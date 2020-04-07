@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: b83ceb3dd5079f82a13e8f1e2aba37fcf5ca5835
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 79ee8bba588f7d429cf0a6fd279ec4b8d0271262
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271431"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742324"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas de la versión de SQL Server Data Tools (SSDT)
 
@@ -106,7 +106,6 @@ _SSDT para Visual Studio 2017._
 | Problema conocido | Detalles |
 | :---------- | :------ |
 | La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. | Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas. |
-| SSDT para Visual Studio 2017 superior a 15.8 no es compatible con el diseño de paquetes que contienen orígenes y destinos de Teradata. | Utilice SSDT para Visual Studio 2017 (15.8). |
 | El origen de Power Query puede no admitir OData v4 cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
 | El origen de Power Query puede no admitir el empleo de ODBC para conectarse a Oracle cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
 | El origen de Power Query no está localizado | &nbsp; |
@@ -134,7 +133,6 @@ _SSDT para Visual Studio 2017._
 | Problema conocido | Detalles |
 | :---------- | :------ |
 | La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. | Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas. |
-| SSDT para Visual Studio 2017 superior a 15.8 no es compatible con el diseño de paquetes que contienen orígenes y destinos de Teradata. | Utilice SSDT para Visual Studio 2017 (15.8). |
 | No se pueden crear o editar orígenes de datos en el modelo de implementación de paquetes. | No se puede abrir al Asistente para orígenes de datos. |
 | El origen de Power Query puede no admitir OData v4 cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
 | El origen de Power Query puede no admitir el empleo de ODBC para conectarse a Oracle cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
@@ -164,7 +162,6 @@ _SSDT para Visual Studio 2017._
 | Problema conocido | Detalles |
 | :---------- | :------ |
 | La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. | Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas. |
-| SSDT para Visual Studio 2017 superior a 15.8 no es compatible con el diseño de paquetes que contienen orígenes y destinos de Teradata. | Utilice SSDT para Visual Studio 2017 (15.8). |
 | No se pueden crear o editar orígenes de datos en el modelo de implementación de paquetes. | No se puede abrir al Asistente para orígenes de datos. |
 | El origen de Power Query puede no admitir OData v4 cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
 | El origen de Power Query puede no admitir el empleo de ODBC para conectarse a Oracle cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
@@ -198,7 +195,6 @@ _SSDT para Visual Studio 2017._
 | Problema conocido | Detalles |
 | :---------- | :------ |
 | La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. | Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas. |
-| SSDT para Visual Studio 2017 superior a 15.8 no es compatible con el diseño de paquetes que contienen orígenes y destinos de Teradata. | Utilice SSDT para Visual Studio 2017 (15.8). |
 | El origen de Power Query puede no admitir OData v4 cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
 | El origen de Power Query puede no admitir el empleo de ODBC para conectarse a Oracle cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
 | El origen de Power Query no está localizado. | &nbsp; |
@@ -218,7 +214,6 @@ Se corrigió un problema que consistía en que al implementar un proyecto de SSI
 ### <a name="known-issues"></a>Problemas conocidos:
 
 - La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
-- SSDT para Visual Studio 2017 (15.8.2) no es compatible con el diseño de paquetes que contienen orígenes y destinos de Oracle o Teradata. Utilice SSDT para Visual Studio 2017 (15.8).
 
 ## <a name="1581nbsp-ssdt-for-vs-2017"></a>15.8.1,&nbsp; SSDT para VS 2017
 
@@ -237,7 +232,6 @@ _SSDT para Visual Studio 2017._
 
 - La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas.
 - Al implementar un proyecto de SSIS que contiene paquetes con destino de tarea Script o archivo plano para Azure-SSIS, los paquetes no se ejecutan en Azure-SSIS.
-- SSDT para Visual Studio 2017 (15.8.1) no es compatible con el diseño de paquetes que contienen orígenes y destinos de Oracle o Teradata. Utilice SSDT para Visual Studio 2017 (15.8).
 
 
 ## <a name="158nbsp-ssdt-for-vs-2017"></a>15,8,&nbsp; SSDT para VS 2017

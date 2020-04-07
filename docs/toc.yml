@@ -78,6 +78,8 @@
           items:
             - name: Guía para la implementación
               href: big-data-cluster/deployment-guidance.md
+            - name: Recursos implementados
+              href: big-data-cluster/concept-architecture-pods.md
             - name: Actualización a una nueva versión
               href: big-data-cluster/deployment-upgrade.md
             - name: Personalización de las implementaciones
@@ -107,7 +109,7 @@
                 - name: Script de kubeadm de nodo único
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: Implementación con cuadernos
-                  href: big-data-cluster/deploy-notebooks.md
+                  href: big-data-cluster/notebooks-deploy.md
     - name: Conceptos
       items:
         - name: Implementación de la aplicación
@@ -190,26 +192,18 @@
               href: big-data-cluster/connect-to-big-data-cluster.md
             - name: Vista del estado del clúster
               href: big-data-cluster/view-cluster-status.md
-            - name: Solución de problemas de Kubernetes
-              href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Administración con cuadernos
-              href: big-data-cluster/manage-notebooks.md
             - name: Administración con el panel de controladores
               href: big-data-cluster/manage-with-controller-dashboard.md
+            - name: Administrar los cuaderno existentes
+              href: big-data-cluster/notebooks-manage-bdc.md
+            - name: Ejecución de un cuaderno con Spark
+              href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Seguridad
               items:
                 - name: Actualización de AZDATA_PASSWORD
                   href: big-data-cluster/change-azdata-password.md
                 - name: Administrar el acceso de los usuarios
                   href: big-data-cluster/manage-user-access.md
-        - name: Cuaderno
-          items:
-            - name: Introducción a Notebooks
-              href: big-data-cluster/notebooks-guidance.md
-            - name: Tutorial de cuaderno
-              href: big-data-cluster/tutorial-notebook-spark.md
-            - name: Administrar los cuaderno existentes
-              href: big-data-cluster/notebooks-how-to-manage.md
         - name: Trabajos de Spark
           items:
             - name: Enviar trabajos de Spark en Azure Data Studio
@@ -222,7 +216,9 @@
               href: big-data-cluster/spark-history-server.md
         - name: Solución de problemas
           items:
-            - name: Implementación de Active Directory
+            - name: Solución de problemas de Kubernetes
+              href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Ámbito de los grupos de Active Directory
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: Referencia
       items:
@@ -2555,7 +2551,11 @@
             - name: Tipos de datos Java a SQL
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Crear un archivo jar de Java
-              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
+              href: language-extensions/how-to/call-java-from-sql.md
+        - name: Referencia
+          items:
+            - name: API de marco de extensibilidad
+              href: language-extensions/reference/extensibility-framework-api.md
     - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
@@ -7017,8 +7017,8 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: Informes y análisis
   items:
-    - name: Advanced Analytics y Machine Learning >
-      href: advanced-analytics/
+    - name: Machine Learning Services >
+      href: machine-learning/
     - name: Sistema de la plataforma de análisis >
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
@@ -7791,8 +7791,6 @@
               href: azure-data-studio/keyboard-shortcuts.md
             - name: Recursos de SQL Azure del explorador
               href: azure-data-studio/azure-resource-explorer.md
-            - name: SQL Notebooks
-              href: azure-data-studio/sql-notebooks.md
             - name: Grupos de servidores
               href: azure-data-studio/server-groups.md
             - name: Control de código fuente
@@ -7801,6 +7799,14 @@
               href: azure-data-studio/settings.md
             - name: Autenticación de Windows (Kerberos)
               href: azure-data-studio/enable-kerberos.md
+            - name: Cuaderno
+              items:
+                - name: Introducción a Notebooks
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: Procedimiento para usar el kernel SQL
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Procedimiento para administrar un cuaderno
+                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: Recopilación de datos de uso
               href: azure-data-studio/usage-data-collection.md
         - name: Extensiones

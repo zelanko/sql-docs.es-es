@@ -1,5 +1,6 @@
 ---
 title: Crear y administrar suscripciones para servidores de informes en modo de SharePoint | Microsoft Docs
+description: Aprenda a crear una suscripción de Reporting Services para entregar informes desde una aplicación web de SharePoint que esté integrada con un servidor de informes en el modo de SharePoint.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5275678180b785b1d41705d4f2debdada8fd5a78
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578348"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742260"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
   Puede crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar informes desde una aplicación web de SharePoint que esté integrada con un servidor de informes en el modo de SharePoint. Las suscripciones pueden entregar informes a una biblioteca de documentos, a una carpeta de archivos o como un correo electrónico. En este tema se resumen los requisitos y los pasos para crear una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -28,11 +29,11 @@ ms.locfileid: "65578348"
   
  Cuando se crea una suscripción, hay tres formas de especificar su entrega:  
   
--   **Biblioteca de documentos**: puede crear una suscripción que entrega un documento basado en el informe original a una biblioteca dentro del mismo sitio de SharePoint que el informe original. No puede entregar el documento a una biblioteca en otro servidor u otro sitio dentro de la misma colección de sitios. Para entregar el documento, debe tener el permiso Agregar elementos para la biblioteca a la que se entrega el informe.  
+-   **Biblioteca de documentos**: puede crear una suscripción que entregue un documento basado en el informe original a una biblioteca que se encuentre en el mismo sitio de SharePoint que el informe original. No puede entregar el documento a una biblioteca en otro servidor u otro sitio dentro de la misma colección de sitios. Para entregar el documento, debe tener el permiso Agregar elementos para la biblioteca a la que se entrega el informe.  
   
--   **Carpeta de archivos** : puede entregar un documento basado en el informe original a una carpeta compartida del sistema de archivos. Debe seleccionar una carpeta existente que sea accesible a través de una conexión de red.  
+-   **Carpeta de archivos:** puede entregar un documento basado en el informe original a una carpeta compartida del sistema de archivos. Debe seleccionar una carpeta existente que sea accesible a través de una conexión de red.  
   
--   **Correo electrónico** : si el servidor de informes está configurado para usar la extensión de entrega de correo electrónico del servidor de informes, puede crear una suscripción que envíe un informe o un archivo de informe exportado (guardado en un formato de salida) a la bandeja de entrada. Para recibir simplemente la notificación sin la dirección URL del informe o sin el informe propiamente dicho, desactive las casillas **Incluir un vínculo al informe** y **Mostrar informe dentro del mensaje** .  
+-   **Correo electrónico:** si el servidor de informes está configurado para usar la extensión de entrega de correo electrónico del servidor de informes, puede crear una suscripción que envíe un informe o un archivo de informe exportado (guardado en un formato de salida) a la bandeja de entrada. Para recibir simplemente la notificación sin la dirección URL del informe o sin el informe propiamente dicho, desactive las casillas **Incluir un vínculo al informe** y **Mostrar informe dentro del mensaje** .  
   
  **En este tema:**  
   

@@ -1,5 +1,6 @@
 ---
 title: Supervisar suscripciones de Reporting Services | Microsoft Docs
+description: Aprenda a usar la interfaz de usuario, PowerShell o los archivos de registro para realizar el seguimiento de las suscripciones de Reporting Services. Las opciones de supervisión dependen del modo del servidor de informes que se ejecute.
 ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1cfa2c5face12eab1677d4a1386511d005aa5dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67285046"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742040"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Supervisar suscripciones de Reporting Services
   Puede supervisar las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la interfaz de usuario, Windows PowerShell o los archivos de registro. Las opciones disponibles para la supervisión dependen del modo de servidor de informes que esté ejecutando.  
@@ -76,7 +77,7 @@ ms.locfileid: "67285046"
   
  Este es un mensaje de error de ejemplo de un archivo de registro de seguimiento relacionado con las suscripciones:  
   
--   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Inicializando EnableExecutionLogging en 'True' según lo especificado en el sistema servidor properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **error al enviar correo**. Excepción: System.Net.Mail.SmtpException: El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.1 El cliente no está autenticado en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36 i INFO: Inicializando EnableExecutionLogging en 'True' como se especifica en Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41 ERROR: **Error al enviar correo electrónico**. Excepción: System.Net.Mail.SmtpException: el servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.7.1 No se autenticó el cliente en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  El archivo de registro no incluye información sobre si se ha abierto el informe o si se ha realizado la entrega correctamente. Una entrega correcta quiere decir que el Procesador de entrega y programación no generó ningún error y que el servidor de informes se conectó al servidor de correo. Si el mensaje de correo electrónico produce un error de mensaje que no se pudo entregar en el buzón del usuario, esta información no se incluirá en el archivo de registro. Para más información sobre los archivos de registro, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -97,7 +98,7 @@ ms.locfileid: "67285046"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Proceso|Área|Category|Nivel|Correlation|Message|  
-|21/05/2019 14:34:06:15|Grupo de aplicaciones: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensión de correo electrónico del servidor de informes|Inesperado|(vacío)|**Error al enviar correo electrónico.** Excepción: System.Net.Mail.SmtpException: buzón no disponible. La respuesta del servidor fue: 5.7.1 El cliente no tiene permiso para enviar como este remitente en System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) en System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) en System.Net.Mail.SmtpClient.Send(MailMessage message) en Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|21/05/2019 14:34:06:15|Grupo de aplicaciones: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensión de correo electrónico del servidor de informes|Inesperado|(vacío)|**Error al enviar correo electrónico.** Excepción: System.Net.Mail.SmtpException: buzón no disponible. La respuesta del servidor fue: 5.7.1 El cliente no tiene permisos para enviar como este remitente en System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) en System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) en System.Net.Mail.SmtpClient.Send(MailMessage message) en Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Usar PowerShell para supervisar suscripciones  
  Para ver scripts de PowerShell de ejemplo que puede utilizar para comprobar el estado del modo nativo o las suscripciones del modo de SharePoint, consulte [Administrar propietarios de suscripciones y ejecutar suscripciones (PowerShell)](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  

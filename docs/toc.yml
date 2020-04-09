@@ -8529,6 +8529,14 @@
                   href: ssms/register-servers/registered-servers-f1-help.md
             - name: Scripting con SSMS
               items:
+                - name: Generación de scripts
+                  items:
+                    - name: Generar scripts
+                      href: ssms/scripting/generate-scripts-sql-server-management-studio.md
+                    - name: Asistente para generar y publicar scripts
+                      href: ssms/scripting/generate-and-publish-scripts-wizard.md
+                    - name: Objetos que admite el asistente Generar scripts
+                      href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: Editores de texto y consultas
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
@@ -8650,14 +8658,6 @@
                       items:
                         - name: Ventana Resultados espaciales
                           href: ssms/scripting/spatial-results-window.md
-                        - name: Generar scripts
-                          href: ssms/scripting/generate-scripts-sql-server-management-studio.md
-                          items:
-                            - name: Asistente para generar y publicar scripts
-                              href: ssms/scripting/generate-and-publish-scripts-wizard.md
-                              items:
-                                - name: Objetos que admite el asistente Generar scripts
-                                  href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Instrucciones
           items:
             - name: Instalación de versiones de SSMS en otros idiomas que no sean inglés

@@ -1,5 +1,6 @@
 ---
 title: Entrega por correo electrónico en Reporting Services | Microsoft Docs
+description: En este artículo, aprenderá a usar la extensión de entrega de correo electrónico, que proporciona una forma de enviar por correo electrónico un informe a grupos o usuarios individuales.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72305045"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742075"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega de correo electrónico que permite enviar por correo electrónico un informe a grupos o usuarios individuales. Para distribuir un informe por correo electrónico, debe 1) configurar el servidor de informes para la entrega de correo electrónico y 2) definir una suscripción estándar o una suscripción controlada por datos. Una suscripción única no puede entregar varios informes en un solo mensaje de correo electrónico. Sin embargo, se pueden crear varias suscripciones.  

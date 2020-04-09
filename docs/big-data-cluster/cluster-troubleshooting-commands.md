@@ -1,5 +1,5 @@
 ---
-title: Supervisión y solución de problemas
+title: Solución de problemas de Kubernetes
 titleSuffix: SQL Server big data clusters
 description: En este artículo se proporcionan comandos útiles para supervisar y solucionar problemas de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
@@ -9,21 +9,21 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70153631"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664181"
 ---
-# <a name="monitoring-and-troubleshoot-big-data-clusters-2019"></a>Supervisión y solución de problemas con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Solución de problemas de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describen varios comandos útiles de Kubernetes que puede usar para supervisar y solucionar problemas de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Se muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos. En este artículo también se tratan las tareas habituales, como copiar archivos en un contenedor que ejecute uno de los servicios de clúster de macrodatos de SQL Server, o bien copiarlos desde uno.
 
 > [!TIP]
-> Para supervisar el estado de los componentes de los clústeres de macrodatos, puede usar los comandos [**azdata bdc status**](deployment-guidance.md#status) o los [cuadernos de solución de problemas](manage-notebooks.md) integrados proporcionados con Azure Data Studio.
+> Para supervisar el estado de los componentes de los clústeres de macrodatos, puede usar los comandos [**azdata bdc status**](deployment-guidance.md#status) o los [cuadernos de solución de problemas](notebooks-manage-bdc.md) integrados proporcionados con Azure Data Studio.
 
 > [!TIP]
 > Ejecute los siguientes comandos de **kubectl** en un equipo cliente Windows (cmd o PS) o Linux (bash). Requieren la autenticación previa en el clúster y un contexto de clúster en el que ejecutarse. Por ejemplo, para un clúster de AKS creado anteriormente, puede ejecutar `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` para descargar el archivo de configuración del clúster de Kubernetes y establecer el contexto del clúster.

@@ -1,5 +1,6 @@
 ---
-title: Solución de problemas de procesamiento de informes de Reporting Services | Microsoft Docs
+title: Solución de problemas de procesamiento de informes de Reporting Services
+description: En este artículo, solucionará los problemas que se producen cuando el procesador de informes combina datos e información de diseño, y evalúa expresiones de propiedades de elementos de informe.
 ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d10dc9e4e5808fbc9c315cb262a1b2136c73029
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573870"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664441"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Solución de problemas de procesamiento de informes de Reporting Services
 Una vez recuperados los datos del informe, el procesador de informes combina los datos y la información de diseño. Cada propiedad de elemento de informe que tiene una expresión se evalúa en el contexto de los datos y el diseño combinados. Utilice este tema como ayuda para solucionar estos problemas.   
@@ -23,7 +24,7 @@ En tiempo de ejecución, el procesador de informes combina los datos y los eleme
   
 El procesador de informes comprueba que la definición de informe (archivo .rdl) cumple el esquema que se especifica al principio de la declaración de espacio de nombres del archivo .rdl. Para más información sobre los esquemas RDL, vea [Buscar la versión del esquema de definición de informe (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
-Además, las expresiones de informe que se evalúan en tiempo de ejecución deben seguir un conjunto de reglas que permitan asegurarse de que los datos del informe y el diseño se pueden combinar correctamente. Cuando el procesador de informes detecta un problema, podría ver el mensaje siguiente: La definición de `<report name>` del informe no es válida.  
+Además, las expresiones de informe que se evalúan en tiempo de ejecución deben seguir un conjunto de reglas que permitan asegurarse de que los datos del informe y el diseño se pueden combinar correctamente. Cuando el procesador de informes detecta un problema, es posible que vea el mensaje siguiente: La definición de `<report name>` del informe no es válida.  
   
 ### <a name="report-item-expressions-can-only-refer-to-fields-within-the-current-dataset-scope-or-if-inside-an-aggregate-the-specified-dataset-scope"></a>Las expresiones de elemento de informe solamente pueden hacer referencia a los campos dentro del ámbito del conjunto de datos actual o, si están dentro de un agregado, el ámbito del conjunto de datos especificado.  
   

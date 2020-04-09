@@ -1,5 +1,6 @@
 ---
-title: Solución de problemas de informes de Reporting Services | Microsoft Docs
+title: Solución de problemas de informes de Reporting Services
+description: En este artículo, solucionará los problemas relacionados con el diseño, la vista previa, la exportación y la publicación de informes en un servidor de informes en modo nativo o de SharePoint.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573877"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662799"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Solución de problemas de informes de Reporting Services
 Este tema contiene información útil para solucionar problemas con el diseño de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , la vista previa de un informe, la publicación de un informe en un servidor de informes en modo nativo o en modo de SharePoint, la visualización de un informe en el servidor de informes o la exportación de un informe en un formato de archivo diferente.  

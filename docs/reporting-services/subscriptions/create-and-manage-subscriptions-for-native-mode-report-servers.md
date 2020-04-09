@@ -1,5 +1,6 @@
 ---
 title: Crear y administrar suscripciones para servidores de informes en modo nativo | Microsoft Docs
+description: Aprenda a crear y administrar una suscripción estándar como un usuario individual que quiere recibir un informe por correo electrónico o en una carpeta compartida.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c0521826132a51b6f0ec18b43bb8008098c61bd4
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971313"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742298"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Este tema proporciona información sobre las suscripciones estándar que los usuarios individuales crean y administran. Las suscripciones controladas por datos tienen diferentes requisitos y pasos, y se tratan en otro tema. Para obtener más información, vea [Cómo crear, modificar y eliminar suscripciones controladas por datos](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -68,10 +69,10 @@ ms.locfileid: "76971313"
   
 8. En **Opciones de entrega (Recurso compartido de archivos de Windows)** , especifique:  
    - **Nombre de archivo**: escriba un nombre de archivo para el informe.
-   - **Agregar una extensión de archivo cuando se crea el archivo**: esta opción agrega una extensión de archivo de tres caracteres al nombre de archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
+   - **Agregar una extensión de archivo cuando se crea el archivo**: Esta opción agrega una extensión de archivo de tres caracteres al nombre del archivo. La extensión de archivo está determinada por el formato de salida de informes seleccionado.  
    - **Ruta de acceso**: escriba una ruta UNC (convención de nomenclatura universal) para una carpeta existente en la que quiera entregar los informes (por ejemplo, \\<nombreDeServidor\>\<misInformes>). Incluya dos barras diagonales inversas al comienzo de la ruta de acceso. No escriba una barra diagonal inversa al final.  
   
-     ![Suscripción a recurso compartido](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Suscripción a recurso compartido")  
+     ![Suscripción a recurso compartido de archivos](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-file-share-delivery-option.png "Suscripción a recurso compartido de archivos")  
   
    - **Formato de representación**: seleccione un formato de salida de informes para la entrega de archivos. Elija el formato correspondiente a la aplicación de escritorio que utilizará para abrir el informe. Evite formatos que no representen los informes en un solo flujo o que especifiquen una interactividad no admitida en un archivo estático (por ejemplo, HTML 4.0).  
   
@@ -112,7 +113,7 @@ El informe se entrega como un archivo estático. Si el informe contiene caracter
      >[!NOTE]  
      > Dependiendo de sus permisos, podrá escribir la dirección de correo electrónico donde desea recibir el informe. Para especificar varias direcciones de correo electrónico, sepárelas con un punto y coma (;). También puede escribir direcciones de correo electrónico adicionales en los cuadros de texto **CC**, **CCO**y **Responder a** . Esto requiere que tenga permiso para administrar todas las suscripciones.  
   
-   - **Asunto**: el valor predeterminado es "@ReportName se ejecutó a las @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que @ReportName y @ExecutionTime son las únicas variables globales que se admiten en el campo **Asunto**.  
+   - **Firmante**: el valor predeterminado es "@ReportName se ejecutó a las @ExecutionTime". Puede editar el asunto, pero tenga en cuenta que @ReportName y @ExecutionTime son las únicas variables globales que se admiten en el campo **Asunto**.  
   
      ![suscripción de correo electrónico](../../reporting-services/subscriptions/media/create-and-manage-subscriptions-for-native-mode-report-servers/subscription-e-mail-delivery-option.png "Suscripción de correo electrónico")  
 

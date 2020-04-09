@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seo-lt-2019
-ms.date: 09/05/2018
+ms.date: 03/26/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b22b71f3e5b9428e15a529917056565b874d55d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a877bf2edd04e937cfafaece19c6acd9ecd09c07
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80271421"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742250"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI)
 
@@ -54,11 +54,11 @@ Las últimas descargas se proporcionan para el caso improbable de que experiment
 <br>
 
 
-\* SSDT admite las dos versiones más recientes de Visual Studio. Con el lanzamiento de Visual Studio 2017, SSDT para VS2013 se deja de actualizar. Para obtener información adicional, consulte la sección de *preguntas más frecuentes* de [esta entrada del blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
+\* SSDT admite las dos versiones más recientes de Visual Studio. Con el lanzamiento de Visual Studio 2019, SSDT para VS2015 se deja de actualizar. Para obtener información adicional, consulte la sección de *preguntas más frecuentes* de [esta entrada del blog del equipo de SSDT](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/).
 
   
 ## <a name="links-to-download-pages"></a>Vínculos a páginas de descarga 
-**Motor de bases de datos relacionales de SQL**  
+**SQL relacional: Motor de base de datos**  
   
 Proporciona plantillas con las que pueden crearse bases de datos relacionales para RDBMS y Base de datos SQL de Azure. En lo que respecta al diseño de las bases de datos relacionales, SSDT no se limita a una versión específica: puede usar Visual Studio 2012 o 2013 con cualquier versión del Motor de base de datos de SQL Server o de Base de datos SQL de Azure.  
   
@@ -72,7 +72,7 @@ Proporciona plantillas con las que pueden crearse bases de datos relacionales pa
   
 Los clientes de Visual Studio 2013 pueden descargar una versión de vista previa de SSDT para probar las nuevas características que aún no están en la versión de lanzamiento del producto.  
   
-**Microsoft SQL BI: Analysis Services, Reporting Services e Integration Services**  
+**SQL BI: Analysis Services, Reporting Services e Integration Services**  
   
 Las plantillas de la edición Business Intelligence (BI) se utilizan para crear modelos de SSAS, informes de SSRS y paquetes SSIS. Los diseñadores de BI están vinculados a versiones específicas de SQL Server. Para utilizar las nuevas características de BI, instale las versiones más recientes de los diseñadores de BI.  
   

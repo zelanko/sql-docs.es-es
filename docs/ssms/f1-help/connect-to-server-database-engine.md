@@ -1,7 +1,7 @@
 ---
 title: Conectar al servidor (motor de base de datos)
 ms.custom: seo-lt-2019
-ms.date: 03/27/2020
+ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9fdaf17118649543fe95ba60c7f6c0148d52d0e5
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 396d9c1094d496289540804baa07c959fe5c3eef
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402544"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531203"
 ---
 # <a name="connect-to-server-database-engine"></a>Conectar al servidor (motor de base de datos)
 
@@ -56,20 +56,17 @@ La versión actual de SSMS ofrece cinco modos de autenticación al conectarse a 
 > **Autenticación de SQL Server**  
 > Cuando un usuario se conecta con un nombre y una contraseña de inicio de sesión determinados desde una conexión no confiable, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza la autenticación y comprueba si se configuró una cuenta de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si la contraseña especificada coincide con la almacenada anteriormente. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene configurada una cuenta de inicio de sesión, la autenticación no se realizará correctamente y el usuario recibirá un mensaje de error. Siempre que sea posible, use la autenticación de Windows o la autenticación de contraseña de Active Directory.  
 > 
-> **Active Directory - Universal compatible con MFA**  
+> **Azure Active Directory: universal compatible con MFA**  
 > Active Directory - Universal compatible con MFA es un flujo de trabajo interactivo que es compatible con Azure Multi-Factor Authentication (MFA). Azure MFA ayuda a proteger el acceso a los datos y las aplicaciones mientras se cumple la exigencia del usuario en cuanto a un proceso de inicio de sesión simple. Ofrece una autenticación segura con una variedad de opciones de comprobación sencillas, como llamadas de teléfono, mensajes de texto, tarjetas inteligentes con PIN o notificaciones de aplicaciones móviles, que permiten que los usuarios elijan el método que prefieran. Si la cuenta de usuario está configurada para MFA, el flujo de trabajo de autenticación interactivo requiere una interacción adicional por parte del usuario a través de cuadros de diálogo emergentes, las tarjetas inteligentes, etc. Si la cuenta de usuario está configurada para MFA, el usuario debe seleccionar Autenticación universal de Azure para conectarse. Si la cuenta de usuario no requiere MFA, el usuario puede usar de todas maneras las otras dos opciones de Autenticación de Azure Active Directory. Para obtener más información, consulte [Compatibilidad de SSMS con Azure AD MFA con SQL Database y SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/). Si es necesario, puede cambiar el dominio que autentica el inicio de sesión. Para ello, haga clic en **Opciones**, seleccione la pestaña **Propiedades de conexión** y complete el cuadro **Nombre de dominio o ID de inquilino de AD**.  
 > 
-> **Active Directory - Contraseña**  
+> **Azure Active Directory: contraseña**  
 > Autenticación de Azure Active Directory es un mecanismo que permite conectar con [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mediante identidades de Azure Active Directory.  Use este método para conectarse con [!INCLUDE[ssSDS](../../includes/sssds-md.md)] si ha iniciado sesión en Windows con credenciales de un dominio no federado con Azure o si usa la autenticación de Azure AD con Azure AD basado en el dominio inicial o de cliente. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
 > 
 > **Active Directory - Integrado**  
-> Autenticación de Azure Active Directory es un mecanismo que permite conectar con [!INCLUDE[msCoName](../../includes/msconame_md.md)]  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mediante identidades de Azure Active Directory. Use este método para conectarse a SQL Database, a la instancia administrada o a Azure Synapse Analytics si ha iniciado sesión en Windows con sus credenciales de Azure Active Directory desde un dominio federado, o bien desde un dominio administrado que esté configurado para el inicio de sesión único de conexión directa con autenticación de paso a través y hash de contraseña. Para obtener más información, consulte [Inicio de sesión único de conexión directa de Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso) y [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
->
-  > [!NOTE]
-  > [MSAL.NET (Microsoft.Identity.Client)](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki#roadmap) para autenticación integrada de Windows no es compatible con el inicio de sesión único de conexión directa con autenticación de paso a través y hash de contraseña.  
+> Autenticación de Azure Active Directory es un mecanismo que permite conectar con [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] mediante identidades de Azure Active Directory. Use este método para conectarse con [!INCLUDE[ssSDS](../../includes/sssds-md.md)] si ha iniciado sesión en Windows con credenciales de Azure Active Directory de un dominio federado. Para más información, consulte [Usar la autenticación de Azure Active Directory para autenticación con SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).  
   
 **Nombre de usuario**  
-El nombre de usuario de Windows con el que se va a conectar. Esta opción solo está disponible si seleccionó **Autenticación de contraseña de Active Directory**para conectarse. Es de solo lectura cuando se selecciona **Autenticación de Windows** o la autenticación **Active Directory - Integrado**.  
+El nombre de usuario de Windows con el que se va a conectar. Esta opción solo está disponible si ha seleccionado la autenticación **Azure Active Directory: contraseña** para conectarse. Es de solo lectura cuando se selecciona **Autenticación de Windows** o la autenticación **Azure Active Directory: integrado**.  
   
 **Inicio de sesión**  
 Escriba el inicio de sesión con el que va a conectarse. Esta opción solo está disponible si se ha seleccionado Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Autenticación de contraseña de Active Directory para conectarse.  

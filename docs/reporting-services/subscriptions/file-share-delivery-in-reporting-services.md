@@ -1,5 +1,6 @@
 ---
 title: Entrega a recursos compartidos de archivos en Reporting Services | Microsoft Docs
+description: En este artículo, aprenderá a configurar la extensión de entrega de recursos compartidos de archivos que permite entregar un informe a una carpeta.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a411b818d0b844f3f43ae29db7a3e1ee732be798
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72278230"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742049"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. La cuenta que requiere permisos de escritura puede ser credenciales configuradas en la suscripción o una **cuenta de recurso compartido** configurada para el servidor de informes. Para obtener más información sobre la cuenta del recurso compartido de archivos, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  
@@ -68,9 +69,9 @@ ms.locfileid: "72278230"
 ##  <a name="file-options"></a><a name="bkmk_file_options"></a> Opciones de archivo  
  Cuando se crea una suscripción de recurso compartido de archivos, puede configurar cómo se crea el nombre de archivo y si el archivo sobrescribe las versiones anteriores del informe. Un nombre de archivo completo tiene tres partes: un nombre, una extensión y texto o un número que se anexa al archivo para crear un nombre de archivo exclusivo.  
   
- **Nombre de archivo:** el nombre de archivo predeterminado se basa en el nombre del informe de origen, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
+ **Nombre de archivo:** nombre de archivo predeterminado se basa en el nombre del informe de origen, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
   
- **Sobrescribir:** se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
+ **Sobrescribir:** Se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
   
  Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue la variable **\@timestamp** al nombre del archivo (por ejemplo, *CompanySales@timestamp* ). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
   

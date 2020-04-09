@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9d51cc4164cbb40ff647cad337240e689696b449
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255912"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531121"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>Creación, exportación y puntuación de modelos de aprendizaje automático de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -52,7 +52,7 @@ En este ejemplo, los datos de censo (**AdultCensusIncome.csv**) sirven para crea
 
    Este cuaderno contiene celdas con los comandos necesarios para esta sección del ejemplo.
 
-1. Abra el cuaderno en Azure Data Studio y ejecute cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Uso de los cuadernos en SQL Server](notebooks-guidance.md).
+1. Abra el cuaderno en Azure Data Studio y ejecute cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Procedimiento para usar cuadernos con SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 Los datos se leen primero en Spark y se dividen en conjuntos de datos de entrenamiento y de prueba. Después, el código entrena un modelo de canalización con los datos de entrenamiento. Por último, exporta el modelo a un conjunto de MLeap.
 
@@ -61,7 +61,7 @@ Los datos se leen primero en Spark y se dividen en conjuntos de datos de entrena
 
 ## <a name="model-scoring-with-sql-server"></a>Puntuación del modelo con SQL Server
 
-Ahora que el modelo de canalización de Spark ML se encuentra en un formato de serialización común de [agrupación de MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html), puede puntuarlo en Java sin la presencia de Spark. 
+Ahora que el modelo de canalización de Spark ML se encuentra en un formato de serialización común de [agrupación de MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html), puede puntuarlo en Java sin la presencia de Spark.
 
 En este ejemplo se usa la [extensión del lenguaje Java](../language-extensions/language-extensions-overview.md) en SQL Server. Para poder puntuar el modelo en SQL Server, primero debe compilar una aplicación Java que pueda cargar el modelo en Java y puntuarlo. Encontrará el código de ejemplo para esta aplicación Java en la [carpeta mssql-mleap-app](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 

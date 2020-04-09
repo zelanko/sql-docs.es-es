@@ -1,5 +1,6 @@
 ---
 title: Suscripciones y entrega (Reporting Services) | Microsoft Docs
+description: En este artículo, obtendrá información sobre las suscripciones de Reporting Services, que entregan un informe en un momento específico o como respuesta a un evento.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd9288a630dd24dd8d79deef184cfc4c4fabcd9f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91de7513eb5d7a6528537ca68b15765c36162f8d
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578034"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742231"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
   Una suscripción [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que se especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes.  

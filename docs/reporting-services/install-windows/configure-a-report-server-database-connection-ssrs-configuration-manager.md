@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seo-lt-2019, seo-mmd-2019
-ms.date: 12/04/2019
-ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 01/04/2020
+ms.openlocfilehash: 0497915a9f1f0f2a50eafeed70f9dde4550bd1f0
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866047"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531166"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
 
@@ -91,6 +91,13 @@ Hay tres tipos de credenciales que se pueden utilizar en una conexión a la base
   
 Si la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para la autenticación de Windows y está en el mismo dominio o en un dominio de confianza con el equipo del servidor de informes, puede configurar la conexión para utilizar la cuenta de servicio o una cuenta de usuario de dominio que administre como una propiedad de conexión a través de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si el servidor de bases de datos está en un dominio diferente o si utiliza la seguridad del grupo de trabajo, debe configurar la conexión para utilizar un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En este caso, asegúrese de cifrar la conexión.  
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Al usar Instancia administrada de Azure SQL Database para hospedar las bases de datos del servidor de informes, la autenticación de SQL Server es el único tipo de credencial compatible. Además, tenga en cuenta que Instancia administrada no puede hospedar la instancia del servidor de informes.
+
+::: moniker-end
+
 #### <a name="using-service-accounts-and-integrated-security"></a>Usar cuentas de servicio y seguridad integrada
 
 Puede utilizar la seguridad integrada de Windows para conectarse a través de la cuenta del servicio Servidor de informes. A la cuenta se le conceden derechos de inicio de sesión en la base de datos del servidor de informes. Éste es el tipo de credenciales predeterminado que elige el programa de instalación si instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada.  
@@ -105,14 +112,7 @@ Puede especificar una cuenta de usuario de Windows para la conexión del servido
 
 #### <a name="using-a-sql-server-login"></a>Usar un inicio de sesión de SQL Server
 
-Puede especificar un solo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a la base de datos del servidor de informes. Si utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos del servidor de informes se encuentra en un equipo remoto, utilice IPSEC para contribuir a proteger la transmisión de datos entre los servidores. Si utiliza un inicio de sesión de base de datos, debe actualizar la conexión a la base de datos del servidor de informes cada vez que cambie la contraseña o la cuenta.  
-
-::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-
-> [!NOTE]
-> Cuando se usa una Instancia administrada de Azure SQL para hospedar bases de datos de Reporting Services 2019, la compatibilidad se limita al uso de credenciales de inicio de sesión de SQL Server para la conexión.
-
-::: moniker-end
+Puede especificar un solo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a la base de datos del servidor de informes. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos del servidor de informes se encuentra en un equipo remoto, utilice IPSEC para contribuir a proteger la transmisión de datos entre los servidores. Si utiliza un inicio de sesión de base de datos, debe actualizar la conexión a la base de datos del servidor de informes cada vez que cambie la contraseña o la cuenta.
 
 ### <a name="database-permissions"></a>Permisos para la base de datos
 

@@ -1,5 +1,6 @@
 ---
 title: Deshabilitar o pausar el procesamiento de informes y suscripciones | Microsoft Docs
+description: Administre suscripciones, pause programaciones compartidas, deshabilite orígenes de datos compartidos, bloquee el acceso a informes, administre permisos de suscripción y quite extensiones de entrega.
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 228cb40e1c0f40d9525ca83129878d30b722b910
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f82420b687c3714c75b69e778c1bcc881aad8e82
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893426"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742090"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deshabilitar o pausar el procesamiento de informes y suscripciones  
 Existen varios enfoques que puede usar para deshabilitar o pausar el procesamiento de informes y suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los enfoques de este artículo comprenden desde deshabilitar una suscripción a interrumpir la conexión del origen de datos. No todos los enfoques son posibles con los dos modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En las siguientes tablas se resumen los métodos y modos de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admitidos:  

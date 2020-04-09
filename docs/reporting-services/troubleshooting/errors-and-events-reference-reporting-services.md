@@ -1,5 +1,6 @@
 ---
-title: Referencia de errores y eventos (Reporting Services) | Microsoft Docs
+title: Referencia de errores y eventos (Reporting Services)
+description: Vea el identificador, el tipo, la categoría, el origen y la descripción de los distintos eventos del servidor de informes. Estos eventos incluyen los tipos de error, advertencia e información.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9bfaa996eb0a0bf02440268c68a8a543470fd022
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68258546"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664404"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referencia de errores y eventos (Reporting Services)
 

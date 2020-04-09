@@ -1,5 +1,6 @@
 ---
 title: Cambiar la extensión de entrega predeterminada de Reporting Services | Microsoft Docs
+description: Aprenda a configurar las opciones de Reporting Services para volver a ordenar las extensiones de entrega que se muestran en la lista "Entregado por" y para establecer la extensión de entrega predeterminada.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 007427739f91a12ea6603bbf58450821d2c999ea
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 83c2c0c6bb3c2a457182e8dcf56c5caa68397184
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66500402"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742306"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Cambiar la extensión de entrega predeterminada de Reporting Services
   Puede modificar las opciones de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para cambiar la extensión de entrega predeterminada que aparece en la lista **Entregado por** de una página de definición de suscripción. Por ejemplo, puede modificar la configuración de modo que cuando los usuarios creen una nueva suscripción, la entrega de recurso compartido de archivos se seleccione de forma predeterminada en lugar de la entrega por correo electrónico. También puede cambiar el orden en que se muestran las extensiones de entrega en la interfaz de usuario.  
@@ -83,9 +84,9 @@ ms.locfileid: "66500402"
   
      Cuando se lee la configuración, se escribe el siguiente evento en el registro de eventos de Windows.  
   
-     **Identificador del evento:** 109  
+     **Id. de evento**: 109  
   
-     **Origen:** Servicio Servidor de informes de Windows (nombre de instancia)  
+     **Origen**: Servicio Servidor de informes de Windows (nombre de instancia)  
   
      Se ha modificado el archivo RSReportServer.config  
   

@@ -1,5 +1,6 @@
 ---
 title: Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos) | Microsoft Docs
+description: Aprenda a usar un origen de datos externo para una suscripción controlada por datos dinámica. Comprenda el procesamiento de datos, las consultas, las opciones de entrega y la forma de pasar parámetros.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 39698991ebb6d683944b19966a5712c269c11e88
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d071905e9efe6c084cafaeeb8304a37b03fbbb5
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578090"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742217"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos)
   En una suscripción controlada por datos, los datos de suscripción dinámica se proporcionan mediante una consulta o un comando que recupera los datos desde un origen de datos externo. Los datos de suscripción se pueden recuperar desde cualquier origen de datos compatible que satisfaga los requisitos del procesamiento de suscripciones controladas por datos. La sintaxis de la consulta o el comando debe ser válida para una extensión de procesamiento de datos instalada en el servidor de informes.  

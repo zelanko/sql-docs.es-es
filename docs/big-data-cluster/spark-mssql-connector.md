@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8869a556eff61eca9cfc085b91cfc6fb9c0c3455
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8b8da0912f3c928857dd84b8981fecb10b17da
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79487683"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531116"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL
 
@@ -111,7 +111,7 @@ En el ejemplo se realizan las tareas siguientes:
 
 ### <a name="run-the-sample-notebook"></a>Ejecución del cuaderno de ejemplo
 
-Para demostrar el uso del conector de Spark MSSQL con estos datos en modo sin AD, puede descargar un cuaderno de ejemplo, abrirlo en Azure Data Studio y ejecutar cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Uso de los cuadernos en SQL Server](notebooks-guidance.md).
+Para demostrar el uso del conector de Spark MSSQL con estos datos en modo sin AD, puede descargar un cuaderno de ejemplo, abrirlo en Azure Data Studio y ejecutar cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Procedimiento para usar cuadernos con SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 1. Desde una línea de comandos de PowerShell o Bash, ejecute el comando siguiente para descargar el cuaderno de ejemplo **mssql_spark_connector_non_ad_pyspark.ipynb**:
 

@@ -1,5 +1,6 @@
 ---
 title: Crear, modificar y eliminar programaciones | Microsoft Docs
+description: Cree, modifique y elimine programaciones compartidas de Reporting Services. En el modo nativo, use el portal web o Management Studio. En el modo de SharePoint, use la aplicación de servicio.
 ms.date: 06/11/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca14dd80ab00e0a2930ddabdf206f8fbaf6c08eb
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140215"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742272"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Use este artículo para obtener información sobre cómo crear, modificar y eliminar programaciones compartidas de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)].  Para administrar programaciones compartidas para el modo nativo, use la página Programaciones del portal web o la carpeta Programaciones compartidas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para el modo de SharePoint, use las páginas de administración para la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .

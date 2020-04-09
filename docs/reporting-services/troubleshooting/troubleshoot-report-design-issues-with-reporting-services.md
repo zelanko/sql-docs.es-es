@@ -1,5 +1,6 @@
 ---
-title: Solución de problemas de diseño de informes con Reporting Services | Microsoft Docs
+title: Solución de problemas de diseño de informes con Reporting Services
+description: En este artículo, diagnosticará y corregirá los problemas de diseño de los informes que se pueden producir al crear su diseño en la vista Diseño de una aplicación de creación de informes.
 ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dd38603a00c01187c131c2f515c2a4c6c1cb858e
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573850"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80662815"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Solución de problemas de diseño de informes con Reporting Services
 Los problemas de diseño se pueden producir al crear un diseño de un informe en la vista Diseño en una aplicación de creación de informes. Utilice este tema como ayuda para solucionar estos problemas.   
@@ -41,7 +42,7 @@ Los campos integrados [&PageNumber] y [&TotalPages] solo son válidos en el enca
 Para agregar los campos [&PageNumber] o [&TotalPages] a un informe, primero debe agregar un encabezado de página o un pie de página. Para más información, consulte [Agregar o quitar un encabezado](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
-> Incluir [&TotalPages] en el encabezado de página o el pie de página puede tener consecuencias para el procesamiento del informe. Para más información, consulte Solucionar problemas: informes exportados a un formato de archivo específico.  
+> Incluir [&TotalPages] en el encabezado de página o el pie de página puede tener consecuencias para el procesamiento del informe. Para más información, vea Solución de problemas de informes: Informes exportados a un formato de archivo específico.  
 [Solución de problemas de procesamiento de informes de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md).  
   
 ## <a name="how-do-i-design-two-tables-or-a-chart-and-a-table-to-display-side-by-side"></a>¿Cómo diseño dos tablas o un gráfico y una tabla de forma que se muestren en paralelo?  

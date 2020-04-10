@@ -15,16 +15,16 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>= sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45afb5e861aee7b8cf253f6c241a884b54ff9451
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 3c12349e48f474b53957ffac55415ccc0689eeca
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662838"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012445"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Genera un valor predicho para una entrada determinada que consta de un modelo de aprendizaje automático almacenado en un formato binario en una base de datos de SQL ServerSQL Server .
 
@@ -53,7 +53,7 @@ Una consulta SQL válida
 Se devuelve una columna de puntuación, así como cualquier columna de paso a través del origen de datos de entrada.
 Se pueden devolver columnas de puntuación adicionales, como el intervalo de confianza, si el algoritmo admite la generación de dichos valores.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Para habilitar el uso del procedimiento almacenado, SQLCLR debe estar habilitado en la instancia.
 
@@ -64,7 +64,7 @@ El usuario `EXECUTE` necesita permiso en la base de datos.
 
 ### <a name="supported-algorithms"></a>Algoritmos admitidos
 
-Para crear y entrenar modelos, utilice uno de los algoritmos admitidos para R o Python, proporcionado por [SQL Server 2Machine Learning Services (R o Python),](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning) [SQL Server 2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), SQL Server Machine Learning Server [(Standalone) (R o Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)o [SQL Server 2016 R Server (independiente).](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)
+Para crear y entrenar modelos, utilice uno de los algoritmos admitidos para R o Python, proporcionado por [SQL Server Machine Learning Services (R o Python),](https://docs.microsoft.com/sql/machine-learning/what-is-sql-server-machine-learning)SQL Server [2016 R Services](https://docs.microsoft.com/sql/machine-learning/r/sql-server-r-services), SQL Server Machine Learning Server [(Standalone) (R o Python)](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone)o [SQL Server 2016 R Server (independiente).](https://docs.microsoft.com/sql/machine-learning/r/r-server-standalone?view=sql-server-2016)
 
 #### <a name="r-revoscaler-models"></a>R: Modelos RevoScaleR
 
@@ -87,7 +87,7 @@ Para crear y entrenar modelos, utilice uno de los algoritmos admitidos para R o 
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [Categórico](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
@@ -113,7 +113,7 @@ Para crear y entrenar modelos, utilice uno de los algoritmos admitidos para R o 
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [Categórico](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
 ### <a name="unsupported-model-types"></a>Tipos de modelos no admitidos

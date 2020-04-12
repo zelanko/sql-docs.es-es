@@ -137,3 +137,5 @@
       href: global-settings-logging-sybasetosql.md
     - name: Evaluador
       href: global-settings-tester-sybasetosql.md
+- name: Mensajes de conversión
+  href: messages/toc.yml

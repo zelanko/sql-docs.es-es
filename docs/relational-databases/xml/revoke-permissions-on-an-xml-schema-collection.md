@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5d2cdfdf47aad32c9fc669ae054cf84c061c0ee5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b3e6a69d61f65cb755fd96d8b0a310f002ab85a5
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000756"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664840"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>Revocar los permisos en una colección de esquemas XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Para revocar el permiso para crear una colección de esquemas XML, realice uno de los procedimientos siguientes:  
   
 -   Revocar el permiso ALTER para el esquema relacional. Entonces, la entidad de seguridad no podrá crear una colección de esquemas XML en el esquema relacional. No obstante, la entidad de seguridad todavía podría hacerlo en otros esquemas relacionales de la misma base de datos.  

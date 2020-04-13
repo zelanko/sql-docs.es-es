@@ -24,15 +24,15 @@ ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fe65ba7995dc21b4bb5f5889c8667e9c8dfb6c10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb576af5eb2a6f88d05d8a2b3bd1527e1c90ff67
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257623"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664827"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos y limitaciones de las colecciones de esquemas XML en el servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La validación del lenguaje de definición de esquemas XML (XSD) tiene algunas limitaciones relativas a las columnas SQL que usan el tipo de datos **xml** . En la tabla siguiente se proporcionan detalles acerca de estas limitaciones, así como directrices para modificar el esquema XSD para que funcione con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los temas de esta sección proporcionan información adicional sobre limitaciones específicas y orientación para trabajar con ellas.  
   
 |Elemento|Limitación|  

@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d5da60bc3e2716fb808c47f949b3b918b4e9d85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 25d673f7f385649afb0a46ae65a61e3eb0f270f9
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479674"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531075"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
   
-|||  
-|-|-|  
+|Elemento|Value|
+|:---|:---|
 |Nombre de producto|SQL Server|  
 |Id. de evento|8992|  
 |Origen de eventos|MSSQLSERVER|  
@@ -43,9 +43,9 @@ Este error se puede producir cuando una o más tablas del sistema se han actuali
 Este error se puede producir al ejecutar DBCC CHECKDB contra una base de datos actualizada de SQL Server 2000 a SQL Server 2005 o posterior. En SQL Server 2000, DBCC CHECKDB no incluía la funcionalidad de DBCC CHECKCATALOG, de modo que el error no se detectara antes de la actualización a menos que DBCC CHECKCATALOG se ejecutara específicamente contra la base de datos en SQL Server 2000.  
   
 Puede ver alguno de los errores siguientes junto con el error 8992:  
-|||
-|-|-| 
+
 |Id. del mensaje|Texto del mensaje|
+|:---|:---|
 |3851|Se encontró una fila no válida (%ls) en la tabla del sistema sys.%ls%ls.|
 |3852|La fila (%ls) de sys.%ls%ls no tiene una fila coincidente (%ls) en sys.%ls%ls.|
 |3853|El atributo (%ls) de la fila (%ls) de sys.%ls%ls no tiene una fila coincidente (%ls) en sys.%ls%ls.|

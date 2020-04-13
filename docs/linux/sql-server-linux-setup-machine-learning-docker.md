@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a53419aba5515a9a60817ec0cc2a9de5a648d2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eb42a3b63c06e1d436bfac8f727c87ce201bd4ec
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80228346"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664380"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Instalación de SQL Server Machine Learning Services (Python y R) en Docker
 
@@ -129,10 +129,10 @@ RECONFIGURE WITH OVERRIDE
 
 Los desarrolladores de Python pueden aprender a usar Python con SQL Server con estos tutoriales:
 
-+ [Tutorial de Python: Predicción de alquileres de esquíes con regresión lineal en SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-ski-rental-linear-regression.md)
-+ [Tutorial: Clasificación de clientes por categorías mediante la agrupación en clústeres k-means con SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-clustering-model.md)
++ [Tutorial de Python: Predicción de alquileres de esquíes con regresión lineal en SQL Server Machine Learning Services](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Tutorial de Python: Clasificación de clientes por categorías mediante la agrupación en clústeres k-means con SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)
 
 Los desarrolladores de R pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de R con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
-+ [Tutorial: Ejecutar R en T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: Análisis en base de datos para desarrolladores de R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Inicio rápido: Ejecutar R en T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Tutorial: Análisis en base de datos para desarrolladores de R](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 68ad6f8f3c56b094b5d14d369452d78237b6dcee
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: b1ebc05fcae4bbf6065b0821101618b7eb64f541
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80402659"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002782"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Ediciones y características admitidas de SQL Server 2019 en Linux
 
@@ -152,7 +152,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Enmascaramiento de datos dinámicos|Sí|Sí|Sí|Sí|   
 |Auditoría básica|Sí|Sí|Sí|Sí| 
 |Auditoría específica|Sí|Sí|Sí|Sí| 
-|Cifrado de base de datos transparente|Sí|No|No|No|   
+|Cifrado de base de datos transparente|Sí|Sí|No|No|   
 |Roles definidos por el usuario|Sí|Sí|Sí|Sí| 
 |Bases de datos independientes|Sí|Sí|Sí|Sí| 
 |Cifrado para copias de seguridad|Sí|Sí|No|No|  
@@ -227,7 +227,6 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
 | &nbsp; | Alertas |
 | &nbsp; | Copia de seguridad administrada |
-| &nbsp; | Administración de varios servidores con MSX/TSX |
 | **Alta disponibilidad** | Creación de reflejo de la base de datos  |
 | **Seguridad** | Administración extensible de claves |
 | &nbsp; | Autenticación de AD para servidores vinculados | 

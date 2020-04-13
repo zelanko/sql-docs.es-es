@@ -2,11 +2,11 @@
 title: Estructura SSVARIANT | Microsoft Docs
 description: Estructura SSVARIANT en OLE DB Driver for SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 06/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: connectivity
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 09ff4af7026ce75a8668db22910e550dc0c72857
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0583e1cdbf7f1e336698a794bef29f804a053318
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67995168"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219254"
 ---
 # <a name="ssvariant-structure"></a>Estructura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,6 +79,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |BinaryVal|No hay indicador de tipo OLE DB correspondiente.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Admite los tipos de datos **binary** y **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Incluye los miembros siguientes:<br /><br /> *sActualLength* (**SHORT**) especifica la longitud real de los datos a los que apunta *prgbBinaryVal*.<br /><br /> *sMaxLength* (**SHORT**) especifica la longitud máxima de los datos a los que apunta *prgbBinaryVal*.<br /><br /> *prgbBinaryVal* (**BYTE** \*) Puntero a los datos binarios.<br /><br /> Miembro no usado: *dwReserved*.|  
 |TipoDesconocido|No se usa|No se usa|No se usa|No se usa|  
 |BLOBType|No se usa|No se usa|No se usa|No se usa|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="see-also"></a>Consulte también  
  [Tipos de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  

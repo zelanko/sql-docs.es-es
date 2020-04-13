@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287339"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664462"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
 
@@ -96,7 +96,7 @@ Estos roles de base de datos solo existen en la base de datos maestra virtual. S
 |**loginmanager** | Puede crear y eliminar inicios de sesión en la base de datos maestra virtual.|
 
 > [!NOTE]
-> La entidad de seguridad a nivel de servidor y el administrador de Azure Active Directory (si está configurado) tienen todos los permisos en [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sin la necesidad de ser miembros de ninguno de los roles. Para más información, consulte [Autorización y autenticación de SQL Database: concesión de acceso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> La entidad de seguridad a nivel de servidor y el administrador de Azure Active Directory (si está configurado) tienen todos los permisos en [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] sin la necesidad de ser miembros de ninguno de los roles. Para más información, consulte [Autorización y autenticación de SQL Database: concesión de acceso](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/) 
   
 ## <a name="msdb-roles"></a>Roles de msdb  
  La base de datos msdb contiene los roles con fines especiales que se muestran en la tabla siguiente.  
@@ -112,18 +112,6 @@ Estos roles de base de datos solo existen en la base de datos maestra virtual. S
 > [!IMPORTANT]  
 >  Los miembros de los roles **db_ssisadmin** y **dc_admin** quizás puedan elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que ejecutan paquetes para usar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin** .  
 
-## <a name="working-with-r-services"></a>Trabajo con R Services  
-
-**Se aplica a:** SQL Server a partir de [!INCLUDE[ssSQLv14_md](../../../includes/sssqlv14-md.md)]   
-
-Si R Services está instalado, hay roles de base de datos adicionales disponibles para administrar paquetes. Para más información, vea [R Package management for SQL Server (Administración de paquetes de R para SQL Server)](../../../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
-|Nombre de rol |Descripción|  
-|-------------|-----------------|
-|**rpkgs-users** |Permite a los usuarios usar cualquier paquete compartido que los miembros del rol rpkgs-shared hayan instalado.|
-|**rpkgs-private** |Proporciona acceso a los paquetes compartidos con los mismos permisos que el rol rpkgs-users. Los miembros de este rol también pueden instalar, quitar y usar paquetes de ámbito privado.|
-|**rpkgs-shared** |Proporciona los mismos permisos que el rol rpkgs-private. Los usuarios que son miembros de este rol también pueden instalar o quitar paquetes compartidos.|
-  
 ## <a name="working-with-database-level-roles"></a>Trabajar con roles de nivel de base de datos  
  En la tabla siguiente se explican los comandos, las vistas y las funciones que se usan para trabajar con los roles de nivel de base de datos.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 64b11563f05347e772d7979c3cb07c9a31f306e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40c91548b4bf106f938f4bce8298a162937e7ffc
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68112879"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664605"
 ---
 # <a name="create-views-over-xml-columns"></a>Crear vistas sobre columnas XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Puede utilizar una columna de tipo **xml** para crear vistas. En el siguiente ejemplo se crea una vista en la que se recupera el valor de una columna de tipo `xml` por medio del método **value()** del tipo de datos **xml** .  
   
 ```  

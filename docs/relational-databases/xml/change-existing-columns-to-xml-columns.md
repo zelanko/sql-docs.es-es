@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 605911ebe60c7467db2792737426cc98ce67b52d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 20d18e12da4738f5af674eb2e90c4344ffa2b535
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113131"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664723"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Cambiar columnas existentes a columnas XML
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 La instrucción ALTER TABLE admite el tipo de datos **xml** . Por ejemplo, puede cambiar cualquier columna de tipo de cadena al tipo de datos **xml** . Tenga en cuenta que, en estos casos, los documentos contenidos en la columna deben tener un formato correcto. Asimismo, si cambia el tipo de la columna de cadena a xml con tipo, los documentos de la columna se validarán con los esquemas XSD especificados.  
   

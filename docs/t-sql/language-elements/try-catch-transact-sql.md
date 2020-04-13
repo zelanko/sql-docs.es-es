@@ -29,12 +29,12 @@ ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ca4bfd07491b25659253ca56eb1c16adb414544b
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68121557"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809838"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,9 +70,14 @@ END CATCH
   
  Una construcción TRY…CATCH no puede abarcar varios lotes. Una construcción TRY…CATCH no puede abarcar varios bloques de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo, una construcción TRY…CATCH no puede abarcar dos bloques BEGIN…END de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], ni puede abarcar una construcción IF…ELSE.  
   
- Si no hay errores en el código incluido en un bloque TRY, cuando la última instrucción de este bloque ha terminado de ejecutarse, el control se transfiere a la instrucción inmediatamente posterior a la instrucción END CATCH asociada. Si hay un error en el código incluido en un bloque TRY, el control se transfiere a la primera instrucción del bloque CATCH asociado. Si la instrucción END CATCH es la última instrucción de un procedimiento almacenado o desencadenador, el control se devuelve a la instrucción que llamó al procedimiento almacenado o activó el desencadenador.  
-  
- Cuando finaliza el código del bloque CATCH, el control se transfiere a la instrucción inmediatamente posterior a la instrucción END CATCH. Los errores capturados por un bloque CATCH no se devuelven a la aplicación que realiza la llamada. Si es necesario devolver cualquier parte de la información sobre el error a la aplicación, debe hacerlo el código del bloque CATCH a través de mecanismos como los conjuntos de resultados SELECT o las instrucciones RAISERROR y PRINT.  
+ Si no hay errores en el código incluido en un bloque TRY, cuando la última instrucción de este bloque ha terminado de ejecutarse, el control se transfiere a la instrucción inmediatamente posterior a la instrucción END CATCH asociada.
+ 
+ Si hay un error en el código incluido en un bloque TRY, el control se transfiere a la primera instrucción del bloque CATCH asociado. Cuando finaliza el código del bloque CATCH, el control se transfiere a la instrucción inmediatamente posterior a la instrucción END CATCH. 
+ 
+ > [!NOTE] 
+ > Si la instrucción END CATCH es la última instrucción de un procedimiento almacenado o desencadenador, el control se devuelve a la instrucción que llamó al procedimiento almacenado o activó el desencadenador. 
+ 
+ Los errores capturados por un bloque CATCH no se devuelven a la aplicación que realiza la llamada. Si es necesario devolver cualquier parte de la información sobre el error a la aplicación, debe hacerlo el código del bloque CATCH a través de mecanismos como los conjuntos de resultados SELECT o las instrucciones RAISERROR y PRINT.  
   
  Las construcciones TRY…CATCH pueden estar anidadas. Un bloque TRY o un bloque CATCH puede contener construcciones TRY…CATCH anidadas. Por ejemplo, un bloque CATCH puede contener una construcción TRY…CATCH insertada para controlar los errores detectados por el código de CATCH.  
   

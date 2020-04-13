@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: 9299e42d4e9defb5695716771a60ea2855729ee7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912411"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219241"
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
@@ -39,7 +39,7 @@ Las siguientes secciones de la documentación de [!INCLUDE[ssNoVersion](../../..
 -   [Procesar resultados (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Ejecutar procedimientos almacenados](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Compatibilidad con columnas dispersas (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
--   [Cifrado SSL](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
+-   [Utilizar el cifrado sin validación](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Parámetros con valores de tabla](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
 -   [UTF-8 y UTF-16 para la API de datos y comandos](https://msdn.microsoft.com/library/ff878241.aspx)
 -   [Utilizar funciones de catálogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  

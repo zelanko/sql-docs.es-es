@@ -1,23 +1,23 @@
 ---
 title: Bibliotecas de conexiones para Microsoft SQL Databases | Microsoft Docs
 description: Proporciona vínculos de descarga para los módulos que permiten la conexión a Microsoft SQL Server y a Azure SQL Database, desde diversos lenguajes de programación de cliente.
-author: RothJa
+author: David-Engel
 ms.prod: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.custom: ''
 ms.topic: article
-ms.date: 03/05/2020
-ms.author: JRoth
-ms.openlocfilehash: 88fbd0e3fd01492b8e7d920eb132196f8a005478
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 03/06/2020
+ms.author: v-daenge
+ms.openlocfilehash: a60c1314164ddc6b662914d828e4bf5973f38d2f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79434122"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219384"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Módulos de conexión para las bases de datos SQL de Microsoft
 
-En este artículo se proporcionan vínculos de descarga a módulos de conexión o *controladores* que los programas cliente pueden usar para interactuar con [Microsoft SQL Server](../relational-databases/database-features.md) y con su gemelo en la nube, [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Hay controladores disponibles para diversos lenguajes de programación, que se ejecutan en los siguientes sistemas operativos:
+En este artículo se proporcionan vínculos de descarga a módulos de conexión o *controladores* que los programas cliente pueden usar para interactuar con [Microsoft SQL Server](../relational-databases/database-features.md) y con su gemelo en la nube, [Azure SQL Database](/azure/sql-database/). Hay controladores disponibles para diversos lenguajes de programación, que se ejecutan en los siguientes sistemas operativos:
 
 - Linux
 - macOS
@@ -44,7 +44,7 @@ En el presente artículo se dedican secciones independientes para estos dos tipo
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, instrucciones de instalación](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Descargar ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Controlador de Ruby, instrucciones de instalación](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Página de descarga de Ruby](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
@@ -60,7 +60,7 @@ En la tabla siguiente se muestran ejemplos de marcos de asignación relacional d
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 

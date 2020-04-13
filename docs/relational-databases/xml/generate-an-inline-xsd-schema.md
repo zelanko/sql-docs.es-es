@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7b3fe9adcbbba14f4e23da33911c6dcbeaccf70c
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943158"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665321"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generar un esquema XSD insertado
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En una cláusula FOR XML, se puede solicitar que una consulta devuelva un esquema insertado con los resultados de la consulta. Si se desea un esquema XDR, se utiliza la palabra clave XMLDATA en la cláusula FOR XML. Si se desea un esquema XSD, se utiliza la palabra clave XMLSCHEMA.  
   
  En este tema se describe la palabra clave XMLSCHEMA y se explica la estructura del esquema XSD insertado resultante. A continuación se indican las limitaciones que existen al solicitar esquemas insertados:  

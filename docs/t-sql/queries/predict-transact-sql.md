@@ -17,17 +17,17 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5874c8714706e760f40c1862d18b94b3c28952b
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907257"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664421"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Genera un valor de predicción o puntuaciones basadas en un modelo almacenado. Para obtener más información, vea [Puntuación nativa mediante la función PREDICT de T-SQL](../../advanced-analytics/sql-native-scoring.md).
+Genera un valor de predicción o puntuaciones basadas en un modelo almacenado. Para obtener más información, vea [Puntuación nativa mediante la función PREDICT de T-SQL](../../machine-learning/sql-native-scoring.md).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -98,7 +98,7 @@ No es necesario instalar R, Python u otro lenguaje de aprendizaje automático en
 
 ### <a name="supported-algorithms"></a>Algoritmos admitidos
 
-El modelo que se use se debe haber creado mediante uno de los algoritmos admitidos del paquete RevoScaleR. Para obtener una lista de los modelos admitidos actualmente, vea [Puntuación en tiempo real](../../advanced-analytics/real-time-scoring.md).
+El modelo que se use se debe haber creado mediante uno de los algoritmos admitidos del paquete RevoScaleR. Para obtener una lista de los modelos admitidos actualmente, vea [Puntuación en tiempo real](../../machine-learning/real-time-scoring.md).
 
 ### <a name="permissions"></a>Permisos
 
@@ -182,4 +182,4 @@ WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Puntuación nativa mediante la función PREDICT de T-SQL](../../advanced-analytics/sql-native-scoring.md)
+- [Puntuación nativa mediante la función PREDICT de T-SQL](../../machine-learning/sql-native-scoring.md)

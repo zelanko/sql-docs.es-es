@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9dcfe0dd5dea972145c35ddce9b75b1fb009ccb9
+ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006815"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80664530"
 ---
 # <a name="example-querying-xmltype-columns"></a>Ejemplo: Consultar columnas de tipo XML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La consulta siguiente incluye columnas de tipo **xml** . La consulta recupera el identificador, el nombre y los pasos de fabricación del modelo de producto en la primera ubicación de la columna `Instructions` de tipo **xml** .  
   
 ## <a name="example"></a>Ejemplo  

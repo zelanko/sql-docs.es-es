@@ -1,7 +1,5 @@
 ---
 title: Conectar al servidor (motor de base de datos)
-ms.custom: seo-lt-2019
-ms.date: 08/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,24 +15,30 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 396d9c1094d496289540804baa07c959fe5c3eef
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.custom: seo-lt-2019
+ms.date: 04/07/2020
+ms.openlocfilehash: 49bc9ee786c814da1322e9f44c1b80bf7bc63b23
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531203"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809697"
 ---
 # <a name="connect-to-server-database-engine"></a>Conectar al servidor (motor de base de datos)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. En la mayoría de los casos, para conectarse, puede escribir el nombre del servidor de base de datos en el cuadro **Nombre del servidor** y hacer clic en **Conectar**. Si se está conectando con una instancia con nombre, use el nombre del equipo seguido de una barra inversa y, después, el nombre de la instancia. Por ejemplo, `mycomputer\myinstance`. Si se está conectando a [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], use el nombre del equipo seguido de **\sqlexpress**.  
+Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. En la mayoría de los casos, para conectarse, puede escribir el nombre del servidor de base de datos en el cuadro **Nombre del servidor** y hacer clic en **Conectar**. Si se está conectando con una instancia con nombre, use el nombre del equipo seguido de una barra inversa y, después, el nombre de la instancia. Por ejemplo, `mycomputer\myinstance`. Si se está conectando a [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], use el nombre del equipo seguido de **\sqlexpress**.
   
-Hay diversos factores que pueden afectar a la capacidad de conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener ayuda, vea los recursos siguientes:  
+Hay diversos factores que pueden afectar a la capacidad de conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener ayuda, vea los recursos siguientes:
+
 - [Lección 1 del tutorial: Conexión al motor de base de datos](../../relational-databases/lesson-1-connecting-to-the-database-engine.md)  
+
 - [Solucionar problemas de conexión al motor de base de datos de SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)  
+
 - [Solving Connectivity errors to SQL Server](https://support.microsoft.com/help/4009936/solving-connectivity-errors-to-sql-server) (Solución de problemas de conectividad en SQL Server)   
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>Opciones
+
 **Tipo de servidor**  
 Al registrar un servidor desde el Explorador de objetos, seleccione el tipo de servidor al que se conectará: [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. El resto del cuadro de diálogo muestra simplemente las opciones que se aplican al tipo de servidor seleccionado. Cuando se registra un servidor desde Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el componente Servidores registrados. Para registrar un tipo de servidor distinto, seleccione [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssEW](../../includes/ssew-md.md)]o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde la barra de herramientas Servidores registrados antes de comenzar a registrar un nuevo servidor.  
   
@@ -43,13 +47,13 @@ Seleccione la instancia de servidor a la que va a conectarse. De forma predeterm
   
 > [!NOTE]  
 > Para conectarse a una instancia de usuarios activos de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] , use el protocolo Canalizaciones con nombre especificando el nombre de canalización, como `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. Para obtener más información, consulte la documentación de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] .  
+
 > [!NOTE]  
 > Las conexiones normalmente se conservan en el historial "Usados recientemente". Para quitar las entradas de los elementos usados recientemente, simplemente haga clic en el control de cuadro combinado **Nombre del servidor**, seleccione el nombre del servidor para quitar y, a continuación, presione la tecla **SUPR**.  
-   
+
 **Autenticación**  
 La versión actual de SSMS ofrece cinco modos de autenticación al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Si el cuadro de diálogo de autenticación no coincide con la lista siguiente, descargue la versión más reciente de SSMS desde [Descarga de SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 
-  
 > **Autenticación de Windows**  
 > [!INCLUDE[msCoName](../../includes/msconame_md.md)] El modo de autenticación de Windows permite al usuario conectarse mediante una cuenta de usuario de Windows.  
 > 
@@ -71,12 +75,14 @@ El nombre de usuario de Windows con el que se va a conectar. Esta opción solo e
 **Inicio de sesión**  
 Escriba el inicio de sesión con el que va a conectarse. Esta opción solo está disponible si se ha seleccionado Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Autenticación de contraseña de Active Directory para conectarse.  
   
+> [!NOTE]  
+> Las conexiones normalmente se conservan en el historial "Usados recientemente". Para quitar las entradas de los elementos usados recientemente, simplemente haga clic en el control de cuadro combinado **Nombre del servidor**, seleccione el nombre del servidor para quitar y, a continuación, presione la tecla **SUPR**. Esto se incluyó por primera vez con SSMS 18.5.
+
 **Contraseña**  
 Escriba la contraseña del inicio de sesión. Esta opción solo se puede editar si se ha seleccionado Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Autenticación de contraseña de Active Directory para conectarse.  
-  
+
 **Conexión**  
-Haga clic para conectar con el servidor.  
-  
+Haga clic para conectar con el servidor.
+
 **Opciones**  
-Haga clic para mostrar las pestañas **Propiedades de conexión** y **Parámetros de conexión adicionales**.  
-  
+Haga clic para mostrar las pestañas **Propiedades de conexión** y **Parámetros de conexión adicionales**.

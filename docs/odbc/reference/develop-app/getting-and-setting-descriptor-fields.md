@@ -1,5 +1,5 @@
 ---
-title: Obtener y establecer los campos de descriptor | Microsoft Docs
+title: Obtención y configuración de campos de descriptor ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 930a062477fa1459413ea98073d3ca13a574a82e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 783dc26316032dd8441b72fea04d2c03596e791e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139062"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305546"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>Obtener y establecer los campos de Descriptor
-En esta sección se describen los métodos que una aplicación puede utilizar para recuperar o establecer los valores en los campos de descriptor.  
+En esta sección se describen los métodos que una aplicación puede utilizar para recuperar o establecer los valores de los campos descriptores.  
   
  Esta sección contiene los temas siguientes.  
   

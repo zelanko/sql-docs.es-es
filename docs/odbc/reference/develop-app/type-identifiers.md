@@ -1,5 +1,5 @@
 ---
-title: Identificadores de tipo | Microsoft Docs
+title: Identificadores de tipo ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - identifiers [ODBC], type
 - type identifiers [ODBC], about type identifiers
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79aa4de5d722208195477f7ffef53cac6c61a2de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a274a19eaa0a2fdf98bcaa9ef42406ee8a6b6461
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093022"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306436"
 ---
 # <a name="type-identifiers"></a>Identificadores de tipo
-Para describir los tipos de datos de SQL y C, ODBC define dos conjuntos de *identificadores de tipo*. Un identificador de tipo describe el tipo de una columna de SQL o un búfer de C. Es un valor **#define** y normalmente se pasa como argumento de función o se devuelve en metadatos.  
+Para describir los tipos de datos SQL y C, ODBC define dos conjuntos de identificadores de *tipo.* Un identificador de tipo describe el tipo de una columna SQL o un búfer de C. Es un valor **#define** y generalmente se pasa como un argumento de función o se devuelve en metadatos.  
   
- Por ejemplo, la siguiente llamada a **SQLBindParameter** enlaza una variable de tipo SQL_DATE_STRUCT a un parámetro de fecha en una instrucción SQL. El identificador de tipo de C SQL_C_TYPE_DATE especifica el tipo de la variable de *fecha* y el identificador de tipo de SQL SQL_TYPE_DATE especifica el tipo del parámetro dinámico.  
+ Por ejemplo, la siguiente llamada a **SQLBindParameter** enlaza una variable de tipo SQL_DATE_STRUCT a un parámetro date en una instrucción SQL. El identificador de tipo C SQL_C_TYPE_DATE especifica el tipo de la variable *Date* y el identificador de tipo SQL SQL_TYPE_DATE especifica el tipo del parámetro dinámico.  
   
 ```  
 SQL_DATE_STRUCT Date;  

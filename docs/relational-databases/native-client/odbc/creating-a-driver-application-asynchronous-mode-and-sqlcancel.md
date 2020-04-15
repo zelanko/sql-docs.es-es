@@ -1,5 +1,5 @@
 ---
-title: Modo asincrónico y SQLCancel | Microsoft Docs
+title: Modo asincrónico y SQLCancel ? Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ODBC applications, asynchronous operations
 - SQL Server Native Client ODBC driver, asynchronous mode
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e49e9cd9fdf9b4aeeaad4480a222914aaeb607e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 014314eebdeabc137f9f1735e899f7d111105ed4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73787780"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303763"
 ---
 # <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Crear una aplicación de controlador: modo asincrónico y SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Cuando la aplicación comprueba que el comando ha finalizado, realiza la misma llamada de función con los mismos parámetros al controlador. Si el controlador aún no ha recibido una respuesta del servidor, devolverá de nuevo SQL_STILL_EXECUTING. La aplicación debe comprobar periódicamente el comando hasta que el código de retorno sea distinto de SQL_STILL_EXECUTING. Cuando la aplicación obtiene otro código de retorno, incluso SQL_ERROR, puede determinar que el comando ha finalizado.  
   
- A veces un comando tarda mucho tiempo en completarse. Si la aplicación necesita cancelar el comando sin esperar una respuesta, puede hacerlo mediante una llamada a **SQLCancel** con el mismo identificador de instrucción que el comando pendiente. Esta es la única vez que se debe usar **SQLCancel** . Algunos programadores usan **SQLCancel** cuando se han procesado de forma parcial a través de un conjunto de resultados y desean cancelar el resto del conjunto de resultados. Se debe usar [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) o [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) para cancelar el resto de un conjunto de resultados pendiente, no **SQLCancel**.  
+ A veces un comando tarda mucho tiempo en completarse. Si la aplicación necesita cancelar el comando sin esperar una respuesta, puede hacerlo llamando a **SQLCancel** con el mismo identificador de instrucción que el comando pendiente. Esta es la única vez que se debe usar **SQLCancel.** Algunos programadores usan **SQLCancel** cuando han procesado parte a través de un conjunto de resultados y desean cancelar el resto del conjunto de resultados. [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) o [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) se deben usar para cancelar el resto de un conjunto de resultados pendiente, no **SQLCancel**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear una aplicación de controlador ODBC de SQL Server Native Client](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  

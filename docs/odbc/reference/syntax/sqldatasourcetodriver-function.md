@@ -1,5 +1,5 @@
 ---
-title: Función SQLDataSourceToDriver | Microsoft Docs
+title: FUNción SQLDataSourceToDriver ( SQLDataSourceToDriver) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ f1_keywords:
 helpviewer_keywords:
 - SQLDataSourceToDriver function [ODBC]
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba5019b15fdbb8bce06f04d5109813b88c40647d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 92df58b76a9a11d0d4ab9821756bff014ecae29a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68104850"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301195"
 ---
 # <a name="sqldatasourcetodriver-function"></a>Función SQLDataSourceToDriver
-**SQLDataSourceToDriver** supportstranslations para controladores ODBC. Las aplicaciones habilitadas para ODBC no llaman a esta función; las aplicaciones solicitan la traducción a través de **SQLSetConnectAttr**. El controlador asociado con el *ConnectionHandle* especificado en **SQLSetConnectAttr** llama al archivo dll especificado para realizar traducciones de todos los datos que fluyen desde el origen de datos al controlador. Se puede especificar un archivo DLL de traducción predeterminado en el archivo de inicialización de ODBC.  
+**SQLDataSourceToDriver** admite traducciones para controladores ODBC. Las aplicaciones habilitadas para ODBC no llaman a esta función; las aplicaciones solicitan la traducción a través de **SQLSetConnectAttr**. El controlador asociado con el *ConnectionHandle* especificado en **SQLSetConnectAttr** llama al archivo DLL especificado para realizar traducciones de todos los datos que fluyen desde el origen de datos al controlador. Se puede especificar un archivo DLL de traducción predeterminado en el archivo de inicialización ODBC.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,64 +48,64 @@ BOOL SQLDataSourceToDriver(
   
 ## <a name="arguments"></a>Argumentos  
  *fOption*  
- Entradas Valor de la opción.  
+ [Entrada] Valor de la opción.  
   
  *fSqlType*  
- Entradas El tipo de datos SQL. Este argumento indica al controlador cómo convertir *rgbValueIn* en un formato aceptable por la aplicación. Para obtener una lista de tipos de datos SQL válidos, vea la sección [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) en el Apéndice D: tipos de datos.  
+ [Entrada] El tipo de datos SQL. Este argumento indica al controlador cómo convertir *rgbValueIn* en un formulario aceptable por la aplicación. Para obtener una lista de tipos de datos SQL válidos, vea la sección Tipos de [datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) en Apéndice D: Tipos de datos.  
   
  *rgbValueIn*  
- Entradas Valor que se va a traducir.  
+ [Entrada] Valor que se va a traducir.  
   
  *cbValueIn*  
- Entradas Longitud de *rgbValueIn*.  
+ [Entrada] Longitud de *rgbValueIn*.  
   
  *rgbValueOut*  
- Genere Resultado de la conversión.  
+ [Salida] Resultado de la traducción.  
   
 > [!NOTE]  
->  La DLL de traducción no termina en NULL este valor.  
+>  El archivo DLL de traducción no termina en null este valor.  
   
  *cbValueOutMax*  
- Entradas Longitud de *rgbValueOut*.  
+ [Entrada] Longitud de *rgbValueOut*.  
   
  *pcbValueOut*  
- Genere El número total de bytes (sin incluir el byte de terminación nula) disponible para devolver en *rgbValueOut*.  
+ [Salida] El número total de bytes (excluyendo el byte de terminación nula) disponiblepara devolver en *rgbValueOut*.  
   
- En el caso de los datos de caracteres o binarios, si es mayor o igual que *cbValueOutMax*, los datos de *rgbValueOut* se truncan en *cbValueOutMax* bytes.  
+ Para los datos binarios o de caracteres, si es mayor o igual que *cbValueOutMax*, los datos de *rgbValueOut* se truncan en bytes *cbValueOutMax.*  
   
- Para el resto de tipos de datos, se omite el valor de *cbValueOutMax* y el archivo dll de traducción supone que el tamaño de *rgbValueOut* es el tamaño del tipo de datos de C predeterminado del tipo de datos de SQL especificado con *fSqlType*.  
+ Para todos los demás tipos de datos, se omite el valor de *cbValueOutMax* y el archivo DLL de traducción supone que el tamaño de *rgbValueOut* es el tamaño del tipo de datos C predeterminado del tipo de datos SQL especificado con *fSqlType*.  
   
- El argumento *pcbValueOut* puede ser un puntero nulo.  
+ El *argumento pcbValueOut* puede ser un puntero nulo.  
   
  *szErrorMsg*  
- Genere Puntero al almacenamiento para un mensaje de error. Se trata de una cadena vacía a menos que se haya producido un error de traducción.  
+ [Salida] Puntero al almacenamiento para un mensaje de error. Se trata de una cadena vacía a menos que se haya producido un error en la traducción.  
   
  *cbErrorMsgMax*  
- Entradas Longitud de *szErrorMsg*.  
+ [Entrada] Longitud de *szErrorMsg*.  
   
  *pcbErrorMsg*  
- Genere Puntero al número total de bytes (sin incluir el byte de terminación nula) disponible para devolver en *szErrorMsg*. Si es mayor o igual que *cbErrorMsg*, los datos de *szErrorMsg* se truncan en *cbErrorMsgMax* menos el carácter de terminación null. El argumento *pcbErrorMsg* puede ser un puntero nulo.  
+ [Salida] Puntero al número total de bytes (excluyendo el byte de terminación nula) disponibles para devolver en *szErrorMsg*. Si esto es mayor o igual que *cbErrorMsg*, los datos de *szErrorMsg* se truncan a *cbErrorMsgMax* menos el carácter de terminación nula. El argumento *pcbErrorMsg* puede ser un puntero nulo.  
   
 ## <a name="returns"></a>Devuelve  
- TRUE si la conversión se realizó correctamente, FALSE si se produjo un error en la traducción.  
+ TRUESi la traducción se realizó correctamente, FALSE si se produjo un error en la traducción.  
   
 ## <a name="comments"></a>Comentarios  
- El controlador llama a **SQLDataSourceToDriver** para traducir ALLDATA (los datos del conjunto de resultados, los nombres de tabla, los recuentos de filas, los mensajes de error, etc.) que pasan desde el origen de datos al controlador. Es posible que la DLL de traducción no traduzca algunos datos, según el tipo de datos y el propósito del archivo DLL de traducción. por ejemplo, un archivo DLL que traduce los datos de caracteres de una página de códigos a otra omite todos los datos numéricos y binarios.  
+ El controlador llama a **SQLDataSourceToDriver** para traducir alldata (datos del conjunto de resultados, nombres de tabla, recuentos de filas, mensajes de error, etc.) pasando del origen de datos al controlador. Es posible que el archivo DLL de traducción no traduzca algunos datos, según el tipo de datos y el propósito de la DLL de traducción; por ejemplo, un archivo DLL que traduce datos de caracteres de una página de códigos a otra omite todos los datos numéricos y binarios.  
   
- El valor de *fOption* se establece en el valor de *vParam* especificado mediante una llamada a **SQLSetConnectAttr** con el atributo SQL_ATTR_TRANSLATE_OPTION. Es un valor de 32 bits que tiene un significado específico para un archivo DLL de traducción determinado. Por ejemplo, podría especificar una traducción determinada del juego de caracteres.  
+ El valor de *fOption* se establece en el valor de *vParam* especificado mediante una llamada a **SQLSetConnectAttr** con el atributo SQL_ATTR_TRANSLATE_OPTION. Es un valor de 32 bits que tiene un significado específico para un archivo DLL de traducción determinado. Por ejemplo, podría especificar una traducción de un determinado juego de caracteres.  
   
- Si se especifica el mismo búfer para *rgbValueIn* y *rgbValueOut*, se llevará a cabo la traducción de los datos en el búfer.  
+ Si se especifica el mismo búfer para *rgbValueIn* y *rgbValueOut*, la traducción de datos en el búfer se realizará en su lugar.  
   
  Aunque *cbValueIn*, *cbValueOutMax*y *pcbValueOut* son del tipo SDWORD, **SQLDataSourceToDriver** no admite necesariamente punteros enormes.  
   
- Si **SQLDataSourceToDriver** devuelve false, es posible que se haya producido un truncamiento de datos durante la traducción. Si *pcbValueOut* (el número de bytes disponibles para devolver en el búfer de salida) es mayor que *cbValueOutMax* (la longitud del búfer de salida), se produce un truncamiento. El controlador debe determinar si el truncamiento es aceptable. Si no se ha producido el truncamiento, el **SQLDataSourceToDriver** devolvió false debido a otro error. En cualquier caso, se devuelve un mensaje de error específico en *szErrorMsg*.  
+ Si **SQLDataSourceToDriver** devuelve FALSE, es posible que se haya producido un truncamiento de datos durante la traducción. Si *pcbValueOut* (el número de bytes disponibles para devolver en el búfer de salida) es mayor que *cbValueOutMax* (la longitud del búfer de salida), se produjo el truncamiento. El controlador debe determinar si el truncamiento era aceptable. Si no se produjo el truncamiento, **el SQLDataSourceToDriver** devolvió FALSE debido a otro error. En cualquier caso, se devuelve un mensaje de error específico en *szErrorMsg*.  
   
- Para obtener más información sobre la traducción de datos, vea [archivos dll de traducción](../../../odbc/reference/develop-app/translation-dlls.md).  
+ Para obtener más información sobre la traducción de datos, vea [DLL de traducción](../../../odbc/reference/develop-app/translation-dlls.md).  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
 |Para información acerca de|Vea|  
 |---------------------------|---------|  
-|Trasladar los datos que se envían al origen de datos|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
-|Devolver el valor de un atributo de conexión|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
+|Traducción de los datos que se envían al origen de datos|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
+|Devolver la configuración de un atributo de conexión|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Establecer un atributo de conexión|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

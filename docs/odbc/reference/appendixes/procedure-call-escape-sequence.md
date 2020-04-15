@@ -1,5 +1,5 @@
 ---
-title: Secuencia de escape de llamada de procedimiento | Microsoft Docs
+title: Secuencia de escape de llamada de procedimiento ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,60 +12,60 @@ helpviewer_keywords:
 - procedure call escape sequence [ODBC]
 - ODBC escape sequences [ODBC], procedure call
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1194efe6a21c456a722ccd4352661c998f0316d9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68100589"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298225"
 ---
 # <a name="procedure-call-escape-sequence"></a>Secuencia de Escape de llamada de procedimiento
-ODBC utiliza secuencias de escape para las llamadas a procedimientos. La sintaxis de esta secuencia de escape es la siguiente:  
+ODBC usa secuencias de escape para las llamadas a procedimientos. La sintaxis de esta secuencia de escape es la siguiente:  
   
- **{**[? =]**Call** *procedure-Name*[**(**[*parámetro*] [, [*parámetro*]]... **)**]**}**  
+ **•** *nombre-procedimiento*de**llamada** [**(***[ parámetro*][,[*parámetro*]]... **)**]**}**  
   
  En la notación BNF, la sintaxis es la siguiente:  
   
- *ODBC-procedure-escape* :: =  
+ *ODBC-procedimiento-escape* ::  
   
- &#124; *ODBC-ESC-Initiator* [? =] Call *procedure ODBC-ESC-Terminator*  
+ &#124; *odbc-esc-iniciador* [?-] llama al *procedimiento ODBC-esc-terminator*  
   
- *procedure* :: = *procedure-Name* &#124; *procedure-Name* (*procedure-parameter-list*)  
+ *procedimiento* ::- *nombre-procedimiento* &#124; *nombre-procedimiento* *(procedimiento-parámetro-lista*)  
   
- *procedure-Identifier* :: = *nombre definido por el usuario*  
+ *procedimiento-identificador* ::- *nombre definido por* el usuario  
   
- *procedure-Name* :: = *procedure-Identifier*  
+ *nombre-procedimiento* ::- *identificador de procedimiento*  
   
- *Nombre del propietario de*&#124;. *procedimiento: identificador*  
+ &#124; *nombre-propietario*. *procedimiento-identificador*  
   
- &#124; el *identificador de procedimiento* del *separador de catálogos de nombre de catálogo*  
+ &#124; *identificador de procedimiento* de separador de catálogo de nombre de *catálogo*  
   
- &#124; *el separador de catálogos de nombre de catálogo* [*Owner-Name*]. *procedimiento: identificador*  
+ &#124; *catalog-name catalog-separator* [*owner-name*]. *procedimiento-identificador*  
   
- (La tercera sintaxis solo es válida si el origen de datos no admite propietarios).  
+ (La tercera sintaxis solo es válida si el origen de datos no admite propietarios.)  
   
- *Owner-Name* :: = *nombre definido por el usuario*  
+ *nombre-propietario* ::- *nombre definido por el usuario*  
   
- *Catalog-Name* :: = *nombre definido por el usuario*  
+ *nombre-catálogo* ::- *nombre definido por* el usuario  
   
- *el separador de catálogo* :: = {*definido por la implementación*}  
+ *separador de catálogos* ::- -*definido por la implementación*?  
   
- (El separador de catálogo se devuelve a través de **SQLGetInfo** con la opción de información de SQL_CATALOG_NAME_SEPARATOR).  
+ (El separador de catálogo se devuelve a través de **SQLGetInfo** con la opción de información SQL_CATALOG_NAME_SEPARATOR.)  
   
- *procedure-parameter-list* :: = *procedure-parámetro*  
+ *procedimiento-parámetro-lista* ::- *parámetro-procedimiento*  
   
- &#124; *procedimiento: Parameter*-Parameter- *List*  
+ &#124; *parámetro de procedimiento*, *procedimiento-parámetro-lista*  
   
- *procedure-Parameter* :: = *parámetro dinámico* &#124; *literal* &#124; *Empty-String*  
+ *parámetro-procedimiento* ::- *parámetro dinámico* &#124; *literal* &#124; *cadena vacía*  
   
- *Empty-String* :: =  
+ *cadena vacía* ::  
   
- *ODBC-ESC-Initiator* :: = {  
+ *ODBC-esc-iniciador* ::-  
   
- *ODBC-ESC-Terminator* :: =}  
+ *ODBC-esc-terminator* ::-  
   
- (Si un parámetro de procedimiento es una cadena vacía, el procedimiento usa el valor predeterminado para ese parámetro).  
+ (Si un parámetro de procedimiento es una cadena vacía, el procedimiento utiliza el valor predeterminado para ese parámetro.)  
   
  Para determinar si el origen de datos admite procedimientos y el controlador admite la sintaxis de invocación de procedimiento ODBC, una aplicación puede llamar a **SQLGetInfo** con el tipo de información SQL_PROCEDURES.

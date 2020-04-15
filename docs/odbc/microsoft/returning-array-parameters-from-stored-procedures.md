@@ -1,5 +1,5 @@
 ---
-title: Devolver parámetros de matriz de procedimientos almacenados | Microsoft Docs
+title: Devolviendo los parámetros de la matriz de los procedimientos almacenados Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bc998dadc0e0c4a4bfe054bfd1d40296bc176393
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987973"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292865"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Devolver los parámetros de matriz de los procedimientos almacenados
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se eliminará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   
- En Oracle 7,3, no hay ninguna manera de tener acceso a un tipo de registro de PL/SQL excepto desde un programa de PL/SQL. Si un procedimiento o función empaquetado tiene un argumento formal definido como tipo de registro de PL/SQL, no es posible enlazar ese argumento formal como parámetro. Use el tipo de tabla PL/SQL de Microsoft ODBC driver for Oracle para invocar parámetros de matriz desde procedimientos que contengan las secuencias de escape correctas.  
+ En Oracle 7.3, no hay forma de acceder a un tipo de registro PL/SQL excepto desde un programa PL/SQL. Si un procedimiento o función empaquetado tiene un argumento formal definido como un tipo de registro PL/SQL, no es posible enlazar ese argumento formal como parámetro. Utilice el tipo PL/SQL TABLE en el controlador ODBC de Microsoft para Oracle para invocar parámetros de matriz de procedimientos que contienen las secuencias de escape correctas.  
   
- Para invocar el procedimiento, use la sintaxis siguiente:  
+ Para invocar el procedimiento, utilice la sintaxis siguiente:  
   
 ```  
 {call  <package-name>.<proc-or-func>;  
@@ -35,13 +35,13 @@ ms.locfileid: "67987973"
 ```  
   
 > [!NOTE]  
->  El \<parámetro Max-Records-solicited> debe ser mayor o igual que el número de filas presentes en el conjunto de resultados. De lo contrario, Oracle devuelve un error que el controlador pasa al usuario.  
+>  El \<parámetro de> max-records-requested debe ser mayor o igual que el número de filas presentes en el conjunto de resultados. De lo contrario, Oracle devuelve un error que el controlador pasa al usuario.  
 >   
->  Los registros PL/SQL no se pueden usar como parámetros de matriz. Cada parámetro de matriz puede representar solo una columna de una tabla de base de datos.  
+>  Los registros PL/SQL no se pueden utilizar como parámetros de matriz. Cada parámetro de matriz solo puede representar una columna de una tabla de base de datos.  
   
  En el ejemplo siguiente se define un paquete que contiene dos procedimientos que devuelven conjuntos de resultados diferentes y, a continuación, proporciona dos maneras de devolver conjuntos de resultados del paquete.  
   
-## <a name="package-definition"></a>Definición de paquete:  
+## <a name="package-definition"></a>Definición del paquete:  
   
 ```  
 CREATE OR REPLACE PACKAGE SimplePackage AS  
@@ -107,13 +107,13 @@ END SimplePackage;
   
 #### <a name="to-invoke-procedure-proc1"></a>Para invocar el procedimiento PROC1  
   
-1.  Devolver todas las columnas en un único conjunto de resultados:  
+1.  Devuelve todas las columnas de un único conjunto de resultados:  
   
     ```  
     {call SimplePackage.Proc1( {resultset  3, o_id , ao_course, ao_dept  } ) }  
     ```  
   
-2.  Devolver cada columna como un conjunto de resultados único:  
+2.  Devuelve cada columna como un único conjunto de resultados:  
   
     ```  
     {call SimplePackage.Proc1( {resultset 3, o_id},  {resultset 3, ao_course}, {resultset 3, ao_dept} ) }  
@@ -123,19 +123,19 @@ END SimplePackage;
   
 #### <a name="to-invoke-procedure-proc2"></a>Para invocar el procedimiento PROC2  
   
-1.  Devolver todas las columnas en un único conjunto de resultados:  
+1.  Devuelve todas las columnas de un único conjunto de resultados:  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset  5, ao_Arg2, ao_Arg3} ) }  
     ```  
   
-2.  Devolver cada columna como un conjunto de resultados único:  
+2.  Devuelve cada columna como un único conjunto de resultados:  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- Asegúrese de que las aplicaciones capturan todos los conjuntos de resultados mediante la API de [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) . Para obtener más información, consulte la *Referencia del programador de ODBC*.  
+ Asegúrese de que las aplicaciones capturan todos los conjuntos de resultados mediante la API [SQLMoreResults.](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) Para obtener más información, consulte la *referencia del programador ODBC*.  
   
 > [!NOTE]  
->  En el controlador ODBC para Oracle versión 2,0, las funciones de Oracle que devuelven matrices PL/SQL no se pueden usar para devolver conjuntos de resultados.
+>  En el controlador ODBC para Oracle versión 2.0, las funciones de Oracle que devuelven matrices PL/SQL no se pueden utilizar para devolver conjuntos de resultados.

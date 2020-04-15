@@ -1,5 +1,5 @@
 ---
-title: Protocolo de flujo de datos estándar | Microsoft Docs
+title: Protocolo de flujo de datos estándar (Data Stream Protocol) Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2018
 ms.prod: sql
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - standardizing database access [ODBC], data stream protocol
 - standard data stream protocol [ODBC]
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 996121d437ac3ad93f05b758bd44f30d3dac6151
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0e959170ea5df50786451acb6a574ea2765298af
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081850"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280214"
 ---
 # <a name="standard-data-stream-protocol"></a>Protocolo de flujo de datos estándar
-Un protocolo de flujo de datos estándar es una manera de tener acceso a los datos de DBMS heterogéneos. De hecho, ya existe un protocolo de flujo de datos estándar:
+Un protocolo de flujo de datos estándar es una forma de acceder a los datos en DBMS heterogéneos. De hecho, ya existe un protocolo de flujo de datos estándar:
 
-- Estándar de acceso remoto a base de datos (RDA) de ANSI/ISO: [ISO/IEC 9579:2000](https://www.iso.org/iso/catalogue_detail.htm?csnumber=30615). Aunque el sistema ANSI/ISO muestra Promise, no se implementa ampliamente en la actualidad.
+- El estándar ANSI/ISO Remote Database Access (RDA): [ISO/IEC 9579:2000](https://www.iso.org/iso/catalogue_detail.htm?csnumber=30615). Aunque el sistema ANSI/ISO muestra una promesa, no se implementa ampliamente hoy en día.

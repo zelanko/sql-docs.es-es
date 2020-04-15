@@ -1,5 +1,5 @@
 ---
-title: Obtener autenticación mutua de Kerberos | Microsoft Docs
+title: Obtener autenticación Kerberos mutua ? Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5d222f54b3c19d0deaeab4a370ded226856f2246
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73782806"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301145"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Obtener la autenticación mutua de Kerberos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73782806"
   
  No funcionará con ninguna versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obtener más información, consulte nombre de entidad de seguridad de [servicio &#40;SPN&#41; compatibilidad en conexiones de cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Para obtener más información, consulte [Nombre de entidad de seguridad de servicio &#40;compatibilidad con&#41; SPN en conexiones](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)de cliente .  
   
 ## <a name="example"></a>Ejemplo  
  Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  

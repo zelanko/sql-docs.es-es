@@ -1,5 +1,5 @@
 ---
-title: Modificar un origen de datos de Visual FoxPro | Microsoft Docs
+title: Modificación de un origen de datos de Visual FoxPro Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ helpviewer_keywords:
 - Visual FoxPro data source [ODBC], changing
 - editing data sources [ODBC], Visual FoxPro
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68ed273989d738a768d8e5fffd116ea630d8043d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fc9ceb3bd250a25ce6d0166c55c43827758ea8ac
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045056"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284805"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Modificar un origen de datos de Visual FoxPro
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Para modificar un origen de datos de Visual FoxPro  
   
-1.  En los equipos que ejecutan Windows 2000, abra el panel de control de Windows y haga doble clic en herramientas administrativas.  
+1.  En equipos que ejecutan Windows 2000, abra el Panel de control de Windows y haga doble clic en Herramientas administrativas.  
   
-2.  Haga doble clic en orígenes de datos (ODBC) para abrir el cuadro de diálogo Administrador de orígenes de datos ODBC. Este icono está disponible después de instalar el controlador ODBC de Visual FoxPro o cualquier software de controlador ODBC.  
+2.  Haga doble clic en Orígenes de datos (ODBC) para abrir el cuadro de diálogo Administrador de orígenes de datos ODBC. Este icono está disponible después de instalar el controlador ODBC de Visual FoxPro o cualquier software de controlador ODBC.  
   
     > [!NOTE]  
-    >  Si está ejecutando una versión anterior de Windows, abra el panel de control de Windows y haga doble clic en ODBC de 32 bits para abrir el cuadro de diálogo Administrador de orígenes de datos ODBC.  
+    >  Si está ejecutando una versión anterior de Windows, abra el Panel de control de Windows y haga doble clic en ODBC u ODBC de 32 bits para abrir el cuadro de diálogo Administrador de orígenes de datos ODBC.  
   
-3.  En la pestaña DSN de usuario o DSN de sistema, seleccione el nombre del origen de datos que desea modificar y haga clic en configurar.  
+3.  En la pestaña DSN de usuario o DSN del sistema, seleccione el nombre del origen de datos que desea modificar y haga clic en Configurar.  
   
-4.  En el [cuadro de diálogo Configuración de ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), seleccione y cambie los elementos que desea modificar y, a continuación, haga clic en Aceptar.  
+4.  En el cuadro de diálogo Configuración de [ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), seleccione y cambie los elementos que desea modificar y, a continuación, haga clic en Aceptar.  
   
 5.  Haga clic en Aceptar para guardar los cambios y cerrar el cuadro de diálogo Administrador de orígenes de datos ODBC.  
   
- Los cambios surtirán efecto la próxima vez que tenga acceso al origen de datos desde la aplicación.
+ Los cambios surtirán efecto la próxima vez que acceda al origen de datos desde la aplicación.

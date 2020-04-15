@@ -1,5 +1,5 @@
 ---
-title: Agregar una columna a una tabla SQL Server | Microsoft Docs
+title: Adición de una columna a una tabla de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, columns
 - adding columns
 ms.assetid: 22bae18a-bc9d-4617-8660-ed8b17a468d4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45048935e9d636a95af1c77eb8f7a88153d22106
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1b848875ba70c0b31e29de6cb54852c403bd109a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73788510"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283133"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Agregar una columna a una tabla de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone la función **ITableDefinition:: addColumn** . Esto permite que los consumidores agreguen una columna a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client expone la función **ITableDefinition::AddColumn.** Esto permite que los consumidores agreguen una columna a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Al agregar una columna a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla, el consumidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del proveedor de OLE DB de Native Client está restringido de la siguiente manera:  
+ Al agregar una columna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una tabla, el consumidor del proveedor OLE DB de Native Client está restringido de la siguiente manera:  
   
 -   Si DBPROP_COL_AUTOINCREMENT es VARIANT_TRUE, DBPROP_COL_NULLABLE debe ser VARIANT_FALSE.  
   
--   Si la columna se define mediante el tipo de datos timestamp[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** de **, DBPROP_COL_NULLABLE debe ser VARIANT_FALSE.  
+-   Si la columna se define mediante el tipo de datos  **timestamp** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], DBPROP_COL_NULLABLE debe ser VARIANT_FALSE.  
   
 -   Para cualquier otra definición de columna, DBPROP_COL_NULLABLE debe ser VARIANT_TRUE.  
   

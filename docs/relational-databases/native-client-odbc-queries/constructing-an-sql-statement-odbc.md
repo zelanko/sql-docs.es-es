@@ -1,5 +1,5 @@
 ---
-title: Construir una instrucción SQL (ODBC) | Microsoft Docs
+title: Construcción de una instrucción SQL (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - statements [ODBC], constructing
 - ODBC applications, statements
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96e3c04692360bd13010fe40063b0e761d60b2ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eab0db859bbecea43d19b012a56b2e491b4ecfcf
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779980"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81291518"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Crear una instrucción SQL (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73779980"
   
      Instrucciones SQL creadas en tiempo de ejecución que permiten al usuario personalizar la instrucción utilizando cláusulas comunes, como SELECT, WHERE y ORDER BY. Entre este tipo de instrucciones se incluyen las consultas ad hoc escritas por usuarios.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de cliente analiza las instrucciones SQL solo para la [!INCLUDE[ssDE](../../includes/ssde-md.md)]sintaxis de ODBC e ISO no admitida directamente por, que el controlador transforma [!INCLUDE[tsql](../../includes/tsql-md.md)]en. El resto de la sintaxis SQL se pasa a [!INCLUDE[ssDE](../../includes/ssde-md.md)] sin modificar, donde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinará si se trata de código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Este enfoque ofrece dos ventajas:  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de cliente analiza las instrucciones SQL solo para [!INCLUDE[ssDE](../../includes/ssde-md.md)]la sintaxis ODBC [!INCLUDE[tsql](../../includes/tsql-md.md)]e ISO no admitida directamente por , que el controlador transforma en . El resto de la sintaxis SQL se pasa a [!INCLUDE[ssDE](../../includes/ssde-md.md)] sin modificar, donde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinará si se trata de código [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido. Este enfoque ofrece dos ventajas:  
   
 -   Reducción de la sobrecarga  
   
@@ -43,11 +43,11 @@ ms.locfileid: "73779980"
   
 -   Flexibilidad  
   
-     Los programadores pueden personalizar la portabilidad de sus aplicaciones. Para mejorar la portabilidad en distintas bases de datos, utilice principalmente la sintaxis ODBC e ISO. Para utilizar mejoras específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] adecuada. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la [!INCLUDE[tsql](../../includes/tsql-md.md)] sintaxis completa, por lo que las aplicaciones basadas en ODBC pueden aprovechar todas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las características de.  
+     Los programadores pueden personalizar la portabilidad de sus aplicaciones. Para mejorar la portabilidad en distintas bases de datos, utilice principalmente la sintaxis ODBC e ISO. Para utilizar mejoras específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] adecuada. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de [!INCLUDE[tsql](../../includes/tsql-md.md)] Native Client admite la sintaxis completa para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que las aplicaciones basadas en ODBC puedan aprovechar todas las características de .  
   
  La lista de columnas de una instrucción SELECT solo debe incluir las columnas necesarias para realizar la tarea actual. Esto no solo hace que se reduzca la cantidad de datos enviados a través de la red, sino que también reduce el efecto de los cambios de la base de datos en la aplicación. Si una aplicación no hace referencia a una columna de una tabla, cualquier cambio que se realice en dicha columna no afectará a la aplicación.  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejecutar consultas &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Ejecución de consultas &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

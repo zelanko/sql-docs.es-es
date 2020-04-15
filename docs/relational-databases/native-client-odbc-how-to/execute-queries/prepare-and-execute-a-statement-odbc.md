@@ -1,5 +1,5 @@
 ---
-title: Preparar y ejecutar una instrucción (ODBC) | Microsoft Docs
+title: Preparar y ejecutar una instrucción (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eaf7e3518f369639ba3d2eb854a103ff839276c7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781386"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294164"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparar y ejecutar una instrucción (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "73781386"
   
 3.  Puede llamar a [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) para determinar el número de parámetros de la instrucción preparada.  
   
-4.  Opcionalmente, para cada parámetro de la instrucción preparada, llame a SQLDescribeParam para obtener información sobre los parámetros.  
+4.  Opcionalmente, para cada parámetro de la instrucción preparada, llame a SQLDescribeParam para obtener información de parámetros.  
   
 5.  Para cada marcador de parámetro:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "73781386"
   
 3.  Llame a SQLPrepare para preparar la instrucción.  
   
-4.  Para cada marcador de parámetro, llame a SQLBindParameter para que el valor de datos de parámetro y el puntero de longitud de datos apunten a sus variables en el primer elemento de la matriz de estructuras asignada en el paso 1. Si el parámetro es un parámetro de datos en ejecución, configúrelo.  
+4.  Para cada marcador de parámetro, llame a SQLBindParameter para apuntar el valor de datos del parámetro y el puntero de longitud de datos a sus variables en el primer elemento de la matriz de estructuras asignadas en el paso 1. Si el parámetro es un parámetro de datos en ejecución, configúrelo.  
   
 5.  Para cada ejecución de una instrucción preparada:  
   
@@ -114,6 +114,6 @@ ms.locfileid: "73781386"
     -   Si se usan parámetros de entrada de datos en ejecución, SQLExecute devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo SQLParamData y SQLPutData.  
   
 ## <a name="see-also"></a>Consulte también  
- [Temas de procedimientos de ejecución de consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Ejecución de temas de procedimientos de consultas &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLManageDataSources | Microsoft Docs
+title: SQLManageDataSources ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - SQLManageDataSources [ODBC]
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3b572a861af3479e1543be9fda9598cc7e25d36c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68018965"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290223"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformidad**  
- Versión introducida: ODBC 2,0  
+ Versión introducida: ODBC 2.0  
   
  **Resumen**  
  **SQLManageDataSources** muestra un cuadro de diálogo con el que los usuarios pueden configurar, agregar y eliminar orígenes de datos en la información del sistema.  
@@ -42,41 +42,41 @@ BOOL SQLManageDataSources(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *identificador*  
- Entradas Identificador de la ventana primaria.  
+ *Hwnd*  
+ [Entrada] Identificador de ventana principal.  
   
 ## <a name="returns"></a>Devuelve  
- **SQLManageDataSources** devuelve false si *hWnd* no es un identificador de ventana válido. De lo contrario, devuelve TRUE.  
+ **SQLManageDataSources** devuelve FALSE si *hwnd* no es un identificador de ventana válido. De lo contrario, devuelve TRUE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLManageDataSources** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLManageDataSources** devuelve FALSE, se puede obtener un valor * \*pfErrorCode* asociado llamando a **SQLInstallerError**. En la tabla * \** siguiente se enumeran los valores pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se produjo un error en el que no había ningún error específico del instalador.|  
-|ODBC_ERROR_REQUEST_FAILED|Error en la *solicitud*|Error en la llamada a **ConfigDSN** .|  
-|ODBC_ERROR_INVALID__HWND|Identificador de ventana no válido|El argumento *hWnd* no era válido o era null.|  
-|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se ha producido un error para el que no se ha producido ningún error específico del instalador.|  
+|ODBC_ERROR_REQUEST_FAILED|*Solicitud* fallida|Error en la llamada a **ConfigDSN.**|  
+|ODBC_ERROR_INVALID__HWND|Mango de ventana no válido|El *hwnd* argumento no era válido o NULL.|  
+|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a la falta de memoria.|  
   
 ## <a name="managing-data-sources"></a>Administrar orígenes de datos  
- **SQLManageDataSources** inicialmente muestra el cuadro de diálogo **Administrador de orígenes de datos ODBC** , tal como se muestra en la siguiente ilustración.  
+ **SQLManageDataSources** muestra inicialmente el cuadro de diálogo Administrador de orígenes de **datos ODBC,** como se muestra en la siguiente ilustración.  
   
  ![Cuadro de diálogo Administrador de ODBC de origen de datos](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- En el cuadro de diálogo se muestran los orígenes de datos enumerados en la información del sistema en tres pestañas: **DSN de usuario**, **DSN de sistema**y DSN de **archivo**. Si el usuario hace doble clic en un origen de datos o selecciona un origen de datos y hace clic en **configurar**, **SQLManageDataSources** llama a **ConfigDSN** en el archivo DLL de instalación con la opción ODBC_CONFIG_DSN.  
+ El cuadro de diálogo muestra los orígenes de datos enumerados en la información del sistema en tres fichas: **DSN de**usuario , **DSN**de sistema y **DSN**de archivo . Si el usuario hace doble clic en un origen de datos o selecciona un origen de datos y hace clic en **Configurar**, **SQLManageDataSources** llama a **ConfigDSN** en el archivo DLL de instalación con la opción ODBC_CONFIG_DSN.  
   
- Si el usuario hace clic en **Agregar**, **SQLManageDataSources** muestra el cuadro de diálogo **crear nuevo origen de datos** , que se muestra en la siguiente ilustración.  
+ Si el usuario hace clic en **Agregar**, **SQLManageDataSources** muestra el cuadro de diálogo Crear nuevo origen de **datos,** que se muestra en la siguiente ilustración.  
   
  ![Cuadro de diálogo Crear un nuevo origen de datos](../../../odbc/reference/syntax/media/ch23f.gif "CH23F")  
   
- El cuadro de diálogo muestra una lista de los controladores instalados. Si el usuario hace doble clic en un controlador o selecciona un controlador y hace clic en **Aceptar**, **SQLManageDataSources** llama a **ConfigDSN** en el archivo dll de instalación y le pasa la opción ODBC_ADD_DSN.  
+ El cuadro de diálogo muestra una lista de controladores instalados. Si el usuario hace doble clic en un controlador o selecciona un controlador y hace clic en Aceptar , **SQLManageDataSources** llama **a** **ConfigDSN** en el archivo DLL de instalación y le pasa la opción ODBC_ADD_DSN.  
   
- Si el usuario selecciona un origen de datos y hace clic en **quitar**, **SQLManageDataSources** pregunta si el usuario desea eliminar el origen de datos. Si el usuario hace clic en **sí**, **SQLManageDataSources** llama a **ConfigDSN** en el archivo DLL de instalación con la opción ODBC_REMOVE_DSN.  
+ Si el usuario selecciona un origen de datos y hace clic en **Quitar**, **SQLManageDataSources** le pregunta si el usuario desea eliminar el origen de datos. Si el usuario hace clic en **Sí**, **SQLManageDataSources** llama a **ConfigDSN** en el archivo DLL de instalación con la opción ODBC_REMOVE_DSN.  
   
- El cuadro de diálogo **crear nuevo origen de datos** se utiliza para agregar o eliminar un origen de datos de usuario, un origen de datos del sistema o un origen de datos de archivo.  
+ El cuadro de diálogo **Crear nuevo origen** de datos se utiliza para agregar o eliminar un origen de datos de usuario, un origen de datos del sistema o un origen de datos de archivo.  
   
 ## <a name="user-dsns"></a>DSN de usuario  
- Los DSN creados para usuarios individuales se denominarán DSN de usuario para distinguirlos de los DSN del sistema. Los DSN de usuario se registran como se indica a continuación en la información del sistema:  
+ Los DSN creados para usuarios individuales se denominarán DSN de usuario, para distinguirlos de los DSN del sistema. Los DSN de usuario se registran de la siguiente manera en la información del sistema:  
   
  `HKEY_CURRENT_USERS`  
   
@@ -86,43 +86,43 @@ BOOL SQLManageDataSources(
   
  `Odbc.ini`  
   
-## <a name="system-dsns"></a>DSN de sistema  
- El cuadro de diálogo **crear nuevo origen de datos** permite agregar un origen de datos del sistema al equipo local o eliminar uno, o establecer la configuración de un origen de datos del sistema.  
+## <a name="system-dsns"></a>DSN del sistema  
+ El cuadro de diálogo **Crear nuevo origen** de datos permite agregar un origen de datos del sistema al equipo local o eliminar uno, o establecer la configuración de un origen de datos del sistema.  
   
- Un origen de datos configurado con un nombre de origen de datos del sistema (DSN) puede ser utilizado por más de un usuario en el mismo equipo. También lo puede usar un servicio de todo el sistema, que puede obtener acceso al origen de datos incluso si ningún usuario ha iniciado sesión en la máquina.  
+ Más de un usuario puede utilizar un origen de datos configurado con un nombre de origen de datos del sistema (DSN) en el mismo equipo. También puede ser utilizado por un servicio de todo el sistema, que puede obtener acceso al origen de datos incluso si ningún usuario ha iniciado sesión en el equipo.  
   
- Un DSN del sistema se registra en la entrada HKEY_LOCAL_MACHINE en la información del sistema en lugar de en la entrada HKEY_CURRENT_USER. No está vinculado a un usuario que inicia sesión con su nombre de usuario y contraseña particulares, pero lo puede usar cualquier usuario de ese equipo o un servicio automatizado de todo el sistema. Sin embargo, el DSN del sistema está vinculado a un equipo. No admite la capacidad de usar DSN remotos entre máquinas. Los DSN del sistema se registran como se indica a continuación en la información del sistema:  
+ Un DSN del sistema se registra en la entrada HKEY_LOCAL_MACHINE en la información del sistema en lugar de en la entrada HKEY_CURRENT_USER. No está vinculado a un usuario que inicia sesión con su nombre de usuario y contraseña particular, pero puede ser utilizado por cualquier usuario de esa máquina o por un servicio automático en todo el sistema. Sin embargo, el DSN del sistema está atado a una máquina. No admite la capacidad de utilizar DSN remotos entre máquinas. Los DSN del sistema se registran de la siguiente manera en la información del sistema:  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC ODBC. ini  
+ HKEY_LOCAL_MACHINE SOFTWARE ODBC Odbc.ini  
   
 ## <a name="file-dsns"></a>DSN de archivo  
- Un origen de datos de archivo no tiene un nombre de origen de datos, como un origen de datos de la máquina, y no está registrado en ningún usuario o equipo. La información de conexión para ese origen de datos se encuentra en un archivo. DSN que se puede copiar en cualquier equipo. Un origen de datos de archivo puede ser compartible, en cuyo caso el archivo. DSN reside en una red y se puede usar simultáneamente por varios usuarios en la red siempre que el usuario tenga instalado el controlador adecuado. Un origen de datos de archivo también puede ser no compartible, en cuyo caso solo se puede usar en un único equipo.  
+ Un origen de datos de archivo no tiene un nombre de origen de datos, al igual que un origen de datos de máquina, y no está registrado en ningún usuario o equipo. La información de conexión de ese origen de datos se encuentra en un archivo .dsn que se puede copiar en cualquier equipo. Un origen de datos de archivo puede ser compartible, en cuyo caso el archivo .dsn reside en una red y puede ser utilizado simultáneamente por varios usuarios en la red, siempre y cuando el usuario tenga instalado el controlador adecuado. Un origen de datos de archivo también puede ser incompartible, en cuyo caso solo se puede utilizar en una sola máquina.  
   
- Para obtener más información acerca de los orígenes de datos de archivo, consulte [conectarse con orígenes de datos de archivo](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)o consulte [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Para obtener más información sobre los orígenes de datos de archivo, vea Conexión mediante orígenes de [datos](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)de archivo o [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
-## <a name="managing-drivers"></a>Administrar controladores  
- Si el usuario hace clic en la ficha **Controladores** del cuadro de diálogo **Administrador de orígenes de datos ODBC** , **SQLManageDataSources** muestra una lista de controladores ODBC instalados en el sistema, así como información acerca de los controladores. La fecha que se muestra es la fecha de creación del controlador, tal como se muestra en la siguiente ilustración.  
+## <a name="managing-drivers"></a>Gestión de conductores  
+ Si el usuario hace clic en la pestaña **Controladores** del cuadro de diálogo Administrador de orígenes de **datos ODBC,** **SQLManageDataSources** muestra una lista de controladores ODBC instalados en el sistema, así como información sobre los controladores. La fecha mostrada es la fecha de creación del controlador, como se muestra en la siguiente ilustración.  
   
  ![Pestaña Controladores de Administrador de orígenes de datos ODBC](../../../odbc/reference/syntax/media/ch23g.gif "ch23g")  
   
 ## <a name="tracing-options"></a>Opciones de traza  
- Si el usuario hace clic en la ficha **seguimiento** del cuadro de diálogo **Administrador de orígenes de datos ODBC** , **SQLManageDataSources** muestra las opciones de seguimiento, tal como se muestra en la siguiente ilustración.  
+ Si el usuario hace clic en la pestaña **Seguimiento** del cuadro de diálogo Administrador de orígenes de **datos ODBC,** **SQLManageDataSources** muestra las opciones de seguimiento, como se muestra en la siguiente ilustración.  
   
  ![Pestaña Trazas de Administrador de orígenes de datos ODBC](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   
- Si el usuario hace clic en **iniciar el seguimiento ahora** y, a continuación, hace clic en **Aceptar**, **SQLManageDataSources** habilita el seguimiento manualmente para todas las aplicaciones que se ejecutan actualmente en el equipo.  
+ Si el usuario hace clic en **Iniciar seguimiento ahora** y, a continuación, hace clic en **Aceptar**, **SQLManageDataSources** habilita el seguimiento manualmente para todas las aplicaciones que se ejecutan actualmente en el equipo.  
   
- Si el usuario especifica el nombre de un archivo de seguimiento en el cuadro de texto **ruta de acceso del archivo de registro** y, a continuación, hace clic en **Aceptar**, **SQLManageDataSources** establece **la palabra clave** de seguimiento en la sección [ODBC] de la información del sistema en el nombre especificado.  
+ Si el usuario especifica el nombre de un archivo de seguimiento en el cuadro de texto Ruta del **archivo** de registro y, a continuación, hace clic en **Aceptar**, **SQLManageDataSources** establece la palabra clave **TraceFile** en la sección [ODBC] de la información del sistema en el nombre especificado.  
   
 > [!IMPORTANT]  
->  Se quitó la compatibilidad con Visual Studio Analyzer a partir de Windows 8 (Visual Studio Analyzer solo se incluía en versiones anteriores de Visual Studio). Para un mecanismo de solución de problemas alternativo, use el seguimiento de PUJAs.  
+>  La compatibilidad con Visual Studio Analyzer se quitó a partir de Windows 8 (Visual Studio Analyzer solo se incluía en versiones anteriores de Visual Studio.). Para un mecanismo de solución de problemas alternativo, utilice el seguimiento de BID.  
   
- Si el usuario hace clic en **iniciar Visual Studio Analyzer** y, a continuación, hace clic en **Aceptar**, Visual Studio Analyzer está habilitado. Permanece habilitada hasta que se hace clic en **detener Visual Studio Analyzer** .  
+ Si el usuario hace clic en **Iniciar Visual Studio Analyzer** y, a continuación, hace clic en **Aceptar**, Visual Studio Analyzer está habilitado. Permanece habilitado hasta que se hace clic en **Detener Visual Studio Analyzer.**  
   
- Para obtener más información sobre el seguimiento, vea [seguimiento](../../../odbc/reference/develop-app/tracing.md). Para obtener más información sobre **las palabras clave Trace y de** **seguimiento** , vea la [subclave ODBC](../../../odbc/reference/install/odbc-subkey.md).  
+ Para obtener más información sobre el seguimiento, consulte [Seguimiento](../../../odbc/reference/develop-app/tracing.md). Para obtener más información acerca de las palabras clave **Trace** y **TraceFile,** vea [Subclave ODBC](../../../odbc/reference/install/odbc-subkey.md).  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
 |Para información acerca de|Vea|  
 |---------------------------|---------|  
-|Crear orígenes de datos|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|
+|Creación de orígenes de datos|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|

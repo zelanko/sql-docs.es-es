@@ -1,5 +1,5 @@
 ---
-title: Procesar códigos de retorno y parámetros de salida (ODBC) | Microsoft Docs
+title: Procesar códigos de retorno y parámetros de salida (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 156fc0a443d7c5742f49e4d94de6be6a12154172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780652"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282017"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Ejecutar procedimientos almacenados: procesar códigos de retorno y parámetros de salida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite ejecutar los procedimientos almacenados como procedimientos almacenados remotos. La ejecución de un procedimiento almacenado como un procedimiento almacenado remoto permite al controlador y al servidor optimizar el rendimiento de la ejecución del procedimiento.  
   
-  Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y los parámetros de salida se envían en el último paquete del servidor y no están disponible para la aplicación hasta que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) devuelve SQL_NO_DATA. Si se devuelve un error de un procedimiento almacenado, llame a SQLMoreResults para avanzar al resultado siguiente hasta que se devuelva SQL_NO_DATA.  
+  Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y los parámetros de salida se envían en el último paquete del servidor y no están disponible para la aplicación hasta que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) devuelve SQL_NO_DATA. Si se devuelve un error de un procedimiento almacenado, llame a SQLMoreResults para avanzar al siguiente resultado hasta que se devuelva SQL_NO_DATA.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32.](https://go.microsoft.com/fwlink/?LinkId=64532)  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Para procesar códigos de retorno y parámetros de salida  
   
@@ -44,15 +44,15 @@ ms.locfileid: "73780652"
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo se procesan un código de retorno y un parámetro de salida. Este ejemplo no es compatible con IA64. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
- Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la Página principal de [ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de la comunidad de Microsoft SQL Server). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks desde la página principal [De ejemplos y proyectos](https://go.microsoft.com/fwlink/?LinkID=85384) de comunidad de Microsoft SQL Server.) Este origen de datos debe basarse en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- La primera lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () crea un procedimiento almacenado que se usa en este ejemplo.  
+ La primera [!INCLUDE[tsql](../../includes/tsql-md.md)]lista de códigos ( ) crea un procedimiento almacenado utilizado por este ejemplo.  
   
  Compile el segundo fragmento de código (C++) con odbc32.lib. A continuación, ejecute el programa.  
   
- La tercera lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () elimina el procedimiento almacenado que se usa en este ejemplo.  
+ La tercera [!INCLUDE[tsql](../../includes/tsql-md.md)]lista de códigos ( ) elimina el procedimiento almacenado utilizado por este ejemplo.  
   
 ```  
 use AdventureWorks  
@@ -194,6 +194,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Llamar a procedimientos almacenados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[Llame a procedimientos almacenados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

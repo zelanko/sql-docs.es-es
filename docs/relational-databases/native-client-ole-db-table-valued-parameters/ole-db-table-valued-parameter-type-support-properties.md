@@ -1,5 +1,5 @@
 ---
-title: OLE DB tipo de parámetro con valores de tabla (propiedades)
+title: Tipo de parámetro con valores de tabla OLE DB (Propiedades)
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb516647b76a720adfd855af3f6205d3814e0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2f289da99108bb51c90f9f15bbe8d39a20a6be78
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75242767"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81283226"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "75242767"
   En este tema se proporciona información sobre las propiedades de OLE DB y los conjuntos de propiedades asociados a los objetos de conjunto de filas de parámetro con valores de tabla.  
   
 ## <a name="properties"></a>Propiedades  
- A continuación, se muestra la lista de propiedades expuestas mediante el método IRowsetInfo::GetProperties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, si se intenta establecer cualquiera de las propiedades a través de los métodos IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints:: CreateTableWithConstraints en sus valores no predeterminados, se producirá un error y no se creará ningún objeto.  
+ A continuación, se muestra la lista de propiedades expuestas mediante el método IRowsetInfo::GetProperties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, si se intenta establecer cualquiera de las propiedades mediante los métodos IOpenRowset::OpenRowset o ITableDefinitionWithConstraints::CreateTableWithConstraints en sus valores no predeterminados, se producirá un error y no se creará ningún objeto.  
   
  No se enumeran aquí las propiedades no implementadas en el objeto de conjunto de filas de parámetro con valores. Para obtener una lista completa de las propiedades, vea la documentación de OLE DB en Data Access Components para Windows.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "75242767"
  La propiedad siguiente establece los parámetros con valores de tabla admitidos.  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- El consumidor utiliza esta propiedad en el proceso de creación de un objeto de conjunto de filas de parámetros con valores de tabla mediante ITableDefinitionWithConstraints:: CreateTableWithConstraints para cada columna a través de la estructura DBCOLUMNDESC, si es necesario.  
+ El consumidor usa esta propiedad en el proceso de crear un objeto de conjunto de filas de parámetros con valores de tabla mediante ITableDefinitionWithConstraints::CreateTableWithConstraints para cada columna con la estructura DBCOLUMNDESC, si es necesario.  
   
 |Id. de propiedad|Valor de la propiedad|  
 |-----------------|--------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "75242767"
 |||
 
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- El consumidor Lee estas propiedades mientras se detecta la información del tipo de parámetro con valores de tabla en las llamadas a ISSCommandWithParameters:: GetParameterProperties y se establece por el consumidor mientras se establecen propiedades específicas sobre el parámetro con valores de tabla. a través de ISSCommandWithParameters:: SetParameterProperties.  
+ El consumidor lee estas propiedades mientras se detecta la información de tipos de parámetros con valores de tabla en las llamadas a ISSCommandWithParameters::GetParameterPropertiey las establece mientras se configuran propiedades específicas sobre el parámetro con valores de tabla mediante ISSCommandWithParameters::SetParameterProperties.  
   
  En la tabla siguiente se proporcionan descripciones detalladas de estas propiedades.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "75242767"
 |||
 
 ## <a name="see-also"></a>Consulte también  
- [OLE DB compatibilidad con tipos de parámetros con valores de tabla](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Compatibilidad con el tipo de parámetro con valores de tabla OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Usar parámetros con valores de tabla &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

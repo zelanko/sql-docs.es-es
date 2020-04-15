@@ -1,5 +1,5 @@
 ---
-title: Función SQLParamOptions | Microsoft Docs
+title: Función SQLParamOptions ( SQLParamOptions) Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
 ms.prod: sql
@@ -18,28 +18,28 @@ f1_keywords:
 helpviewer_keywords:
 - SQLParamOptions function [ODBC]
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3ebcd3da4f5e7d57bbc8883ebf7409ff5ea106f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 209cfe6444918a40f5199af1f1a839050a3a6a57
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68343528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306916"
 ---
 # <a name="sqlparamoptions-function"></a>Función SQLParamOptions
 **Conformidad**  
- Versión introducida: compatibilidad con estándares de ODBC 1,0: desusado  
+ Versión introducida: Cumplimiento de normas ODBC 1.0: en desuso  
   
  **Resumen**  
- La función **SQLParamOptions** de ODBC 2,0 se ha reemplazado en ODBC 3. *x* mediante llamadas a [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ La función ODBC 2.0 **SQLParamOptions** se ha reemplazado en ODBC 3. *x* mediante llamadas a [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Para obtener más información sobre lo que el administrador de controladores asigna a esta función cuando se trata de un ODBC 2. la aplicación *x* está trabajando con un ODBC 3. *x* , consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en el Apéndice G: instrucciones de controlador para la compatibilidad con versiones anteriores.  
+>  Para obtener más información acerca de lo que el Administrador de controladores asigna esta función a cuando un ODBC 2. *x* aplicación está trabajando con un ODBC 3. *x* Driver, consulte Asignación de [funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en el Apéndice G: Directrices del controlador para la compatibilidad con versiones anteriores.  
   
 ## <a name="remarks"></a>Observaciones  
- Consulte la [información de ODBC 64](../../../odbc/reference/odbc-64-bit-information.md)bits, si la aplicación se ejecutará en un sistema operativo de 64 bits.  
+ Consulte Información de [ODBC de 64 bits,](../../../odbc/reference/odbc-64-bit-information.md)si la aplicación se ejecutará en un sistema operativo de 64 bits.  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referencia de la API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

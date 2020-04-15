@@ -1,5 +1,5 @@
 ---
-title: Consideraciones de programación del controlador de Paradox | Microsoft Docs
+title: Consideraciones para la programación de conductores de Paradox Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 327e952b-e7d5-4209-9423-f4b49cea272f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 52ef0cfa67e476110097ae5cf3a4680acbd0377b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d2c33b52d851facfea5a20b8aac6faf8428758f3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68043713"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290855"
 ---
 # <a name="paradox-driver-programming-considerations"></a>Consideraciones sobre la programación de controlador de Paradox
 Esta sección contiene los siguientes temas:  
@@ -34,4 +34,4 @@ Esta sección contiene los siguientes temas:
 -   [Otros detalles de programación del controlador de Paradox](../../odbc/microsoft/other-paradox-driver-programming-details.md)  
   
 > [!NOTE]  
->  El acceso a los archivos ISAM de Paradox a través de los controladores de base de datos de escritorio ODBC requiere la instalación del motor de base de datos de Borland.
+>  El acceso a los archivos ISAM de Paradox a través de los controladores de base de datos de escritorio ODBC requiere la instalación del motor de base de datos Borland.

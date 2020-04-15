@@ -1,5 +1,5 @@
 ---
-title: Argumentos de función Unicode | Microsoft Docs
+title: Argumentos de la función Unicode (Unicode Function Arguments) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 88ce592ebbf5a1b44d55b1b3119ef96e713112bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a25dd6fe0a77aad5c5ec9ba15eaf12bd2ec3fc18
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74833016"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284295"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos de función de Unicode
-El administrador de controladores ODBC 3,5 (o posterior) es compatible con las versiones ANSI y Unicode de todas las funciones que aceptan punteros a cadenas de caracteres o SQLPOINTER en sus argumentos. Las funciones Unicode se implementan como funciones (con un sufijo de *W*), no como macros. Las funciones ANSI (a las que se puede llamar con o sin un sufijo de) son idénticas a las funciones actuales de la *API de ODBC*.  
+El Administrador de controladores ODBC 3.5 (o superior) admite versiones ANSI y Unicode de todas las funciones que aceptan punteros a cadenas de caracteres o SQLPOINTER en sus argumentos. Las funciones Unicode se implementan como funciones (con un sufijo *W*), no como macros. Las funciones ANSI (a las que se puede llamar con o sin un sufijo de *A*) son idénticas a las funciones actuales de la API ODBC.  
   
 ## <a name="remarks"></a>Observaciones  
- Las funciones Unicode que siempre devuelven o toman cadenas o argumentos de longitud se pasan como un recuento de caracteres. En el caso de las funciones que devuelven información de longitud de los datos del servidor, el tamaño y la precisión de la pantalla se describen en número de caracteres. Cuando una longitud (el tamaño de transferencia de los datos) podría hacer referencia a datos de cadena o que no son de cadena, la longitud se describe en longitudes de octeto. Por ejemplo, **SQLGetInfoW** seguirá teniendo la longitud como recuento de bytes, pero **SQLExecDirectW** usará el recuento de caracteres.  
+ Las funciones Unicode que siempre devuelven o toman cadenas o argumentos de longitud se pasan como recuento de caracteres. Para las funciones que devuelven información de longitud para los datos del servidor, el tamaño de visualización y la precisión se describen en número de caracteres. Cuando una longitud (tamaño de transferencia de los datos) podría hacer referencia a datos de cadena o no de cadena, la longitud se describe en longitudes de octeto. Por ejemplo, **SQLGetInfoW** seguirá tomás la longitud como recuento de bytes, pero **SQLExecDirectW** usará count-of-characters.  
   
- Recuento de caracteres hace referencia al número de bytes (octetos) para las funciones ANSI y el número de WCHAR (palabras de 16 bits) para las funciones Unicode. En concreto, una secuencia de caracteres de doble byte (DBCS) o una secuencia de caracteres multibyte (MBCS) pueden estar compuestas de varios bytes. Una secuencia de caracteres Unicode UTF-16 puede estar formada por varios WCHARs.  
+ Count-of-characters hace referencia al número de bytes (octets) para las funciones ANSI y al número de WCHAR (palabras de 16 bits) para las funciones UNICODE. En particular, una secuencia de caracteres de doble byte (DBCS) o una secuencia de caracteres multibyte (MBCS) se pueden componer de varios bytes. Una secuencia de caracteres Unicode UTF-16 se puede componer de varios WcHAR.  
   
- A continuación se muestra una lista de las funciones de la API de ODBC que admiten las versiones Unicode (W) y ANSI (A):  
+ A continuación se muestra una lista de las funciones de la API ODBC que admiten las versiones Unicode (W) y ANSI (A):  
   
 |||  
 |-|-|  
@@ -52,7 +52,7 @@ El administrador de controladores ODBC 3,5 (o posterior) es compatible con las v
 |**SQLGetDescRec**|**SQLTables**|  
 |**SQLGetDiagField**||  
   
- A continuación se muestra una lista de las funciones de instalador de ODBC y de traductor de ODBC que admiten las versiones Unicode (W) y ANSI (A):  
+ A continuación se muestra una lista de las funciones Odbc Installer y ODBC Translator que admiten las versiones Unicode (W) y ANSI (A):  
   
 |||  
 |-|-|  
@@ -66,7 +66,7 @@ El administrador de controladores ODBC 3,5 (o posterior) es compatible con las v
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  Las funciones en desuso tienen compatibilidad con la asignación de Unicode a ANSI porque el administrador de controladores ODBC *3. x* admite la recompilación de aplicaciones ODBC *2. x* con la **#define**Unicode.  
+>  Las funciones en desuso tienen compatibilidad con la asignación de Unicode a ANSI porque el Administrador de controladores ODBC *3.x* admite la recompilación de aplicaciones ODBC *2.x* con la **#define**UNICODE.  
   
  Esta sección contiene los temas siguientes.  
   

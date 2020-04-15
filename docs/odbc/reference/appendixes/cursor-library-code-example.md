@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de código de la biblioteca de cursores | Microsoft Docs
+title: Ejemplo de código de biblioteca de cursores ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], examples
 - cursor library [ODBC], examples
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68019070"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81284685"
 ---
 # <a name="cursor-library-code-example"></a>Ejemplo de código de la biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
+>  Esta característica se eliminará en una versión futura de Windows. Evite usar esta característica en el nuevo trabajo de desarrollo y planee modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad del cursor del controlador.  
   
- En el ejemplo siguiente se usa la biblioteca de cursores para recuperar el identificador de cada pedido, la fecha de apertura y el estado de la tabla ORDERs. A continuación, muestra 20 filas de datos. Si el usuario actualiza estos datos, el código actualiza los búferes del conjunto de filas y ejecuta una instrucción UPDATE posicionada. Por último, pide al usuario la dirección de desplazamiento y repite el proceso.  
+ En el ejemplo siguiente se utiliza la biblioteca de cursores para recuperar el identificador, la fecha de apertura y el estado de cada pedido de la tabla ORDERS. A continuación, muestra 20 filas de datos. Si el usuario actualiza estos datos, el código actualiza los búferes del conjunto de filas y ejecuta una instrucción de actualización posicionada. Por último, solicita al usuario la dirección para desplazarse y repite el proceso.  
   
 ```  
 #define ROWS 20  

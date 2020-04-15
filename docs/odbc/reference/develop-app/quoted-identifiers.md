@@ -1,5 +1,5 @@
 ---
-title: Identificadores entre comillas | Microsoft Docs
+title: Identificadores citados ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - interoperability of SQL statements [ODBC], quoted identifiers
 - quoted identifiers [ODBC]
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0c03fa8bbc059566288997b29c899056f26de252
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079006"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81282008"
 ---
 # <a name="quoted-identifiers"></a>Identificadores entre comillas
-En una instrucción SQL, los identificadores que contienen caracteres especiales o palabras clave de coincidencia deben ir entre *comillas de identificador*. los identificadores incluidos en dichos caracteres se conocen como *identificadores entre comillas* (también conocidos como *identificadores delimitados* en SQL-92). Por ejemplo, el identificador de cuentas por pagar se encuentra entre comillas en la siguiente instrucción **Select** :  
+En una instrucción SQL, los identificadores que contengan caracteres especiales o palabras clave de coincidencia deben incluirse entre *caracteres de comillas*identificador; los identificadores incluidos en estos caracteres se conocen como *identificadores entrecomillas* (también conocidos como *identificadores delimitados* en SQL-92). Por ejemplo, el identificador Deproveedores se cotiza en el siguiente extracto **SELECT:**  
   
 ```  
 SELECT * FROM "Accounts Payable"  
 ```  
   
- El motivo de los identificadores de Comillas es hacer que la instrucción sea analizable. Por ejemplo, si no se incluyó en la instrucción anterior cuentas por pagar, el analizador supondría que había dos tablas, cuentas y pagos, y devolvería un error de sintaxis que no se separó con una coma. El carácter de comilla de identificador es específico del controlador y se recupera con la opción SQL_IDENTIFIER_QUOTE_CHAR en **SQLGetInfo**. Las listas de caracteres especiales y de palabras clave se recuperan con las opciones SQL_SPECIAL_CHARACTERS y SQL_KEYWORDS de **SQLGetInfo**.  
+ La razón para citar identificadores es hacer que la instrucción sea analizable. Por ejemplo, si Proveedores no se cotizaen en el extracto anterior, el analizador asumiría que había dos tablas, Cuentas y Proveedor, y devolvería un error de sintaxis que indica que no estaban separados por una coma. El carácter de comillas identificador es específico del controlador y se recupera con la opción SQL_IDENTIFIER_QUOTE_CHAR en **SQLGetInfo**. Las listas de caracteres especiales y de palabras clave se recuperan con las opciones SQL_SPECIAL_CHARACTERS y SQL_KEYWORDS de **SQLGetInfo**.  
   
- Para ser segura, las aplicaciones interoperables suelen citar todos los identificadores, excepto los de las pseudo-columnas, como la columna ROWID de Oracle. **SQLSpecialColumns** devuelve una lista de pseudo columnas. Además, si hay restricciones específicas de la aplicación en las que los caracteres especiales pueden aparecer en un nombre de objeto, es mejor para las aplicaciones interoperables no usar caracteres especiales en dichas posiciones.
+ Para ser seguras, las aplicaciones interoperables a menudo citan todos los identificadores excepto los de pseudocolumnas, como la columna ROWID en Oracle. **SQLSpecialColumns** devuelve una lista de pseudocolumnas. Además, si hay restricciones específicas de la aplicación sobre dónde pueden aparecer caracteres especiales en un nombre de objeto, es mejor que las aplicaciones interoperables no utilicen caracteres especiales en esas posiciones.

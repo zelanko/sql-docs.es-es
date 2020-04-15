@@ -1,5 +1,5 @@
 ---
-title: Ejecutar directamente una instrucción (ODBC) | Microsoft Docs
+title: Ejecutar una instrucción directamente (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5ece0a8b0e0844e8c33779796b0217ebf744050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9a4516f25ee6d18ddb56bedab1e55a2924c03873
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73781426"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294231"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Ejecutar directamente una instrucción (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,9 +86,9 @@ ms.locfileid: "73781426"
   
 6.  Si se usan parámetros de entrada de datos en ejecución, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) devuelve SQL_NEED_DATA. Envíe los datos en fragmentos utilizyo [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) y [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
- **Nota:** El enlace de modo de columna y de modo de fila se usa normalmente en combinación con la [función SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) y [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) que con [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Nota** Los enlaces de modo de columna y de modo de fila se usan con mayor frecuencia con [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) y [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) que con [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
   
 ## <a name="see-also"></a>Consulte también  
- [Temas de procedimientos de ejecución de consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Ejecución de temas de procedimientos de consultas &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

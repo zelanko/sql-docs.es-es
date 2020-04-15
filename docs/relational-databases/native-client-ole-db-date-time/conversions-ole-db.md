@@ -11,40 +11,40 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74095357"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304417"
 ---
 # <a name="conversions-ole-db"></a>Conversiones (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  En esta sección se describe cómo convertir entre valores **DateTime** y **DateTimeOffset** . OLE DB ya proporciona las conversiones descritas en esta sección o son una extensión coherente de OLE DB.  
+  En esta sección se describe cómo convertir entre valores **datetime** y **datetimeoffset**. OLE DB ya proporciona las conversiones descritas en esta sección o son una extensión coherente de OLE DB.  
   
  El formato de literales y cadenas para las fechas y horas en OLE DB generalmente sigue la ISO y no depende de la configuración regional del cliente. Una excepción es DBTYPE_DATE, donde la norma es OLE Automation. Sin embargo, debido a que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client solamente convierte entre tipos cuando se transmiten datos a o desde el cliente, no hay ninguna manera de que una aplicación fuerce a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client a convertir entre DBTYPE_DATE y los formatos de cadena. De lo contrario, las cadenas usan los formatos siguientes (el texto entre corchetes indica un elemento opcional):  
   
--   El formato de las cadenas **DateTime** y **DateTimeOffset** es el siguiente:  
+-   El formato de las cadenas **datetime** y **datetimeoffset** es:  
   
-     *aaaa*-** mm-*DD*[ *HH*:*mm*:*SS*[.* 9999999*] [± *HH*:*mm*]]  
+     *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[.* 9999999*][ á *hh*:*mm*]]  
   
 -   El formato de las cadenas **time** es:  
   
-     *HH*:*mm*:*SS*[.* 9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
--   El formato de las cadenas de **fecha** es:  
+-   El formato de las cadenas **date** es:  
   
-     *aaaa*-** mm-*DD*  
+     *aaaa*-*mm*-*dd*  
   
 > [!NOTE]  
 >  Las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y de las conversiones OLE implementadas SQLOLEDB, en caso de un error en las conversiones estándar. Como resultado, algunas conversiones realizadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 y posteriores difieren de la especificación OLE DB.  
   
- Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "formatos de datos: cadenas y literales" en [compatibilidad con tipos de datos para obtener OLE DB mejoras de fecha y hora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "Formatos de datos: cadenas y literales" en Compatibilidad con tipos de datos para mejoras de [fecha y hora OLE DB](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  A continuación figuran las reglas de conversión generales:  
   

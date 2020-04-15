@@ -1,5 +1,5 @@
 ---
-title: Configuración de datos de gran tamaño | Microsoft Docs
+title: Establecimiento de datos grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fde7a3fd5dadb59895c2edc643d7d482b89370ab
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73758318"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297701"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
+  Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor OLE DB de Native Client, puede establecer datos BLOB pasando un puntero a un objeto de almacenamiento de consumidor.  
   
  El consumidor crea un objeto de almacenamiento que contiene los datos y pasa al proveedor un puntero a este objeto de almacenamiento. A continuación, el proveedor lee los datos del objeto de almacenamiento del consumidor y los escribe en la columna BLOB.  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Blobs y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BlLOBs y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tareas del controlador | Microsoft Docs
+title: Tareas del conductor ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC], tasks
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1b30df63a3c955d2ed074ab13649ea55c21a6da7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915458"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81294205"
 ---
 # <a name="driver-tasks"></a>Tareas de controlador
-Entre las tareas específicas realizadas por los controladores se incluyen las siguientes:  
+Las tareas específicas realizadas por los conductores incluyen:  
   
--   Conectarse y desconectarse del origen de datos.  
+-   Conexión y desconexión del origen de datos.  
   
--   Comprobando si hay errores de función no comprobados por el administrador de controladores.  
+-   Comprobación de errores de función no comprobados por el Administrador de controladores.  
   
--   Iniciar transacciones; Esto es transparente para la aplicación.  
+-   Iniciar transacciones; esto es transparente para la aplicación.  
   
--   Enviar instrucciones SQL al origen de datos para su ejecución. El controlador debe modificar SQL ODBC a SQL específico de DBMS; a menudo, esto se limita al reemplazo de cláusulas de escape definidas por ODBC con SQL específico del DBMS.  
+-   Envío de instrucciones SQL al origen de datos para su ejecución. El controlador debe modificar ODBC SQL a SQL específico de DBMS; esto se limita a suponer cláusulas de escape definidas por ODBC por SQL específico de DBMS.  
   
--   Enviar y recuperar datos del origen de datos, incluida la conversión de los tipos de datos especificados por la aplicación.  
+-   Enviar datos y recuperar datos del origen de datos, incluida la conversión de tipos de datos según lo especificado por la aplicación.  
   
--   Asignación de errores específicos de DBMS a SQLSTATEs de ODBC.
+-   Asignación de errores específicos de DBMS a SQLSTATEs ODBC.

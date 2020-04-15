@@ -1,5 +1,5 @@
 ---
-title: COMO las limitaciones de predicados | Microsoft Docs
+title: COMO Limitaciones de Predicados ( LIKE Predicate Limitations) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - LIKE predicate limitations [ODBC]
 - ODBC SQL grammar, LIKE predicate limitations
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6d596d688956d7bdbf3d9125184d81c16249781c
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68119711"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298965"
 ---
 # <a name="like-predicate-limitations"></a>Al igual que las limitaciones de predicado
-Si los datos de una columna tienen más de 255 caracteres, la comparación LIKE solo se basará en los primeros 255 caracteres.  
+Si los datos de una columna tienen más de 255 caracteres, la comparación LIKE se basará solo en los primeros 255 caracteres.  
   
- Una LIKE utilizada en un procedimiento solo se admite con patrones constantes. Los controladores de base de datos de escritorio admiten SQL-92 como coincidencia de patrones.  
+ Un LIKE utilizado en un procedimiento se soporta solamente con patrones constantes. Los controladores de base de datos de escritorio admiten la coincidencia de patrones LIKE de SQL-92.  
   
- No se admite el uso de una cláusula escape en un predicado LIKE.  
+ No se admite el uso de una cláusula de escape en un predicado LIKE.  
   
- No se debe realizar una comparación LIKE en una columna que contenga datos de un tipo de datos float o Numeric. Los resultados pueden ser imprevisibles. Para obtener más información, vea la *Guía del programador de Microsoft Jet motor de base de datos*.
+ No se debe realizar una comparación LIKE en una columna que contenga datos de un tipo de datos numérico o flotante. Los resultados pueden ser impredecibles. Para obtener más información, consulte la Guía del programador de *Microsoft Jet Database Engine*.

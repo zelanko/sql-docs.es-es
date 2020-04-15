@@ -1,5 +1,5 @@
 ---
-title: Generar perfiles del rendimiento del controlador ODBC | Microsoft Docs
+title: Rendimiento del controlador ODBC de generación de perfiles (Profiling ODBC Driver Performance) Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2bd869b16cc6ec81d77ce0256859de1ed8c1d0e3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760708"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303691"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "73760708"
   
 -   Conectándose a un origen de datos que especifique el registro.  
   
--   Llamar a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer los atributos específicos del controlador que controlan la generación de perfiles.  
+-   Llamar a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer atributos específicos del controlador que controlan la generación de perfiles.  
   
  Cada proceso de la aplicación obtiene su propia copia del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y los perfiles se generan de forma global para la combinación de una copia del controlador y un proceso de la aplicación. Cuando algo en la aplicación activa la generación de perfiles, el proceso de generación de perfiles registra información de todas las conexiones activas en el controlador de esa aplicación. Se incluyen incluso las conexiones que no llamaron específicamente para la generación de perfiles.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73760708"
   
  Si una aplicación empieza a generar perfiles en un archivo de registro y una segunda aplicación intenta empezar a generar perfiles en el mismo archivo de registro, la segunda aplicación no puede registrar ningún dato de generación de perfiles. Si la segunda aplicación empieza a generar perfiles después de que la primera haya descargado su controlador, la segunda aplicación sobrescribirá el archivo de registro de la primera aplicación.  
   
- Si una aplicación se conecta a un origen de datos que tiene habilitada la generación de perfiles, el controlador devuelve SQL_ERROR si la aplicación llama a **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** devuelve lo siguiente:  
+ Si una aplicación se conecta a un origen de datos que tiene habilitada la generación de perfiles, el controlador devuelve SQL_ERROR si la aplicación llama a **SQLSetConnectOption** para iniciar el registro. A continuación, una llamada a **SQLGetDiagRec** devuelve lo siguiente:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -121,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Cantidad acumulada de tiempo que el controlador ha pasado esperando respuestas del servidor.|  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL ServerSQL Server Native Client &#40;&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Temas de cómo realizar perfiles de rendimiento del controlador ODBC &#40;&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

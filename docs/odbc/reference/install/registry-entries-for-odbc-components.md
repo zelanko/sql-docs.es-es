@@ -1,5 +1,5 @@
 ---
-title: Entradas del registro para componentes ODBC | Microsoft Docs
+title: Entradas del Registro para Componentes ODBC ( Registry Entries for ODBC Components) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ helpviewer_keywords:
 - subkeys [ODBC], for components
 - registry entries for components [ODBC], about registry entries
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cbee5187a7318e0953ea61d92f7478d83e5afaff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bead63f11b253342cd444e1d5bd0697ee00cfbc1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70009345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81296185"
 ---
 # <a name="registry-entries-for-odbc-components"></a>Entradas del registro para los componentes de ODBC
 > [!NOTE]  
->  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. Solo debe instalar explícitamente ODBC en versiones anteriores de Windows.  
+>  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. Solo debe instalar ODBC explícitamente en versiones anteriores de Windows.  
   
- La DLL del instalador mantiene información en el registro acerca de cada componente ODBC instalado. En los equipos que ejecutan Microsoft Windows NT y Microsoft Windows 95/98, esta información se almacena en subclaves en la siguiente clave del registro:  
+ El archivo DLL del instalador mantiene información en el registro sobre cada componente ODBC instalado. En equipos que ejecutan Microsoft Windows NT y Microsoft Windows 95/98, esta información se almacena en subclaves bajo la siguiente clave del Registro:  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbcinst.ini
  ```
 
- Dado que Odbcinst. ini es una subclave del árbol de HKEY_LOCAL_MACHINE, la información acerca de los componentes ODBC está disponible para todos los usuarios de la máquina.  
+ Dado que Odbcinst.ini es una subclave del árbol de HKEY_LOCAL_MACHINE, la información sobre los componentes ODBC está disponible para todos los usuarios del equipo.  
   
  Esta sección contiene los temas siguientes.  
   

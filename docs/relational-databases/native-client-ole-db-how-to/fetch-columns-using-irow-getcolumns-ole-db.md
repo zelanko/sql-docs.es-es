@@ -1,5 +1,5 @@
 ---
-title: 'Capturar columnas mediante IRow:: GetColumns (OLE DB) | Microsoft Docs'
+title: Capturar columnas mediante IRow::GetColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IRow interface
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d95f551a965758db6f6140770d6823543d6922d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c790ccc8e57a3df3bb7ddcdeee06a5c4e0805496
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73768238"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295915"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73768238"
 -   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pData** es NULL y **cbMaxLen** es 0, la llamada a **IRow**-**>GetColumns()** devuelve solo la longitud de columna real. En este caso, se puede volver a llamar a **IRow->GetColumns()** en la misma columna para recuperar los datos reales.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32.](https://go.microsoft.com/fwlink/?LinkId=64532)  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Para capturar columnas mediante IRow::GetColumns  
   

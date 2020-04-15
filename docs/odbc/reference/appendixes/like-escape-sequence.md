@@ -1,5 +1,5 @@
 ---
-title: LIKE (secuencia de escape) | Microsoft Docs
+title: COMO Secuencia de Escape ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - LIKE escape sequence [ODBC]
 - escape sequences [ODBC], LIKE
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 517c21f7b64fa7ceb662af9839a9fed1a1e6eff6
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68041710"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304926"
 ---
 # <a name="like-escape-sequence"></a>Secuencia de escape LIKE
-ODBC usa secuencias de escape para la cláusula LIKE. La sintaxis de esta secuencia de escape es la siguiente:  
+ODBC utiliza secuencias de escape para la cláusula LIKE. La sintaxis de esta secuencia de escape es la siguiente:  
   
 ```  
 {'escape-character'}  
@@ -31,14 +31,14 @@ ODBC usa secuencias de escape para la cláusula LIKE. La sintaxis de esta secuen
 ## <a name="remarks"></a>Observaciones  
  En la notación BNF, la sintaxis es la siguiente:  
   
- *ODBC-like-escape* :: =  
+ *ODBC-like-escape* ::  
   
- *ODBC-ESC-Initiator* escape '*carácter de escape*' *ODBC-ESC-Terminator*  
+ *ODBC-esc-iniciador* escape '*escape-carácter*' *ODBC-esc-terminator*  
   
- carácter *de escape* : *: =*  
+ *carácter de* escape *character* ::  
   
- *ODBC-ESC-Initiator* :: = {  
+ *ODBC-esc-iniciador* ::-  
   
- *ODBC-ESC-Terminator* :: =}  
+ *ODBC-esc-terminator* ::-  
   
  Para determinar si el controlador admite la secuencia de escape LIKE, una aplicación puede llamar a **SQLGetInfo** con el tipo de información SQL_LIKE_ESCAPE_CLAUSE.

@@ -1,5 +1,5 @@
 ---
-title: Descriptores y controladores de base de datos de escritorio | Microsoft Docs
+title: Descriptores y controladores de base de datos de escritorio ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,54 +13,54 @@ helpviewer_keywords:
 - descriptors [ODBC], Jet-supported descriptor fields
 - ODBC desktop database drivers [ODBC], descriptors
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68112047"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303517"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descriptores de y controladores de escritorio de la base de datos
-Un descriptor es una estructura de datos que contiene información sobre los datos de columna o los parámetros dinámicos. **SQLGetDescField** se puede usar para recuperar los descriptores admitidos que se enumeran a continuación. Los descriptores de parámetros de implementación (IPD) no se rellenan automáticamente porque no se admite **SQLDescribeParam** . Tampoco se admiten los campos de descriptor que no están disponibles a través de jet (como SQL_DESC_BASE_TABLE_NAME).  
+Un descriptor es una estructura de datos que contiene información sobre datos de columna o parámetros dinámicos. **SQLGetDescField** se puede utilizar para recuperar los descriptores admitidos que se enumeran a continuación. Los descriptores de parámetros de implementación (IPD) no se rellenan automáticamente porque no se admite **SQLDescribeParam.** Tampoco se admiten los campos de descriptor que no están disponibles a través de Jet (como SQL_DESC_BASE_TABLE_NAME).  
   
- Para obtener más información acerca de los campos de descriptor compatibles con jet, vea la *Guía del programador de Microsoft Jet motor de base de datos*.  
+ Para obtener más información acerca de los campos descriptores compatibles con Jet, consulte la Guía del programador del motor de base de *datos de Microsoft Jet*.  
   
- Para obtener más información acerca de los descriptores, vea los temas de "descriptores" en la *Referencia del programador de ODBC*.  
+ Para obtener más información acerca de los descriptores, vea los temas en "Descriptores" en la *referencia del programador ODBC*.  
   
-|Campos de descriptor|Nivel de compatibilidad|  
+|Campos descriptores|Nivel de compatibilidad|  
 |-----------------------|-------------------|  
 |SQL_DESC_ALLOC_TYPE|Compatible|  
-|SQL_DESC_ARRAY_SIZE|Solo se admite para ARD|  
+|SQL_DESC_ARRAY_SIZE|Soportado sólo para ARD|  
 |SQL_DESC_ARRAY_STATUS_PTR|Compatible|  
 |SQL_DESC_BIND_OFFSET_PTR|Compatible|  
 |SQL_DESC_BIND_TYPE|Compatible|  
 |SQL_DESC_COUNT|Compatible|  
-|SQL_DESC_ROWS_PROCESSED_PTR|Solo se admite para ARD|  
+|SQL_DESC_ROWS_PROCESSED_PTR|Soportado sólo para ARD|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Compatible|  
-|SQL_DESC_BASE_COLUMN_NAME|Compatible (nuevo)|  
-|SQL_DESC_BASE_TABLE_NAME|Compatible (nuevo)|  
-|SQL_DESC_CASE_SENSITIVE|Siempre FALSE|  
+|SQL_DESC_BASE_COLUMN_NAME|Compatible (NUEVO)|  
+|SQL_DESC_BASE_TABLE_NAME|Compatible (NUEVO)|  
+|SQL_DESC_CASE_SENSITIVE|Siempre FALSO|  
 |SQL_DESC_CATALOG_NAME|No compatible|  
 |SQL_DESC_CONCISE_TYPE|Compatible|  
 |SQL_DESC_DATA_PTR|Compatible|  
 |SQL_DESC_DATETIME_INTERVAL_CODE|Compatible|  
-|SQL_DESC_DATETIME_INTERVAL_PRECISION|Compatible con tipos de intervalo C|  
+|SQL_DESC_DATETIME_INTERVAL_PRECISION|Compatible con los tipos INTERVAL C|  
 |SQL_DESC_DISPLAY_SIZE|Compatible|  
-|SQL_DESC_FIXED_PREC_SCALE|Compatible (TRUE para Money)|  
+|SQL_DESC_FIXED_PREC_SCALE|Compatible (TRUE por dinero)|  
 |SQL_DESC_INDICATOR_PTR|Compatible|  
 |SQL_DESC_LABEL|Compatible|  
 |SQL_DESC_LENGTH|Compatible|  
 |SQL_DESC_LITERAL_PREFIX|Compatible|  
 |SQL_DESC_LITERAL_SUFFIX|Compatible|  
-|SQL_DESC_LOCAL_TYPE_NAME|No compatible (devuelve una cadena vacía)|  
+|SQL_DESC_LOCAL_TYPE_NAME|No admitido (devuelve la cadena EMPTY)|  
 |SQL_DESC_NAME|Compatible|  
-|SQL_DESC_NULLABLE|Compatible<br /><br /> **Nota:** No se admite en las versiones anteriores a Jet 4,0|  
+|SQL_DESC_NULLABLE|Compatible<br /><br /> **Nota** No compatible con versiones anteriores a Jet 4.0|  
 |SQL_DESC_NUM_PREC_RADIX|Compatible|  
 |SQL_DESC_OCTET_LENGTH|Compatible|  
 |SQL_DESC_OCTET_LENGTH_PTR|Compatible|  
-|SQL_DESC_PARAMETER_TYPE|Solo parámetros de entrada|  
+|SQL_DESC_PARAMETER_TYPE|Sólo parámetros de entrada|  
 |SQL_DESC_PRECISION|Compatible|  
 |SQL_DESC_SCALE|Compatible|  
 |SQL_DESC_SCHEMA_NAME|No compatible|  

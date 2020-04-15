@@ -1,5 +1,5 @@
 ---
-title: ALTER TABLE-comando SQL | Microsoft Docs
+title: ALTER TABLE - Comando SQL ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 587d721522503f9b392bb8be7433850fd7449efb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901376"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304716"
 ---
 # <a name="alter-table---sql-command"></a>Modificar tabla - comando SQL
 Modifica mediante programación la estructura de una tabla.  
@@ -60,34 +60,34 @@ ALTER TABLE TableName1
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *TableName1*  
- Especifica el nombre de la tabla cuya estructura se ha modificado.  
+ *NombreDeTabla1*  
+ Especifica el nombre de la tabla cuya estructura se modifica.  
   
- Agregar [columna] *FieldName1*  
+ ADD [COLUMN] *NombreDeCampo1*  
  Especifica el nombre del campo que se va a agregar.  
   
- ALTER [columna] *FieldName1*  
+ ALTER [COLUMN] *NombreDeCampo1*  
  Especifica el nombre de un campo existente que se va a modificar.  
   
- *FieldType* [( *NFieldWidth* [, *nPrecision*]])  
- Especifica el tipo de campo, el ancho de campo y la precisión de campo (número de posiciones decimales) de un campo nuevo o modificado.  
+ *Tipo de campo* [( *nFieldWidth* [, *nPrecision*]])  
+ Especifica el tipo de campo, el ancho del campo y la precisión del campo (número de decimales) para un campo nuevo o modificado.  
   
  *FieldType* es una sola letra que indica el tipo de [datos](../../odbc/microsoft/visual-foxpro-field-data-types.md)del campo. Algunos tipos de datos de campo requieren que especifique *nFieldWidth* o *nPrecision* o ambos.  
   
- *nFieldWidth* y *nPrecision* se omiten para los tipos D, G, I, L, M, P, T e y. De forma predeterminada, *nPrecision* es cero (sin posiciones decimales) si *nPrecision* no se incluye para los tipos B, F o N.  
+ *nFieldWidth* y *nPrecision* se omiten para los tipos D, G, I, L, M, P, T e Y. De forma predeterminada, *nPrecision* es cero (sin decimales) si *nPrecision* no se incluye para los tipos B, F o N.  
   
  NULL &#124; NOT NULL  
- Permite o impide valores NULL en el campo.  
+ Permite o impide valores nulos en el campo.  
   
- Si omite NULL y NOT NULL, el valor actual de SET NULL determina si se permiten valores NULL en el campo. Sin embargo, si omite NULL y NOT NULL e incluye la cláusula PRIMAry KEY o UNIQUE, se omite la configuración actual de SET NULL y el campo no es NULL de forma predeterminada.  
+ Si omite NULL y NOT NULL, el valor actual de SET NULL determina si se permiten valores NULL en el campo. Sin embargo, si omite NULL y NOT NULL e incluye la cláusula PRIMARY KEY o UNIQUE, se omite el valor actual de SET NULL y el campo NO es NULL de forma predeterminada.  
   
- COMPROBAR *lExpression1*  
- Especifica una regla de validación para el campo. *lExpression1* debe evaluarse como una expresión lógica y puede ser una función definida por el usuario o un procedimiento almacenado. Siempre que se anexa un registro en blanco, se comprueba la regla de validación. Se genera un error si la regla de validación no permite un valor de campo en blanco en un registro anexado.  
+ CHECK *lExpression1*  
+ Especifica una regla de validación para el campo. *lExpression1* debe evaluarse como una expresión lógica y puede ser una función definida por el usuario o un procedimiento almacenado. Cada vez que se anexa un registro en blanco, se comprueba la regla de validación. Se genera un error si la regla de validación no permite un valor de campo en blanco en un registro anexado.  
   
  ERROR *cMessageText1*  
- Especifica el mensaje de error que se muestra cuando la regla de validación de campo genera un error.  
+ Especifica el mensaje de error que se muestra cuando la regla de validación de campos genera un error.  
   
- *EEXPRESSION1* predeterminado  
+ DEFAULT *eExpression1*  
  Especifica un valor predeterminado para el campo. El tipo de datos de *eExpression1* debe ser el mismo que el tipo de datos del campo.  
   
  PRIMARY KEY  
@@ -97,100 +97,100 @@ ALTER TABLE TableName1
  Crea una etiqueta de índice candidata con el mismo nombre que el campo.  
   
 > [!NOTE]  
->  Los índices candidatos (creados mediante la opción UNIQUE, que se proporciona para la compatibilidad con ANSI en ALTER TABLE o CREATE TABLE) difieren de los índices creados mediante la opción UNIQUE del comando INDEX. Un índice creado con UNIQUE en el comando INDEX permite claves de índice duplicadas; los índices candidatos no permiten claves de índice duplicadas.  
+>  Los índices candidatos (creados mediante la inclusión de la opción UNIQUE, proporcionada para la compatibilidad ANSI en ALTER TABLE o CREATE TABLE) difieren de los índices creados mediante la opción UNIQUE en el comando INDEX. Un índice creado mediante UNIQUE en el comando INDEX permite claves de índice duplicadas; los índices candidatos no permiten claves de índice duplicadas.  
   
- Los valores NULL y los registros duplicados no se permiten en un campo que se usa para un índice principal o candidato.  
+ Los valores nulos y los registros duplicados no se permiten en un campo que se utiliza para un índice principal o candidato.  
   
- Si va a crear un nuevo campo mediante agregar columna, Visual FoxPro no generará un error si crea un índice principal o candidato para un campo que admita valores NULL. Sin embargo, Visual FoxPro generará un error si intenta especificar un valor null o duplicado en un campo que se usa para un índice principal o candidato.  
+ Si va a crear un nuevo campo mediante ADD COLUMN, Visual FoxPro no generará un error si crea un índice principal o candidato para un campo que admite valores nulos. Sin embargo, Visual FoxPro generará un error si intenta escribir un valor nulo o duplicado en un campo que se usa para un índice principal o candidato.  
   
- Si va a modificar un campo existente y la expresión de índice principal o candidato se compone de campos de la tabla, Visual FoxPro comprobará los campos para ver si contienen valores NULL o registros duplicados. Si lo hacen, Visual FoxPro genera un error y la tabla no se modifica.  
+ Si está modificando un campo existente y la expresión de índice principal o candidato consta de campos en la tabla, Visual FoxPro comprueba los campos para ver si contienen valores nulos o registros duplicados. Si lo hacen, Visual FoxPro genera un error y la tabla no se modifica.  
   
- HACE referencia a la etiqueta *TableName2* *TagName1*  
+ REFERENCIAS *TableName2* TAG *TagName1*  
  Especifica la tabla primaria en la que se establece una relación persistente. TAG *TagName1* especifica la etiqueta de índice de la tabla primaria en la que se basa la relación. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
   
  NOCPTRANS  
- Impide la traducción a una página de códigos diferente para los campos de caracteres y de memorando. Si la tabla se convierte en otra página de códigos, los campos para los que se ha especificado NOCPTRANS no se convierten. NOCPTRANS solo se puede especificar para los campos de caracteres y de memorando.  
+ Impide la traducción a una página de códigos diferente para los campos de caracteres y notas. Si la tabla se convierte en otra página de códigos, los campos para los que se ha especificado NOCPTRANS no se traducen. NOCPTRANS solo se puede especificar para los campos de caracteres y notas.  
   
- En el ejemplo siguiente se crea una tabla denominada MyTable que contiene dos campos de caracteres y dos campos memo. El segundo campo de carácter, char2, y el segundo campo de memorando, memo2, incluyen NOCPTRANS para evitar la traducción.  
+ En el ejemplo siguiente se crea una tabla denominada mytable que contiene dos campos de caracteres y dos campos de nota. El segundo campo de carácter, char2, y el segundo campo de nota, memo2, incluyen NOCPTRANS para evitar la traducción.  
   
 ```  
 CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;  
    memo1 M, memo2 M NOCPTRANS)  
 ```  
   
- ALTER [columna] *FieldName2*  
+ ALTER [COLUMN] *NombreDeCampo2*  
  Especifica el nombre de un campo existente que se va a modificar.  
   
- ESTABLECER *EEXPRESSION2* predeterminado  
+ SET DEFAULT *eExpression2*  
  Especifica un nuevo valor predeterminado para un campo existente. El tipo de datos de *eExpression2* debe ser el mismo que el tipo de datos del campo.  
   
- ESTABLECER *lExpression2* de comprobación  
+ SET CHECK *lExpression2*  
  Especifica una nueva regla de validación para un campo existente. *lExpression2* debe evaluarse como una expresión lógica y puede ser una función definida por el usuario o un procedimiento almacenado.  
   
  ERROR *cMessageText2*  
- Especifica el mensaje de error que se muestra cuando la regla de validación de campo genera un error. El mensaje solo se muestra cuando se cambian los datos dentro de una ventana de exploración o de edición.  
+ Especifica el mensaje de error que se muestra cuando la regla de validación de campos genera un error. El mensaje solo se muestra cuando se cambian los datos en una ventana Examinar o Editar.  
   
  DROP DEFAULT  
  Quita el valor predeterminado de un campo existente.  
   
- QUITAR COMPROBACIÓN  
+ DROP CHECK  
  Quita la regla de validación de un campo existente.  
   
- DROP [columna] *FieldName3*  
- Especifica un campo que se va a quitar de la tabla. Al quitar un campo de la tabla, también se quita la configuración de valor predeterminado y la regla de validación de campo del campo.  
+ DROP [COLUMN] *NombreDeCampo3*  
+ Especifica un campo que se va a quitar de la tabla. Al quitar un campo de la tabla también se quita la configuración de valor predeterminada del campo y la regla de validación de campos.  
   
- Si la clave de índice o las expresiones de desencadenador hacen referencia al campo, las expresiones dejan de ser válidas cuando se quita el campo. En este caso, no se genera un error cuando se quita el campo, pero la clave de índice o las expresiones de desencadenador no válidas generarán errores en tiempo de ejecución.  
+ Si las expresiones de clave de índice o desencadenador hacen referencia al campo, las expresiones pasan a ser válidas cuando se quita el campo. En este caso, no se genera un error cuando se quita el campo, pero la clave de índice no válida o las expresiones de desencadenador generarán errores en tiempo de ejecución.  
   
- ESTABLECER *lExpression3* de comprobación  
- Especifica la regla de validación de la tabla. *lExpression3* debe evaluarse como una expresión lógica y puede ser una función definida por el usuario o un procedimiento almacenado.  
+ SET CHECK *lExpression3*  
+ Especifica la regla de validación de tabla. *lExpression3* debe evaluarse como una expresión lógica y puede ser una función definida por el usuario o un procedimiento almacenado.  
   
  ERROR *cMessageText3*  
- Especifica el mensaje de error que se muestra cuando la regla de validación de tabla genera un error. El mensaje solo se muestra cuando se cambian los datos dentro de una ventana de exploración o de edición.  
+ Especifica el mensaje de error que se muestra cuando la regla de validación de tabla genera un error. El mensaje solo se muestra cuando se cambian los datos en una ventana Examinar o Editar.  
   
- QUITAR COMPROBACIÓN  
+ DROP CHECK  
  Quita la regla de validación de la tabla.  
   
- Agregar clave principal *eExpression3*etiqueta *TagName2*  
- Agrega un índice principal a la tabla. *eExpression3* especifica la expresión de clave de índice principal y *TagName2* especifica el nombre de la etiqueta de índice principal. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Si se omite la etiqueta *TagName2* y *eExpression3* es un campo único, la etiqueta del índice principal tiene el mismo nombre que el campo especificado en *eExpression3*.  
+ AGREGAR PRIMARY KEY *eExpression3*TAG *TagName2*  
+ Agrega un índice principal a la tabla. *eExpression3* especifica la expresión de clave de índice principal y *TagName2* especifica el nombre de la etiqueta de índice principal. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Si se omite TAG *TagName2* y *eExpression3* es un solo campo, la etiqueta de índice principal tiene el mismo nombre que el campo especificado en *eExpression3*.  
   
- QUITAR CLAVE PRINCIPAL  
- Quita el índice principal y su etiqueta de índice. Dado que una tabla solo puede tener una clave principal, no es necesario especificar el nombre de la clave principal. Al quitar el índice principal, también se eliminan todas las relaciones persistentes basadas en la clave principal.  
+ DROP PRIMARY KEY  
+ Quita el índice principal y su etiqueta de índice. Dado que una tabla solo puede tener una clave principal, no es necesario especificar el nombre de la clave principal. La eliminación del índice principal también elimina las relaciones persistentes basadas en la clave principal.  
   
- AGREGAR *EEXPRESSION4*único [tag *TagName3*]  
- Agrega un índice candidato a la tabla. *eExpression4* especifica la expresión de clave de índice candidata y *TagName3* especifica el nombre de la etiqueta de índice candidata. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Si omite la etiqueta *TagName3* y si *eExpression4* es un campo único, la etiqueta del índice candidato tiene el mismo nombre que el campo especificado en *eExpression4*.  
+ ADD UNIQUE *eExpression4*[TAG *TagName3*]  
+ Agrega un índice candidato a la tabla. *eExpression4* especifica la expresión de clave de índice candidata y *TagName3* especifica el nombre de la etiqueta de índice candidata. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Si omite TAG *TagName3* y *eExpression4* es un campo único, la etiqueta de índice candidata tiene el mismo nombre que el campo especificado en *eExpression4*.  
   
  DROP UNIQUE TAG *TagName4*  
  Quita el índice candidato y su etiqueta de índice. Dado que una tabla puede tener varias claves candidatas, debe especificar el nombre de la etiqueta de índice candidata.  
   
- Agregar etiqueta de clave externa [ *eExpression5*] *TagName4*  
- Agrega un índice externo (no principal) a la tabla. *eExpression5* especifica la expresión de clave de índice externa y *TagName4* especifica el nombre de la etiqueta de índice externo. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
+ ADD FOREIGN KEY [ *eExpression5*]TAG *TagName4*  
+ Agrega un índice externo (no primario) a la tabla. *eExpression5* especifica la expresión de clave de índice externa y *TagName4* especifica el nombre de la etiqueta de índice externa. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
   
- REFERENCEs *TableName2*[tag *TagName5*]  
- Especifica la tabla primaria en la que se establece una relación persistente. Incluya la etiqueta *TagName5* para establecer una relación basada en una etiqueta de índice existente para la tabla primaria. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Si omite la etiqueta *TagName5*, la relación se establece mediante la etiqueta de índice principal de la tabla primaria.  
+ REFERENCIAS *NombreDeTabla2*[TAG *TagName5*]  
+ Especifica la tabla primaria en la que se establece una relación persistente. Incluya TAG *TagName5* para establecer una relación basada en una etiqueta de índice existente para la tabla primaria. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Si omite TAG *TagName5*, la relación se establece mediante la etiqueta de índice principal de la tabla primaria.  
   
- QUITAR etiqueta de clave externa *TagName6*[Guardar]  
+ DROP FOREIGN KEY TAG *TagName6*[SAVE]  
  Elimina una clave externa cuya etiqueta de índice es *TagName6*. Si omite SAVE, la etiqueta de índice se elimina del índice estructural. Incluya SAVE para evitar la eliminación de la etiqueta de índice del índice estructural.  
   
- Cambiar el nombre de la columna *FieldName4*a *FieldName5*  
- Permite cambiar el nombre de un campo de la tabla. *FieldName4* especifica el nombre del campo al que se cambia el nombre. *FieldName5* especifica el nuevo nombre del campo.  
+ RENAME COLUMN *FieldName4*A *FieldName5*  
+ Le permite cambiar el nombre de un campo de la tabla. *FieldName4* especifica el nombre del campo al que se cambia el nombre. *FieldName5* especifica el nuevo nombre del campo.  
   
 > [!CAUTION]  
->  Tenga cuidado al cambiar el nombre de los campos de tabla porque las expresiones de índice, las reglas de validación de tablas y campos, los comandos y las funciones pueden hacer referencia a los nombres de campo originales.  
+>  Tenga cuidado al cambiar el nombre de los campos de tabla porque las expresiones de índice, las reglas de validación de campos y tablas, los comandos y las funciones pueden hacer referencia a los nombres de campo originales.  
   
- Novalidate  
- Especifica que Visual FoxPro permite realizar cambios en la estructura de la tabla; Estos cambios podrían infringir la integridad de los datos de la tabla. De forma predeterminada, Visual FoxPro evita que ALTER TABLE realice cambios que infrinjan la integridad de los datos de la tabla. Incluya novalidate para invalidar este comportamiento predeterminado.  
+ NOVALIDATE  
+ Especifica que Visual FoxPro permite realizar cambios en la estructura de la tabla; estos cambios podrían infringir la integridad de los datos de la tabla. De forma predeterminada, Visual FoxPro impide que ALTER TABLE realice cambios que infrinjan la integridad de los datos de la tabla. Incluya NOVALIDATE para invalidar este comportamiento predeterminado.  
   
 ## <a name="remarks"></a>Observaciones  
- ALTER TABLE se puede usar para modificar la estructura de una tabla que no se ha agregado a una base de datos. Sin embargo, Visual FoxPro genera un error si se incluyen las cláusulas DEFAULT, FOREIGN KEY, PRIMAry KEY, REFERENCEs o SET cuando se modifica una tabla libre.  
+ ALTER TABLE se puede utilizar para modificar la estructura de una tabla que no se ha agregado a una base de datos. Sin embargo, Visual FoxPro genera un error si incluye las cláusulas DEFAULT, FOREIGN KEY, PRIMARY KEY, REFERENCES o SET al modificar una tabla libre.  
   
- ALTER TABLE puede volver a generar la tabla creando un nuevo encabezado de tabla y anexando registros al encabezado de la tabla. Por ejemplo, cambiar el tipo o el ancho de un campo podría hacer que se vuelva a generar la tabla.  
+ ALTER TABLE puede reconstruir la tabla creando un nuevo encabezado de tabla y anexando registros al encabezado de tabla. Por ejemplo, cambiar el tipo o el ancho de un campo puede hacer que se vuelva a generar la tabla.  
   
- Después de volver a generar una tabla, se ejecutan las reglas de validación de campos para los campos cuyo tipo o ancho se cambie. Si cambia el tipo o el ancho de cualquier campo de la tabla, se ejecuta la regla de la tabla.  
+ Después de volver a generar una tabla, se ejecutan reglas de validación de campos para cualquier campo cuyo tipo o ancho cambie. Si cambia el tipo o el ancho de cualquier campo de la tabla, se ejecuta la regla de tabla.  
   
- Si modifica las reglas de validación de campos o tablas para una tabla que contiene registros, Visual FoxPro prueba las nuevas reglas de validación de tablas o campos con los datos existentes y emite una advertencia en la primera aparición de una regla de validación de tabla o de campo o de una infracción del desencadenador.  
+ Si modifica las reglas de validación de campos o tablas para una tabla que tiene registros, Visual FoxPro prueba las nuevas reglas de validación de campos o tablas con los datos existentes y emite una advertencia en la primera aparición de una regla de validación de campo o tabla o de una infracción de desencadenador.  
   
- Si la tabla que se modifica está en una base de datos, ALTER TABLE-SQL requiere el uso exclusivo de la base de datos. Para abrir una base de datos para su uso exclusivo, incluya EXCLUSIVe en OPEN DATABASE.  
+ Si la tabla que modifica está en una base de datos, ALTER TABLE - SQL requiere el uso exclusivo de la base de datos. Para abrir una base de datos de uso exclusivo, incluya EXCLUSIVA en OPEN DATABASE.  
   
 ## <a name="see-also"></a>Consulte también  
- [Comando CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
+ [CREATE TABLE - Comando SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [Comando de índice](../../odbc/microsoft/index-command.md)

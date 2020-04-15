@@ -1,5 +1,5 @@
 ---
-title: Limitaciones de las funciones escalares | Microsoft Docs
+title: Limitaciones de la función escalar ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
 ms.assetid: 023d94b9-3ed6-46d3-9a66-f2872f505bbb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea36de05f813fc32a90a855bd0c08d020cf1f9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2466fefd76b4e285ec2df6e79992e8cf3f33e4e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67987920"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81292885"
 ---
 # <a name="scalar-function-limitations"></a>Limitaciones de la función escalar
-Las funciones escalares solo se admiten con el formato canónico de ODBC.
+Las funciones escalares solo se admiten mediante el formato canónico ODBC.

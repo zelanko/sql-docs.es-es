@@ -1,5 +1,5 @@
 ---
-title: Limitaciones de NOT NULL | Microsoft Docs
+title: LIMITACIONes NO NUAS ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC SQL grammar, NOT NULL limitations
 - NOT NULL limitations [ODBC]
 ms.assetid: bb1a04f0-111b-412e-b2fb-090b62e74d59
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a58b1d328bb658c714e4f98ffc4243ca4c7eb13a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e752804ffe1999d5b06e176c9f1912ce03501df4
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915856"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298175"
 ---
 # <a name="not-null-limitations"></a>Limitaciones no NULL
-No se admite la restricción NOT NULL en la instrucción CREATE TABLE.
+No se admite la restricción NOT NULL de la instrucción CREATE TABLE.

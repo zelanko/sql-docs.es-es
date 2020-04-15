@@ -1,5 +1,5 @@
 ---
-title: Tipos de datos admitidos (controlador ODBC para Oracle) | Microsoft Docs
+title: Tipos de datos admitidos (controlador ODBC para Oracle) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301120"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Tipos de datos admitidos (controlador ODBC para Oracle)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se eliminará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   
- El controlador ODBC para Oracle admite todos los tipos de datos de Oracle 7,3; sin embargo, no es compatible con ninguno de los nuevos tipos de datos de Oracle8 que se enumeran aquí.  
+ El controlador ODBC para Oracle admite todos los tipos de datos de Oracle 7.3; sin embargo, no admite ninguno de los nuevos tipos de datos Oracle8 enumerados aquí.  
   
-|Tipo de datos|Oracle 7,3|Oracle8|  
+|Tipo de datos|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  
 |BFILE|N/D|No compatible|  
 |BLOB|N/D|No compatible|  
@@ -46,4 +46,4 @@ ms.locfileid: "67915669"
 |MLSLABEL|No compatible.|No compatible.|  
   
 > [!NOTE]  
->  Para obtener más información sobre el tamaño permitido de la columna VARCHAR, vea [tamaño de columna VARCHAR](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) en esta guía.
+>  Para obtener más información sobre el tamaño permitido de la columna VARCHAR, consulte Tamaño de [columna VARCHAR](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) en esta guía.

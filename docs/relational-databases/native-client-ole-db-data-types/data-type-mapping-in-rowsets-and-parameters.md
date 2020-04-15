@@ -19,54 +19,54 @@ helpviewer_keywords:
 - GetParameterInfo function
 - OLE DB, data types
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9521a35478cf8239cec99d448acf7d4699dba71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 41e5fceb2e69ab049bc7b82db5f67eb340d35ac9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73771369"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297022"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  En conjuntos de filas y como valores de parámetro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el proveedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Native Client representa los datos utilizando los siguientes tipos de datos definidos por el OLE DB, que se muestran en las funciones **IColumnsInfo:: GetColumnInfo** y **ICommandWithParameters:: GetParameterInfo**.  
+  En conjuntos de filas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y como valores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parámetro, el proveedor OLE DB de Native Client representa los datos mediante los siguientes tipos de datos definidos por OLE DB, notificados en las funciones **IColumnsInfo::GetColumnInfo** y **ICommandWithParameters::GetParameterInfo**.  
   
 |Tipos de datos de SQL Server|Tipo de datos de OLE DB|  
 |--------------------------|----------------------|  
-|**BIGINT**|DBTYPE_I8|  
+|**bigint**|DBTYPE_I8|  
 |**binary**|DBTYPE_BYTES|  
 |**bit**|DBTYPE_BOOL|  
 |**char**|DBTYPE_STR|  
 |**datetime**|DBTYPE_DBTIMESTAMP|  
 |**datetime2**|DBTYPE_DBTIME2|  
 |**Decimal**|DBTYPE_NUMERIC|  
-|**float**|DBTYPE_R8|  
-|**impresión**|DBTYPE_BYTES|  
+|**Flotador**|DBTYPE_R8|  
+|**Imagen**|DBTYPE_BYTES|  
 |**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
-|**nchar**|DBTYPE_WSTR|  
+|**Nchar**|DBTYPE_WSTR|  
 |**ntext**|DBTYPE_WSTR|  
-|**alfanumérico**|DBTYPE_NUMERIC|  
-|**nvarchar**|DBTYPE_WSTR|  
-|**impuestos**|DBTYPE_R4|  
+|**Numérico**|DBTYPE_NUMERIC|  
+|**NVARCHAR**|DBTYPE_WSTR|  
+|**real**|DBTYPE_R4|  
 |**smalldatetime**|DBTYPE_DBTIMESTAMP|  
-|**smallint**|DBTYPE_I2|  
+|**SMALLINT**|DBTYPE_I2|  
 |**SMALLMONEY**|DBTYPE_CY|  
 |**sql_variant**|DBTYPE_VARIANT, DBTYPE_SQLVARIANT|  
 |**sysname**|DBTYPE_WSTR|  
-|**negrita**|DBTYPE_STR|  
-|**timestamp**|DBTYPE_BYTES|  
-|**tinyint**|DBTYPE_UI1|  
+|**text**|DBTYPE_STR|  
+|**Timestamp**|DBTYPE_BYTES|  
+|**TINYINT**|DBTYPE_UI1|  
 |**UDT**|DBTYPE_UDT|  
-|**uniqueidentifier**|DBTYPE_GUID|  
+|**UNIQUEIDENTIFIER**|DBTYPE_GUID|  
 |**varbinary**|DBTYPE_BYTES|  
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite conversiones de datos solicitadas por el consumidor, tal como se muestra en la ilustración.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite conversiones de datos solicitadas por el consumidor, como se muestra en la ilustración.  
   
  Los objetos **sql_variant** pueden contener datos de cualquier tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] excepto text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp y los tipos definidos por el usuario de Common Language Runtime (CLR) de Microsoft .NET Framework. Una instancia de datos sql_variant no puede tener sql_variant como tipo de datos base subyacente. Por ejemplo, la columna puede contener valores **smallint** en algunas filas, valores **float** en otras filas y valores **char**/**nchar** en el resto.  
   
@@ -76,12 +76,12 @@ ms.locfileid: "73771369"
  Cuando los datos **sql_variant** se capturan como DBTYPE_VARIANT, se incluyen en una estructura VARIANT en el búfer. Pero es posible que los subtipos de la estructura VARIANT no se asignen a los subtipos definidos en el tipo de datos **sql_variant**. Los datos **sql_variant** se tienen que capturar en este caso como DBTYPE_SQLVARIANT para que todos los subtipos coincidan.  
   
 ## <a name="dbtype_sqlvariant-data-type"></a>Tipo de datos DBTYPE_SQLVARIANT  
- Para admitir el tipo de datos **sql_variant** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client expone un tipo de datos específico del proveedor denominado DBTYPE_SQLVARIANT. Cuando los datos **sql_variant** se capturan como DBTYPE_SQLVARIANT, se almacenan en una estructura SSVARIANT específica del proveedor. La estructura SSVARIANT contiene todos los subtipos que coinciden con los subtipos del tipo de datos **sql_variant**.  
+ Para admitir el tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos **sql_variant,** el proveedor OLE DB de Native Client expone un tipo de datos específico del proveedor denominado DBTYPE_SQLVARIANT. Cuando los datos **sql_variant** se capturan como DBTYPE_SQLVARIANT, se almacenan en una estructura SSVARIANT específica del proveedor. La estructura SSVARIANT contiene todos los subtipos que coinciden con los subtipos del tipo de datos **sql_variant**.  
   
  La propiedad SSPROP_ALLOWNATIVEVARIANT de la sesión también debe estar establecida en TRUE.  
   
 ## <a name="provider-specific-property-ssprop_allownativevariant"></a>Propiedad SSPROP_ALLOWNATIVEVARIANT específica del proveedor  
- Al capturar los datos, puede especificar explícitamente qué clase de tipo de datos se debería devolver para una columna o para un parámetro. **IColumnsInfo** también se puede utilizar para obtener la información de columna y usarla para realizar el enlace. Cuando se usa **IColumnsInfo** para obtener información de columna con fines de enlace, si la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión es FALSE (valor predeterminado), en las columnas **sql_variant** se devuelve DBTYPE_VARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT es FALSE, no se admite DBTYPE_SQLVARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT está establecida en TRUE, el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT. Al capturar datos **sql_variant** como DBTYPE_SQLVARIANT, la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión tiene que establecerse en TRUE.  
+ Al capturar los datos, puede especificar explícitamente qué clase de tipo de datos se debería devolver para una columna o para un parámetro. También se puede usar **IColumnsInfo** para obtener la información de columna y usarla al crear el enlace. Cuando se usa **IColumnsInfo** para obtener información de columna con fines de enlace, si la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión es FALSE (valor predeterminado), en las columnas **sql_variant** se devuelve DBTYPE_VARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT es FALSE, no se admite DBTYPE_SQLVARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT está establecida en TRUE, el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT. Al capturar datos **sql_variant** como DBTYPE_SQLVARIANT, la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión tiene que establecerse en TRUE.  
   
  La propiedad SSPROP_ALLOWNATIVEVARIANT forma parte del conjunto de propiedades DBPROPSET_SQLSERVERSESSION específico del proveedor y es una propiedad de sesión.  
   

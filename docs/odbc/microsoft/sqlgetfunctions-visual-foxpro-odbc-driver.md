@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions (controlador ODBC de Visual FoxPro) | Microsoft Docs
+title: SQLGetFunctions (controlador ODBC de Visual FoxPro) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,28 +10,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetFunctions function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: af7ad2368847ff271dcf81759d6fa06b8a79fb0a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003332"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298615"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Compatibilidad: completa  
+ Soporte: Completo  
   
- Conformidad con la API de ODBC: nivel 1  
+ Conformidad de la API ODBC: Nivel 1  
   
  Devuelve TRUE para todas las funciones admitidas.  
   
- El controlador ODBC de Visual FoxPro es compatible con todas las funciones principales y de nivel 1 de la API de ODBC. En la tabla siguiente se indica si el controlador admite una función de nivel 2 específica.  
+ El controlador ODBC de Visual FoxPro admite todas las funciones ODBC API Core y Level 1. La tabla siguiente indica si el controlador admite una función de nivel 2 específica.  
   
-|*Funcionalidad*|Compatible|  
+|*Función*|Compatible|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|No|  
 |SQL_API_SQLCOLUMNPRIVELEGES|No|  
@@ -51,4 +51,4 @@ ms.locfileid: "68003332"
 |SQL_API_SQLSETSCROLLOPTIONS|Sí|  
 |SQL_API_SQLTABLEPRIVILEGES|No|  
   
- Para obtener más información, vea [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) en la *Referencia del programador de ODBC*.
+ Para obtener más información, vea [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) en la *referencia del programador ODBC*.

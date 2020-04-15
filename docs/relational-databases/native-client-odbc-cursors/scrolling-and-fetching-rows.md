@@ -1,5 +1,5 @@
 ---
-title: Desplazamiento y captura de filas | Microsoft Docs
+title: Desplazamiento y obtención de filas de desplazamiento de filas de desplazamiento y obtención de filas de desplazamiento de filas de desplazamiento Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - fetching [ODBC]
 - ODBC cursors, scrolling rows
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a8c0c0783ff51548143fa7fd670de2502482673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0ae9f1079f329951045d4b3f61b39c12efc153fb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784055"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302501"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Desplazamiento y captura de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,23 +35,23 @@ ms.locfileid: "73784055"
   
 -   Establezca las capacidades del cursor mediante [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
--   Abra el cursor con **SQLExecute** o **SQLExecDirect**.  
+-   Abra el cursor mediante **SQLExecute** o **SQLExecDirect**.  
   
--   Desplazamiento y captura de filas con **SQLFetch** o [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
+-   Desplácese y captura filas mediante **SQLFetch** o [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   
- **SQLFetch** y **SQLFetchSroll** pueden capturar bloques de filas a la vez. El número de filas devueltas se especifica mediante **SQLSetStmtAttr** para establecer el parámetro SQL_ATTR_ROW_ARRAY_SIZE.  
+ **SQLFetch** y **SQLFetchSroll** pueden capturar bloques de filas a la vez. El número de filas devueltas se especifica mediante **SQLSetStmtAttr** para establecer el SQL_ATTR_ROW_ARRAY_SIZE parámetro.  
   
- Las aplicaciones ODBC pueden usar **SQLFetch** para obtener un cursor de solo avance.  
+ Las aplicaciones ODBC pueden usar **SQLFetch** para capturar a través de un cursor de solo avance.  
   
- **SQLFetchScroll** se utiliza para desplazarse alrededor de un cursor. **SQLFetchScroll** admite la captura de los conjuntos de filas siguiente, anterior, primero y último, además de la captura relativa (capturar el conjunto de filas *n* filas desde el inicio del conjunto de filas actual) y la captura absoluta (capturar el conjunto de filas a partir de la fila *n*). Si *n* es negativo en una captura absoluta, las filas se cuentan desde el final del conjunto de resultados. Una captura absoluta de la fila -1 significa que se capturará el conjunto de filas que empieza con la última fila del conjunto de resultados.  
+ **SQLFetchScroll** se utiliza para desplazarse alrededor de un cursor. **SQLFetchScroll** admite la obtención de los conjuntos de filas siguiente, anterior, primero y último además de la obtención relativa (capturar el conjunto de filas *n* filas desde el inicio del conjunto de filas actual) y la obtención absoluta (capturar el conjunto de filas que comienza en la fila *n*). Si *n* es negativo en una captura absoluta, las filas se cuentan desde el final del conjunto de resultados. Una captura absoluta de la fila -1 significa que se capturará el conjunto de filas que empieza con la última fila del conjunto de resultados.  
   
- Las aplicaciones que usan **SQLFetchScroll** solo para sus capacidades de cursor de bloque, como los informes, es probable que pasen por el conjunto de resultados una sola vez, usando solo la opción para capturar el siguiente conjunto de filas. Por otro lado, las aplicaciones basadas en pantalla pueden aprovechar todas las funcionalidades de **SQLFetchScroll**. Si la aplicación establece el tamaño del conjunto de filas en el número de filas que se muestra en la pantalla y enlaza los búferes de pantalla al conjunto de resultados, puede traducir las operaciones de la barra de desplazamiento directamente a las llamadas a **SQLFetchScroll**.  
+ Las aplicaciones que usan **SQLFetchScroll** solo para sus capacidades de cursor de bloque, como informes, es probable que pasen a través del conjunto de resultados una sola vez, utilizando solo la opción para capturar el siguiente conjunto de filas. Las aplicaciones basadas en pantalla, por otro lado, pueden aprovechar todas las capacidades de **SQLFetchScroll**. Si la aplicación establece el tamaño del conjunto de filas en el número de filas que se muestran en la pantalla y enlaza los búferes de pantalla al conjunto de resultados, puede traducir las operaciones de la barra de desplazamiento directamente a las llamadas a **SQLFetchScroll**.  
   
 |Funcionamiento de la barra de desplazamiento|Opción de desplazamiento de SQLFetchScroll|  
 |--------------------------|-------------------------------------|  
 |Re Pág|SQL_FETCH_PRIOR|  
-|Av Pág|SQL_FETCH_NEXT|  
-|Línea arriba|SQL_FETCH_RELATIVE con FetchOffset igual a-1|  
+|Página abajo|SQL_FETCH_NEXT|  
+|Línea arriba|SQL_FETCH_RELATIVE con FetchOffset igual a -1|  
 |Línea abajo|SQL_FETCH_RELATIVE con FetchOffset igual a 1|  
 |Cuadro de desplazamiento hacia arriba|SQL_FETCH_FIRST|  
 |Cuadro de desplazamiento hacia abajo|SQL_FETCH_LAST|  
@@ -62,6 +62,6 @@ ms.locfileid: "73784055"
 -   [Marcar filas en ODBC](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Usar cursores &#40;&#41;ODBC](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Uso de cursores &#40;&#41;ODBC](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

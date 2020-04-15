@@ -1,5 +1,5 @@
 ---
-title: Funciones de la API (controlador ODBC para Oracle) | Microsoft Docs
+title: Funciones de API (controlador ODBC para Oracle) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], functions
 - API functions [ODBC]
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2314aadfad1934e56f2d7caa67939818e133665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 22caca270e9023057e9a4e146482a57bf4bad754
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68006255"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299915"
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>Funciones de la API (controlador ODBC para Oracle)
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se eliminará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   
- Microsoft ODBC driver for Oracle admite las funciones de API de nivel básico, nivel 1 y nivel 2. Estas funciones se enumeran en [los niveles de cumplimiento de ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md).  
+ El controlador ODBC de Microsoft para Oracle admite las funciones de API de nivel principal, nivel 1 y nivel 2. Estas funciones se enumeran en Niveles de [conformidad ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md).  
   
--   La conformidad con la [interfaz de nivel básico](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md) (CLI) proporciona características definidas en la especificación de la CLI ISO y las características obligatorias que se definen en la especificación Open Group CLI.  
+-   La conformidad de [la interfaz](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md) de nivel de núcleo (CLI) proporciona las características definidas en la especificación ISO CLI y las características obligatorias definidas en la especificación CLI del grupo abierto.  
   
--   El cumplimiento de [nivel 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) proporciona funcionalidad de interfaz de nivel básico, así como características adicionales, como transacciones.  
+-   [La](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) conformidad de nivel 1 proporciona funcionalidad de interfaz de nivel básico, así como características adicionales, como transacciones.  
   
--   El cumplimiento de [nivel 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) proporciona funcionalidad de nivel 1, así como características adicionales, como marcadores, parámetros dinámicos y la ejecución asincrónica de funciones ODBC.
+-   [La](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) conformidad de nivel 2 proporciona funcionalidad de nivel 1, así como características adicionales como marcadores, parámetros dinámicos y ejecución asincrónica de funciones ODBC.

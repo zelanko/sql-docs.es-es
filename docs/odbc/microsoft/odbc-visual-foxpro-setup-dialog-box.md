@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo Configuración de ODBC Visual FoxPro | Microsoft Docs
+title: Cuadro de diálogo Configuración de ODBC Visual FoxPro (ODBC Visual FoxPro Setup) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d9aa8954cd42ac715b3e6e67e0b0add69d07a570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ef7ac702a69342833c6dfffa0ffc9cdd0ac2857e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915662"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298085"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Cuadro de diálogo de configuración de Visual FoxPro ODBC
-El cuadro de diálogo **configuración de ODBC para Visual FoxPro** le permite agregar o cambiar un origen de datos de Visual FoxPro.  
+El cuadro de diálogo Configuración de **ODBC Visual FoxPro** permite agregar o cambiar un origen de datos de Visual FoxPro.  
   
- Para descargar el controlador, consulte [el sitio de descarga del controlador ODBC de Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Para descargar el controlador, consulte el sitio de descarga del controlador ODBC de [Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
 ## <a name="dialog-box-options"></a>Opciones del cuadro de diálogo  
  **Nombre del origen de datos**  
@@ -34,18 +34,18 @@ El cuadro de diálogo **configuración de ODBC para Visual FoxPro** le permite a
  Escriba una descripción para el origen de datos.  
   
  **Tipo de base de datos**  
- Permite elegir el tipo de base de datos al que se desea conectar el origen de datos.  
+ Le permite elegir el tipo de base de datos al que desea que se conecte el origen de datos.  
   
- **Base de datos de Visual FoxPro (. DBC**  
- Especifica que el origen de datos se conecta a una [base](../../odbc/microsoft/visual-foxpro-terminology.md) de datos de Visual FoxPro (archivo. DBC) y a todas las tablas y vistas locales de la base de datos.  
+ **Base de datos de Visual FoxPro (. DBC)**  
+ Especifica que el origen de datos se conecta a una [base](../../odbc/microsoft/visual-foxpro-terminology.md) de datos de Visual FoxPro (archivo .dbc) y a todas las tablas y vistas locales de la base de datos.  
   
- **Directorio de tabla libre**  
- Especifica que el origen de datos se conecta a un directorio de [tablas libres](../../odbc/microsoft/visual-foxpro-terminology.md). Las funciones de catálogo de ODBC, como [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) o [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md), omiten todas las tablas de [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) del mismo directorio. Se puede tener acceso a las tablas de base de datos mediante instrucciones SELECT de SQL enviadas a través de [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) y [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+ **Directorio de tablas libres**  
+ Especifica que el origen de datos se conecta a un directorio de [tablas libres.](../../odbc/microsoft/visual-foxpro-terminology.md) Las funciones de catálogo ODBC, como [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) o [SQLTables,](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)omiten las tablas de [base](../../odbc/microsoft/visual-foxpro-terminology.md) de datos del mismo directorio. Se puede tener acceso a las tablas de base de datos mediante instrucciones SELECT de SQL enviadas a través de [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) y [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
  **Path**  
- Muestra la ruta de acceso y el nombre de la base de datos o el directorio de las tablas disponibles a las que se conecta el origen de datos.  
+ Muestra la ruta de acceso y el nombre de la base de datos o el directorio de tablas libres al que se conecta el origen de datos.  
   
- **Browse**  
+ **Examinar**  
  Permite buscar en el sistema y la red la base de datos o el directorio al que desea conectar el origen de datos.  
   
  **Opciones**  
@@ -53,21 +53,21 @@ El cuadro de diálogo **configuración de ODBC para Visual FoxPro** le permite a
   
 ## <a name="driver"></a>Controlador  
  **Secuencia de intercalación**  
- Secuencia en la que se ordenan los campos. Las secuencias predeterminadas reflejan las secuencias admitidas por la versión de idioma del sistema operativo. Para obtener una lista de las secuencias de intercalación admitidas, vea [set COLLATE](../../odbc/microsoft/set-collate-command.md).  
+ La secuencia en la que se ordenan los campos. Las secuencias predeterminadas reflejan las secuencias admitidas por la versión de idioma del sistema operativo. Para obtener una lista de las secuencias de intercalación admitidas, consulte [SET COLLATE](../../odbc/microsoft/set-collate-command.md).  
   
  **Exclusivo**  
- Cuando se activa esta casilla, el controlador abre la base de datos de Visual FoxPro exclusivamente cuando se obtiene acceso a los datos mediante el origen de datos. Otros usuarios no pueden tener acceso a la base de datos ni a las tablas de la base de datos mientras la base de datos se abre exclusivamente. Las tablas de la base de datos abierta exclusivamente se abren como compartidas. Para abrir exclusivamente una tabla, use el comando [set Exclusive](../../odbc/microsoft/set-exclusive-command.md) . Esta casilla está deshabilitada cuando el **tipo de base de datos** está establecido en directorio de **tabla libre**.  
+ Cuando esta casilla de verificación está activada, el controlador abre la base de datos de Visual FoxPro exclusivamente cuando se accede a los datos mediante el origen de datos. Otros usuarios no pueden tener acceso a la base de datos o a las tablas de la base de datos mientras la base de datos se abre exclusivamente. Las tablas dentro de la base de datos abierta exclusivamente se abren como SHARED. Para abrir una tabla exclusivamente, utilice el comando [SET EXCLUSIVE.](../../odbc/microsoft/set-exclusive-command.md) Esta casilla de verificación está deshabilitada cuando **Tipo de base** de datos se establece en Directorio de tabla **libre**.  
   
  **Null**  
- Determina si las columnas creadas con ALTER TABLE y CREATE TABLE permiten valores NULL. Si establece null en, INSERT-SQL inserta un valor null en una columna no incluida en una instrucción INSERT-SQL... Cláusula VALUE. Si null está desactivado, se inserta un espacio en blanco. También puede controlar esta opción a través de una cadena de conexión que se pasa como en el código siguiente:  
+ Determina si las columnas creadas con ALTER TABLE y CREATE TABLE permiten valores nulos. Si establece Null ON, INSERT - SQL inserta un valor nulo en cualquier columna no incluida en un INSERT - SQL... Cláusula VALUE. Se inserta un espacio en blanco si Null está desactivado. También puede controlar esta opción a través de una cadena de conexión pasada como en el código siguiente:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Borró**  
- Determina si se devuelven las filas marcadas como eliminadas. También puede controlar esta opción a través de una cadena de conexión que se pasa como en el código siguiente:  
+ **Eliminado**  
+ Determina si se devuelven las filas marcadas como eliminadas. También puede controlar esta opción a través de una cadena de conexión pasada como en el código siguiente:  
   
 ```  
 strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;  
@@ -75,5 +75,5 @@ SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;
 DELETED=YES"  
 ```  
   
- **Obtención de datos en segundo plano**  
- Determina si los registros se capturarán en segundo plano (captura progresiva) o si la aplicación esperará hasta que se capturen todos los registros del conjunto de resultados.
+ **Obtener datos en segundo plano**  
+ Determina si los registros se recuperarán en segundo plano (recuperación progresiva) o la aplicación esperará hasta que se obtengan todos los registros del conjunto de resultados.

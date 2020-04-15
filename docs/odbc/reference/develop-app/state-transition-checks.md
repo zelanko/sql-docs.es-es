@@ -1,5 +1,5 @@
 ---
-title: Comprobaciones de transición de estado | Microsoft Docs
+title: Comprobaciones de la transición del estado (State Transition Checks) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - state transition checks [ODBC]
 - driver manager [ODBC], error checking
 ms.assetid: 0706db7d-e125-4845-a13a-7fe4308f7360
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b337d317092ad6ae20cc91236d69c1314de96bce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7dc1ddc126a2d652dfdb038cbb0e510f9735d7b0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299710"
 ---
 # <a name="state-transition-checks"></a>Comprobaciones de transición de estado
-El administrador de controladores comprueba que el estado del entorno, la conexión o la instrucción es adecuado para la función a la que se llama. Por ejemplo, una conexión debe estar en un estado asignado cuando se llama a **SQLConnect** ; una instrucción debe estar en estado preparado cuando se llama a **SQLExecute** . El administrador de controladores devuelve SQL_ERROR para los errores de transición de estado.
+El Administrador de controladores comprueba que el estado del entorno, la conexión o la instrucción es adecuado para la función a la que se llama. Por ejemplo, una conexión debe estar en un estado asignado cuando se llama a **SQLConnect;** una instrucción debe estar en un estado preparado cuando **sqlExecute** se llama. El Administrador de controladores devuelve SQL_ERROR para los errores de transición de estado.

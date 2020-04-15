@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (dBASE driver) | Microsoft Docs
+title: SQLGetInfo (controlador dBASE) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - SQLGetInfo function [ODBC], dBASE Driver
 - DBase driver [ODBC], SQLGetInfo
 ms.assetid: 42ffdc9c-281b-4df5-ac6d-7b34f15ecd4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ba029c2f75fc715b1286a950cf11c1658bdab35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9ac88f3b563ef7811d9112d8ef7169f533691938
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003295"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298605"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo (dBASE controlador)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador de dBASE. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador dBASE. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** admite el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica cómo el controlador trata directamente los archivos de un origen de datos:  
+ **SQLGetInfo** admite el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica cómo el controlador trata directamente los archivos en un origen de datos:  
   
 -   SQL_FILE_NOT_SUPPORTED: el controlador no es un controlador de un solo nivel.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "68003295"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|ISAM|Versión|Formato de los números de versión|  
+|Isam|Versión|Formato de los números de versión|  
 |----------|-------------|-------------------------------|  
-|DBASE|3.0|03.00.0000|  
+|Dbase|3.0|03.00.0000|  
 ||4.0|04.00.0000|  
 ||5.0|05.00.0000|  
   

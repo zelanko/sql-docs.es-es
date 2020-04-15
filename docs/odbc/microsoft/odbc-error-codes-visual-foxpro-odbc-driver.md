@@ -1,5 +1,5 @@
 ---
-title: Códigos de error de ODBC (controlador ODBC de Visual FoxPro) | Microsoft Docs
+title: Códigos de error ODBC (controlador ODBC de Visual FoxPro) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error codes
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4364590e908688fe094da0e7687410bdda3b97cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a2f6da9d4e4799bb9c40ec1c2716b71f70c53695
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915774"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298115"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>Códigos de Error ODBC (controlador ODBC de Visual FoxPro)
-En la tabla siguiente se enumeran los códigos de error de Visual FoxPro asignados a los valores SQLSTATE de códigos de error ODBC. Los valores de SQLSTATE asignados proceden de [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) y [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). No se asigna ningún otro valor de SQLSTATE de otra API de ODBC porque **SQLExecDirect** y **SQLPrepare** son las únicas funciones que tienen acceso al motor de Visual FoxPro.  
+En la tabla siguiente se enumeran los códigos de error de Visual FoxPro asignados a los valores SQLSTATE de código de error ODBC. Los valores SQLSTATE asignados proceden de [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) y [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md). No se asignan otros valores SQLSTATE de otra API ODBC porque **SQLExecDirect** y **SQLPrepare** son las únicas funciones que tienen acceso al motor de Visual FoxPro.  
   
- Para obtener más información sobre los códigos de error de ODBC, vea el [Apéndice A: códigos de error ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md), en la *Referencia del programador de ODBC*.  
+ Para obtener más información sobre los códigos de error ODBC, vea [Apéndice A: Códigos](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)de error ODBC , en Referencia *del programador ODBC*.  
   
 |SQLSTATE|Código de error de Visual FoxPro|  
 |--------------|------------------------------|  

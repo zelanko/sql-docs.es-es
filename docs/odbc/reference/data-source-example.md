@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de origen de datos | Microsoft Docs
+title: Ejemplo de origen de datos ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], examples
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec9eacef6f0bd63eb0aaeac36dc97938297d1f16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 48c87f0d9f0a48b7d216151178c15bb019c0cbaa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68135636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306526"
 ---
 # <a name="data-source-example"></a>Ejemplo de origen de datos
-En los equipos que ejecutan Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional o Microsoft Windows® 95/98, la información del origen de datos de la máquina se almacena en el registro. En función de la clave del registro en la que se almacene la información, el origen de datos se denomina origen de datos del *usuario* o origen de *datos del sistema*. Los orígenes de datos de usuario se almacenan en la clave HKEY_CURRENT_USER y solo están disponibles para el usuario actual. Los orígenes de datos del sistema se almacenan con la clave HKEY_LOCAL_MACHINE y pueden ser usados por más de un usuario en un equipo. También pueden utilizarlos los servicios de todo el sistema, que pueden obtener acceso al origen de datos incluso si ningún usuario ha iniciado sesión en la máquina. Para obtener más información acerca de los orígenes de datos de usuario y del sistema, vea [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  
+En equipos que ejecutan Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional o Microsoft Windows® 95/98, la información del origen de datos del equipo se almacena en el registro. Dependiendo de la clave del Registro en la que se almacena la información, el origen de datos se conoce como origen de datos de *usuario* o origen de datos *del sistema.* Los orígenes de datos de usuario se almacenan bajo la clave HKEY_CURRENT_USER y solo están disponibles para el usuario actual. Los orígenes de datos del sistema se almacenan bajo la clave HKEY_LOCAL_MACHINE y pueden ser utilizados por más de un usuario en un equipo. También pueden ser utilizados por los servicios de todo el sistema, que pueden obtener acceso al origen de datos incluso si ningún usuario ha iniciado sesión en el equipo. Para obtener más información acerca de los orígenes de datos de usuario y del sistema, vea [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  
   
- Supongamos que un usuario tiene tres orígenes de datos de usuario: personal e inventario, que usan un DBMS de Oracle. y Payroll, que utiliza un DBMS Microsoft SQL Server. Los valores del registro para los orígenes de datos pueden ser:  
+ Supongamos que un usuario tiene tres orígenes de datos de usuario: Personal e Inventario, que utilizan un DBMS de Oracle; y Payroll, que utiliza un DBMS de Microsoft SQL Server. Los valores del Registro para los orígenes de datos pueden ser:  
   
 ```  
 HKEY_CURRENT_USER  
@@ -35,7 +35,7 @@ SOFTWARE
                     Payroll : REG_SZ : SQL Server  
 ```  
   
- y los valores del registro para el origen de datos de nóminas podrían ser:  
+ y los valores del Registro para el origen de datos Nómina podrían ser:  
   
 ```  
 HKEY_CURRENT_USER  

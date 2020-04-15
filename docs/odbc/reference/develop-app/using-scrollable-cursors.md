@@ -1,5 +1,5 @@
 ---
-title: Usar cursores desplazables | Microsoft Docs
+title: Uso de cursores desplazables ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68079568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289136"
 ---
 # <a name="using-scrollable-cursors"></a>Uso de los cursores desplazables
 El uso de un cursor desplazable requiere estos tres pasos:  
   
-1.  Determinar las capacidades del cursor.  
+1.  Determine las capacidades del cursor.  
   
 2.  Configure el cursor.  
   
-3.  Desplazar y capturar filas.  
+3.  Desplácese y obtenga filas.  
   
  Esta sección contiene los temas siguientes.  
   

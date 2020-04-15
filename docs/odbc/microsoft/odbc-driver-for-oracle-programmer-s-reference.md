@@ -1,5 +1,5 @@
 ---
-title: Referencia de&#39;s del programador del controlador ODBC para Oracle | Microsoft Docs
+title: Controlador ODBC para Oracle Programmer&#39;s Referencia de la empresa de sistemas de oracle Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,18 +8,18 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe50584664d625040753a666cf7ebdf0c25ab11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67915783"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298125"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Referencia de&#39;s del programador del controlador ODBC para Oracle
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Controlador ODBC para Oracle Programmer&#39;s Reference
 > [!IMPORTANT]  
->  Esta característica se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
+>  Esta característica se eliminará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. En su lugar, utilice el controlador ODBC proporcionado por Oracle.  
   
  En esta sección se incluyen los siguientes temas:  
   
@@ -43,11 +43,11 @@ ms.locfileid: "67915783"
   
 -   [Controlador ODBC para procedimientos almacenados de Oracle](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [Mensajes de error del controlador ODBC para Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [Controlador ODBC para mensajes de error de Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
--   [Niveles de cumplimiento de ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
+-   [Niveles de conformidad ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   
--   [Funciones de API](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
+-   [Funciones API](../../odbc/microsoft/api-functions-odbc-driver-for-oracle.md)  
   
 -   [Tipos de datos admitidos](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - GetStatus method
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a123717631084a61a33bbd8b106f95a51a831b9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 90ddf4e4617e1182e50979f051fa6ee2657166ba
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73763022"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306733"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,9 +67,9 @@ HRESULT GetStatus(
   
  DBASYNCHPHASE_POPULATION: el objeto se encuentra en fase de rellenado. Si bien el conjunto de filas está totalmente inicializado y en el objeto está disponible todo el conjunto de interfaces, es posible que el conjunto de filas cuente con filas adicionales aún sin rellenar. Aunque *pulProgress* y *pulProgressMax* pueden basarse en el número de filas rellenado, generalmente se basan en el tiempo o el esfuerzo exigidos para rellenar el conjunto de filas. Por lo tanto, el autor de la llamada debe usar esta información como un cálculo aproximado del tiempo que puede durar el proceso, y no del recuento de filas final. Esta fase solo se devuelve durante el rellenado de un conjunto de filas; nunca se devuelve durante la inicialización de un objeto de origen de datos ni debido a la ejecución de un comando que actualiza, elimina o inserta filas.  
   
- DBASYNCHPHASE_COMPLETE: se ha completado el procesamiento asincrónico del objeto. **ISSAsynchStatus:: getStatus** devuelve un valor HRESULT que indica el resultado de la operación. Normalmente, será el HRESULT que se habría devuelto si la operación se hubiese llamado de forma sincrónica. Si la operación asincrónica era el resultado de una llamada a **ICommand::Execute** en un comando que actualiza, elimina o inserta filas, el valor de los parámetros *pulProgress* y *pulProgressMax* será igual al número total de filas afectadas por el comando. Si el valor de *cParamSets* es mayor que 1, éste será el número total de filas afectadas por todos los conjuntos de parámetros especificados en la ejecución. Si *peAsynchPhase* es un puntero NULL, no se devuelve ningún código de estado.  
+ DBASYNCHPHASE_COMPLETE: se ha completado el procesamiento asincrónico del objeto. **ISSAsynchStatus::GetStatus** devuelve un HRESULT, que indica el resultado de la operación. Normalmente, será el HRESULT que se habría devuelto si la operación se hubiese llamado de forma sincrónica. Si la operación asincrónica era el resultado de una llamada a **ICommand::Execute** en un comando que actualiza, elimina o inserta filas, el valor de los parámetros *pulProgress* y *pulProgressMax* será igual al número total de filas afectadas por el comando. Si el valor de *cParamSets* es mayor que 1, éste será el número total de filas afectadas por todos los conjuntos de parámetros especificados en la ejecución. Si *peAsynchPhase* es un puntero NULL, no se devuelve ningún código de estado.  
   
- DBASYNCHPHASE_CANCELED: se ha anulado el procesamiento asincrónico del objeto. **ISSAsynchStatus:: getStatus** devuelve DB_E_CANCELED. Si la operación asincrónica era el resultado de una llamada a **ICommand::Execute** de un comando que actualiza, elimina o inserta filas, el valor de *pulProgress* es igual al número total de filas, de todos los conjuntos de parámetros, afectadas por el comando antes de la cancelación.  
+ DBASYNCHPHASE_CANCELED: se ha anulado el procesamiento asincrónico del objeto. **ISSAsynchStatus::GetStatus** devuelve DB_E_CANCELED. Si la operación asincrónica era el resultado de una llamada a **ICommand::Execute** de un comando que actualiza, elimina o inserta filas, el valor de *pulProgress* es igual al número total de filas, de todos los conjuntos de parámetros, afectadas por el comando antes de la cancelación.  
   
  *ppwszStatusText*[in/out]  
  Puntero a memoria que contiene información adicional sobre la operación. Un proveedor puede usar este valor para distinguir los diferentes elementos de una operación; por ejemplo, el acceso a diferentes recursos. Esta cadena se localiza según la propiedad DBPROP_INIT_LCID del objeto de origen de datos.  
@@ -99,11 +99,11 @@ HRESULT GetStatus(
  El parámetro *hChapter* no es correcto.  
   
  E_UNEXPECTED  
- Se llamó a **ISSAsynchStatus:: getStatus** en un objeto de origen de datos y no se ha llamado a **IDBInitialize:: Initialize** en el objeto de origen de datos.  
+ Se llamó a**ISSAsynchStatus::GetStatus** en un objeto de origen de datos y no se llamó a **IDBInitialize::Initialize** en el objeto de origen de datos.  
   
- Se llamó a **ISSAsynchStatus:: getStatus** en un conjunto de filas, se llamó a **ITransaction:: commit** o **ITransaction:: ABORT** y el objeto está en estado inerte.  
+ Se llamó a**ISSAsynchStatus::GetStatus** en un conjunto de filas, se llamó a **ITransaction::Commit** o **ITransaction::Abot** y el objeto se encuentra en estado inerte.  
   
- Se llamó a **ISSAsynchStatus:: getStatus** en un conjunto de filas que se canceló de forma asincrónica en su fase de inicialización. El conjunto de filas se encuentra en estado inerte.  
+ Se llamó a**ISSAsynchStatus::GetStatus** en un conjunto de filas que se canceló de forma asincrónica durante su fase de inicialización. El conjunto de filas se encuentra en estado inerte.  
   
  E_FAIL  
  Se produjo un error específico del proveedor.  

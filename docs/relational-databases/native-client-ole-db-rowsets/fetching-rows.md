@@ -1,5 +1,5 @@
 ---
-title: Capturando filas | Microsoft Docs
+title: Captura de filas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2dee6b8b6967046bb8ce69984fe29b71f223789d
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298955"
 ---
 # <a name="fetching-rows"></a>Capturar filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "73761706"
   
  Para capturar filas de la base de datos, el consumidor llama a un método, como **IRowset::GetNextRows** o **IRowsetLocate::GetRowsAt**. Estas operaciones de captura colocan los datos de filas del servidor en el búfer de filas del proveedor. El consumidor no tiene acceso directo al búfer de filas del proveedor. El consumidor usa **IRowset::GetData** para copiar los datos del búfer del proveedor en el búfer del consumidor e **IRowsetChange::SetData** para copiar los cambios de datos del búfer del consumidor en el búfer del proveedor.  
   
- El consumidor llama al método **GetData** y pasa el identificador a una fila, el identificador a un descriptor de acceso, y un puntero a un búfer asignado por el consumidor. **GetData** convierte los datos y devuelve las columnas especificadas en los enlaces usados para crear el descriptor de acceso. El consumidor puede llamar a **GetData** más de una vez para una fila, con descriptores de acceso y búferes distintos y, por tanto, el consumidor puede obtener varias copias de los mismos datos.  
+ El consumidor llama al método **GetData** y pasa el identificador a una fila, el identificador a un descriptor de acceso, y un puntero a un búfer asignado por el consumidor. **GetData** convierte los datos y devuelve las columnas como se especifica en los enlaces usados para crear el descriptor de acceso. El consumidor puede llamar a **GetData** más de una vez para una fila, con descriptores de acceso y búferes distintos y, por tanto, el consumidor puede obtener varias copias de los mismos datos.  
   
  Los datos de las columnas de longitud variable se pueden tratar de varias maneras. Primero, tales columnas se pueden enlazar a una sección finita de la estructura del consumidor. Esto produce un truncamiento cuando la longitud de los datos supera la longitud del búfer. El consumidor puede determinar que se ha producido ese truncamiento comprobando el estado DBSTATUS_S_TRUNCATED. La longitud devuelta siempre es la longitud verdadera en bytes, para que el consumidor pueda determinar también cuántos datos se han truncado.  
   

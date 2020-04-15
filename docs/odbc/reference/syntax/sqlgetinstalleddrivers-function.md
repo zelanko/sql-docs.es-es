@@ -1,5 +1,5 @@
 ---
-title: Función SQLGetInstalledDrivers | Microsoft Docs
+title: FUNción SQLGetInstalledDrivers ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetInstalledDrivers function [ODBC]
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e7b079e2b66f4e1ba7b3233a6aaa20cd9908a67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 24793473bf4f25253ac11673df852d10cfb2c558
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68061521"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303332"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>Función SQLGetInstalledDrivers
 **Conformidad**  
- Versión introducida: ODBC 1,0  
+ Versión introducida: ODBC 1.0  
   
  **Resumen**  
- **SQLGetInstalledDrivers** lee la sección [ODBC drivers] de la información del sistema y devuelve una lista de descripciones de los controladores instalados.  
+ **SQLGetInstalledDrivers** lee la sección [Controladores ODBC] de la información del sistema y devuelve una lista de descripciones de los controladores instalados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,32 +45,32 @@ BOOL SQLGetInstalledDrivers(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszBuf*  
- Genere Lista de descripciones de los controladores instalados. Para obtener información sobre la estructura de la lista, vea "Comentarios".  
+ [Salida] Lista de descripciones de los controladores instalados. Para obtener información sobre la estructura de la lista, consulte "Comentarios."  
   
  *cbBufMax*  
- Entradas Longitud de *lpszBuf*.  
+ [Entrada] Longitud de *lpszBuf*.  
   
  *pcbBufOut*  
- Genere Número total de bytes (sin incluir el byte de terminación nula) devueltos en *lpszBuf*. Si el número de bytes disponibles para devolver es mayor o igual que *cbBufMax*, la lista de descripciones de los controladores de *lpszBuf* se trunca en *cbBufMax* menos el carácter de terminación null. El argumento *pcbBufOut* puede ser un puntero nulo.  
+ [Salida] Número total de bytes (excluyendo el byte de terminación nula) devueltos en *lpszBuf*. Si el número de bytes disponibles para devolver es mayor o igual que *cbBufMax*, la lista de descripciones de controladores en *lpszBuf* se trunca en *cbBufMax* menos el carácter de terminación nula. El *argumento pcbBufOut* puede ser un puntero nulo.  
   
 ## <a name="returns"></a>Devuelve  
- La función devuelve TRUE si es correcto, FALSE si se produce un error.  
+ La función devuelve TRUE si se realiza correctamente, FALSE si se produce un error.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLGetInstalledDrivers** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLGetInstalledDrivers** devuelve FALSE, se puede obtener un valor * \*pfErrorCode* asociado llamando a **SQLInstallerError**. En la tabla * \** siguiente se enumeran los valores pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se produjo un error en el que no había ningún error específico del instalador.|  
-|ODBC_ERROR_INVALID_BUFF_LEN|Longitud de búfer no válida|El argumento *lpszBuf* era null o no era válido o el argumento *cbBufMax* era menor o igual que 0.|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|No se encontró el componente en el registro|El instalador no encontró la sección [ODBC drivers] en el registro.|  
-|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se ha producido un error para el que no se ha producido ningún error específico del instalador.|  
+|ODBC_ERROR_INVALID_BUFF_LEN|Longitud de búfer no válida|El argumento *lpszBuf* era NULL o no válido, o el argumento *cbBufMax* era menor o igual que 0.|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|Componente no encontrado en el registro|El instalador no pudo encontrar la sección [Controladores ODBC] en el registro.|  
+|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a la falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
- Cada una de las descripciones de los controladores termina con un byte nulo y la lista completa finaliza con un byte nulo. (Es decir, dos bytes nulos marcan el final de la lista). Si el búfer asignado no es lo suficientemente grande como para contener toda la lista, la lista se trunca sin errores. Se devuelve un error si se pasa un puntero nulo como *lpszBuf*.  
+ Cada descripción del controlador se termina con un byte nulo y toda la lista se termina con un byte nulo. (Es decir, dos bytes nulos marcan el final de la lista.) Si el búfer asignado no es lo suficientemente grande como para contener toda la lista, la lista se trunca sin errores. Se devuelve un error si se pasa un puntero nulo como *lpszBuf*.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
 |Para información acerca de|Vea|  
 |---------------------------|---------|  
-|Devolver descripciones y atributos de controladores|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|
+|Devolver las descripciones y atributos del controlador|[SQLDrivers](../../../odbc/reference/syntax/sqldrivers-function.md)|

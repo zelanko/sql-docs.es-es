@@ -1,5 +1,5 @@
 ---
-title: Campos de descriptor | Microsoft Docs
+title: Campos de descriptores (Descriptor Fields) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - header fields [ODBC]
 - record fields [ODBC]
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 94e70de7d237c2eca9aee81979cb19d5295561b5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68106172"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305926"
 ---
 # <a name="descriptor-fields"></a>Campos de descriptor
-Los descriptores contienen campos de *encabezado* y *registro* que describen por completo las columnas o los parámetros.  
+Los descriptores contienen campos de *encabezado* y *registro* que describen completamente columnas o parámetros.  
   
- Un descriptor contiene una única copia de los siguientes campos de encabezado. Cambiar un campo de encabezado afecta a todas las columnas o parámetros.  
+ Un descriptor contiene una sola copia de los siguientes campos de encabezado. El cambio de un campo de encabezado afecta a todas las columnas o parámetros.  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ Los descriptores contienen campos de *encabezado* y *registro* que describen por
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Un descriptor contiene cero o más registros de descriptores. Cada registro describe una columna o un parámetro, dependiendo del tipo de descriptor. Cuando se enlaza un nuevo parámetro o columna, se agrega un nuevo registro al descriptor. Cuando una columna o un parámetro no están enlazados, se quita un registro del descriptor. Cada registro contiene una única copia de los siguientes campos:  
+ Un descriptor contiene cero o más registros descriptores. Cada registro describe una columna o parámetro, dependiendo del tipo de descriptor. Cuando se enlaza una nueva columna o parámetro, se agrega un nuevo registro al descriptor. Cuando una columna o parámetro no está enlazado, se quita un registro del descriptor. Cada registro contiene una sola copia de los siguientes campos:  
   
 |||  
 |-|-|  
@@ -54,9 +54,9 @@ Los descriptores contienen campos de *encabezado* y *registro* que describen por
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- Muchos atributos de instrucción se corresponden con el campo de encabezado de un descriptor. La configuración de estos atributos a través de una llamada a **SQLSetStmtAttr** y el campo correspondiente del encabezado del descriptor llamando a **SQLSetDescField** tienen el mismo efecto. Lo mismo se aplica a **SQLGetStmtAttr** y **SQLGetDescField**, que recuperan la misma información. Llamar a las funciones de instrucción en lugar de las funciones de descriptor tiene la ventaja de que no es necesario recuperar un identificador de descriptor.  
+ Muchos atributos de instrucción corresponden al campo de encabezado de un descriptor. Establecer estos atributos a través de una llamada a **SQLSetStmtAttr** y establecer el campo de encabezado descriptor correspondiente mediante una llamada a **SQLSetDescField** tienen el mismo efecto. Lo mismo ocurre con **SQLGetStmtAttr** y **SQLGetDescField**, que recuperan la misma información. Llamar a las funciones de instrucción en lugar de las funciones descriptor es la ventaja de que no es necesario recuperar un identificador de descriptor.  
   
- Los campos de encabezado siguientes se pueden establecer mediante el establecimiento de atributos de instrucción:  
+ Los siguientes campos de encabezado se pueden establecer estableciendo atributos de instrucción:  
   
 |||  
 |-|-|  

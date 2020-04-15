@@ -1,5 +1,5 @@
 ---
-title: Características duplicadas | Microsoft Docs
+title: Características duplicadas ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - functions [ODBC], duplicated functions
 - backward compatibility [ODBC], duplicated functions
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ca73b5b9b41c99bd6db8e6181fa3582cae47c1d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 00f5529cfbfacebcad78a0a4433e84f34034694a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68046905"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300485"
 ---
 # <a name="duplicated-features"></a>Características duplicados
-Las funciones ODBC *2.* x siguientes se han duplicado con las funciones ODBC *3. x* . Como resultado, las funciones ODBC *2. x* están en desuso en ODBC *3. x*. Las funciones ODBC *3. x* se conocen como funciones de reemplazo.  
+Las siguientes funciones ODBC *2.x* se han duplicado mediante funciones ODBC *3.x.* Como resultado, las funciones ODBC *2.x* están en desuso en ODBC *3.x*. Las funciones ODBC *3.x* se conocen como funciones de reemplazo.  
   
- Cuando una aplicación utiliza una función ODBC *2. x* desusada y el controlador subyacente es un controlador ODBC *3. x* , el administrador de controladores asigna la llamada de función a la función de reemplazo correspondiente. La única excepción a esta regla es **SQLExtendedFetch**. (Vea la nota al final de la tabla siguiente). Para obtener más información acerca de estas asignaciones, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en el Apéndice G: instrucciones de controlador para la compatibilidad con versiones anteriores.  
+ Cuando una aplicación utiliza una función ODBC *2.x* en desuso y el controlador subyacente es un controlador ODBC *3.x,* el Administrador de controladores asigna la llamada de función a la función de reemplazo correspondiente. La única excepción a esta regla es **SQLExtendedFetch**. (Véase la nota al pie al final de la tabla siguiente.) Para obtener más información acerca de estas asignaciones, consulte Asignación de [funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en el Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
   
- Cuando una aplicación utiliza una función de reemplazo y el controlador subyacente es un controlador ODBC *2. x* , el administrador de controladores asigna la llamada de función a la función desusada correspondiente.  
+ Cuando una aplicación utiliza una función de reemplazo y el controlador subyacente es un controlador ODBC *2.x,* el Administrador de controladores asigna la llamada de función a la función en desuso correspondiente.  
   
-|ODBC *2. x* (función)|ODBC *3. x* (función)|  
+|Función ODBC *2.x*|Función ODBC *3.x*|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -48,7 +48,7 @@ Las funciones ODBC *2.* x siguientes se han duplicado con las funciones ODBC *3.
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] la función **SQLExtendedFetch** es una funcionalidad duplicada; **SQLFetchScroll** proporciona la misma funcionalidad en ODBC *3. x*. Sin embargo, el administrador de controladores no asigna **SQLExtendedFetch** a **SQLFetchScroll** al pasar a un controlador ODBC *3. x* . Para obtener más información, consulte [lo que hace el administrador de controladores en el](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) Apéndice G: instrucciones del controlador para la compatibilidad con versiones anteriores. El administrador de controladores asigna **SQLFetchScroll** a **SQLExtendedFetch** al pasar a un controlador ODBC *2. x* .  
+ [1] La función **SQLExtendedFetch** es funcionalidad duplicada; **SQLFetchScroll** proporciona la misma funcionalidad en ODBC *3.x*. Sin embargo, el Administrador de controladores no asigna **SQLExtendedFetch** a **SQLFetchScroll** cuando se va en un controlador ODBC *3.x.* Para obtener más información, consulte Qué hace el Administrador de [controladores](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) en el Apéndice G: Directrices del controlador para la compatibilidad con versiones anteriores. El Administrador de controladores asigna **SQLFetchScroll** a **SQLExtendedFetch** cuando se va a un controlador ODBC *2.x.*  
   
 > [!NOTE]
->  La función **SQLBindParam** es un caso especial. **SQLBindParam** es una funcionalidad duplicada. Esta no es una función ODBC *2. x* , sino una función que está presente en los estándares Open Group e ISO. La funcionalidad proporcionada por esta función está totalmente incluida en la de **SQLBindParameter**. Como resultado, el administrador de controladores asigna una llamada a **SQLBindParam** a **SQLBindParameter** cuando el controlador subyacente es un controlador ODBC *3. x* . Sin embargo, cuando el controlador subyacente es un controlador ODBC *2. x* , el administrador de controladores no realiza esta asignación.
+>  La función **SQLBindParam** es un caso especial. **SQLBindParam** es una funcionalidad duplicada. No se trata de una función ODBC *2.x,* sino de una función que está presente en las normas Open Group e ISO. La funcionalidad proporcionada por esta función está completamente subsumida por la de **SQLBindParameter**. Como resultado, el Administrador de controladores asigna una llamada a **SQLBindParam** a **SQLBindParameter** cuando el controlador subyacente es un controlador ODBC *3.x.* Sin embargo, cuando el controlador subyacente es un controlador ODBC *2.x,* el Administrador de controladores no realiza esta asignación.

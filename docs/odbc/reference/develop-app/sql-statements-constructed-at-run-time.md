@@ -1,5 +1,5 @@
 ---
-title: Instrucciones SQL construidas en tiempo de ejecución | Microsoft Docs
+title: Instrucciones SQL construidas en tiempo de ejecución Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 795335be2a2a3aab1be6dac26bf6d213161fe42e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68107462"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301976"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Instrucciones SQL creadas en tiempo de ejecución
-Las aplicaciones que realizan el análisis ad hoc suelen compilar instrucciones SQL en tiempo de ejecución. Por ejemplo, una hoja de cálculo podría permitir a un usuario seleccionar columnas de las que recuperar datos:  
+Las aplicaciones que realizan análisis ad hoc suelen generar instrucciones SQL en tiempo de ejecución. Por ejemplo, una hoja de cálculo puede permitir a un usuario seleccionar columnas de las que recuperar datos:  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -68,8 +68,8 @@ int main() {
 }  
 ```  
   
- Otra clase de aplicaciones que normalmente construye instrucciones SQL en tiempo de ejecución son los entornos de desarrollo de aplicaciones. Sin embargo, las instrucciones que generan están codificadas de forma rígida en la aplicación que están compilando, donde normalmente se pueden optimizar y probar.  
+ Otra clase de aplicaciones que normalmente construye instrucciones SQL en tiempo de ejecución son los entornos de desarrollo de aplicaciones. Sin embargo, las instrucciones que construyen están codificadas de forma rígida en la aplicación que están creando, donde normalmente se pueden optimizar y probar.  
   
- Las aplicaciones que crean instrucciones SQL en tiempo de ejecución pueden proporcionar una gran flexibilidad al usuario. Como se puede ver en el ejemplo anterior, que no admitía las operaciones comunes como cláusulas **Where** , cláusulas **order by** o combinaciones, la creación de instrucciones SQL en tiempo de ejecución es enormemente más compleja que las instrucciones de codificación rígida. Además, la prueba de estas aplicaciones es problemática porque puede construir un número arbitrario de instrucciones SQL.  
+ Las aplicaciones que construyen instrucciones SQL en tiempo de ejecución pueden proporcionar una gran flexibilidad al usuario. Como se puede ver en el ejemplo anterior, que ni siquiera admitía operaciones comunes como cláusulas **WHERE,** cláusulas **ORDER BY** o combinaciones, la construcción de instrucciones SQL en tiempo de ejecución es mucho más compleja que las instrucciones de codificación rígida. Además, probar estas aplicaciones es problemático porque pueden construir un número arbitrario de instrucciones SQL.  
   
- Una posible desventaja de la construcción de instrucciones SQL en tiempo de ejecución es que tarda mucho más tiempo en construir una instrucción que usar una instrucción codificada de forma rígida. Afortunadamente, esto rara vez es un problema. Estas aplicaciones suelen ser de uso intensivo de la interfaz de usuario y el tiempo que la aplicación invierte en construir instrucciones SQL suele ser pequeño en comparación con el tiempo que el usuario invierte en introducir criterios.
+ Una desventaja potencial de construir instrucciones SQL en tiempo de ejecución es que se necesita mucho más tiempo para construir una instrucción que usar una instrucción codificada de forma rígida. Afortunadamente, esto rara vez es una preocupación. Estas aplicaciones tienden a ser intensivas en interfaz de usuario, y el tiempo que la aplicación pasa construyendo instrucciones SQL es generalmente pequeño en comparación con el tiempo que el usuario pasa introduciendo criterios.

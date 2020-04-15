@@ -1,5 +1,5 @@
 ---
-title: Ejecutar una instrucción | Microsoft Docs
+title: Ejecución de una Declaración ( Executing a Statement) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,27 +10,27 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], executing
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d95226e9d895bf78e15176744f651b7e830a1a10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3ce09809c896a4d1d9333da00367f972655f96b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901342"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305746"
 ---
 # <a name="executing-a-statement"></a>Ejecutar una instrucción
-Hay cuatro maneras de ejecutar una instrucción, dependiendo de Cuándo se compilan (prepara) el motor de base de datos y quién las define:  
+Hay cuatro maneras de ejecutar una instrucción, dependiendo de cuándo se compilan (preparan) por el motor de base de datos y quién las define:  
   
 -   **Ejecución directa** La aplicación define la instrucción SQL. Se prepara y ejecuta en tiempo de ejecución en un solo paso.  
   
--   **Ejecución preparada** La aplicación define la instrucción SQL. Se prepara y ejecuta en tiempo de ejecución en pasos independientes. La instrucción se puede preparar una vez y ejecutarse varias veces.  
+-   **Ejecución preparada** La aplicación define la instrucción SQL. Se prepara y ejecuta en tiempo de ejecución en pasos independientes. La instrucción se puede preparar una vez y ejecutar varias veces.  
   
--   **Procedimientos** de La aplicación puede definir y compilar una o varias instrucciones SQL en tiempo de desarrollo y almacenar estas instrucciones en el origen de datos como un procedimiento. El procedimiento se ejecuta una o más veces en tiempo de ejecución. La aplicación puede enumerar los procedimientos almacenados disponibles mediante las funciones de catálogo.  
+-   **Procedimientos** La aplicación puede definir y compilar una o varias instrucciones SQL en tiempo de desarrollo y almacenar estas instrucciones en el origen de datos como un procedimiento. El procedimiento se ejecuta una o más veces en tiempo de ejecución. La aplicación puede enumerar los procedimientos almacenados disponibles mediante funciones de catálogo.  
   
 -   **Funciones de catálogo** El escritor de controladores crea una función que devuelve un conjunto de resultados predefinido. Normalmente, esta función envía una instrucción SQL predefinida o llama a un procedimiento creado para este propósito. La función se ejecuta una o más veces en tiempo de ejecución.  
   
- Una instrucción determinada (identificada por su identificador de instrucción) se puede ejecutar cualquier número de veces. La instrucción se puede ejecutar con diversas instrucciones SQL diferentes, o bien se puede ejecutar repetidamente con la misma instrucción SQL. Por ejemplo, el código siguiente utiliza el mismo identificador de instrucción (*hstmt1*) para recuperar y mostrar las tablas de la base de datos sales. A continuación, vuelve a usar este identificador para recuperar las columnas de una tabla seleccionada por el usuario.  
+ Una instrucción determinada (como se identifica por su identificador de instrucción) se puede ejecutar cualquier número de veces. La instrucción se puede ejecutar con una variedad de instrucciones SQL diferentes, o se puede ejecutar repetidamente con la misma instrucción SQL. Por ejemplo, el código siguiente utiliza el mismo identificador de instrucción (*hstmt1*) para recuperar y mostrar las tablas en la base de datos Sales. A continuación, reutiliza este identificador para recuperar las columnas de una tabla seleccionada por el usuario.  
   
 ```  
 SQLHSTMT    hstmt1;  
@@ -72,13 +72,13 @@ while ((OrderID = GetOrderID()) != 0) {
 }  
 ```  
   
- En el caso de muchos controladores, la asignación de instrucciones es una tarea costosa, por lo que reutilizar la misma instrucción de esta manera suele ser más eficaz que liberar las instrucciones existentes y asignar otras nuevas. Las aplicaciones que crean conjuntos de resultados en una instrucción deben tener cuidado de cerrar el cursor sobre el conjunto de resultados antes de volver a ejecutar la instrucción; para obtener más información, vea [cerrar el cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
+ Para muchos controladores, asignar instrucciones es una tarea costosa, por lo que reutilizar la misma instrucción de esta manera suele ser más eficaz que liberar instrucciones existentes y asignar otras nuevas. Las aplicaciones que crean conjuntos de resultados en una instrucción deben tener cuidado de cerrar el cursor sobre el conjunto de resultados antes de volver a ejecutar la instrucción; Para obtener más información, consulte [Cierre del cursor](../../../odbc/reference/develop-app/closing-the-cursor.md).  
   
- Las instrucciones que se reutilizan también obligan a la aplicación a evitar una limitación en algunos controladores del número de instrucciones que pueden estar activas al mismo tiempo. La definición exacta de "Active" es específica del controlador, pero a menudo hace referencia a cualquier instrucción que se ha preparado o ejecutado y todavía tiene resultados disponibles. Por ejemplo, después de preparar una instrucción **Insert** , generalmente se considera activa; una vez que se ha ejecutado una instrucción **Select** y el cursor todavía está abierto, se suele considerar activo. una vez que se ha ejecutado una instrucción **CREATE TABLE** , normalmente no se considera activa.  
+ Reutilizar instrucciones también obliga a la aplicación a evitar una limitación en algunos controladores del número de instrucciones que pueden estar activas a la vez. La definición exacta de "activo" es específica del controlador, pero a menudo se refiere a cualquier instrucción que se haya preparado o ejecutado y que todavía tenga resultados disponibles. Por ejemplo, después de que se ha preparado una instrucción **INSERT,** generalmente se considera activa; después de que se ha ejecutado una instrucción **SELECT** y el cursor sigue abierto, generalmente se considera que está activo; después de ejecutar una instrucción **CREATE TABLE,** generalmente no se considera activa.  
   
- Una aplicación determina el número de instrucciones que pueden estar activas en una sola conexión al mismo tiempo llamando a **SQLGetInfo** con la opción SQL_MAX_CONCURRENT_ACTIVITIES. Una aplicación puede utilizar más instrucciones activas que este límite abriendo varias conexiones con el origen de datos. No obstante, dado que las conexiones pueden ser costosas, se debe tener en cuenta el efecto en el rendimiento.  
+ Una aplicación determina cuántas instrucciones pueden estar activas en una sola conexión a la vez llamando a **SQLGetInfo** con la opción SQL_MAX_CONCURRENT_ACTIVITIES. Una aplicación puede usar instrucciones más activas que este límite abriendo varias conexiones al origen de datos; debido a que las conexiones pueden ser costosas, sin embargo, se debe considerar el efecto en el rendimiento.  
   
- Las aplicaciones pueden limitar la cantidad de tiempo asignada a una instrucción para que se ejecute con el atributo de instrucción SQL_ATTR_QUERY_TIMEOUT. Si el período de tiempo de espera expira antes de que el origen de datos devuelva el conjunto de resultados, la función que ejecuta la instrucción SQL devuelve SQLSTATE HYT00 (tiempo de espera expirado). No hay un tiempo de espera predeterminado.  
+ Las aplicaciones pueden limitar la cantidad de tiempo asignado para que una instrucción se ejecute con el atributo de instrucción SQL_ATTR_QUERY_TIMEOUT. Si el período de tiempo de espera expira antes de que el origen de datos devuelva el conjunto de resultados, la función que ejecuta la instrucción SQL devuelve SQLSTATE HYT00 (tiempo de espera caducado). No hay un tiempo de espera predeterminado.  
   
  Esta sección contiene los temas siguientes.  
   

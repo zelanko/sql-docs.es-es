@@ -1,5 +1,5 @@
 ---
-title: Propiedades de la sesión, SQL Native Client OLE DB
+title: Propiedades de sesión, SQL Native Client OLE DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,27 +11,27 @@ helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6b0a6b512798e4da90555f7a7e195bfbcfbe97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
-ms.translationtype: MT
+ms.openlocfilehash: 4d4b2bef0bf37b4400ac2cfcb672e43ba4f5abcb
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75231766"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81297253"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>Propiedades de la sesión: proveedor de SQL Server Native Client OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client interpreta OLE DB propiedades de sesión como se indica a continuación.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client interpreta las propiedades de sesión OLE DB de la siguiente manera.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite todos los niveles de aislamiento de transacción de confirmación automática con la excepción del nivel de caos DBPROPVAL_TI_CHAOS.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite todos los niveles de aislamiento de transacciones de confirmación automática con la excepción del nivel de caos DBPROPVAL_TI_CHAOS.|  
 |||
 
- En el conjunto de propiedades específico del proveedor DBPROPSET_SQLSERVERSESSION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client define la siguiente propiedad de sesión adicional.  
+ En el conjunto de propiedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] específico del proveedor DBPROPSET_SQLSERVERSESSION, el proveedor OLE DB de Native Client define la siguiente propiedad de sesión adicional.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  

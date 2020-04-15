@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM de datos, IRowsetFastUpload (OLE DB)
+title: Data FILESTREAM, IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 545190d2852d617fa7d73f4aaf464d15b7f1327b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: d298d9c4677d6b50ad0234a85e3d51b4bb8478ae
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225952"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295700"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Enviar datos a una columna FILESTREAM mediante IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   En este ejemplo se utiliza la interfaz IRowsetFastUpload para enviar entre 4MB y 4GB de datos a una columna FILESTREAM.  
   
- Para obtener más información sobre la característica FileStream, vea [compatibilidad de filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obtener más información sobre la característica filestream, vea [FileSTREAM Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Ejemplo  
- Antes de compilar y ejecutar este ejemplo, habilite la compatibilidad con FILESTREAM ([habilitar y configurar FileStream](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Antes de compilar y ejecutar este ejemplo, habilite la compatibilidad con FILESTREAM ([Habilitar y configurar FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   

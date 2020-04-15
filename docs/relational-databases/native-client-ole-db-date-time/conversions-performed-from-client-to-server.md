@@ -9,16 +9,16 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6195bc8bbe5dc36cf70337adec8f03eab67ca09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 54ab88302c14e9dc0aa405756bdf2e5b1ba75be5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096010"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304419"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversiones realizadas de cliente a servidor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "74096010"
 ## <a name="conversions"></a>Conversiones  
  En este tema se describen las conversiones realizadas en el cliente. Si el cliente especifica una precisión de fracciones de segundos para un parámetro que difiere de la definida en el servidor, la conversión del cliente puede producir un error cuando el servidor permita llevar a cabo la operación. En concreto, el cliente trata cualquier truncamiento de fracciones de segundo como un error, mientras que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redondea los valores de hora al segundo entero más próximo.  
   
- Si no se llama a ICommandWithParameters:: SetParameterInfo, los enlaces de DBTYPE_DBTIMESTAMP se convierten como si fueran **datetime2**.  
+ Si no se llama a ICommandWithParameters::SetParameterInfo, los enlaces de DBTYPE_DBTIMESTAMP se convierten como si fueran **datetime2**.  
   
 |A -><br /><br /> De|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -50,8 +50,8 @@ ms.locfileid: "74096010"
   
 |Símbolo|Significado|  
 |------------|-------------|  
-|-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor:: CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION se devuelve en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
-|N/D|No aplicable.|  
+|-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor::CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION se devuelve en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
+|N/D|No es aplicable.|  
 |1|Si los datos proporcionados no son válidos, se establece DBSTATUS_E_CANTCONVERTVALUE. Los datos de entrada se validan antes de que se apliquen las conversiones, de modo que aunque un componente vaya a ser omitido por una conversión subsiguiente, deberá seguir siendo válido para que la conversión se produzca con éxito.|  
 |2|Se omiten los campos de hora.|  
 |3|Las fracciones de segundo deben ser cero o se establece DBSTATUS_E_DATAOVERFLOW.|  

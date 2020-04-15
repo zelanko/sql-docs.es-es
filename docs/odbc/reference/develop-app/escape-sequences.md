@@ -12,18 +12,18 @@ helpviewer_keywords:
 - escape sequences [ODBC], determining if supported
 - interoperability of SQL statements [ODBC], escape sequences
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d73282cde4d0598d7e6a35ac6273935626b96969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5d9589230183b198cb7d59cf9739dab75625441e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68001374"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298715"
 ---
 # <a name="escape-sequences"></a>Secuencias de escape
-ODBC define secuencias de escape que contienen la gramática estándar para los literales de fecha, hora, marca de tiempo y intervalo de fecha y hora, llamadas a funciones escalares, **como** caracteres de escape de predicado, combinaciones externas y llamadas a procedimientos. Las aplicaciones interoperables deben usar estas secuencias siempre que sea posible.  
+ODBC define secuencias de escape que contienen gramática estándar para literales de fecha, hora, marca de tiempo e intervalo de fecha y hora, llamadas a funciones escalares, caracteres de escape de predicado **LIKE,** combinaciones externas y llamadas a procedimientos. Las aplicaciones interoperables deben utilizar estas secuencias siempre que sea posible.  
   
- Para determinar si un controlador admite las secuencias de escape para los literales de fecha, hora, marca de tiempo o intervalo de fecha y hora, una aplicación llama a **SQLGetTypeInfo**. Si el origen de datos admite un tipo de datos de fecha, hora, marca de tiempo o intervalo de fecha y hora, también debe admitir la secuencia de escape correspondiente. Para determinar si se admiten las otras secuencias de escape, una aplicación llama a **SQLGetInfo**.  
+ Para determinar si un controlador admite las secuencias de escape para literales de fecha, hora, marca de tiempo o intervalo de fecha y hora, una aplicación llama a **SQLGetTypeInfo**. Si el origen de datos admite un tipo de datos de fecha, hora, marca de tiempo o intervalo de fecha y hora, también debe admitir la secuencia de escape correspondiente. Para determinar si se admiten las otras secuencias de escape, una aplicación llama a **SQLGetInfo**.  
   
- Para obtener más información, vea [secuencias de escape en ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md), más adelante en esta sección.
+ Para obtener más información, vea [Secuencias](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)de escape en ODBC , más adelante en esta sección.

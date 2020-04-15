@@ -1,5 +1,5 @@
 ---
-title: Tamaño del conjunto de filas cursor | Microsoft Docs
+title: Tamaño del conjunto de filas del cursor (Cursor Rowset Size) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC cursors, rowset size
 - rowsets [ODBC]
 ms.assetid: 2febe2ae-fdc1-490e-a79f-c516bc8e7c3f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5188b87e91725e2d0e86337261fc1f915189ff19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7f799722bfae35a714e740691e2cdc53e3155063
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784242"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302892"
 ---
 # <a name="cursor-rowset-size"></a>Tamaño del conjunto de filas del cursor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ SQLSetStmtAttr(m_hstmt, SQL_ATTR_ROW_ARRAY_SIZE, (SQLPOINTER)uwRowsetSize, SQL_I
   
      Una matriz se genera mediante estructuras que contienen los datos e indicadores para todas las columnas de una fila. La matriz tiene el mismo número de estructuras que el tamaño del conjunto de filas.  
   
- Cuando se usa un enlace de modo de columna o de modo de fila, cada llamada a **SQLFetch** o **SQLFetchScroll** rellena las matrices enlazadas con los datos del conjunto de filas recuperado.  
+ Cuando se usa el enlace de columna o de fila, cada llamada a **SQLFetch** o **SQLFetchScroll** rellena las matrices enlazadas con datos del conjunto de filas recuperado.  
   
- [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) también se puede usar para recuperar datos de columna de un cursor de bloque. Dado que **SQLGetData** funciona una fila cada vez, se debe llamar a **SQLSetPos** para establecer una fila específica del conjunto de filas como la fila actual antes de llamar a **SQLGetData**.  
+ [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) también se puede usar para recuperar datos de columna de un cursor de bloque. Dado que **SQLGetData** funciona una fila a la vez, se debe llamar a **SQLSetPos** para establecer una fila específica en el conjunto de filas como la fila actual antes de llamar a **SQLGetData**.  
   
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client ofrece una optimización mediante conjuntos de filas para recuperar rápidamente un conjunto de resultados completo. Para usar esta optimización, establezca los atributos de cursor en sus valores predeterminados (solo avance, solo lectura, tamaño del conjunto de filas = 1) en el momento en que se llama a **SQLExecDirect** o **SQLExecute** . El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client configura un conjunto de resultados predeterminado. Esto es más eficaz que los cursores de servidor al transferir los resultados al cliente sin desplazarse. Después de ejecutar la instrucción, aumente el tamaño del conjunto de filas y use el enlace de modo de columna o de modo de fila. Esto permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usar un conjunto de resultados predeterminado para enviar filas de resultados de forma eficaz al cliente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mientras que el controlador ODBC de Native Client extrae continuamente filas de los búferes de red en el cliente.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client ofrece una optimización mediante conjuntos de filas para recuperar rápidamente un conjunto de resultados completo. Para usar esta optimización, establezca los atributos del cursor en sus valores predeterminados (solo avance, de solo lectura, tamaño del conjunto de filas n.o 1) en el momento en que se llama a **SQLExecDirect** o **SQLExecute.** El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client configura un conjunto de resultados predeterminado. Esto es más eficaz que los cursores de servidor al transferir los resultados al cliente sin desplazarse. Después de ejecutar la instrucción, aumente el tamaño del conjunto de filas y use el enlace de modo de columna o de modo de fila. Esto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite usar un conjunto de resultados predeterminado para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enviar filas de resultados de forma eficaz al cliente, mientras que el controlador ODBC de Native Client extrae continuamente filas de los búferes de red en el cliente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Propiedades de cursor](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

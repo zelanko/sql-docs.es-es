@@ -1,5 +1,5 @@
 ---
-title: Función SQLGetStmtOption | Microsoft Docs
+title: FUNción SQLGetStmtOption ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,25 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC]
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f99078de7fccdd662fd0056b92453780da445d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e3e7bd7a48dbf2116702b52f4963bb545e809352
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68030669"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303287"
 ---
 # <a name="sqlgetstmtoption-function"></a>Función SQLGetStmtOption
 **Conformidad**  
- Versión introducida: compatibilidad con estándares de ODBC 1,0: desusado  
+ Versión introducida: Cumplimiento de normas ODBC 1.0: en desuso  
   
  **Resumen**  
- En ODBC 3. *x*, la función **SQLGetStmtOption** de ODBC 2,0 se ha reemplazado por **SQLGetStmtAttr**. Para obtener más información, vea [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ En ODBC 3. *x*, la función ODBC 2.0 **SQLGetStmtOption** se ha reemplazado por **SQLGetStmtAttr**. Para obtener más información, vea [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  
->  Para obtener más información sobre lo que el administrador de controladores asigna a esta función cuando se trata de un ODBC 2. la aplicación *x* está trabajando con un ODBC 3. *x* , consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en el Apéndice G: instrucciones de controlador para la compatibilidad con versiones anteriores.  
+>  Para obtener más información acerca de lo que el Administrador de controladores asigna esta función a cuando un ODBC 2. *x* aplicación está trabajando con un ODBC 3. *x* Driver, consulte Asignación de [funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en el Apéndice G: Directrices del controlador para la compatibilidad con versiones anteriores.  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referencia de la API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

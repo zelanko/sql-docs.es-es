@@ -1,5 +1,5 @@
 ---
-title: Procedimiento almacenado, llamada ODBC, salida
+title: Procedimiento almacenado, ODBC CALL, salida
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 11e50e3937137b44c273d10914968dde2cfefdc5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244493"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302234"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ejecutar procedimiento almacenado con ODBC CALL y procesar la salida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "75244493"
   
 2.  Cree un conjunto de enlaces (uno para cada creador de parámetro) mediante una matriz de estructura DBBINDING.  
   
-3.  Cree un descriptor de acceso para los parámetros definidos mediante el método **IAccessor:: CreateAccessor** . **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
+3.  Cree un descriptor de acceso para los parámetros definidos mediante el uso del método **IAccessor::CreateAccessor**. El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
   
 4.  Rellene la estructura DBPARAMS.  
   
 5.  Llame al comando **Execute** (en este caso, una llamada a un procedimiento almacenado).  
   
-6.  Procese el conjunto de filas y suéltelo mediante el método **IRowset:: Release** .  
+6.  Procese el conjunto de filas y libérelo mediante el método **IRowset::Release**.  
   
 7.  Procese el código de retorno y los valores de parámetro de salida que se reciben del procedimiento almacenado.  
   
@@ -357,6 +357,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Temas de procedimientos de procesamiento de resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Temas de procedimientos para procesar resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

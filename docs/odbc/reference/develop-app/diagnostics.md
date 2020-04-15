@@ -1,5 +1,5 @@
 ---
-title: Diagnósticos | Microsoft Docs
+title: Diagnósticos de la página de diagnóstico de la página de Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - functions [ODBC], diagnostic information
 - diagnostic information [ODBC], about diagnostic information
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd6640c0dc06d9e957176717ef26aa3e444ffa9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68022521"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305156"
 ---
 # <a name="diagnostics"></a>Diagnóstico
-Las funciones de ODBC devuelven información de diagnóstico de dos maneras. El código de retorno indica el éxito o error general de la función, mientras que los registros de diagnóstico proporcionan información detallada sobre la función. Al menos un registro de diagnóstico: se devuelve el registro de encabezado, incluso si la función se ejecuta correctamente.  
+Las funciones de ODBC devuelven información de diagnóstico de dos maneras. El código de retorno indica el éxito general o el error de la función, mientras que los registros de diagnóstico proporcionan información detallada sobre la función. Se devuelve al menos un registro de diagnóstico (el registro de encabezado) incluso si la función se realiza correctamente.  
   
- La información de diagnóstico se usa durante el desarrollo para detectar errores de programación, como identificadores no válidos y errores de sintaxis en instrucciones SQL codificadas de forma rígida. Se utiliza en tiempo de ejecución para detectar errores y advertencias en tiempo de ejecución, como el truncamiento de datos, las infracciones de acceso y los errores de sintaxis en instrucciones SQL escritas por el usuario.  
+ La información de diagnóstico se utiliza en tiempo de desarrollo para detectar errores de programación, como identificadores no válidos y errores de sintaxis en instrucciones SQL codificadas de forma rígida. Se utiliza en tiempo de ejecución para detectar errores y advertencias en tiempo de ejecución, como el truncamiento de datos, las infracciones de acceso y los errores de sintaxis en las instrucciones SQL introducidas por el usuario.  
   
  Esta sección contiene los temas siguientes.  
   

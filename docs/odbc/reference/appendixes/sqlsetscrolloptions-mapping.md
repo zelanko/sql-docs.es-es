@@ -1,5 +1,5 @@
 ---
-title: Asignación de SQLSetScrollOptions | Microsoft Docs
+title: Asignación de SQLSetScrollOptions ( SQLSetScrollOptions) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - SQLSetScrollOptions function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetScrollOptions
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 06b6b0f982b5c8d864e5024c8544f1f8e9af75ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 77050df283b10abd17ba62a48bd366d6c1b3f601
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091705"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300505"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Asignación de SQLSetScrollOptions
-Cuando una aplicación llama a **SQLSetScrollOptions** a través de un controlador ODBC *3. x* y el controlador no admite **SQLSetScrollOptions**, la llamada a  
+Cuando una aplicación llama a **SQLSetScrollOptions** a través de un controlador ODBC *3.x* y el controlador no admite **SQLSetScrollOptions**, la llamada a  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
 ```  
   
- el resultado será el siguiente:  
+ resultará de la siguiente manera:  
   
 -   Una llamada a  
   
@@ -35,7 +35,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLGetInfo(ConnectionHandle, InfoType, InfoValuePtr, BufferLength, StringLengthPtr)  
     ```  
   
-     con el argumento *InfoType* establecido en uno de los valores de la tabla siguiente, dependiendo del valor del argumento *KeysetSize* en **SQLSetScrollOptions**.  
+     con el argumento *InfoType* establecido en uno de los valores de la tabla siguiente, en función del valor del argumento *KeysetSize* en **SQLSetScrollOptions**.  
   
     |*Argumento KeysetSize*|*Argumento InfoType*|  
     |---------------------------|-------------------------|  
@@ -43,20 +43,20 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     |SQL_SCROLL_STATIC|SQL_STATIC_CURSOR_ATTRIBUTES2|  
     |SQL_SCROLL_KEYSET_DRIVEN|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
     |SQL_SCROLL_DYNAMIC|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|  
-    |Un valor mayor que el argumento *RowsetSize*|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
+    |Un valor mayor que el *RowsetSize* argumento|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
   
      Si el valor del argumento *KeysetSize* no aparece en la tabla anterior, la llamada a **SQLSetScrollOptions** devuelve SQLSTATE S1107 (valor de fila fuera del intervalo) y no se realiza ninguno de los pasos siguientes.  
   
-     A continuación, el administrador de controladores comprueba si se ha establecido el bit adecuado en el valor **InfoValuePtr* devuelto por la llamada a **SQLGetInfo**, según el valor del argumento de *simultaneidad* en **SQLSetScrollOptions**.  
+     A continuación, el Administrador de controladores comprueba si el bit adecuado se establece en el **InfoValuePtr* valor devuelto por la llamada a **SQLGetInfo**, según el valor de la *Simultaneidad* argumento en **SQLSetScrollOptions**.  
   
-    |Argumento de *simultaneidad*|Configuración de *InfoType*|  
+    |*Argumento de simultaneidad*|*Configuración de InfoType*|  
     |----------------------------|------------------------|  
     |SQL_CONCUR_READ_ONLY|SQL_CA2_READ_ONLY_CONCURRENCY|  
     |SQL_CONCUR_LOCK|SQL_CA2_LOCK_CONCURRENCY|  
     |SQL_CONCUR_ROWVER|SQL_CA2_ROWVER_CONCURRENCY|  
     |SQL_CONCUR_VALUES|SQL_CA2_VALUES_CONCURRENCY|  
   
-     Si el argumento de *simultaneidad* no es ninguno de los valores de la tabla anterior, la llamada a **SQLSetScrollOptions** devuelve SQLSTATE S1108 (opción de simultaneidad fuera del intervalo) y no se realiza ninguno de los pasos siguientes. Si el bit adecuado (como se indica en la tabla anterior) no se establece en **InfoValuePtr* en uno de los valores correspondientes al argumento de *simultaneidad* , la llamada a **SQLSetScrollOptions** devuelve SQLSTATE S1C00 (controlador no compatible) y no se realiza ninguno de los pasos siguientes.  
+     Si el argumento *Concurrency* no es uno de los valores de la tabla anterior, la llamada a **SQLSetScrollOptions** devuelve SQLSTATE S1108 (opción de simultaneidad fuera del intervalo) y no se realiza ninguno de los pasos siguientes. Si el bit adecuado (como se indica en la tabla anterior) no se establece en **InfoValuePtr* en uno de los valores correspondientes a la *simultaneidad* argumento, la llamada a **SQLSetScrollOptions** devuelve SQLSTATE S1C00 (Driver no capaz) y no se realiza ninguno de los pasos siguientes.  
   
 -   Una llamada a  
   
@@ -66,13 +66,13 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
   
      con * \*ValuePtr* establecido en uno de los valores de la tabla siguiente, según el valor del argumento *KeysetSize* en **SQLSetScrollOptions**.  
   
-    |Argumento *KeysetSize*|*\*ValuePtr*|  
+    |*Argumento KeysetSize*|*\*ValuePtr*|  
     |---------------------------|------------------|  
     |SQL_SCROLL_FORWARD_ONLY|SQL_CURSOR_FORWARD_ONLY|  
     |SQL_SCROLL_STATIC|SQL_CURSOR_STATIC|  
     |SQL_SCROLL_KEYSET_DRIVEN|SQL_CURSOR_KEYSET_DRIVEN|  
     |SQL_SCROLL_DYNAMIC|SQL_CURSOR_DYNAMIC|  
-    |Un valor mayor que el argumento *RowsetSize*|SQL_CURSOR_KEYSET_DRIVEN|  
+    |Un valor mayor que el *RowsetSize* argumento|SQL_CURSOR_KEYSET_DRIVEN|  
   
 -   Una llamada a  
   
@@ -80,15 +80,15 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     con * \*ValuePtr* establecido en el argumento de *simultaneidad* en **SQLSetScrollOptions**.  
+     con * \*ValuePtr* establecido en el argumento *Concurrency* en **SQLSetScrollOptions**.  
   
--   Si el argumento *KeysetSize* de la llamada a **SQLSetScrollOptions** es positivo, una llamada a  
+-   Si el *KeysetSize* argumento en la llamada a **SQLSetScrollOptions** es positivo, una llamada a  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     con * \*ValuePtr* establecido en el argumento *KeysetSize* en **SQLSetScrollOptions**.  
+     con * \*ValuePtr* establecido en el *keysetSize* argumento en **SQLSetScrollOptions**.  
   
 -   Una llamada a  
   
@@ -96,7 +96,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     con * \*ValuePtr* establecido en el argumento *RowsetSize* en **SQLSetScrollOptions**.  
+     con * \*ValuePtr* establecido en el *Argumento RowsetSize* en **SQLSetScrollOptions**.  
   
     > [!NOTE]  
-    >  Cuando el administrador de controladores asigna **SQLSetScrollOptions** para una aplicación que trabaja con un controlador ODBC *3. x* que no admite **SQLSetScrollOptions**, el administrador de controladores establece la opción de instrucción SQL_ROWSET_SIZE, no el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE, en el argumento *RowsetSize* de **SQLSetScrollOption**. Como resultado, una aplicación no puede usar **SQLSetScrollOptions** al capturar varias filas mediante una llamada a **SQLFetch** o **SQLFetchScroll**. Solo se puede usar al capturar varias filas mediante una llamada a **SQLExtendedFetch**.
+    >  Cuando el Administrador de controladores asigna **SQLSetScrollOptions** para una aplicación que trabaja con un controlador ODBC *3.x* que no admite **SQLSetScrollOptions**, el Administrador de controladores establece la opción de instrucción SQL_ROWSET_SIZE, no el atributo de instrucción *SQL_ATTR_ROW_ARRAY_SIZE,* en el argumento RowsetSize de **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** no se puede utilizar una aplicación al capturar varias filas mediante una llamada a **SQLFetch** o **SQLFetchScroll**. Solo se puede utilizar cuando se capturan varias filas mediante una llamada a **SQLExtendedFetch**.

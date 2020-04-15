@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults | Microsoft Docs
+title: SQLMoreResults ? Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ apitype: DLLExport
 helpviewer_keywords:
 - SQLMoreResults function
 ms.assetid: f65698c3-7291-480d-9dab-58b13feb7771
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3256e0e4862923138cdf035eb15926364bc8e0a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f22112f57bbb38873956f17189169a4d66efe019
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73786301"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81289315"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **SQLMoreResults** permite que la aplicación recupere varios conjuntos de filas de resultados. Una instrucción SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] con una cláusula COMPUTE o un lote enviadoo de ODBC o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , provocan que el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Cliente generen varios conjuntos de resultados. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la creación de un cursor de servidor para procesar los resultados en ninguno de los casos. Por consiguiente, el programador debe asegurarse de que la instrucción ODBC bloquea la tabla. El programador debe agotar los datos devueltos o cancelar la instrucción ODBC antes de procesar los datos de otras instrucciones activas en la conexión.  
+  **SQLMoreResults** permite que la aplicación recupere varios conjuntos de filas de resultados. Una instrucción SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] con una cláusula COMPUTE o un lote enviadoo de ODBC o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , provocan que el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Cliente generen varios conjuntos de resultados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la creación de un cursor de servidor para procesar los resultados en ninguno de los casos. Por consiguiente, el programador debe asegurarse de que la instrucción ODBC bloquea la tabla. El programador debe agotar los datos devueltos o cancelar la instrucción ODBC antes de procesar los datos de otras instrucciones activas en la conexión.  
   
 > [!NOTE]  
 >  Una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] que contiene una cláusula COMPUTE solo se admite cuando se establece la conexión a una versión de servidor anterior a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -164,7 +163,7 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [SQLMoreResults, función](https://go.microsoft.com/fwlink/?LinkId=59357)   
+ [Función SQLMoreResults](https://go.microsoft.com/fwlink/?LinkId=59357)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

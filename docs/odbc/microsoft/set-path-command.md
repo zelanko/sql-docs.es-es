@@ -1,5 +1,5 @@
 ---
-title: Comando establecer ruta de acceso | Microsoft Docs
+title: Comando SET PATH (SET PATH Command) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e44093c3ea18bc995264a8974726f5af0abe3b3a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68063646"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300825"
 ---
 # <a name="set-path-command"></a>Comando de ruta de acceso set
-Especifica una ruta de acceso para las búsquedas de archivos. Para obtener información específica del controlador, consulte la sección Comentarios.  
+Especifica una ruta de acceso para las búsquedas de archivos. Para obtener información específica del controlador, consulte Comentarios.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -30,22 +30,22 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- En [ *ruta de acceso*]  
- Especifica los directorios en los que desea que Visual FoxPro busque. Use comas o punto y coma para separar los directorios.  
+ A [ *Camino*]  
+ Especifica los directorios que desea que Visual FoxPro busque. Utilice comas o punto y coma para separar los directorios.  
   
 ## <a name="remarks"></a>Observaciones  
- ESTABLECER ruta de acceso permite especificar rutas de búsqueda para otros programas de Visual FoxPro a los que se puede llamar en procedimientos almacenados. ESTABLECER ruta de acceso no cambiará la ruta de acceso del origen de datos especificado para la conexión.  
+ SET PATH le permite especificar rutas de búsqueda para otros programas de Visual FoxPro a los que se puede llamar dentro de procedimientos almacenados. SET PATH no cambiará la ruta de acceso del origen de datos que ha especificado para la conexión.  
   
- Problema establezca la ruta de acceso en sin *ruta de acceso* para restaurar la ruta de acceso al directorio o la carpeta predeterminados.  
+ Emita SET PATH TO sin *Path* para restaurar la ruta de acceso al directorio o carpeta predeterminado.  
   
-## <a name="driver-remarks"></a>Notas del controlador  
- Si se emite SET PATH en un procedimiento almacenado, se omitirán con las siguientes funciones y comandos:  
+## <a name="driver-remarks"></a>Observaciones del conductor  
+ Si emite SET PATH en un procedimiento almacenado, las siguientes funciones y comandos lo ignorarán:  
   
 -   Las funciones de catálogo como [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) y [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) omitirán la nueva ruta de acceso y seguirán haciendo referencia a la ruta de acceso especificada por el origen de datos en [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) o [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
 -   Los comandos como SELECT, INSERT, UPDATE, DELETE y CREATE TABLE omitirán la nueva ruta de acceso y seguirán haciendo referencia a la ruta de acceso especificada por el origen de datos en **SQLPrepare** o **SQLExecDirect**.  
   
- Si se emite SET PATH en un procedimiento almacenado y no se vuelve a establecer la ruta de acceso en su estado original, otras conexiones a la base de datos usarán la nueva ruta de acceso (porque SET PATH no tiene el ámbito de las sesiones de datos).  
+ Si emite SET PATH en un procedimiento almacenado y no vuelve a establecer la ruta de acceso a su estado original, otras conexiones a la base de datos usarán la nueva ruta de acceso (porque SET PATH no tiene el ámbito de las sesiones de datos).  
   
  Si desea crear, seleccionar o actualizar tablas en un directorio distinto del especificado por el origen de datos, especifique la ruta de acceso completa del archivo con el comando.  
   

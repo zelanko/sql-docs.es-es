@@ -1,5 +1,5 @@
 ---
-title: Native Client, compilar aplicaciones SQL
+title: Native Client, cree aplicaciones SQL
 ms.custom: ''
 ms.date: 12/16/2019
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad6dcaf2b22e7aa545727354f911502dcde16aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 302d1958bbc3d6c1cca12f82f04db11119fdbd57
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244217"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302550"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Generar aplicaciones con SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,18 +46,18 @@ ms.locfileid: "75244217"
  [Actualización de una aplicación desde SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  Se describen los problemas que deben tenerse en cuenta a la hora de realizar la actualización de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Usar ADO con SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  
+ [Utilizar ADO con SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  
  Se describe el modo en que ADO usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para obtener acceso a la funcionalidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usarla.  
   
- [Directivas de soporte con SQL Server Native Client](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
+ [Directivas de soporte para SQL Server Native Client](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
  Se describe cómo se pueden usar varios componentes de acceso a datos con versiones diferentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
  [Conexión a una Azure SQL Database con SQL Server Native Client](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Describe cómo conectarse a una base de datos de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Consulte también  
- [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [Temas de procedimientos de ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [Programación de clientenativo de SQL Server](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [Temas de información de ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Temas de procedimientos de OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

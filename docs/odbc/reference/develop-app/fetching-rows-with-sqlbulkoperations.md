@@ -1,5 +1,5 @@
 ---
-title: Capturando filas con SQLBulkOperations | Microsoft Docs
+title: Obtención de filas con SQLBulkOperations ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ helpviewer_keywords:
 - updating data [ODBC], bookmarks
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: 0efee2d6-ce94-411e-9976-97ba28b8da37
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60b6673c4a6d618e52c78b48fe7307c20c8628f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae0b4c2114059cecaaf8f8825169300f131bd473
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68069837"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305654"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Capturar filas con SQLBulkOperations
-Los datos se pueden volver a capturar en un conjunto de filas mediante marcadores mediante una llamada a **SQLBulkOperations.** Las filas que se van a capturar se identifican mediante los marcadores de una columna de marcador enlazada. No se capturan las columnas con un valor de SQL_COLUMN_IGNORE.  
+Los datos se pueden convertir en un conjunto de filas mediante marcadores mediante una llamada a **SQLBulkOperations.** Las filas que se van a capturar se identifican mediante los marcadores de una columna de marcador enlazada. Las columnas con un valor de SQL_COLUMN_IGNORE no se recuperan.  
   
- Para realizar capturas masivas con **SQLBulkOperations**, la aplicación hace lo siguiente:  
+ Para realizar recuperaciones masivas con **SQLBulkOperations**, la aplicación hace lo siguiente:  
   
-1.  Recupera y almacena en caché los marcadores de todas las filas que se van a actualizar. Si se usa más de un marcador y un enlace de modo de columna, los marcadores se almacenan en una matriz; Si se usa más de un marcador y un enlace de modo de fila, los marcadores se almacenan en una matriz de estructuras de filas.  
+1.  Recupera y almacena en caché los marcadores de todas las filas que se van a actualizar. Si hay más de un marcador y se utiliza el enlace de columna, los marcadores se almacenan en una matriz; si hay más de un marcador y se utiliza el enlace de fila, los marcadores se almacenan en una matriz de estructuras de fila.  
   
-2.  Establece el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE en el número de filas que se van a capturar y enlazar el búfer que contiene el valor de marcador, o la matriz de marcadores, a la columna 0.  
+2.  Establece el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE en el número de filas que se van a capturar y enlaza el búfer que contiene el valor del marcador, o la matriz de marcadores, en la columna 0.  
   
-3.  Establece el valor del búfer de longitud/indicador de cada columna según sea necesario. Es la longitud de bytes de los datos o SQL_NTS para las columnas enlazadas a búferes de cadena, la longitud de bytes de los datos para las columnas enlazadas a búferes binarios y SQL_NULL_DATA para que las columnas se establezcan en NULL. La aplicación establece el valor del búfer de longitud/indicador de las columnas que se van a establecer en su valor predeterminado (si existe) o NULL (si no hay ninguno) para SQL_COLUMN_IGNORE.  
+3.  Establece el valor en el búfer de longitud/indicador de cada columna según sea necesario. Esta es la longitud de bytes de los datos o SQL_NTS de las columnas enlazadas a búferes de cadena, la longitud de bytes de los datos de las columnas enlazadas a búferes binarios y SQL_NULL_DATA para que las columnas se establezcan en NULL. La aplicación establece el valor en el búfer de longitud/indicador de las columnas que se deben establecer en su valor predeterminado (si existe) o NULL (si no lo hace) en SQL_COLUMN_IGNORE.  
   
-4.  Llama a **SQLBulkOperations** con el argumento *Operation* establecido en SQL_FETCH_BY_BOOKMARK.  
+4.  Llama a **SQLBulkOperations** con el *Operación* argumento establecido en SQL_FETCH_BY_BOOKMARK.  
   
- No es necesario que la aplicación use la matriz de operaciones de fila para evitar que la operación se realice en determinadas columnas. La aplicación selecciona las filas que desea capturar copiando solo los marcadores de esas filas en la matriz de marcadores enlazada.
+ No es necesario que la aplicación utilice la matriz de operaciones de fila para evitar que la operación se realice en determinadas columnas. La aplicación selecciona las filas que desea capturar copiando solo los marcadores de esas filas en la matriz de marcadores enlazados.

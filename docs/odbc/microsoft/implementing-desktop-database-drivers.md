@@ -1,5 +1,5 @@
 ---
-title: Implementar controladores de base de datos de escritorio | Microsoft Docs
+title: Implementación de controladores de base de datos de escritorio ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b25a5e8ed7a39a11b207c185f47855c7670473e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67952350"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81290615"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementación de controladores de escritorio de la base de datos
-Las instrucciones y notas técnicas sobre cómo implementar y configurar los controladores de base de datos de escritorio de Microsoft ODBC pueden encontrarse en la ayuda en pantalla del administrador de orígenes de datos ODBC. Se puede tener acceso a este archivo durante las rutinas de instalación del controlador desde el [Administrador de orígenes de datos ODBC de Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  
+Las instrucciones y notas técnicas sobre cómo implementar y configurar los controladores de base de datos de escritorio ODBC de Microsoft se pueden encontrar en la ayuda en línea del Administrador de orígenes de datos ODBC. Se puede acceder a este archivo durante las rutinas de instalación del controlador desde el Administrador de [orígenes](../../odbc/admin/odbc-data-source-administrator.md)de datos ODBC de Microsoft .  
   
  Esta sección contiene los temas siguientes.  
   

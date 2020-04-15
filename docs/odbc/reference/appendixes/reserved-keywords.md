@@ -1,5 +1,5 @@
 ---
-title: Palabras clave reservadas | Microsoft Docs
+title: Palabras clave reservadas ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68057210"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307996"
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
-Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática de SQL mínima; sin embargo, para garantizar la compatibilidad con los controladores que admiten la gramática básica de SQL, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El valor de #**define** SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
+Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática SQL mínima; sin embargo, para garantizar la compatibilidad con controladores que admiten la gramática SQL principal, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El valor**de definición** SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACCIÓN|ISOLATION|  
+|ACTION|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -48,7 +48,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|NO|  
+|CASCADED|No|  
 |CASE|Ninguno|  
 |CAST|NOT|  
 |CATALOG|NULL|  
@@ -64,11 +64,11 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|SE superpone|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|RESTRICCIONES|PARTIAL|  
+|CONSTRAINTS|PARTIAL|  
 |CONTINUE|PASCAL|  
-|CONVERT|LOCALIZACIÓN|  
+|CONVERT|POSITION|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -94,7 +94,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|TAMAÑO|  
+|DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
@@ -127,7 +127,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTIDAD|USER|  
+|IDENTITY|USER|  
 |IMMEDIATE|USING|  
 |IN|VALOR|  
 |INCLUDE|VALUES|  

@@ -1,5 +1,5 @@
 ---
-title: Gramática de SQL ODBC compatible adicional | Microsoft Docs
+title: Gramática SQL ODBC compatible adicional ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67901396"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307136"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Gramática de SQL de ODBC compatibles adicionales
-Los controladores ODBC admiten por completo la gramática mínima de ODBC 2,5 y las siguientes cláusulas en la gramática básica y extendida de ODBC 2,5. Se puede mostrar información adicional mediante el salto a la [instrucción ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [los nombres de correlación y los](../../odbc/microsoft/correlation-names.md)temas de [invocación de procedimiento](../../odbc/microsoft/procedure-invocation.md) .  
+Los controladores ODBC admiten completamente la gramática ODBC 2.5 mínima y las siguientes cláusulas en la gramática Core y Extended ODBC 2.5. Para mostrar información adicional, se puede saltar a los temas [INstrucción ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), Nombres de [correlación](../../odbc/microsoft/correlation-names.md)y [Invocación de](../../odbc/microsoft/procedure-invocation.md) procedimiento.  
   
--   Literal numérico aproximado (Core)  
+-   Literal numérico aproximado (Núcleo)  
   
--   [ALTER TABLE (instrucción](../../odbc/microsoft/alter-table-statement.md) , Core)  
+-   [Instrucción ALTER TABLE](../../odbc/microsoft/alter-table-statement.md) (Core)  
   
 -   Literales binarios (extendidos)  
   
@@ -33,7 +33,7 @@ Los controladores ODBC admiten por completo la gramática mínima de ODBC 2,5 y 
   
 -   [Invocación de procedimiento](../../odbc/microsoft/procedure-invocation.md) (extendido)  
   
--   [Entre predicado](../../odbc/microsoft/between-predicate.md) (Core)  
+-   [ENTRE predicado](../../odbc/microsoft/between-predicate.md) (núcleo)  
   
 -   [Instrucción CREATE INDEX](../../odbc/microsoft/create-index-statement.md)  
   
@@ -51,15 +51,15 @@ Los controladores ODBC admiten por completo la gramática mínima de ODBC 2,5 y 
   
 -   [ORDER BY con GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   Predicate EXISTs (Core)  
+-   Predicado EXISTS (Núcleo)  
   
--   EN (*ValueList*) (núcleo)  
+-   IN (*valuelist*) (Core)  
   
--   [Jet: combinaciones externas](../../odbc/microsoft/jet-outer-joins.md) (extendido)  
+-   [Jet: Uniones externas (extendidas)](../../odbc/microsoft/jet-outer-joins.md)  
   
 -   Instrucción SELECT (Extended) (incluidas las cláusulas GROUP BY, HAVING y UNION)  
   
--   Subconsultas (subselecciones) (núcleo)  
+-   Subconsultas (SUBSELECTs) (Núcleo)  
   
 -   [Funciones escalares](../../odbc/microsoft/scalar-functions.md)  
   

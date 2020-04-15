@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas (ODBC) | Microsoft Docs
+title: Ejecución de consultas (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, queries
 - queries [ODBC]
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a982d232a16e2b7f3d3692d9293686829910aeec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 93984308c9b661af8e7263ed1c3c0a54e1b35eab
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73779814"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298015"
 ---
 # <a name="executing-queries-odbc"></a>Ejecutar consultas (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Después de que una aplicación ODBC inicializa un identificador de conexión y conecta con un origen de datos, asigna uno o más identificadores de instrucciones en el identificador de conexión. A continuación, la aplicación [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar instrucciones en el identificador de instrucción. La secuencia general de eventos para ejecutar una instrucción SQL es:  
+  Después de que una aplicación ODBC inicializa un identificador de conexión y conecta con un origen de datos, asigna uno o más identificadores de instrucciones en el identificador de conexión. A continuación, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la aplicación puede ejecutar instrucciones en el identificador de instrucción. La secuencia general de eventos para ejecutar una instrucción SQL es:  
   
 1.  Establezca los atributos de instrucción necesarios.  
   
@@ -45,23 +45,23 @@ ms.locfileid: "73779814"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- Cada marcador de parámetro se puede enlazar a una variable de programa llamando a [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md).  
+ A continuación, cada marcador de parámetro se puede enlazar a una variable de programa llamando a [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md).  
   
  Una vez ejecutadas todas las instrucciones SQL y procesados sus conjuntos de resultados, la aplicación libera el identificador de instrucción.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite varios identificadores de instrucción por cada identificador de conexión. Las transacciones se administran en el nivel de conexión, para que todo el trabajo realizado en todos los identificadores de instrucciones de una única conexión se administre como parte de la misma transacción.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite varios identificadores de instrucción por identificador de conexión. Las transacciones se administran en el nivel de conexión, para que todo el trabajo realizado en todos los identificadores de instrucciones de una única conexión se administre como parte de la misma transacción.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 -   [Asignar un identificador de instrucción](../../relational-databases/native-client-odbc-queries/allocating-a-statement-handle.md)  
   
--   [Construir una instrucción SQL &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md)  
+-   [Construir una instrucción SQL &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/constructing-an-sql-statement-odbc.md)  
   
 -   [Crear instrucciones SQL para cursores](../../relational-databases/native-client-odbc-queries/constructing-sql-statements-for-cursors.md)  
   
 -   [Usar parámetros de instrucciones](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  
   
--   [Ejecutar instrucciones &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+-   [Ejecución de instrucciones &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
 -   [Liberar un identificador de instrucción](../../relational-databases/native-client-odbc-queries/freeing-a-statement-handle.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Instrucciones SQL codificadas de forma rígida | Microsoft Docs
+title: Instrucciones SQL codificadas de forma rígida ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - hard-coded SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c7a092742e5f0151b7b08f434b453645cbd804a5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68139154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300205"
 ---
 # <a name="hard-coded-sql-statements"></a>Instrucciones SQL codificadas de forma rígida
-Las aplicaciones que realizan una tarea fija normalmente contienen instrucciones SQL codificadas de forma rígida. Por ejemplo, un sistema de entrada de pedidos podría usar la siguiente llamada para enumerar los pedidos de venta abiertos:  
+Las aplicaciones que realizan una tarea fija suelen contener instrucciones SQL codificadas de forma rígida. Por ejemplo, un sistema de entrada de pedidos puede utilizar la siguiente llamada para enumerar pedidos de ventas abiertos:  
   
 ```  
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Hay varias ventajas en las instrucciones SQL codificadas de forma rígida: se pueden probar cuando se escribe la aplicación; son más fáciles de implementar que las instrucciones construidas en tiempo de ejecución; y simplifican la aplicación.  
+ Hay varias ventajas de las instrucciones SQL codificadas de forma rígida: se pueden probar cuando se escribe la aplicación; son más fáciles de implementar que las instrucciones construidas en tiempo de ejecución; y simplifican la aplicación.  
   
- El uso de los parámetros de instrucción y la preparación de instrucciones proporcionan aún mejores formas de usar instrucciones SQL codificadas de forma rígida. Por ejemplo, supongamos que la tabla Parts contiene las columnas de campo de campo, Descripción y precio. Una manera de insertar una nueva fila en esta tabla sería construir y ejecutar una instrucción **Insert** :  
+ El uso de parámetros de instrucción y la preparación de instrucciones proporcionan aún mejores maneras de usar instrucciones SQL codificadas de forma rígida. Por ejemplo, supongamos que la tabla Parts contiene las columnas PartID, Description y Price. Una forma de insertar una nueva fila en esta tabla sería construir y ejecutar una instrucción **INSERT:**  
   
 ```  
 #define DESC_LEN 51  
@@ -51,7 +51,7 @@ sprintf_s(Statement, 100, "INSERT INTO Parts (PartID, Description,  Price) "
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Una manera aún mejor es usar una instrucción con parámetros codificada de forma rígida. Esto tiene dos ventajas con respecto a una instrucción con valores de datos codificados de forma rígida. En primer lugar, es más fácil construir una instrucción parametrizada porque los valores de datos se pueden enviar en sus tipos nativos, como enteros y números de punto flotante, en lugar de convertirlos en cadenas. En segundo lugar, este tipo de instrucción se puede usar más de una vez simplemente cambiando los valores de los parámetros y volver a ejecutarlo; no es necesario volver a generarlo.  
+ Una forma aún mejor es usar una instrucción parametrizada codificada de forma rígida. Esto tiene dos ventajas sobre una instrucción con valores de datos codificados de forma rígida. En primer lugar, es más fácil construir una instrucción parametrizada porque los valores de datos se pueden enviar en sus tipos nativos, como enteros y números de punto flotante, en lugar de convertirlos en cadenas. En segundo lugar, una instrucción de este tipo se puede utilizar más de una vez simplemente cambiando los valores de parámetro y volviéndolo a ejecutar; no hay necesidad de reconstruirlo.  
   
 ```  
 #define DESC_LEN 51  
@@ -78,7 +78,7 @@ GetNewValues(&PartID, Desc, &Price);
 SQLExecDirect(hstmt, Statement, SQL_NTS);  
 ```  
   
- Suponiendo que esta instrucción se ejecute más de una vez, se puede preparar para una mayor eficacia:  
+ Suponiendo que esta instrucción se ejecute más de una vez, se puede preparar para una eficiencia aún mayor:  
   
 ```  
 #define DESC_LEN 51  
@@ -106,7 +106,7 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecute(hstmt);  
 ```  
   
- Quizás la manera más eficaz de usar la instrucción es construir un procedimiento que contenga la instrucción, tal como se muestra en el ejemplo de código siguiente. Dado que el procedimiento se construye en tiempo de desarrollo y se almacena en el origen de datos, no es necesario que esté preparado en tiempo de ejecución. Un inconveniente de este método es que la sintaxis para crear procedimientos es específica del DBMS y los procedimientos se deben construir por separado para cada DBMS en el que se va a ejecutar la aplicación.  
+ Tal vez la forma más eficaz de usar la instrucción es construir un procedimiento que contenga la instrucción, como se muestra en el ejemplo de código siguiente. Dado que el procedimiento se construye en tiempo de desarrollo y se almacena en el origen de datos, no es necesario prepararlo en tiempo de ejecución. Un inconveniente de este método es que la sintaxis para crear procedimientos es específica de DBMS y los procedimientos deben construirse por separado para cada DBMS en el que se va a ejecutar la aplicación.  
   
 ```  
 #define DESC_LEN 51  
@@ -129,4 +129,4 @@ while (GetNewValues(&PartID, Desc, &Price))
    SQLExecDirect(hstmt, "{call InsertPart(?, ?, ?)}", SQL_NTS);  
 ```  
   
- Para obtener más información sobre los parámetros, las instrucciones preparadas y los procedimientos, vea [ejecutar una instrucción](../../../odbc/reference/develop-app/executing-a-statement.md).
+ Para obtener más información acerca de los parámetros, instrucciones preparadas y procedimientos, vea [Ejecutar una instrucción](../../../odbc/reference/develop-app/executing-a-statement.md).

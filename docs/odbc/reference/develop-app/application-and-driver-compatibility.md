@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad de aplicaciones y controladores | Microsoft Docs
+title: Compatibilidad de aplicaciones y controladores ( Application and Driver Compatibility) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - compatibility [ODBC], application and driver compatibility
 - application compatibility issues [ODBC]
 ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0d803c2ad63d19ddd21d620233148dad7f7ca420
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68077077"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304366"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilidad de controladores y aplicaciones
-Las aplicaciones y el controlador ODBC se dividen en varias categorías, además de en su versión. Algunas de estas aplicaciones no son compatibles con algunos controladores; en otros casos, el tipo de la aplicación o el controlador puede tener un inconveniente de los problemas de compatibilidad con versiones anteriores.  
+Las aplicaciones ODBC y el controlador se dividen en una serie de categorías además de su versión. Algunas de estas aplicaciones son incompatibles con algunos controladores; en otros casos, el tipo de aplicación o controlador puede tener relación con los problemas de compatibilidad con versiones anteriores entre ellos.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -1,5 +1,5 @@
 ---
-title: Ejecutar procedimientos almacenados (OLE DB) | Microsoft Docs
+title: Ejecución de procedimientos almacenados (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, stored procedures
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6329b0ff8f4d502916d2046e404fcecac8fc5869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f01c5e43d7d451cbcdca30dd66cf2ca70227541
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759337"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305354"
 ---
 # <a name="stored-procedures---running"></a>Procedimientos almacenados: ejecución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73759337"
   
 -   Función agregada.  
   
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite tres de los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mecanismos que los procedimientos almacenados usan para devolver datos:  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite tres de los mecanismos que usan los procedimientos almacenados para devolver datos:  
   
 -   Cada instrucción SELECT del procedimiento genera un conjunto de resultados.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "73759337"
   
  La aplicación debe ser capaz de manejar todos estos resultados de los procedimientos almacenados.  
   
- Diferentes proveedores OLE DB devuelven parámetros de salida y valores devueltos en diferentes momentos durante el procesamiento de los resultados. En el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] caso del proveedor de OLE DB de Native Client, los parámetros de salida y los códigos de retorno no se suministran hasta que el consumidor haya recuperado o cancelado los conjuntos de resultados devueltos por el procedimiento almacenado. Los códigos de retorno y los parámetros de salida se devuelven en el último paquete TDS del servidor.  
+ Diferentes proveedores OLE DB devuelven parámetros de salida y valores devueltos en diferentes momentos durante el procesamiento de los resultados. En el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] caso del proveedor OLE DB de Native Client, los parámetros de salida y los códigos de retorno no se proporcionan hasta después de que el consumidor haya recuperado o cancelado los conjuntos de resultados devueltos por el procedimiento almacenado. Los códigos de retorno y los parámetros de salida se devuelven en el último paquete TDS del servidor.  
   
  Los proveedores usan la propiedad DBPROP_OUTPUTPARAMETERAVAILABILITY para notificar cuando devuelve parámetros de salida y valores de retorno. Esta propiedad se encuentra en el conjunto de propiedades DBPROPSET_DATASOURCEINFO.  
   
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client establece la propiedad DBPROP_OUTPUTPARAMETERAVAILABILITY en DBPROPVAL_OA_ATROWRELEASE para indicar que no se devuelven los códigos de retorno y los parámetros de salida hasta que se procesa o libera el conjunto de resultados.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client establece la propiedad DBPROP_OUTPUTPARAMETERAVAILABILITY en DBPROPVAL_OA_ATROWRELEASE para indicar que los códigos de retorno y los parámetros de salida no se devuelven hasta que se procesa o libera el conjunto de resultados.  
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados](../../../relational-databases/native-client/ole-db/stored-procedures.md)  

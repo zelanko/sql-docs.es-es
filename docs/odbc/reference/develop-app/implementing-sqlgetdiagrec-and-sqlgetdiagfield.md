@@ -1,5 +1,5 @@
 ---
-title: Implementar SQLGetDiagRec y SQLGetDiagField | Microsoft Docs
+title: Implementación de SQLGetDiagRec y SQLGetDiagField ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 4c090af19a9296e46e3036ca23f6c97298bcb1b8
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216373"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300145"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementar SQLGetDiagRec y SQLGetDiagField
-**SQLGetDiagRec** y **SQLGetDiagField** se implementan mediante el administrador de controladores y cada controlador. El administrador de controladores y cada controlador mantienen registros de diagnóstico para cada entorno, conexión, instrucción y identificador de descriptor, y liberan esos registros solo cuando se llama a otra función con ese identificador o se libera el identificador.  
+**SQLGetDiagRec** y **SQLGetDiagField** se implementan mediante el Administrador de controladores y cada controlador. El Administrador de controladores y cada controlador mantienen registros de diagnóstico para cada entorno, conexión, instrucción y identificador de descriptor, y liberan esos registros solo cuando se llama a otra función con ese identificador o se libera el identificador.  
   
- Aunque el administrador de controladores y cada controlador deben determinar el primer registro de estado según las clasificaciones en [secuencia de registros de estado](../../../odbc/reference/develop-app/sequence-of-status-records.md), el administrador de controladores determina la secuencia final de los registros.  
+ Aunque tanto el Administrador de controladores como cada controlador deben determinar el primer registro de estado según las clasificaciones de [la secuencia de registros de estado,](../../../odbc/reference/develop-app/sequence-of-status-records.md)el Administrador de controladores determina la secuencia final de registros.  
   
  **SQLGetDiagRec** y **SQLGetDiagField** no publican registros de diagnóstico sobre sí mismos.  
   

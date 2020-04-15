@@ -1,5 +1,5 @@
 ---
-title: Obtener un cursor de FAST_FORWARD | Microsoft Docs
+title: Obtención de un cursor FAST_FORWARD | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: reference
 helpviewer_keywords:
 - fast forward-only cursors
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ab00e9d49b7a72ba9ac23bcf7aa4141bd9c4435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 60da6e10349c94f491f711a00136949f2e886c9a
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73767428"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81302254"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Obtener un cursor FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Para obtener un cursor de solo avance y de solo lectura, establezca las propiedades del conjunto de filas DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT y DBPROP_OWNUPDATEDELETE en VARIANT_TRUE.  
   
- En un ejemplo completo se muestra cómo establecer las propiedades del conjunto de filas para obtener un cursor FAST_FORWARD. Una vez establecidas las propiedades, se ejecuta una instrucción SELECT para recuperar y mostrar la columna **Name** de la tabla **Purchasing. Vendor** de la base de datos **AdventureWorks** .  
+ En un ejemplo completo se muestra cómo establecer las propiedades del conjunto de filas para obtener un cursor FAST_FORWARD. Una vez establecidas las propiedades, se ejecuta una instrucción SELECT para recuperar y mostrar la columna **Name** de la tabla **Purchasing.Vendor** en la base de datos **AdventureWorks.**  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32.](https://go.microsoft.com/fwlink/?LinkId=64532)  
   
 ### <a name="to-obtain-fast_forward-cursor"></a>Para obtener el cursor FAST_FORWARD  
   

@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM de datos, ISequentialStream ICommandText
+title: Data FILESTREAM, ISequentialStream ICommandText
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4395a52b49bdf5e41350a1e37cd33f72b35f1d1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f27ac32da560316806086f51c69cd2a374eb1a15
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75241722"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295864"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Enviar datos a FILESTREAM: ISequentialStream enlazado a ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   En este ejemplo se usa una interfaz ISequentialStream enlazada a un parámetro ICommandText para enviar entre 4 MB y 4 GB de datos a una columna de secuencia de archivos.  
   
- Para obtener más información sobre la característica FileStream, vea [compatibilidad de filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obtener más información sobre la característica filestream, vea [FileSTREAM Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Ejemplo  
- Antes de compilar y ejecutar este ejemplo, habilite la compatibilidad con FILESTREAM ([habilitar y configurar FileStream](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Antes de compilar y ejecutar este ejemplo, habilite la compatibilidad con FILESTREAM ([Habilitar y configurar FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   

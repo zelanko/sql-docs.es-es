@@ -1,5 +1,5 @@
 ---
-title: Llamar a un procedimiento almacenado (OLE DB) | Microsoft Docs
+title: Llamada a un procedimiento almacenado (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - stored procedures [OLE DB], calling
 - SQL Server Native Client OLE DB provider, stored procedures
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c30e6ca03f1d1d4c794d01bd594efd88306410e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73759044"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305350"
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client, se pueden pasar los parámetros a un procedimiento almacenado:  
+  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza el proveedor OLE DB de Native Client, los parámetros de un procedimiento almacenado se pueden pasar:  
   
 -   Codificando de forma rígida el valor de datos.  
   
@@ -79,14 +79,13 @@ ms.locfileid: "73759044"
 5.  Ejecute el comando mediante **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos para llamar a un procedimiento almacenado  
- Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite:  
+ Al ejecutar un procedimiento [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]almacenado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en , el proveedor OLE DB de Native Client admite:  
   
 -   Secuencia de escape ODBC CALL.  
   
 -   Secuencia de escape RPC (llamada a procedimiento remoto).  
   
--   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.   
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.   
   
 ### <a name="odbc-call-escape-sequence"></a>Secuencia de escape ODBC CALL  
  Si conoce la información de parámetros, llame al método **ICommandWithParameters::SetParameterInfo** para describir los parámetros al proveedor. De lo contrario, cuando se utiliza la sintaxis ODBC CALL para llamar a un procedimiento almacenado, el proveedor llama a una función del asistente para buscar la información de parámetros del procedimiento almacenado.  
@@ -95,7 +94,7 @@ ms.locfileid: "73759044"
   
  La sintaxis general para llamar a un procedimiento utilizando la secuencia de escape ODBC CALL es la siguiente:  
   
- {[**? =**]**Call**_procedure_name_[**(**[*parámetro*] [**,**[*parámetro*]]... **)**]}  
+ • [**?**] procedure_name_de_**llamadas**[**[***[ parámetro*][**,**[*parámetro*]]... **)**]}  
   
  Por ejemplo:  
   
@@ -118,12 +117,12 @@ ms.locfileid: "73759044"
 {rpc SalesByCategory}  
 ```  
   
- Para obtener una aplicación de ejemplo que muestra una secuencia de escape RPC, vea [ejecutar un procedimiento almacenado &#40;usar la sintaxis rpc&#41; y procesar códigos de retorno y parámetros de salida &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Si quiere ver una aplicación de ejemplo que muestre una secuencia de escape RPC, consulte [Ejecución de un procedimiento almacenado &#40;mediante sintaxis RPC&#41; y procesamiento de códigos de devolución y parámetros de salida &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrucción EXECUTE de Transact-SQL:  
- Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client utiliza el mecanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC de para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
+ Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client utiliza el mecanismo RPC de optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
- Este es un ejemplo de la instrucción EXECUTE[!INCLUDE[tsql](../../../includes/tsql-md.md)] ** de **:  
+ Este es un ejemplo de la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - WaitForAsynchCompletion method
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50751cdbb4a488913a9673d00195b4b6000f54ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 33ec9e1dd6d2898261eb541d746e4ccece9d5591
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73762624"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299063"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ HRESULT WaitForAsynchCompletion(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *dwMillisecTimeOut*[in]  
+ *dwMillisecTimeOut*[entrada]  
  Tiempo de espera en milisegundos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -54,10 +54,10 @@ HRESULT WaitForAsynchCompletion(
  La operación todavía no se ha completado aunque se ha alcanzado el tiempo de espera especificado.  
   
 > [!NOTE]  
->  Además de los valores de código de retorno enumerados anteriormente, el método **ISSAsynchStatus::WaitForAsynchCompletion** también admite los valores de código de retorno que devuelven los métodos **ICommand::Execute** e **IDBInitialize::Initialize** de OLEDB básicos.  
+>   Además de los valores de código de retorno enumerados anteriormente, el método **ISSAsynchStatus::WaitForAsynchCompletion** también admite los valores de código de retorno que devuelven los métodos **ICommand::Execute** e **IDBInitialize::Initialize** de OLEDB básicos.  
   
 ## <a name="remarks"></a>Observaciones  
- No se devolverá el método **ISSAsynchStatus::WaitForAsynchCompletion** hasta que haya transcurrido el valor de tiempo de espera (en milisegundos) o se haya completado la operación pendiente. El objeto **Command** tiene una propiedad **CommandTimeout** que controla el número de segundos que se ejecutará una consulta antes de que se agote el tiempo de espera. La propiedad **CommandTimeout** se omitirá si se utiliza junto con el método **ISSAsynchStatus:: WaitForAsynchCompletion** .  
+ No se devolverá el método **ISSAsynchStatus::WaitForAsynchCompletion** hasta que haya transcurrido el valor de tiempo de espera (en milisegundos) o se haya completado la operación pendiente. El objeto **Command** tiene una propiedad **CommandTimeout** que controla el número de segundos que se ejecutará una consulta antes de agotar el tiempo de espera. La propiedad **CommandTimeout** se omitirá si se usa junto con el método **ISSAsynchStatus::WaitForAsynchCompletion.**  
   
  La propiedad de tiempo de espera se omite en las operaciones asincrónicas. El parámetro de tiempo de espera de **ISSAsynchStatus::WaitForAsynchCompletion** especifica el tiempo máximo que debe transcurrir antes de que se devuelva el control al autor de la llamada. Si este tiempo de espera expira, se devolverá DB_S_ASYNCHRONOUS. Los tiempos de espera nunca cancelan las operaciones asincrónicas. Si la aplicación necesita cancelar una operación asincrónica que no se ha completado en un período de tiempo de espera, debe esperar a que finalice el tiempo de espera y, a continuación, cancelar explícitamente la operación si se devuelve DB_S_ASYNCHRONOUS.  
   

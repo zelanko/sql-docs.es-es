@@ -1,5 +1,5 @@
 ---
-title: Sintaxis de literales numéricos | Microsoft Docs
+title: Sintaxis literal numérica ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,42 +12,42 @@ helpviewer_keywords:
 - numeric literals [ODBC]
 - literals [ODBC], numeric
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67990720"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81299865"
 ---
 # <a name="numeric-literal-syntax"></a>Sintaxis de los literales numéricos
-La siguiente sintaxis se utiliza para los literales numéricos en ODBC:  
+La sintaxis siguiente se utiliza para literales numéricos en ODBC:  
   
- *Numeric-literal* :: = *signed-numeric-literal &#124; unsigned-Numeric-literal*  
+ *literal numérico* ::- *literal numérico-firmado &#124; unsigned-numeric-literal*  
   
- *signed-Numeric-literal* :: = [*signo*] *unsigned-literal-literal*  
+ *literal-numérico firmado* :: [*signo*] *unsigned-numeric-literal*  
   
- *unsigned-Numeric-literal* :: = *Exact-numeric-literal &#124; aproximada-Numeric-literal*  
+ *unsigned-numeric-literal* ::- *literal exacto-numérico &#124; literal aproximado-numérico*  
   
- *Exact-Numeric-literal* :: = *unsigned-Integer* [*period*[*unsigned-Integer*]] *&#124;period sin signo-entero*  
+ *exact-numeric-literal* ::- *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
   
- *Sign* :: = *plus-Sign &#124; signo menos*  
+ *signo* :: *- signo más &#124; menos-signo*  
   
- *aproximado-Numeric-literal* :: = *mantisa E exponente*  
+ *aproximado-numérico-literal* :: ' *mantissa E exponente*  
   
- *mantisa* :: = *Exact-Numeric-literal*  
+ *mantissa* ::- *literal exacto-numérico*  
   
- *exponente* :: = *signed-Integer*  
+ *exponente* :: - *entero firmado*  
   
- *signed-Integer* :: = [*Sign*] *unsigned-Integer*  
+ *signed-integer* ::- [*sign*] *unsigned-integer*  
   
- *unsigned-Integer* :: = *digit...*  
+ *unsigned-integer* ::- *digit...*  
   
- *signo más* :: =*+*  
+ *signo de además* ::*+*  
   
- signo *menos* :: =-  
+ *signo menos* :: -  
   
- *digit* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *dígito* :: 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *period* :: =.
+ *período* ::.

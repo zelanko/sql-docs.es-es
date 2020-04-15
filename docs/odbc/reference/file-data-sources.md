@@ -1,5 +1,5 @@
 ---
-title: Orígenes de datos de archivo | Microsoft Docs
+title: Fuentes de datos de archivos ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68068645"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306656"
 ---
 # <a name="file-data-sources"></a>Orígenes de datos de archivo
-Los *orígenes de datos de archivo* se almacenan en un archivo y permiten que un solo usuario pueda usar la información de conexión de forma repetida o compartida entre varios usuarios. Cuando se utiliza un origen de datos de archivo, el administrador de controladores realiza la conexión al origen de datos utilizando la información de un archivo. DSN. Este archivo se puede manipular como cualquier otro archivo. Un origen de datos de archivo no tiene un nombre de origen de datos, como un origen de datos de la máquina, y no está registrado en ningún usuario o equipo.  
+*Los orígenes* de datos de archivo se almacenan en un archivo y permiten que la información de conexión sea utilizada repetidamente por un solo usuario o compartida entre varios usuarios. Cuando se utiliza un origen de datos de archivo, el Administrador de controladores realiza la conexión al origen de datos mediante la información de un archivo .dsn. Este archivo se puede manipular como cualquier otro archivo. Un origen de datos de archivo no tiene un nombre de origen de datos, al igual que un origen de datos de máquina, y no está registrado en ningún usuario o equipo.  
   
- Un origen de datos de archivo simplifica el proceso de conexión, ya que el archivo. DSN contiene la cadena de conexión que, de lo contrario, tendría que compilarse para una llamada a la función **SQLDriverConnect** . Otra ventaja del archivo. DSN es que se puede copiar en cualquier equipo, por lo que muchos equipos pueden usar orígenes de datos idénticos siempre que tengan instalado el controlador adecuado. Las aplicaciones también pueden compartir un origen de datos de archivo. Un origen de datos de archivo que se puede compartir puede colocarse en una red y usarse simultáneamente en varias aplicaciones.  
+ Un origen de datos de archivo simplifica el proceso de conexión, porque el archivo .dsn contiene la cadena de conexión que, de lo contrario, tendría que compilarse para una llamada a la función **SQLDriverConnect.** Otra ventaja del archivo .dsn es que se puede copiar en cualquier equipo, por lo que muchos equipos pueden utilizar orígenes de datos idénticos siempre que tengan instalado el controlador adecuado. Las aplicaciones también pueden compartir un origen de datos de archivo. Un origen de datos de archivo compartible puede colocarse en una red y utilizarse simultáneamente en varias aplicaciones.  
   
- Un archivo. DSN también puede ser no compartible. Un archivo. DSN que no se pueda compartir reside en un solo equipo y apunta a un origen de datos de la máquina. Los orígenes de datos de archivos que no se pueden compartir existen principalmente para permitir la conversión sencilla de orígenes de datos de equipo en orígenes de datos de archivo, de modo que una aplicación pueda diseñarse para funcionar exclusivamente con orígenes de datos de archivo. Cuando el administrador de controladores envía la información de un origen de datos de archivos que no se pueden compartir, se conecta según sea necesario en el origen de datos de la máquina al que apunta el archivo. DSN.  
+ Un archivo .dsn también puede ser no compartible. Un archivo .dsn no compartible reside en un único equipo y apunta a un origen de datos de la máquina. Los orígenes de datos de archivos no compartibles existen principalmente para permitir la fácil conversión de orígenes de datos de máquina a orígenes de datos de archivo para que una aplicación se pueda diseñar para trabajar únicamente con orígenes de datos de archivos. Cuando se envía la información en un origen de datos de archivo no compartible, se conecta según sea necesario al origen de datos del equipo al que apunta el archivo .dsn.  
   
- Para obtener más información acerca de los orígenes de datos de archivo, vea [conectarse con orígenes de datos de archivo](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)o la descripción de la función [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) .
+ Para obtener más información acerca de los orígenes de datos de archivo, vea Conexión mediante [orígenes](../../odbc/reference/develop-app/connecting-using-file-data-sources.md)de datos de archivo o la descripción de la función [SQLDriverConnect.](../../odbc/reference/syntax/sqldriverconnect-function.md)

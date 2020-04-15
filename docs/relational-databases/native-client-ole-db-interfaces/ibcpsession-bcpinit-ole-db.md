@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPInit (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPInit (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: COM
 helpviewer_keywords:
 - BCPInit method
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99c11795cb51e66b9fc1590351445ffcd14aeb34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f37a23f89ca7fcb2b3e0a60a7f4813891317b3f5
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73763560"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81307382"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ HRESULT BCPInit(
   
  El método **BCPInit** examina la estructura del origen de base de datos o la tabla de destino, no el archivo de datos. Especifica los valores de formato de datos del archivo de datos basándose en cada columna de la tabla de base de datos, la vista o el conjunto de resultados de la instrucción SELECT. Esta especificación incluye el tipo de datos de cada columna, la presencia o ausencia de cadenas de bytes de un indicador de longitud o nulo y de terminador en los datos, y el ancho de los tipos de datos de longitud fija. El método **BCPInit** establece estos valores como sigue:  
   
--   El tipo de datos especificado es el tipo de datos de la columna de la tabla de base de datos, la vista o el conjunto de resultados de una instrucción SELECT. El tipo de datos se enumera mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los tipos de datos nativos especificados en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de encabezado de Native Client (SQLNCLI. h). Sus valores están en el modelo de BCP_TYPE_XXX. Los datos están representados en el formato del equipo. Es decir, los datos de una columna de tipo de datos entero están representados por una secuencia de cuatro bytes "big endian" o "little endian" basada en el equipo que creó el archivo de datos.  
+-   El tipo de datos especificado es el tipo de datos de la columna de la tabla de base de datos, la vista o el conjunto de resultados de una instrucción SELECT. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se enumera mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos nativos especificados en el archivo de encabezado de cliente nativo (sqlncli.h). Sus valores están en el modelo de BCP_TYPE_XXX. Los datos están representados en el formato del equipo. Es decir, los datos de una columna de tipo de datos entero están representados por una secuencia de cuatro bytes "big endian" o "little endian" basada en el equipo que creó el archivo de datos.  
   
 -   Si un tipo de datos de base de datos es de longitud fija, los datos del archivo de datos también serán de longitud fija. Los métodos de copia masiva que procesan los datos (por ejemplo, [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) analizan las filas de datos esperando que la longitud de los datos del archivo de datos sea idéntica a la longitud de los datos especificados en la tabla de base de datos, la vista o la lista de columnas de la instrucción SELECT. Por ejemplo, los datos de una columna de base de datos definidos como `char(13)` deben estar representados por 13 caracteres por cada fila de datos del archivo. Los datos de longitud fija pueden tener como prefijo un indicador nulo si la columna de base de datos permite valores nulos.  
   
@@ -71,7 +71,7 @@ HRESULT BCPInit(
  Nombre del archivo de usuario en o del que se va a copiar.  
   
  *pwszErrorFile*[in]  
- Nombre del archivo de error que se va a rellenar con mensajes de progreso, mensajes de error y copias de las filas que, por cualquier razón, no se puedan copiar de un archivo de usuario en una tabla. Si el argumento *pwszErrorFile* se establece en null, no se utiliza ningún archivo de error.  
+ Nombre del archivo de error que se va a rellenar con mensajes de progreso, mensajes de error y copias de las filas que, por cualquier razón, no se puedan copiar de un archivo de usuario en una tabla. Si el argumento *pwszErrorFile* se establece en NULL, no se usa ningún archivo de error.  
   
  *eDirection*[in]  
  Dirección de la operación de copia, BCP_DIRECTION_IN o BCP_DIRECTION_OUT. BCP_DIRECTION_IN indica una copia de un archivo de usuario en una tabla de base de datos; BCP_DIRECTION_OUT indica una copia de una tabla de base de datos en un archivo de usuario.  
@@ -81,7 +81,7 @@ HRESULT BCPInit(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor ' para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Se ha producido un error específico del proveedor' para obtener información detallada, utilice la interfaz [ISQLServerErrorInfo.](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)  
   
  E_OUTOFMEMORY  
  Error de memoria insuficiente.  
@@ -90,7 +90,7 @@ HRESULT BCPInit(
  No se han especificado correctamente uno o varios argumentos. Por ejemplo, se proporcionó un nombre de archivo no válido.  
   
 ## <a name="see-also"></a>Consulte también  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;&#41;OLE DB](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Usar funciones de catálogo | Microsoft Docs
+title: Uso de funciones de catálogo ? Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,27 +15,26 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dbbab122d5789f26d9fd5a6c853be4f5a354a96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 961e44e22ba7db89537f4505a8dec401f9fd69b0
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73760326"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303638"
 ---
 # <a name="using-catalog-functions"></a>Utilizar funciones de catálogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Todas las bases de datos tienen una estructura que contiene los datos almacenados en la base de datos. Una definición de esta estructura, junto con otra información como permisos, está almacenada en un catálogo (se implementa como un conjunto de tablas del sistema), también conocido como diccionario de datos.  
   
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite que una aplicación determine la estructura de la base de datos a través de llamadas a funciones de catálogo de ODBC. Las funciones de catálogo devuelven información en conjuntos de resultados y se implementan utilizando procedimientos almacenados de catálogo para consultar las tablas del sistema en el catálogo. Por ejemplo, una aplicación puede solicitar un conjunto de resultados que contenga información sobre todas las tablas del sistema o todas las columnas de una tabla determinada. Las funciones de catálogo estándar de ODBC se utilizan para obtener información de catálogo del servidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al que está conectada la aplicación.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite a una aplicación determinar la estructura de la base de datos a través de llamadas a funciones de catálogo ODBC. Las funciones de catálogo devuelven información en conjuntos de resultados y se implementan utilizando procedimientos almacenados de catálogo para consultar las tablas del sistema en el catálogo. Por ejemplo, una aplicación puede solicitar un conjunto de resultados que contenga información sobre todas las tablas del sistema o todas las columnas de una tabla determinada. Las funciones de catálogo estándar de ODBC se utilizan para obtener información de catálogo del servidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al que está conectada la aplicación.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite consultas distribuidas en las que se tiene acceso a datos de varios orígenes de datos OLE DB heterogéneos en una única consulta. Uno de los métodos para tener acceso a un origen de datos OLE DB remoto consiste en definir el origen de datos como un servidor vinculado. Esto puede realizarse mediante [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Una vez definido el servidor vinculado, se puede hacer referencia a los objetos de ese servidor en instrucciones Transact-SQL utilizando un nombre con cuatro partes:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite consultas distribuidas en las que se tiene acceso a datos de varios orígenes de datos OLE DB heterogéneos en una única consulta. Uno de los métodos para tener acceso a un origen de datos OLE DB remoto consiste en definir el origen de datos como un servidor vinculado. Esto se puede hacer mediante [el uso de sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Una vez definido el servidor vinculado, se puede hacer referencia a los objetos de ese servidor en instrucciones Transact-SQL utilizando un nombre con cuatro partes:  
   
- *linked_server_name. Catalog. Schema. object_name*.  
+ *linked_server_name.catalog.schema.object_name*.  
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite dos funciones específicas del controlador que ayudan a obtener información de catálogo de los servidores vinculados:  
   
@@ -47,7 +46,7 @@ ms.locfileid: "73760326"
   
      Devuelve una lista de los catálogos incluidos en un servidor vinculado.  
   
- Después de tener un nombre de servidor vinculado y un nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] catálogo, el controlador ODBC de Native Client permite obtener información del catálogo mediante el uso de un nombre de dos partes de _linked_server_name_**.** _Catalog_ para *nombrecatálogo* en las siguientes funciones de catálogo de ODBC:  
+ Después de tener un nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servidor vinculado y un nombre de catálogo, el controlador ODBC de Native Client admite la obtención de información del catálogo mediante un nombre de dos partes de _linked_server_name_**.** _catálogo_ para *CatalogName* en las siguientes funciones de catálogo ODBC:  
   
 -   **SQLColumnPrivileges**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "73760326"
   
 -   **SQLTables**  
   
- Linked_server_name de dos partes __**.** el _Catálogo_ también es compatible con *FKCatalogName* y *PKCatalogName* en [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ La _linked_server_name_de dos partes **.** _Catálogo_ también es compatible con *FKCatalogName* y *PKCatalogName* en [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  Para utilizar SQLLinkedServers y SQLLinkedCatalogs hacen falta los siguientes archivos:  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73760326"
      Debe estar presente en el momento de la ejecución. sqlncli11.dll se distribuye con el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [SQL ServerSQL Server Native Client &#40;&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   
  [SQLPrimaryKeys](../../../relational-databases/native-client-odbc-api/sqlprimarykeys.md)   

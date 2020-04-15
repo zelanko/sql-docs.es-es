@@ -1,5 +1,5 @@
 ---
-title: Recuento de registros | Microsoft Docs
+title: Recuento de registros de registros de registros de Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - record count [ODBC]
 - descriptors [ODBC], record count
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d4d684fb6d9614defdca3897c53c4bae9fc231a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28e503ae4602d87fc9138ed018ee1e95f135ec57
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68138082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81281821"
 ---
 # <a name="record-count"></a>Número de registros
-El SQL_DESC_COUNT campo de encabezado de un descriptor es el índice de base uno del registro con el número más alto que contiene los datos. Este campo no es un recuento de todas las columnas o parámetros enlazados. Cuando se asigna un descriptor, el valor inicial de SQL_DESC_COUNT es 0.  
+El campo de encabezado SQL_DESC_COUNT de un descriptor es el índice basado en uno del registro con el número más alto que contiene datos. Este campo no es un recuento de todas las columnas o parámetros enlazados. Cuando se asigna un descriptor, el valor inicial de SQL_DESC_COUNT es 0.  
   
- El controlador toma las medidas necesarias para asignar y mantener el almacenamiento que necesita para contener información del descriptor. La aplicación no especifica explícitamente el tamaño de un descriptor ni asigna nuevos registros. Cuando la aplicación proporciona información para un registro de descriptor cuyo número es mayor que el valor de SQL_DESC_COUNT, el controlador aumenta automáticamente SQL_DESC_COUNT. Cuando la aplicación desenlaza el registro del descriptor con el número más alto, el controlador disminuye automáticamente SQL_DESC_COUNT para que contenga el número del registro enlazado más alto.
+ El controlador realiza cualquier acción necesaria para asignar y mantener cualquier almacenamiento que necesite para contener información del descriptor. La aplicación no especifica explícitamente el tamaño de un descriptor ni asigna nuevos registros. Cuando la aplicación proporciona información para un registro descriptor cuyo número es mayor que el valor de SQL_DESC_COUNT, el controlador aumenta automáticamente SQL_DESC_COUNT. Cuando la aplicación desenlaza el registro descriptor con el número más alto, el controlador disminuye automáticamente SQL_DESC_COUNT para contener el número del registro enlazado restante más alto.

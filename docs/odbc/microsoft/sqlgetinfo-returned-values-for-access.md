@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo devuelve valores para Access | Microsoft Docs
+title: Valores devueltos de SQLGetInfo para el acceso ? Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Access driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68003230"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298565"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo devuelve valores para el acceso
-En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines del lenguaje C indicado a **SQLGetInfo** en el argumento *fInfoType* . Para obtener más información sobre los valores devueltos por **SQLGetInfo**, vea la *Referencia del programador de ODBC*.  
+En la tabla siguiente se enumeran los #defines de lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines de lenguaje C enumerados a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, vea la *referencia del programador ODBC*.  
   
 > [!NOTE]  
->  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa una operación OR bit a bit.  
+>  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa un OR bit a bit.  
   
 |InfoType|Valor devuelto|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Todo establecido|  
+|SQL_AGGREGATE_FUNCTIONS|Todo listo|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"."|  
-|SQL_CATALOG_TERM|Base|  
+|SQL_CATALOG_TERM|"Base de datos"|  
 |SQL_CATALOG_USAGE|Varios valores|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|El DSN de ODBC. ini o "" si se usa la palabra clave DRIVER en ODBC. ini|  
+|SQL_DATA_SOURCE_NAME|El DSN de Odbc.ini, o "" si la palabra clave DRIVER se utiliza en Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Nombre de archivo|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|ACCESO|  
+|SQL_DBMS_NAME|"Acceso"|  
 |SQL_DBMS_VER|Varios valores|  
 |SQL_DDL_INDEX|Varios valores|  
 |SQL_DEFAULT_TXN_ISOLATION|SQL_TXN_READ_COMMITTED|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Controlado por el administrador de controladores.|  
-|SQL_DRIVER_HENV|Controlado por el administrador de controladores.|  
-|SQL_DRIVER_HLIB|Controlado por el administrador de controladores.|  
-|SQL_DRIVER_HSTMT|Controlado por el administrador de controladores.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_HDBC|Manejado por el Administrador de conductores.|  
+|SQL_DRIVER_HENV|Manejado por el Administrador de conductores.|  
+|SQL_DRIVER_HLIB|Manejado por el Administrador de conductores.|  
+|SQL_DRIVER_HSTMT|Manejado por el Administrador de conductores.|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
+|SQL_DRIVER_VER|"4.00.*nnnn"*(*nnnn* especifica la fecha de compilación)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_GETDATA_EXTENSIONS|Varios valores|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (comilla inversa)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (cotización posterior)|  
 |SQL_KEYWORDS|Varios valores|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -141,13 +141,13 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Varios valores|  
-|SQL_ODBC_SAG_CLI_ CONFORMIDAD|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCIA|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Desde el administrador de controladores|  
+|SQL_ODBC_VER|Desde el Administrador de controladores|  
 |SQL_OJ_CAPABILITIES|Varios valores|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
-|SQL_PROCEDURE_TERM|MISMA|  
+|SQL_PROCEDURE_TERM|"CONSULTA"|  
 |SQL_PROCEDURES|"Y"|  
 |SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  
@@ -155,16 +155,16 @@ En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento 
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Varios valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|ACCESO|  
-|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\ \'[] &#124; "|  
+|SQL_SERVER_NAME|"Acceso"|  
+|SQL_SPECIAL_CHARACTERS|\`@#$%^&\*\'""" ;:?/><,.!\_-+=\\ \'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Varios valores|  
 |SQL_SUBQUERIES|Varios valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|CUADRO|  
+|SQL_TABLE_TERM|"TABLE"|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Varios valores|  
 |SQL_TXN_CAPABLE|SQL_TC_ALL|  
 |SQL_TXN_ISOLATION_OPTION|SQL_TXN_READ_COMMITTED|  
 |SQL_UNION|Varios valores|  
-|SQL_USER_NAME|ADMINISTRAR|
+|SQL_USER_NAME|"ADMIN"|

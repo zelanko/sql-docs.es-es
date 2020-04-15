@@ -1,5 +1,5 @@
 ---
-title: Quitar una columna de una tabla SQL Server | Microsoft Docs
+title: Eliminación de una columna de una tabla de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - DropColumn function
 - SQL Server Native Client OLE DB provider, columns
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff59a03f10e595601590201b4fede2d10424a7d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 97b20e285749c7a3dba2ecf36ccb6556d93b5903
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761587"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280057"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Quitar una columna de una tabla de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone la función **ITableDefinition::D ropcolumn** . Esto permite que los consumidores puedan quitar una columna de una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client expone la función **ITableDefinition::DropColumn.** Esto permite que los consumidores puedan quitar una columna de una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Los consumidores especifican el nombre de la tabla como una cadena de caracteres Unicode en el miembro *pwszName* de la unión *uName* en el parámetro *pTableID*. El miembro *eKind* de *pTableID* debe ser DBKIND_NAME.  
   
- El consumidor indica un nombre de columna en el miembro *pwszName*de la Unión *uname* en el parámetro *pColumnID* . El nombre de la columna es una cadena de caracteres Unicode. El miembro *eKind* de *pColumnID* debe ser DBKIND_NAME.  
+ El consumidor indica un nombre de columna en el miembro *pwszName* de la unión *uName* en el parámetro *pColumnID*. El nombre de la columna es una cadena de caracteres Unicode. El miembro *eKind* de *pColumnID* debe ser DBKIND_NAME.  
   
 ## <a name="example"></a>Ejemplo  
   

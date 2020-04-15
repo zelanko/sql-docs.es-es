@@ -1,5 +1,5 @@
 ---
-title: Controladores ODBC proporcionados por Microsoft | Microsoft Docs
+title: Controladores ODBC suministrados por Microsoft ( Microsoft-Supplied ODBC Drivers) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - drivers [ODBC], about ODBC drivers
 - ODBC drivers [ODBC]
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6afb061e07b3d01395031b4ce00fe315364ef382
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dadbc638219803562ef376a44abb37e9f85802cc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68045015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298205"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Controladores ODBC proporcionados por Microsoft
-Los *Controladores* son bibliotecas que implementan las funciones de la API de ODBC. Cada controlador es específico de un sistema de administración de bases de datos (DBMS) determinado. En la mayoría de los casos, los controladores exponen las capacidades del DBMS subyacente; no son necesarios para implementar funciones no admitidas por el DBMS. Los controladores realizan tareas específicas y se pueden clasificar en dos categorías: basadas en archivos y basados en DBMS. Para obtener más información acerca de los controladores y la arquitectura de controladores, consulte [Controladores](../../odbc/reference/drivers.md).  
+*Los controladores* son bibliotecas que implementan las funciones en la API ODBC. Cada controlador es específico de un sistema de administración de bases de datos (DBMS) determinado. En la mayoría de los casos, los controladores exponen las capacidades del DBMS subyacente; no son necesarios para implementar capacidades no admitidas por el DBMS. Los controladores realizan tareas específicas y se pueden clasificar en dos categorías: basadas en archivos y basadas en DBMS. Para obtener más información acerca de los controladores y la arquitectura de [controladores,](../../odbc/reference/drivers.md)consulte Controladores .  
   
  Esta sección contiene los temas siguientes.  
   

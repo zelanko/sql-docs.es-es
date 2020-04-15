@@ -13,35 +13,33 @@ helpviewer_keywords:
 - transactions [OLE DB]
 - SQL Server Native Client OLE DB provider, transactions
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ddfe4bd9d8760fa561e7b0221f61413b3c6d111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c3535360e120e0f9c61a8cfb7cb578e531e92572
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73761616"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280323"
 ---
 # <a name="isolation-levels-ole-db"></a>Niveles de aislamiento (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Los clientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden controlar los niveles de aislamiento de la transacción para una conexión. Para controlar el nivel de aislamiento de transacción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el consumidor del proveedor de OLE DB de Native Client utiliza:  
+  Los clientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden controlar los niveles de aislamiento de la transacción para una conexión. Para controlar el nivel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de aislamiento de transacciones, el consumidor del proveedor OLE DB de Native Client utiliza:  
   
--   DBPROPSET_SESSION propiedad DBPROP_SESS_AUTOCOMMITISOLEVELS para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modo de confirmación automática predeterminada del proveedor de OLE DB de Native Client.  
+-   DBPROPSET_SESSION DBPROP_SESS_AUTOCOMMITISOLEVELS de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propiedades para el modo de confirmación automática predeterminado del proveedor OLE DB de Native Client.  
   
-     El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valor predeterminado del proveedor de OLE DB de Native Client para el nivel es DBPROPVAL_TI_READCOMMITTED.  
+     El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valor predeterminado del proveedor OLE DB de Native Client para el nivel es DBPROPVAL_TI_READCOMMITTED.  
   
 -   El parámetro *isoLevel* del método **ITransactionLocal::StartTransaction** para las transacciones locales de confirmación manual.  
   
 -   El parámetro *isoLevel* del método **ITransactionDispenser::BeginTransaction** para las transacciones distribuidas coordinadas por MS DTC.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite el acceso de solo lectura en el nivel de aislamiento de lectura de datos sucios. Todos los demás niveles restringen la simultaneidad aplicando bloqueos a los objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando el cliente requiere niveles de simultaneidad mayores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica mayores restricciones al acceso simultáneo a los datos. Para mantener el máximo nivel de acceso simultáneo a los datos, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor del proveedor de OLE DB de Native Client debe controlar de forma inteligente sus solicitudes de niveles de simultaneidad específicos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite el acceso de solo lectura en el nivel de aislamiento de lectura de datos sucios. Todos los demás niveles restringen la simultaneidad aplicando bloqueos a los objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando el cliente requiere niveles de simultaneidad mayores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica mayores restricciones al acceso simultáneo a los datos. Para mantener el nivel más alto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceso simultáneo a los datos, el consumidor del proveedor OLE DB de native Client debe controlar inteligentemente sus solicitudes de niveles de simultaneidad específicos.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] presentó el nivel del aislamiento de instantánea. Para obtener más información, vea [Trabajar con aislamiento de instantánea](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] presentó el nivel del aislamiento de instantánea. Para obtener más información, vea [Trabajar con aislamiento de instantánea](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Transactions](../../relational-databases/native-client-ole-db-transactions/transactions.md)  

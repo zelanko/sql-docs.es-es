@@ -1,5 +1,5 @@
 ---
-title: Subclave ODBC drivers | Microsoft Docs
+title: Subclave de controladores ODBC (ODBC Drivers Subkey) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - registry entries for components [ODBC], drivers subkey
 - drivers subkey [ODBC]
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dd1f8d3293e35a543cce6b5079d9c6e10a331a88
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68093981"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304036"
 ---
 # <a name="odbc-drivers-subkey"></a>Subclave de controladores de ODBC
-Los valores de la subclave ODBC drivers enumeran los controladores instalados. El formato de estos valores se muestra en la tabla siguiente.  
+Los valores de la subclave Controladores ODBC enumeran los controladores instalados. El formato de estos valores se muestra en la tabla siguiente.  
   
 |Nombre|Tipo de datos|data|  
 |----------|---------------|----------|  
-|*controlador: Descripción*|REG_SZ|**Instalación**|  
+|*descripción del conductor*|REG_SZ|**Instalado**|  
   
- El nombre *de la descripción del controlador* lo define el desarrollador del controlador. Normalmente, es el nombre del DBMS asociado al controlador.  
+ El nombre *de descripción del controlador* lo define el desarrollador del controlador. Normalmente es el nombre del DBMS asociado con el controlador.  
   
- Por ejemplo, suponga que se han instalado Controladores para los archivos de texto con formato y SQL Server. Los valores de la subclave controladores ODBC pueden ser:  
+ Por ejemplo, supongamos que se han instalado controladores para archivos de texto con formato y SQL Server. Los valores de la subclave Controladores ODBC pueden ser:  
   
 ```  
 Text : REG_SZ : Installed  

@@ -1,5 +1,5 @@
 ---
-title: Arquitecturas de acceso a bases de datos estándar | Microsoft Docs
+title: Arquitecturas de acceso a bases de datos estándar (Standard Database Access Architectures) Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b2113167bb3440c0d772a99b4b8098104d7ed11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6e78202eff69e6b30dc1e97d80f464dad75bb201
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68129247"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81280038"
 ---
 # <a name="standard-database-access-architectures"></a>Arquitecturas de acceso a base de datos estándar
-Al examinar los componentes de acceso a bases de datos descritos en la sección anterior, resulta que dos de ellos son interfaces de programación y protocolos de flujo de datos: son buenos candidatos para la normalización. Los otros dos componentes: el mecanismo IPC y los protocolos de red, no solo residen en un nivel demasiado bajo, pero dependen en gran medida de la red y del sistema operativo. También hay un tercer enfoque: puertas de enlace, que proporcionan posibilidades de normalización.  
+Al examinar los componentes de acceso a la base de datos descritos en la sección anterior, resulta que dos de ellos - interfaces de programación y protocolos de flujo de datos - son buenos candidatos para la estandarización. Los otros dos componentes - mecanismo IPC y protocolos de red - no sólo residen en un nivel demasiado bajo, pero ambos son altamente dependientes de la red y el sistema operativo. También hay un tercer enfoque - puertas de enlace - que proporciona posibilidades de estandarización.  
   
  Esta sección contiene los temas siguientes.  
   

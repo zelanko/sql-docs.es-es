@@ -1,5 +1,5 @@
 ---
-title: 'Fetch, IRow:: GetColumns e ISequentialStream'
+title: Fetch, IRow::GetColumns e ISequentialStream
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1151da2b2763aec188682ba6e5e227a8b560855f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 49b5690c5eb09504d61f3ca094a7ff3a1a3b07e9
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75226079"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81295913"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "75226079"
   Los datos grandes se pueden enlazar o recuperar mediante la interfaz **ISequentialStream**. En el caso de las columnas enlazadas, la marca de estado DBSTATUS_S_TRUNCATED indica que se truncan los datos.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32.](https://go.microsoft.com/fwlink/?LinkId=64532)  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Para capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream  
   
@@ -36,13 +36,13 @@ ms.locfileid: "75226079"
   
 2.  Ejecute el comando (en este ejemplo, se llama a **ICommandExecute::Execute()** con IID_IRow).  
   
-3.  Capture los datos de la columna mediante **IRow:: Open ()** o **IRow:: GetColumns ()**.  
+3.  Capture los datos de columna mediante **IRow::Open()** o **IRow::GetColumns()**.  
   
-    -   **IRow:: Open ()** se puede usar para abrir **ISequentialStream** en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (**IStream** o **ISequentialStream** pueden usarse después para leer los datos de la columna).  
+    -   Se puede usar **IRow::Open()** para abrir **ISequentialStream** en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (**IStream** o **ISequentialStream** pueden usarse después para leer los datos de la columna).  
   
     -   Si se usa **IRow::GetColumns()**, el elemento **pData** de la estructura DBCOLUMNACCESS se establece de modo que apunte a un objeto de flujo.  
   
-4.  Utilice **ISequentialStream:: Read ()** varias veces para leer el número especificado de bytes en el búfer del consumidor.  
+4.  Use repetidamente **ISequentialStream::Read()** para leer el número de bytes especificado en el búfer del consumidor.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo capturar una sola fila con IRow. En este ejemplo se recupera una columna a la vez de la fila. En este ejemplo se ilustra el uso de IRow::Open() y de IRow::GetColumns(). Para leer los datos de la columna, en el ejemplo se usa ISequentialStream::Read.  

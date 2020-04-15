@@ -1,5 +1,5 @@
 ---
-title: Actualizar, eliminar o capturar por marcador | Microsoft Docs
+title: Actualización, eliminación o obtención por marcador . Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deleting by bookmarks [ODBC]
 - bookmarks [ODBC]
 ms.assetid: e2ee58d7-c28f-435f-b537-06207215dd2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ce43cb1d5563128e840aa3c0df26190524774a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5e94a98bb577ef906afbb04539761fd07d15f772
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68091634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81286155"
 ---
 # <a name="updating-deleting-or-fetching-by-bookmark"></a>Actualizar, eliminar o capturar marcador
-Los marcadores se pueden utilizar para identificar los datos que se van a actualizar en el conjunto de resultados, eliminarse del conjunto de resultados o recuperarse del conjunto de resultados a los búferes del conjunto de filas. Estas operaciones se realizan mediante una llamada a **SQLBulkOperations** con un argumento de *opción* de SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK o SQL_FETCH_BY_BOOKMARK. Los marcadores utilizados en estas operaciones se almacenan en la columna 0 de los búferes del conjunto de filas. Al actualizar por marcador, los datos en los que se actualizan las columnas del conjunto de resultados se recuperan de los búferes del conjunto de filas. Para obtener más información, vea [actualizar datos con SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md).
+Los marcadores se pueden usar para identificar los datos que se van a actualizar en el conjunto de resultados, eliminar del conjunto de resultados o recuperarse del conjunto de resultados en los búferes del conjunto de filas. Estas operaciones se realizan mediante una llamada a **SQLBulkOperations** con un *Option* argumento de SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK o SQL_FETCH_BY_BOOKMARK. Los marcadores utilizados en estas operaciones se almacenan en la columna 0 de los búferes del conjunto de filas. Al actualizar por marcador, los datos en los que se actualizan las columnas del conjunto de resultados se recuperan de los búferes del conjunto de filas. Para obtener más información, vea [Actualización de datos con SQLBulkOperations](../../../odbc/reference/develop-app/updating-data-with-sqlbulkoperations.md).

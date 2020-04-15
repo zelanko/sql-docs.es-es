@@ -1,5 +1,5 @@
 ---
-title: Usar cursores de servidor | Microsoft Docs
+title: Uso de cursores de servidor ? Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - ODBC cursors, server cursors
 - server cursors [SQL Server]
 ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ca1f7e2e5115920558e8550f5564a56aea5790b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ede31d9d59ef7d01dfd7e7b610edae273cbc5d64
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73784442"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305398"
 ---
 # <a name="using-server-cursors"></a>Utilizar cursores de servidor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Si una aplicación ODBC establece cualquiera de los atributos de cursor de ODBC en algo distinto de los valores predeterminados, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client solicita al servidor que implemente un cursor de servidor de API del mismo tipo. El uso de cursores de servidor de API libera memoria en el cliente y reduce significativamente el tráfico de red entre el cliente y el servidor.  
+  Si una aplicación ODBC establece cualquiera de los atributos del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor ODBC en cualquier cosa que no sea el predeterminado, el controlador ODBC de Native Client solicita al servidor que implemente un cursor de servidor de API del mismo tipo. El uso de cursores de servidor de API libera memoria en el cliente y reduce significativamente el tráfico de red entre el cliente y el servidor.  
   
  El hecho de que los cursores de servidor de API no admitan actualmente todas las instrucciones SQL puede representar un inconveniente. Los cursores de servidor de API no se pueden utilizar para ejecutar lo siguiente:  
   

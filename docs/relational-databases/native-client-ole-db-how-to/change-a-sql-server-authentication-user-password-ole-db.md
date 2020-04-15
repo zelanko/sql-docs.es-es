@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 768aff63d6b1faeecc0bba555fad0f598c9015a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 643148404dd2d532ce82e472097fb4331c8877bc
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75226169"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300993"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Cambiar una contraseña de usuario de autenticación de SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75226169"
   En este ejemplo se muestra cómo usar OLE DB para cambiar la contraseña de una cuenta de usuario bajo autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32.](https://go.microsoft.com/fwlink/?LinkId=64532)  
   
 ## <a name="example"></a>Ejemplo  
  Antes de realizar la compilación, actualice el código de C++ para que se especifique el identificador de usuario, la antigua contraseña y la nueva.  

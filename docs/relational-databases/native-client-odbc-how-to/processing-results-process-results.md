@@ -1,5 +1,5 @@
 ---
-title: Procesar resultados (ODBC) | Microsoft Docs
+title: Resultados del proceso (ODBC) Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,20 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebd41c30d72b86fe5344a15767648371a14f7a2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: de9adbcc2d89895a4162b5c7f7b2921f024d03e7
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73780918"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81300410"
 ---
 # <a name="processing-results---process-results"></a>Procesar resultados: procesar resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-El procesamiento de los resultados en una aplicación ODBC implica determinar primero las características del conjunto de resultados y, a continuación, recuperar los datos en variables de programa mediante [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
+El procesamiento de resultados en una aplicación ODBC implica primero determinar las características del conjunto de resultados y, a continuación, recuperar los datos en variables de programa mediante [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) o [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
 ### <a name="to-process-results"></a>Para procesar resultados  
   
@@ -62,6 +62,6 @@ El procesamiento de los resultados en una aplicación ODBC implica determinar pr
 >  Para cancelar el procesamiento de un conjunto de resultados antes de que [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) devuelva SQL_NO_DATA, llame a [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Consulte también  
-[Recuperar información del conjunto de resultados &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[Recuperar información del conjunto de resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

@@ -1,5 +1,5 @@
 ---
-title: Obtención de datos de gran tamaño | Microsoft Docs
+title: Obtención de datos grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0922ed161eb691386b1870f03a8597b6a4872f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73775507"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81303626"
 ---
 # <a name="getting-large-data"></a>Obtener datos grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  En general, los consumidores deben aislar el código que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un objeto de almacenamiento de proveedor OLE DB Native Client desde otro código que controle los datos a los que no se hace referencia a través de un puntero de interfaz **ISequentialStream** .  
+  En general, los consumidores deben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aislar el código que crea un objeto de almacenamiento de proveedor OLE DB de Native Client de otro código que controla los datos a los que no se hace referencia a través de un puntero de interfaz **ISequentialStream.**  
   
  En este tema se hace referencia a la funcionalidad disponible con las funciones siguientes:  
   
@@ -36,9 +36,9 @@ ms.locfileid: "73775507"
   
 -   ICommand::Execute  
   
- Si la propiedad DBPROP_ACCESSORDER (en el grupo de propiedades de conjunto de filas) está establecida en cualquiera de los valores DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, el consumidor solo debe capturar una fila de datos en una llamada al método **GetNextRows** porque los datos de BLOB no se almacenan en búfer. Si el valor de DBPROP_ACCESSORDER está establecido en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
+ Si la propiedad DBPROP_ACCESSORDER (en el grupo de propiedades del conjunto de filas) se establece en cualquiera de los valores DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, el consumidor debe capturar solo una fila de datos en una llamada al método **GetNextRows** porque los datos BLOB no se almacenan en búfer. Si el valor de DBPROP_ACCESSORDER está establecido en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no recupera datos grandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde hasta que el consumidor lo solicite. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client no recupera datos grandes desde el que el consumidor lo solicita. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se recupera un valor de datos grandes de una única columna:  
@@ -149,7 +149,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Blobs y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BlLOBs y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

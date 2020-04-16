@@ -19,20 +19,20 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fbf2bdf2249209da0c46c7ba4e1dc95df6789c5e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173364"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388546"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaz de usuario del diseñador gráfico de consultas
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto con los que se pueden crear consultas y recuperar datos de una base de datos relacional para un conjunto de datos de informe del Diseñador de informes. Use el diseñador gráfico de consultas para generar una consulta de forma interactiva y ver los resultados para los tipos de orígenes de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC. Use el diseñador de consultas basado en texto para especificar varias instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , sintaxis compleja de consultas o comandos, y consultas basadas en expresiones. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../text-based-query-designer-user-interface.md). Para obtener más información sobre cómo trabajar con tipos de orígenes de datos específicos, vea [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md).
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto con los que se pueden crear consultas y recuperar datos de una base de datos relacional para un conjunto de datos de informe del Diseñador de informes. Use el diseñador gráfico de consultas para generar una consulta de forma interactiva y ver los resultados para los tipos de orígenes de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC. Use el diseñador de consultas basado en texto para especificar varias instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , sintaxis compleja de consultas o comandos, y consultas basadas en expresiones. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../text-based-query-designer-user-interface.md). Para obtener más información sobre cómo trabajar con tipos de origen de datos específicos, vea Agregar datos a un informe &#40;Generador de [informes y SSRS&#41;](report-datasets-ssrs.md).
 
  .
 
 ## <a name="graphical-query-designer"></a>Diseñador gráfico de consultas
- Este diseñador gráfico de consultas admite tres tipos de comandos de consulta: **Text**, **StoredProcedure** o **TableDirect**. Antes de crear una consulta para el conjunto de datos, debe seleccionar una opción de tipo de comando en la página Consulta del cuadro de diálogo [Propiedades del conjunto de datos](../dataset-properties-dialog-box-query.md) .
+ Este diseñador gráfico de consultas admite tres tipos de comandos de consulta: **Text**, **StoredProcedure**o **TableDirect**. Antes de crear una consulta para el conjunto de datos, debe seleccionar una opción de tipo de comando en la página Consulta del cuadro de diálogo [Propiedades del conjunto de datos](../dataset-properties-dialog-box-query.md) .
 
  Dispone de tres tipos de consultas:
 
@@ -76,7 +76,7 @@ ms.locfileid: "78173364"
 |![Botón de alternancia Mostrar u ocultar panel de cuadrícula](../media/rsqdicon-showhidegrid.gif "Botón de alternancia Mostrar u ocultar panel de cuadrícula")|Muestra u oculta el panel Cuadrícula.|
 |![Botón de alternancia Mostrar u ocultar panel de SQL](../media/rsqdicon-showhidesql.gif "Botón de alternancia Mostrar u ocultar panel de SQL")|Muestra u oculta el panel de SQL.|
 |![Botón de alternancia Mostrar u ocultar panel de resultados](../media/rsqdicon-showhideresult.gif "Botón de alternancia Mostrar u ocultar panel de resultados")|Muestra u oculta el panel Resultado.|
-|![Ejecutar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta.|
+|![Ejecución de la consulta](../../analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta.|
 |![Botón Comprobar SQL en el panel de SQL](../media/rsqdicon-verifysql.gif "Botón Comprobar SQL en el panel de SQL")|Comprueba que la sintaxis del texto de consulta sea correcta.|
 |![Establecer orden ascendente en el campo seleccionado](../media/rsqdicon-sortascending.gif "Establecer orden ascendente en el campo seleccionado")|Establece el criterio de ordenación en **Orden ascendente** para la columna seleccionada en el panel Diagrama.|
 |![Establecer orden descendente en el campo seleccionado](../media/rsqdicon-sortdescending.gif "Establecer orden descendente en el campo seleccionado")|Establece el criterio de ordenación en **Orden descendente** para la columna seleccionada en el panel Diagrama.|
@@ -118,7 +118,7 @@ EXEC uspGetEmployeeManagers '1';
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas.|
 |**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
 |![Icono del botón Diseñador de consultas genérico](../media/icongenericquerydesigner.gif "Icono del botón Diseñador de consultas genérico")|Alterna el diseñador de consultas genérico y el diseñador gráfico de consultas, a la vez que mantiene el texto de consulta o la vista del procedimiento almacenado.|
-|![Ejecutar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Selecciona todas las columnas de la tabla seleccionada.|
+|![Ejecución de la consulta](../../analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Selecciona todas las columnas de la tabla seleccionada.|
 
 ### <a name="command-type-storedprocedure"></a>Tipo de comando StoredProcedure
  En el tipo **StoredProcedure** , el diseñador gráfico de consultas muestra una lista desplegable de los procedimientos almacenados disponibles del origen de datos y el panel Resultado. En la siguiente tabla se describe la función de cada panel.
@@ -135,7 +135,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas.|
 |**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos .sql y .rdl. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
-|![Ejecutar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta el procedimiento almacenado.|
+|![Ejecución de la consulta](../../analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta el procedimiento almacenado.|
 |Lista desplegable de procedimientos almacenados|Haga clic en la flecha abajo para mostrar una lista de procedimientos almacenados disponibles del origen de datos. Haga clic en un procedimiento almacenado de la lista para seleccionarlo.|
 
 #### <a name="example"></a>Ejemplo
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>Consulte también
- [Herramientas de diseño de consultas en Diseñador de informes SQL Server Data Tools &#40;ssrs&#41;](query-design-tools-ssrs.md) [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-datasets-ssrs.md) [SQL Server tipo de conexión &#40;SSRS&#41;](sql-server-connection-type-ssrs.md) [OLE DB tipo de conexión &#40;ssrs&#41;](ole-db-connection-type-ssrs.md) [agregar datos a un informe &#40;Generador de informes y SSRS&#41;tipo de](report-datasets-ssrs.md) [conexión de Oracle &#40;](oracle-connection-type-ssrs.md) informes de configuración de RSReportDesigner de archivos de [configuración](../report-server/rsreportdesigner-configuration-file.md) de SSRS&#41;[Visual Database Tools](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md) &#40;
+ Herramientas de diseño de consultas en el Diseñador de informes [SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md) Agregar datos a un generador de informes &#40;de informes y [SSRS&#41;](report-datasets-ssrs.md) tipo de conexión de SQL Server &#40;[SSRS&#41;](sql-server-connection-type-ssrs.md) tipo de conexión OLE DB &#40;[SSRS&#41;](ole-db-connection-type-ssrs.md) Agregar datos a un informe &#40;Generador de informes y [SSRS&#41;](report-datasets-ssrs.md) Tipo de conexión de Oracle &#40;[SSRS&#41;](oracle-connection-type-ssrs.md) [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [Consultas de diseño](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md) de archivos de configuración y vistas Temas de información &#40;visual&#41;
 
 

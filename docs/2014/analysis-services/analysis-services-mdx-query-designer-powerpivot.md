@@ -1,5 +1,5 @@
 ---
-title: Analysis Services el diseñador de consultas MDX (PowerPivot) | Microsoft Docs
+title: Diseñador de consultas MDX de Analysis ServicesAnalysis Services (PowerPivot) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "66062469"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Diseñador de consultas MDX de Analysis Services (PowerPivot)
-  El diseñador de consultas de expresiones multidimensionales (MDX) de Analysis Services proporciona interfaces gráficas de usuario para ayudarle a crear [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consultas MDX para un origen de datos. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX que recupera los datos que desee usar.  
+  El diseñador de consultas de expresiones multidimensionales (MDX) de Analysis ServicesAnalysis Services proporciona interfaces gráficas de usuario para ayudarle a crear consultas MDX para un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origen de datos. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX que recupera los datos que desee usar.  
   
 > [!IMPORTANT]  
 >  Los usuarios tienen acceso a los orígenes de datos cuando crean y ejecutan las consultas. Debe conceder permisos mínimos para los orígenes de datos, por ejemplo permisos de solo lectura.  
@@ -42,13 +42,13 @@ ms.locfileid: "66062469"
 |Panel Filtro|Se usa a fin de elegir dimensiones y jerarquías relacionadas para filtrar datos en el origen y limitar datos devueltos.|  
 |Panel Datos|Muestra los encabezados de columna del conjunto de resultados mientras arrastra elementos de los paneles Metadatos y Miembros calculados. Actualiza automáticamente el conjunto de resultados si el botón **Ejecución automática** está seleccionado.|  
   
- Puede arrastrar dimensiones, medidas y KPI desde el panel Metadatos, y los miembros calculados desde el panel Miembros calculados al panel Datos. En el panel Filtro, puede seleccionar dimensiones y jerarquías relacionadas, y establecer expresiones de filtro para limitar los datos disponibles en la consulta. Si el botón de alternancia **ejecución** automática (![ejecutar la consulta](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")automáticamente) de la barra de herramientas está seleccionado, el diseñador de consultas ejecuta la consulta cada vez que coloque un objeto de metadatos en el panel datos. Puede ejecutar manualmente la consulta mediante el botón **Ejecutar** (![ejecutar la consulta](media/rsqdicon-run.gif "Ejecutar la consulta")) de la barra de herramientas.  
+ Puede arrastrar dimensiones, medidas y KPI desde el panel Metadatos, y los miembros calculados desde el panel Miembros calculados al panel Datos. En el panel Filtro, puede seleccionar dimensiones y jerarquías relacionadas, y establecer expresiones de filtro para limitar los datos disponibles en la consulta. Si el botón de alternancia **Ejecución automática** (![Ejecutar la consulta automáticamente](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")) de la barra de herramientas está seleccionado, el diseñador de consultas ejecuta la consulta cada vez que coloque un objeto de metadatos en el panel Datos. Puede ejecutar la consulta manualmente con el botón **Ejecutar** (![Ejecutar la consulta](media/rsqdicon-run.gif "Ejecutar la consulta")) de la barra de herramientas.  
   
  Al crear una consulta MDX en este modo, se incluyen automáticamente en la consulta las propiedades adicionales siguientes:  
   
  **Propiedades de miembro** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
   
- **Propiedades de celda** VALOR, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
+ **Propiedades de la celda** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
   
  Si desea especificar sus propias propiedades adicionales, debe modificar manualmente la consulta MDX en el modo de consulta.  
   
@@ -106,10 +106,10 @@ ms.locfileid: "66062469"
   
 -   **Agregar miembro calculado** (![Agregar miembro calculado](media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))  
   
--   **Mostrar celdas vacías** (![alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
+-   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
   
--   **Ejecución** automática (![ejecución automática de la consulta](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))  
+-   **Ejecutar automáticamente** (![Ejecutar la consulta automáticamente](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))  
   
--   **Mostrar agregaciones** (![botón Mostrar agregaciones](media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))  
+-   **Mostrar agregaciones** (![Botón Mostrar agregaciones](media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))  
   
   

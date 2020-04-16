@@ -17,12 +17,12 @@ ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 06583b8c8b661d9a98496d535d24e285d7726d99
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 2f26fb42531635fd6e5791fbad0cba94f980f23e
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78172859"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388337"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas SAP NetWeaver BI
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas que permite crear consultas MDX (expresiones multidimensionales) para un origen de datos de SAP NetWeaver® Business Intelligence. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel Metadatos desde el que puede arrastrar miembros de un InfoCubo, un MultiSitio, o bien de una consulta habilitada para web definidos en el origen de datos; de esta forma, se puede crear una consulta MDX que recupera datos cuando se procesa el informe.
@@ -58,14 +58,14 @@ ms.locfileid: "78172859"
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No está disponible para este tipo de origen de datos.|
 |**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
 |![Actualizar campos de conjunto de datos](../media/rsqdicon-refreshfields.gif "Actualizar campos de conjunto de datos")|Actualiza los metadatos desde el origen de datos.|
-|![Agregar miembro calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|
-|![Alternar para mostrar celdas vacías](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|
-|![Ejecutar la consulta automáticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realice un cambio, por ejemplo al eliminar una columna en el panel Datos. Los resultados se mostrarán en el panel Datos.|
-|![Eliminar](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|
-|![Icono del cuadro de diálogo Parámetros de consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")|Muestra el cuadro de diálogo **Variables** . Este botón se habilita solo cuando el cubo seleccionado es un cubo de consulta; únicamente los cubos de consulta admiten variables. Al asignar un valor predeterminado a una variable, se crea un parámetro de informe correspondiente.|
-|![Ejecutar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra los resultados en el panel Datos.|
-|![Cancelar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancelar la consulta")|Cancela la consulta.|
-|![Cambiar al modo de diseño](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Cambiar al modo de diseño")|Alterna el modo de diseño y el modo de consulta.|
+|![Agregar miembro calculado](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|
+|![Alternar para mostrar celdas vacías](../../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|
+|![Ejecutar la consulta automáticamente](../../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realice un cambio, por ejemplo al eliminar una columna en el panel Datos. Los resultados se mostrarán en el panel Datos.|
+|![Eliminar](../../analysis-services/media/rsqdicon-delete.gif "Eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|
+|![Icono del cuadro de diálogo Parámetros de consulta](../../analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")|Muestra el cuadro de diálogo **Variables** . Este botón se habilita solo cuando el cubo seleccionado es un cubo de consulta; únicamente los cubos de consulta admiten variables. Al asignar un valor predeterminado a una variable, se crea un parámetro de informe correspondiente.|
+|![Ejecución de la consulta](../../analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra los resultados en el panel Datos.|
+|![Cancelar la consulta](../../analysis-services/media/rsqdicon-cancel.gif "Cancelar la consulta")|Cancela la consulta.|
+|![Cambiar al modo de diseño](../../analysis-services/media/rsqdicon-designmode.gif "Cambiar al modo de diseño")|Alterna el modo de diseño y el modo de consulta.|
 
 ## <a name="graphical-query-designer-in-query-mode"></a>Diseñador gráfico de consultas en modo de consulta
  Para cambiar el diseñador gráfico de consultas al modo de consulta, haga clic en el botón de alternancia **Modo de diseño** de la barra de herramientas.
@@ -95,15 +95,15 @@ ms.locfileid: "78172859"
 
 -   **Editar como texto**
 
--   **Agregar miembro calculado** (![Agregar miembro calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))
+-   **Agregar miembro calculado** (![Agregar miembro calculado](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))
 
--   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))
+-   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](../../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))
 
--   **Ejecutar automáticamente** (![Ejecutar la consulta automáticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))
+-   **Ejecutar automáticamente** (![Ejecutar la consulta automáticamente](../../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))
 
--   **Eliminar** (![Eliminar](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Eliminar"))
+-   **Eliminar** (![Eliminar](../../analysis-services/media/rsqdicon-delete.gif "Eliminar"))
 
 ## <a name="see-also"></a>Consulte también
- [Crear un conjunto de archivos compartido o un conjunto de &#40;incrustado generador de informes y SSRS&#41;archivo de](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
+ Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de [informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) archivo de [configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
 
 

@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "62767564"
 ---
-# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Paso 7: agregar y configurar el destino de OLE DB
+# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Paso 7: Adición y configuración del destino de OLE DB
   Ahora, el paquete puede extraer datos de un origen de archivo plano y transformar dichos datos en un formato compatible con el destino. La tarea siguiente consiste realmente en cargar los datos transformados en el destino. Para cargar los datos, debe agregar un destino de OLE DB al flujo de datos. El destino de OLE DB puede utilizar una tabla de bases de datos, una vista o un comando SQL para cargar datos en distintas bases de datos compatibles con OLE DB.  
   
  En este procedimiento, se agrega y configura un destino de OLE DB para utilizar el administrador de conexiones de OLE DB creado con anterioridad.  
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>Para agregar y configurar un destino de OLE DB de ejemplo  
   
-1.  En el **cuadro de herramientas de SSIS**, expanda **otros destinos**y arrastre **OLE DB destino** a la superficie de diseño de la pestaña **flujo de datos** . Coloque el OLE DB destino directamente debajo de la transformación **lookup Date Key** .  
+1.  En el cuadro de herramientas de **Lookup Date Key** **SSIS**, expanda Otros **destinos**y arrastre Destino OLE **DB** a la superficie de diseño de la pestaña **Flujo** de datos.  
   
 2.  Haga clic en la transformación **Lookup Date Key** y arrastre la flecha verde hasta el **Destino de OLE DB** que acaba de agregar para conectar los dos componentes entre sí.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767564"
   
 13. Haga clic con el botón derecho en **Sample OLE DB Destination** y haga clic en **Propiedades**.  
   
-14. En el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos)** y que`DefaultCodePage` la propiedad está establecida en **1252**.  
+14. En la ventana Propiedades, `LocaleID` compruebe que la propiedad está`DefaultCodePage` establecida en **Inglés (Estados Unidos)** y la propiedad está establecida en **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 8: Facilitar la comprensión del paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

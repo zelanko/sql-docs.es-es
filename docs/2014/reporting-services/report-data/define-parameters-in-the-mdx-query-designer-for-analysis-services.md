@@ -1,5 +1,5 @@
 ---
-title: Definir parámetros en el diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS) | Microsoft Docs
+title: Definir parámetros en el Diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd352eccbe0cba2d29c7c446eef00bea5415084d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78176923"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388532"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definir parámetros en el diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS)
   Si desea incluir parámetros en una consulta MDX para un origen de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , debe agregar un parámetro de consulta a la consulta. En el diseñador de consultas MDX, puede agregar un parámetro de consulta tanto en el modo de diseño como en el modo de consulta mediante la especificación de un filtro. Después de definir la consulta con un parámetro de consulta, Reporting Services crea automáticamente un parámetro de informe y un conjunto de datos para proporcionar la lista de valores válidos. Esto permite al usuario especificar un valor que se pasa directamente a la consulta.
@@ -59,7 +59,7 @@ ms.locfileid: "78176923"
 
 2.  En la barra de herramientas, haga clic en **Diseño** para cambiar al modo de consulta.
 
-3.  En la barra de herramientas del diseñador de consultas MDX, haga clic en **Parámetros de consulta** (![Icono del cuadro de diálogo Parámetros de consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")). Se abrirá el cuadro de diálogo Parámetros de consulta.
+3.  En la barra de herramientas del diseñador de consultas MDX, haga clic en **Parámetros de consulta** (![Icono del cuadro de diálogo Parámetros de consulta](../../analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")). Se abrirá el cuadro de diálogo Parámetros de consulta.
 
 4.  En la columna **Parámetro**, haga clic en **\<Escribir parámetro>** y luego escriba el nombre de un parámetro.
 
@@ -82,6 +82,6 @@ ms.locfileid: "78176923"
      Para ver el conjunto de datos que proporciona los valores disponibles para el parámetro de informe, haga clic con el botón secundario en cualquier área en blanco del panel Datos de informe y, a continuación, haga clic en **Mostrar conjuntos de datos ocultos**. El panel Datos de informe muestra todos los conjuntos de datos del informe.
 
 ## <a name="see-also"></a>Consulte también
- [Analysis Services tipo de conexión para mdx &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services interfaz de usuario del diseñador de consultas MDX](analysis-services-mdx-query-designer-user-interface.md)
+ Tipo de conexión de [Analysis Services para MDX &#40;interfaz](analysis-services-connection-type-for-mdx-ssrs.md) de usuario del Diseñador de [consultas MDX](analysis-services-mdx-query-designer-user-interface.md) de Analysis Services&#41;MDX
 
 

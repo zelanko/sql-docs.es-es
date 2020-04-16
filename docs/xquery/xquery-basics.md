@@ -1,5 +1,6 @@
 ---
-title: Conceptos básicos de XQuery | Microsoft Docs
+title: Fundamentos de XQuery ?? Microsoft Docs
+description: Aprenda los fundamentos del lenguaje XQuery, incluidos, secuencia y QNames, contexto de expresión, atomización, sistema de tipos, control de errores y comentarios.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81a506c9f7b079dc86062976fca1b8785c1a80dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 92882722baab0284f421989ba4906e60e777049e
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67946054"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388134"
 ---
 # <a name="xquery-basics"></a>Conceptos básicos de XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -27,22 +28,22 @@ ms.locfileid: "67946054"
   En esta sección se describe los aspectos básicos de XQuery.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Sequence y QNames &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
+ [Secuencia y Nombres de preguntas &#40;&#41;XQuery](../xquery/sequence-and-qnames-xquery.md)  
  Se describen las secuencias, los QName y los espacios de nombres predefinidos.  
   
- [Contexto de expresiones y evaluación de consultas &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [Contexto de expresión y evaluación de consultas &#40;&#41;XQuery](../xquery/expression-context-and-query-evaluation-xquery.md)  
  Se describen los dos contextos en los que se evalúa XQuery. Se trata de los contextos estático y dinámico.  
   
- [Atomización &#40;XQuery&#41;](../xquery/atomization-xquery.md)  
+ [Atomización &#40;&#41;XQuery](../xquery/atomization-xquery.md)  
  Se describe la atomización, que es un proceso de extracción del valor con tipo de un elemento.  
   
- [Valor booleano efectivo &#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
+ [Valor booleano efectivo &#40;&#41;XQuery](../xquery/effective-boolean-value-xquery.md)  
  Se describe el valor booleano efectivo. Este valor se puede calcular para las expresiones que devuelven un solo valor booleano, una secuencia de nodo o una secuencia vacía.  
   
- [Sistema de tipos &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [Tipo System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  Se describe el sistema de tipos XQuery con varios tipos predefinidos. XQuery es un lenguaje con establecimiento inflexible de tipos para tipos de esquema y con establecimiento flexible de tipos para datos sin tipo.  
   
- [Control de errores &#40;XQuery&#41;](../xquery/error-handling-xquery.md)  
+ [Control de errores &#40;&#41;XQuery](../xquery/error-handling-xquery.md)  
  Se describe el control de errores estáticos, dinámicos y de tipo en XQuery.  
   
  [Comentarios en XQuery](../xquery/comments-in-xquery.md)  

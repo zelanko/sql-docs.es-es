@@ -1,5 +1,5 @@
 ---
-title: Llamar a métodos | Microsoft Docs
+title: Métodos de llamada ? Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 471549e5a42f8d08a62da37c4e98e66bc9b67413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "70148762"
 ---
 # <a name="calling-methods"></a>Llamar a métodos
@@ -33,7 +33,7 @@ ms.locfileid: "70148762"
  Use el control de excepciones para detectar si el método se realizó correctamente. Para más información, consulte [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md).  
   
 ## <a name="examples"></a>Ejemplos  
-Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea Crear un proyecto SMO de [Visual C&#35; en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>Usar un método SMO simple en Visual Basic  

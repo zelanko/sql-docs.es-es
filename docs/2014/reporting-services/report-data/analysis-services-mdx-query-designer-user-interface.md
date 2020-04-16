@@ -16,12 +16,12 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c7f4f40fb819cd9686039d7df8f73c5d7ac96c2b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78173234"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388704"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas MDX de Analysis Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] proporciona diseñadores gráficos de consultas para crear consultas MDX (Expresiones multidimensionales) y consultas DMX (Expresiones de minería de datos) para un origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En este tema se describe el diseñador de consultas MDX. Para más información sobre el diseñador de consultas DMX, vea [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).
@@ -36,7 +36,7 @@ ms.locfileid: "78173234"
 
  En la siguiente ilustración se indican los nombres de los paneles del modo de diseño.
 
- ![Diseñador de consultas MDX de Analysis Services, vista de diseño](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Diseñador de consultas MDX de Analysis Services, vista de diseño")
+ ![Diseñador de consultas MDX de Analysis Services, vista de diseño](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Diseñador de consultas MDX de Analysis Services, vista de diseño")
 
  En la tabla siguiente aparecen los paneles de este modo:
 
@@ -48,13 +48,13 @@ ms.locfileid: "78173234"
 |Panel Filtro|Se utiliza a fin de elegir dimensiones y jerarquías relacionadas para filtrar datos en el origen y limitar datos devueltos al informe.|
 |Panel Datos|Muestra los encabezados de columna del conjunto de resultados mientras arrastra elementos de los paneles Metadatos y Miembros calculados. Actualiza automáticamente el conjunto de resultados si el botón **Ejecución automática** está seleccionado. .|
 
- Puede arrastrar dimensiones, medidas y KPI desde el panel Metadatos, y los miembros calculados desde el panel Miembros calculados al panel Datos. En el panel Filtro, puede seleccionar dimensiones y jerarquías relacionadas, y establecer expresiones de filtro para limitar los datos disponibles en la consulta. Si el botón de alternancia **ejecución** automática (![ejecutar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")automáticamente) de la barra de herramientas está seleccionado, el diseñador de consultas ejecuta la consulta cada vez que coloque un objeto de metadatos en el panel datos. Puede ejecutar manualmente la consulta mediante el botón **Ejecutar** (![ejecutar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")) de la barra de herramientas.
+ Puede arrastrar dimensiones, medidas y KPI desde el panel Metadatos, y los miembros calculados desde el panel Miembros calculados al panel Datos. En el panel Filtro, puede seleccionar dimensiones y jerarquías relacionadas, y establecer expresiones de filtro para limitar los datos disponibles en la consulta. Si el botón de alternancia **Ejecución automática** (![Ejecutar la consulta automáticamente](../../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")) de la barra de herramientas está seleccionado, el diseñador de consultas ejecuta la consulta cada vez que coloque un objeto de metadatos en el panel Datos. Puede ejecutar la consulta manualmente con el botón **Ejecutar** (![Ejecutar la consulta](../../analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")) de la barra de herramientas.
 
  Al crear una consulta MDX en este modo, se incluyen automáticamente en la consulta las propiedades adicionales siguientes:
 
  **Propiedades de miembro** MEMBER_CAPTION, MEMBER_UNIQUE_NAME
 
- **Propiedades de celda** VALOR, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+ **Propiedades de la celda** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
 
  Si desea especificar sus propias propiedades adicionales, debe modificar manualmente la consulta MDX en el modo de consulta.
 
@@ -65,26 +65,26 @@ ms.locfileid: "78173234"
 |------------|-----------------|
 |**Editar como texto**|No está habilitado para este tipo de origen de datos.|
 |**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|
-|![Cambiar a la vista de la consulta MDX](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Cambiar a la vista de la consulta MDX")|Cambia al tipo de comando MDX.|
-|![Cambio a la vista del lenguaje de consultas DMX](../media/rsqdicon-commandtypedmx.gif "Cambio a la vista del lenguaje de consultas DMX")|Cambia al tipo de comando DMX.|
-|![Actualizar datos de resultados](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Actualizar datos de resultados")|Actualiza los metadatos desde el origen de datos.|
-|![Agregar miembro calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|
-|![Alternar para mostrar celdas vacías](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|
-|![Ejecutar la consulta automáticamente](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realiza un cambio. Los resultados se mostrarán en el panel Datos.|
-|![Botón Mostrar agregaciones](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones")|Muestra agregaciones en el panel Datos.|
-|![Eliminar](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|
-|![Icono del cuadro de diálogo Parámetros de consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")|Muestra el cuadro de diálogo **Parámetros de consulta** . Al especificar valores para un parámetro de consulta, se crea automáticamente un parámetro de informe con el mismo nombre. El valor del parámetro de consulta se establece en una expresión que hace referencia al parámetro de informe.|
-|![Botón Preparar consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-preparequery.gif "Botón Preparar consulta")|Prepara la consulta.|
-|![Ejecutar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra los resultados en el panel Datos.|
-|![Cancelar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-cancel.gif "Cancelar la consulta")|Cancela la consulta.|
-|![Cambiar al modo de diseño](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Cambiar al modo de diseño")|Alterna el modo de diseño y el modo de consulta.|
+|![Cambiar a la vista de la consulta MDX](../../analysis-services/media/rsqdicon-commandtypemdx.gif "Cambiar a la vista de la consulta MDX")|Cambia al tipo de comando MDX.|
+|![Cambiar a la vista del lenguaje de consultas DMX](../media/rsqdicon-commandtypedmx.gif "Cambiar a la vista del lenguaje de consultas DMX")|Cambia al tipo de comando DMX.|
+|![Actualizar datos de resultados](../../analysis-services/media/rsqdicon-refresh.gif "Actualizar datos de resultados")|Actualiza los metadatos desde el origen de datos.|
+|![Agregar miembro calculado](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|
+|![Alternar para mostrar celdas vacías](../../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|
+|![Ejecutar la consulta automáticamente](../../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realiza un cambio. Los resultados se mostrarán en el panel Datos.|
+|![Botón Mostrar agregaciones](../../analysis-services/media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones")|Muestra agregaciones en el panel Datos.|
+|![Eliminar](../../analysis-services/media/rsqdicon-delete.gif "Eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|
+|![Icono del cuadro de diálogo Parámetros de consulta](../../analysis-services/media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")|Muestra el cuadro de diálogo **Parámetros de consulta** . Al especificar valores para un parámetro de consulta, se crea automáticamente un parámetro de informe con el mismo nombre. El valor del parámetro de consulta se establece en una expresión que hace referencia al parámetro de informe.|
+|![Botón Preparar consulta](../../analysis-services/media/rsqdicon-preparequery.gif "Botón Preparar consulta")|Prepara la consulta.|
+|![Ejecutar la consulta](../../analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra los resultados en el panel Datos.|
+|![Cancelar la consulta](../../analysis-services/media/rsqdicon-cancel.gif "Cancelar la consulta")|Cancela la consulta.|
+|![Cambiar al modo de diseño](../../analysis-services/media/rsqdicon-designmode.gif "Cambiar al modo de diseño")|Alterna el modo de diseño y el modo de consulta.|
 
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>Diseñador gráfico de consultas MDX en modo de consulta
  Para cambiar el diseñador gráfico de consultas al modo **Consulta** , haga clic en el botón **Modo de diseño** de la barra de herramientas.
 
  En la ilustración siguiente se indican los nombres de los paneles del modo de consulta.
 
- ![Diseñador de consultas MDX de Analysis Services, vista de consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Diseñador de consultas MDX de Analysis Services, vista de consulta")
+ ![Diseñador de consultas MDX de Analysis Services, vista de consulta](../../analysis-services/media/rsqd-dsawas-mdx-querymode.gif "Diseñador de consultas MDX de Analysis Services, vista de consulta")
 
  En la tabla siguiente aparecen los paneles de este modo:
 
@@ -106,15 +106,15 @@ ms.locfileid: "78173234"
 
 -   **Editar como texto**
 
--   **Agregar miembro calculado** (![Agregar miembro calculado](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))
+-   **Agregar miembro calculado** (![Agregar miembro calculado](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))
 
--   **Mostrar celdas vacías** (![alternar para mostrar celdas vacías](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))
+-   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](../../analysis-services/media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))
 
--   **Ejecución** automática (![ejecución automática de la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))
+-   **Ejecutar automáticamente** (![Ejecutar la consulta automáticamente](../../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))
 
--   **Mostrar agregaciones** (![botón Mostrar agregaciones](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))
+-   **Mostrar agregaciones** (![Botón Mostrar agregaciones](../../analysis-services/media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))
 
 ## <a name="see-also"></a>Consulte también
- [Defina los parámetros en el diseñador de consultas MDX para Analysis Services &#40;generador de informes y ssrs&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [crear un conjunto de DataSet compartido o un conjunto de archivos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [tipo de conexión Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) el [archivo de configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [Analysis Services tipo de conexión para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)
+ [Definir parámetros en el Diseñador de consultas MDX para Analysis ServicesAnalysis Services &#40;Generador de informes y SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) Crear un conjunto de datos compartido o conjunto de datos incrustado &#40;Generador de informes y Tipo de conexión de [SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) Analysis Services para DMX &#40;[SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) Tipo de conexión de Los servicios de análisis de archivos de configuración [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)
 
 

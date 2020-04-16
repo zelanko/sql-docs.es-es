@@ -1,5 +1,6 @@
 ---
-title: Ejecutar consultas SQL con el método ExecuteXMLReader
+title: Ejecute consultas SQL con el método ExecuteXMLReader
+description: Aprenda a ejecutar consultas SQL mediante el método ExecuteXmlReader del objeto SqlXmlCommand para ejecutar comandos.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23b28209db43753b7185a87311ec6d338bcaccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9acfa4eecb97902f20a0ba25762e2b14f2d5c756
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75251530"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81387999"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ejecutar consultas SQL mediante el método ExecuteXMLReader
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En lugar de usar el método ExecuteToStream, puede utilizar el método ExecuteXmlReader del objeto SqlXmlCommand para ejecutar comandos. Este método devuelve un objeto XmlReader que se puede usar para el procesamiento posterior del resultado (que en este ejemplo está imprimiendo los nombres de los elementos o atributos y los valores).  
+  En lugar de utilizar el método ExecuteToStream, puede usar el método ExecuteXmlReader del objeto SqlXmlCommand para ejecutar comandos. Este método devuelve un objeto XmlReader que se puede utilizar para el procesamiento posterior del resultado (que en este ejemplo es imprimir los nombres de elemento o atributo y los valores).  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  
@@ -71,7 +72,7 @@ using System.Xml;
   
 1.  Asegúrese de que tiene [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework instalado en el equipo.  
   
-2.  Guarde el código C# (DocSample.cs) que se proporciona en este tema en una carpeta.  
+2.  Guarde el código de C-(DocSample.cs) que se proporciona en este tema en una carpeta.  
   
 3.  Compile el código. Para compilar el código en el símbolo del sistema, use:  
   

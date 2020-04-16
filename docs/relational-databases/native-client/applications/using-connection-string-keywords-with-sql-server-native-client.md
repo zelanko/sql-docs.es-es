@@ -1,5 +1,5 @@
 ---
-title: Native Client, palabras clave de conexión SQL
+title: Usar palabras clave de cadenas de conexión
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6dd4f0cecc7b2772e82386d552e8b391d6dfd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 86e615d22284c5e22f3c6281caa683becfc35bb0
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303926"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388583"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Usar palabras clave de cadena de conexión con SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -276,7 +276,7 @@ ms.locfileid: "81303926"
   
  **Nota** En la cadena de conexión, la propiedad "Old Password" establece SSPROP_AUTH_OLD_PASSWORD, que es la contraseña actual (posiblemente expirada) que no está disponible a través de una propiedad de cadena del proveedor.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Generar aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

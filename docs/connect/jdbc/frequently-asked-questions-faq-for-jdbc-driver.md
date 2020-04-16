@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f753fde186e056b5c7222c2c801303661e1fd79
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78fe63a54214ad7ff231ebf5df2353ef09d0fc09
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924662"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219171"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -113,8 +113,8 @@ Los controladores JDBC Driver 6.0, 6.2, 6.4 y 7.0 son redistribuibles. Revise la
 **¿Puedo usar el controlador para acceder a Microsoft SQL Server desde un equipo Linux?**  
 Sí. Puede utilizar el controlador para acceder a SQL Server desde otras plataformas distintas de Windows, Unix y Linux. Para obtener más información, consulte [Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**¿El controlador admite el cifrado de Capa de sockets seguros (SSL)?**  
-A partir de la versión 1.2, el controlador admite el cifrado de capa de sockets seguros (SSL). Para más información, consulte [Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md).
+**¿El controlador admite el cifrado TLS?**  
+A partir de la versión 1.2, el controlador admite el cifrado de Seguridad de la capa de transporte (TLS), antes conocida como Capa de sockets seguros (SSL). Para obtener más información, consulte [Uso de cifrado](../../connect/jdbc/using-ssl-encryption.md).
 
 **¿Qué tipos de autenticación admite Microsoft JDBC Driver para SQL Server?**  
 En la tabla siguiente se muestran las opciones de autenticación disponibles. La autenticación Kerberos pura de Java está disponible a partir de la versión 4.0 del controlador.

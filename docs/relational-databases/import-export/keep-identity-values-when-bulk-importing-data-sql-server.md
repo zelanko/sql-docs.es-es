@@ -1,5 +1,6 @@
 ---
 title: Mantenimiento de valores de identidad al importar datos en bloque
+description: Al importar en bloque datos que contienen valores de identidad a una instancia de SQL Server, de forma predeterminada, se asignan nuevos valores. Puede optar por mantener los valores originales.
 ms.date: 09/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9dc47ecc9056c2344b64feb4eb0f122e340927b5
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74055970"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980617"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenimiento de valores de identidad al importar datos en bloque (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b5de8c538d0ee91f8d176637beceabdf9352177a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 02892e3768a01ee834598d620300962f1a2bbb56
+ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76037045"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80742317"
 ---
 # <a name="functions---dm_execution_performance_counters"></a>Funciones - dm_execution_performance_counters
 
@@ -51,7 +51,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 |Búferes planos en uso|Número de búferes planos que usa el motor de flujo de datos. Todos los búferes planos son privados.|  
 |Memoria de búfer privado|Cantidad de memoria en uso por todos los búferes privados. Un búfer privado es un búfer que una transformación usa para realizar trabajo temporal.<br /><br /> Un búfer no es privado si el motor de flujo de datos lo crea para admitir el flujo de datos.|  
 |Búferes privados en uso|Número de búferes que las transformaciones usan para realizar trabajo temporal.|  
-|Filas leídas|Número total de filas listas para su ejecución.|  
+|Filas leídas|Número total de filas que lee la ejecución.|  
 |Filas escritas|Número total de filas escritas por la ejecución.|  
   
 ## <a name="return"></a>Valor devuelto  

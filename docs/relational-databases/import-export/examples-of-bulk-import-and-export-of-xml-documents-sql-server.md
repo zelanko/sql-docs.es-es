@@ -1,5 +1,6 @@
 ---
 title: Importación y exportación de documentos XML en bloque
+description: En estos ejemplos se muestra la importación en bloque de documentos XML en una base de datos de SQL Server y la exportación masiva desde una base de datos de SQL Server.
 ms.description: Examples of bulk importing and exporting of XML documents with SQL Server
 ms.date: 10/24/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e44f6a80553927b3888d76f53f0570ba5b3b9026
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401584"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980667"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de documentos XML en bloque (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

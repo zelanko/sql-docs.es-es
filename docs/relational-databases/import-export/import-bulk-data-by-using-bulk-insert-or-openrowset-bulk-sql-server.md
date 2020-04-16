@@ -1,5 +1,6 @@
 ---
 title: Uso de BULK INSERT u OPENROWSET(BULK...) para importar datos a SQL Server
+description: Descubra cómo usar instrucciones Transact-SQL para importar en bloque datos de un archivo a una tabla SQL Server o Azure SQL Database y obtenga información sobre las consideraciones de seguridad.
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,15 +21,15 @@ ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
 author: markingmyname
 ms.author: maghan
 manager: jroth
-ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fb3a05f08cdf3481b9e2957c35bf6ee48bce6b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: seo-lt-2019
+ms.openlocfilehash: fe9d407b446177004715ae5d3403e856028985d3
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76909968"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980587"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>Uso de BULK INSERT u OPENROWSET(BULK...) para importar datos a SQL Server
 

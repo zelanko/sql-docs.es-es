@@ -1,1 +1,1 @@
-<Token>**SE APLICA A:** ![sí](media/yes.png)SQL Server ![sí](media/yes.png)SSIS Integration Runtime en Azure Data Factory</Token> ![sí](media/yes.png)Azure Synapse Analytics (SQL DW)
+<Token>**SE APLICA A:** ![Sí](media/yes-icon.png)SQL Server ![Sí](media/yes-icon.png)SSIS Integration Runtime en Azure Data Factory</Token> ![Sí](media/yes-icon.png)Azure Synapse Analytics (SQL DW)

@@ -1,6 +1,6 @@
 ---
 title: Uso de PIVOT y UNPIVOT | Microsoft Docs
-ms.custom: ''
+description: Referencia de Transact-SQL para los operadores relacionales PIVOT y UNPIVOT. Use estos operadores en instrucciones SELECT para modificar una expresión con valores de tabla en otra tabla.
 ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d776fbae94ae69af10595d7c0d50b84449dd9875
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc131a531be7882aacc8b8463e211523125960aa
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77255999"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517689"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: uso de PIVOT y UNPIVOT
 

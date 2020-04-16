@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 658dcbccb515b7d5d720d0bb0c677aa2178b7606
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc70544fdb0bb79ef97d5026ad8b985ad8add2ba
+ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216084"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80443381"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configuración de los grupos de escalado horizontal de PolyBase en Windows
 
@@ -87,7 +87,10 @@ Una vez completada la instalación, las dos máquinas pueden funcionar como nodo
 3. Ejecute services.msc en el nodo de ejecución (PQTH4A-CMP02).
   
 4. Apague el motor de PolyBase y reinicie el servicio de movimiento de datos de PolyBase.
-  
+
+> [!NOTE] 
+> Cuando el servicio de motor de PolyBase se reinicia o se detiene en el nodo principal, los servicios del servicio de movimiento de datos (DMS) se detienen en cuanto se cierra el canal de comunicación entre DMS y el servicio de motor de PolyBase (DW). Si el motor de DW se reinicia más de dos veces, DMS entra en un período no interactivo durante 90 minutos y debe esperar 90 minutos para el siguiente intento de inicio automático. En esta situación, debe iniciar este servicio manualmente en todos los nodos.
+
 ## <a name="optional-remove-a-compute-node"></a>Opcional: eliminación de un nodo de ejecución.  
   
 1. Conéctese al nodo de ejecución de SQL Server (PQTH4A-CMP02).

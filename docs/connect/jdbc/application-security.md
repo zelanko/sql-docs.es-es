@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 650a298b9cc67b24c33f3da370a8a1b6de6ac63b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f7d9c9a1610b5ebcd086bec1cc11d0ec85f7358
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922669"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219444"
 ---
 # <a name="application-security"></a>Seguridad de la aplicación
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,9 +59,9 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  El código "file:/install_dir/lib/-" hace referencia al directorio de instalación del controlador JDBC.  
   
 ## <a name="protecting-server-communication"></a>Protección de las comunicaciones con el servidor  
- Cuando se usa el controlador JDBC para comunicarse con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede proteger el canal de comunicaciones mediante el protocolo de seguridad de Internet (IPSec), Capa de sockets seguros (SSL) o ambos.  
+ Cuando se usa el controlador JDBC para comunicarse con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede proteger el canal de comunicación mediante el protocolo de seguridad de Internet (IPSEC) o Seguridad de la capa de transporte (TLS), antes conocida como Capa de sockets seguros (SSL), o ambos.  
   
- La compatibilidad con SSL se puede utilizar para proporcionar un nivel adicional de protección además de IPSEC. Para más información sobre cómo usar SSL, consulte [Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md).  
+ La compatibilidad con TLS se puede usar para proporcionar un nivel adicional de protección, además de IPSEC. Para obtener más información sobre cómo usar TLS, consulte [Uso de cifrado](../../connect/jdbc/using-ssl-encryption.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4654771be070cc02f2c56b1f08950d120706216d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db0bbc0fe85809ea827b005e8c10bbbfe4f30670
+ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761718"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80517524"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -67,6 +67,7 @@ Es una expresión que contiene la información de propiedad que se va a devolver
 |InstanceDefaultLogPath|**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta la versión actual en actualizaciones a partir de finales de 2015.<br /><br /> Nombre de la ruta de acceso predeterminada a los archivos de registro de instancia.|  
 |InstanceName|Nombre de la instancia a la que está conectado el usuario.<br /><br /> Devuelve NULL si el nombre de la instancia es la instancia predeterminada o si es una entrada no válida o un error.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Devuelve 1 si se ha instalado la característica Análisis avanzado durante la instalación; 0 si no se instaló Análisis avanzado.|  
+|IsBigDataCluster| Introducido en [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] a partir de CU4.<br /><br />Devuelve 1 si la instancia es un clúster de macrodatos de SQL Server; en caso contrario, devuelve 0.|  
 |IsClustered|La instancia del servidor está configurada en un clúster de conmutación por error.<br /><br /> 1 = Clúster.<br /><br /> 0 = No clúster.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |IsFullTextInstalled|Los componentes de indización de texto completo y semántica están instalados en la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Los componentes de indización de texto completo y semántica están instalados.<br /><br /> 0 = Los componentes de indización de texto completo y semántica no están instalados.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**|  
 |IsHadrEnabled|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está habilitado en esta instancia del servidor.<br /><br /> 0 = La característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está deshabilitada.<br /><br /> 1 = La característica [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está habilitada.<br /><br /> NULL = La entrada no es válida, es un error o no es aplicable.<br /><br /> Tipo de datos base: **int**<br /><br /> Para que las réplicas de disponibilidad se creen y se ejecuten en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] debe estar habilitado en la instancia del servidor. Para más información, vea [Habilitar y deshabilitar grupos de disponibilidad de AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Nota:** La propiedad IsHadrEnabled pertenece solamente a [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Otras características de alta disponibilidad o de recuperación ante desastres, como la creación de reflejo de la base de datos o el trasvase de registros, no se ven afectadas por esta propiedad de servidor.|  

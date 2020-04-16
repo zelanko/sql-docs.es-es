@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50c2d3aba84ce537e34b5c2bf5948c6ee84ac359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd7bcfd87f6ab51f2692d9d1a9ec11d9740aaab9
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165223"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809859"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema
 
@@ -52,7 +52,7 @@ WITH (SYSTEM_VERSIONING = ON);
 - Siempre se supone que las columnas **PERIOD** no aceptan valores NULL, aunque no se especifique la nulabilidad. Si se define explícitamente que las columnas **PERIOD** aceptan valores NULL, la instrucción **CREATE TABLE** generará un error.
 - La tabla de historial siempre debe tener el mismo esquema que la tabla temporal o actual, en lo concerniente a número y nombres de columnas, orden, y tipos de datos.
 - Se crea automáticamente una tabla de historial anónima en el mismo esquema que la tabla temporal o actual.
-- El nombre de la tabla de historial anónima tiene el formato siguiente: *MSSQL_TemporalHistoryFor_<id_de_objeto_de_tabla_temporal_actual>_[sufijo]* . El sufijo es opcional y se agregará únicamente si la primera parte del nombre de la tabla no es único.
+- El nombre de la tabla de historial anónima tiene el formato siguiente: *MSSQL_TemporalHistoryFor_<id._objeto_tabla_temporal_actual>_[sufijo]* . El sufijo es opcional y se agregará únicamente si la primera parte del nombre de la tabla no es único.
 - La tabla de historial se crea como una tabla de almacén de filas. Si es posible, se aplicará la compresión de página; en caso lo contrario, la tabla de historial estará descomprimida. Por ejemplo, algunas configuraciones de tabla, como las columnas dispersas, no permiten la compresión.
 - Se crea un índice agrupado predeterminado para la tabla de historial con un nombre generado automáticamente en formato *IX_<nombre_de_tabla_de_historial>* . El índice agrupado contiene las columnas **PERIOD** (finalización, inicio).
 - Para crear la tabla actual como una tabla optimizada para memoria, vea [Tablas temporales con control de versiones del sistema con tablas optimizadas para memoria](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).
@@ -164,9 +164,8 @@ ALTER TABLE InsurancePolicy
 
 - La acción de agregar columnas que no admiten valores NULL con valores predeterminados en una tabla existente con datos es una operación de tamaño de datos en todas las ediciones, excepto SQL Server Enterprise Edition (donde constituye una operación de metadatos). Si cuenta con una gran tabla de historial existente con datos en SQL Server Standard Edition, la adición de una columna que no acepte valores NULL puede constituir una operación costosa.
 - Las restricciones de las columnas de inicio y finalización del periodo se deben elegir con cautela:
-
   - El valor predeterminado de la columna de inicio especifica desde qué momento concreto considera que las filas existentes son válidas. No se puede especificar como un punto datetime en el futuro.
-  - La hora de finalización se debe especificar como el valor máximo para una precisión de datetime2 determinada.
+  - La hora de finalización se debe especificar como el valor máximo para una precisión de datetime2 determinada, por ejemplo, `9999-12-31 23:59:59` o `9999-12-31 23:59:59.9999999`.
 - Si se agrega un período, se realizará una comprobación de coherencia de datos en la tabla actual para garantizar la validez de los valores predeterminados de las columnas de período.
 - Cuando se especifica una tabla de historial existente al habilitar **SYSTEM_VERSIONING**, se realizará una comprobación de coherencia de datos en la tabla actual y en la de historial. Puede omitirse si se especifica **DATA_CONSISTENCY_CHECK = OFF** como parámetro adicional.
 

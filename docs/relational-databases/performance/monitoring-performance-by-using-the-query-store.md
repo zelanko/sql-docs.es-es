@@ -1,7 +1,7 @@
 ---
 title: Supervisión del rendimiento mediante el Almacén de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: bd1dde8b4b98041ed8a9d07c82d52f8d202ed0c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d90d6f77433c3dceba4d3bf16de10d6eb70c36
+ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448177"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81012421"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 
@@ -34,9 +34,9 @@ Para más información sobre el funcionamiento del Almacén de consultas de Azur
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Habilitar el Almacén de consultas
 
- El Almacén de consultas no está activo para nuevas bases de datos de manera predeterminada.
+ El Almacén de consultas no está habilitado de forma predeterminada para las nuevas bases de datos de SQL Server y Azure Synapse Analytics (SQL DW) y está habilitado de forma predeterminada para las nuevas bases de datos de Azure SQL Database.
 
-## <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Use la página del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>Use la página del Almacén de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 1. En el Explorador de objetos, haga clic con el botón derecho en una base de datos y, luego, haga clic en **Propiedades**.
 
@@ -47,7 +47,7 @@ Para más información sobre el funcionamiento del Almacén de consultas de Azur
 
 3. En el cuadro **Modo de operación (solicitado)** seleccione **Lectura y escritura**.
 
-## <a name="use-transact-sql-statements"></a>Uso de instrucciones Transact-SQL
+### <a name="use-transact-sql-statements"></a>Uso de instrucciones Transact-SQL
 
 Use la instrucción **ALTER DATABASE** para habilitar el almacén de consultas para una base de datos concreta. Por ejemplo:
 

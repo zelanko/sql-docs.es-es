@@ -17,12 +17,12 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123599"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80928162"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Funciones deterministas y no deterministas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68123599"
 ## <a name="built-in-function-determinism"></a>Determinismo de las funciones integradas  
  El determinismo de las funciones integradas no se ve afectado por el usuario. Las funciones integradas son deterministas o no deterministas según el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementa cada función. Por ejemplo, al especificar una cláusula ORDER BY en una consulta, no se cambia el determinismo de una función que se usa en la consulta.  
   
- Todas las funciones integradas de cadena son deterministas. Para obtener una lista de estas funciones, vea [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
+ Todas las funciones integradas de cadena son deterministas, excepto [FORMAT](../../t-sql/functions/format-transact-sql.md). Para obtener una lista de estas funciones, vea [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   
  Las siguientes funciones integradas procedentes de categorías de funciones integradas que no son de cadena siempre son deterministas.  
   

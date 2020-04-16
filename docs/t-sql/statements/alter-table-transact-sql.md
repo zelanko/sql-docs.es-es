@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61329dcaeb7972382e9385b723f5be889470c3c
+ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288309"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "81002840"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -245,6 +245,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 }
 ```
 
+> [!NOTE]
+> Para información adicional, consulte:
+>
+> - [ALTER TABLE column_constraint](alter-table-column-constraint-transact-sql.md)
+> - [ALTER TABLE column_definition](alter-table-column-definition-transact-sql.md)
+> - [ALTER TABLE computed_column_definition](alter-table-computed-column-definition-transact-sql.md)
+> - [ALTER TABLE index_option](alter-table-index-option-transact-sql.md)
+> - [ALTER TABLE table_constraints](alter-table-table-constraint-transact-sql.md)
+
 ## <a name="syntax-for-memory-optimized-tables"></a>Sintaxis para las tablas optimizadas para memoria
 
 ```
@@ -341,8 +350,7 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 ```
 
 ```
-
--- Syntax for Azure SQL Data Warehouse and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Analytics Platform System
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
@@ -374,8 +382,12 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
 }
 
 <column_constraint>::=
-    [ CONSTRAINT constraint_name ] DEFAULT constant_expression
-
+    [ CONSTRAINT constraint_name ] 
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
 <rebuild_option > ::=
 {
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }
@@ -407,8 +419,21 @@ La columna modificada no puede ser:
 - Una columna con un tipo de datos **timestamp**.
 - La columna ROWGUIDCOL de la tabla.
 - Una columna calculada o usada en una columna calculada.
-- Se usa en las estadísticas generadas por la instrucción CREATE STATISTICS. A menos que la columna sea un tipo de datos **varchar**, **nvarchar** o **varbinary**, el tipo de datos no cambia. Y el nuevo tamaño es igual o mayor que el tamaño anterior. O bien, si se cambia la columna de "not null" a "null". Quite primero las estadísticas con la instrucción DROP STATISTICS.
+- Se usa en las estadísticas generadas por la instrucción CREATE STATISTICS. Los usuarios deben ejecutar DROP STATISTICS para quitar las estadísticas a fin de que ALTER COLUMN pueda realizarse correctamente.  Ejecute esta consulta para obtener todas las estadísticas y las columnas de estadísticas creadas por el usuario para una tabla.
 
+``` sql
+
+SELECT s.name AS statistics_name  
+      ,c.name AS column_name  
+      ,sc.stats_column_id  
+FROM sys.stats AS s  
+INNER JOIN sys.stats_columns AS sc   
+    ON s.object_id = sc.object_id AND s.stats_id = sc.stats_id  
+INNER JOIN sys.columns AS c   
+    ON sc.object_id = c.object_id AND c.column_id = sc.column_id  
+WHERE s.object_id = OBJECT_ID('<table_name>'); 
+
+```
    > [!NOTE]
    > Las estadísticas generadas automáticamente por el optimizador de consultas se quitan automáticamente con ALTER COLUMN.
 
@@ -1058,11 +1083,11 @@ La adición de una columna que actualiza las filas de la tabla requiere el permi
 
 |Category|Elementos de sintaxis ofrecidos|
 |--------------|------------------------------|
-|[Agregar columnas y restricciones](#add)|ADD • PRIMARY KEY con opciones de índice • columnas dispersas y conjuntos de columnas •|
+|[Agregar columnas y restricciones](#add)|ADD * PRIMARY KEY con opciones de índice * columnas dispersas y conjuntos de columnas *|
 |[Quitar columnas y restricciones](#Drop)|DROP|
-|[Modificar una definición de columna](#alter_column)|cambiar tipo de datos • cambiar tamaño de columna • intercalación|
-|[Modificar una definición de tabla](#alter_table)|DATA_COMPRESSION • SWITCH PARTITION • LOCK ESCALATION • seguimiento de cambios|
-|[Deshabilitar y habilitar restricciones y desencadenadores](#disable_enable)|CHECK • NO CHECK • ENABLE TRIGGER • DISABLE TRIGGER|
+|[Modificar una definición de columna](#alter_column)|cambiar tipo de datos * cambiar tamaño de columna * intercalación|
+|[Modificar una definición de tabla](#alter_table)|DATA_COMPRESSION * SWITCH PARTITION * LOCK ESCALATION * seguimiento de cambios|
+|[Deshabilitar y habilitar restricciones y desencadenadores](#disable_enable)|CHECK * NO CHECK * ENABLE TRIGGER * DISABLE TRIGGER|
 | &nbsp; | &nbsp; |
 
 ### <a name="adding-columns-and-constraints"></a><a name="add"></a>Agregar columnas y restricciones

@@ -20,12 +20,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9384317f0e58e77a6bb51fe066458dcf956882ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 997d227c3c5a2ea493d96c4b55f5b42f8a8c9845
+ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79448307"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80531211"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="arguments"></a>Argumentos  
 *database*  
-Una expresión que especifica el nombre de la base de datos para la que `DATABASEPROPERTYEX` devolverá la información de la propiedad con nombre. *database* tiene un tipo de datos **nvarchar(128)**.  
+Una expresión que especifica el nombre de la base de datos para la que `DATABASEPROPERTYEX` devolverá la información de la propiedad con nombre. *database* tiene un tipo de datos **nvarchar(128)** .  
 
 Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` necesita el nombre de la base de datos actual. Devuelve NULL para todas las propiedades si se proporciona un nombre de base de datos diferente.
   
@@ -64,15 +64,15 @@ Una expresión que especifica el nombre de la propiedad de base de datos que se 
 |IsArithmeticAbortEnabled|Las consultas se finalizan cuando hay un error de desbordamiento o división por cero durante su ejecución.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAutoClose|La base de datos se cierra sin problemas y libera los recursos cuando sale el último usuario.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAutoCreateStatistics|El optimizador de consultas crea estadísticas de columna única, según sea necesario, para mejorar el rendimiento de las consultas.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
-|IsAutoCreateStatisticsIncremental|Las estadísticas de columna única creadas automáticamente son incrementales siempre que sea posible.|**Válido para **: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
+|IsAutoCreateStatisticsIncremental|Las estadísticas de columna única creadas automáticamente son incrementales siempre que sea posible.|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAutoShrink|Los archivos de base de datos son candidatos para la reducción periódica automática.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsAutoUpdateStatistics|Cuando una consulta usa estadísticas existentes potencialmente obsoletas, el optimizador de consultas actualiza dichas estadísticas.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|
 |IsClone|La base de datos es una copia de solo estadísticas y esquema de una base de datos de usuario creada con DBCC CLONEDATABASE. Vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/help/3177838) para más información.|**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y versiones posteriores<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**| 
 |IsCloseCursorsOnCommitEnabled|Cuando se confirme una transacción, se cerrarán todos los cursores abiertos.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
-|IsFulltextEnabled|La base de datos está habilitada para la indización semántica y de texto completo.|**Válido para **: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**<br /><br /> **Nota:** El valor de esta propiedad ya no tiene ningún efecto. En las bases de datos de usuario siempre está habilitada la búsqueda de texto completo. Una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quitará esta propiedad. No use esta propiedad en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que la usen actualmente.|  
+|IsFulltextEnabled|La base de datos está habilitada para la indización semántica y de texto completo.|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**<br /><br /> **Nota:** El valor de esta propiedad ya no tiene ningún efecto. En las bases de datos de usuario siempre está habilitada la búsqueda de texto completo. Una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quitará esta propiedad. No use esta propiedad en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que la usen actualmente.|  
 |IsInStandBy|La base de datos está en línea como de solo lectura con el registro de restauración permitido.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsLocalCursorsDefault|El valor predeterminado de las declaraciones de cursores es LOCAL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
-|IsMemoryOptimizedElevateToSnapshotEnabled|Se obtiene acceso a las tablas optimizadas para memoria mediante el aislamiento de SNAPSHOT cuando el valor de configuración de sesión TRANSACTION ISOLATION LEVEL se establece en READ COMMITTED, READ UNCOMMITTED o en un nivel de aislamiento inferior.|**Válido para **: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> Tipo de datos base: **int**|  
+|IsMemoryOptimizedElevateToSnapshotEnabled|Se obtiene acceso a las tablas optimizadas para memoria mediante el aislamiento de SNAPSHOT cuando el valor de configuración de sesión TRANSACTION ISOLATION LEVEL se establece en READ COMMITTED, READ UNCOMMITTED o en un nivel de aislamiento inferior.|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> Tipo de datos base: **int**|  
 |IsMergePublished|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la publicación de tablas de base de datos para la replicación de mezcla, en el caso de que la replicación esté instalada.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsNullConcat|La concatenación con un operando NULL da como resultado NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  
 |IsNumericRoundAbortEnabled|Se generan errores cuando se produce una pérdida de precisión en expresiones.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: Entrada no válida<br /><br /> Tipo de datos base: **int**|  

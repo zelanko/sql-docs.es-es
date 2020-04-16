@@ -1,5 +1,6 @@
 ---
 title: Creación de archivos de formato (SQL Server) | Microsoft Docs
+description: Al importar en bloque o exportar de forma masiva una tabla de SQL Server, un archivo de formato permite escribir archivos de datos sin necesidad de leer o editar en gran medida archivos de datos de otros programas.
 ms.custom: ''
 ms.date: 02/23/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68035817"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980487"
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68035817"
  Por lo general, los archivos de formato XML y no XML son intercambiables. Sin embargo, es recomendable utilizar la sintaxis XML para los nuevos archivos de formato porque proporciona varias ventajas con relación a los archivos de formato no XML.  
   
 > [!NOTE]  
->  La versión de la utilidad **bcp** (Bcp.exe) que se emplee para leer un archivo de formato debe ser la misma versión, o una versión posterior, a la que se use para crear el archivo de formato. Por ejemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**de** puede leer un archivo de formato de la versión 10.0 generado por [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**de**, pero [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]bcp**de** no puede leer un archivo de formato de la versión 11.0 generado por [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]bcp**de**.  
+>  La versión de la utilidad **bcp** (Bcp.exe) que se emplee para leer un archivo de formato debe ser la misma versión, o una versión posterior, a la que se use para crear el archivo de formato. Por ejemplo, **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] puede leer un archivo de formato de la versión 10.0 generado por **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], pero **bcp** de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no puede leer un archivo de formato de la versión 11.0 generado por **bcp** de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada ( **-n**, **-c**, **-w**o **-N**) y en los delimitadores de la vista o de la tabla.  
   
@@ -195,7 +196,7 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Especifica el archivo de formato XML.|  
 |**-c**|Especifica los datos de caracteres.|  
-|**-t** `,`|Especifica una coma ( **,** ) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), no es necesario el modificador **-t** .|  
+|**-t** `,`|Especifica una coma ( **,** ) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), no es necesario el modificador **-t**.|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
  En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  

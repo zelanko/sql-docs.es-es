@@ -1,5 +1,6 @@
 ---
 title: Uso del formato de caracteres para importar o exportar datos
+description: El formato de caracteres usa el formato de datos de caracteres para todas las columnas. Esto resulta útil para trabajar con otros programas o copiarlos en una instancia desde otro proveedor de bases de datos.
 ms.date: 09/29/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 26a71907372fc6f69d76a8eba6bf3478ae6ec938
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056333"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980628"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Uso del formato de caracteres para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

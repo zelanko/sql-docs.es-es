@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e13bab7b3a5b97195a1fd57e30cd2f5bf514b315
+ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287879"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809709"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ Al igual que cualquier base de datos que esté total o parcialmente sin conexió
 > [!IMPORTANT]  
 > Una base de datos creada por una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede adjuntarse en versiones anteriores. Esto evita que la base de datos se use físicamente con una versión anterior de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Pero esto se relaciona con el estado de los metadatos y no afecta al [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).   
   
-Al adjuntar una base de datos a otra instancia de servidor, es posible que tenga que volver a crear una parte o la totalidad de los metadatos de la base de datos, por ejemplo los inicios de sesión y los trabajos, en la otra instancia de servidor; de este modo se proporciona una experiencia coherente a usuarios y aplicaciones. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+Al adjuntar una base de datos a otra instancia de servidor, es posible que tenga que volver a crear una parte o la totalidad de los metadatos de la base de datos, por ejemplo los inicios de sesión y los trabajos, en la otra instancia de servidor; de este modo se proporciona una experiencia coherente a usuarios y aplicaciones. Para obtener más información, vea [Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
 **Para separar una base de datos**  

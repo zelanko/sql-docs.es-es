@@ -11,12 +11,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a91cffde531d7d72564df6935a48aff91dae8187
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286679"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550221"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices de almacén de columnas: Guía de carga de datos
 
@@ -47,7 +47,7 @@ La carga masiva tiene estas optimizaciones de rendimiento integradas:
 
 -   **Registro reducido:** Los datos que se cargan directamente en grupos de filas comprimidos conducen a una reducción significativa del tamaño del registro. Por ejemplo, si los datos se han comprimido 10 veces, el registro de transacciones correspondiente será aproximadamente 10 veces más pequeño sin necesidad de TABLOCK o de un modelo de recuperación simple u optimizado para cargas masivas de registros. Los datos que van a un grupo de filas delta se registran por completo, incluidos los tamaños de lote con menos de 102 400 filas.  El procedimiento recomendado es usar batchsize >= 102400. Dado que no se requiere TABLOCK, puede cargar los datos en paralelo. 
 
--   **Registro mínimo:** Puede obtener una mayor reducción del registro si sigue los requisitos previos para [el registro mínimo](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Sin embargo, a diferencia de la carga de datos en un almacén de filas, TABLOCK conduce a un bloqueo X en la tabla en lugar de un bloqueo BU (actualización masiva) y, por lo tanto, no se puede realizar la carga de datos paralela. Para obtener más información acerca del bloqueo [Versiones de fila y bloqueo[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+-   **Registro mínimo:** Puede obtener una mayor reducción del registro si sigue los requisitos previos para [el registro mínimo](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Sin embargo, a diferencia de la carga de datos en un almacén de filas, TABLOCK conduce a un bloqueo X en la tabla en lugar de un bloqueo BU (actualización masiva) y, por lo tanto, no se puede realizar la carga de datos paralela. Para obtener más información sobre el bloqueo, consulte [Versiones de fila y bloqueo](../sql-server-transaction-locking-and-row-versioning-guide.md).
 
 -   **Optimization de bloqueo:** El bloqueo X de un grupo de filas se adquiere automáticamente al cargar los datos en un grupo de filas comprimido. Sin embargo, cuando la carga masiva se realiza en un grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
   
@@ -97,7 +97,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **Optimización del registro:** Registro reducido cuando los datos se cargan en el grupo de filas comprimido.   
 -   **Optimization de bloqueo:** Cuando se cargan datos en un grupo de filas comprimido, se obtiene el bloqueo X en el grupo de filas. Sin embargo, con el grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
   
- Si tiene uno o varios índices no agrupados, no habrá ninguna optimización de registro o bloqueo para el propio índice; sin embargo, las optimizaciones en el índice de almacén de columnas agrupado siguen estando disponibles, tal y como se describió anteriormente.  
+ Si tiene uno o varios índices no agrupados, no habrá ninguna optimización de registro o bloqueo para el propio índice, pero las optimizaciones en el índice de almacén de columnas agrupado siguen estando disponibles, tal como se describió anteriormente.  
   
 ## <a name="what-is-trickle-insert"></a>¿Qué es la inserción gradual?
 

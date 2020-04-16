@@ -21,12 +21,12 @@ ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbedcb09ba05ff427fbae722a9223d902f2c438d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1179633f88bef025648b08892859e73b06f14b8
+ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71271962"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80550153"
 ---
 # <a name="database-identifiers"></a>Identificadores de base de datos
 
@@ -37,7 +37,7 @@ ms.locfileid: "71271962"
 
 ```sql
 CREATE TABLE TableX
-(KeyCol INT PRIMARY KEY, Description nvarchar(80))
+(KeyCol INT PRIMARY KEY, Description nvarchar(80));
 ```
 
  Esta tabla tiene también una restricción sin nombre. La restricción `PRIMARY KEY` no tiene ningún identificador.
@@ -48,34 +48,55 @@ CREATE TABLE TableX
 > Los nombres de variables o los parámetros de funciones y procedimientos almacenados deben cumplir las reglas para los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
 ## <a name="classes-of-identifiers"></a>Clases de identificadores
+Existen dos clases de identificadores:
 
- Existen dos clases de identificadores:
+-  Identificadores normales    
+   Siguen las reglas de formato de los identificadores. Los identificadores normales no están delimitados cuando se usan en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
- Identificadores normales: cumplen con las reglas respecto al formato de identificadores. Los identificadores normales no están delimitados cuando se usan en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] .
+   ```sql
+   USE AdventureWorks
+   GO
+   SELECT *
+   FROM HumanResources.Employee
+   WHERE NationalIDNumber = 153479919
+   ```
+
+-  Identificadores delimitados    
+   Se incluyen entre comillas dobles (") o corchetes ([ ]). Los identificadores que siguen las reglas de formato de los identificadores pueden no estar delimitados. Por ejemplo:
+
+   ```sql
+   USE AdventureWorks
+   GO
+   SELECT *
+   FROM [HumanResources].[Employee] --Delimiter is optional.
+   WHERE [NationalIDNumber] = 153479919 --Delimiter is optional.
+   ```
+
+Los identificadores que no cumplen las reglas de los identificadores deben estar delimitados en las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Por ejemplo:
 
 ```sql
+USE AdventureWorks
+GO
+CREATE TABLE [SalesOrderDetail Table] --Identifier contains a space and uses a reserved keyword.
+(
+    [Order] [int] NOT NULL,
+    [SalesOrderDetailID] [int] IDENTITY(1,1) NOT NULL,
+    [OrderQty] [smallint] NOT NULL,
+    [ProductID] [int] NOT NULL,
+    [UnitPrice] [money] NOT NULL,
+    [UnitPriceDiscount] [money] NOT NULL,
+    [ModifiedDate] [datetime] NOT NULL,
+  CONSTRAINT [PK_SalesOrderDetail_Order_SalesOrderDetailID] PRIMARY KEY CLUSTERED 
+  ([Order] ASC, [SalesOrderDetailID] ASC)
+);
+GO
+
 SELECT *
-FROM TableX
-WHERE KeyCol = 124
+FROM [SalesOrderDetail Table]  --Identifier contains a space and uses a reserved keyword.
+WHERE [Order] = 10;            --Identifier is a reserved keyword.
 ```
 
- Identificadores delimitados: se incluyen entre comillas dobles (") o corchetes ([ ]). Los identificadores que siguen las reglas de formato de los identificadores pueden no estar delimitados. Por ejemplo:
-
-```sql
-SELECT *
-FROM [TableX]         --Delimiter is optional.
-WHERE [KeyCol] = 124  --Delimiter is optional.
-```
-
- Los identificadores que no cumplen las reglas de los identificadores deben estar delimitados en las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Por ejemplo:
-
-```sql
-SELECT *
-FROM [My Table]      --Identifier contains a space and uses a reserved keyword.
-WHERE [order] = 10   --Identifier is a reserved keyword.
-```
-
- Ambos identificadores, normales y delimitados, deben tener entre 1 y 128 caracteres. En el caso de las tablas temporales locales, el identificador puede tener un máximo de 116 caracteres.
+Ambos identificadores, normales y delimitados, deben tener entre 1 y 128 caracteres. En el caso de las tablas temporales locales, el identificador puede tener un máximo de 116 caracteres.
 
 ## <a name="rules-for-regular-identifiers"></a>Reglas de los identificadores normales
  Los nombres de variables, funciones y procedimientos almacenados deben cumplir las siguientes reglas para los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
@@ -84,11 +105,11 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 
     -   Una letra, tal como se define en el estándar Unicode 3,2. La definición Unicode de letras incluye los caracteres latinos de la “a” a la “z” y de la “A” a la “Z”, además de los caracteres de letras de otros idiomas.
 
-    -   El signo de subrayado (_), arroba (@) o número (#).
+    -   El signo de subrayado (\_), arroba (@) o número (#).
 
-         Ciertos símbolos al principio de un identificador tienen un significado especial en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un identificador normal que comience por el signo arroba siempre denotará una variable local o un parámetro, y no se puede usar como nombre de ningún otro tipo de objeto. Un identificador que empieza con el signo de número indica una tabla o procedimiento temporal. Un identificador que empieza con un signo de número doble (##) indica un objeto temporal global. Aunque es posible utilizar los caracteres de signo de número o doble signo de número para comenzar los nombres de otros tipos de objetos, no se recomienda hacerlo.
+        Ciertos símbolos al principio de un identificador tienen un significado especial en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un identificador normal que comience por el signo arroba siempre denotará una variable local o un parámetro, y no se puede usar como nombre de ningún otro tipo de objeto. Un identificador que empieza con el signo de número indica una tabla o procedimiento temporal. Un identificador que empieza con un signo de número doble (##) indica un objeto temporal global. Aunque es posible utilizar los caracteres de signo de número o doble signo de número para comenzar los nombres de otros tipos de objetos, no se recomienda hacerlo.
 
-         Algunas funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] tienen nombres que empiezan con un doble signo de arroba (@@). Para evitar confusiones con estas funciones, se recomienda no utilizar nombres que empiecen con @@.
+        Algunas funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] tienen nombres que empiezan con un doble signo de arroba (@@). Para evitar confusiones con estas funciones, se recomienda no utilizar nombres que empiecen con @@.
 
 2.  Los caracteres subsiguientes pueden ser:
 
@@ -102,7 +123,7 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 
 4.  No se permiten los caracteres especiales o los espacios incrustados.
 
-5.  Los caracteres complementarios no están permitidos.
+5.  Los [caracteres complementarios](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) no están permitidos.
 
  Cuando se utilizan en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , los identificadores que no cumplan estas reglas deben aparecer delimitados por comillas dobles o corchetes.
 
@@ -110,18 +131,17 @@ WHERE [order] = 10   --Identifier is a reserved keyword.
 > Algunas reglas de formato de los identificadores normales dependen del nivel de compatibilidad de la base de datos. Este nivel se puede establecer mediante [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 ## <a name="see-also"></a>Consulte también
-
-- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
-- [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
-- [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
-- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
-- [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
-- [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
-- [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
-- [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
-- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
-- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
-- [Palabras clave reservadas &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
-- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
-- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+[CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
+[CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+[CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
+[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
+[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
+[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
+[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
+[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[Palabras clave reservadas &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
+[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  

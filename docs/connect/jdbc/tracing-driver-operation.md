@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb926c0696f0e926f91297ee5b719bbafce3eda8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91f71543b9fecd994cc2b951758caacd23e8ae1f
+ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909131"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81219364"
 ---
 # <a name="tracing-driver-operation"></a>Seguimiento del funcionamiento del controlador
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "80909131"
 |XA|Registra mensajes para todas las transacciones XA de la clase [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). La aplicación puede configurar el nivel de registro como FINE y FINER.|  
 |KerbAuthentication|Registra mensajes relativos a la autenticación Kerberos de tipo 4 (cuando la propiedad de conexión **authenticationScheme** se establece en **JavaKerberos**). La aplicación puede configurar el nivel de registro como FINE o FINER.|  
 |TDS.DATA|Registra mensajes que contienen la conversación de nivel de protocolo TDS entre el controlador y SQL Server. Los contenidos detallados de cada paquete TDS enviado y recibido se registran en ASCII y como hexadecimales. No se registran las credenciales de inicio de sesión (nombres y contraseñas de usuarios). Todos los demás datos se registran.<br /><br /> Esta categoría crea mensajes muy detallados y solo se puede habilitar si se establece el nivel de registro en FINEST.|  
-|TDS.Channel|Esta categoría realiza un seguimiento del canal de comunicaciones TDS con SQL Server. El mensaje registrado incluye la apertura y cierre de sockets, así como lecturas y escrituras. También realiza seguimientos de mensajes relacionados con el establecimiento de una conexión de Capa de sockets seguros (SSL) con SQL Server.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINE, FINER o FINEST.|  
+|TDS.Channel|Esta categoría realiza un seguimiento del canal de comunicaciones TDS con SQL Server. El mensaje registrado incluye la apertura y cierre de sockets, así como lecturas y escrituras. También realiza seguimientos de mensajes relacionados con el establecimiento de una conexión de Seguridad de la capa de transporte (TLS), antes conocida como Capa de sockets seguros (SSL), con SQL Server.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINE, FINER o FINEST.|  
 |TDS.Writer|Esta categoría realiza un seguimiento de las escrituras en el canal TDS. Tenga en cuenta que solo se hace un seguimiento de la longitud de las escrituras, no de los contenidos. Esta categoría también hace un seguimiento de los problemas que se producen cuando una señal de atención es enviada al servidor para cancelar la ejecución de una instrucción.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINEST.|  
 |TDS.Reader|Esta categoría realiza un seguimiento de determinadas operaciones de lectura desde el canal TDS en el nivel FINEST. En el nivel FINEST, el seguimiento puede ser detallado. En los niveles WARNING y SEVERE, esta categoría realiza un seguimiento cuando el controlador recibe un protocolo TDS no válido antes de que el controlador cierre la conexión.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINER y FINEST.|  
 |TDS.Command|Esta categoría realiza un seguimiento de las transiciones de estado de bajo nivel y de otras informaciones asociadas a la ejecución de comandos TDS, como ejecuciones de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], recuperaciones de cursores ResultSet, confirmaciones, etc.<br /><br /> Esta categoría solo puede ser habilitada configurando el nivel de registro en FINEST.|  

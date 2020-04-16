@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28329315313f6f08f84aa2d8944eef55d26fdd46
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75548276"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873171"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -192,7 +192,7 @@ DELETE
  TOP no se puede usar en una instrucción DELETE con vistas divididas en particiones.  
   
 ## <a name="locking-behavior"></a>Comportamiento del bloqueo  
- De forma predeterminada, una instrucción DELETE siempre adquiere un bloqueo exclusivo (X) en la tabla que modifica y retiene ese bloqueo hasta que se completa la transacción. Al utilizar un bloqueo exclusivo (X), el resto de las transacciones no pueden modificar los datos; las operaciones de lectura solo se pueden realizar si se utiliza la sugerencia NOLOCK o el nivel de aislamiento de lectura no confirmada. Puede especificar sugerencias de tabla para invalidar este comportamiento predeterminado durante la ejecución de la instrucción DELETE especificando otro método de bloqueo, sin embargo se recomienda que solo los desarrolladores y administradores de bases de datos experimentados usen las sugerencias y únicamente como último recurso. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ De forma predeterminada, una instrucción DELETE siempre adquiere un bloqueo con intención exclusiva (IX) en el objeto de tabla que modifica y retiene ese bloqueo hasta que se completa la transacción. Al usar un bloqueo con intención exclusiva (IX), el resto de las transacciones no pueden modificar los datos; las operaciones de lectura solo se pueden realizar si se usa la sugerencia NOLOCK o el nivel de aislamiento de lectura no confirmada. Puede especificar sugerencias de tabla para invalidar este comportamiento predeterminado durante la ejecución de la instrucción DELETE especificando otro método de bloqueo, sin embargo se recomienda que solo los desarrolladores y administradores de bases de datos experimentados usen las sugerencias y únicamente como último recurso. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Cuando se eliminan filas de un montón, [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede usar bloqueo de filas o páginas para la operación. Como consecuencia, las páginas que han quedado vacías por la operación de eliminación permanecen asignadas al montón. Si no se cancela la asignación de las páginas vacías, otros objetos de la base de datos no pueden volver a utilizar el espacio asociado.  
   
@@ -200,7 +200,7 @@ DELETE
   
 -   Especifique la sugerencia TABLOCK en la instrucción DELETE. Si se utiliza la sugerencia TABLOCK, la operación de eliminación aplica un bloqueo exclusivo a la tabla, en lugar de un bloqueo de fila o de página. Esto permite cancelar la asignación de las páginas. Para obtener más información sobre las sugerencias TABLOCK, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
--   Se debe utilizar TRUNCATE TABLE si se van a eliminar todas las filas de la tabla.  
+-   Use `TRUNCATE TABLE` si se van a eliminar todas las filas de la tabla.  
   
 -   Cree un índice clúster en el montón antes de eliminar las filas. Puede quitar el índice clúster tras eliminar las filas. Este método requiere más tiempo que los métodos anteriores y utiliza más recursos temporales.  
   
@@ -208,14 +208,14 @@ DELETE
 >  Las páginas vacías se pueden quitar de un montón en cualquier momento con la instrucción `ALTER TABLE <table_name> REBUILD`.  
   
 ## <a name="logging-behavior"></a>Comportamiento del registro  
- La instrucción DELETE siempre está registrada totalmente.  
+La instrucción DELETE siempre está registrada totalmente.  
   
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Se requieren permisos DELETE en la tabla de destino. También se requieren los permisos para utilizar SELECT si la instrucción contiene una cláusula WHERE.  
+ Se requieren permisos `DELETE` en la tabla de destino. También se requieren permisos `SELECT` si la instrucción contiene una cláusula WHERE.  
   
- Los permisos para utilizar DELETE corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin**, de los roles fijos de base de datos **db_owner** y **db_datawriter** y al propietario de la tabla. Los miembros de los roles **sysadmin**, **db_owner** y **db_securityadmin** y el propietario de la tabla pueden transferir permisos a otros usuarios.  
+ Los permisos DELETE se adjudican de forma predeterminada a los miembros del rol fijo de servidor `sysadmin`, a los roles fijos de base de datos `db_owner` y `db_datawriter`, y al propietario de la tabla. Los miembros de los roles `sysadmin`, `db_owner` y `db_securityadmin` y el propietario de la tabla pueden transferir permisos a otros usuarios.  
   
 ## <a name="examples"></a>Ejemplos  
   

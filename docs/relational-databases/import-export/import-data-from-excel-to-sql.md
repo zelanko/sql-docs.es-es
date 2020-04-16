@@ -1,5 +1,6 @@
 ---
 title: Importación de datos de Excel a SQL | Microsoft Docs
+description: En este artículo se describen métodos para importar datos de Excel a SQL Server o Azure SQL Database. Algunos usan un solo paso, mientras que otros requieren un archivo de texto intermedio.
 ms.custom: sqlfreshmay19
 ms.date: 09/30/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68a5542d36731e260ab4aeb5a0734bea2a983108
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bbb114a2d3ae3f5655f4d5a60a2842af77170b6
+ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245270"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80980581"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importación de datos de Excel a SQL Server o Azure SQL Database
 
@@ -252,7 +253,7 @@ Como se ha descrito anteriormente en la sección [Requisitos previos](#prereq), 
 Para obtener más información sobre el Asistente para copia, vea los temas siguientes:
 
 - [Asistente para copia de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
-- [Tutorial: crear una canalización con la actividad de copia mediante el Asistente para copia de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
+- [Tutorial: crear una canalización con la actividad de copia mediante el Asistente para copia de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial).
 
 ## <a name="azure-data-factory"></a><a name="adf"></a> Azure Data Factory
 
@@ -269,7 +270,7 @@ Para obtener más información sobre el uso de estos orígenes y receptores de D
 Para empezar a obtener información sobre cómo copiar los datos con Azure Data Factory, vea los temas siguientes:
 
 - [Movimiento de datos con la actividad de copia](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
-- [Tutorial: Crear una canalización con la actividad de copia mediante Azure Portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+- [Tutorial: crear una canalización con la actividad de copia mediante Azure Portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="common-errors"></a>Errores comunes
 

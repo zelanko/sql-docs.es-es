@@ -12,12 +12,12 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 6d81ddb24d11e9357819b43338341b818fb35583
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5a6c25db072de12c5f011e33bda8017b6d5658a
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434102"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873131"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Actualizaciones más recientes de Microsoft SQL Server
 
@@ -35,8 +35,8 @@ Cada uno de estos vínculos proporciona información sobre todos los productos y
 
 |Versiones de productos   | Service Pack más reciente |  GDR más reciente | Actualización acumulativa más reciente | Fecha de publicación de la actualización acumulativa | Instrucciones generales  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/D|[KB 4538853](https://support.microsoft.com/help/4517790)|CU 3 [(KB 4538853)](https://support.microsoft.com/help/4538853)|12/03/2020|[Instalación de SQL Server 2019](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2017|N/D|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 19 [(KB 4535007)](https://support.microsoft.com/help/4535007)|5/2/2020|[Instalación de SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2019|N/D|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 4 [(KB 4548597)](https://support.microsoft.com/help/4548597)|31/03/2020|[Instalación de SQL Server 2019](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|N/D|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 20 [(KB 4541283)](https://support.microsoft.com/help/4541283)|5/2/2020|[Instalación de SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 12 [(KB 4536648)](https://support.microsoft.com/kb/4536648)|25/02/2020|[Instalación de SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|09/07/2019|[Instalación de SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|N/D|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|22/11/2017|[Instalación de SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
@@ -55,7 +55,7 @@ Cada uno de estos vínculos proporciona información sobre todos los productos y
 |SQL Server 2005 |SP4 [(KB 2463332)](https://support.microsoft.com/kb/2463332)|N/D|N/D|N/D|[Instalación de SQL Server 2005](https://msdn.microsoft.com/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/D|N/D|N/D|[Instalación de SQL Server 2000](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
-**Aprenda a probar las actualizaciones:** [Prueba y desarrollo de hojas de ruta de compatibilidad para las aplicaciones de ISV (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+**Aprenda a probar las actualizaciones:**  [Prueba y desarrollo de hojas de ruta de compatibilidad para las aplicaciones de ISV (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>Base de conocimiento
 

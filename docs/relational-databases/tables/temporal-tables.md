@@ -11,12 +11,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60026dd35a22ccf5ea693619912ef1aadab77745
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7afb01d003e6221b30ea194ff711555b7e982f41
+ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165700"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80873181"
 ---
 # <a name="temporal-tables"></a>Tablas temporales
 
@@ -40,7 +40,7 @@ En SQL Server 2016 se presentó la compatibilidad con las tablas temporales (t
   - [Trabajo con tablas temporales con control de versiones del sistema con optimización para memoria](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)
   - [Modificación de los datos de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
   - [Consulta de los datos de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
-  - **Descarga de la base de datos de ejemplo de Adventure Works:** para empezar a trabajar con las tablas temporales, descargue la [base de datos AdventureWorks para SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) con scripts de ejemplo y siga las instrucciones de la carpeta "Temporal".
+  - **Descarga de la base de datos de ejemplo de Adventure Works:** Para empezar a trabajar con las tablas temporales, descargue la [base de datos AdventureWorks para SQL Server](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak) con scripts de ejemplo y siga las instrucciones de la carpeta "Temporal".
 
 - **Sintaxis:**
 

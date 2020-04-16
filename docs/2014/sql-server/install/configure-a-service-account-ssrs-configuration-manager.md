@@ -1,5 +1,5 @@
 ---
-title: Configurar una cuenta de servicio (SSRS Configuration Manager) | Microsoft Docs
+title: Configurar una cuenta de servicio (Administrador de configuración de SSRS) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "71952581"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurar una cuenta de servicio (Administrador de configuración de SSRS)
   En una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento en segundo plano se ejecutan dentro de un único servicio. La cuenta en la que el servicio se ejecuta se define durante la instalación, al especificar la cuenta en la página Identidad de servicio, pero puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si desea usar una cuenta diferente o actualizar la contraseña.  
   
- Si tiene un servidor de informes que está configurado para usar el modo integrado de SharePoint y cambia la cuenta de servicio mediante [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la herramienta de configuración de, también debe abrir Administración central de SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y usar la página **conceder acceso a base de datos** para volver a aplicar la configuración del servidor de informes y de la instancia. Este paso concederá acceso a la nueva cuenta de servicio a las bases de datos de SharePoint, que es [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necesario [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] para [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]la integración con o.  
+ Si tiene un servidor de informes configurado para usar el modo integrado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de SharePoint y cambia la cuenta [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de servicio mediante la herramienta Configuración, también debe abrir Administración central de SharePoint y usar la página **Conceder acceso** a la base de datos para volver a aplicar la configuración del servidor de informes y de la instancia. Este paso concederá a la nueva cuenta de servicio acceso a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] las [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]bases de datos de SharePoint, que es necesaria para la integración con o .  
   
  Use siempre la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para actualizar la cuenta de servicio y que se pueda actualizar simultáneamente otra configuración que dependa de la identidad del servicio.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952581"
   
 1.  Inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese al servidor de informes.  
   
-2.  En la página Cuenta de servicio, seleccione la opción que describa el tipo de cuenta que desea utilizar. Para obtener recomendaciones sobre el tipo de cuenta que se debe especificar, vea [configurar la cuenta de servicio del servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
+2.  En la página Cuenta de servicio, seleccione la opción que describa el tipo de cuenta que desea utilizar. Para obtener recomendaciones sobre qué tipo de cuenta especificar, vea Configurar la cuenta de servicio del servidor de informes &#40;el Administrador de configuración de [SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
 3.  Si seleccionó una cuenta de usuario de Windows, especifique la nueva cuenta y la contraseña. La cuenta no puede tener más de 20 caracteres.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71952581"
   
 5.  Cuando el sistema pida que cree una copia de seguridad de la clave simétrica, escriba un nombre de archivo y una ubicación para la copia de seguridad, escriba una contraseña para bloquear y desbloquear el archivo y haga clic en **Aceptar**.  
   
-6.  Si el servidor de informes utiliza la cuenta de servicio para conectarse a su base de datos, la información de la conexión se actualizará para utilizar la nueva cuenta o contraseña. Para actualizar la información de la conexión se requiere que se conecte a la base de datos. Si aparece el cuadro de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
+6.  Si el servidor de informes utiliza la cuenta de servicio para conectarse a su base de datos, la información de la conexión se actualizará para utilizar la nueva cuenta o contraseña. Para actualizar la información de la conexión se requiere que se conecte a la base de datos. Si aparece el cuadro de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Conexión de base de datos**, escriba las credenciales que tienen permiso para conectarse a la base de datos y haga clic en **Aceptar**.  
   
 7.  Cuando el sistema pida confirmación para restaurar la clave simétrica, escriba la contraseña que especificó en el paso 5 y haga clic en **Aceptar**.  
   
@@ -64,10 +64,10 @@ ms.locfileid: "71952581"
 -   Pueden producirse errores de la reserva de direcciones URL al actualizar la cuenta de servicio. Cada reserva de direcciones URL incluye un descriptor de seguridad que incluye una Lista de control de acceso discrecional (DACL) que concede permisos a la cuenta de servicio para aceptar las solicitudes en la dirección URL. Al actualizar la cuenta, la dirección URL se debe volver a crear para actualizar la DACL con la información de la nueva cuenta. Si no se puede volver a crear la reserva de direcciones URL, y sabe que la cuenta es válida, intente reiniciar el equipo. Si el error persiste, intente utilizar una cuenta diferente.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar una conexión a la base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Cuenta de servicio &#40;el modo nativo de SSRS&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
+ [Administrador de configuración de Reporting ServicesReporting Services &#40;&#41;en modo nativo](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Configure la cuenta de servicio del servidor de informes &#40;el Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Configure una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Cuenta de servicio &#40;&#41;en modo nativo de SSRS](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

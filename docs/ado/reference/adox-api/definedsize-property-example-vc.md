@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de la propiedad DefinedSize (VC + +) | Microsoft Docs
+title: Ejemplo de la propiedad DefinedSize (VC++) Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "76939586"
 ---
 # <a name="definedsize-property-example-vc"></a>Ejemplo de propiedad DefinedSize (VC++)
-En este ejemplo se muestra la propiedad [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) de una [columna](../../../ado/reference/adox-api/column-object-adox.md). El código redefinirá el tamaño de la columna FirstName de la tabla **Employees** de la base de datos *Northwind* . A continuación, se muestra el cambio en los valores del [campo](../../../ado/reference/ado-api/field-object.md) FirstName de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) basado en la tabla **Employees** . Tenga en cuenta que, de forma predeterminada, el campo FirstName se rellena con espacios después de volver a definir la propiedad **DefinedSize** .  
+En este ejemplo se muestra la propiedad [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) de una [columna](../../../ado/reference/adox-api/column-object-adox.md). El código redefinirá el tamaño de la columna FirstName de la tabla **Employees** de la base de *datos Northwind.* A continuación, se muestra el cambio en los valores del [campo](../../../ado/reference/ado-api/field-object.md) FirstName de un conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md) basado en la tabla **Employees.** Tenga en cuenta que, de forma predeterminada, el campo FirstName se rellena con espacios después de redefinir la propiedad **DefinedSize.**  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -163,5 +163,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Objeto column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize (propiedad, ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

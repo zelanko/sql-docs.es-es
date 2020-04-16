@@ -14,10 +14,10 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/15/2020
 ms.locfileid: "73728482"
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728482"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un modelo para contener los objetos de modelo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, consulte [Administradores &#40;&#41;de Master Data ServicesMaster Data Services ](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model"></a>Para crear un modelo  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73728482"
   
 6.  En el campo **Log Retention Days** (Días de retención del registro), seleccione una de las opciones de retención de datos de registro. El valor predeterminado es **Configuración del sistema**, lo que indica que el valor se hereda de la configuración del sistema del [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-     Para reemplazar la configuración del sistema sin quitar los datos del registro de transacciones, seleccione **NO**. Para conservar solo los datos de registro de hoy y truncar los de todos los días anteriores, seleccione **SÍ** y establezca el campo **Días** en 0. Para conservar los datos de registro durante un número especificado de días, seleccione **Sí** y establezca el campo **Días** en el número de días.  
+     Para reemplazar la configuración del sistema sin quitar los datos del registro de transacciones, seleccione **NO**. Para conservar solo los datos de registro actuales y truncar los datos de registro de todos los días anteriores, seleccione **Sí** y establezca el campo **Días** en 0. Para conservar los datos de registro durante un número especificado de días, seleccione **Sí** y establezca el campo **Días** en el número de días.  
   
 7.  Si lo desea, active **Crear entidad con el mismo nombre que el modelo** para crear una entidad con el mismo nombre que el modelo.  
   
@@ -55,31 +55,31 @@ ms.locfileid: "73728482"
   
  Por cada modelo creado, se agrega una fila con ocho columnas a la cuadrícula. Las ocho columnas son:  
   
--   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo** , se muestra la imagen de ![actualización](../master-data-services/media/mds-model-status-updating.png "Actualizando") , que indica que el modelo se está actualizando. Si hay errores al crear o editar un modelo, se muestra la imagen de ![error](../master-data-services/media/mds-model-status-error.png "Error") . De lo contrario, el estado es Correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
+-   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo,** se muestra la imagen ![Actualizar,](../master-data-services/media/mds-model-status-updating.png "Actualizando") que indica que el modelo se está actualizando. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error.](../master-data-services/media/mds-model-status-error.png "Error") De lo contrario, el estado es Correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
--   **Name**: el nombre del modelo.  
+-   **Nombre**: el nombre del modelo.  
   
 -   **Descripción**: la descripción del modelo.  
   
 -   **Días de retención del registro**: el número de días que se conserva el registro para el modelo.  
   
--   **Creado por**: nombre del usuario que creó el modelo.  
+-   **Creado por**: el nombre del usuario que creó el modelo.  
   
--   **Fecha y hora de creación**: fecha y hora en que se creó el modelo.  
+-   **Fecha y hora de creación**: la fecha y hora de creación del modelo.  
   
--   **Actualizado por**: nombre del usuario que actualizó por última vez el modelo.  
+-   **Actualizado por**: el nombre del último usuario que actualizó el modelo.  
   
--   **Fecha y hora actualizadas**: fecha y hora en que se actualizó por última vez el modelo.  
+-   **Fecha y hora de actualización**: la fecha y hora de la última actualización del modelo.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   
--   [Cree una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
+-   [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
- [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   
- [Editar Master Data Services de &#40;del modelo&#41;](../master-data-services/edit-model-master-data-services.md)   
+ [Modelos &#40;&#41;de Master Data Services](../master-data-services/models-master-data-services.md)   
+ [Entidades &#40;Servicios de datos maestrosMaster Data Services&#41;](../master-data-services/entities-master-data-services.md)   
+ [Eliminar un modelo &#40;servicios de datos maestrosmasteres&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [Editar &#40;de modelos Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)   
  [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

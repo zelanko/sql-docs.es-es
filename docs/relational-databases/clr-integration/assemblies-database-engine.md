@@ -1,5 +1,6 @@
 ---
-title: Ensamblados (Motor de base de datos) | Microsoft Docs
+title: Ensamblajes (motor de base de datos) Microsoft Docs
+description: Una instancia de SQL ServerSQL Server puede hospedar ensamblados que implementan funciones, procedimientos, desencadenadores y agregados y tipos definidos por el usuario escritos en un lenguaje CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed494e55967bb02680f0397d3b651a59fd2d3bbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 386e1980ae19ba4f98222b51a4955b024f815083
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028041"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488086"
 ---
 # <a name="assemblies-database-engine"></a>Ensamblados (motor de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En los temas de esta sección se ofrece información que le ayudará a comprender, diseñar e implementar ensamblados.  
   
- Los ensamblados son archivos DLL que se utilizan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia de para implementar funciones, procedimientos almacenados, desencadenadores, agregados definidos por el usuario y tipos definidos por el usuario que se escriben en uno de los [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] lenguajes de código administrado hospedados por el [!INCLUDE[tsql](../../includes/tsql-md.md)]Common Language Runtime (CLR), en lugar de en.  
+ Los ensamblados son archivos DLL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizados en una instancia de implementar funciones, procedimientos almacenados, desencadenadores, agregados definidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] por el usuario y tipos [!INCLUDE[tsql](../../includes/tsql-md.md)]definidos por el usuario que se escriben en uno de los lenguajes de código administrado hospedados por Common Language Runtime (CLR), en lugar de en .  
   
  Un ensamblado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un objeto que hace referencia a un módulo de aplicación administrada (archivo .dll) creado en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime. Un ensamblado contiene metadatos de clase y código administrado. El primer paso para crear los siguientes objetos de base de datos es cargar un ensamblado en una instancia de SQL Server:  
   
--   Funciones CLR. Para obtener más información, vea [Create CLR Functions](../../relational-databases/user-defined-functions/create-clr-functions.md).  
+-   Funciones CLR. Para obtener más información, vea [Crear funciones CLR](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   Procedimientos almacenados CLR. Para obtener más información, vea [procedimientos almacenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   Procedimientos almacenados CLR. Para obtener más información, vea [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
   
--   Desencadenadores CLR. Para obtener más información, vea [crear desencadenadores CLR](../../relational-databases/triggers/create-clr-triggers.md).  
+-   Desencadenadores CLR. Para obtener más información, vea [Crear desencadenadores CLR](../../relational-databases/triggers/create-clr-triggers.md).  
   
--   Funciones de agregado definidas por el usuario. Para obtener más información, consulte [crear agregados definidos por el usuario](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
+-   Funciones de agregado definidas por el usuario. Para obtener más información, consulte [Crear agregados definidos por](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)el usuario .  
   
 -   Tipos definidos por el usuario. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../../relational-databases/native-client/features/using-user-defined-types.md).  
   

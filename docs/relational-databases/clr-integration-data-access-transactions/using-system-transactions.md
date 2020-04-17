@@ -1,5 +1,6 @@
 ---
-title: Usar System. Transactions | Microsoft Docs
+title: Uso de System.Transactions ( System.Transactions) Microsoft Docs
+description: El espacio de nombres System.Transactions proporciona un marco de transacciones totalmente integrado con ADO.NET y la integración de SQL Server CLR.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b99842a92649a42e9a0a42e6732368dc5e06ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68081353"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488504"
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68081353"
   
  Si se produce una excepción dentro de **TransactionScope**, la transacción se marca como incoherente y se abandona. Se revierte cuando se elimina **TransactionScope** . Si no se produce ninguna excepción, las transacciones participantes se confirman.  
   
- **TransactionScope** solo se debe usar cuando se tiene acceso a orígenes de datos locales y remotos o a administradores de recursos externos. Esto se debe a que **TransactionScope** siempre hace que se promuevan las transacciones, aunque solo se esté utilizando dentro de una conexión de contexto.  
+ Se debe utilizar**TransactionScope** solamente cuando se tiene acceso a orígenes de datos locales y remotos o a administradores de recursos externos. Esto se debe a que **TransactionScope** siempre hace que se promuevan las transacciones, aunque solo se esté utilizando dentro de una conexión de contexto.  
   
 > [!NOTE]  
 >  La clase **TransactionScope** crea una transacción con **System.Transactions.Transaction.IsolationLevel** de **Serializable** de forma predeterminada. Dependiendo de la aplicación, puede considerar la opción de reducir el nivel de aislamiento para evitar conflictos en ella.  

@@ -1,5 +1,6 @@
 ---
-title: Diseñar ensamblados | Microsoft Docs
+title: Diseño de Las Asambleas (Diseño de Las Asambleas) Microsoft Docs
+description: En este artículo se describen los factores que se deben tener en cuenta al diseñar un ensamblado para hospedar en SQL ServerSQL Server, incluidos el empaquetado, la administración y las restricciones en los ensamblados.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68028021"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488062"
 ---
 # <a name="assemblies---designing"></a>Ensamblados: diseño
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describen los siguientes aspectos que se deben tener en cuenta al diseñar ensamblados:  
   
--   Empaquetar ensamblados  
+-   Conjuntos de embalaje  
   
--   Administrar la seguridad de ensamblados  
+-   Gestión de la seguridad del ensamblaje  
   
--   Restricciones en ensamblados  
+-   Restricciones en los ensamblados  
   
 ## <a name="packaging-assemblies"></a>Empaquetar ensamblados  
  Un ensamblado puede contener funcionalidad para más de un tipo o una rutina de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en sus clases y métodos. En la mayoría de los casos, resulta conveniente empaquetar la funcionalidad de rutinas que ejecutan funciones relacionadas dentro del mismo ensamblado, especialmente si estas rutinas comparten clases cuyos métodos se llaman unos a otros. Por ejemplo, las clases que efectúan tareas de administración de entradas de datos para desencadenadores de Common Language Runtime (CLR) y procedimientos almacenados de CLR se pueden empaquetar en el mismo ensamblado. Esto se debe a que los métodos correspondientes a estas clases tienen más probabilidad de llamarse unos a otros que los de tareas menos relacionadas.  
   
  Cuando empaquete código en un ensamblado, debe tener en cuenta lo siguiente:  
   
--   Los índices y tipos definidos por el usuario CLR que dependan de funciones definidas por el usuario CLR pueden provocar que haya datos almacenados en la base de datos que dependan del ensamblado. Normalmente, modificar el código de un ensamblado resulta más complejo cuando hay datos almacenados que dependen del ensamblado de la base de datos. Por lo tanto, en general es mejor separar el código en el que se basan las dependencias de datos almacenados (como los tipos y los índices definidos por el usuario que utilizan funciones definidas por el usuario) del código que no tiene tales dependencias de datos almacenados. Para obtener más información, vea [implementar ensamblados](../../relational-databases/clr-integration/assemblies-implementing.md) y [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
+-   Los índices y tipos definidos por el usuario CLR que dependan de funciones definidas por el usuario CLR pueden provocar que haya datos almacenados en la base de datos que dependan del ensamblado. Normalmente, modificar el código de un ensamblado resulta más complejo cuando hay datos almacenados que dependen del ensamblado de la base de datos. Por lo tanto, en general es mejor separar el código en el que se basan las dependencias de datos almacenados (como los tipos y los índices definidos por el usuario que utilizan funciones definidas por el usuario) del código que no tiene tales dependencias de datos almacenados. Para obtener más información, vea Implementación de [ensamblados](../../relational-databases/clr-integration/assemblies-implementing.md) y [ALTER ASSEMBLY &#40;&#41;de Transact-SQLTransact-SQL ](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
 -   Si parte del código administrado requiere un permiso de mayor nivel, es mejor separar ese código en un ensamblado diferente del correspondiente al código que no requiere ese nivel de permiso.  
   
@@ -54,11 +55,10 @@ ms.locfileid: "68028021"
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE proporciona a los ensamblados un acceso sin límites a los recursos situados tanto dentro como fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El código que se ejecuta desde un ensamblado con UNSAFE puede llamar a código no administrado.  
   
- Además, si se especifica UNSAFE, el código incluido en el ensamblado puede realizar operaciones que la comprobación de CLR considera sin seguridad de tipos. Estas operaciones pueden tener acceso a búferes de memoria en el espacio del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma incontrolada. Los ensamblados UNSAFE también pueden trastornar potencialmente el sistema de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de Common Language Runtime. Los permisos UNSAFE solo deben concederlos programadores o administradores experimentados a ensamblados de mucha confianza. Solo los miembros del rol fijo de servidor **sysadmin** pueden crear ensamblados no seguros.  
+ Además, si se especifica UNSAFE, el código incluido en el ensamblado puede realizar operaciones que la comprobación de CLR considera sin seguridad de tipos. Estas operaciones pueden tener acceso a búferes de memoria en el espacio del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma incontrolada. Los ensamblados UNSAFE también pueden trastornar potencialmente el sistema de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de Common Language Runtime. Los permisos UNSAFE solo deben concederlos programadores o administradores experimentados a ensamblados de mucha confianza. Solo los miembros del rol fijo de servidor **sysadmin** pueden crear ensamblados UNSAFE.  
   
 ## <a name="restrictions-on-assemblies"></a>Restricciones en los ensamblados  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impone ciertas restricciones en el código administrado de los ensamblados para asegurarse de que puedan ejecutarse de manera confiable y escalable. Esto significa que, en los ensamblados con SAFE y EXTERNAL_ACCESS, no se permiten ciertas operaciones que pueden comprometer la estabilidad del servidor.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impone ciertas restricciones en el código administrado de los ensamblados para asegurarse de que puedan ejecutarse de manera confiable y escalable. Esto significa que, en los ensamblados con SAFE y EXTERNAL_ACCESS, no se permiten ciertas operaciones que pueden comprometer la estabilidad del servidor.  
   
 ### <a name="disallowed-custom-attributes"></a>Atributos personalizados no permitidos  
  Los ensamblados no se pueden anotar con los siguientes atributos personalizados:  
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>API de .NET Framework no permitidas  
- No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se puede llamar a ninguna API anotada con uno de los **HostProtectionAttributes** no permitidos desde ensamblados seguros y external_access.  
+ No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se puede llamar a ninguna API que se anote con uno de los **HostProtectionAttributes** no permitidos desde SAFE y EXTERNAL_ACCESS ensamblados.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -118,7 +118,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Ensamblados &#40;Motor de base de datos&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [&#41;de motor de base de datos &#40;ensamblados](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

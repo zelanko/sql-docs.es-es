@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 67e24b9c5c4ccd5f6ab2159ed5924474ff77bc84
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664277"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488206"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script exter
   
 > [!NOTE] 
 >  
-> Esta vista de administración dinámica (DMV) solo está disponible si ha instalado y habilitado la característica que admite la ejecución de scripts externos. Para obtener más información, vea Servicios de [R en SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) y Machine Learning Services [(R, Python) en SQL Server 2017 y versiones posteriores.](../../machine-learning/what-is-sql-server-machine-learning.md)  
+> Esta vista de administración dinámica (DMV) solo está disponible si ha instalado y habilitado la característica que admite la ejecución de scripts externos. Para obtener más información, vea Servicios de [R en SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) y Machine Learning Services [(R, Python) en SQL Server 2017 y versiones posteriores.](../../machine-learning/sql-server-machine-learning-services.md)  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

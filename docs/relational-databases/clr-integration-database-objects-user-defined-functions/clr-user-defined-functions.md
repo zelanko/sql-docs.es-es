@@ -1,5 +1,6 @@
 ---
-title: Funciones CLR definidas por el usuario | Microsoft Docs
+title: Funciones definidas por el usuario de CLR ( User-Defined Functions) Microsoft Docs
+description: La integración de SQL Server CLR permite crear funciones de agregado, con valores escalares, de tabla y de valor escalar definidos por el usuario en cualquier lenguaje de programación de .NET Framework.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6195badbf3fc0d789e1b083ab187eebbce2414fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68009725"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488288"
 ---
-# <a name="clr-user-defined-functions"></a>Funciones CLR definidas por el usuario
+# <a name="clr-user-defined-functions"></a>Funciones definidas por el usuario de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Las funciones definidas por el usuario son rutinas que pueden tomar parámetros, realizar cálculos u otras acciones y devolver un resultado. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], las funciones definidas por el usuario se pueden escribir en cualquier lenguaje de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   

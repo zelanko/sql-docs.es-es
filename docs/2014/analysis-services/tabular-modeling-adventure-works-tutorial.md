@@ -1,5 +1,5 @@
 ---
-title: Modelado tabular (tutorial de Adventure Works) | Microsoft Docs
+title: Modelado tabular (Tutorial de Obras de Aventura) Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af4d5dfa6d59338fb9640143b387b78421375e05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66067800"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487634"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Creación de modelos tabulares (tutorial de Adventure Works)
   En este tutorial se proporcionan lecciones sobre cómo crear un modelo tabular de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -27,42 +27,40 @@ ms.locfileid: "66067800"
   
 -   Cómo importar datos de una base de datos relacional de SQL Server en un proyecto de modelo tabular.  
   
--   Cómo crear y administrar las relaciones entre las tablas del modelo.  
+-   Cómo crear y administrar relaciones entre las tablas del modelo.  
   
 -   Cómo crear y administrar cálculos, medidas e indicadores clave de rendimiento que ayuden a los usuarios a analizar los datos del modelo.  
   
 -   Cómo crear y administrar perspectivas y jerarquías que ayuden a los usuarios a examinar más fácilmente los datos del modelo mediante puntos de vista específicos del negocio y de la aplicación.  
   
--   Cómo crear particiones que dividen los datos de la tabla en partes lógicas más pequeñas que se pueden procesar de manera independiente de otras particiones.  
+-   Cómo crear particiones que dividan los datos de la tabla en piezas lógicas más pequeñas que se puedan procesar independientemente de otras particiones.  
   
--   Cómo proteger los datos y los objetos de modelo mediante la creación de roles con miembros de usuario.  
+-   Cómo proteger los objetos y los datos del modelo creando roles con miembros de usuario.  
   
 -   Cómo implementar un modelo tabular en un espacio aislado o en una instancia de producción de Analysis Services que se ejecuta en modo tabular.  
   
 ## <a name="tutorial-scenario"></a>Escenario del tutorial  
- Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
+ Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
   
  Para satisfacer mejor las necesidades de análisis de datos de los equipos de ventas y marketing, y de los directivos, le encargan que cree un modelo tabular para que los usuarios analicen datos de las ventas por Internet de la base de datos de ejemplo AdventureWorksDW.  
   
  Para completar el tutorial, y el modelo tabular Ventas por Internet de Adventure Works, debe realizar una serie de lecciones. Cada lección incluye una serie de tareas, y es necesario completar todas las tareas en orden para completar la lección. Mientras que en una determinada lección puede haber varias tareas con las que se obtiene un resultado similar, el modo en que se completa cada tarea puede ser ligeramente diferente. Es decir, a menudo hay varias formas de completar una determinada tarea, y para su realización tendrá que poner en práctica los conocimientos que aprendió en tareas anteriores.  
   
- El propósito de las lecciones es guiarle por la creación de un modelo tabular básico que se ejecute en modo en memoria usando muchas de las características incluidas en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Dado que cada lección se basa en la lección anterior, debe completar las lecciones en orden. Cuando haya completado todas las lecciones, habrá creado e implementado el modelo tabular de ejemplo Venta por Internet de Adventure Works en un servidor de Análisis Services.  
+ El propósito de las lecciones es guiarle por la creación de un modelo tabular básico que se ejecute en modo en memoria usando muchas de las características incluidas en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Como cada lección se basa en la anterior, debe completar las lecciones en orden. Cuando haya completado todas las lecciones, habrá creado e implementado el modelo tabular de ejemplo Venta por Internet de Adventure Works en un servidor de Análisis Services.  
   
 > [!NOTE]  
 >  Este tutorial no proporciona lecciones ni información sobre cómo administrar una base de datos del modelo tabular implementado utilizando SQL Server Management Studio o una aplicación cliente de informes para conectarse a un modelo implementado con objeto de examinar los datos del modelo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para completar este tutorial, debe tener los siguientes requisitos previos instalados:  
   
 -   Instancia de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services que se ejecuta en modo Tabular.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de [https://go.microsoft.com/fwlink/?LinkID=335807](https://go.microsoft.com/fwlink/?LinkID=335807)ejemplo, vea.  
+-   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)de datos de ejemplo, consulte .  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 o posterior (para su uso con la característica Analizar de Excel en la lección 11)  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 o posterior (para su uso con la característica Analizar de Excel en la lección 11)  
   
 ## <a name="lessons"></a>Lecciones  
  Este tutorial incluye las siguientes lecciones:  
@@ -92,7 +90,7 @@ ms.locfileid: "66067800"
 |Lección|Tiempo estimado para completarla|  
 |------------|--------------------------------|  
 |[Implementar seguridad dinámica utilizando filtros de filas](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutos|  
-|[Configurar propiedades de informes para informes de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) Configurar propiedades de informes para informes de Power View|30 minutos|  
+|[Configurar las propiedades de informes para los informes](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) de Power View Configurar las propiedades de informes para los informes de Power View|30 minutos|  
   
 ## <a name="next-step"></a>siguiente paso  
  Para empezar el tutorial, vaya a la primera lección: [Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md).  

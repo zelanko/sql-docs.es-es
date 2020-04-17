@@ -13,12 +13,12 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62721554"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487006"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar IIS 7 para la sincronización web
   Los procedimientos descritos en este tema le guiarán a través del proceso de configurar manualmente [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) versión 7 y superior para su uso con la sincronización web en la replicación de mezcla. 
@@ -28,11 +28,11 @@ ms.locfileid: "62721554"
  Para obtener información general sobre todo el proceso de configuración, vea [Configurar sincronización web](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir los errores similares a "El formato de un mensaje durante la sincronización web no era válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web."  
+>  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir errores, por ejemplo: "El formato de un mensaje durante la sincronización web no es válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web."  
   
  Para utilizar la sincronización web, debe configurar IIS 7 mediante los siguientes pasos. Cada paso se describe detalladamente en este tema.  
   
-1.  Instale y configure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la escucha de replicación en el equipo en el que se ejecuta IIS.  
+1.  Instale y configure Escucha de replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo en el que se ejecuta IIS.  
   
 2.  Configure SSL (Capa de sockets seguros). SSL es necesario para establecer comunicaciones entre IIS y todos los suscriptores.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62721554"
   
 ## <a name="installing-the-sql-server-replication-listener"></a>Instalar la Escucha de replicación de SQL Server  
 
-La sincronización web es compatible con IIS, a partir de la versión 5.0. El Asistente de configuración de sincronización web de IIS versión 5 y 6 no está disponible con IIS versión 7.0 o superior. **A partir de SQL Server 2012, para usar el componente de sincronización Web en el servidor IIS, debe instalar SQL Server con la replicación. Puede ser la edición gratuita de SQL Server Express.**
+La sincronización web es compatible con IIS, a partir de la versión 5.0. El Asistente de configuración de sincronización web de IIS versión 5 y 6 no está disponible con IIS versión 7.0 o superior. **A partir de SQL Server 2012, para usar el componente de sincronización web en el servidor IIS, debe instalar SQL Server con replicación. Puede ser la edición gratuita de SQL Server Express.**
   
 #### <a name="to-install-and-configure-the-sql-server-replication-listener"></a>Para instalar y configurar la Escucha de replicación de SQL Server  
   
@@ -54,7 +54,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 4.  Registre el archivo replisapi.dll:  
   
-    1.  Haga clic en **Inicio** y, a continuación, en **Ejecutar**. En el cuadro **abrir** , escriba `cmd`y, a continuación, haga clic en **Aceptar**.  
+    1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**. En **Open** el cuadro `cmd`Abrir , escriba y, a continuación, haga clic en **Aceptar**.  
   
     2.  En el directorio creado en el paso 1, ejecute el siguiente comando:  
   
@@ -66,7 +66,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     1.  En **Administrador de Internet Information Services (IIS)**, en el panel **Conexiones** , haga clic con el botón secundario en **Sitio web predeterminado**y, a continuación, seleccione **Agregar directorio virtual**.  
   
-    2.  En **alias**, escriba `SQLReplication`.  
+    2.  En **Alias** `SQLReplication`, escriba .  
   
     3.  En **Ruta de acceso física**, escriba **\<<unidad>:\Inetpub\SQLReplication\\** y haga clic en **Aceptar**.  
   
@@ -78,7 +78,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     3.  En el panel **Acciones** , haga clic en **Agregar asignación de módulo**.  
   
-    4.  En **** ruta de acceso de `replisapi.dll`la solicitud, escriba.  
+    4.  En Request Path `replisapi.dll`(Ruta **de solicitud),** escriba .  
   
     5.  En la lista desplegable **Módulo** , seleccione **IsapiModule**.  
   
@@ -155,7 +155,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 ###### <a name="to-test-the-certificate"></a>Para probar el certificado  
   
-1.  En el **Administrador de Internet Information Services (IIS)**, haga clic en **sitio web predeterminado.**  
+1.  En el Administrador de **Internet Information Services (IIS),** haga clic en **Sitio Web predeterminado.**  
   
 2.  En el panel **Acciones**, haga clic en **Examinar \*:443(https)**.  
   
@@ -170,7 +170,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
  Además de realizar los siguientes pasos, asegúrese de que los inicios de sesión necesarios se encuentran en la lista de acceso a la publicación (PAL). Para obtener más información sobre la PAL, vea [Secure the Publisher](security/secure-the-publisher.md) (Proteger el publicador).  
   
- **Importante** La cuenta creada en esta sección es la cuenta que se conectará al publicador y al distribuidor durante la sincronización. La cuenta se debe agregar como cuenta de inicio de sesión SQL en el servidor de distribución y publicación.  
+ **Importante** La cuenta creada en esta sección es la cuenta que se conectará al publicador y el distribuidor durante la sincronización. La cuenta se debe agregar como cuenta de inicio de sesión SQL en el servidor de distribución y publicación.  
   
  La cuenta utilizada para la Escucha de replicación de SQL Server debe tener los permisos descritos en el tema sobre seguridad del agente de mezcla, en la sección sobre conexión al publicador o distribuidor.  
   
@@ -188,11 +188,11 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 1.  Cree una cuenta local en el equipo en el que se ejecuta IIS:  
   
-    1.  Abra el **Administrador del servidor**. En el menú Inicio, haga clic con el botón secundario en **Equipo** y, a continuación, en **Administrar**.  
+    1.  Abra **el Administrador del servidor**. En el menú Inicio, haga clic con el botón secundario en **Equipo** y, a continuación, en **Administrar**.  
   
     2.  En el **Administrador del servidor**, expanda **Configuración**y, a continuación, expanda **Usuarios y grupos locales**.  
   
-    3.  Haga clic con el botón secundario en **Usuarios**y después en **Usuario nuevo**.  
+    3.  Haga clic con el botón secundario en **Usuarios**y, a continuación, haga clic en **Nuevo usuario**.  
   
     4.  Escriba un nombre de usuario y una contraseña segura. Desactive **El usuario debe cambiar la contraseña en el siguiente inicio de sesión**.  
   
@@ -272,7 +272,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 1.  Asegúrese de que la configuración de red de área local (LAN) del suscriptor es correcta:  
   
-    1.  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, en el menú **herramientas** , haga clic en **Opciones de Internet**.  
+    1.  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, en el menú **Herramientas** , haga clic en **Opciones de Internet**.  
   
     2.  En la pestaña **Conexiones** , haga clic en **Configuración de LAN**.  
   
@@ -280,10 +280,10 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     4.  Si se utiliza un servidor proxy, haga clic en **Utilizar un servidor proxy para su LAN** y **No usar servidor proxy para direcciones locales**y, después, en **Aceptar**.  
   
-2.  En el suscriptor, en Internet Explorer, conéctese al servidor en modo de diagnóstico agregando `?diag` a la dirección de replisapi.dll. Por ejemplo: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  En el suscriptor, en Internet Explorer, conéctese al servidor en modo de diagnóstico agregando `?diag` a la dirección de replisapi.dll. Por ejemplo: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
-    >  En el ejemplo anterior, **servidor.dominio.com** se debe reemplazar con el nombre de **Emitido** exacto que aparece en la sección **Certificados de servidor** en el Administrador de IIS.  
+    >   En el ejemplo anterior, **servidor.dominio.com** se debe reemplazar con el nombre de **Emitido** exacto que aparece en la sección **Certificados de servidor** en el Administrador de IIS.  
   
 3.  Si el sistema operativo Windows no reconoce el certificado especificado para IIS, aparece el cuadro de diálogo **Alerta de seguridad** . Esta alerta puede producirse porque el certificado es un certificado de prueba, o bien porque lo emitió una entidad de certificación (CA) que Windows no reconoce.  
   
@@ -319,6 +319,6 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 ## <a name="see-also"></a>Consulte también  
  [Sincronización web para la replicación de mezcla](web-synchronization-for-merge-replication.md)   
- [Configurar la sincronización Web](configure-web-synchronization.md)  
+ [Configurar sincronización web](configure-web-synchronization.md)  
   
   

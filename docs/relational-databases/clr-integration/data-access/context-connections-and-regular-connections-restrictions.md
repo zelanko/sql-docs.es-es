@@ -1,5 +1,6 @@
 ---
-title: Restricciones en las conexiones normales y de contexto | Microsoft Docs
+title: Restricciones en las conexiones regulares y de contexto Microsoft Docs
+description: En este artículo se describen las restricciones asociadas con el código que se ejecuta en el proceso de Microsoft SQL Server a través del contexto y las conexiones regulares.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8cbdd195f698090602b98cdb6e5bab0a86556ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68216411"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81485374"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Conexiones de contexto y conexiones normales: restricciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describen las restricciones asociadas al código que se ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el proceso a través de las conexiones de contexto y normales.  
+  En este tema se describen las restricciones asociadas con la ejecución de código en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proceso a través del contexto y las conexiones regulares.  
   
 ## <a name="restrictions-on-context-connections"></a>Restricciones en conexiones de contexto  
  Al desarrollar su aplicación, tenga en cuenta las siguientes restricciones que se aplican a las conexiones de contexto:  
@@ -34,22 +35,22 @@ ms.locfileid: "68216411"
   
 -   No se admite el procesamiento por lotes de actualizaciones en una conexión de contexto  
   
--   No se puede utilizar **SqlNotificationRequest** con comandos que se ejecutan en una conexión de contexto.  
+-   **SqlNotificationRequest** no se puede utilizar con comandos que se ejecutan en una conexión de contexto.  
   
--   No se admite la cancelación de comandos que están ejecutándose en la conexión de contexto. El método **SqlCommand. Cancel** omite la solicitud de forma silenciosa.  
+-   No se admite la cancelación de comandos que están ejecutándose en la conexión de contexto. El **método SqlCommand.Cancel** omite silenciosamente la solicitud.  
   
 -   No puede usarse ninguna otra palabra clave de cadena de conexión cuando se utiliza "context connection=true".  
   
--   La propiedad **SqlConnection. DataSource** devuelve NULL si la cadena de conexión para **SqlConnection** es "context Connection = true", en lugar del nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   La propiedad **SqlConnection.DataSource** devuelve null si la cadena de conexión de **SqlConnection** es "context [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]connection-true", en lugar del nombre de la instancia de .  
   
--   El establecimiento de la propiedad **SqlCommand. CommandTimeout** no tiene ningún efecto cuando el comando se ejecuta en una conexión de contexto.  
+-   Establecer el **SqlCommand.CommandTimeout** propiedad no tiene ningún efecto cuando el comando se ejecuta en una conexión de contexto.  
   
 ## <a name="restrictions-on-regular-connections"></a>Restricciones en conexiones normales  
  Al desarrollar su aplicación, tenga en cuenta las siguientes restricciones que se aplican a las conexiones normales:  
   
--   No se admite la ejecución de comandos asincrónica en servidores internos. Si se incluye "Async = true" en la cadena de conexión de un comando y, a continuación, se ejecuta el comando, se produce una excepción en **System. NotSupportedException** . Aparece este mensaje: "No se admite el procesamiento asincrónico  al ejecutar el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]".  
+-   No se admite la ejecución de comandos asincrónica en servidores internos. La inclusión de "async-true" en la cadena de conexión de un comando y, a continuación, la ejecución del comando, da como resultado **System.NotSupportedException** que se produce. Aparece este mensaje: "No se admite el procesamiento asincrónico  al ejecutar el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]".  
   
--   No se admite el objeto **SqlDependency** .  
+-   No se admite el objeto **SqlDependency.**  
   
 ## <a name="see-also"></a>Consulte también  
  [Conexión de contexto](../../../relational-databases/clr-integration/data-access/context-connection.md)  

@@ -1,5 +1,6 @@
 ---
-title: Crear un tipo definido por el usuario | Microsoft Docs
+title: Creación de un tipo definido por el usuario ( User-Defined Type ? Microsoft Docs
+description: Para crear un UDT para instalar en SQL Server, primero cree una clase en un lenguaje de programación de .NET Framework, que se ajuste a las especificaciones para crear UDT.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 09480763fe03e5191fdaaf778e2490988a3e334e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76911089"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486961"
 ---
 # <a name="creating-user-defined-types"></a>Crear tipos definidos por el usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para crear un tipo definido por el usuario (UDT) capaz de instalarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe crear primero una clase en uno de los lenguajes de programación de .NET Framework compatibles, como Visual C# o Visual Basic, que se ajuste a las especificaciones para crear UDT. A continuación, la clase puede compilarse como una biblioteca de vínculos dinámicos (DLL), que puede cargarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede crear e implementar UDT con Visual Studio.  
   
- La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CLR puede habilitarse mediante el **sp_configure** procedimiento almacenado del sistema, como se muestra en las siguientes [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones:  
+ La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El CLR se puede habilitar mediante el procedimiento almacenado del [!INCLUDE[tsql](../../includes/tsql-md.md)] sistema **sp_configure,** como se muestra en las instrucciones siguientes:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +41,9 @@ Reconfigure
  Muestra las técnicas de codificación implicadas en la creación de tipos definidos por el usuario.  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente lista de código define el UDT Point, que se describe en detalle en [codificación de tipos definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ La siguiente lista de código define el UDT de punto, que se describe en detalle en Codificación de [tipos definidos por](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)el usuario .  
   
- Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones sobre cómo instalar estos ejemplos, vea [ejemplos de motor de base de datos de SQL Server](https://msftengprodsamples.codeplex.com/).  
+ Las listas de códigos completas para el resto de los ejemplos que se describen en esta sección pueden obtenerse instalando los ejemplos de CLR. Para obtener instrucciones sobre cómo instalar estos ejemplos, vea Ejemplos de Motor de base de datos de [SQL ServerSQL Server Database Engine](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -331,6 +332,6 @@ End Structure
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos CLR definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

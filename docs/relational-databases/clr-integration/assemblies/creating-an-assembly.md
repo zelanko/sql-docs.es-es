@@ -1,5 +1,6 @@
 ---
-title: Crear un ensamblado | Microsoft Docs
+title: Creación de una Asamblea (Asamblea) Microsoft Docs
+description: Use CREATE ASSEMBLY para registrar un ensamblado en SQL Server y especificar su configuración de seguridad. Registre un ensamblado para usar su funcionalidad.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9493567f33cf07dbfa9ae4f19d037a7db6157eda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6ca6787abae22722a7bbb99d335e63d47051bb46
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72907400"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486848"
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Los objetos de base de datos administrados, como procedimientos almacenados o desencadenadores, se compilan y, a continuación, se implementan en unidades denominadas ensamblados. Los ensamblados de dll administrados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deben registrarse en para poder usar la funcionalidad que proporciona el ensamblado. Para registrar un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use la instrucción CREATE ASSEMBLY. En este tema se explica cómo registrar un ensamblado en una base de datos mediante la instrucción CREATE ASSEMBLY y cómo especificar la configuración de seguridad del ensamblado.  
+  Los objetos de base de datos administrados, como procedimientos almacenados o desencadenadores, se compilan y, a continuación, se implementan en unidades denominadas ensamblados. Los ensamblados DLL administrados deben registrarse antes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de que se pueda usar la funcionalidad que proporciona el ensamblado. Para registrar un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use la instrucción CREATE ASSEMBLY. En este tema se explica cómo registrar un ensamblado en una base de datos mediante la instrucción CREATE ASSEMBLY y cómo especificar la configuración de seguridad del ensamblado.  
   
 ## <a name="the-create-assembly-statement"></a>La instrucción CREATE ASSEMBLY  
- La instrucción CREATE ASSEMBLY se usa para crear un ensamblado en una base de datos. Aquí tiene un ejemplo:  
+ La instrucción CREATE ASSEMBLY se usa para crear un ensamblado en una base de datos. Este es un ejemplo:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -37,8 +38,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  La cláusula FROM especifica el nombre de ruta de acceso del ensamblado que va a crearse. Esta ruta de acceso puede ser una ruta de acceso UNC (Convención de nomenclatura universal) o una ruta de acceso al archivo físico local en el equipo.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
   
  Es posible crear ensamblados que hagan referencia a otros ensamblados. Cuando se crea un ensamblado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también crea los ensamblados a los que hace referencia el ensamblado de nivel raíz, en caso de que aún no se hayan creado en la base de datos.  
   
@@ -53,7 +53,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ## <a name="specifying-security-when-creating-assemblies"></a>Especificar la seguridad al crear ensamblados  
  Al crear un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puede especificar uno de los tres niveles distintos de seguridad en los que puede ejecutarse el código: **SAFE**, **EXTERNAL_ACCESS**o **UNSAFE**. Cuando se ejecuta la instrucción **CREATE ASSEMBLY** , se realizan determinadas comprobaciones en el ensamblado de código que pueden provocar que el ensamblado no se registre en el servidor. Para obtener más información, vea el ejemplo de suplantación en [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
- **Safe** es el conjunto de permisos predeterminado y funciona en la mayoría de los escenarios. Para especificar un nivel de seguridad determinado, debe modificar la sintaxis de la instrucción CREATE ASSEMBLY tal y como se indica a continuación:  
+ **SAFE** es el conjunto de permisos predeterminado y funciona en la mayoría de los escenarios. Para especificar un nivel de seguridad determinado, debe modificar la sintaxis de la instrucción CREATE ASSEMBLY tal y como se indica a continuación:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -71,9 +71,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  Cuando el código de un ensamblado se ejecuta con el conjunto de permisos **SAFE** , solo puede realizar tareas de cálculo y acceso a datos en el servidor a través del proveedor administrado en proceso.  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>Crear ensamblados EXTERNAL_ACCESS y UNSAFE  
- **External_access** trata los escenarios en los que el código necesita tener acceso a recursos fuera del servidor, como archivos, redes, registro y variables de entorno. Cuando el servidor obtiene acceso a un recurso externo, suplanta el contexto de seguridad del usuario que llama al código administrado.  
+ **EXTERNAL_ACCESS** se usa en escenarios en los que el código necesita tener acceso a recursos fuera del servidor, como archivos, la red, el Registro y variables de entorno. Cuando el servidor obtiene acceso a un recurso externo, suplanta el contexto de seguridad del usuario que llama al código administrado.  
   
- El permiso de código no **seguro** es para aquellas situaciones en las que un ensamblado no es seguro y requiere acceso adicional a recursos restringidos, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] como la API de Win32.  
+ **UNSAFE** se usa en escenarios en los que no puede comprobarse la seguridad de un ensamblado o el ensamblado requiere acceso adicional a recursos restringidos, como la API Win32 de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
  Para crear un ensamblado **EXTERNAL_ACCESS** o **UNSAFE** en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe cumplirse una de las dos condiciones siguientes:  
   
@@ -131,11 +131,11 @@ WITH PERMISSION_SET = UNSAFE;
  Para obtener más información sobre los permisos de cada configuración, vea [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar ensamblados de integración CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Modificar un ensamblado](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Quitar un ensamblado](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [Seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [Propiedad de base de datos TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
+ [Administración de ensamblados de integración de CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Alterar una Asamblea](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [Dejar caer una asamblea](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+ [Seguridad de acceso al código de integración de CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Propiedad TRUSTWORTHY Database](../../../relational-databases/security/trustworthy-database-property.md)   
  [Permitir llamadores de confianza parcial](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

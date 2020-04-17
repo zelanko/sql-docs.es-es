@@ -18,12 +18,12 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63128769"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487164"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
   Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Este tema proporciona la siguiente información:  
@@ -38,7 +38,7 @@ ms.locfileid: "63128769"
   
 -   [Ejemplos](#_examples)  
   
-##  <a name="_conventions"></a>Convenciones de nomenclatura de permisos  
+##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>Convenciones de nomenclatura de permisos  
  A continuación se describen las convenciones generales que se siguen en la nomenclatura de permisos:  
   
 -   CONTROL  
@@ -49,11 +49,11 @@ ms.locfileid: "63128769"
   
      Confiere la posibilidad de cambiar las propiedades, excepto la propiedad, de un elemento protegible determinado. Cuando se concede para un ámbito, ALTER también confiere la posibilidad de modificar, crear o quitar cualquier elemento protegible que esté contenido en ese ámbito. Por ejemplo, el permiso ALTER en un esquema incluye la posibilidad de crear, modificar y quitar objetos del esquema.  
   
--   Modifique cualquier \<> *protegible del servidor* , donde el *servidor protegible* puede ser cualquier elemento protegible del servidor.  
+-   ALTER \<ANY *Server Securable*>, donde *Server Securable* puede ser cualquier servidor protegible.  
   
      Confiere la posibilidad de crear, modificar o quitar instancias individuales del *Protegible del servidor*. Por ejemplo, ALTER ANY LOGIN confiere la posibilidad de crear, modificar o quitar cualquier inicio de sesión en la instancia.  
   
--   Modifique cualquier \<> *protegible de base de datos* , donde la base de *datos protegible* puede ser cualquier elemento protegible en el nivel de base de datos.  
+-   ALTER \<ANY *Database Securable*>, donde *Database Securable* puede ser aplicable en el nivel de base de datos.  
   
      Confiere la posibilidad de crear (CREATE), modificar (ALTER) o quitar (DROP) instancias individuales del *Protegible de la base de datos*. Por ejemplo, ALTER ANY SCHEMA confiere la posibilidad de crear, modificar o quitar cualquier esquema en la base de datos.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "63128769"
   
      Permite al receptor del permiso tomar propiedad del elemento protegible para el que se concede este permiso.  
   
--   \<Suplantar inicio de *sesión*>  
+-   Inicio de \< *sesión* IMPERSONATE>  
   
      Permite al receptor suplantar el inicio de sesión.  
   
--   \<Suplantar *usuario*>  
+-   \< *Usuario* IMPERSONATE>  
   
      Permite al receptor suplantar al usuario.  
   
--   Crear \<elemento *protegible del servidor*>  
+-   CREAR \< *servidor protegible*>  
   
      Confiere al receptor la posibilidad de crear el *Protegible del servidor*.  
   
--   Crear \<elemento *protegible de base de datos*>  
+-   CREAR \< *base de datos protegible*>  
   
      Confiere al receptor la posibilidad de crear el *Protegible de la base de datos*.  
   
--   Crear \<elemento *protegible contenido en el esquema*>  
+-   CREATE \< *Securable con esquema*>  
   
      Confiere la posibilidad de crear el elemento protegible contenido en el esquema. No obstante, para crear el elemento protegible en un esquema concreto se requiere el permiso ALTER en el esquema.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "63128769"
      El permiso de REFERENCES es necesario en un objeto para crear FUNCTION o VIEW con la cláusula `WITH SCHEMABINDING` que hace referencia a ese objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server  
- Para obtener un gráfico con el tamaño [!INCLUDE[ssDE](../../includes/ssde-md.md)] de un póster de todos los [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)permisos en formato PDF, vea.  
+ Para obtener un gráfico [!INCLUDE[ssDE](../../includes/ssde-md.md)] de tamaño póster [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)de todos los permisos en formato pdf, consulte .  
   
-##  <a name="_securables"></a>Permisos aplicables a elementos protegibles específicos  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Permisos aplicables a securables específicos  
  En la siguiente tabla se enumeran los principales tipos de permisos y los tipos de elementos protegibles a los que se pueden aplicar.  
   
 |Permiso|Se aplica a|  
@@ -102,21 +102,21 @@ ms.locfileid: "63128769"
 |SELECT|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Funciones con valores de tabla, [!INCLUDE[tsql](../../includes/tsql-md.md)] y Common Language Runtime (CLR), y columnas<br /><br /> Vistas y columnas|  
 |VIEW CHANGE TRACKING|Tablas<br /><br /> Esquemas|  
 |UPDATE|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Vistas y columnas<br /><br /> Objetos de secuencia|  
-|REFERENCES|Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]colas<br /><br /> Tablas y columnas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), y columnas<br /><br /> Tipos<br /><br /> Vistas y columnas<br /><br /> Objetos de secuencia|  
+|REFERENCES|Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tablas y columnas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR), y columnas<br /><br /> Tipos<br /><br /> Vistas y columnas<br /><br /> Objetos de secuencia|  
 |INSERT|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Vistas y columnas|  
 |Delete|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Vistas y columnas|  
 |Ejecute|Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Sinónimos<br /><br /> Tipos CLR|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)]colas|  
-|VIEW DEFINITION|Grupos de disponibilidad<br /><br /> Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]colas<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Inicios de sesión, usuarios y roles<br /><br /> Sinónimos<br /><br /> Tablas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Vistas<br /><br /> Objetos de secuencia|  
-|ALTER|Grupos de disponibilidad<br /><br /> Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Objetos de secuencia<br /><br /> Inicios de sesión, usuarios y roles<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]colas<br /><br /> Tablas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Vistas|  
+|RECEIVE|Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|VIEW DEFINITION|Grupos de disponibilidad<br /><br /> Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Inicios de sesión, usuarios y roles<br /><br /> Sinónimos<br /><br /> Tablas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Vistas<br /><br /> Objetos de secuencia|  
+|ALTER|Grupos de disponibilidad<br /><br /> Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Objetos de secuencia<br /><br /> Inicios de sesión, usuarios y roles<br /><br /> Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tablas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Vistas|  
 |TAKE OWNERSHIP|Grupos de disponibilidad<br /><br /> Roles<br /><br /> Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Roles del servidor<br /><br /> Sinónimos<br /><br /> Tablas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Vistas<br /><br /> Objetos de secuencia|  
-|CONTROL|Grupos de disponibilidad<br /><br /> Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Inicios de sesión, usuarios y roles<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]colas<br /><br /> Sinónimos<br /><br /> Tablas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Vistas<br /><br /> Objetos de secuencia|  
+|CONTROL|Grupos de disponibilidad<br /><br /> Procedimientos ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Funciones escalares y de agregado ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Inicios de sesión, usuarios y roles<br /><br /> Colas de[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Sinónimos<br /><br /> Tablas<br /><br /> Funciones con valores de tabla ([!INCLUDE[tsql](../../includes/tsql-md.md)] y CLR)<br /><br /> Vistas<br /><br /> Objetos de secuencia|  
 |IMPERSONATE|Inicios de sesión y usuarios|  
   
 > [!CAUTION]  
 >  Los permisos predeterminados que se conceden a objetos del sistema en el momento de la instalación se evalúan detenidamente frente a posibles amenazas y no necesitan modificarse como parte de la protección de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los cambios a los permisos de los objetos del sistema podrían limitar o interrumpir la funcionalidad y dejar potencialmente a su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un estado no admitido.  
   
-##  <a name="_permissions"></a>SQL Server y SQL Database permisos  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>Permisos de SQL Server y SQL Database  
  La tabla siguiente contiene una lista completa de los permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos de[!INCLUDE[ssSDS](../../includes/sssds-md.md)] solo están disponibles para elementos protegibles de base que se admiten. No se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sin embargo, en algunos casos los permisos de base de datos están disponibles en su lugar.  
   
 |Elemento protegible base|Permisos granulares del elemento protegible base|Código del tipo de permiso|Elemento protegible que contiene un elemento protegible base|Permiso para el elemento protegible contenedor que implica permiso granular para el elemento protegible base|  
@@ -157,7 +157,7 @@ ms.locfileid: "63128769"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: Solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]se aplica a .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "63128769"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: Solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]se aplica a .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,13 +204,13 @@ ms.locfileid: "63128769"
 |DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Ejecute|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a. Use ALTER ANY CONNECTION en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: Solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]se aplica a . Use ALTER ANY CONNECTION en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UPDATE|ARRIBA|SERVER|CONTROL SERVER|  
+|DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |ENDPOINT|ALTER|AL|SERVER|ALTER ANY ENDPOINT|  
@@ -246,7 +246,7 @@ ms.locfileid: "63128769"
 |OBJECT|REFERENCES|RF|SCHEMA|REFERENCES|  
 |OBJECT|SELECT|SL|SCHEMA|SELECT|  
 |OBJECT|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
-|OBJECT|UPDATE|ARRIBA|SCHEMA|UPDATE|  
+|OBJECT|UPDATE|UP|SCHEMA|UPDATE|  
 |OBJECT|VIEW CHANGE TRACKING|VWCT|SCHEMA|VIEW CHANGE TRACKING|  
 |OBJECT|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
 |REMOTE SERVICE BINDING|ALTER|AL|DATABASE|ALTER ANY REMOTE SERVICE BINDING|  
@@ -275,7 +275,7 @@ ms.locfileid: "63128769"
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
 |SCHEMA|SELECT|SL|DATABASE|SELECT|  
 |SCHEMA|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
-|SCHEMA|UPDATE|ARRIBA|DATABASE|UPDATE|  
+|SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|  
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |SERVER|ADMINISTER BULK OPERATIONS|ADBO|No aplicable|No aplicable|  
@@ -342,7 +342,7 @@ ms.locfileid: "63128769"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a>Resumen del algoritmo de comprobación de permiso  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>Resumen del algoritmo de comprobación de permisos  
  Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad**, el **espacio del permiso**y el **permiso necesario**.  
   
 > [!NOTE]  
@@ -362,7 +362,7 @@ ms.locfileid: "63128769"
   
     -   Si se utiliza la firma de módulo, cualquier cuenta de inicio de sesión o de usuario da cuenta del certificado utilizado para firmar el módulo que el usuario está ejecutando actualmente, así como de los pertenecientes al rol asociados de ese entidad de seguridad.  
   
--   **Espacio de permisos**  
+-   **Espacio del permiso**  
   
      Es la entidad protegible y todas las clases protegibles que contiene la entidad protegible. Por ejemplo, una tabla (una entidad protegible) está contenida en la clase de esquema protegible y en la clase de base de datos protegible. El acceso puede verse afectado por permisos de nivel de tabla, esquema, base de datos y servidor. Para obtener más información, vea [Jerarquía de permisos &#40;motor de base de datos&#41;](permissions-hierarchy-database-engine.md).  
   
@@ -396,7 +396,7 @@ ms.locfileid: "63128769"
   
 7.  La comprobación del permiso es correcta si no se denegó el **permiso requerido** y el **permiso requerido** contiene un permiso GRANT o un permiso GRANT WITH GRANT directo o implícito para cualquiera de las identidades del **contexto de seguridad** de cualquier objeto del **espacio del permiso**.  
   
-##  <a name="_examples"></a>Example  
+##  <a name="examples"></a><a name="_examples"></a> Ejemplos  
  En los ejemplos de esta sección se muestra cómo se recupera la información sobre permisos.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Devolver la lista completa de los permisos que pueden concederse.  

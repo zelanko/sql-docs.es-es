@@ -1,5 +1,6 @@
 ---
-title: SqlPipe (objeto) | Microsoft Docs
+title: Objeto SqlPipe (Objeto SqlPipe) Microsoft Docs
+description: Para los objetos de base de datos CLR que se ejecutan en SQL ServerSQL Server, puede enviar resultados a la canalización conectada mediante los métodos Send del objeto SqlPipe.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ecc3f87313b6ddcd48b7b0e527ba4effd58e624
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913556"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487540"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe, objetos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,8 +31,7 @@ ms.locfileid: "67913556"
  En los objetos de base de datos de Common Language Runtime (CLR) que se ejecutan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede enviar los resultados a la canalización conectada mediante los métodos **Send** del objeto **SqlPipe** . Para obtener el objeto **Pipe** , debe obtener acceso a la propiedad **SqlContext** del objeto **SqlPipe** . La clase **SqlPipe** es conceptualmente similar a la clase **Response** incluida en ASP.NET. Para obtener más información, vea la documentación de referencia de la clase SqlPipe en el kit de desarrollo de software de .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Devolver mensajes y resultados tabulares  
- 
-  **SqlPipe** incluye un método **Send** , que cuenta con tres sobrecargas. Son las siguientes:  
+ **SqlPipe** incluye un método **Send** , que cuenta con tres sobrecargas. Son las siguientes:  
   
 -   `void Send(string message)`  
   
@@ -50,10 +50,10 @@ ms.locfileid: "67913556"
 ## <a name="returning-custom-result-sets"></a>Devolver conjuntos de resultados personalizados  
  Los procedimientos almacenados administrados pueden enviar conjuntos de resultados que no proceden de **SqlDataReader**. El método **SendResultsStart** , junto con **SendResultsRow** y **SendResultsEnd**, permite a los procedimientos almacenados enviar conjuntos de resultados personalizados al cliente.  
   
- **SendResultsStart** toma un **SqlDataRecord** como entrada. Este método marca el principio de un conjunto de resultados y utiliza los metadatos del registro para generar los metadatos que describen el conjunto de resultados. No envía el valor del registro con **SendResultsStart**. Todas las filas subsiguientes, enviadas mediante el método **SendResultsRow**, deben coincidir con la definición de los metadatos.  
+ **SendResultsStart** toma como entrada un **SqlDataRecord** . Este método marca el principio de un conjunto de resultados y utiliza los metadatos del registro para generar los metadatos que describen el conjunto de resultados. No envía el valor del registro con **SendResultsStart**. Todas las filas subsiguientes, enviadas mediante el método **SendResultsRow**, deben coincidir con la definición de los metadatos.  
   
 > [!NOTE]  
->  Después de llamar al método **SendResultsStart** , solo se puede llamar a **SendResultsRow** y **SendResultsEnd** . La llamada a cualquier otro método en la misma instancia de **SqlPipe** produce una excepción **InvalidOperationException**. **SendResultsEnd** establece **SqlPipe** de nuevo en el estado inicial en el que se puede llamar a otros métodos.  
+>  Después de llamar al método **SendResultsStart** , solo se puede llamar a **SendResultsRow** y **SendResultsEnd** . La llamada a cualquier otro método en la misma instancia de **SqlPipe** produce una excepción **InvalidOperationException**. **SendResultsEnd** devuelve **SqlPipe** al estado inicial con el que se puede llamar a otros métodos.  
   
 ### <a name="example"></a>Ejemplo  
  El procedimiento almacenado **uspGetProductLine** devuelve el nombre, el número de producto, el color y el precio de todos los productos de una línea de productos especificada. Este procedimiento almacenado acepta coincidencias exactas de *prodLine*.  
@@ -142,7 +142,7 @@ EXEC uspGetProductLineVB 'T';
   
 ## <a name="see-also"></a>Consulte también  
  [Objeto SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
- [Procedimientos almacenados CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
+ [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Extensiones específicas en proceso de SQL Server a ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
   
   

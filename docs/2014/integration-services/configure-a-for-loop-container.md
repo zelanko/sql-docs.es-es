@@ -1,5 +1,5 @@
 ---
-title: Configurar un contenedor de bucles for | Microsoft Docs
+title: Configurar un contenedor de bucles For ( For Loop Container) Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,15 @@ ms.assetid: b9cd7ea7-b198-4a35-8b16-6acf09611ca5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe51deb631f0c3d794bdce3f05af61b5e030d5e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66060829"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487003"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurar un contenedor de bucles For
   En este procedimiento se describe cómo configurar un contenedor de bucles For mediante el cuadro de diálogo **Editor de bucles For** .  
-  
- Para obtener un ejemplo del contenedor de bucles For, vea [Bucles de SSIS que no producen error](https://go.microsoft.com/fwlink/?LinkId=240295) en bimonkey.com.  
   
 ### <a name="to-configure-the-for-loop-container"></a>Para configurar el contenedor de bucles For  
   
@@ -45,8 +43,8 @@ ms.locfileid: "66060829"
 7.  Haga clic en **Aceptar** para cerrar el **Editor de bucles For**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Contenedor de bucles for](control-flow/for-loop-container.md)   
- [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
+ [Para contenedor de bucles](control-flow/for-loop-container.md)   
+ [Integration ServicesIntegration Services &#40;expresiones de&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
  [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md)  
   
   

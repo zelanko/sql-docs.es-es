@@ -1,5 +1,6 @@
 ---
-title: Definir tablas y columnas UDT | Microsoft Docs
+title: Definición de tablas y columnas UDT ? Microsoft Docs
+description: Después de registrar el ensamblado que contiene una definición UDT, puede usarlo en una definición de columna.
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8386da85d22f50b45492ecd52588e6d06fe80590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f46ebc5089a4cb2fdb974df52d9bc876f925da4
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74901954"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486898"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>Trabajar con tipos definidos por el usuario: definir columnas y tablas UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Una vez que el ensamblado que contiene la definición de tipo definido por el usuario (UDT [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) se ha registrado en una base de datos, se puede utilizar en una definición de columna. Para más información, consulte [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
+  Una vez que el ensamblado que contiene la definición [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipo definido por el usuario (UDT) se ha registrado en una base de datos, se puede utilizar en una definición de columna. Para más información, consulte [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
 ## <a name="creating-tables-with-udts"></a>Crear tablas con UDT  
- No hay ninguna sintaxis especial para crear una columna UDT de una tabla. Puede utilizar el nombre del UDT en una definición de columna como si fuera uno de los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intrínsecos. La siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE crea una tabla denominada **Points**, con una columna denominada **ID,** que se define como una columna de identidad **int** y la clave principal de la tabla. La segunda columna se denomina **PointValue**, con un tipo de datos **Point**. El nombre de esquema que se usa en este ejemplo es **DBO**. Observe que debe tener los permisos necesarios para especificar un nombre de esquema. Si omite el nombre de esquema, se utiliza el esquema predeterminado para el usuario de la base de datos.  
+ No hay ninguna sintaxis especial para crear una columna UDT de una tabla. Puede utilizar el nombre del UDT en una definición de columna como si fuera uno de los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intrínsecos. La siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción CREATE TABLE crea una tabla denominada **Points**, con una columna denominada **ID,** que se define como una columna de identidad **int** y la clave principal de la tabla. La segunda columna se denomina **PointValue**, con un tipo de datos **Point**. El nombre de esquema utilizado en este ejemplo es **dbo**. Observe que debe tener los permisos necesarios para especificar un nombre de esquema. Si omite el nombre de esquema, se utiliza el esquema predeterminado para el usuario de la base de datos.  
   
 ```sql  
 CREATE TABLE dbo.Points   
@@ -51,5 +52,5 @@ CREATE TABLE dbo.Points
   
 ## <a name="see-also"></a>Consulte también  
  [Trabajar con tipos definidos por el usuario en SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     
- [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)     
- [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     
+ [TIPO CREATE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)     
+ [Tipos CLR definidos por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)     

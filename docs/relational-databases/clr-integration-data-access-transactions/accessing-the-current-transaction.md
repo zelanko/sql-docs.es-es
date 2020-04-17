@@ -1,5 +1,6 @@
 ---
-title: Obtener acceso a la transacción actual | Microsoft Docs
+title: Acceso a la transacción actual ? Microsoft Docs
+description: En la integración de CLR de SQL Server, la propiedad Current de la clase System.Transactions.Transaction permite tener acceso a la transacción actual.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab30ca777997a8d7dff819c3c797cae740922ca4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67913531"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487498"
 ---
 # <a name="accessing-the-current-transaction"></a>Obtener acceso a la transacción actual
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

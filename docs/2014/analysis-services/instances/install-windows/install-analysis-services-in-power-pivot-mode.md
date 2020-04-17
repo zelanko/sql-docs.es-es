@@ -10,12 +10,12 @@ ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cd41c3a139a2e4be03d0204a16cb698b3d36c89
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "68888657"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487401"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   Los procedimientos de este tema le guían por la instalación en un solo servidor de un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de implementación de SharePoint. Los pasos incluyen la ejecución del Asistente para la instalación de SQL Server, así como tareas de configuración que usan Administración central de SharePoint 2013.  
@@ -24,7 +24,7 @@ ms.locfileid: "68888657"
   
  **En este tema:**  
   
- [Información previa](#bkmk_background)  
+ [Información preliminar](#bkmk_background)  
   
  [Requisitos previos](#bkmk_prereq)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68888657"
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a>Requisitos de SQL Server Edition  
  No todas las características de Business Intelligence están disponibles en todas las ediciones de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obtener más información, vea [Características admitidas porhttps://go.microsoft.com/fwlink/?linkid=232473) las ediciones de SQL Server 2012 (y](https://go.microsoft.com/fwlink/?linkid=232473) [ediciones y componentes de SQL Server 2014.](../../../sql-server/editions-and-components-of-sql-server-2016.md)  
   
- Las notas de la versión actual se pueden encontrarhttps://go.microsoft.com/fwlink/?LinkID=248389)en las notas de la versión de SQL Server [2012 SP1](ttp://go.microsoft.com/fwlink/?LinkID=248389) ( .  
+ Las notas de la versión actual se pueden encontrarhttps://go.microsoft.com/fwlink/?LinkID=248389)en las notas de la versión de SQL Server [2012 SP1](https://go.microsoft.com/fwlink/?LinkID=248389) ( .  
   
  [Notas de la versión dehttps://go.microsoft.com/fwlink/?LinkId=236893)Microsoft SQL Server 2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   

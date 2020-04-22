@@ -222,6 +222,8 @@
               href: big-data-cluster/troubleshoot-active-directory.md
     - name: Referencia
       items:
+        - name: Asociados de BDC
+          href: sql-server/partner-big-data-cluster.md
         - name: Referencia de implementación
           items:
             - name: Archivo de configuración de implementación
@@ -1385,6 +1387,15 @@
                       href: relational-databases/databases/database-properties-mirroring-page.md
                     - name: Página Almacén de consultas
                       href: relational-databases/databases/database-properties-query-store-page.md
+    - name: Notificación de evento
+      href: relational-databases/service-broker/event-notifications.md
+      items:
+        - name: Implementar
+          href: relational-databases/service-broker/implement-event-notifications.md
+        - name: Seguridad del cuadro de diálogo Configurar
+          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
+        - name: Obtener información
+          href: relational-databases/service-broker/get-information-about-event-notifications.md
     - name: 'Secuencia de archivos, Tabla de archivos y BLOB'
       href: relational-databases/blob/binary-large-object-blob-data-sql-server.md
       items:
@@ -1540,14 +1551,7 @@
         - name: Propiedades de secuencia
           href: relational-databases/sequence-numbers/sequence-properties-general-page.md
     - name: Service Broker
-      href: relational-databases/service-broker/event-notifications.md
-      items:
-        - name: Implementar
-          href: relational-databases/service-broker/implement-event-notifications.md
-        - name: Seguridad del cuadro de diálogo Configurar
-          href: relational-databases/service-broker/configure-dialog-security-for-event-notifications.md
-        - name: Obtener información
-          href: relational-databases/service-broker/get-information-about-event-notifications.md
+      href: database-engine/configure-windows/sql-server-service-broker.md
     - name: Datos espaciales
       href: relational-databases/spatial/spatial-data-sql-server.md
       items:
@@ -4370,8 +4374,6 @@
           href: database-engine/configure-windows/remote-servers.md
         - name: Información general del Monitor de SQL Server
           href: database-engine/configure-windows/sql-server-monitor-overview.md
-        - name: Service Broker
-          href: database-engine/configure-windows/sql-server-service-broker.md
         - name: Buffer Pool Extension
           href: database-engine/configure-windows/buffer-pool-extension.md
         - name: Opciones de configuración del servidor
@@ -10073,8 +10075,6 @@
           href: sql-server/sql-server-docs-contribute.md
     - name: Asociados
       items:
-        - name: Clústeres de macrodatos
-          href: sql-server/partner-big-data-cluster.md
         - name: Supervisión
           href: sql-server/partner-monitor-sql-server.md
         - name: Alta disponibilidad y recuperación ante desastres
@@ -10354,6 +10354,8 @@
                   href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
             - name: Errores 5000 a 8000
               items:
+                - name: 5120
+                  href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
                 - name: 5228
                   href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
                 - name: 5229
@@ -10626,6 +10628,8 @@
                   href: relational-databases/errors-events/mssqlserver-17194-database-engine-error.md
                 - name: 17204
                   href: relational-databases/errors-events/mssqlserver-17204-database-engine-error.md
+                - name: 17207
+                  href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
                 - name: 17300
                   href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
                 - name: 17660

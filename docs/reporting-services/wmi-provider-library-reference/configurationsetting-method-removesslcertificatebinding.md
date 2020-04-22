@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571274"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634572"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Método ConfigurationSetting - RemoveSSLCertificateBinding
-  Quita un enlace de certificado SSL.  
+  Quita un enlace de certificado TLS/SSL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +46,7 @@ public void RemoveSSLCertificateBindings(string Application,
  Dirección IP para la aplicación.  
   
  *Puerto*  
- Puerto SSL asociado al enlace.  
+ Puerto TLS asociado al enlace.  
   
  *lcid*  
  Configuración regional que se utilizará para los mensajes de error que se devuelven.  

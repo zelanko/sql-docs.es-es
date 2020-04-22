@@ -1,5 +1,6 @@
 ---
-title: Acerca de los ejemplos de código de la documentación | Microsoft Docs
+title: Sobre los ejemplos de código de la documentación
+description: Hay que tener en cuenta varios puntos al ejecutar los ejemplos de código de la documentación sobre los controladores de Microsoft para PHP para SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9da3b91dfa90ed9b28ec9518b5cdb012002d62ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c90f2f1a420f1ab40f99a2fe83c928890e37e621
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911791"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631896"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>Sobre los ejemplos de código de la documentación
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +28,7 @@ Hay que tener en cuenta varios puntos al ejecutar los ejemplos de código de la 
   
     Para obtener información sobre cómo descargar las ediciones gratuitas y de prueba de SQL Server, consulte [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193).  
   
-    Para información sobre cómo descargar e instalar la base de datos AdventureWorks, consulte la página [AdventureWorks en el repositorio de GitHub de ejemplos de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
+    Para información sobre cómo descargar e instalar la base de datos AdventureWorks, consulte la página [AdventureWorks en el repositorio de GitHub de ejemplos de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works).
   
 -   Casi todos los ejemplos de código de esta documentación están diseñados para ejecutarse en la línea de comandos, que habilita las pruebas automatizadas de todos los ejemplos de código. Para obtener información sobre cómo ejecutar PHP en la línea de comandos, consulte [PHP desde la línea de comandos](https://php.net/manual/en/features.commandline.php).  
   
@@ -48,8 +49,8 @@ Hay que tener en cuenta varios puntos al ejecutar los ejemplos de código de la 
     die();  
     ```  
   
-    Para obtener más información sobre el control de errores y advertencias, consulte [Controlar errores y advertencias](../../connect/php/handling-errors-and-warnings.md).  
+    Para obtener más información sobre el control de errores y advertencias, consulte [Controlar errores y advertencias](handling-errors-and-warnings.md).  
   
 ## <a name="see-also"></a>Consulte también  
-[Información general de los controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Información general de los controladores de Microsoft para PHP para SQL Server](overview-of-the-php-sql-driver.md)
   

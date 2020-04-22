@@ -1,5 +1,6 @@
 ---
-title: 'Paso 3: Conexión de prueba de concepto a SQL con PHP | Microsoft Docs'
+title: 'Paso 3: Conexión con SQL mediante PHP'
+description: El paso 3 es una prueba de concepto, que muestra cómo puede conectarse a SQL Server mediante PHP. Los ejemplos básicos demuestran la selección e inserción de datos.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926852"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528589"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Paso 3: Conexión de prueba de concepto a SQL mediante PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,8 +80,7 @@ La función [sqlsrv_query](https://php.net/manual/en/function.sqlsrv-query.php) 
   
 ## <a name="step-3--insert-a-row"></a>Paso 3:  Inserción de una fila  
   
-En este ejemplo se muestra cómo ejecutar la instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros que protejan la aplicación ante el valor de [inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
-  
+En este ejemplo, verá cómo ejecutar una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros. Los valores de parámetro protegen la aplicación de la [inyección de código SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ En este ejemplo se muestra cómo ejecutar la instrucción [INSERT](../../t-sql/s
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Paso 4:  Reversión de una transacción  
+## <a name="step-4--roll-back-a-transaction"></a>Paso 4:  Reversión de una transacción  
   
   
 Este ejemplo de código muestra el uso de transacciones con las que podrá realizar lo siguiente:  

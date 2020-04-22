@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573294"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625874"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar la autenticación básica en el servidor de informes
   De forma predeterminada, Reporting Services acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si su implementación incluye aplicaciones cliente o exploradores que utilizan la autenticación básica, debe agregar esta autenticación a la lista de tipos admitidos. Además, si desea utilizar el Generador de informes, debe permitir el acceso anónimo a los archivos del Generador de informes.  
@@ -25,7 +25,7 @@ ms.locfileid: "65573294"
   
  Antes de habilitar la autenticación básica, compruebe que la infraestructura de seguridad la admite. Con la autenticación básica, el servicio web del servidor de informes pasará las credenciales a la entidad de seguridad local. Si las credenciales especifican una cuenta de usuario local, la entidad de seguridad local autentica al usuario en el equipo del servidor de informes y el usuario obtendrá un token de seguridad válido para los recursos locales. Las credenciales para las cuentas de usuario de dominio se reenvían a un controlador de dominio que las autentica. El vale resultante es válido para los recursos de red.  
   
- Si desea mitigar el riesgo de que se intercepten las credenciales mientras se dirigen a un controlador de dominio de la red, se requiere cifrado en el canal, como Capa de sockets seguros (SSL). Por sí sola, la autenticación básica transmite el nombre de usuario en texto sin cifrar y la contraseña en codificación en base 64. Cuando se agrega cifrado al canal, el paquete es ilegible. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Si desea mitigar el riesgo de que se intercepten las credenciales mientras se dirigen a un controlador de dominio de la red, se requiere cifrado en el canal, como la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL). Por sí sola, la autenticación básica transmite el nombre de usuario en texto sin cifrar y la contraseña en codificación en base 64. Cuando se agrega cifrado al canal, el paquete es ilegible. Para más información, vea [Configurar conexiones TLS en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
  Después de habilitar la autenticación básica, tenga en cuenta que los usuarios no pueden seleccionar la opción **Seguridad integrada de Windows** al establecer las propiedades de conexión en un origen de datos externo que proporciona los datos para un informe. La opción estará deshabilitada en las páginas de propiedades del origen de datos.  
   

@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70958338"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487455"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
 
@@ -49,10 +49,10 @@ Tenga en cuenta lo siguiente al trabajar con tablas temporales:
 - Los desencadenadores**INSTEAD OF** no se permiten en la tabla actual o de historial para evitar que se invalide la lógica DML. Los desencadenadores**AFTER** solo se permiten en la tabla actual. Se bloquean en la tabla de historial para evitar que se invalide la lógica DML.
 - El uso de tecnologías de replicación está limitado:
 
-  - **Always On** : totalmente compatible.
-  - **Captura de datos y seguimiento de datos modificados** : solo es compatible con la tabla actual.
-  - **Replicación transaccional y de instantáneas**: solo es compatible con un publicador único sin la función de temporalidad habilitada, y con un suscriptor que tenga dicha función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF"). No se admite el uso de varios suscriptores, puesto que este escenario puede provocar que los datos temporales sean incoherentes (cada uno de ellos dependería del reloj del sistema local).
-  - **Replicación de mezcla:** no es compatible con las tablas temporales.
+  - **Always On:** totalmente compatible
+  - **Captura de datos modificados y seguimiento de cambios:** solo se admite en la tabla actual
+  - **Replicación transaccional y de instantáneas**: solo se admite para un publicador único sin la función de temporalidad habilitada, y un suscriptor que tenga esa función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF"). Cuando se inicia el agente de distribución, este abre una transacción que se mantiene abierta hasta que se detiene el agente de distribución. Debido a este comportamiento, SysStartTime y SysEndTime se rellenan en la hora de inicio de la primera transacción en la que se inicia el agente de distribución. Por lo tanto, puede ser preferible ejecutar el agente de distribución según una programación en lugar de hacerlo de forma continuada. No se admite el uso de varios suscriptores, puesto que puede provocar que los datos temporales sean incoherentes porque cada uno de ellos dependería del reloj del sistema local.
+  - **Replicación de mezcla:** no es compatible con las tablas temporales
 
 - Las consultas normales solo afectan a los datos de la tabla actual. Para consultar los datos en la tabla de historial, debe usar consultas temporales. Este asunto se explica más adelante en este documento, en la sección titulada "Consulta de datos temporales".
 - Una estrategia de indexación óptima consiste en incluir un índice de almacén de columnas agrupado o un índice de almacén de filas de árbol B en la tabla actual, así como un índice de almacén de columnas agrupado en la tabla de historial para que el rendimiento y el tamaño de almacenamiento sean óptimos. Si crea o usa su propia tabla de historial, recomendamos encarecidamente que genere este tipo de índice que consta de columnas de periodo empezando por el fin de la columna de periodo con el fin de acelerar las consultas temporales y las que forman parte de la comprobación de coherencia de datos. La tabla de historial predeterminada cuenta con un índice de almacén de filas agrupado que se ha creado en función de las columnas de periodo (fin e inicio). Como mínimo, se recomienda un índice de almacén de filas no agrupado.

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ddbb30c678599cafcde7e5cb8888a904b9cf7b58
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705873"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529430"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,16 +165,16 @@ replmerg [-?]
  Es la ubicación de los archivos de instantánea de datos filtrados cuando la publicación utiliza los filtros de fila con parámetros.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Es el nivel de cifrado de Capa de sockets seguros (SSL) utilizado por el agente de mezcla cuando realiza conexiones.  
+ Es el nivel de cifrado de la Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL), utilizado por el Agente de mezcla cuando realiza conexiones.  
   
 |Valor de EncryptionLevel|Descripción|  
 |---------------------------|-----------------|  
-|**0**|Especifica que no se utiliza SSL.|  
-|**1**|Especifica que se utiliza SSL, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor SSL.|  
-|**2**|Especifica que se usa SSL y que se ha comprobado el certificado.|  
+|**0**|Especifica que no se utiliza TLS.|  
+|**1**|Especifica que se utiliza TLS, pero el agente no comprueba que un emisor confiable haya firmado el certificado del servidor TLS/SSL.|  
+|**2**|Especifica que se usa TLS y que se ha comprobado el certificado.|  
 
  > [!NOTE]  
- >  Un certificado SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" debe establecerse en el nombre completo de la instancia de SQL Server.
+ >  Un certificado TLS/SSL válido se define con un nombre de dominio completo de SQL Server. Para que el agente se conecte correctamente al establecer -EncryptionLevel en 2, cree un alias en la instancia local de SQL Server. El parámetro "Alias Name" debe ser el nombre del servidor, mientras que el parámetro "Server" debe establecerse en el nombre completo de la instancia de SQL Server.
 
  Para más información, consulte [Ver y modificar la configuración de seguridad de la replicación](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

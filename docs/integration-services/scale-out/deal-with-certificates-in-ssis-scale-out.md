@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896965"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488141"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Usar certificados en la escalabilidad horizontal de SQL Server Integration Services
 
@@ -29,20 +29,20 @@ Para proteger la comunicación entre el patrón de escalabilidad horizontal y lo
 
 En la mayoría de los casos, el certificado del patrón de escalabilidad horizontal se configura durante la instalación de este patrón.
 
-En la página **Configuración de escalabilidad horizontal de Integration Services: nodo principal** del asistente de instalación de SQL Server, puede elegir crear un nuevo certificado SSL autofirmado o usar un certificado SSL ya existente.
+En la página **Configuración de escalabilidad horizontal de Integration Services: nodo principal** del asistente de instalación de SQL Server, puede elegir crear un nuevo certificado TLS/SSL autofirmado o usar un certificado TLS/SSL ya existente.
 
 ![Configuración principal](media/master-config.PNG)
 
-**Nuevo certificado** Si no tiene requisitos especiales para los certificados, puede crear un nuevo certificado SSL autofirmado. Además, puede especificar los nombres comunes en el certificado. Asegúrese de que el nombre de host del punto de conexión principal que los trabajadores de escalabilidad horizontal van a usar se incluya en el apartado de nombres comunes. De forma predeterminada, se incluyen el nombre del equipo y la dirección IP del nodo principal. 
+**Nuevo certificado** Si no tiene requisitos especiales para los certificados, puede crear un nuevo certificado TLS/SSL autofirmado. Además, puede especificar los nombres comunes en el certificado. Asegúrese de que el nombre de host del punto de conexión principal que los trabajadores de escalabilidad horizontal van a usar se incluya en el apartado de nombres comunes. De forma predeterminada, se incluyen el nombre del equipo y la dirección IP del nodo principal. 
 
-**Certificado existente** Si decide usar un certificado existente, haga clic en **Examinar** para seleccionar un certificado SSL desde el almacén de certificados **raíz** del equipo local.
+**Certificado existente** Si decide usar un certificado existente, haga clic en **Examinar** para seleccionar un certificado TLS/SSL desde el almacén de certificados **raíz** del equipo local.
 
 ### <a name="change-the-scale-out-master-certificate"></a>Cambiar el certificado del patrón de escalabilidad horizontal
 
 Puede que quiera cambiar el certificado del patrón de escalabilidad horizontal porque está a punto de expirar o por otras razones. Para cambiar el certificado del patrón de escalabilidad horizontal, siga estos pasos:
 
-#### <a name="1-create-an-ssl-certificate"></a>1. Cree un certificado SSL.
-Cree e instale un nuevo certificado SSL en el nodo principal mediante el siguiente comando:
+#### <a name="1-create-a-tlsssl-certificate"></a>1. Cree un certificado TLS/SSL.
+Cree e instale un nuevo certificado TLS/SSL en el nodo principal mediante el siguiente comando:
 
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -70,7 +70,7 @@ Elimine el enlace original y configure el nuevo enlace mediante los siguientes c
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
+netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
 Por ejemplo:
@@ -81,18 +81,18 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3. Actualizar el archivo de configuración del servicio de patrón de escalabilidad horizontal
-Actualice el archivo de configuración del servicio de patrón de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, en el nodo del patrón. Actualice **SSLCertThumbprint** a la huella digital del certificado SSL nuevo.
+Actualice el archivo de configuración del servicio de patrón de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, en el nodo del patrón. Actualice **SSLCertThumbprint** a la huella digital del certificado TLS/SSL nuevo.
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4. Reiniciar el servicio del patrón de escalabilidad horizontal
 
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Reconectar los trabajadores de escalabilidad horizontal con el patrón de escalabilidad horizontal
 Para cada trabajador de escalabilidad horizontal, elimine el trabajador y vuelva a agregarlo con [Scale Out Manager](integration-services-ssis-scale-out-manager.md) o siga estos pasos:
 
-a.  Instale el certificado SSL de cliente en el almacén raíz del equipo local en el nodo del trabajador.
+a.  Instale el certificado TLS/SSL de cliente en el almacén raíz del equipo local en el nodo del trabajador.
 
 b.  Actualice el archivo de configuración de mantenimiento del trabajador de escalabilidad horizontal.
 
-Actualice el archivo de configuración del servicio del trabajador de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, en el nodo del trabajador. Actualice **MasterHttpsCertThumbprint** a la huella digital del certificado SSL nuevo.
+Actualice el archivo de configuración del servicio del trabajador de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`, en el nodo del trabajador. Actualice **MasterHttpsCertThumbprint** a la huella digital del certificado TLS/SSL nuevo.
 
 c.  Reinicie el servicio del trabajador de escalabilidad horizontal.
 

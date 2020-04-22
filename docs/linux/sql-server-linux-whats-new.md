@@ -3,16 +3,16 @@ title: Novedades de SQL Server 2017 en Linux
 description: En este artículo se destacan las novedades de SQL Server 2017 en Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/23/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6874c34c70b562ef726bda5abbda2aebe615cc08
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a400a7b40f388fcc47f3a0d73c6917559afb069
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72890544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81308066"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Novedades de SQL Server 2017 en Linux
 
@@ -22,6 +22,14 @@ En este artículo se describen las características y los servicios principales 
 
 > [!NOTE]
 > Además de las funcionalidades de este artículo, se publican actualizaciones acumulativas a intervalos regulares. Estas actualizaciones acumulativas proporcionan muchas mejoras y correcciones. Para obtener más información sobre la versión de CU más reciente, vea [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). Para descargar los paquetes y consultar los problemas conocidos, vea [Notas de la versión](sql-server-linux-release-notes.md).
+
+## <a name="ubuntu-1804-supported"></a>Compatibilidad con Ubuntu 18.04
+
+A partir de SQL Server 2017 CU20, ahora se admite Ubuntu 18.04. Consulte nuestro Inicio rápido sobre [instalación de SQL Server y creación de una base de datos en Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-2017).
+
+## <a name="rhel-8-supported"></a>Compatibilidad con RHEL 8
+
+A partir de SQL Server 2017 CU20, ahora se admite RHEL 8. Consulte nuestro Inicio rápido sobre [instalación de SQL Server y creación de una base de datos en Red Hat](quickstart-install-connect-red-hat.md?view=sql-server-2017).
 
 ## <a name="sql-server-database-engine"></a>Motor de base de datos de SQL Server
 

@@ -1,5 +1,6 @@
 ---
-title: Uso de la autenticación integrada | Microsoft Docs
+title: Uso de la autenticación integrada
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921168"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629665"
 ---
 # <a name="using-integrated-authentication"></a>Uso de la autenticación integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -34,7 +35,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Al conectarse con un DSN, también puede agregar **Trusted_Connection= =yes** a la entrada DSN en `odbc.ini`.
   
-La opción `-E` de `sqlcmd` y la opción `-T` de `bcp` también pueden utilizarse para especificar la autenticación integrada. Para obtener más información, vea [Conectarse con **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) y [ Conectarse con **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
+La opción `-E` de `sqlcmd` y la opción `-T` de `bcp` también pueden utilizarse para especificar la autenticación integrada. Para obtener más información, vea [Conectarse con **sqlcmd**](connecting-with-sqlcmd.md) y [ Conectarse con **bcp**](connecting-with-bcp.md).
 
 Asegúrese de que el servidor principal de Linux que se va a conectar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya esté autenticado con el KDC de Kerberos.
   
@@ -64,7 +65,7 @@ Los administradores de bases de datos pueden crear una pista de auditoría del a
   
 Para iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se usa la cuenta del sistema, y no existe ninguna función en Linux para suplantar el contexto de seguridad. Por lo tanto, se requieren más acciones para determinar el usuario.
   
-Para auditar las actividades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nombre de usuarios distintos a los de la cuenta del sistema, la aplicación debe usar [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE AS**de**.  
+Para auditar las actividades de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nombre de usuarios distintos a los de la cuenta del sistema, la aplicación debe usar **EXECUTE AS** de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 Para mejorar su rendimiento, las aplicaciones pueden utilizar la agrupación de conexiones con la autenticación integrada y la auditoría. Pero combinar la agrupación de conexiones, la autenticación integrada y la auditoría trae consigo un riesgo de seguridad, ya que el administrador de controladores unixODBC permite que distintos usuarios reutilicen las conexiones agrupadas. Para obtener más información, consulte este artículo sobre la [agrupación de conexiones ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 
@@ -125,11 +126,11 @@ La hora del equipo con Linux o macOS y la del Centro de distribución de claves 
 
 Si se produce un error en la autenticación Kerberos, el controlador ODBC en Linux o macOS no usa la autenticación NTLM.  
 
-Para obtener más información sobre la autenticación de equipos con Linux o macOS con Active Directory, consulte [Autenticar clientes de Linux con Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) y [Procedimiento recomendado para integrar OS X con Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obtener más información sobre la configuración de Kerberos, consulte la [Documentación de Kerberos del MIT](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Para más información sobre la autenticación de equipos Linux o macOS con Active Directory, vea [Autenticar los clientes de Linux con Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). Para obtener más información sobre la configuración de Kerberos, consulte la [Documentación de Kerberos del MIT](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Consulte también  
-[Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[Instrucciones de programación](programming-guidelines.md)
 
-[Notas de la versión](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de la versión](release-notes-odbc-sql-server-linux-mac.md)
 
-[Uso de Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[Uso de Azure Active Directory](../using-azure-active-directory.md)

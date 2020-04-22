@@ -1,5 +1,6 @@
 ---
-title: 'Paso 4: Conexión resistente a SQL con PHP | Microsoft Docs'
+title: 'Paso 4: Conexión resistente a SQL con PHP'
+description: El paso 4 es un programa de demostración diseñado para mostrar de qué modo un error transitorio producido durante un intento de conexión provoca un reintento.
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9467a62d2d3ca1cbbd9b5a543c27f310f7d3ba60
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926894"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528357"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Paso 4: Conexión resistente a SQL con PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-El programa de demostración se ha diseñado para que un error transitorio (que es cualquier código de error con el prefijo '08' que se muestra en este [apéndice](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante un intento de conectar clientes potenciales a un reintento. Pero un error transitorio durante un comando de consulta provoca que el programa descarte la conexión y cree una nueva antes de reintentar el comando de consulta. No se recomienda ni lo contrario esta opción de diseño. El programa de demostración muestra la flexibilidad del diseño que se encuentra disponible.  
+El programa de demostración se ha diseñado para que un error transitorio (que es cualquier código de error con el prefijo '08' que se muestra en este [apéndice](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) durante un intento de conectar clientes potenciales a un reintento. Pero un error transitorio durante un comando de consulta provoca que el programa descarte la conexión y cree una nueva antes de reintentar el comando de consulta. No se recomienda ni se desaconseja esta opción de diseño. El programa de demostración muestra la flexibilidad del diseño que se encuentra disponible.  
   
 La longitud de este ejemplo de código se debe principalmente a la lógica de excepción catch.   
   

@@ -1,5 +1,6 @@
 ---
-title: Descripción de las transacciones XA | Microsoft Docs
+title: Descripción de las transacciones XA
+description: Microsoft JDBC Driver para SQL Server es compatible con las transacciones distribuidas opcionales de Java Platform, Enterprise Edition/JDBC 2.0.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917001"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528739"
 ---
 # <a name="understanding-xa-transactions"></a>Descripción de las transacciones XA
 
@@ -48,7 +49,7 @@ Las siguientes instrucciones adicionales se aplican a las transacciones fuerteme
   
 - MS DTC admite también las ramas XA estrechamente ligadas donde varias ramas XA con el mismo identificador de transacción global (GTRID) se asignan a un único identificador de transacción de MS DTC. Esta compatibilidad permite que varias ramas XA estrechamente ligadas vean los cambios respectivos en el administrador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- Una marca [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que las aplicaciones usen transacciones XA estrechamente ligadas, que tienen identificadores de rama de transacción XA diferentes (BQUAL), pero el mismo identificador de transacción global (GTRID, Global Transaction ID) e identificador de formato (FormatID). Para utilizar esa característica, debe establecer [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) en el parámetro de marcas del método XAResource.start:
+- Una marca [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que las aplicaciones usen transacciones XA estrechamente ligadas, que tienen identificadores de rama de transacción XA diferentes (BQUAL), pero el mismo identificador de transacción global (GTRID) e identificador de formato (FormatID). Para utilizar esa característica, debe establecer [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) en el parámetro de marcas del método XAResource.start:
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -144,11 +145,11 @@ Cuando se inicia, se establece un valor de tiempo de espera para cada transacci�
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     Significa que todas las transacciones tendrán un tiempo de espera de sesenta segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica un tiempo de espera, entonces se usará ese valor de tiempo de espera. No se exige ningún valor máximo para el tiempo de espera.  
+     Significa que todas las transacciones tendrán un tiempo de espera de 60 segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica un tiempo de espera, entonces se usará ese valor de tiempo de espera. No se exige ningún valor máximo para el tiempo de espera.  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Significa que todas las transacciones tendrán un tiempo de espera de treinta segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 60 segundos (el valor máximo).  
+     Significa que todas las transacciones tendrán un tiempo de espera de 30 segundos si el cliente no especifica ningún tiempo de espera. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 60 segundos (el valor máximo).  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   

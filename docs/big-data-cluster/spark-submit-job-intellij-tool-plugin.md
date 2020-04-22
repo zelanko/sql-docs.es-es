@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 604292d548d9368439b810fa4dfebf2d4388929e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244078"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634947"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Envío de trabajos de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en IntelliJ
 
@@ -33,9 +33,9 @@ Uno de los escenarios clave para [!INCLUDE[big-data-clusters-2019](../includes/s
 ## <a name="link-sql-server-big-data-cluster"></a>Vincular el clúster de macrodatos de SQL Server
 1. Abra la herramienta IntelliJ IDEA.
 
-2. Si usa un certificado autofirmado, deshabilite la validación de certificados SSL en el menú **Herramientas**, seleccione **Azure**, **Validate Spark Cluster SSL Certificate** (Validar certificado SSL de clúster de Spark) y, luego, **Deshabilitar**.
+2. Si usa un certificado autofirmado, deshabilite la validación de certificados TLS/SSL en el menú **Herramientas**, seleccione **Azure**, **Validate Spark Cluster SSL Certificate** (Validar certificado SSL de clúster de Spark) y, luego, **Deshabilitar**.
 
-    ![Vinculación de clúster de macrodatos de SQL Server: deshabilitación de SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![Vinculación de clúster de macrodatos de SQL Server: deshabilitación de TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Abra Azure Explorer desde el menú **Ver**, seleccione **Ventanas de herramientas** y, luego, **Azure Explorer**.
 4. Haga clic con el botón derecho en **SQL Server big data cluster** (Clúster de macrodatos de SQL Server) y seleccione **Link SQL Server big data cluster** (Vincular clúster de macrodatos de SQL Server). Escriba el **Servidor**, el **Nombre de usuario** y la **Contraseña** y haga clic en **Aceptar**.

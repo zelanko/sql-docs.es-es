@@ -9,12 +9,12 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc33ebc4ae271841cba2de73cb9168e1a41e7b69
-ms.sourcegitcommit: fbe0ab88fa8d5aa3ea96629f4ccfa4da5caf74f4
+ms.openlocfilehash: cd1ab5402383681172ff111b7daf5fcea675beaa
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81012431"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298215"
 ---
 # <a name="extensibility-framework-api-for-sql-server"></a>API Extensibility Framework para SQL Server
 
@@ -587,7 +587,7 @@ SQLRETURN InstallExternalLibrary(
 *LibraryErrorLength*  
 \[Salida\] Longitud de la cadena LibraryError.
 
-## <a name="uninstalllibrary"></a>UninstallLibrary
+## <a name="uninstallexternallibrary"></a>UninstallExternalLibrary
 
 Desinstala una biblioteca. La función es opcional y no requiere implementación. La implementación predeterminada es deshacer el trabajo realizado por la implementación predeterminada de InstallExternalLibrary. La implementación predeterminada elimina el contenido del archivo *LibraryName* en *LibraryInstallDirectory*.
 

@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a9874a24ae077b0381d8e8e8834b091a72953688
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 821d9e5339c70551a3503faa81ca15276892ed86
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980603"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529235"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Uso de un archivo de formato para asignar columnas de tabla a campos de un archivo de datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,20 +85,20 @@ Compare los cambios:
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **Después**
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 El archivo de formato modificado ahora refleja:
@@ -116,7 +116,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 Consulte [Sintaxis de esquema para archivos de formato XML](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) para terminología.  Abra `D:\BCP\myRemap.xml` en el Bloc de notas y realice las modificaciones siguientes:
 1. El orden en el que se declaran los elementos \<FIELD> en el formato de archivo es el orden en que esos campos aparecen en el archivo de datos, por tanto, invierta el orden de los elementos \<FIELD> con atributos de identificador 2 y 3.
 2. Asegúrese de que los valores de atributo de identificador \<FIELD> son secuenciales.
-3. El orden de los elementos \<COLUMN> del elemento \<ROW> define el orden en el que la operación masiva los devuelve.  El archivo de formato XML asigna a cada elemento \<COLUMN> un nombre local que no tiene ninguna relación con la columna de la tabla de destino de una operación de importación en bloque.  El orden de los elementos \<COLUMN> es independiente del orden de los elementos \<FIELD> de una definición \<RECORD>.  Cada elemento \<COLUMN> corresponde a un elemento \<FIELD> (cuyo identificador se especifica en el atributo SOURCE del elemento \<COLUMN>).  Por lo tanto, los valores de \<COLUMN> SOURCE son los únicos atributos que requieren revisión.  Invierta el orden de los atributos 2 y 3 de \<COLUMN> SOURCE.
+3. El orden de los elementos \<COLUMN> del elemento \<ROW> define el orden en el que la operación masiva los envía al destino.  El archivo de formato XML asigna a cada elemento \<COLUMN> un nombre local que no tiene ninguna relación con la columna de la tabla de destino de una operación de importación en bloque.  El orden de los elementos \<COLUMN> es independiente del orden de los elementos \<FIELD> de una definición \<RECORD>.  Cada elemento \<COLUMN> corresponde a un elemento \<FIELD> (cuyo identificador se especifica en el atributo SOURCE del elemento \<COLUMN>).  Por lo tanto, los valores de \<COLUMN> SOURCE son los únicos atributos que requieren revisión.  Invierta el orden de los atributos 2 y 3 de \<COLUMN> SOURCE.
 
 Compare los cambios.  
 **Antes**

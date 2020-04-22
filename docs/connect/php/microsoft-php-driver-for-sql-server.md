@@ -1,5 +1,6 @@
 ---
 title: Controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+description: Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP a través de extensiones PHP.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b13d533ae1acd2fee069a2418b70cf9489d74884
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922847"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486753"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Controladores de Microsoft para PHP para SQL Server
 
@@ -24,10 +25,10 @@ ms.locfileid: "80922847"
 Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones de PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para acceder a datos en instancias de Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias de PHP, para leer y escribir objetos grandes.  
   
 ## <a name="getting-started"></a>Introducción  
-* [Paso 1: configurar el entorno de desarrollo para el desarrollo de PHP](step-1-configure-development-environment-for-php-development.md)  
+* [Paso 1: Configuración del entorno de desarrollo para el desarrollo de PHP](step-1-configure-development-environment-for-php-development.md)  
 * [Paso 2: Creación de una base de datos para el desarrollo de PHP](step-2-create-a-sql-database-for-php-development.md)  
-* [Paso 3: prueba de concepto de la conexión a SQL con PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [Paso 4: conectarse con resistencia a SQL con PHP](step-4-connect-resiliently-to-sql-with-php.md)  
+* [Paso 3: Prueba de concepto de la conexión a SQL mediante PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [Paso 4: Conexión resistente a SQL con PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Documentación  
 * [Introducción](getting-started-with-the-php-sql-driver.md)

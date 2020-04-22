@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570757"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630652"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>Método de ConfigurationSetting: CreateSSLCertificateBinding
-  Crea un enlace de certificado SSL.  
+  Crea un enlace de certificado TLS/SSL.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  Dirección IP para la aplicación.  
   
  *Puerto*  
- Puerto SSL asociado al enlace.  
+ Puerto TLS asociado al enlace.  
   
  *Lcid*  
  Configuración regional que se utilizará para los mensajes de error devueltos.  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>Observaciones  
  Este método agrega un enlace a rsreportserver.config para la aplicación. Si no existe todavía un enlace en HTTP.SYS, se crea ahí.  
   
- Antes de crear el enlace, la llamada al método examina las reservas de direcciones URL para la aplicación especificada con el fin de determinar si el enlace de certificado SSL es válido.  
+ Antes de crear el enlace, la llamada de método examina las reservas de direcciones URL para la aplicación especificada con el fin de determinar si el enlace de certificado TLS/SSL es válido.  
   
  Las condiciones siguientes se validan y pueden dar lugar a errores:  
   

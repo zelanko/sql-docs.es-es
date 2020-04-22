@@ -1,5 +1,6 @@
 ---
 title: Controlador Python para SQL Server | Microsoft Docs
+description: Puede conectarse a una instancia de SQL Database mediante Python en Windows, Linux o macOS.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be70fb850262c6825ea45fdf5533f0304b702146
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926757"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487874"
 ---
 # <a name="python-sql-driver"></a>Controlador de SQL para Python
 
 ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[Para instalar el controlador de SQL para Python](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Puede conectarse a una instancia de SQL Database mediante Python en Windows, Linux o Mac.   
+Puede conectarse a una instancia de SQL Database mediante Python en Windows, Linux o macOS.  
   
 ## <a name="getting-started"></a>Introducción  
 Hay varios controladores de SQL para Python disponibles. Sin embargo, Microsoft dedica sus esfuerzos de prueba y su confianza en el controlador **pyodbc**. Elija un controlador y configure su entorno de desarrollo en consecuencia:

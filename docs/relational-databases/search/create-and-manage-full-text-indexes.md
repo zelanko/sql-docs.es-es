@@ -1,7 +1,7 @@
 ---
 title: Creación y administración de índices de texto completo | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: a76112a515f33bc169883c60de68742239c8d4e1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80530941"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304450"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Para obtener más información, vea [Populate Full-Text Indexes](../../relationa
     |----------|-----------------|  
     |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de cambios**<br /><br /> **Lista de propiedades de búsqueda**|  
     |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Populate Full-Text Indexes](populate-full-text-indexes.md) (Rellenar índices de texto completo).|
-    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md) (Rellenar índices de texto completo).<br /><br /> Nota: Después de salir del cuadro de diálogo **Propiedades del índice de texto completo** , cualquier programación que se cree se asociará a un trabajo del Agente SQL Server (Iniciar rellenado incremental de tablas en *nombre_basededatos*.*nombre_tabla*).|  
+    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Populate Full-Text Indexes](../../relational-databases/search/populate-full-text-indexes.md) (Rellenar índices de texto completo).<br /><br /> Nota: Después de salir del cuadro de diálogo **Propiedades del índice de texto completo**, cualquier programación que se cree se asocia a un trabajo del Agente SQL Server (Iniciar rellenado incremental de tablas en *database_name*.*table_name*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  
   
@@ -117,15 +117,15 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  **Ejemplo**  
   
- El ejemplo siguiente consulta si el índice `PK_Document_DocumentID` se usa para exigir la exclusividad de la columna de clave de texto completo como sigue:  
+ El ejemplo siguiente consulta si el índice `PK_Document_DocumentNode` se usa para exigir la exclusividad de la columna de clave de texto completo como sigue:  
   
 ```sql  
 USE AdventureWorks  
 GO  
-SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey' )  
 ```  
   
- Este ejemplo devuelve 1 si el índice `PK_Document_DocumentID` se utiliza para exigir la exclusividad de la columna de clave de texto completo. De lo contrario, devuelve 0 o NULL. NULL implica que está usando un nombre de índice no válido, el nombre de índice no corresponde a la tabla, la tabla no existe, etcétera.  
+ Este ejemplo devuelve 1 si el índice `PK_Document_DocumentNode` se utiliza para exigir la exclusividad de la columna de clave de texto completo. De lo contrario, devuelve 0 o NULL. NULL implica que está usando un nombre de índice no válido, el nombre de índice no corresponde a la tabla, la tabla no existe, etcétera.  
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>Buscar el identificador de la columna de clave de texto completo  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  En el ejemplo siguiente se devuelve el identificador de la columna de clave de texto completo o NULL. NULL implica que está usando un nombre de índice no válido, el nombre de índice no corresponde a la tabla, la tabla no existe, etcétera.  
   
-```sql  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -162,7 +162,7 @@ SELECT @key_column AS 'Unique Key Column';
 GO  
 ```  
   
- Este ejemplo devuelve una columna de conjunto de resultados denominada `Unique Key Column`, que muestra una única fila que contiene el nombre de la columna de clave única de la tabla Document, DocumentID. Tenga en cuenta que, si esta consulta contuviera un nombre de índice no válido, el nombre del índice no correspondiera a la tabla, la tabla no existiera, etc., devolvería NULL.  
+ Este ejemplo devuelve una columna de conjunto de resultados denominada `Unique Key Column`, que muestra una única fila que contiene el nombre de la columna de clave única de la tabla Document, DocumentNode. Tenga en cuenta que, si esta consulta contuviera un nombre de índice no válido, el nombre del índice no correspondiera a la tabla, la tabla no existiera, etc., devolvería NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indexar columnas varbinary(max) y xml  
  Si una columna **varbinary(max)** , **varbinary**o **xml** está indexada con texto completo, se puede consultar con los predicados de texto completo (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE), igual que cualquier otra columna indexada de texto completo.

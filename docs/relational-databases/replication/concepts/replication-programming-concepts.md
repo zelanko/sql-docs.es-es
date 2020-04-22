@@ -15,12 +15,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91277deb1aab5916f23d52fed3f8d8f0530b6fab
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285790"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529122"
 ---
 # <a name="replication-programming-concepts"></a>Conceptos de la programación de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "76285790"
   
 2.  Además del acceso a datos típico requerido para una aplicación de ventas, esta aplicación debería permitir que un vendedor sincronizara la suscripción de extracción a petición haciendo clic en un botón. Puesto que un representante de ventas instalará y ejecutará la aplicación, también necesita poder configurar una suscripción y aplicar la instantánea inicial en el cliente. Opcionalmente, la aplicación utilizará la infraestructura que proporciona Windows para detectar la conectividad inalámbrica y sincronizar automáticamente la suscripción cuando se descubra una conexión.  
   
-3.  Siga todas las instrucciones de seguridad para la replicación, incluido el uso de la autenticación de Windows y una red privada virtual (VPN) al conectarse al publicador. Si está implementando la sincronización web, utilice una conexión de capa de sockets seguros (SSL). Para más información, consulte [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
+3.  Siga todas las instrucciones de seguridad para la replicación, incluido el uso de la autenticación de Windows y una red privada virtual (VPN) al conectarse al publicador. Si implementa la sincronización web, use una conexión con la Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL). Para más información, consulte [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
   
 4.  Para aprovechar las características de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], la aplicación se desarrolla utilizando un lenguaje de código administrado.  
   

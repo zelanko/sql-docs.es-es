@@ -1,5 +1,6 @@
 ---
-title: Carga de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+title: Carga de los controladores de Microsoft para PHP
+description: En esta página se proporcionan instrucciones para cargar los controladores de Microsoft para PHP para SQL Server en el espacio del proceso PHP.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce26b4800250cab25a6db6f5b3ed7ebf0b1d9bd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73899b2ea917c3981b0c696b78de453eacbf894d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922870"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632779"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Carga de los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 En esta página se proporcionan instrucciones para cargar los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] en el espacio del proceso PHP.  
   
-Puede descargar los controladores pregenerados para su plataforma desde la página del proyecto de Github [Controladores de Microsoft para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases). Cada paquete de instalación contiene los archivos de los controladores SQLSRV y PDO_SQLSRV en las variantes de subprocesos y de no subproceso. En Windows, también están disponibles en variantes de 32 bits y de 64 bits. Consulte [Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) para obtener una lista de los archivos de controlador contenidos en cada paquete. El archivo de controlador debe coincidir con la versión, la arquitectura y los subprocesos de PHP del entorno PHP.
+Puede descargar los controladores pregenerados para su plataforma desde la página del proyecto de GitHub [Controladores de Microsoft para PHP para SQL Server](https://github.com/Microsoft/msphpsql/releases). Cada paquete de instalación contiene los archivos de los controladores SQLSRV y PDO_SQLSRV en las variantes de subprocesos y de no subproceso. En Windows, también están disponibles en variantes de 32 y 64 bits. Consulte [Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](system-requirements-for-the-php-sql-driver.md) para obtener una lista de los archivos de controlador contenidos en cada paquete. El archivo de controlador debe coincidir con la versión, la arquitectura y los subprocesos de PHP del entorno PHP.
 
-En Linux y macOS, los controladores se pueden instalar alternativamente mediante PECL, tal y como se encuentra en el [tutorial de instalación](../../connect/php/installation-tutorial-linux-mac.md).
+En Linux y macOS, los controladores se pueden instalar alternativamente mediante PECL, tal y como se encuentra en el [tutorial de instalación](installation-tutorial-linux-mac.md).
 
 También puede crear los controladores desde el código fuente al crear PHP o mediante `phpize`. Si opta por crear los controladores desde el código fuente, tiene la opción de crearlos estáticamente en PHP en lugar de crearlos como extensiones compartidas agregando `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (en Linux y macOS) o `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (en Windows) al comando `./configure` al crear PHP. Para más información sobre el sistema de creación de PHP y `phpize`, consulte la [documentación de PHP](http://php.net/manual/install.php).
   
@@ -63,7 +64,7 @@ Para cargar el controlador de SQLSRV cuando se inicie PHP, mueva primero un arch
     ```
     En Linux, si ha instalado PHP con el administrador de paquetes del sistema, PDO probablemente se instala como una extensión cargada dinámicamente denominada pdo.so. La extensión PDO debe cargarse antes que la extensión PDO_SQLSRV; de lo contrario, se producirá un error de carga. Normalmente, las extensiones se cargan mediante archivos .ini individuales, y estos archivos se leen después del archivo php.ini. Por lo tanto, si pdo.so se carga a través de su propio archivo .ini, se requiere una carga de archivos independiente en el controlador PDO_SQLSRV después de PDO. 
 
-    Para averiguar en qué directorio se encuentran los archivos .ini específicos de la extensión, ejecute `php --ini` y anote el directorio que aparece en `Scan for additional .ini files in:`. Busque el archivo que carga pdo.so; es probable que tenga como prefijo un número, como 10-pdo.ini. El prefijo numérico indica el orden de carga de los archivos .ini, mientras que los archivos que no tienen un prefijo numérico se cargan alfabéticamente. Cree un archivo para cargar el archivo del controlador PDO_SQLSRV llamado 30-pdo_sqlsrv. ini (cualquier número mayor que el que se utilice como prefijo para PDO.ini funciona) o pdo_sqlsrv. ini (si el archivo pdo.ini no tiene un número como prefijo) y agréguele la línea siguiente, cambiando el nombre de archivo según corresponda:  
+    Para averiguar en qué directorio se encuentran los archivos .ini específicos de la extensión, ejecute `php --ini` y anote el directorio que aparece en `Scan for additional .ini files in:`. Busque el archivo que carga pdo.so. Es probable que tenga como prefijo un número, como 10-pdo.ini. El prefijo numérico indica el orden de carga de los archivos .ini, mientras que los archivos que no tienen un prefijo numérico se cargan alfabéticamente. Cree un archivo para cargar el archivo del controlador PDO_SQLSRV llamado 30-pdo_sqlsrv. ini (cualquier número mayor que el que se utilice como prefijo para PDO.ini funciona) o pdo_sqlsrv. ini (si el archivo pdo.ini no tiene un número como prefijo) y agréguele la línea siguiente, cambiando el nombre de archivo según corresponda:  
     ```
     extension=php_pdo_sqlsrv_72_nts.so
     ```
@@ -83,13 +84,13 @@ Para cargar el controlador de SQLSRV cuando se inicie PHP, mueva primero un arch
 Para obtener más información sobre las directivas de **php.ini**, vea el artículo [Descripción de las directivas del núcleo de php.ini](https://php.net/manual/en/ini.core.php).  
   
 ## <a name="see-also"></a>Consulte también  
-[Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Introducción a los controladores de Microsoft para PHP para SQL Server](getting-started-with-the-php-sql-driver.md)
 
-[Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](system-requirements-for-the-php-sql-driver.md)
 
-[Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guía de programación para los controladores de Microsoft para PHP para SQL Server](programming-guide-for-php-sql-driver.md)
 
-[Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+[Referencia de API del controlador SQLSRV](sqlsrv-driver-api-reference.md)
 
-[Referencia de la API del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[Referencia de la API del controlador PDO_SQLSRV](pdo-sqlsrv-driver-reference.md)  
   

@@ -1,5 +1,6 @@
 ---
-title: 'Paso 3: Prueba de concepto de la conexión a SQL con pymssql | Microsoft Docs'
+title: 'Paso 3: Conexión con SQL mediante pymssql'
+description: El paso 3 es una prueba de concepto, que muestra cómo puede conectarse a SQL Server mediante Python y pymssql. Los ejemplos básicos demuestran la selección e inserción de datos.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2246ddeb-7c2f-46f3-8a91-cdd718d39b40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea474658e57c3f61df7eb95866ea4688c942a750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1c75d13e9e44632c411639385227776f54ca1a9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913115"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528569"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Paso 3: Prueba de concepto de la conexión a SQL con pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -50,7 +51,7 @@ La función [cursor.execute](https://pypi.org/project/pymssql/) puede usarse par
   
 ## <a name="step-3--insert-a-row"></a>Paso 3:  Inserción de una fila  
   
-En este ejemplo se muestra cómo ejecutar la instrucción [INSERT](../../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros que protejan la aplicación ante el valor de [inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+En este ejemplo, verá cómo ejecutar una instrucción [INSERT](../../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros. El paso de parámetros como valores protege la aplicación de la [inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).  
   
   
 ```python
@@ -66,7 +67,7 @@ En este ejemplo se muestra cómo ejecutar la instrucción [INSERT](../../../t-sq
     conn.close()
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Paso 4:  Reversión de una transacción  
+## <a name="step-4-roll-back-a-transaction"></a>Paso 4: Reversión de una transacción  
   
 Este ejemplo de código muestra el uso de transacciones con las que podrá realizar lo siguiente:  
   

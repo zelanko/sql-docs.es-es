@@ -1,5 +1,6 @@
 ---
-title: Uso de la API de copia masiva para la operación de inserción por lotes para el controlador JDBC de MSSQL | Microsoft Docs
+title: API de copia masiva para la inserción por lotes en JDBC
+description: Microsoft JDBC Driver para SQL Server admite el uso de la API de copia masiva para las operaciones de inserción por lotes en Azure Data Warehouse.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62843af006d730c3994519fe4c31182805923478
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916891"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633996"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso de la API de copia masiva para la operación de inserción por lotes
 
@@ -141,4 +142,4 @@ Finished. Time taken : 1058 milliseconds.
 
 ## <a name="see-also"></a>Consulte también
 
-[Mejora del rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Mejora del rendimiento y la confiabilidad con el controlador JDBC](improving-performance-and-reliability-with-the-jdbc-driver.md)

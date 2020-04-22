@@ -1,5 +1,6 @@
 ---
 title: rsProcessingError - Error de Reporting Services | Microsoft Docs
+description: 'En esta página de referencia de error, obtenga información sobre el identificador de evento "rsProcessingError": Se produjeron errores en el procesamiento de informes de SQL Server Reporting Services.'
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573820"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487224"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
     
@@ -53,7 +54,7 @@ ms.locfileid: "65573820"
   
 -   Se ha detectado que un parámetro con el conjunto de propiedades que admite valores NULL establecido en **False** tiene un valor NULL en el parámetro.  
   
--   Una expresión para la propiedad Hidden de una región de datos contiene un error: Referencia de objeto no definida a una instancia de un objeto.  
+-   Una presión para la propiedad Hidden de una región de datos contiene un error: Referencia a objeto no establecida como instancia de un objeto.  
   
 -   Una expresión incluía una llamada de función no válida o un error de sintaxis.  
   

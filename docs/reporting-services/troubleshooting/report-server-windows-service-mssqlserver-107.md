@@ -1,5 +1,6 @@
 ---
 title: Servicio Servidor de informes de Windows (MSSQLServer) 107 | Microsoft Docs
+description: 'En esta página de referencia de error, obtenga información sobre el identificador de evento 107: El servicio Servidor de informes de Windows (SQL Server) no se puede conectar a la base de datos del servidor de informes.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0133ef77db176910c33ae8e78174cb5c3e507c3c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3d37bca818ecd0641f35cc3ff8a08493f7037a9a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575547"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487769"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Servicio Servidor de informes de Windows (MSSQLServer) 107
     

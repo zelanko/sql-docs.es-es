@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 928e7eafe6de60c71f3a79cef89eb93d5521e2fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903789"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305256"
 ---
 # <a name="application-roles"></a>Roles de la aplicación
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "72903789"
  En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la única forma de que un usuario vuelva a adquirir su contexto de seguridad original después de iniciar un rol de aplicación consiste en desconectarse y volver a conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], **sp_setapprole** tiene una opción que crea una cookie. La cookie contiene información sobre el contexto anterior al momento en que se habilita el rol de aplicación. **sp_unsetapprole** puede usar la cookie para revertir la sesión a su contexto original. Para obtener más información sobre esta nueva opción y obtener un ejemplo, vea [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 > [!IMPORTANT]  
->  **SqlClient** no admite la opción **encrypt**de ODBC. Cuando transmita información confidencial a través de una red, utilice SSL (Capa de sockets seguros) o IPSec para cifrar el canal. Si necesita conservar las credenciales de la aplicación cliente, cífrelas mediante las funciones de la API de criptografía. En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y versiones posteriores, el parámetro *password* se almacena como un hash unidireccional.  
+>  **SqlClient** no admite la opción **encrypt**de ODBC. Cuando transmita información confidencial a través de una red, utilice Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL), o IPSec para cifrar el canal. Si necesita conservar las credenciales de la aplicación cliente, cífrelas mediante las funciones de la API de criptografía. En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y versiones posteriores, el parámetro *password* se almacena como un hash unidireccional.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

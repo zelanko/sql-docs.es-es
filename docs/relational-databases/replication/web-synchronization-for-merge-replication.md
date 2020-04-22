@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2374100459ea4e6ee05a8bba8e77919ec9185898
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136967"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529135"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronización web para la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68136967"
   
  Por ejemplo, un representante de ventas puede utilizar la sincronización web durante sus viajes. La empresa [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]tiene representantes de ventas que viajan para visitar varias tiendas y proveedores de su región. En viajes más largos, los representantes se hospedan en hoteles y necesitan una manera cómoda de cargar datos de ventas y descargar cualquier actualización de productos al final de cada día.  
   
- El departamento de TI de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] ha configurado cada equipo portátil con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ha habilitado la replicación de mezcla para que utilice la sincronización web. El Agente de mezcla de cada equipo portátil tiene una dirección URL de Internet que apunta a los componentes de replicación instalados en un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Estos componentes sincronizan el suscriptor con el publicador. Ahora cada representante se puede conectar a través de cualquier conexión de Internet disponible sin utilizar una conexión remota de acceso telefónico y puede cargar y descargar los datos que desee. La conexión de Internet utiliza SSL (Capa de sockets seguros), por lo que no es necesaria una red privada virtual (VPN).  
+ El departamento de TI de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] ha configurado cada equipo portátil con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ha habilitado la replicación de mezcla para que utilice la sincronización web. El Agente de mezcla de cada equipo portátil tiene una dirección URL de Internet que apunta a los componentes de replicación instalados en un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Estos componentes sincronizan el suscriptor con el publicador. Ahora cada representante se puede conectar a través de cualquier conexión de Internet disponible sin utilizar una conexión remota de acceso telefónico y puede cargar y descargar los datos que desee. La conexión de Internet utiliza la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL), por lo que no es necesaria una red privada virtual (VPN).  
   
  Para obtener información sobre cómo configurar los componentes necesarios para la sincronización web, consulte [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md), [Configurar IIS para la sincronización web](../../relational-databases/replication/configure-iis-for-web-synchronization.md) y [Configurar IIS 7 para la sincronización web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   

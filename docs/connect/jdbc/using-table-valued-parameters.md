@@ -1,5 +1,6 @@
 ---
-title: Uso de parámetros con valores de tabla | Microsoft Docs
+title: Empleo de parámetros con valores de tabla
+description: Los parámetros con valores de tabla proporcionan una manera eficaz de enviar varias filas de datos de un cliente a SQL Server en un único comando parametrizado.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a4a46120991400f8e76c91e8a0e9b00ada2eac0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923860"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631945"
 ---
 # <a name="using-table-valued-parameters"></a>Empleo de parámetros con valores de tabla
 
@@ -48,7 +49,7 @@ Antes de la incorporación de los parámetros con valores de tabla a SQL Server�
   
 - Crear una serie de instrucciones SQL individuales para las modificaciones de datos que afecten a varias filas. Los cambios se pueden enviar al servidor individualmente o por lotes en grupos. Sin embargo, incluso cuando se envían en lotes que contienen varias instrucciones, cada instrucción se ejecuta por separado en el servidor.  
   
-- Use el programa de la utilidad BCP o [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) para cargar muchas filas de datos en una tabla. Aunque esta técnica es muy eficaz, no admite el procesamiento del lado servidor a menos que los datos se carguen en una tabla temporal o una variable de tabla.
+- Use el programa de la utilidad BCP o [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) para cargar muchas filas de datos en una tabla. Aunque esta técnica es muy eficaz, no admite el procesamiento del lado servidor a menos que los datos se carguen en una tabla temporal o una variable de tabla.
   
 ## <a name="creating-table-valued-parameter-types"></a>Creación de tipos de parámetro con valores de tabla  
 
@@ -314,4 +315,4 @@ Se han agregado los siguientes métodos a esta clase para admitir el paso de par
 
 ## <a name="see-also"></a>Consulte también
 
-[Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Introducción al controlador JDBC](overview-of-the-jdbc-driver.md)  

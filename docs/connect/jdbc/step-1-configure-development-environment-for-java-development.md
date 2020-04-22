@@ -1,5 +1,6 @@
 ---
-title: 'Paso 1: Configuración del entorno de desarrollo para el desarrollo en Java | Microsoft Docs'
+title: 'Paso 1: Configuración del entorno para Java'
+description: El paso 1 de esta guía de introducción implica la instalación de Java, Microsoft JDBC Driver para SQL Server y la configuración del entorno de desarrollo.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee43294f88a00dc6294872020610268ccd53b74d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e5b9aba9e329ec2a2ecda990ca174ddb998e63a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909275"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529449"
 ---
 # <a name="step-1-configure-development-environment-for-java-development"></a>Paso 1: configuración del entorno de desarrollo para el desarrollo de Java
   

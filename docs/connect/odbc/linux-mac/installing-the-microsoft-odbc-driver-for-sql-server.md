@@ -1,5 +1,6 @@
 ---
 title: Instalación de Microsoft ODBC Driver for SQL Server (Linux)
+description: Aprenda a instalar el controlador Microsoft ODBC Driver for SQL Server en clientes de Linux para habilitar la conectividad de base de datos.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61639d78617cf1b0611729d17010962766d1bf1c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a26c8282ec5afe00c3f23987fb82e3759c77c76e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902081"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487787"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>Instalación de Microsoft ODBC Driver for SQL Server (Linux)
 
@@ -201,7 +202,7 @@ En las secciones siguientes se proporcionan instrucciones para instalar versione
 - [Microsoft ODBC Driver 13 for SQL Server](#13)
 - [Microsoft ODBC Driver 11 for SQL Server](#11)
 
-## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
+## <a name="odbc-131"></a><a id="13.1"></a> ODBC 13.1
 
 En las secciones siguientes se explica cómo instalar Microsoft ODBC Driver 13.1 desde el shell de Bash para diferentes distribuciones de Linux.
 
@@ -427,7 +428,7 @@ Si prefiere o necesita que la versión 13 del controlador ODBC de [!INCLUDE[msCo
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Cada uno de estos paquetes a su vez tiene sus propias dependencias, que pueden o no estar presentes en el sistema. Para una solución general de este problema, consulte la documentación del administrador de paquetes de su distribución: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) y [SUSE](https://en.opensuse.org/Portal:Zypper).
+Cada uno de estos paquetes a su vez tiene sus propias dependencias, que pueden o no estar presentes en el sistema. Para una solución general de este problema, consulte la documentación del administrador de paquetes de su distribución: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) y [SUSE](https://en.opensuse.org/Portal:Zypper)
 
 También es común descargar manualmente todos los paquetes dependientes y colocarlos juntos en el equipo de instalación, luego instalar manualmente cada paquete a su vez, finalizando con el paquete de la versión 13 del controlador ODBC de [!INCLUDE[msCoName](../../../includes/msconame_md.md)].
 

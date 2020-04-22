@@ -1,5 +1,6 @@
 ---
-title: Instrucciones de programación (ODBC Driver para SQL Server) | Microsoft Docs
+title: Instrucciones de programación (controlador ODBC)
+description: Las características de programación de Microsoft ODBC Driver for SQL Server en macOS y Linux se basan en ODBC en SQL Server Native Client (ODBC).
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219241"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632795"
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
@@ -49,7 +50,7 @@ Las siguientes secciones de la documentación de [!INCLUDE[ssNoVersion](../../..
 Las siguientes características no se han verificado para funcionar correctamente con esta versión del controlador ODBC en macOS y Linux:
 
 -   Conexión de clúster de conmutación por error
--   [Resolución de IP de red transparente](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (antes, versión 17 del controlador ODBC)
+-   [Resolución de IP de red transparente](../using-transparent-network-ip-resolution.md) (antes, versión 17 del controlador ODBC)
 -   [Seguimiento de controlador avanzado](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 Las siguientes características no están disponibles en esta versión del controlador ODBC en macOS y Linux: 
@@ -108,7 +109,7 @@ Para la versión 17 del controlador ODBC, se admiten datos de SQLCHAR en una de
 
 Al establecer la conexión, el controlador detecta la configuración regional actual del proceso en el que se carga. Si utiliza una de las codificaciones anteriores, el controlador utiliza esa codificación para los datos de SQLCHAR (caracteres estrechos). En caso contrario, el valor predeterminado es UTF-8. Dado que todos los procesos empiezan de forma predeterminada en la configuración regional "C" (y esto hace que el valor predeterminado del controlador sea UTF-8), si una aplicación necesita utilizar una de las codificaciones anteriores, debe usar la función **setlocale** para establecer la configuración regional adecuadamente antes de conectarse, ya sea especificando la configuración regional deseada de forma explícita o mediante una cadena vacía, como `setlocale(LC_ALL, "")`, para usar la configuración regional del entorno.
 
-Por lo tanto, en un entorno típico de Linux o Mac, donde la codificación es UTF-8, los usuarios de la versión 17 del controlador ODBC que actualizan desde la versión 13 o 13.1 no observarán ninguna diferencia. Sin embargo, las aplicaciones que usan una codificación que no es UTF-8 en la lista anterior a través de `setlocale()` deben usar esa codificación para los datos hacia y desde el controlador en lugar de UTF-8.
+Por lo tanto, en un entorno típico de Linux o macOS, donde la codificación es UTF-8, los usuarios de la versión 17 del controlador ODBC que actualizan desde la versión 13 o 13.1 no observarán ninguna diferencia. Sin embargo, las aplicaciones que usan una codificación que no es UTF-8 en la lista anterior a través de `setlocale()` deben usar esa codificación para los datos hacia y desde el controlador en lugar de UTF-8.
 
 Los datos de SQLWCHAR deben tener la codificación UTF-16LE (Little Endian).
 
@@ -147,8 +148,8 @@ En el momento de redactar este documento, el tamaño predeterminado de la pila e
 3.  Al usar el controlador con aplicaciones multiproceso, la validación del identificador de unixODBC puede convertirse en un cuello de botella de rendimiento. En estos escenarios, se puede obtener significativamente más rendimiento compilando unixODBC con la opción `--enable-fastvalidate`. Sin embargo, tenga cuidado de que esto puede hacer que las aplicaciones que pasan identificadores no válidos a las API de ODBC se bloqueen en lugar de devolver errores de `SQL_INVALID_HANDLE`.
 
 ## <a name="see-also"></a>Consulte también  
-[Preguntas más frecuentes](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[Preguntas más frecuentes](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[Problemas conocidos en esta versión del controlador](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[Problemas conocidos en esta versión del controlador](known-issues-in-this-version-of-the-driver.md)
 
-[Notas de la versión](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Notas de la versión](release-notes-odbc-sql-server-linux-mac.md)

@@ -23,12 +23,12 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99800a06e04d5f5d4f9651e32d0a143e90331b09
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68034523"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528159"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -122,4 +122,8 @@ FROM ExpenseQueue;
  Para más información, vea [Service Broker con grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  
   
   
+## <a name="next-steps"></a>Pasos siguientes
+
+El uso más común de Service Broker es para [las notificaciones de eventos](../../relational-databases/service-broker/event-notifications.md). Aprenda a [implementar notificaciones de eventos](../../relational-databases/service-broker/implement-event-notifications.md) o [configurar seguridad de diálogo](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md), o bien [obtenga más información](../../relational-databases/service-broker/get-information-about-event-notifications.md). 
+
 

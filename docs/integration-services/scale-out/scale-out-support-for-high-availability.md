@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286889"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487994"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -53,7 +53,7 @@ Este nombre de host es el punto de conexión principal de Escalabilidad horizont
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Instalación del Servicio principal de escalabilidad horizontal en el nodo secundario
 Instale los servicios de motor de base de datos de SQL Server, Integration Services y el Servicio principal de escalabilidad horizontal en el nodo secundario del servicio. 
 
-Use el mismo certificado del Servicio principal de escalabilidad horizontal que usó con el nodo principal. Exporte el certificado SSL del Servicio principal de escalabilidad horizontal en el nodo principal con una clave privada e instálelo en el almacén de certificados raíz del equipo local en el nodo secundario. Seleccione este certificado cuando instale el Servicio principal de escalabilidad horizontal en el nodo secundario.
+Use el mismo certificado del Servicio principal de escalabilidad horizontal que usó con el nodo principal. Exporte el certificado TLS/SSL del patrón de escalabilidad horizontal en el nodo principal con una clave privada e instálelo en el almacén de certificados raíz del equipo local en el nodo secundario. Seleccione este certificado cuando instale el Servicio principal de escalabilidad horizontal en el nodo secundario.
 
 ![Configuración del patrón HA 2](media/ha-master-config2.PNG)
 

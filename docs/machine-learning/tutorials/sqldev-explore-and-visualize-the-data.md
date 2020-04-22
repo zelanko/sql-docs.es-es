@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116108"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632115"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lección 1: exploración y visualización de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ En el conjunto de datos públicos original, los identificadores de taxis y los r
 > A partir de SQL Server 2019, el mecanismo de aislamiento ha cambiado. Por lo tanto, debe conceder los permisos adecuados al directorio donde se almacena el archivo de trazado. Para más información sobre cómo establecer estos permisos, consulte [la sección sobre los permisos de archivo en SQL Server 2019 en Windows: Cambios de aislamiento para Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Para crear el trazado, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), una de las funciones mejoradas de R proporcionadas en [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Este paso representa un histograma en función de los datos de una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede ajustar esta función en un procedimiento almacenado, **PlotRxHistogram**.
+Para crear el trazado, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), una de las funciones mejoradas de R proporcionadas en [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Este paso representa un histograma en función de los datos de una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)]. Puede ajustar esta función en un procedimiento almacenado, **RxPlotHistogram**.
 
 1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el Explorador de objetos, haga clic con el botón derecho en la base de datos **NYCTaxi_Sample** y seleccione **Nueva consulta**.
 
-2. Pegue el siguiente script para crear un procedimiento almacenado que trace el histograma. Este ejemplo se denomina **RPlotRxHistogram*.
+2. Pegue el siguiente script para crear un procedimiento almacenado que trace el histograma. Este ejemplo se denomina **RxPlotHistogram**.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]

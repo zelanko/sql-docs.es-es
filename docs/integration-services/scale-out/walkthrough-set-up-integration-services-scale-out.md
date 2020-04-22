@@ -5,17 +5,17 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288749"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488004"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Tutorial: Configuración de Escalabilidad horizontal de Integration Services (SSIS)
 
@@ -66,9 +66,9 @@ Para instalar la característica de patrón de escalabilidad horizontal, use el 
 
     ![Configuración principal](media/master-config.PNG "Configuración principal")
 
-4.  Especifique el certificado SSL usado para proteger la comunicación entre el patrón y el trabajo de escalabilidad horizontal; para ello, siga uno de los siguientes pasos.
-    * Deje que el proceso de instalación cree un certificado SSL autofirmado predeterminado; para ello, haga clic en **Crear un nuevo certificado SSL**.  El certificado predeterminado se instala en Entidades de certificación raíz de confianza, Equipo local. Puede especificar los CN en este certificado. El nombre de host del punto de conexión principal debe incluirse en los CN. De forma predeterminada, se incluyen el nombre de la máquina y la dirección IP del nodo principal.
-    * Para seleccionar un certificado SSL existente del equipo local, haga clic en **Usar un certificado SSL existente** y en **Examinar**. La huella digital del certificado aparece en el cuadro de texto. Haga clic en **Examinar** para que se muestren los certificados almacenados en Entidades de certificación raíz de confianza, Equipo local. El certificado que vaya a seleccionar debe almacenarse aquí.       
+4.  Especifique el certificado TLS/SSL usado para proteger la comunicación entre el patrón y el trabajo de escalabilidad horizontal; para ello, siga uno de los siguientes pasos.
+    * Deje que el proceso de instalación cree un certificado TLS/SSL autofirmado predeterminado; para ello, haga clic en **Crear un nuevo certificado SSL**.  El certificado predeterminado se instala en Entidades de certificación raíz de confianza, Equipo local. Puede especificar los CN en este certificado. El nombre de host del punto de conexión principal debe incluirse en los CN. De forma predeterminada, se incluyen el nombre de la máquina y la dirección IP del nodo principal.
+    * Para seleccionar un certificado TLS/SSL existente del equipo local, haga clic en **Usar un certificado SSL existente** y en **Examinar**. La huella digital del certificado aparece en el cuadro de texto. Haga clic en **Examinar** para que se muestren los certificados almacenados en Entidades de certificación raíz de confianza, Equipo local. El certificado que vaya a seleccionar debe almacenarse aquí.       
 
     ![Configuración principal 2](media/master-config-2.PNG "Configuración principal 2")
   
@@ -118,14 +118,14 @@ Para instalar la característica de trabajador de escalado horizontal, use el As
     > [!NOTE]
     > También puede omitir la configuración del trabajador en este momento y asociar el trabajador de escalabilidad horizontal al patrón de escalabilidad horizontal usando [Scale Out Manager](integration-services-ssis-scale-out-manager.md) tras la instalación.
 
-4. Para un entorno de **varios equipos**, especifique el certificado SSL de cliente que se usará para validar el patrón de escalabilidad horizontal. Para un entorno de **un único equipo**, no tendrá que especificar un certificado de cliente SSL. 
+4. Para un entorno de **varios equipos**, especifique el certificado TLS/SSL de cliente que se usará para validar el patrón de escalabilidad horizontal. Para un entorno de **un único equipo**, no tendrá que especificar un certificado de cliente TLS/SSL. 
   
-    Haga clic en **Examinar** para buscar el archivo de certificado (*.cer). Para usar el certificado de SSL predeterminado, seleccione el archivo `SSISScaleOutMaster.cer`, que se encuentra en `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` en el equipo que contiene el patrón de escalabilidad horizontal.   
+    Haga clic en **Examinar** para buscar el archivo de certificado (*.cer). Para usar el certificado de TLS/SSL predeterminado, seleccione el archivo `SSISScaleOutMaster.cer`, que se encuentra en `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` en el equipo que contiene el patrón de escalabilidad horizontal.   
 
     ![Configuración del trabajador 2](media/worker-config-2.PNG "Configuración del trabajador 2")
 
     > [!NOTE]
-    > Si el certificado SSL que usa el patrón de escalabilidad horizontal está autofirmado, deberá haber un certificado SSL de cliente correspondiente instalado en el equipo que contiene el trabajador de escalabilidad horizontal. Si proporciona la ruta de acceso del archivo del certificado SSL de cliente en la página **Configuración del trabajo de escalabilidad horizontal de Integration Services**, se instalará automáticamente; en caso contrario, tendrá que instalar el certificado manualmente más adelante. 
+    > Si el certificado TLS/SSL que usa el patrón de escalabilidad horizontal está autofirmado, deberá haber un certificado TLS/SSL de cliente correspondiente instalado en el equipo que contiene el trabajo de escalabilidad horizontal. Si proporciona la ruta de acceso del archivo del certificado TLS/SSL de cliente en la página **Configuración del trabajo de escalabilidad horizontal de Integration Services**, se instalará automáticamente; en caso contrario, tendrá que instalar el certificado manualmente más adelante. 
      
 5. Finalice el Asistente para la instalación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 

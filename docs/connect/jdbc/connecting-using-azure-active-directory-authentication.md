@@ -1,5 +1,6 @@
 ---
-title: Conexión mediante autenticación de Azure Active Directory | Microsoft Docs
+title: Conexión mediante autenticación de Azure Active Directory
+description: Obtenga información sobre cómo desarrollar aplicaciones Java que usan la característica de autenticación de Azure Active Directory con Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 01/29/2020
 ms.reviewer: ''
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e46a8e4d290a5b8c23173153c6e72bd7730be4e7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73b377076dfea329ba82c0219c28bf9c955d7e7f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922455"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634815"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conexión mediante autenticación de Azure Active Directory
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-En este artículo se proporciona información sobre cómo desarrollar aplicaciones Java para usar la característica de autenticación de Azure Active Directory con Microsoft JDBC Driver para SQL Server.
+En este artículo se proporciona información sobre cómo desarrollar aplicaciones Java que usan la característica de autenticación de Azure Active Directory con Microsoft JDBC Driver para SQL Server.
 
 Puede usar la autenticación de Azure Active Directory (AAD), que es un mecanismo que permite conectar con Azure SQL Database v12 mediante identidades en Azure Active Directory. Use la autenticación de Azure Active Directory para administrar identidades de usuarios de base de datos de forma centralizada y como alternativa a la autenticación de SQL Server. El controlador JDBC permite especificar las credenciales de Azure Active Directory en la cadena de conexión de JDBC para conectarse a Azure SQL DB. Para obtener información sobre cómo configurar la autenticación de Azure Active Directory, visite [Conectar a la SQL Database mediante la autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
@@ -40,7 +41,7 @@ Las propiedades de conexión para admitir la autenticación de Azure Active Dire
 
 *   **AccessToken**: use esta propiedad de conexión para conectarse a una base de datos SQL mediante un token de acceso. Solo se puede establecer accessToken mediante el parámetro Properties del método getConnection() en la clase DriverManager. No se puede usar en la dirección URL de conexión.  
 
-Para obtener más información, consulte la propiedad de autenticación en la página [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
+Para obtener más información, consulte la propiedad de autenticación en la página [Establecer las propiedades de conexión](setting-the-connection-properties.md).  
 
 
 ## <a name="client-setup-requirements"></a>Requisitos de configuración del cliente
@@ -107,10 +108,10 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Conexión con el modo de autenticación ActiveDirectoryIntegrated
 Con la versión 6.4, el controlador JDBC de Microsoft agrega compatibilidad con la autenticación ActiveDirectoryIntegrated mediante un vale Kerberos en varias plataformas (Windows, Linux y macOS).
-Para obtener más información, consulte [Establecimiento del vale Kerberos en Windows, Linux y Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac) para más detalles. Como alternativa, en Windows también se puede usar mssql-jdbc_auth-\<versión>-\<arch>.dll para la autenticación ActiveDirectoryIntegrated con el controlador JDBC.
+Para más información, vea [Establecimiento del vale Kerberos en Windows, Linux y macOS](#set-kerberos-ticket-on-windows-linux-and-macos) para más detalles. Como alternativa, en Windows también se puede usar mssql-jdbc_auth-\<versión>-\<arch>.dll para la autenticación ActiveDirectoryIntegrated con el controlador JDBC.
 
 > [!NOTE]
->  Si usa una versión anterior del controlador, compruebe este [vínculo](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) para las dependencias correspondientes necesarias para usar este modo de autenticación. 
+>  Si usa una versión anterior del controlador, compruebe este [vínculo](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) para las dependencias correspondientes necesarias para usar este modo de autenticación. 
 
 En el siguiente ejemplo se muestra cómo usar el modo `authentication=ActiveDirectoryIntegrated`. Ejecute este ejemplo en una máquina unida al dominio que se federa con Azure Active Directory. Un usuario de la base de datos independiente que represente su entidad de seguridad de Azure AD, o bien uno de los grupos a los que pertenece, debe existir en la base de datos y debe contar con el permiso CONNECT. 
 
@@ -156,7 +157,7 @@ Al ejecutar este ejemplo en un equipo cliente, su vale Kerberos se usa automáti
 You have successfully logged on as: <your domain user name>
 ```
 
-### <a name="set-kerberos-ticket-on-windows-linux-and-mac"></a>Establecimiento del vale Kerberos en Windows, Linux y Mac
+### <a name="set-kerberos-ticket-on-windows-linux-and-macos"></a>Establecimiento del vale Kerberos en Windows, Linux y macOS
 
 Debe configurar un vale de Kerberos que vincule el usuario actual a una cuenta de dominio de Windows. A continuación se incluye un resumen de los pasos clave.
 
@@ -172,7 +173,7 @@ JDK incluye `kinit`, que puede usar para obtener un TGT del Centro de distribuci
 > [!NOTE]
 >  Es posible que tenga que especificar un archivo `.ini` con `-Djava.security.krb5.conf` para que la aplicación busque KDC.
 
-#### <a name="linux-and-mac"></a>Linux y Mac
+#### <a name="linux-and-macos"></a>Linux y macOS
 
 ##### <a name="requirements"></a>Requisitos
 Acceso a un equipo Windows unido a dominio para consultar el controlador de dominio de Kerberos.
@@ -190,7 +191,7 @@ Acceso a un equipo Windows unido a dominio para consultar el controlador de domi
 - **Información para extraer** El nombre del controlador de dominio, en este caso `co1-red-dc-33.domain.company.com`
 
 ##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Paso 2: Configuración de KDC en krb5.conf
-- **Ejecutar en**: Linux/Mac
+- **Ejecutar en**: Linux/macOS
 - **Acción**: Edite el archivo /etc/krb5.conf en el editor que elija. Configure las claves siguientes
   ```
   [libdefaults]
@@ -207,7 +208,7 @@ Acceso a un equipo Windows unido a dominio para consultar el controlador de domi
 >  El dominio debe estar en MAYÚSCULAS.
 
 ##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Paso 3: Prueba de la recuperación de un vale de concesión de vales
-- **Ejecutar en**: Linux/Mac
+- **Ejecutar en**: Linux/macOS
 - **Acción**:
   - Use el comando `kinit username@DOMAIN.COMPANY.COM` para obtener un TGT de KDC y, a continuación, le solicitará la contraseña del dominio.
   - Use `klist` para ver los vales disponibles. Si el comando kinit se ha ejecutado correctamente, debería ver un vale en krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
@@ -285,7 +286,7 @@ En el siguiente ejemplo se incluye una aplicación Java sencilla que se conecta 
     11. En la sección "Claves", cree una clave rellenando el campo de nombre, seleccionando la duración de la clave y guardando la configuración (deje el campo de valor vacío). Tras guardarla, el campo de valor debe rellenarse automáticamente. Copie el valor generado. Este es el secreto del cliente.
     12. Haga clic en Azure Active Directory en el panel izquierdo. En "Registros de aplicaciones", busque la pestaña "Puntos finales". Copie la dirección URL en "PUNTO DE CONEXIÓN DE TOKEN DE OATH 2.0". Esta es su dirección URL de STS.
     
-    ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
+    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
 2. Inicie sesión en la base de datos de usuario de Azure SQL Server como administrador de Azure Active Directory y use un comando de T-SQL para aprovisionar un usuario de la base de datos independiente para su entidad de seguridad de aplicación. Para obtener más información, consulte [Conexión a SQL Database o a SQL Data Warehouse mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) para más detalles sobre cómo crear un administrador de Azure Active Directory y un usuario de la base de datos independiente.
 
     ```

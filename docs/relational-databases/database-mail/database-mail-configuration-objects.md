@@ -32,16 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134429"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529439"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuración de Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Correo electrónico de base de datos tiene dos objetos de configuración. Los objetos de configuración de base de datos proporcionan una manera de configurar los valores que Correo electrónico de base de datos debe usar al enviar un correo electrónico de la aplicación de base de datos o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Correo electrónico de base de datos tiene dos objetos de configuración: los objetos de configuración de base de datos proporcionan una manera de configurar los valores que Correo electrónico de base de datos debe usar al enviar un correo electrónico de la aplicación de base de datos o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Cuentas de Correo electrónico de base de datos  
   
@@ -61,9 +61,9 @@ ms.locfileid: "68134429"
   
 -   Autenticación de Windows: el Correo electrónico de base de datos utiliza las mismas credenciales de la cuenta de servicio de Windows [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para la autenticación en el servidor SMTP.  
   
--   Autenticación básica: el Correo electrónico de base de datos utiliza el nombre de usuario y la contraseña especificados para la autenticación en el servidor SMTP.  
+-   Autenticación básica:  el Correo electrónico de base de datos utiliza el nombre de usuario y la contraseña especificados para la autenticación en el servidor SMTP.  
   
--   Autenticación anónima: el servidor SMTP no requiere autenticación.  Correo electrónico de base de datos no utilizará ninguna credencial para la autenticación en el servidor SMTP.  
+-   Autenticación anónima:  el servidor SMTP no requiere ninguna autenticación.  Correo electrónico de base de datos no utilizará ninguna credencial para la autenticación en el servidor SMTP.  
   
  La información de la cuenta se almacena en la base de datos **msdb** . Cada cuenta contiene la siguiente información:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134429"
   
 -   El número de puerto del servidor de correo electrónico.  
   
--   Una columna de tipo bit que indica si se ha realizado la conexión al servidor de correo SMTP con SSL (Capa de sockets seguros).  
+-   Una columna de tipo bit que indica si se ha realizado la conexión al servidor de correo SMTP mediante la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL).  
   
 -   Una columna de tipo bit que indica si se ha realizado la conexión al servidor SMTP con las credenciales configuradas para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

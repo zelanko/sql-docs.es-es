@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903812"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488138"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Patrón de escalado horizontal de Integration Services (SSIS)
 
@@ -55,7 +55,7 @@ Configure el Servicio principal de escalabilidad horizontal con el archivo `<dri
 |Configuración  |Descripción  |Valor predeterminado  |
 |---------|---------|---------|
 |PortNumber|Número de puerto de red usado para comunicarse con un trabajador de escalado horizontal.|8391|
-|SSLCertThumbprint|Huella digital del certificado SSL usado para proteger la comunicación con un trabajador de escalado horizontal.|Huella digital del certificado SSL especificado durante la instalación del patrón de escalado horizontal|
+|SSLCertThumbprint|Huella digital del certificado TLS/SSL usado para proteger la comunicación con un trabajo de escalabilidad horizontal.|Huella digital del certificado SSL especificado durante la instalación del patrón de escalabilidad horizontal|
 |SQLServerName|Es el nombre de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] que contiene el catálogo SSISDB. Por ejemplo, NombreServidor\\NombreInstancia.|Es el nombre del servidor de SQL Server que se instala con el patrón de escalabilidad horizontal.|
 |CleanupCompletedJobsIntervalInMs|Intervalo de limpieza de los trabajos de ejecución terminados en milisegundos.|43200000|
 |DealWithExpiredTasksIntervalInMs|Intervalo para tratar con los trabajos de ejecución terminados en milisegundos.|300000|

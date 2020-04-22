@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78946732"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287965"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Inicio, detención, pausa, reanudación o reinicio de servicios de SQL Server
 
@@ -338,6 +338,10 @@ Para obtener más información sobre la instrucción **SHUTDOWN**, vea [SHUTDOWN
     # Display the state of the service.
     $DfltInstance
     ```  
+  
+##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> Uso de la clase de controlador de servicio
+
+Puede utilizar la clase ServiceController para controlar el servicio SQL Server o cualquier otro servicio de Windows. Para obtener un ejemplo sobre cómo hacerlo, vea la [clase ServiceController](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>Administración del servicio SQL Server en Linux
 

@@ -1,5 +1,6 @@
 ---
-title: Lista de los errores corregidos | Microsoft Docs
+title: Lista de los errores corregidos
+description: Esta página contiene una lista de los errores corregidos en cada versión, a partir de Microsoft ODBC Driver 17 for SQL Server.
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896771"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629725"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de los errores corregidos
 
-Esta página contiene una lista de los errores corregidos en cada versión, a partir del Controlador ODBC 17 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Esta página contiene una lista de los errores corregidos en cada versión, a partir de [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>Correcciones de errores en el controlador ODBC 17.5.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -30,10 +31,10 @@ Esta página contiene una lista de los errores corregidos en cada versión, a pa
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.5 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Corrección del cálculo de hash de metadatos de AKV CMK en Linux/Mac
+- Corrección del cálculo de hash de metadatos de AKV CMK en Linux/macOS
 - Corrección del error al cargar OpenSSL 1.0.0
 - Corrección de problemas de conversión al usar las páginas de código de ISO-8859-1 e ISO-8859-2
-- Corrección del nombre de la biblioteca interna en Mac para incluir el número de versión
+- Corrección del nombre de la biblioteca interna en macOS para incluir el número de versión
 - Corrección del valor de un indicador NULL cuando se utilizan enlaces de indicador y longitud independientes
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17.4.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -82,7 +83,7 @@ Esta página contiene una lista de los errores corregidos en cada versión, a pa
 - Se corrigieron los mensajes de error de ADAL truncados
 - Se corrigió un error poco frecuente en Windows de 32 bits al convertir un número de punto flotante en un entero
 - Se corrigió un problema que hacía que la inserción doble en el campo decimal con Always Encrypted devolvería un error de truncamiento de datos
-- Se corrigió una advertencia en el instalador de MacOS
+- Se corrigió una advertencia en el instalador de macOS
 - Se corrigió el envío de un estado incorrecto a SQL Server durante el intento de recuperación de la sesión cuando tanto la resistencia de la conexión como la agrupación de conexiones están habilitadas, lo que provoca que el servidor deje la sesión
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17-for-ssnoversion"></a>Correcciones de errores en el Controlador ODBC 17 de [!INCLUDE[msCoName](../../includes/msconame_md.md)]para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -101,5 +102,5 @@ Esta página contiene una lista de los errores corregidos en cada versión, a pa
 - Se corrigió un carácter de subrayado de escape que no funcionaba en SQLTables
 - Se corrigió un error en el que los datos en hebreo (varchar) se truncan cuando se devuelven como caracteres anchos en Linux
 - Se corrigió un problema con la consulta char/varchar con codificación Shift-JIS desde una aplicación UTF-8
-- Se corrigió el error en el que, al llamar a SQLGetInfo con el parámetro SQL_DRIVER_NAME, se devolvía un nombre de archivo de estilo Linux en MacOS
+- Se corrigió el error en el que, al llamar a SQLGetInfo con el parámetro SQL_DRIVER_NAME, se devolvía un nombre de archivo de estilo Linux en macOS
 - Se corrigió un problema en el que cargar datos de caracteres de Windows-1252, con archivos de entrada de más de 32 000 bytes en columnas VARCHAR mediante la utilidad BCP, daría lugar a errores

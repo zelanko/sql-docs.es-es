@@ -1,5 +1,6 @@
 ---
-title: Uso de Azure Active Directory con el controlador ODBC | Microsoft Docs para SQL Server
+title: Uso de Azure Active Directory con el controlador ODBC
+description: Microsoft ODBC Driver for SQL Server permite que las aplicaciones ODBC se conecten a una instancia de Azure SQL Database mediante Azure Active Directory.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f572479921eef0f8957bba6890d0d92415b7c44b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 15f8117c84f952d4244c95a53d187e142daa8572
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928335"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635410"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso de Azure Active Directory con el controlador ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="purpose"></a>Propósito
 
-Microsoft ODBC Driver for SQL Server con la versión 13.1 o superior permite que las aplicaciones ODBC se conecten a una instancia de SQL Azure mediante una identidad federada en Azure Active Directory con un nombre de usuario y contraseña, un token de acceso de Azure Active Directory, una identidad de servicio administrada de Azure Active Directory o autenticación integrada de Windows (_solo controlador de Windows_). Para la versión 13.1 del controlador ODBC, la autenticación de token de acceso de Azure Active Directory es _solo Windows_. La versión 17 del controlador ODBC y versiones posteriores admiten esta autenticación en todas las plataformas (Windows, Linux y macOS). En la versión 17.1 del controlador ODBC para Windows se incluye una nueva autenticación interactiva de Azure Active Directory con el identificador de inicio de sesión. Se agregó un nuevo método de autenticación de identidad de servicio administrada de Azure Active Directory en la versión 17.3.1.1 del controlador ODBC para las identidades asignadas por el sistema y por el usuario. Todo esto se logra mediante el uso de nuevas palabras clave de cadena de conexión y DSN con atributos de conexión.
+Microsoft ODBC Driver for SQL Server con la versión 13.1 o posterior permite que las aplicaciones ODBC se conecten a una instancia de Azure SQL Database mediante una identidad federada en Azure Active Directory con un nombre de usuario y contraseña, un token de acceso de Azure Active Directory, una identidad de servicio administrada de Azure Active Directory o autenticación integrada de Windows (_solo controlador de Windows_). Para la versión 13.1 del controlador ODBC, la autenticación de token de acceso de Azure Active Directory es _solo Windows_. La versión 17 del controlador ODBC y versiones posteriores admiten esta autenticación en todas las plataformas (Windows, Linux y macOS). En la versión 17.1 del controlador ODBC para Windows se incluye una nueva autenticación interactiva de Azure Active Directory con el identificador de inicio de sesión. Se agregó un nuevo método de autenticación de identidad de servicio administrada de Azure Active Directory en la versión 17.3.1.1 del controlador ODBC para las identidades asignadas por el sistema y por el usuario. Todo esto se logra mediante el uso de nuevas palabras clave de cadena de conexión y DSN con atributos de conexión.
 
 > [!NOTE]
 > El controlador ODBC en Linux y macOS solo admite la autenticación de Azure Active Directory directamente en Azure Active Directory. Si va a usar la autenticación de nombre de usuario y contraseña de Azure Active Directory desde un cliente Linux o macOS, y la configuración de Active Directory requiere que el cliente se autentique sobre un punto de conexión de Servicios de federación de Active Directory, se puede producir un error en la autenticación.

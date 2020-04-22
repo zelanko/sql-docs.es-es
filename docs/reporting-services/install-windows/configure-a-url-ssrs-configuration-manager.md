@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077056"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487174"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurar una dirección URL (Administrador de configuración de SSRS)
   Para poder usar el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o el servicio web del servidor de informes, debe configurar al menos una dirección URL para cada aplicación. Configurar las direcciones URL es obligatorio si ha instalado [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de "solo archivos" (es decir, al seleccionar la opción **Install but do not configure the server (Instalar pero no configurar el servidor)** en la página Opciones de instalación del servidor de informes del Asistente para la instalación). Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, las direcciones URL ya están configuradas para cada aplicación.  
@@ -33,7 +33,7 @@ ms.locfileid: "77077056"
   
  Para obtener más información sobre cómo se almacenan y mantienen las direcciones URL o sobre problemas de interoperabilidad, consulte [Acerca de las reservas y el registro de reservas de URL (Administrador de configuración de SSRS)](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md) e [Instalar Reporting Services e Internet Information Services en paralelo (modo nativo de SSRS)](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md). Para revisar ejemplos de direcciones URL que suelen usarse en una instalación de Reporting Services, vea [Ejemplos de direcciones URL](#URLExamples) en este tema.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Antes de crear o modificar una dirección URL, recuerde los puntos siguientes:  
   
 -   Debe ser miembro del grupo local de administradores en el equipo del servidor de informes.  
@@ -84,20 +84,20 @@ ms.locfileid: "77077056"
   
 6.  Si aún no lo ha hecho, compruebe que IIS (si está instalado) no tiene un directorio virtual con el mismo nombre que piensa utilizar.  
   
-7.  Si instaló un certificado SSL, puede seleccionarlo ahora para enlazar la dirección URL al certificado SSL que esté instalado en el equipo.  
+7.  Si instaló un certificado TLS/SSL, puede seleccionarlo ahora para enlazar la dirección URL al certificado TLS/SSL que esté instalado en el equipo.  
   
-8.  O bien, si selecciona un certificado SSL, puede especificar un puerto personalizado. El valor predeterminado es 443, pero puede utilizar cualquier puerto que esté disponible.  
+8.  O bien, si selecciona un certificado TLS/SSL, puede especificar un puerto personalizado. El valor predeterminado es 443, pero puede utilizar cualquier puerto que esté disponible.  
   
 9. Haga clic en **Aplicar** para crear la dirección URL.  
   
 10. Pruebe la dirección URL haciendo clic en el vínculo en la sección **Direcciones URL** de la página. Observe que la base de datos del servidor de informes debe crearse y configurarse para poder probar la dirección URL. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
->  Si tiene enlaces SSL y reservas de direcciones URL existentes y desea cambiar el enlace SSL para, por ejemplo, usar otro certificado o encabezado de host, se recomienda que complete los pasos siguientes por orden:  
+>  Si tiene enlaces TLS y reservas de direcciones URL existentes y desea cambiar el enlace TLS para, por ejemplo, usar otro certificado o encabezado de host, se recomienda que complete los pasos siguientes por orden:  
 > 
 >  1.  Quite primero todas las reservas de direcciones URL.  
-> 2.  A continuación, quite todos los enlaces SSL.  
-> 3.  Después, vuelva a crear las direcciones URL y los enlaces SSL.  
+> 2.  A continuación, quite todos los enlaces TLS.  
+> 3.  Después, vuelva a crear las direcciones URL y los enlaces TLS.  
 > 
 >  El procedimiento anterior se puede realizar mediante el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
 > 
@@ -113,9 +113,9 @@ ms.locfileid: "77077056"
   
 3.  Especifique el directorio virtual. El [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] escucha en la misma dirección IP y puerto que el servicio web del servidor de informes. Si ha configurado el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para señalar a un servicio web del servidor de informes diferente, debe modificar la configuración de la dirección URL del [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] en el archivo RSReportServer.config.  
   
-4.  Si ha instalado un certificado SSL, puede seleccionarlo para requerir que todas las solicitudes para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se enruten a través de HTTPS.  
+4.  Si ha instalado un certificado TLS/SSL, puede seleccionarlo para requerir que todas las solicitudes para [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] se enruten a través de HTTPS.  
   
-     O bien, si selecciona un certificado SSL, puede especificar un puerto personalizado. El valor predeterminado es 443, pero puede utilizar cualquier puerto que esté disponible.  
+     O bien, si selecciona un certificado TLS/SSL, puede especificar un puerto personalizado. El valor predeterminado es 443, pero puede utilizar cualquier puerto que esté disponible.  
   
 5.  Haga clic en **Aplicar** para crear la dirección URL.  
   
@@ -136,14 +136,14 @@ ms.locfileid: "77077056"
  Un encabezado de host es un nombre único que permite que varios sitios web compartan una única dirección IP y puerto. Los nombres de encabezado de host son más fáciles de recordar y escribir que los números de dirección IP y puerto. Un ejemplo de nombre de encabezado de host podría ser www.adventure-works.com.  
   
  **Puerto SSL**  
- Especifica el puerto para las conexiones SSL. El número de puerto para SSL es 443.  
+ Especifica el puerto para las conexiones TLS/SSL. El puerto predeterminado para TLS es 443.  
   
  **Certificado SSL**  
- Especifica el nombre del certificado de un certificado SSL que instaló en este equipo. Si el certificado se asigna a un carácter comodín, puede utilizarlo para una conexión de servidor de informes.  
+ Especifica el nombre del certificado de un certificado TLS/SSL que instaló en este equipo. Si el certificado se asigna a un carácter comodín, puede utilizarlo para una conexión de servidor de informes.  
   
  Especifica el nombre completo del equipo para el que se registra el certificado. El nombre que se especifica debe ser idéntico al nombre para el que se registra el certificado.  
   
- Para utilizar esta opción debe tener instalado un certificado. También debe modificar la opción de configuración UrlRoot del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Para utilizar esta opción debe tener instalado un certificado. También debe modificar la opción de configuración UrlRoot del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para más información, vea [Configurar conexiones TLS en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>Para establecer propiedades avanzadas en una dirección URL  
   

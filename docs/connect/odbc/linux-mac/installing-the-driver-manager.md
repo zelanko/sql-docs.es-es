@@ -1,5 +1,6 @@
 ---
-title: Instalar el Administrador de controladores (controlador ODBC para SQL Server) | Microsoft Docs
+title: Instalación del Administrador de controladores
+description: Este artículo contiene instrucciones para instalar el Administrador de controladores unixODBC para su uso con todas las versiones de Microsoft ODBC Driver for SQL Server en Linux y macOS.
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f2179df0018d227fc12dd545f4e846c475b120ca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ba758f3c95ef3285424cafe676df46e5d3df7b34
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921909"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528249"
 ---
 # <a name="installing-the-driver-manager"></a>Instalación del Administrador de controladores
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

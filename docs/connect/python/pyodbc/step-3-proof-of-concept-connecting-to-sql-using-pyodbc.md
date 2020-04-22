@@ -1,5 +1,6 @@
 ---
-title: 'Paso 3: prueba de concepto de la conexión a SQL con pyodbc | Microsoft Docs'
+title: 'Paso 3: Conexión con SQL mediante pyodbc'
+description: El paso 3 es una prueba de concepto, que muestra cómo puede conectarse a SQL Server mediante Python y pyODBC. Los ejemplos básicos demuestran la selección e inserción de datos.
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: c5d8adfa33541402fb50017c3790d38f0396d73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78256905"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528479"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Paso 3: prueba de concepto de la conexión a SQL con pyodbc
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Paso 3: Prueba de concepto de la conexión a SQL con pyodbc
 
 Este ejemplo es una prueba de concepto. El código de ejemplo se simplifica por claridad y no representa necesariamente los procedimientos recomendados que sugiere Microsoft.  
 
@@ -59,7 +60,7 @@ while row:
 
 ```  
   
-## <a name="insert-a-row"></a>Insertar una fila  
+## <a name="insert-a-row"></a>Inserción de una fila  
   
 En este ejemplo se muestra cómo ejecutar una instrucción [INSERT](../../../t-sql/statements/insert-transact-sql.md) de forma segura y pasar parámetros que protejan la aplicación de la [inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   

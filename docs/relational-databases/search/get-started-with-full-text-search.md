@@ -1,6 +1,6 @@
 ---
 title: Introducción a la búsqueda de texto completo | Microsoft Docs
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903828"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288260"
 ---
 # <a name="get-started-with-full-text-search"></a>Introducción a la búsqueda de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,17 @@ Para configurar una búsqueda de texto completo con un asistente, vea [Usar el A
 2.  Para crear un índice de texto completo en la tabla Document, antes debe asegurarse de que dicha tabla tiene un índice único, de una sola columna y que no admite valores NULL. La siguiente instrucción [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) crea un índice único, `ui_ukDoc`, en la columna DocumentID de la tabla Document:  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  Después de tener una clave única, puede crear un índice de texto completo en la tabla `Document` mediante la siguiente instrucción [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
+3.  Quite el índice de texto completo existente en la tabla `Document` mediante la siguiente instrucción [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md). 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  Después de tener una clave única, puede crear un índice de texto completo en la tabla `Document` mediante la siguiente instrucción [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ Para configurar una búsqueda de texto completo con un asistente, vea [Usar el A
     GO  
   
     ```  
+    
+  
   
      El elemento TYPE COLUMN definido en este ejemplo especifica la columna de tipo de la tabla que contiene el tipo del documento en cada fila de la columna "Document" (que es del tipo binario). La columna de tipo almacena la extensión de archivo proporcionada por el usuario (".doc", ".xls", etc.) del documento en una fila determinada. El motor de búsqueda de texto completo utiliza la extensión de archivo almacenada en una fila determinada para invocar el filtro adecuado para analizar los datos de esa fila. Cuando el filtro haya analizado los datos binarios de la fila, el separador de palabras especificado analiza el contenido. (En este ejemplo, se usa el separador de palabras para inglés del Reino Unido). Para obtener más información, vea [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
 

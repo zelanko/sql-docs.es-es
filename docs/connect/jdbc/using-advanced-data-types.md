@@ -1,5 +1,6 @@
 ---
-title: Empleo de tipos de datos avanzados | Microsoft Docs
+title: Empleo de tipos de datos avanzados
+description: Obtenga información sobre cómo usar tipos de datos avanzados de JDBC para convertir tipos de datos de SQL Server en tipos de datos de Java mediante Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924072"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528729"
 ---
 # <a name="using-advanced-data-types"></a>Empleo de tipos de datos avanzados
 
@@ -148,7 +149,7 @@ Para obtener más información sobre tipos de valores grandes, consulte "Uso de 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un tipo de datos **xml** que permite almacenar documentos y fragmentos XML en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Como sucede con otros tipos integrados, puede usar el tipo de datos **xml** como un tipo de columna cuando crea una tabla; como un tipo de variable, de parámetro o de devolución de función; o en funciones CAST y CONVERT de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-En el controlador JDBC, el tipo de datos **xml** se puede asignar como una cadena, una matriz de bytes, un flujo o un objeto CLOB, BLOB o SQLXML. Cadena es el valor predeterminado. Desde la versión 2.0 del controlador JDBC, este controlador proporciona compatibilidad con la API de JDBC 4.0, que presenta la interfaz SQLXML. La interfaz SQLXML define métodos para interactuar con datos XML y manipularlos. El tipo de datos **SQLXML** se asigna al tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]xml**de**. Para obtener más información sobre cómo leer y escribir datos XML desde y en la base de datos relacional con el tipo de datos de Java **SQLXML**, vea [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md).  
+En el controlador JDBC, el tipo de datos **xml** se puede asignar como una cadena, una matriz de bytes, un flujo o un objeto CLOB, BLOB o SQLXML. Cadena es el valor predeterminado. Desde la versión 2.0 del controlador JDBC, este controlador proporciona compatibilidad con la API de JDBC 4.0, que presenta la interfaz SQLXML. La interfaz SQLXML define métodos para interactuar con datos XML y manipularlos. El tipo de datos **SQLXML** se asigna al tipo de datos **xml** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo leer y escribir datos XML desde y en la base de datos relacional con el tipo de datos de Java **SQLXML**, vea [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md).  
   
 La implementación de los tipos de datos **xml** de JDBC Driver proporciona compatibilidad con lo siguiente:  
   

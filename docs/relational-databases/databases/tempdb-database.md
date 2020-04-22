@@ -2,7 +2,7 @@
 title: Base de datos tempdb | Microsoft Docs
 description: En este tema se proporcionan detalles relacionados con la configuración y el uso de la base de datos tempdb en SQL Server en Azure SQL Database.
 ms.custom: P360
-ms.date: 08/21/2019
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c324d19a0e5005261a1c5a14834ea2d9c2f4f73
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288499"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635353"
 ---
 # <a name="tempdb-database"></a>Base de datos TempDB
 
@@ -111,26 +111,26 @@ Para obtener una descripción de estas opciones de la base de datos, vea [Opcion
 
 |SLO|Tamaño de archivo de datos de TempDB máximo (GB)|Número de archivos de datos de TempDB|Tamaño de datos de TempDB máximo (GB)|
 |---|---:|---:|---:|
-|Básica|13|1|13|
-|S0|13|1|13|
-|S1|13|1|13|
-|S2|13|1|13|
+|Básica|13.9|1|13.9|
+|S0|13.9|1|13.9|
+|S1|13.9|1|13.9|
+|S2|13.9|1|13.9|
 |S3|32|1|32
 |S4|32|2|64|
 |S6|32|3|96|
 |S7|32|6|192|
 |S9|32|12|384|
 |S12|32|12|384|
-|P1|13|12|156|
-|P2|13|12|156|
-|P4|13|12|156|
-|P6|13|12|156|
-|P11|13|12|156|
-|P15|13|12|156|
-|Grupos elásticos premium (todas las configuraciones de DTU)|13|12|156|
-|Grupos elásticos estándar (S0 a S2)|13|12|156|
+|P1|13.9|12|166.7|
+|P2|13.9|12|166.7|
+|P4|13.9|12|166.7|
+|P6|13.9|12|166.7|
+|P11|13.9|12|166.7|
+|P15|13.9|12|166.7|
+|Grupos elásticos premium (todas las configuraciones de DTU)|13.9|12|166.7|
+|Grupos elásticos estándar (S0 a S2)|13.9|12|166.7|
 |Grupos elásticos estándar (S3 y superior) |32|12|384|
-|Grupos elásticos básicos (todas las configuraciones de DTU)|13|12|156|
+|Grupos elásticos básicos (todas las configuraciones de DTU)|13.9|12|166.7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Tamaños de TempDB para los niveles de servicio basado en núcleo virtual

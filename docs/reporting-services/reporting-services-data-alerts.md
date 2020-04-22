@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286629"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487810"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
 
@@ -270,12 +270,12 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona contadores de rendimiento para otras características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Contadores de rendimiento para los objetos de rendimiento de MSRS 2011 Web Service y MSRS 2011 Windows Service &#40;modo nativo&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) y [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> Compatibilidad con SSL  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede usar el servicio SSL (Capa de sockets seguros) de HTTP para establecer conexiones cifradas con un servidor de informes o un sitio de SharePoint.  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> Compatibilidad con TLS  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede usar el servicio SSL de HTTP para establecer conexiones cifradas con un servidor de informes o un sitio de SharePoint. La Seguridad de la capa de transporte (TLS) se conocía antes como Capa de sockets seguros (SSL).
   
- El servicio de ejecución de alertas y la interfaz de usuario de alertas de datos admiten SSL y funcionan de un modo similar tanto si se utiliza SSL como HTTP; sin embargo, hay algunas pequeñas diferencias. Cuando la definición de alerta de datos se crea mediante una conexión SSL, la dirección URL que se utiliza como vínculo a la biblioteca de SharePoint desde el mensaje de alerta de datos también utiliza SSL. Puede identificar que se trata de una conexión SSL porque utiliza HTTPS en lugar de HTTP en su URL. Asimismo, si la definición de alerta de datos se creó mediante una conexión HTTP, el vínculo al sitio de SharePoint utiliza HTTP. Independiente de cómo se creara la definición de alerta, con SSL o con HTTP, la experiencia de los usuarios y administradores de alertas es la misma cuando utilizan el Diseñador de alertas de datos o el Administrador de alertas de datos. Si el protocolo (HTTP o SSL) debe cambiarse entre en el momento en que se creó la definición de alerta y después de actualizarse y volverse a guardar, el protocolo original se mantiene y se utiliza en las direcciones URL del vínculo.  
+ El servicio de ejecución de alertas y la interfaz de usuario de alertas de datos admiten TLS y funcionan de un modo similar tanto si se utiliza TLS como HTTP; sin embargo, hay algunas pequeñas diferencias. Cuando la definición de alerta de datos se crea mediante una conexión TLS, la dirección URL que se utiliza como vínculo a la biblioteca de SharePoint desde el mensaje de alerta de datos también utiliza TLS. Puede identificar que se trata de una conexión TLS porque utiliza HTTPS en lugar de HTTP en su URL. Asimismo, si la definición de alerta de datos se creó mediante una conexión HTTP, el vínculo al sitio de SharePoint utiliza HTTP. Independiente de cómo se creara la definición de alerta, con TLS o con HTTP, la experiencia de los usuarios y administradores de alertas es la misma cuando utilizan el Diseñador de alertas de datos o el Administrador de alertas de datos. Si el protocolo (HTTP o TLS) debe cambiarse entre en el momento en que se creó la definición de alerta y después de actualizarse y volverse a guardar, el protocolo original se mantiene y se utiliza en las direcciones URL del vínculo.  
   
- Si crea una alerta de datos en un sitio de SharePoint configurado para usar SSL y, a continuación, quita el requisito de SSL, la alerta continúa vigente en el sitio. Si se elimina el sitio, en su lugar se utiliza el sitio de zona predeterminada.  
+ Si crea una alerta de datos en un sitio de SharePoint configurado para usar TLS y, a continuación, quita el requisito de TLS, la alerta continúa vigente en el sitio. Si se elimina el sitio, en su lugar se utiliza el sitio de zona predeterminada.  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> Interfaz de usuario de alertas de datos  
  Las alertas de datos proporcionan páginas de SharePoint para administrar alertas y un diseñador para crear y editar definiciones de alertas de datos.  

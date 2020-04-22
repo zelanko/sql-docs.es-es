@@ -1,5 +1,6 @@
 ---
-title: Empleo de tipos de datos básicos | Microsoft Docs
+title: Uso de tipos de datos básicos de JDBC
+description: Microsoft JDBC Driver para SQL Server usa tipos de datos básicos de JDBC para convertir los tipos de datos de SQL Server a un formato que pueda entenderse mediante Java.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4608bd48607244c50e7d6fd03b74919448fa074
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924068"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625568"
 ---
 # <a name="using-basic-data-types"></a>Empleo de tipos de datos básicos
 
@@ -68,37 +69,37 @@ En la siguiente tabla se muestran las asignaciones predeterminadas entre los tip
   
 (1) Para usar java.sql.Time con el tipo de hora [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe establecer la propiedad de conexión **sendTimeAsDatetime** en FALSE.  
   
-(2) Puede tener acceso mediante programación a los valores de **datetimeoffset** con la [clase DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) Puede tener acceso mediante programación a los valores de **datetimeoffset** con la [clase DateTimeOffset](reference/datetimeoffset-class.md).  
   
-Las siguientes secciones proporcionan ejemplos de cómo puede usar el controlador JDBC y los tipos de datos básicos. Si quiere obtener un ejemplo detallado sobre cómo usar los tipos de datos básicos en una aplicación de Java, consulte [Ejemplo de tipos de datos básicos](../../connect/jdbc/basic-data-types-sample.md).  
+Las siguientes secciones proporcionan ejemplos de cómo puede usar el controlador JDBC y los tipos de datos básicos. Si quiere obtener un ejemplo detallado sobre cómo usar los tipos de datos básicos en una aplicación de Java, consulte [Ejemplo de tipos de datos básicos](basic-data-types-sample.md).  
   
 ## <a name="retrieving-data-as-a-string"></a>Recuperar datos como una cadena
 
-Si tiene que recuperar datos de un origen de datos que se asigne a cualquiera de los tipos de datos básicos de JDBC para verlos como una cadena, o si no se necesitan datos fuertemente tipados, puede usar el método [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), como en el siguiente ejemplo:  
+Si tiene que recuperar datos de un origen de datos que se asigne a cualquiera de los tipos de datos básicos de JDBC para verlos como una cadena, o si no se necesitan datos fuertemente tipados, puede usar el método [getString](reference/getstring-method-sqlserverresultset.md) de la clase [SQLServerResultSet](reference/sqlserverresultset-class.md), como en el siguiente ejemplo:  
   
-[!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
+[!code[JDBC#UsingBasicDataTypes1](codesnippet/Java/using-basic-data-types_1.java)]  
   
 ## <a name="retrieving-data-by-data-type"></a>Recuperar datos por tipo de datos
 
 Si tiene que recuperar datos de un origen de datos y sabe el tipo de datos que se van a recuperar, use uno de los métodos get\<Type> de la clase SQLServerResultSet, también conocidos como *métodos de captador*. Con los métodos get\<Type>, puede usar un nombre de columna o un índice de columna, como en el siguiente ejemplo:  
   
-[!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
+[!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
 > Los métodos con escala getUnicodeStream y getBigDecimal están obsoletos y el controlador JDBC no los admite.
 
 ## <a name="updating-data-by-data-type"></a>Actualizar datos por tipo de datos
 
-Si tiene que actualizar el valor de un campo en un origen de datos, use uno de los métodos update\<Type> de la clase SQLServerResultSet. En el siguiente ejemplo, se usa el método [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) en conjunción con el método [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) para actualizar los datos del origen de datos:  
+Si tiene que actualizar el valor de un campo en un origen de datos, use uno de los métodos update\<Type> de la clase SQLServerResultSet. En el siguiente ejemplo, se usa el método [updateInt](reference/updateint-method-sqlserverresultset.md) en conjunción con el método [updateRow](reference/updaterow-method-sqlserverresultset.md) para actualizar los datos del origen de datos:  
   
-[!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
+[!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
 > [!NOTE]  
 > El controlador JDBC no puede actualizar una columna SQL Server con un nombre de columna que tenga más de 127 caracteres de largo. Si se intenta una actualización a una columna cuyo nombre tenga más de 127 caracteres, se genera una excepción.  
   
 ## <a name="updating-data-by-parameterized-query"></a>Actualizar datos por consulta con parámetros
 
-Si tiene que actualizar datos de un origen de datos mediante el uso de una consulta con parámetros, puede establecer el tipo de datos de los parámetros con los métodos set\<Type> de la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), también conocidos como *métodos de establecedor*. En el siguiente ejemplo, se usa el método [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) para precompilar la consulta con parámetros y, luego, el método [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) para establecer el valor de cadena del parámetro antes de llamar al método [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md).  
+Si tiene que actualizar datos de un origen de datos mediante el uso de una consulta con parámetros, puede establecer el tipo de datos de los parámetros con los métodos set\<Type> de la clase [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), también conocidos como *métodos de establecedor*. En el siguiente ejemplo, se usa el método [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) para precompilar la consulta con parámetros y, luego, el método [setString](reference/setstring-method-sqlserverpreparedstatement.md) para establecer el valor de cadena del parámetro antes de llamar al método [executeUpdate](reference/executeupdate-method.md).  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   

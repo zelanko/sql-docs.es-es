@@ -1,5 +1,6 @@
 ---
 title: Empleo del controlador JDBC | Microsoft Docs
+description: En esta sección se proporciona una serie de instrucciones rápidas para establecer una conexión sencilla a una base de datos de SQL Server mediante el controlador Microsoft JDBC Driver para SQL Server.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3da65f02169a1e0a553f431a4745230820010117
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8d1c14f81c22442f37ec026310edf228124e8911
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923886"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488304"
 ---
 # <a name="using-the-jdbc-driver"></a>Empleo del controlador JDBC
 

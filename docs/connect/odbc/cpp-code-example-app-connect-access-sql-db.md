@@ -1,5 +1,6 @@
 ---
 title: Aplicación ODBC de C++ que tiene acceso a una base de datos SQL
+description: Esta aplicación de ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y acceder a una base de datos SQL.
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4f3df5ecdefffc8c9d5ae1cc43ba9210f458c41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 819fdc766d03d845582dfc0ae7885615cd8a6019
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907751"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528929"
 ---
 # <a name="c-odbc-example-application-accesses-a-sql-database"></a>La aplicación de ejemplo ODBC de C++ accede a una base de datos SQL
 
@@ -22,7 +23,7 @@ ms.locfileid: "80907751"
 
 Esta aplicación de ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y acceder a una base de datos SQL.
 
-Entre octubre de 2013 y julio de 2019, esta aplicación ODBC de C++ de ejemplo se descargó 47 300 veces. En julio de 2019, este origen de la aplicación se ha pasado de la galería de código de Microsoft a esta página web.
+Entre octubre de 2013 y julio de 2019, esta aplicación ODBC de C++ de ejemplo se descargó 47 300 veces. En julio de 2019, el origen de esta aplicación se pasó de la galería de código de Microsoft a esta página web.
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md

@@ -1,7 +1,8 @@
 ---
-title: Matriz de compatibilidad de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+title: Matriz de compatibilidad de controladores de Microsoft para PHP
+description: Esta página contiene la matriz de compatibilidad y la directiva de ciclo de vida de soporte técnico de los controladores de Microsoft para PHP para SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922826"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632758"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Matriz de compatibilidad de los controladores de Microsoft para PHP para SQL Server
 
@@ -106,7 +107,7 @@ Las versiones siguientes del sistema operativo Windows son compatibles con la ve
 |Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-Las versiones siguientes de los sistemas operativos Linux y Mac (solo de 64 bits) son compatibles con la versión indicada de los controladores de Microsoft para PHP:
+Las versiones siguientes de los sistemas operativos Linux y macOS (solo de 64 bits) son compatibles con la versión indicada de los controladores de Microsoft para PHP:
 
 |Versión del controlador de PHP para SQL Server &#8594;<br />&#8595; sistema operativo|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -132,12 +133,12 @@ Las versiones siguientes de los sistemas operativos Linux y Mac (solo de 64 bit
 |macOS El Capitan (64 bits)           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> La compatibilidad con Alpine Linux es experimental para la versión 5.8.
+<sup>1</sup> La compatibilidad con Alpine Linux es experimental para la versión 5.8.0. La versión 5.8.1 presenta soporte técnico de producción.
 
 ## <a name="see-also"></a>Consulte también
 
-[Notas de la versión](../../connect/php/release-notes-php-sql-driver.md)
+[Notas de la versión](release-notes-php-sql-driver.md)
 
-[Recursos de soporte técnico](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[Recursos de soporte técnico](support-resources-for-the-php-sql-driver.md)
 
-[Requisitos del sistema](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Requisitos del sistema](system-requirements-for-the-php-sql-driver.md)

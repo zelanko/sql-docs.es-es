@@ -1,5 +1,6 @@
 ---
-title: Compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres | Microsoft Docs
+title: Compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres
+description: En este tema se describe la compatibilidad de Microsoft JDBC Driver para SQL Server con la alta disponibilidad y la recuperación ante desastres (grupos de disponibilidad AlwaysOn).
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c7035ebdab328abd33c4648754ebaba6b80efb54
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 941136eb74d217f0af7b2687e618bf93f2454b8f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219212"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635065"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   En este tema se describe la compatibilidad de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para la alta disponibilidad y la recuperación ante desastres: [!INCLUDE[ssHADR](../../includes/sshadr_md.md)]. Para obtener más información acerca de [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vea los Libros en pantalla de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
- A partir de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], puede especificar la escucha de un grupo de disponibilidad (alta disponibilidad, recuperación ante desastres) en la propiedad de conexión. Si una aplicación [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] está conectada a una base de datos Always On que conmuta por error, se interrumpirá la conexión original y la aplicación deberá abrir una nueva para seguir trabajando tras la conmutación por error. En [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] se han agregado las siguientes [propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md):  
+ A partir de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], puede especificar la escucha de un grupo de disponibilidad (alta disponibilidad, recuperación ante desastres) en la propiedad de conexión. Si una aplicación [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] está conectada a una base de datos AlwaysOn que conmuta por error, se interrumpirá la conexión original y la aplicación deberá abrir una nueva para seguir trabajando tras la conmutación por error. En [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] se han agregado las siguientes [propiedades de conexión](setting-the-connection-properties.md):  
   
 -   **multiSubnetFailover**  
   
@@ -30,9 +31,9 @@ ms.locfileid: "81219212"
  
 Especifique multiSubnetFailover=true al conectarse a la escucha de grupo de disponibilidad de un grupo de disponibilidad o de una instancia de clúster de conmutación por error. Tenga en cuenta que **multiSubnetFailover** es false de forma predeterminada. Use **applicationIntent** para declarar el tipo de carga de trabajo de la aplicación. Consulte las siguientes secciones para obtener más detalles.
  
-A partir de la versión 6.0 de Microsoft JDBC Driver para SQL Server, se agrega una nueva propiedad de conexión, **transparentNetworkIPResolution** (TNIR), para una conexión transparente a los grupos de disponibilidad Alsway On o a un servidor con varias direcciones IP asociadas. Cuando **transparentNetworkIPResolution** es true, el controlador intenta conectarse a la primera dirección IP disponible. Si se produce un error en el primer intento, el controlador trata de conectarse a todas las direcciones IP en paralelo hasta expirar el tiempo de espera, descartándose los intentos de conexión pendientes cuando uno tiene éxito.   
+A partir de la versión 6.0 de Microsoft JDBC Driver para SQL Server, se agrega una nueva propiedad de conexión, **transparentNetworkIPResolution** (TNIR), para una conexión transparente a los grupos de disponibilidad AlswayOn o a un servidor con varias direcciones IP asociadas. Cuando **transparentNetworkIPResolution** es true, el controlador intenta conectarse a la primera dirección IP disponible. Si se produce un error en el primer intento, el controlador trata de conectarse a todas las direcciones IP en paralelo hasta expirar el tiempo de espera, descartándose los intentos de conexión pendientes cuando uno tiene éxito.   
 
-Tenga en cuenta lo siguiente:
+Observe lo siguiente:
 * transparentNetworkIPResolution es true de forma predeterminada
 * transparentNetworkIPResolution se omite si multiSubnetFailover es true
 * transparentNetworkIPResolution se omite si se usa la creación de reflejo de la base de datos
@@ -51,9 +52,9 @@ Tenga en cuenta lo siguiente:
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a multiSubnetFailover  
  Especifique siempre **multiSubnetFailover=true** al conectarse a la escucha de grupo de disponibilidad de un grupo de disponibilidad de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o a una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **multiSubnetFailover** habilita una conmutación por error más rápida en todos los grupos de disponibilidad y las instancias del clúster de conmutación por error en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y reducirá significativamente el tiempo de conmutación por error en las topologías únicas y AlwaysOn de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] reintentará agresivamente la conexión TCP.  
   
- La propiedad de conexión **multiSubnetFailover** indica que la aplicación se está implementando en un grupo de disponibilidad o una instancia de clúster de conmutación por error y que [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un intento de conexión a todas las direcciones IP. Si **MultiSubnetFailover=true** se especifica para una conexión, el cliente reintenta la conexión TCP más deprisa que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
+ La propiedad de conexión **multiSubnetFailover** indica que la aplicación se está implementando en un grupo de disponibilidad o una instancia de clúster de conmutación por error y que [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un intento de conexión a todas las direcciones IP. Si **MultiSubnetFailover=true** se especifica para una conexión, el cliente reintenta la conexión TCP más deprisa que los intervalos de retransmisión TCP predeterminados del sistema operativo. Este comportamiento permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
   
- Para obtener más información sobre las palabras clave de la cadena de conexión en el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], consulte [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
+ Para obtener más información sobre las palabras clave de la cadena de conexión en el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], consulte [Establecimiento de las propiedades de conexión](setting-the-connection-properties.md).  
   
  Si se especifica **multiSubnetFailover=true** al conectarse a algo que no sea una escucha de grupo de disponibilidad o una instancia de clúster de conmutación por error, el rendimiento puede verse afectado negativamente, de modo que no se permite.  
   
@@ -61,7 +62,7 @@ Tenga en cuenta lo siguiente:
   
  Utilice las siguientes instrucciones para conectarse a un servidor en un grupo de disponibilidad o una instancia de clúster de conmutación por error:  
   
--   El controlador generará un error si la propiedad de conexión **instanceName** se usa en la misma cadena de conexión que la propiedad de conexión **multiSubnetFailover**. Esto refleja el hecho de que SQL Browser no se usa en un grupo de disponibilidad. Sin embargo, si también se especifica la propiedad de conexión **portNumber**, el controlador omitirá **instanceName** y usará **portNumber**.  
+-   El controlador generará un error si la propiedad de conexión **instanceName** se usa en la misma cadena de conexión que la propiedad de conexión **multiSubnetFailover**. Este error refleja el hecho de que SQL Browser no se usa en un grupo de disponibilidad. Sin embargo, si también se especifica la propiedad de conexión **portNumber**, el controlador omitirá **instanceName** y usará **portNumber**.  
   
 -   Use la propiedad de conexión **multiSubnetFailover** cuando se conecte a una única subred o a varias subredes, ya que mejorará el rendimiento en ambos casos.  
   
@@ -95,27 +96,27 @@ Tenga en cuenta lo siguiente:
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>Nuevos métodos que admiten multiSubnetFailover y applicationIntent  
  Los siguientes métodos proporcionan acceso mediante programación a las palabras clave de la cadena de conexión **multiSubnetFailover**, **applicationIntent** y **transparentNetworkIPResolution**:  
   
--   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.getApplicationIntent](reference/getapplicationintent-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.setApplicationIntent](../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.setApplicationIntent](reference/setapplicationintent-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.getMultiSubnetFailover](../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.getMultiSubnetFailover](reference/getmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [SQLServerDataSource.setMultiSubnetFailover](../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
+-   [SQLServerDataSource.setMultiSubnetFailover](reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [SQLServerDriver.getPropertyInfo](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
+-   [SQLServerDriver.getPropertyInfo](reference/getpropertyinfo-method-sqlserverdriver.md)  
 
 -   SQLServerDataSource.setTransparentNetworkIPResolution
 
 -   SQLServerDataSource.getTransparentNetworkIPResolution
   
- Los métodos **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** y **setTransparentNetworkIPResolution** también se agregan a las clases [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) y [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
+ Los métodos **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** y **setTransparentNetworkIPResolution** también se agregan a las clases [SQLServerDataSource](reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](reference/sqlserverconnectionpooldatasource-class.md) y [SQLServerXADataSource](reference/sqlserverxadatasource-class.md).  
   
 ## <a name="tlsssl-certificate-validation"></a>Validación de certificado TLS/SSL  
- Un grupo de disponibilidad consta de varios servidores físicos. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] agregó compatibilidad con **nombres alternativos de sujeto** en los certificados TLS/SSL, por lo que es posible asociar varios hosts al mismo certificado. Para obtener más información sobre TLS, consulte [Descripción de la compatibilidad con cifrado](../../connect/jdbc/understanding-ssl-support.md).  
+ Un grupo de disponibilidad consta de varios servidores físicos. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] agregó compatibilidad con **nombres alternativos de sujeto** en los certificados TLS/SSL, por lo que es posible asociar varios hosts al mismo certificado. Para obtener más información sobre TLS, consulte [Descripción de la compatibilidad con cifrado](understanding-ssl-support.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
- [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md)  
+ [Conexión a SQL Server con el controlador JDBC](connecting-to-sql-server-with-the-jdbc-driver.md)  
+ [Establecimiento de las propiedades de conexión](setting-the-connection-properties.md)  
   
   

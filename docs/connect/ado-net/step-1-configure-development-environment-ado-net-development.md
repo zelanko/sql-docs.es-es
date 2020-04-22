@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1: Configurar el entorno de desarrollo para el desarrollo de ADO.NET | Microsoft Docs'
+title: 'Paso 1: Configuración del entorno de desarrollo para el desarrollo de ADO.NET | Microsoft Docs'
 description: Describe cómo configurar el entorno para el desarrollo de ADO.NET.
 ms.custom: ''
 ms.date: 08/15/2019
@@ -11,22 +11,22 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b6d1328c7bbdebe90a2e30118f67123214008989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dde55bd4afd162869606e336126c32c274ea7445
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918218"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633322"
 ---
-# <a name="step-1-configure-development-environment-for-adonet-development"></a>Paso 1: Configurar el entorno de desarrollo para el desarrollo de ADO.NET
+# <a name="step-1-configure-development-environment-for-adonet-development"></a>Paso 1: Configuración del entorno de desarrollo para el desarrollo de ADO.NET
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-- Siguiente artículo:&nbsp;&nbsp;&nbsp;[Paso 2: Crear una base de datos SQL para el desarrollo de ADO.NET](step-2-create-sql-database-ado-net-development.md)  
+- Siguiente artículo:&nbsp;&nbsp;&nbsp;[Paso 2: Creación de una base de datos SQL para el desarrollo de ADO.NET](step-2-create-sql-database-ado-net-development.md)  
 
 ## <a name="download-a-net-sql-driver"></a>Descarga de un controlador .NET SQL
 
-En el ejemplo de código actual se usa ADO.NET del .NET Framework, para Windows. .NET Core está disponible para Linux y MacOS (además de Windows).
+En el ejemplo de código actual se usa ADO.NET del .NET Framework, para Windows. .NET Core está disponible para Linux y macOS (además de Windows).
 
 ### <a name="adonet-for-windows"></a>ADO.NET, para Windows
 
@@ -37,7 +37,7 @@ En el ejemplo de código actual se usa ADO.NET del .NET Framework, para Windows
     - [Más opciones para Visual Studio gratis](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core, para Linux (Ubuntu y MacOS)
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core, para Linux-Ubuntu y macOS
 
 Los vínculos para descargar .NET Core, para una variedad de sistemas operativos, están disponibles en:
 

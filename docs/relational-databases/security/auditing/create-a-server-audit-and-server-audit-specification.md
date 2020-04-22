@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8fe4348947203e54a889c9e7fa18067a0562feca
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952467"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635750"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Crear una auditoría de servidor y una especificación de auditoría de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,14 +164,19 @@ ms.locfileid: "75952467"
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> Aunque puede usar una ruta de acceso UNC como destino del archivo de auditoría, tenga precaución. Si hay latencia de red en ese recurso compartido de archivos, puede experimentar una degradación del rendimiento en SQL Server, ya que los subprocesos esperarían a que una escritura de auditoría se completara antes de continuar. Puede observar varios mensajes de error en el registro de errores de SQL Server, como 17894:
+>
+>   2020-02-07 12:21:35.100 Parece que el distribuidor del servidor (0x7954) del grupo de distribuidores "grupo de distribuidores principal del motor XE", trabajo 0x00000058E7300000, no rinde en el nodo 0.
+
+
 #### <a name="to-create-a-server-audit-specification"></a>Para crear una especificación de auditoría de servidor  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  

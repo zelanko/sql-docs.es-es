@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 59c833c86c632c0f5a0838a98f31d89f4f0df5fb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570259"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635875"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>Propiedad de ConfigurationSetting: SecureConnectionLevel
   Devuelve el nivel de conexión segura especificado en el archivo RSReportServer.config. Solo lectura.  
@@ -36,7 +36,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- Un valor **Integer** que representa el nivel de conexión segura. Los valores devueltos indican que el SSL está configurado o no. Un valor mayor o igual que 1 indica que SSL está activado. El valor 0 indica que SSL está desactivado.  
+ Un valor **Integer** que representa el nivel de conexión segura. Los valores devueltos indican si TLS está configurado o no. Un valor mayor o igual que 1 indica que TLS está activado. Un valor 0 indica que TLS está desactivado.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

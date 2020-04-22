@@ -1,5 +1,6 @@
 ---
 title: Controlador Microsoft JDBC para SQL Server | Microsoft Docs
+description: Microsoft proporciona un controlador JDBC para su uso con SQL Server y Azure SQL Database, lo que permite la conectividad desde cualquier aplicación, servidor o applet de Java.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09257402146c8e2354d54a04d202f2daf697bb3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be47bcad4526a65012fdd94e5dfe6b79d780985a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928224"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487820"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver para SQL Server
 
@@ -28,8 +29,8 @@ El controlador JDBC de Microsoft para SQL Server se ha probado con servidores de
 ## <a name="getting-started"></a>Introducción  
 
 * [Paso 1: Configurar el entorno de desarrollo para el desarrollo de Java](step-1-configure-development-environment-for-java-development.md)  
-* [Paso 2: Crear una base de datos SQL para el desarrollo de Java ](step-2-create-a-sql-database-for-java-development.md)  
-* [Paso 3: Prueba de concepto que se conecta a SQL con Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Paso 2: Crear una base de datos SQL para el desarrollo de Java](step-2-create-a-sql-database-for-java-development.md)  
+* [Paso 3: Prueba de concepto de la conexión a SQL mediante Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Documentación  
 

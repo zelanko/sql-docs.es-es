@@ -1,5 +1,6 @@
 ---
-title: Conexión con bcp | Microsoft Docs
+title: Conexión con bcp
+description: Obtenga información sobre cómo usar la utilidad bcp con Microsoft ODBC Driver for SQL Server en Linux y macOS.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924543"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632811"
 ---
 # <a name="connecting-with-bcp"></a>Conexión con bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-La utilidad [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y MacOS. En esta página se documentan las diferencias de la versión de `bcp` de Windows.
+La utilidad [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y macOS. En esta página se documentan las diferencias de la versión de `bcp` de Windows.
   
 - El terminador de campo es una tabulación ("\t").  
   
@@ -61,7 +62,7 @@ Utiliza un tipo de datos de caracteres.
 Especifica la base de datos a la que conectarse.  
   
 - -d  
-Hace que el valor transmitido a la opción `bcp` -S se interprete como un nombre de origen de datos (DSN). Para obtener más información, vea la sección "Compatibilidad con DSN en sqlcmd y bcp" de [Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Hace que el valor transmitido a la opción `bcp` -S se interprete como un nombre de origen de datos (DSN). Para obtener más información, vea la sección "Compatibilidad con DSN en sqlcmd y bcp" de [Connecting with sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *error_file* especifica la ruta completa de un archivo de error que se usa para almacenar las filas que la utilidad `bcp` no puede transferir del archivo a la base de datos.  
   
@@ -84,7 +85,7 @@ Especifica un tiempo de espera de inicio de sesión. La opción -l especifica el
 Especifica el número de la última fila que se exportará desde una tabla o que se importará desde un archivo de datos.  
   
 - -m *max_errors*  
-Especifica el número máximo de errores de sintaxis que pueden producirse antes de que se cancele la operación de `bcp`.  
+Especifica el número máximo de errores de sintaxis que pueden producirse antes de que se cancele la operación `bcp`.  
   
 - -n  
 Utiliza los tipos de datos nativos (de la base de datos) de los datos para realizar la operación de copia masiva.  
@@ -147,4 +148,4 @@ Si se usa con las opciones format y -f format_file, genera un archivo de formato
   
 ## <a name="see-also"></a>Consulte también
 
-[Conexión con **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Conexión con **sqlcmd**](connecting-with-sqlcmd.md)  

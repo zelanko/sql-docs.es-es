@@ -1,6 +1,6 @@
 ---
 title: Conexión a un agente de escucha del grupo de disponibilidad
-description: Contiene información sobre cómo conectarse a una escucha de grupo de disponibilidad Always On, como la forma de conectarse a la réplica principal, una réplica secundaria de solo lectura, usar SSL y Kerberos.
+description: Contiene información sobre cómo conectarse a una escucha de grupo de disponibilidad Always On, como la forma de conectarse a la réplica principal, una réplica secundaria de solo lectura, usar TLS/SSL y Kerberos.
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433742"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528499"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conexión a un agente de escucha del grupo de disponibilidad Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  La opción de conexión **MultiSubnetFailover** debe establecerse en **True** aunque el grupo de disponibilidad solo abarque una única subred.  Esto permite preconfigurar nuevos clientes que puedan abarca en el futuro subredes sin necesidad de los cambios en la cadena de conexión de cliente y también optimiza el rendimiento de conmutación por error para conmutaciones por error de las subredes.  Cuando la opción de conexión **MultiSubnetFailover** no es necesaria, proporciona la ventaja de una conmutación por error más rápida de la subred.  Esto se debe a que el controlador cliente intentará abrir un socket de TCP para cada dirección IP en paralelo asociada al grupo de disponibilidad.  El controlador cliente esperará que la primera dirección IP responda y, una vez que lo haga, la utilizará para la conexión.  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> Clientes de escucha y certificados SSL  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> Clientes de escucha y certificados TLS/SSL  
 
- Al conectarse a un agente de escucha del grupo de disponibilidad, si las instancias participantes de SQL Server utilizan certificados SSL junto con cifrado de sesión, el controlador cliente de conexión deberá admitir el nombre alternativo del asunto del certificado SSL para forzar el cifrado.  La compatibilidad del controlador de SQL Server con el nombre alternativo del asunto del certificado está previsto para ADO.NET (SqlClient), Microsoft JDBC y SQL Native Client (SNAC).  
+Al conectarse a un agente de escucha del grupo de disponibilidad, si las instancias participantes de SQL Server utilizan certificados TLS/SSL junto con cifrado de sesión, el controlador cliente de conexión deberá admitir el nombre alternativo del asunto del certificado TLS/SSL para forzar el cifrado.  La compatibilidad del controlador de SQL Server con el nombre alternativo del asunto del certificado está previsto para ADO.NET (SqlClient), Microsoft JDBC y SQL Native Client (SNAC).  
   
- Se debe configurar un certificado X.509 para cada nodo de servidor participante en el clúster de conmutación por error con una lista de todos los agentes de escucha del grupo de disponibilidad establecidos en el nombre alternativo del asunto del certificado.  
-  
- Por ejemplo, si el WSFC tiene tres agentes de escucha del grupo de disponibilidad con los nombres `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`y `AG3_listener.Adventure-Works.com`, el nombre alternativo del asunto del certificado debe establecerse del modo siguiente:  
-  
+Se debe configurar un certificado X.509 para cada nodo de servidor participante en el clúster de conmutación por error con una lista de todos los agentes de escucha del grupo de disponibilidad establecidos en el nombre alternativo del asunto del certificado. 
+
+El formato de los valores de certificado es: 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+Por ejemplo, tiene los valores siguientes: 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+En el caso de un WSFC que tenga un solo grupo de disponibilidad, el certificado debe tener el nombre de dominio completo (FQDN) del servidor y el FQDN del agente de escucha: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+Con esta configuración, las conexiones se cifrarán al conectarse a la instancia (`WIN2019\SQL2019`) o al agente de escucha (`Listener2019`). 
+
+En función de cómo esté configurada la red, hay un pequeño subconjunto de clientes que es posible que tengan que agregar también el NetBIOS al SAN. En ese caso, los valores del certificado deben ser: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+Si el WSFC tiene tres agentes de escucha del grupo de disponibilidad, por ejemplo: Listener1, Listener2, Listener3
+
+Los valores del certificado deben ser: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> Clientes de escucha y Kerberos (SPN) 
 

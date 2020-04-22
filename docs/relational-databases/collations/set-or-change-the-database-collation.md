@@ -13,22 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2221d88e5f564b08f993f68f9be4131588aebe2a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f36317fd3572b0fd3b8e7f45cecd735c26da8f5
+ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866114"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81388075"
 ---
 # <a name="set-or-change-the-database-collation"></a>Establecer o cambiar la intercalación de base de datos
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo establecer y cambiar la intercalación de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si no se especifica ninguna intercalación, se utiliza la del servidor.  
   
 > [!IMPORTANT]
-> La modificación de la intercalación de base de datos no está explícitamente prohibida en Azure SQL Database. Sin embargo, requiere el bloqueo exclusivo en la base de datos, y otros procesos de usuario o en segundo plano (por ejemplo, las copias de seguridad) podrían mantener este bloqueo y evitar el cambio de la intercalación. La instrucción `ALTER DATABASE COLLATE` de Azure SQL Database producirá un error si se ejecuta mientras los procesos en segundo plano acceden a la base de datos. Si recibe un error de tiempo de expiración de bloqueo, debería reintentar la instrucción. 
- 
-> [!NOTE]
-> La intercalación no se puede modificar con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] una vez que se creó la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Solo se puede modificar a través de [!INCLUDE[tsql](../../includes/tsql-md.md)].
+> La modificación de la intercalación de base de datos no está explícitamente prohibida en Azure SQL Database. Sin embargo, requiere el bloqueo exclusivo en la base de datos, y otros procesos de usuario o en segundo plano (por ejemplo, las copias de seguridad) podrían mantener este bloqueo y evitar el cambio de la intercalación. La instrucción `ALTER DATABASE COLLATE` en Azure SQL Database no se admite.
 
  **En este tema**  
   

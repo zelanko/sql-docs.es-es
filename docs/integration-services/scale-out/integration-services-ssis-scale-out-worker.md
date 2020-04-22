@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082069"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488264"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Trabajador de escalado horizontal de Integration Services (SSIS)
 
@@ -33,7 +33,7 @@ Puede configurar el servicio de trabajador de escalabilidad horizontal mediante 
 |DisplayName|Nombre para mostrar del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Nombre de equipo|
 |Descripción|Descripción del trabajador de escalado horizontal. **No está en uso en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017.**|Vacío|
 |MasterEndpoint|Punto de conexión para conectarse al patrón de escalado horizontal.|Punto de conexión establecido durante la instalación del trabajador de escalado horizontal|
-|MasterHttpsCertThumbprint|Huella digital del certificado SSL de cliente usado para autenticar el patrón de escalado horizontal|Huella digital del certificado de cliente especificado durante la instalación del trabajador de escalado horizontal.|
+|MasterHttpsCertThumbprint|Huella digital del certificado TLS/SSL de cliente usado para autenticar el patrón de escalabilidad horizontal|Huella digital del certificado de cliente especificado durante la instalación del trabajador de escalado horizontal.|
 |WorkerHttpsCertThumbprint|Huella digital del certificado del patrón de escalado horizontal usado para autenticar el trabajador de escalado horizontal.|Huella digital de un certificado creado e instalado automáticamente durante la instalación del trabajador de escalado horizontal|
 |StoreLocation|Ubicación del almacén del certificado del trabajador.|LocalMachine|
 |StoreName|Nombre del almacén en el que está el certificado de ese trabajador.|My|

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742075"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632542"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega de correo electrónico que permite enviar por correo electrónico un informe a grupos o usuarios individuales. Para distribuir un informe por correo electrónico, debe 1) configurar el servidor de informes para la entrega de correo electrónico y 2) definir una suscripción estándar o una suscripción controlada por datos. Una suscripción única no puede entregar varios informes en un solo mensaje de correo electrónico. Sin embargo, se pueden crear varias suscripciones.  
   
- El servidor de informes se conecta con el servidor de correo electrónico a través de una conexión estándar. No utiliza ninguna comunicación que se haya cifrado mediante SSL (Capa de sockets seguros). El servidor de correo electrónico debe ser un servidor SMTP (Protocolo simple de transferencia de correo) remoto o local en la misma red que el servidor de informes.  
+ El servidor de informes se conecta con el servidor de correo electrónico a través de una conexión estándar. No utiliza ninguna comunicación que se haya cifrado mediante la Seguridad de la capa de transporte (TLS), anteriormente conocida como Capa de sockets seguros (SSL). El servidor de correo electrónico debe ser un servidor SMTP (Protocolo simple de transferencia de correo) remoto o local en la misma red que el servidor de informes.  
   
  Para obtener los pasos detallados que le pueden guiar para crear una suscripción, consulte lo siguiente:  
   

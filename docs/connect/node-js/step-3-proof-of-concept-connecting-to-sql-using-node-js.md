@@ -1,5 +1,6 @@
 ---
-title: 'Paso 3: Prueba de concepto de la conexión a SQL con Node.js | Microsoft Docs'
+title: 'Paso 3: Conexión con SQL mediante Node.js'
+description: Este ejemplo debe considerarse una prueba de concepto que muestra cómo conectarse a SQL mediante node.js y se ha simplificado para mayor claridad.
 ms.custom: ''
 ms.date: 07/23/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b52af27ed1f811246a7654ee19fa97ba7deddf07
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e7bc243bbcfe0f132cebe73df18d52ee769ec77e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923813"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528919"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante Node.js
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c6981b34f973737b30480b92152faae9e74fd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510196"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486859"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Instalación del servidor de informes en modo nativo de Reporting Services 2016
 
@@ -90,7 +90,7 @@ Las reservas de direcciones URL están compuestas de un prefijo, un nombre de ho
 
 |Parte|Descripción|
 |----------|-----------------|
-|Prefijo|El prefijo predeterminado es HTTP. Si instaló anteriormente un certificado de Capa de sockets seguros (SSL), el programa de instalación intentará crear reservas de direcciones URL que usen el prefijo HTTPS.|
+|Prefijo|El prefijo predeterminado es HTTP. Si instaló anteriormente un certificado de Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL), el programa de instalación intentará crear reservas de direcciones URL que usen el prefijo HTTPS.|
 |Nombre de host|El nombre de host predeterminado es un carácter comodín (+) seguro. Especifica que el servidor de informes aceptará cualquier solicitud HTTP en el puerto designado para cualquier nombre de host que se resuelva como el equipo, incluidos `https://<computername>/reportserver`, `https://localhost/reportserver` o `https://<IPAddress>/reportserver`.|
 |Port|El puerto predeterminado es 80. Tenga en cuenta que si utiliza cualquier puerto distinto del 80, tendrá que agregarlo explícitamente a la dirección URL cuando abra una aplicación web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una ventana del explorador.|
 |Directorio virtual|De forma predeterminada, los directorios virtuales se crean en el formato de ReportServer_\<*nombre_instancia*> para el servicio web del servidor de informes y Reports_\<*nombre_instancia*> para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Para el servicio web del servidor de informes, el nombre del directorio virtual predeterminado es **reportserver**. Para el [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)], el directorio virtual predeterminado es **reports**.|
@@ -188,7 +188,7 @@ Para obtener más información, consulte la sección Nativo de los dos temas sig
 [Configuración de una conexión a la base de datos del servidor de informes](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
 [Instalación de solo archivos &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)  
 [Inicialización de un servidor de informes](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
-[Configuración de conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+[Configuración de conexiones TLS en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

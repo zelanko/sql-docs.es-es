@@ -1,5 +1,6 @@
 ---
 title: Controlador Node.js de SQL Server | Microsoft Docs
+description: El módulo tedioso es una implementación JavaScript de código abierto del protocolo TDS, que es compatible con todas las versiones actuales de SQL Server.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b1bc3240a726d1a322d10a80e5841697d8fd898
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2ac747a2ab737fc5368fcf1beb22a15399bfb896
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923846"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631926"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Controlador Node.js de SQL Server
 
@@ -23,12 +24,12 @@ ms.locfileid: "80923846"
 
 El módulo tedioso es una implementación JavaScript del protocolo TDS, que es compatible con todas las versiones actuales de SQL Server. El controlador es un proyecto de código abierto disponible en GitHub.  
   
-Puede conectarse a una instancia de SQL Database mediante Node.js en Windows, Linux o Mac.  
+Puede conectarse a una instancia de SQL Database mediante Node.js en Windows, Linux o macOS.  
   
 ## <a name="getting-started"></a>Introducción  
-* [Paso 1: configurar el entorno de desarrollo para el desarrollo de Node.js](step-1-configure-development-environment-for-node-js-development.md)  
-* [Paso 2: crear una instancia de SQL Database para el desarrollo de Node.js](step-2-create-a-sql-database-for-node-js-development.md)  
-* [Paso 3: prueba de concepto de la conexión a SQL mediante Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
+* [Paso 1: Configuración del entorno de desarrollo para el desarrollo de Node.js](step-1-configure-development-environment-for-node-js-development.md)  
+* [Paso 2: Creación de una instancia de SQL Database para el desarrollo de Node.js](step-2-create-a-sql-database-for-node-js-development.md)  
+* [Paso 3: Prueba de concepto de la conexión a SQL mediante Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
   
 ## <a name="documentation"></a>Documentación  
   

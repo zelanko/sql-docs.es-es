@@ -1,5 +1,6 @@
 ---
-title: 'Paso 1: Configuración del entorno de desarrollo de Python pyodbc | Microsoft Docs'
+title: 'Paso 1: Configuración del entorno de Python de pyodbc'
+description: El paso 1 de esta guía de introducción implica la instalación de Python, el controlador Microsoft ODBC Driver for SQL Server y pyODBC en el entorno de desarrollo.
 ms.custom: ''
 ms.date: 07/06/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7dd2063a527d782833f2abfcbd635de30aa27117
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ea669649767f55598190093b7c929f5bd8db27f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926776"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528519"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Paso 1: Configuración del entorno de desarrollo para el desarrollo de Python pyodbc
 

@@ -1,5 +1,6 @@
 ---
 title: Descargar controlador ODBC para SQL Server
+description: Descargue Microsoft ODBC Driver for SQL Server para desarrollar aplicaciones de código nativo que se conectan a SQL Server y Azure SQL Database.
 ms.date: 04/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ce99312dac0fa05af904f1c6a8c5e78c398d70fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ba443225baa1e84a56fd9ce114ec8ff6fa96ebb9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924579"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488600"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Descargar controlador ODBC para SQL Server
 

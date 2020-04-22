@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a8c9ba25c3f9dfd03aa528b4d02f9e02e197546
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae203110efcb9cc6a649d8f0c4af8856c779a741
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509836"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488428"
 ---
 # <a name="authorization-methods"></a>Métodos de autorización
   Puede utilizar estos métodos para administrar tareas, roles y directivas en el servidor de informes.  
@@ -35,7 +35,7 @@ ms.locfileid: "79509836"
 |<xref:ReportService2010.ReportingService2010.GetSystemPermissions%2A>|Devuelve los permisos de sistema del usuario. Este método se aplica solo al modo nativo.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|Devuelve las directivas del sistema, incluidos los grupos y roles a los que están asociados. Este método se aplica solo al modo nativo.|  
 |<xref:ReportService2010.ReportingService2010.InheritParentSecurity%2A>|Elimina las directivas asociadas a un elemento determinado en la base de datos del servidor de informes y establece las directivas de seguridad para el elemento en las de su elemento primario.|  
-|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|Devuelve un valor booleano que indica si el protocolo Capa de sockets seguros (SSL) se requiere para utilizar el extremo de <xref:ReportService2010>.|  
+|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|Devuelve un valor booleano que indica si el protocolo de Seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL), se requiere para utilizar el punto de conexión de <xref:ReportService2010>.|  
 |<xref:ReportService2010.ReportingService2010.ListRoles%2A>|Devuelve los nombres y descripciones de los roles que administra el servidor de informes.|  
 |<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|Devuelve una lista de los métodos del Protocolo simple de acceso a objetos (SOAP) en el extremo de <xref:ReportExecution2005> que requieren una conexión segura cuando se invocan. El valor **SecureConnectionLevel** del servidor de informes se usa para determinar qué métodos se devuelven.|  
 |<xref:ReportService2010.ReportingService2010.ListTasks%2A>|Devuelve las tareas que son administradas por el servidor de informes.|  

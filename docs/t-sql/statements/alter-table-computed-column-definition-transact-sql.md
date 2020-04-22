@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b06287c5a21b2b333335cc199a9447200e04110
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982042"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631693"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73982042"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -55,7 +55,7 @@ column_name AS computed_column_expression
  Es el nombre de la columna que se va a modificar, agregar o quitar. *column_name* puede tener entre 1 y 128 caracteres. Si se trata de columnas nuevas, *column_name* se puede omitir para las columnas creadas con un tipo de datos **timestamp**. Si no se especifica el argumento *column_name* en una columna con un tipo de datos **timestamp**, se usa el nombre **timestamp**.  
   
 *computed_column_expression*  
- Es una expresión que define el valor de una columna calculada. Una columna calculada es una columna virtual que no está almacenada físicamente en la tabla, sino que se calcula a partir de una expresión que utiliza otras columnas de la misma tabla. Por ejemplo, una columna calculada puede tener la definición cost AS price * qty. La expresión puede ser un nombre de columna no calculada, una constante, una función, una variable o cualquier combinación de estos elementos conectados mediante uno o más operadores. La expresión no puede ser una subconsulta ni incluir un tipo de datos alias.  
+ Es una expresión que define el valor de una columna calculada. Una columna calculada es una columna virtual que no está almacenada físicamente en la tabla, sino que se calcula a partir de una expresión que utiliza otras columnas de la misma tabla. Una expresión debe proporcionar un valor. Por ejemplo, una columna calculada podría tener la definición: cost AS price * qty. Otro ejemplo con operadores bit a bit: is_finalised COMO is_checked | is_approved. La expresión puede ser un nombre de columna no calculada, una constante, una función, una variable o cualquier combinación de estos elementos conectados mediante uno o más operadores. La expresión no puede ser una condición de búsqueda, una subconsulta ni incluir un tipo de datos alias.  
   
  Las columnas calculadas se pueden utilizar en listas de selección, cláusulas WHERE, cláusulas ORDER BY o cualquier otra ubicación donde se puedan emplear expresiones regulares, pero con las siguientes excepciones:  
   

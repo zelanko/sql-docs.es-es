@@ -1,7 +1,7 @@
 ---
 title: Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo | Microsoft Docs
 ms.custom: ''
-ms.date: 11/23/2017
+ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75776422"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488334"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,30 +55,38 @@ ms.locfileid: "75776422"
   
 -   La agrupación de subprocesos permite optimizar el rendimiento cuando un gran número de clientes se conecta al servidor. Normalmente, se crea un subproceso del sistema operativo independiente para cada solicitud de la consulta. Sin embargo, cuando hay cientos de conexiones al servidor, el uso de un subproceso por solicitud de consulta puede consumir grandes cantidades de recursos del sistema. La opción de **máximo de subprocesos de trabajo** permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cree un grupo de subprocesos de trabajo para atender un gran número de solicitudes de consulta, lo que mejora el rendimiento.  
   
--   En la siguiente tabla se muestra el número configurado automáticamente de máximo de subprocesos de trabajo para diferentes combinaciones de CPU y versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   En la tabla siguiente se muestra el número configurado automáticamente de máximo de subprocesos de trabajo para diferentes combinaciones de CPU, arquitectura de equipo y versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mediante la fórmula: * **Trabajos máximos predeterminados* + ((* CPU lógicas* - 4) * *Trabajos por CPU*)**.  
   
-    |Número de CPU|Equipo de 32 bits|Equipo de 64 bits|  
-    |------------|------------|------------|  
-    |\<= 4 procesadores|256|512|  
-    |8 procesadores|288|576|  
-    |16 procesadores|352|704|  
-    |32 procesadores|480|960|  
-    |64 procesadores|736|1472|  
-    |128 procesadores|4224|4480|  
-    |256 procesadores|8320|8576| 
+    |Número de CPU|Equipo de 32 bits (hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|Equipo de 64 bits (hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|Equipo de 64 bits (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
+    |------------|------------|------------|------------|  
+    |\<= 4|256|512|512|   
+    |8|288|576|576|   
+    |16|352|704|704|   
+    |32|480|960|960|   
+    |64|736|1472|2432|   
+    |128|1248|2496|4480|   
+    |256|2272|4544|8576|   
     
-    Con la siguiente fórmula:
+    Hasta [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, los *trabajos por CPU* solo dependen de la arquitectura (32 bits o 64 bits):
     
-    |Número de CPU|Equipo de 32 bits|Equipo de 64 bits|  
-    |------------|------------|------------| 
-    |\<= 4 procesadores|256|512|
-    |\> 4 procesadores y \<= 64 procesadores|256 + ((CPU lógicas - 4) * 8)|512 + [(CPU lógicas - 4) * 16]|
-    |\> 64 procesadores|256 + [(CPU lógicas - 4) * 32]|512 + [(CPU lógicas - 4) * 32]|
+    |Número de CPU|Equipo de 32 bits <sup>1</sup>|Equipo de 64 bits|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4|256 + ((CPU lógicas - 4) * 8)|512 <sup>2</sup> + [(CPU lógicas - 4) * 16]|   
+    
+    A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], los *Trabajos por CPU* dependen de la arquitectura y el número de procesadores (entre 4 y 64, o superior a 64):
+    
+    |Número de CPU|Equipo de 32 bits <sup>1</sup>|Equipo de 64 bits|   
+    |------------|------------|------------|   
+    |\<= 4|256|512|   
+    |\> 4 y \<= 64|256 + ((CPU lógicas - 4) * 8)|512 <sup>2</sup> + [(CPU lógicas - 4) * 16]|   
+    |\> 64|256 + [(CPU lógicas - 4) * 32]|512 <sup>2</sup> + [(CPU lógicas - 4) * 32]|   
   
-    > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no se puede instalar en un sistema operativo de 32 bits. Se muestran los valores de equipo de 32 bits como ayuda para los clientes que ejecutan [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores. Se recomienda 1024 como número máximo de subprocesos de trabajo para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo de 32 bits.  
+    <sup>1</sup> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no se puede instalar en un sistema operativo de 32 bits. Se muestran los valores de equipo de 32 bits como ayuda para los clientes que ejecutan [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores. Se recomienda 1024 como número máximo de subprocesos de trabajo para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en un equipo de 32 bits.
+    
+    <sup>2</sup> A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], el valor de *trabajos máximos predeterminados* se divide por 2 con menos de 2 GB de memoria.
   
-    > [!NOTE]  
+    > [!TIP]  
     > Para obtener recomendaciones sobre el uso de más de 64 CPU, vea [Prácticas recomendadas para ejecutar SQL Server en equipos que tienen más de 64 CPU](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Si todos los subprocesos de trabajo están activos con consultas de ejecución prolongada, puede parecer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no responde hasta que finaliza un subproceso de trabajo y vuelve a estar disponible. Aunque no se trata de un defecto, puede que a veces este comportamiento no sea deseable. Si un proceso parece no responder y no se pueden procesar nuevas consultas, conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión de administrador dedicada (DAC) y finalice el proceso. Para impedir este comportamiento, aumente el número máximo de subprocesos de trabajo.  

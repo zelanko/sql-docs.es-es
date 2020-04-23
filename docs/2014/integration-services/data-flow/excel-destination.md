@@ -15,12 +15,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62827228"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087165"
 ---
 # <a name="excel-destination"></a>Destino de Excel
   El destino de Excel carga datos en hojas de cálculo o rangos en libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -48,10 +48,9 @@ ms.locfileid: "62827228"
   
      Si desea información sobre cómo evitar incluir las comillas simples, consulte esta entrada de blog, [Se añade una comilla simple a todas las cadenas al transformar los datos a Excel cuando se utiliza el componente de flujo de datos de destino Excel en un paquete SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), en msdn.com.  
   
--   **Guardar Memo (ntext) da**TA. Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, la instrucción CREATE TABLE debe utilizar LONGTEXT (o uno de sus sinónimos) como tipo de datos de la columna de memorando.  
+-   **Guardar datos de memorando (ntext)**. Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, la instrucción CREATE TABLE debe utilizar LONGTEXT (o uno de sus sinónimos) como tipo de datos de la columna de nota.  
   
--   **Tipos de datos**. El controlador de Excel reconoce solo un conjunto limitado de tipos de datos. Por ejemplo, todas las columnas numéricas se interpretan como dobles (DT_R8) y todas las columnas de cadena (a excepción de las columnas memorando) se interpretan como cadenas Unicode de 255 caracteres (DT_WSTR). 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] asigna los tipos de datos de Excel de la siguiente manera:  
+-   **Tipos de datos**. El controlador de Excel reconoce solo un conjunto limitado de tipos de datos. Por ejemplo, todas las columnas numéricas se interpretan como dobles (DT_R8) y todas las columnas de cadena (a excepción de las columnas memorando) se interpretan como cadenas Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] asigna los tipos de datos de Excel de la siguiente manera:  
   
     -   Numérico    flotante de doble precisión (DT_R8)  
   
@@ -59,14 +58,13 @@ ms.locfileid: "62827228"
   
     -   Booleano     booleano (DT_BOOL)  
   
-    -   Fecha y hora `datetime` (DT_DATE)  
+    -   Fecha y `datetime` hora (DT_DATE)  
   
     -   Cadena    cadena Unicode, longitud de 255 caracteres (DT_WSTR)  
   
     -   Memorando     flujo de texto Unicode (DT_NTEXT)  
   
--   **Tipos de datos y conversiones de longitud**. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no convierte tipos de datos de forma implícita. Como resultado, probablemente necesite usar las transformaciones Columna derivada o Conversión de datos para convertir datos de Excel de forma explícita antes de cargarlos en un destino diferente de Excel, o para convertir datos que no son de Excel antes de cargarlos en un destino de Excel. En este caso, puede resultar útil crear el paquete inicial a través del Asistente para importación y exportación, que le configura las conversiones necesarias. Entre algunos ejemplos de las conversiones que se pueden requerir, figuran:  
+-   **Conversiones de tipo de datos y de longitud**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no convierte tipos de datos de forma implícita. Como resultado, probablemente necesite usar las transformaciones Columna derivada o Conversión de datos para convertir datos de Excel de forma explícita antes de cargarlos en un destino diferente de Excel, o para convertir datos que no son de Excel antes de cargarlos en un destino de Excel. En este caso, puede resultar útil crear el paquete inicial a través del Asistente para importación y exportación, que le configura las conversiones necesarias. Entre algunos ejemplos de las conversiones que se pueden requerir, figuran:  
   
     -   Conversión entre columnas de cadena de Excel Unicode y columnas de cadena no Unicode con páginas de códigos específicas.  
   
@@ -85,13 +83,13 @@ ms.locfileid: "62827228"
   
 -   [Editor de destino de Excel &#40;página Administrador de conexiones&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de Excel &#40;página asignaciones&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Editor de destino de Excel &#40;página Asignaciones&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Editor de destino de Excel &#40;página salida de error&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Editor de destino de Excel &#40;página Salida de error&#41;](../excel-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica todas las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas de Excel](excel-custom-properties.md)  
   
@@ -105,17 +103,9 @@ ms.locfileid: "62827228"
   
 -   [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-content"></a>Contenido relacionado  
-  
--   Entrada de blog, [Excel en Integration Services, parte 1 de 3: conexiones y componentes](https://go.microsoft.com/fwlink/?LinkId=217674), en dougbert.com  
-  
--   Entrada de blog, [Excel en Integration Services, parte 2 de 3: tablas y tipos de datos](https://go.microsoft.com/fwlink/?LinkId=217675), en dougbert.com.  
-  
--   Entrada de blog, [Excel en Integration Services, parte 3 de 3: problemas y alternativas](https://go.microsoft.com/fwlink/?LinkId=217676), en dougbert.com.  
-  
 ## <a name="see-also"></a>Consulte también  
  [Origen de Excel](excel-source.md)   
- [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
  [Flujo de datos](data-flow.md)   
  [Trabajar con archivos de Excel con la tarea Script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

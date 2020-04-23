@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 851c138e00300a303b1618041a16e2c38516968e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301275"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087565"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -62,7 +62,7 @@ ms.locfileid: "81301275"
 |-**0x08**|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a los predicados de seguridad de nivel de fila.|  
 |-**0x10**|El almacenamiento en caché del conjunto de resultados está deshabilitado debido al uso de la tabla del sistema, la tabla temporal o la tabla externa en la consulta.|  
 |-**0x20**|El almacenamiento en caché del conjunto de resultados está deshabilitado porque la consulta contiene constantes en tiempo de ejecución, funciones definidas por el usuario o funciones no deterministas.|  
-|-**0x40**|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a que el tamaño estimado del conjunto de resultados es demasiado grande (> 1 millón de filas).|  
+|-**0x40**|El almacenamiento en caché del conjunto de resultados está deshabilitado debido a que el tamaño estimado del conjunto de resultados está >de 10 GB.|  
 |-**0x80**|El almacenamiento en caché del conjunto de resultados está deshabilitado porque el conjunto de resultados contiene filas de gran tamaño (>64 kb).|  
   
 ## <a name="permissions"></a>Permisos

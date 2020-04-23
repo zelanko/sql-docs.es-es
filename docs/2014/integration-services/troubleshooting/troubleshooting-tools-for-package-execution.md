@@ -16,12 +16,12 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd39b7315903335fe2370ae148579f3fe9d07abc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637803"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087065"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Herramientas para solucionar problemas con la ejecución de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que puede utilizar para solucionar problemas de los paquetes durante su ejecución, después de que los paquetes se hayan completado e implementado.  
@@ -52,13 +52,13 @@ ms.locfileid: "73637803"
   
 -   **Agregar información descriptiva a las salidas de error**. Se puede facilitar el análisis de la salida de error agregando información descriptiva a los dos identificadores numéricos que proporciona la salida de error.  
   
-     **Agregue la descripción del error**. Es sencillo buscar la descripción de un error mediante un componente de script. Para obtener más información, vea [mejorar una salida de error para el componente de script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
+     **Agregue la descripción del error**. Es sencillo buscar la descripción de un error mediante un componente de script. Para obtener más información, consulte Mejora de una salida de [error para el componente de script](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md).  
   
-     **Agregue el nombre de la columna de error**. No es sencillo buscar en el componente de script el nombre de la columna que corresponde al Id. de columna guardado por la salida de error, y se requieren pasos adicionales. Cada Id. de columna de un flujo de datos es único dentro de esa tarea Flujo de datos y se mantiene en el paquete en tiempo de diseño. A continuación se sugiere un enfoque posible para agregar el nombre de columna a la salida de error. Para obtener un ejemplo de cómo usar este enfoque, vea [Agregar el nombre de la columna de error a una salida de error](https://go.microsoft.com/fwlink/?LinkId=261546) en dougbert.com.  
+     **Agregue el nombre de la columna**de error . No es sencillo buscar en el componente de script el nombre de la columna que corresponde al Id. de columna guardado por la salida de error, y se requieren pasos adicionales. Cada Id. de columna de un flujo de datos es único dentro de esa tarea Flujo de datos y se mantiene en el paquete en tiempo de diseño. A continuación se sugiere un enfoque posible para agregar el nombre de columna a la salida de error. 
   
     1.  **Cree una tabla de búsqueda de nombres de columna**. Cree una aplicación independiente que use la API de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para establecer una iteración en cada paquete guardado, cada flujo de datos del paquete, cada objeto del flujo de datos, y cada entrada y salida del objeto de flujo de datos. La aplicación deberá almacenar el Id. y el nombre de columna de cada columna en una tabla de búsqueda, junto con el Id. de la tarea Flujo de datos primaria y el Id. del paquete.  
   
-    2.  **Agregue el nombre de columna a la salida**. Agregue una transformación Búsqueda a la salida de error que busque el nombre de columna en la tabla de búsqueda creada en el paso anterior. La búsqueda puede utilizar el Id. de columna en la salida de error, el Id. de paquete (disponible en la variable del sistema System::PackageID) y el Id. de la tarea Flujo de datos (disponible en la variable del sistema System::TaskID).  
+    2.  **Agregue el nombre de columna a la salida.** Agregue una transformación Búsqueda a la salida de error que busque el nombre de columna en la tabla de búsqueda creada en el paso anterior. La búsqueda puede utilizar el Id. de columna en la salida de error, el Id. de paquete (disponible en la variable del sistema System::PackageID) y el Id. de la tarea Flujo de datos (disponible en la variable del sistema System::TaskID).  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>Solucionar problemas de ejecución de paquetes mediante informes de operaciones  
  Los informes de operaciones estándar se encuentran disponibles en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] al objeto de ayudarle a supervisar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se han implementado en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Estos informes sobre paquetes le ayudan a ver el estado e historial y, si fuera necesario, identificar la causa de los errores de ejecución.  
@@ -66,7 +66,7 @@ ms.locfileid: "73637803"
  Para obtener más información, consulte [Troubleshooting Reports for Package Execution](troubleshooting-reports-for-package-execution.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>Solución de problemas de la ejecución de paquetes mediante vistas de SSISDB  
- Se encuentran disponibles diversas vistas de la base de datos de SSISDB, las cuales puede consultar para supervisar la ejecución de paquetes y otra información sobre operaciones. Para obtener más información, vea [supervisar las ejecuciones de paquetes y otras operaciones](../performance/monitor-running-packages-and-other-operations.md).  
+ Se encuentran disponibles diversas vistas de la base de datos de SSISDB, las cuales puede consultar para supervisar la ejecución de paquetes y otra información sobre operaciones. Para obtener más información, consulte Supervisión de ejecuciones de [paquetes y otras operaciones](../performance/monitor-running-packages-and-other-operations.md).  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>Solución de problemas de la ejecución de paquetes mediante el registro  
  Al habilitar el registro, se puede hacer un seguimiento de gran parte de lo que sucede en los paquetes en ejecución. Los proveedores de registro capturan información sobre los eventos especificados para su análisis posterior y guardan la información en una tabla de base de datos, un archivo plano, un archivo XML u otro formato de salida compatible.  
@@ -85,7 +85,7 @@ ms.locfileid: "73637803"
   
     3.  **Posibilidad de capturar datos de recuento de filas**. Tenga en cuenta la posibilidad de crear una tabla independiente para almacenar información de recuento de filas, donde cada instancia de ejecución del paquete se identifique mediante su ExecutionID. Utilice la transformación Recuento de filas para guardar el recuento de filas en una serie de variables en puntos clave del flujo de datos. Tras finalizar el flujo de datos, utilice una tarea Ejecutar SQL para insertar la serie de valores en una fila de la tabla para permitir realizar análisis y generar informes posteriormente.  
   
-     Para obtener más información sobre este enfoque, vea la sección sobre auditoría y registro del ETL, en las notas del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
+     Para más información sobre este enfoque, consulte la sección sobre auditoría y registro del ETL, en las notas del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)], [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Solución de problemas de ejecución de paquetes utilizando archivos de volcado de depuración  
  En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear archivos de volcado de depuración que proporcionen información sobre la ejecución de un paquete. Para obtener más información, consulte [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  
@@ -111,8 +111,5 @@ ms.locfileid: "73637803"
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md)  
-  
-## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog [Agregar el nombre de columna de error a una salida de error](https://go.microsoft.com/fwlink/?LinkId=261546), en dougbert.com.  
   
   

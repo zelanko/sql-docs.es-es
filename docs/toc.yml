@@ -10083,8 +10083,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: Desarrollo
           href: sql-server/partner-dev-sql-server.md
-    - name: Contenido local con Visor de ayuda
-      href: sql-server/sql-server-help-installation.md
+    - name: Documentación de SQL Server sin conexión
+      href: sql-server/sql-server-offline-documentation.md
 - name: Referencia
   items:
     - name: Contenido archivado (SQL 2005 - 2012) >

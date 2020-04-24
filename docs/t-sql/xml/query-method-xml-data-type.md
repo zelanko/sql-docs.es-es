@@ -1,7 +1,7 @@
 ---
 title: query() (método del tipo de datos xml) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/26/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9501e1cf2b6c34ba3cf0ff4494866e2a32d16366
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72278164"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81636113"
 ---
 # <a name="query-method-xml-data-type"></a>query() (método de tipo de datos xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ Especifica una expresión XQuery en una instancia del tipo de datos **xml**. El 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 query ('XQuery')  
 ```  
@@ -45,7 +45,7 @@ En el ejemplo siguiente se declara una variable **\@myDoc** de tipo **xml** y se
   
 La consulta recupera el elemento secundario <`Features`> del elemento <`ProductDescription`>:  
   
-```  
+```sql
 declare @myDoc xml  
 set @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
@@ -70,7 +70,7 @@ La siguiente salida muestra el resultado:
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. Usar el método query() con una columna de tipo XML  
 En el ejemplo siguiente, el método **query()** se usa para especificar una expresión XQuery en la columna **CatalogDescription** de tipo **xml** de la base de datos **AdventureWorks**:  
   
-```  
+```sql
 SELECT CatalogDescription.query('  
 declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
@@ -100,7 +100,7 @@ La siguiente salida muestra el resultado parcial:
   
 Observe que ambos métodos, query() y exist(), declaran el prefijo PD. En estos casos, puede utilizar WITH XMLNAMESPACES para definir los prefijos en primer lugar y utilizarlo en la consulta.  
   
-```  
+```sql
 WITH XMLNAMESPACES 
 (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  

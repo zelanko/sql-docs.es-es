@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 34ab0ad4011c0301aa22a437315d8a5a64e0e372
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118118"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487147"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalación de nuevos paquetes de R con sqlmlutils
 
@@ -250,4 +250,4 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 - Para obtener información sobre los paquetes de R instalados, consulte [Obtener información de paquetes de R](r-package-information.md).
 - Para obtener ayuda para trabajar con paquetes de R, consulte [Sugerencias para usar paquetes de R](tips-for-using-r-packages.md).
 - Para obtener información sobre la instalación de paquetes de Python, consulte [Instalación de paquetes de Python con PIP](install-additional-python-packages-on-sql-server.md).
-- Para obtener más información sobre SQL Server Machine Learning Services, consulte [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- Para obtener más información sobre SQL Server Machine Learning Services, consulte [¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md)

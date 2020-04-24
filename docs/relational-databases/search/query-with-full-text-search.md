@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd248b42f01a65aabcd1146d23c7b247d0053908
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68053575"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488192"
 ---
 # <a name="query-with-full-text-search"></a>Consultar con búsqueda de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Escriba consultas de texto completo mediante los predicados **CONTAINS** y **FRE
 
 ## <a name="examples-of-each-predicate-and-function"></a><a name="examples_simple"></a> Ejemplos de cada predicado y función
 
-En los siguientes ejemplos, se usa la base de datos de ejemplo AdventureWorks. Para obtener la versión final de AdventureWorks, vea [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) (Bases de datos y scripts de AdventureWorks para SQL Server 2016 CTP3). Para ejecutar las consultas de ejemplo, también tendrá que configurar la búsqueda de texto completo. Para obtener más información, vea [Introducción a la búsqueda de texto completo](get-started-with-full-text-search.md). 
+En los siguientes ejemplos, se usa la base de datos de ejemplo AdventureWorks. Para obtener la versión final de AdventureWorks, vea [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) (Bases de datos y scripts de AdventureWorks para SQL Server 2016 CTP3). Para ejecutar las consultas de ejemplo, también tendrá que configurar la búsqueda de texto completo. Para obtener más información, vea [Introducción a la búsqueda de texto completo](get-started-with-full-text-search.md). 
 
 ### <a name="example---contains"></a>Ejemplo: CONTAINS  
 En este ejemplo, se buscan todos los productos con un precio de `$80.99` que contengan la palabra `"Mountain"`:

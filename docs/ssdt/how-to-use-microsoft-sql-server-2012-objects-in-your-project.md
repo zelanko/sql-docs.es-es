@@ -10,18 +10,18 @@ manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c9ea326bc37d4843b6cb7e3bc4e21fa356af5435
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69c68812e169d2831ffde71d2b21f9af8f418600
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244253"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486796"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Usar objetos de Microsoft SQL Server 2012 en un proyecto
 
 En este ejemplo, agregará un objeto de secuencia a un proyecto de base de datos destinado a Microsoft SQL Server 2012.  
   
-Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite.  Para más información sobre los objetos de secuencia consulte [Números de secuencia](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Para obtener información sobre las novedades de Microsoft SQL Server 2012, vea [Novedades de SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
+Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite.  Para más información sobre los objetos de secuencia consulte [Números de secuencia](../relational-databases/sequence-numbers/sequence-numbers.md). Para obtener información sobre las novedades de Microsoft SQL Server 2012, vea [Novedades de SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
   
 > [!WARNING]  
 > Los procedimientos siguientes usan entidades creadas en procedimientos anteriores de las secciones [Desarrollo de bases de datos conectadas](../ssdt/connected-database-development.md) y [Desarrollo de bases de datos sin conexión orientado a proyectos](../ssdt/project-oriented-offline-database-development.md).  

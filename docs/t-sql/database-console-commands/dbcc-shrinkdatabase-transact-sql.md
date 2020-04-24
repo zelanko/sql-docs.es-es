@@ -28,12 +28,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8af6e4e5e3b159249e9437c48791b0519821cbb9
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68073160"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632328"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Reduce el tamaño de los archivos de datos y de registro de la base de datos esp
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
 DBCC SHRINKDATABASE   
 ( database_name | database_id | 0   
      [ , target_percent ]   

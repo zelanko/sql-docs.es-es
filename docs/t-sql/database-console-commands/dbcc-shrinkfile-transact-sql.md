@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35ca1ac90704b05bc714327f839ff1487e5cd66f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67930326"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632315"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Reduce el tamaño especificado de los datos o del archivo de registro de la base
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```syntaxsql
   
 DBCC SHRINKFILE   
 (  

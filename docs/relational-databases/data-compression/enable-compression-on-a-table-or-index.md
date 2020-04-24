@@ -23,12 +23,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007163"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488014"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Habilitar compresión de una tabla o un índice
 
@@ -211,7 +211,7 @@ ms.locfileid: "68007163"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo primero se ejecuta el procedimiento almacenado `sp_estimate_data_compression_savings` para devolver el tamaño estimado del objeto en caso de que se use la configuración de compresión ROW. Después, se habilita la compresión de ROW en todas las particiones de la tabla especificada.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
@@ -229,7 +229,7 @@ ms.locfileid: "68007163"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo primero se consulta la vista de catálogo `sys.indexes` para devolver el nombre y el `index_id` para cada índice en la tabla `Production.TransactionHistory` . Después, se ejecuta el procedimiento almacenado `sp_estimate_data_compression_savings` para devolver el tamaño estimado del identificador del índice especificado en caso de que se use el valor de compresión PAGE. Finalmente, en el ejemplo se vuelve a generar el identificador de índice 2 (`IX_TransactionHistory_ProductID`), especificando la compresión PAGE.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, index_id  

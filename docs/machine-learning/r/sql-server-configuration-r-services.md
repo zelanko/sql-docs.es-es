@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117348"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486714"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuración de SQL Server para su uso con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ Una de las ventajas de SQL Server es su capacidad para controlar un gran volume
 
 También puede enviar los datos de entrada como una sola consulta, que SQL Server analiza. Si se puede elaborar un plan de consulta paralelo para los datos de entrada, se crean particiones de los datos asignados a los nodos automáticamente, y se llevan a cabo también las combinaciones y agregaciones necesarias en paralelo.
 
-Si le interesa obtener información detallada sobre cómo definir un procedimiento almacenado para usarlo en la puntuación, vea el proyecto de ejemplo en [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) y busque el archivo "step5_score_for_matching.sql". El script de ejemplo también lleva un seguimiento de las horas de inicio y de fin de la consulta, y registra el tiempo en la consola de SQL para que pueda evaluar el rendimiento.
+Si le interesa obtener información detallada sobre cómo definir un procedimiento almacenado para usarlo en la puntuación, vea el proyecto de ejemplo en [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR) y busque el archivo "step5_score_for_matching.sql". El script de ejemplo también lleva un seguimiento de las horas de inicio y de fin de la consulta, y registra el tiempo en la consola de SQL para que pueda evaluar el rendimiento.
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>Puntuación simultánea mediante grupos de recursos
 
@@ -214,7 +214,7 @@ En el escenario de búsqueda de CV, la simultaneidad se diseñó del siguiente m
 
 - Cada grupo de cargas de trabajo debe encargarse de dos tareas de puntuación. En cuanto una tarea termine de leer los datos y la puntuación se inicia, la otra puede empezar a leer datos de la base de datos.
 
-Para ver los scripts de PowerShell de este escenario, abra el archivo experiment.ps1 del [proyecto de Github](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips).
+Para ver los scripts de PowerShell de este escenario, abra el archivo experiment.ps1 del [proyecto de Github](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching).
 
 ### <a name="storing-models-for-prediction"></a>Almacenamiento de modelos para la predicción
 

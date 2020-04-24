@@ -11,18 +11,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7112b89375251244ba54182197855e0bed412455
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4117596621141ced75e3cf013bfbc6048dbf52c4
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116528"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487392"
 ---
 # <a name="tutorial-categorizing-customers-using-k-means-clustering-with-sql-server-machine-learning-services"></a>Tutorial: Clasificación de clientes por categorías mediante la agrupación en clústeres k-means con SQL Server Machine Learning Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En esta serie de tutoriales de cuatro partes, usará Python para desarrollar e implementar un modelo de agrupación en clústeres k-means en [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) para agrupar en clústeres datos de clientes.
+En esta serie de tutoriales de cuatro partes, usará Python para desarrollar e implementar un modelo de agrupación en clústeres k-means en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) para agrupar en clústeres datos de clientes.
 
 En la primera parte de esta serie, configurará los requisitos previos para el tutorial y, después, restaurará un conjunto de datos de ejemplo en una base de datos SQL. Más adelante en esta serie, usará estos datos para entrenar e implementar un modelo de agrupación en clústeres en Python con SQL Server Machine Learning Services.
 
@@ -44,7 +44,7 @@ En la [parte cuatro](python-clustering-model-deploy.md), aprenderá a crear un p
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
-* [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) con la opción de lenguaje de Python: siga las instrucciones de instalación en la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md) o la [Guía de instalación para Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15).
+* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) con la opción de lenguaje de Python: siga las instrucciones de instalación en la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md) o la [Guía de instalación para Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15).
 
 * [Azure Data Studio](../../azure-data-studio/what-is.md) Usará un cuaderno en Azure Data Studio para Python y SQL. Para obtener más información sobre los cuadernos, vea [Uso de los cuadernos en Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
 

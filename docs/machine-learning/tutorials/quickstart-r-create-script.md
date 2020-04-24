@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 33baeba807711c1eb65b3a9c972066bb384e2542
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116248"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487304"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>Inicio rápido: ejecución de scripts de R sencillos con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este inicio rápido, ejecutará un conjunto de scripts de R sencillos mediante [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md). Aprenderá a usar el procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para ejecutar el script en una instancia de SQL Server.
+En este inicio rápido, ejecutará un conjunto de scripts de R sencillos mediante [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Aprenderá a usar el procedimiento almacenado [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para ejecutar el script en una instancia de SQL Server.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -249,4 +249,4 @@ Para más información sobre cómo usar R en SQL Server Machine Learning Ser
 
 - [Creación de funciones avanzadas de R con SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [Creación y puntuación de un modelo predictivo en R con SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md)

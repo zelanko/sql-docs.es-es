@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116298"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487344"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: Creación y puntuación de un modelo predictivo en Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este inicio rápido, creará y entrenará un modelo predictivo con Python. Guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir los valores de los datos nuevos con [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+En este inicio rápido, creará y entrenará un modelo predictivo con Python. Guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir los valores de los datos nuevos con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. En el primero, se usa el conjunto de datos de flores Iris clásico y se genera un modelo de Bayes naive para predecir una especie de Iris basándose en las características florales. El segundo procedimiento es para puntuación: realiza una llamada al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de Python en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
 
@@ -186,4 +186,4 @@ La ventaja final es que los procesos pueden modificarse mediante parámetros. En
 
 Para más información sobre SQL Server Machine Learning Services, vea:
 
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md)

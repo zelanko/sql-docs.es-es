@@ -14,12 +14,12 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995629"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488035"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinar los permisos efectivos del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -156,5 +156,5 @@ Para obtener detalles de la sintaxis, vea [HAS_PERMS_BY_NAME](../../../t-sql/fun
 ## <a name="see-also"></a>Ver también:
 
 [Introducción a los permisos de los motores de bases de datos](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[Tutorial: Introducción al motor de base de datos](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[Tutorial: Introducción al motor de base de datos](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 

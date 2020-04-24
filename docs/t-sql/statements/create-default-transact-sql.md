@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6885901c16ac5d89bd42dc369fb6ae399cc399c4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902845"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632197"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Crea un objeto denominado valor predeterminado. Cuando se enlaza a una columna o
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 CREATE DEFAULT [ schema_name . ] default_name   
 AS constant_expression [ ; ]  

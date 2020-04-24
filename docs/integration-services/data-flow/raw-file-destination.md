@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 417fce6637f17b428f0e4d45404760088a8c0e20
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292180"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488604"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
 
@@ -136,7 +136,7 @@ ms.locfileid: "71292180"
  Para obtener información sobre cómo establecer las propiedades del componente, vea [Establecer las propiedades de un componente de flujo de datos](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada del blog, sobre los [archivos sin formato](https://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx), en sqlservercentral.com  
+ Entrada del blog, sobre los [archivos sin formato](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), en sqlservercentral.com  
   
 ## <a name="raw-file-destination-editor-connection-manager-page"></a>Editor de destino de archivos sin formato (página Administrador de conexiones)
   Use el editor de destino de archivos sin formato para configurar el destino de archivo sin formato con el fin de escribir datos sin formato en un archivo.  

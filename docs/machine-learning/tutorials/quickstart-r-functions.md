@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e67dcbc35bf5af88d2a7fab37f795cd5cc1d55d9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: fd3c3326fe0b186ade24cbcf95f587abba1cb6bc
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116178"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487292"
 ---
 # <a name="quickstart-r-functions-with-sql-server-machine-learning-services"></a>Inicio rápido: funciones de R con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,4 +114,4 @@ Para crear un modelo de aprendizaje automático con R en SQL Server, siga esta g
 
 Para más información sobre SQL Server Machine Learning Services, vea:
 
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md)

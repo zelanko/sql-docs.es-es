@@ -27,12 +27,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d727044455bcee06155848aee2bd6749bd475ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2d2ddb02927d63ceea9a6fb31bfd5e3b7bd39619
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79315059"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633601"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ Controla el comportamiento del bloqueo y de las versiones de fila de las instruc
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET TRANSACTION ISOLATION LEVEL
@@ -56,11 +56,12 @@ SET TRANSACTION ISOLATION LEVEL
     }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+
 >[!NOTE]
 > SQL Data Warehouse implementa las transacciones ACID. El nivel de aislamiento de la compatibilidad transaccional se establece de forma predeterminada en READ UNCOMMITTED.  Para cambiarlo a READ COMMITTED SNAPSHOT ISOLATION, active la opción de base de datos READ_COMMITTED_SNAPSHOT de una base de datos de usuario cuando se conecte a la base de datos maestra.  Una vez habilitada, todas las transacciones de esta base de datos se ejecutan bajo READ COMMITTED SNAPSHOT ISOLATION y no se respetará la opción de configuración READ UNCOMMITTED en el nivel de sesión. Consulte [Opciones de ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) para obtener más información.  
 
@@ -170,7 +171,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se establece `TRANSACTION ISOLATION LEVEL` para la sesión. En cada instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantendrá todos los bloqueos compartidos hasta el final de la transacción.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;  

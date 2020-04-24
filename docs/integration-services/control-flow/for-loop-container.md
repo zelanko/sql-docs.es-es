@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294154"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488194"
 ---
 # <a name="for-loop-container"></a>Contenedor de bucles For
 
@@ -72,8 +72,6 @@ ms.locfileid: "71294154"
 
 ##  <a name="configure-the-for-loop-container"></a>Configurar el contenedor de bucles Para
 En este procedimiento se describe cómo configurar un contenedor de bucles For mediante el cuadro de diálogo **Editor de bucles For** .  
-  
- Para obtener un ejemplo del contenedor de bucles For, vea [Bucles de SSIS que no producen error](https://go.microsoft.com/fwlink/?LinkId=240295) en bimonkey.com.  
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga doble clic en el contenedor de bucles For para abrir el **Editor de bucles For**.  
   

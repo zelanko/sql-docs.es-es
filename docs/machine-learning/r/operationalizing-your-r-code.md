@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebca30560a437cc8c95b9604cc24fbd7542c9d85
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117588"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486814"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Operacionalización de código de R con procedimientos almacenados en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ En este tutorial se proporcionan ejemplos de puntuación mediante un procedimien
 
 Vea estas plantillas de soluciones para consultar ejemplos de cómo integrar la puntuación en una aplicación:
 
-+ [Previsión de comercio minorista](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/Introduction.md)
++ [Previsión de comercio minorista](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/README.md)
 + [Detección de fraude](https://github.com/Microsoft/r-server-fraud-detection)
 + [Agrupación en clústeres de clientes](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 

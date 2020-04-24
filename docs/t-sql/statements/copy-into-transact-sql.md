@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903822"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631978"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versión preliminar)
 
@@ -36,7 +36,7 @@ En este artículo se explica cómo usar la instrucción COPY en Azure SQL Data W
 
 ## <a name="syntax"></a>Sintaxis  
 
-```
+```syntaxsql
 COPY INTO [schema.]table_name
 [(Column_list)] 
 FROM ‘<external_location>’ [,...n]
@@ -364,7 +364,7 @@ WITH (
 El comando COPY tendrá un mejor rendimiento en el momento en el que la característica esté disponible con carácter general. Para obtener el mejor rendimiento de carga durante la versión preliminar pública, considere la posibilidad de dividir la entrada en varios archivos al cargar CSV. Actualmente, el rendimiento de COPY es equivalente al de PolyBase al usar INSERT SELECT. 
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>¿Cuál es el procedimiento para dividir archivos a la hora de cargar archivos CSV con el comando COPY?
-Las instrucciones sobre el número de archivos se describen en la tabla siguiente. Una vez alcanzado el número recomendado de archivos, obtendrá un mejor rendimiento cuanto mayor tamaño tengan estos. Cuando el comando COPY esté disponible con carácter general, no tendrá que dividir los archivos no comprimidos. 
+Las instrucciones sobre el número de archivos se describen en la tabla siguiente. Una vez alcanzado el número recomendado de archivos, obtendrá un mejor rendimiento cuanto mayor tamaño tengan estos. 
 
 | **DWU** | **Número de archivos** |
 | :-----: | :--------: |

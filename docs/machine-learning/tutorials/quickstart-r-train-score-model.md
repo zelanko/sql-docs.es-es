@@ -10,17 +10,17 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116148"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487283"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Inicio rápido: creación y puntuación de un modelo predictivo en R con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+En este inicio rápido, creará y entrenará un modelo predictivo con T. Guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El primero usa el conjunto de datos **mtcars** incluido con R y genera un sencillo modelo lineal generalizado (GLM) que predice la probabilidad de que un vehículo tenga transmisión manual. El segundo procedimiento es para puntuación: realiza una llamada al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de R en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
 
@@ -222,4 +222,4 @@ También puede usar la instrucción [PREDICT (Transact-SQL)](../../t-sql/queries
 
 Para más información sobre SQL Server Machine Learning Services, vea:
 
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md)

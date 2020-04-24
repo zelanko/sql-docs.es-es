@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 03d578b2cd6419a676ed6bd1b581dd57107d4209
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116338"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487341"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Inicio rápido: estructuras de datos y objetos mediante Python en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -214,4 +214,4 @@ Para obtener información sobre cómo escribir funciones avanzadas de Python en 
 Para más información sobre cómo usar Python en SQL Server Machine Learning Services, vea los artículos siguientes:
 
 - [Creación y puntuación de un modelo predictivo en Python](quickstart-python-train-score-model.md)
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md)

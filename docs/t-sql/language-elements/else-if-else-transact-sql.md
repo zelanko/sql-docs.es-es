@@ -20,12 +20,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ff6cc86bb2b8df43ccf47beb144190567492fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075310"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634940"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68075310"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>A. Utilizar una expresión booleana simple  
  En el ejemplo siguiente hay una expresión booleana simple (`1=1`) que es TRUE y, por tanto, se imprime la primera instrucción.  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  En el ejemplo siguiente hay una expresión booleana simple (`1=2`) que es FALSE y, por tanto, se imprime la segunda instrucción.  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. Utilizar una consulta en una expresión booleana  
  En el ejemplo siguiente se ejecuta una consulta en la expresión booleana. Dado que hay 10 bicicletas en la tabla `Product` que cumplen la cláusula `WHERE`, se ejecutará la primera instrucción de impresión. Cambie `> 5` por `> 15` para ver cómo podría ejecutarse la segunda parte de la instrucción.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>C. Utilizar un bloque de instrucciones  
  En el ejemplo siguiente se ejecuta una consulta en la expresión booleana y, a continuación, se ejecutan bloques de instrucciones con pequeñas diferencias que dependen del resultado de la expresión booleana. Cada bloque de instrucciones comienza con `BEGIN` y finaliza con `END`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>D. Utilizar instrucciones IF...ELSE anidadas  
  En el ejemplo siguiente, se muestra cómo anidar una instrucción IF… ELSE dentro de otra. Establezca la variable `@Number` en `5`, `50` y `500` para probar cada instrucción.  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -139,7 +139,7 @@ GO
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: Utilizar una consulta en una expresión booleana  
  En el ejemplo siguiente se usa `IF...ELSE` para determinar cuál de las dos respuestas se muestra al usuario, en función del peso de un elemento en la tabla `DimProduct`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

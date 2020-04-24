@@ -23,12 +23,12 @@ ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ec5ad11e85df28992e40be22315395de744e2276
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: ababfa50656969d8151f5ebca264c8ae52ebe8fe
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517537"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634347"
 ---
 # <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -39,7 +39,7 @@ Permite insertar valores explícitos en la columna identidad de una tabla.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
@@ -67,7 +67,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente crea una tabla con una columna de identidad y muestra cómo se puede utilizar la opción `SET IDENTITY_INSERT` para rellenar un vacío en los valores de identidad causado por una instrucción `DELETE`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Create tool table.  

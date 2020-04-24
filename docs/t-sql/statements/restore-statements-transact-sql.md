@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: df6819f9beaa78232227e0fadd3e7c7a2e56c801
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73530930"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634737"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
 
@@ -86,7 +86,7 @@ Para más información sobre los escenarios de restauración de [!INCLUDE[ssNoVe
 
 ## <a name="syntax"></a>Sintaxis
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  [ FROM <backup_device> [ ,...n ] ]
@@ -751,7 +751,7 @@ Para ver otros comandos RESTORE compatibles, vea:
 
 ## <a name="syntax"></a>Sintaxis
 
-```sql
+```syntaxsql
 --To Restore an Entire Database from a Full database backup (a Complete Restore):
 RESTORE DATABASE { database_name | @database_name_var }
  FROM URL = { 'physical_device_name' | @physical_device_name_var } [ ,...n ]
@@ -883,7 +883,7 @@ Restaura una base de datos de usuario de [!INCLUDE[ssPDW](../../includes/sspdw-m
 
 ## <a name="syntax"></a>Sintaxis
 
-```sql
+```syntaxsql
 
 -- Restore the master database
 -- Use the Configuration Manager tool.
@@ -995,7 +995,7 @@ En el siguiente ejemplo se restaura una copia de seguridad completa y, luego, un
 
 La copia de seguridad completa de la base de datos se restaura a partir de la copia de seguridad que se almacena en el directorio `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. Si la restauración se completa correctamente, la copia de seguridad diferencial se restaura en la base de datos SalesInvoices2013. La copia de seguridad diferencial se almacena en el directorio `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff`.
 
-```sql
+```syntaxsql
 RESTORE DATABASE SalesInvoices2013
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'
     WITH BASE = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
@@ -1007,7 +1007,7 @@ RESTORE DATABASE SalesInvoices2013
 
 En este ejemplo se restaura la información de encabezado para la copia de seguridad de base de datos `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full`. El comando da como resultado una fila de información relativa a la copia de seguridad de Invoices2013Full.
 
-```sql
+```syntaxsql
 RESTORE HEADERONLY
     FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'
 [;]

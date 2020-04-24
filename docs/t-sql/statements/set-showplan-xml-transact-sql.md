@@ -24,12 +24,12 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 890c84330005c3d9f6c4b30a06662d67dfef46f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97aae435e393a5ae876004ecaa29722171679e89
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941657"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634702"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
@@ -41,7 +41,7 @@ Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ejecute in
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
 

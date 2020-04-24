@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941694"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634303"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941694"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**Tipo**|Tipo de nodo. En el nodo primario de cada consulta, éste es el tipo de instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] (por ejemplo, SELECT, INSERT, EXECUTE, etcétera). En los subnodos que representan planes de ejecución, el tipo es PLAN_ROW.|  
 |**Parallel**|**0** = El operador no se ejecuta en paralelo.<br /><br /> **1** = El operador se ejecuta en paralelo.|  
 |**EstimateExecutions**|Número estimado de veces que se va a ejecutar este operador durante la ejecución de la consulta actual.|  
-  
+|||
+
  *Las unidades de coste están basadas en una medición interna de tiempo, no en tiempo de reloj. Se usan para determinar el coste relativo de un plan en comparación con otros planes.  
   
 ## <a name="permissions"></a>Permisos  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  Los valores de las columnas **EstimateRows** y **TotalSubtreeCost** son inferiores en la primera consulta indizada, lo que indica que se procesa mucho más rápidamente y que usa menos recursos que la no indizada.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  

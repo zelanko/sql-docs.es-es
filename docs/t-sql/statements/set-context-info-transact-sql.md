@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f75a2c8fcbef8109c48e352a9c3987a2a5a7cc2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12bdcb5de42e7a3f78455cd0a3bc0046f89b18bc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78866623"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634419"
 ---
 # <a name="set-context_info-transact-sql"></a>SET CONTEXT_INFO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "78866623"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
   
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
@@ -67,7 +67,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
 ### <a name="a-setting-context-information-by-using-a-constant"></a>A. Establecer información de contexto utilizando una constante  
  El ejemplo siguiente muestra `SET CONTEXT_INFO` estableciendo el valor y mostrando los resultados. Tenga en cuenta que para consultar `sys.dm_exec_sessions` se requieren permisos SELECT y VIEW SERVER STATE, mientras que el uso de la función CONTEXT_INFO no los requiere.  
   
-```  
+```sql
 SET CONTEXT_INFO 0x01010101;  
 GO  
 SELECT context_info   
@@ -79,7 +79,7 @@ GO
 ### <a name="b-setting-context-information-by-using-a-function"></a>B. Establecer información de contexto utilizando una función  
  El ejemplo siguiente muestra el uso del resultado de una función para establecer el valor de contexto, donde el valor de la función se debe colocar primero en una variable **binary**.  
   
-```  
+```sql
 DECLARE @BinVar varbinary(128);  
 SET @BinVar = CAST(REPLICATE( 0x20, 128 ) AS varbinary(128) );  
 SET CONTEXT_INFO @BinVar;  

@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fa8bd2c029ea65bb03e21543212dd11b65f2242
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f3886e6688f6e880a736885b55e5427dc0a98b8d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80345457"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634527"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "80345457"
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 SET ANSI_DEFAULTS { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse and Parallel Data Warehouse
 
 SET ANSI_DEFAULTS ON
@@ -61,6 +61,7 @@ Cuando se habilita (ON), esta opción habilita las opciones siguientes de ISO:
 |SET ANSI_NULL_DFLT_ON|SET IMPLICIT_TRANSACTIONS|  
 |SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
 |SET ANSI_WARNINGS||  
+|||
   
 Juntas, estas opciones SET del estándar ISO definen el entorno de procesamiento de consultas durante la sesión de trabajo del usuario, la ejecución de un desencadenador o un procedimiento almacenado. Sin embargo, estas opciones SET no son todas las necesarias para cumplir el estándar ISO.  
   

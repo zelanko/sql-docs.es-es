@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211347"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Propiedades del operador y Nuevo operador (página General)
@@ -26,28 +26,28 @@ ms.locfileid: "68211347"
  **Nombre**  
  Cambie el nombre del operador.  
   
- **Enabled**  
+ **Habilitado**  
  Habilite el operador. Si no se hablita, no se le envía ninguna notificación.  
   
  **Nombre de correo electrónico**  
  Especifica la dirección de correo electrónico del operador.  
   
- **Dirección de net send**  
+ **Dirección de NET SEND**  
  Especifique la dirección que se va a usar para **net send**.  
   
- **Nombre de correo electrónico del buscapersonas**  
+ **Correo electrónico del buscapersonas**  
  Especifica la dirección de correo electrónico que debe utilizarse para el buscapersonas del operador.  
   
- **Programación de buscapersonas en el servicio**  
+ **Programación de buscapersonas en servicio**  
  Establece las horas a las que el buscapersonas está activo.  
   
- **Lunes-domingo**  
+ **Lunes - Viernes**  
  Seleccione los días en los que el buscapersonas está activo.  
   
- **Inicio de WorkDay**  
+ **Inicio del día laborable**  
  Seleccione la hora del día a partir de la cual el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía mensajes al buscapersonas.  
   
- **Fin de WorkDay**  
+ **Fin del día laborable**  
  Seleccione la hora del día a partir de la cual el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deja de enviar mensajes al buscapersonas.  
   
 ## <a name="see-also"></a>Consulte también  

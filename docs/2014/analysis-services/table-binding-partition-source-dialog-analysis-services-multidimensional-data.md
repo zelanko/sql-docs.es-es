@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067867"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Detalle del enlace de tablas (cuadro de diálogo Origen de la partición) (Analysis Services - Datos multidimensionales)
@@ -26,7 +26,7 @@ ms.locfileid: "66067867"
  **Grupo de medida**  
  Muestra el grupo de medida para esta partición.  
   
- **Look in**  
+ **Buscar en**  
  Seleccione el origen de datos o la vista del origen de datos que contiene las tablas de origen para la partición. La vista del origen de datos utilizada por el grupo de medida seleccionado es el valor seleccionado de manera predeterminada.  
   
  **Tablas de filtros**  

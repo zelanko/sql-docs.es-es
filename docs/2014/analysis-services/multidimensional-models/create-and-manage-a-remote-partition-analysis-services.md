@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076262"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Crear y administrar una partición remota (Analysis Services)
@@ -27,15 +27,14 @@ ms.locfileid: "66076262"
   
  Una base de datos secundaria dedicada puede almacenar particiones remotas para una y solo una base de datos maestra, pero la base de datos maestra puede usar varias bases de datos secundarias, siempre y cuando todas las bases de datos secundarias estén en la misma instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Las dimensiones de una base de datos dedicada a las particiones remotas se crean como dimensiones vinculadas.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para poder crear una partición remota, deben cumplirse las siguientes condiciones:  
   
 -   Debe tener una segunda instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y una base de datos dedicada para almacenar las particiones. La base de datos secundaria se usa para un único fin: proporciona almacenamiento para las particiones remotas de una base de datos maestra.  
   
 -   Ambas instancias del servidor deben ser de la misma versión. Ambas bases de datos deben ser del mismo nivel funcional.  
   
--   Ambas instancias deben estar configuradas para conexiones TCP. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no admite la creación de particiones remotas mediante el protocolo HTTP.  
+-   Ambas instancias deben estar configuradas para conexiones TCP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no admite la creación de particiones remotas mediante el protocolo HTTP.  
   
 -   Se debe establecer la configuración de firewall de ambos equipos para que acepten conexiones externas. Para obtener más información sobre la configuración de firewall, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -125,8 +124,7 @@ ms.locfileid: "66076262"
 5.  En el servidor maestro: haga clic con el botón derecho en el nombre del cubo en el Explorador de soluciones, seleccione **Procesar** y procese totalmente el cubo.  
   
 ## <a name="administering-remote-partitions"></a>Administrar particiones remotas  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite tanto el procesamiento paralelo como el procesamiento secuencial de las particiones remotas. La base de datos maestra, en la que se definieron las particiones, coordina las transacciones entre todas las instancias que participan en el procesamiento de las particiones de un cubo. A continuación se envían informes de procesamiento a todas las instancias que procesaron una partición.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite tanto el procesamiento paralelo como el procesamiento secuencial de las particiones remotas. La base de datos maestra, en la que se definieron las particiones, coordina las transacciones entre todas las instancias que participan en el procesamiento de las particiones de un cubo. A continuación se envían informes de procesamiento a todas las instancias que procesaron una partición.  
   
  Un cubo que contenga particiones remotas puede administrarse junto con sus particiones en una sola instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Sin embargo, los metadatos de la partición remota solo se pueden ver y actualizar en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en que se definieron la partición y su cubo primario. La partición remota no se puede ver ni actualizar en la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -134,6 +132,6 @@ ms.locfileid: "66076262"
 >  Aunque las bases de datos dedicadas al almacenamiento de particiones remotas no se exponen a los conjuntos de filas de esquema, las aplicaciones que usan Objetos de administración de análisis (AMO) pueden seguir detectando una base de datos dedicada mediante el uso del comando Discover de XML for Analysis. Cualquier comando CREATE o DELETE que se envíe directamente a una base de datos dedicada mediante un cliente TCP o HTTP se ejecutará correctamente, pero el servidor devolverá una advertencia que indica que la acción puede dañar la base de datos estrechamente administrada.  
   
 ## <a name="see-also"></a>Consulte también  
- [Particiones &#40;Analysis Services de datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

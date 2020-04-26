@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067511"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Crear y administrar KPI (SSAS tabular)
@@ -37,7 +37,7 @@ ms.locfileid: "66067511"
 > [!IMPORTANT]  
 >  Antes de crear un KPI, debe crear primero una medida base que se evalúe como un valor. Después, extienda la medida base a un KPI. La forma de crear medidas se describe en el tema [Crear y administrar medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md). Un KPI también necesita un valor de destino. Este valor puede ser de otra medida predefinida o puede ser un valor absoluto. Una vez extendida una medida base a un KPI, puede seleccionar el valor de destino y definir umbrales de estado en el cuadro de diálogo Indicador clave de rendimiento.  
   
-###  <a name="bkmk_create_KPI"></a>Para crear un KPI  
+###  <a name="to-create-a-kpi"></a><a name="bkmk_create_KPI"></a> Para crear un KPI  
   
 1.  En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actuará como medida base (valor) y, después, haga clic en **Crear KPI**.  
   
@@ -56,15 +56,15 @@ ms.locfileid: "66067511"
 > [!TIP]  
 >  Puede usar la característica Analizar en Excel para probar el KPI. Para obtener más información, vea [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
-###  <a name="bkmk_edit_KPI"></a>Para editar un KPI  
+###  <a name="to-edit-a-kpi"></a><a name="bkmk_edit_KPI"></a> Para editar un KPI  
   
 -   En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actúa como medida base (valor) del KPI y, después, haga clic en **Editar configuración de KPI**.  
   
-###  <a name="bkmk_delete"></a>Para eliminar un KPI y la medida base  
+###  <a name="to-delete-a-kpi-and-the-base-measure"></a><a name="bkmk_delete"></a> Para eliminar un KPI y la medida base  
   
 -   En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actúa como medida base (valor) del KPI y, después, haga clic en **Eliminar**.  
   
-###  <a name="bkmk_delete_KPI"></a>Para eliminar un KPI, pero mantener la medida base  
+###  <a name="to-delete-a-kpi-but-keep-the-base-measure"></a><a name="bkmk_delete_KPI"></a>Para eliminar un KPI, pero mantener la medida base  
   
 -   En la cuadrícula de medidas, haga clic con el botón derecho en la medida que actúa como medida base (valor) del KPI y, después, haga clic en **Eliminar KPI**.  
   

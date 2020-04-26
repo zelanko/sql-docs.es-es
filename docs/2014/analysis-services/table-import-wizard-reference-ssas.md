@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef0cb7dfe9b3fbbca1cda3833506e56cc6bb9681
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067907"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Referencia del Asistente para la importación de tablas (SSAS)
@@ -85,6 +85,6 @@ ms.locfileid: "66067907"
 -   [Especificar una consulta SQL o MDX &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Importar datos &#40;&#41;tabular de SSAS](import-data-ssas-tabular.md)  
+ [Importar datos &#40;SSAS tabular&#41;](import-data-ssas-tabular.md)  
   
   

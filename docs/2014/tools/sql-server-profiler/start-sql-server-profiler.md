@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68186112"
 ---
 # <a name="start-sql-server-profiler"></a>Iniciar SQL Server Profiler
@@ -35,14 +35,13 @@ ms.locfileid: "68186112"
 1.  En el menú [!INCLUDE[ssDE](../../includes/ssde-md.md)] Herramientas **del Asistente para la optimización de** , haga clic en **SQL Server Profiler**.  
   
 ## <a name="starting-sql-server-profiler-in-management-studio"></a>Iniciar SQL Server Profiler en Management Studio  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inicia cada sesión del generador de perfiles en su propia instancia y continúa ejecutándose después de cerrar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] inicia cada sesión del generador de perfiles en su propia instancia y continúa ejecutándose después de cerrar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Puede iniciar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] desde varias ubicaciones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], tal y como se muestra en los procedimientos siguientes. Cuando se inicia [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , éste carga el contexto de conexión, la plantilla de seguimiento y el contexto del filtro de su punto de inicio.  
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>Para iniciar SQL Server Profiler desde el menú Herramientas  
   
-1.  En el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Herramientas** , haga clic en **SQL Server Profiler**.  
+1.  En el menú  **Herramientas** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic en **SQL Server Profiler**.  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>Para iniciar SQL Server Profiler desde el Editor de consultas  
   

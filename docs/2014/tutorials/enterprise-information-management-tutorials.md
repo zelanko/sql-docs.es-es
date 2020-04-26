@@ -11,15 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60becb35980b896aa2c44bbc8ff0a78a81210f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65485576"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Tutoriales de Administración de información empresarial
-  Esta sección contiene tutoriales sobre la administración de información en una empresa mediante las tecnologías de Administración de información empresarial (EIM) incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Administración de información empresarial (EIM) de la empresa proporciona una cartera de soluciones que permiten a las organizaciones confiar en la credibilidad y la coherencia de sus datos para poder tomar decisiones empresariales críticas. 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dispone de las siguientes tecnologías que le ayudan a implementar soluciones de EIM en la empresa.  
+  Esta sección contiene tutoriales sobre la administración de información en una empresa mediante las tecnologías de Administración de información empresarial (EIM) incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Administración de información empresarial (EIM) de la empresa proporciona una cartera de soluciones que permiten a las organizaciones confiar en la credibilidad y la coherencia de sus datos para poder tomar decisiones empresariales críticas. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] dispone de las siguientes tecnologías que le ayudan a implementar soluciones de EIM en la empresa.  
   
 -   SQL Server Integration Services (SSIS). SSIS proporciona una plataforma extensible y eficaz para la integración de datos procedentes de diversos orígenes en una solución completa de extracción, transformación y carga (ETL) que admite flujos de trabajo empresariales, un almacenamiento de datos o administración de datos maestros.  
   

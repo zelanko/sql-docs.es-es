@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067825"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Diseñador de modelos tabulares (SSAS tabular)
@@ -24,7 +24,7 @@ ms.locfileid: "66067825"
   
  Secciones de este tema:  
   
--   [Privilegios](#bkmk_benefits)  
+-   [Ventajas](#bkmk_benefits)  
   
 -   [Plantillas de proyecto](#bkmk_proj_temp)  
   
@@ -32,27 +32,27 @@ ms.locfileid: "66067825"
   
 -   [Integración de Visual Studio](#bkmk_vsint)  
   
-##  <a name="bkmk_benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Privilegios  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se agregan nuevas plantillas de proyecto para crear modelos tabulares a los tipos de proyecto disponibles. Una vez creado un proyecto de modelo tabular mediante una de las plantillas, puede empezar a crear modelos mediante las herramientas y los asistentes del diseñador de modelos tabulares.  
   
  Además de las nuevas plantillas y herramientas para crear soluciones de modelos tabulares y multidimensionales profesionales, el entorno de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proporciona funciones para la depuración y el ciclo de vida de los proyectos que le permiten asegurarse de que crea las soluciones BI más eficaces para su organización. Para obtener más información sobre [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], vea [Introducción a Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a>Plantillas de proyecto  
+##  <a name="project-templates"></a>Plantillas del proyecto <a name="bkmk_proj_temp"></a>  
  Al instalar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], se agregan las siguientes plantillas de proyectos de modelos tabulares a los tipos de proyecto de Business Intelligence:  
   
- **Analysis Services proyecto tabular**  
+ **Proyecto tabular de Analysis Services**  
  Esta plantilla se puede usar para crear un proyecto de modelo tabular en blanco.  
   
  **Importar del servidor (tabular)**  
  Esta plantilla se puede usar para crear un proyecto de modelo tabular extrayendo los metadatos de uno ya existente en Analysis Services.  
   
  **Importar desde PowerPivot**  
- Esta plantilla se usa para crear un proyecto de modelo tabular extrayendo los metadatos y los datos de un archivo de [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)].  
+ Esta plantilla se usa para crear un proyecto de modelo tabular extrayendo los metadatos y los datos de un archivo de [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] .  
   
 > [!NOTE]  
 >  Los proyectos de modelo tabular requieren que una instancia del servidor de Analysis Services se ejecute en modo tabular localmente o en la red.  
   
-##  <a name="bkmk_wind_men"></a>Ventanas y menús  
+##  <a name="windows-and-menus"></a><a name="bkmk_wind_men"></a> Ventanas y menús  
  El entorno de creación de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] incluye lo siguiente:  
   
 ### <a name="designer-window"></a>Ventana del diseñador  
@@ -114,11 +114,11 @@ ms.locfileid: "66067825"
 ### <a name="toolbar"></a>Barra de herramientas  
  La barra de herramientas de Analysis Services proporciona un acceso rápido y fácil a los comandos de creación de modelos usados con más frecuencia.  
   
-##  <a name="bkmk_vsint"></a>Integración de Visual Studio  
+##  <a name="visual-studio-integration"></a>Integración de <a name="bkmk_vsint"></a> Visual Studio  
  **Control de código fuente**  
  Los proyectos de Analysis Services se integran con el complemento de control de código fuente seleccionado. Si ha configurado Visual Studio para usar el control de código fuente, puede usar las funciones de protección/desprotección desde el Explorador de soluciones. Para configurar el uso de Team Foundation Server, vea [Configurar Visual Studio con el control de versiones de Team Foundation](https://msdn.microsoft.com/library/ms253064.aspx). También se admiten muchos complementos de control de código fuente de terceros.  
   
- **Éstas**  
+ **Fuentes**  
  Los modelos tabulares usan la fuente del entorno de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para controlar las fuentes en la pantalla. Puede que sea necesario cambiar esta fuente si la fuente predeterminada de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] no tiene todos los caracteres Unicode necesarios para su idioma. Para cambiar las fuentes, haga clic en el menú **Herramientas** , haga clic en **Opciones**y, a continuación, haga clic en **Fuentes y colores**.  
   
  **Métodos abreviados de teclado**  
@@ -126,6 +126,6 @@ ms.locfileid: "66067825"
   
 ## <a name="see-also"></a>Consulte también  
  [Proyectos de modelos tabulares &#40;&#41;tabular de SSAS](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Propiedades &#40;&#41;tabular de SSAS](tabular-models/properties-ssas-tabular.md)  
+ [Propiedades &#40;SSAS tabular&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

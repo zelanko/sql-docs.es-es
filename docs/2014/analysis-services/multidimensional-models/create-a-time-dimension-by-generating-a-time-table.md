@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076290"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Crear una dimensión de tiempo generando una tabla de tiempos
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión de tiempo cuando no haya ninguna tabla de tiempos disponible en la base de datos de origen. Para ello, seleccione una de las opciones siguientes en la página **Seleccionar método de creación** :  
   
--   **Generar una tabla de tiempos en el origen de datos** Seleccione esta opción cuando tenga permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará una tabla de tiempos y la almacenará en el origen de datos. El asistente crea entonces la dimensión de tiempo de esa tabla de tiempos.  
+-   **Generar una tabla de tiempos en el origen de datos** : seleccione esta opción cuando tenga el permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará una tabla de tiempos y la almacenará en el origen de datos. El asistente crea entonces la dimensión de tiempo de esa tabla de tiempos.  
   
--   **Generar una tabla de tiempos en el servidor** Seleccione esta opción cuando no tenga permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará y almacenará una tabla en el servidor en lugar de realizarlo en el origen de datos. (La dimensión creada a partir de una tabla de tiempos en el servidor se denomina *dimensión de tiempo de servidor*). El asistente crea a continuación la dimensión de tiempo de servidor a partir de esa tabla.  
+-   **Generar una tabla de tiempos en el servidor** : seleccione esta opción cuando no tenga permiso para crear objetos en el origen de datos subyacente. A continuación, el asistente generará y almacenará una tabla en el servidor en lugar de realizarlo en el origen de datos. (La dimensión creada a partir de una tabla de tiempos en el servidor se denomina *dimensión de tiempo de servidor*). El asistente crea a continuación la dimensión de tiempo de servidor a partir de esa tabla.  
   
  Cuando cree una dimensión de tiempo, debe especificar los períodos de tiempo y las fechas de inicio y de finalización de la dimensión. El asistente utiliza los períodos de tiempo especificados para crear los atributos de tiempo. Al procesar la dimensión, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera y almacena los datos necesarios para admitir las fechas y períodos de tiempo especificados. El asistente usa los atributos creados para una dimensión de tiempo para recomendar las jerarquías de la dimensión. Las jerarquías reflejan las relaciones entre distintos períodos de tiempo y tienen en cuenta distintos calendarios. Por ejemplo, en una jerarquía de calendario estándar, se muestra el nivel Weeks bajo el nivel Years, pero no bajo el nivel Months, ya que las semanas se dividen de forma regular en años pero no en meses. En cambio, en una jerarquía de calendario de informes o de fabricación, las semanas se dividen de forma regular en meses, por lo que el nivel Weeks se muestra bajo el nivel Months.  
   

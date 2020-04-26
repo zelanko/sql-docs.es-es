@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067628"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Crear un proyecto de modelos de tabulares nuevo (SSAS tabular)
@@ -32,6 +32,6 @@ ms.locfileid: "66067628"
   
 ## <a name="see-also"></a>Consulte también  
  [Propiedades del proyecto &#40;&#41;tabular de SSAS](properties-ssas-tabular.md)   
- [Propiedades del modelo &#40;&#41;tabular de SSAS](model-properties-ssas-tabular.md)  
+ [Propiedades del modelo &#40;SSAS tabular&#41;](model-properties-ssas-tabular.md)  
   
   

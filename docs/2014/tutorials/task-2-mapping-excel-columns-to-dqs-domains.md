@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484702"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarea 2: asignar columnas de Excel a dominios de DQS
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarea 2: Asignación de columnas de Excel a dominios de DQS
     
 1.  En la página **Asignación** , seleccione **Archivo de Excel** en **Origen de datos**.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "65484702"
 6.  Haga clic en **siguiente** para cambiar a la página **limpieza** .  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 3: limpiar datos con la base de conocimiento Proveedores](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [Tarea 3: Limpieza de datos en la base de conocimiento Proveedores](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

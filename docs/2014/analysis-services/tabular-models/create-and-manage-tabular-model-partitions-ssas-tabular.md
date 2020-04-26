@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067397"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Crear y administrar particiones de modelos tabulares (SSAS tabular)
@@ -22,7 +22,7 @@ ms.locfileid: "66067397"
   
  En este tema se incluyen las tareas siguientes:  
   
--   [Para crear una nueva partición](#bkmk_create_new)  
+-   [Para crear una partición](#bkmk_create_new)  
   
 -   [Para copiar una partición](#bkmk_copy)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66067397"
 ## <a name="tasks"></a>Tareas  
  Para crear y administrar particiones en una base de datos de modelos tabulares implementada, usará el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para ver el cuadro de diálogo **Particiones** , en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en una tabla y, después, haga clic en **Particiones**.  
   
-###  <a name="bkmk_create_new"></a>Para crear una nueva partición  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Para crear una nueva partición  
   
 1.  En el cuadro de diálogo **Particiones** , haga clic en el botón **Nuevo** .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66067397"
   
 4.  Para validar la instrucción, haga clic en **Comprobar sintaxis**.  
   
-###  <a name="bkmk_copy"></a>Para copiar una partición  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a>Para copiar una partición  
   
 1.  En el cuadro de diálogo **Particiones** , en la lista **Particiones** , seleccione la partición que desea copiar y, a continuación, haga clic en el botón **Copiar** .  
   
@@ -51,14 +51,14 @@ ms.locfileid: "66067397"
   
 3.  En **Instrucción SQL**, edite la instrucción de consulta SQL.  
   
-###  <a name="bkmk_merge"></a>Para combinar dos o más particiones  
+###  <a name="to-merge-two-or-more-partitions"></a><a name="bkmk_merge"></a> Para combinar dos o más particiones  
   
 -   En el cuadro de diálogo **Particiones** , en la lista **Particiones** , use Ctrl+clic para seleccionar las particiones que quiere combinar y, después, haga clic en el botón **Combinar** .  
   
 > [!IMPORTANT]  
 >  Al combinar las particiones no se actualizan los metadatos de la partición. Los administradores deben modificar la instrucción SQL para la partición resultante a fin de asegurarse de que las operaciones de procesamiento procesan todos los datos de la partición combinada.  
   
-###  <a name="bkmk_delete"></a>Para eliminar una partición  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a> Para eliminar una partición  
   
 -   En el cuadro de diálogo **Particiones** , en la lista **Particiones** , seleccione la partición que desea eliminar y, a continuación, haga clic en el botón **Eliminar** .  
   

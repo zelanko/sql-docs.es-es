@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076556"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Crear un cubo usando una vista del origen de datos
@@ -49,7 +49,7 @@ ms.locfileid: "66076556"
 -   La pestaña **Diagrama** muestra el esquema de vista del origen de datos. Las tablas están codificadas mediante colores para indicar hechos o dimensiones. Haga clic en cualquier tabla del esquema y, a continuación, haga clic en **Hechos** o **Dimensiones** para seleccionar o borrar el valor de esa tabla. Para cambiar la ampliación, use el botón **Zoom** .  
   
 > [!NOTE]  
->  En la pestaña **Diagrama** puede ampliar o maximizar la ventana del asistente para ver el esquema.  
+>   En la pestaña **Diagrama** , puede ampliar o maximizar la ventana del asistente para ver el esquema.  
   
  Si hay un tabla de dimensiones de tiempo en la vista del origen de datos, selecciónela en la lista **Tabla de dimensiones de tiempo** . Si no hay ninguno, deje ** \<ninguno>** seleccionado. Este es el elemento predeterminado en la lista. Cuando se selecciona una tabla como la tabla de dimensiones de tiempo, también se la selecciona como tabla de dimensiones en las pestañas **Tablas** y **Diagrama** .  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312879"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal que usan datos de reemplazo (Tutorial intermedio de minería de datos)
@@ -86,7 +86,7 @@ ms.locfileid: "63312879"
   
     1.  Compruebe que la columna ReportingDate del modelo de minería de datos está asignada a la columna ReportingDate de los datos de entrada.  
   
-    2.  En el cuadro de diálogo **modificar asignación** , en la fila de la columna del modelo AvgQty, haga clic en columna de la **tabla** y, a continuación, seleccione T1000 Pacific. quantity. Haga clic en **OK**.  
+    2.  En el cuadro de diálogo **modificar asignación** , en la fila de la columna del modelo AvgQty, haga clic en columna de la **tabla** y, a continuación, seleccione T1000 Pacific. quantity. Haga clic en **Aceptar**.  
   
          Este paso asigna la columna que creó en el modelo para la cantidad promedio que predecía los datos reales de la serie T1000 de la cantidad de ventas.  
   
@@ -162,6 +162,6 @@ AND
   
 ## <a name="see-also"></a>Consulte también  
  [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [&#41;PredictTimeSeries &#40;DMX](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

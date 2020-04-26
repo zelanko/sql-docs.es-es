@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65485238"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarea 12: agregar la transformación Columna derivada para agregar las columnas necesarias en MDS
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarea 12: Adición de la transformación Columna derivada para agregar las columnas necesarias en MDS
   En esta tarea, agregará la transformación Columna derivada al flujo de datos. Agrega dos columnas derivadas, **ImportType** y **BatchTag**, a los registros que se pasan a esta transformación. Debe agregar estas columnas antes de cargar los datos en las tablas de ensayo en MDS. Son dos columnas necesarias para las tablas de ensayo en MDS. Consulte [tablas de almacenamiento provisional de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md) para obtener más detalles.  
   
 1.  Arrastre y coloque la **transformación columna derivada** desde la sección **común** del **cuadro de herramientas de SSIS** hasta la pestaña flujo de **datos** .  
@@ -57,6 +57,6 @@ ms.locfileid: "65485238"
 15. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **transformación columna derivada** .  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 13: agregar el destino de OLE DB para escribir datos en la tabla de ensayo de MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [Tarea 13: Adición del destino de OLE DB para escribir datos en la tabla de ensayo de MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

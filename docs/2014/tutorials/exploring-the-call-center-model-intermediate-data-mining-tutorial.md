@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315081"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de centro de llamadas (Tutorial intermedio de minería de datos)
@@ -24,7 +24,7 @@ ms.locfileid: "63315081"
   
 -   [Visor de árbol de contenido genérico de Microsoft](#bkmk_genviewer) **:** este visor estándar proporciona detalles detallados sobre los patrones y estadísticas que detecta el algoritmo al generar el modelo.  
   
-##  <a name="bkmk_NNviewer"></a>Visor de redes neuronal de Microsoft  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Visor de redes neuronal de Microsoft  
  El visor tiene tres paneles: **entrada**, **salida**y **variables**.  
   
  Mediante el panel de **salida** , puede seleccionar valores diferentes para el atributo de predicción o la variable dependiente. Si el modelo contiene varios atributos de predicción, puede seleccionar el atributo en la lista **atributo de salida** .  
@@ -114,7 +114,7 @@ ms.locfileid: "63315081"
   
  [Volver al principio](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Visor de árbol de contenido genérico de Microsoft  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Visor de árbol de contenido genérico de Microsoft  
  Este visor se puede usar para ver información incluso más detallada creada por el algoritmo cuando se procesa el modelo. El **visor de árbol de contenido de MicrosoftGeneric** representa el modelo de minería de datos como una serie de nodos, donde cada nodo representa el conocimiento aprendido sobre los datos de entrenamiento. Este visor se puede utilizar con todos los modelos, pero el contenido de los nodos es diferente según el tipo de modelo.  
   
  En los modelos de red neuronal o de regresión logística, podría encontrar que el `marginal statistics node` es particularmente útil. Este nodo contiene estadísticas derivadas acerca de la distribución de los valores de los datos. Esta información puede ser de utilidad si desea obtener un resumen de los datos sin tener que escribir muchas consultas de T-SQL. El gráfico de los valores del tema anterior se derivó del nodo de estadísticas marginal.  

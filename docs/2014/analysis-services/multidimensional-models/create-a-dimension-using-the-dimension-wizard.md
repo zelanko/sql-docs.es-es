@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076427"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Crear una dimensión usando el Asistente para dimensiones
@@ -45,26 +45,26 @@ ms.locfileid: "66076427"
   
          Si la lista **Columnas de clave** contiene varias columnas de clave, debe especificar una columna de nombre que proporcione los valores de miembro al atributo clave. Para ello, puede crear un cálculo con nombre en la vista de origen de datos y utilizarlo como columna de nombre.  
   
-    5.  Haga clic en **Next**.  
+    5.  Haga clic en **Siguiente**.  
   
 4.  En la página **Seleccionar tablas relacionadas** , seleccione las tablas relacionadas que desea incluir en su dimensión y, a continuación, haga clic en **Siguiente**.  
   
     > [!NOTE]  
-    >  La página **Seleccionar tablas relacionadas** aparece si la tabla de dimensiones principal que ha especificado tiene relaciones con otras tablas de dimensiones.  
+    >   La página **Seleccionar tablas relacionadas** aparece si la tabla de dimensiones principal que especificó tiene relaciones con otras tablas de dimensiones.  
   
 5.  En la página **Seleccionar los atributos de la dimensión** , seleccione los atributos que quiera incluir en la dimensión y, a continuación, haga clic en **Siguiente**.  
   
      Opcionalmente, puede cambiar los nombres de los atributos, habilitar o deshabilitar la exploración y especificar el tipo de atributo.  
   
     > [!NOTE]  
-    >  Para activar los campos **Habilitar exploración** y **Tipo de atributo** de un atributo, el atributo tiene que estar seleccionado para incluirlo en la dimensión.  
+    >   Para activar los campos **Habilitar exploración** y **Tipo de atributo** de un atributo, el atributo debe estar seleccionado para ser incluido en la dimensión.  
   
 6.  En la columna **Tipos de cuenta integrados** de la página **Definir la inteligencia de cuentas** , seleccione el tipo de cuenta y, después, haga clic en **Siguiente**.  
   
      El tipo de cuenta debe corresponder al tipo de cuenta de la tabla de origen que aparece en la columna **Tipos de cuenta de tabla de origen** .  
   
     > [!NOTE]  
-    >  La página **Definir la inteligencia de cuentas** aparece si ha definido un atributo de dimensión **Tipo de cuenta** en la página **Seleccionar los atributos de la dimensión del asistente** .  
+    >   La página **Definir la inteligencia de cuentas** aparece si definió un atributo de dimensión **Tipo de cuenta** en la página **Seleccionar los atributos de la dimensión** del asistente.  
   
 7.  En la página **Finalización del asistente** , escriba un nombre para la nueva dimensión y revise la estructura de la dimensión. Si desea realizar modificaciones, haga clic **Atrás**; de lo contrario, haga clic en **Finalizar**.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076510"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
@@ -23,8 +23,7 @@ ms.locfileid: "66076510"
 ## <a name="selecting-the-build-method"></a>Seleccionar el método de generación  
  En la página **Seleccionar método de generación** del Asistente para cubos, haga clic en **Generar el cubo sin un origen de datos**. Para generar el cubo usando una plantilla de cubo existente, active la casilla **Usar una plantilla de cubo** . . Si prefiere no usar una plantilla, deberá establecer las opciones manualmente.  
   
- Las plantillas de cubo contienen medidas, grupos de medida, dimensiones, jerarquías y atributos predefinidos. Si selecciona una plantilla, el asistente usará las definiciones de sus objetos como base para establecer las opciones de las páginas siguientes. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se instala con varias plantillas para cubos estándar. El administrador del servidor también puede agregar plantillas de cubo o de dimensiones diseñadas específicamente para los datos de su organización.  
+ Las plantillas de cubo contienen medidas, grupos de medida, dimensiones, jerarquías y atributos predefinidos. Si selecciona una plantilla, el asistente usará las definiciones de sus objetos como base para establecer las opciones de las páginas siguientes. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se instala con varias plantillas para cubos estándar. El administrador del servidor también puede agregar plantillas de cubo o de dimensiones diseñadas específicamente para los datos de su organización.  
   
 ## <a name="selecting-dimensions"></a>Seleccionar dimensiones  
  Use la página **Seleccionar dimensiones** del asistente para agregar dimensiones existentes al cubo. Esta página solo aparece si ya existen dimensiones compartidas sin un origen de datos en el proyecto o en la base de datos. No muestra las dimensiones que tienen un origen de datos.  
@@ -58,16 +57,16 @@ ms.locfileid: "66076510"
   
 |Columna|Descripción|  
 |------------|-----------------|  
-|**Tipo**|Muestra el tipo de dimensión de una dimensión de la plantilla. Haga clic en esta celda para cambiar el tipo de dimensión. Esta columna establece la propiedad **Type** del objeto de dimensión.|  
+|**Type**|Muestra el tipo de dimensión de una dimensión de la plantilla. Haga clic en esta celda para cambiar el tipo de dimensión. Esta columna establece la propiedad **Type** del objeto de dimensión.|  
 |`Name`|Muestra el nombre de la dimensión. Haga clic en esta celda para escribir otro nombre. Este valor establece la `Name` propiedad para el objeto Dimension.|  
-|**Attribute**|Especifica que se trata de una dimensión de variación lenta (DVL). Si se activa esta casilla, se agregan los atributos Fecha de inicio de DVL, Id. original de DVL y Estado de DVL a la dimensión. **DVL** está seleccionado de forma predeterminada si usa una plantilla para crear el cubo y el asistente detecta estos cuatro tipos de atributos en una dimensión de plantilla.|  
+|**DVL**|Especifica que se trata de una dimensión de variación lenta (DVL). Si se activa esta casilla, se agregan los atributos Fecha de inicio de DVL, Id. original de DVL y Estado de DVL a la dimensión. La opción**DVL** aparece seleccionada de forma predeterminada si se usa una plantilla para crear el cubo y el asistente detecta estos cuatro tipos de atributos en una dimensión de plantilla.|  
 |**Atributos**|Muestra los atributos que se crearán para la dimensión. Cada nombre de atributo de la lista está precedido del nombre de la dimensión. Esta lista es de solo lectura. Puede editar los atributos con el Diseñador de dimensiones una vez completado el asistente.|  
   
 ## <a name="defining-time-periods"></a>Definir períodos de tiempo  
  Use la página **Definir períodos de tiempo** del asistente para especificar el intervalo de fechas que desea incluir en la dimensión. Por ejemplo, puede elegir un intervalo que comience el 1 de enero del primer año de los datos y que incluya hasta unos años antes de la transacción más reciente. Las transacciones que queden fuera del intervalo no aparecerán o, si lo hacen, aparecerán como miembros desconocidos de la dimensión en función del valor de la propiedad `UnknownMemberVisible` de la dimensión. La propiedad `UnknownMemberName` especifica el título del miembro desconocido. También puede cambiar el primer día de la semana que se usará en los datos (el valor predeterminado es Domingo).  
   
 > [!NOTE]  
->  La página **Definir períodos de tiempo** solo aparece si incluye una dimensión de tiempo en el cubo en la página **Definir nuevas dimensiones** del asistente.  
+>   La página **Definir períodos de tiempo** solo aparece si incluye una dimensión de tiempo en el cubo en la página **Definir nuevas dimensiones** del asistente.  
   
  Seleccione los períodos de tiempo (**Año**, **Semestre**, **Trimestre**, **Cuatrimestre**, **Mes**, **Diez días**, **Semana**y **Fecha**) que quiere incluir en el esquema. Es necesario que seleccione el período de tiempo Fecha. El atributo Fecha es el atributo clave de la dimensión, por lo que esta no puede funcionar sin él. También puede cambiar el idioma usado para etiquetar los miembros de la dimensión.  
   

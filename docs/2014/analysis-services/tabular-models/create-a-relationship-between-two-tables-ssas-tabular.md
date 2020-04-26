@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067536"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Crear una relación entre dos tablas (SSAS tabular)
-  Si entre las tablas del origen de datos no hay relaciones existentes, o si agrega nuevas tablas, puede usar las herramientas del diseñador de modelos para crear relaciones. Para más información sobre cómo se usan las relaciones en los modelos tabulares, vea [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
+  Si entre las tablas del origen de datos no hay relaciones existentes, o si agrega nuevas tablas, puede usar las herramientas del diseñador de modelos para crear relaciones. Para más información sobre cómo se usan las relaciones en los modelos tabulares, vea [Relaciones &#40;SSAS tabular&#41;](relationships-ssas-tabular.md).  
   
 ## <a name="create-a-relationship-between-two-tables"></a>Crear una relación entre dos tablas  
   
@@ -71,6 +71,6 @@ ms.locfileid: "66067536"
   
 ## <a name="see-also"></a>Consulte también  
  [Eliminar relaciones &#40;SSAS tabular&#41;](delete-relationships-ssas-tabular.md)   
- [Relaciones &#40;&#41;tabular de SSAS](relationships-ssas-tabular.md)  
+ [Relaciones &#40;SSAS tabular&#41;](relationships-ssas-tabular.md)  
   
   

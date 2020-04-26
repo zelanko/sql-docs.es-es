@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489626"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>Tarea 8: crear una regla de dominio compuesto
+# <a name="task-8-creating-a-composite-domain-rule"></a>Tarea 8: Creación de una regla de dominio compuesto
   En esta tarea, creará una regla para el dominio compuesto **validación de direcciones** . Defina una regla entre dominios: Si **City** es los **Ángeles**, el **Estado** debe ser **CA** , donde la **ciudad** y el **Estado** son dos dominios.  
   
 1.  En el panel derecho, cambie a la pestaña **reglas de CD** .  
@@ -35,6 +35,6 @@ ms.locfileid: "65489626"
 6.  Haga clic en el botón **cerrar** situado en la parte inferior de la página para cambiar a la Página principal del cliente DQS. Publicará la base de conocimiento en la próxima lección. Observe que la base de conocimiento está en estado bloqueado (icono de candado).  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 9: configurar un servicio de datos de referencia](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
+ [Tarea 9: Configuración de un servicio de datos de referencia](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

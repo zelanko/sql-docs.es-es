@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484710"
 ---
-# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tarea 17: revisar el proyecto de limpieza de DQS creado por el paquete SSIS
+# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tarea 17: Revisión del proyecto de limpieza de DQS creado por el paquete SSIS
   En esta tarea, abrirá el proyecto de DQS creado por el paquete SSIS en el Cliente DQS, revisará los resultados del proceso de limpieza y, opcionalmente, realizará una limpieza interactiva y exportará los resultados.  
   
 1.  Inicie **Data Quality Client**.  
@@ -40,13 +40,13 @@ ms.locfileid: "65484710"
   
 9. En la lista de proyectos, seleccione el proyecto creado por el componente Limpieza de DQS de SSIS. El nombre del proyecto debe tener el formato: **CleanseAndCurate. cleane Supplier Data. GUID (en color rojo)**. Es posible que tenga que ordenar la lista en función de la columna **fecha de creación** y buscar el registro más reciente.  
   
-10. Haga clic en **Next**.  
+10. Haga clic en **Siguiente**.  
   
 11. La página **administrar y ver resultados** debe ser familiar desde la limpieza interactiva que hizo anteriormente en este tutorial.  
   
 12. Revise los resultados de la limpieza. También puede hacer una limpieza interactiva y exportar los resultados a un archivo de Excel o a una base de datos en la página siguiente.  
   
-13. Haga clic en **Next**. En esta página **exportar** , puede exportar los resultados a un archivo de Excel, a un archivo CSV o a una base de datos SQL.  
+13. Haga clic en **Siguiente**. En esta página **exportar** , puede exportar los resultados a un archivo de Excel, a un archivo CSV o a una base de datos SQL.  
   
 14. Haga clic en **Finalizar** para finalizar la actividad.  
   

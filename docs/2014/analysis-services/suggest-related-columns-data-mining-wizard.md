@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66068021"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Sugerir columnas relacionadas (Asistente para minería de datos)
   Utilice la página **Sugerir columnas relacionadas** para ver las recomendaciones de la característica **Sugerir** que ha seleccionado en la página anterior del asistente. Las columnas de entrada serán seleccionadas previamente en función de su asociación con la columna **Predicción** que ha seleccionado. Si acepta los cambios en este cuadro de diálogo, los cambios se reflejarán en la página **Especificar los datos de entrenamiento** .  
   
- **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Nombre de columna**  
  Muestra las columnas de entrada que ha definido en la página **Especificar los datos de entrenamiento** del asistente.  
   
- **Carácter**  
+ **Puntuación**  
  Muestra la relación entre la columna y la columna **Predicción** previamente seleccionada.  
   
  **Entrada**  

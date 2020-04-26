@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067495"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Crear y administrar jerarquías (SSAS tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "66067495"
   
 -   [Eliminar una jerarquía](#bkmk_delete)  
   
-##  <a name="bkmk_create"></a>Crear una jerarquía  
+##  <a name="create-a-hierarchy"></a><a name="bkmk_create"></a> Crear una jerarquía  
  Puede crear una jerarquía usando las columnas y el menú contextual de la tabla. Al crear una jerarquía, se muestra un nuevo nivel primario con las columnas seleccionadas como niveles secundarios.  
   
 #### <a name="to-create-a-hierarchy-from-the-context-menu"></a>Para crear una jerarquía desde el menú contextual  
@@ -46,7 +46,7 @@ ms.locfileid: "66067495"
 > [!NOTE]  
 >  El comando Crear jerarquía está deshabilitado en el menú contextual si realiza una selección múltiple de una medida junto con una o varias columnas, o si selecciona columnas de varias tablas.  
   
-##  <a name="bkmk_edit"></a>Editar una jerarquía  
+##  <a name="edit-a-hierarchy"></a><a name="bkmk_edit"></a>Editar una jerarquía  
  Puede cambiar el nombre de una jerarquía, cambiar el nombre de un nivel secundario, cambiar el orden de los niveles secundarios, agregar columnas adicionales como niveles secundarios, quitar un nivel secundario de una jerarquía, mostrar el nombre del origen de un nivel secundario (el nombre de columna) y ocultar un nivel secundario si tiene el mismo nombre que el nivel primario de la jerarquía.  
   
 #### <a name="to-change-the-name-of-a-hierarchy-or-child-level"></a>Para cambiar el nombre de una jerarquía o de un nivel secundario  
@@ -85,7 +85,7 @@ ms.locfileid: "66067495"
   
 -   Haga clic con el botón derecho en un nivel secundario de la jerarquía y, después, haga clic en **Show Source Name**(Mostrar nombre del origen). Aparece el nombre de la columna de la que se copió la jerarquía.  
   
-##  <a name="bkmk_delete"></a>Eliminar una jerarquía  
+##  <a name="delete-a-hierarchy"></a><a name="bkmk_delete"></a>Eliminar una jerarquía  
   
 #### <a name="to-delete-a-hierarchy-and-remove-its-child-levels"></a>Para eliminar una jerarquía y quitar sus niveles secundarios  
   
@@ -96,6 +96,6 @@ ms.locfileid: "66067495"
 ## <a name="see-also"></a>Consulte también  
  [Diseñador de modelos tabulares &#40;&#41;tabular de SSAS](../tabular-model-designer-ssas-tabular.md)   
  [Jerarquías &#40;&#41;tabular de SSAS](hierarchies-ssas-tabular.md)   
- [Medidas &#40;&#41;tabular de SSAS](measures-ssas-tabular.md)  
+ [Medidas &#40;SSAS tabular&#41;](measures-ssas-tabular.md)  
   
   

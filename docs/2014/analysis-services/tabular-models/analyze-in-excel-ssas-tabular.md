@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067688"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analizar en Excel (SSAS tabular)
@@ -24,11 +24,11 @@ ms.locfileid: "66067688"
   
  Secciones de este tema:  
   
--   [Privilegios](#bkmk_benefits)  
+-   [Ventajas](#bkmk_benefits)  
   
 -   [Tareas relacionadas](#bkmk_rt)  
   
-##  <a name="bkmk_benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Privilegios  
  La característica Analizar en Excel proporciona a los autores de modelos la capacidad de probar la eficacia de un proyecto de modelos mediante el uso de la aplicación de análisis de datos comunes Microsoft Excel. Para usar la característica Analizar en Excel, tiene que tener instalado Microsoft Office 2003 o posterior en el mismo equipo que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 > [!NOTE]  
@@ -44,14 +44,14 @@ ms.locfileid: "66067688"
  **Otro usuario de Windows**  
  Usa un nombre de usuario de Windows específico en lugar del usuario que ha iniciado sesión actualmente. El uso de otro usuario de Windows no requiere una contraseña. Los objetos y los datos solo se pueden ver en Excel dentro del contexto del nombre de usuario vigente. En Excel no se puede realizar ninguna modificación en los objetos ni en los datos del modelo.  
   
- **Role**  
+ **Rol**  
  Los roles se usan para definir permisos de usuario en los metadatos y datos de objeto. Generalmente, los roles se definen para un usuario o un grupo de usuarios de Windows determinado. Algunos roles pueden incluir filtros adicionales en el nivel de fila definidos en una fórmula de DAX. Cuando se usa la característica Analizar en Excel, se puede seleccionar de forma opcional el rol que se va a usar. Los metadatos del objeto y las vistas de datos estarán limitados por los permisos y los filtros definidos para el rol. Para obtener más información, vea [Crear y administrar roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md).  
   
  Además del usuario o el rol vigente, se puede especificar una perspectiva. Las perspectivas permiten a los autores de modelos definir vistas específicas de escenario empresarial de los objetos del modelo y los datos. De forma predeterminada, no se usa ninguna perspectiva. Para usar una perspectiva con la característica Analizar en Excel, es necesario que se hayan definido antes las perspectivas mediante el cuadro de diálogo Perspectivas de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Si se especifica una perspectiva, la lista de campos de la tabla dinámica solo incluirá los objetos seleccionados en dicha perspectiva. Para obtener más información, vea [crear y administrar perspectivas &#40;&#41;tabular de SSAS ](perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_rt"></a> Tareas relacionadas  
   
-|**Tema.**|**Descripción**|  
+|**Tema**|**Descripción**|  
 |---------------|---------------------|  
 |[Analizar un modelo tabular en Excel &#40;SSAS tabular&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|En este tema se describe cómo usar la característica Analizar en Excel del diseñador de modelos para abrir Excel, crear una conexión de origen de datos con la base de datos del área de trabajo del modelo y agregar una tabla dinámica a la hoja de cálculo.|  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076568"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Conectar con una base de datos de Analysis Services en modo en línea
@@ -34,12 +34,12 @@ ms.locfileid: "66076568"
   
      Puede escribir el nombre de la base de datos o hacer una consulta en el servidor para ver las bases de datos que contiene.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
      En ese momento, puede editar directamente los objetos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  
  [Trabajar con Analysis Services proyectos y bases de datos durante la fase de desarrollo](work-with-analysis-services-projects-and-databases-in-development.md)   
- [Crear modelos multidimensionales mediante SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Crear modelos multidimensionales utilizando las herramientas de datos de SQL Server &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

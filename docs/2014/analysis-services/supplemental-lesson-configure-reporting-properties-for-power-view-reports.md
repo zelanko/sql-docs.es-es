@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067959"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar las propiedades de notificación para informes de Power View
@@ -26,7 +26,7 @@ ms.locfileid: "66067959"
   
  Tiempo estimado para completar esta lección: **30 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema de la lección complementaria forma parte de un tutorial de creación de modelos tabulares, que se debe completar de forma ordenada. Antes de realizar las tareas de esta lección complementaria, debe haber completado todas las lecciones anteriores.  
   
  Para completar esta lección complementaria concreta, también debe tener lo siguiente:  
@@ -42,13 +42,13 @@ ms.locfileid: "66067959"
   
 -   **Agregar nuevos datos** : al agregar datos nuevos en una columna calculada mediante una fórmula Dax, se crea información de fecha en un formato más fácil de mostrar en los gráficos.  
   
--   **Ocultar las tablas y columnas que no son útiles para el usuario final** : la propiedad **Hidden** controla si las tablas y las columnas de la tabla se muestran en el cliente de informes. Los elementos que están ocultos siguen siendo parte del modelo y permanecen disponibles para las consultas y los cálculos.  
+-   **Ocultar las tablas y las columnas que no son útiles para el usuario final** : la propiedad **Hidden** controla si las tablas y las columnas de tabla se muestran en el cliente de informes. Los elementos que están ocultos siguen siendo parte del modelo y permanecen disponibles para las consultas y los cálculos.  
   
 -   **Habilitar tablas de un clic** : de forma predeterminada, no se produce ninguna acción si un usuario final hace clic en una tabla de la lista de campos. Para cambiar este comportamiento de modo que al hacer clic en la tabla, se agregue al informe, establecerá Conjunto de campos predeterminado en cada columna que desee incluir en la tabla. Esta propiedad se establece en las columnas de tabla que los usuarios finales es probable que deseen usar.  
   
--   **Establecer agrupación cuando sea necesario** : la propiedad **mantener filas únicas** determina si los valores de la columna se deben agrupar por valores en un campo diferente, como un campo de identificador. En las columnas que contienen valores duplicados, como Customer Name (por ejemplo, varios clientes denominados John Smith), es importante agrupar (mantener filas únicas) en el campo **Identificador de fila** para proporcionar a los usuarios finales los resultados correctos.  
+-   **Establecer agrupación cuando sea necesario** : la propiedad **Mantener filas únicas** determina si los valores de la columna se deben agrupar por valores en un campo diferente, como un campo identificador. En las columnas que contienen valores duplicados, como Customer Name (por ejemplo, varios clientes denominados John Smith), es importante agrupar (mantener filas únicas) en el campo **Identificador de fila** para proporcionar a los usuarios finales los resultados correctos.  
   
--   **Establecer tipos de datos y formatos de datos** : de forma predeterminada, Power View aplica reglas basadas en el tipo de datos de columna para determinar si el campo se puede utilizar como medida. Dado que cada visualización de datos en Power View también tiene reglas sobre dónde se pueden colocar las medidas y las no medidas, es importante establecer el tipo de datos en el modelo o invalidar el predeterminado para lograr el comportamiento que quiera para el usuario final.  
+-   **Establecer tipos de datos y formatos de datos** : de manera predeterminada, Power View aplica las reglas según el tipo de datos de columna a fin de determinar si el campo puede usarse como una medida. Dado que cada visualización de datos en Power View también tiene reglas sobre dónde se pueden colocar las medidas y las no medidas, es importante establecer el tipo de datos en el modelo o invalidar el predeterminado para lograr el comportamiento que quiera para el usuario final.  
   
 -   **Establezca la propiedad ordenar por columna** : la propiedad **ordenar por columna** especifica si los valores de la columna se deben ordenar por valores en un campo diferente. Por ejemplo, en la columna Month Calendar que contiene el nombre de mes, ordene por la columna Month Number.  
   
@@ -82,19 +82,19 @@ ms.locfileid: "66067959"
   
 #### <a name="to-set-default-field-set-for-tables"></a>Para establecer el conjunto de campos predeterminado para las tablas  
   
-1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer**.  
+1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer** .  
   
 2.  En la ventana **Propiedades** , en **Propiedades de informe**, en la propiedad **Conjunto de campos predeterminado** , haga clic en **Haga clic para editar** para abrir el cuadro de diálogo **Conjunto de campos predeterminado** .  
   
 3.  En el cuadro de diálogo **Conjunto de campos predeterminado** , en el cuadro de lista **Campos de la tabla** , presione CTRL y seleccione los campos siguientes; después, haga clic en **Agregar**.  
   
-     **Fecha de nacimiento**, **ID. alternativo del cliente**, **nombre**y **apellidos**.  
+     **Birth Date**, **Customer Alternate Id**, **First Name**, **Last Name**.  
   
-4.  En la ventana **Campos predeterminados, en orden**, use los botones Mover arriba y Mover abajo para poner el orden siguiente:  
+4.  En la ventana **Campos predeterminados, en orden** , use los botones Mover arriba y Mover abajo para poner el orden siguiente:  
   
-     **ID. alternativo del cliente**  
+     **Id. alternativo del cliente**  
   
-     **Nombre de usuario**  
+     **Nombre**  
   
      **Apellidos**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66067959"
   
 7.  Finalmente, realice estos mismos pasos para la tabla **Product** , seleccionando los campos siguientes y poniéndolos en este orden.  
   
-     **ID. alternativo del producto**, **nombre del producto**.  
+     **Product Alternate Id**, **Product Name**.  
   
 ## <a name="table-behavior"></a>Comportamiento de tabla  
  Con las propiedades de Comportamiento de tabla, puede cambiar el comportamiento predeterminado de los diferentes tipos de visualización y el comportamiento de agrupación para las tablas usadas en los informes de Power View. Esto permite una ubicación predeterminada más eficaz de la información de identificación como los nombres, imágenes o títulos en los diseños de mosaico, tarjeta y gráfico.  
@@ -117,7 +117,7 @@ ms.locfileid: "66067959"
   
 #### <a name="to-set-table-behavior-for-tables"></a>Para establecer el comportamiento de tabla de las tablas  
   
-1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer**.  
+1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer** .  
   
 2.  En la ventana **Propiedades** , en la propiedad **Comportamiento de tabla** , haga clic en **Haga clic para editar**para abrir el cuadro de diálogo **Comportamiento de tabla** .  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66067959"
   
 #### <a name="to-set-properties-for-columns"></a>Para establecer las propiedades de las columnas  
   
-1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer**.  
+1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer** .  
   
 2.  Haga clic en la columna **Customer Id** para mostrar las propiedades de columna en la ventana **Propiedades** .  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66067959"
   
 4.  Repita estos pasos, estableciendo la columna siguiente y las propiedades de informes para cada tabla especificada. Deje las demás propiedades con su configuración predeterminada.  
   
-     **Customer**  
+     **Cliente**  
   
     |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
@@ -170,21 +170,21 @@ ms.locfileid: "66067959"
     |Día de la semana|Hidden|True|  
     |Día del mes|Hidden|True|  
     |Día del año|Hidden|True|  
-    |Nombre del mes|Sort By Column|Month|  
-    |Month|Hidden|True|  
+    |Nombre del mes|Sort By Column|Mes|  
+    |Mes|Hidden|True|  
     |Month Calendar|Hidden|True|  
     |Trimestre fiscal|Hidden|True|  
     |Año fiscal|Hidden|True|  
     |Semestre fiscal|Hidden|True|  
   
-     **Geográfico**  
+     **Geografía**  
   
     |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Producto**  
+     **Manuales**  
   
     |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
@@ -195,7 +195,7 @@ ms.locfileid: "66067959"
     |Fecha de finalización del producto|Formato de datos|Short Date|  
     |Foto grande|Hidden|True|  
   
-     **Ventas por Internet**  
+     **Internet Sales**  
   
     |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
@@ -204,7 +204,7 @@ ms.locfileid: "66067959"
     |Id. de promoción|Hidden|True|  
     |Id. de moneda|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
-    |Cantidad del pedido|Tipo de datos<br /><br /> Formato de datos<br /><br /> Decimal Places|Número decimal<br /><br /> Número decimal<br /><br /> 0|  
+    |Cantidad del pedido|Tipo de datos<br /><br /> Formato de datos<br /><br /> Decimal Places|Decimal Number<br /><br /> Decimal Number<br /><br /> 0|  
     |Order Date|Tipo de datos|Short Date|  
     |Due Date|Tipo de datos|Short Date|  
     |Ship Date|Tipo de datos|Short Date|  
@@ -218,7 +218,7 @@ ms.locfileid: "66067959"
   
      Aparece el cuadro de diálogo **implementar** y muestra el estado de implementación de los metadatos, así como las tablas incluidas en el modelo.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ahora puede usar Power View para visualizar los datos del modelo. Asegúrese de que las cuentas de Analysis Services y Reporting Services en el sitio de SharePoint tienen permisos de lectura en la instancia de Analysis Services donde implementó el modelo.  
   
  Para crear un origen de datos de informe de Reporting Services que señale al modelo, vea [Crear un origen de datos compartido para un modelo de datos (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  

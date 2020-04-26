@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476993"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarea 13: agregar el destino de OLE DB para escribir datos en la tabla de ensayo de MDS
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarea 13: Adición del destino de OLE DB para escribir datos en la tabla de ensayo de MDS
   Ahora que ha agregado los valores de **ImportType** y **BatchTag** a todos los registros, está listo para enviarlos a MDS para el almacenamiento provisional. En esta tarea, usará el destino OLE DB para escribir los datos en **STG. supplier_Leaf** tabla de ensayo.  
   
 1.  Arrastre **OLE DB destino** desde la sección **otros destinos** del **cuadro de herramientas de SSIS** hasta la pestaña **flujo de datos** y colóquelo en **Agregar columnas requeridas por MDS**.  
@@ -49,6 +49,6 @@ ms.locfileid: "65476993"
      ![Flujo de datos completado](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Flujo de datos completado")  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 14: agregar la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [Tarea 14: Adición de la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

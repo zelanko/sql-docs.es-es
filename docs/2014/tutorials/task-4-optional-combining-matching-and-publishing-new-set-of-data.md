@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489271"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarea 4 (opcional): combinar, buscar coincidencias y publicar un conjunto de datos nuevo
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarea 4 (opcional): Combinación, búsqueda de coincidencias y publicación de un conjunto de datos nuevo
   Con el tiempo, le interesará agregar más datos al repositorio MDS. Antes de agregar datos, puede ser útil comparar los nuevos datos con los datos que ya se administran en MDS, para asegurarse de que no se agregan datos duplicados o inexactos. En el complemento Master Data Services para Excel, puede combinar datos de dos hojas de cálculo y comparar los datos para identificar y quitar duplicados antes de publicar los datos en MDS. La característica de búsqueda de coincidencias del complemento MDS para Excel emplea la funcionalidad de coincidencia de DQS para identificar coincidencias en los datos. En esta tarea, combinará datos de dos hojas de cálculo en una y después buscará coincidencias para identificar y quitar duplicados antes de publicar los datos en MDS. Vea [coincidencia de calidad de datos en los temas complemento MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) y [combinar datos](https://msdn.microsoft.com/library/hh548680.aspx) para obtener más detalles.  
   
 1.  Inicie una nueva instancia de **Excel**. Haga clic en **Inicio**, seleccione **Ejecutar**, escriba **Excel**y haga clic en **Aceptar**.  
@@ -78,7 +78,7 @@ ms.locfileid: "65489271"
   
 22. Asigne columnas de la hoja de cálculo a dominios como se muestra en la tabla siguiente.  
   
-    |Columna de la hoja de cálculo|Domain|  
+    |Columna de la hoja de cálculo|Dominio|  
     |----------------------|------------|  
     |Code (cargó Id. de proveedor como código de la entidad Proveedor en MDS)|Id. de proveedor|  
     |Name (cargó Nombre de proveedor como nombre de la entidad Proveedor en MDS)|Nombre del proveedor|  
@@ -88,7 +88,7 @@ ms.locfileid: "65489271"
   
 24. Escriba **70%** como el **peso** del **nombre del proveedor** y el **30%** como el **peso** del **correo electrónico de contacto** , tal como se muestra en la imagen.  
   
-25. Haga clic en **OK**.  
+25. Haga clic en **Aceptar**.  
   
 26. El proceso de coincidencia debe identificar un duplicado para el proveedor con **código: S1**.  
   
@@ -111,6 +111,6 @@ ms.locfileid: "65489271"
 34. Ahora, cierre **libro1: ventana de Microsoft Excel** sin guardar el archivo.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 5: crear un atributo basado en dominio desde Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [Tarea 5: Creación de un atributo basado en dominio desde Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

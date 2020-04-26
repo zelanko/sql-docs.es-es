@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067460"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Crear y administrar particiones en la base de datos del área de trabajo (SSAS tabular)
-  Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente o en paralelo con otras particiones. Las particiones pueden mejorar la escalabilidad y facilitar el uso de bases de datos grandes. De forma predeterminada, cada tabla tiene una partición que incluye todas las columnas. Las tareas de este tema explican cómo crear y administrar particiones en la base de datos del área de trabajo del modelo mediante el cuadro de diálogo **Administrador de particiones** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
+  Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente o en paralelo con otras particiones. Las particiones pueden mejorar la escalabilidad y facilitar el uso de bases de datos grandes. De forma predeterminada, cada tabla tiene una partición que incluye todas las columnas. En las tareas de este tema se describe cómo crear y administrar particiones en la base de datos del área de trabajo del modelo mediante el cuadro de diálogo **Administrador de particiones** de.[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  Una vez implementado un modelo en otra instancia de Analysis Services, los administradores de bases de datos pueden crear y administrar las particiones del modelo (implementado) mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Crear y administrar particiones de modelos tabulares &#40;SSAS tabular&#41;](partitions-ssas-tabular.md).  
   
  En este tema se incluyen las tareas siguientes:  
   
--   [Para crear una nueva partición](#bkmk_create_new)  
+-   [Para crear una partición](#bkmk_create_new)  
   
 -   [Para copiar una partición](#bkmk_copy)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66067460"
 ## <a name="tasks"></a>Tareas  
  Para crear y administrar particiones, deberá usar el cuadro de diálogo **Administrador de particiones** . Para ver el cuadro de diálogo **Administrador de particiones** , en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Tabla** y en **Particiones**.  
   
-###  <a name="bkmk_create_new"></a>Para crear una nueva partición  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Para crear una nueva partición  
   
 1.  En el diseñador de modelos, seleccione la tabla en la que desea definir una partición.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66067460"
   
      Para usar una instrucción SQL, haga clic en el botón **Editor de consultas** cerca de la esquina superior derecha de la ventana de vista previa y, después, escriba o pegue una instrucción de consulta SQL en la ventana de consulta. Para validar la instrucción, haga clic **Validar**. Haga clic en **Diseño**para abrir el Diseñador de consultas.  
   
-###  <a name="bkmk_copy"></a>Para copiar una partición  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a>Para copiar una partición  
   
 1.  En **Administrador de particiones**, en el cuadro de lista **Tabla** , compruebe o seleccione la tabla que contiene la partición que desea copiar.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067460"
   
 3.  En **Nombre de partición**, escriba un nuevo nombre para la partición.  
   
-###  <a name="bkmk_delete"></a>Para eliminar una partición  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a> Para eliminar una partición  
   
 1.  En **Administrador de particiones**, en el cuadro de lista **Tabla** , compruebe o seleccione la tabla que contiene la partición que desea eliminar.  
   

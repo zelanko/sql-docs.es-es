@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489706"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarea 8: agregar un nuevo valor para la entidad Estado en Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarea 8: Adición de un nuevo valor para la entidad Estado en Excel
   En esta tarea, agregará un valor para la entidad Estado en Excel y publicará el cambio en el servidor de MDS.  
   
 1.  Para agregar una **hoja de trabajo** en Excel, haga clic en la pestaña nuevo de la parte inferior.  
@@ -53,6 +53,6 @@ ms.locfileid: "65489706"
 12. En Excel, haga clic con el botón secundario en la hoja de cálculo de **Estado** en la parte inferior y haga clic en **eliminar** para eliminar la hoja de cálculo. Al eliminar la hoja de cálculo no se eliminan los datos del servidor de MDS.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 9: crear una jerarquía derivada mediante Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [Tarea 9: Creación de una jerarquía derivada mediante Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

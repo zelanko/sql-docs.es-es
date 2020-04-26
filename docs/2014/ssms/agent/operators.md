@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189016"
 ---
 # <a name="operators"></a>Operadores
@@ -53,7 +53,7 @@ ms.locfileid: "68189016"
   
      La notificación por correo electrónico envía un mensaje de correo electrónico al operador. Para la notificación por correo electrónico debe proporcionar una dirección de correo electrónico al operador.  
   
--   **Notificación por buscapersonas**  
+-   **Notificación mediante buscapersonas**  
   
      Este tipo de notificación se implementa mediante el correo electrónico. Para la notificación por buscapersonas debe proporcionar una dirección de correo electrónico en la que el operador recibirá los mensajes del buscapersonas. Para establecer la notificación mediante buscapersonas, debe instalar en el servidor de correo un software que procese el correo entrante y lo convierta en mensajes de buscapersonas. El software realizar diversas acciones, entre las que se incluyen:  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68189016"
     > [!NOTE]  
     >  Si utiliza un sistema de localización alfanumérica de baja capacidad, puede reducir el texto enviado si excluye el texto del error de la notificación del buscapersonas. Un sistema de localización alfanumérica de baja capacidad es, por ejemplo, uno que esté limitado a 64 caracteres por página.  
   
--   **net sendNotification**  
+-   **net sendnotification**  
   
      Envía un mensaje al operador mediante el comando **net send** . Si usa **net send**, especifique el destinatario (el equipo o el usuario) de un mensaje de red.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68189016"
   
      Entre los motivos que impiden contactar con los operadores principales se incluyen el uso de direcciones de buscapersonas incorrectas y los operadores fuera de servicio.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El agente no puede tener acceso a las tablas del sistema en la base de datos **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente no puede tener acceso a las tablas del sistema en la base de datos **msdb** .  
   
      La tabla del sistema **sysnotifications** especifica las responsabilidades de los operadores respecto a las alertas.  
   
@@ -117,9 +117,9 @@ ms.locfileid: "68189016"
   
 |||  
 |-|-|  
-|**Tareas**|**Tema.**|  
-|Tareas relacionadas con la creación de un operador|[Crear un operador](create-an-operator.md)<br /><br /> [Designar un operador para notificaciones de error](designate-a-fail-safe-operator.md)|  
-|Tareas relacionadas con la asignación de alertas|[Asignar alertas a un operador](assign-alerts-to-an-operator.md)<br /><br /> [Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Asignar alertas a un operador](assign-alerts-to-an-operator.md)|  
+|**Tareas**|**Tema**|  
+|Tareas relacionadas con la creación de un operador|[Create an Operator](create-an-operator.md)<br /><br /> [Designar un operador para notificaciones de error](designate-a-fail-safe-operator.md)|  
+|Tareas relacionadas con la asignación de alertas|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Definir la respuesta a una alerta &#40;SQL Server Management Studio&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Consulte también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)  

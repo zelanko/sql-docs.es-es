@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067848"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Cuadro de diálogo Propiedades de tabla (SSAS - tabular)
@@ -29,9 +29,9 @@ ms.locfileid: "66067848"
 |Término|Definición|  
 |----------|----------------|  
 |**Nombre**|Muestra el nombre de la tabla.|  
-|**SESIÓN**|Muestra el identificador de la tabla.|  
+|**Id**|Muestra el identificador de la tabla.|  
 |**Descripción**|Muestra la descripción de la tabla.|  
-|**Crear marca de tiempo**|Muestra la fecha y la hora de creación de la tabla.|  
+|**Marca de tiempo de creación**|Muestra la fecha y la hora de creación de la tabla.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora en que se actualizaron por última vez los metadatos de la tabla.|  
 |**State**|Muestra el estado de procesamiento de la tabla. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Procesado por última vez**|Muestra la fecha y la hora en que se procesó la tabla por última vez.|  

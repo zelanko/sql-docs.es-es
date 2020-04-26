@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067636"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Cambiar las asignaciones de filtros de tabla, columna o fila (SSAS tabular)
@@ -33,7 +33,7 @@ ms.locfileid: "66067636"
   
 2.  En el cuadro de diálogo **Editar propiedades de tabla** , busque la columna que contiene los criterios por los que desea filtrar y, a continuación, haga clic en la flecha hacia abajo que hay a la derecha del encabezado de columna.  
   
-3.  En el menú **Autofiltro** , siga uno de estos procedimientos:  
+3.  En el menú **Autofiltro** , realice una de las acciones siguientes:  
   
     -   En la lista de valores de columna, active o desactive uno o varios valores para filtrar y haga clic en Aceptar.  
   

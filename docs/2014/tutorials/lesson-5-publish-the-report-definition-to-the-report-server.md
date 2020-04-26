@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63272869"
 ---
-# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lección 5: Publicar la definición de informe en el servidor de informes
+# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Lección 5: Publicación de la definición de informe en el servidor de informes
   El último paso de la actualización de la definición de informe es su publicación en el servidor de informes.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Para publicar el informe en el catálogo de informes  

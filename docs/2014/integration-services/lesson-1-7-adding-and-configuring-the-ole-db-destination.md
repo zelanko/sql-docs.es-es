@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767564"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Paso 7: Adición y configuración del destino de OLE DB
@@ -24,7 +24,7 @@ ms.locfileid: "62767564"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>Para agregar y configurar un destino de OLE DB de ejemplo  
   
-1.  En el cuadro de herramientas de **Lookup Date Key** **SSIS**, expanda Otros **destinos**y arrastre Destino OLE **DB** a la superficie de diseño de la pestaña **Flujo** de datos.  
+1.  En el **cuadro de herramientas de SSIS**, expanda **otros destinos**y arrastre **OLE DB destino** a la superficie de diseño de la pestaña **flujo de datos** . Coloque el OLE DB destino directamente debajo de la transformación **lookup Date Key** .  
   
 2.  Haga clic en la transformación **Lookup Date Key** y arrastre la flecha verde hasta el **Destino de OLE DB** que acaba de agregar para conectar los dos componentes entre sí.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62767564"
   
 7.  En el cuadro **Nombre de la tabla o la vista** , escriba o seleccione **[dbo].[FactCurrencyRate]**.  
   
-8.  Haga clic en el botón **Nuevo** para crear una nueva tabla.  Cambie el nombre de la tabla en el script a **NewFactCurrencyRate**.  Haga clic en **OK**.  
+8.  Haga clic en el botón **Nuevo** para crear una nueva tabla.  Cambie el nombre de la tabla en el script a **NewFactCurrencyRate**.  Haga clic en **Aceptar**.  
   
 9. Al hacer clic en **Aceptar**, se cerrará el cuadro de diálogo y el **Nombre de la tabla o la vista** cambiará automáticamente a **NewFactCurrencyRate**.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "62767564"
   
 11. Compruebe que las columnas de entrada **AverageRate**, **CurrencyKey**, **EndOfDayRate**y **DateKey** están correctamente asignadas a las columnas de destino. Si hay columnas con el mismo nombre asignadas, la asignación es correcta.  
   
-12. Haga clic en **OK**.  
+12. Haga clic en **Aceptar**.  
   
 13. Haga clic con el botón derecho en **Sample OLE DB Destination** y haga clic en **Propiedades**.  
   
-14. En la ventana Propiedades, `LocaleID` compruebe que la propiedad está`DefaultCodePage` establecida en **Inglés (Estados Unidos)** y la propiedad está establecida en **1252**.  
+14. En el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos)** y que`DefaultCodePage` la propiedad está establecida en **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 8: Facilitar la comprensión del paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

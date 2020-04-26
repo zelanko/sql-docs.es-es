@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678448"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lección 1: Crear un modelo de minería de datos de serie temporal y una estructura de minería de datos
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lección 1: Creación de un modelo de minería de datos de serie temporal y una estructura de minería de datos
   En esta lección, creará un modelo de minería de datos que le permita predecir valores a lo largo del tiempo, según datos históricos. Al crear el modelo, la estructura subyacente se generará automáticamente y se utilizará como base para otros modelos de minería de datos.  
   
  En esta lección se supone que conoce los modelos de predicción y los requisitos del algoritmo de serie temporal de Microsoft. Para más información, consulte [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  
@@ -72,7 +72,7 @@ CREATE MINING MODEL [Mining Model Name]
   
 -   Modificar la consulta para crear la el modelo de minería de datos  
   
--   Ejecutar la consulta  
+-   Ejecución de la consulta  
   
 ## <a name="creating-the-query"></a>Crear la consulta  
  El primer paso es conectarse a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y crear una consulta DMX en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -100,7 +100,7 @@ CREATE MINING MODEL [Mining Model Name]
     [mining model name]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Forecasting_MIXED]  
@@ -112,7 +112,7 @@ CREATE MINING MODEL [Mining Model Name]
     <key columns>  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Reporting Date] DATE KEY TIME,  
@@ -129,7 +129,7 @@ CREATE MINING MODEL [Mining Model Name]
     < predictable attribute columns> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Quantity] LONG CONTINUOUS PREDICT,  
@@ -144,7 +144,7 @@ CREATE MINING MODEL [Mining Model Name]
     WITH DRILLTHROUGH  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     USING Microsoft_Time_Series(AUTO_DETECT_PERIODICITY = 0.8, FORECAST_METHOD = 'MIXED')  
@@ -195,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  En la lección siguiente, agregará un modelo de minería de datos a la **Forecasting_MIXED** estructura de minería de datos que acaba de crear.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services-minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

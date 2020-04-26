@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714572"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Propiedades de proxy (pestaña Referencias)
@@ -29,7 +29,7 @@ ms.locfileid: "62714572"
  **Paso de trabajo**  
  Nombres de los pasos del trabajo que usa esta cuenta de proxy.  
   
- **Subsystem**  
+ **Subsistema**  
  Subsistema que usa esta cuenta de proxy.  
   
 ## <a name="see-also"></a>Consulte también  

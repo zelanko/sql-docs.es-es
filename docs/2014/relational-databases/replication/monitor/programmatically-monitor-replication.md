@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667251"
 ---
 # <a name="programmatically-monitor-replication"></a>Supervisar la replicación mediante programación
@@ -54,7 +54,7 @@ ms.locfileid: "62667251"
   
  [Replication Management Objects (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Para supervisar publicadores, publicaciones y suscripciones desde el distribuidor  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667251"
   
     -   Un valor de **1** en **@mode** para habilitar la métrica del umbral de supervisión o un valor de **2** para deshabilitarla.  
   
-##  <a name="RMO"></a> Replication Management Objects (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Replication Management Objects (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>Para supervisar una suscripción a una publicación de combinación en el suscriptor  
   
@@ -268,19 +268,13 @@ ms.locfileid: "62667251"
   
         |Value|Descripción|  
         |-----------|-----------------|  
-        |1|
-  `expiration`: supervisa la expiración inminente de suscripciones a publicaciones transaccionales.|  
-        |2|
-  `latency`: supervisa el rendimiento de suscripciones a publicaciones transaccionales.|  
-        |4|
-  `mergeexpiration`: supervisa la expiración inminente de suscripciones a publicaciones de combinación.|  
+        |1|`expiration`: supervisa la expiración inminente de suscripciones a publicaciones transaccionales.|  
+        |2|`latency`: supervisa el rendimiento de suscripciones a publicaciones transaccionales.|  
+        |4|`mergeexpiration`: supervisa la expiración inminente de suscripciones a publicaciones de combinación.|  
         |5|`mergeslowrunduration`: supervisa la duración de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
-        |6|
-  `mergefastrunduration`: supervisa la duración de sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).|  
-        |7|
-  `mergefastrunspeed`: supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
-        |8|
-  `mergeslowrunspeed`: supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
+        |6|`mergefastrunduration`: supervisa la duración de sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).|  
+        |7|`mergefastrunspeed`: supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
+        |8|`mergeslowrunspeed`: supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de poco ancho de banda (acceso telefónico).|  
   
     -   *enable* - <xref:System.Boolean> que indica si la métrica está habilitada para la publicación.  
   

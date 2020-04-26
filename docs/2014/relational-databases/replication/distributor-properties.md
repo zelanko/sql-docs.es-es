@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721397"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Propiedades del distribuidor de Replicación de SQL Server
 En este tema se describen las propiedades que se encuentran en las páginas **General**, **publicadores**y **base de datos de distribución** dentro de la ventana Propiedades del **distribuidor** . 
 
 ## <a name="general"></a>General
-  La página **General** del cuadro de diálogo **propiedades del distribuidor** permite agregar y eliminar bases de datos de distribución y establecer las propiedades de la base de datos de distribución.  
+  La página **General** del cuadro de diálogo **Propiedades del distribuidor** le permite agregar y eliminar bases de datos de distribución y configurar las propiedades de la base de datos de distribución.  
   
  En la base de datos de distribución se almacenan metadatos y datos del historial de todos los tipos de replicación y transacciones de replicación transaccional. En muchas ocasiones, una sola base de datos de distribución resulta suficiente. Pero si varios publicadores utilizan un único distribuidor, podría ser aconsejable crear una base de datos de distribución para cada publicador. De esta forma, se garantiza que los datos que pasan por cada base de datos de distribución son distintos.  
   
@@ -51,7 +51,7 @@ En este tema se describen las propiedades que se encuentran en las páginas **Ge
   
 ### <a name="options"></a>Opciones  
  **Publicadores**  
- Seleccione los servidores que pueden utilizar este distribuidor. Haga clic en el botón de propiedades **(...)** situado junto a un publicador para ver y establecer propiedades adicionales.  
+ Seleccione los servidores que pueden utilizar este distribuidor. Haga clic en el botón **(...)** de Propiedades que se encuentra junto a un publicador para ver y establecer propiedades adicionales.  
   
  **Add (Agregar)**  
  Si el servidor que quiere habilitar no aparece, haga clic en **Agregar** para agregar un publicador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un publicador de Oracle a la lista de publicadores disponibles. Si el servidor que agrega es el primer servidor que utilizará este distribuidor como distribuidor remoto, se le solicitará que proporcione una contraseña de vínculo administrativo.  
@@ -66,13 +66,13 @@ En este tema se describen las propiedades que se encuentran en las páginas **Ge
  Para más información acerca de la seguridad para Distribuidores, vea [Proteger el distribuidor](security/secure-the-distributor.md).  
 
 ## <a name="distribution-database"></a>Base de datos de distribución
- El cuadro de diálogo Propiedades de la **base de datos de distribución** permite ver un número de propiedades y establecer el período de retención de la transacción y el período de retención del historial para la base de datos.  
+  El cuadro de diálogo **Propiedades de base de datos de distribución** permite ver un número de propiedades y establecer el período de retención de transacción y retención de historial para la base de datos.  
   
 ### <a name="options"></a>Opciones  
  **Nombre**  
  Nombre de la base de datos de distribución que, de manera predeterminada, se establece 'distribución' (de solo lectura).  
   
- **Ubicaciones de archivos**  
+ **Ubicaciones de archivo**  
  Ubicación del archivo de la base de datos y del archivo de registro (de solo lectura).  
   
  **Período de retención de transacción**  
@@ -94,7 +94,7 @@ En este tema se describen las propiedades que se encuentran en las páginas **Ge
 
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar distribución](configure-distribution.md)   
+ [Configurar la distribución](configure-distribution.md)   
  [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md)   
 
   

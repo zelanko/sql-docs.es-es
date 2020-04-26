@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62657708"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -38,7 +38,7 @@ ms.locfileid: "62657708"
   
 |Código de función dinámica|Source|  
 |---------------------------|------------|  
-|SQL_DIAG_DFC_SS_ALTER_DATABASE|Instrucción ALTER DATABASE|  
+|SQL_DIAG_DFC_SS_ALTER_DATABASE|instrucción ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrucción CHECKPOINT|  
 |SQL_DIAG_DFC_SS_CONDITION|Error surgido en las cláusulas WHERE o HAVING de una instrucción.|  
 |SQL_DIAG_DFC_SS_CREATE_DATABASE|Instrucción CREATE DATABASE|  
@@ -73,7 +73,7 @@ ms.locfileid: "62657708"
 |SQL_DIAG_DFC_SS_READTEXT|Instrucción READTEXT|  
 |SQL_DIAG_DFC_SS_RECONFIGURE|Instrucción RECONFIGURE|  
 |SQL_DIAG_DFC_SS_RETURN|Instrucción RETURN de control de flujo|  
-|SQL_DIAG_DFC_SS_SELECT_INTO|Instrucción SELECT INTO|  
+|SQL_DIAG_DFC_SS_SELECT_INTO|SELECT INTO, instrucción|  
 |SQL_DIAG_DFC_SS_SET|Instrucción SET (genérico, todas las opciones)|  
 |SQL_DIAG_DFC_SS_SET_IDENTITY_INSERT|SET IDENTITY_INSERT, instrucción|  
 |SQL_DIAG_DFC_SS_SET_ROW_COUNT|SET ROWCOUNT, instrucción|  

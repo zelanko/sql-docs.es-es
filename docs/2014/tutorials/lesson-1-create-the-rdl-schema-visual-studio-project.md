@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678523"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lección 1: Crear el proyecto de Visual Studio de la aplicación Esquema RDL
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lección 1: Creación del proyecto de Visual Studio Esquema RDL
   Para este tutorial creará una aplicación de consola sencilla. En este tutorial se da por supuesto [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]que está desarrollando en.  
   
 > [!NOTE]  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62938587"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación de mezcla)
@@ -46,7 +46,7 @@ ms.locfileid: "62938587"
  **Publicación**  
  Elija una publicación que contenga tablas con conflictos.  
   
- **Table**  
+ **Cuadro**  
  Elija una tabla que contenga conflictos.  
   
  **Definir filtro**  
@@ -58,7 +58,7 @@ ms.locfileid: "62938587"
  **Seleccionar todo**  
  Haga clic para seleccionar todos los conflictos mostrados en la cuadrícula.  
   
- **No seleccionar nada**  
+ **Seleccione ninguno**  
  Haga clic para anular la selección de todos los conflictos mostrados en la cuadrícula.  
   
  **Remove**  
@@ -80,10 +80,10 @@ ms.locfileid: "62938587"
  Haga clic en esta opción para aceptar la fila que el solucionador de conflictos determinó ser la perdedora. Es posible cambiar el valor de las columnas que no se muestran como de solo lectura antes de hacer clic en este botón.  
   
  **Registrar los detalles de este conflicto**  
- Active esta casilla para registrar los detalles del conflicto en un archivo. Para especificar la ubicación del archivo, señale el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón de búsqueda ( **...** ) y navegue hasta encontrar el archivo adecuado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
+ Active esta casilla para registrar los detalles del conflicto en un archivo. Para especificar la ubicación del archivo, señale el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón de búsqueda (**...**) y navegue hasta encontrar el archivo adecuado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Ver y resolver conflictos de datos para publicaciones de mezcla &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [Ver y resolver conflictos de datos para publicaciones de combinación &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Replicación de mezcla avanzada: detección y resolución de conflictos](merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

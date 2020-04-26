@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472935"
 ---
 # <a name="pick-schedule-for-job"></a>Elegir programación para trabajo
@@ -31,7 +31,7 @@ ms.locfileid: "62472935"
  **Nombre**  
  Muestra el nombre de la programación.  
   
- **Enabled**  
+ **Habilitado**  
  Esta opción está seleccionada si la programación está habilitada.  
   
  **Descripción**  

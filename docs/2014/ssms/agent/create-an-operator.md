@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a5414e845d8e625c852d628bf0d965432bc72a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136416"
 ---
 # <a name="create-an-operator"></a>Create an Operator
@@ -41,23 +41,22 @@ ms.locfileid: "63136416"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Las opciones buscapersonas y **net send** se quitarán del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
 -   Tenga en cuenta que deberá configurar el Agente SQL Server para que utilice el Correo electrónico de base de datos para enviar a los operadores notificaciones por correo electrónico o buscapersonas. Para obtener más información, vea el tema sobre [asignación de alertas a un operador](assign-alerts-to-an-operator.md).  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden crear operadores.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-an-operator"></a>Para crear un operador  
   
@@ -72,28 +71,28 @@ ms.locfileid: "63136416"
      **Nombre**  
      Cambie el nombre del operador.  
   
-     **Enabled**  
+     **Habilitado**  
      Habilite el operador. Si no se hablita, no se le envía ninguna notificación.  
   
      **Nombre de correo electrónico**  
      Especifica la dirección de correo electrónico del operador.  
   
-     **Dirección de net send**  
+     **Dirección de NET SEND**  
      Especifique la dirección que se va a usar para **net send**.  
   
-     **Nombre de correo electrónico del buscapersonas**  
+     **Correo electrónico del buscapersonas**  
      Especifica la dirección de correo electrónico que debe utilizarse para el buscapersonas del operador.  
   
-     **Programación de buscapersonas en el servicio**  
+     **Programación de buscapersonas en servicio**  
      Establece las horas a las que el buscapersonas está activo.  
   
-     **Lunes-domingo**  
+     **Lunes - Viernes**  
      Seleccione los días en los que el buscapersonas está activo.  
   
-     **Inicio de WorkDay**  
+     **Inicio del día laborable**  
      Seleccione la hora del día a partir de la cual el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía mensajes al buscapersonas.  
   
-     **Fin de WorkDay**  
+     **Fin del día laborable**  
      Seleccione la hora del día a partir de la cual el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deja de enviar mensajes al buscapersonas.  
   
      Las siguientes opciones están disponibles en la página **Notificaciones** del cuadro de diálogo **Nuevo operador** :  
@@ -121,7 +120,7 @@ ms.locfileid: "63136416"
   
 4.  Cuando termine de crear el nuevo operador, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-an-operator"></a>Para crear un operador  
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467908"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para utilizar las tablas con optimización para memoria
@@ -22,8 +22,7 @@ ms.locfileid: "62467908"
   
 -   Edición Enterprise de 64 bits, Developer o Evaluation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita suficiente memoria para almacenar los datos en tablas optimizadas para memoria e índices. Para tener en cuenta las versiones de fila, debe proporcionar una cantidad de memoria que sea dos veces el tamaño esperado de las tablas e índices optimizados para memoria. Pero la cantidad de memoria necesaria real dependerá de la carga de trabajo. Debe supervisar el uso de la memoria y realizar ajustes según sea necesario. El tamaño de los datos en las tablas optimizadas para memoria no puede superar el porcentaje permitido del grupo. Para detectar el tamaño de una tabla optimizada para memoria, vea [Sys. dm_db_xtp_table_memory_stats &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesita suficiente memoria para almacenar los datos en tablas optimizadas para memoria e índices. Para tener en cuenta las versiones de fila, debe proporcionar una cantidad de memoria que sea dos veces el tamaño esperado de las tablas e índices optimizados para memoria. Pero la cantidad de memoria necesaria real dependerá de la carga de trabajo. Debe supervisar el uso de la memoria y realizar ajustes según sea necesario. El tamaño de los datos en las tablas optimizadas para memoria no puede superar el porcentaje permitido del grupo. Para detectar el tamaño de una tabla optimizada para memoria, vea [Sys. dm_db_xtp_table_memory_stats &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
   
      Si la base de datos tiene tablas basadas en disco, debe proporcionar suficiente memoria para el grupo de búferes y el procesamiento de consultas de esas tablas.  
   
@@ -39,14 +38,13 @@ ms.locfileid: "62467908"
   
      Para instalar la generación de informes ([determinar si una tabla o un procedimiento almacenado se debe migrar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ) y (para administrar OLTP en memoria [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] a través de explorador de objetos), seleccione **herramientas de administración-básica** o **herramientas de administración-avanzada** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-hek_2"></a>Información importante sobre el uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
 -   El tamaño total en memoria de todas las tablas durables de una base de datos no debe superar los 250 GB. Para obtener más información, vea [durabilidad para las tablas optimizadas para memoria](durability-for-memory-optimized-tables.md).  
   
 -   Esta versión de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] está diseñada para ofrecer un rendimiento óptimo en sistemas de 2 o 4 sockets y menos de 60 núcleos.  
   
--   Los archivos de puntos de comprobación no se deben eliminar manualmente. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza automáticamente la recolección de elementos no utilizados en los archivos de puntos de comprobación innecesarios. Para obtener más información, vea la explicación sobre la combinación de archivos Delta y de datos de [durabilidad para las tablas optimizadas para memoria](durability-for-memory-optimized-tables.md).  
+-   Los archivos de puntos de comprobación no se deben eliminar manualmente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza automáticamente la recolección de elementos no utilizados en los archivos de puntos de comprobación innecesarios. Para obtener más información, vea la explicación sobre la combinación de archivos Delta y de datos de [durabilidad para las tablas optimizadas para memoria](durability-for-memory-optimized-tables.md).  
   
 -   En esta primera versión de OLTP en memoria (en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), la única forma de quitar un grupo de archivos optimizados para memoria es eliminar la base de datos.  
   

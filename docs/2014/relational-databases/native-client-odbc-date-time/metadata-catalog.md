@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c2784b7915d96665cae814e0dff46b2f2135bc52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62511529"
 ---
 # <a name="catalog-metadata"></a>Metadatos de catálogo
   En este tema se describen los metadatos de columna devueltos por `SQLColumns` y `SQLProcedureColumns` y los metadatos de tipo de datos devueltos por `SQLGetTypeInfo`.  
   
 ## <a name="remarks"></a>Observaciones  
- 
-  `SQLColumns` y `SQLProcedureColumns` devuelven los siguientes valores de columna para los tipos de fecha y hora.  
+ `SQLColumns` y `SQLProcedureColumns` devuelven los siguientes valores de columna para los tipos de fecha y hora.  
   
 |Tipo de parámetro|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
@@ -39,8 +38,7 @@ ms.locfileid: "62511529"
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- 
-  `SQLGetTypeInfo` devuelve los siguientes valores de columna para los tipos de fecha y hora:  
+ `SQLGetTypeInfo` devuelve los siguientes valores de columna para los tipos de fecha y hora:  
   
 |Tipo de parámetro|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  

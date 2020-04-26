@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767037"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
@@ -73,7 +73,7 @@ ms.locfileid: "62767037"
 |`IfExists`|Especifica que se utilizará el archivo de punto de comprobación, si existe. Si existe un archivo de punto de comprobación, el paquete se reiniciará desde el punto del error de ejecución anterior; de lo contrario, se ejecutará desde el inicio del flujo de trabajo del paquete.|  
   
 > [!NOTE]  
->  La opción **/Checkpointing on on** de DTExec es equivalente a establecer la `SaveCheckpoints` propiedad del paquete en `True`y la `CheckpointUsage` propiedad en Always. Para obtener más información, vea [DTExec Utility](dtexec-utility.md).  
+>  La opción **/Checkpointing on on** de DTExec es equivalente a establecer la `SaveCheckpoints` propiedad del paquete en `True`y la `CheckpointUsage` propiedad en Always. Para obtener más información, consulte [utilidad dtexec](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Proteger archivos de puntos de comprobación  
  El nivel de protección de paquetes no incluye la protección de archivos de puntos de comprobación; estos archivos se deben proteger por separado. Solo puede almacenar datos de puntos de comprobación en el sistema de archivos y debe utilizar una lista de control de acceso (ACL) al sistema operativo para proteger la ubicación o carpeta en la que ha almacenado el archivo. Es importante proteger los archivos de puntos de comprobación, dado que contienen información sobre el estado del paquete, incluidos los valores actuales de las variables. Por ejemplo, una variable puede contener un conjunto de registros con varias filas de datos privados, tales como números de teléfono. Para más información, vea [Acceso a los archivos usados por los paquetes](../access-to-files-used-by-packages.md).  

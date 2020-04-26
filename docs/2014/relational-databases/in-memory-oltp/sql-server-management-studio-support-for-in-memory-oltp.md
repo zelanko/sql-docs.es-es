@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62468202"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server Management Studio con OLTP en memoria
@@ -84,7 +84,7 @@ ms.locfileid: "62468202"
   
     -   En el **Explorador de objetos**, haga clic con el botón derecho en la base de datos, haga clic en **Propiedades**y, después, haga clic en la página **General** . El valor de la propiedad **Memoria asignada a los objetos optimizados para memoria** indica la memoria asignada a los objetos optimizados para memoria en la base de datos. El valor de la propiedad **Memoria usada por los objetos optimizados para memoria** indica la memoria usada por los objetos optimizados para memoria en la base de datos.  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Características admitidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>Características admitidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite las características y las operaciones compatibles con el motor de base de datos en las bases de datos con un grupo de archivos de datos optimizados para memoria, tablas optimizadas para memoria, índices y procedimientos compilados de forma nativa.  
   
  En los objetos de base de datos, procedimiento almacenado, tipo de tabla definido por el usuario o índice se han actualizado o ampliado las siguientes características de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para que sean compatibles con OLTP en memoria.  
@@ -150,7 +150,7 @@ ms.locfileid: "62468202"
   
 -   Template Explorer  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Características no admitidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>Características no admitidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Para los objetos OLTP en memoria, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no admite las características y las operaciones que tampoco admite el motor de base de datos.  
   
  Para obtener más información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las características no admitidas, vea [características admitidas de SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473054"
 ---
 # <a name="post-download-instructions"></a>Exponer instrucciones de descarga
@@ -38,7 +38,7 @@ ms.locfileid: "62473054"
  **Estos servidores de destino**  
  Seleccione esta opción para exponer la instrucción de descarga en los servidores de destino seleccionados.  
   
- **No**  
+ **Select**  
  Especifica que el servidor de destino reciba la instrucción de descarga.  
   
  **Servidor de destino**  

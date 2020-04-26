@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638742"
 ---
 # <a name="sql-server-extended-events-packages"></a>Paquetes de SQL Server Extended Events
@@ -36,7 +36,7 @@ ms.locfileid: "62638742"
   
  Un paquete puede contener cualquiera de los objetos siguientes, o todos ellos, que se describen pormenorizadamente más adelante en este tema:  
   
--   Eventos  
+-   Events  
   
 -   Destinos  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62638742"
   
 -   Predicados  
   
--   Mapas  
+-   Maps  
   
  Se pueden mezclar objetos de distintos paquetes en una sesión de eventos. Para más información, consulte [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62638742"
   
  ![Relación de un módulo, varios paquetes y un objeto](../../database-engine/media/xepackagesobjects.gif "Relación de un módulo, varios paquetes y un objeto")  
   
-### <a name="events"></a>Eventos  
+### <a name="events"></a>Events  
  Los eventos son puntos de supervisión de interés en la ruta de ejecución de un programa, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La activación de un evento conlleva el hecho de que se ha llegado al punto de interés, así como información de estado del momento en que se activó el evento.  
   
  Los eventos se pueden utilizar únicamente para realizar el seguimiento o para activar acciones. Estas acciones pueden ser sincrónicas o asincrónicas.  
@@ -147,11 +147,11 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   type  
+-   tipo  
   
  Para obtener más información, vea [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   
-### <a name="maps"></a>Mapas  
+### <a name="maps"></a>Maps  
  Una tabla de asignación asigna un valor interno a una cadena, que permite a un usuario saber qué representa el valor. En lugar de poder obtener solo un valor numérico, un usuario puede obtener una descripción significativa del valor interno. La consulta siguiente muestra cómo obtener valores de asignaciones.  
   
 ```  
@@ -214,8 +214,8 @@ where name = 'lock_mode'
  Utilizando esta tabla como ejemplo, suponga que tiene una columna denominada modo, y su valor es 5. La tabla indica que 5 se asigna a X, lo que quiere decir el tipo de bloqueo es Exclusivo.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
- [Motor de SQL Server Extended Events](sql-server-extended-events-engine.md)   
+ [SQL Server sesiones de eventos extendidos](sql-server-extended-events-sessions.md)   
+ [SQL Server motor de eventos extendidos](sql-server-extended-events-engine.md)   
  [Destinos de SQL Server Extended Events](../../database-engine/sql-server-extended-events-targets.md)  
   
   

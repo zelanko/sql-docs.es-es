@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62714872"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación transaccional)
@@ -36,7 +36,7 @@ ms.locfileid: "62714872"
  **Publicación**  
  Elija una publicación que contenga tablas con conflictos.  
   
- **Table**  
+ **Cuadro**  
  Elija una tabla que contenga conflictos.  
   
  **Definir filtro**  
@@ -48,7 +48,7 @@ ms.locfileid: "62714872"
  **Seleccionar todo**  
  Haga clic para seleccionar todos los conflictos mostrados en la cuadrícula.  
   
- **No seleccionar nada**  
+ **Seleccione ninguno**  
  Haga clic para anular la selección de todos los conflictos mostrados en la cuadrícula.  
   
  **Remove**  
@@ -64,7 +64,7 @@ ms.locfileid: "62714872"
  Haga clic para ver la información de la columna: **Nombre de tabla**, **Nombre de columna**, **Tipo de datos**y **Valor de columna**.  
   
  **Registrar los detalles de este conflicto**  
- Active esta casilla para registrar los detalles del conflicto en un archivo. Para especificar la ubicación del archivo, señale el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón de búsqueda ( **...** ) y navegue hasta encontrar el archivo adecuado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
+ Active esta casilla para registrar los detalles del conflicto en un archivo. Para especificar la ubicación del archivo, señale el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón de búsqueda (**...**) y navegue hasta encontrar el archivo adecuado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Detección de conflictos en la replicación punto a punto](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   

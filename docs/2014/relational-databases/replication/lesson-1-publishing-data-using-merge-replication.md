@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721178"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lección 1: Publicar datos con la replicación de mezcla
-  En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader**y **SalesOrderDetail** en [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] la base de datos de ejemplo. Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
+  En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader**y **SalesOrderDetail** en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para crear publicaciones y definir artículos  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62721178"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Para ver el estado de la generación de instantáneas  
   
-1.  Conéctese al publicador [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en, expanda el nodo del servidor y, a continuación, expanda la carpeta **replicación** .  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación** .  
   
 2.  En la carpeta Publicaciones locales, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge**y luego haga clic en **Ver estado del Agente de instantáneas**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62721178"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>Para agregar el inicio de sesión del Agente de mezcla para la lista de acceso de la publicación (PAL)  
   
-1.  Conéctese al publicador [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en, expanda el nodo del servidor y, a continuación, expanda la carpeta **replicación** .  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación** .  
   
 2.  En la carpeta Publicaciones locales, haga clic con el botón derecho en **AdvWorksSalesOrdersMerge**y luego haga clic en **Propiedades**.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "62721178"
   
 3.  Seleccione la página **Lista de acceso a la publicación** y haga clic en **Agregar**.  
   
-4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione _<Machine_Name>_ **\ repl_merge** y haga clic en **Aceptar**. Haga clic en **OK**.  
+4.  En el cuadro de diálogo Agregar acceso de publicación, seleccione _<nombre_equipo>_**\repl_merge** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha creado correctamente la publicación de combinación. A continuación se suscribirá a esta publicación. Consulte la [Lección 2: Crear una suscripción a la publicación de combinación](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Consulte también  

@@ -19,21 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185640"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Tutorial DMX de Market Basket
   En este tutorial aprenderá a crear, entrenar y explorar modelos de minería de datos utilizando el lenguaje de consulta Extensiones de minería de datos (DMX). A continuación, estos modelos de minería de datos se utilizarán para crear predicciones que describen los productos que tienden a adquirirse simultáneamente.  
   
- Los modelos de minería de datos se crearán a partir de los datos incluidos en la base de datos de ejemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que almacena datos de la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una gran empresa multinacional de fabricación. La empresa fabrica y vende bicicletas de metal y de materiales compuestos en los mercados de Norteamérica, Europa y Asia. Su sede central de operaciones se encuentra en Bothell, Washington, con 290 empleados, y tiene distribuidos varios equipos regionales de ventas en toda su base de mercado internacional.  
+ Los modelos de minería de datos se crearán a partir de los datos incluidos en la base de datos de ejemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que almacena datos de la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una gran empresa multinacional de fabricación. La empresa fabrica y vende bicicletas de metal y de materiales compuestos en los mercados de Norteamérica, Europa y Asia. Su sede central de operaciones se encuentra en Bothell, Washington, con 290 empleados, y tiene distribuidos varios equipos regionales de ventas en toda su base de mercado internacional.  
   
 ## <a name="tutorial-scenario"></a>Escenario del tutorial  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha decidido crear una aplicación personalizada que utiliza la funcionalidad de minería de datos para predecir los tipos de productos que los clientes tienden a adquirir simultáneamente. El objetivo de la aplicación personalizada es poder especificar un conjunto de productos y predecir los productos adicionales que se adquirirán con los productos especificados. A continuación, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] utilizará esta información para agregar una característica de "sugerencia" a su sitio web y también para organizar mejor la forma en que presenta la información a sus clientes.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha decidido crear una aplicación personalizada que utiliza la funcionalidad de minería de datos para predecir los tipos de productos que los clientes tienden a adquirir simultáneamente. El objetivo de la aplicación personalizada es poder especificar un conjunto de productos y predecir los productos adicionales que se adquirirán con los productos especificados. A continuación, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] utilizará esta información para agregar una característica de "sugerencia" a su sitio web y también para organizar mejor la forma en que presenta la información a sus clientes.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona varias herramientas que se pueden usar para realizar esta [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tarea:  
   
@@ -88,16 +86,16 @@ ms.locfileid: "63185640"
 ## <a name="what-you-will-learn"></a>Aprendizaje  
  El tutorial está compuesto por las lecciones siguientes:  
   
- [Lección 1: Crear la estructura de minería de la cesta de la compra](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [Lección 1: Creación de la estructura de minería de la cesta de la compra](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `CREATE` para crear estructuras de minería de datos.  
   
- [Lección 2: Agregar modelos de minería a la estructura de minería cesta de la compra](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lección 2: Adición de modelos de minería a la estructura de minería cesta de la compra](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `ALTER` para agregar modelos de minería de datos a una estructura de minería de datos.  
   
- [Lección 3: Procesar la estructura de minería de datos de la cesta de la compra](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lección 3: Procesar la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `INSERT INTO` para procesar estructuras de minería de datos y sus modelos de minería de datos asociados.  
   
- [Lección 4: Ejecutar predicciones de cesta de la compra](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lección 4: Ejecución de predicciones de cesta de la compra](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  En esta lección aprenderá a usar la instrucción `PREDICTION JOIN` para crear predicciones basadas en modelos de minería de datos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -117,6 +115,6 @@ ms.locfileid: "63185640"
 ## <a name="see-also"></a>Consulte también  
  [Tutorial DMX de Bike Buyer](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lección 3: generar un escenario de cesta de la compra &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

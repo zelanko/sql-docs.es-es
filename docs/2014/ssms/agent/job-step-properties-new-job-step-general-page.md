@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510959"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página General)
@@ -28,7 +28,7 @@ ms.locfileid: "62510959"
  **Nombre del paso**  
  Establece el nombre del paso de trabajo.  
   
- **Tipo**  
+ **Type**  
  Establece el subsistema que utiliza el paso de trabajo. En función del subsistema elegido, las opciones que se muestran para definir el paso de trabajo son diferentes.  
   
  **Ejecutar como**  
@@ -47,13 +47,13 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado al Portapapeles.  
   
  **Pegar**  
  Pega el contenido del Portapapeles.  
   
- **Analizar**  
+ **Analiza**  
  Comprueba la sintaxis del comando.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Opciones de pasos de trabajo de scripts ActiveX  
@@ -76,7 +76,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -92,7 +92,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -105,7 +105,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del script.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -115,7 +115,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -125,7 +125,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -138,7 +138,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -148,7 +148,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -158,7 +158,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -174,7 +174,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -193,7 +193,7 @@ ms.locfileid: "62510959"
  **Seleccionar todo**  
  Selecciona el texto del comando.  
   
- **Copy**  
+ **Copiar**  
  Copia el texto seleccionado.  
   
  **Pegar**  
@@ -205,7 +205,7 @@ ms.locfileid: "62510959"
  Especifique dónde se encuentra el paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) y qué método de autenticación se va a utilizar. Cuando seleccione esta pestaña, aparecerán las opciones siguientes.  
   
  **Origen del paquete**  
- Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Elija alguna de las acciones siguientes:  
+ Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Elija una de las siguientes opciones:  
   
 -   **SQL Server**  
   
@@ -223,10 +223,9 @@ ms.locfileid: "62510959"
  Para los inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si selecciona este método de autenticación, escriba el **nombre de usuario** y la **contraseña**adecuados.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona por motivos de compatibilidad con versiones anteriores. Para mejorar la seguridad, utilice la autenticación de Windows siempre que sea posible.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona por motivos de compatibilidad con versiones anteriores. Para mejorar la seguridad, utilice la autenticación de Windows siempre que sea posible.  
   
- **Package**  
+ **Paquete**  
  Escriba la ubicación del paquete.  
   
 > [!IMPORTANT]  
@@ -283,7 +282,7 @@ ms.locfileid: "62510959"
 ### <a name="execution-options-tab"></a>Opciones de ejecución (pestaña)  
  En esta pestaña puede consultar o cambiar las opciones de configuración del paquete.  
   
- **Error de paquete en advertencias de validación**  
+ **Rechazar el paquete cuando haya advertencias de validación**  
  Active esta opción para rechazar la ejecución del paquete si se producen advertencias de validación.  
   
  **Validar el paquete sin ejecutarlo**  
@@ -301,7 +300,7 @@ ms.locfileid: "62510959"
  **...**  
  Busque el archivo de punto de comprobación del paquete.  
   
- **Invalidar opciones de reinicio**  
+ **Omitir opciones de reinicio**  
  Active esta opción para especificar en este paso de trabajo opciones de reinicio diferentes de las opciones especificadas en el paquete.  
   
  **Opción de reinicio**  
@@ -322,7 +321,7 @@ ms.locfileid: "62510959"
 ### <a name="set-values-tab"></a>Valores establecidos (pestaña)  
  En esta pestaña puede consultar o cambiar valores de propiedades del paquete.  
   
- **Ruta de acceso de propiedad**  
+ **Ruta de acceso de la propiedad**  
  Permite ver o cambiar la ruta de acceso de la propiedad.  
   
  **Valor**  
@@ -334,25 +333,25 @@ ms.locfileid: "62510959"
 ### <a name="verification-tab"></a>Comprobación (pestaña)  
  En esta pestaña puede seleccionar las opciones de comprobación del paso de trabajo.  
   
- **Ejecutar solo paquetes firmados**  
+ **Ejecutar solo los paquetes firmados**  
  Solo ejecuta paquetes con firma. Si se selecciona esta opción, el paso de trabajo se rechaza si es un paquete sin firma.  
   
  **Comprobar la compilación del paquete**  
  Solo ejecuta paquetes con un número de generación específico. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el número de generación especificado.  
   
- **Build**  
+ **Compilar**  
  Escriba el número de generación del paquete.  
   
- **Comprobar el identificador del paquete**  
+ **Comprobar el Id. del paquete**  
  Ejecuta solo los paquetes que tienen un identificador concreto. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el identificador especificado.  
   
- **IDENTIFICADOR de paquete**  
+ **Id. de paquete**  
  Escriba el Id. del paquete.  
   
- **Comprobar el ID. de versión**  
+ **Comprobar el Id. de versión**  
  Ejecuta solo los paquetes que tienen un identificador de versión concreto. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el identificador de versión especificado.  
   
- **Id. de la versión**  
+ **Id. de versión**  
  Escriba el Id. de versión.  
   
 ### <a name="command-line-tab"></a>Línea de comandos (pestaña)  

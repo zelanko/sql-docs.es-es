@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8022532dcb038b7c9a5839acb0541337ac3d5001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766158"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generar archivos de volcado para la ejecución de paquetes
@@ -42,7 +42,7 @@ ms.locfileid: "62766158"
   
 -   El archivo de volcado de depuración .tmp. Es un archivo de texto con formato.  
   
- De forma predeterminada, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacena estos archivos en la carpeta *\<unidad>:* \Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ De forma predeterminada [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , almacena estos archivos en la carpeta * \<>:* \Archivos de programa\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  En la tabla siguiente solo se describen determinadas secciones del archivo .tmp. El archivo .tmp incluye datos adicionales que no se incluyen en la tabla.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "62766158"
 |Mensajes recientes|Mensajes recientes emitidos por el sistema. Incluye la fecha y hora, el tipo, la descripción y el identificador de subproceso de cada mensaje.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descripción: falta el componente, no está registrado, no puede actualizarse o faltan interfaces necesarias. La información de contacto para este componente es "".|  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Ejecutar paquete (cuadro de diálogo)](../execute-package-dialog-box.md)  
+ [Execute Package Dialog Box](../execute-package-dialog-box.md)  
   
   

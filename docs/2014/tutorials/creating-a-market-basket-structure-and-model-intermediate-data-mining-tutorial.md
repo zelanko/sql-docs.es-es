@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190833"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de cesta de la compra (Tutorial intermedio de minería de datos)
@@ -35,7 +35,7 @@ ms.locfileid: "63190833"
   
 5.  Seleccione **pedidos**en **vistas del origen de datos disponibles**y, a continuación, haga clic en **siguiente**.  
   
-6.  En la página **especificar tipos de tablas** , en la fila de la tabla vAssocSeqLineItems, active la casilla **anidada** y, en la fila de la tabla anidada vAssocSeqOrders, active la casilla **caso** . Haga clic en **Next**.  
+6.  En la página **especificar tipos de tablas** , en la fila de la tabla vAssocSeqLineItems, active la casilla **anidada** y, en la fila de la tabla anidada vAssocSeqOrders, active la casilla **caso** . Haga clic en **Siguiente**.  
   
 7.  En la página **especificar los datos de entrenamiento** , desactive los cuadros que puedan estar comprobados. Establezca la clave para la tabla de casos, vAssocSeqOrders, activando la casilla **clave** junto a OrderNumber.  
   
@@ -49,23 +49,22 @@ ms.locfileid: "63190833"
   
      ![cuál debería ser la apariencia del cuadro de diálogo](../../2014/tutorials/media/tutorial-configassocmodel.gif "cuál debería ser la apariencia del cuadro de diálogo")  
   
-10. Haga clic en **Next**.  
+10. Haga clic en **Siguiente**.  
   
 11. En la página **especificar el contenido y el tipo de datos de las columnas**, revise las selecciones, que deben ser como se muestra en la tabla siguiente y, a continuación, haga clic en **siguiente**.  
   
     |Columnas|Tipo de contenido|Tipo de datos|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Texto|  
-    |Order Number|Clave|Texto|  
-    |Region|Discrete|Texto|  
+    |IncomeGroup|Discrete|Text|  
+    |Order Number|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
-    |Modelo|Clave|Texto|  
+    |Modelo|Key|Text|  
   
-12. En la página **crear conjunto de pruebas** , el valor predeterminado de la opción **porcentaje de datos para pruebas** es el 30 por ciento. Cámbielo a **0**. Haga clic en **Next**.  
+12. En la página **crear conjunto de pruebas** , el valor predeterminado de la opción **porcentaje de datos para pruebas** es el 30 por ciento. Cámbielo a **0**. Haga clic en **Siguiente**.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona varios gráficos para medir la precisión del modelo. Sin embargo, algunos tipos de gráficos de precisión, como el gráfico de elevación y el informe de validación cruzada, están diseñados para la clasificación y la estimación. No se pueden usar en la predicción asociativa.  
+    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona varios gráficos para medir la precisión del modelo. Sin embargo, algunos tipos de gráficos de precisión, como el gráfico de elevación y el informe de validación cruzada, están diseñados para la clasificación y la estimación. No se pueden usar en la predicción asociativa.  
   
 13. En la página **finalización del asistente** , en nombre de la estructura `Association`de minería de **datos**, escriba.  
   

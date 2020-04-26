@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823282"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Agregar un modelo de regresión logística a la estructura de centro de llamadas (Tutorial intermedio de minería de datos)
@@ -36,7 +36,7 @@ ms.locfileid: "62823282"
   
 4.  En el cuadro de diálogo **nuevo modelo de minería de datos** , en `Call Center - LR`nombre del **modelo**, escriba.  En **nombre del algoritmo**, seleccione **regresión logística de Microsoft**.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
      El nuevo modelo de minería de datos se muestra en la pestaña **modelos de minería de datos** .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62823282"
   
 1.  En la pestaña **modelo de minería de datos** , haga clic con el botón secundario en la columna del modelo denominado Call Center-LR y seleccione **establecer parámetros de algoritmo**.  
   
-2.  En la fila del parámetro HOLDOUT_SEED, haga clic en la celda vacía **** situada debajo de valor `1`y escriba. Haga clic en **OK**.  
+2.  En la fila del parámetro HOLDOUT_SEED, haga clic en la celda vacía **Value**situada debajo de valor `1`y escriba. Haga clic en **Aceptar**.  
   
     > [!NOTE]  
     >  El valor de inicialización que elija no es importante siempre y cuando use el mismo para todos los modelos relacionados.  
@@ -69,6 +69,6 @@ ms.locfileid: "62823282"
  [Crear predicciones para los modelos del centro de llamadas &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/create-predictions-call-center-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Requisitos y consideraciones de procesamiento &#40;la minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

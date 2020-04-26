@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7b554dc39832a834ebe1bc2ac2d4bfefa21721a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721310"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar un publicador remoto en un distribuidor (SQL Server Management Studio)
-  Habilite un publicador para utilizar un distribuidor remoto en la página **publicadores** . Esta página está disponible en el Asistente para configurar la distribución y en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Configurar la publicación y la distribución](configure-publishing-and-distribution.md) y [Ver y modificar propiedades del distribuidor y el publicador](view-and-modify-distributor-and-publisher-properties.md).  
+  Habilite un publicador para utilizar un distribuidor remoto en la página **Publicadores** . Esta página está disponible en el Asistente para configurar la distribución y en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Configurar la publicación y la distribución](configure-publishing-and-distribution.md) y [Ver y modificar propiedades del distribuidor y el publicador](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>Para habilitar un publicador en el Asistente para configurar la distribución  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62721310"
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar la publicación y la distribución](configure-publishing-and-distribution.md)   
- [Configurar distribución](configure-distribution.md)   
+ [Configurar la distribución](configure-distribution.md)   
  [Proteger el distribuidor](security/secure-the-distributor.md)  
   
   

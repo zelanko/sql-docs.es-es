@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822107"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lección 5: Extender el modelo de serie temporal
+# <a name="lesson-5-extending-the-time-series-model"></a>Lección 5: Extensión del modelo de serie temporal
   En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, es posible agregar datos nuevos a un modelo de serie temporal e incorporarlos automáticamente al mismo. Los nuevos datos se agregan a un modelo de minería de datos de serie temporal de una de estas dos maneras:  
   
 -   Usando una instrucción PREDICTION JOIN  para unir los datos de un origen externo a los datos de entrenamiento.  
@@ -61,7 +61,7 @@ PREDICTION JOIN <source query>
     SELECT [<model columns>,] PredictTimeSeries(<table column reference>, n, EXTEND_MODEL_CASES)   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     SELECT [Model Region],  
@@ -78,7 +78,7 @@ PREDICTION JOIN <source query>
     FROM <mining model>  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     FROM [Forecasting_MIXED]  
@@ -90,7 +90,7 @@ PREDICTION JOIN <source query>
     PREDICTION JOIN <source query>  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     NATURAL PREDICTION JOIN   
@@ -111,7 +111,7 @@ PREDICTION JOIN <source query>
     [WHERE <criteria>]  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -160,12 +160,12 @@ PREDICTION JOIN <source query>
 |||||  
 |-|-|-|-|  
 |||Modelo existente (`PredictTimeSeries`)|Modelo con datos de ventas actualizados (`PredictTimeSeries` con `EXTEND_MODEL_CASES`)|  
-|M200 Europe|7/25/2008 12:00:00 AM|77|10|  
-|M200 Europe|8/25/2008 12:00:00 AM|64|15|  
-|M200 Europe|9/25/2008 12:00:00 AM|59|72|  
-|M200 Europe|10/25/2008 12:00:00 AM|56|69|  
-|M200 Europe|11/25/2008 12:00:00 AM|56|68|  
-|M200 Europe|12/25/2008 12:00:00 AM|74|89|  
+|M200 Europa|7/25/2008 12:00:00 AM|77|10|  
+|M200 Europa|8/25/2008 12:00:00 AM|64|15|  
+|M200 Europa|9/25/2008 12:00:00 AM|59|72|  
+|M200 Europa|10/25/2008 12:00:00 AM|56|69|  
+|M200 Europa|11/25/2008 12:00:00 AM|56|68|  
+|M200 Europa|12/25/2008 12:00:00 AM|74|89|  
   
  **Producto y región: M200 Pacific**  
   
@@ -181,9 +181,9 @@ PREDICTION JOIN <source query>
   
  A raíz de estos resultados, puede observar dos cuestiones:  
   
--   Las primeras dos predicciones para la serie M200 Europe son exactamente iguales que los nuevos datos que proporcionó. Por diseño, Analysis Services devuelve los nuevos datos reales en lugar de realizar una predicción. Eso se debe a que al extender los casos del modelo, los pasos temporales utilizados para las consultas de predicción siempre se inician al final de la serie original. Por tanto, si agrega dos datos nuevos, las dos primeras predicciones devueltas se superponen a los datos nuevos.  
+-   Las primeras dos predicciones para la serie M200 Europa son exactamente iguales que los nuevos datos que proporcionó. Por diseño, Analysis Services devuelve los nuevos datos reales en lugar de realizar una predicción. Eso se debe a que al extender los casos del modelo, los pasos temporales utilizados para las consultas de predicción siempre se inician al final de la serie original. Por tanto, si agrega dos datos nuevos, las dos primeras predicciones devueltas se superponen a los datos nuevos.  
   
--   Una vez agotados todos los nuevos datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] realiza predicciones basadas en el modelo actualizado. Por consiguiente, a partir de septiembre de 2005, puede ver la diferencia entre las predicciones para M200 Europe del modelo original, en la columna de la izquierda, y el modelo que utiliza EXTEND_MODEL_CASES, en la columna de la derecha. Las predicciones son diferentes porque el modelo se ha actualizado con datos nuevos.  
+-   Una vez agotados todos los nuevos datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] realiza predicciones basadas en el modelo actualizado. Por consiguiente, a partir de septiembre de 2005, puede ver la diferencia entre las predicciones para M200 Europa del modelo original, en la columna de la izquierda, y el modelo que utiliza EXTEND_MODEL_CASES, en la columna de la derecha. Las predicciones son diferentes porque el modelo se ha actualizado con datos nuevos.  
   
 ## <a name="using-start-and-end-time-steps-to-control-predictions"></a>Usar pasos temporales de inicio y de fin para controlar las predicciones  
  Al extender un modelo, los datos nuevos siempre se asocian al final de la serie. Sin embargo, para la predicción, los intervalos de tiempo usados en las consultas de predicción se inician al final de la serie original. Si únicamente desea obtener las predicciones nuevas al agregar datos nuevos, debe especificar el punto inicial como un número de intervalos de tiempo. Por ejemplo, si va a agregar dos datos nuevos y desea realizar cuatro predicciones nuevas, haría lo siguiente:  
@@ -224,16 +224,16 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ||||  
 |-|-|-|  
-|M200 Europe|9/25/2008 12:00:00 AM|72|  
-|M200 Europe|10/25/2008 12:00:00 AM|69|  
-|M200 Europe|11/25/2008 12:00:00 AM|68|  
-|M200 Europe|12/25/2008 12:00:00 AM|89|  
+|M200 Europa|9/25/2008 12:00:00 AM|72|  
+|M200 Europa|10/25/2008 12:00:00 AM|69|  
+|M200 Europa|11/25/2008 12:00:00 AM|68|  
+|M200 Europa|12/25/2008 12:00:00 AM|89|  
   
 ## <a name="making-predictions-with-replace_model_cases"></a>Realizar predicciones con REPLACE_MODEL_CASES  
  La sustitución de los casos del modelo resulta útil si desear entrenar un modelo en un conjunto de casos y, a continuación, aplicar ese modelo a una serie de datos diferente. Un tutorial detallado de este escenario se presenta en la [Lección 2: generar un escenario de previsión &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Ejemplos de consultas de modelos de serie temporal](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [&#41;PredictTimeSeries &#40;DMX](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

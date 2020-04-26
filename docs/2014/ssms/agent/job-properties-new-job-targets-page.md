@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f47054e2f0260db272ad25cbed549fd14df8c8e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695439"
 ---
 # <a name="job-properties-new-job-targets-page"></a>Propiedades del trabajo: Nuevo trabajo (página Destinos)
   Utilice esta página para administrar los servidores de destino del trabajo.  
   
 ## <a name="options"></a>Opciones  
- **Servidor local de destino**  
+ **Destino en servidor local**  
  Ejecuta el trabajo en el servidor local. Si no se han dado de alta servidores de destino, esta es la única opción disponible.  
   
  **Destino en varios servidores**  

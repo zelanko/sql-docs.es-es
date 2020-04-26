@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63058101"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Inicio de sesión para suscripciones actualizables
@@ -36,7 +36,7 @@ ms.locfileid: "63058101"
  Las dos primeras opciones se pueden especificar en este asistente. La última opción solo se puede especificar mediante [sp_link_publication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql); Especifique un valor de **1** para el parámetro **@security_mode**.  
   
 ## <a name="options"></a>Opciones  
- **Cree un servidor vinculado que se conecte mediante el siguiente inicio de sesión de autenticación de SQL Server:**  
+ **Crear un servidor vinculado que se conecte mediante el siguiente inicio de sesión para la Autenticación de SQL Server:**  
  La replicación crea un servidor vinculado utilizando las credenciales especificadas en los campos **Inicio de sesión** y **Contraseña** .  
   
  **Inicio de sesión**  
@@ -45,16 +45,16 @@ ms.locfileid: "63058101"
  **Contraseña**  
  Escriba una contraseña segura para el inicio de sesión especificado en **Inicio de sesión**.  
   
- **Confirmar contraseña**  
+ **Confirm Password**  
  Vuelva a escribir la contraseña para confirmar que se ha escrito correctamente.  
   
- **Utilice un servidor vinculado o un servidor remoto que ya haya definido.**  
+ **Utilizar un servidor vinculado o un servidor remoto que ya está definido.**  
  Esta opción requiere un servidor vinculado o un servidor remoto que ya se ha definido. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../linked-servers/linked-servers-database-engine.md) y [Servidores remotos](../../database-engine/configure-windows/remote-servers.md). Asegúrese de que el inicio de sesión utilizado para el servidor vinculado o el servidor remoto tiene una contraseña segura y solo tiene los permisos descritos en este tema.  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear una suscripción actualizable a una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Ver y modificar la configuración de seguridad de la replicación](security/view-and-modify-replication-security-settings.md)   
  [Suscripciones actualizables para la replicación transaccional](transactional/updatable-subscriptions-for-transactional-replication.md)   
- [Suscribirse a publicaciones](subscribe-to-publications.md)  
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

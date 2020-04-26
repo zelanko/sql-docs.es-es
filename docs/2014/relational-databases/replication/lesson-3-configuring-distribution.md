@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721100"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lección 3: Configurar la distribución
@@ -31,13 +31,13 @@ ms.locfileid: "62721100"
 2.  Haga clic con el botón derecho en la carpeta **Replicación** y luego haga clic en **Configurar distribución**.  
   
     > [!NOTE]  
-    >  Si se ha conectado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando **localhost** en lugar del nombre real del servidor, aparecerá una advertencia indicando que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar con el servidor **'localhost'**. En el cuadro de diálogo de advertencia, haga clic en **Aceptar** . En el cuadro de diálogo **Conectar al servidor** , cambie el **Nombre del servidor** de **localhost** al nombre del servidor. Haga clic en **Conectar**.  
+    >  Si se ha conectado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando **localhost** en lugar del nombre real del servidor, aparecerá una advertencia indicando que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar con el servidor **'localhost'**. Haga clic en **Aceptar** en el cuadro de diálogo de advertencia. En el cuadro de diálogo **Conectar al servidor** , cambie el **Nombre del servidor** de **localhost** al nombre del servidor. Haga clic en **Conectar**.  
   
      Se iniciará el Asistente para configurar la distribución.  
   
 3.  En la página **distribuidor** , seleccione **'**_\<ServerName>_ **' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**y, a continuación, haga clic en **siguiente**.  
   
-4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Inicio del Agente** , seleccione **Sí**, configurar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del Agente para que se inicie automáticamente. Haga clic en **Next**.  
+4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Inicio del Agente** , seleccione **Sí**, configurar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del Agente para que se inicie automáticamente. Haga clic en **Siguiente**.  
   
 5.  Escriba ** \\ ** \< _Machine_Name>_ **\repldata** en el cuadro de texto **carpeta de instantáneas** , donde \< *Machine_Name>* es el nombre del publicador y, a continuación, haga clic en **siguiente**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721100"
 7.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_merge. Este inicio de sesión debe contar con asignaciones de usuario en las bases de datos **distribution** y **AdventureWorks** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar distribución](configure-distribution.md)   
+ [Configurar la distribución](configure-distribution.md)   
  [Modelo de seguridad del agente de replicación](security/replication-agent-security-model.md)  
   
   

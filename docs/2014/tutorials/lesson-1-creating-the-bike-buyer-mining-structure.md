@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678498"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lección 1: Crear la estructura de minería de datos de Bike Buyer
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lección 1: Creación de la estructura de minería de datos de Bike Buyer
   En esta lección creará una estructura de minería de datos que permita predecir si un cliente potencial de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] adquirirá una bicicleta. Si no está familiarizado con las estructuras de minería de datos y su rol en la minería de datos, vea estructuras de minería de datos [&#40;Analysis Services-data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La estructura de minería de datos Bike Buyer que creará en esta lección permite agregar modelos de minería de datos basados en el algoritmo de [Microsoft clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)Algorithm[Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). En lecciones posteriores, utilizará los modelos de minería de datos de agrupación en clústeres para explorar las distintas formas en las que los clientes pueden agruparse, y utilizará los modelos de minería de datos del árbol de decisión para predecir si un cliente potencial adquirirá una bicicleta.  
@@ -87,7 +87,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 -   Modificar la consulta para crear la estructura de minería de datos.  
   
--   Ejecute la consulta.  
+-   Ejecutar la consulta.  
   
 ## <a name="creating-the-query"></a>Crear la consulta  
  El primer paso es conectarse a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y crear una consulta DMX en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -113,7 +113,7 @@ WITH HOLDOUT (<holdout specifier>)
     [<mining structure>]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Bike Buyer]  
@@ -125,7 +125,7 @@ WITH HOLDOUT (<holdout specifier>)
     <key column>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     CustomerKey LONG KEY  
@@ -137,7 +137,7 @@ WITH HOLDOUT (<holdout specifier>)
     <mining structure columns>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Age] LONG DISCRETIZED(Automatic,10),  
@@ -161,7 +161,7 @@ WITH HOLDOUT (<holdout specifier>)
     WITH HOLDOUT (holdout specifier>)  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     WITH HOLDOUT (30 PERCENT or 1000 CASES)  
@@ -214,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  En la siguiente lección agregará modelos de minería de datos a la estructura que acaba de crear.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

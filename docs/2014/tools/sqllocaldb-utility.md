@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035405"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB (utilidad)
@@ -43,31 +43,31 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **crear** | **c** ] nombre de instancia>* \<>de versión de instancia* [**-s** ] * \<*  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
  Crea una instancia de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB`usa la versión de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] los archivos binarios especificados por * \<la versión de la instancia>* argumento. El número de versión se especifica en formato numérico con al menos un decimal. Los números de versión secundaria (Service Pack) son opcionales. Como los siguientes dos números de versión son aceptables: 11.0 u 11.0.1186. La versión especificada se debe instalar en el equipo. Si no se especifica, el número de versión tiene como valor predeterminado la `SqlLocalDB` versión de la utilidad. Al agregar **-s**, se inicia la nueva instancia de **LocalDB**.  
   
  [ **share** | **h** ]  
  Comparte la instancia privada especificada de **LocalDB** por medio del nombre compartido especificado. Si se omite el SID del usuario o el nombre de la cuenta, usa de forma predeterminada el usuario actual.  
   
- [no **compartido** | **u** ]  
+ [ **unshared** | **u** ]  
  Detiene el uso compartido de la instancia compartida especificada de **LocalDB**.  
   
- [ **eliminar** | **d** ] *>de nombre de instancia \<*  
+ [ **delete** | **d** ] *\<instance-name>*  
  Elimina la instancia especificada de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **Start** | **s** ] "*\<nombre de instancia>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  Inicia la instancia especificada de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Cuando se realiza correctamente, la instrucción devuelve la dirección de la canalización con nombre de **LocalDB**.  
   
- [ **Stop** | **p** ] nombre de instancia>[**-i** ] [**-k** ] * \<*  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
  Detiene la instancia especificada de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Al agregar **-i se** solicita el cierre de `NOWAIT` la instancia con la opción. Al agregar **-k**, se elimina el proceso de la instancia sin ponerse en contacto con ella.  
   
- [ **info** | **i** ] [ * \<nombre-de-instancia>* ]  
+ [ **info** | **i** ] [ *\<instance-name>* ]  
  Muestra toda la instancia de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** que pertenece al usuario actual.  
   
- [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **** **** *nombre-de-instancia>devuelve el nombre, la versión, el estado (en ejecución o detenido), la última hora de inicio de la instancia especificada de LocalDB y el nombre de la \<* canalización local de LocalDB.  
+ *\<instance-name>* devuelve el nombre, la versión, el estado (En ejecución o Detenido), la última hora de inicio de la instancia especificada de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** y el nombre de la canalización local de **LocalDB**.  
   
- [ **seguimiento** | **t** ]  | **desactivado** ****  
- **Trace on** habilita el seguimiento de `SqlLocalDB` las llamadas de API para el usuario actual. el **seguimiento desactivado** deshabilita el seguimiento.  
+ [ **trace** | **t** ] **on** | **off**  
+ **Trace on** habilita el seguimiento de `SqlLocalDB` las llamadas de API para el usuario actual. **trace off** deshabilita el seguimiento.  
   
  **-?**  
  Devuelve breves descripciones de cada `SqlLocalDB` opción.  

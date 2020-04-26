@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721505"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar un controlador de lógica de negocios (programación de la replicación)
@@ -33,7 +33,7 @@ ms.locfileid: "62721505"
   
 1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción a la publicación. Para más información, vea [Configuración de la publicación y la distribución](configure-publishing-and-distribution.md) y [Creación de una publicación](publish/create-a-publication.md).  
   
-2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Cree y registre un controlador de lógica de negocios Para obtener más información, vea [implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Cree un proyecto de Replication Management Objects (RMO) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio que mediante programación inicie sincrónicamente el Agente de mezcla. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62721505"
   
 1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción de extracción a la publicación. La publicación debe admitir la sincronización web o los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)] .  
   
-2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md).  
+2.  Cree y registre un controlador de lógica de negocios Para obtener más información, vea [implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md).  
   
 3.  Establezca un punto de interrupción en el código del controlador de lógica de negocios, ya sea en el método que se depura o en el constructor de clase. Para obtener más información acerca de los métodos que se pueden implementar en un controlador de lógica de negocios, vea el tema de métodos <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
@@ -82,7 +82,6 @@ ms.locfileid: "62721505"
 11. Suponiendo que no se establezcan otros puntos de interrupción y que se repliquen los comandos adecuados, la ejecución se detiene cuando llega al punto de interrupción en el controlador de lógica de negocios.  
   
 ## <a name="see-also"></a>Consulte también  
- [Implementar un controlador de lógica de negocios para un artículo de mezcla
-](implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63301299"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Modificar la estructura de previsión (tutorial intermedio de minería de datos)
@@ -54,6 +54,6 @@ ms.locfileid: "63301299"
   
 ## <a name="see-also"></a>Consulte también  
  [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelos de minería de datos &#40;Analysis Services&#41;de minería de datos](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

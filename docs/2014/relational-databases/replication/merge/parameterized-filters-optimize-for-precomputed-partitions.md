@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250546"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente
@@ -30,7 +30,7 @@ ms.locfileid: "63250546"
   
  Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
- **Para usar particiones precalculadas**  
+ **Para utilizar particiones precalculadas**  
   
  Las particiones precalculadas están habilitadas de forma predeterminada en todas las publicaciones nuevas y existentes que se ajustan a las directrices indicadas anteriormente. La configuración se puede cambiar a través de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o mediante programación. Para más información, consulte [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63250546"
   
 ### <a name="database-collation"></a>Intercalación de base de datos  
   
--   Cuando se utilizan las particiones precalculadas, siempre se utiliza la intercalación de la base de datos al realizar comparaciones, en lugar de la intercalación de la tabla o columna. Considere el siguiente escenario:  
+-   Cuando se utilizan las particiones precalculadas, siempre se utiliza la intercalación de la base de datos al realizar comparaciones, en lugar de la intercalación de la tabla o columna. Considere el caso siguiente:  
   
     -   Una base de datos con una intercalación que distingue entre mayúsculas y minúsculas contiene una tabla con una intercalación que no distingue entre mayúsculas y minúsculas.  
   

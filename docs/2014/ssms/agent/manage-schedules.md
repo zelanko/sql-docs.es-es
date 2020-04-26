@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255070"
 ---
 # <a name="manage-schedules"></a>Administrar programaciones
@@ -29,7 +29,7 @@ ms.locfileid: "63255070"
  **Nombre**  
  Muestra el nombre de la programación.  
   
- **Enabled**  
+ **Habilitado**  
  Seleccione esta opción para habilitar la programación.  
   
  **Descripción**  

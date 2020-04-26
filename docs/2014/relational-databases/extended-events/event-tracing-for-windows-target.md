@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519309"
 ---
 # <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
@@ -54,7 +54,7 @@ ms.locfileid: "62519309"
 |default_etw_session_logfile_path|Cualquier cadena de 256 caracteres, como máximo. Este valor es opcional.|La ruta de acceso del archivo de registro para la sesión de Extended Events. De forma predeterminada, es %TEMP%\XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Un entero sin signo. Este valor es opcional.|El tamaño del archivo de registro, en megabytes (MB), para la sesión de Extended Events. El valor predeterminado es 20 MB.|  
 |default_etw_session_buffer_size_kb|Un entero sin signo. Este valor es opcional.|El tamaño de búfer en memoria, en kilobytes (kB), para la sesión de Extended Events. El valor predeterminado es 128 kB.|  
-|retries|Un entero sin signo.|El número de veces que se debe reintentar publicar el evento al subsistema de ETW antes de quitar el evento. El valor predeterminado es 0.|  
+|retries|Un entero sin signo.|El número de veces que se debe reintentar publicar el evento al subsistema de ETW antes de quitar el evento. El valor predeterminado es 0.|  
   
  La configuración de estos valores es opcional. El destino ETW utiliza los valores predeterminados para estos valores.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62519309"
     > [!IMPORTANT]  
     >  No se puede cambiar la ruta de acceso del archivo después de que la primera sesión se haya iniciado.  
   
--   Los archivos MOF (Managed Object Format) se encuentran en *\<su ruta de instalación>* \Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](https://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
+-   Los archivos Managed Object Format (MOF) se encuentran en * \<la ruta de instalación>* \Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](https://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Agregar el destino a una sesión  
  Para agregar el destino ETW a una sesión de eventos extendidos, debe incluir la siguiente instrucción al crear o modificar una sesión de eventos:  
@@ -87,9 +87,9 @@ ADD TARGET package0.etw_classic_sync_target
  Para obtener más información sobre un ejemplo completo que muestra cómo usar el destino ETW, incluida la forma de ver los datos, vea [Supervisar la actividad del sistema mediante eventos extendidos](monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Destinos de SQL Server Extended Events](../../database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinos de eventos extendidos](../../database-engine/sql-server-extended-events-targets.md)   
+ [Sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CREAR sesión de eventos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

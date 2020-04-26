@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2e3f85016b32884b9a6b809e28d20d9985f97cd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62655807"
 ---
-# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lección 3: Procesar la estructura de minería de datos de Bike Buyer
+# <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lección 3: Procesamiento de la estructura de minería de datos de Bike Buyer
   En esta lección, usará la instrucción INSERT INTO y la vista vTargetMail de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de datos de ejemplo para procesar las estructuras de minería de datos y los modelos de minería de datos creados en la [Lección 1: crear la estructura de minería de datos Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) y [Lección 2: agregar modelos de minería de datos a la estructura de minería de datos Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lee los datos de origen y genera las estructuras que admiten los modelos de minería de datos. Al procesar un modelo de minería de datos, los datos definidos por la estructura de minería de datos se pasan por el algoritmo de minería de datos que elija. El algoritmo busca tendencias y patrones y, a continuación, almacena esta información en el modelo de minería de datos. Por consiguiente, el modelo de minería de datos no contiene los datos de origen reales, sino la información descubierta por el algoritmo. Para obtener más información sobre el procesamiento de modelos de minería de datos, vea [requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
@@ -86,7 +86,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     [<mining structure name>]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Bike Buyer  
@@ -98,7 +98,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     <mining structure columns>  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Customer Key],  
@@ -123,7 +123,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
     OPENQUERY([<datasource>],'<SELECT statement>')  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     OPENQUERY([Adventure Works DW],  
@@ -177,6 +177,6 @@ OPENQUERY([<datasource>],'<SELECT statement>')
  En la siguiente lección explorará el contenido de los modelos de minería de datos que ha agregado a la estructura de minería de datos en esta lección.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Examinar los modelos de minería de datos de Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lección 4: Examen de los modelos de minería de datos de Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

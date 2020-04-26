@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667892"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
@@ -50,20 +50,20 @@ ms.locfileid: "62667892"
   
      [Replication Management Objects](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Los testigos de seguimiento también pueden ser útiles al detener el sistema, lo que implica detener todas las actividades y comprobar que todos los nodos han recibido todos los cambios pendientes. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Para usar testigos de seguimiento, debe utilizar determinadas versiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Para usar testigos de seguimiento, debe utilizar ciertas versiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   El distribuidor debe ser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior.  
   
 -   El publicador debe ser de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior, o un publicador de Oracle.  
   
--   En el caso de las suscripciones de inserción, las estadísticas del token de seguimiento se obtienen del publicador, del distribuidor y de los suscriptores, si el suscriptor es [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 o posterior.  
+-   En el caso de las suscripciones de extracción, las estadísticas del token de seguimiento se recopilan desde el publicador, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el distribuidor y los suscriptores, si el suscriptor es 7,0 o posterior.  
   
--   Para las suscripciones de extracción, las estadísticas del token de seguimiento se obtienen solo de los suscriptores, si el suscriptor es de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Si el suscriptor es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], las estadísticas se obtienen solo del publicador y del distribuidor.  
+-   Para las suscripciones de extracción, las estadísticas del token de seguimiento se obtienen solo de los suscriptores, si el suscriptor es de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Si el suscriptor es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], las estadísticas solo se recopilan desde el publicador y el distribuidor.  
   
  También hay que tener en cuenta otros problemas y restricciones:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62667892"
   
 -   Después de la conmutación por error a un elemento secundario, el Monitor de replicación no puede ajustar el nombre de la instancia de publicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y seguirá mostrando información de replicación bajo el nombre de la instancia principal original de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Después de la conmutación por error, el Monitor de replicación no puede especificar un token de seguimiento, aunque muestra un token de seguimiento especificado en el nuevo publicador mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-##  <a name="SSMSProcedure"></a> Usar el Monitor de replicación de SQL Server  
+##  <a name="using-sql-server-replication-monitor"></a><a name="SSMSProcedure"></a>Uso del monitor de Replicación de SQL Server  
  Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](start-the-replication-monitor.md).  
   
 #### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Para insertar un testigo de seguimiento y ver la información del token  
@@ -88,7 +88,7 @@ ms.locfileid: "62667892"
   
 3.  Haga clic en **Insertar seguimiento**.  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. Un valor de **Pending** indica que el token no ha alcanzado un punto determinado.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para ver información en el testigo de seguimiento insertado previamente  
   
@@ -98,12 +98,12 @@ ms.locfileid: "62667892"
   
 3.  Seleccione una hora en la lista desplegable **Hora de inserción** .  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. Un valor de **Pending** indica que el token no ha alcanzado un punto determinado.  
   
     > [!NOTE]  
     >  La información del testigo de seguimiento se guarda durante el mismo período que otros datos del historial, que depende del período de retención de historial de la base de datos de distribución. Para obtener información sobre cómo cambiar las propiedades de la base de datos de distribución, vea [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para exponer un token de seguimiento en una publicación transaccional  
   
@@ -127,12 +127,12 @@ ms.locfileid: "62667892"
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) y especifique **@publication** y el id. del seguimiento para eliminar desde el paso 2 para **@tracer_id**.  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Ejemplo (Transact-SQL)  
  Este ejemplo expone un registro de token de seguimiento y utiliza el Id. devuelto del token de seguimiento expuesto para ver información de la latencia.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para exponer un token de seguimiento en una publicación transaccional  
   

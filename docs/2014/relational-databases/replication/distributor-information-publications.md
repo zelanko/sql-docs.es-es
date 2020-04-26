@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721360"
 ---
 # <a name="distributor-information-dialog-box"></a>Información del distribuidor (cuadro de diálogo) 
@@ -45,7 +45,7 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
   El nombre del publicador se incluye en la información para las suscripciones de publicaciones de instantáneas. De lo contrario, la funcionalidad y la información proporcionadas en este cuadro de diálogo son las mismas que las de la vista Publicador. Para más información sobre cómo utilizar este cuadro de diálogo, vea [Publisher Information, Subscription Watch List &#40;Snapshot Publication, SQL Server 2005 and Later&#41;](publisher-information-subscription-watch-list-snapshot.md) (Información del publicador, Lista de supervisión de suscripciones (Publicación de instantáneas, SQL Server 2005 y versiones posteriores)).  
 
 ## <a name="agents"></a>Agentes
-  La pestaña **Agentes** muestra información acerca de los agentes y trabajos de mantenimiento asociados con el publicador y el suscriptor.  
+   La pestaña **Agentes** muestra información acerca de los agentes y trabajos de mantenimiento asociados con el publicador y el suscriptor.  
   
  Los agentes que están disponibles en la pestaña **Agentes** de un distribuidor en la vista Distribuidor incluyen todos los agentes que están disponibles en la pestaña **Agentes** de un publicador. Sin embargo, la pestaña **Agentes** para un distribuidor en la vista Distribuidor también incluye un Agente de distribuidor y un Agente de mezcla.  
   
@@ -73,7 +73,7 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
  **Suscripción**  
  Nombre de la suscripción, con el formato: [*SubscriberName*].[*Database*].  
   
- **Tipo**  
+ **Type**  
  Tipo de replicación: inserción, extracción o anónima.  
   
  **Última hora de inicio**  
@@ -88,7 +88,7 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
  **Tasa de entrega**  
  La tasa, en comandos por segundo, a la que se confirman los comandos de inicialización en la base de datos de distribución durante la última ejecución del agente.  
   
- **Latency**  
+ **Latencia**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en la base de datos de publicación y el comando correspondiente que se confirma en la base de datos de distribución.  
   
  **#Trans**  
@@ -119,7 +119,7 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
  **Suscripción**  
  Nombre de la suscripción, con el formato: [*SubscriberName*].[*Database*].  
   
- **Tipo**  
+ **Type**  
  Tipo de replicación: inserción, extracción o anónima.  
   
  **Última hora de inicio**  
@@ -160,7 +160,7 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
   
  
 ## <a name="see-also"></a>Consulte también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Supervisar la replicación](monitoring-replication.md)  
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Supervisión de la replicación](monitoring-replication.md)  
   
   

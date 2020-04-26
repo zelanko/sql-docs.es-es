@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721127"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Inicializar una suscripción con una instantánea
@@ -48,7 +48,7 @@ ms.locfileid: "62721127"
 -   Transferir la instantánea mediante el Protocolo de transferencia de archivos (FTP). Para obtener más información, vea [Transferir instantáneas mediante FTP](transfer-snapshots-through-ftp.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Initialize a Subscription](initialize-a-subscription.md)  (Inicializar una suscripción)  
+ [Inicializar una suscripción](initialize-a-subscription.md)   
  [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md)  
   
   

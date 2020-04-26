@@ -17,24 +17,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721227"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar un solucionador de conflictos personalizado para un artículo de mezcla
-  En este tema se describe cómo implementar el solucionador de conflictos personalizado para un artículo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de mezcla [!INCLUDE[tsql](../../includes/tsql-md.md)] en mediante o un [solucionador personalizado basado en com](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+   En este tema se describe cómo implementar el solucionador de conflictos personalizado para un artículo de mezcla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o un [solucionador personalizado basado en COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
  **En este tema**  
   
--   **Para implementar el solucionador de conflictos personalizado para un artículo de mezcla con:**  
+-   **Para implementar un solucionador de conflictos personalizado para un artículo de mezcla con:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [Solucionador basado en COM](#COM)  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede escribir su propio solucionador de conflictos personalizado como un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] en cada publicador. Durante la sincronización, se llama a este procedimiento almacenado cuando se encuentran conflictos en un artículo para el que se registró el solucionador y el Agente de mezcla pasa información sobre la fila del conflicto a los parámetros pertinentes del procedimiento. Los solucionadores de conflictos personalizados basados en el procedimiento almacenado siempre se crean en el publicador.  
   
 > [!NOTE]  
@@ -51,7 +51,7 @@ ms.locfileid: "62721227"
     |**@rowguid**|`uniqueidentifier`|Identificador único de la fila que tiene el conflicto.|  
     |**@subscriber**|`sysname`|Nombre del servidor desde donde se propaga un cambio conflictivo.|  
     |**@subscriber_db**|`sysname`|Nombre de la base de datos desde donde se propaga un cambio conflictivo.|  
-    |**@log_conflictGENERE**|`int`|Si el proceso de mezcla debería registrar un conflicto para su posterior resolución:<br /><br /> **0** = no registrar el conflicto.<br /><br /> **1** = el suscriptor es el perdedor del conflicto.<br /><br /> **2** = el publicador es el perdedor del conflicto.|  
+    |**@log_conflictGENERE**|`int`|Si el proceso de mezcla debería registrar un conflicto para su posterior resolución:<br /><br /> **0** = No registre el conflicto.<br /><br /> **1** = El suscriptor es el perdedor del conflicto.<br /><br /> **2** = El publicador es el perdedor del conflicto.|  
     |**@conflict_messageGENERE**|`nvarchar(512)`|Mensaje que se va a proporcionar sobre la resolución si se registra el conflicto.|  
     |**@destowner**|`sysname`|El propietario de la tabla publicada en el suscriptor.|  
   
@@ -69,8 +69,8 @@ ms.locfileid: "62721227"
   
 2.  Ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando **@publication**, **@article**, un valor de **resolver_info** para **@property**y el nombre del procedimiento almacenado que implementa la lógica del solucionador de conflictos para **@value**.  
   
-##  <a name="COM"></a>Usar un solucionador personalizado basado en COM  
- El espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa una interfaz que le permite escribir una lógica de negocios compleja para administrar eventos y solucionar conflictos que se producen durante el proceso de sincronización de replicación de mezcla. Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md). También puede escribir su propia lógica de negocios personalizada basada en código nativo para solucionar conflictos. Esta lógica está generada como componente COM y se compila en las bibliotecas de vínculo dinámico (DLL), usando productos como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Este solucionador de conflictos personalizado basado en COM debe implementar la interfaz **ICustomResolver** , que está diseñada específicamente para la resolución de conflictos.  
+##  <a name="using-a-com-based-custom-resolver"></a><a name="COM"></a>Usar un solucionador personalizado basado en COM  
+ El espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> implementa una interfaz que le permite escribir una lógica de negocios compleja para administrar eventos y solucionar conflictos que se producen durante el proceso de sincronización de replicación de mezcla. Para obtener más información, vea [implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md). También puede escribir su propia lógica de negocios personalizada basada en código nativo para solucionar conflictos. Esta lógica está generada como componente COM y se compila en las bibliotecas de vínculo dinámico (DLL), usando productos como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++. Este solucionador de conflictos personalizado basado en COM debe implementar la interfaz **ICustomResolver** , que está diseñada específicamente para la resolución de conflictos.  
   
 #### <a name="to-create-and-register-a-com-based-custom-conflict-resolver"></a>Para crear y registrar un solucionador de conflictos personalizado basado en COM  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62721227"
   
 8.  En el Publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) para comprobar que la biblioteca no está registrada aún como solucionador de conflictos personalizado.  
   
-9. Para registrar la biblioteca como un solucionador de conflictos personalizado, ejecute [sp_registercustomresolver &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), en el distribuidor. Especifique el nombre descriptivo del objeto COM **@article_resolver**para, el identificador de la biblioteca (CLSID) para **@resolver_clsid**y un valor de `false` para. **@is_dotnet_assembly**  
+9. Para registrar la biblioteca como solucionador de conflictos personalizado, ejecute [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) en el Distribuidor. Especifique el nombre descriptivo del objeto COM **@article_resolver**para, el identificador de la biblioteca (CLSID) para **@resolver_clsid**y un valor de `false` para. **@is_dotnet_assembly**  
   
     > [!NOTE]  
     >  Cuando ya no se necesite, se puede eliminar del registro un solucionador de conflictos personalizado usando [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql).  
@@ -106,13 +106,13 @@ ms.locfileid: "62721227"
   
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>Para utilizar un solucionador de conflictos personalizado con un nuevo artículo de tabla  
   
-1.  En el publicador, ejecute [sp_enumcustomresolvers &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) y anote el nombre descriptivo del solucionador deseado.  
+1.  En el Publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) y tenga en cuenta el nombre descriptivo del solucionador que desee.  
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) para definir un artículo. Especifique el nombre descriptivo del solucionador de artículos del paso 1 para **@article_resolver**. Para más información, consulte [Define an Article](publish/define-an-article.md).  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>Para utilizar un solucionador de conflictos personalizado con un artículo de tabla existente  
   
-1.  En el publicador, ejecute [sp_enumcustomresolvers &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) y anote el nombre descriptivo del solucionador deseado.  
+1.  En el Publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) y tenga en cuenta el nombre descriptivo del solucionador que desee.  
   
 2.  Ejecute [sp_changemergearticle &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), **@publication**especificando **@article**,, un valor de **article_resolver** para **@property**y el nombre descriptivo del solucionador de artículos del paso 1 para. **@value**  
   
@@ -139,6 +139,6 @@ ms.locfileid: "62721227"
 ## <a name="see-also"></a>Consulte también  
  [Detección y resolución de conflictos de replicación de mezcla avanzada](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Solucionadores personalizados basados en COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
- [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
+ [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md)  
   
   

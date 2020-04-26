@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823135"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Agregar una vista del origen de datos para las previsiones (tutorial intermedio de minería de datos)
@@ -26,14 +26,14 @@ ms.locfileid: "62823135"
   
 2.  En la página inicial del **Asistente para orígenes de datos**, haga clic en **Siguiente**.  
   
-3.  En la página **seleccionar un origen de datos** , en **orígenes de datos relacionales**, seleccione el origen de [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] datos. Haga clic en **Next**.  
+3.  En la página **seleccionar un origen de datos** , en **orígenes de datos relacionales**, seleccione el origen de [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] datos. Haga clic en **Siguiente**.  
   
     > [!NOTE]  
     >  Si no tiene este origen de datos, puede encontrar los pasos para crear el origen de datos en el [tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
 4.  En la página **seleccionar tablas y vistas** , seleccione la tabla vTimeSeries (DBO) y, a continuación, haga clic en la flecha derecha para agregarla a la vista del origen de datos.  
   
-5.  Haga clic en **Next**.  
+5.  Haga clic en **Siguiente**.  
   
 6.  En la página **finalización del asistente** , la vista del origen de datos se [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]denomina de forma predeterminada. Cambie el nombre a **SalesByRegion**y, a continuación, haga clic en **Finalizar**.  
   

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822317"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Lección 5: Ejecutar consultas de predicción
+# <a name="lesson-5-executing-prediction-queries"></a>Lección 5: Ejecución de consultas de predicción
   En esta lección, usará la forma [seleccionar del \<modelo> combinación de predicción (DMX)](/sql/dmx/select-from-model-cases-dmx) de la instrucción SELECT para crear dos tipos diferentes de predicciones basadas en el modelo de árbol de decisión creado en la [Lección 2: agregar modelos de minería de datos a la estructura de minería de datos Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Estos tipos de predicciones se definen a continuación.  
   
  Consulta singleton  
@@ -88,7 +88,7 @@ ORDER BY <expression>
     <select list>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
@@ -102,7 +102,7 @@ ORDER BY <expression>
     [<mining model>]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Decision Tree]  
@@ -114,7 +114,7 @@ ORDER BY <expression>
     (SELECT '<value>' AS [<column name>], ...)  AS t  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     (SELECT 35 AS [Age],  
@@ -207,7 +207,7 @@ ORDER BY <expression> [DESC|ASC]
     <select list>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     SELECT  

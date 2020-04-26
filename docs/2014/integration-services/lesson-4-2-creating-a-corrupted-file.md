@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767387"
 ---
-# <a name="step-2-creating-a-corrupted-file"></a>Paso 2: Crear un archivo dañado
+# <a name="step-2-creating-a-corrupted-file"></a>Paso 2: Creación de un archivo dañado
   Para demostrar los errores de configuración y el control de los errores de transformación, debe crear un archivo plano de ejemplo que, cuando se procese, genere un error en un componente.  
   
  En esta tarea, creará una copia de un archivo plano de ejemplo existente. Luego abrirá el archivo en el Bloc de notas y modificará la columna **CurrencyID** para garantizar que no pueda producir una coincidencia durante la búsqueda de transformaciones. Cuando se procese el archivo nuevo, el error de búsqueda hará que se produzca un error en la transformación Lookup Currency Key y, por consiguiente, el resto del paquete generará un error. Una vez que haya creado el archivo de ejemplo dañado, ejecutará el paquete para ver su error.  
@@ -28,7 +28,7 @@ ms.locfileid: "62767387"
   
      Los datos de ejemplo se incluyen con los paquetes de lecciones de SSIS. Para descargar los datos de ejemplo y los paquetes de lecciones, haga lo siguiente.  
   
-    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkID=267527).  
+    1.  Vaya a [Integration Services ejemplos del producto](https://go.microsoft.com/fwlink/?LinkID=267527).  
   
     2.  Haga clic en la pestaña **descargas** .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62767387"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>Para comprobar que se producirá un error durante la ejecución  
   
-1.  En el menú **Depurar** , haga clic en **Iniciar depuración**.  
+1.  En el menú **depurar** , haga clic en **iniciar depuración**.  
   
      En la tercera iteración del flujo de datos, la transformación Lookup Currency Key intenta procesar el archivo Currency_BAD.txt y la transformación generará un error. El error de la transformación hará que todo el paquete genere un error.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62767387"
     > [!NOTE]  
     >  El número 27 es el Id. del componente. Este valor se asigna al generar el flujo de datos, y es posible que el valor del paquete sea diferente.  
   
-## <a name="next-steps"></a>Pasos siguientes  
- [Paso 3: Agregar redirección de flujo de errores](lesson-4-3-adding-error-flow-redirection.md)  
+## <a name="next-steps"></a>Pasos a seguir  
+ [Paso 3: Adición de redirección de flujo de errores](lesson-4-3-adding-error-flow-redirection.md)  
   
   

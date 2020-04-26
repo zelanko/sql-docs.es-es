@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721095"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lección 1: Publicar datos con la replicación transaccional
-  En esta lección, creará una publicación transaccional con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto filtrado de la tabla **Product** en la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos de ejemplo. También agregará un inicio de sesión de SQL Server que utiliza el Agente de distribución para la lista de acceso a la publicación (PAL). Antes de iniciar este tutorial, deberá haber finalizado el tutorial anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
+  En esta lección, creará una publicación transaccional con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto filtrado de la tabla **Product** en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . También agregará un inicio de sesión de SQL Server que utiliza el Agente de distribución para la lista de acceso a la publicación (PAL). Antes de iniciar este tutorial, deberá haber finalizado el tutorial anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Para crear publicaciones y definir artículos  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62721095"
   
 4.  En la página Tipo de publicación, seleccione **Publicación transaccional**y, a continuación, haga clic en **Siguiente**.  
   
-5.  En la página Artículos, expanda el nodo **Tablas** , active la casilla **Product** , expanda **Product** y, a continuación, desactive las casillas **ListPrice** y **StandardCost** . Haga clic en **Next**.  
+5.  En la página Artículos, expanda el nodo **Tablas** , active la casilla **Product** , expanda **Product** y, a continuación, desactive las casillas **ListPrice** y **StandardCost** . Haga clic en **Siguiente**.  
   
 6.  En la página Filtrar filas de tabla, haga clic en **Agregar**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721095"
   
 10. En la página Seguridad del agente, desactive la casilla **Usar la configuración de seguridad del Agente de instantáneas** .  
   
-11. Haga clic en **configuración de seguridad** para el \<agente de instantáneas, escriba _Machine_Name>_ **\ repl_snapshot** en el cuadro **cuenta de proceso** , proporcione la contraseña para esta cuenta y, a continuación, haga clic en **Aceptar**.  
+11. Haga clic en **Configuración de seguridad** para el Agente de instantáneas, escriba \<_nombreDeEquipo>_**\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y luego haga clic en **Aceptar**.  
   
 12. Repita el paso anterior para establecer repl_logreader como la cuenta de proceso para el Agente de registro del LOG y, después, haga clic en **Finalizar**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62721095"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>Para ver el estado de la generación de instantáneas  
   
-1.  Conéctese al publicador [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en, expanda el nodo del servidor y, a continuación, expanda la carpeta **replicación** .  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación** .  
   
 2.  En la carpeta **Publicaciones locales** , haga clic con el botón derecho en **AdvWorksProductTrans**y luego en **Ver estado del Agente de instantáneas**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62721095"
   
 ### <a name="to-add-the-distribution-agent-login-to-the-pal"></a>Para agregar el inicio de sesión del Agente de distribución para la lista de acceso de la publicación (PAL)  
   
-1.  Conéctese al publicador [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en, expanda el nodo del servidor y, a continuación, expanda la carpeta **replicación** .  
+1.  Conéctese al publicador en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda el nodo del servidor y luego la carpeta **Replicación** .  
   
 2.  En la carpeta **Publicaciones locales** , haga clic con el botón derecho en **AdvWorksProductTrans**y luego en **Propiedades**.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "62721095"
   
 3.  Seleccione la página **Lista de acceso a la publicación** y haga clic en **Agregar**.  
   
-4.  \En el cuadro de diálogo **Agregar acceso de publicación** , seleccione _<Machine_Name>_ **\ Repl_distribution** y haga clic en **Aceptar**. Haga clic en **OK**.  
+4.  \En el cuadro de diálogo **Agregar acceso de publicación**, seleccione _<nombre_equipo>_**\repl_distribution** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha creado correctamente la publicación transaccional. A continuación se suscribirá a esta publicación. Consulte [Lección 2: Crear una suscripción a la publicación transaccional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Filtrar datos publicados](publish/filter-published-data.md)   
- [Define an Article](publish/define-an-article.md)   
+ [Definir un artículo](publish/define-an-article.md)   
  [Crear y aplicar la instantánea](create-and-apply-the-snapshot.md)  
   
   

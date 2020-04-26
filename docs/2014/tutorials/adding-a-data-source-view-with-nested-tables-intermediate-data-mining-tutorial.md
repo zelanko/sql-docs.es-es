@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822787"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Agregar una vista del origen de datos con tablas anidadas (Tutorial intermedio de minería de datos)
@@ -47,7 +47,7 @@ ms.locfileid: "62822787"
   
 2.  En la página inicial del **Asistente para orígenes de datos**, haga clic en **Siguiente**.  
   
-3.  En la página **seleccionar un origen de datos** , en **orígenes de datos relacionales**, seleccione el [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] origen de datos que ha creado en el tutorial básico de minería de datos. Haga clic en **Next**.  
+3.  En la página **seleccionar un origen de datos** , en **orígenes de datos relacionales**, seleccione el [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] origen de datos que ha creado en el tutorial básico de minería de datos. Haga clic en **Siguiente**.  
   
 4.  En la página **seleccionar tablas y vistas** , seleccione las tablas siguientes y, a continuación, haga clic en la flecha derecha para incluirlas en la nueva vista del origen de datos:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62822787"
   
     -   `vAssocSeqLineItems`  
   
-5.  Haga clic en **Next**.  
+5.  Haga clic en **Siguiente**.  
   
 6.  En la página **finalización del asistente** , la vista del origen de datos se [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]denomina de forma predeterminada. Cambie el nombre a `Orders`y, a continuación, haga clic en **Finalizar**.  
   
@@ -82,6 +82,6 @@ ms.locfileid: "62822787"
 ## <a name="see-also"></a>Consulte también  
  [Tutorial intermedio de minería de datos &#40;Analysis Services:&#41;de minería de datos](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelos de minería de datos &#40;Analysis Services&#41;de minería de datos](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

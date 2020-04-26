@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667142"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Visualización de información y realización de tareas mediante el Monitor de replicación
@@ -38,10 +38,10 @@ El Monitor de replicación proporciona una serie de pestañas y opciones para ve
     -   El Agente de registro del LOG, utilizado por todas las publicaciones transaccionales.    
     -   El Agente de lectura de cola, utilizado por las publicaciones transaccionales con suscripciones de actualización en cola.  
   
--   **Advertencias** (para distribuidores que [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ejecutan y versiones posteriores)   
+-   **Advertencias** (para distribuidores que ejecutan [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y versiones posteriores)   
     -   Esta pestaña permite especificar advertencias y alertas para agentes.  
   
--   **Testigos de seguimiento** (solo replicación transaccional, para distribuidores que ejecutan [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y versiones posteriores)  
+-   **Testigos de seguimiento** (solo replicación transaccional, para distribuidores que ejecuten [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y versiones posteriores)  
   
      Esta pestaña permite medir la latencia, es decir, el tiempo que transcurre entre la confirmación de una transacción en el publicador y la confirmación de la transacción correspondiente en el suscriptor.  
   
@@ -64,7 +64,7 @@ El Monitor de replicación proporciona una serie de pestañas y opciones para ve
   
 -   **Publicaciones** : esta ficha muestra información acerca de todas las publicaciones en el publicador seleccionado.  
   
--   **Lista de supervisión de suscripciones** : esta pestaña está diseñada para mostrar información acerca de las suscripciones de todas las publicaciones disponibles en el publicador seleccionado que tienen errores, advertencias o el rendimiento más bajo. Esta pestaña no se muestra en los distribuidores que se ejecutan en versiones anteriores de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+-   **Lista de supervisión de suscripciones** : esta pestaña está diseñada para mostrar información acerca de las suscripciones de todas las publicaciones disponibles en el publicador seleccionado que tienen errores, advertencias o el rendimiento más bajo. Esta pestaña no se muestra para los distribuidores que ejecutan [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]versiones anteriores a.  
   
 -   Pestaña **agentes** : en esta pestaña se muestra información detallada sobre los agentes y trabajos utilizados por todos los tipos de replicación. La pestaña también le permite iniciar y detener cada agente y trabajo.  
   
@@ -74,12 +74,12 @@ El Monitor de replicación proporciona una serie de pestañas y opciones para ve
   
 1.  Expanda un grupo de publicador en el panel izquierdo y, a continuación, haga clic en un publicador.    
 2.  Para ver información sobre todas las publicaciones, haga clic en la pestaña **Publicaciones** .    
-3.  Para ver información acerca de las suscripciones, haga clic en la pestaña **Lista de supervisión de suscripciones** . En esta pestaña, también puede realizar tareas y tener acceso a información más detallada:    
+3.  Para ver información acerca de las suscripciones, haga clic en la pestaña **lista de supervisión de suscripciones** . También puede tener acceso a información más detallada y realizar tareas desde esta pestaña:    
     -   Para ver información detallada sobre el agente asociado a una suscripción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Ver detalles**.    
     -   Para ver las propiedades de una suscripción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Propiedades**.    
     -   Para sincronizar una suscripción de inserción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Iniciar sincronización**.    
     -   Para reinicializar una suscripción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Reinicializar suscripción**.   
-4.  Para ver información sobre los agentes, haga clic en la pestaña **Agentes** . En esta pestaña, también puede realizar tareas y tener acceso a información más detallada:    
+4.  Para ver información acerca de los agentes, haga clic en la pestaña **agentes** . También puede tener acceso a información más detallada y realizar tareas en esta pestaña:    
     -   Para ver información detallada sobre un agente (por ejemplo, mensajes informativos y mensajes de error), haga clic con el botón secundario en el agente y, a continuación, haga clic en **Ver detalles**.    
     -   Para ver información detallada del trabajo que ejecuta el agente (como la programación, los detalles de los pasos del trabajo, etc.), haga clic con el botón secundario en el agente y, a continuación, haga clic en **Propiedades**.    
     -   Para administrar perfiles para el agente, haga clic con el botón secundario en el agente y, a continuación, haga clic en **Perfil del agente**. Para más información, vea [Trabajar con perfiles del Agente de replicación](../agents/replication-agent-profiles.md).    
@@ -118,7 +118,7 @@ El Monitor de replicación proporciona una serie de pestañas y opciones para ve
 -   El Agente de registro del LOG, utilizado por todas las publicaciones transaccionales.    
 -   El Agente de lectura de cola, utilizado por las publicaciones transaccionales con suscripciones de actualización en cola habilitadas.  
   
- Para ver más información acerca de las opciones de esta pestaña, haga clic en **Ayuda** en la barra de menús. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](start-the-replication-monitor.md).  
+ Para ver más información sobre las opciones de esta pestaña, haga clic en **ayuda** en la barra de menús. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](start-the-replication-monitor.md).  
   
 ### <a name="view-information-and-perform-tasks"></a>Vista de información y realización de tareas 
   
@@ -168,5 +168,5 @@ El Monitor de replicación proporciona una serie de pestañas y opciones para ve
 
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar propiedades de publicación](../publish/view-and-modify-publication-properties.md)   
- [Supervisar la replicación](../monitoring-replication.md)  
+ [Supervisión de la replicación](../monitoring-replication.md)  
   

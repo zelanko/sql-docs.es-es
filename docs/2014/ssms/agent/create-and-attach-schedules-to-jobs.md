@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136280"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Crear y adjuntar programaciones a trabajos
@@ -75,8 +75,7 @@ ms.locfileid: "63136280"
  Puede cambiar la fecha de inicio de la programación después de adjuntar la programación a un trabajo.  
   
 ## <a name="cpu-idle-schedules"></a>Programaciones de inactividad de CPU  
- Para maximizar los recursos de CPU, puede definir una condición de CPU inactiva para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente usa la configuración de la condición de CPU inactiva para determinar el momento más conveniente para ejecutar trabajos. Por ejemplo, puede programar la ejecución de un trabajo de generación de índices durante el tiempo de inactividad de CPU y en periodos de baja producción.  
+ Para maximizar los recursos de CPU, puede definir una condición de CPU inactiva para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente usa la configuración de la condición de CPU inactiva para determinar el momento más conveniente para ejecutar trabajos. Por ejemplo, puede programar la ejecución de un trabajo de generación de índices durante el tiempo de inactividad de CPU y en periodos de baja producción.  
   
  Antes de definir trabajos para que se ejecuten durante el tiempo de inactividad de CPU, determine la carga de la CPU durante el procesamiento normal. Para ello, utilice el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o el Monitor de rendimiento para supervisar el tráfico del servidor y obtener estadísticas. La información que obtenga puede utilizarla para establecer el porcentaje y la duración del tiempo de inactividad de CPU.  
   
@@ -86,10 +85,10 @@ ms.locfileid: "63136280"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema.**|  
+|**Descripción**|**Tema**|  
 |Describe cómo crear una programación para un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Create a Schedule](create-a-schedule.md)|  
-|Describe cómo programar un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Schedule a Job](schedule-a-job.md)|  
-|Explica cómo definir la condición de inactividad de la CPU para el servidor.|[Establecer la duración y el tiempo de inactividad de CPU &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|Describe cómo programar un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Programar un trabajo](schedule-a-job.md)|  
+|Explica cómo definir la condición de inactividad de la CPU para el servidor.|[Establecer la duración y el tiempo de inactividad de la CPU &#40;SQL Server Management Studio&#41;](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Consulte también  
  [sp_help_jobschedule &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   

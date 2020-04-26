@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667423"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Agregar y quitar publicadores del Monitor de replicación
@@ -105,7 +105,7 @@ ms.locfileid: "62667423"
 2.  Haga clic con el botón secundario en un grupo de publicador y, a continuación, haga clic en **Quitar**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar distribución](../configure-distribution.md)   
- [Supervisar la replicación](../monitoring-replication.md)  
+ [Configurar la distribución](../configure-distribution.md)   
+ [Supervisión de la replicación](../monitoring-replication.md)  
   
   

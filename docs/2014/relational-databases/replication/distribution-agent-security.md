@@ -15,28 +15,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721494"
 ---
 # <a name="distribution-agent-security"></a>Seguridad del Agente de distribución
-  El cuadro de diálogo **seguridad de agente de distribución** permite especificar la cuenta de Windows con la que se ejecuta el agente de distribución. El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. La cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows se denomina también *cuenta de proceso*porque el proceso del agente se ejecuta con dicha cuenta. Las opciones adicionales disponibles en el cuadro de diálogo dependen de cómo se tenga acceso al mismo:  
+  El cuadro de diálogo **Seguridad del Agente de distribución** permite especificar la cuenta de Windows con la que se ejecuta el Agente de distribución. El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. La cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows se denomina también *cuenta de proceso*porque el proceso del agente se ejecuta con dicha cuenta. Las opciones adicionales disponibles en el cuadro de diálogo dependen de cómo se tenga acceso al mismo:  
   
--   Si se tiene acceso al cuadro de diálogo desde el Asistente para nueva suscripción, es posible especificar también el contexto en que el Agente de distribución realiza conexiones al suscriptor (para las suscripciones de inserción) o al distribuidor (para las suscripciones de extracción). La conexión se puede realizar suplantando la cuenta de Windows o en el contexto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una cuenta que especifique.  
+-   Si se tiene acceso al cuadro de diálogo desde el Asistente para nueva suscripción, es posible especificar también el contexto en que el Agente de distribución realiza conexiones al suscriptor (para las suscripciones de inserción) o al distribuidor (para las suscripciones de extracción). La conexión se puede realizar mediante la suplantación de la cuenta Windows o en el contexto de una cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se especifique.  
   
--   Si se tiene acceso al cuadro de diálogo desde el cuadro de diálogo **Propiedades de la suscripción** , especifique el contexto en que el Agente de distribución realiza las conexiones haciendo clic en el botón de propiedades (**...**) de la fila **Conexión de suscriptor** o **Conexión del distribuidor** de ese cuadro de diálogo. Para más información sobre cómo acceder al cuadro de diálogo **Propiedades de suscripción**, vea [Ver y modificar las propiedades de una suscripción de inserción](view-and-modify-push-subscription-properties.md) y [Ver y modificar las propiedades de una suscripción de extracción](view-and-modify-pull-subscription-properties.md).  
+-   Si se tiene acceso al cuadro de diálogo desde el cuadro de diálogo **Propiedades de la suscripción** , especifique el contexto en que el Agente de distribución realiza las conexiones haciendo clic en el botón de propiedades ( **...** ) de la fila **Conexión de suscriptor** o **Conexión del distribuidor** de ese cuadro de diálogo. Para más información sobre cómo acceder al cuadro de diálogo **Propiedades de suscripción**, vea [Ver y modificar las propiedades de una suscripción de inserción](view-and-modify-push-subscription-properties.md) y [Ver y modificar las propiedades de una suscripción de extracción](view-and-modify-pull-subscription-properties.md).  
   
  Todas las cuentas deben ser válidas y se debe especificar la contraseña correcta para cada cuenta. Las cuentas y las contraseñas se validan cuando se ejecuta el agente.  
   
 ## <a name="options"></a>Opciones  
- **Cuenta de proceso**  
+ **Process Account**  
  Indique la cuenta de Windows con la que se ejecuta el Agente de distribución:  
   
 -   Para las suscripciones de inserción, la cuenta debe:  
   
-    -   Ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.  
+    -   Ser como mínimo miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.  
   
     -   Ser miembro de la lista de acceso a la publicación (PAL).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62721494"
   
  Si se suplanta la cuenta de proceso al realizar las conexiones serán necesarios permisos adicionales. Vea las secciones **Conectar al distribuidor** y **Conectar al suscriptor** a continuación.  
   
- No se puede especificar la **cuenta de proceso** para las suscripciones de extracción [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]en, porque el agente de distribución no [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]se ejecuta en instancias de.  
+ No se puede especificar **Cuenta de proceso** para las suscripciones de extracción a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]porque el Agente de distribución no se ejecuta en instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
  **Contraseña** y **Confirmar contraseña**  
  Escriba la contraseña de la cuenta de Windows.  
@@ -67,7 +67,7 @@ ms.locfileid: "62721494"
   
 -   Tener permisos de lectura en el recurso compartido de instantáneas.  
   
- **Conectarse al suscriptor**  
+ **Conectar al suscriptor**  
  Para las suscripciones de extracción, las conexiones con el suscriptor siempre se realizan suplantando la cuenta especificada en el cuadro de texto **Cuenta de proceso** .  
   
  Para las suscripciones de inserción, las opciones para los suscriptores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y para los suscriptores que no sean de-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son diferentes:  

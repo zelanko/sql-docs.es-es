@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767647"
 ---
-# <a name="step-4-adding-package-configurations"></a>Paso 4: Agregar configuraciones de paquetes
+# <a name="step-4-adding-package-configurations"></a>Paso 4: Adición de configuraciones de paquete
   En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona diversos tipos de configuración. Puede almacenar configuraciones en variables de entorno, entradas del Registro, variables definidas por el usuario, tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y archivos XML. Para proporcionar más flexibilidad, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite el uso de configuraciones indirectas. Esto significa que se usa una variable de entorno para especificar la ubicación de la configuración, que a su vez especifica los valores reales. Los paquetes del proyecto Deployment Tutorial utilizan una combinación de archivos de configuración XML y configuraciones indirectas. Un archivo de configuración XML puede incluir configuraciones de varias propiedades y, si hace falta, varios paquetes pueden hacer referencia a él. En este tutorial, utilizará un archivo de configuración independiente para cada paquete.  
@@ -47,7 +47,7 @@ ms.locfileid: "62767647"
     > [!NOTE]  
     >  Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable. Si no desea reiniciar el equipo, puede escribir el nombre de la variable de entorno.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 8.  En la página Finalización del asistente, escriba **Configuración de DataTransfer EV** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración en el panel **Vista previa** y, a continuación, haga clic en **Finalizar**.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "62767647"
   
 7.  En el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** , vaya a C:\DeploymentTutorial, escriba **DataTransferConfig** en el cuadro **Nombre de archivo** y, después, haga clic en **Guardar**.  
   
-8.  En la página Seleccionar tipo de configuración, haga clic en **siguiente**.  
+8.  En la página Seleccionar tipo de configuración, haga clic en **Siguiente**.  
   
 9. En la página Seleccionar propiedades para la exportación, expanda DataTransfer, Administradores de conexión, Registro del tutorial de implementación y Propiedades y, luego, active la casilla **Cadena de conexión** .  
   
 10. Dentro de Administradores de conexión, expanda NewCustomers y, después, active la casilla **Cadena de conexión** .  
   
-11. Haga clic en **Next**.  
+11. Haga clic en **Siguiente**.  
   
 12. En la página Finalización del asistente, escriba **Configuración de DataTransfer** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62767647"
     > [!NOTE]  
     >  Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 8.  En la página Finalización del asistente, escriba **Configuración de LoadXMLData EV** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   
@@ -118,18 +118,18 @@ ms.locfileid: "62767647"
   
 7.  En el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** , vaya a C:\DeploymentTutorial, escriba **LoadXMLDataConfig** en el cuadro **Nombre de archivo** y, después, haga clic en **Guardar**.  
   
-8.  En la página Seleccionar tipo de configuración, haga clic en **siguiente**.  
+8.  En la página Seleccionar tipo de configuración, haga clic en **Siguiente**.  
   
 9. En la página Seleccionar propiedades para la exportación, expanda LoadXMLData, Ejecutables, Cargar datos XML y Propiedades y, después, active las casillas **[XMLSource].[XMLData]** y **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Haga clic en **Next**.  
+10. Haga clic en **Siguiente**.  
   
 11. En la página Finalización del asistente, escriba **Configuración de LoadXMLData** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   
 12. En el cuadro de diálogo **Organizador de configuraciones de paquetes** , compruebe que Configuración de LoadXMLData EV y Configuración de LoadXMLData aparecen en primer y segundo lugar respectivamente y, a continuación, haga clic en **Cerrar**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 5: Probar los paquetes actualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [Paso 5: Prueba de los paquetes actualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ![Integration Services icono (pequeño)](media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   

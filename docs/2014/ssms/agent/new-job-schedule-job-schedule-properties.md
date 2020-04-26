@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704626"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Nueva programación de trabajo: Propiedades de programación del trabajo
@@ -33,11 +33,11 @@ ms.locfileid: "62704626"
  **Tipo de programación**  
  Seleccione el tipo de programación.  
   
- **Enabled**  
+ **Habilitado**  
  Seleccione esta opción para habilitar o deshabilitar la programación.  
   
 ## <a name="recurring-schedule-types-options"></a>Opciones de tipos de programación periódica  
- **Se produce**  
+ **Sucede**  
  Seleccione el intervalo con el que se repite la programación.  
   
  **Se repite cada**  
@@ -52,10 +52,10 @@ ms.locfileid: "62704626"
  **Miércoles**  
  Configure el trabajo para que tenga lugar el miércoles. Solo está disponible para las programaciones de periodicidad semanal.  
   
- **Jueves**  
+ **Martes**  
  Configure el trabajo para que tenga lugar el jueves. Solo está disponible para las programaciones de periodicidad semanal.  
   
- **Viernes**  
+ **Día**  
  Configure el trabajo para que tenga lugar el viernes. Solo está disponible para las programaciones de periodicidad semanal.  
   
  **Sábado**  
@@ -70,10 +70,10 @@ ms.locfileid: "62704626"
  **de cada**  
  Seleccione el número de meses entre las repeticiones de la programación. Solo está disponible para las programaciones de periodicidad mensual.  
   
- **El parámetro**  
+ **Tenga en cuenta que**  
  Especifique una programación para un día determinado de la semana, en un semana determinada del mes. Solo está disponible para las programaciones de periodicidad mensual.  
   
- **Se produce una vez a las**  
+ **Sucede una vez a las**  
  Establezca la hora para que el trabajo se produzca diariamente.  
   
  **Sucede cada**  
@@ -97,6 +97,6 @@ ms.locfileid: "62704626"
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y adjuntar programaciones a trabajos](create-and-attach-schedules-to-jobs.md)   
- [Schedule a Job](schedule-a-job.md)  
+ [Programar un trabajo](schedule-a-job.md)  
   
   

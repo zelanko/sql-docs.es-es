@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766635"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
@@ -41,7 +41,7 @@ ms.locfileid: "62766635"
 -   Importar y exportar paquetes  
   
 > [!IMPORTANT]  
->  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]admite el servicio para mantener la compatibilidad con versiones anteriores [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]de. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
+>  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
 ## <a name="package-store"></a>Almacén de paquetes  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]proporciona dos carpetas de nivel superior para tener acceso [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a los paquetes: **paquetes en ejecución** y **paquetes almacenados**. En la carpeta **Paquetes en ejecución** se muestran los paquetes que se están ejecutando en el servidor. En la carpeta **Paquetes almacenados** se enumeran los paquetes que están guardados en el almacén de paquetes. Estos son los únicos paquetes que administra el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El almacén de paquetes puede constar de la base de datos msdb y las carpetas del sistema de archivos enumeradas en el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El archivo de configuración especifica la base de datos msdb y las carpetas del sistema de archivos que se van a administrar. También puede haber paquetes almacenados en otras partes del sistema de archivos que no sean administrados por el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -73,8 +73,7 @@ ms.locfileid: "62766635"
  Para obtener más información, vea [Configurar el servicio Integration Services &#40;servicio SSIS&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 ## <a name="importing-and-exporting-packages"></a>Importar y exportar paquetes  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los paquetes se pueden guardar en la base de datos msdb o en el sistema de archivos. Puede copiar un paquete de un tipo de almacenamiento a otro con la característica de importación o exportación que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . También puede importar un paquete al mismo tipo de almacenamiento y asignarle un nombre distinto, para crear una copia de un paquete. La utilidad de símbolo del sistema **dtutil** (dtutil.exe) también se puede usar para importar y exportar paquetes.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los paquetes se pueden guardar en la base de datos msdb o en el sistema de archivos. Puede copiar un paquete de un tipo de almacenamiento a otro con la característica de importación o exportación que proporciona [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . También puede importar un paquete al mismo tipo de almacenamiento y asignarle un nombre distinto, para crear una copia de un paquete. La utilidad de símbolo del sistema **dtutil** (dtutil.exe) también se puede usar para importar y exportar paquetes.  
   
  Para más información, consulte [dtutil Utility](../dtutil-utility.md).  
   

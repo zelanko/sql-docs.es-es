@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767661"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>Paso 1: crear carpetas de trabajo y variables de entorno
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>Paso 1: Creación de las carpetas de trabajo y las variables de entorno
   En esta tarea, creará la carpeta de trabajo (C:\DeploymentTutorial) y las nuevas variables de entorno del sistema (`DataTransfer` y `LoadXMLData`) que usará en posteriores tareas del tutorial.  
   
  La carpeta de trabajo está en la raíz de la unidad C. Si debe usar otra unidad o ubicación, puede hacerlo. No obstante, deberá anotar esta ubicación y usarla siempre que el tutorial haga referencia a la ubicación de la carpeta de trabajo DeploymentTutorial.  
@@ -52,7 +52,7 @@ ms.locfileid: "62767661"
   
 6.  Haga clic en **OK**.  
   
-7.  Vuelva **** a hacer clic en nuevo `LoadXMLData` y escriba en el cuadro **nombre** de `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` variable y en el cuadro **valor de variable** .  
+7.  Vuelva **New** a hacer clic en nuevo `LoadXMLData` y escriba en el cuadro **nombre** de `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` variable y en el cuadro **valor de variable** .  
   
 8.  Haga clic en **Aceptar** para salir del cuadro de diálogo **Variables de entorno** .  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62767661"
   
 6.  Haga clic en **OK**.  
   
-7.  Vuelva **** a hacer clic en nuevo `LoadXMLData` y escriba en el cuadro **nombre** de `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` variable y en el cuadro **valor de variable** .  
+7.  Vuelva **New** a hacer clic en nuevo `LoadXMLData` y escriba en el cuadro **nombre** de `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` variable y en el cuadro **valor de variable** .  
   
 8.  Haga clic en **Aceptar** para salir del cuadro de diálogo **Variables de entorno** .  
   

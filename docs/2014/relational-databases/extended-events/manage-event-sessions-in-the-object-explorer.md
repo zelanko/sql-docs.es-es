@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705522"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Administrar sesiones de eventos en el Explorador de objetos
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  Expanda la lista desplegable **Plantilla** .  
   
-5.  Haga clic en **\<File From ... (Archivo de ...) >Abrir** y busque la sesión (archivo XML) que quiera importar.  
+5.  Haga clic en ** \<archivo de... >abra** y busque la sesión (archivo XML) que desee importar.  
   
  La sesión aparecen bajo el nodo **Sesiones** . De forma predeterminada, no se inicia la sesión.  
   
@@ -105,7 +105,7 @@ STATE = STOP
   
  Para editar una sesión de eventos extendidos:  
   
-1.  En el **Explorador de objetos**, expanda los nodos **Administración**, **Eventos extendidos**y **Sesiones** .  
+1.  En **Explorador de objetos**, expanda los nodos **Administración**, **eventos extendidos**y **sesiones** .  
   
 2.  Haga clic con el botón derecho en una sesión y seleccione **Propiedades**.  
   
@@ -113,7 +113,7 @@ STATE = STOP
   
 4.  Después de finalizar la revisión de la sesión de evento, haga clic en **Aceptar**.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Crear un script para una definición de la sesión de eventos mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>Crear un script para una definición de la sesión de eventos mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Tanto el Asistente para nueva sesión como el cuadro de diálogo Nueva sesión tienen una opción de script que genera [!INCLUDE[tsql](../../includes/tsql-md.md)] para definir la sesión de eventos extendidos.  
   
  Puede tener acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] para una sesión de eventos extendidos existente haciendo clic con el botón secundario en el nombre de la sesión, seleccionando **Incluir sesión como**y después seleccionando **Crear para**.  
@@ -123,7 +123,7 @@ STATE = STOP
   
 -   En el Editor de consultas mediante `DROP EVENT SESSION`.  
   
--   En el **Explorador de objetos**.  
+-   En **Explorador de objetos**.  
   
  Cuando se elimina una sesión de eventos, se quita toda la información de configuración y la definición de la sesión ya no aparece en la vista de catálogo sys.server_event_sessions.  
   
@@ -134,7 +134,7 @@ STATE = STOP
   
  Para eliminar una sesión de eventos extendidos en el **Explorador de objetos**:  
   
-1.  Expanda los nodos de **Administración**, **Eventos extendidos**y **Sesiones** .  
+1.  Expanda los nodos **Administración**, **eventos extendidos**y **sesiones** .  
   
 2.  Haga clic con el botón derecho en la sesión y seleccione **Eliminar**.  
   

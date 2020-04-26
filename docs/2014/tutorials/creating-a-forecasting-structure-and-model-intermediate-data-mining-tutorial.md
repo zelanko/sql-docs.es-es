@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204812"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura de pronóstico y un modelo (tutorial intermedio de minería de datos)
@@ -32,7 +32,7 @@ ms.locfileid: "63204812"
   
 5.  En la página **seleccionar vista del origen de datos** , en vistas del origen de **datos disponibles**, seleccione **SalesByRegion**.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  En la página **especificar tipos de tablas** , asegúrese de que está seleccionada la casilla de la columna **caso** de la tabla vTimeSeries y, a continuación, haga clic en **siguiente**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63204812"
   
      La columna ModelRegion se designa como columna de **clave** y la columna ReportingDate se designa automáticamente como una columna **key Time** . Puede tener solo una clave de cada tipo.  
   
-11. Haga clic en **Next**.  
+11. Haga clic en **Siguiente**.  
   
 12. En la página **finalización del asistente** , en nombre de la estructura `Forecasting`de minería de **datos**, escriba.  
   

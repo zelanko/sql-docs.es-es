@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937205"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página Opciones avanzadas)
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página Avanzado)
   Utilice esta página para ver y cambiar las propiedades de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso de trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
@@ -42,7 +42,7 @@ ms.locfileid: "62937205"
  **...**  
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
- **Vista**  
+ **Ver**  
  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
@@ -51,13 +51,13 @@ ms.locfileid: "62937205"
  **Registro en tabla**  
  Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
- **Vista**  
+ **Ver**  
  Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
  **Anexar salida a la entrada existente de la tabla**  
  Anexa la salida al contenido existente de la tabla. De lo contrario, el anterior contenido de la tabla se sobrescribe cada vez que se ejecuta el paso de trabajo.  
   
- **Incluir salida de paso en el historial**  
+ **Incluir salida de paso en historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
  **Ejecutar como usuario**  
@@ -70,7 +70,7 @@ ms.locfileid: "62937205"
  **...**  
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
- **Vista**  
+ **Ver**  
  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
@@ -79,13 +79,13 @@ ms.locfileid: "62937205"
  **Registro en tabla**  
  Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
- **Vista**  
+ **Ver**  
  Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
  **Anexar salida a la entrada existente de la tabla**  
  Anexa la salida al contenido existente de la tabla. De lo contrario, el anterior contenido de la tabla se sobrescribe cada vez que se ejecuta el paso de trabajo.  
   
- **Incluir salida de paso en el historial**  
+ **Incluir salida de paso en historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
 ## <a name="options-for-powershell-job-steps"></a>Opciones de pasos de trabajo de PowerShell  
@@ -95,7 +95,7 @@ ms.locfileid: "62937205"
  **...**  
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
- **Vista**  
+ **Ver**  
  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
@@ -104,13 +104,13 @@ ms.locfileid: "62937205"
  **Registro en tabla**  
  Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
- **Vista**  
+ **Ver**  
  Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
  **Anexar salida a la entrada existente de la tabla**  
  Anexa la salida al contenido existente de la tabla. De lo contrario, el anterior contenido de la tabla se sobrescribe cada vez que se ejecuta el paso de trabajo.  
   
- **Incluir salida de paso en el historial**  
+ **Incluir salida de paso en historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>Opciones de pasos de trabajo del Lector de cola de replicación  
@@ -127,7 +127,7 @@ ms.locfileid: "62937205"
  **...**  
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
- **Vista**  
+ **Ver**  
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
@@ -136,13 +136,13 @@ ms.locfileid: "62937205"
  **Registro en tabla**  
  Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
- **Vista**  
+ **Ver**  
  Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
  **Anexar salida a la entrada existente de la tabla**  
  Anexa la salida al contenido existente de la tabla. De lo contrario, el anterior contenido de la tabla se sobrescribe cada vez que se ejecuta el paso de trabajo.  
   
- **Incluir salida de paso en el historial**  
+ **Incluir salida de paso en historial**  
  Seleccione esta opción para incluir la salida del paso de trabajo en el historial de trabajos.  
   
 ## <a name="see-also"></a>Consulte también  

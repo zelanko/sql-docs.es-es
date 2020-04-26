@@ -19,10 +19,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62666873"
 ---
 # <a name="monitoring-replication"></a>Supervisar (replicación)
@@ -34,11 +34,9 @@ ms.locfileid: "62666873"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     
-  [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] proporciona acceso al Monitor de replicación. También permite ver el estado actual y el último mensaje registrado por los siguientes agentes, además de permitir iniciar y detener cada agente: Agente de registro del LOG, Agente de instantáneas, Agente de mezcla y Agente de distribución. Para más información, consulte [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] proporciona acceso al Monitor de replicación. También permite ver el estado actual y el último mensaje registrado por los siguientes agentes, además de permitir iniciar y detener cada agente: Agente de registro del LOG, Agente de instantáneas, Agente de mezcla y Agente de distribución. Para más información, consulte [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] y Replication Management Objects (RMO)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] y Replication Management Objects (RMO)  
   
      Ambas interfaces le permiten supervisar todos los tipos de replicación desde el distribuidor. La replicación de mezcla también ofrece la posibilidad de supervisar la replicación desde el suscriptor.  
   
@@ -52,7 +50,7 @@ ms.locfileid: "62666873"
   
 ## <a name="see-also"></a>Consulte también  
  [Preguntas más frecuentes sobre la administración de replicación](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
+ [Prácticas recomendadas para la administración de replicación](administration/best-practices-for-replication-administration.md)   
 
   
   

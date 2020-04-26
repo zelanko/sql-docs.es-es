@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762422"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
@@ -41,13 +41,13 @@ ms.locfileid: "62762422"
   
   
   
-##  <a name="Security"></a> Seguridad  
+##  <a name="security"></a><a name="Security"></a> Seguridad  
  Los permisos de acceso a archivos se establecen durante una serie de operaciones de base de datos, incluidas las operaciones de desasociar o adjuntar una base de datos.  
   
 > [!IMPORTANT]  
->  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar una base de datos de un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos en un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
+>  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
   
-##  <a name="DetachDb"></a>Separar una base de datos  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> Separar una base de datos  
  Al separar una base de datos, la está quitando de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero la deja intacta en sus archivos de datos y en los archivos de registro de transacciones. Estos archivos pueden utilizarse después para adjuntar la base de datos a cualquier instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluido el servidor del que se separó.  
   
  No podrá separar una base de datos si se cumple cualquiera de las condiciones siguientes:  
@@ -84,7 +84,7 @@ ms.locfileid: "62762422"
   
 3.  Vuelva a separar la base de datos.  
   
-##  <a name="AttachDb"></a>Adjuntar una base de datos  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> Adjuntar una base de datos  
  Puede adjuntar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiada o separada. Al adjuntar [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] una instancia de servidor, los archivos de catálogo se adjuntan desde su ubicación anterior junto con los demás archivos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]base de datos, igual que en. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../search/upgrade-full-text-search.md).  
   
  Al adjuntar una base de datos, todos los archivos de datos deben estar disponibles (archivos MDF y NDF). Si algún archivo de datos tiene una ruta de acceso diferente a la que tenía cuando se creó la base de datos o cuando ésta se adjuntó por última vez, debe especificar la ruta actual.  
@@ -104,7 +104,7 @@ ms.locfileid: "62762422"
   
   
   
-###  <a name="Metadata"></a>Cambios en los metadatos al adjuntar una base de datos  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> Cambios en los metadatos al adjuntar una base de datos  
  Cuando se separa y se vuelve a adjuntar una base de datos de solo lectura, se pierde la información de copia de seguridad acerca de la base diferencial. La *base diferencial* es la copia de seguridad más reciente de todos los datos de una base de datos o de un subconjunto de archivos o grupos de archivos de la misma. Sin la información de la copia de seguridad básica, la base de datos **maestra** deja de estar sincronizada con la base de datos de solo lectura, de modo que las copias de seguridad diferenciales tomadas después pueden proporcionar resultados inesperados. Por lo tanto, si utiliza copias de seguridad diferenciales con una base de datos de solo lectura, deberá establecer una nueva base diferencial actual realizando una copia de seguridad completa después de volver a adjuntar la base de datos. Para obtener más información sobre las copias de seguridad diferenciales, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](../backup-restore/differential-backups-sql-server.md).  
   
  Al adjuntar, la base de datos se inicia. Normalmente, al adjuntar una base de datos, esta vuelve al mismo estado en el que estaba cuando fue separada o copiada. Sin embargo, las operaciones de adjuntar y separar deshabilitan el encadenamiento de propiedades entre bases de datos para la base de datos. Para obtener más información sobre cómo habilitar el encadenamiento, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). Asimismo, TRUSTWORTHY se establece en OFF siempre que la base de datos se adjunta. Para obtener más información sobre cómo establecer TRUSTWORTHY en ON, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -112,14 +112,14 @@ ms.locfileid: "62762422"
 ### <a name="backup-and-restore-and-attach"></a>Hacer copias de seguridad y restauración, y adjuntar  
  Al igual que cualquier base de datos que esté total o parcialmente sin conexión, no es posible adjuntar una base de datos con archivos que se estén restaurando. Puede adjuntar la base de datos si detiene la secuencia de restauración. Posteriormente, puede reiniciar la secuencia de restauración.  
   
-###  <a name="OtherServerInstance"></a> Adjuntar una base de datos a otra instancia de servidor  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> Adjuntar una base de datos a otra instancia de servidor  
   
 > [!IMPORTANT]  
 >  Una base de datos creada por una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede adjuntarse en versiones anteriores.  
   
- Al adjuntar una base de datos a otra instancia de servidor, es posible que tenga que volver a crear una parte o la totalidad de los metadatos de la base de datos, por ejemplo los inicios de sesión y los trabajos, en la otra instancia de servidor; de este modo se proporciona una experiencia coherente a usuarios y aplicaciones. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Al adjuntar una base de datos a otra instancia de servidor, es posible que tenga que volver a crear una parte o la totalidad de los metadatos de la base de datos, por ejemplo los inicios de sesión y los trabajos, en la otra instancia de servidor; de este modo se proporciona una experiencia coherente a usuarios y aplicaciones. Para obtener más información, vea [administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para separar una base de datos**  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
@@ -132,17 +132,17 @@ ms.locfileid: "62762422"
   
 -   [Adjuntar una base de datos](attach-a-database.md)  
   
--   [sp_attach_db &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
+-   [sp_attach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
   
--   [sp_attach_single_file_db &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
+-   [sp_attach_single_file_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
- **Para actualizar una base de datos mediante operaciones de separar y adjuntar**  
+ **Para actualizar una base de datos mediante el método de separar y adjuntar**  
   
--   [Actualizar una base de datos mediante separar y adjuntar &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
+-   [Actualizar una base de datos mediante Separar y Adjuntar &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
   
- **Para trasladar una base de datos mediante operaciones de separar y adjuntar**  
+ **Para mover una base de datos mediante el método de separar y adjuntar**  
   
--   [Trasladar una base de datos mediante separar y adjuntar &#40;Transact-SQL&#41;](move-a-database-using-detach-and-attach-transact-sql.md)  
+-   [Mover una base de datos mediante Separar y Adjuntar &#40;Transact-SQL&#41;](move-a-database-using-detach-and-attach-transact-sql.md)  
   
  **Para eliminar una instantánea de base de datos**  
   

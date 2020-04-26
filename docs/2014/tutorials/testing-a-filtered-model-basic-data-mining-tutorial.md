@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044105"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Probar un modelo filtrado (Tutorial básico de minería de datos)
@@ -37,7 +37,7 @@ ms.locfileid: "63044105"
   
 4.  En el campo **nombre del modelo** , `TM_Decision_Tree_Male`escriba.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
  Luego, cree un filtro para seleccionar los clientes para el modelo basados en su género.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "63044105"
      Ahora tiene dos modelos nuevos que se muestran en la pestaña **Modelos de minería de datos** .  
   
 ## <a name="evaluate-the-results"></a>Evaluar los resultados  
- Vea los resultados y evalúe la exactitud de los modelos filtrados de la misma manera que hizo con los tres modelos anteriores. Para más información, consulte:  
+ Vea los resultados y evalúe la exactitud de los modelos filtrados de la misma manera que hizo con los tres modelos anteriores. Para obtener más información, consulte:  
   
  [Explorar el modelo de árbol de decisión &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [Probar la precisión con gráficos de elevación &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>Para explorar los modelos filtrados  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63044105"
   
 3.  **Nivel** de presentación en `3`.  
   
-4.  Cambie el **** valor de fondo `1`a.  
+4.  Cambie el **Background** valor de fondo `1`a.  
   
 5.  Coloque el cursor sobre el nodo con la etiqueta **Todos** para ver el número de compradores de bicicleta con respecto a los no compradores.  
   
@@ -129,15 +129,15 @@ ms.locfileid: "63044105"
  Para obtener un ejemplo de cómo aplicar filtros a tablas anidadas, vea [tutorial intermedio de minería de datos &#40;Analysis Services-&#41;de minería de datos ](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Tarea anterior de la lección  
- [Probar la precisión con gráficos de elevación &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Probar la exactitud con gráficos de mejora respecto al modelo predictivo &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 6: crear y trabajar con predicciones &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lección 6: Crear y trabajar con predicciones &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Tutorial intermedio de minería de datos &#40;Analysis Services:&#41;de minería de datos](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Tareas y procedimientos del modelo de minería de datos](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Eliminar un filtro de un modelo de minería de datos](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [Filtros para modelos de minería de datos &#40;Analysis Services-minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

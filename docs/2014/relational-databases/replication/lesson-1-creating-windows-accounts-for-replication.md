@@ -14,21 +14,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721161"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lección 1: Crear cuentas de Windows para replicación
   En esta lección creará cuentas de Windows para ejecutar agentes de replicación. Creará distintas cuentas de Windows en el servidor local para los siguientes agentes:  
   
-|Agente|Location|Nombre de cuenta|  
+|Agente|Ubicación|Nombre de cuenta|  
 |-----------|--------------|------------------|  
-|Agente de instantáneas|Publicador|\<*machine_name*> \ repl_snapshot|  
-|Agente de registro del LOG|Publicador|\<*machine_name*> \ repl_logreader|  
-|Agente de distribución|Publicador y suscriptor|\<*machine_name*> \ repl_distribution|  
-|Agente de mezcla|Publicador y suscriptor|\<*machine_name*> \ repl_merge|  
+|Agente de instantáneas|Publicador|\<*nombreDeEquipo*>\repl_snapshot|  
+|Agente de registro del LOG|Publicador|\<*nombreDeEquipo*>\repl_logreader|  
+|Agente de distribución|Publicador y suscriptor|\<*nombreDeEquipo*>\repl_distribution|  
+|Agente de mezcla|Publicador y suscriptor|\<*nombreDeEquipo*>\repl_merge|  
   
 > [!NOTE]  
 >  En los tutoriales de replicación, el publicador y el distribuidor comparten la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El publicador y el suscriptor pueden compartir la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aunque no es necesario. Si el publicador y el suscriptor comparten la misma instancia, no se requieren los pasos que se utilizan para crear las cuentas en el suscriptor.  
@@ -61,7 +61,7 @@ ms.locfileid: "62721161"
   
 6.  Haga clic en **Cerrar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha creado correctamente cuentas de Windows para agentes de replicación. A continuación, configurará la carpeta de instantáneas. Consulte [Lección 2: Preparar la carpeta de instantáneas](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Consulte también  

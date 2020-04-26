@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b7c992f8b33e2eb96b0e6ea7eec1f58beaf8aefd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62511830"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Datos Unicode y páginas de códigos de servidor
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]En su lugar, use la integración con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, utilice la integración con CLR.  
   
  La API Procedimiento almacenado extendido está habilitada para los datos Unicode; sin embargo, no está habilitada para los metadatos Unicode. La directiva #define de Unicode no tiene ningún efecto en la API Procedimiento almacenado extendido.  
   

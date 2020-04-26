@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62650382"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded), clase de eventos
-  La clase de eventos SHOWPLAN Text () se [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produce cuando ejecuta una instrucción SQL. Esta clase de eventos es igual que la clase de eventos Showplan Text, pero la información de evento tiene formato de cadena en lugar de datos binarios.  
+  La clase de eventos Showplan Text (Unencoded) se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. Esta clase de eventos es igual que la clase de eventos Showplan Text, pero la información de evento tiene formato de cadena en lugar de datos binarios.  
   
  La información contenida es un subconjunto de la información disponible en las clases de eventos Showplan All, Showplan XML o Showplan XML Statistics Profile.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62650382"
 |ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |BinaryData|`image`|Valor binario que depende de la clase de eventos que se captura en el seguimiento.|2|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
-|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 68.|27|No|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
@@ -51,7 +51,7 @@ ms.locfileid: "62650382"
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|`int`|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|`nvarchar`|Nombre del objeto al que se hace referencia.|34|Sí|  
-|ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
 |RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |nombreDeServidor|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
@@ -62,10 +62,10 @@ ms.locfileid: "62650382"
 |XactSequence|`bigint`|Token que describe la transacción actual.|50|Sí|  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Referencia de operadores lógicos y físicos del plan de presentación](../showplan-logical-and-physical-operators-reference.md)   
  [SHOWPLAN All (clase de eventos)](showplan-all-event-class.md)   
  [SHOWPLAN XML (clase de eventos)](showplan-xml-event-class.md)   
- [Showplan XML Statistics Profile (clase de eventos)](showplan-xml-statistics-profile-event-class.md)  
+ [Showplan XML Statistics Profile, clase de eventos](showplan-xml-statistics-profile-event-class.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467879"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
@@ -45,6 +45,6 @@ ms.locfileid: "62467879"
 -   GRANT (conceda) y DENY (deniegue) permisos a las tablas y los procedimientos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
+ [procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

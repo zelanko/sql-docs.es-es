@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63000345"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Detección y resolución de conflictos de replicación de mezcla avanzada
@@ -40,7 +40,7 @@ ms.locfileid: "63000345"
   
     -   Un *controlador de lógica de negocios* escrito en código administrado  
   
-    -   Un *solucionador personalizado*basado en COM  
+    -   Un *solucionador personalizado*basado en com.  
   
     -   Un solucionador basado en COM proporcionado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63000345"
   
  Para más información, consulte [Detectar y solucionar conflictos en registros lógicos](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [Specify the Conflict Tracking and Resolution Level for Merge Articles](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+ Para especificar el seguimiento de conflictos y el nivel de resolución para un artículo, vea [especificar el nivel de resolución y de seguimiento de conflictos para artículos de mezcla](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-resolution"></a>Resolución de conflictos  
  Una vez detectado un conflicto, el Agente de mezcla inicia el solucionador de conflictos seleccionado y lo utiliza para determinar el ganador. La fila ganadora se aplica en el publicador y en el suscriptor, y los datos de la fila perdedora se escriben en una tabla de conflictos. Los conflictos se resuelven inmediatamente después de ejecutarse el solucionador, a menos que seleccione solucionar los conflictos de forma interactiva.  
@@ -81,11 +81,11 @@ ms.locfileid: "63000345"
   
 -   Un solucionador personalizado basado en COM  
   
-     La replicación de combinación proporciona una API para escribir solucionadores como objetos COM en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para más información, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La replicación de mezcla proporciona una API para escribir resoluciones como objetos com en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para más información, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un solucionador basado en COM proporcionado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye varios solucionadores basados en COM. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye varios solucionadores basados en com. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Para obtener información sobre cómo seleccionar el tipo de solucionador adecuado, consulte [Elegir un solucionador](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "63000345"
   
  El Visor de conflictos muestra información de tres tablas del sistema:  
   
--   La replicación crea una tabla de conflictos por cada tabla de un artículo de mezcla, con un nombre en formato **MSmerge_conflict_\<NombreDePublicación>_\<NombreDeArtículo>** .  
+-   La replicación crea una tabla de conflictos por cada tabla de un artículo de mezcla, con un nombre en formato **MSmerge_conflict_\<NombreDePublicación>_\<NombreDeArtículo>**.  
   
      Las tablas de conflictos tienen la misma estructura que las tablas en las que se basan. Una fila de una de estas tablas consta de la versión perdedora de una fila de conflictos (la versión ganadora de esta fila se encuentra en la tabla real del usuario).  
   

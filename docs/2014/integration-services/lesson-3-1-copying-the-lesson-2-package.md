@@ -11,20 +11,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4458f8fe198ba3d052bcb21bef38975738b2c23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767467"
 ---
-# <a name="step-1-copying-the-lesson-2-package"></a>Paso 1: Copiar el paquete de la Lección 2
+# <a name="step-1-copying-the-lesson-2-package"></a>Paso 1: Copia del paquete de la lección 2
   En esta tarea, creará una copia del paquete que ha creado en la lección 2, denominado Lesson 2.dtsx. También puede agregar al proyecto el paquete completado de la lección 2 que se incluye con el tutorial y, después, copiar dicho paquete. Usará esta nueva copia en toda la lección 3.  
   
 ### <a name="to-create-the-lesson-3-package"></a>Para crear el paquete de la lección 3  
   
 1.  Si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools no está abierto, haga clic en **Inicio**, seleccione **Todos los programas**, **Microsoft SQL Server 2012**y, después, haga clic en **SQL Server Data Tools**.  
   
-2.  En el menú **archivo** , haga clic en **abrir**, haga clic en **proyecto o solución**, seleccione **SSIS tutorial** , haga clic en **abrir**y, a continuación, haga doble clic en **SSIS tutorial. sln**.  
+2.  En el menú **Archivo** , haga clic en **Abrir**, haga clic en **Proyecto o solución**, seleccione **SSIS Tutorial** , haga clic en **Abrir**y, después, haga doble clic en **SSIS Tutorial.sln**.  
   
 3.  En el Explorador de soluciones, haga clic con el botón derecho en **Lesson 2.dtsx**y, después, haga clic en **Copiar**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62767467"
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
-    1.  Vaya a [Integration Services ejemplos de productos](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Haga clic en la pestaña **descargas** .  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62767467"
 5.  Copie y pegue el paquete de la lección 3 tal como se describe en los pasos del 3 a 8 del procedimiento anterior.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 2: Agregar y configurar el registro](lesson-3-2-adding-and-configuring-logging.md)  
+ [Paso 2: Adición y configuración de registro](lesson-3-2-adding-and-configuring-logging.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bb482d1385ad9b22900bb74015a779ea6750d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638729"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>Supervisar la actividad del sistema mediante eventos extendidos
@@ -94,7 +94,7 @@ ms.locfileid: "62638729"
 7.  En el símbolo del sistema, ejecute los comandos siguientes para ver los datos ETW.  
   
     > [!NOTE]  
-    >  Para obtener ayuda sobre el comando **tracerpt** , escriba `tracerpt /?`en el símbolo del sistema.  
+    >   Para obtener ayuda sobre el comando **tracerpt** , en el símbolo del sistema, escriba `tracerpt /?`.  
   
     ```  
     logman query -ets --- List the ETW sessions. This is optional.  
@@ -116,7 +116,7 @@ ms.locfileid: "62638729"
     ```  
   
 ## <a name="see-also"></a>Consulte también  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [CREAR sesión de eventos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   
  [Vistas de catálogo de eventos extendidos &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql)  

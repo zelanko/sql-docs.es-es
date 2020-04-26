@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224597"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Explorar el modelo de árbol de decisión (tutorial básico de minería de datos)
@@ -22,7 +22,7 @@ ms.locfileid: "63224597"
   
 
   
-##  <a name="Decision_Tree_Tab"></a>Pestaña árbol de decisión  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>Pestaña árbol de decisión  
  En la pestaña **árbol de decisión** , puede ver los árboles de decisión para cada atributo de predicción del conjunto de información.  
   
  En este caso, el modelo predice solo una columna, Bike Buyer, por lo que solo hay un árbol para ver. Si hubiera más árboles, podría usar el cuadro de **árbol** para elegir otro árbol.  
@@ -43,7 +43,7 @@ ms.locfileid: "63224597"
   
 3.  **Nivel** de presentación en la cuarta barra.  
   
-4.  Cambie el **** valor de fondo `1`a.  
+4.  Cambie el **Background** valor de fondo `1`a.  
   
      Al cambiar la configuración de **fondo** , puede ver rápidamente el número de casos de cada nodo que tienen el valor de destino `1` de para [Bike Buyer]. Recuerde que en este escenario en concreto, cada caso representa un cliente. El valor `1` indica que el cliente ha adquirido previamente una bicicleta; el valor **0** indica que el cliente no ha comprado una bicicleta. Cuanto más oscuro sea el sombreado del nodo, mayor será el porcentaje de casos del nodo que tienen el valor de destino.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "63224597"
      Se muestra la misma hoja de cálculo con las columnas de estructura anexadas al final.  
   
   
-###  <a name="Dependency_Network_Tab"></a>Pestaña red de dependencias  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>Pestaña red de dependencias  
  La pestaña **red de dependencias** muestra las relaciones entre los atributos que contribuyen a la capacidad de predicción del modelo de minería de datos. El visor Red de dependencias reafirma nuestra conclusión de que la edad y la región son factores importantes para predecir la compra de bicicletas.  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Para explorar el modelo en la pestaña Red de dependencias  

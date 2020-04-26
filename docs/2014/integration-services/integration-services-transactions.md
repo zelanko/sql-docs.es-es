@@ -16,18 +16,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0359ca10e7279f4a80bec082a8e049f4641c9b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767637"
 ---
 # <a name="integration-services-transactions"></a>Transacciones de Integration Services
-  Los paquetes utilizan transacciones para enlazar las acciones de base de datos que las tareas realizan en unidades atómicas y mantener de esta forma la integridad de los datos. Todos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] los tipos de contenedores: paquetes, los contenedores de bucles for, bucles foreach y secuencias, y los hosts de tareas que encapsulan cada tarea, se pueden configurar para que utilicen transacciones. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]proporciona tres opciones para configurar transacciones: **NotSupported**, **Supported**y **required**.  
+  Los paquetes utilizan transacciones para enlazar las acciones de base de datos que las tareas realizan en unidades atómicas y mantener de esta forma la integridad de los datos. Todos los tipos de contenedor de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (los contenedores de paquetes, de bucles For y Foreach o de secuencias, así como los hosts de las tareas que encapsulan cada tarea) se pueden configurar para que usen transacciones. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona tres opciones para configurar transacciones: **NotSupported**, **Supported**y **Required**.  
   
--   **Required** indica que el contenedor inicia una transacción, a menos que el contenedor principal ya haya iniciado una. Si ya existe una transacción, el contenedor la combina. Por ejemplo, si un paquete que no está configurado para admitir transacciones, incluye un contenedor de secuencias que utiliza la opción **Required** , el contenedor de secuencias iniciará su propia transacción. Si el paquete se hubiera configurado para utilizar la opción **Required** , el contenedor de secuencias combinaría la transacción del paquete.  
+-   **Required** indica que el contenedor inicia una transacción, a menos que el contenedor principal ya haya iniciado otra. Si ya existe una transacción, el contenedor la combina. Por ejemplo, si un paquete que no está configurado para admitir transacciones, incluye un contenedor de secuencias que utiliza la opción **Required** , el contenedor de secuencias iniciará su propia transacción. Si el paquete se hubiera configurado para utilizar la opción **Required** , el contenedor de secuencias combinaría la transacción del paquete.  
   
--   **Supported** indica que el contenedor no inicia una transacción, pero combina cualquier transacción iniciada por su contenedor primario. Por ejemplo, si un paquete con cuatro tareas Ejecutar SQL inicia una transacción y las cuatro tareas utilizan la opción **Supported** , las actualizaciones de la base de datos realizadas por las tareas Ejecutar SQL se revierten si se produce un error en cualquiera de las tareas. Si el paquete no inicia una transacción, las cuatro tareas Ejecutar SQL no estarán enlazadas por una transacción y no se revertirá ninguna actualización de base de datos, excepto las realizadas por la tarea que tuvo el error.  
+-   **Supported** indica que el contenedor no inicia una transacción, pero sí combina cualquier transacción iniciada por el contenedor principal. Por ejemplo, si un paquete con cuatro tareas Ejecutar SQL inicia una transacción y las cuatro tareas utilizan la opción **Supported** , las actualizaciones de la base de datos realizadas por las tareas Ejecutar SQL se revierten si se produce un error en cualquiera de las tareas. Si el paquete no inicia una transacción, las cuatro tareas Ejecutar SQL no estarán enlazadas por una transacción y no se revertirá ninguna actualización de base de datos, excepto las realizadas por la tarea que tuvo el error.  
   
 -   **NotSupported** indica que el contenedor no inicia una transacción ni combina una transacción existente. Una transacción iniciada por un contenedor principal no afecta a los contenedores secundarios configurados de manera que no admitan transacciones. Por ejemplo, si un paquete está configurado para iniciar una transacción y un contenedor de bucles For del paquete utiliza la opción **NotSupported** , no se revertirá ninguna de las tareas del contenedor de bucles For aunque genere un error.  
   

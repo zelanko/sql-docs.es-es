@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676271"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lección 1: Crear la estructura de minería de la cesta de la compra
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lección 1: Creación de la estructura de minería de la cesta de la compra
   En esta lección creará una estructura de minería de datos que permita predecir qué productos de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiende a adquirir un cliente simultáneamente. Si no está familiarizado con las estructuras de minería de datos y su rol en la minería de datos, vea estructuras de minería de datos [&#40;Analysis Services-data mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La estructura de minería de datos de asociación que creará en esta lección permite agregar modelos de minería de datos basados en el [algoritmo de Asociación de Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). En lecciones posteriores utilizará los modelos de minería de datos para predecir el tipo de productos que un cliente tiende a adquirir simultáneamente, lo que se denomina análisis de cesta de mercado (Market Basket). Por ejemplo, es posible que averigüe que los clientes tienden a comprar bicicletas de montaña, ruedas y cascos simultáneamente.  
@@ -89,7 +89,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 -   Modificar la consulta para crear la estructura de minería de datos  
   
--   Ejecutar la consulta  
+-   Ejecución de la consulta  
   
 ## <a name="creating-the-query"></a>Crear la consulta  
  El primer paso es conectarse a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y crear una consulta DMX en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -117,7 +117,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     [mining structure name]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Market Basket]  
@@ -129,7 +129,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     <key column>  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     OrderNumber TEXT KEY  
@@ -143,7 +143,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
        <nested mining structure columns> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Products] TABLE (  
@@ -187,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  En la siguiente lección agregará modelos de minería de datos a la estructura de minería de datos Market Basket que acaba de crear.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar modelos de minería a la estructura de minería cesta de la compra](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lección 2: Adición de modelos de minería a la estructura de minería cesta de la compra](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

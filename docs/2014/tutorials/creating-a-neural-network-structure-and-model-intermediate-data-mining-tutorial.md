@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856327"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de red neuronal (Tutorial intermedio de minería de datos)
@@ -42,7 +42,7 @@ ms.locfileid: "62856327"
   
  [Procesar todos los modelos](#bkmk_SeedProcess)  
   
-## Crear la estructura predeterminada del centro de llamadas<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>Crear la estructura predeterminada del centro de llamadas<a name="bkmk_defaul"></a>  
   
 1.  En Explorador de soluciones en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic con el botón secundario en **estructuras de minería de datos** y seleccione **nueva estructura de minería de datos**.  
   
@@ -56,13 +56,13 @@ ms.locfileid: "62856327"
   
      Dado que los modelos de regresión logística se basan en las redes neuronales, puede volver a usar la misma estructura y agregar un nuevo modelo de minería de datos.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
      Aparece la página **seleccionar vista del origen de datos** .  
   
 7.  En **vistas del origen de datos disponibles**, seleccione `Call Center`y haga clic en **siguiente**.  
   
-8.  En la página **especificar tipos de tablas** , active la casilla **caso** junto a la tabla **FactCallCenter** . No seleccione nada para **DimDate**. Haga clic en **Next**.  
+8.  En la página **especificar tipos de tablas** , active la casilla **caso** junto a la tabla **FactCallCenter** . No seleccione nada para **DimDate**. Haga clic en **Siguiente**.  
   
 9. En la página **especificar los datos de entrenamiento** , seleccione **clave** junto a la columna **FactCallCenterID.**  
   
@@ -74,39 +74,39 @@ ms.locfileid: "62856327"
     |---------------------|-------------------------|  
     |AutomaticResponses|Entrada|  
     |AverageTimePerIssue|Entrada/Predicción|  
-    |Calls|Entrada|  
-    |DateKey|No usar|  
+    |Llamadas|Entrada|  
+    |DateKey|No debe usarse|  
     |DayOfWeek|Entrada|  
-    |FactCallCenterID|Clave|  
+    |FactCallCenterID|Key|  
     |IssuesRaised|Entrada|  
     |LevelOneOperators|Entrada/Predicción|  
     |LevelTwoOperators|Entrada|  
-    |Pedidos|Entrada/Predicción|  
+    |Orders|Entrada/Predicción|  
     |ServiceGrade|Entrada/Predicción|  
     |Shift|Entrada|  
-    |TotalOperators|No usar|  
+    |TotalOperators|No debe usarse|  
     |WageType|Entrada|  
   
      Observe que se han seleccionado varias columnas de predicción. Uno de los puntos fuertes del algoritmo de red neuronal es que puede analizar todas las posibles combinaciones de atributos de entrada y salida. No querrá hacer esto para un conjunto de datos grande, ya que podría aumentar exponencialmente el tiempo de procesamiento.  
   
 12. En la página **especificar el contenido y el tipo de datos de las columnas** , compruebe que la cuadrícula contiene las columnas, los tipos de contenido y los tipos de datos como se muestra en la tabla siguiente y, a continuación, haga clic en **siguiente**.  
   
-    |Columnas|Tipo de contenido|Tipo de datos|  
+    |Columnas|Tipo de contenido|Tipos de datos|  
     |-------------|------------------|----------------|  
     |AutomaticResponses|Continuo|long|  
     |AverageTimePerIssue|Continuo|long|  
-    |Calls|Continuo|long|  
-    |DayOfWeek|Discrete|Texto|  
-    |FactCallCenterID|Clave|long|  
+    |Llamadas|Continuo|long|  
+    |DayOfWeek|Discrete|Text|  
+    |FactCallCenterID|Key|long|  
     |IssuesRaised|Continuo|long|  
     |LevelOneOperators|Continuo|long|  
     |LevelTwoOperators|Continuo|long|  
-    |Pedidos|Continuo|long|  
-    |ServiceGrade|Continuo|DOUBLE|  
-    |Shift|Discrete|Texto|  
-    |WageType|Discrete|Texto|  
+    |Orders|Continuo|long|  
+    |ServiceGrade|Continuo|Double|  
+    |Shift|Discrete|Text|  
+    |WageType|Discrete|Text|  
   
-13. En la página **crear conjunto de pruebas** , desactive el cuadro de texto de la opción **porcentaje de datos para pruebas**. Haga clic en **Next**.  
+13. En la página **crear conjunto de pruebas** , desactive el cuadro de texto de la opción **porcentaje de datos para pruebas**. Haga clic en **Siguiente**.  
   
 14. En la página **finalización del asistente** , en **nombre**de la estructura de `Call Center`minería de datos, escriba.  
   
@@ -136,14 +136,14 @@ ms.locfileid: "62856327"
   
  Modelo predeterminado (continuo)  
   
-|VALOR|SOPORTE TÉCNICO|  
+|VALOR|Support|  
 |-----------|-------------|  
 |Missing|0|  
 |0,09875|120|  
   
  Discretizado mediante agrupación en clústeres  
   
-|VALOR|SOPORTE TÉCNICO|  
+|VALOR|Support|  
 |-----------|-------------|  
 |\<0,0748051948|34|  
 |0,0748051948-0,09716216215|27|  
@@ -153,7 +153,7 @@ ms.locfileid: "62856327"
   
  Discretizado mediante áreas iguales  
   
-|VALOR|SOPORTE TÉCNICO|  
+|VALOR|Support|  
 |-----------|-------------|  
 |\<0,07|26|  
 |0,07-0,00|22|  
@@ -181,12 +181,12 @@ ms.locfileid: "62856327"
   
  Como alternativa, en lugar de usar los valores numéricos, podría agregar una columna derivada independiente que clasifique los grados de servicio en intervalos de destino predefinidos, como \<el **mejor** (ServiceGrade = 0,05), **aceptable** (0,10 > ServiceGrade > 0,05) y **malo** (ServiceGrade >= 0,10).  
   
-###  <a name="bkmk_newColumn"></a>Crear una copia de una columna y cambiar el método de discretización  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>Crear una copia de una columna y cambiar el método de discretización  
  Realizará una copia de la columna de minería de datos que contiene el atributo de destino, ServiceGrade y cambia la forma en que se agrupan los números. Puede crear varias copias de cualquier columna de una estructura de minería de datos, incluido el atributo de predicción.  
   
  En este tutorial utilizará el método de discretización de áreas iguales y especificará cuatro cubos. Las agrupaciones que resultan de este método están bastante cerca de los valores objetivo que interesan a los usuarios empresariales.  
   
-####  <a name="bkmk_ColumnCopy"></a>Para crear una copia personalizada de una columna en la estructura de minería de datos  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>Para crear una copia personalizada de una columna en la estructura de minería de datos  
   
 1.  En el Explorador de soluciones, haga doble clic en la estructura de minería de datos recién creada.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "62856327"
   
      Observe que al agregar una copia de una columna de la estructura de minería de datos, la marca de uso de la copia se establece automáticamente en `Ignore`. Normalmente, al agregar una copia de una columna a una estructura de minería de datos, no utilizaría la copia para el análisis junto con la columna original o el algoritmo encontrará una correlación fuerte entre las dos columnas que podrían disimular otras relaciones.  
   
-##  <a name="bkmk_NewModel"></a>Agregar un nuevo modelo de minería de datos a la estructura de minería de datos  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>Agregar un nuevo modelo de minería de datos a la estructura de minería de datos  
  Ahora que ha creado una nueva agrupación para el atributo de destino, necesita agregar un nuevo modelo de minería de datos que use la columna de datos discretos. Cuando lo haya hecho, la estructura de minería de datos CallCenter tendrá dos modelos de minería de datos:  
   
 -   El modelo de minería de datos, Call Center Default NN, administra los valores de ServiceGrade como un intervalo continuo.  
@@ -243,10 +243,10 @@ ms.locfileid: "62856327"
   
 6.  De igual forma, busque ServiceGrade Binned y cambie el uso de `Ignore` a `Predict`.  
   
-##  <a name="bkmk_Alias2"></a>Crear un alias para la columna de destino  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>Crear un alias para la columna de destino  
  Normalmente, no puede comparar modelos de minería de datos que usen atributos de predicción diferentes. Sin embargo, puede crear un alias para una columna del modelo de minería de datos. Es decir, puede cambiar el nombre de la columna ServiceGrade Discretizan en el modelo de minería de datos para que tenga el mismo nombre que la columna original. A continuación, puede comparar directamente estos dos modelos en un gráfico de precisión, aunque los datos se discreticen de manera diferente.  
   
-###  <a name="bkmk_Alias"></a>Para agregar un alias para una columna de estructura de minería de datos en un modelo de minería de datos  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>Para agregar un alias para una columna de estructura de minería de datos en un modelo de minería de datos  
   
 1.  En la pestaña **modelos de minería de datos** , en **estructura**, seleccione ServiceGrade discretizan.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "62856327"
     |Propiedad|Value|  
     |--------------|-----------|  
     |**Descripción**|Alias de columna temporal|  
-    |**SESIÓN**|ServiceGrade Discretizan|  
+    |**Id**|ServiceGrade Discretizan|  
     |**Marcas de modelado**||  
     |**Nombre**|Service Grade|  
     |**SourceColumn ID**|Service Grade 1|  
@@ -280,13 +280,13 @@ ms.locfileid: "62856327"
     ||Red neuronal de Microsoft|Red neuronal de Microsoft|  
     |AutomaticResponses|Entrada|Entrada|  
     |AverageTimePerIssue|Predict|Predict|  
-    |Calls|Entrada|Entrada|  
+    |Llamadas|Entrada|Entrada|  
     |DayOfWeek|Entrada|Entrada|  
-    |FactCallCenterID|Clave|Clave|  
+    |FactCallCenterID|Key|Key|  
     |IssuesRaised|Entrada|Entrada|  
     |LevelOneOperators|Entrada|Entrada|  
     |LevelTwoOperators|Entrada|Entrada|  
-    |Pedidos|Entrada|Entrada|  
+    |Orders|Entrada|Entrada|  
     |ServiceGrade Binned|Ignore|Predicción (ServiceGrade)|  
     |ServiceGrade|Predict|Ignore|  
     |Shift|Entrada|Entrada|  
@@ -299,11 +299,11 @@ ms.locfileid: "62856327"
 > [!NOTE]  
 >  Si no se especifica un valor numérico para el parámetro de inicialización, SQL Server Analysis Services lo generará a partir del nombre del modelo. Dado que los modelos siempre tienen nombres diferentes, debe establecer un valor de inicialización para asegurarse de que procesan los datos en el mismo orden.  
   
-###  <a name="bkmk_SeedProcess"></a>Para especificar el inicialización y procesar los modelos  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>Para especificar el inicialización y procesar los modelos  
   
 1.  En la pestaña **modelo de minería de datos** , haga clic con el botón secundario en la columna del modelo denominado Call Center-LR y seleccione **establecer parámetros de algoritmo**.  
   
-2.  En la fila del parámetro HOLDOUT_SEED, haga clic en la celda vacía **** situada debajo de valor `1`y escriba. Haga clic en **OK**. Repita este paso para cada modelo asociado a la estructura.  
+2.  En la fila del parámetro HOLDOUT_SEED, haga clic en la celda vacía **Value**situada debajo de valor `1`y escriba. Haga clic en **Aceptar**. Repita este paso para cada modelo asociado a la estructura.  
   
     > [!NOTE]  
     >  El valor de inicialización que elija no es importante siempre y cuando use el mismo para todos los modelos relacionados.  
@@ -320,6 +320,6 @@ ms.locfileid: "62856327"
  [Explorar el modelo de centro de llamadas &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721677"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
@@ -26,13 +26,13 @@ ms.locfileid: "62721677"
   
  **En este tema**  
   
--   **Para crear una suscripción para un suscriptor que no sea de SQL Server, utilizando:**  
+-   **Para crear una suscripción para un suscriptor que no sea de SQL Server con:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Para crear una publicación para un suscriptor que no sea de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 1.  Instale y configure el software de cliente y el proveedor o proveedores OLE DB adecuados en el distribuidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Oracle Subscribers](non-sql/oracle-subscribers.md) y [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
@@ -68,8 +68,7 @@ ms.locfileid: "62721677"
     > [!NOTE]  
     >  Al seleccionar **True** se asigna el valor 'drop' a la propiedad de artículo **pre_creation_cmd** . El valor mencionado indica que la replicación debe quitar una tabla en el suscriptor si coincide con el nombre de la tabla del artículo. Si en el suscriptor existen tablas que desea conservar, use el procedimiento almacenado [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) para cada artículo; asigne el valor 'none' a **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
-5.  
-  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Se le pedirá que cree una nueva instantánea para la publicación. Si no desea crear ninguna en este momento, siga los pasos descritos en el procedimiento correspondiente más adelante.  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Se le pedirá que cree una nueva instantánea para la publicación. Si no desea crear ninguna en este momento, siga los pasos descritos en el procedimiento correspondiente más adelante.  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>Para crear una suscripción para un suscriptor que no sea de SQL Server  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62721677"
   
      El asistente no valida el nombre del origen de datos especificado en este paso ni las credenciales del paso 9. No se utilizan para la replicación hasta que se ejecuta el Agente de distribución para la suscripción. Asegúrese de que haber comprobado todos los valores conectándose al suscriptor mediante una herramienta cliente (como **sqlplus** para Oracle). Para obtener más información, consulte [Oracle Subscribers](non-sql/oracle-subscribers.md) y [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md).  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]En la página **suscriptores** del asistente, el suscriptor se muestra ahora en la columna **suscriptor** con un **(destino predeterminado)** de solo lectura en la columna **base de datos de suscripciones** :  
+7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] En la página **Suscriptores** del asistente, el suscriptor aparece en la columna **Suscriptor** con un **(destino predeterminado)** de solo lectura en la columna **Base de datos de suscripciones** :  
   
     -   En Oracle, un servidor tiene como máximo una base de datos, por lo que no es necesario especificarla.  
   
@@ -138,11 +137,11 @@ ms.locfileid: "62721677"
   
 2.  Haga clic con el botón secundario en la publicación y, a continuación, haga clic en **Ver estado del agente de instantáneas**.  
   
-3.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<Publicación>**, haga clic en **Iniciar**.  
+3.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<publicación>**, haga clic en **Iniciar**.  
   
  Cuando el Agente de instantáneas termina de generar la instantánea, aparece un mensaje del tipo "[100%] Se ha generado una instantánea de 17 artículos".  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede crear suscripciones de inserción para suscriptores que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante programación con procedimientos almacenados de replicación.  
   
 > [!IMPORTANT]  
@@ -176,18 +175,18 @@ ms.locfileid: "62721677"
         > [!NOTE]  
         >  Las conexiones realizadas mediante la autenticación integrada de Windows siempre utilizan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
   
-    -   Un valor de **0** para **@subscriber_security_mode** y la información de inicio de sesión **@subscriber_login** del **@subscriber_password**proveedor de OLE DB para y.  
+    -   Un valor de **0** para **@subscriber_security_mode** y la información de inicio de sesión del proveedor OLE DB para **@subscriber_login** y **@subscriber_password**.  
   
-    -   Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, vea [especificar programaciones de sincronización](specify-synchronization-schedules.md).  
+    -   Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al crear una suscripción de inserción en un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Suscriptores de IBM DB2](non-sql/ibm-db2-subscribers.md)   
  [Suscriptores de Oracle](non-sql/oracle-subscribers.md)   
  [Otros suscriptores que no son de SQL Server](non-sql/other-non-sql-server-subscribers.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
+ [Conceptos de procedimientos almacenados del sistema de replicación](concepts/replication-system-stored-procedures-concepts.md)   
+ [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md)  
   
   

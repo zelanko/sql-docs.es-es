@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f051b3de9ba88354f5fded8cd1f429e3b277747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188173"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Administrar trabajos en una empresa
@@ -38,7 +38,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [sp_delete_jobstep (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)  
   
--   [sp_attach_schedule &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
 -   [sp_detach_schedule &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql)  
   
@@ -53,7 +53,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Objetos de administración de SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **Para cambiar los servidores de destino de un trabajo**  
+ **Para modificar los servidores de destino para un trabajo**  
   
 -   [SQL Server Management Studio](modify-the-target-servers-for-a-job.md)  
   
@@ -61,7 +61,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [Objetos de administración de SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- **Para cambiar la ubicación de un servidor de destino**  
+ **Para modificar la ubicación de un servidor de destino**  
   
 -   [SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   

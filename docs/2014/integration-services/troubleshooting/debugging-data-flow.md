@@ -17,23 +17,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766198"
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el [!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador de incluyen características y herramientas que puede usar para solucionar problemas de los flujos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datos en un paquete de.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona visores de datos.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona visores de datos.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] y las transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporcionan recuentos de filas.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] y las transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporcionan recuentos de filas.  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona informes de progreso en tiempo de ejecución.  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona informes de progreso en tiempo de ejecución.  
   
 ## <a name="data-viewers"></a>Visores de datos  
  Los visores de datos muestran datos entre dos componentes en un flujo de datos. Los visores de datos pueden mostrar datos cuando los datos se extraen de un origen de datos y entran por primera vez en un flujo de datos, antes y después de que una transformación actualice los datos, y antes de que los datos se carguen en su destino.  
@@ -52,7 +49,7 @@ ms.locfileid: "62766198"
   
 #### <a name="to-add-a-data-viewer"></a>Para agregar un visor de datos  
   
--   [agregar un visor de datos a un flujo de datos](../add-a-data-viewer-to-a-data-flow.md)  
+-   [Agregar un visor de datos a un flujo de datos](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="row-counts"></a>Recuentos de filas  
  La cantidad de filas que han pasado por una ruta aparece en la superficie de diseño de la pestaña **Flujo de datos** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] junto a la ruta. La cantidad se actualiza periódicamente mientras los datos pasan por la ruta.  
@@ -69,7 +66,7 @@ ms.locfileid: "62766198"
 |Sin color|Espera la llamada del motor de flujo de datos.|  
 |Amarillo|Ejecución de una transformación, extracción de datos o carga de datos.|  
 |Verde|Ejecución correcta.|  
-|red|Ejecución con errores.|  
+|rojo|Ejecución con errores.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  

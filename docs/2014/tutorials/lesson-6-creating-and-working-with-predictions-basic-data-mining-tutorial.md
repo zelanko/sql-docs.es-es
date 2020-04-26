@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185397"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lección 6: Crear y trabajar con predicciones (Tutorial básico de minería de datos)
@@ -26,7 +26,7 @@ ms.locfileid: "63185397"
   
  En esta lección se incluyen los temas siguientes:  
   
- [Crear predicciones &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [Usar la obtención de detalles en datos de estructura &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63185397"
  [Lección 5: probar los modelos &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Crear predicciones &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Contenido del modelo de minería de datos para los modelos de árbol de decisión &#40;&#41;de minería de datos Analysis Services](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

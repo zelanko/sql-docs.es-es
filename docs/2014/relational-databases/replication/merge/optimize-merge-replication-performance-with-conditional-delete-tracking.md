@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "68210690"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimizar el rendimiento de la replicación de mezcla con seguimiento condicional de eliminaciones
@@ -44,12 +44,12 @@ ms.locfileid: "68210690"
 > [!IMPORTANT]  
 >  Si siguen llevándose a cabo otras actividades en el publicador, deberá asegurarse de que no se producen eliminaciones que se deban propagar a los suscriptores mientras el seguimiento de eliminaciones está deshabilitado.  
   
- **Para especificar que no se debe realizar el seguimiento de las eliminaciones**  
+ **Para especificar que no se realice el seguimiento de las eliminaciones**  
   
 -   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la replicación: [especificar que no se debe realizar un seguimiento de las eliminaciones para los artículos de mezcla &#40;programación de la replicación con Transact-SQL&#41;](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>Consulte también  
- [Opciones de artículos para replicación de mezcla](article-options-for-merge-replication.md)   
+ [Opciones de artículo para la replicación de mezcla](article-options-for-merge-replication.md)   
  [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767437"
 ---
-# <a name="step-3-modifying-the-flat-file-connection-manager"></a>Paso 3: Modificar el Administrador de conexiones de archivos planos
+# <a name="step-3-modifying-the-flat-file-connection-manager"></a>Paso 3: Modificación del Administrador de conexiones de archivos planos
   En esta tarea, modificará el administrador de conexiones de archivos planos que creó y configuró en la lección 1. Cuando se creó inicialmente, el administrador de conexiones de archivos planos se configuró para cargar de forma estática un único archivo. Para permitir que el Administrador de conexiones de archivos planos cargue archivos de forma iterativa, debe modificar la propiedad ConnectionString del administrador de conexiones de modo que acepte la variable `User:varFileName`, definida por el usuario, que contiene la ruta de acceso del archivo que se cargará en tiempo de ejecución.  
   
  Al modificar el administrador de conexiones para que use la variable definida por el usuario `User::varFileName`para rellenar la propiedad ConnectionString del administrador de conexiones, este podrá conectarse a distintos archivos planos. En tiempo de ejecución, cada iteración del contenedor de bucles Foreach actualizará dinámicamente la variable `User::varFileName` . A su vez, actualizar esta variable da lugar a que el administrador de conexiones se conecte a un archivo plano distinto, y que la tarea de flujo de datos procese un conjunto de datos distinto.  
@@ -26,11 +26,11 @@ ms.locfileid: "62767437"
   
 1.  En el panel **Administradores de conexión** , haga clic con el botón derecho en **Sample Flat File Source Data**y, después, seleccione **Propiedades**.  
   
-2.  En la ventana Propiedades, para **Expresiones**, haga clic en la celda vacía y, después, haga clic en el botón de puntos suspensivos **(…)**.  
+2.  En el ventana Propiedades, para las **expresiones**, haga clic en la celda vacía y, a continuación, haga clic en el botón de puntos suspensivos **(...)**.  
   
 3.  En el cuadro de diálogo **Editor de expresiones de propiedad** , en la columna **propiedad** , `ConnectionString`escriba o seleccione.  
   
-4.  En la columna **Expresión**, haga clic en el botón de puntos suspensivos **(…)** para abrir el cuadro de diálogo **Generador de expresiones**.  
+4.  En la columna **expresión** , haga clic en el botón de puntos suspensivos **(...)** para abrir el cuadro de diálogo **generador de expresiones** .  
   
 5.  En el cuadro de diálogo **Generador de expresiones** , expanda el nodo **Variables** .  
   
@@ -41,6 +41,6 @@ ms.locfileid: "62767437"
 8.  Haga clic en **Aceptar** de nuevo para cerrar el cuadro de diálogo **Editor de expresiones de propiedad** .  
   
 ## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
- [Paso 4: Probar el paquete del tutorial de la lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [Paso 4: Prueba del paquete del tutorial de la lección 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

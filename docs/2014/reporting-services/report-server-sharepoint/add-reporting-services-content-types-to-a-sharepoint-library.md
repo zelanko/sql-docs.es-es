@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 468acea55c334ffda169daff2b5da4c417348a3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104291"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Agregar el elemento web Visor de informes a una página web (Reporting Services en el modo integrado de SharePoint)
@@ -58,7 +58,7 @@ ms.locfileid: "66104291"
 ## <a name="see-also"></a>Consulte también  
  [Elemento Web visor de informes en un sitio de SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personalizar el elemento Web visor de informes](../customize-the-report-viewer-web-part.md)   
- [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Conceder permisos para elementos del servidor de informes en un sitio de SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Instalar o desinstalar el complemento de Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

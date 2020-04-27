@@ -10,20 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 3523b88b978bb2e08a9c712a30daf14b11fab299
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636208"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138248"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
   Devuelve el plan de consulta para una instrucción [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sin ejecutarla. Use EXPLAIN para obtener una vista previa de las operaciones que requerirán movimiento de datos y ver los costos estimados de las operaciones de consulta. `WITH RECOMMENDATIONS` se aplica a Azure SQL Data Warehouse (versión preliminar).
-  
- Para obtener más información sobre los planes de consulta, vea "Descripción de los planes de consulta" en la [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
 ## <a name="syntax"></a>Sintaxis  
   

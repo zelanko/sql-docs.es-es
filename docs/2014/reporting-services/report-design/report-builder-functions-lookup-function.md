@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93e53646314d211ced489d3538b40c77195f494b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105223"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Función Lookup (Generador de informes y SSRS)
@@ -49,8 +49,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>Observaciones  
  Use `Lookup` para recuperar el valor del conjunto de datos especificado correspondiente a un par nombre/valor donde hay una relación de uno a uno. Por ejemplo, para un campo de identificador, puede usar `Lookup` para recuperar el campo Name correspondiente de un conjunto de datos que no está enlazado a la región de datos.  
   
- 
-  `Lookup` realiza las operaciones siguientes:  
+ `Lookup` realiza las operaciones siguientes:  
   
 -   Evalúa la expresión de origen en el ámbito actual.  
   
@@ -72,8 +71,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   Las expresiones de origen, destino y resultado no pueden incluir referencias a variables de informe o de grupo.  
   
--   
-  `Lookup` no se puede usar como una expresión para los siguientes elementos de informe:  
+-   `Lookup` no se puede usar como una expresión para los siguientes elementos de informe:  
   
     -   Cadenas de conexión dinámicas para un origen de datos.  
   

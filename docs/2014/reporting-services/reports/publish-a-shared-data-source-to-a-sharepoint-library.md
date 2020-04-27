@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102542"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Publicar un origen de datos compartido en una biblioteca de SharePoint
@@ -30,13 +30,13 @@ ms.locfileid: "66102542"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra un proyecto de servidor de informes nuevo o uno existente.  
   
-2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo _Páginas de propiedades\< de_ **proyecto>** .  
+2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abrirá el cuadro de diálogo **páginas de propiedades** del _ \<proyecto>_.  
   
 3.  Elija la **Configuración** que utilice para publicar en un sitio de SharePoint.  
   
 4.  Si desea publicar los orígenes de datos compartidos del proyecto y sobrescribir los publicados anteriormente, establezca **OverwriteDataSources** en **True**.  
   
-5.  (Opcional) Para **TargetDataSourceFolder**, escriba una dirección URL a una biblioteca de SharePoint o a una carpeta de bibliotecas. Por ejemplo, *http://TestServer/TestSite/Documents/DataSources*.  
+5.  (Opcional) Para **TargetDataSourceFolder**, escriba una dirección URL a una biblioteca de SharePoint o a una carpeta de bibliotecas. Por ejemplo, *http://TestServer/TestSite/Documents/DataSources* .  
   
      Si no se especifica ningún valor, se usa el valor **TargetReportFolder** .  
   
@@ -54,9 +54,9 @@ ms.locfileid: "66102542"
 ## <a name="see-also"></a>Consulte también  
  [Publicar un informe en una biblioteca de SharePoint](publish-a-report-to-a-sharepoint-library.md)   
  [Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Páginas de propiedades del proyecto (cuadro de diálogo)](../tools/project-property-pages-dialog-box.md)   
- [Establecer propiedades de implementación &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
- [Publicación de informes en un servidor de informes](publishing-reports-to-a-report-server.md)   
+ [Cuadro de diálogo páginas de propiedades del proyecto](../tools/project-property-pages-dialog-box.md)   
+ [Establecer las propiedades de implementación &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [Publicar informes en un servidor de informes](publishing-reports-to-a-report-server.md)   
  [Usar una conexión de datos de Office &#40;.odc&#41; con informes &#40;Reporting Services en el modo integrado de SharePoint&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

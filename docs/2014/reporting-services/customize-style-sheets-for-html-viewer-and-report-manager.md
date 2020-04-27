@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "64568267"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizar hojas de estilos para el Visor HTML y el Administrador de informes
@@ -68,6 +68,6 @@ http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs
 ## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Visor HTML y la barra de herramientas de informe](html-viewer-and-the-report-toolbar.md)   
- [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
+ [Archivo de configuración RSReportServer](report-server/rsreportserver-config-configuration-file.md)  
   
   

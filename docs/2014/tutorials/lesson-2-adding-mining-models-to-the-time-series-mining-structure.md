@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62855716"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de serie temporal
   En esta lección, agregará un nuevo modelo de minería de datos a la estructura de minería de datos que acaba de crear en la [Lección 1: crear un modelo de minería de datos de serie temporal y una estructura de minería](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)de datos.  
   
 ## <a name="alter-mining-structure-statement"></a>Instrucción ALTER MINING STRUCTURE  
@@ -105,7 +105,7 @@ WITH DRILLTHROUGH
     <mining structure name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Forecasting_MIXED_Structure]  
@@ -117,7 +117,7 @@ WITH DRILLTHROUGH
     <mining model name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Forecasting_ARIMA  
@@ -129,7 +129,7 @@ WITH DRILLTHROUGH
     <key columns>,  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [ReportingDate],  
@@ -144,7 +144,7 @@ WITH DRILLTHROUGH
     <mining model columns>  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     ([Quantity] PREDICT,  
@@ -159,7 +159,7 @@ WITH DRILLTHROUGH
     [WITH DRILLTHROUGH]  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     USING Microsoft_Time_Series (AUTO_DETECT_PERIODICITY = .08, FORECAST_METHOD = 'ARIMA')  
@@ -218,7 +218,7 @@ WITH DRILLTHROUGH
  En la siguiente lección procesará todos los modelos y la estructura de minería de datos.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Procesar la estructura de serie temporal y los modelos](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Lección 3: Procesamiento de la estructura de serie temporal y los modelos](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   

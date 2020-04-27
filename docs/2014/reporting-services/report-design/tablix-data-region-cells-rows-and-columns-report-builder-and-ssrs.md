@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104648"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
@@ -40,10 +40,10 @@ ms.locfileid: "66104648"
   
 |Icono|Descripción|  
 |----------|-----------------|  
-|![Identificador de fila con 3 líneas paralelas para la fila de detalles](../media/rs-icontablix-detailsrow.gif "Identificador de fila con 3 líneas paralelas para la fila de detalles")|Solo el grupo de detalles en la jerarquía de grupos de filas|  
+|![Identificador de fila con tres líneas paralelas para la fila de detalles](../media/rs-icontablix-detailsrow.gif "Identificador de fila con tres líneas paralelas para la fila de detalles")|Solo el grupo de detalles en la jerarquía de grupos de filas|  
 |![Identificador de fila con fila de detalles y un grupo exterior](../media/rs-icontablix-groupwithdetails.gif "Identificador de fila con fila de detalles y un grupo exterior")|Un grupo exterior y el grupo de detalles secundario|  
 |![Dos corchetes en paralelo muestran los grupos anidados](../media/rs-icontablix-nestedgroupnodetails.gif "Dos corchetes en paralelo muestran los grupos anidados")|Un grupo exterior y un grupo interno; ningún grupo de detalles|  
-|![2 corchetes & 3 líneas apiladas para los detalles de & anidados](../media/rs-icontablix-nestedgroupwithdetails.gif "Dos corchetes y tres líneas apiladas para anidados y detalles")|Un grupo exterior, un grupo interno y el grupo de detalles secundario|  
+|![Dos corchetes y tres líneas apiladas para anidados y detalles](../media/rs-icontablix-nestedgroupwithdetails.gif "Dos corchetes y tres líneas apiladas para anidados y detalles")|Un grupo exterior, un grupo interno y el grupo de detalles secundario|  
 |![Un grupo externo con una fila de pie, un grupo interno](../media/rs-icontablix-nestedgroupwithparentfooter.gif "Un grupo externo con una fila de pie, un grupo interno")|Un grupo exterior con una fila de pie para los totales y un grupo interno|  
 |![corchete de grupo externo, corchete de grupo interno, detalles](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "corchete de grupo externo, corchete de grupo interno, detalles")|Un grupo exterior con una fila de pie para los totales, un grupo interno con una fila de pie para los totales y una fila de detalles|  
 |![encabezado y pie primario, y también grupo secundario](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "encabezado y pie primario, y también grupo secundario")|Un grupo exterior con un encabezado para las etiquetas y un pie para los totales, y un grupo interno; ningún grupo de detalles|  

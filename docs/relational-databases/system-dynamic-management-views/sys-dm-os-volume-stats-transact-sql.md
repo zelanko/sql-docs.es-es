@@ -19,10 +19,10 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899717"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
@@ -38,9 +38,9 @@ ms.locfileid: "67899717"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  *database_id*  
- Identificador de la base de datos. *database_id* es de **tipo int**y no tiene ningún valor predeterminado. No puede ser NULL.  
+ Identificador de la base de datos. *database_id* es de tipo **int** y no tiene ningún valor predeterminado. No puede ser NULL.  
   
  *file_id*  
  Id. del archivo. *file_id* es de **tipo int**y no tiene ningún valor predeterminado. No puede ser NULL.  
@@ -56,8 +56,8 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**volume_id**|**nvarchar(512)**|Identificador del volumen del sistema operativo. Puede devolver una cadena vacía|  
 |**logical_volume_name**|**nvarchar(512)**|Nombre lógico del volumen. Puede devolver una cadena vacía|  
 |**file_system_type**|**nvarchar(512)**|Tipo de volumen de sistema de archivos (por ejemplo NTFS, FAT, RAW). Puede devolver una cadena vacía|  
-|**total_bytes**|**BIGINT**|Tamaño total del volumen en bytes. No puede ser null.|  
-|**available_bytes**|**BIGINT**|Espacio disponible del volumen. No puede ser null.|  
+|**total_bytes**|**bigint**|Tamaño total del volumen en bytes. No puede ser null.|  
+|**available_bytes**|**bigint**|Espacio disponible del volumen. No puede ser null.|  
 |**supports_compression**|**bit**|Indica si el volumen admite la compresión del sistema operativo. No puede ser null.|  
 |**supports_alternate_streams**|**bit**|Indica si el volumen admite flujos alternativos. No puede ser null.|  
 |**supports_sparse_files**|**bit**|Indica si el volumen admite archivos dispersos.  No puede ser null.|  

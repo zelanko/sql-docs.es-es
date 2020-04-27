@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488942"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarea 7: agregar la transformación Limpieza de DQS al flujo de datos
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarea 7: Adición de la transformación Limpieza de DQS al flujo de datos
   En esta tarea, agregará la transformación Limpieza de DQS al flujo de datos para limpiar los datos de proveedor de entrada mediante DQS. Vea **[transformación limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx)** para obtener más detalles sobre la transformación.  
   
 1.  Haga clic con el botón secundario en **limpieza de DQS** en la pestaña **flujo de datos** y haga clic en **cambiar nombre**. Escriba **limpiar datos de proveedor**y presione **entrar**.  
@@ -48,7 +48,7 @@ ms.locfileid: "65488942"
   
 11. En el panel inferior, asigne estas columnas mediante listas desplegables de la columna **dominio** :  
   
-    |Columna|Domain|  
+    |Columna|Dominio|  
     |------------|------------|  
     |Nombre del proveedor|Nombre del proveedor|  
     |ContactEmailAddress|Dirección de correo electrónico de contacto|  
@@ -61,6 +61,6 @@ ms.locfileid: "65488942"
 12. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación limpieza de DQS** .  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 8: agregar la transformación División condicional para dividir el resultado de la limpieza](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Tarea 8: Adición de la transformación División condicional para dividir el resultado de la limpieza](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

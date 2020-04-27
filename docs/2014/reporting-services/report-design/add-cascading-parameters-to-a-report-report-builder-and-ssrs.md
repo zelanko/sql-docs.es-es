@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106701"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Agregar parámetros en cascada a un informe (Generador de informes y SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106701"
   
     2.  Un parámetro de consulta para cada parámetro en cascada. Un parámetro de consulta limita los datos recuperados del origen de datos especificando determinados valores para incluirlos o excluirlos de la consulta. Normalmente, los parámetros de consulta se sitúan en una cláusula de restricción de la consulta. Por ejemplo, en una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] , los parámetros de consulta se sitúan en la cláusula WHERE. Para obtener más información, vea "Filtrar filas mediante WHERE y HAVING" en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-6.  Haga clic en **Ejecutar** ( **!** ). Una vez incluidos los parámetros de la consulta y ejecutada la consulta, automáticamente se crean parámetros de informe correspondientes a los parámetros de la consulta.  
+6.  Haga clic en **Ejecutar** (**!**). Una vez incluidos los parámetros de la consulta y ejecutada la consulta, automáticamente se crean parámetros de informe correspondientes a los parámetros de la consulta.  
   
     > [!NOTE]  
     >  El orden que tienen los parámetros de la consulta la primera vez se ejecuta una consulta determina el orden en que se crean en el informe. Para cambiar el orden, vea [Cambiar el orden de un parámetro de informe &#40;Generador de informes y SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "66106701"
   
      El comando SELECT DISTINCT quita los valores duplicados del conjunto de resultados para que obtenga cada valor único de la columna y la tabla especificadas.  
   
-     Haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra los valores disponibles para este primer parámetro.  
+     Haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra los valores disponibles para este primer parámetro.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -154,9 +154,9 @@ ms.locfileid: "66106701"
 4.  Haga clic en **Ver informe**. El informe actualiza la presentación basándose en los parámetros que ha elegido.  
   
 ## <a name="see-also"></a>Consulte también  
- [Agregar, cambiar o eliminar parámetros de informe &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Agregar, cambiar o eliminar un parámetro de informe &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: agregar un parámetro a un informe &#40;Generador de informes&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Tutoriales &#40;Generador de informes&#41;](../report-builder-tutorials.md)   
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

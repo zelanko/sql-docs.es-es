@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270221"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabajar con el seguimiento de cambios (SQL Server)
   Las aplicaciones que utilizan el seguimiento de cambios deben poder obtener los cambios que se han sometido a seguimiento, aplicarlos a otro almacén de datos y actualizar la base de datos de origen. En este tema se describe cómo realizar estas tareas y también el rol que desempeña el seguimiento de cambios cuando se produce una conmutación por error y una base de datos se debe restaurar a partir de una copia de seguridad.  
   
-##  <a name="Obtain"></a> Obtener cambios mediante las funciones de seguimiento de cambios  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Obtener cambios mediante las funciones de seguimiento de cambios  
  Describe cómo utilizar las funciones de seguimiento de cambios para obtener las modificaciones y la información sobre los cambios que se realizaron en una base de datos.  
   
 ### <a name="about-the-change-tracking-functions"></a>Acerca de las funciones de seguimiento de cambios  
@@ -285,7 +285,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  La elección del enfoque que va a funcionar para la aplicación cuando se usa el seguimiento de cambios (o cualquier mecanismo de seguimiento personalizado), requiere un análisis significativo. Por consiguiente, es mucho más fácil utilizar el aislamiento de instantánea.  
   
-##  <a name="Handles"></a> Cómo el seguimiento de cambios controla los cambios en una base de datos  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a>Cómo Change Tracking controla los cambios en una base de datos  
  Algunas aplicaciones que utilizan el seguimiento de cambios realizan una sincronización bidireccional con otro almacén de datos. Es decir, los cambios que se realizan en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan en el otro almacén de datos y los que se realizan en este se actualizan en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Cuando una aplicación actualiza la base de datos local con los cambios de otro almacén de datos, debe realizar las operaciones siguientes:  
@@ -404,7 +404,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Existe la posibilidad de que la fila que se está actualizando en la transacción de instantáneas pueda haber sido actualizada en otra transacción una vez iniciada la transacción de instantáneas. En este caso, se producirá un conflicto de actualización del aislamiento de instantánea que provocará que se termine la transacción. Si esto ocurre, vuelva a intentar la actualización. Esto conducirá entonces a la detección de un conflicto del seguimiento de cambios y a que no se realicen cambios en ninguna fila.  
   
-##  <a name="DataRestore"></a> Seguimiento de cambios y restauración de datos  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a>Change Tracking y restauración de datos  
  Las aplicaciones que requieren sincronización deben considerar el caso en el que una base de datos que tiene el seguimiento de cambios habilitado revierta a una versión anterior de los datos. Esta situación se puede producir al restaurar una base de datos a partir de una copia de seguridad, cuando se produce una conmutación por causa de error a un espejo de la base de datos asincrónico, o cuando se produce un error al utilizar trasvase de registros. El siguiente escenario muestra el problema:  
   
 1.  La tabla T1 está sometida a seguimiento de cambios y la versión válida mínima para la tabla es 50.  
@@ -433,12 +433,12 @@ COMMIT TRAN
   
 ## <a name="see-also"></a>Consulte también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
- [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
- [Administrar el seguimiento de cambios &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
- [Habilitar y deshabilitar el seguimiento de cambios &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [Acerca de Change Tracking &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
+ [Administrar Change Tracking &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Habilitar y deshabilitar Change Tracking &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;&#41;de Transact-SQL](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;&#41;de Transact-SQL](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/with-change-tracking-context-transact-sql)  
   
   

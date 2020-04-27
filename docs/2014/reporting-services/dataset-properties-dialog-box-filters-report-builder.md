@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01d9c5b6ae0e69febd45008bf0aa7b6c3b5a83d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109377"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Filtros (Generador de informes)
@@ -42,7 +42,7 @@ ms.locfileid: "66109377"
  Mueve el filtro seleccionado hacia abajo en la lista.  
   
  **Expression**  
- Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón expresión (**FX**) para editar la expresión.  
+ Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón Expresión (**fx**) para editar la expresión.  
   
  **Tipo de datos**  
  Elija el tipo de datos para **Valor**. Si es posible, elija un tipo de datos que coincida con el tipo de datos de **Expresión**.  
@@ -51,14 +51,14 @@ ms.locfileid: "66109377"
   
  Si la opción de tipos de datos que necesita no está en la lista desplegable, escriba una expresión que convierta el valor al tipo de datos correcto. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
- **Operator**  
+ **Operador**  
  Elija el operador que se va a utilizar para comparar la expresión y el valor.  
   
  **Valor**  
- Escriba la expresión o el valor que se debe usar al evaluar la expresión especificada en el cuadro **Expresión** . Haga clic en el botón expresión (**FX**) para editar la expresión.  
+ Escriba la expresión o el valor que se debe usar al evaluar la expresión especificada en el cuadro **Expresión** . Haga clic en el botón Expresión (**fx**) para editar la expresión.  
   
 ## <a name="see-also"></a>Consulte también  
- [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Conjuntos de valores integrados de informe y conjuntos de recursos compartidos &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Agregar un filtro a un conjunto de &#40;Generador de informes y SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
  [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  

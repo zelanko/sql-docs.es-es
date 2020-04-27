@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482547"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
@@ -70,7 +70,7 @@ ms.locfileid: "65482547"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un modelo para organizar los datos maestros.|[Cree un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|Crear un modelo para organizar los datos maestros.|[Crear un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
 |Cambiar el nombre de un modelo existente.|[Cambiar el nombre de un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
 |Eliminar un modelo existente.|[Eliminar un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
@@ -84,6 +84,6 @@ ms.locfileid: "65482547"
   
 -   [Implementar modelos &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [Permisos del objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [Permisos de objeto del modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

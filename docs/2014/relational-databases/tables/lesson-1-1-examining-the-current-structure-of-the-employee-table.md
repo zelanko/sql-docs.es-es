@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110139"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Examen de la estructura actual de la tabla Empleado
-  La base [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de datos de ejemplo contiene una tabla **Employee** en el esquema **humanresources** . Para evitar cambiar la tabla original, este paso realiza una copia de la tabla **Employee** denominada **EmployeeDemo**. Para simplificar el ejemplo, copie solo cinco columnas de la tabla original. A continuación, consulte la tabla **humanresources. EmployeeDemo** para revisar cómo se estructuran los datos en una tabla sin utilizar `hierarchyid` el tipo de datos.  
+   La base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contiene una tabla llamada **Employee** en el esquema **HumanResources**. Para evitar cambiar la tabla original, este paso realiza una copia de la tabla **Employee** denominada **EmployeeDemo**. Para simplificar el ejemplo, copie solo cinco columnas de la tabla original. A continuación, consulte la tabla **humanresources. EmployeeDemo** para revisar cómo se estructuran los datos en una tabla sin utilizar `hierarchyid` el tipo de datos.  
   
 ### <a name="to-copy-the-employee-table"></a>Para copiar la tabla Employee  
   

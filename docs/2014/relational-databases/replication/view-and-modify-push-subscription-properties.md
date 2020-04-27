@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212018"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Ver y modificar las propiedades de una suscripción de inserción
@@ -29,7 +29,7 @@ ms.locfileid: "68212018"
   
  **En este tema**  
   
--   **Para ver y modificar las propiedades de una suscripción de extracción con:**  
+-   **Para ver y modificar las propiedades de una suscripción de inserción con:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68212018"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Vea y modifique las propiedades de suscripción de inserción del publicador en:  
   
 -   El cuadro de diálogo **Propiedades de suscripción - \<Publicador>: \<baseDeDatosDePublicación>**, que está disponible en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "68212018"
   
 4.  Modifique las propiedades si es necesario y, a continuación, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Se puede modificar las suscripciones de inserción y tener acceso a sus propiedades mediante programación utilizando procedimientos almacenados de replicación. Los procedimientos almacenados que se usen dependerán del tipo de publicación a la que corresponda la suscripción.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para ver las propiedades de una suscripción de inserción a una publicación transaccional o de instantáneas  
@@ -96,15 +96,15 @@ ms.locfileid: "68212018"
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql). Especifique **@publication** y **@subscriber**.  
   
-2.  En el publicador, ejecute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), especificando **@subscriber**.  
+2.  En el Publicador, ejecute [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), especificando **@subscriber**.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Para cambiar las propiedades de una suscripción de inserción a una publicación de combinación  
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql). Especifique **@publication**, **@subscriber**, **@subscriber_db**, la propiedad de suscripción que se **@property**está cambiando como y el nuevo **@value**valor como.  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Ejemplo (Transact-SQL)  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Las clases RMO que usa para ver o modificar las propiedades de suscripción de inserción dependen del tipo de publicación a la que se suscribe la suscripción de inserción.  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para ver o modificar propiedades de una suscripción de inserción a una publicación transaccional o de instantáneas  
@@ -141,7 +141,7 @@ ms.locfileid: "68212018"
   
 ## <a name="see-also"></a>Consulte también  
  [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Suscribirse a publicaciones](subscribe-to-publications.md)  
+ [Procedimientos recomendados de seguridad de la replicación](security/replication-security-best-practices.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

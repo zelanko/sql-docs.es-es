@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7ea763aa9c0bd187b2207dc50a1f678c295f3b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483389"
 ---
 # <a name="create-a-collection-master-data-services"></a>Crear una colección (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una colección cuando desee crear listas planas de miembros hoja y consolidados. Las colecciones no tienen que incluir todos los miembros de la entidad.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -50,15 +50,15 @@ ms.locfileid: "65483389"
   
 8.  Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción de la colección.  
   
-9. Haga clic en **OK**.  
+9. Haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   [Agregar miembros a una colección &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
  [Eliminar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [Cree una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+ [Crear una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

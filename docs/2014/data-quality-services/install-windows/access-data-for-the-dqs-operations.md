@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3c722c5774a333773f4bcffc41c408d19ae28be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480520"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acceso a datos para las operaciones de DQS
@@ -24,7 +24,7 @@ ms.locfileid: "65480520"
   
 -   Use su propia base de datos como datos de origen para las operaciones de DQS y como destino para exportar los datos procesados. Para ello, asegúrese de que la base de datos está en la misma instancia de SQL Server que las bases de datos de Data Quality Server. De lo contrario, la base de datos no estará disponible en Data Quality Client para las operaciones de DQS. Además, se debe conceder acceso a la cuenta de usuario de Windows en la base de datos DQS_STAGING_DATA para exportar los resultados coincidentes, ya que estos se exportan en dos fases: primero, los resultados coincidentes se exportan a las tablas temporales de la base de datos DQS_STAGING_DATA y, después, se mueven a la tabla de la base de datos de destino.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
   
 -   Debe haber completado la instalación del [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] ejecutando el archivo DQSInstaller.exe. Para obtener más información, vea [Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
@@ -42,15 +42,15 @@ ms.locfileid: "65480520"
   
 5.  En el panel derecho, seleccione la casilla en la columna **Asignar** para la base de datos **DQS_STAGING_DATA** y, después, seleccione los siguientes roles en el panel **Pertenencia al rol de base de datos para: DQS_STAGING_DATA** :  
   
-    -   **db_datareader**: leer datos de tablas o vistas.  
+    -   **db_datareader**: leer datos de las tablas y de las vistas.  
   
-    -   **db_datawriter**: agregar, eliminar o cambiar datos en tablas.  
+    -   **db_datawriter**: agregar, eliminar o cambiar los datos de las tablas.  
   
-    -   **db_ddladmin**: crear, modificar o eliminar tablas o vistas.  
+    -   **db_ddladmin**: crear, modificar o eliminar las tablas o vistas.  
   
 6.  En el cuadro de diálogo **Propiedades de inicio de sesión** , haga clic en **Aceptar** para aplicar los cambios.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Intente realizar operaciones de DQS que obtengan acceso a la base de datos como origen de datos para la operación de DQS, y después exporte los datos procesados a la base de datos.  
   
 ## <a name="see-also"></a>Consulte también  

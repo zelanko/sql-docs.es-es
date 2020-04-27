@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412972"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Vista previa de los informes en SQL Server Reporting Services (SSRS)
@@ -41,9 +41,9 @@ ms.locfileid: "67412972"
  Si utiliza una configuración de proyecto que genera el informe pero no lo implementa, el informe especificado en la propiedad `StartItem` de la configuración actual se abrirá en una ventana de vista previa distinta. La ventana de vista previa muestra el informe de la misma manera y tiene la misma funcionalidad que el modo de vista previa.  
   
 > [!NOTE]  
-> Antes de depurar un informe es preciso establecer un elemento de inicio. Para establecer un elemento de inicio, en Explorador de soluciones, haga clic con el botón secundario en **** el proyecto de informe, `StartItem`haga clic en propiedades y, a continuación, en, seleccione el nombre del informe que desea mostrar.  
+> Antes de depurar un informe es preciso establecer un elemento de inicio. Para establecer un elemento de inicio, en Explorador de soluciones, haga clic con el botón secundario en **Properties**el proyecto de informe, `StartItem`haga clic en propiedades y, a continuación, en, seleccione el nombre del informe que desea mostrar.  
   
- Si quiere obtener la vista previa de un informe determinado que no es el elemento de inicio del proyecto, seleccione una configuración que genere el informe pero no lo implemente (por ejemplo, la configuración de depuración local), haga clic con el botón derecho en el informe y luego haga clic en **Ejecutar**. Debe elegir una configuración que no implemente el informe; de lo contrario, éste se publicará en el servidor de informes en lugar de mostrarse localmente en una ventana de vista previa.  
+ Si quiere obtener la vista previa de un informe determinado que no es el elemento de inicio del proyecto, seleccione una configuración que genere el informe pero no lo implemente (por ejemplo, la configuración de depuración local), haga clic con el botón derecho en el informe y, luego, haga clic en **Ejecutar**. Debe elegir una configuración que no implemente el informe; de lo contrario, éste se publicará en el servidor de informes en lugar de mostrarse localmente en una ventana de vista previa.  
   
 ## <a name="print-preview"></a>Vista previa de impresión
 
@@ -60,4 +60,4 @@ ms.locfileid: "67412972"
  - [Imprimir informes &#40;Generador de informes y SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)
  - [Imprimir un informe &#40;Generador de informes y SSRS&#41;](../report-builder/print-a-report-report-builder-and-ssrs.md)
  - [Publicar informes](../publish-reports.md)
- - [Uso de ensamblados personalizados con informes](../custom-assemblies/using-custom-assemblies-with-reports.md)
+ - [Usar ensamblados personalizados con informes](../custom-assemblies/using-custom-assemblies-with-reports.md)

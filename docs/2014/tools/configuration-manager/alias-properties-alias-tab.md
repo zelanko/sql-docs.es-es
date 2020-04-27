@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ee874caeaa8be9e7b050336f74bab9487f15884
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035304"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>Propiedades de &lt;Alias&gt; (pestaña Alias)
@@ -26,14 +26,14 @@ ms.locfileid: "63035304"
  **Nombre de alias**  
  Nombre (alias) que desee usar para hacer referencia a esta conexión.  
   
- **Nombre de canalización** / **número de Puerto**  
+ **Nombre de canalización** / **Número de puerto**  
  Elementos adicionales de la cadena de conexión. El nombre de este cuadro varía según el protocolo seleccionado. Vea los temas enumerados a continuación para obtener ejemplos.  
   
- **N°**  
+ **Protocolo**  
  Protocolo utilizado para la conexión.  
   
  **Server**  
- Nombre de la instancia [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de a la que se está conectando.  
+ Nombre de la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se va a conectar.  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

@@ -11,23 +11,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480350"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Administrar usuarios de DQS en SSMS
   En este tema se describe cómo crear usuarios adicionales en la instancia de SQL Server con SQL Server Management Studio y cómo concederles roles de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) adecuados en la base de datos DQS_MAIN.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear el inicio de sesión de SQL y concederle los roles de DQS adecuados, debe usarse una cuenta de usuario de Windows que sea miembro del rol fijo de servidor adecuado (como securityadmin, serveradmin o sysadmin).  
   
-##  <a name="GrantRoles"></a>Crear un inicio de sesión de SQL y conceder el rol de DQS  
+##  <a name="create-a-sql-login-and-grant-dqs-role"></a><a name="GrantRoles"></a>Crear un inicio de sesión de SQL y conceder el rol de DQS  
   
 1.  Inicie Microsoft SQL Server Management Studio.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "65480350"
   
 3.  Haga clic con el botón derecho en la carpeta **Seguridad** , seleccione **Nuevo**y, después, haga clic en **Inicio de sesión**.  
   
-4.  En el cuadro de diálogo **Inicio de sesión - Nuevo**, especifique el nombre de un usuario de Windows en el cuadro **Nombre de inicio de sesión**, especifique el tipo de autenticación como **Autenticación de Windows**y haga clic en **Buscar** para validar el usuario.  
+4.  En el cuadro de diálogo **Inicio de sesión-nuevo** , especifique el nombre de un usuario de Windows en el cuadro **nombre de inicio de sesión** , especifique el tipo de autenticación como autenticación de **Windows**y haga clic en **Buscar** para validar el usuario.  
   
     > [!NOTE]  
     >  DQS solo admite la autenticación de Windows; la autenticación de SQL Server no se admite.  

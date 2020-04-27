@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101666"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
@@ -77,7 +77,7 @@ ms.locfileid: "66101666"
  (create-and-manage-role-assignments.md)   
  [Configurar el acceso a Generador de informes](../report-server/configure-report-builder-access.md)   
  [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
- [Protección de elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
+ [Proteger elementos de orígenes de datos compartidos](secure-shared-data-source-items.md)   
  [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

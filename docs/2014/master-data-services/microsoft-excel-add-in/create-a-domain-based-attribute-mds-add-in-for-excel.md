@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478986"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Crear un atributo basado en dominio (complemento MDS para Excel)
@@ -23,14 +23,14 @@ ms.locfileid: "65478986"
  Los valores pueden estar ya en la hoja de cálculo o pueden proceder de una entidad existente.  
   
 > [!NOTE]  
->  Si los usuarios escriben un valor en la columna restringida, en lugar de seleccionarlo de la lista, se muestran errores en la columna **$InputStatus$** al publicar.  
+>   Si los usuarios escriben un valor en la columna restringida, en lugar de seleccionarlo en la lista, los errores aparecen en la columna **$InputStatus$** al publicar.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales del **Explorador** y de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   El modelo y la entidad deben existir.  
   
@@ -52,15 +52,15 @@ ms.locfileid: "65478986"
   
 6.  Si elige **la columna seleccionada** en el paso anterior, en el cuadro **Nuevo nombre de entidad** , escriba un nombre para la nueva entidad. Puede ser el mismo que el nombre de la columna (atributo).  
   
-7.  Haga clic en **OK**. Cada celda de la columna tiene ahora una lista de valores para que los usuarios elijan.  
+7.  Haga clic en **Aceptar**. Cada celda de la columna tiene ahora una lista de valores para que los usuarios elijan.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   Para agregar y eliminar los valores en la lista restringida, cargue la entidad en la que el atributo se basa. Para obtener más información sobre la carga de entidades, vea [cargar datos de MDS en Excel](export-data-to-excel-from-master-data-services.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Atributos basados en dominio &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
  [Cree una entidad &#40;Complemento MDS para Excel&#41;](create-an-entity-mds-add-in-for-excel.md)   
- [Generar un modelo &#40;Complemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [Generar un modelo &#40;complemento MDS para Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

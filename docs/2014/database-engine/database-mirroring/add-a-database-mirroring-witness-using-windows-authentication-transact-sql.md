@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792611"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "67792611"
   
 3.  Conéctese al servidor principal y emita la siguiente instrucción:  
   
-     ALTER DATABASE *<database_name>* Set Witness **=** _<server_network_address>_  
+     ALTER DATABASE *<nombre_de_base_de_datos>* SET WITNESS **=** _<dirección_de_red_de_servidor>_  
   
      donde *<nombre_de_base_de_datos>* es el nombre de la base de datos de la que se va a crear el reflejo (este nombre es el mismo para ambos asociados) y *<dirección_de_red_de_servidor>* es la dirección de red de servidor de la instancia del servidor testigo.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "67792611"
   
      TCP **://**\<_dirección del sistema>_ **:**\<*Puerto>*  
   
-     donde \<la *>de dirección del sistema* es una cadena que identifica de forma inequívoca el sistema del \<equipo de destino y el *Puerto>* es el número de puerto utilizado por el extremo de la creación de reflejo de la instancia del servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md).  
+     donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto>*, el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Por ejemplo, en la instancia del servidor principal, la siguiente instrucción ALTER DATABASE define el testigo. El nombre de la base de datos es **AdventureWorks**, la dirección del sistema es DBSERVER3 (el nombre del sistema testigo) y el puerto que usa el punto de conexión de creación de reflejo de la base de datos del testigo es `7022`:  
+     Por ejemplo, en la instancia del servidor principal, la siguiente instrucción ALTER DATABASE define el testigo. El nombre de la base de datos es **AdventureWorks**, la dirección del sistema es DBSERVER3 (el nombre del sistema testigo) y el puerto usado por el extremo de creación de `7022`reflejo de la base de datos del testigo es:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -129,9 +129,9 @@ ms.locfileid: "67792611"
 ## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Permitir el acceso de red a un extremo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Crear un extremo de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)   
  [Quitar el testigo de una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
- [Testigo de creación de reflejo de la base de datos](database-mirroring-witness.md)  
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

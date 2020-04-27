@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107719"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66107719"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a>Representación en MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Representación en MHTML  
  La extensión de representación en HTML también puede representar informes en MHTML (Encapsulación MIME de documentos HTML agregados). MHTML extiende HTML para incrustar objetos codificados, como imágenes, en el documento HTML. Con la extensión de representación en MHTML, puede incrustar en un único archivo recursos tales como imágenes, documentos u otros archivos binarios como estructuras MIME incluidas en el informe HTML. Los informes MHTML también resultan útiles para incrustarlos en mensajes de correo electrónico porque todos los recursos se incluyen en el informe. Aunque la extensión de representación en HTML es la que en realidad representa el MHTML, esta funcionalidad también se denomina extensión de representación en MHTML.  
   
-##  <a name="BrowserSupport"></a>Compatibilidad con exploradores  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a>Compatibilidad con exploradores  
  Esta extensión de representación admite las versiones siguientes de los exploradores:  
   
 -   Internet Explorer 5.5 y versiones posteriores  
@@ -45,7 +45,7 @@ ms.locfileid: "66107719"
   
  Debido a los distintos comportamientos de los exploradores, el informe representado puede variar ligeramente de un explorador a otro. Por ejemplo, el cuadro de texto contiene una propiedad denominada WritingMode. Esta propiedad no es compatible con Firefox.  
   
-##  <a name="HTMLSpecificRenderingRules"></a>Reglas de representación específicas de HTML  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a>Reglas de representación específicas de HTML  
  Durante la representación se aplican las siguientes reglas específicas de HTML:  
   
 -   El representador genera una estructura de tabla HTML en la que se alojarán todos los elementos existentes en cada colección `ReportItems`, si hubiera más de uno.  
@@ -62,7 +62,7 @@ ms.locfileid: "66107719"
   
 -   Todas las coordenadas y los tamaños de los elementos de informe se convierten a milímetros. Todos los demás tamaños, incluidas las propiedades de estilo, conservan sus unidades originales. Cuando la diferencia entre el tamaño y la posición es inferior a 0,2 mm se trata como si fuera 0 mm.  
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interactividad  
  Algunos elementos interactivos se admiten en HTML. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
@@ -85,12 +85,12 @@ ms.locfileid: "66107719"
   
  El control ReportViewer de formularios Web Forms proporciona funcionalidad adicional de búsqueda.  
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configuración de la información del dispositivo  
  Para cambiar algunos valores de configuración predeterminados para este representador, incluido el modo de representación, solo tiene que cambiar la configuración de la información del dispositivo. Para más información, consulte [HTML Device Information Settings](../html-device-information-settings.md).  
 
 ## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Comportamientos de representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

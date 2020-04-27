@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108113"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pasar un parámetro de informe en una dirección URL
@@ -26,7 +26,7 @@ ms.locfileid: "66108113"
 > [!IMPORTANT]  
 >  Es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El proxy agrega algún contexto a la solicitud HTTP, contexto que es necesario para garantizar la correcta ejecución del informe para los servidores de informes de modo de SharePoint.  
 >   
->  Si no incluye la sintaxis de proxy, tendrá que agregar *rp:* como prefijo del parámetro.  
+>  Si no incluye la sintaxis de proxy, debe prefijar el parámetro con *RP:*.  
   
  Todos los parámetros de consulta pueden tener parámetros de informe correspondientes. Para pasar un parámetro de consulta a un informe, pase el parámetro de informe correspondiente. Para más información, vea [Crear una consulta en el Diseñador de consultas relacionales &#40;Generador de informes y SSRS&#41;](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
@@ -80,7 +80,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  Si un informe contiene un parámetro de informe con un valor predeterminado y el valor de la propiedad `Prompt` es `false` (es decir, la propiedad Preguntar al usuario no está seleccionada en el Administrador de informes), no puede pasar un valor dentro de una dirección URL para ese parámetro de informe. Esto proporciona a los administradores una opción para evitar que los usuarios finales agreguen o modifiquen los valores de ciertos parámetros de informe.  
   
-##  <a name="bkmk_examples"></a> Otros ejemplos  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> Otros ejemplos  
  En el ejemplo siguiente de dirección URL se incluyen espacios en blanco y varios parámetros  
   
 -   El nombre de carpeta de "Equipo de educación de usuarios de SQL Server" incluye espacios en blanco y, por tanto, el signo "+" reemplaza cada espacio.  
@@ -99,7 +99,7 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- En el siguiente ejemplo de dirección URL se pasa un único parámetro de *SellStartDate* con el valor "7/1/2005" para un servidor de informes en modo nativo.  
+ En el siguiente ejemplo de dirección URL se pasa un único parámetro de *SellStartDate* con un valor de "7/1/2005" para un servidor de informes en modo nativo.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  

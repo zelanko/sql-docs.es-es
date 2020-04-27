@@ -14,23 +14,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479564"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Eliminar un grupo de atributos (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine un grupo de atributos cuando ya no necesite que la pestaña se muestre en el área funcional del **explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
--   **Nota:** Cuando existen grupos de atributos, los atributos que no pertenecen a un grupo de atributos no se muestran en el **Explorador**. Cuando no existe ningún grupo de atributos, se muestran todos.  
+-   **Nota** Cuando existan grupos de atributos, los atributos que no pertenezcan a un grupo de atributos no se muestran en el **explorador**. Cuando no existe ningún grupo de atributos, se muestran todos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-attribute-group"></a>Para eliminar un grupo de atributos  
   
@@ -54,6 +54,6 @@ ms.locfileid: "65479564"
   
 ## <a name="see-also"></a>Consulte también  
  [Grupos de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
- [Cree un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
+ [Crear un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

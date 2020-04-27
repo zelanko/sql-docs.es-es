@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481237"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Tarea 10: configurar un dominio compuesto para que use un servicio de datos de referencia
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Tarea 10: Configuración de un dominio compuesto para usar un servicio de datos de referencia
   En esta tarea, configurará el dominio compuesto **validación de direcciones** para que use el servicio **Melissa Data-Address check** . En tiempo de ejecución, durante la actividad de limpieza, DQS pasa los valores de dominios del dominio Validación de direcciones al servicio para su limpieza. Para obtener más información [, vea asignar dominio o compuesto de dominio a datos de referencia](https://msdn.microsoft.com/library/hh213030.aspx) .  
   
 1.  En la Página principal del **cliente DQS**, haga clic en **proveedores (administración de dominios)** en **bases de conocimiento recientes** para iniciar la página **Administración de dominios** .  
@@ -49,6 +49,6 @@ ms.locfileid: "65481237"
 9. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 11: publicar la base de conocimiento](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
+ [Tarea 11: Publicación de la base de conocimiento](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

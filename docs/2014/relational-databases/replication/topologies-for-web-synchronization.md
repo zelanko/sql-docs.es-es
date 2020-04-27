@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273557"
 ---
 # <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-  Puede elegir entre una variedad de topologías de replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sincronización Web. Entre las maneras habituales de configurar una sincronización web se incluyen:  
+  Puede elegir entre una serie de topologías de replicación de sincronización web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Entre las maneras habituales de configurar una sincronización web se incluyen:  
   
 -   Servidor único  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63273557"
  ![Sincronización web con nueva publicación](media/web-sync05.gif "Sincronización web con nueva publicación")  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar la sincronización Web](configure-web-synchronization.md)   
+ [Configurar sincronización web](configure-web-synchronization.md)   
  [Sincronización web para la replicación de mezcla](web-synchronization-for-merge-replication.md)  
   
   

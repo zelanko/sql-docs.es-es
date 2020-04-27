@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102262"
 ---
 # <a name="search-page-report-manager"></a>Buscar (página del Administrador de informes)
@@ -53,7 +53,7 @@ ms.locfileid: "66102262"
   
  No se admiten operadores booleanos, como el signo más (+).  
   
- **Detalles**  
+ **Vista de detalles**  
  Haga clic para mostrar la página Resultados de la búsqueda en una lista que contiene información adicional sobre los elementos, como el tipo de elemento, nombre, la descripción, la carpeta en la que se encuentra y la última vez que se ejecutó. En la vista **Detalles**puede utilizar los botones **Eliminar** y **Mover** para quitar y reubicar los elementos de una carpeta.  
   
  Mantenga el mouse sobre un elemento y haga clic en la flecha de lista desplegable para abrir el menú desplegable donde podrá obtener acceso a las propiedades del elemento seleccionado y configurarlas.  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcf52745a984d049db92e8255ba7984b6b52a71a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483128"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Eliminar una jerarquía derivada (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65483128"
 > [!NOTE]  
 >  Eliminar una jerarquía derivada no tiene ningún efecto en las relaciones de atributo en las que se basas la jerarquía.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>Eliminar una jerarquía derivada  
   

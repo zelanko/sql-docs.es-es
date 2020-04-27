@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106284"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a la leyenda de un gráfico (Generador de informes y SSRS)
@@ -79,7 +79,7 @@ ms.locfileid: "66106284"
  De forma predeterminada, el texto de la leyenda no se optimiza para que quepa en el área de la leyenda. Para que el texto de la leyenda se ajuste automáticamente al espacio asignado, establezca la propiedad `False` AutoFitTextDisabled en y establezca un tamaño de fuente mínimo para la propiedad MinFontSize en el tamaño de fuente más bajo que cree que se va a mostrar y siga permitiendo la optimización de la leyenda.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cuadro de diálogo Propiedades de la leyenda, general &#40;Generador de informes y SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Cuadro de diálogo de Propiedades de la leyenda, General &#40;Generador de informes y SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Cambiar el texto de un elemento de leyenda &#40;Generador de informes y SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [Aplicar formato a un gráfico &#40;Generador de informes y SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   

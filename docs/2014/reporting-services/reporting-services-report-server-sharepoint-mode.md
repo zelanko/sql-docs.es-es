@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: c89596d916f9a8ec2fea91cdea8f72b1958c5b6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102824"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de informes de Reporting Services (modo de SharePoint)
@@ -46,7 +46,7 @@ Para obtener información sobre la instalación y la configuración, vea lo sigu
   
 -   [Tareas relacionadas](#bkmk_relatedtasks)  
   
-##  <a name="bkmk_featuresum"></a>Resumen de características
+##  <a name="feature-summary"></a><a name="bkmk_featuresum"></a>Resumen de características
 
  Configurar un servidor de informes para que se ejecute en el modo integrado de SharePoint proporciona la siguiente funcionalidad adicional, que solo está disponible al implementar un servidor de informes en este modo:  
   
@@ -74,15 +74,15 @@ Para obtener información sobre la instalación y la configuración, vea lo sigu
   
 -   Zonas de AAM, implementaciones con conexión a Internet y tokens de usuario de SharePoint para listas de SharePoint.  
   
-##  <a name="bkmk_connectedandlocal"></a>Modo conectado y modo local
+##  <a name="connected-mode-and-local-mode"></a><a name="bkmk_connectedandlocal"></a>Modo conectado y modo local
 
  La versión SQL Server 2008 R2 presentó un nuevo *modo local* para ver informes desde un servidor de SharePoint 2010 que tenga instalado el complemento Reporting Services de Microsoft SQL Server 2008 R2 o posterior para productos de SharePoint 2010.  
   
--   *Modo*local: el modo local permite que los informes se representen localmente desde la biblioteca de documentos de SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , sin integración con un servidor de informes. Se requiere el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para los productos de SharePoint. No se requiere un servidor de informes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El complemento se puede instalar de varias formas diferentes, incluida la herramienta de preparación de productos de SharePoint 2010. Para obtener más información sobre el modo local, vea informes en modo [local frente a modo conectado en el visor de informes &#40;Reporting Services en modo de sharepoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) y [dónde encontrar el complemento de Reporting Services para productos de SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   *Modo local*: el modo Local permite que los informes se representen localmente desde la biblioteca de documentos de SharePoint, sin integración con un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Se requiere el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para los productos de SharePoint. No se requiere un servidor de informes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El complemento se puede instalar de varias formas diferentes, incluida la herramienta de preparación de productos de SharePoint 2010. Para obtener más información sobre el modo local, vea informes en modo [local frente a modo conectado en el visor de informes &#40;Reporting Services en modo de sharepoint&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) y [dónde encontrar el complemento de Reporting Services para productos de SharePoint](install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Modo conectado*: se admite el modo conectado integrando [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] un servidor de informes en la granja de servidores de SharePoint mediante administración central de SharePoint. La integración con un servidor de informes habilita la creación de informes completos; proporciona las características de colaboración de SharePoint 2010 y las características basadas en servidor de un servidor de informes: suscripciones, instantáneas y procesamiento basado en servidor.  
+-   *Modo conectado*: la compatibilidad con el modo conectado se obtiene integrando un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en la granja de SharePoint mediante la Administración central de SharePoint. La integración con un servidor de informes habilita la creación de informes completos; proporciona las características de colaboración de SharePoint 2010 y las características basadas en servidor de un servidor de informes: suscripciones, instantáneas y procesamiento basado en servidor.  
   
-##  <a name="bkmk_unsupportedsharepoint"></a>Características de SharePoint no admitidas
+##  <a name="unsupported-sharepoint-features"></a><a name="bkmk_unsupportedsharepoint"></a>Características de SharePoint no admitidas
 
  No todas las características de SharePoint se encuentran disponibles para las operaciones integradas. A continuación se muestra una lista de las características de SharePoint con las que [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no se integra directamente:  
   
@@ -100,14 +100,14 @@ Para obtener información sobre la instalación y la configuración, vea lo sigu
   
      El historial de versiones de la biblioteca de documentos se configura en la página "Configuración de versiones" de "Configuración de biblioteca".  
   
-##  <a name="bkmk_supportedcombinations"></a>Combinaciones admitidas del complemento de SharePoint y el servidor de informes
+##  <a name="supported-combinations-of-the-sharepoint-add-in-and-report-server"></a><a name="bkmk_supportedcombinations"></a>Combinaciones admitidas del complemento de SharePoint y el servidor de informes
 
  No todas las características se admiten en todas las combinaciones de servidor de informes, complemento de Reporting Services para SharePoint y productos de SharePoint. Para obtener más información, vea [combinaciones admitidas de SharePoint y Reporting Services Server y el complemento &#40;SQL Server 2014&#41;](install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 > [!NOTE]  
 >  Se debe utilizar la versión correcta del complemento Reporting Services con la versión correspondiente de Productos de SharePoint.  
   
-##  <a name="bkmk_components"></a>Componentes que proporcionan integración
+##  <a name="components-that-provide-integration"></a><a name="bkmk_components"></a>Componentes que proporcionan integración
 
  Para combinar los servidores en una sola implementación, se integra una instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con una instancia de productos de SharePoint.  
   
@@ -122,10 +122,9 @@ Para obtener información sobre la instalación y la configuración, vea lo sigu
   
  Una vez instalado el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en SharePoint y configurados los dos servidores para la integración, puede cargar o publicar los tipos de contenido del servidor de informes en una biblioteca de SharePoint y, a continuación, ver y administrar esos documentos desde un sitio de SharePoint. Cargar o publicar el contenido de un servidor de informes es un primer paso importante; las páginas y el elemento web están disponibles cuando se seleccionan definiciones de informe (.rdl), modelos de informe (.smdl) y orígenes de datos compartidos (.rsds) en un sitio de SharePoint.  
   
-##  <a name="bkmk_language"></a>Consideraciones de idioma
+##  <a name="language-considerations"></a><a name="bkmk_language"></a>Consideraciones de idioma
 
- 
-  [!INCLUDE[SPF2010](../includes/spf2010-md.md)] y [!INCLUDE[SPS2010](../includes/sps2010-md.md)] están disponibles en muchos más idiomas que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ [!INCLUDE[SPF2010](../includes/spf2010-md.md)] y [!INCLUDE[SPS2010](../includes/sps2010-md.md)] están disponibles en muchos más idiomas que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
  Cuando configure un servidor de informes para que se ejecute en una implementación de un producto de SharePoint, es probable que vea una combinación de idiomas. La interfaz de usuario, la documentación y los mensajes se mostrarán en los siguientes idiomas:  
   
@@ -137,7 +136,7 @@ Para obtener información sobre la instalación y la configuración, vea lo sigu
   
  Si el idioma de su producto o tecnología de SharePoint difiere del idioma del servidor de informes, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] intentará utilizar el idioma que más se aproxime de la misma familia de idiomas. Si no hay ningún idioma sustituto que se aproxime, el servidor de informes utilizará el inglés.  
   
-##  <a name="bkmk_relatedtasks"></a> Tareas relacionadas
+##  <a name="related-tasks"></a><a name="bkmk_relatedtasks"></a> Tareas relacionadas
 
  En la tabla siguiente se resumen las tareas relacionadas con un servidor de informes en modo de SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :  
   

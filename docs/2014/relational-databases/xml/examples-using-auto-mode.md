@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287809"
 ---
 # <a name="examples-using-auto-mode"></a>Ejemplos: Usar el modo AUTO
@@ -167,8 +167,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
  `...`  
   
 ## <a name="example-returning-binary-data"></a>Ejemplo: devolver datos binarios  
- Esta consulta devuelve una fotografía del producto de la tabla `ProductPhoto` . 
-  `ThumbNailPhoto` es una columna `varbinary(max)` de la tabla `ProductPhoto`. De manera predeterminada, el modo `AUTO` devuelve a los datos binarios una referencia que es una dirección URL relativa de la raíz virtual de la base de datos donde se ejecuta la consulta. Se debe especificar el atributo clave `ProductPhotoID` para identificar la imagen. Al recuperar la referencia de una imagen como se muestra en este ejemplo, también debe especificarse la clave principal en la cláusula `SELECT` para identificar una fila de forma única.  
+ Esta consulta devuelve una fotografía del producto de la tabla `ProductPhoto` . `ThumbNailPhoto` es una columna `varbinary(max)` de la tabla `ProductPhoto`. De manera predeterminada, el modo `AUTO` devuelve a los datos binarios una referencia que es una dirección URL relativa de la raíz virtual de la base de datos donde se ejecuta la consulta. Se debe especificar el atributo clave `ProductPhotoID` para identificar la imagen. Al recuperar la referencia de una imagen como se muestra en este ejemplo, también debe especificarse la clave principal en la cláusula `SELECT` para identificar una fila de forma única.  
   
 ```  
 SELECT ProductPhotoID, ThumbNailPhoto  

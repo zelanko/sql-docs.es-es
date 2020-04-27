@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480015"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
@@ -50,7 +50,7 @@ ms.locfileid: "65480015"
   
 |Tipo de administrador|Descripción|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Administrador del sistema|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] no tienen ningún efecto sobre el acceso del administrador.<br /><br /> Tiene automáticamente el permiso **Actualizar** para todos los modelos.<br /><br /> Tiene acceso a todas las áreas funcionales automáticamente.<br /><br /> En MDM. tblUser, el valor de la columna **ID** es **1**.|  
+|Administrador del sistema de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] no tienen ningún efecto sobre el acceso del administrador.<br /><br /> Tiene automáticamente el permiso **Actualizar** para todos los modelos.<br /><br /> Tiene acceso a todas las áreas funcionales automáticamente.<br /><br /> En MDM. tblUser, el valor de la columna **ID** es **1**.|  
 |Administrador de modelo|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] determinan si el usuario es o no un administrador de modelo.<br /><br /> Puede ser administrador de modelo según los permisos que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Es un administrador solo para los modelos que tienen el permiso **Actualizar** asignado al objeto de modelo de nivel superior y ningún otro permiso.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> En MDM. tblUser, el valor de la columna **ID** no es **1**.|  
   
 ## <a name="see-also"></a>Consulte también  

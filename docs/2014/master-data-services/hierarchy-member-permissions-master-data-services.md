@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482954"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permisos de miembros de la jerarquía (Master Data Services)
@@ -37,7 +37,7 @@ ms.locfileid: "65482954"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Solo lectura**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario tampoco puede mover los miembros en ninguna jerarquía explícita o colección a la que los miembros pertenezcan.<br /><br /> Nota: Si asigna el permiso **de solo lectura** a la **raíz**, los miembros de **raíz** son de solo lectura; sin embargo, en las jerarquías explícitas y colecciones, el usuario puede trasladar miembros a **raíz** y agregar nuevos miembros a la **raíz**.|  
-|**Update**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
+|**Actualizar**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
 |**Deny**|Los miembros no se muestran.|  
   
  En la pestaña **Miembros de la jerarquía** , los permisos que asigne no surtirán efecto inmediatamente. La frecuencia con la que se aplican permisos depende de la **configuración del intervalo de procesamiento de la seguridad de los miembros** en la tabla de configuración del sistema en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Puede aplicar permisos de los miembros de forma inmediata si sigue los pasos descritos en [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md).  
@@ -60,6 +60,6 @@ ms.locfileid: "65482954"
  [Cómo se determinan los permisos &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Jerarquías &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [Aplicar inmediatamente los permisos de miembro &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
   
   

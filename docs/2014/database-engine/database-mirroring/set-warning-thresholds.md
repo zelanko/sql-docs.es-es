@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65805157"
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
@@ -24,7 +24,7 @@ ms.locfileid: "65805157"
   
  El cuadro de diálogo intenta conectarse a las dos instancias del servidor. Estas conexiones se establecen de forma asincrónica. En el cuadro de diálogo se muestra el estado de conexión de cada asociado. Si el asociado no está conectado, haga clic en **Conectar**.  
   
- **Para usar SQL Server Management Studio para supervisar la creación de reflejo de la base de datos**  
+ **Para utilizar SQL Server Management Studio a fin de supervisar la creación de reflejo de la base de datos**  
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
@@ -34,19 +34,19 @@ ms.locfileid: "65805157"
   
  Este campo también indica si el monitor está conectado actualmente a esta instancia del servidor. Los estados de conexión posibles son:  
   
--   **No conectado a**  *server_instance_name*  
+-   **No conectado a** *nombre de instancia de servidor*  
   
--   **Intentando conectarse a**  *server_instance_name*  
+-   **Intentando conectar a** *nombre de instancia de servidor*  
   
--   **Conectado a**  *server_instance_name*  
+-   **Conectado a** *nombre de instancia de servidor*  
   
     > [!NOTE]  
-    >  Si no es miembro del rol fijo de servidor **sysadmin** , este estado es **Conectado a** *nombre_instancia_servidor* **(permisos limitados)**.  
+    >  Si no es miembro del rol fijo de servidor **sysadmin**, este estado es **Conectado a** *nombre de instancia de servidor*  **(permisos limitados)** .  
   
  El nombre de cada una de las instancias del servidor asociado se muestra en otro campo de *instancia del servidor y su estado de conexión* . En el campo superior se muestra el servidor principal cuando el monitor inició su ejecución.  
   
  **Conectar**/**Cancelar**  
- Un botón **conectar**/**Cancelar** está asociado a cada *instancia del servidor y sus campos de estado de conexión* . El estado del botón depende del estado de la conexión:  
+ Un botón **Conectar**/**Cancelar** está asociado a cada campo de la *instancia del servidor y su estado de conexión* . El estado del botón depende del estado de la conexión:  
   
 -   Si no hay conexión con la instancia del servidor, el texto del botón es **Conectar**. Haga clic en el botón para conectarse a la instancia del servidor.  
   
@@ -72,10 +72,10 @@ ms.locfileid: "65805157"
 |**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|El umbral indica el número de minutos de transacciones que no se han enviado desde la cola de envío a la instancia del servidor reflejado. Este valor ayuda a medir la posibilidad de pérdida de datos con respecto a la hora.|  
 |**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|El umbral indica el número de milisegundos de retraso por transacción (solo relevante en el modo de seguridad alta). Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día.|  
   
- **Habilitado en '** * \<instancia de servidor>* **'**  
+ **Habilitado en "** *\<instancia de servidor>* **"**  
  Una casilla en blanco indica que la advertencia está deshabilitada actualmente en la instancia del servidor. Para habilitar una advertencia, haga clic en su casilla.  
   
- **Umbral en '** * \<instancia de servidor>* **'**  
+ **Umbral en "** *\<instancia de servidor* **"**  
  Al habilitar una advertencia, establezca el umbral en la parte izquierda de esta columna. Se produce un evento si se ha alcanzado el umbral especificado al actualizarse la tabla de estado. Si deshabilita un umbral tras la configuración de un valor, su valor permanece en este campo y se usará si vuelve a habilitar la advertencia.  
   
  Cuando no se habilita una advertencia, este campo está inactivo.  

@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482566"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Cuadro de diálogo Filtrar (Complemento MDS para Excel)
-  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use el cuadro de diálogo **Filtro** para restringir la lista de datos administrados por MDS antes de cargarla en Excel.  
+  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], use el cuadro de diálogo **filtro** para restringir la lista de datos administrados por MDS antes de cargarlos en Excel.  
   
  Este cuadro de diálogo contiene tres secciones: **Columnas**, **Filas**, y **Resumen**.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65482566"
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
 |Atributo|Muestra un atributo por el que desea filtrar. Si no aparece ningún atributo, se debe a que no se han agregado.<br /><br /> Nota: Puede filtrar los atributos que no tiene previsto mostrar en la hoja de cálculo.|  
-|Operator|Muestra los operadores correspondientes al tipo de atributo que estaba seleccionado. Para obtener más información, consulte [Operadores de filtro &#40;Master Data Services&#41;](../filter-operators-master-data-services.md).|  
+|Operador|Muestra los operadores correspondientes al tipo de atributo que estaba seleccionado. Para obtener más información, consulte [Operadores de filtro &#40;Master Data Services&#41;](../filter-operators-master-data-services.md).|  
 |Criterios|Los criterios por los que desea filtrar.|  
 |Resumen de actualización|Cuando trabaje con conjuntos de datos grandes, haga clic para actualizar la sección **Resumen** con detalles de la cantidad de datos que se cargarán.|  
 |Sumar|Al hacer clic en un atributo en la sección **Columnas** y, a continuación, hacer clic en **Agregar**, se agrega un atributo a la lista de filtros.|  
@@ -54,7 +54,7 @@ ms.locfileid: "65482566"
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
 |Modelo|Nombre del modelo.|  
-|Versión|El nombre de la versión.|  
+|Version|El nombre de la versión.|  
 |Entidad|Nombre de la entidad.|  
 |Filas|El número de filas que se cargan en Excel, basado en los filtros aplicados en la sección **Filas** .|  
 |Columnas|El número de columnas que se cargarán en Excel, en función de los atributos seleccionados en la sección **Columnas** .|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265860"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Crear un componente de tiempo de ejecución de elemento de informe personalizado
@@ -150,6 +150,6 @@ namespace Microsoft.Samples.ReportingServices
  [Arquitectura de elementos de informe personalizados](custom-report-item-architecture.md)   
  [Crear un componente de tiempo de diseño de elemento de informe personalizado](creating-a-custom-report-item-design-time-component.md)   
  [Bibliotecas de clases de elementos de informe personalizadas](custom-report-item-class-libraries.md)   
- [Implementación de un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Cómo: Implementar un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
   
   

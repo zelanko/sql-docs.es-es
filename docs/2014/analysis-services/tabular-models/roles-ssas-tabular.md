@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284859"
 ---
 # <a name="roles-ssas-tabular"></a>Roles (SSAS tabular)
@@ -35,11 +35,11 @@ ms.locfileid: "67284859"
   
 -   [Filtros de fila](#bkmk_rowfliters)  
   
--   [Probar roles](#bkmk_testroles)  
+-   [Prueba de roles](#bkmk_testroles)  
   
 -   [Tareas relacionadas](#bkmk_rt)  
   
-##  <a name="bkmk_underst"></a>Descripción de los roles  
+##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>Descripción de los roles  
  Los roles se usan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en para administrar la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguridad de los datos de y. Hay dos tipos de roles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 -   El rol del servidor, que es un rol fijo que proporciona acceso de administrador a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -48,14 +48,14 @@ ms.locfileid: "67284859"
   
  Los roles definidos para un modelo tabular son roles de base de datos. Es decir, los roles contienen miembros que son usuarios o grupos de Windows con permisos específicos que definen las acciones que pueden realizar en la base de datos del modelo. Un rol de base de datos se crea como objeto independiente en la base de datos y solo se aplica a la base de datos en que se crea ese rol. El autor del modelo que, de forma predeterminada, tiene permisos de administrador en el servidor de bases de datos del área de trabajo, incluye a los usuarios y/o grupos de Windows en el rol; para un modelo implementado, lo hace un administrador.  
   
- Use los filtros de fila para definir de forma más exhaustiva los roles en los modelos tabulares. Los filtros de fila usan expresiones DAX para definir las filas de una tabla, así como las filas relacionadas en las distintas direcciones, que los usuarios pueden consultar. Los filtros de fila que usen expresiones de DAX solo se pueden definir para los permisos de lectura y de lectura y procesamiento. Para obtener más información, vea [Row Filters](#bkmk_rowfliters) , más adelante en este tema.  
+ Use los filtros de fila para definir de forma más exhaustiva los roles en los modelos tabulares. Los filtros de fila usan expresiones DAX para definir las filas de una tabla, así como las filas relacionadas en las distintas direcciones, que los usuarios pueden consultar. Los filtros de fila que usen expresiones de DAX solo se pueden definir para los permisos de lectura y de lectura y procesamiento. Para obtener más información, vea [filtros de fila](#bkmk_rowfliters) más adelante en este tema.  
   
  De manera predeterminada, cuando crea un nuevo proyecto modelo tabular, el proyecto modelo no tiene ningún rol. Los roles se pueden definir mediante el cuadro de diálogo Administrador de roles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Si los roles se definen durante la creación del modelo, se aplican a la base de datos del área de trabajo del modelo. Cuando se implementa el modelo, se aplican los mismos roles al modelo implementado. Una vez implementado el modelo, los miembros del rol de servidor (administrador de[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) y los administradores de bases de datos pueden administrar los roles asociados al modelo y los miembros asociados con cada rol mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 > [!NOTE]  
 >  Los roles definidos para un modelo configurado para el modo DirectQuery no pueden usar filtros de fila; sin embargo, se aplicarán los permisos definidos para cada rol.  
   
-##  <a name="bkmk_permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permisos  
  Cada rol tiene un único permiso de base de datos definido (excepto en el caso del permiso de lectura y procesamiento combinado). De forma predeterminada, los roles tienen el permiso Ninguno. Es decir, una vez que se agreguen los miembros al rol con el permiso Ninguno, estos no podrán modificar la base de datos, ejecutar una operación de proceso, consultar los datos ni ver la base de datos a menos que se conceda un permiso diferente.  
   
  Un grupo o usuario de Windows puede ser miembro de varios roles, cada uno de ellos con un permiso distinto. Cuando un usuario es miembro de varios roles, los permisos definidos para cada uno de ellos son acumulativos. Por ejemplo, si un usuario es miembro de un rol que tiene el permiso de lectura y de otro que tiene el permiso Ninguno, dicho usuario tendrá permisos de lectura.  
@@ -70,7 +70,7 @@ ms.locfileid: "67284859"
 |Proceso|Los miembros pueden ejecutar operaciones de proceso mediante la ejecución de un script o un paquete que contenga un comando de proceso. No se puede modificar el esquema de la base de datos de modelo. No se pueden consultar los datos. No puede consultar la base de datos del modelo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|No se pueden aplicar filtros de fila. No se pueden consultar datos en este rol|  
 |Administrador|Los miembros pueden realizar modificaciones en el esquema del modelo y consultar todos los datos en el diseñador de modelos, el cliente de informes y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|No se pueden aplicar filtros de fila. Todos los datos se pueden consultar datos en este rol.|  
   
-##  <a name="bkmk_rowfliters"></a>Filtros de fila  
+##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>Filtros de fila  
  Los filtros de fila definen las filas de una tabla que los miembros de un rol determinado pueden consultar. Los filtros de fila están definidos para cada tabla en un modelo mediante fórmulas DAX.  
   
  Los filtros de fila solo se pueden definir para los roles con permisos de lectura y lectura y proceso. De forma predeterminada, si no se define un filtro de fila para una tabla determinada, los miembros de un rol que tenga permisos de lectura o de lectura y procesamiento pueden consultar todas las filas de la tabla, a menos que se aplique un filtro cruzado de otra tabla.  
@@ -124,14 +124,14 @@ ms.locfileid: "67284859"
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|Fabricación|  
-|5|Quality Assurance|  
+|5|Control de calidad|  
 |6|Research and Development|  
 |7|Sales and Marketing|  
   
-##  <a name="bkmk_testroles"></a>Probar roles  
+##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>Probar roles  
  Al crear un proyecto de modelos, puede usar la característica Analizar en Excel para probar la eficacia de los roles que ha definido. En el menú **Modelo** del diseñador de modelos, al hacer clic en **Analizar en Excel**, y antes de que se inicie Excel, aparecerá el cuadro de diálogo **Elegir credenciales y perspectivas** . En este cuadro de diálogo, puede especificar el nombre de usuario actual, otro nombre de usuario, un rol y una perspectiva que usará para conectar con el modelo del área de trabajo como un origen de datos. Para obtener más información, vea [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_rt"></a> Tareas relacionadas  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102133"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
@@ -45,8 +45,7 @@ ms.locfileid: "66102133"
  Las instrucciones siguientes están pensadas para un servidor de informes en modo nativo. Si el servidor de informes se implementa en modo integrado de SharePoint, se deben utilizar los valores de autenticación predeterminados que especifican la seguridad integrada de Windows. El servidor de informes utiliza las características internas de la extensión de autenticación de Windows predeterminada para admitir los servidores de informes en modo integrado de SharePoint.  
   
 ## <a name="extended-protection-for-authentication"></a>Protección ampliada para la autenticación  
- A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se admite la protección ampliada para autenticación. La característica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el uso del enlace de canal y del enlace de servicio para mejorar la protección de la autenticación. Las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tienen que usarse con un sistema operativo que admita la protección ampliada. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la protección extendida viene determinada por la configuración del archivo RSReportServer.config. El archivo puede actualizarse modificando el archivo o usando las API WMI. Para obtener más información, vea [protección ampliada para la autenticación con Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], se admite la protección ampliada para autenticación. La característica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el uso del enlace de canal y del enlace de servicio para mejorar la protección de la autenticación. Las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] tienen que usarse con un sistema operativo que admita la protección ampliada. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para la protección extendida viene determinada por la configuración del archivo RSReportServer.config. El archivo puede actualizarse modificando el archivo o usando las API WMI. Para más información, consulte [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Para configurar un servidor de informes para usar la seguridad integrada de Windows  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66102133"
           <EnableAuthPersistence>true</EnableAuthPersistence>  
     ```  
   
-     \<>/Authentication  
+     \</Authentication>  
   
      La tercera estructura XML especifica todos los paquetes de seguridad que se utilizan en la seguridad integrada de Windows:  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66102133"
   
 8.  Reinicie el servidor de informes para borrar las sesiones que estén abiertas en ese momento.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a>Resolver errores de autenticación Kerberos al conectarse a un servidor de informes  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a>Resolver errores de autenticación Kerberos al conectarse a un servidor de informes  
  En un servidor de informes que esté configurado para usar la autenticación Kerberos o Negotiate, se producirá un error en una conexión de cliente con el servidor de informes si hay un error de autenticación Kerberos. Se producen errores de autenticación Kerberos cuando:  
   
 -   El servicio del servidor de informes se ejecuta como una cuenta de usuario de dominio de Windows y no se registró un nombre de la entidad de seguridad del servicio (SPN) para la cuenta.  

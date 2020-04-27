@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbf84d6fd3253a3b4d945693090fdad00d077ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483546"
 ---
 # <a name="collections-master-data-services"></a>Colecciones (Master Data Services)
@@ -45,7 +45,7 @@ ms.locfileid: "65483546"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Habilitar una entidad para colecciones y jerarquías explícitas.|[Habilitar una entidad para colecciones y jerarquías explícitas &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|Crear una nueva colección.|[Cree una colección &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
+|Crear una nueva colección.|[Crear una colección &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
 |Agregar miembros a una colección existente.|[Agregar miembros a una colección &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  

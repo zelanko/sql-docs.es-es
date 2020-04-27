@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108079"
 ---
 # <a name="plan-for-map-report-support"></a>Planear la compatibilidad de informe de mapa
@@ -26,7 +26,7 @@ ms.locfileid: "66108079"
  En cada informe, sus autores pueden especificar si se utiliza una conexión de Capa de sockets seguros (SSL) para recuperar los mosaicos del servidor de mosaicos. Para ello, en el panel Propiedades de la capa de mosaico, deben establecer la propiedad booleana UseSecureConnection en `true`.  
   
 > [!NOTE]  
->  Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
+>   Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
 ## <a name="report-design-recommendations"></a>Recomendaciones de diseño de informes  
  Un buen diseño de los informes de mapas requiere que su autor evalúe los pros y los contras entre los datos espaciales estáticos y dinámicos, y que encuentre un equilibrio que sirva para los usuarios del informe. Los elementos de mapa incrustados pueden aumentar considerablemente el tamaño de la definición de informe, pero reducen el tiempo necesario para ver el informe de mapa. Los elementos de mapa dinámicos reducen el tamaño de la definición de informe, pero aumentan el tiempo necesario para procesar y ver el mapa. El autor del informe debe buscar el equilibrio adecuado entre estos aspectos opuestos.  
@@ -50,6 +50,6 @@ ms.locfileid: "66108079"
  Para obtener más información, [Maps &#40;generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Solucionar problemas de informes: informes de mapa &#40;Generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

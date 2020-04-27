@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3eafc9720197ffc32cdca2ef58f91725befaaec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483154"
 ---
 # <a name="database-object-security-master-data-services"></a>Seguridad de objetos de base de datos (Master Data Services)
@@ -35,13 +35,13 @@ ms.locfileid: "65483154"
   
 -   [Eliminar versiones](#Versions)  
   
--   [Aplicar inmediatamente los permisos de los miembros de la jerarquía](#Hierarchy)  
+-   [Aplicación inmediata de permisos de los miembros de la jerarquía](#Hierarchy)  
   
 -   [Cambio de la cuenta del administrador del sistema](#SysAdmin)  
   
 -   [Configuración del sistema](#SysSettings)  
   
-##  <a name="Staging"></a>Datos de almacenamiento provisional  
+##  <a name="staging-data"></a><a name="Staging"></a> Almacenar datos de forma provisional  
  En la tabla siguiente, cada elemento protegible tiene "name" como parte del nombre. Indica el nombre de la tabla de ensayo que se especificó cuando se creó una entidad. Para obtener más información, vea [&#40;de importación de datos Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
 |Acción|Elementos protegibles|Permisos|  
@@ -56,7 +56,7 @@ ms.locfileid: "65483154"
   
  Para más información, vea [Importación de datos &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="rules"></a>Validar datos según las reglas de negocios  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Validar datos según las reglas de negocios  
   
 |Acción|Elemento protegible|Permisos|  
 |------------|---------------|-----------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "65483154"
   
  Para obtener más información, consulte [Procedimiento almacenado de validación &#40;Master Data Services&#41;](../../2014/master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="Versions"></a>Eliminar versiones  
+##  <a name="deleting-versions"></a><a name="Versions"></a>Eliminar versiones  
   
 |Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
@@ -73,15 +73,15 @@ ms.locfileid: "65483154"
   
  Para obtener más información, consulte [Eliminar una versión &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="Hierarchy"></a>Aplicar inmediatamente los permisos de los miembros de la jerarquía  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Aplicar inmediatamente los permisos de los miembros de la jerarquía  
   
 |Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
 |Aplicar los permisos de los miembros inmediatamente|mdm.udpSecurityMemberProcessRebuildModel|Ejecute|  
   
- Para más información, vea [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
+ Para obtener más información, consulte [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysAdmin"></a>Cambio de la cuenta de administrador del sistema  
+##  <a name="changing-the-system-administrator-account"></a><a name="SysAdmin"></a>Cambio de la cuenta de administrador del sistema  
   
 |Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
@@ -90,10 +90,10 @@ ms.locfileid: "65483154"
   
  Para obtener más información, vea [cambiar la cuenta de administrador del sistema &#40;Master Data Services&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md).  
   
-##  <a name="SysSettings"></a>Configuración del sistema  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>Configuración del sistema  
  Hay opciones del sistema que puede configurar para controlar el comportamiento en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Puede ajustar estos valores en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o, si tiene el acceso ACTUALIZAR, puede ajustarlos directamente en la tabla de base de datos mdm.tblSystemSetting. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Master Data Services de &#40;de seguridad&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [Seguridad &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217128"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servicios de minería de datos y orígenes de datos
@@ -61,9 +61,9 @@ ms.locfileid: "79217128"
   
 -   Dado que la minería de datos es un servicio que proporciona un servidor, a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se le debe conceder acceso al origen de datos.  Hay dos aspectos para el acceso: la ubicación y la identidad.  
   
-     La **Ubicación** significa que, si se genera un modelo con datos que solo se almacenan en el equipo y, a continuación, se implementa el modelo en un servidor, el modelo no se procesará porque no se puede encontrar el origen de datos. Para resolver este problema, puede que tenga que transferir datos de la misma instancia de SQL Server en la que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se está ejecutando o mover los archivos a una ubicación compartida.  
+     **La ubicación** significa que, si genera un modelo con los datos almacenados solo en el equipo y luego implementa el modelo en un servidor, el modelo no podría procesarse porque el origen de datos no podría encontrarse. Para resolver este problema, puede que tenga que transferir datos de la misma instancia de SQL Server en la que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se está ejecutando o mover los archivos a una ubicación compartida.  
   
-     La **identidad** significa que los servicios [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de deben poder abrir el archivo de datos o el origen de datos con las credenciales adecuadas. Por ejemplo, al generar el modelo, podría haber tenido permisos ilimitados para ver los datos, pero el usuario que procesa y actualiza los modelos del servidor podría haber limitado o impedido el acceso a los datos, lo que podría impedir el procesamiento o afectar al contenido de un modelo. Como mínimo, la cuenta utilizada para conectarse al origen de datos remoto debe tener permisos de lectura en los datos.  
+     **La identidad** significa que los servicios de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deben poder abrir el archivo de datos o el origen de datos con las credenciales adecuadas. Por ejemplo, al generar el modelo, podría haber tenido permisos ilimitados para ver los datos, pero el usuario que procesa y actualiza los modelos del servidor podría haber limitado o impedido el acceso a los datos, lo que podría impedir el procesamiento o afectar al contenido de un modelo. Como mínimo, la cuenta utilizada para conectarse al origen de datos remoto debe tener permisos de lectura en los datos.  
   
 -   Al mover un modelo, se aplican los mismos requisitos: debe configurar el acceso adecuado a la ubicación del origen de datos antiguo, copiar los orígenes de datos o configurar un nuevo origen de datos. Además, debe transferir los inicios de sesión y los roles, o configurar los permisos para permitir que los objetos de minería de datos se procesen y actualicen en la nueva ubicación.  
   
@@ -93,15 +93,15 @@ ms.locfileid: "79217128"
 ## <a name="programmatic-access-to-data-mining-objects"></a>Acceso a objetos de minería de datos mediante programación  
  Puede utilizar los modelos de objetos siguientes para crear una conexión a una base de datos de Analysis Services y trabajar con objetos de minería de datos:  
   
- **ADO** Utiliza OLE DB para conectarse a un servidor de Analysis Services. Cuando se utiliza ADO, el cliente está limitado a consultas de conjunto de filas de esquema e instrucciones DMX.  
+ **ADO** Usa OLE DB para conectarse a un servidor de Analysis Services. Cuando se utiliza ADO, el cliente está limitado a consultas de conjunto de filas de esquema e instrucciones DMX.  
   
- **ADO.net** Interactúa con los proveedores de SQL Server mejor que otros proveedores. Utiliza adaptadores de datos para almacenar conjuntos de filas dinámicos. Utiliza el objeto de conjunto de datos, que es una memoria caché de los datos del servidor almacenados como tablas de datos que se pueden actualizar o guardar como XML.  
+ **ADO.NET** Interactúa con los proveedores de SQL Server mejor que con otros proveedores. Utiliza adaptadores de datos para almacenar conjuntos de filas dinámicos. Utiliza el objeto de conjunto de datos, que es una memoria caché de los datos del servidor almacenados como tablas de datos que se pueden actualizar o guardar como XML.  
   
- **ADOMD.net** Proveedor de datos administrados que está optimizado para trabajar con minería de datos y OLAP. ADOMD.NET es más rápido y usa la memoria con más eficacia que ADO.NET. ADOMD.NET también permite recuperar los metadatos acerca de los objetos de servidor. Se recomienda para las aplicaciones cliente excepto cuando .NET no está disponible.  
+ **ADOMD.NET** Un proveedor de datos administrado que se ha optimiza para trabajar con minería de datos y OLAP. ADOMD.NET es más rápido y usa la memoria con más eficacia que ADO.NET. ADOMD.NET también permite recuperar los metadatos acerca de los objetos de servidor. Se recomienda para las aplicaciones cliente excepto cuando .NET no está disponible.  
   
- **ADOMD de servidor** Modelo de objetos para tener acceso a Analysis Services objetos directamente en el servidor. Lo usan los procedimientos almacenados de Analysis Services pero no el cliente.  
+ **ADOMD de servidor** Modelo de objetos para tener acceso directo a los objetos de Analysis Services en el servidor. Lo usan los procedimientos almacenados de Analysis Services pero no el cliente.  
   
- **Amo** Interfaz de administración para Analysis Services que reemplaza a objetos de ayuda para la toma de decisiones (DSO). Operaciones tales como la iteración de objetos requieren permisos superiores cuando se usa AMO que cuando se usan otras interfaces. Eso se debe a que AMO tiene acceso directo a los metadatos, mientras que ADOMD.NET y otras interfaces tienen acceso solamente a los esquemas de la base de datos.  
+ **AMO** Interfaz de administración para Analysis Services que reemplaza a Objetos de ayuda para la toma de decisiones (DSO). Operaciones tales como la iteración de objetos requieren permisos superiores cuando se usa AMO que cuando se usan otras interfaces. Eso se debe a que AMO tiene acceso directo a los metadatos, mientras que ADOMD.NET y otras interfaces tienen acceso solamente a los esquemas de la base de datos.  
   
 ### <a name="browse-and-query-access-to-servers"></a>Exploración y consulta del acceso a los servidores  
  Puede realizar cualquier tipo de predicciones con una instancia de Analysis Services en el modo de minería de datos y OLAP, con las restricciones siguientes:  

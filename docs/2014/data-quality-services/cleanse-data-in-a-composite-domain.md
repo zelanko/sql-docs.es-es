@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481147"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpiar datos en un dominio compuesto
   Este tema proporciona información sobre la limpieza de dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados. Todos los dominios que forman un dominio compuesto deben tener un área de conocimiento común. Para obtener información detallada acerca de los dominios compuestos, vea [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
   
-##  <a name="Mapping"></a>Asignación de un dominio compuesto a los datos de origen  
+##  <a name="mapping-a-composite-domain-to-the-source-data"></a><a name="Mapping"></a> Asignación de un dominio compuesto a los datos de origen  
  Existen dos formas de asignar los datos de origen a un dominio compuesto:  
   
 -   Los datos de origen están en un único campo (por ejemplo, Nombre completo), que está asignado a un dominio compuesto.  
@@ -33,7 +33,7 @@ ms.locfileid: "65481147"
   
  Para obtener un ejemplo de cómo asignar dominios compuestos a los datos de origen, vea [adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
-##  <a name="CDCorrection"></a>Corrección de datos mediante reglas entre dominios definitivas  
+##  <a name="data-correction-using-definitive-cross-domain-rules"></a><a name="CDCorrection"></a> Corrección de datos mediante reglas entre dominios definitivas  
  Las reglas entre dominios existentes en un dominio compuesto permiten crear reglas que indican la relación que hay entre los dominios que conforman dicho dominio compuesto. Las reglas entre dominios se tienen en cuenta cuando se ejecuta la actividad de limpieza en los datos de origen y resultan involucrados dominios compuestos. Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos.  
   
  Consideremos el siguiente ejemplo: existe un dominio compuesto, Product, con tres dominios individuales: ProductName, CompanyName y ProductVersion. Cree la siguiente regla entre dominios definitiva:  
@@ -59,7 +59,7 @@ ms.locfileid: "65481147"
 > [!NOTE]  
 >  La regla entre dominios definitiva no funcionará en dominios compuestos que estén adjuntados al servicio de datos de referencia.  
   
-##  <a name="DataProfiling"></a>Generación de perfiles de datos para dominios compuestos  
+##  <a name="data-profiling-for-composite-domains"></a><a name="DataProfiling"></a>Generación de perfiles de datos para dominios compuestos  
  El proceso de generación de perfiles de DQS proporciona dos dimensiones de calidad de datos: *integridad* (la medida en que los datos están presentes) y *precisión* (la medida en que los datos se pueden utilizar para su uso previsto) durante la actividad de limpieza. La generación de perfiles no puede proporcionar estadísticas de integridad confiables para los dominios compuestos. Si necesita estadísticas de integridad, utilice dominios individuales en lugar de dominios compuestos. Si desea utilizar dominios compuestos, puede crear una base de conocimiento con dominios individuales para generar los perfiles y determinar la integridad, y crear otro dominio con un dominio compuesto para la actividad de limpieza. Por ejemplo, la generación de perfiles podría mostrar una integridad del 95% para los registros de direcciones utilizando un dominio compuesto, pero podría haber un nivel mucho más alto de falta de integridad en una de las columnas, por ejemplo, una columna de código postal (zip). En este ejemplo, podría medir la integridad de la columna de código postal con un dominio individual.  
   
  La generación de perfiles probablemente proporcione estadísticas precisas y confiables para los dominios compuestos porque permite medir la precisión de varias columnas al mismo tiempo. El valor de estos datos está en la agregación compuesta, por lo que puede ser conveniente medir la precisión con un dominio compuesto.  

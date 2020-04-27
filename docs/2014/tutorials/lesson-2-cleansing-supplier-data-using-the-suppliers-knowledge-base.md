@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488475"
 ---
-# <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lección 2: limpiar datos de proveedor con la base de conocimiento Proveedores
+# <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lección 2: Limpieza de datos de proveedor con la base de conocimiento Proveedores
   En esta lección, limpiará los datos de proveedor en un archivo de Excel con la base de conocimiento **proveedores** que creó en la primera lección. La limpieza de datos en DQS incluye un **proceso asistido por PC** que analiza cómo se ajustan los datos a la información de una base de conocimiento y un **proceso interactivo** que permite revisar y modificar los resultados del proceso asistido por PC. La característica de limpieza de datos identifica los datos incorrectos en el origen de datos y después corrige o sugiere correcciones a los datos incorrectos. También normaliza y enriquece los datos de cliente usando valores de dominio, valores iniciales de sinónimos, reglas de dominio, relaciones basadas en términos y datos de referencia. Puede aprobar o rechazar interactivamente los cambios propuestos por el proceso asistido por PC. Vea [limpieza de datos](https://msdn.microsoft.com/library/gg524800.aspx) para obtener más detalles.  
   
  El proceso asistido por PC emplea los valores de umbral siguientes que puede configurar mediante la opción Configuración de la página principal del Cliente DQS.  
@@ -43,6 +43,6 @@ ms.locfileid: "65488475"
 6.  Importe los valores del proyecto de limpieza a los dominios para aumentar el conocimiento de la base de conocimiento con nuevas reglas, valores, correcciones, etc.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 1: crear un proyecto de calidad de datos](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+ [Tarea 1: Creación de un proyecto de calidad de datos](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

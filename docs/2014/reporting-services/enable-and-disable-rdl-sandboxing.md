@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109224"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar y deshabilitar el espacio seguro para RDL
@@ -66,7 +66,7 @@ ms.locfileid: "66109224"
 |**MaxStringResultLength**|Número máximo de caracteres permitido en un valor de devolución para una expresión RDL.<br /><br /> Valor predeterminado: 1000|  
 |**MaxArrayResultLength**|Número máximo de elementos permitido en un valor de devolución de matriz para una expresión RDL.<br /><br /> Valor predeterminado: 100|  
 |**Tipos**|Lista de los miembros que se permitirán en las expresiones RDL.|  
-|**Allow**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
+|**Permitir**|Tipo o conjunto de tipos que se permitirán en las expresiones RDL.|  
 |**Espacio de nombres**|Atributo de **Allow** que es el espacio de nombres que contiene uno o varios tipos que se aplican a Value. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
 |`AllowNew`|Atributo booleano de **Allow** que controla si se permite que las nuevas instancias del tipo se creen en expresiones RDL o en un elemento **\<Class>** de RDL.<br /><br /> Nota: cuando `RDLSandboxing` está habilitado, no se pueden crear nuevas matrices en expresiones RDL, independientemente de la configuración `AllowNew`de.|  
 |**Valor**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104228"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Dominios de aplicación para las aplicaciones del servidor de informes
@@ -32,7 +32,7 @@ ms.locfileid: "66104228"
   
 -   Cambios de configuración en el servidor de informes  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]cambios de configuración.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] cambios de configuración.  
   
 -   Errores de asignación de memoria  
   
@@ -40,16 +40,10 @@ ms.locfileid: "66104228"
   
 |Evento|Descripción del evento|Se aplica a|Configurable|Descripción de la operación de reciclaje|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|Operaciones de reciclaje programadas que se producen en intervalos predefinidos|De forma predeterminada, los dominios de aplicación se reciclan cada 12 horas.<br /><br /> Las operaciones de reciclaje programadas son una práctica común para aplicaciones de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] que consiguen mantener el buen estado general del proceso.|Servicio web del servidor de informes<br /><br /> Administrador de informes<br /><br /> Aplicación de procesamiento de fondo|Sí. El valor de configuración `RecycleTime` del archivo RSReportServer.config determina el intervalo de reciclaje.<br /><br /> 
-  `MaxAppDomainUnloadTime` establece el tiempo de espera durante el cual se puede completar el procesamiento de fondo.|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] administra la operación de reciclaje para el servicio web y el Administrador de informes.<br /><br /> Para la aplicación de procesamiento de fondo, el servidor de informes crea un nuevo dominio de aplicación para los nuevos trabajos que se inician desde las programaciones. Los trabajos ya en curso pueden completarse en el dominio de aplicación actual hasta que expire el tiempo de espera.|  
-|Cambios de configuración en el servidor de informes|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reciclará los dominios de aplicación en respuesta a los cambios del archivo RSReportServer.config.|Servicio web del servidor de informes<br /><br /> Administrador de informes<br /><br /> Aplicación de procesamiento de fondo|No.|No puede detener las operaciones de reciclaje. Sin embargo, las operaciones de reciclaje que se producen en respuesta a los cambios de configuración se controlan de la misma manera que las operaciones de reciclaje programadas. Los nuevos dominios de aplicación se crean para nuevas solicitudes mientras se completan los trabajos y las solicitudes actuales en el dominio de aplicación actual.|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]cambios de configuración|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará los dominios de aplicación si se producen cambios en los archivos que supervisa (por ejemplo, los archivos machine.config y Web.config, y los archivos de programa de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ).|Servicio web del servidor de informes<br /><br /> Administrador de informes|No.|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] administra la operación.<br /><br /> Las operaciones de reciclaje que se inician a través de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] no afectan al dominio de aplicación de procesamiento de fondo.|  
-|Errores en la asignación de memoria y presión de memoria|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reciclará inmediatamente los dominios de aplicación en caso de que se produzca un error de asignación de memoria o cuando el servidor se encuentre en situaciones de presión de memoria.|Servicio web del servidor de informes<br /><br /> Administrador de informes<br /><br /> Aplicación de procesamiento de fondo|No.|Con presión de memoria, el servidor de informes no aceptará las nuevas solicitudes en el dominio de aplicación actual. Durante el período en el que el servidor deniega nuevas solicitudes, se producen errores de HTTP 503. No se crearán nuevos dominios de aplicación hasta que se descargue el dominio de aplicación anterior. Esto significa que si realiza un cambio de archivo de configuración mientras el servidor se encuentra con alta presión de memoria, las solicitudes y los trabajos que se encuentran en curso podrían no iniciarse o completarse.<br /><br /> En caso de error de asignación de memoria, todos los dominios de aplicación se reinician inmediatamente. Se quitan los trabajos y solicitudes que se encuentran en curso. Debe reiniciar dichos trabajos y solicitudes manualmente.|  
+|Operaciones de reciclaje programadas que se producen en intervalos predefinidos|De forma predeterminada, los dominios de aplicación se reciclan cada 12 horas.<br /><br /> Las operaciones de reciclaje programadas son una práctica común para aplicaciones de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] que consiguen mantener el buen estado general del proceso.|Servicio web del servidor de informes<br /><br /> Administrador de informes<br /><br /> Aplicación de procesamiento de fondo|Sí. El valor de configuración `RecycleTime` del archivo RSReportServer.config determina el intervalo de reciclaje.<br /><br /> `MaxAppDomainUnloadTime` establece el tiempo de espera durante el cual se puede completar el procesamiento de fondo.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] administra la operación de reciclaje para el servicio web y el Administrador de informes.<br /><br /> Para la aplicación de procesamiento de fondo, el servidor de informes crea un nuevo dominio de aplicación para los nuevos trabajos que se inician desde las programaciones. Los trabajos ya en curso pueden completarse en el dominio de aplicación actual hasta que expire el tiempo de espera.|  
+|Cambios de configuración en el servidor de informes|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reciclará los dominios de aplicación en respuesta a los cambios del archivo RSReportServer.config.|Servicio web del servidor de informes<br /><br /> Administrador de informes<br /><br /> Aplicación de procesamiento de fondo|No.|No puede detener las operaciones de reciclaje. Sin embargo, las operaciones de reciclaje que se producen en respuesta a los cambios de configuración se controlan de la misma manera que las operaciones de reciclaje programadas. Los nuevos dominios de aplicación se crean para nuevas solicitudes mientras se completan los trabajos y las solicitudes actuales en el dominio de aplicación actual.|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] cambios de configuración|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará los dominios de aplicación si se producen cambios en los archivos que supervisa (por ejemplo, los archivos machine.config y Web.config, y los archivos de programa de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] ).|Servicio web del servidor de informes<br /><br /> Administrador de informes|No.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] administra la operación.<br /><br /> Las operaciones de reciclaje que se inician a través de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] no afectan al dominio de aplicación de procesamiento de fondo.|  
+|Errores en la asignación de memoria y presión de memoria|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reciclará inmediatamente los dominios de aplicación en caso de que se produzca un error de asignación de memoria o cuando el servidor se encuentre en situaciones de presión de memoria.|Servicio web del servidor de informes<br /><br /> Administrador de informes<br /><br /> Aplicación de procesamiento de fondo|No.|Con presión de memoria, el servidor de informes no aceptará las nuevas solicitudes en el dominio de aplicación actual. Durante el período en el que el servidor deniega nuevas solicitudes, se producen errores de HTTP 503. No se crearán nuevos dominios de aplicación hasta que se descargue el dominio de aplicación anterior. Esto significa que si realiza un cambio de archivo de configuración mientras el servidor se encuentra con alta presión de memoria, las solicitudes y los trabajos que se encuentran en curso podrían no iniciarse o completarse.<br /><br /> En caso de error de asignación de memoria, todos los dominios de aplicación se reinician inmediatamente. Se quitan los trabajos y solicitudes que se encuentran en curso. Debe reiniciar dichos trabajos y solicitudes manualmente.|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>Operaciones de reciclaje planeadas e imprevistas  
  Las operaciones de reciclaje son planeadas o imprevistas dependiendo de las condiciones que provocan la operación:  
@@ -64,8 +58,7 @@ ms.locfileid: "66104228"
   
  Los dominios de aplicación para el servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento de fondo se podrían reciclar de manera conjunta o individualmente, dependiendo de las circunstancias que hacen que se produzca el reciclaje:  
   
--   Las operaciones de reciclaje iniciadas por [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] afectan [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] únicamente a las aplicaciones: servicio Web del servidor de informes y administrador de informes. 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará los dominios de aplicación basándose en si hay cambios en los archivos que supervisa. Las operaciones de reciclaje que se inician a través de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] normalmente son independientes de las operaciones de reciclaje para la aplicación de procesamiento de fondo.  
+-   Las operaciones de reciclaje iniciadas por [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] afectan únicamente a las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]: servicio web del servidor de informes y Administrador de informes. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] reciclará los dominios de aplicación basándose en si hay cambios en los archivos que supervisa. Las operaciones de reciclaje que se inician a través de [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] normalmente son independientes de las operaciones de reciclaje para la aplicación de procesamiento de fondo.  
   
 -   Las operaciones de reciclaje iniciadas por el servidor de informes afectan normalmente al servicio web del servidor de informes, al Administrador de informes y a la aplicación de procesamiento de fondo. Las operaciones de reciclaje se producen en respuesta a los cambios a los valores de configuración y se reinicia el servicio.  
   
@@ -88,7 +81,7 @@ ms.locfileid: "66104228"
   
 ## <a name="see-also"></a>Consulte también  
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
- [Modifique un archivo de configuración de Reporting Services &#40;RSreportserver. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configuración de la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md)  
+ [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Configurar la memoria disponible para las aplicaciones del servidor de informes](../report-server/configure-available-memory-for-report-server-applications.md)  
   
   

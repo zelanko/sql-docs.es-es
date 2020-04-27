@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108128"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nueva asignación de roles del sistema y Editar asignaciones de roles del sistema (páginas del Administrador de informes)
@@ -55,7 +55,7 @@ ms.locfileid: "66108128"
   
  Tenga en cuenta que si está usando [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] con Advanced Services, debe usar los roles predeterminados proporcionados.  
   
- **Revise**  
+ **Descripciones**  
  Muestra información adicional sobre el rol. En el caso de los roles predefinidos, como Usuario del sistema o Administrador del sistema, la descripción es un resumen de las tareas que admite cada rol.  
   
  **Eliminar asignación de roles**  

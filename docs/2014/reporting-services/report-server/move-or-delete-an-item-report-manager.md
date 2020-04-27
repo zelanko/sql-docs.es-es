@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103725"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Mover o eliminar un elemento (Administrador de informes)
@@ -30,11 +30,11 @@ ms.locfileid: "66103725"
   
 |Icono|Elemento que puede moverse|  
 |----------|-------------------|  
-|![Icono de informe](../media/hlp-16doc.gif "Icono de informe")|Informe|  
+|![Report icon](../media/hlp-16doc.gif "Icono de informe")|Informe|  
 |![Icono de informe vinculado](../media/hlp-16linked.gif "Icono de informe vinculado")|Informe vinculado|  
 |![Icono de carpeta](../media/hlp-16folder.gif "Icono de carpeta")|Carpeta|  
-|![icono de recurso genérico](../media/hlp-16file.gif "Icono de recurso genérico")|Recurso genérico|  
-|![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|  
+|![Icono de recurso genérico](../media/hlp-16file.gif "Icono de recurso genérico")|Recurso genérico|  
+|![Shared data source icon](../media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|  
 ||Conjunto de datos compartidos|  
   
  No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar modelos", "Administrar carpetas" y "Administrar orígenes de datos".  

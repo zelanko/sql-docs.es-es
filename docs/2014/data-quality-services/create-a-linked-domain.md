@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c9d5f86ba0be02ba21529aafc02897195ff4396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481009"
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
@@ -33,17 +33,17 @@ ms.locfileid: "65481009"
   
  Un ejemplo sería un registro que contiene los campos siguientes: Nombre del cliente, Apellidos del cliente y Nombre del padre. Imagine que asigna el nombre del cliente y el nombre del padre a un dominio Nombre, y que incluye tanto este como el dominio Apellidos en el dominio compuesto Nombre completo. El problema es que el nombre del padre se agregará al dominio compuesto sin apellidos. Pero si vincula cada uno de los dos campos de nombre a un dominio y vincula ambos dominios, podrá agregar el dominio Nombre del cliente al dominio compuesto Nombre completo, y no agregar el campo Nombre del padre a ese dominio, con lo que evitará que el Nombre del padre se agregue al dominio compuesto.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Para crear un dominio vinculado, es necesario tener una base de conocimiento y un dominio existente al que desea vincular.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio vinculado.  
   
-##  <a name="Create"></a>Crear un dominio vinculado  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a>Crear un dominio vinculado  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "65481009"
   
 7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="Map"></a>Asignar dos campos a dominios vinculados  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a>Asignar dos campos a dominios vinculados  
   
 1.  Abra una base de conocimiento en la actividad de detección de conocimiento, y asígnela a la base de datos y la tabla o la vista.  
   
@@ -72,10 +72,10 @@ ms.locfileid: "65481009"
   
 4.  En el cuadro de diálogo Crear dominio, escriba un nombre de dominio y una descripción; a continuación, haga clic en Aceptar.  
   
-##  <a name="FollowUp"></a>Seguimiento: después de crear un dominio vinculado  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a>Seguimiento: después de crear un dominio vinculado  
  Una vez creado el dominio vinculado, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Behavior"></a>Comportamiento de un dominio vinculado  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a>Comportamiento de un dominio vinculado  
  Puede cambiar la configuración de un dominio vinculado de la manera siguiente:  
   
 -   Puede cambiar el nombre y la descripción de un dominio vinculado.  

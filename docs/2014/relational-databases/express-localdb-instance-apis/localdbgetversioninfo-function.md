@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4350badedcaf2a4e2b977b57cf9e6cfde6c1b275
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032233"
 ---
 # <a name="localdbgetversioninfo-function"></a>Función LocalDBGetVersionInfo
@@ -49,7 +49,7 @@ typedef struct _LocalDBVersionInfo
   
 ```  
   
- **Archivo de encabezado:** SQLNCLI. h  
+ **Archivo de encabezado:** sqlncli.h  
   
 ## <a name="syntax"></a>Sintaxis  
   

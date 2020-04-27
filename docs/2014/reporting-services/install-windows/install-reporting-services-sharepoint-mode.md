@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef049b4ded6408e651d5ec2c3db99c10bf7c27b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108764"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Instalación del modo de SharePoint de Reporting Services (SharePoint 2010 y SharePoint 2013)
@@ -46,9 +46,9 @@ ms.locfileid: "66108764"
   
  [Instalar o desinstalar el complemento de Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
- [Dónde encontrar el complemento de Reporting Services para productos de SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
+ [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Agregar un servidor de informes adicional a una granja de servidores &#40;la escalabilidad horizontal de SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Agregar un servidor de informes adicional a una granja de servidores &#40;escalado horizontal de SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Agregar un front-end web adicional de Reporting Services a una granja de servidores](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   

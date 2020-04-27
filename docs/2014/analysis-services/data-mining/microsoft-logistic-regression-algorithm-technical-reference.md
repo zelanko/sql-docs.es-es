@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174529"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión logística de Microsoft
@@ -44,7 +44,7 @@ ms.locfileid: "78174529"
  Todos los algoritmos de minería de datos de Analysis Services utilizan automáticamente la selección de características para mejorar el análisis y reducir la carga de procesamiento. El método utilizado para la selección de características en un modelo de regresión logística depende del tipo de datos del atributo. Dado que la regresión logística se basa en el algoritmo de red neuronal de Microsoft, utiliza un subconjunto de los métodos de selección de características que se aplican a las redes neuronales. Para más información, vea [Selección de características &#40;minería de datos&#41;](feature-selection-data-mining.md).
 
 ### <a name="scoring-inputs"></a>Entradas de puntuación
- La *puntuación* en el contexto de un modelo de red neuronal o de regresión logística implica el proceso de convertir los valores que están presentes en los datos en un conjunto de valores que utilizan la misma escala y, por tanto, se pueden comparar entre sí. Por ejemplo, suponga que las entradas para los ingresos abarcan de 0 a 100.000 mientras que las entradas para [Número de hijos] abarcan de 0 a 5. Este proceso de conversión siempre le permite *puntuar*, o comparar, la importancia de cada entrada sin tener en cuenta la diferencia en los valores.
+ La*puntuación* en el contexto de un modelo de red neuronal o de regresión logística implica el proceso de convertir los valores que están presentes en los datos en un conjunto de valores que utilizan la misma escala y, por consiguiente, se pueden comparar entre sí. Por ejemplo, suponga que las entradas para los ingresos abarcan de 0 a 100.000 mientras que las entradas para [Número de hijos] abarcan de 0 a 5. Este proceso de conversión siempre le permite *puntuar*, o comparar, la importancia de cada entrada sin tener en cuenta la diferencia en los valores.
 
  Para cada estado que aparece en el conjunto de entrenamiento, el modelo genera una entrada. Para las entradas discretas o de datos discretos, se crea una entrada adicional para representar el estado Missing, si aparece al menos una vez en el conjunto de entrenamiento. En las entradas continuas, se crean al menos dos nodos de entrada: uno para los valores Missing, si están presentes en los datos de entrenamiento, y una entrada para todos los valores existentes o no nulos. Cada entrada se escala a un formato numérico mediante el método de normalización de puntuación z, (x-μ)/StdDev.
 
@@ -102,7 +102,7 @@ WHERE NODE_TYPE = 23
 
  HOLDOUT_SEED especifica un número que se va a usar para inicializar el generador pseudoaleatorio cuando se determinan aleatoriamente los datos de exclusión. Si HOLDOUT_SEED se establece en 0, el algoritmo genera la inicialización basada en el nombre del modelo de minería de datos, para garantizar que el contenido del modelo sigue siendo el mismo durante el nuevo procesamiento.
 
- El valor predeterminado es 0.
+ El valor predeterminado es 0.
 
  MAXIMUM_INPUT_ATTRIBUTES define el número de atributos de entrada que el algoritmo puede controlar antes de invocar la selección de características. Establezca este valor en 0 para desactivar la selección de características.
 
@@ -137,7 +137,7 @@ WHERE NODE_TYPE = 23
  Un modelo de regresión logística debe contener una columna de clave, columnas de entrada y al menos una columna de predicción.
 
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción
- El algoritmo de regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite los tipos de contenido de columna de entrada, tipos de contenido de columna de predicción y marcas de modelado específicos que se enumeran en la siguiente tabla. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).
+ El algoritmo de regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite los tipos de contenido de columna de entrada, tipos de contenido de columna de predicción y marcas de modelado específicos que se enumeran en la siguiente tabla. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).
 
 |Columna|Tipos de contenido|
 |------------|-------------------|

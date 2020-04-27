@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ba4168f5417260b0857accdb9cf8fb3fa0f3c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103335"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>archivo de configuración RSReportDesigner
@@ -58,17 +58,12 @@ ms.locfileid: "66103335"
 |-------------|-----------------|  
 |`SecureConnectionLevel`|Especifica el grado de seguridad de la conexión al servicio web. El intervalo de valores válidos es de 0 a 3, donde 0 es el menos seguro. Para más información, consulte [Using Secure Web Service Methods](../report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |`InstanceName`|Identificador del servidor de vista previa. No modifique este valor.|  
-|`SessionCookies`|Especifica si el servidor de informes utiliza cookies del explorador para mantener información de la sesión. Entre los valores válidos se incluyen `true` y `false`. El valor predeterminado es `true`. Si este valor se establece en false, los datos de la sesión se almacenan en la base de datos **reportservertempdb** .|  
+|`SessionCookies`|Especifica si el servidor de informes utiliza cookies del explorador para mantener información de la sesión. Entre los valores válidos se incluyen `true` y `false`. De manera predeterminada, es `true`. Si este valor se establece en false, los datos de la sesión se almacenan en la base de datos **reportservertempdb** .|  
 |`SessionTimeoutMinutes`|Especifica el período durante el cual una cookie de sesión es válida. El valor predeterminado es 3 minutos.|  
 |`PolicyLevel`|Especifica el archivo de configuración de la directiva de seguridad. El valor válido es Rspreviewpolicy. config. Para obtener más información, consulte [uso de archivos de directiva de seguridad de Reporting Services](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |`CacheDataForPreview`|Cuando se establece en `True`, el Diseñador de informes almacena los datos en un archivo caché en el equipo local. Los valores válidos son `True` (predeterminado) y `False`. Para más información, consulte [Previewing Reports](../reports/previewing-reports.md).|  
-|`Render`|Enumera las extensiones de representación que están disponibles en el Diseñador de informes para obtener vistas previas. Las extensiones de representación que se utilicen para la vista previa deberían ser idénticas a las instaladas con el servidor de informes.<br /><br /> 
-  `Name` especifica la extensión de representación. Si va a invocar una extensión de representación mediante código, utilice este valor para llamar una extensión específica.<br /><br /> 
-  `Type` especifica el nombre completo de clase de la extensión, junto con el nombre de la biblioteca, separados por comas.<br /><br /> 
-  `Visible` especifica si el nombre aparece en una interfaz de usuario. Este valor puede ser `True` (predeterminado) o `False`. Si es `True`, aparece en las interfaces de usuario.|  
-|`Data`|Enumera las extensiones de procesamiento de datos que están disponibles en el Diseñador de informes para conectarse a orígenes de datos que proporcionan información a los informes. Las extensiones de procesamiento de datos utilizadas en el Diseñador de informes pueden ser idénticas a las instaladas con el servidor de informes. Si agrega o quita extensiones personalizadas, vea [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> 
-  `Name` especifica la extensión de procesamiento de datos.<br /><br /> 
-  `Type` especifica el nombre completo de clase de la extensión, junto con el nombre de la biblioteca, separados por comas.|  
+|`Render`|Enumera las extensiones de representación que están disponibles en el Diseñador de informes para obtener vistas previas. Las extensiones de representación que se utilicen para la vista previa deberían ser idénticas a las instaladas con el servidor de informes.<br /><br /> `Name` especifica la extensión de representación. Si va a invocar una extensión de representación mediante código, utilice este valor para llamar una extensión específica.<br /><br /> `Type` especifica el nombre completo de clase de la extensión, junto con el nombre de la biblioteca, separados por comas.<br /><br /> `Visible` especifica si el nombre aparece en una interfaz de usuario. Este valor puede ser `True` (predeterminado) o `False`. Si es `True`, aparece en las interfaces de usuario.|  
+|`Data`|Enumera las extensiones de procesamiento de datos que están disponibles en el Diseñador de informes para conectarse a orígenes de datos que proporcionan información a los informes. Las extensiones de procesamiento de datos utilizadas en el Diseñador de informes pueden ser idénticas a las instaladas con el servidor de informes. Si agrega o quita extensiones personalizadas, vea [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` especifica la extensión de procesamiento de datos.<br /><br /> `Type` especifica el nombre completo de clase de la extensión, junto con el nombre de la biblioteca, separados por comas.|  
 |`Designer`|Enumera los generadores de consultas que están disponibles para el Diseñador de informes. Los generadores de consultas proporcionan una interfaz de usuario para crear consultas que recuperan los datos utilizados en los informes. Los generadores de consultas pueden variar entre las diferentes extensiones de procesamiento de datos. De forma predeterminada, Reporting Services proporciona una interfaz de usuario de herramienta de datos visual para todas las extensiones de procesamiento de datos que se incluyen en el producto. Sin embargo, si genera o utiliza extensiones de procesamiento de datos de otros fabricantes, es posible que se apliquen otras interfaces de generador de consultas.|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|Especifica el período que el servicio de procesamiento de vista previa debe esperar para iniciarse antes de mostrar un mensaje de error. El valor predeterminado es 15 segundos.|  
   

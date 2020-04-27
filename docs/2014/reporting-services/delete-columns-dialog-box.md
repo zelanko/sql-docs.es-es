@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 211d5020c85c5295f195389904385981db46d315
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109339"
 ---
 # <a name="delete-columns-dialog-box"></a>Eliminar columnas (cuadro de diálogo)
@@ -35,7 +35,7 @@ ms.locfileid: "66109339"
 ## <a name="see-also"></a>Consulte también  
  [Diseñador de informes la ayuda F1](tools/report-designer-f1-help.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
+ [&#40;de la región de datos Tablix Generador de informes y SSRS&#41;](../../2014/reporting-services/tablix-data-region-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280431"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Explorar el modelo de agrupación en clústeres (Tutorial básico de minería de datos)
@@ -24,7 +24,7 @@ ms.locfileid: "63280431"
   
 
   
-##  <a name="ClusterDiagramTab"></a>Pestaña diagrama del clúster  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>Pestaña diagrama del clúster  
  La pestaña Diagrama del clúster muestra todos los clústeres de un modelo de minería de datos. Las líneas entre los clústeres representan la "proximidad" y aparecen sombreadas en función de la similitud entre los clústeres. El color de cada clúster representa la frecuencia de la variable y el estado del clúster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>Para explorar el modelo en la pestaña Diagrama del clúster  
@@ -57,7 +57,7 @@ ms.locfileid: "63280431"
   
 
   
-##  <a name="ClusterProfilesTab"></a>Pestaña perfiles del clúster  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>Pestaña perfiles del clúster  
  La pestaña **perfiles del clúster** proporciona una vista general del `TM_Clustering` modelo. La pestaña **perfiles del clúster** contiene una columna para cada clúster del modelo. La primera columna enumera los atributos asociados a un clúster como mínimo. El resto del visor contiene la distribución de estados de un atributo por cada clúster. La distribución de una variable discreta se muestra como una barra de color con el número máximo de barras que se muestran en la lista de **barras de histograma** . Los atributos continuos se muestran con un diagrama de rombo, que representa la desviación media y estándar en cada clúster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>Para explorar el modelo en la pestaña perfiles del clúster  
@@ -84,7 +84,7 @@ ms.locfileid: "63280431"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>Pestaña características del clúster  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>Pestaña características del clúster  
  Con la pestaña **características del clúster** , puede examinar con más detalle las características que componen un clúster. En lugar de comparar las características de todos los clústeres (como en la pestaña Perfiles del clúster), puede explorar un clúster a la vez. Por ejemplo, si selecciona Bike buyers **High** en la lista de **clústeres** , puede ver las características de los clientes en este clúster. Aunque la presentación es diferente del visor Perfiles del clúster, los resultados son los mismos.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "63280431"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>Pestaña distinción del clúster  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>Pestaña distinción del clúster  
  Con la pestaña **distinción del clúster** , puede explorar las características que distinguen a un clúster de otro. Después de seleccionar dos clústeres, uno de la lista **clúster 1** y otro de la lista **clúster 2** , el visor calcula las diferencias entre los clústeres y muestra una lista de los atributos que distinguen los clústeres.  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>Para explorar el modelo en la pestaña distinción del clúster  

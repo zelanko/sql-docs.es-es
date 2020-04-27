@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f31f93ba468e6ffc91313e7ca653d122c1664ad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480665"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>Importar una base de conocimiento desde un archivo .dqs
@@ -26,17 +26,17 @@ ms.locfileid: "65480665"
   
  Al importar una base de conocimiento, puede utilizar el mismo nombre, a menos que este exista ya en la aplicación cliente, en cuyo caso deberá cambiarlo.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Para importar una base de conocimiento desde un archivo de .dqs, antes debe haberla exportado al archivo .dqs.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para importar una base de conocimiento desde un archivo de datos .dqs.  
   
-##  <a name="Import"></a>Importar una base de conocimiento desde un archivo. DQS  
+##  <a name="import-a-knowledge-base-from-a-dqs-file"></a><a name="Import"></a>Importar una base de conocimiento desde un archivo. DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65480665"
   
 8.  Seleccione la actividad que desea realizar y, a continuación, haga clic en **Crear**.  
   
-9. En el cuadro de diálogo **Importar base de conocimiento** , compruebe que la línea de estado indica que se ha completado la importación. Haga clic en **OK**.  
+9. En el cuadro de diálogo **Importar base de conocimiento** , compruebe que la línea de estado indica que se ha completado la importación. Haga clic en **Aceptar**.  
   
 10. Finalice las tareas de detección de conocimiento, administración de dominios o directiva de coincidencia que necesita realizar y, a continuación, haga clic en **Finalizar**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "65480665"
   
 13. En la página de inicio de Data Quality Services, compruebe que la base de conocimiento aparece debajo de **Base de conocimiento reciente**.  
   
-##  <a name="FollowUp"></a>Seguimiento: después de importar una base de conocimiento desde un archivo. DQS  
+##  <a name="follow-up-after-importing-a-knowledge-base-from-a-dqs-file"></a><a name="FollowUp"></a> Seguimiento: después de importar una base de conocimiento desde un archivo .dqs  
  Después de importar una base de conocimiento desde un archivo .dqs, puede agregar conocimiento a la base de conocimiento o utilizarla en un proyecto de limpieza o de búsqueda de coincidencias, dependiendo de su contenido. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md), [Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md), [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md), [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md) o [Coincidencia de datos](../../2014/data-quality-services/data-matching.md).  
   
   

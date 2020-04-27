@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480997"
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
@@ -31,17 +31,17 @@ ms.locfileid: "65480997"
   
  Las reglas entre dominios se tienen en consideración una vez aplicadas todas las reglas sencillas que afectan únicamente a un dominio individual. La regla entre dominios solo se aplica si un valor pasa las reglas de dominio individual (si estas existen). El dominio compuesto y los dominios individuales en los que se ejecuta una regla deben haberse definido con anterioridad a la ejecución de la regla.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Para poder crear una regla entre dominios, debe haber creado y abierto un dominio compuesto.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una regla entre dominios.  
   
-##  <a name="Create"></a>Crear reglas entre dominios  
+##  <a name="create-cross-domain-rules"></a><a name="Create"></a> Crear reglas entre dominios  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65480997"
   
 9. Continúe con el procedimiento de prueba descrito a continuación.  
   
-##  <a name="Test"></a>Probar reglas entre dominios  
+##  <a name="test-cross-domain-rules"></a><a name="Test"></a> Probar reglas entre dominios  
   
 1.  Pruebe la regla entre dominios de la manera siguiente:  
   
@@ -88,13 +88,13 @@ ms.locfileid: "65480997"
   
     4.  Haga clic de nuevo en el icono **Agrega un nuevo término de prueba para la regla de dominio** para agregar otro conjunto de valores de prueba.  
   
-    5.  Haga clic en el icono **Probar la regla de dominio en todos los términos** . Si un conjunto de valores de prueba es válido, DQS incluirá una marca de comprobación en la columna **Validez** de la fila. Si el conjunto de valores de prueba no es válido, DQS incluirá un triángulo con un signo de exclamación en la columna Validez de la fila.  
+    5.  Haga clic en el icono **probar la regla de dominio en todos los términos** . Si un conjunto de valores de prueba es válido, DQS incluirá una marca de comprobación en la columna **Validez** de la fila. Si el conjunto de valores de prueba no es válido, DQS incluirá un triángulo con un signo de exclamación en la columna Validez de la fila.  
   
     6.  Una vez finalizada la prueba, haga clic en **Cerrar** en el cuadro de diálogo **Probar regla de dominio compuesto** .  
   
 2.  Cuando haya terminado de definir las reglas entre dominios, haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a>Seguimiento: después de crear una regla entre dominios  
+##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> Seguimiento: después de crear una regla entre dominios  
  Una vez creada una regla entre dominios, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

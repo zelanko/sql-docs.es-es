@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106418"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Colecciones integradas en expresiones (Generador de informes y SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66106418"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Collections"></a>Descripción de las colecciones integradas  
+##  <a name="understanding-built-in-collections"></a><a name="Collections"></a> Descripción de las colecciones integradas  
  En la tabla siguiente se enumeran las colecciones integradas disponibles cuando se escribe una expresión. Cada fila incluye: el nombre de programación para la colección con distinción de mayúsculas y minúsculas, si se puede usar el cuadro de diálogo Expresión para agregar una referencia a la colección de forma interactiva, un ejemplo y una descripción que incluye el momento en que se inicializan y se ponen a disposición de los usuarios los valores de la colección.  
   
 |Colección integrada|Categoría en el cuadro de diálogo Expresión|Ejemplo|Descripción|  
@@ -36,18 +36,18 @@ ms.locfileid: "66106418"
 |`Fields(`>de conjunto de conjuntos * \<*`)`|Fields|`=Fields!Sales.Value`|Representa la colección de campos del conjunto de datos que están disponibles para el informe. Está disponible una vez que los datos se han recuperado desde un origen de datos en un conjunto de datos. Para obtener más información, vea [Referencias a la colección de campos de conjunto de datos &#40;Generador de informes y SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md).|  
 |`DataSets`|No se muestra|`=DataSets("TopEmployees").CommandText`|Representa la colección de conjuntos de datos a los que se hace referencia desde el cuerpo de una definición de informe. No incluye los orígenes de datos que solo se utilizan en encabezados o pies de página. No está disponible en el modo de vista previa local. Para más información, vea [Usar referencias a las colecciones DataSources y DataSets &#40;Generador de informes y SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |`DataSources`|No se muestra|`=DataSources("AdventureWorks2012").Type`|Representa la colección de orígenes de datos a los que se hace referencia en el cuerpo de un informe. No incluye los orígenes de datos que solo se utilizan en encabezados o pies de página. No está disponible en el modo de vista previa local. Para más información, vea [Usar referencias a las colecciones DataSources y DataSets &#40;Generador de informes y SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md).|  
-|`Variables`|`Variables`|`=Variables!CustomTimeStamp.Value`|Representa la colección de variables de informe y de variables de grupo. Para obtener más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).|  
+|`Variables`|`Variables`|`=Variables!CustomTimeStamp.Value`|Representa la colección de variables de informe y de variables de grupo. Para más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).|  
 |`ReportItems`|No se muestra|`=ReportItems("Textbox1").Value`|Representa la colección de cuadros de texto para un elemento de informe. Esta colección se puede usar para resumir los elementos de la página a fin de incluirlos en un encabezado de página o en un pie de página. Para más información, vea [Usar referencias a la colección ReportItems &#40;Generador de informes y SSRS&#41;](built-in-collections-reportitems-collection-references-report-builder.md).|  
   
-##  <a name="Syntax"></a>Usar la sintaxis de colección en una expresión  
+##  <a name="using-collection-syntax-in-an-expression"></a><a name="Syntax"></a> Uso de la sintaxis de colección en una expresión  
  Para hacer referencia a una colección desde una expresión, use [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] la sintaxis estándar para un elemento de una colección. En la tabla siguiente se muestran ejemplos de sintaxis de colección.  
   
 |Sintaxis|Ejemplo|  
 |------------|-------------|  
 |*Collection! ObjectName. Property*|`=Fields!Sales.Value`|  
 |*Collection! ObjectName ("propiedad")*|`=Fields!Sales("Value")`|  
-|*Colección ("ObjectName"). Propiedad*|`=Fields("Sales").Value`|  
-|*Colección ("Member")*|`=User("Language")`|  
+|*Collection("ObjectName").Property*|`=Fields("Sales").Value`|  
+|*Collection("Member")*|`=User("Language")`|  
 |*Colección. miembro*|`=User.Language`|  
   
 ## <a name="see-also"></a>Consulte también  

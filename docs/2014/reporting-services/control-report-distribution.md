@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109697"
 ---
 # <a name="control-report-distribution"></a>Controlar la distribución de informes
@@ -49,6 +49,6 @@ ms.locfileid: "66109697"
 ## <a name="see-also"></a>Consulte también  
  [Configurar un servidor de informes para la entrega por correo electrónico &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Crear y administrar suscripciones para servidores de informes en modo nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
+ [Creación y administración de suscripciones para servidores de informes en modo nativo](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)  
   
   

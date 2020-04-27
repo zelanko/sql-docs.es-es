@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108497"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario
@@ -28,11 +28,11 @@ ms.locfileid: "66108497"
   
      De este modo, agrega un nuevo archivo XSD **DataSet1.xsd** al proyecto y abre el Diseñador de DataSet.  
   
-3.  En la ventana del Cuadro de herramientas, arrastre un control **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** hasta la superficie de diseño. De este modo, se inicia el Asistente para configuración de **TableAdapter** .  
+3.  En la ventana cuadro de herramientas, arrastre un control **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx\(v=vs.100\).aspx)** hasta la superficie de diseño. De este modo, se inicia el Asistente para configuración de **TableAdapter** .  
   
 4.  En la página **elegir la conexión de datos** , haga clic en **nueva conexión**.  
   
-5.  Si es la primera vez que ha creado un origen de datos en Visual Studio, verá la página **Elegir origen de datos**. En el cuadro **Origen de datos** , seleccione **Microsoft SQL Server**.  
+5.  Si es la primera vez que crea un origen de datos en Visual Studio, verá la página **elegir origen de datos** . En el cuadro **Origen de datos** , seleccione **Microsoft SQL Server**.  
   
 6.  En el cuadro de diálogo **Agregar conexión** , realice los pasos siguientes:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108497"
   
 7.  Si ha seleccionado **Usar autenticación de SQL Server** en el paso 6 (b), seleccione la opción si quiere incluir la información confidencial en la cadena o establecer la información en su código de aplicación.  
   
-8.  En la página **guardar la cadena de conexión en el archivo de configuración de la aplicación** , escriba el nombre de la cadena de conexión o acepte el valor predeterminado **AdventureWorks2008ConnectionString**. Haga clic en **Next**.  
+8.  En la página **guardar la cadena de conexión en el archivo de configuración de la aplicación** , escriba el nombre de la cadena de conexión o acepte el valor predeterminado **AdventureWorks2008ConnectionString**. Haga clic en **Siguiente**.  
   
 9. En la página **elegir un tipo de comando** , seleccione **usar instrucciones SQL**y, a continuación, haga clic en **siguiente**.  
   

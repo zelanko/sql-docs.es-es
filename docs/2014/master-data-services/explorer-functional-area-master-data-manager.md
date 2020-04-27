@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0cf56e718b2d17b2b2a1f44088b05226ef86388d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479424"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Área funcional de Explorador (Master Data Manager)
@@ -23,15 +23,15 @@ ms.locfileid: "65479424"
 ## <a name="data-management"></a>Administración de datos  
  [Atributos &#40;Master Data Services&#41;](attributes-master-data-services.md)  
   
- [Cambiar el tipo de atributo &#40;Complemento MDS para Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
+ [Cambar el tipo de atributo &#40;complemento MDS para Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
   
  [Miembros &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
- [Cree un miembro hoja &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)  
+ [Crear un miembro hoja &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)  
   
  [Eliminar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)  
   
- [Reactivar un miembro o colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
  [Anotaciones &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65479424"
   
  [Anotar una transacción &#40;Master Data Services&#41;](../../2014/master-data-services/annotate-a-transaction-master-data-services.md)  
   
- [Invertir un Master Data Services de &#40;de transacciones&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
+ [Invertir una transacción &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
  [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65479424"
   
  [Eliminar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)  
   
- [Reactivar un miembro o colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Aplicación web Master Data Services](../../2014/master-data-services/master-data-manager-web-application.md)  

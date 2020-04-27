@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264892"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de clases de elemento de informe personalizado
@@ -121,7 +121,7 @@ ms.locfileid: "63264892"
 |`EditValue`|Invoca el editor de expresiones, inicializado con el valor del objeto determinado.|  
   
 ### <a name="microsoftreportdesignerifieldsdataobject"></a>Microsoft.ReportDesigner.IFieldsDataObject  
- Esta clase es una colección de campos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se utiliza para admitir los eventos arrastrar y colocar en el entorno de diseño. Hereda de `IReportItemDataObject`.  
+ Esta clase es una colección de campos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se utiliza para admitir los eventos arrastrar y colocar en el entorno de diseño. Se hereda de `IReportItemDataObject`.  
   
 #### <a name="public-properties"></a>Propiedades públicas  
   
@@ -131,8 +131,8 @@ ms.locfileid: "63264892"
 |`Fields`|La colección de campos (`Microsoft.ReportDesigner.Field`) que se va a quitar.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Lenguaje RDL (Report Definition Language) &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
- [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](creating-a-custom-report-item-run-time-component.md)   
- [Creación de un componente de tiempo de diseño de elemento de informe personalizado](creating-a-custom-report-item-design-time-component.md)  
+ [Lenguaje de definición de informes &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
+ [Crear un componente de tiempo de ejecución de elemento de informe personalizado](creating-a-custom-report-item-run-time-component.md)   
+ [Crear un componente de tiempo de diseño de elemento de informe personalizado](creating-a-custom-report-item-design-time-component.md)  
   
   

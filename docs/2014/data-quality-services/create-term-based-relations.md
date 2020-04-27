@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480827"
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
@@ -30,7 +30,7 @@ ms.locfileid: "65480827"
   
  Cuando se aplica una relación basada en términos en la administración de dominios, DQS aplicará los cambios en los procesos de detección del conocimiento, limpieza o coincidencia; sin embargo, DQS no cambia el propio valor para adecuarse a la relación basada en términos. Es decir, si escribe y acepta una relación basada en términos en la pestaña **Relaciones basadas en términos** de la página **Administración de dominio** , el cambio no se llevará a cabo en la pestaña **Valores del dominio** de la misma página. Esto permite cambiar la TBR posteriormente.  
   
- **Relaciones basadas en términos y limpieza de datos**  
+ **Relaciones basadas en términos y y limpieza de datos**  
   
  Cuando se aplica una relación basada en términos en un dominio y después se ejecuta el proceso de limpieza de datos, DQS aplica los cambios durante la limpieza pero no aplica los cambios a los términos de la base de conocimiento.  
   
@@ -42,25 +42,25 @@ ms.locfileid: "65480827"
   
 -   Si un valor según esmodificado por una relación basada en términos se encuentra en el dominio, pero el valor es Error/No válido sin ninguna corrección, el valor aparecerá en la pestaña No válido con el motivo Valor de dominio.  
   
- **Relaciones basadas en términos y detección de conocimiento**  
+ **Relaciones basadas en términos y detección del conocimiento**  
   
  Cuando se aplica una relación basada en términos se ejecuta después el proceso de detección del conocimiento, cualquier valor que se ajuste al TBR permanecerá tal cual y se identificará como valor correcto. Cualquier valor que un TBR vambie se importará como valor correcto y se identificará como sinónimo en un valor que se ajuste al TBR.  
   
- **Relaciones basadas en términos e importar valores de limpieza en un dominio**  
+ **Relaciones basadas en trérminos e importar valores de limpieza en un dominio**  
   
  Si importa el conocimiento de calidad de los datos recopilados durante el proces ode limpieza en un dominio, valor que cambie un TBR se importará como valor correcto.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Para crear relaciones basadas en términos, debe tener un dominio abierto en la actividad Administración de dominios.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear relaciones basadas en términos.  
   
-##  <a name="Create"></a>Crear relaciones basadas en términos  
+##  <a name="create-term-based-relations"></a><a name="Create"></a>Crear relaciones basadas en términos  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -90,7 +90,7 @@ ms.locfileid: "65480827"
   
     6.  Busque un valor en la tabla de relaciones; para ello, especifique uno o varios caracteres en el cuadro de texto **Buscar** . Se resaltarán las cadenas que coincidan con la especificada. Utilice las flechas arriba y abajo para desplazarse por las distintas instancias de la cadena en la tabla.  
   
-    7.  **Corrector ortográfico**: Si un valor de la columna **valor** o **corregir a** tiene un carácter de subrayado rojo ondulado, el corrector ortográfico está sugiriendo una corrección al valor. Haga clic con el botón secundario en el valor que tiene el carácter de subrayado y seleccione uno de los valores propuestos por el corrector ortográfico. O bien, puede hacer clic en **Agregar** en el menú contextual para seguir usando el valor original. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../../2014/data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../../2014/data-quality-services/set-domain-properties.md).  
+    7.  **Corrector ortográfico**: si un valor de la columna **Valor** o **Corregir a** tiene un carácter de subrayado rojo ondulado, el corrector ortográfico está sugiriendo una corrección al valor. Haga clic con el botón secundario en el valor que tiene el carácter de subrayado y seleccione uno de los valores propuestos por el corrector ortográfico. O bien, puede hacer clic en **Agregar** en el menú contextual para seguir usando el valor original. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../../2014/data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../../2014/data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Relaciones basadas en términos** para habilitarlo en esta página.  
@@ -99,7 +99,7 @@ ms.locfileid: "65480827"
   
 7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a>Seguimiento: después de crear relaciones basadas en términos  
+##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> Seguimiento: después de crear las relaciones basadas en términos  
  Una vez creadas las relaciones basadas en términos, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

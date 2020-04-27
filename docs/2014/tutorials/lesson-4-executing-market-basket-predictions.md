@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312109"
 ---
-# <a name="lesson-4-executing-market-basket-predictions"></a>Lección 4: Ejecutar predicciones de cesta de la compra
+# <a name="lesson-4-executing-market-basket-predictions"></a>Lección 4: Ejecución de predicciones de cesta de la compra
   En esta lección, usará la instrucción DMX `SELECT` para crear predicciones basadas en los modelos de asociación que creó en la [Lección 2: agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Para crear una consulta de predicción se usa la instrucción `SELECT` de DMX y se agrega una cláusula `PREDICTION JOIN`. Para obtener más información sobre la sintaxis de una combinación de predicción, vea [seleccionar desde &#60;modelo&#62; combinación de predicción &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  El formulario **seleccionar \<del modelo> combinación de predicción** de `SELECT` la instrucción contiene tres partes:  
@@ -88,7 +88,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
@@ -102,7 +102,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Default Association]  
@@ -117,7 +117,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  
@@ -162,7 +162,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     PREDICT([Modified Association].[Products],INCLUDE_STATISTICS,3)  
@@ -174,7 +174,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Modified Association]  
@@ -189,7 +189,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  

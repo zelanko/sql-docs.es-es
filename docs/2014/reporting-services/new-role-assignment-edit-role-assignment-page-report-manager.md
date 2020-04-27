@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108157"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nueva asignación de roles y Editar asignación de roles (páginas del Administrador de informes)
@@ -36,7 +36,7 @@ ms.locfileid: "66108157"
 4.  Si desea agregar una nueva asignación de roles, en la barra de herramientas, haga clic en **Nueva asignación de roles**. Si desea editar una asignación de roles, haga clic en **Editar** junto al nombre de usuario o grupo que desee editar.  
   
     > [!NOTE]  
-    >  Si un elemento hereda la seguridad de un elemento primario, en la barra de herramientas, haga clic en **Editar seguridad del elemento** para cambiar la configuración de seguridad.  
+    >   Si un elemento hereda la seguridad de un elemento primario, en la barra de herramientas, haga clic en **Editar seguridad del elemento** para cambiar la configuración de seguridad.  
   
 ## <a name="options"></a>Opciones  
  **Nombre de usuario o grupo**  
@@ -45,7 +45,7 @@ ms.locfileid: "66108157"
 > [!NOTE]  
 >  Este cuadro solo está disponible en la página Nueva asignación de roles.  
   
- **Role**  
+ **Rol**  
  Muestra todos los roles definidos en el servidor de informes que se pueden utilizar para definir la seguridad de los elementos. Cuando cree o cambie una asignación de roles para un informe o una carpeta, seleccione uno o varios roles hasta que el conjunto combinado de tareas describa las acciones que el usuario debería poder realizar. Para ver el conjunto de tareas que admite cada rol, use [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. No puede ver, crear, modificar ni eliminar roles en el Administrador de informes. Para obtener instrucciones, vea [crear, eliminar o modificar un rol &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  **Descripción**  

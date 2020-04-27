@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105118"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Función Union (Generador de informes y SSRS)
@@ -38,8 +38,7 @@ Union(expression, scope, recursive)
  (`String`) (opcional). Nombre de un conjunto de datos, un grupo o una región de datos que contiene los elementos de informe a los que se va a aplicar la función de agregado. Si no se especifica el parámetro *scope* , se usa el ámbito actual.  
   
  *recursive*  
- (**Tipo enumerado**) Opcional. 
-  `Simple` (predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
+ (**Tipo enumerado**) Opcional. `Simple` (predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
   
 ## <a name="return"></a>Valor devuelto  
  Devuelve un objeto espacial, `SqlGeometry` o `SqlGeography`bien, en función del tipo de expresión. Para obtener más información `SqlGeometry` sobre `SqlGeography` los tipos de datos espaciales y, vea [información general sobre tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md).  

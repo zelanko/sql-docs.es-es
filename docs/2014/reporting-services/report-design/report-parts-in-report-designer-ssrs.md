@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c696b87a8c8cf4688e24a0e3177948d339d7443
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105058"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Elementos de informe en el Diseñador de informes (SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66105058"
   
  Hay diferencias fundamentales en el modo en que los elementos de informe se usan en el Diseñador de informes. Una diferencia principal es el flujo de trabajo. El Generador de informes habilita la creación colaborativa: creo un elemento de informe y lo publico. Puede reutilizarlo, modificarlo y volver a publicarlo. En el Diseñador de informes la publicación es unidireccional: se puede publicar un elemento de informe en el Diseñador de informes y reutilizarlo. Pero no se puede reutilizar un elemento de informe existente en un informe en el Diseñador de informes. En este tema se elaboran estas diferencias, después de una información general rápida de los elementos de informe.  
   
-##  <a name="ComponentWorkflow"></a>Ciclo de vida de la publicación del elemento de informe  
+##  <a name="life-cycle-of-report-part-publishing"></a><a name="ComponentWorkflow"></a> Ciclo de vida de la publicación de un elemento de informe  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  En el Diseñador de informes, la persona A crea un proyecto que contiene un informe con un gráfico que depende de un conjunto de datos incrustado.  
@@ -43,7 +43,7 @@ ms.locfileid: "66105058"
   
 6.  En el Generador de informes, la persona B acepta el gráfico actualizado del servidor. De esta forma sobrescribe los cambios que la persona B había realizado en el informe de la persona B.  
   
-##  <a name="PublishingComponents"></a>Publicar elementos de informe  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> Publicar elementos de informe  
  Al publicar un elemento de informe, el Diseñador de informes le asigna un identificador único. Desde ese momento, mantiene ese identificador, con independencia de lo que cambie. El identificador vincula el elemento de informe original en el informe al elemento de informe. Cuando los autores de otros informes reutilizan el elemento de informe en el Generador de informes, el identificador también vincula el elemento de su informe al elemento de informe.  
   
  Estos son los elementos de informe que puede publicar como elementos de informe:  
@@ -77,12 +77,12 @@ ms.locfileid: "66105058"
  Al implementar el informe, el elemento de informe se publica en un sitio de SharePoint o servidor de informes, y otros pueden reutilizarla. Para publicar un elemento de informe, debe disponer de una conexión y de los permisos necesarios en un servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] al implementar el informe.  
   
   
-##  <a name="SearchReuseComponents"></a>Reutilizar elementos de informe  
+##  <a name="reusing-report-parts"></a><a name="SearchReuseComponents"></a> Reutilizar elementos de informe  
  A diferencia de lo que ocurre en el Generador de informes, no puede buscar y reutilizar un elemento de informe en un proyecto distinto de aquel en el que se creó.  
   
  Los autores del informe que trabajan en el Generador de informes pueden buscar y reutilizar elementos de informe que publique en los informes que crean.  
   
-##  <a name="RepublishingComponents"></a>Volver a publicar elementos de informe  
+##  <a name="republishing-report-parts"></a><a name="RepublishingComponents"></a> Volver a publicar elementos de informe  
  En el Diseñador de informes, debería actualizar un elemento de informe existente desde dentro del informe en el que se creó. En el Generador de informes, los autores del informe pueden reutilizar el elemento de informe y publicarlo como un nuevo elemento de informe sin reemplazar al elemento de informe que publicó. Si tienen los permisos necesarios, también pueden actualizar el elemento de informe que publicó. Cualquiera con los permisos suficientes para una carpeta en un sitio o servidor puede actualizar los elementos de informe que se almacenan allí. La última actualización sobrescribe las actualizaciones anteriores.  
   
  Puede modificar y, a continuación, volver a publicar el elemento de informe en el sitio o servidor. Los autores de un informe del Generador de informes que hayan agregado ese elemento de informe a un informe son informados del cambio la próxima vez que lo abran. Pueden elegir aceptar sus cambios o no.  
@@ -91,6 +91,6 @@ ms.locfileid: "66105058"
   
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar elementos de informe](managing-report-parts.md)  
+ [Administración de elementos de informe](managing-report-parts.md)  
   
   

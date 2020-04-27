@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7efb713b5dbf9a3f19118bb3572ccd35778aad19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109648"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Crear un informe detallado (RDLC) con parámetros mediante ReportViewer (Tutorial de SSRS)
@@ -36,10 +36,10 @@ ms.locfileid: "66109648"
  [Lección 6: agregar un control ReportViewer a la aplicación](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)   
  [Lección 7: agregar una acción de obtención de detalles en el informe primario](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)   
  [Lección 8: crear un filtro de datos](../reporting-services/lesson-8-create-a-data-filter.md)   
- [Lección 9: compilar y ejecutar la aplicación](../reporting-services/lesson-9-build-and-run-the-application.md)  
+ [Lección 9: Generación y ejecución de la aplicación](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting Services tutoriales &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Diseñar informes con el Diseñador de informes &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

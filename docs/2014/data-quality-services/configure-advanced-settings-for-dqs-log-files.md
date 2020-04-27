@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1530594eefbb5c614901f2b8cb73030b989951fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480975"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurar las opciones avanzadas de los archivos de registro de DQS
@@ -26,17 +26,17 @@ ms.locfileid: "65480975"
 > [!NOTE]  
 >  Estas actividades no se pueden realizar mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], y están dirigidas exclusivamente a los usuarios expertos.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 -   La cuenta de usuario de Windows debe ser miembro del rol fijo de servidor sysadmin en la instancia de SQL Server para modificar la configuración de la tabla A_CONFIGURATION de la base de datos DQS_MAIN.  
   
 -   Debe haber iniciado sesión como miembro del grupo Administradores en el equipo donde está modificando el archivo DQLog.Client.xml para configurar los valores de registro de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
-##  <a name="DQSServer"></a>Configurar los valores de registro de Data Quality Server  
+##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>Configurar los valores de registro de Data Quality Server  
  Los valores de registro de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] se encuentran en formato XML en la columna **VALUE** de la fila **ServerLogging** de la tabla A_CONFIGURATION de la base de datos DQS_MAIN. Puede ejecutar la consulta SQL siguiente para ver la información de configuración:  
   
 ```  
@@ -93,7 +93,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-4.  Presione F5 para ejecutar las instrucciones. Compruebe el panel de **resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
+4.  Presione F5 para ejecutar las instrucciones. Vea el panel **Resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
   
 5.  Para aplicar los cambios realizados en la configuración de registro de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , debe ejecutar las instrucciones Transact-SQL siguientes. Abra una nueva ventana del editor de consultas y pegue las instrucciones Transact-SQL siguientes:  
   
@@ -107,12 +107,12 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
     ```  
   
-6.  Presione F5 para ejecutar las instrucciones. Compruebe el panel de **resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
+6.  Presione F5 para ejecutar las instrucciones. Vea el panel **Resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
   
 > [!NOTE]  
 >  La configuración de registro de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] se genera y se almacena dinámicamente en el archivo DQS_MAIN.Log, que normalmente se encuentra en C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Log si ha instalado la instancia predeterminada de SQL Server. Sin embargo, los cambios realizados directamente en este archivo no se conservan, y serán reemplazados por la configuración de la tabla A_CONFIGURATION de la base de datos DQS_MAIN.  
   
-##  <a name="DQSClient"></a>Configuración del registro de Data Quality Client  
+##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Configuración del registro de Data Quality Client  
  El [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] archivo de configuración de configuración de registro, DQLog. Client. XML, suele estar disponible en C:\Archivos de Programa\microsoft SQL Server\120\Tools\Binn\DQ\config. El contenido del archivo XML es similar al del archivo XML que modificó anteriormente para los valores [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] de configuración del registro. Para configurar los valores de registro de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Ejecute cualquier herramienta de edición de XML o el Bloc de notas como administrador.  

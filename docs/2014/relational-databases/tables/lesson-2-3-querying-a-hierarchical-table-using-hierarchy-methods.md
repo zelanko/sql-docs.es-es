@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110045"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>Realizar una consulta a una tabla jerárquica mediante métodos de jerarquía
@@ -40,8 +40,7 @@ ms.locfileid: "66110045"
   
      El resultado muestra tanto a Sariya como a Wanida. Sariya aparece porque es el descendiente de nivel 0. Wanida es el descendiente de nivel 1.  
   
-2.  También se puede consultar esta información mediante el método [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) . 
-  `GetAncestor` toma un argumento para el nivel que está intentando devolver. Puesto que Wanida está un nivel por debajo de Sariya, use `GetAncestor(1)` como se muestra en el código siguiente:  
+2.  También se puede consultar esta información mediante el método [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) . `GetAncestor` toma un argumento para el nivel que está intentando devolver. Puesto que Wanida está un nivel por debajo de Sariya, use `GetAncestor(1)` como se muestra en el código siguiente:  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  

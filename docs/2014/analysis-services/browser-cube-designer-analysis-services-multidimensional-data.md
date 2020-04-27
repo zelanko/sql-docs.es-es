@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174304"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Explorador (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -51,11 +51,11 @@ ms.locfileid: "78174304"
 ## <a name="sections"></a>Secciones
  **Barra de herramientas** La barra de herramientas contiene herramientas que se pueden utilizar en la vista de diseño o en la vista de consulta. Para más información sobre la barra de herramientas y cómo usar estas características, vea [Barra de herramientas &#40;pestaña Explorador, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md).
 
- **Analizar en Excel** Use la característica **analizar en Excel** para enviar la selección actual de datos del cubo a Excel, de modo que pueda obtener una vista previa de los datos en una tabla dinámica. La selección actual de datos se basa en los elementos agregados del panel **Metadatos** y los filtros que pueda haber definido mediante las funciones de creación de consultas y filtros. Para obtener más información, vea [Analizar en Excel &#40;pestaña Explorador, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md).
+ **Analizar en Excel** Utilice la pestaña **Analizar en Excel** para enviar la selección actual de datos del cubo a Excel y poder obtener una vista previa de los datos en una tabla dinámica. La selección actual de datos se basa en los elementos agregados del panel **Metadatos** y los filtros que pueda haber definido mediante las funciones de creación de consultas y filtros. Para obtener más información, vea [Analizar en Excel &#40;pestaña Explorador, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md).
 
- **Metadatos** Use el panel **metadatos** para ver los objetos contenidos en el cubo, explorar en profundidad las jerarquías, y explorar y utilizar medidas. Después de realizar la selección, puede ver los datos asociados a ellos en el panel **Informe** . Para más información sobre este panel, vea [Metadatos &#40;pestaña Explorador, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md).
+ **Metadatos** Utilice la pestaña **Metadatos** para ver los objetos contenidos en el cubo, explorar en profundidad las jerarquías, y explorar y utilizar medidas. Después de realizar la selección, puede ver los datos asociados a ellos en el panel **Informe** . Para más información sobre este panel, vea [Metadatos &#40;pestaña Explorador, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md).
 
- **Filtro y consulta** Utilice este área de la superficie de diseño para generar consultas MDX, arrastrando y colocando objetos del panel **metadatos** , y especificando criterios de filtro en el cubo o la dimensión de origen. Para más información, vea [Consulta y filtro &#40;pestaña Explorador del Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).
+ **Filtro y consulta** Utilice este área de la superficie de diseño para generar consultas MDX, arrastrando y colocando objetos del panel **Metadatos** , y especificando criterios de filtro en el cubo o la dimensión de origen. Para más información, vea [Consulta y filtro &#40;pestaña Explorador del Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).
 
 ## <a name="see-also"></a>Consulte también
  [Objetos de cubo &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md) [cubos en modelos multidimensionales diseñador de](multidimensional-models/cubes-in-multidimensional-models.md) [cubos &#40;Analysis Services de datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)

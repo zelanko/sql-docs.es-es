@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: abaa60d696975616631aea210c32bfcea63f6767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264728"
 ---
 # <a name="deploying-a-custom-assembly"></a>Implementar un ensamblado personalizado
@@ -63,6 +63,6 @@ ms.locfileid: "63264728"
   
 ## <a name="see-also"></a>Consulte también  
  [Usar ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)   
- [Trabajar con ensamblados y la caché global de ensamblados](https://go.microsoft.com/fwlink/?LinkId=63912)  
+ [Trabajar con ensamblados y la memoria caché global de ensamblados](https://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

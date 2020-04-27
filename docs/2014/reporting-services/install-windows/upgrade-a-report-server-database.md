@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e3ba4d9ee2e0b92617c2d2bcadae3bf87c8b5414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108639"
 ---
 # <a name="upgrade-a-report-server-database"></a>Actualizar una base de datos del servidor de informes
@@ -31,8 +31,7 @@ ms.locfileid: "66108639"
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Formas de actualizar una base de datos del servidor de informes en modo nativo  
  En la lista siguiente se identifican las condiciones en las que se actualiza una base de datos del servidor de informes:  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualiza una única instancia de un servidor de informes. El esquema de la base de datos del servidor de informes se actualiza automáticamente después del inicio del servicio y el servidor de informes determina que la versión del esquema de la base de datos no coincide con la versión del servidor.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualiza una única instancia de un servidor de informes. El esquema de la base de datos del servidor de informes se actualiza automáticamente después del inicio del servicio y el servidor de informes determina que la versión del esquema de la base de datos no coincide con la versión del servidor.  
   
      Durante el inicio del servicio, el servidor de informes examina la versión del esquema de la base de datos para comprobar si coincide con la del servidor. Si la versión del esquema de la base de datos es anterior, se actualiza automáticamente a la versión que requiere el servidor de informes. La actualización automática es especialmente útil si ha restaurado o adjuntado una base de datos del servidor de informes anterior. Se escribe un mensaje en el archivo de registro de seguimiento del servidor de informes para indicar que se ha actualizado la versión del esquema de la base de datos.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66108639"
  Además de la base de datos del servidor de informes, un servidor de informes utiliza también una base de datos temporal. La base de datos temporal se actualiza automáticamente al actualizar la base de datos del servidor de informes.  
   
 ## <a name="permissions-required-to-upgrade-a-report-server-database"></a>Permisos necesarios para actualizar una base de datos del servidor de informes  
- Si va a actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que incluye una base de datos del servidor de informes, puede aparecer un mensaje de error si la actualización de la base de datos se realiza sin los permisos adecuados. De manera predeterminada, el programa de instalación utiliza el token de seguridad del usuario que ejecuta el programa de instalación para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota y actualizar el esquema. Si tiene permisos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** en el servidor de bases de datos donde se hospedan las bases de datos del servidor de informes, la actualización de la base de datos se realizará correctamente. De manera similar, si ejecuta el programa de instalación desde el símbolo del sistema y se especifican los argumentos RSUPGRADEDATABASEACCOUNT y RSUPGRADEPASSWORD para una cuenta que tiene permiso **sysadmin** para modificar el esquema en el equipo remoto, la base de datos se actualizará correctamente.  
+ Si va a actualizar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que incluye una base de datos del servidor de informes, puede aparecer un mensaje de error si la actualización de la base de datos se realiza sin los permisos adecuados. De manera predeterminada, el programa de instalación utiliza el token de seguridad del usuario que ejecuta el programa de instalación para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota y actualizar el esquema. Si tiene permisos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sysadmin**de** en el servidor de bases de datos donde se hospedan las bases de datos del servidor de informes, la actualización de la base de datos se realizará correctamente. De manera similar, si ejecuta el programa de instalación desde el símbolo del sistema y se especifican los argumentos RSUPGRADEDATABASEACCOUNT y RSUPGRADEPASSWORD para una cuenta que tiene permiso **sysadmin** para modificar el esquema en el equipo remoto, la base de datos se actualizará correctamente.  
   
  Sin embargo, si no tiene permiso **sysadmin** para la base de datos del equipo remoto, se rechazará la conexión y aparecerá un error que indica lo siguiente:  
   
@@ -67,9 +66,9 @@ ms.locfileid: "66108639"
   
 ## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Crear una base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Asistente para cambiar base de datos &#40;el modo nativo de SSRS&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [Actualización y migración de Reporting Services](upgrade-and-migrate-reporting-services.md)   
- [Migrar una instalación Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
+ [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   
   

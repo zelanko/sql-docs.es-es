@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109932"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Cambios recientes de SQL Server Reporting Services en SQL Server 2014
@@ -32,10 +32,10 @@ ms.locfileid: "66109932"
   
 -   [Cambios importantes en SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services cambios importantes  
+##  <a name="sssql14-reporting-services-breaking-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services cambios importantes  
  No hay novedades en los cambios de las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services cambios importantes  
+##  <a name="sssql11-reporting-services-breaking-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services cambios importantes  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>Las referencias de servidor en modo de SharePoint requiere el sitio de SharePoint  
  No puede buscar o hacer referencia directamente al servidor de informes utilizando el nombre virtual en la ruta de acceso URL. Por ejemplo:  
@@ -65,11 +65,10 @@ ms.locfileid: "66109932"
 -   SQL Server Management Studio: los clientes no pueden hacer referencia a un servidor con una sintaxis similar a <machine_name>/<instance_name. A partir de la versión de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , el método recomendado era utilizar la dirección URL del sitio SharePoint. Por ejemplo, **http://<sharepoint_server>/<sharePoint_site **>. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], las direcciones URL de sitios de SharePoint son la única sintaxis compatible.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>El diseñador de modelos de informe no está disponible en las herramientas de datos de SQL Server  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ya no admite proyectos del modelo de informes. El Diseñador de modelos de informe no está disponible en [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. No puede crear nuevos proyectos de modelos de informe ni abrir proyectos existentes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y no puede crear ni actualizar los modelos de informe. Para actualizar los modelos de informe, puede [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usar o las herramientas anteriores. Puede seguir utilizando modelos de informe como orígenes de datos en los informes creados en las herramientas de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] como el Generador de informes y el Diseñador de informes. El diseñador de consultas que se usa para crear consultas para extraer datos de informe de los modelos de informe sigue [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]estando disponible en.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ya no admite proyectos del modelo de informes. El Diseñador de modelos de informe no está disponible en [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. No puede crear nuevos proyectos de modelos de informe ni abrir proyectos existentes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y no puede crear ni actualizar los modelos de informe. Para actualizar los modelos de informe, puede [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] usar o las herramientas anteriores. Puede seguir utilizando modelos de informe como orígenes de datos en los informes creados en las herramientas de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] como el Generador de informes y el Diseñador de informes. El diseñador de consultas que se usa para crear consultas para extraer datos de informe de los modelos de informe sigue [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]estando disponible en.  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services cambios importantes  
- En esta sección se describen los principales cambios de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+##  <a name="sql-server-2008-r2-reporting-services-breaking-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services cambios importantes  
+ En esta sección se describen los [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]cambios importantes en.  
   
 > [!NOTE]  
 >  Dado que SQL Server 2008 R2 es una actualización de versión menor de SQL Server 2008, recomendamos también revisar el contenido en la sección de SQL Server 2008.  
@@ -83,6 +82,6 @@ ms.locfileid: "66109932"
  [Cambios de comportamiento en SQL Server Reporting Services en SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
  [Novedades &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Características en desuso en SQL Server Reporting Services en SQL Server 2014](deprecated-features-in-sql-server-reporting-services-ssrs.md)   
- [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
+ [Funcionalidad de SQL Server Reporting Services descontinuada en SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
   
   

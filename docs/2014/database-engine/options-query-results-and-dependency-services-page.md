@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481202"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opciones (Resultados de la consulta/página Servicios de dependencia)
@@ -28,13 +28,13 @@ ms.locfileid: "65481202"
   
 2.  [Configurar las opciones](#options)  
   
-##  <a name="open_dialog"></a>Abrir el cuadro de diálogo Opciones (página resultados de la consulta/servicios de dependencia)  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Abrir el cuadro de diálogo Opciones (página resultados de la consulta/servicios de dependencia)  
   
 1.  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], haga clic en **Opciones** en el menú **herramientas** .  
   
 2.  Expanda **Resultados de la consulta** y, después, haga clic en **Servicios de dependencia**.  
   
-##  <a name="options"></a> Configurar las opciones  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurar las opciones  
   
 ### <a name="options"></a>Opciones  
  **Servidor de los servicios de dependencia.**  
@@ -51,5 +51,5 @@ ms.locfileid: "65481202"
  **Contraseña**  
  Si está utilizando Autenticación de SQL Server, proporcione una contraseña.  
   
- **Muestre**  
+ **Prueba**  
  Haga clic en esta opción para comprobar la conexión.

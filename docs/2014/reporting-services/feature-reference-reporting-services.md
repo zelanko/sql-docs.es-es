@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10fcb605ba6040c6d2a44c562af81c658ee26514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109168"
 ---
 # <a name="feature-reference-reporting-services"></a>Referencia de características (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye varias herramientas y aplicaciones que puede usar para crear, administrar y ver informes. En esta sección, se proporcionan temas específicos en los que se describen los cuadros de diálogo, las páginas web y los asistentes de estas herramientas y aplicaciones.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye varias herramientas y aplicaciones que se pueden usar para crear, administrar y ver informes. En esta sección, se proporcionan temas específicos en los que se describen los cuadros de diálogo, las páginas web y los asistentes de estas herramientas y aplicaciones.  
   
  Para obtener acceso a un tema de la interfaz de usuario mientras se ejecuta la herramienta o la aplicación, presione F1 o haga clic en **Ayuda** cuando esté abierto el cuadro de diálogo, la página web o el asistente. Para más información sobre cómo iniciar las herramientas de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Tutorial: Cómo buscar e iniciar herramientas de Reporting Services &#40;SSRS&#41;](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66109168"
  [Administrador de configuración de Reporting Services temas de la ayuda F1 &#40;el modo nativo de SSRS&#41;](../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
  Proporciona ayuda para la herramienta de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que se usa para implementar y administrar las instancias del servidor de informes.  
   
- [Servidor de informes en Management Studio (Ayuda F1)](tools/report-server-in-management-studio-f1-help.md)  
+ [Servidor de informes en Management Studio ayuda F1](tools/report-server-in-management-studio-f1-help.md)  
  Proporciona ayuda para los cuadros de diálogo que se usan para administrar informes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]y servidores de informes en.  
   
  [Visor HTML y la barra de herramientas del informe](html-viewer-and-the-report-toolbar.md)  
@@ -48,6 +48,6 @@ ms.locfileid: "66109168"
  [Reporting Services informes &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
  [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Introducción con Generador de informes](https://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Diseñar e implementar informes mediante Generador de informes 1,0](https://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Diseñar e implementar informes usando el Generador de informes 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

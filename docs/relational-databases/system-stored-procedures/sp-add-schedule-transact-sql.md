@@ -18,10 +18,10 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "70810394"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
@@ -63,7 +63,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**4**|Diariamente|  
+|**4**|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente, con respecto a *freq_interval*|  
@@ -87,7 +87,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |Value|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
-|**0x2**|Segundos|  
+|**0X2**|Segundos|  
 |**0x4**|Minutos|  
 |**0x8**|Horas|  
   
@@ -132,8 +132,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  None  
   
 ## <a name="remarks"></a>Observaciones  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
@@ -200,6 +199,6 @@ GO
  [sp_update_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

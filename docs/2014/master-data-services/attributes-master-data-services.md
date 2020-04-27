@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480156"
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
@@ -78,19 +78,19 @@ ms.locfileid: "65480156"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un nuevo atributo de texto de forma libre.|[Cree un atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|Crear un nuevo atributo numérico de forma libre.|[Cree un atributo numérico &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|Crear un nuevo atributo de vínculo de forma libre.|[Cree un atributo de vínculo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|Crear un nuevo atributo de archivo.|[Cree un atributo de archivo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
-|Crear un nuevo atributo basado en dominio.|[Cree un atributo basado en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|Crear un nuevo atributo de texto de forma libre.|[Crear un atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|Crear un nuevo atributo numérico de forma libre.|[Crear un atributo numérico &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|Crear un nuevo atributo de vínculo de forma libre.|[Crear un atributo de vínculo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|Crear un nuevo atributo de archivo.|[Crear un atributo de archivo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|Crear un nuevo atributo basado en dominio.|[Crear un atributo basado en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Cambiar el nombre de un atributo existente.|[Cambiar el nombre de un atributo &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Agregar atributos existentes a un grupo de seguimiento de cambios.|[Agregar atributos a un grupo de Change Tracking &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Agregar atributos existentes a un grupo de seguimiento de cambios.|[Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Eliminar un atributo existente.|[Eliminar un atributo &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |Cambie el orden de los atributos.|[Cambiar el orden de los atributos](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Atributos basados en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos basados en dominios &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Grupos de atributos &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
   

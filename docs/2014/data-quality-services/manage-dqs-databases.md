@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5be0404cc35964573b8a66d7874c76a82e7c55f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484473"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   En esta sección se proporciona información sobre las actividades de administración de bases de datos que se pueden realizar en las bases de datos de DQS, como la copia de seguridad/restauración o las operaciones de separar/adjuntar.  
   
-##  <a name="BackupRestore"></a>Copia de seguridad y restauración de las bases de datos de DQS  
+##  <a name="backup-and-restore-the-dqs-databases"></a><a name="BackupRestore"></a> Copia de seguridad y restauración de las bases de datos de DQS  
  La copia de seguridad y la restauración de bases de datos de SQL Server son operaciones habituales que los administradores de bases de datos llevan a cabo para evitar la pérdida de datos en caso de desastre y que les permiten recuperar la información de las copias de seguridad de las bases de datos. Básicamente, hay dos bases de datos de SQL Server que implementan[!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] : DQS_MAIN y DQS_PROJECTS. Los procedimientos de copia de seguridad y restauración de las bases de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) son similares a los del resto de bases de datos de SQL Server. Las operaciones de copia de seguridad y restauración de las bases de datos de DQS plantean estos tres retos:  
   
 -   Dichas operaciones deben estar sincronizadas. En caso contrario, el [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] restaurado ya no será funcional.  
@@ -42,7 +42,7 @@ ms.locfileid: "65484473"
 >  -   En el modelo de recuperación simple, cuando las entradas de registro permanecen activas durante mucho tiempo (por ejemplo, una transacción prolongada), el truncamiento del registro se puede retrasar y, por tanto, se podría llenar el registro de transacciones. Además, el truncamiento del registro no reduce el tamaño del archivo de registro físico (archivo. ldf). Para reducir el tamaño de un archivo de registro físico, se debe reducir el archivo de registro. Para obtener información sobre la solución de problemas relativos al registro de transacciones, vea [El registro de transacciones &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o el artículo del servicio de soporte técnico de Microsoft en [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Debe realizar periódicamente una copia de seguridad completa o diferencial de las bases de datos de DQS, y una copia de seguridad del registro de transacciones para crear un punto de recuperación de los datos. Para más información, vea [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) y [Realizar copias de seguridad de un registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-##  <a name="DetachAttach"></a>Desasociar o adjuntar las bases de datos de DQS  
+##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a>Desasociar o adjuntar las bases de datos de DQS  
  Puede separar los datos y los archivos de registro de transacciones de las bases de datos de DQS y, a continuación, volver a adjuntar las bases de datos a la misma instancia o a otra instancia de SQL Server si desea cambiar las bases de datos de DQS a una instancia diferente de SQL Server en el mismo equipo o mover la base de datos.  
   
  Para obtener información detallada sobre los aspectos que se deben considerar tanto antes de las operaciones para separar y adjuntar bases de datos en SQL Server como durante dichas operaciones, vea [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  

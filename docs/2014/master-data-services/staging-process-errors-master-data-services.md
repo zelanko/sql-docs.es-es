@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65de28bcf880fab6dc0546c5ed4c315978ad39f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478793"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errores del proceso de almacenamiento provisional (Master Data Services)
@@ -28,9 +28,9 @@ ms.locfileid: "65478793"
 |210003|El atributo values hace referencia a un miembro que no existe o está inactivo.|Cuando almacena provisionalmente atributos basados en dominio, debe usar el código en lugar del nombre. Se aplica a **ImportType0**, **1**y **2**.|Hoja<br /><br /> Consolidado|  
 |210006|El código de miembro está inactivo.|**ImportType** = **1** y especificó un código de miembro que no existe.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210032|El nombre de jerarquía falta o no es válido.|La jerarquía explícita no se encontró o el valor de **HierarchyName** estaba en blanco.|Consolidado<br /><br /> Relación|  
-|210035|Dado que no existe una regla de negocios de generación de código, se requiere **MemberCode** .|Al crear o actualizar miembros, se requiere siempre **MemberCode** , a menos que esté utilizando la generación de código automática. Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Hoja<br /><br /> Consolidado|  
-|210036|Dado que existe una regla de negocios de generación de código, no se requiere **MemberCode** .|Al crear o actualizar miembros, no se requiere **MemberCode** cuando se utilice la generación de código automática. Sin embargo, puede especificar un código si lo desea. Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Hoja<br /><br /> Consolidado|  
-|210041|"ROOT" no es un código de miembro válido.|El valor de **MemberCode** contiene la palabra "ROOT".|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
+|210035|Dado que no existe una regla de negocios de generación de código, se requiere **MemberCode** .|Al crear o actualizar miembros, se requiere siempre **MemberCode** , a menos que esté utilizando la generación de código automática. Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Hoja<br /><br /> Consolidado|  
+|210036|Dado que existe una regla de negocios de generación de código, no se requiere **MemberCode** .|Al crear o actualizar miembros, no se requiere **MemberCode** cuando se utilice la generación de código automática. Sin embargo, puede especificar un código si lo desea. Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).|Hoja<br /><br /> Consolidado|  
+|210041|"ROOT" no es un código de miembro válido.|El valor de **MemberCode** contiene la palabra "root".|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210042|"MDMUNUSED" no es un código de miembro válido.|El valor de **MemberCode** contiene la palabra "MDMUNUSED".|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210052|MemberCode no puede estar desactivado porque se utiliza como valor de atributo basado en dominio.|Cuando **ImportType** = **3** o **4**, el almacenamiento provisional produce un error si el miembro se utiliza como valor de atributo para otros miembros. Use **ImportType5** o **6** para establecer el valor en NULL o cambiar los valores antes de ejecutar el proceso de almacenamiento provisional.|Hoja<br /><br /> Consolidado|  
 |300002|El código de miembro no es válido.|Relaciones: el código de miembro primario o secundario no existe.<br /><br /> Hoja o consolidado: **ImportType** = **3** o **4** y el código de miembro no existe.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  

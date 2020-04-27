@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312150"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lección 4: Explorar los modelos de correo directo (tutorial básico de minería de datos)
@@ -48,7 +48,7 @@ ms.locfileid: "63312150"
  [Explorar el modelo de árbol de decisión &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-lesson"></a>Lección anterior  
- [Lección 3: Agregar y procesar los modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Lección 3: Adición y procesamiento de modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
  [Lección 5: probar los modelos &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  

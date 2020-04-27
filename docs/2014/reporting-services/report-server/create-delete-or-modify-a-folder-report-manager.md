@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103916"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Crear, eliminar o modificar una carpeta (Administrador de informes)
@@ -41,7 +41,7 @@ ms.locfileid: "66103916"
   
 5.  Seleccione **Ocultar en la vista de lista** si no desea mostrar la carpeta en la vista predeterminada de la página **Contenido** . La carpeta estará visible para los usuarios solo cuando hagan clic en **Mostrar detalles** en la página **Contenido** .  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 ### <a name="to-delete-a-folder"></a>Para eliminar una carpeta  
   

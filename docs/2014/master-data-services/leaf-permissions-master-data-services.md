@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479170"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65479170"
   
  Para las entidades sin jerarquías explícitas habilitadas, la asignación de un permiso a **Hoja** es equivalente a asignar un permiso a la entidad.  
   
- **Apunte**  
+ **Notas:**  
   
 -   Los permisos de hoja solo se aplican al área funcional del **Explorador** de la interfaz de usuario.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65479170"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Solo lectura**|Se muestran los miembros hoja, pero el usuario no los puede agregar, quitar o cambiar.<br /><br /> Si hay miembros consolidados, se muestran los nombres y códigos pero el usuario no los puede agregar, quitar o cambiar.|  
-|**Update**|Se muestran los miembros hoja y el usuario los puede agregar, quitar y cambiar.<br /><br /> Si hay miembros consolidados, se muestran los nombres y códigos pero el usuario no los puede agregar, quitar o cambiar.|  
+|**Actualizar**|Se muestran los miembros hoja y el usuario los puede agregar, quitar y cambiar.<br /><br /> Si hay miembros consolidados, se muestran los nombres y códigos pero el usuario no los puede agregar, quitar o cambiar.|  
 |**Deny**|No se muestran los miembros hoja para la entidad.|  
   
 ## <a name="attribute-permissions"></a>Permisos de atributo  
@@ -46,16 +46,16 @@ ms.locfileid: "65479170"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Solo lectura**|Se muestra el atributo, pero el usuario no puede cambiar los valores de atributo.|  
-|**Update**|Se muestra el atributo y el usuario puede cambiar los valores de atributo.|  
+|**Actualizar**|Se muestra el atributo y el usuario puede cambiar los valores de atributo.|  
 |**Deny**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   
 ### <a name="example"></a>Ejemplo  
  Para la entidad Product, asigne el permiso **Actualizar** al atributo Subcategory. Deniegue el permiso al resto de los atributos.  
   
-|Nombre|Código|Subcategory (actualizar)|  
+|NOMBRE|Código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5}Bicicletas de montaña|  
+|Mountain-100|BK-M201|{5}Bicicletas de montaña|  
   
  En el **Explorador**, puede actualizar cualquier valor de atributo en la columna Subcategory. Si no dispone del permiso para un atributo, este no se mostrará.  
   

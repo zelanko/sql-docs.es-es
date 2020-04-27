@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109613"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Crear, eliminar o modificar un origen de datos compartido (Administrador de informes)
@@ -35,7 +35,7 @@ Icono de origen de datos compartido
   
 1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
-2.  En el Administrador de informes, navegue hasta la página **Contenido** .  
+2.  En Administrador de informes, vaya a la página **contenido** .  
   
 3.  Haga clic en **Nuevo origen de datos**. Se abre la página **Nuevo origen de datos** .  
   
@@ -70,7 +70,7 @@ Icono de origen de datos compartido
     > [!NOTE]  
     >  El botón Probar conexión no se admite para el tipo de origen de datos XML.  
   
-10. Haz clic en **Aceptar**.  
+10. Haga clic en **Aceptar**  
   
 ### <a name="to-modify-a-shared-data-source"></a>Para modificar un origen de datos compartido  
   

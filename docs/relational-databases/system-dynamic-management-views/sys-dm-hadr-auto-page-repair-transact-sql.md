@@ -21,10 +21,10 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900687"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67900687"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador la base de datos a la que corresponde esta fila.|  
 |**file_id**|**int**|Identificador del archivo en el que se encuentra la página.|  
-|**page_id**|**BIGINT**|Identificador de la página en el archivo.|  
+|**page_id**|**bigint**|Identificador de la página en el archivo.|  
 |**error_type**|**int**|Tipo del error. Los valores pueden ser:<br /><br /> **-** 1 = todos los errores de hardware 823<br /><br /> 1 = Errores 824 distintos de una suma de comprobación errónea o una página rasgada (por ejemplo, un identificador de página incorrecto)<br /><br /> 2 = Suma de comprobación incorrecta<br /><br /> 3 = Página rasgada|  
 |**page_status**|**int**|El estado del intento de reparación de la página:<br /><br /> 2 = En cola para la solicitud del socio.<br /><br /> 3 = Solicitud enviada al socio.<br /><br /> 4 = la página se reparó correctamente.<br /><br /> 5 = no se pudo reparar la página durante el último intento o la reparación de página automática intentará reparar la página de nuevo.|  
 |**modification_time**|**datetime**|Hora del último cambio en el estado de la página.|  
@@ -49,7 +49,7 @@ ms.locfileid: "67900687"
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [Reparación de página automática &#40;grupos de disponibilidad/creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Reparación de página automática &#40;grupos de disponibilidad: creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [suspect_pages &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

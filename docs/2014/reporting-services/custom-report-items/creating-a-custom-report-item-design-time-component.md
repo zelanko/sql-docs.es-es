@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265142"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Crear un componente de tiempo de diseño de elemento de informe personalizado
@@ -196,8 +196,8 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 ## <a name="see-also"></a>Consulte también  
  [Arquitectura de elementos de informe personalizados](custom-report-item-architecture.md)   
- [Creación de un componente de tiempo de ejecución de elemento de informe personalizado](creating-a-custom-report-item-run-time-component.md)   
+ [Crear un componente de tiempo de ejecución de elemento de informe personalizado](creating-a-custom-report-item-run-time-component.md)   
  [Bibliotecas de clases de elementos de informe personalizadas](custom-report-item-class-libraries.md)   
- [Implementación de un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
+ [Cómo: Implementar un elemento de informe personalizado](how-to-deploy-a-custom-report-item.md)  
   
   

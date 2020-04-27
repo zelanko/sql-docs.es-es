@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e57e0eb15c8c0ae7e326927ab14493f21c52cc14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104296"
 ---
 # <a name="report-properties-dialog-box-references"></a>Propiedades del informe (cuadro de diálogo), Referencias
@@ -42,15 +42,15 @@ ms.locfileid: "66104296"
  **Eliminar**  
  Para eliminar la instancia de clase, selecciónela y haga clic en el botón **Quitar** .  
   
- **Up** (Arriba)  
+ **Arriba**  
  Para las clases que tienen dependencias, puede mover esta referencia hacia arriba en la lista.  
   
- **Vertical**  
+ **Bajar**  
  Para las clases que tienen dependencias, puede mover esta referencia hacia abajo en la lista.  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencias a ensamblados y código personalizado en expresiones en Diseñador de informes &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
+ [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Las referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

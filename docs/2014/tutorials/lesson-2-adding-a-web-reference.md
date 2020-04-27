@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316008"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Lección 2: agregar una referencia web
+# <a name="lesson-2-adding-a-web-reference"></a>Lección 2: Adición de una referencia web
   Se llama detección de servicios web al proceso por el que un cliente busca un servicio web y obtiene la descripción del servicio. El proceso de detección de servicios web en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] conlleva la interrogación de un sitio web de acuerdo con un algoritmo predeterminado. El objetivo del proceso es encontrar la descripción del servicio, que es un documento XML que utiliza el Lenguaje de descripción de servicios web (WSDL).  
   
  En la descripción del servicio, se explican los servicios disponibles y la forma de interactuar con ellos. Sin una descripción del servicio, no se puede interactuar con el servicio web mediante programación.  
@@ -34,7 +34,7 @@ ms.locfileid: "63316008"
   
 4.  En el cuadro **dirección URL** del cuadro de diálogo **Agregar referencia Web** , escriba la dirección URL para obtener la descripción del servicio Web del servidor de informes, http://localhost/reportserver/reportservice2010.asmxcomo. A continuación, haga clic en el botón **ir** para recuperar información sobre el servicio Web.  
   
-     \- O bien  
+     \- o -  
   
      Si el servicio Web del servidor de informes existe en el equipo local, haga clic en el vínculo **servicios web del equipo local** en el panel explorador. A continuación, haga clic en el vínculo del servicio web ReportService2010 de la lista proporcionada.  
   
@@ -42,8 +42,7 @@ ms.locfileid: "63316008"
   
 6.  Haga clic en **Agregar referencia** para agregar una referencia Web para el servicio Web de destino.  
   
-     
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] descarga la descripción del servicio y genera una clase proxy que sirve de interfaz entre la aplicación y el servicio web del servidor de informes. También necesitará agregar una referencia al espacio de nombres <xref:System.Web.Services> para que su referencia web funcione.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] descarga la descripción del servicio y genera una clase proxy que sirve de interfaz entre la aplicación y el servicio web del servidor de informes. También necesitará agregar una referencia al espacio de nombres <xref:System.Web.Services> para que su referencia web funcione.  
   
 7.  En el menú Proyecto, haga clic en **Agregar referencia**.  
   

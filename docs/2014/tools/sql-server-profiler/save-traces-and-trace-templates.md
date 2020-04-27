@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267430"
 ---
 # <a name="save-traces-and-trace-templates"></a>Guardar seguimientos y plantillas de seguimiento
@@ -47,12 +47,10 @@ ms.locfileid: "63267430"
 >  Los usuarios que tienen el permiso SHOWPLAN, ALTER TRACE o VIEW SERVER STATE pueden ver consultas capturadas en la salida del plan de presentación. Estas consultas pueden contener información confidencial, como contraseñas. Por consiguiente, se recomienda conceder estos permisos solo a los usuarios que tengan autorización para ver información confidencial, como los miembros del rol fijo de base de datos **db_owner** o los miembros del rol fijo de servidor **sysadmin** . Además, se recomienda guardar solo los archivos del plan de presentación o los archivos de seguimiento que contengan eventos relacionados con el plan de presentación en una ubicación que utilice el sistema de archivos NTFS, así como restringir el acceso a los usuarios que tengan autorización para ver información confidencial.  
   
 ## <a name="saving-templates"></a>Guardar plantillas  
- La definición de la plantilla de un seguimiento incluye las clases de eventos, columnas de datos, filtros y todas las demás propiedades (excepto los datos de eventos capturados) que se utilizan para crear un seguimiento. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] proporciona plantillas del sistema predefinidas para las tareas de seguimiento comunes y para tareas específicas, como crear una carga de trabajo que el Asistente para la optimización de motor de base de datos pueda utilizar para ajustar el diseño físico de la base de datos. También se pueden crear y guardar plantillas definidas por el usuario.  
+ La definición de la plantilla de un seguimiento incluye las clases de eventos, columnas de datos, filtros y todas las demás propiedades (excepto los datos de eventos capturados) que se utilizan para crear un seguimiento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] proporciona plantillas del sistema predefinidas para las tareas de seguimiento comunes y para tareas específicas, como crear una carga de trabajo que el Asistente para la optimización de motor de base de datos pueda utilizar para ajustar el diseño físico de la base de datos. También se pueden crear y guardar plantillas definidas por el usuario.  
   
 ### <a name="importing-and-exporting-templates"></a>Importar y exportar plantillas  
- 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite importar y exportar plantillas de un servidor a otro. Al exportar una plantilla se mueve una copia de una plantilla existente al directorio especificado. Al importar una plantilla se realiza una copia de una plantilla especificada. Cuando estas plantillas se ven en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], se pueden distinguir de las plantillas del sistema por el término "(usuario)" que sigue al nombre de la plantilla. Las plantillas del sistema predefinidas no se pueden sobrescribir ni modificar directamente.  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite importar y exportar plantillas de un servidor a otro. Al exportar una plantilla se mueve una copia de una plantilla existente al directorio especificado. Al importar una plantilla se realiza una copia de una plantilla especificada. Cuando estas plantillas se ven en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], se pueden distinguir de las plantillas del sistema por el término "(usuario)" que sigue al nombre de la plantilla. Las plantillas del sistema predefinidas no se pueden sobrescribir ni modificar directamente.  
   
 ### <a name="analyzing-performance-with-templates"></a>Analizar el rendimiento con plantillas  
  Si supervisa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]con frecuencia, utilice plantillas para analizar el rendimiento. Las plantillas capturan los mismos datos de eventos cada vez y utilizan la misma definición de seguimiento para supervisar los mismos eventos. No tendrá que definir las clases de eventos y las columnas de datos cada vez que cree un seguimiento. Además, se puede proporcionar una plantilla a otro usuario para supervisar eventos específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, un proveedor de asistencia técnica puede proporcionar una plantilla a un cliente. El cliente puede utilizar la plantilla para capturar los datos de eventos necesarios, que posteriormente enviará al proveedor de asistencia técnica para que los analice.  

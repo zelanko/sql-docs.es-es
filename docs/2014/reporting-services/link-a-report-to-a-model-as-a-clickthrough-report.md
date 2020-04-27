@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45b7695a9cd259d10155036ce1f9367a71e2fe72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108369"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Vincular un informe a un modelo como informe click-through
@@ -48,7 +48,7 @@ ms.locfileid: "66108369"
   
 5.  Para mostrar el informe personalizado cuando se hace clic en una sola instancia de la entidad seleccionada, haga clic en el botón **Examinar** del informe de una sola instancia.  
   
-     O bien  
+     o bien  
   
      Para mostrar el informe personalizado cuando se hace clic en varias instancias de la entidad seleccionada, haga clic en el botón **Examinar** del informe de varias instancias.  
   

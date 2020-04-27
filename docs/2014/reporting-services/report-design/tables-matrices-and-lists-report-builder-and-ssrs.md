@@ -36,10 +36,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff294adb9108156e08c1d0053d301c0f4cafb0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104752"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tablas, matrices y listas (Generador de informes y SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "66104752"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Table"></a>Cuadro  
+##  <a name="table"></a><a name="Table"></a>Cuadro  
  use una tabla para mostrar datos detallados, para organizar los datos en grupos de filas, o para ambas cosas. La plantilla Tabla contiene tres columnas con una fila de encabezado de tabla y una fila de detalles para los datos. En la ilustración siguiente, se muestra la plantilla de tabla inicial, seleccionada en la superficie de diseño:  
   
  ![Plantilla de tabla en la superficie de diseño, seleccionada](../media/rs-tabletemplatenewselected.gif "Plantilla de tabla en la superficie de diseño, seleccionada")  
@@ -76,7 +76,7 @@ ms.locfileid: "66104752"
   
 
   
-##  <a name="Matrix"></a>Matrices  
+##  <a name="matrix"></a><a name="Matrix"></a>Matrices  
  use una matriz para mostrar resúmenes de los datos agregados agrupados en filas y en columnas; algo similar a una tabla dinámica o a una tabla de referencias cruzadas. El número de valores únicos por cada grupo de filas y columnas determina el número de filas y de columnas de los grupos. En la ilustración siguiente, se muestra la plantilla de matriz inicial, seleccionada en la superficie de diseño:  
   
  ![Nueva matriz agregada desde el cuadro de herramientas, seleccionada](../media/rs-matrixtemplatenewselected.gif "Nueva matriz agregada desde el cuadro de herramientas, seleccionada")  
@@ -91,7 +91,7 @@ ms.locfileid: "66104752"
   
 
   
-##  <a name="List"></a>Lista  
+##  <a name="list"></a><a name="List"></a>Lista  
  use una lista para crear un diseño de forma libre. Con una lista, no está limitado a un diseño de cuadrícula, sino que puede colocar libremente los campos dentro de la lista. Use una lista para diseñar un formulario que permita mostrar muchos campos de conjunto de datos, o como contenedor para mostrar en paralelo varias regiones de datos para los datos agrupados. Por ejemplo, puede definir un grupo para una lista; agregar una tabla, un gráfico y una imagen; y mostrar los valores en forma de tabla y de gráfico para cada valor del grupo, tal y como lo haría con un registro de un empleado o de un paciente.  
   
  ![Nueva lista agregada desde el cuadro de herramientas, seleccionada](../media/rs-listtemplatenewselected.gif "Nueva lista agregada desde el cuadro de herramientas, seleccionada")  
@@ -100,7 +100,7 @@ ms.locfileid: "66104752"
   
 
   
-##  <a name="PreparingData"></a>Preparar los datos  
+##  <a name="preparing-data"></a><a name="PreparingData"></a>Preparar los datos  
  Una región de datos de tabla, matriz y lista muestra datos de un conjunto de datos. Puede preparar los datos en la consulta que recupera los datos para el conjunto de datos, o establecer las propiedades en la tabla, matriz o lista.  
   
  Los lenguajes de consulta como [!INCLUDE[tsql](../../includes/tsql-md.md)], que se usan para recuperar los datos para los conjuntos de datos de informe, pueden preparar los datos aplicando filtros que incluyan solo un subconjunto de los datos, reemplazando valores nulos o en blanco con constantes que hagan el informe más legible, y ordenando y agrupando los datos.  
@@ -111,14 +111,14 @@ ms.locfileid: "66104752"
   
 
   
-##  <a name="BuildingConfiguringTableMatrixList"></a>Generar y configurar una tabla, una matriz o una lista  
+##  <a name="building-and-configuring-a-table-matrix-or-list"></a><a name="BuildingConfiguringTableMatrixList"></a>Generar y configurar una tabla, una matriz o una lista  
  Al agregar tablas o matrices a un informe, puede usar el Asistente para tabla o matriz, o generarlas manualmente a partir de las plantillas proporcionadas por el Generador de informes y el Diseñador de informes. Las listas se generan manualmente a partir de la plantilla de lista.  
   
  El asistente indica todos los pasos para generar y configurar rápidamente una tabla o una matriz. Después de completar el asistente o generar las regiones de datos Tablix desde cero, puede configurarlas y refinarlas. Los cuadros de diálogo, disponible en los menús contextuales en las regiones de datos, facilitan el establecimiento de las propiedades más utilizadas para los saltos de página, repeticiones y visibilidad de encabezados y pies de página, opciones de pantalla, filtros y orden. La región de datos Tablix ofrece muchas otras propiedades, que solo puede establecer en el panel Propiedades de Generador de informes. Por ejemplo, si quiere mostrar un mensaje cuando el conjunto de datos de una tabla, matriz o lista esté vacío, debe especificar el texto del mensaje en la propiedad de Tablix NoRowsMessage en el panel Propiedades.  
   
 
   
-##  <a name="ChangingBetweenTablixTemplates"></a>Cambiar entre las plantillas de Tablix  
+##  <a name="changing-between-tablix-templates"></a><a name="ChangingBetweenTablixTemplates"></a>Cambiar entre las plantillas de Tablix  
  La plantilla inicial de Tablix que elija no es necesariamente definitiva. Mientras agrega grupos, totales y etiquetas, es posible que decida modificar el diseño de Tablix. Por ejemplo, puede comenzar con una tabla y, a continuación, eliminar la fila de detalles y agregar grupos de columnas. Para más información, vea [Explorar la flexibilidad de una región de datos Tablix &#40;Generador de informes y SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
  Para continuar el desarrollo de una tabla, matriz o lista, puede agregar cualquier característica de Tablix. Entre las características de Tablix se incluye la visualización de datos detallados o agregados para los datos agrupados en filas y columnas. Puede crear grupos anidados, grupos adyacentes independientes o grupos recursivos. Puede filtrar y ordenar datos agrupados, y combinar grupos fácilmente mediante la inclusión de varias expresiones de grupo en una definición de grupo.  
@@ -127,14 +127,14 @@ ms.locfileid: "66104752"
   
 
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Temas de procedimientos  
  En esta sección se describen procedimientos que muestran, paso a paso, cómo trabajar con tablas, matrices y listas en los informes; cómo mostrar los datos en filas y columnas, agregar y eliminar columnas, combinar celdas, e incluir subtotales para los grupos de filas y columnas.  
   
 -   [Agregar un grupo de detalles &#40;Generador de informes y SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
 -   [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
--   [Cambiar un elemento de una celda &#40;Generador de informes y SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
+-   [Cambiar un elemento de una celda &#40;Diseñador de informes y SSRS&#41;](change-an-item-within-a-cell-report-builder-and-ssrs.md)  
   
 -   [Cambiar el alto de fila o el ancho de columna &#40;Generador de informes y SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md)  
   
@@ -152,11 +152,11 @@ ms.locfileid: "66104752"
   
 -   [Crear un informe escalonado &#40;Generador de informes y SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Agregar, cambiar o eliminar una tabla, una matriz o una lista &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Agregar, mover o eliminar una tabla, una matriz o una lista &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
-##  <a name="InThisSection"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>En esta sección  
  En los siguientes temas se proporciona información adicional acerca de cómo trabajar con la región de datos Tablix.  
   
  [Región de datos Tablix &#40;Generador de informes y SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)  
@@ -181,7 +181,7 @@ ms.locfileid: "66104752"
   
 ## <a name="see-also"></a>Consulte también  
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Anidar regiones de datos &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [Regiones de datos anidadas &#40;Generador de informes y SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   

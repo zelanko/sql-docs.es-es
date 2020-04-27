@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103759"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modificar un archivo de configuración de Reporting Services (RSreportserver.config)
@@ -35,7 +35,7 @@ ms.locfileid: "66103759"
   
 -   [Para editar un archivo de configuración de Reporting Services](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> Leer y usar valores de configuración  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> Leer y usar valores de configuración  
  Un servidor de informes lee los archivos de configuración cuando se inicia el servicio y siempre que se guarda el archivo de configuración. Los valores nuevos y revisados surten efecto en un nuevo dominio de aplicación cuando expira el dominio de aplicación actual. Siempre que es posible, se permite que se completen las solicitudes que todavía se están procesando en el dominio de aplicación actual. Sin embargo, algunos valores requieren una operación inmediata de reciclaje de dominio de aplicación. En este caso, todas las solicitudes que se encuentran en proceso se reinician en un nuevo dominio de aplicación.  
   
  Si el servidor de informes detecta un valor no válido, registra un error en el registro de aplicación Windows y, o bien no puede iniciarse, o bien usa un valor predeterminado, dependiendo del error:  
@@ -46,13 +46,13 @@ ms.locfileid: "66103759"
   
  Todos los cambios del archivo de configuración, incluidos los cambios correctos, se registran en el archivo de registro de seguimiento del servidor de informes. Solo los errores se registran en el registro de eventos de la aplicación.  
   
-##  <a name="bkmk_default_values"></a> Sobre los valores predeterminados  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> Sobre los valores predeterminados  
  La mayoría de los valores de configuración tienen valores predeterminados especificados internamente en el servidor de informes. El servidor de informes usará estos valores si un valor definido por el usuario no es válido o no está especificado. Si hay que usar un valor predeterminado debido a un valor de configuración no válido, se escribe un error en el archivo de registro de seguimiento.  
   
-##  <a name="bkmk_delete_config_settings"></a> Eliminar los parámetros de configuración  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> Eliminar los parámetros de configuración  
  Quitar del archivo de configuración las opciones de configuración con valores predeterminados no tiene ningún efecto. La mayor parte de las opciones de configuración en realidad se definen y se configuran internamente. Si elimina un elemento del archivo de configuración, la copia interna todavía está disponible y se utiliza el valor predeterminado que se define para él.  
   
-##  <a name="bkmk_edit_configuation_file"></a> Para editar un archivo de configuración de Reporting Services  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> Para editar un archivo de configuración de Reporting Services  
   
 1.  Busque el archivo de configuración que desea editar:  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66103759"
   
     -   [Autenticación con el servidor de informes](../security/authentication-with-the-report-server.md)  
   
-    -   [Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
+    -   [Configurar el Administrador de informes para pasar cookies de autenticación personalizada](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
   
     -   [Personalización de los parámetros de extensión de representación en RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "66103759"
  [Archivo de configuración RSReportServer](rsreportserver-config-configuration-file.md)   
  [Archivo de configuración ReportingServicesService](reportingservicesservice-configuration-file.md)   
  [Archivo de configuración RSReportDesigner](rsreportdesigner-configuration-file.md)   
- [Implementación de una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md)   
- [Implementación de una extensión de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
- [Implementación de una extensión de representación](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
+ [Implementar una extensión de procesamiento de datos](../extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Implementar una extensión de entrega](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
+ [Implementar una extensión de representación](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [Cómo: implementar un elemento de informe personalizado](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Archivos de configuración de Reporting Services](reporting-services-configuration-files.md)  
   

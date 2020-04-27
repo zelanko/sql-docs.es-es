@@ -17,18 +17,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102187"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticación con el servidor de informes
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRs) proporciona varias opciones configurables para autenticar usuarios y aplicaciones cliente en el servidor de informes. De forma predeterminada, el servidor de informes usa la autenticación de Windows integrada y supone que existen relaciones de confianza donde el cliente y los recursos de red están en el mismo dominio o en un dominio de confianza. En función de la topología de red y las necesidades de su organización, puede personalizar el protocolo de autenticación que se usa para la autenticación integrada de Windows, usar la autenticación básica o usar una extensión personalizada basada en formularios de autenticación que proporcione. Cada uno de los tipos de autenticación puede activarse o desactivarse individualmente. Puede habilitar más de un tipo de autenticación si desea que el servidor de informes acepte solicitudes de varios tipos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) proporciona varias opciones configurables para autenticar usuarios y aplicaciones cliente en el servidor de informes. De forma predeterminada, el servidor de informes usa la autenticación de Windows integrada y supone que existen relaciones de confianza donde el cliente y los recursos de red están en el mismo dominio o en un dominio de confianza. En función de la topología de red y las necesidades de su organización, puede personalizar el protocolo de autenticación que se usa para la autenticación integrada de Windows, usar la autenticación básica o usar una extensión personalizada basada en formularios de autenticación que proporcione. Cada uno de los tipos de autenticación puede activarse o desactivarse individualmente. Puede habilitar más de un tipo de autenticación si desea que el servidor de informes acepte solicitudes de varios tipos.  
   
 > [!NOTE]  
->  IIS proporcionaba toda la compatibilidad con la autenticación en las versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. IIS no se usa a partir de la versión [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] controla todas las solicitudes de autenticación internamente.  
+>  IIS proporcionaba toda la compatibilidad con la autenticación en las versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. IIS no se usa a partir de la versión [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] controla todas las solicitudes de autenticación internamente.  
   
  Todos los usuarios o aplicaciones que soliciten acceso al contenido y las operaciones del servidor de informes deben autenticarse para que se permita el acceso.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66102187"
 |Anónimas|El servidor de informes no aceptará las solicitudes no autenticadas de un usuario anónimo, salvo en las implementaciones que incluyan una extensión de autenticación personalizada.<br /><br /> El Generador de informes aceptará las solicitudes sin autenticar si habilita el acceso del mismo en un servidor de informes que esté configurado para la autenticación básica.<br /><br /> En todos los demás casos, las solicitudes anónimas se rechazan y se genera un error de acceso denegado de estado 401 de HTTP antes de que la solicitud llegue a [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Los clientes que reciben este error deben volver a formular la solicitud con un tipo de autenticación válido.|  
 |Tecnologías de inicio de sesión único (SSO)|No hay ninguna compatibilidad nativa para las tecnologías de inicio de sesión único en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si desea utilizar una tecnología de inicio de sesión único, debe crear una extensión de autenticación personalizada.<br /><br /> El entorno host del servidor de informes no admite los filtros ISAPI. Si la tecnología SSO que usa se implementa como un filtro ISAPI, considere usar la compatibilidad integrada de ISA Server para el protocolo RADIUS o RSASecueID. De lo contrario, puede crear un ISAPI de ISA Server o un HTTPModule para RS, pero se recomienda usar ISA Server directamente.|  
 |Passport|No se admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|Implícita|No se admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|Resumen|No se admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
 ## <a name="configuration-of-authentication-settings"></a>Configuración de los valores de autenticación  
  La configuración de la autenticación se establece para la seguridad predeterminada cuando la dirección URL del servidor de informes está reservada. Si modifica estos valores incorrectamente, el servidor de informes devolverá errores de acceso denegado HTTP 401 para las solicitudes HTTP que no se puedan autenticar. La elección de un tipo de autenticación requiere saber si la autenticación de Windows se admite en la red. Se debe especificar al menos un tipo de autenticación. Se pueden especificar varios tipos de autenticación para RSWindows. Los tipos de autenticación de RSWindows ( `RSWindowsBasic`es `RSWindowsNTLM`decir `RSWindowsKerberos`,,, y **RSWindowsNegotiate**) se excluyen mutuamente con Custom.  
@@ -65,7 +64,7 @@ ms.locfileid: "66102187"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Configurar la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)  
+-   [Configuración de la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)  
   
 -   [Configuración de la autenticación básica en el servidor de informes](configure-basic-authentication-on-the-report-server.md)  
   
@@ -75,21 +74,21 @@ ms.locfileid: "66102187"
   
 |Descripciones de las tareas|Vínculos|  
 |-----------------------|-----------|  
-|Configurar el tipo de autenticación integrada de Windows.|[Configurar la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)|  
+|Configurar el tipo de autenticación integrada de Windows.|[Configuración de la autenticación de Windows en el servidor de informes](configure-windows-authentication-on-the-report-server.md)|  
 |Configurar el tipo de autenticación básica.|[Configuración de la autenticación básica en el servidor de informes](configure-basic-authentication-on-the-report-server.md)|  
 |Configurar la autenticación de formularios o, de lo contrario, un tipo de autenticación personalizada.|[Configuración de la autenticación de formularios o personalizada en el servidor de informes](configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|Permitir al administrador de informes controlar el escenario de autenticación personalizada.|[Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Permitir al administrador de informes controlar el escenario de autenticación personalizada.|[Configurar el Administrador de informes para pasar cookies de autenticación personalizada](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
   
 ## <a name="see-also"></a>Consulte también  
  [Conceder permisos en un servidor de informes en modo nativo](granting-permissions-on-a-native-mode-report-server.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
  (create-and-manage-role-assignments.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
- [Implementar una extensión de seguridad](../extensions/security-extension/implementing-a-security-extension.md)   
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Implementación de una extensión de seguridad](../extensions/security-extension/implementing-a-security-extension.md)   
  [Configurar conexiones SSL en un servidor de informes en modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configurar el acceso a Generador de informes](../report-server/configure-report-builder-access.md)   
  [Información general de extensiones de seguridad](../extensions/security-extension/security-extensions-overview.md)   
- [Autenticación en Reporting Services](../extensions/security-extension/authentication-in-reporting-services.md)   
- [La autorización en Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)  
+ [Autenticación de Windows en Reporting Services](../extensions/security-extension/authentication-in-reporting-services.md)   
+ [Autorización en Reporting Services](../extensions/security-extension/authorization-in-reporting-services.md)  
   
   

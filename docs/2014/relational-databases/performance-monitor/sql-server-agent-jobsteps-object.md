@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206565"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>JobSteps (objeto del Agente SQL Server)
@@ -41,12 +41,12 @@ ms.locfileid: "68206565"
 |**ANALYSISQUERY**|Información de los pasos de trabajo que utilizan el subsistema ANALYSISQUERY.|  
 |**CmdExec**|Información de los pasos de trabajo que utilizan el subsistema **CmdExec** .|  
 |**Distribución**|Información de los pasos de trabajo que utilizan el subsistema **Distribution** .|  
-|**DTS**|Información de los pasos de trabajo que utilizan el subsistema [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
-|**Lector del registro**|Información de los pasos de trabajo que utilizan el subsistema **LogReader** .|  
+|**Dts**|Información de los pasos de trabajo que utilizan el subsistema [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
+|**LogReader**|Información de los pasos de trabajo que utilizan el subsistema **LogReader** .|  
 |**Combinar**|Información de los pasos de trabajo que utilizan el subsistema **Merge** .|  
 |**PowerShell**|Información de los pasos de trabajo que utilizan el subsistema **PowerShell** .|  
 |**QueueReader**|Información de los pasos de trabajo que utilizan el subsistema **QueueReader** .|  
-|**Archivos**|Información de los pasos de trabajo que utilizan el subsistema **Snapshot** .|  
+|**Instantánea**|Información de los pasos de trabajo que utilizan el subsistema **Snapshot** .|  
 |**TSQL**|Información de los pasos de trabajo que ejecutan [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="see-also"></a>Consulte también  

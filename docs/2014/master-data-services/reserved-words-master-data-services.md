@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482578"
 ---
 # <a name="reserved-words-master-data-services"></a>Palabras reservadas (Master Data Services)
@@ -36,18 +36,18 @@ ms.locfileid: "65482578"
   
 -   [Members](#members)  
   
-##  <a name="models"></a>Modelos  
+##  <a name="models"></a><a name="models"></a>Modelos  
  Si crea un modelo con el nombre establecido en **nombre**, no seleccione **crear entidad con el mismo nombre que el modelo** porque **el nombre no se puede** usar para el nombre de una entidad.  
   
-##  <a name="entities"></a>Jurídica  
+##  <a name="entities"></a><a name="entities"></a>Jurídica  
  Para los nombres de entidad, no puede usar **Name** o **Code**.  
   
-##  <a name="exhierarchies"></a>Jerarquías explícitas  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Jerarquías explícitas  
  Para los nombres de jerarquía explícita, no puede utilizar **Name** o **Code**.  
   
-##  <a name="attributes"></a>Sus  
+##  <a name="attributes"></a><a name="attributes"></a>Sus  
   
--   **SESIÓN**  
+-   **Id**  
   
 -   **Código**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65482578"
   
 -   **Version_ID**  
   
-##  <a name="members"></a>Registrados  
+##  <a name="members"></a><a name="members"></a>Registrados  
  Para los miembros, no puede usar **MDMMemberStatus** o **root** para el valor del atributo **code** .  
   
 ## <a name="see-also"></a>Consulte también  

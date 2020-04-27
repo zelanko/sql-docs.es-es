@@ -1,5 +1,5 @@
 ---
-title: Sintaxis literal de intervalos ? Microsoft Docs
+title: Sintaxis de los literales de intervalo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,65 +15,65 @@ ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3387b07a8e769206a6a495addff4287000691fec
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81290575"
 ---
 # <a name="interval-literal-syntax"></a>Sintaxis de literales de intervalo
-La sintaxis siguiente se utiliza para los literales de intervalo en ODBC.  
+La sintaxis siguiente se usa para los literales de intervalo en ODBC.  
   
- *interval-literal ::- INTERVAL* [+*&#124;*-] *interval-string interval-qualifier*  
+ *Interval-literal:: = Interval* [+*&#124;*-] Interval *-cadena Interval-Qualifier*  
   
- *interval-string* ::- *cita* - *año-mes-literal* &#124; *día-tiempo-literal* - *cita*  
+ *Interval-String* :: = *Quote* { *year-month-literal* &#124; *Day-Time-literal* } *Quote*  
   
- *año-mes-literal* ::- *valor de años* &#124; [*años-valor* -] *valor de meses-*  
+ *Year-month-literal* :: = *years-Value* &#124; [*years-Value* -] *months-Value*  
   
- *día-tiempo-literal* ::- *intervalo de tiempo* del día &#124; intervalo de *tiempo*  
+ *Day-Time-literal* :: = *day-time-Interval* &#124; *tiempo-intervalo*  
   
- *intervalo de tiempo de día* ::- *días-valor* [*horas-valor* [:*minutos-valor*[:*segundo-valor*]]]  
+ *Day-Time-Interval* :: = *Days-Value* [*hours-Value* [:*minutes-Value*[:*seconds-Value*]]]  
   
- *intervalo de tiempo* ::- *valor de horas* [:*minutos-valor* [:*segundo-valor* ] ]  
+ *Time-Interval* :: = *hours-Value* [:*minutes-Value* [:*seconds-Value* ]]  
   
- &#124; *minutos-valor* [:*segundo-valor* ]  
+ &#124; *minutos-valor* [:*seconds-valor* ]  
   
- &#124; *segundos de valor*  
+ &#124; *segundos-valor*  
   
- *valor de años* *datetime-value* ::  
+ *years-Value* :: = *DateTime-Value*  
   
- *valor de meses* :: *datetime-value*  
+ *months-Value* :: = *DateTime-Value*  
   
- *días-valor* ::- *datetime-value*  
+ *Days-Value* :: = *DateTime-Value*  
   
- *horas-valor* ::- *datetime-value*  
+ *hours-Value* :: = *DateTime-Value*  
   
- *valores de minutos* *datetime-value* ::  
+ *minutes-Value* :: = *DateTime-Value*  
   
- *segundo-valor* *::-segundos-valor entero* [.[ *segundos-fracción*] ]  
+ *seconds-Value* :: = *seconds-Integer-Value* [. [ *segundos-fracción*] ]  
   
- *segundos-valor entero* ::- *unsigned-integer*  
+ *segundos: entero-valor* :: = *sin signo: entero*  
   
- *fracción de segundos* :: *unsigned-integer*  
+ *segundos-fracción* :: = *sin signo-entero*  
   
- *valor de fecha* y *unsigned-integer* hora ::  
+ *DateTime-Value* :: = *unsigned-Integer*  
   
- *intervalo-calificador* ::- *campo de inicio* PARA el campo *final* &#124; campo de *fecha única*  
+ *Interval-Qualifier* :: = *Start-Field* TO *End-* Field &#124; *campo de fecha y hora único*  
   
- *start-field* ::- *non-second-datetime-field* [(*interval-leading-field-precision* )]  
+ *Start-Field* :: = *nonsecond-DateTime-Field* [(*Interval-interlineado-campo-precisión* )]  
   
- *campo final* ::- *campo no-segundo-fecha-hora-campo* &#124; SECOND[(*interval-fractional-seconds-precision*)]  
+ *campo final* :: = *non-Second-datetime-Field* &#124; segundo [(*Interval-fraccionario-seconds-precisión*)]  
   
- *campo de fecha* única::- *campo no-segundo-fecha-hora* [(*interval-leading-field-precision*)] &#124; SECOND[(*interval-leading-field-precision* [, (*interval-fractional-seconds-precision*)]  
+ *Single-DateTime-Field* :: = *nonsecond-DateTime-Field* [(*Interval-inicial-field-Precision*)] &#124; segundo [(*Interval-inicial-precisión-campo* [, (*Interval-fraccionario-seconds-precisión*)]  
   
- *campo datetime ::-* campo que no es *de segundo-segundo-fecha-campo* &#124; SEGUNDO  
+ *DateTime-Field* :: = *nonsecond-datetime-Field* &#124; Second  
   
- campo de *no-segundo-fecha-hora* ::-Año &#124; MES &#124; DIA &#124; HORA &#124; MINUTO  
+ *no Second-DateTime-Field* :: = Year &#124; month &#124; Day &#124; hour &#124; minuto  
   
- *interval-fractional-seconds-precision* ::- *unsigned-integer*  
+ *Interval-fraccionario-segundos-precisión* :: = *sin signo: entero*  
   
- *interval-leading-field-precision* ::- *unsigned-integer*  
+ *Interval-inicial-Field-Precision* :: = *unsigned-Integer*  
   
- *cita* ::' '  
+ *Quote* :: = '  
   
- *unsigned-integer* ::- *digit...*
+ *unsigned-Integer* :: = *digit...*

@@ -17,10 +17,10 @@ ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918194"
 ---
 # <a name="move-method-ado"></a>Move (método) (ADO)
@@ -37,7 +37,7 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  Expresión de **tipo Long** con signo que especifica el número de registros que se mueve la posición del registro actual.  
   
- *Iniciar*  
+ *Start*  
  Opcional. Un valor de **cadena** o una **variante** que se evalúa como un marcador. También puede usar un valor de [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
 ## <a name="remarks"></a>Observaciones  

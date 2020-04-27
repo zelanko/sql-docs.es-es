@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103211"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66103211"
   
 ## <a name="see-also"></a>Consulte también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services servidor de informes &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
+ [Servidor de informes de Reporting Services &#40;modo nativo&#41;](reporting-services-report-server-native-mode.md)   
  [Administrar un proceso en ejecución](../subscriptions/manage-a-running-process.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)  
   

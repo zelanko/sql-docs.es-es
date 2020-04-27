@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63256058"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administrar servidores mediante administración basada en directivas
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administración de servidores mediante la administración basada en directivas
   Éste es el tutorial Administrar servidores mediante administración basada en directivas. Este tutorial está destinado a los usuarios que conocen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero que no tienen experiencia con la administración basada en directivas.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
@@ -28,10 +28,10 @@ ms.locfileid: "63256058"
   
  El tutorial está compuesto por dos lecciones:  
   
- [Lección 1: Crear y aplicar una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)  
+ [Lección 1: Creación y aplicación de una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  En esta lección se crea una directiva que especifica que Correo electrónico de base de datos no está habilitado en el servidor. A continuación, se comprueba si el servidor cumple la directiva y se configura el servidor deshabilitando Correo electrónico de base de datos.  
   
- [Lección 2: Crear y aplicar una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Lección 2: Creación y aplicación de una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  En esta lección se crea una directiva que define y exige una denominación estándar para las tablas.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -40,7 +40,7 @@ ms.locfileid: "63256058"
  Para utilizar este tutorial, el sistema debe tener instalado [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="start-the-tutorial"></a>Iniciar el tutorial  
- [Lección 1: Crear y aplicar una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)  
+ [Lección 1: Creación y aplicación de una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  

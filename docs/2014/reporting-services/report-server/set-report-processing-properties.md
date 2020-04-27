@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103242"
 ---
 # <a name="set-report-processing-properties"></a>Establecer las propiedades del procesamiento de informes
@@ -60,6 +60,6 @@ ms.locfileid: "66103242"
  [Configurar las propiedades de ejecución de un informe &#40;Administrador de informes&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Cómo: agregar una instantánea al historial de informes](add-a-snapshot-to-report-history-report-manager.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

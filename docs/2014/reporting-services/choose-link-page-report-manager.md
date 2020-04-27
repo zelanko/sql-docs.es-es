@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109885"
 ---
 # <a name="choose-link-page-report-manager"></a>Elegir vínculo (página del Administrador de informes)
@@ -36,7 +36,7 @@ ms.locfileid: "66109885"
 4.  En la pestaña **General** , en la página de propiedades, haga clic en **Cambiar vínculo**.  
   
 ## <a name="options"></a>Opciones  
- **Location**  
+ **Ubicación**  
  Especifique el nombre completo del informe publicado, incluida la ruta de acceso a la carpeta. Puede escribir el nombre completo o utilizar la vista de árbol para navegar hasta el informe que desee utilizar.  
   
  **Vista de árbol**  

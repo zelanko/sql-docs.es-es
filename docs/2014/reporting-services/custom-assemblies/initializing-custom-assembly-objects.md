@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97ee8e554fa246848b64ebafb0961f35d65f15c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264722"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Inicializar objetos de ensamblados personalizados
@@ -56,6 +56,6 @@ ms.locfileid: "63264722"
  Para más información sobre las colecciones de objetos globales, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Uso de ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)  
+ [Usar ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)  
   
   

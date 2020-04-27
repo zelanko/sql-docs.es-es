@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109107"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propiedades generales, Modelos (Administrador de informes)
@@ -63,7 +63,7 @@ ms.locfileid: "66109107"
   
  Tenga en cuenta que si desea abrir el modelo de informe en el Diseñador de modelos, debería guardar el modelo como archivo .smdl y, a continuación, agregar el archivo .smdl a un proyecto en el Diseñador de modelos.  
   
- **Reemplace**  
+ **Sustituya**  
  Haga clic para reemplazar la definición de modelo por otra diferente de un archivo .smdl que se encuentra en el sistema de archivos. Si actualiza una definición de modelo, debe restablecer la configuración del origen de datos compartido cuando la actualización haya finalizado.  
   
  **Regenerar el modelo**  
@@ -71,6 +71,6 @@ ms.locfileid: "66109107"
   
 ## <a name="see-also"></a>Consulte también  
  [Enlazar un informe o un modelo a un origen de datos compartido &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
- [Servidor de informes en Management Studio (Ayuda F1)](tools/report-server-in-management-studio-f1-help.md)  
+ [Servidor de informes en Management Studio ayuda F1](tools/report-server-in-management-studio-f1-help.md)  
   
   

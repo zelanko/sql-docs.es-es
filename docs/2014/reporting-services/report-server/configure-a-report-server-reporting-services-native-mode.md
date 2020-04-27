@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104065"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurar un servidor de informes (modo nativo de Reporting Services)
@@ -43,7 +43,7 @@ ms.locfileid: "66104065"
   
 2.  Haga clic en **Dirección URL del servicio web** con el fin de abrir la página para configurar una dirección URL para el servidor de informes. Para obtener instrucciones sobre cómo definir la dirección URL, vea [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
-3.  Haga clic en **Base de datos** para crear la base de datos del servidor de informes. Para obtener instrucciones, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+3.  Haga clic en **Base de datos** para crear la base de datos del servidor de informes. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
 4.  Vuelva a la página **Dirección URL del servicio web** y haga clic en la dirección URL para comprobar que funciona.  
   
@@ -59,10 +59,10 @@ ms.locfileid: "66104065"
  Para comprobar la instalación, cree las carpetas, cargue los elementos y ejecute los informes. Siga las instrucciones de [Comprobar una instalación de Reporting Services](../install-windows/verify-a-reporting-services-installation.md) para comprobar la instalación.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar un servidor de informes en modo nativo Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
+ [Administrar un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)   
  [Configurar un firewall para el acceso al servidor de informes](configure-a-firewall-for-report-server-access.md)   
  [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [Configurar un servidor de informes para la administración remota](configure-a-report-server-for-remote-administration.md)   
+ [Configuración de un servidor de informes para la administración remota](configure-a-report-server-for-remote-administration.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

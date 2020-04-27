@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107038"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
@@ -126,10 +126,10 @@ ms.locfileid: "66107038"
   
  En estas condiciones, el servidor de informes se conecta a un origen de datos remoto utilizando una cuenta de ejecución desatendida que debe definirse de antemano. Dado que el servidor de informes no se conecta a un servidor remoto mediante sus credenciales de servicio, debe especificar una cuenta para que el servidor pueda realizar la conexión. Para más información sobre cómo crear esta cuenta, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-##  <a name="DataSourceConfigurationConnections"></a>Configuración del origen de datos y conexiones de red  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a>Configuración del origen de datos y conexiones de red  
  La tabla siguiente muestra cómo se realizan las conexiones para combinaciones específicas de tipos de credenciales y extensiones de procesamiento de datos. Si usa una extensión de procesamiento de datos personalizada, vea [Especificar conexiones para extensiones de procesamiento de datos personalizadas](specify-connections-for-custom-data-processing-extensions.md).  
   
-|**Tipo**|**Contexto para la conexión de red**|**Tipos de orígenes de datos**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
+|**Type**|**Contexto para la conexión de red**|**Tipos de orígenes de datos**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Seguridad integrada|Suplantar al usuario actual|Para todos los tipos de orígenes de datos, conectar mediante la cuenta de usuario actual.|  
 |Credenciales de Windows|Suplantar al usuario especificado|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC y OLE DB: conectar mediante la cuenta de usuario suplantado.|  

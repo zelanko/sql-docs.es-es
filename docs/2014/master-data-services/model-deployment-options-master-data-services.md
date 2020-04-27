@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0dbc88c186e5f8f92c943c3e0d766ab6d8846941
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479022"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Opciones de la implementación de modelos (Master Data Services)
@@ -34,8 +34,8 @@ ms.locfileid: "65479022"
   
 |Opción|Descripción|Notas|  
 |------------|-----------------|-----------|  
-|Nuevo|Cree un nuevo modelo con un nombre único. Se crean identificadores nuevos para todos los objetos del modelo.|Si crea un nuevo modelo con identificadores nuevos, no puede usar las herramientas de implementación de modelos para aplicar las actualizaciones al modelo posteriormente. Cuando utilice el asistente en la aplicación web para implementar un paquete de modelo, tiene la opción de crear un modelo nuevo solo si existe un modelo con el mismo nombre o identificador previamente.|  
-|Clon|Cree un nuevo modelo que es un clon exacto del modelo del paquete. Esto solo funciona si el modelo no existe (por nombre o identificador) en el entorno de destino. Use "clonar" si quiere tener el mismo modelo en varios entornos y actualizar el modelo clonado a lo largo del tiempo.|Este es el comportamiento predeterminado del asistente en la aplicación web. Si aún existe un modelo con el mismo nombre o identificador, se le preguntará si desea crear un nuevo modelo en su lugar.|  
+|New|Cree un nuevo modelo con un nombre único. Se crean identificadores nuevos para todos los objetos del modelo.|Si crea un nuevo modelo con identificadores nuevos, no puede usar las herramientas de implementación de modelos para aplicar las actualizaciones al modelo posteriormente. Cuando utilice el asistente en la aplicación web para implementar un paquete de modelo, tiene la opción de crear un modelo nuevo solo si existe un modelo con el mismo nombre o identificador previamente.|  
+|Clonar|Cree un nuevo modelo que es un clon exacto del modelo del paquete. Esto solo funciona si el modelo no existe (por nombre o identificador) en el entorno de destino. Use "clonar" si quiere tener el mismo modelo en varios entornos y actualizar el modelo clonado a lo largo del tiempo.|Este es el comportamiento predeterminado del asistente en la aplicación web. Si aún existe un modelo con el mismo nombre o identificador, se le preguntará si desea crear un nuevo modelo en su lugar.|  
 |Actualizar|Actualizar un modelo existente con el modelo del paquete. Los identificadores deben ser iguales en ambos modelos. Se utiliza para actualizar un modelo que se clonó previamente.|Puede actualizar solo los modelos que se clonaron previamente. (Los nombres e identificadores deben coincidir).|  
   
 ## <a name="see-also"></a>Consulte también  

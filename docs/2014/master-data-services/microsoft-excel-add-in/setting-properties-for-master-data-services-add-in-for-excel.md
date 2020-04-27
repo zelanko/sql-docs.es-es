@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a041133bf26865404da6a883992176b19e837c78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479067"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Establecer propiedades para el complemento Master Data Services para Excel
@@ -28,7 +28,7 @@ ms.locfileid: "65479067"
 |-|-|-|  
 |Pestaña y sección|Configuración|Descripción|  
 |Configuración: Publicación|Mostrar el cuadro de diálogo **Publicar y anotar** al publicar|Seleccione esta opción para mostrar el cuadro de diálogo **Publicar y anotar** después de hacer clic en **Publicar**; esto le permitirá especificar una sola anotación para todos los cambios o una para cada cambio.<br /><br /> Anule la selección de esta opción si desea que el proceso de publicación se inicie sin mostrar el cuadro de diálogo **Publicar y anotar** . No tendrá la oportunidad de especificar ninguna anotación.|  
-|Configuración: Versión|Selección de versión|Seleccione la versión de los datos maestros que se cargarán en el complemento de Excel. Puede ser:<br /><br /> **Ninguno** para que la versión no tenga como valor predeterminado ninguna versión<br /><br /> Es **más antiguo** que el valor predeterminado de la versión más antigua **más reciente** para la versión más reciente.|  
+|Configuración: Versión|Selección de versión|Seleccione la versión de los datos maestros que se cargarán en el complemento de Excel. Puede ser:<br /><br /> **Ninguno** para que no haya ninguna versión predeterminada<br /><br /> **Más antiguo** para usar como versión predeterminada la más antigua o **Más reciente** para usar como versión predeterminada la más reciente.|  
 |Configuración: Registro|Activar el registro detallado|Habilitar el registro para el proceso de carga de datos maestros desde MDS en el complemento de Excel, de modo que se registre el resultado de cada comando en el servicio.|  
 |Configuración: Tamaño de lotes|Número de celdas para cargar|Seleccione cuántos miles de celdas se incluirán en cada lote que se cargue desde el servidor de MDS en Excel. El valor predeterminado es 50.000 celdas.|  
 |Configuración: Tamaño de lotes|Número de celdas para publicar|Seleccione cuántos miles de celdas se publicarán en cada lote que Excel devuelva al servidor. El valor predeterminado es 50.000 celdas.|  

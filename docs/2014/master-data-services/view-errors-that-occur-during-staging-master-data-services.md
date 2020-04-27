@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 75b7fb5a1b98f599a07e47101f93268779ca39b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478562"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>Ver los errores que se producen durante el proceso de almacenamiento provisional (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65478562"
   
 -   stg.viw_name_RelationshipErrorDetails para las actualizaciones de la relación de la jerarquía.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   En la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , debe tener permisos SELECT en las vistas stg.viw_name_MemberErrorDetails o stg.viw_name_RelationshipErrorDetails.  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-view-staging-errors"></a>Para ver errores de almacenamiento provisional  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65478562"
   
 4.  Ejecute la consulta. Los detalles del error se muestran en el campo **ErrorDescription** .  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Para obtener más información sobre mensajes de error, consulte [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
 ## <a name="see-also"></a>Consulte también  

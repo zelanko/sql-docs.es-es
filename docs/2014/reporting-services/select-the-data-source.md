@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dab6158ba2d0854868bf60f2a73efce594b2cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101441"
 ---
 # <a name="select-the-data-source"></a>Seleccionar el origen de datos
@@ -32,7 +32,7 @@ ms.locfileid: "66101441"
  **Nombre**  
  Escriba un nombre para la conexión con el origen de datos. Dicho nombre debe ser único en el informe.  
   
- **Tipo**  
+ **Type**  
  Seleccione el tipo de origen de datos que está usando (por ejemplo, si está usando una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], elija).  
   
  **Cadena de conexión**  
@@ -47,7 +47,7 @@ ms.locfileid: "66101441"
   
 ## <a name="see-also"></a>Consulte también  
  [Conexiones de datos u orígenes de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informe](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services servidor de informes](../../2014/reporting-services/reporting-services-report-server.md)   
  [Archivo de configuración RSReportDesigner](report-server/rsreportdesigner-configuration-file.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   

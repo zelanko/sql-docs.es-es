@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107631"
 ---
 # <a name="saving-reports-report-builder"></a>Guardar informes (Generador de informes)
@@ -30,7 +30,7 @@ ms.locfileid: "66107631"
   
  Para más información sobre cómo ver y administrar informes directamente en el servidor de informes, vea [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) y [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=154888) en msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a>Guardar definiciones de informe  
+##  <a name="saving-report-definitions"></a><a name="SavingReportDefinitions"></a>Guardar definiciones de informe  
  Aunque puede guardar los informes en su equipo, si se guardan en un servidor de informes, se obtienen muchas ventajas.  
   
  Al guardar un informe en un servidor de informes, se proporcionan las ventajas siguientes:  
@@ -51,22 +51,22 @@ ms.locfileid: "66107631"
   
 
   
-##  <a name="ExportingAndSavingReports"></a> Exportar y guardar informes  
+##  <a name="exporting-and-saving-reports"></a><a name="ExportingAndSavingReports"></a> Exportar y guardar informes  
  Si los informes que necesita archivar son pocos, quizás le interese exportar el informe y guardarlo como un archivo. Tras exportar un informe a una aplicación (como PDF o Excel), puede guardarlo como un archivo y colocarlo en un directorio compartido protegido de la red. También puede cargar un informe PDF o Excel guardado como un elemento de recurso si desea conservar todas las copias del informe, independientemente del formato, en la base de datos del servidor de informes. Para obtener más información sobre cómo exportar un informe, vea [exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md) y [cargar un archivo o informe &#40;administrador de informes ](../reports/upload-a-file-or-report-report-manager.md)&#41;.  
   
 
   
-##  <a name="UsingFileShareDelivery"></a> Usar la entrega a recursos compartidos de archivos  
+##  <a name="using-file-share-delivery"></a><a name="UsingFileShareDelivery"></a> Usar la entrega a recursos compartidos de archivos  
  Si son muchos los informes que desea archivar, cree una suscripción que entregue el informe directamente al sistema de archivos. En este caso, debe crear una suscripción para cada informe, elegir una carpeta compartida donde almacenar los informes y definir una programación que determine el momento en el que se creará el archivo. Una vez definida la suscripción, el servidor de informes puede ejecutar el informe en modo desatendido y agregar archivos de informe al archivo mediante la programación que se indique. También puede crear programaciones de un solo uso para archivar informes de forma puntual. Para obtener más información acerca de las suscripciones y la entrega a recursos compartidos de archivos, vea la sección sobre la entrega a recursos compartidos de archivos en Reporting Services en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
 
   
-##  <a name="UsingReportHistory"></a> Usar el historial de informes  
+##  <a name="using-report-history"></a><a name="UsingReportHistory"></a> Usar el historial de informes  
  Puede utilizar también la característica de historial de informe para crear copias históricas. De este modo, puede crear una copia de seguridad de la base de datos del servidor de informes y almacenarla en una ubicación segura para utilizarla posteriormente. Todos los historiales de informes (junto con los informes, elementos de orígenes de datos compartidos, carpetas, suscripciones y programaciones compartidas) se almacenan en la base de datos del servidor de informes. Puede crear una copia de seguridad para conservar una copia permanente del historial de informes y los metadatos, como la información de suscripción que indica los destinatarios de un informe. Para obtener más información, vea cómo administrar el historial de informes en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
   
 
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Temas de procedimientos  
   
 -   [Guardar informes en un servidor de informes &#40;Generador de informes&#41;](save-reports-to-a-report-server-report-builder.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66107631"
 ## <a name="see-also"></a>Consulte también  
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Instalación, desinstalación y compatibilidad Generador de informes](../install-uninstall-and-report-builder-support.md)   
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Buscar, ver y administrar informes &#40;Generador de informes y SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar informes &#40;Generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   

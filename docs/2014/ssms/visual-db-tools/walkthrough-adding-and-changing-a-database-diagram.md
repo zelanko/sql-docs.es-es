@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273743"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Visita guiada: Agregar y modificar un diagrama de base de datos
@@ -78,8 +78,8 @@ ms.locfileid: "63273743"
   
     |**Nombre de la columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|Activado|  
-    |`T1col2`|`varchar(50)`|Activado|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
     |`T1col3`|`float`|Activado|  
   
 4.  Haga clic con el botón derecho en `T1col1` y seleccione **Establecer clave principal**.  
@@ -90,7 +90,7 @@ ms.locfileid: "63273743"
   
 6.  En el cuadro de diálogo **elegir nombre** , haga clic en **Aceptar** para aceptar `Diagram1`el nombre predeterminado.  
   
-7.  Aparecerá el cuadro de diálogo **Guardar** con un mensaje que indica que `Table1` se guardará en la base de datos. Haga clic en **Sí**.  
+7.  Aparecerá el cuadro de diálogo **Guardar`Table1` con un mensaje que indica que ** se guardará en la base de datos. Haga clic en **Sí**.  
   
 ## <a name="modifying-table-structure"></a>Modificar la estructura de la tabla  
  Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el Diseñador de diagramas.  
@@ -107,12 +107,11 @@ ms.locfileid: "63273743"
   
 3.  Seleccione la fila **Expresión** en la cuadrícula y haga clic en el botón de puntos suspensivos.  
   
-     Aparecerá el cuadro de diálogo **Expresión de restricción CHECK** .  
+     Aparecerá el cuadro de diálogo **Expresión de restricción CHECK**.  
   
 4.  Escriba `T1col3 > 5` y haga clic en **Aceptar**.  
   
-     
-  `Table1` tiene ahora una restricción para que todos los valores escritos en `T1col3` sean mayores de 5.  
+     `Table1` tiene ahora una restricción para que todos los valores escritos en `T1col3` sean mayores de 5.  
   
 5.  Haga clic en **Cerrar**.  
   
@@ -123,8 +122,8 @@ ms.locfileid: "63273743"
     |**Nombre de columna**|**Tipo de datos**|**Permitir valores NULL**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|no seleccionado|  
-    |`T2col2`|`varchar(50)`|Activado|  
-    |`T2col3`|`xml`|Activado|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  Las columnas del lado de la clave principal de una relación de clave externa deben participar en una restricción PRIMARY KEY o UNIQUE.  
@@ -137,7 +136,7 @@ ms.locfileid: "63273743"
   
 4.  Haga clic en **Aceptar** nuevamente.  
   
-## <a name="creating-indexes"></a>Creación de índices  
+## <a name="creating-indexes"></a>Crear índices  
  Se pueden crear índices en la mayoría de los tipos de datos, incluso en XML.  
   
 #### <a name="to-create-a-standard-index"></a>Para crear un índice estándar  
@@ -192,11 +191,11 @@ ms.locfileid: "63273743"
   
      Aparecerá el cuadro de diálogo **Guardar** . Si selecciona la opción **Advertir sobre las tablas afectadas** , se proporcionará información acerca de las tablas nuevas o modificadas.  
   
-2.  Haga clic en **OK**.  
+2.  Haga clic en **Aceptar**.  
   
 3.  Si se produce algún error, aparecerá el cuadro de diálogo **Notificaciones después de guardar** con los errores y las causas. Solucione los errores y guarde el diagrama de nuevo.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Este diagrama es básico, únicamente con dos tablas existentes y otras dos nuevas, pero muestra el potencial de la creación de diagramas en una base de datos existente o de la creación de un nuevo esquema visual. Algunas sugerencias de investigación adicional son:  
   
 -   Crear nuevos diagramas que incluyan grupos de tablas relacionadas  

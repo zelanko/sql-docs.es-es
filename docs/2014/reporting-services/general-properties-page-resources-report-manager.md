@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109120"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Página de propiedades generales, recursos (Administrador de informes)
@@ -43,7 +43,7 @@ ms.locfileid: "66109120"
  **Ocultar en la vista de lista**  
  Seleccione esta opción para ocultar el recurso a usuarios que usen el modo de vista de lista en el Administrador de informes. El modo de vista de lista es el formato de vista predeterminado al explorar la jerarquía de carpetas del servidor de informes. En la vista de lista, los nombres y descripciones de elementos se presentan en formato horizontal. El formato alternativo es la vista Detalles. La vista Detalles no incluye descripciones, pero sí otra información acerca del elemento. Aunque se puede ocultar un elemento en la vista de lista, no se puede ocultar en la vista Detalles. Si desea restringir el acceso a un elemento, deberá crear una asignación de roles.  
   
- **Tipo**  
+ **Type**  
  Especifica el tipo MIME del recurso. Esta propiedad es de solo lectura.  
   
  **Aplicar**  
@@ -55,7 +55,7 @@ ms.locfileid: "66109120"
  **Move**  
  Haga clic para cambiar la posición de un informe en la jerarquía de carpetas del servidor de informes. Si hace clic en este botón, se abre la página Mover elementos, en la que puede examinar las carpetas para buscar una nueva ubicación de carpeta.  
   
- **Reemplace**  
+ **Sustituya**  
  Haga clic para abrir la página Importar recurso, que se utiliza para seleccionar un archivo de recursos en un recurso compartido de archivos.  
   
 ## <a name="see-also"></a>Consulte también  

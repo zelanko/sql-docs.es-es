@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284883"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Especificar Marcar como tabla de fechas con inteligencia de tiempo (SSAS tabular)
@@ -36,11 +36,11 @@ ms.locfileid: "67284883"
   
 1.  En el diseñador de modelos, haga clic en la tabla de fechas.  
   
-2.  Haga clic en el menú **tabla** , haga clic en **fecha**y, a continuación, haga clic en **marcar como tabla de fechas**  
+2.  Haga clic en el menú **Tabla** , haga clic en **Fecha**y después haga clic en **Marcar como tabla de fechas**  
   
 3.  En el cuadro de diálogo **Marcar como tabla de fechas** , en el cuadro de lista **Fecha** , seleccione la columna que se utilizará como identificador único. Esta columna debe contener valores únicos y debe ser de tipo de datos Date. Por ejemplo:  
   
-    |Date|  
+    |Fecha|  
     |----------|  
     |1/7/2010 12:00:00 a.m.|  
     |2/7/2010 12:00:00 a.m.|  

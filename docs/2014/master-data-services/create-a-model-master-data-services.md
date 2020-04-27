@@ -14,16 +14,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479933"
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un modelo para contener los objetos de modelo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -46,9 +46,9 @@ ms.locfileid: "65479933"
   
 8.  Haga clic en **Guardar modelo**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
--   [Cree una entidad &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
+-   [Crear una entidad &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Modelos &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482889"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Características y tareas de Master Data Services
@@ -28,7 +28,7 @@ ms.locfileid: "65482889"
   
 -   [Atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
--   [Atributos basados en dominio &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos basados en dominios &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Grupos de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)  
   
@@ -50,13 +50,13 @@ ms.locfileid: "65482889"
   
 -   [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [Master Data Services de &#40;de validación&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Validación &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
 -   [Versiones &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
 -   [Notificaciones &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)  
   
--   [Master Data Services de &#40;de seguridad&#41;](../../2014/master-data-services/security-master-data-services.md)  
+-   [Seguridad &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
 ## <a name="move-data"></a>Traslado de datos  
   

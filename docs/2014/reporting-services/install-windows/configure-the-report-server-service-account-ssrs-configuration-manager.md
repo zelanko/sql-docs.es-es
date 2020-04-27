@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261065"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se implementa como un servicio único que contiene el servicio web del servidor de informes, el Administrador de informes y una aplicación de procesamiento en segundo plano que se usa para el procesamiento programado de informes y la entrega de suscripciones. En este tema se explica cómo se configura inicialmente la cuenta de servicio y cómo modificar la cuenta o la contraseña con la herramienta Configuración de Reporting Services.  
   
 ## <a name="initial-configuration"></a>Configuración inicial
@@ -34,7 +33,7 @@ ms.locfileid: "63261065"
   
 - Agrega automáticamente la cuenta nueva al grupo de servidores de informes que se crea en el equipo local. Este grupo se especifica en las listas de control de acceso (ACL) que protegen los archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-- Actualiza automáticamente los permisos de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] sesión en la instancia de que se usa para hospedar la base de datos del servidor de informes. La cuenta nueva se agregará a **RSExecRole**.  
+- Actualiza automáticamente los permisos de inicio de sesión en la instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se utiliza para hospedar la base de datos del servidor de informes. La cuenta nueva se agregará a **RSExecRole**.  
   
      El inicio de sesión de la base de datos de la cuenta anterior no se quitará automáticamente. Asegúrese de quitar las cuentas que ya no se usen. Para más información, vea [Administrar una base de datos del servidor de informes &#40;modo nativo de SSRS&#41;](../report-server/report-server-database-ssrs-native-mode.md) en los Libros en pantalla de SQL Server.  
   
@@ -65,9 +64,9 @@ ms.locfileid: "63261065"
   
 - [Cuenta de servicio &#40;el modo nativo de SSRS&#41;](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) en libros en pantalla de SQL Server.  
+- [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) en los Libros en pantalla de SQL Server.  
   
-- [Guía de planeamiento de la seguridad de servicios y cuentas de servicio](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [Guía de planeamiento de seguridad para servicios y cuentas de servicio](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
   
 ## <a name="updating-an-expired-password"></a>Actualizar una contraseña que ha expirado
 
@@ -101,7 +100,7 @@ ms.locfileid: "63261065"
   
 3. En la sección Reporting Services, haga clic en **conceder acceso a base de datos**.  
   
-4. Haga clic en **OK**. Aparecerá el cuadro de diálogo Especificar credenciales.  
+4. Haga clic en **Aceptar**. Aparecerá el cuadro de diálogo Especificar credenciales.  
   
 5. Escriba las credenciales de un usuario que sea miembro del grupo de administradores locales en el equipo que hospeda el servidor de informes. Las credenciales se usarán para una sola conexión al equipo del servidor de informes con el propósito de recuperar información de la cuenta de servicio. El inicio de sesión de la base de datos que se crea para cada cuenta de servicio se actualizará en las bases de datos de SharePoint.  
   
@@ -113,11 +112,11 @@ ms.locfileid: "63261065"
   
 9. Espere a que se detenga el servicio.  
   
-10. Haga clic en **Inicio**.  
+10. Haga clic en **Iniciar**.  
   
 > [!NOTE]  
 > Las tecnologías y productos de SharePoint requieren cuentas de dominio para la configuración de servicios como el modo de SharePoint los servicios de informes.  
   
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Pasos a seguir
 
  [Configure una cuenta de servicio &#40;de ssrs Configuration Manager&#41;cuenta de](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [servicio &#40;modo nativo de SSRS&#41;](../../sql-server/install/service-account-ssrs-native-mode.md) [configurar las direcciones url del servidor de informes &#40;SSRS Configuration Manager](configure-report-server-urls-ssrs-configuration-manager.md)&#41;administrador de configuración de Reporting Services &#40;[modo nativo](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)&#41;

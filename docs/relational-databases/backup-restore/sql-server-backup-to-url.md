@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8679d1e430ff2755aac32721ff40184cbe0a3c6a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 8263000b7a6fb166657e48777cc0d8c4c007ddd2
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529092"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087375"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ La copia de seguridad de una base de datos grande en el almacenamiento de blobs 
 
 - Si el servidor tiene acceso a Azure a través de un servidor proxy, debe usar la marca de seguimiento 1819 y, a continuación, establecer la configuración del proxy WinHTTP mediante alguno de los métodos siguientes:
    - La utilidad [proxycfg.exe](/windows/win32/winhttp/proxycfg-exe--a-proxy-configuration-tool) en Windows XP o Windows Server 2003 y versiones anteriores. 
-   - La utilidad [netsh.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731131) en Windows Vista y Windows Server 2008 o versiones posteriores. 
+   - La utilidad [netsh.exe](/windows/win32/winsock/netsh-exe) en Windows Vista y Windows Server 2008 o versiones posteriores. 
   
 ## <a name="supported-arguments--statements"></a>Instrucciones y argumentos admitidos
 

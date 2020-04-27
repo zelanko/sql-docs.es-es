@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899392"
 ---
 # <a name="sysdm_pdw_hadoop_operations-transact-sql"></a>Sys. dm_pdw_hadoop_operations (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "67899392"
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|IDENTIFICADOR de esta operación de Hadoop externa.|Igual que el identificador de [Sys. dm_pdw_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|IDENTIFICADOR de esta operación de Hadoop externa.|Igual que el identificador de [Sys. dm_pdw_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Índice del paso de consulta que hace referencia a esta operación de Hadoop.|Igual que step_index en [Sys. dm_pdw_request_steps &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |operation_type|**nvarchar(255)**|Describe el tipo de operación externa.|' Operación de Hadoop externa '|  
 |operation_name|**nvarchar(4000)**|El ID. de trabajo de un trabajo de asignación y reducción. Esto lo devuelve Hadoop después [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de que envíe el trabajo.||  

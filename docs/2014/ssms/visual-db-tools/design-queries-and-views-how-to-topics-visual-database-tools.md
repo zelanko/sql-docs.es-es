@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316069"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)
   El Diseñador de consultas y vistas le ayudará a crear y mantener los componentes de recuperación y manipulación de datos de la aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Abra el diseñador de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Abrir el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Proporciona los pasos necesarios para abrir una consulta o una vista nueva o existente en el Diseñador de consultas y vistas.  
   
- [Navegue en el diseñador de consultas y vistas &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [Desplazarse por el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  Proporciona una lista de las combinaciones de teclas y las operaciones del mouse (ratón) que se pueden utilizar en el Diseñador de consultar y vistas.  
   
  [Herramientas Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105412"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publicar y volver a publicar elementos de informe (Generador de informes y SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66105412"
   
 ## <a name="see-also"></a>Consulte también  
  [Elementos de informe &#40;Generador de informes y SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Elementos de informe y conjuntos de datos en el Generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Elementos de informe y conjuntos de valores en Generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Solucionar problemas de elementos de informe &#40;Generador de informes y SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Buscar actualizaciones o desactivar las actualizaciones de &#40;Generador de informes y SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [Buscar elementos de informe y establecer una carpeta predeterminada &#40;Generador de informes y SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

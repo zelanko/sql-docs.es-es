@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c498917b7f4f293d1721d09e68d1ba40672c1dc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107210"
 ---
 # <a name="manage-shared-datasets"></a>Administrar conjuntos de datos compartidos
@@ -47,7 +47,7 @@ ms.locfileid: "66107210"
 |-|-|  
 |Editar nombre|Cambie el nombre del conjunto de datos compartido. Todas las referencias en los elementos dependientes continuarán funcionando.|  
 |Editar descripción|Cambie la descripción del conjunto de datos compartido.|  
-|Modificar el tiempo de espera de ejecución de la consulta|Establezca el tiempo de espera de ejecución de la consulta en segundos. Cero (0) segundos significa que no hay tiempo de espera. Determina el número de segundos antes de que se agote el tiempo de espera de la consulta del conjunto de información. Para no especificar ningún valor de tiempo de espera, utilice 0. Para más información, vea [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
+|Modificar el tiempo de espera de ejecución de la consulta|Establezca el tiempo de espera de ejecución de la consulta en segundos. Cero (0) segundos significa que no hay tiempo de espera. Determina el número de segundos antes de que la consulta de conjunto de datos supere el tiempo de espera. Para no especificar ningún valor de tiempo de espera, utilice 0. Para más información, vea [Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md).|  
 |Ver elementos dependientes|Vea los elementos que utilizan este conjunto de datos compartido: los elementos de informe publicados, los orígenes de datos compartidos y los informes.|  
   
  Se configuran automáticamente la siguientes propiedades de conjunto de datos compartidas adicionales:  
@@ -71,30 +71,30 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 ## <a name="controlling-access-to-the-shared-dataset-definition"></a>Controlar el acceso a la definición del conjunto de datos compartido  
  De forma predeterminada, las siguientes tareas se aplican a las operaciones en conjuntos de datos compartidos.  
   
--   **Ver informes** Ver elementos de conjunto de elementos compartidos y propiedades de elementos.  
+-   **Ver informes** . Permite ver elementos de conjunto de datos compartidos y propiedades de elementos.  
   
--   **Consumir informes** Lee las definiciones del conjunto de los recursos compartidos.  
+-   **Usar informes** . Permite leer las definiciones de conjuntos de datos.  
   
--   **Administrar informes** Crear y eliminar conjuntos de recursos compartidos y editar las propiedades del conjunto de los recursos compartidos.  
+-   **Administrar informes** . Permite crear y eliminar los conjuntos de datos compartidos y modificar sus propiedades.  
   
--   **Establecer la seguridad de los elementos** Ver y modificar la configuración de seguridad de los conjuntos de información compartidos.  
+-   **Establecer la seguridad de elementos individuales** . Permite ver y modificar la configuración de seguridad de los conjuntos de datos compartidos.  
   
  Para más información sobre qué tareas y permisos controlan el acceso a las propiedades del origen de datos en un servidor de informes en modo nativo, vea [Proteger los elementos de un conjunto de datos compartido](../security/secure-shared-dataset-items.md).  
   
- El administrador del sitio determina los permisos para ver y modificar las propiedades de los elementos de una biblioteca de SharePoint. Para obtener más información, vea [referencia de permisos de sitio y lista de SharePoint para elementos del servidor de informes](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
+ El administrador del sitio determina los permisos para ver y modificar las propiedades de los elementos de una biblioteca de SharePoint. Para obtener más información, vea [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
 ## <a name="how-to-work-with-shared-dataset-properties-on-a-report-server"></a>Trabajar con las propiedades del conjunto de datos compartido en un servidor de informes  
  Puede utilizar diversas herramientas para trabajar con conjuntos de datos compartidos. En la tabla siguiente se resumen los enfoques y las herramientas, y se proporciona un vínculo a instrucciones adicionales.  
   
 |Tarea|Herramienta|Vínculo|  
 |----------|----------|----------|  
-|Agregue un conjunto de datos compartido o cambie las propiedades de definición del conjunto de datos compartido.|Guardar en el Generador de informes.<br /><br /> Implementar en el Diseñador de informes.<br /><br /> Cargar un archivo .rsd en el Administrador de informes.|Los conjuntos de valores de [informes incrustados y Compartidos &#40;generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) en la [documentación de generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) de MSDN.Microsoft.com<br /><br /> [Página Cargar archivo &#40;Administrador de informes&#41;](../upload-file-page-report-manager.md)<br /><br /> Si carga un conjunto de datos compartido antes de que se publique el origen de datos compartido del que depende, debe enlazar manualmente el conjunto de datos compartido al origen de datos compartido. Para más información, vea [Página de propiedades generales, conjuntos de datos compartidos &#40;Administrador de informes&#41;](../general-properties-page-shared-datasets-report-manager.md).|  
-|Cambiar las propiedades de elemento del conjunto de datos compartido.|Administrador de informes|[Página de propiedades generales, conjuntos de recursos compartidos &#40;Administrador de informes&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
+|Agregue un conjunto de datos compartido o cambie las propiedades de definición del conjunto de datos compartido.|Guardar en el Generador de informes.<br /><br /> Implementar en el Diseñador de informes.<br /><br /> Cargar un archivo .rsd en el Administrador de informes.|[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) en la [documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com<br /><br /> [Cargar archivo &#40;página del Administrador de informes&#41;](../upload-file-page-report-manager.md)<br /><br /> Si carga un conjunto de datos compartido antes de que se publique el origen de datos compartido del que depende, debe enlazar manualmente el conjunto de datos compartido al origen de datos compartido. Para más información, vea [Página de propiedades generales, conjuntos de datos compartidos &#40;Administrador de informes&#41;](../general-properties-page-shared-datasets-report-manager.md).|  
+|Cambiar las propiedades de elemento del conjunto de datos compartido.|Administrador de informes|[Página de propiedades generales, conjuntos de datos compartidos &#40;Administrador de informes&#41;](../general-properties-page-shared-datasets-report-manager.md)|  
 |Especificar propiedades de conjunto de datos compartido adicionales para una instancia del conjunto de datos compartido en un informe.|Diseñador de informes del Generador de informes|[Propiedades del conjunto de datos (cuadro de diálogo), Consulta](../dataset-properties-dialog-box-query.md)|  
-|Enlazar a un origen de datos compartido diferente para un conjunto de datos compartido.|Administrador de informes|[Página de selección de origen de datos &#40;Administrador de informes&#41;](../data-source-selection-page-report-manager.md)|  
+|Enlazar a un origen de datos compartido diferente para un conjunto de datos compartido.|Administrador de informes|[Selección de origen de datos &#40;página del Administrador de informes&#41;](../data-source-selection-page-report-manager.md)|  
 |Comprobar los valores predeterminados para los parámetros de conjunto de datos.|Abrir en el Generador de informes o usar la sintaxis de acceso de URL.|Por ejemplo:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
-|Habilitar el almacenamiento en caché|Administrador de informes|[Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Página de almacenamiento en caché, conjuntos de recursos compartidos &#40;Administrador de informes&#41;](../caching-page-shared-datasets-report-manager.md)|  
-|Crear o modificar un plan de actualización de la memoria caché|Administrador de informes|[Opciones de actualización de caché &#40;Administrador de informes&#41;](../cache-refresh-options-report-manager.md)|  
+|Habilitar el almacenamiento en caché|Administrador de informes|[Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Página de almacenamiento en caché, conjuntos de datos compartidos &#40;Administrador de informes&#41;](../caching-page-shared-datasets-report-manager.md)|  
+|Crear o modificar un plan de actualización de la memoria caché|Administrador de informes|[Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](../cache-refresh-options-report-manager.md)|  
 |Ver el esquema de la definición del conjunto de datos compartido.|Administrador de informes|`http://<reportserver>/shareddatasetdefinition.xsd`|  
 |En modo integrado de SharePoint, sincronizar la definición del conjunto de datos compartido entre el servidor de informes y el sitio de SharePoint|Páginas de aplicación de SharePoint|Cambiar las propiedades de elemento del conjunto de datos compartido<br /><br /> Cambiar las opciones de memoria caché<br /><br /> Cambiar el origen de datos compartido|  
   

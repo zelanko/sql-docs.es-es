@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c88d8dd92fcedac2facff27f52492be5ccb74269
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103607"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar un nombre principal de servicio (SPN) para un servidor de informes
@@ -27,7 +27,7 @@ ms.locfileid: "66103607"
   
 -   [Setspn](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx) (https://technet.microsoft.com/library/cc731241(WS.10).aspx).  
   
--   [Sintaxis de nombres SetSPN de los nombres de entidad de servicio (SPN) (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
+-   [Sintaxis setspn de los nombres de entidad de seguridad de servicio (SPN) (setspn. exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx).  
   
  Debe ser administrador de dominio si desea ejecutar la utilidad en el controlador de dominio.  
   
@@ -40,8 +40,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
   
  **SetSPN** está disponible con Windows Server. El argumento `-s` agrega un SPN después de validar que no existe ningún duplicado. **NOTA: -s** está disponible en Windows Server a partir de Windows Server 2008.  
   
- 
-  `HTTP` es la clase de servicio. El servicio web del servidor de informes se ejecuta en HTTP.SYS. Una consecuencia de la creación de un SPN para HTTP es que a todas las aplicaciones web del mismo equipo que se ejecutan en HTTP.SYS (incluidas las que se hospedan en IIS) se les concederán vales en función de la cuenta de usuario de dominio. Si esos servicios se ejecutan en una cuenta diferente, se producirá un error en las solicitudes de autenticación. Para evitar este problema, asegúrese de configurar todas las aplicaciones HTTP para ejecutarse en la misma cuenta, o considere la posibilidad de crear los encabezados de host para cada aplicación y crear después SPN independientes para cada encabezado de host. Al configurar los encabezados de host, se requieren cambios de DNS con independencia de la configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ `HTTP` es la clase de servicio. El servicio web del servidor de informes se ejecuta en HTTP.SYS. Una consecuencia de la creación de un SPN para HTTP es que a todas las aplicaciones web del mismo equipo que se ejecutan en HTTP.SYS (incluidas las que se hospedan en IIS) se les concederán vales en función de la cuenta de usuario de dominio. Si esos servicios se ejecutan en una cuenta diferente, se producirá un error en las solicitudes de autenticación. Para evitar este problema, asegúrese de configurar todas las aplicaciones HTTP para ejecutarse en la misma cuenta, o considere la posibilidad de crear los encabezados de host para cada aplicación y crear después SPN independientes para cada encabezado de host. Al configurar los encabezados de host, se requieren cambios de DNS con independencia de la configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Los valores que especifique para \<*nombreDeEquipo*>, \<*nombreDeDominio*> y \<*puerto*> identifican la dirección de red única del equipo que hospeda el servidor de informes. Puede ser un nombre de host local o un nombre de dominio completo (FQDN). Si solo tiene un dominio y usa el puerto 80, puede omitir \<*nombreDeDominio*> y \<*puerto*> de la línea de comandos. \<*cuenta-de-usuario-de-dominio*> es la cuenta de usuario con la que se ejecuta el servicio del servidor de informes y para la que es necesario registrar el SPN.  
   
@@ -70,7 +69,7 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 7.  Agregue `<RSWindowsNegotiate/>` como primera entrada en esta sección para habilitar NTLM.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Configurar una cuenta de servicio &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Administración de un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   

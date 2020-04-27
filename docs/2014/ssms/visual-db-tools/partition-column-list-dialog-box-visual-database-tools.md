@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280374"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Lista de columnas de particiones (cuadro de diálogo, Visual Database Tools)

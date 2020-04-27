@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 851fd1c1f3249a36af6de66aaa374088fab1c1ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298169"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>Filtrar eventos en un seguimiento (SQL Server Profiler)
@@ -40,7 +40,7 @@ ms.locfileid: "63298169"
   
 4.  Haga clic en **OK**.  
   
- **Temas**  
+ **Consideraciones:**  
   
 -   Si establece condiciones de filtro en las columnas de datos **StartTime** y **EndTime** de la pestaña Selección de eventos, asegúrese de lo siguiente:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63298169"
   
          O  
   
-    -   **Usar configuración regional para mostrar valores de fecha y hora** está activada en el cuadro de diálogo **Opciones generales** . Para ver el cuadro de diálogo **Opciones generales** , en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **del** , haga clic en **Opción**.  
+    -   Se ha seleccionado la opción**Usar la configuración regional para mostrar valores de fecha y hora** del cuadro de diálogo **Opciones generales** . Para ver el cuadro de diálogo **Opciones generales**, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Herramientas**de**, haga clic en **Opción**.  
   
          Y  
   

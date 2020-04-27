@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481021"
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
@@ -26,17 +26,17 @@ ms.locfileid: "65481021"
   
  La creación de directivas de coincidencia se realiza en tres etapas: un proceso de asignación en el que se identifica el origen de datos y se asignan dominios a las columnas, un proceso de directiva de coincidencia en el que se pueden crear una o varias reglas de coincidencia y probar cada regla de coincidencia por separado, y un proceso de resultados de búsqueda de coincidencias en el que se ejecutan todas las reglas de coincidencia juntas y, si se está satisfecho con ellas, se agrega la directiva a la base de conocimiento. Cada uno de estos procesos se realiza en una página distinta del asistente para la actividad Directiva de coincidencia, lo que le permite desplazarse de una página a otra, volver a ejecutar el proceso y cerrar un proceso de directiva de coincidencia específico y volver a la misma fase del proceso. Después de comprobar todas las reglas juntas, si lo desea puede volver a la página **Directiva de coincidencia** , modificar una de las reglas, probarla de nuevo por separado y, a continuación, volver a la página **Resultados de búsqueda de coincidencias** para volver a ejecutar todas las reglas juntas. DQS proporciona estadísticas sobre los datos de origen, las reglas de coincidencia y los resultados de búsqueda de coincidencias que permiten tomar decisiones fundadas sobre la directiva de coincidencia para poder mejorarla.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Si los datos de origen están en un archivo de Excel, es necesario tener instalado Microsoft Excel en el equipo de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . De lo contrario, no podrá seleccionar dicho archivo en la fase de asignación. Los archivos creados por Microsoft Excel pueden tener la extensión .xlsx, .xls o .csv. Si se utiliza la versión de 64 bits de Excel, solo se admitirán los archivos de Excel 2003 (.xls); los archivos de Excel 2007 o 2010 (.xlsx) no son compatibles. Si utiliza la versión de 64 bits de Excel 2007 o 2010, guarde el archivo como un archivo .xls o .csv, o instale una versión de 32 bits de Excel en su lugar.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una directiva de coincidencia.  
   
-##  <a name="MatchingRules"></a>Cómo establecer parámetros de regla de coincidencia  
+##  <a name="how-to-set-matching-rule-parameters"></a><a name="MatchingRules"></a>Cómo establecer parámetros de regla de coincidencia  
  La creación de una regla de coincidencia es un proceso iterativo en el que se especifican los factores utilizados para determinar si un registro coincide con otro. Puede especificar condiciones para cualquier dominio de una tabla. Cuando DQS realiza el proceso de búsqueda de coincidencias con dos registros, comparará los valores de los campos asignados a los dominios que están incluidos en la regla de coincidencia. DQS analiza los valores de cada campo de la regla y, a continuación, utiliza los factores especificados en la regla para cada dominio con objeto de calcular una puntuación de coincidencia final. Si la puntuación de coincidencia para los dos registros comparados es mayor que la puntuación de coincidencia mínima, los dos campos se consideran coincidencias.  
   
  En una regla de coincidencia se especifican los factores siguientes:  
@@ -55,7 +55,7 @@ ms.locfileid: "65481021"
   
  La generación de perfiles proporciona nuevas perspectivas sobre la integridad y la unicidad. Considere que la integridad y la unicidad forman un tándem. Utilice los datos de integridad y unicidad para determinar qué ponderación debe tener un campo en el proceso de búsqueda de coincidencias. Si hay un nivel alto de unicidad en un campo, utilizar ese campo en una directiva de coincidencia puede reducir los resultados de búsqueda de coincidencias, por lo que puede establecer la ponderación de ese campo en un valor relativamente pequeño. Si tiene un bajo nivel de unicidad en una columna, pero la integridad es baja, es posible que no desee incluir un dominio para esa columna. Si el nivel de unicidad es bajo, pero el nivel de integridad es alto, puede que desee incluir el dominio. Algunas columnas, como sexo, pueden tener un nivel bajo de unicidad intrínseco. Para obtener más información, consulte [Pestañas Generador de perfiles y Resultados](#Tabs).  
   
-##  <a name="Starting"></a>Primer paso: iniciar una directiva de coincidencia  
+##  <a name="first-step-starting-a-matching-policy"></a><a name="Starting"></a>Primer paso: iniciar una directiva de coincidencia  
  La actividad de directiva de coincidencia se realiza en el área de administración de la base de conocimiento de la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "65481021"
   
 3.  Haga clic en **Abrir base de conocimiento** para crear o modificar la directiva de coincidencia de una base de conocimiento existente. Seleccione la base de conocimiento, seleccione **Directiva de coincidencia**y, a continuación, haga clic en **Siguiente**. También puede hacer clic en una base de conocimiento en **Base de conocimiento reciente**. Si abre una base de conocimiento que se cerró mientras se trabajaba en una directiva de coincidencia, continuará en la fase en la que se cerró la actividad de la directiva de coincidencia (indicada por la columna **Estado** para la base de conocimiento en la tabla de bases de conocimiento o en el nombre de la base de conocimiento en **Base de conocimiento reciente**). Si abre una base de conocimiento que incluye una directiva de coincidencia y que se había finalizado, irá a la página **Directiva de coincidencia** . Si abre una base de conocimiento que no incluye una directiva de coincidencia y que se había finalizado, irá a la página **Asignación** .  
   
-##  <a name="MatchingStage"></a>Fase de asignación  
+##  <a name="mapping-stage"></a><a name="MatchingStage"></a> Fase de asignación  
  En la fase de asignación, deberá identificar el origen de los datos para el que creará la directiva de coincidencia y asignará columnas de origen a los dominios para ponerlos a disposición de la actividad de directiva de coincidencia.  
   
 1.  En la página **Asignación** , para crear una directiva para una base de datos, deje **Origen de datos** como **SQL Server**, seleccione la base de datos para la que desea crear la directiva en **Base de datos**y, a continuación, seleccione la tabla o la vista en **Tabla/vista**. La base de datos de origen debe encontrarse en la misma instancia de SQL Server que [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. En caso contrario, no aparecerá en la lista desplegable.  
@@ -89,7 +89,7 @@ ms.locfileid: "65481021"
     > [!NOTE]  
     >  Haga clic en **Cerrar** para guardar la fase del proyecto de búsqueda de coincidencias y volver a la página de inicio de DQS. La próxima vez que abra este proyecto, se iniciará en la misma fase. Haga clic en **Cancelar** para finalizar la actividad de búsqueda de coincidencias, perder los cambios realizados y volver a la página de inicio de DQS.  
   
-##  <a name="MatchingPolicyStage"></a>Fase de directiva de coincidencia  
+##  <a name="matching-policy-stage"></a><a name="MatchingPolicyStage"></a>Fase de directiva de coincidencia  
  Las reglas de coincidencia se crean y se prueban por separado en la página Directiva de coincidencia. Cuando se prueba una regla de coincidencia en la página **Directiva de coincidencia** , se ve una tabla de resultados de búsqueda de coincidencias que muestra los clústeres que DQS ha identificado para la regla seleccionada. La tabla muestra cada registro del clúster con los valores de los dominios de asignación y la puntuación de coincidencia, junto con el registro dinámico inicial para el clúster. También es posible mostrar datos de generación de perfiles para el proceso de búsqueda de coincidencias en conjunto, las condiciones de cada regla de coincidencia y las estadísticas de los resultados para cada regla de coincidencia por separado. Puede utilizar como filtro los datos de la regla maestra que desee.  
   
  Para obtener más información sobre cómo funcionan las reglas de coincidencia, vea [Cómo establecer parámetros para las reglas de coincidencia](#MatchingRules).  
@@ -120,7 +120,7 @@ ms.locfileid: "65481021"
   
 10. Seleccione **Clústeres superpuestos** en la lista desplegable para mostrar los registros dinámicos y los registros siguientes para todos los clústeres cuando se ejecute la búsqueda de coincidencias, incluso si los grupos de clústeres tienen registros en común. Seleccione **Clústeres no superpuestos** para mostrar, como un solo clúster, los clústeres que tienen registros en común cuando se ejecute la búsqueda de coincidencias.  
   
-11. Haga clic en **Volver a cargar los datos del origen** para copiar los datos del origen de datos en la tabla de ensayo y volverlos a indizar cuando se ejecute la directiva de coincidencia. Haga clic en **Ejecutar con los datos anteriores** para ejecutar una directiva de coincidencia sin copiar los datos en la tabla de ensayo ni volver a indizarlos. **Ejecutar en los datos anteriores** está deshabilitado para la primera ejecución de la Directiva de coincidencia, o si cambia la asignación en la página **asignación** y, a continuación, presiona **sí** en el siguiente elemento emergente. En ambos casos, es necesario volver a indizar. No será necesario volver a indizar si la directiva de coincidencia no ha sufrido cambios. La ejecución con los datos anteriores puede mejorar el rendimiento.  
+11. Haga clic en **Volver a cargar los datos del origen** para copiar los datos del origen de datos en la tabla de ensayo y volverlos a indizar cuando se ejecute la directiva de coincidencia. Haga clic en **Ejecutar con los datos anteriores** para ejecutar una directiva de coincidencia sin copiar los datos en la tabla de ensayo ni volver a indizarlos. **Ejecutar con los datos anteriores** aparece deshabilitado la primera vez que se ejecuta la directiva de coincidencia, o si cambia la asignación en la página **Asignación** y, a continuación, presiona **Sí** en el cuadro emergente. En ambos casos, es necesario volver a indizar. No será necesario volver a indizar si la directiva de coincidencia no ha sufrido cambios. La ejecución con los datos anteriores puede mejorar el rendimiento.  
   
 12. Haga clic en **Iniciar** para ejecutar el proceso de búsqueda de coincidencias para la regla seleccionada. Cuando finaliza el proceso, la tabla muestra el identificador, el número del clúster y las columnas de datos del registro (incluyendo las que no están en la regla de coincidencia) para cada registro del clúster. La fila dinámica del clúster se considera el candidato principal a permanecer tras el proceso de eliminación de datos duplicados. Cada fila adicional de un clúster se considera un duplicado; su puntuación de coincidencia (comparada con la del registro dinámico) se muestra en la tabla de resultados. El número de clúster es el mismo que el identificador de registro del registro dinámico del clúster.  
   
@@ -145,14 +145,14 @@ ms.locfileid: "65481021"
   
 18. Haga clic en **Siguiente** para pasar a la fase de resultados de búsqueda de coincidencias.  
   
-##  <a name="MatchingResultsStage"></a>Fase resultados de búsqueda de coincidencias  
+##  <a name="matching-results-stage"></a><a name="MatchingResultsStage"></a>Fase resultados de búsqueda de coincidencias  
  En la página **Resultados de búsqueda de coincidencias** puede probar todas las reglas de coincidencia juntas. Antes de hacerlo, puede especificar si desea que la ejecución de prueba de la regla identifique clústeres superpuestos o no superpuestos. Si ejecuta las reglas varias veces, puede hacerlo volviendo a cargar los datos desde el origen o con los datos anteriores.  
   
  Cuando se prueban las reglas de coincidencia en la página **Resultados de búsqueda de coincidencias** , se ve una tabla de resultados de coincidencia que muestra los clústeres que DQS ha identificado para todas las reglas. La tabla muestra cada registro del clúster con los valores de los dominios de asignación y la puntuación de coincidencia, junto con el registro dinámico inicial para el clúster. También puede mostrar los datos de generación de perfiles para todas las reglas de coincidencia, las condiciones de cada regla de coincidencia y las estadísticas sobre los resultados de todas las reglas de coincidencia.  
   
 1.  En la página **Resultados de búsqueda de coincidencias** , seleccione **Clústeres superpuestos** en la lista desplegable para mostrar los registros dinámicos y los registros siguientes para todos los clústeres cuando se ejecute la búsqueda de coincidencias, incluso si los grupos de clústeres tienen registros en común. Seleccione **Clústeres no superpuestos** para mostrar, como un solo clúster, los clústeres que tienen registros en común cuando se ejecute la búsqueda de coincidencias.  
   
-2.  Haga clic en **Volver a cargar los datos del origen** para copiar los datos del origen de datos en la tabla de ensayo y volverlos a indizar cuando se ejecute la directiva de coincidencia. Haga clic en **Ejecutar con los datos anteriores** para ejecutar una directiva de coincidencia sin copiar los datos en la tabla de ensayo ni volver a indizarlos. **Ejecutar en los datos anteriores** está deshabilitado para la primera ejecución de la Directiva de coincidencia, o si cambia la asignación en la página **asignación** y, a continuación, presiona **sí** en el siguiente elemento emergente. En ambos casos, es necesario volver a indizar. No será necesario volver a indizar si la directiva de coincidencia no ha sufrido cambios. La ejecución con los datos anteriores puede mejorar el rendimiento.  
+2.  Haga clic en **Volver a cargar los datos del origen** para copiar los datos del origen de datos en la tabla de ensayo y volverlos a indizar cuando se ejecute la directiva de coincidencia. Haga clic en **Ejecutar con los datos anteriores** para ejecutar una directiva de coincidencia sin copiar los datos en la tabla de ensayo ni volver a indizarlos. **Ejecutar con los datos anteriores** aparece deshabilitado la primera vez que se ejecuta la directiva de coincidencia, o si cambia la asignación en la página **Asignación** y, a continuación, presiona **Sí** en el cuadro emergente. En ambos casos, es necesario volver a indizar. No será necesario volver a indizar si la directiva de coincidencia no ha sufrido cambios. La ejecución con los datos anteriores puede mejorar el rendimiento.  
   
 3.  Haga clic en **Iniciar** para ejecutar el proceso de búsqueda de coincidencias para todas las reglas que ha definido. La tabla **Resultados de búsqueda de coincidencias** muestra el identificador, el número del clúster y las columnas de datos del registro (incluyendo las que no están en la regla de coincidencia) para cada registro de un clúster. El registro inicial del clúster se selecciona aleatoriamente. (Para determinar el registro que permanece, seleccione la regla de permanencia en la página **exportar** cuando ejecute el proyecto de búsqueda de coincidencias). Cada fila adicional de un clúster se considera un duplicado; la puntuación de coincidencia (comparada con el registro dinámico) se proporciona en la tabla de resultados.  
   
@@ -173,11 +173,11 @@ ms.locfileid: "65481021"
   
 7.  Si está satisfecho con los resultados de todas las reglas, haga clic en **Finalizar** para completar el proceso de directiva de coincidencia y, a continuación, haga clic en una de las opciones siguientes:  
   
-    -   **Sí: publicar la base de conocimiento y salir**: se publicará la base de conocimiento para que la use el usuario actual u otros usuarios. La base de conocimiento no se bloqueará, su estado se establecerá en "vacía" (en la tabla de bases de conocimiento), y las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la pantalla Abrir base de conocimiento.  
+    -   **Sí - Publicar la base de conocimiento y salir**: se publicará la base de conocimiento para que pueda usarla el usuario actual u otros usuarios. La base de conocimiento no se bloqueará, su estado se establecerá en "vacía" (en la tabla de bases de conocimiento), y las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la pantalla Abrir base de conocimiento.  
   
-    -   **No-guardar el trabajo en la base de conocimiento y salir**: se guardará el trabajo, la base de conocimiento permanecerá bloqueada y el estado de la base de conocimiento se establecerá **en trabajando**. Las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio.  
+    -   **No - Guardar el trabajo en la base de conocimiento y salir**: se guardarán los cambios realizados, la base de conocimiento permanecerá bloqueada y su estado se establecerá en **Trabajando**. Las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio.  
   
-    -   **Cancelar-permanecer en la pantalla actual**: se cerrará el cuadro emergente y se volverá a la pantalla administración de dominios.  
+    -   **Cancelar - Permanecer en la pantalla actual**: se cerrará el cuadro emergente y se volverá a la pantalla Administración de dominios.  
   
 8.  Haga clic en **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. El estado de la base de conocimiento mostrará la cadena "Directiva de coincidencia - " y el estado actual. Si hizo clic en **Cerrar** mientras estaba en la pantalla **Resultados de búsqueda de coincidencias** , el estado mostrará: “Directiva de coincidencia: resultados”. Si hizo clic en Cerrar mientras estaba en la pantalla **Directiva de coincidencia**, el estado mostrará: "Directiva de coincidencia: directiva de coincidencia". Después de hacer clic en **Cerrar**, para realizar la actividad **Detección de conocimiento** tendría que volver a la actividad **Directiva de coincidencia** , hacer clic en **Finalizar**y, por último, hacer clic en **Sí** para publicar la base de conocimiento o en **No** para guardar el trabajo en la base de conocimiento y salir.  
   
@@ -186,26 +186,26 @@ ms.locfileid: "65481021"
   
 9. Haga clic en **Cancelar** para finalizar la actividad Directiva de coincidencia, perdiendo los cambios realizados, y volver a la página de inicio de DQS.  
   
-##  <a name="FollowUp"></a>Seguimiento: después de crear una directiva de coincidencia  
+##  <a name="follow-up-after-creating-a-matching-policy"></a><a name="FollowUp"></a> Seguimiento: después de crear una directiva de coincidencia  
  Después de crear una directiva de coincidencia, puede ejecutar un proyecto de búsqueda de coincidencias basándose en la base de conocimiento que contiene la directiva de coincidencia. Para obtener más información, consulte [Ejecutar un proyecto de coincidencia](../../2014/data-quality-services/run-a-matching-project.md).  
   
-##  <a name="Tabs"></a>Pestañas generador de perfiles y resultados  
+##  <a name="profiler-and-results-tabs"></a><a name="Tabs"></a>Pestañas generador de perfiles y resultados  
  Las pestañas Generador de perfiles y Resultados contienen estadísticas para las páginas Directiva de coincidencia y Resultados de búsqueda de coincidencias.  
   
-###  <a name="Profiler"></a>Pestaña generador de perfiles  
+###  <a name="profiler-tab"></a><a name="Profiler"></a> Pestaña Generador de perfiles  
  Haga clic en la pestaña **Generador de perfiles** para mostrar las estadísticas de la base de datos de origen y de cada campo de la regla de directiva. Las estadísticas se actualizarán mientras se ejecuta la regla de directiva.  
   
  Para obtener más información sobre cómo interpretar las estadísticas siguientes, vea [Cómo establecer parámetros para las reglas de coincidencia](#MatchingRules).  
   
  Las estadísticas de la base de datos de origen incluyen:  
   
--   **Registros**: el número total de registros en la base de datos de origen  
+-   **Registros**: el número total de registros existentes en la base de datos de origen  
   
--   **Valores totales**: el número total de valores de los campos del origen de datos  
+-   **Valores totales**: el número total de valores existentes en los campos del origen de datos  
   
 -   **Nuevos valores**: el número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total  
   
--   **Valores únicos**: el número total de valores únicos de los campos y su porcentaje del total  
+-   **Valores únicos**: el número total de valores únicos existentes en los campos y su porcentaje del total  
   
 -   **Nuevos valores únicos**: el número total de valores únicos que son nuevos en los campos y su porcentaje del total  
   
@@ -215,13 +215,13 @@ ms.locfileid: "65481021"
   
 -   **Nombre de dominio**  
   
--   **Nuevo**: el número de valores nuevos y el porcentaje de valores nuevos comparado con los valores existentes en el dominio  
+-   **Nuevo**: el número de valores nuevos y el porcentaje de estos comparado con los valores existentes en el dominio  
   
--   **Único**: el número de registros únicos del campo y su porcentaje del total  
+-   **Único**: el número de registros únicos del campo y su porcentaje sobre el total  
   
 -   **Integridad**: la integridad de cada campo de origen que se ha asignado para el ejercicio de búsqueda de coincidencias  
   
-###  <a name="Notifications"></a>Notificaciones de directiva de coincidencia  
+###  <a name="matching-policy-notifications"></a><a name="Notifications"></a>Notificaciones de directiva de coincidencia  
  En la actividad de directiva de coincidencia, se producen notificaciones cuando se dan las condiciones siguientes:  
   
 -   El campo está vacío en todos los registros; se recomienda eliminarlo de la asignación.  
@@ -234,7 +234,7 @@ ms.locfileid: "65481021"
   
 -   Existe un alto grado de singularidad en el campo. El uso de este campo en la directiva de coincidencia puede disminuir los resultados de búsqueda de coincidencias.  
   
-###  <a name="ResultsTab"></a>Pestaña resultados de búsqueda de coincidencias  
+###  <a name="matching-results-tab"></a><a name="ResultsTab"></a> Pestaña Resultados de búsqueda de coincidencias  
  Haga clic en la pestaña **Resultados de búsqueda de coincidencias** para mostrar las estadísticas para la ejecución de la regla de directiva de coincidencia y la ejecución anterior de la regla. Si ha ejecutado la misma regla más de una vez con parámetros diferentes, la tabla de resultados de búsqueda de coincidencias mostrará las estadísticas para ambas ejecuciones, lo que le permitirá compararlas. También puede restaurar la regla anterior si lo desea.  
   
  Las estadísticas incluyen:  

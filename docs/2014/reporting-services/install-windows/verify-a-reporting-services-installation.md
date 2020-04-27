@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108566"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -34,7 +34,7 @@ ms.locfileid: "66108566"
   
 -   [Comprobar una instalación en modo nativo](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a>Comprobar la instalación en modo de SharePoint  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a>Comprobar la instalación en modo de SharePoint  
   
 #### <a name="to-verify-the-reporting-services-service"></a>Para comprobar el servicio Reporting Services  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108566"
   
 2.  Descargue la base de datos de ejemplo de Adventure Works y los informes de ejemplo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de CodePlex. Para obtener más información, vea [Ejemplos de informes de AdventureWorks](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
-##  <a name="bkmk_nativemode"></a>Comprobar una instalación en modo nativo  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a>Comprobar una instalación en modo nativo  
  Cuando instale un servidor de informes en modo nativo mediante la configuración personalizada, el programa de instalación instalará e implementará el servidor. Puede comprobar si el programa de instalación ha implementado el servidor de informes realizando unas sencillas pruebas. Debe ser un administrador local para poder realizar estos pasos. Para permitir que otros usuarios realicen estas pruebas, deberá configurar el acceso al servidor de informes para estos usuarios.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>Para comprobar que el servidor de informes está instalado y funciona  
@@ -107,7 +107,7 @@ ms.locfileid: "66108566"
   
 #### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Para comprobar que el Diseñador de informes está instalado y funciona  
   
-1.  Abra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y cree un proyecto nuevo basado en un tipo de proyecto de servidor de informes. Para más información sobre cómo usar el Asistente de proyectos de servidor de informes, vea [Reporting Services en SQL Server Data Tools &#40;SSDT&#41;](../tools/reporting-services-in-sql-server-data-tools-ssdt.md) en los Libros en pantalla de SQL Server.  
+1.  Abra [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y cree un proyecto nuevo basado en un tipo de proyecto de servidor de informes. Para más información sobre cómo usar el Asistente de proyectos de servidor de informes, vea [Reporting Services en SQL Server Data Tools &#40;SSDT&#41;](../tools/reporting-services-in-sql-server-data-tools-ssdt.md) en los Libros en pantalla de SQL Server.  
   
 2.  Si ha instalado ejemplos de informe, abra los archivos de proyectos de informe de ejemplo y publique los informes en un servidor de informes.  
   

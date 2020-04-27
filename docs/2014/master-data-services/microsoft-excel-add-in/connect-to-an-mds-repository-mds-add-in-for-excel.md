@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b040198b4ed152f8fa4ea00571375de911822687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482616"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>Conectarse a un repositorio MDS (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], debe conectarse a un repositorio MDS para poder cargar o publicar datos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -40,19 +40,19 @@ ms.locfileid: "65482616"
     > [!NOTE]  
     >  Asegúrese de usar el nombre del equipo; no utilice "localhost".  
   
-6.  Haga clic en **OK**. El nombre se muestra en la sección **Conexiones existentes** .  
+6.  Haga clic en **Aceptar**. El nombre se muestra en la sección **Conexiones existentes** .  
   
 7.  Opcionalmente, haga clic en **Probar** para probar la conexión. Se muestra un cuadro de diálogo de confirmación o de error. Haga clic en **Aceptar** para cerrarlo.  
   
 8.  Haga clic en **Conectar**. Se muestra el panel **Master Data Services** .  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   [Cargar datos de MDS en Excel](export-data-to-excel-from-master-data-services.md)  
   
 -   [Filtre los datos antes de cargar &#40;Complemento MDS para Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Conexiones &#40;Complemento MDS para Excel&#41;](connections-mds-add-in-for-excel.md)  
+ [Conexiones &#40;complemento MDS para Excel&#41;](connections-mds-add-in-for-excel.md)  
   
   

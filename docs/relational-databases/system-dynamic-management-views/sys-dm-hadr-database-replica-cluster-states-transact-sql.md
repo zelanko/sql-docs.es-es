@@ -21,10 +21,10 @@ ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900665"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
@@ -48,8 +48,8 @@ ms.locfileid: "67900665"
 |**is_failover_ready**|**bit**|Indica si la base de datos secundaria está sincronizada con la base de datos principal correspondiente. uno de los siguientes:<br /><br /> 0 = La base de datos no está marcada como sincronizada en el clúster. La base de datos no está lista para una conmutación por error.<br /><br /> 1 = La base de datos está marcada como sincronizada en el clúster. La base de datos está lista para una conmutación por error.|  
 |**is_pending_secondary_suspend**|**bit**|Indica si, después de una conmutación por error forzada, la base de datos está pendiente de suspensión pendiente; puede ser uno de los siguientes:<br /><br /> 0 = Cualquier estado a excepción de HADR_SYNCHRONIZED_ SUSPENDED.<br /><br /> 1 = HADR_SYNCHRONIZED_ SUSPENDED. Cuando una conmutación por error forzada se completa, cada una de las bases de datos secundarias se establece en HADR_SYNCHONIZED_SUSPENDED y permanece en este estado hasta que la nueva réplica principal recibe confirmación de esa base de datos secundaria en el mensaje SUSPEND.<br /><br /> NULL = Desconocido (sin quórum)|  
 |**is_database_joined**|**bit**|Indica si la base de datos de esta réplica de disponibilidad se ha unido al grupo de disponibilidad; puede ser uno de los siguientes:<br /><br /> 0 = La base de datos no se ha unido al grupo de disponibilidad en esta réplica de disponibilidad.<br /><br /> 1 = La base de datos se ha unido al grupo de disponibilidad en esta réplica de disponibilidad.<br /><br /> NULL = Desconocido (la réplica de disponibilidad no tiene quórum).|  
-|**recovery_lsn**|**Numeric (25, 0)**|En la réplica principal, el final del registro de transacciones antes de que la réplica escriba nuevas entradas de registro después de la recuperación o la conmutación por error. En la réplica principal, la fila de una base de datos secundaria dada tendrá el valor que la réplica principal necesita para la sincronización con la réplica secundaria (es decir, para la reversión y la reinicialización).<br /><br /> En las réplicas secundarias este valor es NULL. Tenga en cuenta que cada réplica secundaria tendrá el valor MAX o un valor inferior al que la réplica principal ha notificado a la réplica secundaria que se va a volver.|  
-|**truncation_lsn**|**Numeric (25, 0)**|El valor de truncamiento de registro de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], que puede ser más alto que el LSN de truncamiento local si el truncamiento de registro local está bloqueado (como mediante una operación de copia de seguridad).|  
+|**recovery_lsn**|**numeric(25,0)**|En la réplica principal, el final del registro de transacciones antes de que la réplica escriba nuevas entradas de registro después de la recuperación o la conmutación por error. En la réplica principal, la fila de una base de datos secundaria dada tendrá el valor que la réplica principal necesita para la sincronización con la réplica secundaria (es decir, para la reversión y la reinicialización).<br /><br /> En las réplicas secundarias este valor es NULL. Tenga en cuenta que cada réplica secundaria tendrá el valor MAX o un valor inferior al que la réplica principal ha notificado a la réplica secundaria que se va a volver.|  
+|**truncation_lsn**|**numeric(25,0)**|El valor de truncamiento de registro de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], que puede ser más alto que el LSN de truncamiento local si el truncamiento de registro local está bloqueado (como mediante una operación de copia de seguridad).|  
   
 ## <a name="security"></a>Seguridad  
   
@@ -57,10 +57,10 @@ ms.locfileid: "67900665"
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [Funciones y vistas de administración dinámica de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Vistas de catálogo de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Always On vistas y funciones de administración dinámica de grupos de disponibilidad &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
+ [Always On vistas de catálogo de grupos de disponibilidad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Sys. dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [Always On grupos de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484681"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarea 12: detectar conocimiento (detección de conocimiento)
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarea 12: Detección de conocimiento
   En esta tarea, realizará la actividad **detección de conocimiento** en los dominios ID. de **proveedor** y nombre de **proveedor** . En este escenario, el proceso de detección de conocimiento importa principalmente valores de estos dos dominios.  
   
  En este tutorial, empezó a crear la base de conocimiento desde el principio. También puede empezar a crear una base de conocimiento realizando una actividad de detección de conocimiento. Al hacer clic en **crear una base de conocimiento** en la Página principal, el cliente DQS le lleva a una página con la actividad **Administración de dominios** seleccionada para la actividad. Puede cambiar la **actividad** a **detección de conocimiento** y, a continuación, en la página siguiente, puede crear dominios como parte del proceso de detección de conocimiento. Vea [realizar la detección de conocimiento](https://msdn.microsoft.com/library/hh510398.aspx) para obtener más detalles.  
@@ -67,6 +67,6 @@ ms.locfileid: "65484681"
      Ha completado la primera lección del tutorial.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Lección 2: limpiar datos de proveedor con la base de conocimiento Proveedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [Lección 2: Limpieza de datos de proveedor con la base de conocimiento Proveedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

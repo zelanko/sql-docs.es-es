@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105277"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>Función CountRows (Generador de informes y SSRS)
@@ -35,15 +35,13 @@ CountRows(scope, recursive)
  (`String`) Nombre de un conjunto de datos, una región de datos o un grupo que contiene los elementos de informe que hay que contar.  
   
  *recursive*  
- (**Tipo enumerado**) Opcional. 
-  `Simple` (predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
+ (**Tipo enumerado**) Opcional. `Simple` (predeterminado) o `RdlRecursive`. Especifica si se debe realizar la agregación de forma recursiva.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  Devuelve un `Integer`.  
   
 ## <a name="remarks"></a>Observaciones  
- 
-  `CountRows` cuenta todas las filas del ámbito especificado, incluso las filas que contienen valores NULL.  
+ `CountRows` cuenta todas las filas del ámbito especificado, incluso las filas que contienen valores NULL.  
   
  El valor de *scope* no puede ser una expresión y debe hacer referencia al ámbito actual o a un ámbito contenedor.  
   

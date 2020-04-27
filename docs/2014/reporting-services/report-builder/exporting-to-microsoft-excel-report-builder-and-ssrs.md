@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed18d5f14a2245290e14804d4a64f58beba885d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107912"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
@@ -39,9 +39,8 @@ ms.locfileid: "66107912"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ExcelLimitations"></a>Limitaciones de Excel  
- 
-  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] impone limitaciones a los informes exportados debido a las funciones de Excel y sus formatos de archivo. A continuación se indican las más importantes:  
+##  <a name="excel-limitations"></a><a name="ExcelLimitations"></a> Limitaciones de Excel  
+ [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] impone limitaciones a los informes exportados debido a las funciones de Excel y sus formatos de archivo. A continuación se indican las más importantes:  
   
 -   El ancho máximo de las columnas en Excel es de 255 caracteres o 1726,5 puntos. El representador no comprueba que el ancho de columna es menor que el límite.  
   
@@ -94,8 +93,7 @@ ms.locfileid: "66107912"
   
 -   Los encabezados y pies de página de Excel admiten un máximo de 256 caracteres, incluido el marcado. La extensión de presentación trunca la cadena en los 256 caracteres.  
   
--   
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no admite márgenes en los encabezados y pies de página del informe. Cuando se exportan a Excel, estos valores de margen se configuran en cero y cualquier encabezado o pie de página que contenga varias filas de datos no podría imprimir varias filas, dependiendo de la configuración de la impresora.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no admite márgenes en los encabezados y pies de página del informe. Cuando se exportan a Excel, estos valores de margen se configuran en cero y cualquier encabezado o pie de página que contenga varias filas de datos no podría imprimir varias filas, dependiendo de la configuración de la impresora.  
   
 -   Los cuadros de texto de un encabezado o pie de página mantienen el formato, pero no su alineación, cuando se exportan a Excel. Esto se produce porque los espacios iniciales y finales se recortan cuando el informe se representa en Excel.  
   
@@ -157,8 +155,7 @@ ms.locfileid: "66107912"
   
 -   Sitio de SharePoint si Reporting Services está instalado en modo integrado de SharePoint.  
   
--   
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y obtiene una vista previa del informe.  
+-   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y obtiene una vista previa del informe.  
   
 -   Generador de informes está conectado a un servidor de informes. Puede tratarse de una versión de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] o independiente del Generador de informes.  
   
@@ -170,8 +167,7 @@ ms.locfileid: "66107912"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- La extensión EXCELOPENXML define el representador de Excel para Excel 2007-2010. La extensión EXCEL define la versión de Excel 2003. 
-  `Visible = "false"` indica que el representador de Excel 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ La extensión EXCELOPENXML define el representador de Excel para Excel 2007-2010. La extensión EXCEL define la versión de Excel 2003. `Visible = "false"` indica que el representador de Excel 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Diferencias entre los representadores de Excel 2007-2010 y de Excel 2003  
  Los informes, representados con los representadores de Excel o Excel 2003, suelen ser idénticos y solo en raras ocasiones observará diferencias entre los dos formatos. En la tabla siguiente se comparan los representadores de Excel y de Excel 2003.  
@@ -188,7 +184,7 @@ ms.locfileid: "66107912"
   
  Puesto que el informe establece explícitamente el alto de fila, el alto de fila predeterminado afecta solo a las filas cuyo tamaño se configura automáticamente al exportar a Excel.  
   
-##  <a name="ReportItemsExcel"></a>Elementos de informe en Excel  
+##  <a name="report-items-in-excel"></a><a name="ReportItemsExcel"></a> Elementos de informe en Excel  
  Los rectángulos, los subinformes, el cuerpo de los informes y las regiones de datos se representan como un rango de celdas de Excel. Los cuadros de texto, las imágenes, los gráficos, las barras de datos, los minigráficos, los mapas, los medidores y los indicadores se deben representar dentro de una celda de Excel, que podría combinarse en función del diseño del resto del informe.  
   
  Las imágenes, gráficos, minigráficos, barras de datos, mapas, medidores, indicadores y líneas se colocan dentro de una celda de Excel, pero se sitúan encima de la cuadrícula de la celda. Las líneas se representan como bordes de las celdas.  
@@ -202,8 +198,8 @@ ms.locfileid: "66107912"
   
  Si no encuentra ninguna coincidencia, Excel usa el tamaño de página predeterminado para la impresora. La orientación se establece en Vertical si el ancho de página es menor que el alto; en caso contrario, se establece en Horizontal.  
   
-##  <a name="WorksheetTabNames"></a>Nombres de pestañas de hoja de cálculo  
- Al exportar un informe a Excel, las páginas del mismo que se crearon con saltos de página se exportan a hojas de cálculo diferentes. Si proporcionó un nombre de página inicial para el informe, cada hoja de cálculo del libro de Excel tendrá este nombre de forma predeterminada. El nombre aparece en la pestaña de la hoja de cálculo. Sin embargo, puesto que cada hoja de cálculo de un libro debe tener un nombre único, un entero que empieza en 1 y se incrementa en 1 se anexa al nombre de página inicial para cada hoja de cálculo adicional. Por ejemplo, si el nombre de la página inicial es **Informe de ventas por año fiscal**, la segunda hoja de cálculo se denominaría **Informe de ventas por año fiscal1**, la tercera **Informe de ventas por año fiscal2**y así sucesivamente.  
+##  <a name="worksheet-tab-names"></a><a name="WorksheetTabNames"></a> Nombres de las pestañas de las hojas de cálculo  
+ Al exportar un informe a Excel, las páginas del mismo que se crearon con saltos de página se exportan a hojas de cálculo diferentes. Si proporcionó un nombre de página inicial para el informe, cada hoja de cálculo del libro de Excel tendrá este nombre de forma predeterminada. El nombre aparece en la pestaña de la hoja de cálculo. Sin embargo, dado que cada hoja de cálculo de un libro debe tener un nombre único, un número entero a partir de 1 que se incrementa en 1 se anexa al nombre de página inicial para cada hoja de cálculo adicional. Por ejemplo, si el nombre de la página inicial es **Informe de ventas por año fiscal**, la segunda hoja de cálculo se denominaría **Informe de ventas por año fiscal1**, la tercera **Informe de ventas por año fiscal2**y así sucesivamente.  
   
  Si todas las páginas del informe creadas con saltos de página proporcionan nombres de página nuevos, cada hoja de cálculo tendrá el nombre de página asociado. Sin embargo, estos nombres de página podrían no ser únicos. Si los nombres de página no son únicos, las hojas de cálculo se denominan de la misma manera que los iniciales de las páginas. Por ejemplo, si el nombre de página de dos grupos es **Ventas de NW**, una pestaña de la hoja de cálculo tendrá el nombre **Ventas de NW**y la otra **Ventas de NW1**.  
   
@@ -211,7 +207,7 @@ ms.locfileid: "66107912"
   
  Reporting Services proporciona propiedades para establecer en los informes, regiones de datos, grupos y rectángulos con el fin de ayudarle a crear informes que se puedan exportar a Excel de la manera que desee. Para más información, vea [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="DocumentProperties"></a>Propiedades de documento  
+##  <a name="document-properties"></a><a name="DocumentProperties"></a> Propiedades de documento  
  El presentador de Excel escribe los metadatos siguientes en el archivo de Excel.  
   
 |Propiedades del elemento de informe|Descripción|  
@@ -221,7 +217,7 @@ ms.locfileid: "66107912"
 |Descripción|Descripción del informe|  
 |LastSaved|Fecha y hora de ejecución del informe como un valor de fecha y hora de ISO.|  
   
-##  <a name="PageHeadersFooters"></a>Encabezados y pies de página  
+##  <a name="page-headers-and-footers"></a><a name="PageHeadersFooters"></a> Encabezados y pies de página  
  En función del valor de SimplePageHeaders en la información del dispositivo, el encabezado de página se puede representar de dos maneras: en la parte superior de cada cuadrícula de celda de la hoja de cálculo o en la propia sección de encabezado de la hoja de cálculo de Excel. De forma predeterminada, el encabezado se representa en la cuadrícula de celda en la hoja de cálculo de Excel.  
   
  El pie de página siempre se representa en la propia sección de pie de página de la hoja de cálculo de Excel, sin tener en cuenta el valor del parámetro SimplePageHeaders.  
@@ -242,12 +238,11 @@ ms.locfileid: "66107912"
   
  Debido a las limitaciones de Excel, los cuadros de texto son el único tipo de elemento de informe que se puede representar en la sección de encabezado y pie de página de Excel.  
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="interactivity"></a><a name="Interactivity"></a> Interactividad  
  En Excel se admiten algunos elementos interactivos. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
- 
-  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] tiene limitaciones en el modo de administrar los elementos de informe ocultos y visibles cuando éstos se exportan. Los grupos, filas y columnas que contienen elementos de informe que pueden mostrarse y ocultarse se representan como esquemas de Excel. Excel crea esquemas que expanden y contraen filas y columnas completas, lo que puede provocar que se colapsen elementos de informe que no se deberían contraer. Además, los símbolos de esquema de Excel pueden mostrarse desordenados con esquemas superpuestos. Para solucionar estos problemas, al usar la extensión de representación en Excel se aplican las reglas de esquema siguientes:  
+ [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] tiene limitaciones en el modo de administrar los elementos de informe ocultos y visibles cuando éstos se exportan. Los grupos, filas y columnas que contienen elementos de informe que pueden mostrarse y ocultarse se representan como esquemas de Excel. Excel crea esquemas que expanden y contraen filas y columnas completas, lo que puede provocar que se colapsen elementos de informe que no se deberían contraer. Además, los símbolos de esquema de Excel pueden mostrarse desordenados con esquemas superpuestos. Para solucionar estos problemas, al usar la extensión de representación en Excel se aplican las reglas de esquema siguientes:  
   
 -   El elemento de informe que se puede mostrar y ocultar y que está situado en la esquina superior izquierda se podrá seguir mostrando y ocultando en Excel. Los elementos de informe que se pueden mostrar y ocultar y que comparten un espacio vertical u horizontal con el elemento de informe que se puede mostrar y ocultar y que está situado en la esquina superior izquierda no se podrán mostrar ni ocultar en Excel.  
   
@@ -278,7 +273,7 @@ ms.locfileid: "66107912"
 ### <a name="bookmarks"></a>Marcadores  
  Los vínculos de marcador que aparecen en cuadros de texto se representan como hipervínculos de Excel en la celda en la que se representa el texto. Los vínculos de marcador para imágenes y gráficos se representan como hipervínculos de Excel en la imagen cuando se representa ésta. Cuando se hace clic, el marcador va a la celda de Excel en la que se presenta el elemento de informe marcado.  
   
-##  <a name="ConditionalFormat"></a>Cambiar informes en tiempo de ejecución  
+##  <a name="changing-reports-at-run-time"></a><a name="ConditionalFormat"></a> Cambiar informes en tiempo de ejecución  
  Si un informe se debe representar en varios formatos y no es posible crear un diseño del informe que se represente de la manera que desea en todos los formatos necesarios, podría considerar la utilización del valor del RenderFormat integrado global, para cambiar condicionalmente la apariencia del informe en tiempo de ejecución. De este modo puede ocultar o presentar los elementos de informe dependiendo del representador usado para obtener los mejores resultados en cada formato. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte también  

@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58785d54954278d2dcb839ef3e707859682a9d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104109"
 ---
 # <a name="caching-reports-ssrs"></a>Informes almacenados en caché (SSRS)
@@ -76,6 +76,6 @@ ms.locfileid: "66104109"
  [Cargar previamente el Administrador de informes de &#40;de caché&#41;](preload-the-cache-report-manager.md)   
  [Programaciones](../subscriptions/schedules.md)   
  [Almacenar en caché conjuntos de recursos compartidos &#40;SSRS&#41;](cache-shared-datasets-ssrs.md)   
- [Opciones de actualización de caché &#40;Administrador de informes&#41;](../cache-refresh-options-report-manager.md)  
+ [Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](../cache-refresh-options-report-manager.md)  
   
   

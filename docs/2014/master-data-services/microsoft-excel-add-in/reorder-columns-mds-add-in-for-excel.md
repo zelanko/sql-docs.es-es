@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7d14023208ddb9cac2eb5c2f3c3c2770f2363dc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478925"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>Reordenar columnas (complemento MDS para Excel)
@@ -22,7 +22,7 @@ ms.locfileid: "65478925"
   
  Cuando vuelva a ordenar atributos en el cuadro de diálogo **Filtro** , los datos se cargan en Excel con el orden nuevo. Sin embargo, la próxima vez filtre los datos de atributo, el orden revertirá al orden del diseño original. Para cambiar el orden de forma permanente, un administrador debe cambiar el orden en el área de **Administración del sistema** de Master Data Manager. Para más información, consulte [Change the Order of Attributes](../change-the-order-of-attributes.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  

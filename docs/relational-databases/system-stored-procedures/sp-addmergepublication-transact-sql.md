@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278354"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
@@ -89,7 +89,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**nativo** (valor predeterminado)|Genera la salida de todas las tablas mediante un programa de copia masiva en modo nativo.|  
-|**character**|Genera la salida de todas las tablas mediante un programa de copia masiva en modo de caracteres. Necesario para admitir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que no sean de.|  
+|**óptico**|Genera la salida de todas las tablas mediante un programa de copia masiva en modo de caracteres. Necesario para admitir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que no sean de.|  
   
 `[ @allow_push = ] 'allow_push'`Especifica si se pueden crear suscripciones de extracción para la publicación especificada. *allow_push* es de tipo **nvarchar (5)** y su valor predeterminado es true, que permite suscripciones de extracción en la publicación.  
   
@@ -164,20 +164,20 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**reales**|La publicación utiliza particiones previamente calculadas.|  
-|**es**|La publicación no utiliza particiones previamente calculadas.|  
+|**true**|La publicación utiliza particiones previamente calculadas.|  
+|**false**|La publicación no utiliza particiones previamente calculadas.|  
 |NULL (valor predeterminado)|El sistema decide la estrategia de partición.|  
   
  Las particiones precalculadas se utilizan de manera predeterminada. Para evitar el uso de particiones precalculadas, *use_partition_groups* debe establecerse en **false**. Si es NULL, el sistema decidirá si se pueden utilizar. Si no se pueden usar particiones precalculadas, este valor se convierte en **false** sin generar ningún error. En tales casos, *keep_partition_changes* se puede establecer en **true** para proporcionar una optimización. Para obtener más información, vea [filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) y optimizar el [rendimiento de los filtros con parámetros con particiones precalculadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
 `[ @publication_compatibility_level = ] backward_comp_level`Indica la compatibilidad con versiones anteriores de la publicación. *backward_comp_level* es **nvarchar (6)** y puede tener uno de estos valores:  
   
-|Value|Versión|  
+|Value|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
   
-`[ @replicate_ddl = ] replicate_ddl`Indica si se admite la replicación de esquemas para la publicación. *replicate_ddl* es de **tipo int**y su valor predeterminado es 1. **1** indica que las instrucciones del lenguaje de definición de datos (DDL) ejecutadas en el publicador se replican y **0** indica que las instrucciones de DDL no se replican. Para obtener más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
+`[ @replicate_ddl = ] replicate_ddl`Indica si se admite la replicación de esquemas para la publicación. *replicate_ddl* es de **tipo int**y su valor predeterminado es 1. **1** indica que las instrucciones del lenguaje de definición de datos (DDL) ejecutadas en el publicador se replican y **0** indica que las instrucciones de DDL no se replican. Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
  El * \@parámetro replicate_ddl* se respeta cuando una instrucción DDL agrega una columna. El * \@parámetro replicate_ddl* se omite cuando una instrucción DDL modifica o quita una columna por los siguientes motivos.  
   
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`Especifica las unidades para el período de retención establecido por *retención*. *retention_period_unit* es **nvarchar (10)** y puede tener uno de los valores siguientes.  
   
-|Value|Versión|  
+|Value|Version|  
 |-----------|-------------|  
 |**Day** (valor predeterminado)|El período de retención se especifica en días.|  
 |**week**|El período de retención se especifica en semanas.|  
@@ -221,7 +221,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |**publicador**|Los registros de conflictos se almacenan en el publicador.|  
 |**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite [!INCLUDE[ssEW](../../includes/ssew-md.md)] para los suscriptores de.|  
 |**ambos**|Los registros de conflictos se almacenan tanto en el publicador como en el suscriptor.|  
-|NULL (predeterminado)|La replicación establece ** automáticamente conflict_logging **en cuando el** valor *backward_comp_level* es **90rtm** y en el **publicador** en todos los demás casos.|  
+|NULL (predeterminado)|La replicación establece *conflict_logging* automáticamente conflict_logging **en cuando el** valor *backward_comp_level* es **90rtm** y en el **publicador** en todos los demás casos.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

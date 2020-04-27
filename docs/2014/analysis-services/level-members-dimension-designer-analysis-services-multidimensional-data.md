@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078110"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Nivel y miembros (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -92,7 +92,7 @@ ms.locfileid: "66078110"
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha habilitado el modo de reescritura.  
   
- **Cambiar el nombre**  
+ **Cambiar nombre**  
  Seleccione esta opción para modificar el nombre del miembro seleccionado.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "66078110"
  **Contraer miembro**  
  Contrae el miembro seleccionado en el **Árbol**.  
   
- **Diferi**  
+ **Reescritura**  
  Seleccione esta opción para habilitar el modo de reescritura.  
   
 ## <a name="see-also"></a>Consulte también  

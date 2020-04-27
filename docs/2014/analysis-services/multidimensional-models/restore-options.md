@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a754ac9650c94511e8576a8a05e0b81fb38138a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073084"
 ---
 # <a name="restore-options"></a>Opciones de restauración
@@ -34,8 +34,8 @@ ms.locfileid: "66073084"
   
 ## <a name="see-also"></a>Consulte también  
  [Cuadro de diálogo restaurar base de datos &#40;Analysis Services-datos multidimensionales&#41;](../restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [Copias de seguridad y restauración de bases de datos de Analysis Services](backup-and-restore-of-analysis-services-databases.md)   
+ [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](backup-and-restore-of-analysis-services-databases.md)   
  [Elemento restore &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
- [Realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079232"
 ---
 # <a name="modifying-default-table-names"></a>Modificar los nombres de tabla predeterminados
@@ -46,7 +46,7 @@ ms.locfileid: "66079232"
 7.  En el menú **Archivo** , o en la barra de herramientas de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en **Guardar todo** para guardar los cambios que ha realizado hasta este momento en el proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si lo desea, puede detener aquí el tutorial y reanudarlo más tarde.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
+ [Lección 2: definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md)   

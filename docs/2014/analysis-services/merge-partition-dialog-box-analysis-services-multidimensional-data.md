@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077827"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Partición de mezcla (Analysis Services - Datos multidimensionales)
@@ -43,11 +43,11 @@ ms.locfileid: "66077827"
 |Columna|Descripción|  
 |------------|-----------------|  
 |**Combinar**|Seleccione esta columna para mezclar la partición de origen con la de destino.|  
-|**Nombre de partición**|Muestra el nombre de la partición de origen.|  
+|**Nombre de la partición**|Muestra el nombre de la partición de origen.|  
 |**Procesado por última vez**|Muestra la fecha y la hora en que la partición de origen se procesó por última vez.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Mezclar particiones en Analysis Services &#40;SSAS-multidimensional&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Mezclar particiones en Analysis Services &#40;SSAS - Multidimensional&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078189"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lección 10: Crear jerarquías
-  En esta lección, creará jerarquías. Las jerarquías son grupos de columnas dispuestas en niveles; por ejemplo, una jerarquía geografía puede tener subniveles de país, estado, provincia y ciudad. Las jerarquías pueden aparecer separadas de otras columnas en una lista de campos de aplicación cliente de generación de informes, lo que facilita que los usuarios puedan navegar por ellas e incluirlas en un informe. Para obtener más información, vea [Jerarquías &#40;SSAS tabular&#41;](tabular-models/hierarchies-ssas-tabular.md).  
+  En esta lección, creará jerarquías. Las jerarquías son grupos de columnas dispuestas en niveles; por ejemplo, una jerarquía Geografía puede tener subniveles para País, Provincia y Ciudad. Las jerarquías pueden aparecer separadas de otras columnas en una lista de campos de aplicación cliente de generación de informes, lo que facilita que los usuarios puedan navegar por ellas e incluirlas en un informe. Para obtener más información, vea [Jerarquías &#40;SSAS tabular&#41;](tabular-models/hierarchies-ssas-tabular.md).  
   
  Para crear jerarquías, usará el diseñador de modelos en *Vista de diagrama*. La creación y administración de jerarquías no se admite en la vista de datos del diseñador de modelos.  
   
  Tiempo estimado para completar esta lección: **20 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 9: Crear perspectivas](lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Crear jerarquías  
@@ -45,7 +45,7 @@ ms.locfileid: "66078189"
 5.  En la `Category` jerarquía, haga clic con el botón secundario en la columna **Product Category Name** , haga clic en `Category`cambiar **nombre**y, a continuación, escriba.  
   
     > [!NOTE]  
-    >  Al cambiar el nombre de una columna de una jerarquía no cambia el nombre de esa columna en la tabla. Una columna de una jerarquía es simplemente una representación de la columna en la tabla.  
+    >  Al cambiar el nombre de una columna de la jerarquía no se cambia el nombre de esa columna en la tabla. Una columna de una jerarquía es simplemente una representación de la columna de la tabla.  
   
 6.  En la `Product` tabla, haga clic con el botón secundario en la columna **Product subcategory Name** , en el menú contextual, seleccione **Agregar a jerarquía**y, a continuación, haga clic en `Category`.  
   
@@ -63,31 +63,31 @@ ms.locfileid: "66078189"
   
     |Columna|Cambiar el nombre a:|  
     |------------|----------------|  
-    |Año del calendario|Year|  
+    |Año del calendario|Año|  
     |Semestre del calendario|Semestre|  
     |Trimestre del calendario|Trimestre|  
-    |Month Calendar|Month|  
+    |Month Calendar|Mes|  
     |Day Of Month|Día|  
   
 4.  En la tabla **Fecha** , repita los pasos anteriores y cree una jerarquía **Fiscal** que incluya las siguientes columnas:  
   
     |Columna|Cambiar el nombre a:|  
     |------------|----------------|  
-    |Año fiscal|Year|  
+    |Año fiscal|Año|  
     |Semestre fiscal|Semestre|  
     |Trimestre fiscal|Trimestre|  
-    |Month Calendar|Month|  
+    |Month Calendar|Mes|  
     |Day Of Month|Día|  
   
 5.  Finalmente, en la tabla **Fecha** , repita los pasos anteriores y cree una jerarquía **Calendario de producción** que incluya las columnas siguientes:  
   
     |Columna|Cambiar el nombre a:|  
     |------------|----------------|  
-    |Año del calendario|Year|  
+    |Año del calendario|Año|  
     |Week Number Of Year|Semana|  
     |Day Of Week|Día|  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 11: Crear particiones](lesson-10-create-partitions.md).  
   
   

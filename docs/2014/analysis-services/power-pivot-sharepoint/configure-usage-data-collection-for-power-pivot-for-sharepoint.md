@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071740"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurar la recolección de datos de uso para PowerPivot para SharePoint
@@ -24,17 +24,17 @@ ms.locfileid: "66071740"
   
  **En este tema:**  
   
- [Habilitar la recopilación de datos de uso y elegir los eventos que desencadenan la recopilación de datos](#events)  
+ [Habilitar la recopilación de datos de uso y elegir los eventos que la desencadenan](#events)  
   
- [Establecer la ubicación del archivo de registro](#configdb)  
+ [Establecer la ubicación de los archivos de registro](#configdb)  
   
  [Configurar los trabajos de temporizador utilizados en la recopilación de datos de uso](#jobs)  
   
- [Limitar cuánto tiempo se almacena el historial de datos de uso](#confighist)  
+ [Limitar durante cuánto tiempo se almacena el historial de datos de uso](#confighist)  
   
- [Definir categorías de respuesta de consulta rápida, media y lenta a efectos de los informes](#qrh)  
+ [Definir las categorías de respuesta a las consultas rápida, media y lenta a efectos de los informes](#qrh)  
   
- [Especificar la frecuencia con que se envían las estadísticas de consulta al sistema de recopilación de datos de uso](#ttr)  
+ [Especificar con qué frecuencia se notifican las estadísticas de consulta al sistema de recopilación de datos de uso](#ttr)  
   
  [Abrir la página Aplicación de servicio PowerPivot para tener acceso a la configuración](#openconfig)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66071740"
 > [!IMPORTANT]  
 >  Los datos de uso proporcionan una visión general de la forma en que los usuarios tienen acceso a los datos y los recursos, pero no garantizan la confiabilidad ni la persistencia de los datos en las operaciones del servidor y el acceso de los usuarios. Por ejemplo, si se reinicia un servidor, los datos de uso del evento se perderán y no se podrán recuperar. De igual forma, si los archivos de registro temporales alcanzan el tamaño máximo, no se agregarán nuevos datos hasta que se borren los archivos. Si requiere la capacidad de auditoría, considere usar las características de tipo de contenido y flujo de trabajo que SharePoint proporciona para generar un subsistema de auditoría para la granja. Para obtener más información, busque en la documentación de la comunidad y del producto en Internet.  
   
-##  <a name="events"></a>Habilitar la recopilación de datos de uso y elegir los eventos que desencadenan la recopilación de datos  
+##  <a name="enable-usage-data-collection-and-choose-events-that-trigger-data-collection"></a><a name="events"></a>Habilitar la recopilación de datos de uso y elegir los eventos que desencadenan la recopilación de datos  
  Configurar la recopilación de datos de uso en Administración central de SharePoint.  
   
 1.  En Administración central, haga clic en **Supervisión**.  
@@ -64,13 +64,13 @@ ms.locfileid: "66071740"
     > [!NOTE]  
     >  El estado del servidor y las operaciones de actualización de datos también generan datos de uso, pero no hay ningún evento asociado a estos procesos.  
   
-5.  También puede actualizar la ubicación de los archivos de registro. Para más información, consulte la siguiente sección.  
+5.  También puede actualizar la ubicación de los archivos de registro. Para obtener más información, vea la próxima sección.  
   
 6.  Haga clic en **Aceptar** para guardar los cambios.  
   
 7.  Opcionalmente, puede especificar si se registran todos los mensajes o solo los errores. Para obtener más información sobre cómo limitar los mensajes de eventos, vea [configurar y ver archivos de registro de SharePoint y el registro de diagnósticos &#40;PowerPivot para SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
-##  <a name="configdb"></a>Establecer la ubicación del archivo de registro  
+##  <a name="set-log-file-location"></a><a name="configdb"></a>Establecer la ubicación del archivo de registro  
  Los datos de uso de PowerPivot se almacenan inicialmente en archivos de registro de uso en el servidor local y, a continuación, se mueven periódicamente a las bases de datos de aplicación de servicio PowerPivot. La ubicación de los archivos de registro se establece en Administración central. La ubicación predeterminada es:  
   
  `C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\logs`  
@@ -83,7 +83,7 @@ ms.locfileid: "66071740"
   
 3.  En Configuración de la recopilación de datos de uso, vea o modifique la ubicación, el nombre o el tamaño máximo del archivo. Si especifica un tamaño de archivo que es demasiado bajo, alcanzará el límite máximo y no se agregarán entradas nuevas hasta que su contenido se mueva a la base de datos central de recopilación de datos de uso.  
   
-##  <a name="jobs"></a>Configurar los trabajos de temporizador utilizados en la recopilación de datos de uso  
+##  <a name="configure-the-timer-jobs-used-in-usage-data-collection"></a><a name="jobs"></a>Configurar los trabajos de temporizador utilizados en la recopilación de datos de uso  
  Los datos de estado y de uso de servidor de PowerPivot se mueven a ubicaciones diferentes en el sistema de recopilación de datos de uso mediante dos trabajos de temporizador:  
   
 -   El trabajo del temporizador "Importación de datos de uso de Microsoft SharePoint Foundation" mueve el uso de PowerPivot a la base de datos de aplicación de servicio PowerPivot.  
@@ -94,7 +94,7 @@ ms.locfileid: "66071740"
   
 1.  En Administración central, haga clic en **Supervisión**.  
   
-2.  Haga clic en **revisar definiciones de trabajo.** En la sección **Trabajos del temporizador** .  
+2.  Haga clic en **Revisar definiciones de trabajo** En la sección **Trabajos del temporizador** .  
   
 3.  Haga clic en **Importación de datos de uso de Microsoft SharePoint Foundation**.  
   
@@ -106,10 +106,10 @@ ms.locfileid: "66071740"
   
 7.  Compruebe los informes para ver los datos de la actualización. Para obtener más información, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
-##  <a name="confighist"></a>Limitar cuánto tiempo se almacena el historial de datos de uso  
+##  <a name="limit-how-long-usage-data-history-is-stored"></a><a name="confighist"></a>Limitar cuánto tiempo se almacena el historial de datos de uso  
  El historial de datos de uso se almacena para los eventos (conexiones, carga, descarga y procesamiento de consultas a petición) y la actualización de datos (procesamiento de datos programado). Aunque los datos de uso se recopilan a través del sistema de recopilación de datos de uso de SharePoint, los datos de los informes se mueven a una base de datos de aplicación de PowerPivot y a una base de datos de informes para conseguir un almacenamiento a más largo plazo. La configuración del historial de datos de uso controla cuánto tiempo se conservan en las bases de datos de aplicación de PowerPivot. El mismo límite se aplica por igual a todos los tipos de datos de uso almacenados en la misma base de datos de aplicación de servicio PowerPivot.  
   
-1.  [Abra la página aplicación de servicio PowerPivot](#openconfig).  
+1.  [Abra la página Aplicación de servicio PowerPivot](#openconfig).  
   
 2.  En la sección **Recolección de datos de uso** , en **Historial de datos de uso**, escriba el número de días para los que desea mantener un registro de actividad de la actualización de datos para cada libro.  
   
@@ -123,18 +123,18 @@ ms.locfileid: "66071740"
   
      Los datos se eliminan realmente cuando se produce el evento siguiente. El límite del historial de datos de uso solo se comprueba cuando el sistema procesa un evento.  
   
-3.  Haga clic en **OK**.  
+3.  Haga clic en **Aceptar**.  
   
  Para obtener más información sobre cómo se recopilan y almacenan los datos de uso, vea [recopilación de datos de uso de PowerPivot](power-pivot-usage-data-collection.md).  
   
-##  <a name="qrh"></a>Definir categorías de respuesta de consulta rápida, media y lenta a efectos de los informes  
+##  <a name="define-fast-medium-and-slow-query-response-categories-for-reporting-purposes"></a><a name="qrh"></a>Definir categorías de respuesta de consulta rápida, media y lenta a efectos de los informes  
  El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: trivial, rápido, esperado, de ejecución prolongada y superada. Cada solicitud para un servidor de PowerPivot pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
   
  La información de las respuestas a las consultas se utiliza en los informes de actividad. Dentro de los informes, cada categoría se utiliza de manera diferente para revelar mejor las tendencias de rendimiento del sistema de PowerPivot. Las solicitudes triviales se excluyen completamente, por ejemplo, porque de ese modo se quita el ruido en los datos y se muestran las tendencias más significativas mediante las categorías restantes. Por el contrario, las estadísticas de solicitudes de ejecución prolongada o superadas se destacan en el informe para que los administradores o los propietarios de los libros puedan emprender la acción correctora inmediatamente.  
   
  Aunque no puede agregar ni eliminar categorías, puede definir los límites superior e inferior que determinan dónde termina una categoría y dónde comienza la siguiente. Si una organización utiliza contratos de nivel de servicio (SLA) para definir los niveles aceptables de disponibilidad y el rendimiento de los servidores, puede ajustar estas categorías para reflejar el Contrato de nivel de servicio que cree.  
   
-1.  [Abra la página aplicación de servicio PowerPivot](#openconfig).  
+1.  [Abra la página Aplicación de servicio PowerPivot](#openconfig).  
   
 2.  En la sección **Recolección de datos de uso** , en **Límite superior de respuesta trivial** , especifique un valor (en milisegundos) que establezca el límite superior para completar una respuesta trivial. Algunas solicitudes que no entran en esta categoría normalmente son, entre otras, los pings de servidor, la iniciación de las sesiones y las consulta de metadatos. El valor predeterminado es 500 milisegundos (o medio segundo).  
   
@@ -146,12 +146,12 @@ ms.locfileid: "66071740"
   
      Cualquier solicitud que supere este límite se clasifica como *Superada*. No hay ningún umbral configurable para *Superada*. Se deduce del límite superior que especifique como límite superior de las solicitudes de ejecución prolongada. Las solicitudes que entran en la categoría Superada se ejecutan más tiempo de lo que se permite en el contrato de nivel de servicio que se haya definido.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
-##  <a name="ttr"></a>Especificar la frecuencia con que se envían las estadísticas de consulta al sistema de recopilación de datos de uso  
+##  <a name="specify-how-often-query-statistics-are-reported-to-the-usage-data-collection-system"></a><a name="ttr"></a>Especificar la frecuencia con que se envían las estadísticas de consulta al sistema de recopilación de datos de uso  
  El intervalo de tiempo de informe especifica la frecuencia con que las estadísticas de consulta se notifican al sistema de recopilación de datos de uso. Las estadísticas de consulta se acumulan en un proceso y se notifican como un evento único a intervalos regulares. Puede ajustar el intervalo para escribir más o menos a menudo en el archivo de registro.  
   
-1.  [Abra la página aplicación de servicio PowerPivot](#openconfig).  
+1.  [Abra la página Aplicación de servicio PowerPivot](#openconfig).  
   
 2.  En la sección **Recolección de datos de uso** , en **Intervalo de informes de consulta**, escriba el número de segundos que hay que esperar antes de que el servidor notifique las estadísticas de consulta para todas las categorías (trivial, rápida, esperada, de ejecución prolongada y superada) como un único evento al sistema de recopilación de datos de uso.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "66071740"
   
      Si eleva este valor a un número mucho mayor, podría perder los datos estadísticos antes de que se puedan notificar. Por ejemplo, si se reinicia el servicio, las estadísticas de consulta se perderán. Por el contrario, si los informes de actividad integrados muestran que los datos son insuficientes, considere disminuir el intervalo para obtener eventos para indicar el tiempo para la notificación con más frecuencia.  
   
-3.  Haga clic en **OK**.  
+3.  Haga clic en **Aceptar**.  
   
-##  <a name="openconfig"></a>Abrir la página aplicación de servicio PowerPivot para tener acceso a la configuración  
+##  <a name="open-the-powerpivot-service-application-page-to-access-configuration-settings"></a><a name="openconfig"></a>Abrir la página aplicación de servicio PowerPivot para tener acceso a la configuración  
  Debe ser administrador de un servicio o granja para modificar las configuraciones de las aplicaciones de servicio. Si definió varias aplicaciones de servicio PowerPivot en la granja, debe modificar cada una individualmente.  
   
 1.  En Administración central de SharePoint, en **Administración de aplicaciones**, haga clic en **Administrar aplicaciones de servicio**.  
@@ -172,16 +172,16 @@ ms.locfileid: "66071740"
   
 3.  Haga clic en el nombre de la aplicación de servicio PowerPivot. Se abrirá el panel de administración de PowerPivot.  
   
-4.  En **acciones**, haga clic en configurar las opciones de la **aplicación de servicio**. Se abrirá la página Configuración de aplicación de servicio PowerPivot.  
+4.  En **Acciones**, haga clic en **Configurar las opciones de aplicación de servicio**. Se abrirá la página Configuración de aplicación de servicio PowerPivot.  
   
-##  <a name="defaultconfig"></a>La configuración predeterminada para la recopilación de datos de uso de PowerPivot  
+##  <a name="the-default-configuration-for-powerpivot-usage-data-collection"></a><a name="defaultconfig"></a>La configuración predeterminada para la recopilación de datos de uso de PowerPivot  
  La recopilación de datos de uso para las operaciones de servicio PowerPivot se puede habilitar con la configuración predeterminada para hacer que esté inmediatamente disponible en las aplicaciones que admiten la característica de integración de Analysis Services. La configuración predeterminada incluye eventos que desencadenan la recopilación de datos de uso, limita el tiempo que se almacenan los datos de uso y los umbrales para clasificar los tiempos de respuesta de las consultas.  
   
  En la siguiente tabla se muestran los valores predeterminados para la configuración de la recopilación de datos de uso.  
   
 |Configuración|Valor predeterminado|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services eventos de uso** (conexión, carga, descarga, solicitudes)|\<habilitado>|Boolean|Estos valores están habilitados o deshabilitados.|  
+|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<habilitado>|Boolean|Estos valores están habilitados o deshabilitados.|  
 |**Intervalo de informes de consulta**|300 (en segundos)|Entero|De 1 a cualquier entero positivo. El valor predeterminado es 5 minutos.|  
 |**Historial de datos de uso**|365 (en días)|Entero|0 especifica ilimitado, pero también puede establecer un límite superior para que los datos históricos expiren y que se eliminen automáticamente. Los valores válidos para un período de retención limitado abarcan de 1 a 5000 (en días).|  
 |Límite superior de respuesta trivial|500 (en milisegundos)|Entero|Establece un límite superior que define un intercambio de solicitudes y respuestas trivial. Cualquier solicitud que se complete entre 0 y 500 milisegundos es una solicitud trivial y se omite a los efectos del informe de errores.|  

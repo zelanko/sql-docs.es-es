@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a339ee307ed7a10f2ff7d2b1ce51d2e2177ee37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079657"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuración posterior a la instalación (Analysis Services)
@@ -31,18 +31,18 @@ ms.locfileid: "66079657"
 |----------|----------------------|  
 |[Configurar Firewall de Windows para permitir el acceso a Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)|Cree una regla de entrada en Firewall de Windows de manera que se puedan enrutar las solicitudes a través del puerto TCP usado por la instancia de Analysis Services. Esta tarea es obligatoria. Nadie puede tener acceso a Analysis Services desde un equipo remoto hasta que no se defina una regla de firewall de entrada.|  
 |[Conceder permisos de administrador de servidor &#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)|Durante la instalación, tenía que agregar al menos una cuenta de usuario al rol Administrador de la instancia de Analysis Services. Los permisos administrativos son necesarios para muchas operaciones rutinarias del servidor, como el procesamiento de datos de bases de datos relacionales externas. Use la información de este tema para agregar o modificar la pertenencia del rol Administrador.|  
-|[Configurar cuentas de servicio &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Durante la instalación, se aprovisionó la cuenta de servicio de Analysis Services con los permisos adecuados para permitir el acceso controlado a los archivos ejecutables de programas y los archivos de base de datos. Como una tarea posterior a la instalación, ahora debe considerar si va a permitir el uso de la cuenta de servicio al realizar tareas adicionales. Tanto las cargas de trabajo de procesamiento como las de consulta se pueden ejecutar bajo la cuenta de servicio. Estas operaciones solo se realizan correctamente cuando la cuenta de servicio tiene los permisos adecuados.|  
+|[Configurar las cuentas de servicio &#40;Analysis Services&#41;](configure-service-accounts-analysis-services.md)|Durante la instalación, se aprovisionó la cuenta de servicio de Analysis Services con los permisos adecuados para permitir el acceso controlado a los archivos ejecutables de programas y los archivos de base de datos. Como una tarea posterior a la instalación, ahora debe considerar si va a permitir el uso de la cuenta de servicio al realizar tareas adicionales. Tanto las cargas de trabajo de procesamiento como las de consulta se pueden ejecutar bajo la cuenta de servicio. Estas operaciones solo se realizan correctamente cuando la cuenta de servicio tiene los permisos adecuados.|  
 |[Registrar una instancia de Analysis Services en un grupo de servidores](register-an-analysis-services-instance-in-a-server-group.md)|SQL Server Management Studio (SSMS) permite crear grupos de servidores para organizar las instancias de SQL Server. Las implementaciones escalables que constan de varias instancias de servidor son más fáciles de administrar en grupos de servidores. Use la información de este tema para organizar las instancias de Analysis Services en grupos en SSMS.|  
 |[Determinar el modo de servidor de una instancia de Analysis Services](determine-the-server-mode-of-an-analysis-services-instance.md)|Durante la instalación, elija un modo de servidor que determine el tipo de modelo (multidimensional o tabular) que se ejecuta en el servidor. Si no está seguro del modo de servidor que debe emplear, use la información de este tema para determinar qué modo se instaló.|  
 |[Cambiar el nombre de una instancia de Analysis Services](rename-an-analysis-services-instance.md)|Un nombre descriptivo puede ayudar a distinguir entre varias instancias que disponen de modos de servidor diferentes, o entre las instancias usadas principalmente por los distintos departamentos o equipos de la organización. Si desea cambiar el nombre de instancia a uno que le ayude a administrar mejor las instalaciones, use la información de este tema para saber cómo hacerlo.|  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Aprenda a conectarse a Analysis Services desde aplicaciones de Microsoft o aplicaciones personalizadas mediante las bibliotecas de cliente. En función de los requisitos de la solución, puede ser necesario configurar también el servicio para la autenticación Kerberos. Las conexiones que deben cruzar límites de dominio necesitarán acceso HTTP. Para obtener instrucciones acerca de los pasos siguientes, vea [Connect to Analysis Services](connect-to-analysis-services.md) .  
   
 ## <a name="see-also"></a>Consulte también  
  [Instalación de SQL Server 2014](../../../2014/database-engine/install-windows/installation-for-sql-server.md)   
  [Instalar Analysis Services en modo multidimensional y de minería de datos](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Instalar Analysis Services en modo tabular](install-windows/install-analysis-services.md)   
- [PowerPivot for SharePoint 2013 Installation](install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Instalación de PowerPivot para SharePoint 2013](install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

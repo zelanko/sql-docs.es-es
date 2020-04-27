@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077503"
 ---
 # <a name="actions-in-multidimensional-models"></a>Acciones en modelos multidimensionales
@@ -72,10 +72,10 @@ ms.locfileid: "66077503"
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|**Invocación**|Especifica cómo se ejecuta la acción. Interactiva, que es la opción predeterminada, especifica que la acción se ejecuta cuando un usuario tiene acceso a un objeto. Los valores posibles son:<br /><br /> Batch<br /><br /> Interactive<br /><br /> Al abrir|  
+|**Invocación**|Especifica cómo se ejecuta la acción. Interactiva, que es la opción predeterminada, especifica que la acción se ejecuta cuando un usuario tiene acceso a un objeto. Los valores posibles son:<br /><br /> Batch<br /><br /> Interactive (Interactivo)<br /><br /> Al abrir|  
 |**Aplicación**|Describe la aplicación de la acción.|  
 |**Descripción**|Describe la acción.|  
-|**Caption**|Proporciona un título que se muestra para la acción. Si el título es MDX, especifique `True` para **título es MDX**.|  
+|**Hayan**|Proporciona un título que se muestra para la acción. Si el título es MDX, especifique `True` para **título es MDX**.|  
 |**El título es MDX**|Especifique `True` si el título es MDX o `False` si no lo es.|  
   
 > [!NOTE]  
@@ -90,7 +90,7 @@ ms.locfileid: "66077503"
 |Propiedad|Descripción|  
 |--------------|-----------------|  
 |**Nombre del servidor**|Nombre del equipo en el que se ejecuta el servidor de informes.|  
-|**Ruta de acceso del servidor**|La ruta de acceso expuesta por un servidor de informes.|  
+|**Ruta de acceso al servidor**|La ruta de acceso expuesta por un servidor de informes.|  
 |**Formato de informe**|HTML5, HTML3, Excel o PDF.|  
   
  **Parámetros (opcional)**  

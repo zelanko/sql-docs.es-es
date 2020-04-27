@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069747"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Seleccionar una vista del origen de datos (Asistente para cubos)
   Use la página **Seleccionar una vista del origen de datos** para seleccionar la vista del origen de datos para el cubo vacío.  
   
 > [!NOTE]  
->  Esta página solo aparecerá si ha seleccionado **Crear un cubo vacío** en la página **Seleccionar método de creación** .  
+>   Esta página solo aparecerá si ha seleccionado **Crear un cubo vacío** en la página **Seleccionar método de creación** .  
   
 ## <a name="options"></a>Opciones  
  **Vista del origen de datos**  

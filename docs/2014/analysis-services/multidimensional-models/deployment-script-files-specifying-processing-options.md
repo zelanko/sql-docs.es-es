@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075227"
 ---
 # <a name="specifying-processing-options"></a>Especificar opciones de procesamiento
@@ -29,7 +29,7 @@ ms.locfileid: "66075227"
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Revisar las opciones de procesamiento para implementación  
  Los valores de configuración almacenados en \<el *nombre del proyecto*> archivo. archivo deploymentoptions son los siguientes:  
   
--   **Método de procesamiento** Esta configuración controla si los objetos implementados se procesan después de la implementación y el tipo de procesamiento que se va a realizar. Existen tres opciones de procesamiento:  
+-   **Método de procesamiento** Este valor controla si los objetos implementados se procesan después de la implementación y el tipo de procesamiento que se realizará. Existen tres opciones de procesamiento:  
   
     -   Procesamiento predeterminado (valor predeterminado)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66075227"
   
     -   None  
   
--   **Opciones de tabla de reescritura** Si está habilitada la escritura [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] diferida en el proyecto, esta configuración define cómo se controla la reescritura. Existen tres opciones de tabla de reescritura:  
+-   **Opciones de tabla de reescritura** Si la reescritura está habilitada en el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , este valor define cómo controlarla. Existen tres opciones de tabla de reescritura:  
   
     -   De forma predeterminada, si existe una tabla de reescritura, se utilizará. Si no existe ninguna tabla de reescritura, se creará una nueva.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075227"
   
     -   Independientemente de si existe ya una tabla de reescritura o no, se crea una nueva tabla de reescritura. En este caso, el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eliminará la tabla existente y la reemplazará por una tabla de reescritura nueva.  
   
--   **Implementación transaccional** Esta configuración controla si la implementación de cambios de metadatos y de comandos de proceso se produce en una transacción única o en transacciones independientes.  
+-   **Implementación transaccional** Este valor controla si la implementación de cambios de metadatos y de comandos de proceso se produce en una transacción única o en transacciones independientes.  
   
     -   Si esta opción es `True` (predeterminada), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementa todos los cambios de metadatos y todos los comandos de proceso en una sola transacción.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "66075227"
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de forma interactiva. En la página **Opciones de procesamiento** , especifique las opciones de procesamiento del proyecto que se está implementando.  
   
-     O bien  
+     o bien  
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el símbolo del sistema y ajuste el asistente de manera que se ejecute en modo de archivo de respuesta. Para obtener más información acerca del modo de archivo de respuesta, vea [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     O bien  
+     o bien  
   
 -   Modifique el \< *nombre del proyecto*> archivo. archivo deploymentoptions con cualquier editor de texto.  
   

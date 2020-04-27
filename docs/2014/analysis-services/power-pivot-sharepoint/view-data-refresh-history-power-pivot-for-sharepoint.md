@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efe11a733408124490ece2e85c9bd40db34f3fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070917"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Ver el Historial de actualización de datos (PowerPivot para SharePoint)
@@ -35,14 +35,14 @@ ms.locfileid: "66070917"
   
  [Ver el historial de actualización de datos para todos los libros](#viewITOps)  
   
- [Usar información del historial](#pageelements)  
+ [Usar la información del historial](#pageelements)  
   
-##  <a name="prereq"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="prereq"></a> Requisitos previos  
  Debe tener los permisos de contribución u otros superiores para ver el historial de la actualización de datos.  
   
  Debe haber habilitado y programado la actualización de datos en un libro que contenga los datos PowerPivot. Si no ha programado la actualización de datos, verá la página de definición de la programación en lugar de la información del historial.  
   
-##  <a name="viewhistory"></a>Ver el historial de actualización de datos para un libro individual  
+##  <a name="view-data-refresh-history-for-an-individual-workbook"></a><a name="viewhistory"></a>Ver el historial de actualización de datos para un libro individual  
   
 1.  En un sitio de SharePoint, abra la biblioteca que contiene un libro de Excel con los datos PowerPivot.  
   
@@ -54,22 +54,22 @@ ms.locfileid: "66070917"
   
  La página del historial aparece y muestra un registro completo de toda la actividad de actualización para los datos PowerPivot del libro de Excel actual.  
   
-##  <a name="viewITOps"></a>Ver el historial de actualización de datos para todos los libros  
+##  <a name="view-data-refresh-history-for-all-workbooks"></a><a name="viewITOps"></a>Ver el historial de actualización de datos para todos los libros  
  Mediante el panel de administración de PowerPivot de Administración central, los administradores de una granja y los administradores de las aplicaciones de servicio pueden obtener una vista completa del historial de la actualización de datos y del estado de todos los libros PowerPivot. Para obtener más información, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
-##  <a name="pageelements"></a>Usar información del historial  
+##  <a name="use-history-information"></a><a name="pageelements"></a>Usar información del historial  
  La página del historial de actualización de datos proporciona información detallada sobre cada operación de actualización. Puede utilizar la información de esta página para confirmar si la actualización tuvo lugar o determinar por qué se produjo un error.  
   
 |Elemento|Descripción|  
 |----------|-----------------|  
 |Nombre|Especifica el nombre de archivo del libro de Excel que contiene los datos PowerPivot.|  
-|Estado actual|Los valores son **Programado**, **Actualizando**, **Correcto**o **Error**.<br /><br /> **Programado** aparece cuando se crea por primera vez la programación. Después de que la actualización de datos se ejecuta la primera vez, este mensaje de estado ya no aparece.<br /><br /> La **actualización** indica que la actualización de datos está en curso. Una solicitud está en la cola de procesos o ejecutándose activamente en el servidor.<br /><br /> **Succeeded** indica que la última operación de actualización de datos se completó y que el libro actualizado se vuelve a comprobar en la biblioteca de SharePoint.<br /><br /> **Error** indica que la última operación de actualización de datos no se realizó correctamente. Los datos actualizados no se guardaron. El libro contiene los mismos datos que tenía antes de que la actualización de datos comenzara.|  
+|Estado actual|Los valores son **Programado**, **Actualizando**, **Correcto**o **Error**.<br /><br /> **Programado** aparece cuando se crea por primera vez la programación. Después de que la actualización de datos se ejecuta la primera vez, este mensaje de estado ya no aparece.<br /><br /> **Actualizando** indica que la actualización de datos está en curso. Una solicitud está en la cola de procesos o ejecutándose activamente en el servidor.<br /><br /> **Correcto** indica que la última operación de actualización de datos se completó y que el libro actualizado se vuelve a poner en la biblioteca de SharePoint.<br /><br /> **Error** indica que la última operación de actualización de datos no tuvo éxito. Los datos actualizados no se guardaron. El libro contiene los mismos datos que tenía antes de que la actualización de datos comenzara.|  
 |Última actualización correcta|Especifica la fecha en la que la última actualización de datos se completó correctamente.|  
 |Siguiente actualización de programación|Especifica la fecha en la que la siguiente actualización de datos está programada para que se produzca.<br /><br /> El vínculo **Configurar programación** le lleva a la página de definición de la programación. Si tiene permisos de contribución en el libro, puede hacer clic en el vínculo para ver y modificar la información de programación que controla la actualización de datos desatendida de los datos PowerPivot del libro.|  
-|Started|Dentro de la sección de detalles del historial, **Iniciado** indica el tiempo de proceso real. El tiempo de procesamiento real podría ser diferente de lo que programó. El procesamiento comenzará cuando haya memoria suficiente disponible en el servidor. Si el servidor está muy ocupado, el procesamiento podría comenzar varias horas después de la hora de inicio que especificó.|  
+|Iniciado|Dentro de la sección de detalles del historial, **Iniciado** indica el tiempo de proceso real. El tiempo de procesamiento real podría ser diferente de lo que programó. El procesamiento comenzará cuando haya memoria suficiente disponible en el servidor. Si el servidor está muy ocupado, el procesamiento podría comenzar varias horas después de la hora de inicio que especificó.|  
 |Completed|Dentro de la sección de detalles del historial, **Completado** indica cuándo finalizó la operación de la actualización de datos. La fecha y hora indica cuándo se volvió a incluir el libro en la biblioteca.<br /><br /> Si se produce un error en la actualización de los datos, uno o más mensajes de error explican su causa. Puede expandir cada registro para ver el estado detallado. Cada origen de datos se enumera individualmente, junto con los mensajes de éxito o de error que explican por qué la actualización de datos no se completó.|  
-|Time|Proporciona el tiempo acumulado desde el momento en que se inició la actualización de datos hasta que se completó.|  
-|Status|Proporciona un registro histórico de si una operación de actualización se realizó correctamente o no.|  
+|Tiempo|Proporciona el tiempo acumulado desde el momento en que se inició la actualización de datos hasta que se completó.|  
+|Estado|Proporciona un registro histórico de si una operación de actualización se realizó correctamente o no.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar la recopilación de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   

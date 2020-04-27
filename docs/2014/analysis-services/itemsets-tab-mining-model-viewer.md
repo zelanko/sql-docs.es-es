@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079559"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Pestaña Conjuntos de elementos (Visor de modelos de minería de datos)
   Puede utilizar el panel **Conjuntos de elementos** para ver los conjuntos de elementos frecuentes que contiene un modelo de minería de datos de reglas de asociación. Dado que un modelo de asociación puede contener muchos conjuntos de elementos, el visor dispone de controles para ayudarle a filtrar los conjuntos de elementos que se muestran en el visor.  
   
- **Para obtener más información:** [algoritmo de Asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [examinar un modelo mediante el visor de reglas de Asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -31,10 +31,10 @@ ms.locfileid: "66079559"
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para ver el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de los modelos de asociación o el visor de árbol de contenido genérico de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
- **Compatibilidad mínima**  
+ **Soporte mínimo**  
  Cambie este valor para establecer el soporte mínimo que un conjunto de elementos debe contener para aparecer en el visor. El valor predeterminado que se muestra al abrir el modelo por primera vez es calculado por el modelo, pero puede cambiarlo para ver más o menos conjuntos de elementos.  
   
  **Tamaño mínimo del conjunto de elementos**  
@@ -51,7 +51,7 @@ ms.locfileid: "66079559"
   
  De forma predeterminada, los criterios de filtro se aplican a todo el nombre de la combinación de atributo-valor; por consiguiente, si solo está viendo el nombre del atributo, podría no ser obvio que los criterios de filtro se han aplicado correctamente. Utilice la lista desplegable **Mostrar** para seleccionar **Mostrar el valor y el nombre del atributo**, y compruebe que la lista de conjuntos de elementos se filtra correctamente.  
   
- **Feria**  
+ **Mostrar**  
  Ajuste el modo en que desea que se muestre el conjunto de elementos en el visor. Puede seleccionar una de las tres opciones siguientes:  
   
 -   Mostrar el valor y el nombre del atributo  
@@ -68,13 +68,13 @@ ms.locfileid: "66079559"
  **Número máximo de filas**  
  Limite el número de conjuntos de elementos que se muestran en el visor. De forma predeterminada, los conjuntos de elementos se clasifican por soporte en orden descendente, de modo que si se baja este valor, la lista se restringe a los conjuntos de elementos más comunes.  
   
- **Ser**  
+ **Soporte técnico**  
  Muestra el soporte de cada conjunto de elementos.  
   
  **Tamaño**  
  Muestra el número de elementos que existe en cada conjunto de elementos.  
   
- **Conjunto**  
+ **Conjunto de elementos**  
  Muestra la descripción de cada conjunto de elementos. De forma predeterminada, los conjuntos de elementos se presentan en una lista de atributos y sus valores delimitada por comas. Puede cambiar la manera en que se muestran utilizando la opción **Mostrar** .  
   
 ## <a name="see-also"></a>Consulte también  

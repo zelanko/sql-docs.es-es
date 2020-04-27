@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078898"
 ---
 # <a name="modifying-measures"></a>Modificar medidas
@@ -36,19 +36,19 @@ ms.locfileid: "66078898"
   
 5.  Seleccione una de las medidas siguientes. Para seleccionar varias medidas, haga clic en cada una de ellas mientras mantiene presionada la tecla CTRL:  
   
-    -   **Precio por unidad**  
+    -   **Unit Price**  
   
-    -   **Cantidad extendida**  
+    -   **Extended Amount**  
   
-    -   **Importe de descuento**  
+    -   **Discount Amount**  
   
-    -   **Costo estándar del producto**  
+    -   **Product Standard Cost**  
   
-    -   **Costo total del producto**  
+    -   **Total Product Cost**  
   
-    -   **Importe de ventas**  
+    -   **Sales Amount**  
   
-    -   **Importe de impuestos**  
+    -   **Tax Amt**  
   
     -   **Freight**  
   

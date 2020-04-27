@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079280"
 ---
 # <a name="defining-a-data-source-view"></a>Definir una vista del origen de datos
@@ -28,7 +28,7 @@ ms.locfileid: "66079280"
   
 2.  En la página inicial del **Asistente para orígenes de datos**, haga clic en **Siguiente**. Aparece la página **Seleccionar un origen de datos** .  
   
-3.  En **Orígenes de datos relacionales**, el origen de datos **Adventure Works DW 2012** aparece seleccionado. Haga clic en **Next**.  
+3.  En **Orígenes de datos relacionales**, el origen de datos **Adventure Works DW 2012** aparece seleccionado. Haga clic en **Siguiente**.  
   
     > [!NOTE]  
     >  Para crear una vista del origen de datos que se base en varios orígenes de datos, defina primero una vista del origen de datos que se base en un único origen de datos. Este origen de datos luego se llama origen de datos principal. A continuación, puede agregar tablas y vistas a partir de un origen de datos secundario. Al diseñar dimensiones que contengan atributos basados en tablas relacionadas en varios orígenes de datos, puede que necesite definir un origen de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como el origen de datos principal para usar sus capacidades del motor de consultas distribuidas.  
@@ -40,15 +40,15 @@ ms.locfileid: "66079280"
   
      En la lista **Objetos disponibles** , seleccione los siguientes objetos. Para seleccionar varias tablas, haga clic en cada una de ellas mientras mantiene presionada la tecla CTRL:  
   
-    -   **DimCustomer (DBO)**  
+    -   **DimCustomer (dbo)**  
   
-    -   **DimDate (DBO)**  
+    -   **DimDate (dbo)**  
   
-    -   **DimGeography (DBO)**  
+    -   **DimGeography (dbo)**  
   
-    -   **DimProduct (DBO)**  
+    -   **DimProduct (dbo)**  
   
-    -   **FactInternetSales (DBO)**  
+    -   **FactInternetSales (dbo)**  
   
 5.  Haga **>** clic en esta opción para agregar las tablas seleccionadas a la lista **objetos incluidos** .  
   

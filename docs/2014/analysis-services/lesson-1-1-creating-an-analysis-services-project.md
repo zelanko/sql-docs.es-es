@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079359"
 ---
 # <a name="creating-an-analysis-services-project"></a>Crear un proyecto de Analysis Services
@@ -41,6 +41,6 @@ ms.locfileid: "66079359"
   
 ## <a name="see-also"></a>Consulte también  
  [Crear modelos multidimensionales mediante SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Cree un proyecto de Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Crear un proyecto de Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077922"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Medidas (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -65,7 +65,7 @@ ms.locfileid: "66077922"
 |**Palmera**|Muestra los grupos de medida y las medidas en una vista de árbol.|  
 |**Cuadrícula**|Muestra los grupos de medida y las medidas en una cuadrícula.|  
   
- **Cambiar el nombre**  
+ **Cambiar nombre**  
  Seleccione esta opción para cambiar el nombre del grupo de medida o de la medida seleccionados.  
   
  **Eliminar**  

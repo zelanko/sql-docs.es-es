@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077778"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Diseñador de gráfico de precisión de minería de datos (Minería de datos)
@@ -36,7 +36,7 @@ ms.locfileid: "66077778"
   
      Muestra la matriz de clasificación para los modelos seleccionados en la pestaña `Input Selection`.  
   
--   [Pestaña validación cruzada &#40;vista gráfico de precisión de minería de datos&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [Pestaña Validación cruzada &#40;vista Gráfico de precisión de minería de datos&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      Establezca las opciones y genere los resultados de la validación cruzada para la estructura de minería de datos seleccionada.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66077778"
  [Vista estructura de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Vista modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-models-view-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)  
+ [Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)  
   
   

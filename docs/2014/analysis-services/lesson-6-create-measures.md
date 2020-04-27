@@ -11,31 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078432"
 ---
 # <a name="lesson-7-create-measures"></a>Lección 7: Crear medidas
-  En esta lección, creará medidas para incluirlas en su modelo. Al igual que las columnas calculadas que creó en la lección anterior, una medida es esencialmente un cálculo creado usando una fórmula DAX. Pero, a diferencia de las columnas calculadas, las medidas se evalúan en función de un *filtro* seleccionado por el usuario (por ejemplo, una determinada columna o segmentación agregada al campo Etiquetas de fila de una tabla dinámica).   Luego, la medida aplicada calculará un valor para cada celda del filtro. Las medidas son cálculos eficaces y flexibles que deseará incluir en casi todos los modelos tabulares para realizar cálculos dinámicos sobre datos numéricos. Para obtener más información, vea [Medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  
+  En esta lección, creará medidas para incluirlas en su modelo. Al igual que las columnas calculadas que creó en la lección anterior, una medida es esencialmente un cálculo creado usando una fórmula DAX. Sin embargo, a diferencia de las columnas calculadas, las medidas se evalúan en función de un *filtro*seleccionado por el usuario; por ejemplo, una columna o una segmentación de datos determinada agregada al campo Etiquetas de filas en una tabla dinámica.   Luego, la medida aplicada calculará un valor para cada celda del filtro. Las medidas son cálculos eficaces y flexibles que deseará incluir en casi todos los modelos tabulares para realizar cálculos dinámicos sobre datos numéricos. Para obtener más información, vea [Medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  
   
- Para crear medidas, usará la cuadrícula de medidas. De forma predeterminada, cada tabla tiene una cuadrícula de medidas vacía, aunque en principio no creará medidas para todas las tablas. La cuadrícula de medidas aparece debajo de una tabla en el diseñador de modelos en la vista de datos. Para mostrar u ocultar la cuadrícula de medidas de una tabla, haga clic en el menú **Tabla** y haga clic en **Mostrar cuadrícula de medidas**.  
+ Para crear medidas, usará la cuadrícula de medidas. De manera predeterminada, cada tabla tiene una cuadrícula de medidas vacía, pero normalmente no creará medidas para todas las tablas. La cuadrícula de medidas aparece debajo de una tabla en el diseñador de modelos en la vista de datos. Para mostrar u ocultar la cuadrícula de medidas de una tabla, haga clic en el menú **Tabla** y haga clic en **Mostrar cuadrícula de medidas**.  
   
- Puede crear una medida haciendo clic en una celda vacía de la cuadrícula de medidas y, luego, escribiendo una fórmula DAX en la barra de fórmulas. Al hacer clic en ENTRAR para completar la fórmula, la medida aparecerá en la celda. También puede crear medidas usando una función de agregación estándar; para ello, haga clic en una columna y, luego, haga clic en el botón Autosuma (**∑**) de la barra de herramientas. Las medidas creadas mediante la característica de autosuma aparecerán directamente en la cuadrícula de medidas debajo de la columna, pero se pueden mover si es necesario.  
+ Puede crear una medida haciendo clic en una celda vacía de la cuadrícula de medidas y escribiendo después una fórmula DAX en la barra de fórmulas. Al hacer clic en ENTRAR para completar la fórmula, la medida aparecerá en la celda. También puede crear medidas usando una función de agregación estándar; para ello, haga clic en una columna y, luego, haga clic en el botón Autosuma (**∑**) de la barra de herramientas. Las medidas creadas mediante la característica de autosuma aparecerán directamente en la cuadrícula de medidas debajo de la columna, pero se pueden mover si es necesario.  
   
  En esta lección, creará medidas escribiendo una fórmula DAX en la barra de fórmulas y usando la característica de autosuma.  
   
  Tiempo estimado para completar esta lección: **30 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 6: Crear columnas calculadas](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Crear medidas  
   
 #### <a name="to-create-a-days-current-quarter-to-date-measure-in-the-date-table"></a>Para crear una medida Días del trimestre actual hasta la fecha en la tabla Fecha  
   
-1.  En el diseñador de modelos, haga clic en la tabla **Date** .  
+1.  En el diseñador de modelos, haga clic en la tabla **Fecha** .  
   
 2.  Si no aparece una cuadrícula de medidas vacía debajo de la tabla, haga clic en el menú **Tabla** y después en **Mostrar cuadrícula de medidas**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66078432"
   
      Cuando termine de crear la fórmula, presione ENTRAR.  
   
- Al crear una relación de comparación entre un período incompleto y el período anterior, la fórmula debe tener en cuenta la parte del período que ha transcurrido y compararla con la misma proporción del período anterior. En este caso, [Días del trimestre actual hasta la fecha]/[Días del trimestre actual] da como resultado la parte transcurrida del período actual.  
+ Al crear un coeficiente de comparación entre un período incompleto y el período anterior, la fórmula debe tener en cuenta la parte del período que ha transcurrido y compararla con la misma parte del período anterior. En este caso, [Días del trimestre actual hasta la fecha]/[Días del trimestre actual] da como resultado la parte transcurrida del período actual.  
   
 #### <a name="to-create-an-internet-distinct-count-sales-order-measure-in-the-internet-sales-table"></a>Para crear una medida Pedido de venta de recuento distinto por Internet en la tabla Ventas por Internet  
   
@@ -92,10 +92,10 @@ ms.locfileid: "66078432"
     |------------------|------------|-------------------|-------------|  
     |Recuento de líneas de pedido por Internet|Número de líneas del pedido de venta|Count|=COUNT ([Número de líneas del pedido de venta])|  
     |Unidades totales de Internet|Cantidad del pedido|Sum|=SUM([Cantidad del pedido])|  
-    |Importe de descuento total por Internet|Importe de descuento|Sum|=SUM([Importe de descuento])|  
+    |Importe de descuento total por Internet|Discount Amount|Sum|=SUM([Importe de descuento])|  
     |Costo total del producto por Internet|Total Product Cost|Sum|=SUM([Costo total del producto])|  
-    |Ventas totales por Internet|Importe de ventas|Sum|=SUM([Importe de ventas])|  
-    |Margen total por Internet|Margin|Sum|=SUM([Margin])|  
+    |Ventas totales por Internet|Sales Amount|Sum|=SUM([Importe de ventas])|  
+    |Margen total por Internet|Margen|Sum|=SUM([Margen])|  
     |Importe de impuesto total por Internet|Tax Amt|Sum|=SUM([Importe de impuesto])|  
     |Cargos totales por Internet|Freight|Sum|=SUM([Freight])|  
   

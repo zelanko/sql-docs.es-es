@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080350"
 ---
 # <a name="analysis-services-instance-management"></a>Administración de una instancia de Analysis Services
@@ -46,9 +46,9 @@ ms.locfileid: "66080350"
   
 |Vínculo|Descripción de la tarea|  
 |----------|----------------------|  
-|[&#40;de configuración posterior a la instalación Analysis Services&#41;](post-install-configuration-analysis-services.md)|Describe las tareas necesarias y opcionales que completan o modifican una instalación de Analysis.|  
+|[Configuración posterior a la instalación &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|Describe las tareas necesarias y opcionales que completan o modifican una instalación de Analysis.|  
 |[Conectar a Analysis Services](connect-to-analysis-services.md)|Describe las propiedades de cadena de conexión, las bibliotecas de cliente, las metodologías de autenticación y los pasos para establecer o borrar conexiones.|  
-|[Supervisar una instancia de Analysis Services](monitor-an-analysis-services-instance.md)|Describe las herramientas y técnicas de supervisión de instancias de servidor, incluida una explicación sobre el uso del monitor de rendimiento y SQL Server Profiler.|  
+|[Monitor an Analysis Services Instance](monitor-an-analysis-services-instance.md)|Describe las herramientas y técnicas de supervisión de instancias de servidor, incluida una explicación sobre el uso del monitor de rendimiento y SQL Server Profiler.|  
 |[Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)|Explica cómo automatizar muchas tareas administrativas, incluido el procesamiento.|  
 |[Escenarios de globalización para Analysis Services Multidimensional](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Explica la compatibilidad de intercalación e idioma, los pasos que se deben seguir para cambiar ambas propiedades y sugerencias para configurar y probar el comportamiento de estas.|  
 |[Operaciones de registro en Analysis Services](log-operations-in-analysis-services.md)|Describe los registros y explica cómo configurarlos.|  

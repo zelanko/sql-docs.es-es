@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f536ae91cde1301b9499b2d36957d25c877be9c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073057"
 ---
 # <a name="roles-and-permissions-analysis-services"></a>Roles y permisos (Analysis Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]proporciona un modelo de autorización basado en roles que concede acceso a operaciones, objetos y datos. Todos los usuarios que acceden a una base de datos o a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deben hacerlo en el contexto de un rol.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un modelo de autorización basada en roles que concede acceso a operaciones, objetos y datos. Todos los usuarios que acceden a una base de datos o a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deben hacerlo en el contexto de un rol.  
   
  Como administrador del sistema de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , se va a encargar de conceder la pertenencia al **rol de administrador del servidor** que proporciona acceso sin restricciones a las operaciones del servidor. Este rol tiene permisos fijos y no puede personalizarse. De forma predeterminada, los miembros del grupo local de administradores son automáticamente administradores del sistema de Analysis Services.  
   
@@ -29,33 +29,32 @@ ms.locfileid: "66073057"
   
  Una práctica habitual es crear roles y asignar miembros en operaciones independientes. A menudo, el diseñador del modelo agrega roles durante la fase de diseño. De este modo, todas las definiciones de roles se reflejan en los archivos de proyecto que definen el modelo. La asignación de pertenencia a los roles normalmente se lleva a cabo después, cuando la base de datos pasa a producción, y suelen hacerlo los administradores de bases de datos, que crean scripts que se pueden desarrollar, probar y ejecutar en una operación independiente.  
   
- Toda la autorización se basa en una identidad de Windows válida. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa la autenticación de Windows solamente para autenticar identidades de usuario. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]no proporciona ningún método de autenticación de propiedad. Consulte [metodologías de autenticación admitidas por Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md).  
+ Toda la autorización se basa en una identidad de Windows válida. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa la autenticación de Windows solamente para autenticar identidades de usuario. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]no proporciona ningún método de autenticación de propiedad. Consulte [metodologías de autenticación admitidas por Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md).  
   
 > [!IMPORTANT]  
 >  Los permisos se van sumando en cada usuario o grupo de Windows, en todos los roles de la base de datos. Si un rol impide que un permiso de usuario o grupo realice determinadas tareas o vea ciertos datos, pero hay otro rol que concede este mismo permiso a ese usuario o grupo, el usuario o grupo tendrá permiso para realizar la tarea o ver los datos.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Autorización de acceso a objetos y operaciones &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](authorizing-access-to-objects-and-operations-analysis-services.md)  
   
--   [Conceder permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
+-   [Otorgar permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)  
   
--   [Conceder permisos de cubo o de modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+-   [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
--   [Conceder permisos de proceso &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+-   [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
--   [Conceder permisos Leer definición en metadatos de objeto &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+-   [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
--   [Conceder permisos para un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+-   [Otorgar permisos para un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
--   [Conceder permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
+-   [Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)  
   
--   [Conceder permisos en una dimensión &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
+-   [Otorgar permisos para una dimensión &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)  
   
 -   [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)  
   
--   [Conceder acceso personalizado a los datos de celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+-   [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y administrar roles &#40;SSAS tabular&#41;](../tabular-models/roles-ssas-tabular.md)  

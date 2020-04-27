@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074338"
 ---
 # <a name="using-cell-properties-mdx"></a>Usar las propiedades de celda (MDX)
@@ -52,18 +52,14 @@ SELECT [<axis_specification>
 |`ACTION_TYPE`|Máscara de bits que indica los tipos de acciones de la celda. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: Las acciones de obtención de detalles no se incluyen para las consultas que contienen un conjunto en la cláusula WHERE.|  
 |**BACK_COLOR**|Color de fondo para mostrar las propiedades `VALUE` o `FORMATTED_VALUE`. Para obtener más información, vea [Contenido de FORE_COLOR y BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`CELL_ORDINAL`|Número ordinal de la celda en el conjunto de datos.|  
-|**FONT_FLAGS**|Máscara de bits que detalla los efectos de la fuente. Por ejemplo, el valor 5 representa la combinación de los efectos de fuente negrita (`MDFF_BOLD`) y subrayado (`MDFF_UNDERLINE`). El valor es el resultado de una operación de bits OR de una o varias de las siguientes constantes:<br /><br /> `MDFF_BOLD`= 1<br /><br /> 
-  `MDFF_ITALIC` = 2<br /><br /> 
-  `MDFF_UNDERLINE` = 4<br /><br /> 
-  `MDFF_STRIKEOUT` = 8|  
+|**FONT_FLAGS**|Máscara de bits que detalla los efectos de la fuente. Por ejemplo, el valor 5 representa la combinación de los efectos de fuente negrita (`MDFF_BOLD`) y subrayado (`MDFF_UNDERLINE`). El valor es el resultado de una operación de bits OR de una o varias de las siguientes constantes:<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
 |**FONT_NAME**|Fuente utilizada para mostrar la propiedad `VALUE` o `FORMATTED_VALUE`.|  
 |**FONT_SIZE**|Tamaño de fuente utilizado para mostrar la propiedad `VALUE` o `FORMATTED_VALUE`.|  
 |**FORE_COLOR**|Color de primer plano para mostrar las propiedades `VALUE` o `FORMATTED_VALUE`. Para obtener más información, vea [Contenido de FORE_COLOR y BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
-|`FORMAT`|Igual que `FORMAT_STRING`.|  
+|`FORMAT`|Igual a `FORMAT_STRING`.|  
 |`FORMAT_STRING`|Cadena de formato utilizada para crear el valor de la propiedad `FORMATTED_VALUE`. Para obtener más información, vea [FORMAT_STRING, contenido &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md).|  
 |`FORMATTED_VALUE`|Cadena de caracteres que representa una visualización con formato de la propiedad `VALUE`.|  
-|`LANGUAGE`|Configuración regional a la que se aplicará `FORMAT_STRING`. 
-  `LANGUAGE` suele utilizarse para la conversión de moneda.|  
+|`LANGUAGE`|Configuración regional a la que se aplicará `FORMAT_STRING`. `LANGUAGE` suele utilizarse para la conversión de moneda.|  
 |`UPDATEABLE`|Valor que indica si la celda puede actualizarse. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `MD_MASK_ENABLED`(0x00000000) la celda puede actualizarse.<br /><br /> `MD_MASK_NOT_ENABLED`(0x10000000) la celda no se puede actualizar.<br /><br /> `CELL_UPDATE_ENABLED`(0x00000001) la celda puede actualizarse en el Cellset.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`(0x00000002) la celda puede actualizarse con una instrucción UPDATE. La actualización puede no realizarse correctamente si se actualiza una celda hoja no habilitada para escritura.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`(0x10000001) la celda no se puede actualizar porque la celda tiene un miembro calculado entre sus coordenadas; la celda se recuperó con un conjunto en la cláusula WHERE. Las celdas pueden actualizarse incluso si tienen una fórmula que incida en el valor de una celda, o si hay una celda calculada activa (en algún punto de la ruta de agregación). Con este escenario, es posible que el valor final de la celda no sea el valor actualizado, puesto que el cálculo afecta al resultado.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`(0x10000002) la celda no se puede actualizar porque no se pueden actualizar las medidas que no son de suma (Count, min, Max, DISTINCT Count, semi-Additive).<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`(0x10000003) la celda no se puede actualizar porque la celda no existe tal como está en la intersección de una medida y un miembro de dimensión no relacionado con el grupo de medida de la medida.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`(0x10000005) la celda no se puede actualizar porque la celda está protegida.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`(0x10000006) reservado para uso futuro.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`(0x10000007) la celda no se puede actualizar debido a las razones internas.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`(0x10000009) la celda no se puede actualizar porque no se admite la actualización en dimensiones del modelo de minería de datos, indirectas o de minería de datos.|  
 |`VALUE`|Valor sin formato de la celda.|  
   

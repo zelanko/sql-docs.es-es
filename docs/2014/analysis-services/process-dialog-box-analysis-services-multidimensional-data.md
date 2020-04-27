@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070744"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Procesar (Analysis Services - Datos multidimensionales)
@@ -39,7 +39,7 @@ ms.locfileid: "66070744"
  **Nombre de objeto**  
  Muestra el nombre del objeto que se va a procesar. El icono que se muestra a la izquierda del nombre indica el tipo de objeto.  
   
- **Tipo**  
+ **Type**  
  Muestra el tipo de objeto que se va a procesar.  
   
  **Opciones de proceso**  
@@ -55,7 +55,7 @@ ms.locfileid: "66070744"
  Haga clic para abrir el cuadro de diálogo **Análisis de impacto** y mostrar los objetos a los que afectará la tarea de procesamiento. Para obtener más información sobre el cuadro de diálogo **Análisis de impacto**, vea [Cuadro de diálogo Análisis de impacto &#40;Analysis Services - Datos multidimensionales&#41;](impact-analysis-dialog-box-analysis-services-multidimensional-data.md).  
   
 > [!NOTE]  
->  Esta opción se deshabilitará si se selecciona la opción **Objetos afectados por el proceso** en el cuadro de diálogo **Cambiar configuración**.  
+>   Esta opción se deshabilitará si se selecciona la opción **Objetos afectados por el proceso** en el cuadro de diálogo **Cambiar configuración** .  
   
  **Cambiar configuración**  
  Haga clic para abrir el cuadro de diálogo **Cambiar configuración** y cambiar la configuración que regirá el procesamiento de los objetos seleccionados, incluida la configuración de procesamiento por lotes, la configuración de reescritura y la configuración de errores de claves de dimensiones. Para obtener más información sobre el cuadro de diálogo **Cambiar configuración**, vea [Cuadro de diálogo Cambiar configuración &#40;Analysis Services - Datos multidimensionales&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md).  

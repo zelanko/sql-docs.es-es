@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077621"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Pestaña Modelo (Visores de modelos de minería de datos)
@@ -24,7 +24,7 @@ ms.locfileid: "66077621"
   
  Utilice esta vista de un modelo de serie temporal para extraer información útil sobre el análisis de la serie temporal, incluida la ecuación del gráfico, los términos ARIMA y los coeficientes.  
   
- **Para obtener más información: algoritmo de** [serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [examinar un modelo usando el visor de series temporales](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)de Microsoft, [algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md)  
+ **Para obtener más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [Examinar un modelo usando el Visor de serie temporal de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -33,7 +33,7 @@ ms.locfileid: "66077621"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos que desee ver. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de este tipo de modelo o el **Visor de árbol de contenido genérico de Microsoft** . También puede utilizar visores de complemento, si están disponibles.  
   
  **Acercar**  

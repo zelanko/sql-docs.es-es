@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078936"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lección 2: Definir e implementar un cubo
@@ -23,7 +23,7 @@ ms.locfileid: "66078936"
  Puede definir un cubo y sus dimensiones en un solo paso mediante el Asistente para cubos. También puede definir una o más dimensiones y usar el Asistente para cubos con objeto de definir un cubo que use dichas dimensiones. Si está diseñando una solución compleja, generalmente empezará definiendo las dimensiones. Para obtener más información, consulte [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md) o [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que acompañan a este tutorial.  
+>  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
   
  Esta lección contiene las siguientes tareas:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66078936"
  En esta tarea, examinará los datos de cubo y de dimensión usando Excel o el diseñador de consultas MDX.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Lección 3: modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Escenario de Analysis Services tutorial](analysis-services-tutorial-scenario.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075774"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios
@@ -113,8 +113,7 @@ ms.locfileid: "66075774"
   
 9. Elija medidas para cada tabla de hechos.  
   
-     Para simplificar el modelo, borre todas las medidas y, luego, seleccione solamente **Sales Amount** y **Fact Internet Sales Count** en la parte inferior de la lista. 
-  **FactInternetSalesReason** tiene solo una medida, por lo que se selecciona automáticamente.  
+     Para simplificar el modelo, borre todas las medidas y, luego, seleccione solamente **Sales Amount** y **Fact Internet Sales Count** en la parte inferior de la lista. **FactInternetSalesReason** tiene solo una medida, por lo que se selecciona automáticamente.  
   
 10. En la lista de dimensiones, debe ver **Dim Sales Reason** y **Dim Sales Orders**.  
   
@@ -147,11 +146,11 @@ ms.locfileid: "66075774"
   
 3.  Cree una tabla dinámica que use lo siguiente:  
   
-    -   **Sales amount** como valor  
+    -   **Sales Amount** como valor  
   
     -   **Sales Reason Name** en columnas  
   
-    -   **Número de pedido de ventas** en filas  
+    -   **Sales Order Number** en Filas  
   
 4.  Analice los resultados. Como estamos usando datos de ejemplo, la impresión inicial es que todos los pedidos de ventas tienen valores idénticos. Sin embargo, si se desplaza hacia abajo, empieza a ver variaciones en los datos.  
   
@@ -177,14 +176,14 @@ ms.locfileid: "66075774"
   
 4.  Evite usar grupos de medida vinculada en diversas relaciones varios a varios, especialmente cuando estas relaciones están en distintos cubos. Si lo hace, puede producir agregaciones ambiguas. Para más información, vea [Cantidades incorrectas para medidas vinculadas en cubos que contienen relaciones varios a varios](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
-##  <a name="bkmk_Learn"></a>Aprende más  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>Aprende más  
  Use los vínculos siguientes para obtener información adicional que le ayude a dominar estos conceptos.  
   
  [Definir una dimensión varios a varios en Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [La revolución varios a varios 2,0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [La revolución varios a varios 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Tutorial: ejemplo de dimensiones varios a varios para SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Tutorial: Ejemplo de dimensiones varios a varios para SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Consulte también  
  [Relaciones de dimensión](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

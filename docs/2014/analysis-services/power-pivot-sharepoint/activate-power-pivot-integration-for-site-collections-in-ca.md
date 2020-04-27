@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072007"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Activar la integración de características de PowerPivot para colecciones de sitios en Administración central
@@ -24,7 +24,7 @@ ms.locfileid: "66072007"
   
  Debe activar la integración de PowerPivot para cada colección de sitios que admita el procesamiento de consultas de PowerPivot.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Debe ser administrador de la colección de sitios.  
   
 ## <a name="activate-powerpivot-features"></a>Activar las características de PowerPivot  
@@ -41,11 +41,11 @@ ms.locfileid: "66072007"
   
 5.  Haga clic en **Activar**.  
   
-6.  Repita el procedimiento para las colecciones de sitios adicionales abriendo cada sitio y haciendo clic en **acciones del sitio**.  
+6.  Repita este procedimiento con las demás colecciones de sitios abriendo cada sitio y haciendo clic en **Acciones de sitio**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Administración y configuración del servidor de PowerPivot en administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [PowerPivot para SharePoint de &#40;de configuración inicial&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
- [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Instalación de PowerPivot para SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

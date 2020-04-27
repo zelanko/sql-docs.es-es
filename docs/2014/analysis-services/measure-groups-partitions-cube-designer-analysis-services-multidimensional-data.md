@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077909"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Grupos de medida (pestaña Particiones, Diseñador de cubos) (Analysis Services - Datos multidimensional)
@@ -31,7 +31,7 @@ ms.locfileid: "66077909"
   
  Haga clic para seleccionar toda la fila para la partición.  
   
- **Nombre de partición**  
+ **Nombre de la partición**  
  Escriba el nombre de la partición seleccionada.  
   
  **Origen**  
@@ -71,7 +71,7 @@ ms.locfileid: "66077909"
 |**Configuración de reescritura**|Haga clic para mostrar el cuadro de diálogo **Enable/Disable Writeback** (Habilitar/Deshabilitar reescritura) y especifique la configuración de reescritura para el grupo de medida que contiene la partición seleccionada.|  
 |**Optimización basada en uso**|Haga clic para mostrar el **Asistente para optimización basada en el uso** y cree un diseño de agregaciones basado en los patrones de uso existentes para la partición seleccionada.<br /><br /> Nota: Esta opción está deshabilitada si se ha seleccionado una partición de reescritura.|  
 |**Proceso**|Haga clic para mostrar el cuadro de diálogo **Proceso** y procese la partición seleccionada.|  
-|**Copy**|Esta opción está deshabilitada.|  
+|**Copiar**|Esta opción está deshabilitada.|  
 |**Pegar**|Esta opción está deshabilitada.|  
 |**Propiedades**|Seleccione esta opción para mostrar la ventana **Propiedades** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para la partición seleccionada.|  
   

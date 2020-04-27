@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081587"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentar modelos de minería de datos (Complementos de minería de datos para Excel)
@@ -55,9 +55,9 @@ ms.locfileid: "66081587"
   
 ||||  
 |-|-|-|  
-|**Metadatos**|Nombre del modelo<br /><br /> Descripción del modelo<br /><br /> Nombre del algoritmo<br /><br /> Fecha del último procesamiento||  
+|**Metadata**|Nombre del modelo<br /><br /> Descripción del modelo<br /><br /> Nombre del algoritmo<br /><br /> Fecha del último procesamiento||  
 |**Resultados del modelo**|Asociación|Número de conjuntos de elementos<br /><br /> Número de reglas|  
-||agrupación en clústeres|Número de clústeres<br /><br /> Compatibilidad con el clúster|  
+||Agrupación en clústeres|Número de clústeres<br /><br /> Compatibilidad con el clúster|  
 ||Árbol de decisión|Número de árboles<br /><br /> Número de nodos en cada árbol|  
 ||Regresión lineal|Número de árboles (siempre 1)<br /><br /> Número de nodos (siempre 1)|  
 ||Bayes Naive|Atributos importantes|  
@@ -69,7 +69,7 @@ ms.locfileid: "66081587"
   
 ||||  
 |-|-|-|  
-|**Metadatos**|Metadatos del modelo|Parámetros de algoritmo y valores|  
+|**Metadata**|Metadatos del modelo|Parámetros de algoritmo y valores|  
 ||Metadatos de columna|Nombre de la columna<br /><br /> Uso<br /><br /> Tipo de datos<br /><br /> Tipo de contenido<br /><br /> Valores (lista de valores discretos o rango de valores)|  
 |**Estadísticas del modelo**|Columnas continuas|Valor medio<br /><br /> Valor mínimo<br /><br /> Valor máximo<br /><br /> Error cuadrático medio<br /><br /> Desviación media<br /><br /> Logaritmo<br /><br /> Fórmula de regresión (solo para modelos de regresión lineal)|  
 ||Columnas discretas [DMX]|Número sin errores<br /><br /> Número con errores<br /><br /> Logaritmo<br /><br /> Mejora respecto al modelo predictivo|  

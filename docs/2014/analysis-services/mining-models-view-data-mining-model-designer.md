@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b698a6c216d4179de414f236fb7d41d6366e470d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077648"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>Modelos de minería de datos (vista del Diseñador de modelos de minería de datos)
@@ -30,6 +30,6 @@ ms.locfileid: "66077648"
  [Vista estructura de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)   
- [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)  
+ [Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)  
   
   

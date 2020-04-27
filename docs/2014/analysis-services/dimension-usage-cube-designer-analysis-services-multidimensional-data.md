@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081667"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Uso de dimensiones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -26,7 +26,7 @@ ms.locfileid: "66081667"
   
 |Panel|Definición|  
 |----------|----------------|  
-|**Barra de herramientas**|Use la barra de herramientas para realizar operaciones comunes en esta pestaña. Para obtener más información sobre este panel, vea [barra de herramientas &#40;pestaña uso de dimensiones, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barra**|Use la barra de herramientas para realizar operaciones comunes en esta pestaña. Para obtener más información sobre este panel, vea [barra de herramientas &#40;pestaña uso de dimensiones, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Cuadrícula**|Use la cuadrícula para ver y editar relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo. Para más información sobre este panel, vea [Cuadrícula &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte también  

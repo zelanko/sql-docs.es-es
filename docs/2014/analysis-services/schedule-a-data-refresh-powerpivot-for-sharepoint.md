@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070006"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Programar una actualización de datos (PowerPivot para SharePoint)
@@ -39,7 +39,7 @@ ms.locfileid: "66070006"
 > [!NOTE]  
 >  Las instancias de servidor de Analysis Services realizan la actualización de los datos PowerPivot en la granja de servidores de SharePoint. No está relacionada con la característica de actualización de datos que se proporciona en Excel Services. La característica de programación de actualizaciones de datos de PowerPivot no actualizará los datos que no sean de PowerPivot.  
   
-##  <a name="prereq"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="prereq"></a> Requisitos previos  
  Debe tener el nivel de permisos para contribuir o uno superior en el libro si desea crear una programación para la actualización de datos.  
   
  Los orígenes de datos externos a los que se tiene acceso durante la actualización de datos deben estar disponibles y las credenciales que especifique en la programación deben tener el permiso de acceso a esos orígenes de datos. La actualización de datos programada requiere la ubicación de un origen de datos que sea accesible a través de una conexión de red (por ejemplo, desde un recurso compartido de archivos de red en lugar de una carpeta local en la estación de trabajo).  
@@ -53,7 +53,7 @@ ms.locfileid: "66070006"
 > [!NOTE]  
 >  El servidor no bloquea el libro mientras la actualización de datos esté en curso. Sin embargo, bloquea el archivo al final de la actualización de datos con el fin de proteger el archivo actualizado. En este momento, el archivo se desprotege para otro usuario, se producirán los datos actualizados. Del mismo modo, si el archivo está protegido, pero es significativamente diferente de la copia recuperada por el servidor al inicio de la actualización de datos, se descartarán los datos actualizados.  
   
-##  <a name="intro"></a>Información general sobre la actualización de datos  
+##  <a name="data-refresh-overview"></a><a name="intro"></a>Información general sobre la actualización de datos  
  Los datos PowerPivot de libro de Excel pueden originarse en varios orígenes de datos externos como son bases de datos externas o archivos de datos a los que tiene acceso desde servidores remotos o desde recursos compartidos de archivos de red. En el caso de libros PowerPivot que contengan datos importados de orígenes de datos externos o conectados, puede configurar la actualización de datos para programar una importación automática de los datos actualizados de esos orígenes iniciales.  
   
  El acceso a un origen de datos externo se obtiene a través de una dirección URL, ruta UNC o cadena de conexión incrustada que se especifica al importar los datos originales en el libro utilizando la aplicación cliente de PowerPivot. La información de conexión original que está almacenada en el libro PowerPivot se reutiliza para las operaciones de actualización de datos subsiguientes. Aunque puede sobrescribir las credenciales que se usan para conectarse a los orígenes de datos, no puede sobrescribir las cadenas de conexión para la actualización de datos; solo se utiliza la información de conexión existente.  
@@ -72,7 +72,7 @@ ms.locfileid: "66070006"
   
  Al crear programaciones específicas para orígenes de datos individuales se permite hacer coincidir la programación de la actualización con las fluctuaciones en los orígenes de datos externos. Por ejemplo, si un origen de datos externo contiene datos transaccionales que se generan a lo largo del día, puede crear una programación individual de la actualización de datos para que ese origen de datos obtenga su información actualizada por la noche.  
   
-##  <a name="drenablesched"></a>Habilitar y programar la actualización de datos  
+##  <a name="enable-and-schedule-data-refresh"></a><a name="drenablesched"></a>Habilitar y programar la actualización de datos  
  Utilice las siguientes instrucciones para programar la actualización de datos para los datos PowerPivot en un libro de Excel que esté publicado en una biblioteca de SharePoint.  
   
 1.  En la biblioteca que contenga el libro, selecciónelo y, a continuación, haga clic en la flecha abajo para mostrar una lista de comandos.  
@@ -88,9 +88,9 @@ ms.locfileid: "66070006"
   
 5.  En Hora de inicio más temprana, elija una de las siguientes:  
   
-    1.  **Después del horario comercial** , se especifica un período de procesamiento fuera de horas en el que es más probable que los servidores de bases de datos tengan los datos actuales que se generaron a lo largo del día laborable.  
+    1.  **Después del horario comercial** especifica un período de procesamiento fuera del horario comercial cuando es más probable que los servidores de bases de datos tengan los datos actuales que se generaron a lo largo del día laboral.  
   
-    2.  La **hora de inicio más temprana específica** es la hora y los minutos de la hora más temprana del día a la que se agrega la solicitud de actualización de datos a una cola de procesos. Los minutos se pueden especificar en intervalos de 15 minutos. La configuración se aplica al día actual así como a fechas futuras. Por ejemplo, si especifica el valor 6:30 a.m. y la hora actual son las 4:30 p.m., la solicitud de actualización se agregará a la cola en el día actual porque 4:30 p.m. es después de las 6:30 a.m.  
+    2.  **Hora de inicio más temprana específica** es la hora y los minutos de la hora más cercana del día en que le gustaría que la solicitud de actualización de datos se agregara a una cola de procesos. Los minutos se pueden especificar en intervalos de 15 minutos. La configuración se aplica al día actual así como a fechas futuras. Por ejemplo, si especifica el valor 6:30 a.m. y la hora actual son las 4:30 p.m., la solicitud de actualización se agregará a la cola en el día actual porque 4:30 p.m. es después de las 6:30 a.m.  
   
      La hora de inicio más temprana define cuándo se agrega una solicitud a la cola de procesos. El procesamiento real se produce cuando el servidor tiene los recursos adecuados para comenzar el procesamiento de los datos. El tiempo de procesamiento real se registrará en el historial de la actualización de datos una vez completado el procesamiento.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070006"
   
 11. Haga clic en **Aceptar** para guardar la programación.  
   
-##  <a name="drverify"></a>Comprobar la actualización de datos  
+##  <a name="verify-data-refresh"></a><a name="drverify"></a>Comprobar la actualización de datos  
  La mejor forma de comprobar la actualización de datos es ejecutarla inmediatamente y revisar la página del historial para ver si se completó de modo correcto. Al activar la casilla **También actualizar lo más rápido posible** en la programación se comprobará que la actualización de datos está operativa.  
   
  Puede ver el registro actual y pasado de las operaciones de actualización de datos en la página Historial de actualización de datos para el libro. Esta página solo aparece si la actualización de datos se ha programado para un libro. Si no hay ninguna programación de actualización de datos, la página de definición de la programación aparece en su lugar.  

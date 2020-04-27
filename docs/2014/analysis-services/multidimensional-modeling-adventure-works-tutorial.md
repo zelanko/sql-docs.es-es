@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077580"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Creación de modelos multidimensionales (tutorial de Adventure Works)
@@ -36,7 +36,7 @@ ms.locfileid: "66077580"
   
  Este tutorial va acompañado de una descripción del escenario para poder entender mejor el contexto de estas lecciones. Para obtener más información, consulte [Escenario de Tutorial de Analysis Services](analysis-services-tutorial-scenario.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Necesitará datos de ejemplo, archivos del proyecto de ejemplo y software para completar todas las lecciones de este tutorial. Para obtener instrucciones sobre cómo encontrar e instalar los requisitos previos para este tutorial, consulte [Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](install-sample-data-and-projects.md).  
   
  Además, los permisos siguientes deben existir para realizar correctamente este tutorial:  
@@ -51,14 +51,14 @@ ms.locfileid: "66077580"
 |Lección|Tiempo estimado para completarla|  
 |------------|--------------------------------|  
 |[Lección 1: definir una vista del origen de datos en un proyecto de Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
-|[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
-|[Lección 3: Modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutos|  
-|[Lección 4: Definir propiedades de dimensiones y de atributos avanzados](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
+|[Lección 2: definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
+|[Lección 3: modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutos|  
+|[Lección 4: definir propiedades avanzadas de atributos y dimensiones](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
 |[Lección 5: definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  
-|[Lección 6: Definir cálculos](lesson-6-defining-calculations.md)|45 minutos|  
-|[Lección 7: definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutos|  
+|[Lección 6: definir cálculos](lesson-6-defining-calculations.md)|45 minutos|  
+|[Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutos|  
 |[Lección 8: definir acciones](lesson-8-defining-actions.md)|30 minutos|  
-|[Lección 9: Definir perspectivas y traducciones](lesson-9-defining-perspectives-and-translations.md)|30 minutos|  
+|[Lección 9: definir perspectivas y traducciones](lesson-9-defining-perspectives-and-translations.md)|30 minutos|  
 |[Lección 10: definir roles administrativos](lesson-10-defining-administrative-roles.md)|15 minutos|  
   
 > [!NOTE]  

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077587"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Acciones (Analysis Services - Datos multidimensionales)
@@ -32,7 +32,7 @@ ms.locfileid: "66077587"
   
 -   Acciones estándar, que devuelven el elemento de acción (URL, HTML, DataSet, RowSet y otros elementos) asociado a la sección seleccionada del cubo donde se produce la acción.  
   
- La aplicación cliente usa una interfaz de consulta, como ADOMD.NET, para recuperar y exponer las acciones al usuario final. Para más información, vea [Desarrollar con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
+ La aplicación cliente usa una interfaz de consulta, como ADOMD.NET, para recuperar y exponer las acciones al usuario final. Para obtener más información, vea [Desarrollar con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net).  
   
  Un objeto <xref:Microsoft.AnalysisServices.Action> simple se compone de la información básica, el destino donde se va a producir la acción, una condición para limitar el ámbito de acción y el tipo. La información básica incluye el nombre de la acción, la descripción de la acción, la sugerencia de título para la acción y otros elementos.  
   
@@ -40,8 +40,7 @@ ms.locfileid: "66077587"
   
  La condición es una expresión MDX de tipo `Boolean` que se evalúa en el evento de la acción. La acción se ejecuta si la condición se evalúa como `true`. En caso contrario, no se ejecuta la acción.  
   
- El tipo es el tipo de acción que se va a ejecutar. 
-  <xref:Microsoft.AnalysisServices.Action> es una clase abstracta y, por lo tanto, para usarla es necesario usar una de las clases derivadas. Existen dos tipos de acciones predefinidas: obtención de detalles y elaboración de informes. Estos tienen clases derivadas correspondientes: <xref:Microsoft.AnalysisServices.DrillThroughAction> y <xref:Microsoft.AnalysisServices.ReportAction>. Otras acciones se realizan con la clase <xref:Microsoft.AnalysisServices.StandardAction> .  
+ El tipo es el tipo de acción que se va a ejecutar. <xref:Microsoft.AnalysisServices.Action> es una clase abstracta y, por lo tanto, para usarla es necesario usar una de las clases derivadas. Existen dos tipos de acciones predefinidas: obtención de detalles y elaboración de informes. Estos tienen clases derivadas correspondientes: <xref:Microsoft.AnalysisServices.DrillThroughAction> y <xref:Microsoft.AnalysisServices.ReportAction>. Otras acciones se realizan con la clase <xref:Microsoft.AnalysisServices.StandardAction> .  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una acción es una instrucción MDX almacenada que se puede presentar y emplear en aplicaciones cliente. En otras palabras, una acción es un comando cliente que se define y se almacena en el servidor. Una acción también contiene información que especifica cuándo y cómo debe la aplicación cliente mostrar y controlar la instrucción MDX. La operación que se especifica con la acción puede iniciar una aplicación, utilizando la información de la acción como parámetro, o bien recuperar información en función de criterios que proporciona la acción.  
   

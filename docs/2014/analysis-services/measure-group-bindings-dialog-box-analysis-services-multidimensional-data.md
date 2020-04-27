@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077855"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Enlaces de grupo de medida (Analysis Services - Datos multidimensionales)
-  Use el cuadro de diálogo **Enlaces de grupo de medida** para crear y modificar las relaciones directas entre los atributos que no son de granularidad de una dimensión de cubo y las columnas de un grupo de medida para una relación de dimensión regular, así como para especificar opciones de procesamiento de valores NULL para los atributos de una dimensión de cubo del cuadro de diálogo **Definir relación**.  
+  Use el cuadro de diálogo **Enlaces de grupo de medida** para crear y modificar las relaciones directas entre los atributos que no son de granularidad de una dimensión de cubo y las columnas de un grupo de medida para una relación de dimensión regular, así como para especificar opciones de procesamiento de valores NULL para los atributos de una dimensión de cubo del cuadro de diálogo **Definir relación** .  
   
 ## <a name="options"></a>Opciones  
  **Tabla de grupos de medida**  

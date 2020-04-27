@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071809"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar el uso del espacio en disco (PowerPivot para SharePoint)
@@ -72,25 +72,25 @@ ms.locfileid: "66071809"
   
 ## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>Limitar cuánto tiempo se conserva en caché una base de datos  
   
-1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en **aplicación de servicio PowerPivot predeterminada** para abrir el panel de administración.  
   
-3.  En Acciones, haga clic en **Configurar las opciones de aplicación de servicio**.  
+3.  En acciones, haga clic en configurar las opciones de la **aplicación de servicio**.  
   
 4.  En la sección Caché de disco, puede especificar cuánto tiempo permanece en memoria una base de datos inactiva para atender las nuevas solicitudes (de forma predeterminada, 48 horas) y cuánto tiempo se queda en caché (de forma predeterminada, 120 horas).  
   
-     **Mantener una base de datos inactiva en memoria** especifica cuánto tiempo permanece en la memoria una base de datos inactiva para atender nuevas solicitudes de esos datos. Una base de datos activa se mantiene siempre en memoria mientras que se esté consultando, pero una vez que deja de estar activa, el sistema la mantendrá en memoria durante un período de tiempo adicional por si hay más solicitudes de esos datos.  
+     **Mantener base de datos inactiva en memoria** especifica cuánto tiempo permanece en memoria una base de datos inactiva para atender nuevas solicitudes de esos datos. Una base de datos activa se mantiene siempre en memoria mientras que se esté consultando, pero una vez que deja de estar activa, el sistema la mantendrá en memoria durante un período de tiempo adicional por si hay más solicitudes de esos datos.  
   
      Dado que las bases de datos PowerPivot se almacenan en caché primero y después se cargan en memoria, los archivos de base de datos utilizan el espacio en disco inmediatamente. Sin embargo, mientras la base de datos está activa (y durante las 48 horas posteriores), todas las solicitudes se dirigen en primer lugar a la base de datos en memoria, omitiendo la base de datos en caché. Después de 48 horas de inactividad, el archivo se descarga de la memoria, pero permanece en la memoria caché donde puede volver a cargarse rápidamente si la instancia del servidor local PowerPivot intercepta una nueva solicitud de conexión de esos datos. Las solicitudes de conexión a una base de datos inactiva se sirven desde la memoria caché en lugar de desde la biblioteca de contenido, reduciendo el efecto en las bases de datos de contenido.  
   
      Es importante tener en cuenta que la biblioteca de contenido es la única ubicación permanente para las bases de datos PowerPivot. Se usan copias en caché solo si la base de datos de la biblioteca es la misma que la copia en el disco.  
   
-     **Mantener base de datos inactiva en caché** especifica cuánto tiempo permanece una base de datos inactiva en el sistema de archivos después de que se haya descargado de la memoria. El trabajo de limpieza usa este valor para determinar qué archivos eliminar. El trabajo de limpieza elimina del disco todas las bases de datos PowerPivot que están inactivas durante 168 horas (48 horas en memoria y 120 horas en caché).  
+     **Mantener base de datos inactiva en caché** especifica cuánto tiempo se conserva una base de datos inactiva en el sistema de archivos una vez descargado de la memoria. El trabajo de limpieza usa este valor para determinar qué archivos eliminar. El trabajo de limpieza elimina del disco todas las bases de datos PowerPivot que están inactivas durante 168 horas (48 horas en memoria y 120 horas en caché).  
   
 5.  Haga clic en **Aceptar** para guardar los cambios.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Una instalación de PowerPivot para SharePoint proporciona reglas de estado para que pueda realizar una acción correctora cuando se detecten problemas en el estado, la configuración o la disponibilidad del servidor. Algunas de estas reglas utilizan la configuración para determinar las condiciones en las que se desencadenan las reglas de estado. Si va a optimizar activamente el rendimiento del servidor, puede que también desee consultar estos valores para garantizar que los predeterminados son la mejor opción para el sistema. Para obtener más información, vea [reglas de estado de PowerPivot: configurar](configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Consulte también  

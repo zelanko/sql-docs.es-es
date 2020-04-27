@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e249e2e8a9bccdeddb32bf0f8302d478d08adf1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069790"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>Seleccionar una dimensión de grupo de medida (Agregar nueva tabla anidada)
   Utilice la página **Seleccionar una dimensión de grupo de medida** para seleccionar una dimensión en el grupo de medida con el fin de utilizarla como una tabla anidada.  
   
- **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Grupos de medida**  

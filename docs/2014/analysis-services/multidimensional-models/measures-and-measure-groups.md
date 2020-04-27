@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073666"
 ---
 # <a name="measures-and-measure-groups"></a>Medidas y grupos de medida
@@ -41,7 +41,7 @@ ms.locfileid: "66073666"
 |[Define Semiadditive Behavior](define-semiadditive-behavior.md)|El comportamiento de suma parcial corresponde a las agregaciones que son válidas para algunas dimensiones, pero no para otras. Un ejemplo común es un saldo de cuenta bancaria. Quizás quiera agregar saldos por cliente y región, pero no por tiempo. Por ejemplo, es poco probable que quiera agregar saldos de la misma cuenta en días consecutivos. Para definir el comportamiento de suma parcial, use el Asistente para agregar inteligencia empresarial.|  
 |[Grupos de medida vinculados](linked-measure-groups.md)|Reasigne un grupo de medida existente de otros cubos a la misma base de datos o a diferentes bases de datos de Analysis Services.|  
   
-##  <a name="bkmk_measure"></a>Cuantas  
+##  <a name="measures"></a><a name="bkmk_measure"></a>Cuantas  
  Una medida representa una columna que contiene datos cuantificables, normalmente numéricos, que se pueden agregar. Las medidas representan algunos aspectos de la actividad de la organización, expresada en términos económicos (como ingresos, márgenes o costos), como cuentas (niveles de inventario, cantidad de empleados, clientes o pedidos) o como un cálculo más complejo que incorpora la lógica de negocios.  
   
  Cada cubo debe tener al menos una medida, pero la mayoría tienen muchas, a veces, cientos. Estructuralmente, una medida se asigna, por lo general, a una columna de origen de una tabla de hechos. Dicha columna proporciona los valores usados para cargar la medida. De forma alternativa, también puede definir una medida mediante MDX.  
@@ -60,7 +60,7 @@ ms.locfileid: "66073666"
   
  Para reducir las posibilidades de que se produzcan estos comportamientos en una aplicación cliente, puede crear varios cubos o perspectivas en la misma base de datos y asegurarse de que cada cubo o perspectiva contenga solo los objetos relacionados. Las relaciones que debe comprobar son las del grupo de medida (asignado a la tabla de hechos) con las dimensiones.  
   
-##  <a name="bkmk_mg"></a>Grupos de medida  
+##  <a name="measure-groups"></a><a name="bkmk_mg"></a>Grupos de medida  
  En un cubo, las tablas de hechos subyacentes agrupan las medidas en grupos de medida. Los grupos de medida se utilizan para asociar dimensiones a medidas. Los grupos de medida también se utilizan para las medidas que tienen recuento distintivo como comportamiento de agregación. Si se coloca cada medida de recuento distintiva en su propio grupo de medida se optimiza el procesamiento de la agregación.  
   
  Un objeto <xref:Microsoft.AnalysisServices.MeasureGroup> simple se compone de información básica, como el nombre de grupo, el modo de almacenamiento y el modo de procesamiento. También contiene sus partes constitutivas: las medidas, las dimensiones y las particiones que componen el grupo de medida.  

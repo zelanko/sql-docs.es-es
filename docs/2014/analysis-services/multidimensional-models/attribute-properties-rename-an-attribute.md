@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077221"
 ---
 # <a name="rename-an-attribute"></a>Cambiar el nombre de un atributo
-  El nombre de un atributo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se define por la propiedad **Nombre** . Para cambiar el nombre de un atributo, haga clic con el botón derecho en el panel **Atributos** de la pestaña **Estructura de dimensión** del Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y, después, haga clic en **Cambiar nombre**. Si el panel **Atributos** se encuentra en la vista de cuadrícula, puede hacer clic en el nombre del atributo y editarlo directamente en la cuadrícula. También puede seleccionar un atributo y establecer la propiedad **Name** en la ventana **Propiedades** .  
+  El nombre de un atributo de  se define por la propiedad Nombre . Para cambiar el nombre de un atributo, haga clic con el botón derecho en el panel **Atributos** de la pestaña **Estructura de dimensión** del Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y, después, haga clic en **Cambiar nombre**. Si el panel **Atributos** se encuentra en la vista de cuadrícula, puede hacer clic en el nombre del atributo y editarlo directamente en la cuadrícula. También puede seleccionar un atributo y establecer la propiedad **Name** en la ventana **Propiedades** .  
   
  Para más información sobre cómo cambiar el nombre de un atributo, vea [Enlazar un atributo a una columna de clave](attribute-properties-bind-an-attribute-to-a-key-column.md).  
   

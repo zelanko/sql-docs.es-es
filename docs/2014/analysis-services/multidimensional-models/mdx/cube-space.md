@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074709"
 ---
 # <a name="cube-space"></a>Espacio de cubo
@@ -98,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  En la consulta anterior, la jerarquía definida por el usuario Customer Geography de la dimensión Customer se utiliza para definir la posición en el espacio de cubo que se definió anteriormente mediante una jerarquía de atributo. La posición idéntica en el espacio de cubo puede definirse mediante jerarquías de atributo o jerarquías definidas por el usuario.  
   
-##  <a name="AttribRelationships"></a>Relaciones de atributo y espacio de cubo  
+##  <a name="attribute-relationships-and-cube-space"></a><a name="AttribRelationships"></a>Relaciones de atributo y espacio de cubo  
  El definir relaciones de atributo entre atributos relacionados mejora el rendimiento de las consultas (al facilitar la creación de agregaciones apropiadas) y afecta al miembro de una jerarquía de atributo relacionada que aparece con un miembro de jerarquía de atributo. Por ejemplo, cuando define una tupla que incluye a un miembro de la jerarquía de atributo City y la tupla no define explícitamente al miembro de la jerarquía de atributo Country, se puede esperar que el miembro de la jerarquía de atributo predeterminada Country sea el miembro relacionado de la jerarquía de atributo Country. Sin embargo, esto es cierto solo si se define una relación de atributo entre la jerarquía de atributo City y la jerarquía de atributo Country.  
   
  El ejemplo siguiente devuelve el miembro de una jerarquía de atributo relacionada que no está incluida explícitamente en la consulta.  
@@ -135,6 +135,6 @@ FROM [Adventure Works]
  [Trabajar con miembros, tuplas y conjuntos &#40;&#41;MDX](working-with-members-tuples-and-sets-mdx.md)   
  [Totales visuales y totales no visuales](visual-totals-and-non-visual-totals.md)   
  [Referencia del lenguaje MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Expresiones multidimensionales &#40;referencia de&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Referencia de expresiones multidimensionales &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

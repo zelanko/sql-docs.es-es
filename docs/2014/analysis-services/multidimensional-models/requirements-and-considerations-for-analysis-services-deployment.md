@@ -22,18 +22,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073172"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Requisitos y consideraciones para la implementación de Analysis Services
   El rendimiento y la disponibilidad de una solución dependen de muchos factores, como son las capacidades del hardware subyacente, la topología de la implementación del servidor, las características de la solución (por ejemplo, si tiene particiones distribuidas en varios servidores o usa el almacenamiento ROLAP que requiere acceso directo al motor relacional), los contratos de nivel de servicio y la complejidad del modelo de datos.  
   
 ## <a name="memory-and-processor-requirements"></a>Requisitos de memoria y procesador  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] necesitará más recursos de memoria y procesador en los siguientes casos:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] necesitará más recursos de memoria y procesador en los siguientes casos:  
   
 -   Cuando se procesen cubos complejos o de gran tamaño. Serán necesarios más recursos de memoria y procesador que en el caso de cubos simples o de pequeño tamaño.  
   
@@ -65,12 +64,12 @@ ms.locfileid: "66073172"
  Las agregaciones requieren espacio adicional proporcional a las agregaciones agregadas: más agregaciones, se necesita más espacio. Si evita la creación de agregaciones innecesarias, lo normal es que el espacio en disco adicional necesario para las agregaciones no supere el 10 por ciento aproximadamente del tamaño de los datos almacenados en la base de datos relacional subyacente.  
   
  Minería de datos  
- De forma predeterminada, las estructuras de minería de datos almacenan en la caché del disco el conjunto de datos con el que se entrenan. Para eliminar estos datos almacenados en la caché del disco, puede utilizar la opción de procesamiento **Procesar borrado de estructura** en el objeto de estructura de minería de datos. Para obtener más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md).  
+ De forma predeterminada, las estructuras de minería de datos almacenan en la caché del disco el conjunto de datos con el que se entrenan. Para eliminar estos datos almacenados en la caché del disco, puede utilizar la opción de procesamiento **Procesar borrado de estructura** en el objeto de estructura de minería de datos. Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Procesamiento de objetos  
  Durante el procesamiento, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] almacena en disco copias de los objetos que está procesando en la transacción en procesamiento hasta que finaliza el procesamiento. Cuando finaliza el procesamiento, las copias procesadas de los objetos reemplazan a los objetos originales. Por lo tanto, deberá proporcionar suficiente espacio adicional en disco para una segunda copia de cada uno de los objetos que vayan a procesarse. Por ejemplo, si tiene previsto procesar todo un cubo en una única transacción, necesitará suficiente espacio en el disco duro como para almacenar una segunda copia de todo el cubo.  
   
-##  <a name="BKMK_Availability"></a>Consideraciones de disponibilidad  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>Consideraciones de disponibilidad  
  En un entorno de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , es posible que un cubo o un modelo de minería de datos no esté disponible para su consulta debido a un error de hardware o software. También puede ser que un cubo no esté disponible porque necesite procesarse.  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Proporcionar disponibilidad en caso de errores de hardware o software  
@@ -87,7 +86,7 @@ ms.locfileid: "66073172"
   
  Para procesar actualizaciones incrementales de datos de origen de un modo transparente, habilite el almacenamiento en caché automático. El almacenamiento en caché automático actualiza los cubos con nuevos datos de origen sin necesidad de un procesamiento manual y sin que esto afecte a la disponibilidad de los cubos. Para más información, vea [Almacenamiento en caché automático &#40;Particiones&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
-##  <a name="BKMK_Scalability"></a>Consideraciones sobre la escalabilidad  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>Consideraciones sobre la escalabilidad  
  Varias instancias de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el mismo equipo pueden provocar problemas de rendimiento. Una opción para resolver estos problemas es aumentar los recursos de procesador, memoria y disco del servidor. No obstante, es posible que también necesite escalar las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] entre varios equipos.  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>Escalar Analysis Services entre varios equipos  

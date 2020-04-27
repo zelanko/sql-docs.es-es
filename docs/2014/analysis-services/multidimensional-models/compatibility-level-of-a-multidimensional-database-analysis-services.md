@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076688"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Establecer el nivel de compatibilidad de una base de datos multidimensional (Analysis Services)
@@ -39,7 +39,7 @@ ms.locfileid: "66076688"
 > [!WARNING]  
 >  Establecer la compatibilidad de la base de datos en un nivel superior es irreversible. Después de aumentar el nivel de compatibilidad `1100`a, debe seguir ejecutando la base de datos en los servidores más recientes. No se puede revertir a `1050`. No se puede adjuntar `1100` o restaurar una base de datos en una versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]servidor anterior a o.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Los niveles de compatibilidad de base de datos se presentaron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Debe tener [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o posterior para ver o establecer el nivel de compatibilidad de la base de datos.  
   
  La base de datos no puede ser un cubo local. Los cubos locales no admiten la propiedad `CompatibilityLevel`.  
@@ -88,10 +88,10 @@ ms.locfileid: "66076688"
   
 3.  La sincronización de servidores solo se admite para los servidores que comparten la misma versión y nivel de compatibilidad de la base de datos.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Después de aumentar el nivel de compatibilidad de la base de datos, puede establecer la propiedad `StringStoresCompatibilityLevel` en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Esto aumenta el almacenamiento de cadenas para medidas y dimensiones. Para obtener más información sobre esta característica, vea [Configurar el almacenamiento de cadenas para dimensiones y particiones](configure-string-storage-for-dimensions-and-partitions.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Realizar copias de seguridad, restaurar y sincronizar bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

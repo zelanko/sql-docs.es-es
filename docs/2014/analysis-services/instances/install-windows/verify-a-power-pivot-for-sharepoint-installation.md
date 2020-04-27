@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079866"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Comprobar una instalación de PowerPivot para SharePoint
   Una instancia de PowerPivot para SharePoint que instale en una granja de servidores de SharePoint se administra a través de Administración central de SharePoint. Como mínimo, puede comprobar las páginas de Administración central y de sitios de SharePoint para comprobar que están disponibles los componentes de servidor y las características de PowerPivot. Sin embargo, para comprobar una instalación por completo, debe tener un libro PowerPivot que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos PowerPivot y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
   
-##  <a name="verifyinstall"></a>Comprobar la integración de administración central  
+##  <a name="verify-central-administration-integration"></a><a name="verifyinstall"></a> Comprobar la integración de Administración central  
  Para comprobar la integración de PowerPivot con Administración central, haga lo siguiente:  
   
 1.  En el menú Inicio, haga clic en **todos los programas**, abra productos de Microsoft SharePoint 2010 y, a continuación, haga clic en **Administración Central de SharePoint 2010**.  
@@ -37,7 +37,7 @@ ms.locfileid: "66079866"
   
     4.  En **Agregar este sitio web a la zona**, escriba la dirección URL a su sitio y, a continuación, haga clic en **Agregar**.  
   
-    5.  Haga clic en **cerrar**y, a continuación, en **Aceptar**.  
+    5.  Haga clic en **Cerrar** y después, en **Aceptar**.  
   
         > [!NOTE]  
         >  La documentación de la instalación de SharePoint incluye instrucciones adicionales para trabajar con los errores del servidor proxy y deshabilitar la Configuración de seguridad mejorada de Internet Explorer para poder descargar e instalar las actualizaciones. Para obtener más información, vea la sección **Realizar tareas adicionales** en [Implementar un único servidor con SQL Server](https://go.microsoft.com/fwlink/?LinkId=177754) en el sitio web de Microsoft.  
@@ -46,11 +46,11 @@ ms.locfileid: "66079866"
   
 4.  Compruebe que la **Característica de integración de PowerPivot** está **Activa**.  
   
-5.  En Administración central, en Configuración del sistema, haga clic en **Administrar servicios en el servidor**.  
+5.  En administración central, en configuración del sistema, haga clic en **administrar servicios en el servidor**.  
   
 6.  Compruebe que se hayan iniciado **SQL Server Analysis Services** y **Servicio de sistema de SQL Server PowerPivot** .  
   
-7.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+7.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 8.  Haga clic en **aplicación de servicio PowerPivot predeterminada** para abrir el panel de administración de PowerPivot para esta aplicación. Al usarse por primera vez, el panel tarda varios minutos en cargarse.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66079866"
 ## <a name="verify-data-access-on-the-server"></a>Comprobar el acceso a datos en el servidor  
  Para comprobar el acceso a datos PowerPivot en el servidor, haga lo siguiente:  
   
-1.  [Descargue](https://go.microsoft.com/fwlink/?LinkID=219108) el ejemplo de datos picnic que acompaña a un tutorial de Reporting Services. Utilizará el libro de ejemplo de esta descarga para comprobar el acceso a datos PowerPivot. Extraiga los archivos.  
+1.  [Descargue](https://go.microsoft.com/fwlink/?LinkID=219108) el ejemplo de datos Picnic que acompaña a un tutorial de Reporting Services. Utilizará el libro de ejemplo de esta descarga para comprobar el acceso a datos PowerPivot. Extraiga los archivos.  
   
 2.  Cargue el libro de Excel (.xlsx) en Documentos compartidos. El libro contiene los datos PowerPivot incrustados.  
   

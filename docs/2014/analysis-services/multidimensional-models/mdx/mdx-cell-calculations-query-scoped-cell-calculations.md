@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074422"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Crear cálculos de celdas del ámbito de consulta (MDX)
@@ -54,6 +54,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Por otro lado, MDX procesa la fórmula de cálculo siempre que se emite una consulta MDX en el cubo y ésta implica celdas incluidas en la definición de celdas calculadas. Este procesamiento se lleva a cabo independientemente del ámbito de creación.  
   
 ## <a name="see-also"></a>Consulte también  
- [CREATE CELL CALCULAtion, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

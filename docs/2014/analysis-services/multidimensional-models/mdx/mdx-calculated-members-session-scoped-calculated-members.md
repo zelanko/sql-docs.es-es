@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074550"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Crear miembros calculados de ámbito de sesión (MDX)
-  Para crear un miembro calculado que esté disponible en una sesión de expresiones multidimensionales (MDX), es necesario usar la instrucción [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member). Un miembro calculado creado mediante la instrucción CREATE MEMBER no se eliminará hasta que se cierre la sesión MDX.  
+  Para crear un miembro calculado que esté disponible en una sesión de expresiones multidimensionales (MDX), es necesario usar la instrucción [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) . Un miembro calculado creado mediante la instrucción CREATE MEMBER no se eliminará hasta que se cierre la sesión MDX.  
   
  Como se indica en este tema, la sintaxis de la instrucción CREATE MEMBER es muy sencilla y fácil de usar.  
   
@@ -52,6 +52,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear miembros calculados de ámbito de consulta &#40;&#41;MDX](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Crear miembros calculados en el ámbito de consulta &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

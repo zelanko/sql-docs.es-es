@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080300"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Borrar las memorias caché de Analysis Services
   Analysis Services almacena los datos en memoria caché para mejorar el rendimiento de las consultas. En este tema se proporcionan recomendaciones para usar el comando ClearCache de XMLA con el fin de borrar las memorias caché creadas en respuesta a una consulta MDX. Los efectos de ejecutar ClearCache varían dependiendo de que se use un modelo tabular o multidimensional.  
   
- **Cuándo borrar la memoria caché para los modelos multidimensionales**  
+ **Cuándo conviene borrar la memoria caché para los modelos multidimensionales**  
   
  Para las bases de datos multidimensionales, Analysis Services genera memorias caché en el motor de fórmulas durante la evaluación de un cálculo y en el motor de almacenamiento para los resultados de las consultas de dimensión y de grupo de medida. Las consultas de grupo de medida se producen cuando el motor de fórmulas necesita datos de medida para un subcubo o una coordenada de celda. Las consultas de dimensión se producen cuando se consultan jerarquías no naturales y cuando se aplica autoexist.  
   
  Se recomienda borrar la memoria caché al realizar pruebas de rendimiento. La acción de borrar la memoria caché entre ejecuciones de pruebas garantiza que el almacenamiento en memoria caché no sesga los resultados de pruebas que miden el impacto de un cambio en el diseño de la consulta.  
   
- **Cuándo borrar la memoria caché para los modelos tabulares**  
+ **Cuándo conviene borrar la memoria caché para los modelos tabulares**  
   
  Los modelos tabulares se almacenan normalmente en memoria, donde se realizan agregaciones y otros cálculos en el momento de ejecutar una consulta. En sí, el comando ClearCache tiene un efecto limitado en los modelos tabulares. En un modelo tabular, los datos se pueden agregar a las memorias caché de Analysis Services si se ejecutan consultas MDX en él. Concretamente, las medidas de DAX a que hacen referencia las operaciones de autoexist y MDX pueden almacenar los resultados en la memoria caché de fórmulas y en la memoria caché de dimensiones, respectivamente. Sin embargo, conviene tener en cuenta que las jerarquías no naturales y las consultas de grupo de medidas no almacenan en caché los resultados del motor de almacenamiento. Además, es importante reconocer que las consultas de DAX no almacenan en caché los resultados del motor de fórmulas y de almacenamiento. En la medida en que las memorias caché existen como resultado de consultas MDX, la ejecución de ClearCache en un modelo tabular invalidará los datos almacenados en caché del sistema.  
   
@@ -89,6 +89,6 @@ ms.locfileid: "66080300"
   
 ## <a name="see-also"></a>Consulte también  
  [Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Supervisar una instancia de Analysis Services](monitor-an-analysis-services-instance.md)  
+ [Monitor an Analysis Services Instance](monitor-an-analysis-services-instance.md)  
   
   

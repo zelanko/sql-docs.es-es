@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075345"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implementar soluciones de modelos con la utilidad de implementación
@@ -33,14 +33,14 @@ ms.locfileid: "66075345"
     {[/s[:logfile]] | [/a] | [[/o[:output_script_file]] [/d]]}  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  *ASdatabasefile*  
  Ruta de acceso completa de la carpeta en la que se encuentra el archivo de script de implementación (.asdatabase) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Este archivo se genera al implementar un proyecto en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Se encuentra en la carpeta bin del proyecto. El archivo .asdatabase contiene la ubicación de las definiciones de objetos que se implementarán. Si no se especifica, se usa la carpeta actual.  
   
  **modificado**  
  Ejecuta la utilidad en modo silencioso y no muestra cuadros de diálogo. Para obtener más información sobre los modos, vea la sección [Modos](#Modes), más adelante en este tema.  
   
- *MSDTC*  
+ *archivoDeRegistro*  
  Ruta completa y nombre del archivo de registro. Los eventos de seguimiento se registrarán en el archivo de registro especificado. Si el archivo de registro ya existe, se reemplazará el contenido del archivo.  
   
  **/a**  
@@ -54,7 +54,7 @@ ms.locfileid: "66075345"
  *output_script_file*  
  Ruta de acceso completa y nombre del archivo de script de salida.  
   
- **/d.**  
+ **/d**  
  Si se usa el argumento **/o** , especifica que la utilidad no debe conectarse con la instancia de destino. Como no se realiza ninguna conexión con los destinos de implementación, el script de salida se genera basándose solamente en la información recuperada de los archivos de entrada.  
   
 > [!NOTE]  
@@ -65,16 +65,16 @@ ms.locfileid: "66075345"
   
  La utilidad está ubicada en la carpeta \Archivos de programa (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
   
-##  <a name="Modes"></a>Formas  
+##  <a name="modes"></a><a name="Modes"></a>Formas  
  La utilidad se puede ejecutar en los modos que se enumeran en la siguiente tabla.  
   
-|Modo|Descripción|  
+|Mode|Descripción|  
 |----------|-----------------|  
 |Modo silencioso|No se muestra ninguna interfaz de usuario y toda la información necesaria para la implementación la proporcionan los archivos de entrada. La utilidad no muestra el progreso en el modo silencioso. En su lugar, se puede usar un archivo de registro opcional para capturar el progreso y la información de errores para su posterior revisión.|  
 |Modo de respuesta|Se muestra la interfaz de usuario del Asistente para la implementación y las respuestas del usuario se guardan en los archivos de entrada especificados para la posterior implementación. La implementación no se produce en el modo de respuesta. El único propósito del modo de respuesta es capturar las respuestas del usuario|  
 |Modo de salida|No se muestra ninguna interfaz de usuario y toda la información necesaria para la implementación la proporcionan los archivos de entrada.<br /><br /> Sin embargo, a diferencia del modo silencioso, la salida de la utilidad se escribe en un archivo de script de salida, no se envía a los destinos de implementación indicados en los archivos de entrada. A menos que especifique el argumento **/d** , la utilidad conecta con cada destino de implementación para comparar los metadatos mientras genera el archivo de script de salida.|  
   
- [Volver a argumentos](#Arguments)  
+ [Volver a Argumentos](#Arguments)  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra cómo implementar un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo silencioso y registrar los mensajes de progreso y de error para una posterior revisión:  
@@ -86,6 +86,6 @@ ms.locfileid: "66075345"
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de la utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

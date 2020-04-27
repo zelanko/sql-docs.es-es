@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b6c79c2ea4355e9d889e235c8185a2460c0ed8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075389"
 ---
 # <a name="deploy-analysis-services-projects-ssdt"></a>Implementar proyectos de Analysis Services (SSDT)
@@ -32,6 +32,6 @@ ms.locfileid: "66075389"
  La configuración del proyecto y las opciones asociadas determinan las propiedades de implementación que se usarán para implementarlo. En los proyectos compartidos, cada programador puede usar su propia configuración, con las opciones de configuración que desee. Por ejemplo, cada programador puede especificar un servidor de pruebas distinto para trabajar independientemente de los demás programadores.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cree un proyecto de Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)  
+ [Crear un proyecto de Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)  
   
   

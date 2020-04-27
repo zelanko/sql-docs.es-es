@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079030"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Agregar atributos a dimensiones
@@ -38,7 +38,7 @@ ms.locfileid: "66079030"
   
     -   **MaritalStatus**  
   
-    -   **Mujer**  
+    -   **Sexo**  
   
     -   **EmailAddress**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66079030"
   
     -   **NumberCarsOwned**  
   
-    -   **Número**  
+    -   **Teléfono**  
   
     -   **DateFirstPurchase**  
   
@@ -64,15 +64,15 @@ ms.locfileid: "66079030"
   
 5.  Arrastre las columnas siguientes de la tabla **Geography** del panel **Vista del origen de datos** al panel **Atributos** :  
   
-    -   **City**  
+    -   **Ciudad**  
   
     -   **StateProvinceName**  
   
-    -   **EnglishCountryRegionName**  
+    -   **SpanishCountryRegionName**  
   
     -   **CódPostal**  
   
-6.  En el menú Archivo, haga clic en **Guardar todo**.  
+6.  En el menú Archivo , haga clic en **Guardar todo**.  
   
 ## <a name="adding-attributes-to-the-product-dimension"></a>Agregar atributos a la dimensión Product  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66079030"
   
     -   **SizeRange**  
   
-    -   **Media**  
+    -   **Peso**  
   
     -   **DaysToManufacture**  
   
@@ -120,7 +120,7 @@ ms.locfileid: "66079030"
   
     -   **Estado**  
   
-5.  En el menú Archivo, haga clic en **Guardar todo**.  
+5.  En el menú Archivo , haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Revisar las propiedades de cubo y dimensión](lesson-2-4-reviewing-cube-and-dimension-properties.md)  

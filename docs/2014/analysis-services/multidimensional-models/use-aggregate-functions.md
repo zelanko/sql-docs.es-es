@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072714"
 ---
 # <a name="use-aggregate-functions"></a>Usar funciones de agregado
@@ -24,16 +24,14 @@ ms.locfileid: "66072714"
   
  En Analysis Services, todas las medidas que se crean están respaldadas por una función de agregación que determina la operación de la medida. Entre `Sum`los tipos de agregación `Min`predefinidos se incluyen,, `Max`, `Count`, **recuento distintivo**y otras funciones más especializadas. O bien, si necesita agregaciones basadas en fórmulas complejas o personalizadas, puede crear un cálculo MDX en vez de usar una función de agregación creada previamente. Por ejemplo, si quiere definir una medida para un valor de porcentaje, lo haría en MDX con una medida calculada. Vea, [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
- A las medidas que se crean mediante el Asistente para cubos se les asigna un tipo de agregación como parte de la definición de la medida. El tipo de agregación es siempre `Sum`, asumiendo que la columna de origen contiene datos numéricos. 
-  `Sum` se asigna independientemente del tipo de datos de la columna de origen. Por ejemplo, si usó el Asistente para cubos para crear medidas y extrajo todas las columnas de una tabla de hechos, notará que todas las medidas resultantes tienen una agregación de `Sum`, incluso si el origen es una columna de fecha y hora. Debe revisar siempre los métodos de agregación asignados previamente para las medidas creadas mediante el asistente para asegurarse de que la función de agregación sea la adecuada.  
+ A las medidas que se crean mediante el Asistente para cubos se les asigna un tipo de agregación como parte de la definición de la medida. El tipo de agregación es siempre `Sum`, asumiendo que la columna de origen contiene datos numéricos. `Sum` se asigna independientemente del tipo de datos de la columna de origen. Por ejemplo, si usó el Asistente para cubos para crear medidas y extrajo todas las columnas de una tabla de hechos, notará que todas las medidas resultantes tienen una agregación de `Sum`, incluso si el origen es una columna de fecha y hora. Debe revisar siempre los métodos de agregación asignados previamente para las medidas creadas mediante el asistente para asegurarse de que la función de agregación sea la adecuada.  
   
  Puede asignar o cambiar el método de agregación en la definición del cubo, a través de [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]o por medio de MDX. Vea [Crear medidas y grupos de medida en modelos multidimensionales](create-measures-and-measure-groups-in-multidimensional-models.md) o [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx) para obtener más instrucciones.  
   
-##  <a name="AggFunction"></a>Funciones de agregado  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] proporciona funciones para agregar medidas a las dimensiones que se incluyen en los grupos de medida. El *grado de agregación* de una función de agregación determina cómo se agrega la medida en todas las dimensiones del cubo. Las funciones de agregación pertenecen a uno de tres niveles de grado de agregación:  
+##  <a name="aggregate-functions"></a><a name="AggFunction"></a>Funciones de agregado  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] proporciona funciones para agregar medidas a las dimensiones que se incluyen en los grupos de medida. El *grado de agregación* de una función de agregación determina cómo se agrega la medida en todas las dimensiones del cubo. Las funciones de agregación pertenecen a uno de tres niveles de grado de agregación:  
   
- Aditiva  
+ Aditivo  
  Una medida aditiva, también denominada medida completamente aditiva, se puede agregar en todas las dimensiones que están incluidas en el grupo de medida que contiene la medida, sin restricciones.  
   
  Semiaditiva  
@@ -46,8 +44,8 @@ ms.locfileid: "66072714"
   
 |Función de agregación|grado de agregación|Valor devuelto|  
 |--------------------------|----------------|--------------------|  
-|`Sum`|Aditiva|Calcula la suma de valores de todos los miembros secundarios. Es la función de agregación predeterminada.|  
-|`Count`|Aditiva|Recupera el recuento de todos los miembros secundarios.|  
+|`Sum`|Aditivo|Calcula la suma de valores de todos los miembros secundarios. Es la función de agregación predeterminada.|  
+|`Count`|Aditivo|Recupera el recuento de todos los miembros secundarios.|  
 |`Min`|Semiaditiva|Recupera el valor más bajo para todos los miembros secundarios.|  
 |`Max`|Semiaditiva|Recupera el valor más alto para todos los miembros secundarios.|  
 |`DistinctCount`|No aditiva|Recupera el recuento de todos los miembros secundarios únicos. Para más detalles, vea [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) en la próxima sección.|  
@@ -59,7 +57,7 @@ ms.locfileid: "66072714"
 |`FirstNonEmpty`|Semiaditiva|Recupera el valor del primer miembro secundario no vacío.|  
 |`LastNonEmpty`|Semiaditiva|Recupera el valor del último miembro secundario no vacío.|  
   
-##  <a name="bkmk_distinct"></a>Acerca de las medidas de recuento distintivas  
+##  <a name="about-distinct-count-measures"></a><a name="bkmk_distinct"></a> About Distinct Count Measures  
  Una medida que tenga el valor **Distinct Count** en la propiedad **Aggregate Function** se denomina medida de recuento distintiva. Una medida de recuento distintiva se puede usar para contar el número de veces que aparecen los miembros del nivel inferior de una dimensión en la tabla de hechos. Como el recuento es distintivo, si un miembro aparece varias veces, solamente se cuenta una vez. Una medida de recuento distintiva se coloca siempre en un grupo de medida dedicado. Colocar una medida de recuento distintiva en su propio grupo de medida es una recomendación que se ha creado en el diseñador como una técnica de optimización del rendimiento.  
   
  Las medidas de recuento distintivas se usan normalmente para determinar, por cada miembro de una dimensión, cuántos miembros distintivos del nivel inferior de otra dimensión comparten filas en la tabla de hechos. Por ejemplo, en un cubo Sales, por cada cliente y grupo de clientes, ¿cuántos productos diferentes se adquirieron? Es decir, por cada miembro de la dimensión Customers, ¿cuántos miembros diferentes del nivel inferior de la dimensión Products comparten filas en la tabla de hechos? O, por ejemplo, en un cubo de visitas a un sitio de Internet, por cada visitante y grupo de visitantes del sitio, ¿cuántas páginas distintas del sitio de Internet se visitaron? Es decir, por cada miembro de la dimensión Site Visitors, ¿cuántos miembros diferentes del nivel inferior de la dimensión Pages comparten filas en la tabla de hechos? En cada uno de estos ejemplos, los miembros del nivel inferior de la segunda dimensión se cuentan mediante una medida de recuento distintiva.  

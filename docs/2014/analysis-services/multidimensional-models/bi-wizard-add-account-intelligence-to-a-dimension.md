@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076900"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Agregar inteligencia de cuentas a una dimensión
@@ -47,12 +47,12 @@ ms.locfileid: "66076900"
     |Tipo de cuenta de servidor|Agregación|Descripción|  
     |-------------------------|-----------------|-----------------|  
     |**Estadística**|`None`|Proporción calculada de algo o recuento de algo que no se agrega a lo largo del tiempo. Este tipo de cuenta no convierte distintas monedas con reglas de conversión.|  
-    |**Asumir**|`LastNonEmpty`|Dinero o valor de cosas debidas en un momento dado. Este tipo de cuenta no se acumula a lo largo del tiempo, por lo que no se agrega de forma natural a lo largo del tiempo. Por ejemplo, la cantidad Year es el valor del último mes con datos. Este tipo de cuenta convierte monedas con la tasa del final del período.|  
+    |**Liability**|`LastNonEmpty`|Dinero o valor de cosas debidas en un momento dado. Este tipo de cuenta no se acumula a lo largo del tiempo, por lo que no se agrega de forma natural a lo largo del tiempo. Por ejemplo, la cantidad Year es el valor del último mes con datos. Este tipo de cuenta convierte monedas con la tasa del final del período.|  
     |**Recurso**|`LastNonEmpty`|Dinero o valor de cosas mantenidas en un momento dado. Este tipo de cuenta se acumula a lo largo del tiempo, por lo que no se agrega de forma natural a lo largo del tiempo. Por ejemplo, la cantidad Year es el valor del último mes con datos. Este tipo de cuenta convierte monedas con la tasa del final del período.|  
     |**Saldo**|`LastNonEmpty`|Recuento de algo en un momento dado. Este tipo de cuenta se acumula pero no se agrega de forma natural a lo largo del tiempo. Por ejemplo, la cantidad Year es el valor del último mes con datos.|  
-    |**Transmite**|`Sum`|Recuento incremental de algo. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo pero no convierte con reglas de conversión de monedas.|  
-    |**Gastos**|`Sum`|Dinero o valor de cosas gastadas. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo y convierte monedas con una tasa media.|  
-    |**Regular**|`Sum`|Dinero o valor de cosas recibidas. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo y convierte monedas con una tasa media.|  
+    |**Flujo**|`Sum`|Recuento incremental de algo. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo pero no convierte con reglas de conversión de monedas.|  
+    |**Expense**|`Sum`|Dinero o valor de cosas gastadas. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo y convierte monedas con una tasa media.|  
+    |**Income**|`Sum`|Dinero o valor de cosas recibidas. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo y convierte monedas con una tasa media.|  
   
     > [!NOTE]  
     >  De ser adecuado, se puede asignar más de un tipo de cuenta de la dimensión a un tipo de cuenta de servidor determinado.  

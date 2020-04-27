@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073036"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Ejecutar el Asistente para la implementación de Analysis Services
   Al utilizar el asistente [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para la implementación de para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementar un proyecto de, puede ejecutar el Asistente de las siguientes maneras:  
   
--   **Interactivamente** Cuando se ejecuta de forma interactiva [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , el Asistente para la implementación genera un script de implementación XML basado en los archivos de entrada, modificados de forma interactiva por los datos proporcionados por el usuario. El asistente solo aplica las modificaciones del usuario al script de implementación. El asistente no modifica los archivos de entrada. Para obtener más información acerca de los archivos de entrada, vea [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md).  
+-   **Interactivamente** Cuando se ejecuta interactivamente, el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera un script XML basado en los archivos de entrada tal y como han sido modificados interactivamente mediante la entrada del usuario. El asistente solo aplica las modificaciones del usuario al script de implementación. El asistente no modifica los archivos de entrada. Para obtener más información acerca de los archivos de entrada, vea [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md).  
   
 -   **Desde el símbolo del sistema** Cuando se ejecuta en el símbolo del sistema [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , el Asistente para la implementación genera un script de implementación de XML for Analysis (XMLA) basado en los modificadores que se usan para ejecutar el asistente. El asistente puede realizar cualquier de las siguientes tareas: solicitar la entrada de usuario y, en función de esa entrada, modificar los archivos de entrada, ejecutar una implementación desatendida en modo silencioso utilizando los archivos de entrada sin cambios o crear un script de implementación para utilizarlo posteriormente.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66073036"
   
 -   En el menú **Inicio**, elija **Todos los programas**, **Microsoft SQL Server**, **Analysis Services**y, a continuación, haga clic en **Asistente para la implementación**.  
   
-     O bien  
+     o bien  
   
 -   En la carpeta **proyectos** del [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto, haga doble clic en el * \<nombre del proyecto>* archivo. asdatabase.  
   

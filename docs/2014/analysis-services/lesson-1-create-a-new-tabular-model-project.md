@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079307"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lección 1: Crear un nuevo proyecto de modelo tabular
@@ -24,7 +24,7 @@ ms.locfileid: "66079307"
   
  Tiempo estimado para completar esta lección: **10 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema es la primera lección de un tutorial de creación de modelos tabulares. Para completar esta lección, debe tener la base de datos AdventureWorksDW instalada en una instancia de SQL Server. Para obtener más información, vea [Creación de modelos tabulares &#40;tutorial de Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Crear un nuevo proyecto de modelo tabular  
@@ -39,7 +39,7 @@ ms.locfileid: "66079307"
   
      De forma predeterminada, **Nombre de la solución** será el mismo que el nombre del proyecto, aunque puede escribir otro nombre para la solución.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>Descripción del entorno de creación de modelos tabulares con las herramientas de datos de SQL Server  
  Ahora que ha creado un nuevo proyecto de modelo tabular, dedique un momento a explorar el entorno de creación de modelos tabulares [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] de (Visual Studio 2010 o posterior).  
@@ -50,19 +50,19 @@ ms.locfileid: "66079307"
   
  En **Explorador de soluciones**, haga clic con el `AW Internet Sales Tabular Model` botón secundario en el proyecto y, a continuación, haga clic en **propiedades**. Aparece el cuadro de diálogo **Páginas de propiedades del Modelo tabular de ventas por Internet de AW** . Estas son las propiedades avanzadas del proyecto. Establecerá alguna de estas propiedades más adelante cuando esté preparado para implementar el modelo.  
   
- Ahora, echemos un vistazo a las propiedades del modelo. En el **Explorador de soluciones**, haga clic en **Model.bim**. En la ventana **Propiedades** verá ahora las propiedades del modelo, de las cuales la más importante es **Modo DirectQuery** . Esta propiedad especifica si el modelo se implementa o no en modo en memoria (desactivado) o en modo DirectQuery (activado). En este tutorial creará e implementará el modelo en modo en memoria.  
+ Ahora, echemos un vistazo a las propiedades del modelo. En el **Explorador de soluciones**, haga clic en **Model.bim**. En la ventana **Propiedades** verá ahora las propiedades del modelo, de las cuales la más importante es **Modo DirectQuery** . Esta propiedad especifica si el modelo se implementa o no en modo en memoria (desactivado) o en modo DirectQuery (activado). En este tutorial, creará e implementará el modelo en modo de almacenamiento en memoria.  
   
- Cuando crea un modelo nuevo, algunas propiedades del modelo se establecen automáticamente según la configuración del modelo de datos, que puede especificarse en Herramientas\cuadro de diálogo Opciones. Las propiedades Copia de seguridad de datos, Retención de área de trabajo y Servidor de área de trabajo especifican cómo y dónde se crea y se conserva en memoria la base de datos del área de trabajo (la base de datos de creación de modelos), y cómo y dónde se efectúa su copia de seguridad. Si es necesario, puede cambiar estas opciones más adelante, pero de momento dejaremos estas propiedades tal como están.  
+ Cuando crea un modelo nuevo, algunas propiedades del modelo se establecen automáticamente según la configuración del modelo de datos, que puede especificarse en Herramientas\cuadro de diálogo Opciones. Las propiedades Copia de seguridad de datos, Retención de área de trabajo y Servidor del área de trabajo especifican cómo y dónde se realiza una copia de seguridad, se conserva en memoria y se crea la base de datos del área de trabajo (la base de datos de creación del modelo). Si es necesario, puede cambiar estas opciones más adelante, pero de momento dejaremos estas propiedades tal como están.  
   
  Cuando instaló [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], se agregaron varios elementos de menú nuevos al entorno de Visual Studio. Echemos un vistazo a los nuevos elementos de menú que son específicos de la creación de modelos tabulares. Haga clic en el menú **Modelo**. Desde aquí, puede iniciar el Asistente para la importación de tablas, ver y editar conexiones existentes, actualizar los datos del área de trabajo, examinar el modelo en [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel con la característica Analizar de Excel, crear perspectivas y roles, seleccionar la vista del modelo y definir opciones de cálculo.  
   
- Haga clic en el menú **Tabla**. Aquí puede crear y administrar las relaciones entre tablas, crear y administrar tablas, especificar la configuración de las tablas de datos, crear particiones y editar las propiedades de tabla.  
+ Haga clic en el menú **Tabla** . Aquí puede crear y administrar las relaciones entre tablas, crear y administrar tablas, especificar la configuración de las tablas de datos, crear particiones y editar las propiedades de tabla.  
   
- Haga clic en el menú **Columna** . Aquí puede agregar y eliminar columnas de una tabla, inmovilizar columnas y especificar el criterio de ordenación. También puede utilizar la característica de autosuma para crear una medida de agregación estándar para una columna seleccionada. Hay otros botones de la barra de herramientas que ofrecen un acceso rápido a las características y los comandos más usados.  
+ Haga clic en el menú **Columna** . Aquí puede agregar y eliminar columnas de una tabla, inmovilizar columnas y especificar el criterio de ordenación. También puede utilizar la característica de autosuma para crear una medida de agregación estándar para una columna seleccionada. Otros botones de la barra de herramientas proporcionan acceso rápido a características y comandos usados con frecuencia.  
   
- Explore algunos de los cuadros de diálogo y ubicaciones de distintas características específicas de la creación de modelos tabulares. Aunque algunos elementos aún no estarán activos, puede hacerse una idea del entorno de creación de modelos tabulares.  
+ Examine algunos de los cuadros de diálogo y ubicaciones de las distintas características específicas de la creación de modelos tabulares. Aunque algunos elementos aún no estén activos, puede hacerse una idea de cómo es el entorno de creación de modelos tabulares.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 2: Agregar datos](lesson-2-add-data.md).  
   
   

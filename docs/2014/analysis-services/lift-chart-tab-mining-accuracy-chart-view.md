@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078100"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Pestaña Gráfico de elevación (vista Gráfico de precisión de minería de datos)
@@ -39,12 +39,12 @@ ms.locfileid: "66078100"
   
  El gráfico de beneficios no está disponible si se ha seleccionado una columna predecible continua en la pestaña **Asignación de columnas** .  
   
- **Copy**  
+ **Copiar**  
  Copia el gráfico en el Portapapeles.  
   
 ## <a name="see-also"></a>Consulte también  
  [Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)   
  [Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Pruebas y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070859"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Cálculo de predicción (Herramientas de análisis de tabla para Excel)
@@ -48,7 +48,7 @@ ms.locfileid: "66070859"
   
 5.  Haga clic en **elegir columnas para su uso**en el análisis.  
   
-6.  En el cuadro de diálogo **selección avanzada de columnas** , seleccione las columnas que tengan información útil. Quite las columnas que no sean relevantes para el análisis. Haga clic en **OK**.  
+6.  En el cuadro de diálogo **selección avanzada de columnas** , seleccione las columnas que tengan información útil. Quite las columnas que no sean relevantes para el análisis. Haga clic en **Aceptar**.  
   
      Para evitar sesgar los resultados, también conviene que quite las columnas con información duplicada. Por ejemplo, si tiene una columna de ingresos que contiene datos numéricos, y una columna de grupo de ingresos que contiene las etiquetas Alto, Medio y Bajo, no debe incluir ambas columnas en el mismo modelo. En su lugar, puede crear un modelo independiente para cada columna.  
   
@@ -101,8 +101,8 @@ ms.locfileid: "66070859"
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Single|71|  
-|Sexo|Mujer|13|  
-|Sexo|Hombre|0|  
+|Sexo|Female|13|  
+|Sexo|Male|0|  
   
  Puede interpretar estos factores de la siguiente manera:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070859"
 |Atributo|Value|Impacto relativo|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
-|Sexo|Hombre|0|  
+|Sexo|Male|0|  
 |Income|39050-71062|117|  
 |Children|0|157|  
 |Educación|Bachelors|22|  
@@ -175,8 +175,7 @@ ms.locfileid: "66070859"
 8.  Convierta la puntuación en un resultado de predicción utilizando los criterios impresos en la hoja inmediatamente después de la fila de **totales** .  
   
 ## <a name="related-tools"></a>Herramientas relacionadas  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el algoritmo de regresión logística de Microsoft para su uso en este tipo de análisis. Si ya está familiarizado con la regresión logística, puede crear fácilmente modelos de regresión logística mediante la opción **avanzadas** del cliente de minería de datos para Excel. Para obtener más información, vea [modelado avanzado &#40;complementos de minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obtener más información acerca de las opciones y los parámetros de los modelos de regresión logística, vea el tema "algoritmo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] regresión logística de Microsoft" en los libros en pantalla de.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el algoritmo de regresión logística de Microsoft para su uso en este tipo de análisis. Si ya está familiarizado con la regresión logística, puede crear fácilmente modelos de regresión logística mediante la opción **avanzadas** del cliente de minería de datos para Excel. Para obtener más información, vea [modelado avanzado &#40;complementos de minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obtener más información acerca de las opciones y los parámetros de los modelos de regresión logística, vea el tema "algoritmo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] regresión logística de Microsoft" en los libros en pantalla de.  
   
 ## <a name="see-also"></a>Consulte también  
  [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  

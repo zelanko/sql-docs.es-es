@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd8bb157d7b501d29230c91d87f148ae738ff45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074410"
 ---
 # <a name="fore_color-and-back_color-contents-mdx"></a>Contenido de FORE_COLOR y BACK_COLOR (MDX)
@@ -31,6 +31,6 @@ ms.locfileid: "66074410"
  El intervalo válido de un color RGB normal es de cero (0) a 16,777,215 (&H00FFFFFF). El byte alto de un número de este intervalo es siempre igual a 0; los 3 bytes más bajos, del byte menos significativo al más significativo, determinan la cantidad de rojo, verde y azul, respectivamente. Los componentes rojo, verde y azul se representan mediante un número comprendido entre 0 y 255 (&HFF).  
   
 ## <a name="see-also"></a>Consulte también  
- [Usar las propiedades de celda &#40;&#41;MDX](mdx-cell-properties-using-cell-properties.md)  
+ [Usar las propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)  
   
   

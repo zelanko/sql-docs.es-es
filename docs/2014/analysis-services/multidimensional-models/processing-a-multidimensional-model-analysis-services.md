@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073360"
 ---
 # <a name="multidimensional-model-object-processing"></a>Procesamiento de objetos del modelo multidimensional
@@ -43,7 +43,7 @@ ms.locfileid: "66073360"
   
  [Volver a procesar objetos](#bkmk_reproc)  
   
-##  <a name="bkmk_prereq"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Requisitos previos  
   
 -   El procesamiento requiere permisos administrativos en la instancia de Analysis Services. Si está procesando de forma interactiva desde [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], debe ser miembro del rol de administrador de servidor de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para el procesamiento que se ejecuta de forma desatendida, por ejemplo mediante un paquete de SSIS que se programa mediante el Agente SQL Server, la cuenta utilizada para ejecutar el paquete debe ser miembro del rol administrador del servidor. Para obtener más información acerca de cómo establecer permisos de administrador, vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
@@ -53,21 +53,21 @@ ms.locfileid: "66073360"
   
      Inicialmente, en las primeras fases del desarrollo del modelo, la implementación y la procesamiento se producen conjuntamente. Sin embargo, puede establecer opciones para procesar el modelo más adelante, después de implementar la solución. Para obtener más información sobre la implementación, vea [Implementar proyectos de Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
-##  <a name="bkmk_tool"></a>Elegir una herramienta o un enfoque  
+##  <a name="choosing-a-tool-or-approach"></a><a name="bkmk_tool"></a>Elegir una herramienta o un enfoque  
  Puede procesar objetos de forma interactiva mediante una aplicación cliente como [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], o una operación incluida en un script que se ejecuta como un trabajo del Agente SQL Server o un paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  La forma de procesar una base de datos varía considerablemente dependiendo de si el modelo se encuentra en desarrollo activo o en producción. Una vez implementado un modelo en un servidor de producción, el procesamiento debe controlarse rigurosamente para garantizar la integridad y la disponibilidad de los datos multidimensionales. Dado que los objetos son interdependientes, el procesamiento suele tener un efecto en cascada en el modelo cuando se procesan otros objetos o no se procesan en tándem. Si algunos objetos permanecen en estado no procesado, las consultas correspondientes a esos datos no se resolverán, interrumpiendo los informes o las aplicaciones que los usan. Cuando se desarrolla una estrategia para procesar una base de datos de producción, considere la posibilidad de usar el script o los paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] que ha depurado y probado para evitar errores de operador o la omisión de pasos.  
   
- Para obtener más información, vea [herramientas y enfoques para procesar &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md).  
+ Para obtener más información, vea [Herramientas y enfoques de procesamiento &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md).  
   
-##  <a name="bkmk_proc"></a>Procesar objetos  
+##  <a name="processing-objects"></a><a name="bkmk_proc"></a>Procesar objetos  
  El procesamiento afecta a los siguientes objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : grupos de medida, particiones, dimensiones, cubos, modelos de minería de datos, estructuras de minería de datos y bases de datos. Cuando un objeto contiene uno o más objetos, el procesamiento del objeto del nivel más alto provoca una cascada de procesamiento de todos los objetos de nivel inferior. Por ejemplo, un cubo suele contener uno o más grupos de medida (cada uno de los cuales contiene una o varias particiones) y dimensiones. El procesamiento de un cubo hace que se procesen todos los grupos de medida de un cubo y las dimensiones que lo constituyen y que actualmente están en estado no procesado. Para obtener más información sobre el procesamiento de objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Procesar objetos de Analysis Services](processing-analysis-services-objects.md).  
   
  Mientras el trabajo de procesamiento está en funcionamiento, se puede obtener acceso a los objetos afectados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para realizar consultas. El trabajo de procesamiento funciona dentro de una transacción y la transacción se puede confirmar o revertir. Si se produce un error en el trabajo de procesamiento, la transacción se revierte. Si el trabajo de procesamiento se realiza correctamente, se aplica un bloqueo exclusivo al objeto al confirmar los cambios, lo que significa que el objeto no está disponible temporalmente para consultas o procesamiento. Durante la fase de confirmación de la transacción, se pueden seguir enviando consultas al objeto, pero se pondrán en cola hasta que la confirmación se complete.  
   
  Durante un trabajo de procesamiento, si se procesa un objeto, y la manera en que se procesará, depende de la opción de procesamiento que se establece para dicho objeto. Para obtener más información sobre las opciones específicas de procesamiento que se pueden aplicar a cada objeto, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
-##  <a name="bkmk_reproc"></a>Volver a procesar objetos  
+##  <a name="reprocessing-objects"></a><a name="bkmk_reproc"></a>Volver a procesar objetos  
  Los cubos que contienen elementos sin procesar se deben volver a procesar antes de poder examinarlos. Los cubos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contienen grupos de medida y particiones que se deben procesar antes de que el cubo se pueda consultar. El procesamiento de un cubo hace que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procese las dimensiones del cubo que lo constituyen, si dichas dimensiones están en un estado sin procesar. Una vez procesado un objeto por primera vez, debe volver a procesarse parcial o completamente cuando se produzca una de estas situaciones:  
   
 -   La estructura del objeto se modifica, por ejemplo, quitando una columna en una tabla de hechos.  
@@ -80,6 +80,6 @@ ms.locfileid: "66073360"
   
 ## <a name="see-also"></a>Consulte también  
  [Arquitectura lógica &#40;Analysis Services de datos multidimensionales&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de base de datos &#40;Analysis Services de datos multidimensionales&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Objetos de base de datos &#40;Analysis Services - Datos multidimensionales&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

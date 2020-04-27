@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070047"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Guardar archivo como (Analysis Services - Datos multidimensionales)
@@ -38,6 +38,6 @@ ms.locfileid: "66070047"
   
 ## <a name="see-also"></a>Consulte también  
  [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Cuadro de diálogo copia de seguridad de base de datos &#40;Analysis Services-datos multidimensionales&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
+ [Cuadro de diálogo Copia de seguridad de la base de datos &#40;Analysis Services - Datos multidimensionales&#41;](backup-database-dialog-box-analysis-services-multidimensional-data.md)  
   
   

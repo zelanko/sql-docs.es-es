@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070516"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Panel de consulta (Vista Predicción de modelo de minería de datos)
   En el panel **Consulta** se muestran las instrucciones DMX (Extensiones de minería de datos) creadas por el Generador de consultas de predicción. Puede modificar las instrucciones y, a continuación, hacer clic en el botón **Cambiar a vista de resultado de consulta** para devolver los resultados. Si cambia a la vista **Diseño** , se perderán los cambios realizados a la instrucción.  
   
- **Para obtener más información:** [extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](/sql/dmx/dmx-statements-data-manipulation), [crear una consulta DMX en SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Para más información:** [Instrucciones de manipulación de datos de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/dmx-statements-data-manipulation), [Crear una consulta DMX en SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Opciones  
  **Cambiar a vista de resultado de consulta**  
@@ -40,6 +40,6 @@ ms.locfileid: "66070516"
 ## <a name="see-also"></a>Consulte también  
  [Interfaces de consulta de minería de datos](data-mining/data-mining-query-tools.md)   
  [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)   
- [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)  
+ [Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)  
   
   

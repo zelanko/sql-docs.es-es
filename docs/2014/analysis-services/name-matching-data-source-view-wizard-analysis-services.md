@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 866bdea710033a0cfa3bdadb34282c96c810d730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072395"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Coincidencia de nombres (Asistente para vistas del origen de datos) (Analysis Services)
@@ -34,8 +34,8 @@ ms.locfileid: "66072395"
   
 |Seleccionar|Para crear|  
 |------------|---------------|  
-|**Mismo nombre que la clave principal**|Una relación lógica con todas las tablas con un nombre de columna que coincida con el nombre de la columna de clave principal de la tabla seleccionada.|  
-|**Mismo nombre que el nombre de la tabla de destino**|Una relación lógica con todas las tablas con un nombre de columna que coincida con el nombre de la tabla seleccionada.|  
+|**Mismo nombre que el de la clave principal**|Una relación lógica con todas las tablas con un nombre de columna que coincida con el nombre de la columna de clave principal de la tabla seleccionada.|  
+|**Mismo nombre que el nombre de tabla de destino**|Una relación lógica con todas las tablas con un nombre de columna que coincida con el nombre de la tabla seleccionada.|  
 |**Nombre de la tabla de destino + nombre de la clave principal**|Una relación lógica con todas las tablas en las que el nombre de columna coincide con el nombre de la tabla seleccionada concatenada con el nombre de la columna de clave principal para la tabla seleccionada, por ese orden. Se ignorarán los caracteres que no sean alfanuméricos en la concatenación (por ejemplo, se harán coincidir "Product ID", "Product_ID" y "ProductID").|  
   
  **Descripción y muestra**  

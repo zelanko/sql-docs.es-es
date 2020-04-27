@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077419"
 ---
 # <a name="define-a-default-member"></a>Definir un miembro predeterminado
@@ -44,6 +44,6 @@ ms.locfileid: "66077419"
  Si los niveles de una jerarquía se agregan de forma natural, podrá definirse un miembro predeterminado para los atributos de la jerarquía con independencia de los demás atributos de la jerarquía. Por ejemplo, en la jerarquía Country-provincia-City, puede definir un miembro predeterminado para City, como [City]. [Montreal] sin definir el miembro predeterminado para el estado o para el país.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar el nivel de&#41; &#40;para las jerarquías de atributo](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar el nivel &#40;All&#41; para las jerarquías de atributo](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

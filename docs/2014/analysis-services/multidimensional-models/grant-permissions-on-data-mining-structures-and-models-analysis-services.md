@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074942"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Otorgar permisos para estructuras y modelos de minería de datos (Analysis Services)
@@ -49,11 +49,11 @@ ms.locfileid: "66074942"
 ## <a name="set-permissions-to-access-a-mining-model"></a>Establecer permisos para obtener acceso a un modelo de minería de datos  
  Para los modelos de minería de datos, los roles pueden tener permisos de **Lectura** o **Lectura y escritura** , así como permisos de **Obtención de detalles** y **Leer definición** que permiten ver y explorar los datos subyacentes.  
   
- **Nota:** Si habilita la obtención de detalles en la estructura de minería de datos y en el modelo de minería de datos, cualquier usuario que sea miembro de un rol que tenga permisos de obtención de detalles en el modelo de minería de datos y la estructura de minería de datos también podrá ver las columnas de la estructura de minería de datos, aunque dichas columnas no estén incluidas en el modelo de minería de datos. Por consiguiente, para proteger información confidencial, debería preparar la vista del origen de datos de forma que enmascare datos personales y solo permita el acceso para la obtención de detalles en la estructura de minería de datos cuando sea necesario.  
+ **Nota** : Si habilita la obtención de detalles en la estructura de minería de datos y el modelo de minería, cualquier usuario que sea miembro de un rol que tenga los permisos de obtención de detalles en el modelo de minería y la estructura de minería de datos también podrá ver las columnas en la estructura de minería de datos, aun cuando esas columnas no estén incluidas en el modelo de minería. Por consiguiente, para proteger información confidencial, debería preparar la vista del origen de datos de forma que enmascare datos personales y solo permita el acceso para la obtención de detalles en la estructura de minería de datos cuando sea necesario.  
   
  Para conceder permisos de lectura y escritura a un rol de base de datos, un usuario debe ser miembro del rol de servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o de un rol de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con permisos de Control total (Administrador).  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de, expanda **roles** para la base de datos adecuada en explorador de objetos y, a continuación, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
   
 2.  En el panel **Estructura de minería de datos** , busque el modelo de minería de datos en la lista **Modelos de minería de datos** y, después, seleccione **Lectura**, **Lectura y escritura**, **Obtención de detalles**o **Examinar** para ese modelo de minería de datos.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "66074942"
  [Conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Conceder permisos de cubo o de modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder acceso personalizado a los datos de celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

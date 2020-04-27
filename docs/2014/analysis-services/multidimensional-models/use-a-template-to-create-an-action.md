@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072687"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Usar una plantilla para crear una acción
@@ -32,6 +32,6 @@ ms.locfileid: "66072687"
 -   Rellene la información necesaria para completar la creación de la acción basándose en la plantilla.  
   
 ## <a name="see-also"></a>Consulte también  
- [Acciones &#40;Analysis Services de datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

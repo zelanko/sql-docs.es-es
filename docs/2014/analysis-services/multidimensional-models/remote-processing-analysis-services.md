@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073208"
 ---
 # <a name="remote-processing-analysis-services"></a>Procesamiento remoto (Analysis Services)
   Puede ejecutar el procesamiento programado o desatendido en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] remota, donde la solicitud de procesamiento se origina en un equipo, pero se ejecuta en otro equipo de la misma red.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
   
 -   Si ejecuta versiones diferentes de SQL Server en cada equipo, las bibliotecas de cliente deben coincidir con la versión de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que está procesando el modelo. Por ejemplo, si el procesamiento se ejecuta en una instancia de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , el equipo desde el que se origina la solicitud debe tener la biblioteca de cliente correspondiente para [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]. Vea [Proveedores de datos usados para conexiones de Analysis Services](../instances/data-providers-used-for-analysis-services-connections.md).  
   
@@ -31,8 +31,7 @@ ms.locfileid: "66073208"
 -   Resuelva los errores de procesamiento local existente antes de intentar ejecutar el procesamiento remoto. Compruebe que, si la solicitud de procesamiento es local, los datos se puedan recuperar correctamente desde el origen de datos relacional externo. Vea [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md) para obtener instrucciones sobre cómo especificar las credenciales que se han usado para recuperar los datos.  
   
 ## <a name="on-demand-remote-processing"></a>Procesamiento remoto a petición  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] acepta las solicitudes de procesamiento de las cuentas de usuario o de aplicación que tienen permisos de administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si es administrador, compruebe que puede conectarse a la instancia remota y procesar la base de datos manualmente a través de la conexión remota.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] acepta las solicitudes de procesamiento de las cuentas de usuario o de aplicación que tienen permisos de administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si es administrador, compruebe que puede conectarse a la instancia remota y procesar la base de datos manualmente a través de la conexión remota.  
   
 1.  En el equipo que se usará para programar el procesamiento, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y conéctese a la instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66073208"
   
 -   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [Los componentes de Agente SQL Server](../../ssms/agent/sql-server-agent.md#Components) sugieren roles fijos de servidor alternativos si no es posible conceder permisos **sysadmin** .  
+-   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) sugiere roles fijos de servidor alternativo si la concesión de permisos de **sysadmin** no es posible.  
   
  Una vez configurados los permisos de cuenta, continúe con estos pasos.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66073208"
   
 2.  De manera opcional, puede establecer propiedades de seguimiento para enviar el seguimiento a un archivo o una tabla de una base de datos.  
   
-#### <a name="run-the-job"></a>Ejecución del trabajo  
+#### <a name="run-the-job"></a>Ejecutar el trabajo  
   
 1.  En el equipo que se usa para ejecutar el trabajo, compruebe que el trabajo puede realizar la operación básica. En el Explorador de objetos, en el Agente SQL Server, amplíe **Trabajos**, haga clic con el botón derecho en el trabajo que acaba de crear y, después, en **Iniciar trabajo en el paso**. El trabajo se inicia inmediatamente. Puede supervisar el progreso en SQL Server Profiler.  
   

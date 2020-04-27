@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072159"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Propiedades de la partición (cuadro de diálogo, SSMS)
@@ -30,7 +30,7 @@ ms.locfileid: "66072159"
   
 |Página|Descripción|  
 |----------|-----------------|  
-|**Seleccione**|Use la página **Selección** para seleccionar la partición del grupo de medida para el que desea mostrar o modificar las propiedades. Para más información sobre esta página, vea [Selección &#40;cuadro de diálogo Propiedades de la partición, SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
+|**Selección**|Use la página **Selección** para seleccionar la partición del grupo de medida para el que desea mostrar o modificar las propiedades. Para más información sobre esta página, vea [Selección &#40;cuadro de diálogo Propiedades de la partición, SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
 |**General**|Use la página **General** para mostrar y modificar las propiedades generales de la partición seleccionada en la página **Selección** . Para más información sobre esta página, vea [General &#40;cuadro de diálogo Propiedades de la partición, SSMS&#41;](general-partition-properties-dialog-box-ssms.md).|  
 |**Almacenamiento en caché automático**|Use la página **Almacenamiento en caché automático** para mostrar y modificar la configuración de almacenamiento y almacenamiento en caché automático de la partición seleccionada en la página **Selección** . Para más información sobre esta página, vea [Almacenamiento en caché automático &#40;cuadro de diálogo Propiedades de la partición, SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md).|  
 |**Configuración de errores**|Use la página **Configuración de errores** para mostrar y modificar la configuración de errores para procesar la partición seleccionada en la página **Selección** . Para más información sobre esta página, vea [Configuración de errores para el procesamiento de cubos, particiones y dimensiones &#40;SSAS - multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  

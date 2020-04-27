@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077847"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadatos (pestaña Explorador, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -25,7 +25,7 @@ ms.locfileid: "66077847"
  También puede arrastrar los objetos y las jerarquías del panel **Metadatos** hasta el área de creación de consultas para crear nuevas consultas o exportar datos para examinarlos en Excel.  
   
 ## <a name="options"></a>Opciones  
- **Metadatos**  
+ **Metadata**  
  Muestra los metadatos disponibles en la vista actual. Puede cambiar la vista (es decir, la perspectiva o el cubo seleccionados actualmente) haciendo clic en el icono de cubo y usando después el cuadro de diálogo **Selección de cubo** para elegir un nuevo cubo o una nueva perspectiva. También puede hacer clic en **Grupo de medida**y seleccionar un nuevo grupo de medida en la lista desplegable para filtrar los objetos disponibles en el panel **Metadatos** .  
   
  Arrastre los elementos seleccionados hasta las áreas de filtro, datos, fila o columna del control PivotTable de [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 11.0 en el panel **Informe** para mostrar los datos del elemento seleccionado.  
@@ -34,7 +34,7 @@ ms.locfileid: "66077847"
  Muestra una lista de todas las funciones, operadores y constantes que se pueden usar para crear consultas o vistas de datos en el **Explorador**. Para utilizar una función, busque la que desea y arrástrela al área de consulta. La definición de sintaxis se agrega al texto  
   
 > [!WARNING]  
->  La lista **Función** no está disponible cuando se trabaja en la vista de diseño gráfica.  
+>   La lista **Función** no está disponible cuando se trabaja en la vista de diseño gráfica.  
   
  Cuando se trabaja con un modelo tabular, la lista de funciones contiene funciones MDX y funciones DAX. De lo contrario, la lista solo contiene funciones MDX. Un modelo multidimensional no puede usar funciones DAX directamente, aunque puede incluirse una expresión DAX como parte de una definición de objeto.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66077847"
 |------------|-----------------|  
 |**Agregar a consulta**|Haga clic para agregar el objeto seleccionado al panel inferior del área de creación de consultas.|  
 |**Agregar a filtro**|Haga clic para agregar la dimensión, el atributo, la jerarquía o el nivel seleccionados al área de filtro del **Explorador**.<br /><br /> Nota: Solo se habilitará esta opción si se selecciona una dimensión, un atributo, una jerarquía o un nivel.|  
-|**Copy**|Haga clic para agregar el elemento seleccionado al Portapapeles.<br /><br /> Nota: Esta opción copia el nombre completo del objeto.|  
+|**Copiar**|Haga clic para agregar el elemento seleccionado al Portapapeles.<br /><br /> Nota: Esta opción copia el nombre completo del objeto.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Barra de herramientas &#40;pestaña explorador, diseñador de cubos&#41; &#40;Analysis Services-datos multidimensionales&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

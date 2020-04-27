@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a0ca45681866e0ba96edaa81c21445a89f94275
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070702"
 ---
 # <a name="process-data-ssas-tabular"></a>Procesar datos (SSAS tabular)
@@ -26,7 +26,7 @@ ms.locfileid: "66070702"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Procesar manualmente los datos &#40;&#41;tabular de SSAS](manually-process-data-ssas-tabular.md)|Describe cómo procesar manualmente los datos del área de trabajo del modelo.|  
-|[Solucionar problemas de datos de proceso &#40;SSAS tabular&#41;](troubleshoot-process-data-ssas-tabular.md)|Describe cómo solucionar problemas de operaciones de proceso.|  
+|[Procesar manualmente los datos &#40;SSAS tabular&#41;](manually-process-data-ssas-tabular.md)|Describe cómo procesar manualmente los datos del área de trabajo del modelo.|  
+|[Solucionar problemas del procesamiento de datos &#40;SSAS tabular&#41;](troubleshoot-process-data-ssas-tabular.md)|Describe cómo solucionar problemas de operaciones de proceso.|  
   
   

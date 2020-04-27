@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071859"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurar las cuentas de servicio PowerPivot
@@ -32,17 +32,17 @@ ms.locfileid: "66071859"
   
  [Actualización de una contraseña caducada para la Aplicación de servicio PowerPivot](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
- [Cambiar la cuenta en la que se ejecuta cada servicio](#bkmk_newacct)  
+ [Cambio de la cuenta con la que se ejecuta cada servicio](#bkmk_newacct)  
   
  [Creación o modificación del grupo de aplicaciones para una aplicación de servicio PowerPivot](#bkmk_appPool)  
   
- [Requisitos y permisos de la cuenta](#requirements)  
+ [Requisitos de cuentas y permisos](#requirements)  
   
- [Solución de problemas: conceder permisos administrativos manualmente](#updatemanually)  
+ [Solucionar problemas: conceder los permisos administrativos manualmente](#updatemanually)  
   
- [Solución de problemas: resolver errores HTTP 503 debido a contraseñas caducadas para administración central o el servicio de aplicación Web de SharePoint Foundation](#expired)  
+ [Solución de problemas: resolver los errores HTTP 503 debidos a que las contraseñas han expirado para Administración central o para el servicio de aplicación web de SharePoint Foundation](#expired)  
   
-##  <a name="bkmk_passwordssas"></a>Actualizar una contraseña expirada para la instancia de SQL Server Analysis Services (PowerPivot)  
+##  <a name="update-an-expired-password-for-sql-server-analysis-services-powerpivot-instance"></a><a name="bkmk_passwordssas"></a>Actualizar una contraseña expirada para la instancia de SQL Server Analysis Services (PowerPivot)  
   
 1.  Haga clic en Inicio, seleccione **Herramientas administrativas**y, a continuación, **Servicios**. Haga doble clic en **SQL Server Analysis Services (PowerPivot)**. Haga clic en **Iniciar sesión**y escriba la nueva contraseña de la cuenta.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66071859"
   
 5.  Seleccione **Establecer contraseña de cuenta con un nuevo valor**. Todos los servicios que se ejecutan en la cuenta administrada utilizarán las credenciales actualizadas.  
   
-##  <a name="bkmk_passwordapp"></a>Actualizar una contraseña expirada para la aplicación de servicio PowerPivot  
+##  <a name="update-an-expired-password-for-the-powerpivot-service-application"></a><a name="bkmk_passwordapp"></a>Actualizar una contraseña expirada para la aplicación de servicio PowerPivot  
   
 1.  En Administración central, en la sección Seguridad, haga clic en **Configurar cuentas administradas**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66071859"
   
 4.  Seleccione **Establecer contraseña de cuenta con un nuevo valor**. Todos los servicios que se ejecutan en la cuenta administrada utilizarán las credenciales actualizadas.  
   
-##  <a name="bkmk_newacct"></a>Cambiar la cuenta en la que se ejecuta cada servicio  
+##  <a name="change-the-account-under-which-each-service-runs"></a><a name="bkmk_newacct"></a>Cambiar la cuenta en la que se ejecuta cada servicio  
   
 1.  En Administración central, en la sección Seguridad, haga clic en **Configurar cuentas de servicio**.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "66071859"
   
 5.  En **Seleccionar una cuenta para este servicio**, elija una cuenta administrada o cree una nueva. La cuenta debe ser una cuenta de usuario de dominio.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
-##  <a name="bkmk_appPool"></a>Crear o cambiar el grupo de aplicaciones para una aplicación de servicio PowerPivot  
+##  <a name="create-or-change-the-application-pool-for-a-powerpivot-service-application"></a><a name="bkmk_appPool"></a>Crear o cambiar el grupo de aplicaciones para una aplicación de servicio PowerPivot  
   
-1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Seleccione la aplicación de servicio PowerPivot, pero no haga clic en ella. Al hacer clic en el nombre de aplicación, se abre el Panel de administración de PowerPivot, que no proporciona un vínculo a la página de propiedades que especifica el grupo de aplicaciones.  Haga clic en el espacio en blanco vacío de la fila o en el nombre de tipo para seleccionar la aplicación de servicio PowerPivot.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66071859"
   
 4.  Seleccione **Crear un grupo de aplicaciones nuevo**. Proporcione un nombre para el grupo de aplicaciones y especifique una cuenta administrada para su identidad.  
   
-##  <a name="requirements"></a>Requisitos y permisos de la cuenta  
+##  <a name="account-requirements-and-permissions"></a><a name="requirements"></a>Requisitos y permisos de la cuenta  
  Al planear una implementación de PowerPivot para SharePoint, debe tener en cuenta las siguientes cuentas de servicio.  
   
 -   Cuenta de servicio de Analysis Services. Analysis Services procesa las consultas de PowerPivot y los trabajos de actualización de datos en la granja. Esta cuenta siempre se especifica durante el programa de instalación de SQL Server al instalar PowerPivot para SharePoint.  
@@ -115,7 +115,7 @@ ms.locfileid: "66071859"
 |Requisitos de permisos|Esta cuenta no necesita permisos de administrador del sistema local en el equipo. Sin embargo, debe tener los permisos de administrador del sistema de Analysis Services en el [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local que está instalado en el mismo equipo. El programa de instalación de SQL Server concede estos permisos automáticamente, o bien se conceden al establecer o cambiar la identidad del grupo de aplicaciones de servicio PowerPivot en Administración central.<br /><br /> Los permisos administrativos son necesarios para reenviar consultas a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. También se requieren para supervisar el estado, cerrar las sesiones inactivas y escuchar los eventos de seguimiento.<br /><br /> La cuenta debe tener permisos de conexión, lectura y escritura para la base de datos de aplicaciones del servicio PowerPivot. Estos permisos se conceden automáticamente cuando se crea la aplicación y se actualizan automáticamente al cambiar cuentas o contraseñas en Administración central.<br /><br /> La aplicación de servicio PowerPivot comprobará que un usuario de SharePoint está autorizado a ver los datos antes de recuperar el archivo, pero no suplanta al usuario. No hay ningún requisito de permiso para la suplantación.|  
 |Requisitos de escalamiento|Ninguno.|  
   
-##  <a name="updatemanually"></a>Solución de problemas: conceder permisos administrativos manualmente  
+##  <a name="troubleshooting-grant-administrative-permissions-manually"></a><a name="updatemanually"></a>Solución de problemas: conceder permisos administrativos manualmente  
  Los permisos administrativos no podrán actualizarse si ella persona que actualiza las credenciales no es administrador local en el equipo. Si ocurre esto, puede conceder los permisos administrativos manualmente. La manera más fácil para ello es ejecutar el trabajo de temporizador de configuración de PowerPivot en Administración central. Con esta solución, puede restablecer los permisos para todos los servidores de PowerPivot en la granja. Observe que este enfoque solo funcionará si el trabajo de temporizador de SharePoint se ejecuta como administrador de la granja y como administrador local en el equipo.  
   
 1.  Para Supervisión, haga clic en **Revisar definiciones de trabajo**.  
@@ -150,7 +150,7 @@ ms.locfileid: "66071859"
   
 11. Escriba el nombre de la cuenta que se use para el grupo de aplicaciones de servicio PowerPivot y haga clic en **Aceptar**.  
   
-##  <a name="expired"></a>Solución de problemas: resolver errores HTTP 503 debido a contraseñas caducadas para administración central o el servicio de aplicación Web de SharePoint Foundation  
+##  <a name="troubleshooting-resolve-http-503-errors-due-to-expired-passwords-for-central-administration-or-the-sharepoint-foundation-web-application-service"></a><a name="expired"></a>Solución de problemas: resolver errores HTTP 503 debido a contraseñas caducadas para administración central o el servicio de aplicación Web de SharePoint Foundation  
  Si el servicio Administración central o el servicio de aplicación web de SharePoint Foundation dejan de funcionar debido a que la cuenta se restablece o expira la contraseña, encontrará mensajes de error HTTP 503 "Servicio no disponible" al intentar abrir Administración central de SharePoint o un sitio de SharePoint. Siga estos pasos para volver a poner el servidor en línea. Cuando Administración central está disponible, puede continuar actualizando la información de la cuenta que ha expirado.  
   
 1.  En Herramientas administrativas, haga clic en **Administrador de Internet Information Services**.  

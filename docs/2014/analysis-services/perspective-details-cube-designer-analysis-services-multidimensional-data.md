@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072059"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalles de la perspectiva (pestaña Perspectivas, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -44,6 +44,6 @@ ms.locfileid: "66072059"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Nueva perspectiva**|Haga clic para crear una nueva perspectiva en el cubo seleccionado.|  
-|**Eliminar perspectiva**|Haga clic en esta opción para mostrar el cuadro de diálogo **Eliminar objetos** y eliminar la perspectiva seleccionada.|  
+|**Eliminar perspectiva**|Haga clic para mostrar el cuadro de diálogo **eliminar objetos** y eliminar la perspectiva seleccionada|  
   
   

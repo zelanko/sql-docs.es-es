@@ -14,18 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080333"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizar tareas administrativas de Analysis Services con SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite automatizar la ejecución de scripts DDL, tareas de procesamiento de cubos y de modelos de minería de datos, y tareas de consulta de minería de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datos. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede considerarse como una colección de tareas de flujo de control y de mantenimiento, que pueden vincularse para formar trabajos de procesamiento de datos secuenciales y paralelos.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite automatizar la ejecución de scripts DDL, tareas de procesamiento de cubos y de modelos de minería de datos, y tareas de consulta de minería de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede considerarse como una colección de tareas de flujo de control y de mantenimiento, que pueden vincularse para formar trabajos de procesamiento de datos secuenciales y paralelos.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se ha diseñado para realizar operaciones de limpieza de datos durante las tareas de procesamiento y para reunir datos procedentes de diferentes orígenes de datos. Cuando se trabaja con cubos y modelos de minería de datos, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede transformar datos no numéricos en datos numéricos y puede garantizar que esos valores de datos se encuentran dentro de los límites esperados, creando así datos limpios desde los cuales llenar dimensiones y tablas de hechos.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se ha diseñado para realizar operaciones de limpieza de datos durante las tareas de procesamiento y para reunir datos procedentes de diferentes orígenes de datos. Cuando se trabaja con cubos y modelos de minería de datos, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede transformar datos no numéricos en datos numéricos y puede garantizar que esos valores de datos se encuentran dentro de los límites esperados, creando así datos limpios desde los cuales llenar dimensiones y tablas de hechos.  
   
 ## <a name="integration-services-tasks"></a>Tareas de Integration Services  
  Existen dos elementos principales en cualquier tarea o trabajo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : elementos de flujo de control y elementos de flujo de datos. Los elementos de flujo de control definen el orden lógico de la progresión del trabajo aplicando restricciones de precedencia. Los elementos de flujo de datos se refieren a la conectividad entre la salida de un componente y la entrada del componente siguiente y a cualquier transformación de datos que puede llevarse a cabo en los datos entre ambas acciones. En cuanto a la decisión sobre el destino de los datos, las restricciones de precedencia contienen lógica que especifica qué componente recibe la salida. Las [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tareas que son más relevantes para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluyen la tarea ejecutar DDL, la tarea procesamiento de Analysis Services y la tarea consulta de minería de datos. Para cada una de estas tareas, se puede utilizar la tarea Enviar correo para enviar al administrador un mensaje de correo electrónico que contenga los resultados de la tarea.  

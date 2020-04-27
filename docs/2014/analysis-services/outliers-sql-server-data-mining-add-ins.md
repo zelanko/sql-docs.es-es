@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072135"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Valores atípicos (Complementos de minería de datos de SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "66072135"
   
 3.  En el cuadro de diálogo **Seleccionar columna** , seleccione una **sola** columna.  
   
-     Haga clic en **Next**.  
+     Haga clic en **Siguiente**.  
   
 4.  En el cuadro de diálogo **especificar umbrales** , revise la distribución de los datos.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66072135"
   
     -   Si la columna contiene datos numéricos, puede hacer clic en el botón **ver como discreto** o en el botón **ver como numérico** para alternar entre ver los valores en un gráfico de barras o en un gráfico de líneas.  
   
-5.  En el cuadro de diálogo **especificar umbrales** , elija el intervalo de datos que desea mantener escribiendo un valor mínimo y máximo, o arrastrando las barras deslizantes. Haga clic en **Next**.  
+5.  En el cuadro de diálogo **especificar umbrales** , elija el intervalo de datos que desea mantener escribiendo un valor mínimo y máximo, o arrastrando las barras deslizantes. Haga clic en **Siguiente**.  
   
 6.  En el cuadro de diálogo **control de valores atípicos** , especifique si desea eliminar o reemplazar los valores y haga clic en **siguiente**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66072135"
 ### <a name="related-options"></a>Opciones relacionadas  
  El asistente proporciona estas opciones:  
   
-|**Opciones**|**Comentario**|  
+|**Opciones**|**Comment**|  
 |-----------------|-----------------|  
 |**Seleccionar columna**|Solo se puede trabajar con una columna cada vez.|  
 |**Especificar el tratamiento de los umbrales**|Establezca un umbral usando **mínimo** para excluir los valores que se encuentran en menos filas que el valor de umbral.<br /><br /> Inicialmente, el valor **mínimo** es igual al valor con el menor número de filas y no se puede hacer que el mínimo sea menor que ese valor.|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080340"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologías de autenticación admitidas por Analysis Services
@@ -34,7 +34,7 @@ ms.locfileid: "66080340"
   
  Para obtener más información sobre BI y los flujos de autenticación de Analysis Services, vea [Autenticación y delegación de identidad de Microsoft BI](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
-##  <a name="bkmk_auth"></a>Descripción de las alternativas de autenticación  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a> Descripción de las alternativas de autenticación  
  La conexión a una base de datos de Analysis Services requiere una identidad de usuario o grupo de Windows y permisos asociados. La identidad puede ser un inicio de sesión de propósito general usado por alguien que necesite consultar un informe, pero lo más probable es que incluya la identidad de usuarios individuales.  
   
  A menudo, los modelos multidimensionales o tabulares tendrán diferentes niveles de acceso a los datos, por objeto o bien dentro de los propios datos, en función de quién realice la solicitud. Para satisfacer este requisito, puede usar la autenticación NTLM, Kerberos, EffectiveUserName o Básica. Todas estas técnicas ofrecen distintas posibilidades de pasar diferentes identidades de usuario con cada conexión. Sin embargo, la mayoría de estas opciones están sujetas a la limitación de un solo salto. Solo Kerberos con delegación permite que la identidad de usuario original circule a través de conexiones entre varios equipos hasta un almacén de datos back-end en un servidor remoto.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078456"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definir la granularidad de las dimensiones en un grupo de medida
@@ -60,8 +60,7 @@ ms.locfileid: "66078456"
   
 12. Elimine la medida **Calendar Quarter** del `Sales Quotas` grupo de medida.  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ha detectado la columna que subyace en la medida Calendar Quarter como columna que contiene medidas. No obstante, esta columna y la columna CalendarYear contienen los valores que más adelante en este tema utilizará para vincular el grupo de medida Sales Quotas con la dimensión Date.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ha detectado la columna que subyace en la medida Calendar Quarter como columna que contiene medidas. No obstante, esta columna y la columna CalendarYear contienen los valores que más adelante en este tema utilizará para vincular el grupo de medida Sales Quotas con la dimensión Date.  
   
 13. En el panel **medidas** , haga clic con el `Sales Quotas` botón secundario en el grupo de medida y, a continuación, haga clic en **nueva medida**.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66078456"
   
      ![Jerarquía Sales Territories en la lista de campos](../../2014/tutorials/media/l5-granularity-1a.png "Jerarquía Sales Territories en la lista de campos")  
   
-8.  En el filtro, haga clic en la casilla Seleccionar todo para desactivar todas las casillas y elija solo **North America**.  
+8.  En el filtro, haga clic en la casilla Seleccionar todo para desactivar todas las casillas y elija solo **Norteamérica**.  
   
      ![Panel Filtro para seleccionar North America](../../2014/tutorials/media/l5-granularity-1b.png "Panel Filtro para seleccionar North America")  
   
@@ -139,7 +138,7 @@ ms.locfileid: "66078456"
   
 9. Compruebe que la casilla **Materializar** está activada.  
   
-10. Haga clic en **OK**.  
+10. Haga clic en **Aceptar**.  
   
 11. Haga clic en la celda en la intersección de la dimensión **territorio de ventas** y el grupo de medida **sales Quotas 1** y, a continuación, haga clic en el botón Examinar (**...**). Se abre el cuadro de diálogo **definir relación** .  
   
@@ -153,7 +152,7 @@ ms.locfileid: "66078456"
   
 16. Compruebe que la casilla **Materializar** está activada.  
   
-17. Haga clic en **OK**.  
+17. Haga clic en **Aceptar**.  
   
 18. Elimine `Date` la dimensión de cubo.  
   
@@ -188,7 +187,7 @@ ms.locfileid: "66078456"
   
 3.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **Calendar Quarter**. Establezca el **Atributo relacionado** en **Fiscal Quarter**.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
      Observe que aparece un mensaje de advertencia que indica que `Date` la dimensión contiene una o varias relaciones de atributo redundantes que pueden impedir que se agreguen datos cuando se usa un atributo sin clave como atributo de granularidad.  
   
@@ -206,7 +205,7 @@ ms.locfileid: "66078456"
   
 4.  Arrastre la medida **Sales Amount Quota** hasta el área Valores.  
   
-5.  Arrastre la jerarquía de usuario **Territorios de ventas** hasta las Etiquetas de columna y, a continuación, filtre en **North America**.  
+5.  Arrastre la jerarquía de usuario **Territorios de ventas** hasta las Etiquetas de columna y, a continuación, filtre en **Norteamérica**.  
   
 6.  Arrastre la jerarquía de usuario **Date.FiscalDate** hasta Etiquetas de fila y, a continuación, haga clic en la flecha hacia abajo que aparece junto a **Etiquetas de fila** en la tabla dinámica y desactive todas las casillas excepto **FY 2008**para mostrar solamente el año fiscal 2008.  
   
@@ -221,11 +220,11 @@ ms.locfileid: "66078456"
      ![Grupo de medida Sales Quota con dimensiones correctas](../../2014/tutorials/media/l5-granularity-7.gif "Grupo de medida Sales Quota con dimensiones correctas")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 6: Definir cálculos](lesson-6-defining-calculations.md)  
+ [Lección 6: definir cálculos](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir una relación normal y propiedades de relación normal](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Trabajar con diagramas en el diseñador de vistas del origen de datos &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

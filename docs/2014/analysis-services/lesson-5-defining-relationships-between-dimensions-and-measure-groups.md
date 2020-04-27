@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078417"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lección 5: definir relaciones entre dimensiones y grupos de medida
@@ -23,7 +23,7 @@ ms.locfileid: "66078417"
  Para obtener más información, consulte [Relaciones de dimensiones](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 > [!NOTE]  
->  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que acompañan a este tutorial.  
+>  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
   
  Esta lección contiene las siguientes tareas:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66078417"
  En esta tarea, aprende a modificar la granularidad de una dimensión para un grupo de medida específico.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 6: Definir cálculos](lesson-6-defining-calculations.md)  
+ [Lección 6: definir cálculos](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Escenario de Analysis Services tutorial](analysis-services-tutorial-scenario.md)   

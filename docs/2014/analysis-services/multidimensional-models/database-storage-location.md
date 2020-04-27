@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075898"
 ---
 # <a name="database-storage-location"></a>Ubicación de almacenamiento de las bases de datos
@@ -33,9 +33,7 @@ ms.locfileid: "66075898"
 >  Se recomienda que establezca la ruta UNC para utilizar una red SAN, una red basada en iSCSI o un disco local adjunto. Cualquier ruta UNC a un recurso compartido de red o a una solución de almacenamiento remoto de latencia conduce a una instalación no compatible.  
   
 ### <a name="dbstoragelocation-compared-to-storagelocation"></a>Comparación entre DbStorageLocation y StorageLocation  
- 
-  `DbStorageLocation` especifica la carpeta en que residen todos los archivos de datos y de metadatos de la base de datos, mientras que `StorageLocation` especifica la carpeta en que residen una o varias particiones de un cubo. 
-  `StorageLocation` se puede establecer independientemente de `DbStorageLocation`. La decisión al respecto la toma el administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basándose en los resultados esperados, y muchas veces se usarán ambas propiedades de forma simultánea.  
+ `DbStorageLocation` especifica la carpeta en que residen todos los archivos de datos y de metadatos de la base de datos, mientras que `StorageLocation` especifica la carpeta en que residen una o varias particiones de un cubo. `StorageLocation` se puede establecer independientemente de `DbStorageLocation`. La decisión al respecto la toma el administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basándose en los resultados esperados, y muchas veces se usarán ambas propiedades de forma simultánea.  
   
 ## <a name="dbstoragelocation-usage"></a>Uso de DbStorageLocation  
  La `DbStorageLocation` propiedad de base de datos se usa como `Create` parte de un comando `Detach` / `Attach` de base de datos en una `Backup` / `Restore` secuencia de comandos de base de datos `Synchronize` , en una secuencia de comandos de base de datos o en un comando de base de datos. El cambio de la propiedad de base de datos `DbStorageLocation` se considera un cambio estructural en el objeto de base de datos. Esto significa que deben crearse de nuevo todos los metadatos y volverse a procesar los datos.  

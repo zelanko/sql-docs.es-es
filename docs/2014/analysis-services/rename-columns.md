@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070318"
 ---
 # <a name="lesson-3-rename-columns"></a>Lección 3: Cambiar el nombre de las columnas
@@ -25,18 +25,18 @@ ms.locfileid: "66070318"
   
  Tiempo estimado para completar esta lección: **20 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 2: Agregar datos](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Cambiar el nombre de las columnas  
   
 #### <a name="to-rename-columns"></a>Para cambiar el nombre de las columnas  
   
-1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer**.  
+1.  En el diseñador de modelos, haga clic en la pestaña de la tabla **Customer** .  
   
      Al hacer clic en una pestaña, la tabla se activa en la ventana del diseñador de modelos.  
   
-2.  Haga doble clic **** en el nombre de la columna `Customer  Id`CustomerKey, escriba y, a continuación, presione Entrar.  
+2.  Haga doble clic **CustomerKey** en el nombre de la columna `Customer  Id`CustomerKey, escriba y, a continuación, presione Entrar.  
   
     > [!TIP]  
     >  También puede cambiar el nombre de una columna en la propiedad **nombre de columna** en la ventana **propiedades** de la columna o en la vista de diagrama.  
@@ -48,8 +48,8 @@ ms.locfileid: "66070318"
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
-    |CustomerAlternateKey|Customer Alternate Id|  
-    |Nombre|Nombre de usuario|  
+    |CustomerAlternateKey|Id. alternativo del cliente|  
+    |Nombre|Nombre|  
     |MiddleName|Segundo nombre|  
     |Apellidos|Apellido|  
     |NameStyle|Estilo del nombre|  
@@ -73,14 +73,14 @@ ms.locfileid: "66070318"
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|Fecha|  
     |DayNumberOfWeek|Día de la semana|  
     |EnglishDayNameOfWeek|Nombre del día|  
     |DayNumberOfMonth|Día del mes|  
     |DayNumberOfYear|Día del año|  
     |WeekNumberOfYear|Número de semana del año|  
     |EnglishMonthName|Nombre del mes|  
-    |MonthNumberOfYear|Month|  
+    |MonthNumberOfYear|Mes|  
     |CalendarQuarter|Trimestre del calendario|  
     |CalendarYear|Año del calendario|  
     |CalendarSemester|Semestre del calendario|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070318"
     |FiscalYear|Año fiscal|  
     |FiscalSemester|Semestre fiscal|  
   
-     **Geográfico**  
+     **Geografía**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "66070318"
     |PostalCode|Código postal|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Producto**  
+     **Manuales**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
@@ -124,7 +124,7 @@ ms.locfileid: "66070318"
     |EnglishDescription|Descripción|  
     |StartDate|Fecha de inicio del producto|  
     |EndDate|Fecha de finalización del producto|  
-    |Status|Estado del producto|  
+    |Estado|Estado del producto|  
   
      **Categoría de productos**  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66070318"
     |EnglishProductSubcategoryName|Nombre de subcategoría del producto|  
     |ProductCategoryKey|Id. de categoría del producto|  
   
-     **Ventas por Internet**  
+     **Internet Sales**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
@@ -159,10 +159,10 @@ ms.locfileid: "66070318"
     |UnitPrice|Unit Price|  
     |ExtendedAmount|Extended Amount|  
     |UnitPriceDiscountPct|Porcentaje de descuento del precio por unidad|  
-    |DiscountAmount|Importe de descuento|  
+    |DiscountAmount|Discount Amount|  
     |ProductStandardCost|Product Standard Cost|  
     |TotalProductCost|Total Product Cost|  
-    |SalesAmount|Importe de ventas|  
+    |SalesAmount|Sales Amount|  
     |TaxAmt|Tax Amt|  
     |CarrierTrackingNumber|Número de seguimiento del transportista|  
     |CustomerPONumber|Número de orden de compra del cliente|  

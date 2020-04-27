@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070968"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Este libro contiene al menos una consulta que actualiza los datos externos.
@@ -39,7 +39,7 @@ ms.locfileid: "66070968"
   
  También puede cambiar la configuración de forma que la advertencia de la actualización ya no se produzca:  
   
-1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en **Aplicación de Servicios de Excel**.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66070968"
   
 5.  En Datos externos, desactive la casilla de **Advertencia en actualización de datos**.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
  O bien, puede crear una nueva ubicación de confianza para los sitios que contienen los libros PowerPivot y, a continuación, modificar la configuración solo para ese sitio. Para obtener más información, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   

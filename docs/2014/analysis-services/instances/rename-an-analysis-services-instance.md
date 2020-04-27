@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079623"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Cambiar el nombre de una instancia de Analysis Services
@@ -57,7 +57,7 @@ ms.locfileid: "66079623"
   
      Será necesario actualizar un inicio de sesión o los permisos de archivo de base de datos si ha utilizado una cuenta virtual para aprovisionar el servicio. Las cuentas virtuales se basan en el nombre de instancia, por lo que si cambia el nombre de la instancia, la cuenta virtual también se actualiza al mismo tiempo. Esto significa que los inicios de sesión o permisos anteriores creados para la instancia anterior ya no son válidos.  
   
-     En el ejemplo siguiente se propociona una ilustración. Supongamos que ha instalado un servidor en modo tabular como una instancia denominada "tabular" mediante la cuenta virtual predeterminada, lo que da lugar a la siguiente configuración:  
+     Esto se muestra en el ejemplo siguiente. Supongamos que ha instalado un servidor en modo tabular como una instancia denominada "tabular" mediante la cuenta virtual predeterminada, lo que da lugar a la siguiente configuración:  
   
     1.  Nombre de instancia \<= servidor> \tabular  
   

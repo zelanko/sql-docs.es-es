@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17cb2b326ed510a952249da6a73693b6be6ab252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073858"
 ---
 # <a name="mdx-scripting-fundamentals-analysis-services"></a>Aspectos básicos de scripting MDX (Analysis Services)
@@ -39,9 +39,9 @@ ms.locfileid: "66073858"
 |-----------|-----------------|  
 |[Script MDX básico &#40;MDX&#41;](the-basic-mdx-script-mdx.md)|Incluye información detallada sobre el script MDX básico, incluido el script MDX predeterminado proporcionado en cada cubo, así como información sobre el funcionamiento general de los scripts MDX en los cubos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Administrar el ámbito y el contexto &#40;MDX&#41;](managing-scope-and-context-mdx.md)|Describe cómo utilizar la instrucción [CALCULATE](/sql/mdx/mdx-scripting-calculate) , la instrucción [SCOPE](/sql/mdx/mdx-scripting-scope) y la función [This](/sql/mdx/this-mdx) para administrar el contexto y el ámbito de un script MDX.|  
-|[Usar variables y parámetros &#40;&#41;MDX](using-variables-and-parameters-mdx.md)|Describe cómo utilizar las variables y los parámetros en un script MDX.|  
-|[Control de errores &#40;&#41;MDX](error-handling-mdx.md)|Explica cómo administrar los errores en un script MDX.|  
-|[&#41;MDX &#40;MDX compatible](supported-mdx-mdx.md)|Proporciona una lista de operadores, instrucciones y funciones MDX admitidos en un script MDX.|  
+|[Usar variables y parámetros &#40;MDX&#41;](using-variables-and-parameters-mdx.md)|Describe cómo utilizar las variables y los parámetros en un script MDX.|  
+|[Control de errores &#40;MDX&#41;](error-handling-mdx.md)|Explica cómo administrar los errores en un script MDX.|  
+|[Compatibilidad con MDX &#40;MDX&#41;](supported-mdx-mdx.md)|Proporciona una lista de operadores, instrucciones y funciones MDX admitidos en un script MDX.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)  

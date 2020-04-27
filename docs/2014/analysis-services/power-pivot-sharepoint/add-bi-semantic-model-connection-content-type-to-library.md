@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4712aba656fa111400e41566964cbd9719f778db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071970"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>Agregar un tipo de contenido de conexión de modelo semántico de BI a una biblioteca (PowerPivot para SharePoint)
@@ -23,7 +23,7 @@ ms.locfileid: "66071970"
 > [!NOTE]  
 >  Si ya utiliza las bibliotecas de conexiones de datos de SharePoint, el tipo de contenido de conexión de modelo semántico de BI se agregará automáticamente a dicha plantilla de biblioteca. Puede omitir los pasos de esta sección si utiliza una biblioteca de conexiones de datos que ya le permita crear documentos de conexión de modelo semántico de BI.  
   
-##  <a name="bkmk_addtype"></a>Agregar el tipo de contenido a una biblioteca de documentos  
+##  <a name="add-the-content-type-to-a-document-library"></a><a name="bkmk_addtype"></a> Agregar el tipo de contenido a una biblioteca de documentos  
  Para agregar y configurar un tipo de contenido, debe tener al menos el permiso Administrar listas. Este permiso se integra en el nivel de permisos de diseño y superiores.  
   
  El sitio que contiene la biblioteca de documentos debe tener la activación de características para PowerPivot para SharePoint. Para obtener más información, vea [activar la integración de características de PowerPivot para colecciones de sitios en administración central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "66071970"
   
 5.  En Tipos de contenido, en la sección "¿Desea permitir la administración de tipos de contenido?" haga clic en **Sí**.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 7.  En la sección Tipos de contenido, haga clic en **Agregar a partir de tipos de contenido de sitio**. Si no ve esta página, regrese al sitio, haga clic en **Biblioteca** en Herramientas de biblioteca y, a continuación, haga clic en **Configuración de la biblioteca**.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66071970"
   
 10. En Tipos de contenido de sitio disponibles, haga clic en **Archivo de conexión de modelo semántico de BI**y, a continuación, haga clic en **Agregar** para mover el tipo de contenido seleccionado a la lista Tipos de contenido que agregar.  
   
-11. Haga clic en **OK**.  
+11. Haga clic en **Aceptar**.  
   
 12. Para comprobar que se ha agregado el tipo de contenido, vuelva a la biblioteca y haga clic en **Nuevo documento** en el área de documentos de la cinta de bibliotecas. En la lista Nuevos documentos, debería ver **Archivo de conexión de modelo semántico de BI** .  
   

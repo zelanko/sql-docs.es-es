@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079091"
 ---
 # <a name="defining-a-dimension"></a>Definir una dimensión
@@ -35,33 +35,33 @@ ms.locfileid: "66079091"
   
 5.  En la lista **Tabla principal** , seleccione **Fecha**.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  En la página **Seleccionar los atributos de la dimensión** , active las casillas situadas junto a los siguientes atributos:  
   
-    -   **Clave de fecha**  
+    -   **Date Key**  
   
-    -   **Clave alternativa de fecha completa**  
+    -   **Full Date Alternate Key**  
   
-    -   **Spanish month Name**  
+    -   **Spanish Month Name**  
   
-    -   **Trimestre natural**  
+    -   **Trimestre del calendario**  
   
     -   **Año natural**  
   
-    -   **Semestre natural**  
+    -   **Semestre del calendario**  
   
-8.  Cambie el valor de la columna **Tipo de atributo** del atributo **Full Date Alternate Key** de **Normal** a **Fecha**. Para ello, haga clic en **Normal** en la columna **Tipo de atributo** . A continuación, haga clic en la flecha para expandir las opciones. A continuación, **haga clic en** > fecha**calendario** > **fecha**. Haga clic en **OK**. Repita estos pasos para cambiar el tipo de atributo de los siguientes atributos como se indica a continuación:  
+8.  Cambie el valor de la columna **Tipo de atributo** del atributo **Full Date Alternate Key** de **Normal** a **Fecha**. Para ello, haga clic en **Normal** en la columna **Tipo de atributo** . A continuación, haga clic en la flecha para expandir las opciones. A continuación, **haga clic en** > fecha**calendario** > **fecha**. Haga clic en **Aceptar**. Repita estos pasos para cambiar el tipo de atributo de los siguientes atributos como se indica a continuación:  
   
-    -   **Spanish month Name** a **Month**  
+    -   **English Month Name** a **Month**  
   
-    -   **Calendario trimestral** a **trimestre**  
+    -   **Calendar Quarter** a **Quarter**  
   
-    -   **Natural año** a **año**  
+    -   **Calendar Year** a **Year**  
   
-    -   **Semestre de calendario** a **semestre**  
+    -   **Calendar Semester** a **Half Year**  
   
-9. Haga clic en **Next**.  
+9. Haga clic en **Siguiente**.  
   
 10. En la página **Finalización del asistente** , en el panel de vista previa, puede ver la dimensión **Fecha** y sus atributos.  
   

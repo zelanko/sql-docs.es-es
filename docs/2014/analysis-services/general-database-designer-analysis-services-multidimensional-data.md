@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081085"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>General (Diseñador de bases de datos) (Analysis Services - Datos multidimensionales)
-  Use la pestaña **General** para cambiar las propiedades de una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+  Use la pestaña **General** para cambiar las propiedades de una base de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Para mostrar la pestaña General**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66081085"
  Expanda la sección **Asignación de tipo de cuenta** para modificar la función de agregación predeterminada asociada con cada **tipo** de cuenta en la base de datos seleccionada.  
   
 > [!NOTE]  
->  Esta opción se aplica solo a los cubos en los que una o varias mediciones usan la función de agregación *ByAccount* .  
+>   Esta opción se aplica solo a los cubos en los que una o varias mediciones utilizan la función de agregación *ByAccount* .  
   
  Esta sección contiene una cuadrícula con las siguientes columnas:  
   

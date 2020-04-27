@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078839"
 ---
 # <a name="modifying-the-product-dimension"></a>Modificar la dimensión Product
@@ -71,7 +71,7 @@ ms.locfileid: "66078839"
   
      El campo NameColumn contiene ahora el texto **Product.EnglishProductName (WChar)**.  
   
-8.  En el ventana Propiedades, desplácese hacia arriba, **** haga clic en el campo de la `Product Name`propiedad nombre y, a continuación, escriba.  
+8.  En el ventana Propiedades, desplácese hacia arriba, **Name** haga clic en el campo de la `Product Name`propiedad nombre y, a continuación, escriba.  
   
 ## <a name="creating-a-hierarchy"></a>Creación de una jerarquía  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66078839"
   
 3.  Arrastre el `Product Name` atributo desde el panel **atributos** a la ** \<celda nuevo nivel>** del panel **jerarquías** , debajo del nivel **nombre del modelo** . (Cambió el nombre Product Key a Nombre del producto en la sección anterior).  
   
-4.  En el panel **jerarquías** de la pestaña **estructura de dimensión** , haga clic con el botón secundario en la barra de título de la jerarquía jerarquía, haga clic en **cambiar nombre**y, a continuación, escriba `Product Model Lines`. ****  
+4.  En el panel **jerarquías** de la pestaña **estructura de dimensión** , haga clic con el botón secundario en la barra de título de la jerarquía jerarquía, haga clic en **cambiar nombre**y, a continuación, escriba `Product Model Lines`. **Hierarchy**  
   
      El nombre de la jerarquía es ahora `Product Model Lines`.  
   
@@ -101,17 +101,17 @@ ms.locfileid: "66078839"
   
     -   **Días de fabricación**  
   
-    -   **Reordenar punto**  
+    -   **Reorder Point**  
   
-    -   **Nivel de seguridad de existencias**  
+    -   **Safety Stock Level**  
   
     -   **Tamaño**  
   
-    -   **Intervalo de tamaño**  
+    -   **Size Range**  
   
     -   **Estilo**  
   
-    -   **Media**  
+    -   **Peso**  
   
 2.  En el campo de la propiedad **AttributeHierarchyDisplayFolder** en el ventana propiedades `Stocking`, escriba.  
   
@@ -119,11 +119,11 @@ ms.locfileid: "66078839"
   
 3.  En el panel **Atributos** , seleccione los atributos siguientes:  
   
-    -   **Precio del distribuidor**  
+    -   **Dealer Price**  
   
-    -   **Precio de lista**  
+    -   **List Price**  
   
-    -   **Costo estándar**  
+    -   **Standard Cost**  
   
 4.  En la celda de la propiedad **AttributeHierarchyDisplayFolder** del ventana Propiedades, `Financial`escriba.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66078839"
   
      En la lista **Tipo de relación** , deje establecido el tipo de relación en **Flexible** , ya que las relaciones entre los miembros pueden cambiar con el tiempo. Por ejemplo, un modelo de producto podría moverse a otra línea de producto.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 5.  En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -184,6 +184,6 @@ ms.locfileid: "66078839"
 ## <a name="see-also"></a>Consulte también  
  [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Crear jerarquías definidas por el usuario](multidimensional-models/user-defined-hierarchies-create.md)   
- [Configurar el nivel de&#41; &#40;para las jerarquías de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Configurar el nivel &#40;All&#41; para las jerarquías de atributo](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081453"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Editar una conexión de origen de datos existente (SSAS tabular)
@@ -79,6 +79,6 @@ ms.locfileid: "66081453"
   
 ## <a name="see-also"></a>Consulte también  
  [Procesar datos &#40;SSAS tabular&#41;](process-data-ssas-tabular.md)   
- [Orígenes de datos admitidos &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

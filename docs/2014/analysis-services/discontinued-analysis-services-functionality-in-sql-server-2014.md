@@ -17,18 +17,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 616c39d03ff8081c209a80dcca912d831bcef1ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081675"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>Funcionalidad de Analysis Services no incluida en SQL Server 2014
   Este tema describe las características de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a>Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
-|Category|Característica desusada|Sustituta|  
+|Categoría|Característica desusada|Sustituta|  
 |--------------|------------------------|-----------------|  
 |Cubos locales|Propiedad de la cadena de conexión InsertInto|La sintaxis original de la cadena de conexión para rellenar cubos locales se sustituye por la instrucción Create Global Cube. Para obtener más información, vea [Create global Cube Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
 |Cubos locales|Propiedad de la cadena de conexión CreateCube|La sintaxis original de la cadena de conexión para rellenar cubos locales se sustituye por la instrucción Create Global Cube. Para obtener más información, vea [Create global Cube Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
@@ -41,6 +41,6 @@ ms.locfileid: "66081675"
  La biblioteca Objetos de ayuda para la toma de decisiones (DSO) que proporcionaba compatibilidad con las bases de datos de SQL Server 2000 Analysis Services también ha dejado de usarse y ya no forma parte de SQL Server.  
   
 ## <a name="see-also"></a>Consulte también  
- [Compatibilidad con versiones anteriores de Analysis Services](analysis-services-backward-compatibility.md)  
+ [Compatibilidad con versiones anteriores Analysis Services](analysis-services-backward-compatibility.md)  
   
   

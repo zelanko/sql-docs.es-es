@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074518"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Generar cálculos de celdas en MDX (MDX)
@@ -34,11 +34,11 @@ ms.locfileid: "66074518"
   
  En términos del ámbito de creación, las celdas calculadas similares a los conjuntos con nombre y los miembros calculados en dichas celdas calculadas pueden crearse temporalmente para la duración de una sesión o una sola consulta, o bien pueden estar disponibles de manera global como parte de un cubo:  
   
--   **Ámbito de consulta** Para crear una celda calculada que se defina como parte de una consulta MDX y, por lo tanto, cuyo ámbito esté limitado a la consulta, utilice la palabra clave WITH. A continuación puede utilizar la celda calculada en una instrucción MDX SELECT. Con este enfoque, la celda calculada creada con la palabra clave `WITH` puede cambiarse sin que ello tenga ningún impacto en la instrucción SELECT.  
+-   **Ámbito de consulta** Para crear una celda calculada que se defina como parte de una consulta MDX y cuyo ámbito, por lo tanto, esté limitado a la consulta, use la palabra clave WITH. A continuación puede utilizar la celda calculada en una instrucción MDX SELECT. Con este enfoque, la celda calculada creada con la palabra clave `WITH` puede cambiarse sin que ello tenga ningún impacto en la instrucción SELECT.  
   
      Para más información sobre el uso de la palabra clave WITH para crear miembros calculados, vea [Crear cálculos de celdas del ámbito de consulta &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   
--   **Ámbito de sesión** Para crear un miembro calculado cuyo ámbito sea más amplio que el contexto de la consulta, es decir, cuyo ámbito sea la duración de la sesión MDX, se utiliza la instrucción CREATE CELL CALCULAtion o ALTER CUBE.  
+-   **Ámbito de sesión** Para crear un miembro calculado cuyo ámbito sea más amplio que el contexto de la consulta (es decir, cuyo ámbito sea la duración de la sesión MDX) puede usar las instrucciones CREATE CELL CALCULATION o ALTER CUBE.  
   
      Para más información sobre el uso de las instrucciones CREATE CELL CALCULATION o ALTER CUBE para crear celdas calculadas en una sesión, vea [Crear celdas calculadas de ámbito de sesión](mdx-cell-calculations-session-scoped-calculated-cells.md).  
   

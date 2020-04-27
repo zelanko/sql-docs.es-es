@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074209"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propiedades de miembro intrínsecas (MDX)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expone propiedades intrínsecas de los miembros de dimensión que se pueden incluir en una consulta para devolver datos o metadatos adicionales para usarlos en una aplicación personalizada o como ayuda durante la investigación o la construcción de un modelo. Si utiliza las herramientas de cliente de SQL Server, puede ver las propiedades intrínsecas en SQL Server Management Studio (SSMS).  
   
  Las propiedades intrínsecas son `ID`, `KEY`, `KEYx` y `NAME`, que son las propiedades que exponen todos los miembros de cualquier nivel. También se puede devolver información de posición mediante propiedades como `LEVEL_NUMBER` o `PARENT_UNIQUE_NAME`, entre otras.  
@@ -102,7 +101,7 @@ ms.locfileid: "66074209"
 |`IS_DATAMEMBER`|Valor booleano que indica si el miembro es un miembro de datos.|  
 |`IS_PLACEHOLDERMEMBER`|Valor booleano que indica si el miembro es un marcador de posición.|  
 |`KEYx`|Clave del miembro, donde x es el valor ordinal (con base cero) de la clave. KEY0 está disponible para claves compuestas y no compuestas.<br /><br /> Si la clave no es compuesta, KEY0 equivale a `Key`.<br /><br /> Para las claves compuestas, el conjunto KEY0, KEY1, KEY2, etc. forma la clave compuesta. Puede hacer referencia a cualquiera de ellas por separado en una consulta para devolver esa parte de la clave compuesta. Por ejemplo, si se especifica KEY0, se devuelve la primera parte de la clave compuesta, si se especifica KEY1, se devuelve la parte siguiente de la clave compuesta, y así sucesivamente.<br /><br /> Tenga en cuenta que `KEYx` se puede utilizar tanto con contexto como sin contexto. Por esta razón, aparece en las dos listas.<br /><br /> Para obtener un ejemplo de cómo utilizar esta propiedad de miembro, vea [Una sencilla curiosidad de MDX: Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
-|`LCID`*x*|Traducción del título de miembro al valor hexadecimal del id. de configuración regional, donde *x* es el valor decimal del id. de configuración regional (por ejemplo, LCID1009 como inglés de Canadá). Disponible únicamente si la traducción tiene una columna de descripción enlazada al origen de datos.|  
+|`LCID` *x*|Traducción del título de miembro al valor hexadecimal del id. de configuración regional, donde *x* es el valor decimal del id. de configuración regional (por ejemplo, LCID1009 como inglés de Canadá). Disponible únicamente si la traducción tiene una columna de descripción enlazada al origen de datos.|  
 |`LEVEL_NUMBER`|Distancia al miembro desde la raíz de la jerarquía. El nivel raíz es cero.|  
 |`LEVEL_UNIQUE_NAME`|Nombre único del nivel al que pertenece el miembro. Los proveedores que generan nombres únicos por calificación tienen delimitados todos los componentes del nombre.|  
 |`MEMBER_CAPTION`|Etiqueta o descripción asociada al miembro. El título se utiliza principalmente para la visualización. Si no existe ningún título, la consulta devuelve `MEMBER_NAME`.|  
@@ -134,7 +133,7 @@ ms.locfileid: "66074209"
 ### <a name="example"></a>Ejemplo  
  En los ejemplos siguientes se muestran consultas MDX que devuelven propiedades intrínsecas.  
   
- **Ejemplo 1: usar propiedades intrínsecas contextuales en la consulta**  
+ **Ejemplo 1: usar propiedades intrínsecas contextuales en una consulta**  
   
  El ejemplo siguiente devuelve el identificador principal, la clave y el nombre de cada categoría de producto. Observe cómo las propiedades se exponen como medidas. Esto permite ver las propiedades en un conjunto de celdas al ejecutar la consulta, en lugar de usar el cuadro de diálogo Propiedades del miembro de SSMS. Puede ejecutar una consulta como esta para recuperar los metadatos de miembro de un cubo implementado previamente.  
   

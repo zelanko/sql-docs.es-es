@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077465"
 ---
 # <a name="add-a-standard-action"></a>Agregar una acción estándar
@@ -63,14 +63,14 @@ ms.locfileid: "66077465"
   
         |Opción|Descripción|  
         |------------|-----------------|  
-        |Interactive|La acción la desencadena la interacción del usuario.|  
+        |Interactive (Interactivo)|La acción la desencadena la interacción del usuario.|  
         |Batch|La acción se ejecuta como una operación por lotes.|  
         |Al abrir|La acción se ejecuta cuando un usuario abre el cubo.|  
   
     -   En **Aplicación**, escriba el nombre de la aplicación que está asociada a la acción. Por ejemplo, si crea una acción que transfiere a un usuario a un sitio web determinado, la aplicación asociada a la acción debería ser Microsoft Internet Explorer u otro explorador web.  
   
         > [!NOTE]  
-        >  Las acciones de propietario no se devuelven al servidor a menos que la aplicación cliente limite explícitamente el conjunto de filas de esquema para que devuelva únicamente las acciones que coinciden con el nombre especificado en **Aplicación**.  
+        >   Las acciones de propietario no se devuelven al servidor a menos que la aplicación cliente limite explícitamente el conjunto de filas de esquema para que devuelva únicamente las acciones que coinciden con el nombre especificado en **Aplicación**.  
   
     -   En **contenido**de la acción, si usa el tipo de dirección URL, incluya la dirección de Internet entre comillas,http://www.adventure-works.compor ejemplo, "".  
   

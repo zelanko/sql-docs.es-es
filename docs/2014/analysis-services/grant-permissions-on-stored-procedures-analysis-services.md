@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080730"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Conceder permisos para procedimientos almacenados (Analysis Services)
@@ -25,8 +25,7 @@ ms.locfileid: "66080730"
 ## <a name="security-context-for-stored-procedure-execution"></a>Contexto de seguridad para la ejecución del procedimiento almacenado  
  Cualquier usuarios puede llamar a un procedimiento almacenado. Dependiendo de la configuración del procedimiento almacenado, el procedimiento puede ejecutarse en el contexto del usuario que llama al procedimiento o en el contexto de un usuario anónimo. Puesto que un usuario anónimo no tiene contexto de seguridad, puede combinar esta capacidad con la configuración de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para permitir el acceso anónimo.  
   
- Después de que el usuario haya llamado a un procedimiento almacenado pero antes de que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] haya ejecutado el procedimiento almacenado, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] evalúa las acciones dentro del procedimiento almacenado. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] evalúa las acciones en un procedimiento almacenado en función de la intersección de los permisos concedidos al usuario y el conjunto de permisos utilizado para ejecutar el procedimiento. Si el procedimiento almacenado contiene alguna acción que el rol de la base de datos no puede realizar para el usuario, esa acción no se llevará a cabo.  
+ Después de que el usuario haya llamado a un procedimiento almacenado pero antes de que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] haya ejecutado el procedimiento almacenado, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] evalúa las acciones dentro del procedimiento almacenado. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] evalúa las acciones en un procedimiento almacenado en función de la intersección de los permisos concedidos al usuario y el conjunto de permisos utilizado para ejecutar el procedimiento. Si el procedimiento almacenado contiene alguna acción que el rol de la base de datos no puede realizar para el usuario, esa acción no se llevará a cabo.  
   
  A continuación se enumeran los conjuntos de permisos utilizados para ejecutar procedimientos almacenados:  
   

@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079199"
 ---
 # <a name="lesson-11-create-partitions"></a>Lección 11: Crear particiones
-  En esta lección, creará particiones para dividir la tabla Internet Sales en piezas lógicas más pequeñas que puedan procesarse (actualizarse) independientemente de otras particiones. De forma predeterminada, cada tabla que se incluye en el modelo tiene una partición que incluye todas las columnas y filas de la tabla. En la tabla Internet sales, queremos dividir los datos por año. una partición para cada uno de los cinco años de la tabla.  Así, cada partición se podrá procesar de manera independiente. Para obtener más información, consulte [Particiones &#40;SSAS tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
+  En esta lección, creará particiones para dividir la tabla Internet Sales en piezas lógicas más pequeñas que puedan procesarse (actualizarse) independientemente de otras particiones. De forma predeterminada, cada tabla que se incluye en el modelo tiene una partición que incluye todas las columnas y filas de la tabla. En la tabla Internet sales, queremos dividir los datos por año. una partición para cada uno de los cinco años de la tabla.  Cada partición se podrá procesar entonces independientemente. Para obtener más información, consulte [Particiones &#40;SSAS tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
   
  Tiempo estimado para completar esta lección: **15 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 10: Crear jerarquías](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Crear particiones  
@@ -150,9 +150,9 @@ ms.locfileid: "66079199"
   
      Si se le piden credenciales de suplantación, especifique el nombre de usuario y la contraseña de Windows que especificó en la lección 2, paso 6.  
   
-     A continuación, aparece el cuadro de diálogo **proceso de datos** y muestra los detalles del proceso de cada partición. Tenga en cuenta que se transfiere un número de filas diferente para cada partición. Esto se debe a que cada partición incluye solamente las filas del año especificado en la cláusula WHERE de la instrucción SQL. No hay datos para el año 2010.  
+     A continuación, aparece el cuadro de diálogo **proceso de datos** y muestra los detalles del proceso de cada partición. Observe que se ha transferido un número diferente de filas para cada partición. Esto es porque cada partición incluye solamente las filas del año especificado en la cláusula WHERE de la instrucción SQL. No hay datos para el año 2010.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 12: Crear roles](lesson-11-create-roles.md).  
   
   

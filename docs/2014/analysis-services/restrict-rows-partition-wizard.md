@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070212"
 ---
 # <a name="restrict-rows-partition-wizard"></a>Restringir filas (Asistente para particiones)
   Utilice la página **Restringir filas** para restringir las filas que se recuperarán de la tabla especificada y que se agregarán e incluirán en la partición.  
   
 > [!NOTE]  
->  Esta página solo aparece si se ha seleccionado una única tabla en la página **Especificar información de origen** .  
+>   Esta página solo aparece si se ha seleccionado una única tabla en la página **Especificar información de origen** .  
   
 > [!CAUTION]  
->  Si, en **Tablas disponibles** en la página **Especificar información de origen** , ha especificado una tabla que se usa en otra partición, debe proporcionar una consulta en la página **Restringir filas** ; de lo contrario, corre el riesgo de duplicar datos en el cubo.  
+>   Si, en **Tablas disponibles** en la página **Especificar información de origen** , ha especificado una tabla que se utiliza en otra partición, debe proporcionar una consulta en la página **Restringir filas** ; de lo contrario, corre el riesgo de duplicar datos en el cubo.  
   
 ## <a name="options"></a>Opciones  
  **Especificar una consulta para restringir las filas**  
@@ -40,10 +40,10 @@ ms.locfileid: "66070212"
 > [!IMPORTANT]  
 >  Si se especifica una cláusula WHERE, puede utilizarse un subconjunto de registros para esta partición. Esto es muy importante para evitar la duplicación de datos cuando varias particiones se basan en una única tabla de hechos.  
   
- **Casilla**  
+ **Comprobación**  
  Comprueba si la instrucción de **Consulta** es una instrucción SQL válida.  
   
 ## <a name="see-also"></a>Consulte también  
- [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

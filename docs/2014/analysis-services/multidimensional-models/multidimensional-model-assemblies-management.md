@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073524"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Administración de ensamblados de modelos multidimensionales
@@ -73,19 +73,18 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Por razones de compatibilidad con versiones anteriores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], se acepta también la siguiente sintaxis:  
   
- *AssemblyName*! *FullClassName*! *Nombreprocedimiento*(*argumento1*, *Argument2*,...)  
+ *nombreDeEnsamblado*!*nombreDeClaseCompleto*!*nombreDeProcedimiento*(*Argumento1*, *Argumento2*…)  
   
  Si una biblioteca COM admite varias interfaces, también se puede utilizar el Id. de interfaz para resolver el nombre de procedimiento, como se muestra a continuación:  
   
- *AssemblyName*! *InterfaceID*! *Nombreprocedimiento*(*argumento1*, *Argument2*,...)  
+ *nombreDeEnsamblado*!*idDeInterfaz*!*nombreDeProcedimiento*(*Argumento1*, *Argumento2*…)  
   
 ## <a name="security"></a>Seguridad  
  La seguridad de los ensamblados depende del modelo de seguridad de .NET Framework, que es un modelo de seguridad de acceso del código. .NET Framework admite un mecanismo de seguridad de acceso del código que presupone que el tiempo de ejecución puede hospedar código de plena confianza y código parcialmente de confianza. Los recursos protegidos por la seguridad de acceso del código de .NET Framework se suelen empaquetar mediante código administrado que solicita el permiso correspondiente antes de permitir el acceso al recurso. La solicitud de permiso solo se satisface si todos los que llaman (en el nivel de ensamblado) de la pila de llamadas tienen el permiso correspondiente para el recurso.  
   
  En el caso de los ensamblados, el permiso de ejecución se pasa con la propiedad `PermissionSet` del objeto `Assembly`. Los permisos que recibe el código administrado vienen determinados por la directiva de seguridad activa. Existen tres niveles de directiva activos en un entorno que no esté hospedado en[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : organización, equipo y usuario. La lista real de permisos que el código recibe queda determinada por la intersección de los permisos obtenidos por estos tres niveles.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un nivel de directiva de seguridad de nivel de host a la biblioteca CLR mientras lo hospeda; esta directiva es un nivel de directiva adicional por debajo de los tres niveles de directiva que siempre están activos. Esta directiva se establece para cada dominio de aplicación creado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un nivel de directiva de seguridad de nivel de host a la biblioteca CLR mientras lo hospeda; esta directiva es un nivel de directiva adicional por debajo de los tres niveles de directiva que siempre están activos. Esta directiva se establece para cada dominio de aplicación creado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  La directiva de nivel de host de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es una combinación de la directiva fija de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ensamblados de sistema y de la directiva especificada por el usuario para ensamblados de usuario. La parte especificada por el usuario de la directiva de host de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende del propietario de ensamblado que especifique uno de los tres depósitos de permisos para cada ensamblado:  
   
@@ -109,8 +108,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  La propiedad `ImpersonationMode` se puede establecer en `ImpersonateCurrentUser` o `ImpersonateAnonymous`. La configuración predeterminada, `ImpersonateCurrentUser`, ejecuta un ensamblado en la cuenta de inicio de sesión en red del usuario actual. Si se `ImpersonateAnonymous` usa la configuración, el contexto de ejecución corresponde a la cuenta de usuario de inicio de sesión de Windows IUSER_*ServerName* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
   
 ### <a name="application-domains"></a>Dominios de aplicación  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no ofrece dominios de aplicación directamente. Dado que un conjunto de ensamblados se ejecuta en el mismo dominio de aplicación, los dominios de aplicación podrán descubrirse entre ellos en el tiempo de ejecución mediante el espacio de nombres `System.Reflection` de .NET Framework o de alguna otra forma, y podrán realizar en ellos llamadas enlazadas en tiempo de ejecución. Tales llamadas estarán sujetas a las comprobaciones de permiso utilizadas por la seguridad basada en autorizaciones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no ofrece dominios de aplicación directamente. Dado que un conjunto de ensamblados se ejecuta en el mismo dominio de aplicación, los dominios de aplicación podrán descubrirse entre ellos en el tiempo de ejecución mediante el espacio de nombres `System.Reflection` de .NET Framework o de alguna otra forma, y podrán realizar en ellos llamadas enlazadas en tiempo de ejecución. Tales llamadas estarán sujetas a las comprobaciones de permiso utilizadas por la seguridad basada en autorizaciones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  No debe confiarse en la búsqueda de ensamblados en el mismo dominio de aplicación, porque la implementación define el límite del dominio de aplicación y los ensamblados que van en cada dominio.  
   

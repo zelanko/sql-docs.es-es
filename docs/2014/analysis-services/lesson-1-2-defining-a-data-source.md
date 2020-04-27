@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079336"
 ---
 # <a name="defining-a-data-source"></a>Definir un origen de datos
@@ -32,7 +32,7 @@ ms.locfileid: "66079336"
   
 4.  En el cuadro de diálogo **Administrador de conexiones** se definen las propiedades de conexión para el origen de datos. En el cuadro de lista **Proveedor** , compruebe que está seleccionada la opción **Native OLE DB\SQL Server Native Client 11.0** .  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]también admite otros proveedores, que se muestran en la lista de **proveedores** .  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] también admite otros proveedores, que se muestran en la lista **Proveedor** .  
   
 5.  En el cuadro de texto **nombre** del servidor `localhost`, escriba.  
   
@@ -44,8 +44,7 @@ ms.locfileid: "66079336"
   
 8.  Haga clic en **Aceptar** y luego en **Siguiente**.  
   
-9. En la página **Información de suplantación** del asistente, debe definir las credenciales de seguridad que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] debe usar para conectarse al origen de datos. La suplantación afecta a la cuenta de Windows usada para conectarse al origen de datos cuando está seleccionada la autenticación de Windows. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no admite la suplantación para el procesamiento de objetos OLAP. Seleccione **Usar cuenta de servicio**y haga clic en **Siguiente**.  
+9. En la página **Información de suplantación** del asistente, debe definir las credenciales de seguridad que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] debe usar para conectarse al origen de datos. La suplantación afecta a la cuenta de Windows usada para conectarse al origen de datos cuando está seleccionada la autenticación de Windows. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no admite la suplantación para el procesamiento de objetos OLAP. Seleccione **Usar cuenta de servicio**y haga clic en **Siguiente**.  
   
 10. En la página **Finalización del asistente** , acepte el nombre predeterminado **Adventure Works DW 2012**y, después, haga clic en **Finalizar** para crear el nuevo origen de datos.  
   

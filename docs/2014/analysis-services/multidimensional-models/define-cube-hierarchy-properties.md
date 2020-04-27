@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ace708cc4ee09295380b814bbf21f5a1c350974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075705"
 ---
 # <a name="define-cube-hierarchy-properties"></a>Definir propiedades de las jerarquías de cubos
@@ -27,9 +27,7 @@ ms.locfileid: "66075705"
 |--------------|-----------------|  
 |`Enabled`|Determina si está habilitada la jerarquía para la dimensión de cubo.|  
 |`HierarchyID`|Contiene el identificador único de la jerarquía.|  
-|`OptimizedState`|Determina el nivel de optimización que se aplica a la jerarquía. Esta propiedad puede tener los valores siguientes:<br /><br /> 
-  `FullyOptimized`: La instancia genera índices para la jerarquía, para mejorar el rendimiento de las consultas. Este es el valor predeterminado.<br /><br /> 
-  `NotOptimized`: La instancia no genera otros índices.|  
+|`OptimizedState`|Determina el nivel de optimización que se aplica a la jerarquía. Esta propiedad puede tener los valores siguientes:<br /><br /> `FullyOptimized`: La instancia genera índices para la jerarquía, para mejorar el rendimiento de las consultas. Este es el valor predeterminado.<br /><br /> `NotOptimized`: La instancia no genera otros índices.|  
 |`Visible`|Determina la visibilidad de la jerarquía de cubo. El valor predeterminado es `True`.|  
   
 ## <a name="see-also"></a>Consulte también  

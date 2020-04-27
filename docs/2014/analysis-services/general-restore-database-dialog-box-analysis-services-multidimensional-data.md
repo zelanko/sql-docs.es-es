@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080946"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>General (cuadro de diálogo Restaurar base de datos) (Analysis Services - Datos multidimensionales)
@@ -33,7 +33,7 @@ ms.locfileid: "66080946"
 -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho o en la carpeta **Bases de datos** de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o en una base de datos en el **Explorador de objetos**, haga clic en **Restaurar**y, luego, en **Seleccionar una página**, haga clic en **General**.  
   
 ## <a name="options"></a>Opciones  
- **Manuscrit**  
+ **Script**  
  Crea un script de restauración basado en las opciones seleccionadas en el cuadro de diálogo. El script de restauración se escribe en el lenguaje de scripting de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (ASSL).  
   
  Al hacer clic en el icono **Script** , se envía el script de restauración a una nueva ventana de consulta, de forma predeterminada.  
@@ -54,7 +54,7 @@ ms.locfileid: "66080946"
  **Del archivo de copia de seguridad**  
  Seleccione el archivo de copia de seguridad a partir del que se restaurará la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccionada.  
   
- **Browse**  
+ **Examinar**  
  Haga clic para mostrar el cuadro de diálogo **Buscar archivos de base de datos** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad que se usará. Para más información sobre el cuadro de diálogo **Buscar archivos de base de datos**, vea [Cuadro de diálogo Buscar archivos de la base de datos &#40;Analysis Services - Datos multidimensionales&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Permitir sobrescritura de base de datos**  

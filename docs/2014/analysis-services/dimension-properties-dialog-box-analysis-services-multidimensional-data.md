@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49513fd41e3167adcc9d39a8e680dd25bccb24a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081836"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Propiedades de la dimensión (Analysis Services - Datos multidimensionales)
@@ -29,9 +29,9 @@ ms.locfileid: "66081836"
 |Término|Definición|  
 |----------|----------------|  
 |**Nombre**|Muestra el nombre de la dimensión.|  
-|**SESIÓN**|Muestra el identificador de la dimensión.|  
+|**Id**|Muestra el identificador de la dimensión.|  
 |**Descripción**|Muestra la descripción de la dimensión.|  
-|**Crear marca de tiempo**|Muestra la fecha y hora en que se creó la dimensión.|  
+|**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la dimensión.|  
 |**Última actualización de esquema**|Muestra la fecha y hora en que se actualizaron por última vez los metadatos de la dimensión.|  
 |**Modo de procesamiento**|Seleccione el modo de procesamiento que usará la dimensión. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>.|  
 |**State**|Muestra el estado de procesamiento de la dimensión. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
@@ -40,6 +40,6 @@ ms.locfileid: "66081836"
   
 ## <a name="see-also"></a>Consulte también  
  [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

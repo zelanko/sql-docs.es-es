@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081780"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Diseñador de dimensiones (Analysis Services - Datos multidimensionales)
@@ -28,7 +28,7 @@ ms.locfileid: "66081780"
   
     -   Haga clic con el botón derecho en una dimensión y, después, haga clic en **Abrir** o en **Diseñador de vistas**.  
   
-         O bien  
+         o bien  
   
     -   Haga doble clic en una dimensión.  
   

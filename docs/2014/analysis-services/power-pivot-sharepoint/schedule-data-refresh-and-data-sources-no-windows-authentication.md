@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071155"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualización de datos programada y orígenes de datos no compatibles con la Autenticación de Windows (PowerPivot para SharePoint)
@@ -24,19 +24,19 @@ ms.locfileid: "66071155"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Información general:** Cree dos aplicaciones de destino de almacenamiento seguro. Configure la primera aplicación de destino (PowerPivotDataRefresh) para usar las credenciales de Windows. Configure la segunda aplicación de destino con las credenciales para un origen de datos que no admita la autenticación de Windows, por ejemplo, una base de datos Oracle. La segunda aplicación de destino también usa la primera aplicación de destino para la cuenta de actualización de datos desatendida.  
+ **Información general:** Cree dos aplicaciones de destino de almacenamiento seguro Configure la primera aplicación de destino (PowerPivotDataRefresh) para usar las credenciales de Windows. Configure la segunda aplicación de destino con las credenciales para un origen de datos que no admita la autenticación de Windows, por ejemplo, una base de datos Oracle. La segunda aplicación de destino también usa la primera aplicación de destino para la cuenta de actualización de datos desatendida.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** un identificador de aplicación de destino de almacén seguro que se establece con la autenticación de Windows.  
+-   **(1) PowerPivotDatarefresh:** Un identificador de aplicación de destino de almacén seguro que se establece con la autenticación de Windows.  
   
--   **(2) OracleAuthentication:** un identificador de aplicación de destino de almacén seguro que se establece con las credenciales de Oracle.  
+-   **(2) OracleAuthentication:** Un identificador de aplicación de destino de almacén seguro que se establece con las credenciales de Oracle.  
   
 -   **(3)** la aplicación de servicio PowerPivot está configurada para usar la aplicación de destino "PowerPivotDataRefresh" para la **cuenta de actualización de datos desatendida**.  
   
--   **(4)** el libro de PowerPivot usa datos de Oracle. Los valores de actualización del libro especifican la conexión de origen de datos que usa la aplicación de destino **(2)** para las credenciales.  
+-   **(4)** El libro de PowerPivot usa datos de Oracle. Los valores de actualización del libro especifican la conexión de origen de datos que usa la aplicación de destino **(2)** para las credenciales.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
   
 -   Existe una aplicación de servicio PowerPivot.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66071155"
   
 ## <a name="to-create-a-target-application-id-that-uses-windows-authentication"></a>Para crear un identificador de aplicación de destino que use la autenticación de Windows  
   
-1.  En Administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en el nombre de la aplicación de servicio de almacenamiento seguro.  
   
@@ -60,19 +60,19 @@ ms.locfileid: "66071155"
   
     -   **Correo electrónico de contacto:** ?  
   
-    -   **Tipo de aplicación de destino:** Agrupamiento.  
+    -   **Tipo de aplicación de destino:** Grupo.  
   
-    -   **URL de la página de aplicación de destino:** Ninguna.  
+    -   **Dirección URL de la página de la aplicación de destino:** Ninguna.  
   
-5.  Haga clic en **Next**.  
+5.  Haga clic en **Siguiente**.  
   
 6.  En la página Credenciales, deje los dos valores predeterminados de nombre de campo y tipos de campo para **Nombre de usuario Windows** y **Contraseña de Windows**.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 8.  En la página **Configuración de pertenencia** , agregue al menos un **Administrador de aplicación de destino** y, a continuación, agregue los miembros que necesiten acceso a la aplicación de destino.  
   
-9. Haga clic en **OK**.  
+9. Haga clic en **Aceptar**.  
   
 10. El nuevo identificador de aplicación de destino se agrega a la lista. Seleccione el identificador de la aplicación de destino y haga clic en **establecer credenciales**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66071155"
   
 ## <a name="to-create-a-target-application-id-that-uses-oracle-credentials"></a>Para crear un identificador de aplicación de destino que use las credenciales de Oracle  
   
-1.  En Administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en el nombre de la aplicación de servicio de almacenamiento seguro.  
   
@@ -88,27 +88,27 @@ ms.locfileid: "66071155"
   
 4.  En la página **Crear nueva aplicación de destino de almacenamiento seguro** , configure los valores siguientes:  
   
-    -   **Identificador de la aplicación de destino:** OracleAuthentication.  
+    -   **Identificador de aplicación de destino:** OracleAuthentication.  
   
     -   **Nombre para mostrar:** OracleAuthentication.  
   
     -   **Correo electrónico de contacto:** ?  
   
-    -   **Tipo de aplicación de destino:** Agrupamiento.  
+    -   **Tipo de aplicación de destino:** Grupo.  
   
-    -   **URL de la página de aplicación de destino:** Ninguna.  
+    -   **Dirección URL de la página de la aplicación de destino:** Ninguna.  
   
-5.  Haga clic en **Next**.  
+5.  Haga clic en **Siguiente**.  
   
 6.  En la página **credenciales** , cambie el primer nombre de `Oracle User ID` campo a y cambie el tipo `User Name`de **campo** a.  
   
      Cambie el segundo nombre de campo `Oracle Password` a y el **tipo** de `Password`campo a.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 8.  En la página **Configuración de pertenencia** , agregue al menos un **Administrador de aplicación de destino** y, a continuación, agregue los miembros que necesiten acceso a la aplicación de destino.  
   
-9. Haga clic en **OK**.  
+9. Haga clic en **Aceptar**.  
   
 10. El nuevo identificador de aplicación de destino se agrega a la lista. Seleccione el identificador de la aplicación de destino y haga clic en **establecer credenciales**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66071155"
   
 10. En el cuadro **ID.:** , `OracleAuthentication`escriba.  
   
-11. Haga clic en **OK**.  
+11. Haga clic en **Aceptar**.  
   
      Si se muestra un mensaje de error similar al siguiente: `The provided Secure Store target application is either incorrectly configured or does not exist`.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66071155"
   
 ## <a name="more-information"></a>Más información  
   
--   [Configure el servicio de almacenamiento seguro en SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
+-   [Configurar el Servicio de almacenamiento seguro de SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
 -   Vea la sección "actualización de datos programada" de [actualización de datos PowerPivot con SharePoint 2013 y SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   

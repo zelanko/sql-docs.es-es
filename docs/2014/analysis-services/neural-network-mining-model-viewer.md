@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072319"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Red neuronal (Visor de modelos de minería de datos)
   Utilice el **Visor de redes neuronales** para explorar modelos de minería de datos basados en el algoritmo de red neuronal de [!INCLUDE[msCoName](../includes/msconame-md.md)] o en el algoritmo de regresión logística de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
- **Para obtener más información: algoritmo de** [red neuronal](data-mining/microsoft-neural-network-algorithm.md)de Microsoft, [algoritmo de regresión logística](data-mining/microsoft-logistic-regression-algorithm.md)de Microsoft,[examinar un modelo usando el visor de redes neuronal de Microsoft](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **Para obtener más información:** [Algoritmo de red neuronal de Microsoft](data-mining/microsoft-neural-network-algorithm.md), [Algoritmo de regresión logística de Microsoft](data-mining/microsoft-logistic-regression-algorithm.md),[Examinar un modelo usando el Visor de redes neuronales de Microsoft](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -31,7 +31,7 @@ ms.locfileid: "66072319"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos que desea ver de los modelos de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado o el **Visor de árbol de contenido genérico de Microsoft**. También puede utilizar visores de complemento si están disponibles.  
   
  **Entrada**  
@@ -42,7 +42,7 @@ ms.locfileid: "66072319"
 |**Atributo**|Elija un atributo de entrada en la lista. Si deja la selección como predeterminada, ** \<todos los>**, el gráfico muestra una lista de todos los atributos de entrada, clasificados por su impacto en el atributo de predicción.|  
 |**Valor**|Elija un valor para el atributo de entrada.|  
   
- **Output**  
+ **Salida**  
  Utilice estos controles para elegir un atributo y valor de predicción para analizar y comparar en el gráfico de barras. Si no cambia las selecciones, el gráfico de barras compara los dos estados del resultado superiores.  
   
 |Value|Descripción|  

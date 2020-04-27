@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070943"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>No pueden actualizar los datos de una conexión de datos del libro. Vuelva a intentarlo o póngase en contacto con el administrador del sistema. No se pudieron actualizar las siguientes conexiones: datos PowerPivot
@@ -32,11 +32,11 @@ ms.locfileid: "66070943"
 ## <a name="explanation-and-resolution"></a>Explicación y resolución  
  Excel Services no puede conectarse con los datos PowerPivot o cargarlos. Este error puede producirse por alguna de las condiciones siguientes:  
   
- **Escenario 1: el servicio no se ha iniciado**  
+ **Escenario 1: el servicio no se inicia**  
   
  No se ha iniciado la instancia de SQL Server Analysis Services (PowerPivot). Una contraseña caducada hará que el servicio deje de funcionar. Para obtener más información acerca de cómo cambiar la contraseña, vea [configurar las cuentas de servicio PowerPivot](configure-power-pivot-service-accounts.md) e [iniciar o detener un servidor PowerPivot para SharePoint](start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
- **Escenario 2A: abrir un libro de la versión anterior n el servidor**  
+ **Escenario 2a: abrir un libro de la versión anterior en el servidor**  
   
  El libro que intenta abrir podría haberse creado en la versión SQL Server 2008 R2 de PowerPivot para Excel. Probablemente, el proveedor de datos de Analysis Services que se especifica en la cadena de conexión de datos no está presente en el equipo que controla la solicitud.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66070943"
   
  [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
- **Escenario 2B: Excel Services se está ejecutando en un servidor de aplicaciones que tiene una versión incorrecta de las bibliotecas de cliente**  
+ **Escenario 2b: Excel Services se ejecuta en un servidor de aplicaciones que tiene una versión incorrecta de las bibliotecas de cliente**  
   
  De forma predeterminada, SharePoint Server 2010 instala la versión SQL Server 2008 del proveedor OLE DB de Analysis Services en los servidores de aplicaciones que ejecutan Excel Services. En una granja de servidores que admite el acceso a datos PowerPivot, todos los servidores físicos que ejecutan aplicaciones que solicitan datos de PowerPivot, por ejemplo, Excel Services y PowerPivot para SharePoint, deben usar una versión posterior del proveedor de datos.  
   

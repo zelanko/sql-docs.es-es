@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077029"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]incluye copias de seguridad y restauración para poder recuperar una base de datos y sus objetos de un momento determinado. Copias de seguridad y restauración también es una técnica válida para migrar bases de datos a servidores actualizados, mover bases de datos entre servidores o implementar una base de datos en un servidor de producción. Para la recuperación de datos, si aún no tiene un plan de copias de seguridad y los datos son importantes, debe diseñar e implementar un plan lo antes posible.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye copias de seguridad y restauración para poder recuperar una base de datos y sus objetos de un momento determinado. Copias de seguridad y restauración también es una técnica válida para migrar bases de datos a servidores actualizados, mover bases de datos entre servidores o implementar una base de datos en un servidor de producción. Para la recuperación de datos, si aún no tiene un plan de copias de seguridad y los datos son importantes, debe diseñar e implementar un plan lo antes posible.  
   
  Los comandos de copias de seguridad y restauración se realizan en una base de datos de Analysis Services implementada. Para los proyectos y soluciones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], debe usar el control de código fuente para asegurarse de que puede recuperar las versiones específicas de los archivos de origen y crear un plan de recuperación de datos del repositorio del sistema de control de código fuente utilizado.  
   
@@ -45,14 +45,14 @@ ms.locfileid: "66077029"
   
 -   [Restaurar una base de datos de Analysis Services](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Requisitos previos  
  Debe tener permisos administrativos en la instancia de Analysis Services o permisos de Control total (administrador) en la base de datos de la que se hace la copia de seguridad.  
   
  La ubicación de restauración debe ser una instancia de Analysis Services que sea de la misma versión o de una versión más reciente, por ejemplo, la instancia a partir de la que se realizó la copia de seguridad. Aunque no puede restaurar una base de datos desde una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a una versión anterior de Analysis Services, una práctica habitual es restaurar una base de datos de la versión anterior, como SQL Server 2012, en una instancia más reciente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  La ubicación de restauración debe ser el mismo tipo de servidor. Las bases de datos tabulares se pueden restaurar solo en Analysis Services ejecutándose en modo tabular. Bases de datos multidimensionales requieren una instancia en modo MDX.  
   
-##  <a name="bkmk_prep"></a>Preparación para la copia de seguridad  
+##  <a name="preparing-for-backup"></a><a name="bkmk_prep"></a>Preparación para la copia de seguridad  
  Use la siguiente lista de comprobación para preparar la copia de seguridad:  
   
 -   Compruebe la ubicación en la que se almacenará el archivo de copia de seguridad. Si usa una ubicación remota, debe especificarla como carpeta UNC. Compruebe que puede tener acceso a la ruta UNC.  
@@ -63,12 +63,11 @@ ms.locfileid: "66077029"
   
 -   Compruebe si hay archivos existentes que tengan el mismo nombre. Si ya existe un archivo con el mismo nombre, se producirá un error en la copia de seguridad a menos que especifique opciones para sobrescribir el archivo.  
   
-##  <a name="bkmk_cube"></a>Copia de seguridad de una base de datos multidimensional o tabular  
- Los administradores pueden hacer copias de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un único archivo de copia de seguridad de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), independientemente del tamaño de la base de datos. Para obtener instrucciones paso a paso, vea en TechMantra [How to Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) (Cómo hacer una copia de seguridad de una base de datos de Analysis Services) y [Automate Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)(Automatizar la copia de seguridad de una base de datos de Analysis Services).  
+##  <a name="backing-up-a-multidimensional-or-a-tabular-database"></a><a name="bkmk_cube"></a> Copia de seguridad de una base de datos multidimensional o tabular  
+ Los administradores pueden hacer copias de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un único archivo de copia de seguridad de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (.abf), independientemente del tamaño de la base de datos. Para obtener instrucciones paso a paso, vea [Cómo hacer copia de seguridad de una base de datos de Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) y [Automatizar la copia de seguridad de una base de datos de Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], que se usa para cargar y consultar modelos de datos PowerPivot en un entorno de SharePoint, carga sus modelos desde bases de datos de contenido de SharePoint. Estas bases de datos de contenido son relacionales y se ejecutan en el motor de base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por tanto, no hay ninguna estrategia de copia de seguridad y restauración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para los modelos de datos PowerPivot. Si dispone de un plan de recuperación ante desastres para contenido de SharePoint, ese plan abarca los modelos de datos PowerPivot almacenados en las bases de datos de contenido.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], que se usa para cargar y consultar modelos de datos PowerPivot en un entorno de SharePoint, carga sus modelos desde bases de datos de contenido de SharePoint. Estas bases de datos de contenido son relacionales y se ejecutan en el motor de base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por tanto, no hay ninguna estrategia de copia de seguridad y restauración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para los modelos de datos PowerPivot. Si dispone de un plan de recuperación ante desastres para contenido de SharePoint, ese plan abarca los modelos de datos PowerPivot almacenados en las bases de datos de contenido.  
   
  **Particiones remotas**  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66077029"
   
  Para obtener más información sobre la copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Opciones de copia de seguridad](backup-options.md).  
   
-##  <a name="bkmk_restore"></a>Restaurar una base de datos de Analysis Services  
+##  <a name="restoring-an-analysis-services-database"></a><a name="bkmk_restore"></a>Restaurar una base de datos de Analysis Services  
  Los administradores pueden restaurar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a partir de uno o más archivos de copia de seguridad.  
   
 > [!NOTE]  

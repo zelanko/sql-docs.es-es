@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076775"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Generar proyectos de Analysis Services (SSDT)
@@ -43,10 +43,10 @@ ms.locfileid: "66076775"
   
 |Archivos (en la carpeta BIN)|Descripción|  
 |-----------------------------|-----------------|  
-|*Projectname*. asdatabase|Contiene los elementos ASSL que definen los metadatos de los objetos del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un archivo de script de implementación. El motor de implementación utiliza este archivo para implementar los objetos en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|*Projectname*. configsettings|Contiene las opciones de configuración usadas en la implementación que se pueden modificar directamente o en el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (por ejemplo, la cadena de conexión de los orígenes de datos).|  
-|*Projectname*. deploymenttargets|Contiene la configuración de destino utilizada en la implementación que puede modificar directamente o en el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (por ejemplo, los nombres del servidor y la base de datos).|  
-|*Projectname*. archivo deploymentoptions|Contiene diversas opciones de configuración usadas en la implementación que se pueden modificar directamente o en el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (por ejemplo, ubicaciones de almacenamiento)|  
+|*nombre de proyecto*.asdatabase|Contiene los elementos ASSL que definen los metadatos de los objetos del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un archivo de script de implementación. El motor de implementación utiliza este archivo para implementar los objetos en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|*nombre de proyecto*.configsettings|Contiene las opciones de configuración usadas en la implementación que se pueden modificar directamente o en el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (por ejemplo, la cadena de conexión de los orígenes de datos).|  
+|*nombre de proyecto*.deploymenttargets|Contiene la configuración de destino utilizada en la implementación que puede modificar directamente o en el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (por ejemplo, los nombres del servidor y la base de datos).|  
+|*nombre de proyecto*.deploymentoptions|Contiene diversas opciones de configuración usadas en la implementación que se pueden modificar directamente o en el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (por ejemplo, ubicaciones de almacenamiento)|  
 |*AssemblyName*/*DllName.* dll|Hay carpetas independientes para cada ensamblado al que se hace referencia; cada carpeta contiene el archivo DLL del ensamblado, los ensamblados a los que se hace referencia y los archivos .pdb asociados para la información de depuración del resultado.|  
   
 |Archivos (en la carpeta OBJ)|Descripción|  

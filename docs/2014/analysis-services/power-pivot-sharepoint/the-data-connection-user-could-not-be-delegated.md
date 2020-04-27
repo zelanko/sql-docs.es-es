@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071032"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: datos PowerPivot
@@ -24,7 +24,7 @@ ms.locfileid: "66071032"
   
 |||  
 |-|-|  
-|Se aplica a|PowerPivot para SharePoint|  
+|Aplicable a|PowerPivot para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Error en la conexión al intentar utilizar un proveedor de datos PowerPivot.|  
 |Texto del mensaje|La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: datos PowerPivot|  
@@ -49,7 +49,7 @@ ms.locfileid: "66071032"
   
 #### <a name="enable-claims-to-windows-token-service"></a>Habilitar Notificaciones del servicio de token de Windows  
   
-1.  En Administración central, en Configuración del sistema, haga clic en **Administrar servicios en el servidor**.  
+1.  En administración central, en configuración del sistema, haga clic en **administrar servicios en el servidor**.  
   
 2.  Seleccione **Notificaciones del servicio de token de Windows**y, a continuación, haga clic en **Inicio**.  
   

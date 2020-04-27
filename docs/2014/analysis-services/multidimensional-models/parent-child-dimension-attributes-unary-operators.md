@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073447"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Operadores unarios en dimensiones de elementos primarios y secundarios
@@ -40,7 +40,7 @@ ms.locfileid: "66073447"
   
  Los valores en blanco y cualquier otro valor que no se encuentre en la tabla se tratan como el operador unario del signo más (+). Los operadores no tienen prioridad, de manera que el orden de los miembros tal como se almacenan en la columna de operadores unarios determina el orden de evaluación. Para cambiar el orden de evaluación, cree un nuevo atributo, establezca su propiedad **Type** en **Sequence**y asigne números de secuencia que correspondan al orden de evaluación en su propiedad **Source Column** . También debe ordenar miembros del atributo de acuerdo con este atributo. Para más información sobre la forma de usar el Asistente de Business Intelligence para ordenar miembros de un atributo, vea [Definir la ordenación en una dimensión](bi-wizard-define-the-ordering-for-a-dimension.md).  
   
- Puede usar la propiedad **UnaryOperatorColumn** para especificar un cálculo con nombre que devuelve un operador unario como un carácter literal para todos los miembros del atributo. Esto puede ser algo tan sencillo como escribir un carácter literal como `'*'` en el cálculo con nombre. Esto reemplaza el operador predeterminado, el signo más (+), con el operador de multiplicación, el asterisco (*), para todos los miembros del atributo. Para obtener más información, vea [definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ Puede usar la propiedad **UnaryOperatorColumn** para especificar un cálculo con nombre que devuelve un operador unario como un carácter literal para todos los miembros del atributo. Esto puede ser algo tan sencillo como escribir un carácter literal como `'*'` en el cálculo con nombre. Esto reemplaza el operador predeterminado, el signo más (+), con el operador de multiplicación, el asterisco (*), para todos los miembros del atributo. Para más información, vea [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  En la pestaña **Explorador** del Diseñador de dimensiones, se pueden ver los operadores unarios junto a cada miembro en una jerarquía. También puede cambiar los operadores unarios al trabajar con una dimensión habilitada para escritura. Si la dimensión no está habilitada para escritura, debe usar una herramienta para modificar directamente el origen de datos.  
   

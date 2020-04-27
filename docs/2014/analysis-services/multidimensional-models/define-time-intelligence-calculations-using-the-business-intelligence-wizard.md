@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075425"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definir cálculos de inteligencia de tiempo mediante el Asistente de Business Intelligence
@@ -59,14 +59,14 @@ ms.locfileid: "66075425"
 ## <a name="apply-time-views-to-members"></a>Aplicar vistas de tiempo a los miembros  
  En la página **Definir el ámbito de cálculo** , se especifican los miembros a los que se aplican las nuevas vistas de tiempo. Puede aplicar las nuevas vistas de tiempo a uno de los siguientes objetos:  
   
--   **Miembros de una dimensión de cuenta** En la página **definir el ámbito de cálculo** , la lista **medidas disponibles** incluye dimensiones de cuentas. Las dimensiones de cuentas tienen su propiedad `Type` configurada como `Accounts`. Si tiene una dimensión de cuentas pero esa dimensión no figura en la lista **Medidas disponibles** , puede usar el Asistente de Business Intelligence para aplicar la inteligencia de cuentas a esa dimensión. Para obtener más información, vea [Agregar inteligencia de cuentas a una dimensión](bi-wizard-add-account-intelligence-to-a-dimension.md).  
+-   **Miembros de una dimensión de cuentas** En la página **Definir el ámbito de cálculo** , la lista **Medidas disponibles** incluye dimensiones de cuentas. Las dimensiones de cuentas tienen su propiedad `Type` configurada como `Accounts`. Si tiene una dimensión de cuentas pero esa dimensión no figura en la lista **Medidas disponibles** , puede usar el Asistente de Business Intelligence para aplicar la inteligencia de cuentas a esa dimensión. Para obtener más información, vea [Agregar inteligencia de cuentas a una dimensión](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
--   **Medidas** de En lugar de especificar una dimensión de cuenta, puede especificar las medidas a las que se aplican las vistas de tiempo. En este caso, seleccione las vistas a las que se aplican los cálculos de tiempo seleccionados. Por ejemplo, los activos y pasivos son datos del año hasta la fecha, por lo tanto no se aplica un cálculo de Valor anual hasta la fecha a medidas de activos o pasivos.  
+-   **Medidas** En lugar de especificar una dimensión de cuentas, puede especificar las medidas a las que se aplican las vistas de tiempo. En este caso, seleccione las vistas a las que se aplican los cálculos de tiempo seleccionados. Por ejemplo, los activos y pasivos son datos del año hasta la fecha, por lo tanto no se aplica un cálculo de Valor anual hasta la fecha a medidas de activos o pasivos.  
   
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Ver la mejora de inteligencia de tiempo  
  En la última página del Asistente de Business Intelligence, puede ver los cambios que se realizarán en la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para una mejora de inteligencia de tiempo, el asistente cambia la dimensión de tiempo seleccionada, la vista del origen de datos relacionada y el cubo asociado como se describe en la siguiente tabla.  
   
-|Object|Change|  
+|Object|Cambio|  
 |------------|------------|  
 |Dimensión de tiempo|Agrega un atributo para cada cálculo (o vista).|  
 |Vista del origen de datos|Agrega una columna calculada en la tabla de tiempo para cada nuevo atributo en la dimensión de tiempo.|  

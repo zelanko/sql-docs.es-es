@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079378"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e intercalaciones (Analysis Services)
-  
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Las propiedades de `Language` y `Collation` se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar más tarde en diferentes niveles de la jerarquía de objetos.  
   
  En un modelo multidimensional (solo), se pueden establecer estas propiedades en una base de datos o en un cubo; también se pueden establecer en traducciones que se crean para objetos dentro de un cubo.  
@@ -51,7 +50,7 @@ ms.locfileid: "66079378"
   
 -   [Compatibilidad con GB18030 en Analysis Services](#bkmk_gb18030)  
   
-##  <a name="bkmk_object"></a>Objetos que admiten propiedades de idioma e intercalación  
+##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>Objetos que admiten propiedades de idioma e intercalación  
  `Language`a `Collation` menudo, las propiedades y se exponen juntas `Language`: donde puede establecer, `Collation`también puede establecer.  
   
  Puede establecer `Language` y `Collation` en estos objetos:  
@@ -70,21 +69,19 @@ ms.locfileid: "66079378"
   
  Además, puede establecer `Language`, por sí mismo, en un objeto **Translation** .  
   
- Al agregar traducciones a un cubo o dimensión se crea un objeto de traducción. `Language`forma parte de la definición de la traducción. 
-  `Collation`, sin embargo, se configura en el cubo o en un nivel superior y todas las traducciones la comparten. Esto es evidente en el XMLA de un cubo que contiene traducciones, donde se verán varias propiedades de idioma (una para cada traducción), pero solo una intercalación. Tenga en cuenta que hay una excepción en el caso de traducciones de atributo de dimensión, donde puede reemplazar la intercalación de cubo para especificar una intercalación de atributo que coincida con la columna de origen (el motor de base de datos admite la configuración de intercalación en columnas individuales y se acostumbra a configurar traducciones individuales para obtener datos de miembro de diferentes columnas de origen). Pero, en caso contrario, para las demás traducciones, `Language` se usa por sí mismo, sin un corolario de `Collation`. Vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md) para más información.  
+ Al agregar traducciones a un cubo o dimensión se crea un objeto de traducción. `Language`forma parte de la definición de la traducción. `Collation`, sin embargo, se configura en el cubo o en un nivel superior y todas las traducciones la comparten. Esto es evidente en el XMLA de un cubo que contiene traducciones, donde se verán varias propiedades de idioma (una para cada traducción), pero solo una intercalación. Tenga en cuenta que hay una excepción en el caso de traducciones de atributo de dimensión, donde puede reemplazar la intercalación de cubo para especificar una intercalación de atributo que coincida con la columna de origen (el motor de base de datos admite la configuración de intercalación en columnas individuales y se acostumbra a configurar traducciones individuales para obtener datos de miembro de diferentes columnas de origen). Pero, en caso contrario, para las demás traducciones, `Language` se usa por sí mismo, sin un corolario de `Collation`. Vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md) para más información.  
   
-##  <a name="bkmk_lang"></a>Compatibilidad con idiomas en Analysis Services  
+##  <a name="language-support-in-analysis-services"></a><a name="bkmk_lang"></a> Compatibilidad con idiomas en Analysis Services  
  La propiedad `Language` establece la configuración regional de un objeto, que se utiliza durante el procesamiento, las consultas y con `Captions` y `Translations` para admitir escenarios multilingües. Las configuraciones regionales se basan en un identificador de idioma (por ejemplo, inglés) y un territorio (por ejemplo, Estados Unidos o Australia) que refina aún más las representaciones de fecha y hora.  
   
  En el nivel de instancia, la propiedad se establece durante la instalación y se basa en el idioma del sistema operativo de Windows Server (uno de 37 idiomas, dando por hecho que se ha instalado un paquete de idioma). No se puede cambiar el idioma en el programa de instalación.  
   
  Después de la instalación, puede invalidar `Language` en la página de propiedades del servidor de Management Studio o en el archivo de configuración msmdsrv.ini. Puede elegir entre muchos más idiomas, incluidos todos los que admite el cliente Windows. Cuando se establece en el nivel de instancia, en el servidor, `Language` determina la configuración regional de todas las bases de datos que se implementan posteriormente. Por ejemplo, si establece `Language` en alemán, todas las bases de datos que se implementan en la instancia tendrán una propiedad de idioma de 1031, el LCID de alemán.  
   
-###  <a name="bkmk_lcid"></a>El valor de la propiedad Language es un identificador de configuración regional (LCID)  
+###  <a name="value-of-the-language-property-is-a-locale-identifier-lcid"></a><a name="bkmk_lcid"></a> El valor de la propiedad Language es un identificador de configuración regional (LCID)  
  Los valores válidos incluyen cualquier LCID que aparezca en la lista desplegable. En Management Studio y SQL Server Data Tools, los LCID se representan en equivalentes de cadena. Aparecen los mismos idiomas en todos los lugares donde se expone la propiedad `Language`, independientemente de la herramienta. Al contar con una lista idéntica de idiomas se garantiza que las traducciones se pueden implementar y probar de forma coherente en todo el modelo.  
   
- Aunque Analysis Services muestra los idiomas por nombre, el valor real almacenado para la propiedad es un LCID. Al establecer una propiedad de idioma mediante programación o mediante el archivo msmdsrv.ini, use el [identificador de configuración regional (LCID)](http://en.wikipedia.org/wiki/Locale) como valor. Un LCID es un valor de 32 bits que consta de un identificador de idioma, un identificador de ordenación y bits reservados que identifican un idioma determinado. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza los LCID para especificar el idioma seleccionado para instancias y objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+ Aunque Analysis Services muestra los idiomas por nombre, el valor real almacenado para la propiedad es un LCID. Al establecer una propiedad de idioma mediante programación o mediante el archivo msmdsrv.ini, use el [identificador de configuración regional (LCID)](http://en.wikipedia.org/wiki/Locale) como valor. Un LCID es un valor de 32 bits que consta de un identificador de idioma, un identificador de ordenación y bits reservados que identifican un idioma determinado. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza los LCID para especificar el idioma seleccionado para instancias y objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Puede establecer el LCID con formatos hexadecimales o decimales. Algunos ejemplos de valores válidos para la `Language` propiedad son:  
   
@@ -101,15 +98,14 @@ ms.locfileid: "66079378"
 > [!NOTE]  
 >  La propiedad `Language` no determina el idioma en el que se devuelven los mensajes del sistema ni qué cadenas aparecen en la interfaz de usuario. Los errores, las advertencias y los mensajes están localizados en todos los idiomas admitidos en Office y Office 365, y se usan automáticamente cuando la conexión de cliente especifica una de las configuraciones regionales admitidas.  
   
-##  <a name="bkmk_collations"></a>Compatibilidad con la intercalación en Analysis Services  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza intercalaciones binarias y de Windows exclusivamente. No utiliza intercalaciones de SQL Server heredadas. Dentro de un cubo, se utiliza una única intercalación en su totalidad, a excepción de las traducciones en el nivel de atributo. Para más información sobre cómo definir traducciones de atributos, vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md).  
+##  <a name="collation-support-in-analysis-services"></a><a name="bkmk_collations"></a> Compatibilidad con intercalaciones en Analysis Services  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza intercalaciones binarias y de Windows exclusivamente. No utiliza intercalaciones de SQL Server heredadas. Dentro de un cubo, se utiliza una única intercalación en su totalidad, a excepción de las traducciones en el nivel de atributo. Para más información sobre cómo definir traducciones de atributos, vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md).  
   
- Las intercalaciones controlan la distinción de mayúsculas y minúsculas de todas las cadenas en un alfabeto bicameral del idioma, a excepción de los identificadores de objeto. Si utiliza mayúsculas y minúsculas en un identificador de objetos, tenga en cuenta que la distinción entre mayúsculas y minúsculas de los identificadores de objetos no está determinada por la intercalación, sino por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para los identificadores de objeto compuestos en el alfabeto del inglés, los identificadores de objeto no distinguen nunca mayúsculas de minúsculas, independientemente de la intercalación. Los alfabetos bicamerales del cirílico y de otros idiomas hacen lo contrario (siempre distinguen mayúsculas de minúsculas). Para más información, vea [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
+ Las intercalaciones controlan la distinción de mayúsculas y minúsculas de todas las cadenas en un alfabeto bicameral del idioma, a excepción de los identificadores de objeto. Si utiliza mayúsculas y minúsculas en un identificador de objeto, tenga en cuenta que la distinción de mayúsculas y minúsculas de los identificadores de objeto no está determinada por la intercalación, sino por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para los identificadores de objeto compuestos en el alfabeto del inglés, los identificadores de objeto no distinguen nunca mayúsculas de minúsculas, independientemente de la intercalación. Los alfabetos bicamerales del cirílico y de otros idiomas hacen lo contrario (siempre distinguen mayúsculas de minúsculas). Para más información, vea [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
  La intercalación de Analysis Services es compatible con el motor de bases de datos relacionales de SQL Server, dando por hecho que se mantiene la paridad en las opciones de ordenación que seleccione para cada servicio. Por ejemplo, si la base de datos relacionales distingue acentos, debe configurar el cubo de la misma manera. Pueden producirse problemas cuando las configuraciones de intercalación difieren. Para obtener un ejemplo y soluciones alternativas, vea [Espacios en blanco en una cadena Unicode tienen distintos resultados de procesamiento en función de la intercalación](https://social.technet.microsoft.com/wiki/contents/articles/23979.ssas-processing-error-blanks-in-a-unicode-string-have-different-processing-outcomes-based-on-collation-and-character-set.aspx). Para obtener más información sobre la intercalación y el motor de base de datos, vea [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-###  <a name="bkmk_collationtype"></a>Tipos de intercalación  
+###  <a name="collation-types"></a><a name="bkmk_collationtype"></a> Tipos de intercalación  
  Analysis Services admite dos tipos de intercalación:  
   
 -   **Intercalaciones de Windows**  
@@ -120,7 +116,7 @@ ms.locfileid: "66079378"
   
      La intercalaciones binarias se ordenan en puntos de código Unicode, no en valores lingüísticos. Por ejemplo, Latin1_General_BIN y Japanese_BIN generan resultados de ordenación idénticos en datos Unicode. Mientras que una ordenación lingüística podría producir resultados como aAbBcCdD, una ordenación binaria sería ABCDabcd porque el punto de código de todos los caracteres en mayúsculas es colectivamente superior a los puntos de código de los caracteres en minúsculas.  
   
-###  <a name="bkmk_sortorder"></a>Opciones de criterio de ordenación  
+###  <a name="sort-order-options"></a><a name="bkmk_sortorder"></a> Opciones de orden  
  Las opciones de ordenación se utilizan para refinar las reglas de ordenación y comparación por distinción de mayúsculas y minúsculas, de acentos, de caracteres kana y de ancho. Por ejemplo, el valor predeterminado de la propiedad de configuración `Collation` para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] es Latin1_General_AS_CS, lo que especifica que se utiliza la intercalación Latin1_General con un orden que distingue acentos y mayúsculas y minúsculas.  
   
  Tenga en cuenta que BIN y BIN2 son mutuamente excluyentes de otras opciones de ordenación, si desea utilizar BIN o BIN2, desactive la opción de ordenación de distinción de acentos. De manera similar, si selecciona BIN2, no estarán disponibles las opciones de distinción de mayúsculas y minúsculas, sin distinción de mayúsculas y minúsculas, distinción de acentos, sin distinción de acentos, distinción de caracteres kana y distinción de ancho.  
@@ -135,7 +131,7 @@ ms.locfileid: "66079378"
 |Distinguir kana (_KS)|Distingue entre los dos tipos de caracteres Kana japoneses: Hiragana y Katakana. Si esta opción no se activa, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera los caracteres Hiragana y Katakana como caracteres iguales en la ordenación. No existe ningún sufijo de orden para el tipo de orden que no distingue los tipos de Kana.|  
 |Distinguir ancho (_WS)|Distingue entre un carácter de un solo byte y el mismo carácter representado como un carácter de doble byte. Si esta opción no se activa, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que la representación de un solo byte y de doble byte del mismo carácter es idéntica en la ordenación. No existe ningún sufijo de orden para el tipo de orden que no distingue el ancho.|  
   
-##  <a name="bkmk_defaultLang"></a>Cambiar el idioma o la intercalación predeterminados de la instancia  
+##  <a name="change-the-default-language-or-collation-on-the-instance"></a><a name="bkmk_defaultLang"></a> Cambiar la configuración predeterminada de idioma o intercalación en la instancia  
  La configuración de idioma e intercalación predeterminada se establece durante la instalación, pero se puede cambiar como parte de la configuración posterior a la instalación. El cambio de la intercalación en el nivel de instancia no es tarea sencilla e incluye estos requisitos:  
   
 -   El reinicio del servicio.  
@@ -146,7 +142,7 @@ ms.locfileid: "66079378"
   
  Puede usar SQL Server Management Studio o PowerShell AMO para cambiar la configuración de idioma o intercalación predeterminada en el nivel de servidor. Como alternativa, puede modificar la ** \<configuración de Language>** y ** \<CollationName>** en el archivo msmdsrv. ini, especificando el LCID del idioma.  
   
-1.  En Management Studio, haga clic con el botón secundario en nombre del servidor | **** | **Idioma o intercalación**de propiedades.  
+1.  En Management Studio, haga clic con el botón secundario en nombre del servidor | **Properties** | **Idioma o intercalación**de propiedades.  
   
 2.  Elija las opciones de ordenación. Para seleccionar **Binario** o **Binario 2**, desactive primero la casilla **Distinguir acentos**.  
   
@@ -156,7 +152,7 @@ ms.locfileid: "66079378"
   
 4.  Reinicie el servicio.  
   
-##  <a name="bkmk_cube"></a>Cambiar el idioma o la intercalación en un cubo  
+##  <a name="change-the-language-or-collation-on-a-cube"></a><a name="bkmk_cube"></a> Cambiar idioma o intercalación en un cubo  
   
 1.  En el Explorador de soluciones, haga doble clic en el cubo para abrirlo en el Diseñador de cubos.  
   
@@ -166,7 +162,7 @@ ms.locfileid: "66079378"
   
      La única forma de incrustar propiedades alternativas de idioma e intercalación en objetos dentro del cubo es a través de las traducciones. Vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md) para más información.  
   
-##  <a name="bkmk_XMLA"></a>Cambiar el idioma y la intercalación dentro de un modelo de datos mediante XMLA  
+##  <a name="change-language-and-collation-within-a-data-model-using-xmla"></a><a name="bkmk_XMLA"></a> Cambiar idioma e intercalación dentro de un modelo de datos mediante XMLA  
  La configuración de idioma e intercalación se hereda al crear el objeto. Los cambios posteriores en estas propiedades deben realizarse manualmente. Un método para cambiar rápidamente la intercalación de varios objetos es usar un comando ALTER en un script XMLA.  
   
  De forma predeterminada, la intercalación se establece una vez en el nivel de base de datos. La herencia está implícita en el resto de la jerarquía de objetos. Si se establece explícitamente `Collation` en los objetos de dentro del cubo, lo cual está permitido en los atributos de dimensión individuales, aparecerá en la definición de XMLA. De lo contrario, solo existe la propiedad de intercalación de nivel superior.  
@@ -181,10 +177,10 @@ ms.locfileid: "66079378"
   
 4.  Vuelva a procesar el cubo.  
   
-##  <a name="bkmk_enablefast1033"></a>Mejore el rendimiento de las configuraciones regionales en inglés a través de EnableFast1033Locale  
+##  <a name="boost-performance-for-english-locales-through-enablefast1033locale"></a><a name="bkmk_enablefast1033"></a> Aumente el rendimiento de las configuraciones regionales de inglés mediante EnableFast1033Locale  
  Si utiliza el identificador de idioma Inglés (Estados Unidos) (0x0409 o 1033) como idioma predeterminado para la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede obtener ventajas de rendimiento adicionales si establece la propiedad de configuración `EnableFast1033Locale`, una propiedad de configuración avanzada disponible solo para este identificador de idioma. Al establecer el valor de esta propiedad en **true** , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede utilizar un algoritmo más rápido en las comparaciones y los algoritmos hash de cadenas. Para más información sobre cómo establecer las propiedades de configuración, vea [Configurar las propiedades de servidor en Analysis Services](server-properties/server-properties-in-analysis-services.md).  
   
-##  <a name="bkmk_gb18030"></a>Compatibilidad con GB18030 en Analysis Services  
+##  <a name="gb18030-support-in-analysis-services"></a><a name="bkmk_gb18030"></a> Compatibilidad con GB18030 en Analysis Services  
  GB18030 es un estándar independiente que se usa en la República Popular China para codificar caracteres chinos. En GB18030, los caracteres pueden tener una longitud de 1, 2 o 4 bytes. En Analysis Services, no se produce ninguna conversión de datos al procesar datos de orígenes externos. Los datos simplemente se almacenan como datos Unicode. En el momento de la consulta, se realiza una conversión de GB18030 a través de las bibliotecas de cliente de Analysis Services (específicamente, el proveedor OLE DB MSOLAP.dll) cuando se devuelven datos de texto en los resultados de la consulta, en función de la configuración del sistema operativo cliente. El motor de base de datos también es compatible con GB18030. Para obtener información detallada, vea [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Consulte también  

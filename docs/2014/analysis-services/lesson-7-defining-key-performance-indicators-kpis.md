@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51fe8dc2a7ec38c9e2a71d9b2678e7c3e4ba6f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078284"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lección 7: definir indicadores clave de rendimiento (KPI)
   En esta lección, aprenderá a definir indicadores clave de rendimiento (KPI) en su proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Los KPI proporcionan un marco para definir cálculos del servidor que midan su negocio y estandarizar la forma en que aparezca la información resultante. Los KPI pueden aparecer en informes, portales y paneles, mediante las API de acceso a datos, y mediante herramientas de [!INCLUDE[msCoName](../includes/msconame-md.md)] y herramientas de terceros. Los KPI son contenedores de metadatos alrededor de medidas normales y otras expresiones de Expresiones multidimensionales (MDX). Para obtener más información, consulte [Indicadores clave de rendimiento &#40;KPI&#41; en modelos multidimensionales](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que acompañan a este tutorial.  
+>  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
   
  Esta lección contiene la siguiente tarea:  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074792"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Miembros calculados en subselecciones y subcubos
@@ -124,6 +124,6 @@ Where [Measures].[Reseller Sales Amount]
 ## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Subselecciones en las consultas](subselects-in-queries.md)   
- [Propiedades XMLA compatibles &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [Propiedades XMLA compatibles &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

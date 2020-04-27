@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072860"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Orígenes de datos admitidos (SSAS multidimensional)
   En este tema se describen los tipos de orígenes de datos que puede usar en un modelo multidimensional.  
   
-##  <a name="bkmk_supported_ds"></a>Orígenes de datos admitidos  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Orígenes de datos admitidos  
  Puede recuperar datos de los siguientes orígenes de datos en la tabla siguiente. Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el programa de instalación no instala los proveedores enumerados para cada origen de datos. Algunos proveedores ya podrían estar instalados con otras aplicaciones en el equipo; en otros casos tendrá que descargar e instalar el proveedor.  
   
 > [!NOTE]  

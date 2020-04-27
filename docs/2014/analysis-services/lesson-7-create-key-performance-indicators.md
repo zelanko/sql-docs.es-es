@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078373"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lección 8: Crear indicadores clave de rendimiento
-  En esta lección, creará indicadores clave de rendimiento (KPI). Los KPI se usan para medir el rendimiento de un valor, definido por una medida *base* , con respecto a un valor de *destino* , también definido por una medida o por un valor absoluto. En aplicaciones cliente de generación de informes, los KPI pueden proporcionar a los profesionales de empresa una manera rápida y sencilla de comprender un resumen de logros empresariales o para identificar tendencias. Para obtener más información, consulte [KPI &#40;SSAS tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
+  En esta lección, creará indicadores clave de rendimiento (KPI). Los KPI miden el rendimiento de un valor, definido por una medida *base* , con respecto a un valor de *destino* , también definido por una medida o por un valor absoluto. En aplicaciones cliente de generación de informes, los KPI pueden proporcionar a los profesionales de empresa una manera rápida y sencilla de comprender un resumen de logros empresariales o para identificar tendencias. Para obtener más información, consulte [KPI &#40;SSAS tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
   
  Tiempo estimado para completar esta lección: **15 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 7: Crear medidas](lesson-6-create-measures.md).  
   
 ## <a name="create-key-performance-indicators"></a>Creación de indicadores clave de rendimiento  
@@ -39,7 +39,7 @@ ms.locfileid: "66078373"
   
      Cuando termine de crear la fórmula, presione ENTRAR.  
   
-     Esta medida servirá como medida base del KPI.  
+     Esta medida servirá como la medida base del KPI.  
   
 4.  En la cuadrícula de medidas, haga clic con el botón derecho en la medida **Rendimiento de ventas por Internet del trimestre actual** y haga clic en **Crear KPI**.  
   
@@ -51,14 +51,14 @@ ms.locfileid: "66078373"
   
 7.  En **definir umbrales de estado**, en el campo de control deslizante de la `1`izquierda (bajo), escriba y, a continuación, en el `1.07`campo de control deslizante derecho (alto), escriba.  
   
-8.  En **Seleccionar el estilo de icono**, seleccione el tipo de icono de rombo (rojo), triángulo (amarillo) o círculo (verde).  
+8.  En **Seleccionar el estilo de icono**, seleccione el tipo de icono de rombo (rojo), triángulo (amarillo), círculo (verde).  
   
     > [!TIP]  
     >  Observe en el campo expansible **Descripciones** los estilos de icono disponibles. Puede especificar descripciones para los distintos elementos de KPI para que sean más fáciles de identificar en las aplicaciones cliente.  
   
 9. Haga clic en **Aceptar** para completar el KPI.  
   
-     En la cuadrícula de medidas, observe el icono situado junto a la medida **Rendimiento de ventas por Internet del trimestre actual** . Este icono indica que esta medida sirve como un valor base para un KPI.  
+     En la cuadrícula de medidas, observe el icono situado junto a la medida **Rendimiento de ventas por Internet del trimestre actual** . Este icono indica que esta medida actúa como valor base de un KPI.  
   
 #### <a name="to-create-an-internet-current-quarter-margin-performance-kpi"></a>Para crear un KPI Rendimiento de margen de ventas por Internet del trimestre actual  
   

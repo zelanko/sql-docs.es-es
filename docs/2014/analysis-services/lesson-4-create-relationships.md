@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078579"
 ---
 # <a name="lesson-5-create-relationships"></a>Lección 5: Crear relaciones
-  En esta lección, comprobará las relaciones que se han creado de forma automática al importar datos y agregará nuevas relaciones entre tablas diferentes. Una relación es una conexión entre dos tablas que establecen cómo se deben relacionar los datos de esas tablas. Por ejemplo, la tabla Product y la tabla Product Subcategory tienen una relación basada en el hecho de que cada producto pertenece a una subcategoría. Para obtener más información, consulte [Relaciones &#40;SSAS tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
+  En esta lección, comprobará las relaciones que se han creado de forma automática al importar datos y agregará nuevas relaciones entre tablas diferentes. Una relación es una conexión entre dos tablas de datos que establece cómo se deben poner en correlación los datos de esas tablas. Por ejemplo, la tabla Product y la tabla Product Subcategory tienen una relación basada en el hecho de que cada producto pertenece a una subcategoría. Para obtener más información, consulte [Relaciones &#40;SSAS tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
   
  Tiempo estimado para completar esta lección: **10 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 3: Cambiar el nombre de las columnas](rename-columns.md).  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examinar las relaciones existentes y agregar nuevas relaciones  
@@ -32,20 +32,20 @@ ms.locfileid: "66078579"
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** , elija **Vista de modelo**y haga clic en **Vista de diagrama**.  
   
-     El Diseñador de modelos aparece ahora en la vista de diagrama, un formato gráfico que muestra todas las tablas que importó con líneas entre ellas. Las líneas entre las tablas indican las relaciones que se crearon automáticamente cuando importó los datos.  
+     El diseñador de modelos se muestra ahora en la vista de diagrama, un formato gráfico que muestra todas las tablas que importó con líneas entre ellas. Las líneas entre las tablas indican las relaciones que se crearon automáticamente cuando importó los datos.  
   
-     Utilice los controles de minimapa de la esquina superior derecha del diseñador de modelos para ajustar la vista e incluir tantas tablas como sea posible. También puede hacer clic y arrastrar las tablas a ubicaciones diferentes, aunando las tablas o colocándolas en un orden concreto. Mover tablas no afecta a las relaciones existentes entre las tablas. Para ver todas las columnas en una tabla determinada, haga clic y arrastre un borde de la tabla para expandir o reducir el tamaño.  
+     Utilice los controles de minimapa de la esquina superior derecha del diseñador de modelos para ajustar la vista e incluir tantas tablas como sea posible. También puede hacer clic y arrastrar las tablas a ubicaciones diferentes, aunando las tablas o colocándolas en un orden determinado. El movimiento de las tablas no afecta a las relaciones existentes entre ellas. Para ver todas las columnas de una determinada tabla, haga clic y arrastre un borde de la tabla para expandirla o reducirla.  
   
-2.  Haga clic en la línea sólida entre la tabla **Customer** y la tabla **Geography** . La línea sólida entre estas dos tablas muestra esta relación está activa, es decir, se utiliza de forma predeterminada al calcular las fórmulas DAX.  
+2.  Haga clic en la línea sólida entre la tabla **Customer** y la tabla **Geography** . La línea sólida entre estas dos tablas muestra que esta relación está activa, es decir, se utiliza de forma predeterminada al calcular fórmulas DAX.  
   
      Observe que la columna **Geography Id** de la tabla **Customer** y la columna **Geography Id** de la tabla **Geography** aparecen ahora dentro de un cuadro. Esto indica que esas son las columnas utilizadas en la relación. Las propiedades de la relación aparecen ahora también en la ventana **propiedades** .  
   
     > [!TIP]  
     >  Además de utilizar el diseñador de modelos en la vista de diagrama, también puede utilizar el cuadro de diálogo **administrar relaciones** para mostrar las relaciones entre todas las tablas en un formato de tabla. Haga clic en el menú **Tabla** y, después, haga clic en **Administrar relaciones**. El cuadro de diálogo **Administrar relaciones** muestra las relaciones que se han creado de forma automática al importar los datos.  
   
-3.  Use el diseñador de modelos en la vista de diagrama, o el cuadro de diálogo **administrar relaciones** , para comprobar que se crearon las siguientes relaciones al importar cada una de las tablas de la base de datos AdventureWorksDW:  
+3.  Use el diseñador de modelos en la vista de diagrama o el cuadro de diálogo **Administrar relaciones** para comprobar que se han creado las siguientes relaciones al importar cada una de las tablas de la base de datos AdventureWorksDW:  
   
-    |Active|Tabla|Tabla de búsquedas relacionadas|  
+    |Active|Tabla|Tabla de búsqueda relacionada|  
     |------------|-----------|--------------------------|  
     |Sí|**Customer [Geography Id]**|**Geography [Geography Id]**|  
     |Sí|**Product [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  
@@ -57,7 +57,7 @@ ms.locfileid: "66078579"
   
  En algunos casos, debe crear relaciones adicionales entre las tablas del modelo para admitir una determinada lógica de negocios. En este tutorial, tendrá que crear tres relaciones adicionales entre la tabla Internet Sales y la tabla Date.  
   
-#### <a name="to-add-new-relationships-between-tables"></a>Procedimiento para agregar nuevas relaciones entre tablas  
+#### <a name="to-add-new-relationships-between-tables"></a>Para agregar nuevas relaciones entre las tablas  
   
 1.  En el diseñador de modelos, en la tabla **Internet Sales** , haga clic y mantenga seleccionada la columna **Order Date** , arrastre el cursor hasta la columna **Date** de la tabla **Date** y suéltelo.  
   

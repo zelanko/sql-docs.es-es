@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081696"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensiones (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -37,7 +37,7 @@ ms.locfileid: "66081696"
  Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en el panel **Dimensiones** :  
   
  **Agregar dimensión de cubo**  
- Haga clic en esta opción para mostrar el cuadro de diálogo **Agregar dimensión de cubo** y agregar referencias a las dimensiones de base de datos nuevas o existentes del cubo. Para más información sobre el cuadro de diálogo **Agregar dimensión de cubo**, vea [Cuadro de diálogo Agregar dimensión de cubo &#40;Analysis Services - Datos multidimensionales&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).  
+ Haga clic en esta opción para mostrar el cuadro de diálogo **Agregar dimensión de cubo** y agregar referencias a las dimensiones de base de datos nuevas o existentes del cubo. Para obtener más información sobre el cuadro de diálogo **Agregar dimensión de cubo**, vea [Cuadro de diálogo Agregar dimensión de cubo &#40;Analysis Services - Datos multidimensionales&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md)  
   
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha seleccionado una dimensión.  
@@ -45,11 +45,11 @@ ms.locfileid: "66081696"
  **Editar dimensión**  
  Haga clic para mostrar el Diseñador de dimensiones y editar la dimensión de la base de datos en la que se basa la dimensión de cubo. Para más información sobre el Diseñador de dimensiones, vea [Diseñador de dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Cambiar el nombre**  
+ **Cambiar nombre**  
  Haga clic para cambiar el nombre de la dimensión seleccionada del cubo.  
   
 > [!NOTE]  
->  Al cambiar el nombre de una dimensión de cubo en el panel **Dimensiones** no se cambia el nombre de la dimensión de la base de datos en la que se basa la dimensión de cubo.  
+>   Al cambiar el nombre de una dimensión de cubo en el panel **Dimensiones** no se cambia el nombre de la dimensión de la base de datos en la que se basa la dimensión de cubo.  
   
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha seleccionado una dimensión.  
@@ -58,7 +58,7 @@ ms.locfileid: "66081696"
  Haga clic para eliminar la dimensión de cubo seleccionada del cubo.  
   
 > [!NOTE]  
->  Al eliminar una dimensión de cubo en el panel **Dimensiones** no se elimina la dimensión de la base de datos en la que se basa la dimensión de cubo.  
+>   Al eliminar una dimensión de cubo en el panel **Dimensiones** no se elimina la dimensión de la base de datos en la que se basa la dimensión de cubo.  
   
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha seleccionado una dimensión.  
@@ -76,7 +76,7 @@ ms.locfileid: "66081696"
 >  Esta opción solo se muestra si se ha seleccionado una dimensión.  
   
  **Nuevo objeto vinculado**  
- Haga clic en esta opción para mostrar el **Asistente para objetos vinculados** , vincular grupos de medida y dimensiones de otros cubos e importar acciones, indicadores clave de rendimiento (KPI) y cálculos al cubo seleccionado. Para más información sobre el **Asistente para objetos vinculados**, vea [Asistente para objetos vinculados (Ayuda F1)](linked-object-wizard-f1-help.md).  
+ Haga clic en esta opción para mostrar el **Asistente para objetos vinculados** , vincular grupos de medida y dimensiones de otros cubos e importar acciones, indicadores clave de rendimiento (KPI) y cálculos al cubo seleccionado. Para obtener más información sobre el **Asistente para objetos vinculados**, vea [Asistente para objetos vinculados (Ayuda F1)](linked-object-wizard-f1-help.md).  
   
 > [!NOTE]  
 >  Esta opción solo se muestra si se ha seleccionado una dimensión.  

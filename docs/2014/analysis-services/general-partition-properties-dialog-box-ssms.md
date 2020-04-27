@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081070"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>General (cuadro de diálogo Propiedades de la partición, SSMS)
@@ -28,12 +28,12 @@ ms.locfileid: "66081070"
 |----------|----------------|  
 |**Id. de diseño de agregaciones**|Muestra el identificador del diseño de agregaciones utilizado por la partición.|  
 |**Prefijo de agregación**|Muestra el prefijo predeterminado de las instancias de agregación que contiene la partición.|  
-|**Crear marca de tiempo**|Muestra la fecha y hora en que se creó la partición.|  
+|**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la partición.|  
 |**Modo de almacenamiento actual**|Muestra el modo de almacenamiento actual de la partición.<br /><br /> Nota: Este modo puede variar en función de la configuración del almacenamiento en caché automático de la partición. Para más información sobre almacenamiento en caché automático, vea [Almacenamiento en caché automático &#40;Particiones&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Descripción**|Escriba o modifique la descripción de la partición.|  
 |**Filas estimadas**|Escriba el número estimado de filas del origen de datos subyacente representadas por la partición. Este valor se utiliza durante el procesamiento para estimar el tiempo y el almacenamiento necesarios para procesar la partición.|  
 |**Tamaño estimado**|Muestra el tamaño estimado de la partición.|  
-|**SESIÓN**|Muestra el identificador de la partición.|  
+|**Id**|Muestra el identificador de la partición.|  
 |**Procesado por última vez**|Muestra la fecha y la hora de la última vez en que se procesó la partición.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora de la última vez en que se actualizaron los metadatos de la partición.|  
 |**Nombre**|Muestra el nombre de la partición.|  
@@ -43,7 +43,7 @@ ms.locfileid: "66081070"
 |**Origen**|Muestra la tabla o consulta que proporciona el origen de datos para la partición.|  
 |**State**|Muestra el estado de procesamiento actual de la partición.|  
 |**Ubicación de almacenamiento**|Muestra la carpeta en la que se almacenan los datos de la partición.<br /><br /> Nota: Esta propiedad solo contiene un valor si se ha especificado una ubicación de almacenamiento distinta de la ubicación de almacenamiento predeterminada de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Tipo**|Muestra el tipo de la partición.|  
+|**Type**|Muestra el tipo de la partición.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   

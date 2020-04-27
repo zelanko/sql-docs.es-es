@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078800"
 ---
 # <a name="modifying-the-date-dimension"></a>Modificar la dimensión Date
   En las tareas de este tema, debe crear una jerarquía definida por el usuario y cambiar los nombres de miembro que se muestran para los atributos Date, Month, Calendar Quarter y Calendar Semester. También definirá claves compuestas para los atributos, controlará el criterio de ordenación de los miembros de dimensión y definirá las relaciones de atributo.  
   
 ## <a name="adding-a-named-calculation"></a>Agregar un cálculo con nombre  
- Puede agregar un cálculo con nombre, que es una expresión SQL representada como columna calculada en una tabla de la vista del origen de datos. Aparece la expresión y se comporta como columna en la tabla. Los cálculos con nombre permiten ampliar el esquema relacional de las tablas existentes de la vista del origen de datos sin modificar la tabla en el origen de datos subyacente. Para obtener más información, consulte [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ Puede agregar un cálculo con nombre, que es una expresión SQL representada como columna calculada en una tabla de la vista del origen de datos. Aparece la expresión y se comporta como columna en la tabla. Los cálculos con nombre permiten ampliar el esquema relacional de las tablas existentes de la vista del origen de datos sin modificar la tabla en el origen de datos subyacente. Para obtener más información, vea [definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>Para agregar un cálculo con nombre  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66078800"
   
      El tipo de relación es **Rígida** porque las relaciones entre los miembros no cambiarán con el tiempo.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 6.  En el diagrama, haga clic con el botón derecho en el atributo **Calendar Quarter** y, después, haga clic en **Nueva relación de atributo**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66078800"
   
 8.  En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
   
-9. Haga clic en **OK**.  
+9. Haga clic en **Aceptar**.  
   
 10. En el diagrama, haga clic con el botón derecho en el atributo **Calendar Semester** y, después, haga clic en **Nueva relación de atributo**.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66078800"
   
 12. En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
   
-13. Haga clic en **OK**.  
+13. Haga clic en **Aceptar**.  
   
 14. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66078800"
   
      Esta instrucción concatena el mes y el año de cada mes de la tabla una nueva columna.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 5.  En el panel **tablas** , haga clic `Date`con el botón secundario y, a continuación, haga clic en **nuevo cálculo con nombre**.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66078800"
   
      Este script SQL concatena el trimestre natural y el año de cada trimestre de la tabla en una nueva columna.  
   
-7.  Haga clic en **OK**.  
+7.  Haga clic en **Aceptar**.  
   
 8.  En el panel **tablas** , haga clic `Date`con el botón secundario y, a continuación, haga clic en **nuevo cálculo con nombre**.  
   
@@ -190,11 +190,11 @@ ms.locfileid: "66078800"
   
 3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar (**...**).  
   
-4.  En el cuadro de diálogo **Columnas de clave** , en la lista **Columnas disponibles** , seleccione la columna **CalendarYear**y, después, haga clic en el botón **>** .  
+4.  En el cuadro de diálogo **columnas de clave** , en la lista **columnas disponibles** , seleccione la columna **CalendarYear**y, a **>** continuación, haga clic en el botón.  
   
 5.  Las columnas **EnglishMonthName** y **CalendarYear** se muestran ahora en la lista **Columnas de clave** .  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 7.  Para establecer la propiedad **NameColumn** del atributo **EnglishMonthName** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
   
@@ -208,11 +208,11 @@ ms.locfileid: "66078800"
   
 2.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar (**...**).  
   
-3.  En el cuadro de diálogo **Columnas de clave** , en la lista **Columnas disponibles** , seleccione la columna **CalendarYear**y, después, haga clic en el botón **>** .  
+3.  En el cuadro de diálogo **columnas de clave** , en la lista **columnas disponibles** , seleccione la columna **CalendarYear**y, a **>** continuación, haga clic en el botón.  
   
      Las columnas **CalendarQuarter** y **CalendarYear** se muestran ahora en la lista **Columnas de clave** .  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 5.  Para establecer la propiedad **NameColumn** del atributo **Calendar Quarter** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
   
@@ -226,11 +226,11 @@ ms.locfileid: "66078800"
   
 2.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar (**...**).  
   
-3.  En el cuadro de diálogo **columnas de clave** , en la lista **columnas disponibles** , seleccione la columna **CalendarYear**y, a continuación **>** , haga clic en el botón.  
+3.  En el cuadro de diálogo **Columnas de clave** , en la lista **Columnas disponibles** , seleccione la columna **CalendarYear**y, después, haga clic en el botón **>** .  
   
      Las columnas **CalendarSemester** y **CalendarYear** se muestran ahora en la lista **Columnas de clave** .  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 5.  Para establecer la propiedad **NameColumn** del atributo **Calendar Semester** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
   
@@ -268,19 +268,19 @@ ms.locfileid: "66078800"
   
 3.  En la ventana Propiedades, haga clic en el botón Examinar (**...**) para cambiar el valor de la propiedad **KeyColumns** .  
   
-4.  En la lista **Columnas de clave** del cuadro de diálogo **Columnas de clave** , compruebe que **CalendarSemester** está seleccionado, y, después, haga clic en la flecha abajo para invertir el orden de los miembros de esta clave compuesta. Haga clic en **OK**.  
+4.  En la lista **Columnas de clave** del cuadro de diálogo **Columnas de clave** , compruebe que **CalendarSemester** está seleccionado, y, después, haga clic en la flecha abajo para invertir el orden de los miembros de esta clave compuesta. Haga clic en **Aceptar**.  
   
      Los miembros de la jerarquía de atributo ahora aparecen ordenados primero por año y luego por semestre.  
   
 5.  Seleccione **Calendar Quarter** en el panel **Atributos** y, después, haga clic en el botón Examinar (**...**) de la propiedad **KeyColumns** de la ventana Propiedades.  
   
-6.  En la lista **Columnas de clave** del cuadro de diálogo **Columnas de clave** , compruebe que **CalendarQuarter** está seleccionado, y, después, haga clic en la flecha abajo para invertir el orden de los miembros de esta clave compuesta. Haga clic en **OK**.  
+6.  En la lista **Columnas de clave** del cuadro de diálogo **Columnas de clave** , compruebe que **CalendarQuarter** está seleccionado, y, después, haga clic en la flecha abajo para invertir el orden de los miembros de esta clave compuesta. Haga clic en **Aceptar**.  
   
      Los miembros de la jerarquía de atributo ahora aparecen ordenados primero por año y luego por trimestre.  
   
 7.  Seleccione **English Month Name** en el panel **Atributos** y, después, haga clic en el botón Examinar (**...**) de la propiedad **KeyColumns** de la ventana Propiedades.  
   
-8.  En la lista **Columnas de clave** del cuadro de diálogo **Columnas de clave** , compruebe que **EnglishMonthName** está seleccionado, y, después, haga clic en la flecha abajo para invertir el orden de los miembros de esta clave compuesta. Haga clic en **OK**.  
+8.  En la lista **Columnas de clave** del cuadro de diálogo **Columnas de clave** , compruebe que **EnglishMonthName** está seleccionado, y, después, haga clic en la flecha abajo para invertir el orden de los miembros de esta clave compuesta. Haga clic en **Aceptar**.  
   
      Los miembros de la jerarquía de atributo ahora aparecen ordenados primero por año y luego por mes.  
   

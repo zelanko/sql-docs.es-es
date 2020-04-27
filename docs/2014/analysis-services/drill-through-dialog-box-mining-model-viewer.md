@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081493"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Cuadro de diálogo Obtener detalles (Visor de modelos de minería de datos)
@@ -34,7 +34,7 @@ ms.locfileid: "66081493"
  **Lista de columnas**  
  Muestra las columnas del modelo, seguidas por las columnas de estructura.  
   
- **Nota:** Las columnas de estructura solo se muestran si la obtención de detalles está habilitada en la estructura de minería de datos y si se han seleccionado las columnas de la opción, el **modelo y la estructura**. Además, debe tener permisos de obtención de detalles en el modelo de minería de datos y en la estructura de minería de datos para ver las columnas.  
+ **Nota** : las columnas de estructura solamente se muestran si la obtención de detalles está habilitada en la estructura de minería de datos y si se ha seleccionado la opción, **Columnas de modelo y estructura**. Además, debe tener permisos de obtención de detalles en el modelo de minería de datos y en la estructura de minería de datos para ver las columnas.  
   
  Las columnas de estructura que no están incluidas en el modelo aparecen como **Structure.\<>de nombre de columna **.  
   

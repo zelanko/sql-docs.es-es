@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070975"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>La ubicación de confianza donde el libro está almacenado no permite las conexiones de datos externos. No se pudieron actualizar las siguientes conexiones: datos PowerPivot
@@ -24,7 +24,7 @@ ms.locfileid: "66070975"
   
 |||  
 |-|-|  
-|Se aplica a|PowerPivot para SharePoint|  
+|Aplicable a|PowerPivot para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Excel Services se configura para denegar el acceso a datos externos.|  
 |Texto del mensaje|La ubicación de confianza donde el libro está almacenado no permite las conexiones de datos externos. No se pudieron actualizar las siguientes conexiones: datos PowerPivot|  
@@ -35,7 +35,7 @@ ms.locfileid: "66070975"
 ## <a name="user-action"></a>Acción del usuario  
  Cambie la configuración para permitir los orígenes de datos incrustados.  
   
-1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en **Aplicación de Servicios de Excel**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66070975"
   
 5.  En Datos externos, en Permitir datos externos, haga clic en **Bibliotecas de conexiones de datos de confianza e incrustadas**.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
  O bien, puede crear una nueva ubicación de confianza para los sitios que contienen los libros PowerPivot y, a continuación, modificar la configuración solo para ese sitio. Para obtener más información, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   

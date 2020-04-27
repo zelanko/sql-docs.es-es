@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074960"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Otorgar permisos para una dimensión (Analysis Services)
@@ -45,20 +45,20 @@ ms.locfileid: "66074960"
 ## <a name="set-permissions-on-a-database-dimension"></a>Establecer permisos para una dimensión de base de datos  
  Las dimensiones de base de datos son objetos independientes en una base de datos, que permiten la reutilización de la dimensión en el mismo modelo. Tenga en cuenta una base de datos DATE que se usa varias veces en un modelo, como dimensiones de cubo Order Date, Ship Date y Due Date. Dado que las dimensiones de cubo y base de datos son objetos del mismo nivel en las bases de datos, puede establecer permisos de procesamiento independientes en cada objeto.  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de, expanda **roles** para la base de datos adecuada en explorador de objetos y, a continuación, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
   
 2.  En el panel **Dimensiones** , el conjunto de dimensiones debe establecerse en **Todas las dimensiones de la base de datos**.  
   
      De forma predeterminada, los permisos se establecen en **Lectura**.  
   
-     Aunque **Lectura y escritura** está disponible, se recomienda no usar este permiso. **Lectura/escritura** se utiliza para escenarios de reescritura de dimensiones, que han quedado en desuso. Consulte [características Desusadas Analysis Services en SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Aunque **Lectura y escritura** está disponible, se recomienda no usar este permiso. **Lectura y escritura** se usa en escenarios de reescritura de dimensiones, que están en desuso. Consulte [características Desusadas Analysis Services en SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
   
      Si lo prefiere, puede establecer permisos de **Leer definición** y **Procesar** en objetos de dimensión individuales, siempre que esos permisos no se hayan establecido al nivel de la base de datos. Vea [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) y [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) para obtener más información.  
   
 ## <a name="set-permissions-on-a-cube-dimension"></a>Establecer permisos para una dimensión de cubo  
  Las dimensiones de cubo son dimensiones de base de datos que se han agregado a un cubo. Como tales, dependen estructuralmente de grupos de medida asociados. Pese a que puede procesar estos objetos de forma atómica, en términos de autorización, conviene tratar al cubo y las dimensiones de cubo como una entidad única.  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de, expanda **roles** para la base de datos adecuada en explorador de objetos y, a continuación, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
   
 2.  En el panel **dimensiones** , cambie el conjunto de dimensiones \<a cubos> **dimensiones de cubo**.  
   
@@ -72,6 +72,6 @@ ms.locfileid: "66074960"
  [Conceder permisos de cubo o de modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Conceder permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Conceder acceso personalizado a los datos de celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

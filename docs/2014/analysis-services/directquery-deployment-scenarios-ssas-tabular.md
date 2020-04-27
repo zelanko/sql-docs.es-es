@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081649"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Escenarios de implementación de DirectQuery (SSAS tabular)
@@ -24,7 +24,7 @@ ms.locfileid: "66081649"
   
  [Comparar las configuraciones de DirectQuery](#bkmk_Configurations)  
   
-##  <a name="bkmk_DQProcedure"></a>Pasos de diseño e implementación  
+##  <a name="design-and-deployment-steps"></a><a name="bkmk_DQProcedure"></a>Pasos de diseño e implementación  
  **Paso 1. Crear la solución**  
   
  Independientemente del modo que utilizará, debe revisar la información que describe las limitaciones en los datos que se pueden utilizar en los modelos de DirectQuery. Por ejemplo, todos los datos usados en el modelo y los informes deben proceder de una sola base de datos de SQL Server. Para más información, vea [Modo DirectQuery &#40;SSAS tabular&#41;](tabular-models/directquery-mode-ssas-tabular.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "66081649"
 |||  
 |-|-|  
 |**Solo DirectQuery**|**DirectQueryOnly**<br /><br /> Dado que ha especificado solo Direct Query, los metadatos del modelo se implementarán en el servidor, pero no se procesará el modelo.<br /><br /> Tenga en cuenta que la memoria caché utilizada por la base de datos del área de trabajo no se eliminará automáticamente. Si desea asegurarse de que los usuarios no puedan ver los datos de la memoria caché, borre la caché de tiempo de diseño. Para obtener más información, vea [borrar las cachés de Analysis Services](instances/clear-the-analysis-services-caches.md).|  
-|**Modo híbrido**|**DirectQuery con in-memory**<br /><br /> **In-memory con DirectQuery**<br /><br /> Ambos valores le permiten utilizar la memoria caché o el origen de datos relacional según sea necesario. El orden define el origen de datos que se utiliza de forma predeterminada al responder a las consultas realizadas en el modelo.<br /><br /> En un modo híbrido, la memoria caché se debe procesar al mismo tiempo que los metadatos del modelo se implementan en el servidor.<br /><br /> Puede cambiar este valor una vez realizada la implementación.|  
+|**Modo híbrido**|**DirectQuery con In-Memory**<br /><br /> **In-memory con DirectQuery**<br /><br /> Ambos valores le permiten utilizar la memoria caché o el origen de datos relacional según sea necesario. El orden define el origen de datos que se utiliza de forma predeterminada al responder a las consultas realizadas en el modelo.<br /><br /> En un modo híbrido, la memoria caché se debe procesar al mismo tiempo que los metadatos del modelo se implementan en el servidor.<br /><br /> Puede cambiar este valor una vez realizada la implementación.|  
   
  **Paso 8. Comprobar el modelo implementado**  
   
@@ -97,11 +97,11 @@ ms.locfileid: "66081649"
   
 -   La propiedad **DirectQueryMode**se estableció al definir las propiedades de implementación.  
   
--   La propiedad **Información de suplantación de origen de datos**se estableció al definir las opciones de suplantación de usuarios. Para obtener más información, vea [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
+-   La propiedad **Información de suplantación de origen de datos**se estableció al definir las opciones de suplantación de usuarios. Para más información, vea [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
 -   Una vez implementado el modelo, puede cambiar estas propiedades en cualquier momento.  
   
-##  <a name="bkmk_Configurations"></a>Comparar las opciones de DirectQuery  
+##  <a name="comparing-directquery-options"></a><a name="bkmk_Configurations"></a>Comparar las opciones de DirectQuery  
  **Solo DirectQuery**  
  Es preferible utilizar esta opción si se desea garantizar un único origen de datos, o si los datos no caben en la memoria. Si trabaja con un origen de datos relacional muy grande, durante el tiempo de diseño puede crear el modelo utilizando un subconjunto de los datos. Al implementar el modelo en el modo Solo DirectQuery, puede modificar la definición del origen de datos para incluir todos los datos necesarios.  
   

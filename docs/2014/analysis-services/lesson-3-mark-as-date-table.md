@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078784"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lección 4: Marcar como tabla de fechas
@@ -26,18 +26,18 @@ ms.locfileid: "66078784"
   
  Tiempo estimado para completar esta lección: **3 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 3: Cambiar el nombre de las columnas](rename-columns.md).  
   
 ### <a name="to-set-mark-as-date-table"></a>Para establecer Marcar como tabla de fechas, siga estos pasos:  
   
 1.  En el diseñador de modelos, haga clic en la tabla **Date** (pestaña).  
   
-2.  Haga clic en el menú **Tabla**, haga clic en **Fecha** y luego en **Marcar como tabla de fechas**.  
+2.  Haga clic en el menú **tabla** , haga clic en **fecha**y, a continuación, haga clic en **marcar como tabla de fechas**.  
   
-3.  En el cuadro de diálogo **Marcar como tabla de fechas**, en el cuadro de lista **Fecha**, seleccione la columna **Date** como identificador único.  
+3.  En el cuadro de diálogo **Marcar como tabla de fechas** en el cuadro de lista **Date** , seleccione la columna **Date** como identificador único.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 5: Crear relaciones](lesson-4-create-relationships.md).  
   
   

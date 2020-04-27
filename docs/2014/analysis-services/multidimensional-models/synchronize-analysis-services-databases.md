@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072851"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bases de datos de Analysis Services
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye una característica de sincronización de bases de datos hace que dos bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sean equivalentes; para ello, copia los datos y los metadatos de una base de datos de un servidor de origen en una base de datos de un servidor de destino. Use la característica Sincronizar base de datos para realizar cualquiera de las tareas siguientes:  
   
 -   Implementar una base de datos de un servidor de ensayo en un servidor de producción.  
@@ -43,7 +42,7 @@ ms.locfileid: "66072851"
 > [!NOTE]  
 >  Las notas del producto siguientes, escritas para versiones anteriores de Analysis Services, siguen siendo aplicables a las soluciones multidimensionales escalables compiladas con SQL Server 2012. Para obtener más información, vea [Scale-Out Querying with Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) (Consulta de escalado horizontal con Analysis Services) y [Scale-Out Querying for Analysis Services with Read-Only Databases](https://go.microsoft.com/fwlink/?LinkId=253137.)(Consulta de escalado horizontal con Analysis Services con bases de datos de solo lectura).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  En el servidor de destino (o destino) desde el que se inicia la sincronización de base de datos, debe ser miembro del rol de administrador del servidor de Analysis Services. En el servidor de origen, su cuenta de usuario de Windows debe tener permisos Control total en la base de datos de origen. Si va a sincronizar la base de datos de forma interactiva, recuerde que la sincronización se ejecuta en el contexto de seguridad de su identidad de usuario de Windows. Si su cuenta tiene denegado el acceso a determinados objetos, esos objetos se excluirán de la operación. Para obtener más información acerca de los roles de administrador de servidor y los permisos de base de datos, vea [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) y [conceder permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
  El puerto TCP 2383 debe estar abierto en ambos servidores para permitir conexiones remotas entre las instancias predeterminadas. Para obtener más información sobre cómo crear una excepción en Firewall de Windows, vea [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -82,7 +81,7 @@ ms.locfileid: "66072851"
   
 3.  Especifique el servidor de origen y la base de datos de origen. En la página Seleccione la base de datos que se va a sincronizar, en **Servidor de origen** y **Base de datos de origen**, escriba el nombre del servidor de origen y la base de datos de origen. Por ejemplo, si va a realizar la implementación desde un entorno de prueba en un servidor de producción, el origen es la base de datos del servidor de ensayo.  
   
-     **Servidor de destino** muestra el nombre de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la instancia de con la que se sincronizan los datos y metadatos de la base de datos seleccionada en base de datos de **origen** .  
+     **Servidor de destino** muestra el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con la que se sincronizan los datos y metadatos de la base de datos seleccionada en **Base de datos de origen** .  
   
      La sincronización se llevará a cabo para las bases de datos de origen y de destino que tengan el mismo nombre. Si el servidor de destino ya tiene una base de datos que tiene el mismo nombre que la base de datos de origen, la base de datos de destino se actualizará con los metadatos y los datos de origen. Si no existe la base de datos, se creará en el servidor de destino.  
   
@@ -117,10 +116,10 @@ ms.locfileid: "66072851"
      **Grupo de medida**  
      Muestra el nombre del grupo de medida del cubo que contiene la partición.  
   
-     **Nombre de partición**  
+     **Nombre de la partición**  
      Muestra el nombre de la partición.  
   
-     **Tamaño (MB)**  
+     **Tamaño (Mb)**  
      Muestra el tamaño de la partición en megabytes (MB).  
   
 5.  Opcionalmente, cambie la ubicación de las particiones remotas. Use la página **Especificar ubicaciones para particiones remotas** para indicar si se deben sincronizar las particiones remotas administradas por la base de datos especificada del servidor de origen, y para especificar una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y una base de datos de destino donde se deben almacenar las particiones remotas seleccionadas.  
@@ -130,7 +129,7 @@ ms.locfileid: "66072851"
   
      La opción **Ubicaciones** muestra una cuadrícula con detalles acerca de las ubicaciones en las que se almacenan las particiones remotas para la base de datos de origen, incluida la información de origen y destino y el tamaño de almacenamiento que usa cada ubicación, disponible en la base de datos seleccionada. La cuadrícula contiene las columnas siguientes:  
   
-     **Sync**  
+     **Sincronizar**  
      Seleccione esta opción para incluir una ubicación que incluye las particiones remotas durante la sincronización.  
   
     > [!NOTE]  
@@ -163,10 +162,10 @@ ms.locfileid: "66072851"
      **Grupo de medida**  
      Muestra el nombre del grupo de medida del cubo que contiene la partición.  
   
-     **Nombre de partición**  
+     **Nombre de la partición**  
      Muestra el nombre de la partición.  
   
-     **Tamaño (MB)**  
+     **Tamaño (Mb)**  
      Muestra el tamaño de la partición en megabytes (MB).  
   
 6.  Especifique si se debe incluir la información de permisos de usuario y si se debe usar compresión. De forma predeterminada, el asistente comprime todos los datos y metadatos antes de copiar los archivos al servidor de destino. Esta opción da como resultado una transmisión de archivos más rápida. Los archivos se descomprimen una vez que llegan al servidor de destino.  
@@ -184,7 +183,7 @@ ms.locfileid: "66072851"
   
 8.  Haga clic en **Finalizar** para sincronizar. Tras comprobar las opciones de la página **Finalización del asistente** , haga clic de nuevo en **Finalizar** .  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Si no sincronizó los roles o la pertenencia, recuerde especificar los permisos de acceso de usuario ahora en la base de datos de destino.  
   
 ## <a name="see-also"></a>Consulte también  

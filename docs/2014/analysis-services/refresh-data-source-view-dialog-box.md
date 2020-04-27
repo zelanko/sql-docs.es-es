@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070507"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Actualizar vista del origen de datos (cuadro de diálogo)
@@ -37,6 +37,6 @@ ms.locfileid: "66070507"
   
 ## <a name="see-also"></a>Consulte también  
  [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services de datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

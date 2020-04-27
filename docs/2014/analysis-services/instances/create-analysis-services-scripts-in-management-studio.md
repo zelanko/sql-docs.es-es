@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e3cca216f7c2312b4e7b54f2236a5d1f7bafd9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080108"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Crear scripts de Analysis Services en Management Studio
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye características, plantillas y editores de generación de script que se pueden usar para incluir objetos y tareas de Analysis Services en un script.  
   
 ## <a name="script-analysis-services-tasks-in-management-studio"></a>Incluir tareas de Analysis Services en un script en Management Studio  
@@ -67,6 +66,6 @@ ms.locfileid: "66080108"
   
 ## <a name="see-also"></a>Consulte también  
  [Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Editor de consultas XMLA &#40;Analysis Services-datos multidimensionales&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [Editor de consultas XMLA &#40;Analysis Services: datos multidimensionales&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075936"
 ---
 # <a name="create-a-date-type-dimension"></a>Crear una dimensión de tipo Date
@@ -40,8 +40,7 @@ ms.locfileid: "66075936"
  Dimensión de tiempo del servidor  
  Si no dispone de una tabla de dimensiones a la que enlazar atributos relacionados con el tiempo, puede hacer que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] defina una dimensión de tiempo del servidor basada en periodos de tiempo. Para definir las jerarquías, niveles y miembros representados por la dimensión de tiempo del servidor, seleccione periodos estándar al crear la dimensión.  
   
- Los atributos de una dimensión de tiempo de servidor tienen enlaces especiales a atributos de tiempo. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa los tipos de atributos relacionados con fechas, como Year, Month o Day, para definir los miembros de los atributos de una dimensión de tiempo.  
+ Los atributos de una dimensión de tiempo de servidor tienen enlaces especiales a atributos de tiempo. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa los tipos de atributos relacionados con fechas, como Year, Month o Day, para definir los miembros de los atributos de una dimensión de tiempo.  
   
  Después de incluir la dimensión de tiempo del servidor en un cubo, establezca la relación entre el grupo de medida y la dimensión de tiempo del servidor especificando una relación en la página **Definir el uso de las dimensiones** del Asistente para cubos.  
   

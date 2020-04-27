@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076759"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Examinar los datos y metadatos de un cubo
@@ -55,13 +55,13 @@ ms.locfileid: "66076759"
   
 -   Expanda una dimensión en el panel Metadatos y arrastre una jerarquía al panel Filtro.  
   
-     \- O bien  
+     \- o -  
   
 -   En la columna **dimensión** del panel **filtro** , haga clic en ** \<seleccionar dimensión>** y seleccione una dimensión de la lista; a continuación, haga clic ** \<en seleccionar jerarquía>** en la columna **jerarquía** y seleccione una jerarquía de la lista.  
   
  Después de especificar la jerarquía, especifique el operador y la expresión de filtro. En la tabla siguiente se describen los operadores y las expresiones de filtro.  
   
-|Operator|Expresión de filtro|Descripción|  
+|Operador|Expresión de filtro|Descripción|  
 |--------------|-----------------------|-----------------|  
 |Igual|Uno o varios miembros|Los valores deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  
 |No igual|Uno o varios miembros|Los valores no deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  
@@ -73,7 +73,7 @@ ms.locfileid: "66076759"
   
  Para las jerarquías definidas por el usuario, en las que se pueden especificar varios miembros en la expresión de filtro, todos los miembros especificados deben estar en el mismo nivel y compartir el mismo elemento primario. Esta restricción no se aplica a las jerarquías de elementos primarios y secundarios.  
   
-## <a name="working-with-data"></a>Trabajo con datos  
+## <a name="working-with-data"></a>Trabajar con datos  
   
 ##### <a name="drilling-down-into-a-member"></a>Explorar en profundidad un miembro  
  Para explorar en profundidad un miembro determinado, haga clic en el signo más (+) situado junto al miembro o haga doble clic en este.  

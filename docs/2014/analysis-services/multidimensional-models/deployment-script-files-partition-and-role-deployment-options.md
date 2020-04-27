@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075351"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Especificar opciones de implementación de roles y particiones
@@ -50,7 +50,7 @@ ms.locfileid: "66075351"
   
 -   Los roles y miembros de roles existentes en la base de datos de destino se conservan, y no se implementan los roles nuevos.  
   
--   **Nota:** Cuando se conservan los roles y miembros existentes, los permisos asociados con esos roles se restablecen en ninguno. Los permisos de seguridad están incluidos en los objetos que protegen, no en los roles de seguridad a los que están asociados. Para obtener más información acerca de cómo trabajar con este comportamiento mediante el Asistente para la implementación de Analysis Services, vea el apartado sobre la conservación de roles y miembros de Microsoft Knowledge base.  
+-   **Nota** Cuando se conservan los roles y los miembros existentes, los permisos asociados con esos roles se restablecen en ninguno. Los permisos de seguridad están incluidos en los objetos que protegen, no en los roles de seguridad a los que están asociados. Para obtener más información acerca de cómo trabajar con este comportamiento mediante el Asistente para la implementación de Analysis Services, vea el apartado sobre la conservación de roles y miembros de Microsoft Knowledge base.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Modificar las opciones de implementación de roles y particiones  
  Es posible que tenga que implementar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] el proyecto con distintas opciones de particiones y roles que las \<almacenadas en el *nombre del proyecto*> archivo. archivo deploymentoptions. Por ejemplo, puede que desee conservar las particiones, los roles y los miembros de roles existentes, en lugar de reemplazar todas las particiones, los roles y los miembros existentes \<, como se indica en el *nombre del proyecto*> archivo. archivo deploymentoptions.  
@@ -61,11 +61,11 @@ ms.locfileid: "66075351"
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de forma interactiva, y en la página **Opciones de implementación de particiones y roles** , especifique nuevas opciones de implementación para las particiones y los roles.  
   
-     O bien  
+     o bien  
   
 -   Ejecute el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el símbolo del sistema y ajuste el asistente de manera que se ejecute en modo de archivo de respuesta. (Para obtener más información acerca del modo de archivo de respuesta, vea [ejecutar el Asistente para la implementación de Analysis Services](running-the-analysis-services-deployment-wizard.md)).  
   
-     O bien  
+     o bien  
   
 -   Abra el \< *nombre del proyecto*>. archivo deploymentoptions en cualquier editor de texto y cambie manualmente las opciones.  
   

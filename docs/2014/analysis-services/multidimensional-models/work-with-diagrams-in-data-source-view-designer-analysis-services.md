@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072378"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabajar con diagramas en el Diseñador de vistas del origen de datos (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66072378"
   
  [Agregar un diagrama](#bkmk_add)  
   
- [Editar o eliminar un diagrama](#bkmk_edit)  
+ [Modificar o eliminar un diagrama](#bkmk_edit)  
   
  [Buscar tablas en un diagrama](#bkmk_findtables)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66072378"
   
  [Conservar la organización de objetos](#bkmk_preserve)  
   
-##  <a name="bkmk_add"></a>Agregar un diagrama  
+##  <a name="add-a-diagram"></a><a name="bkmk_add"></a>Agregar un diagrama  
  Los diagramas DSV se crean automáticamente al crear la DSV. Una vez creada la DSV, puede crear diagramas adicionales, quitarlos u ocultar objetos específicos para crear una representación de la DSV más fácil de administrar.  
   
  Para crear un diagrama, haga clic con el botón derecho en cualquier lugar del panel **Organizador de diagramas** y haga clic en **Nuevo diagrama**.  
@@ -52,14 +52,14 @@ ms.locfileid: "66072378"
   
  Puede agrupar las tablas y consultas con nombre relacionadas en diagramas separados para fines empresariales y para facilitar la comprensión de una vista del origen de datos que contenga muchas tablas, vistas y consultas con nombre. Se puede incluir la misma tabla o consulta con nombre en varios diagramas, excepto \<en el diagrama de todas las tablas>. En el \<diagrama de todas las tablas>, todos los objetos contenidos en la vista del origen de datos se muestran exactamente una vez.  
   
-##  <a name="bkmk_edit"></a>Editar o eliminar un diagrama  
+##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Editar o eliminar un diagrama  
  Cuando trabaje con un diagrama, preste especial atención a los comandos usados para agregar y quitar objetos. Por ejemplo, si elimina un objeto de un diagrama, dicho objeto también se eliminará de la DSV. Si solo desea eliminarlo del diagrama, use **Ocultar tabla** en su lugar.  
   
  ![Captura de pantalla del espacio de trabajo de diagrama, menú contextual](../media/ssas-olapdsv-diagram.gif "Captura de pantalla del espacio de trabajo de diagrama, menú contextual")  
   
  Aunque es posible ocultar objetos individualmente, al mostrarlos de nuevo mediante el comando Mostrar tablas relacionadas volverán a aparecer en el diagrama todos los objetos relacionados. Para controlar qué objetos se devuelven al área de trabajo, arrástrelos desde el panel Tablas.  
   
-##  <a name="bkmk_findtables"></a>Buscar tablas en un diagrama  
+##  <a name="find-tables-in-a-diagram"></a><a name="bkmk_findtables"></a>Buscar tablas en un diagrama  
  Si el esquema tiene un gran tamaño, desplazarse hasta una tabla determinada del panel **Diagrama** puede resultar difícil. No obstante, las siguientes herramientas pueden facilitar la búsqueda de una tabla en un diagrama.  
   
 -   Desplazarse por la lista de tablas en el panel **Tablas** .  
@@ -74,14 +74,14 @@ ms.locfileid: "66072378"
   
      Puede escribir cadenas y caracteres comodín en el cuadro Filtro para ver subconjuntos de las tablas del diagrama.  
   
-##  <a name="bkmk_arrangeobjects"></a>Organizar los objetos de un diagrama  
+##  <a name="arrange-objects-in-a-diagram"></a><a name="bkmk_arrangeobjects"></a>Organizar los objetos de un diagrama  
  Aunque el Diseñador de vistas del origen de datos puede definir varios diagramas para que una DSV sea más comprensible, los diagramas que contienen docenas de tablas pueden resultar difíciles de leer y la reorganización manual del diseño de la tabla suele ser una tarea tediosa. El Diseñador de vistas del origen de datos puede reorganizar las tablas de forma automática en el diagrama actual usando un diseño rectangular o diagonal que se basa en las relaciones entre las tablas del diagrama.  
   
 -   En un diseño rectangular, las líneas de relación se dibujan entre las tablas en lugar de hacerlo entre las columnas. Las líneas de relación se dibujan horizontal y verticalmente entre las tablas.  
   
 -   En un diseño diagonal, las líneas de relación se dibujan tan directamente como sea posible entre las columnas relacionadas de las tablas. Una relación con varias columnas se adjunta a la primera columna relacionada de la tabla. Si las columnas de una tabla no son visibles, las líneas se dibujan en la parte superior de la tabla.  
   
-##  <a name="bkmk_preserve"></a>Conservar la organización de objetos  
+##  <a name="preserve-object-arrangement"></a><a name="bkmk_preserve"></a>Conservar la organización de objetos  
  Una vez organizadas manualmente las tablas de la manera deseada, al agregar más tablas al diagrama se puede producir una actualización del mismo que quite las modificaciones realizadas recientemente a la disposición de los objetos.  
   
  Es más probable que este comportamiento se produzca al agregar una tabla, haciendo que el Organizador de diagramas mueva otras tablas para dar cabida a la nueva. Después vuelve a dibujar el diagrama para asegurarse de que todas las tablas y las líneas de conexión se representan correctamente. En este momento, se puede perder cualquier ajuste manual realizado en la posición de determinados objetos.  
@@ -90,6 +90,6 @@ ms.locfileid: "66072378"
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services de datos multidimensionales&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

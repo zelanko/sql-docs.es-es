@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069692"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Seleccionar calendarios (Asistente para dimensiones)
   Use la página **Seleccionar calendarios** para crear jerarquías adicionales que representan calendarios fiscales, de generación de informes, de fabricación o International Standards Organization (ISO) 8601 para la dimensión de tiempo.  
   
 > [!NOTE]  
->  Esta página se muestra solo si se ha seleccionado la opción **Dimensión de tiempo de servidor** en la página **Seleccionar el tipo de dimensión** o se ha seleccionado la opción **Build the dimension without using a data source** (Generar la dimensión sin un origen de datos) en la página **Dimension Definition** (Definición de dimensión) y se ha seleccionado **Dimensión de tiempo** en la página **Seleccionar el tipo de dimensión** .  
+>   Esta página se muestra solo si se ha seleccionado la opción **Dimensión de tiempo de servidor** en la página **Seleccionar el tipo de dimensión** o se ha seleccionado la opción **Generar la dimensión sin un origen de datos** en la página **Seleccionar método de generación** y se ha seleccionado **Dimensión de tiempo** en la página **Seleccionar el tipo de dimensión** .  
   
 ## <a name="options"></a>Opciones  
  **Calendario fiscal**  
@@ -33,13 +33,13 @@ ms.locfileid: "66069692"
  Seleccione el día y el mes en el que comienza el calendario fiscal.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
+>   Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
   
  **Convención de nomenclatura del año fiscal**  
  Seleccione la convención de nomenclatura usada por el calendario fiscal. Seleccione **Nombre del año natural** o **Nombre del año natural +1**.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
+>   Esta opción solo está disponible si se ha seleccionado **Calendario fiscal** .  
   
  **Calendario de informe (o marketing)**  
  Seleccione esta opción para crear una jerarquía de tiempo basada en un calendario de informe.  
@@ -71,13 +71,13 @@ ms.locfileid: "66069692"
  Seleccione la semana y el mes en que comienza el calendario de fabricación.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si se ha seleccionado **Calendario de fabricación** .  
+>   Esta opción solo está disponible cuando si se ha seleccionado **Calendario de fabricación** .  
   
  **Trimestre con períodos adicionales**  
  Seleccione o escriba el trimestre que contendrá los periodos adicionales.  
   
 > [!NOTE]  
->  Esta opción solo está disponible si se ha seleccionado **Calendario de fabricación** .  
+>   Esta opción solo está disponible cuando si se ha seleccionado **Calendario de fabricación** .  
   
  **Calendario ISO 8601**  
  Seleccione esta opción para crear una jerarquía de tiempo basada en el calendario ISO 8601.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071381"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Conexión de modelo semántico de BI PowerPivot (.bism)
@@ -24,7 +24,7 @@ ms.locfileid: "66071381"
   
  ![Captura de pantalla del comando de inicio rápido de BISM](../media/ssas-bism-quicklaunch.gif "Captura de pantalla del comando de inicio rápido de BISM")  
   
-##  <a name="bkmk_prereq"></a>Bases de datos admitidas  
+##  <a name="supported-databases"></a><a name="bkmk_prereq"></a>Bases de datos admitidas  
  Las conexiones del modelo semántico de BI apuntan a datos del modelo tabular. Hay tres orígenes para estos datos:  
   
 -   Una base de datos de modelo tabular que se ejecuta en una instancia independiente de Analysis Services en el modo de servidor tabular. Una implementación de una instancia de Analysis Services independiente es externa a la granja. El acceso a orígenes de datos fuera de la granja requiere permisos adicionales, acerca de los cuales puede leer en este tema: [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "66071381"
   
  Todas las conexiones que tienen como destino una base de datos modelo tabular se establecen con las credenciales del usuario que solicita los datos. Sin embargo, los mecanismos de esa conexión variarán dependiendo de si se trata de una conexión que se establece dentro una granja, si se trata una conexión de uno o dos saltos y si Kerberos está habilitado. Para más información sobre las conexiones autenticadas entre SharePoint y orígenes de datos back-end, vea [Double-hop authentication: Why NTLM fails and Kerberos works](https://go.microsoft.com/fwlink/?LinkId=237137)(Autenticación de salto doble: Por qué NTLM no funciona y Kerberos sí).  
   
- **Conectarse desde Excel a datos tabulares de una red**  
+ **Establecer conexión desde Excel con datos tabulares de una red**  
   
  Cuando un usuario de Excel especifica una conexión del modelo semántico de BI como origen de datos, la información de conexión incluida en el archivo .bism se descarga en la aplicación cliente, que, a continuación, emite su propia solicitud directa para la base de datos modelo tabular de Analysis Services. Para tener acceso a la conexión de .bism, el usuario de Excel debe ser un usuario de SharePoint con permisos de lectura sobre el archivo de conexión .bism. Una vez que se descarga la información de conexión, todas las conexiones siguientes omiten SharePoint y fluyen directamente desde Excel hacia la base de datos modelo tabular back-end.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66071381"
   
  ![Conexiones desde Excel a una base de datos de modelo tabular](../media/ssas-powerpivotbismconnection-1.gif "Conexiones desde Excel a una base de datos de modelo tabular")  
   
- **Conexión desde Power View a datos tabulares de una red**  
+ **Establecer conexión desde la vista avanzada con los datos tabulares de una red**  
   
  Cuando un usuario de SharePoint hace clic en una conexión semántica de BI de una biblioteca de documentos, la vista avanzada (si está instalada) se inicia inmediatamente y se abre una conexión a la base de datos modelo tabular.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66071381"
   
  En este escenario, todas las conexiones se establecen en la misma granja, por lo que no son necesarios Kerberos ni la delegación limitada.  
   
-##  <a name="bkmk_rel"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_rel"></a> Tareas relacionadas  
  [Agregar un tipo de contenido de conexión de modelo semántico de BI a una biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Creación de una conexión de modelo semántico de BI a un libro de PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  

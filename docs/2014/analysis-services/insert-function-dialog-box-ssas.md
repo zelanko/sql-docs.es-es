@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080410"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Cuadro de diálogo Insertar función (SSAS)
@@ -44,12 +44,12 @@ ms.locfileid: "66080410"
   
  Estadística  
   
- Texto  
+ Text  
   
 ## <a name="measures-and-formulas"></a>Medidas y fórmulas  
  El cuadro de diálogo **Insertar función** solo está disponible cuando se está generando una fórmula. Puede crear los cálculos en una columna calculada, en una tabla dinámica o en un gráfico dinámico. Las fórmulas que genera expresamente para usarse en una tabla dinámica también se denominan *medidas*. Para obtener más información, vea [Crear una columna calculada &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) y [Crear y administrar medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Cálculos &#40;&#41;tabular de SSAS](tabular-models/calculations-ssas-tabular.md)  
+ [Cálculos &#40;SSAS tabular&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

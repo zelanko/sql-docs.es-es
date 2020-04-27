@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073648"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mezclar particiones en Analysis Services (SSAS - Multidimensional)
@@ -27,22 +27,22 @@ ms.locfileid: "66073648"
   
  [Requisitos](#bkmk_prereq)  
   
- [Actualizar el origen de la partición después de mezclar las particiones](#bkmk_Where)  
+ [Actualizar el origen de la partición después de mezclar particiones](#bkmk_Where)  
   
- [Consideraciones especiales para las particiones segmentadas por tabla de hechos o por consulta con nombre](#bkmk_fact)  
+ [Consideraciones especiales para las particiones segmentadas por una tabla de hechos o por una consulta con nombre](#bkmk_fact)  
   
  [Cómo mezclar particiones mediante SSMS](#bkmk_partitionSSMS)  
   
  [Cómo mezclar particiones mediante XMLA](#bkmk_partitionsXMLA)  
   
-##  <a name="bkmk_Scenario"></a>Escenarios comunes  
+##  <a name="common-scenarios"></a><a name="bkmk_Scenario"></a>Escenarios comunes  
  La configuración única más común para el uso de particiones entraña la separación de datos a lo largo de la dimensión temporal. La granularidad del tiempo asociada con cada partición varía dependiendo de los requisitos empresariales específicos del proyecto. Por ejemplo, la segmentación puede ser por años, estando el año más reciente dividido por meses, más una partición independiente para el mes activo. La partición del mes activo recibe periódicamente nuevos datos.  
   
  Cuando el mes activo esté completo, dicha partición se volverá a mezclar con los meses de la partición anual y el proceso continuará. Al final del año, se habrá formado toda una partición anual nueva.  
   
  Como muestra este escenario, la mezcla de particiones puede convertirse en una tarea rutinaria que se realiza periódicamente, proporcionando un método progresivo para consolidar y organizar los datos históricos.  
   
-##  <a name="bkmk_prereq"></a>Satisfacer  
+##  <a name="requirements"></a><a name="bkmk_prereq"></a> Requisitos  
  Solo puede mezclar particiones si todas ellas cumplen los siguientes criterios:  
   
 -   Tienen el mismo grupo de medida.  
@@ -66,7 +66,7 @@ ms.locfileid: "66073648"
   
  Para crear una partición que sea candidata para una mezcla futura, en el Asistente para particiones puede elegir la opción de copiar el diseño de agregaciones de otra de las particiones del cubo. Esto garantizará que las particiones tienen el mismo diseño de agregaciones. Cuando se mezclan, las agregaciones de la partición de origen se combinan con las agregaciones de la partición de destino.  
   
-##  <a name="bkmk_Where"></a>Actualizar el origen de la partición después de mezclar las particiones  
+##  <a name="update-the-partition-source-after-merging-partitions"></a><a name="bkmk_Where"></a>Actualizar el origen de la partición después de mezclar las particiones  
  Las particiones se segmentan por consulta, como la cláusula WHERE de una consulta SQL usada para procesar los datos, o por una tabla o una consulta con nombre que proporcione los datos a la partición. La propiedad `Source` de la partición indica si la partición está enlazada a una consulta o una tabla.  
   
  Cuando se mezclan particiones, el contenido de las particiones se consolida, pero la propiedad `Source` no se actualiza para reflejar el ámbito adicional de la partición. Esto significa que si vuelve a procesar posteriormente una partición que conserva su valor `Source` original, obtendrá datos incorrectos de esa partición. La partición agregará erróneamente datos en el nivel primario. En el ejemplo siguiente se ilustra este comportamiento.  
@@ -81,11 +81,11 @@ ms.locfileid: "66073648"
   
  En este ejemplo, después de mezclar la partición 3 en la partición 2, puede proporcionar un filtro como ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') en la partición 2 resultante para especificar que únicamente se extraigan de la tabla de hechos los datos sobre [ColaDecaf] y [ColaDiet], y se excluyan los datos relacionados con [ColaFull]. Como alternativa, puede especificar filtros para la partición 2 y la partición 3 cuando se crean. Estos filtros se combinarán durante el proceso de mezcla. En cualquier caso, después de procesar la partición, el cubo no contendrá datos duplicados.  
   
- **La conclusión**  
+ **La cConclusión**  
   
  Después de mezclar particiones, compruebe siempre `Source` para comprobar si el filtro es correcto para los datos mezclados. Si empezó con una partición que incluía datos históricos para T1, T2 y Q3, y ahora mezcla T4, debe ajustar el filtro para incluir T4. De lo contrario, el procesamiento posterior de la partición producirá resultados erróneos. No será correcto para T4.  
   
-##  <a name="bkmk_fact"></a>Consideraciones especiales para las particiones segmentadas por tabla de hechos o por consulta con nombre  
+##  <a name="special-considerations-for-partitions-segmented-by-fact-table-or-named-query"></a><a name="bkmk_fact"></a>Consideraciones especiales para las particiones segmentadas por tabla de hechos o por consulta con nombre  
  Además de por consultas, las particiones también se pueden segmentar por tabla o por consulta con nombre. Si la partición de origen y la partición de destino emplean la misma tabla de hechos en un origen de datos o en una vista del origen de datos, la propiedad `Source` es válida después de mezclar las particiones. Especifica los datos de la tabla de hechos que son adecuados para la partición resultante. Como los hechos necesarios para la partición resultante se encuentran en la tabla de hechos, no es necesario efectuar ninguna modificación a la propiedad `Source`.  
   
  Las particiones que usan datos de varias tablas de hechos o de varias consultas con nombre requieren un trabajo adicional. Debe mezclar manualmente los hechos de la tabla de hechos de la partición de origen en la tabla de hechos de la partición de destino.  
@@ -110,7 +110,7 @@ ms.locfileid: "66073648"
   
  Las tablas de hechos se pueden mezclar antes o después de mezclar las particiones. Sin embargo, las agregaciones no representarán con precisión los hechos subyacentes hasta que hayan finalizado ambas operaciones. Se recomienda mezclar las particiones HOLAP o ROLAP que tienen acceso a diferentes tablas de hechos cuando no haya ningún usuario conectado al cubo que contiene esas particiones.  
   
-##  <a name="bkmk_partitionSSMS"></a>Cómo mezclar particiones mediante SSMS  
+##  <a name="how-to-merge-partitions-using-ssms"></a><a name="bkmk_partitionSSMS"></a>Cómo mezclar particiones mediante SSMS  
   
 > [!IMPORTANT]  
 >  Antes de mezclar particiones, copie primero la información de filtro de datos (a menudo, la cláusula WHERE para los filtros basados en consultas SQL). Posteriormente, una vez completada la mezcla, debe actualizar la propiedad Origen de la partición que contiene los datos de hechos acumulados.  
@@ -128,7 +128,7 @@ ms.locfileid: "66073648"
   
 5.  Abra la `Source` propiedad y modifique la cláusula WHERE para que incluya los datos de la partición que acaba de combinar. Recuerde que la `Source` propiedad no se actualiza automáticamente. Si vuelve a procesar sin actualizar primero el `Source`, es posible que no obtenga todos los datos esperados.  
   
-##  <a name="bkmk_partitionsXMLA"></a>Cómo mezclar particiones mediante XMLA  
+##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Cómo mezclar particiones mediante XMLA  
  Para más información, vea el tema [Mezclar particiones &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Consulte también  

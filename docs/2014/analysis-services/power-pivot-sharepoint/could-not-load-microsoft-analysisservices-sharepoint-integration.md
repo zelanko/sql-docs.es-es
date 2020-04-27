@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071628"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>No se pudo cargar el archivo o ensamblado &#39;Microsoft. Data. Services, version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o una de sus dependencias. El sistema no encuentra el archivo especificado.
@@ -24,7 +24,7 @@ ms.locfileid: "66071628"
   
 |||  
 |-|-|  
-|Se aplica a|PowerPivot para SharePoint|  
+|Aplicable a|PowerPivot para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|No se encontró ADO.NET Data Services 3.5 SP1.|  
 |Texto del mensaje|No se puede cargar el archivo o ensamblado 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' ni una de sus dependencias. El sistema no encuentra el archivo especificado.|  
@@ -38,7 +38,7 @@ ms.locfileid: "66071628"
   
 1.  Vaya a la documentación sobre los requisitos de hardware y software para SharePoint 2010, [determinar los requisitos de hardware y software (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734).  
   
-2.  En **instalación de los requisitos previos de software**, busque el vínculo de ADO.NET Data Services 3,5 que corresponda al sistema operativo que está usando.  
+2.  En **Instalar requisitos previos de software**, busque el vínculo de ADO.NET Data Services 3.5 correspondiente al sistema operativo que está usando.  
   
 3.  Haga clic en el vínculo y ejecute el programa de instalación que instala el servicio.  
   

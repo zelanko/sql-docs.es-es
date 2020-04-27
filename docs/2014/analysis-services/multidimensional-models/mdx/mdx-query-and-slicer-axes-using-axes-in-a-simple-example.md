@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074026"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>Usar los ejes de consulta y segmentador en un ejemplo simple (MDX)
@@ -49,6 +49,6 @@ WHERE ( [Measures].[Packages] )
   
 ## <a name="see-also"></a>Consulte también  
  [Especificar el contenido de un eje de consulta &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [Especificar el contenido de un eje segmentador &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Especificar el contenido de un eje de división en sectores &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

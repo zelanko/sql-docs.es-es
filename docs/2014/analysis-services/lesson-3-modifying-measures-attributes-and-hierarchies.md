@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078780"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificar medidas, atributos y jerarquías
   Una vez definido el cubo inicial, estará listo para mejorar la utilidad y la facilidad de uso del cubo. Puede hacerlo agregando jerarquías que admitan navegación y agregación en varios niveles, aplicando formatos a la medida específica, y definiendo cálculos y relaciones.  
   
 > [!NOTE]  
->  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que acompañan a este tutorial.  
+>  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
   
  Esta lección contiene las siguientes tareas:  
   
@@ -42,6 +42,6 @@ ms.locfileid: "66078780"
   
 ## <a name="see-also"></a>Consulte también  
  [Escenario de Analysis Services tutorial](analysis-services-tutorial-scenario.md)   
- [Modelo multidimensional &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

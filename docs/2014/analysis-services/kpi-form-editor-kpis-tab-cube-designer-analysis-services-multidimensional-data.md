@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079451"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -65,7 +65,7 @@ ms.locfileid: "66079451"
 > [!NOTE]  
 >  Los valores inferiores a 1 y superiores a 1 son posibles, pero es posible que las aplicaciones cliente de terceros no los interpreten correctamente.  
   
- **Tendencia**  
+ **Evolución**  
  Expanda para ver las opciones **Gráfico de tendencia** y **Expresión de tendencia** .  
   
  **Gráfico de tendencia**  
@@ -106,7 +106,7 @@ ms.locfileid: "66079451"
 > [!IMPORTANT]  
 >  La expresión MDX debe devolver el nombre único de un miembro en una dimensión de tiempo asociada con el grupo de medida especificado en **Grupo de medida asociado**.  
   
- **Media**  
+ **Peso**  
  Expanda para ver o editar la expresión MDX para el factor de peso del KPI.  
   
  Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.  

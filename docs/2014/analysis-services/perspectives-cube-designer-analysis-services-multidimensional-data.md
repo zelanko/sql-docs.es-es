@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8bc2e3bd77b0a5a7454bd136b7a0dc485180ba28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072021"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>Perspectivas (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -25,7 +25,7 @@ ms.locfileid: "66072021"
  La pestaña **Perspectivas** contiene los siguientes paneles:  
   
 ## <a name="panes"></a>Paneles  
- **Barra de herramientas**  
+ **Barra**  
  Use la barra de herramientas para realizar acciones comunes en la pestaña.  
   
  **Detalles de la perspectiva**  

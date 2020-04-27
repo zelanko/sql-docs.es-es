@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070019"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Guardar resultado de consulta de minería de datos (cuadro de diálogo de la vista Predicción de modelo de minería de datos)
@@ -57,6 +57,6 @@ ms.locfileid: "66070019"
 ## <a name="see-also"></a>Consulte también  
  [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de consulta de minería de datos](data-mining/data-mining-query-tools.md)   
- [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

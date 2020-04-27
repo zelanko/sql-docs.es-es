@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b437016cc29b2e4a85f781e3a422fb40c70f37c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074298"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Usar DRILLTHROUGH para recuperar datos de origen (MDX)
-  Las expresiones multidimensionales (MDX) usan la instrucción [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) para recuperar un conjunto de filas de los datos de origen de una celda de cubo.  
+  Las expresiones multidimensionales (MDX) usan la instrucción [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)para recuperar un conjunto de filas de los datos de origen de una celda de cubo.  
   
  Para ejecutar una instrucción `DRILLTHROUGH` en un cubo, es preciso definir una acción de obtención de detalles para el cubo en cuestión. Para definir una acción de obtención de detalles, en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], en el Diseñador de cubos, en el panel de **Acciones** , en la barra de herramientas, haga clic en **Nueva acción de obtención de detalles**. En la nueva acción de obtención de detalles, especifique el nombre de la acción, el destino, la condición y las columnas que devolverá la instrucción `DRILLTHROUGH`.  
   

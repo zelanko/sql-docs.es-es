@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077690"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Cuadro de diálogo Propiedades del modelo de minería de datos (Analysis Services: minería de datos)
@@ -29,9 +29,9 @@ ms.locfileid: "66077690"
 |Término|Definición|  
 |----------|----------------|  
 |**Nombre**|Muestra el nombre del modelo de minería de datos.|  
-|**SESIÓN**|Muestra el identificador del modelo de minería de datos.|  
+|**Id**|Muestra el identificador del modelo de minería de datos.|  
 |**Descripción**|Muestra la descripción del modelo de minería de datos.|  
-|**Crear marca de tiempo**|Muestra la fecha y la hora de creación del modelo de minería de datos.|  
+|**Marca de tiempo de creación**|Muestra la fecha y la hora de creación del modelo de minería de datos.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora en que se actualizaron por última vez los metadatos del modelo de minería de datos.|  
 |**State**|Muestra el estado de procesamiento del modelo de minería de datos. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Procesado por última vez**|Muestra la fecha y la hora en que se procesó por última vez el modelo de minería de datos.|  

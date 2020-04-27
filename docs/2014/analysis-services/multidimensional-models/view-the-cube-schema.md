@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072513"
 ---
 # <a name="view-the-cube-schema"></a>Ver el esquema del cubo
@@ -40,7 +40,7 @@ ms.locfileid: "66072513"
   
  Además, puede realizar las acciones que se muestran en la tabla siguiente:  
   
-|A|Haga esto|  
+|En|Haga esto|  
 |--------|-------------|  
 |Usar un diagrama desde la vista del origen de datos del cubo|En el menú **Vista del origen de datos** , seleccione **Copiar diagrama desde**y, a continuación, haga clic en el diagrama de la vista del origen de datos que desea usar.<br /><br /> O bien<br /><br /> Haga clic con el botón derecho en el fondo del panel **Vista del origen de datos** , seleccione **Copiar diagrama desde**y, después, haga clic en el diagrama de la vista del origen de datos que prefiera. Este método crea una copia independiente del diagrama, de modo que los cambios que realice en la pestaña **Generador de cubos** no aparecen en el diagrama original.|  
 |Mostrar solo las tablas usadas en el cubo|En el menú **Vista del origen de datos** , haga clic en **Mostrar solo tablas usadas**.<br /><br /> O bien<br /><br /> Haga clic con el botón derecho en el fondo del panel **Vista del origen de datos** y, después, haga clic en **Mostrar solo tablas usadas**.|  

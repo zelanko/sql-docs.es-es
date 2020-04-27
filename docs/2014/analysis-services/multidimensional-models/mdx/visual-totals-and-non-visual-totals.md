@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073726"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Totales visuales y totales no visuales
@@ -36,11 +36,11 @@ ms.locfileid: "66073726"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accesorios**|**Bikes**|**Ropa**|**Componentes**|  
-|**Todos los distribuidores**|**$80,450,596.98**|**$571.297,93**|**$66.302.381,56**|**$1.777.840,84**|**$11.799.076,66**|  
-|**Tienda de bicicletas de especialidad**|**$6.756.166,18**|**$65.125,48**|**$6.080.117,73**|**$252.933,91**|**$357.989,07**|  
-|**Revendedor de valor agregado**|**$34,967,517.33**|**$175.002,81**|**$30.892.354,33**|**$592,385.71**|**$3.307.774,48**|  
-|**Warehouse**|**$38,726,913.48**|**$331.169,64**|**$29.329.909,50**|**$932.521,23**|**$8.133.313,11**|  
+||**All Products**|**Accessories**|**Bikes**|**Ropa**|**Componentes**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
+|**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
+|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
+|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>Filas y columnas no visuales  
  Para generar una tabla con datos solo para los productos Accessories y Clothing, y los revendedores Value Added Reseller y Warehouse, manteniendo todavía los totales globales, se podría escribir de la forma siguiente usando NON VISUAL:  
@@ -61,10 +61,10 @@ ms.locfileid: "66073726"
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accesorios**|**Ropa**|  
-|**Todos los distribuidores**|**$80,450,596.98**|**$571.297,93**|**$1.777.840,84**|  
-|**Revendedor de valor agregado**|**$34,967,517.33**|**$175.002,81**|**$592,385.71**|  
-|**Warehouse**|**$38,726,913.48**|**$331.169,64**|**$932.521,23**|  
+||**All Products**|**Accessories**|**Ropa**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
+|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
+|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
 ## <a name="non-visual-on-rows"></a>Filas no visuales  
  Para generar una tabla que sume visualmente las columnas pero que tome el total real de todos [Category] para los totales de las filas, debe emitirse la consulta siguiente:  

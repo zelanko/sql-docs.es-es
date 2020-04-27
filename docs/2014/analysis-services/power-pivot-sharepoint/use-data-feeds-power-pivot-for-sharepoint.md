@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070905"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Usar fuentes de distribución de datos (PowerPivot para SharePoint)
@@ -34,14 +34,14 @@ ms.locfileid: "66070905"
   
  [Crear una fuente de distribución de datos a partir de un documento de servicio de datos](#dsdoc)  
   
-##  <a name="prereq"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="prereq"></a> Requisitos previos  
  Para importar una fuente de distribución de datos en Excel 2010, debe tener PowerPivot para Excel.  
   
  Debe tener un servicio web o un servicio de datos que proporcione los datos en el formato de Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Y SharePoint 2010 pueden proporcionar datos en este [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] formato.  
   
  Antes de poder exportar una lista de SharePoint como una fuente de distribución de datos, debe instalar ADO.NET Data Services en el servidor de SharePoint. Para obtener más información, vea [Instalar ADO.NET Data Services para admitir las exportaciones de fuentes de distribución de datos de las listas de SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
-##  <a name="sharepointlist"></a>Crear una fuente de distribución de datos a partir de una lista de SharePoint  
+##  <a name="create-a-data-feed-from-a-sharepoint-list"></a><a name="sharepointlist"></a>Crear una fuente de distribución de datos a partir de una lista de SharePoint  
  En una granja de SharePoint 2010, una lista de SharePoint tiene un botón Exportar como fuente de distribución de datos en la cinta de opciones Lista. Puede hacer clic en este botón para exportar la lista como una fuente. Para obtener los mejores resultados, debería tener Excel 2010 con la aplicación cliente de PowerPivot en la estación de trabajo. La aplicación cliente de PowerPivot se iniciará en respuesta a la exportación de la fuente de distribución de datos y creará una nueva tabla de PowerPivot que contenga la lista.  
   
 1.  Abra la lista en el sitio de SharePoint.  
@@ -59,7 +59,7 @@ ms.locfileid: "66070905"
   
  Se producirá un error si ADO.NET Data Services 3.5.1 no está instalado en el servidor de SharePoint. Para obtener más información sobre el error y cómo resolverlo, consulte [Instalar ADO.NET Data Services para admitir las exportaciones de fuentes de distribución de datos de las listas de SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
-##  <a name="rsreport"></a>Crear una fuente de distribución de datos a partir de un informe de Reporting Services  
+##  <a name="create-a-data-feed-from-a-reporting-services-report"></a><a name="rsreport"></a>Crear una fuente de distribución de datos a partir de un informe de Reporting Services  
  Si tiene una implementación de Reporting Services de SQL Server 2008 R2, puede usar la nueva extensión de representación de Atom para generar una fuente de distribución de datos a partir de un informe existente. Para obtener los mejores resultados, debería tener Excel 2010 con PowerPivot para Excel en la estación de trabajo. La aplicación cliente de PowerPivot se iniciará en respuesta a la exportación de la fuente de datos, y agregará y relacionará las tablas y columnas automáticamente a medida que se transmitan.  
   
  Para obtener instrucciones sobre cómo exportar una fuente de distribución de datos a partir de un informe, vea [Generar fuentes de distribución de datos a partir de un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) en el [archivo de Ayuda del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494).  
@@ -67,7 +67,7 @@ ms.locfileid: "66070905"
 > [!NOTE]  
 >  Para configurar la programación de una actualización de datos reiterada que vuelva a importar los datos del informe en un libro PowerPivot que esté publicado en una biblioteca de SharePoint, el servidor de informes se debe configurar para la integración de SharePoint. Para obtener más información sobre el uso conjunto de PowerPivot para SharePoint y Reporting Services, vea [configuración y administración de un servidor de informes &#40;Reporting Services el modo de SharePoint&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
-##  <a name="dsdoc"></a>Crear una fuente de distribución de datos a partir de un documento de servicio de datos  
+##  <a name="create-a-data-feed-from-a-data-service-document"></a><a name="dsdoc"></a>Crear una fuente de distribución de datos a partir de un documento de servicio de datos  
  Si tiene un servicio de datos personalizado que genera las fuentes Atom, puede configurar un documento de servicio de datos para hacer que los datos estén disponibles para los usuarios y aplicaciones. Un archivo de *documento de servicio de datos* (.atomsvc) especifica una o varias conexiones a los orígenes en línea que publican los datos en el formato de conexión de Atom. Los documentos de servicio de datos se pueden crear en una *biblioteca de fuente de distribución de datos*, que es una biblioteca con una finalidad especial que proporciona un punto de acceso común para examinar los documentos de servicio de datos publicados en un servidor de SharePoint. Los trabajadores de la información que disponen de permiso de acceso a los documentos de servicio de datos en la biblioteca de fuentes de distribución de datos pueden hacer referencia a la dirección URL de SharePoint del documento para importar las fuentes de distribución de datos en sus libros y aplicaciones.  
   
 1.  Abra una biblioteca de fuentes de distribución de datos que creara el administrador del sitio. Para obtener más información, vea [crear o personalizar una biblioteca de fuentes de distribución de datos &#40;PowerPivot para SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
@@ -80,9 +80,9 @@ ms.locfileid: "66070905"
   
 5.  Especifique una o más direcciones URL que proporcionen la fuente:  
   
-    1.  La **dirección URL base** es opcional. Debería especificarla si un documento de servicio de datos proporciona varias fuentes. La dirección URL base debería especificar la parte de la dirección URL que sea común a todas las fuentes (por ejemplo, el nombre del servidor y el sitio). Si está creando un documento de servicio de datos para un informe de Reporting Services, la dirección URL base sería la dirección URL del servidor de informes y el informe.  
+    1.  La**Dirección URL base** es opcional. Debería especificarla si un documento de servicio de datos proporciona varias fuentes. La dirección URL base debería especificar la parte de la dirección URL que sea común a todas las fuentes (por ejemplo, el nombre del servidor y el sitio). Si está creando un documento de servicio de datos para un informe de Reporting Services, la dirección URL base sería la dirección URL del servidor de informes y el informe.  
   
-    2.  Se requiere la **dirección URL del servicio Web** . Sin la dirección URL base, este valor debe incluir http:// o https:// en la dirección. Si especificó una dirección URL base, la dirección URL del servicio web es la parte que sigue a la dirección URL base. Por ejemplo, si la dirección URL completa http://adventure-works/inventory/today.aspxes, la dirección URL base http://adventure-works/inventorysería y la dirección URL del servicio Web sería/Today.aspx.  
+    2.  La**Dirección URL del servicio web** es obligatoria. Sin la dirección URL base, este valor debe incluir http:// o https:// en la dirección. Si especificó una dirección URL base, la dirección URL del servicio web es la parte que sigue a la dirección URL base. Por ejemplo, si la dirección URL completa http://adventure-works/inventory/today.aspxes, la dirección URL base http://adventure-works/inventorysería y la dirección URL del servicio Web sería/Today.aspx.  
   
          La dirección URL del servicio web puede incluir parámetros que filtran o seleccionan un subconjunto de datos. La aplicación o servicio que proporciona la fuente debe admitir los parámetros que especifique en la dirección URL.  
   

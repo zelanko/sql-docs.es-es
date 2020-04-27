@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 654d659900d01ae9d5caf5188b9146510de483ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080119"
 ---
 # <a name="connect-to-analysis-services"></a>Conectar a Analysis Services
@@ -27,17 +27,17 @@ ms.locfileid: "66080119"
   
  Cualquier descripción que hable de la conectividad suele incluir la autenticación. A diferencia de otras características de SQL Server, Analysis Services utiliza exclusivamente las credenciales de Windows. En la conexión de back-end de Analysis Services no se puede usar autenticación de base de datos de SQL Server, autenticación de notificaciones, autenticación basada en formularios o autenticación implícita. En esta sección se ofrece más información acerca de la autenticación.  
   
-##  <a name="bkmk_clientApps"></a>Tareas de conexión  
+##  <a name="connection-tasks"></a><a name="bkmk_clientApps"></a>Tareas de conexión  
   
 |Vínculo|Descripción de la tarea|  
 |----------|----------------------|  
 |[Conectarse desde aplicaciones cliente &#40;Analysis Services&#41;](connect-from-client-applications-analysis-services.md)|Si no está familiarizado con Analysis Services, lea este tema para conocer las herramientas y las aplicaciones de uso más frecuente con Analysis Services.|  
-|[Propiedades de la cadena de conexión &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos.|  
+|[Propiedades de cadena de conexión &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md)|Analysis Services incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos.|  
 |[Metodologías de autenticación admitidas por Analysis Services](authentication-methodologies-supported-by-analysis-services.md)|Este tema es una breve introducción a los métodos de autenticación que Analysis Services usa.|  
 |[Configurar Analysis Services para la delegación restringida de Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)|Muchas soluciones de Business Intelligence necesitan suplantación para asegurarse de que solo se devuelven los datos autorizados a cada usuario. En este tema, aprenderá los requisitos para usar la suplantación. En este tema también se explican los pasos para configurar Analysis Services para la delegación limitada de Kerberos.|  
 |[Registro de SPN para una instancia de Analysis Services](spn-registration-for-an-analysis-services-instance.md)|La autenticación Kerberos necesita un nombre principal del servicio (SPN) válido para los servicios que suplantan o delegan identidades de usuario en soluciones multiservidor. Use la información de este tema para conocer la construcción y los pasos para el registro de SPN para Analysis Services.|  
-|[Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)|La autenticación básica o los límites entre dominios son dos motivos importantes para configurar Analysis Services para el acceso HTTP.|  
-|[Proveedores de datos usados para conexiones de Analysis Services](data-providers-used-for-analysis-services-connections.md)|Analysis Services proporciona tres bibliotecas de cliente para el acceso a operaciones de servidor o a datos de Analysis Services. Este tema proporciona una breve introducción a ADOMD.NET, Objetos de administración de Analysis Services (AMO) y el proveedor OLE DB de Analysis Services (MSOLAP).|  
+|[Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)|La autenticación básica o los límites entre dominios son dos motivos importantes para configurar Analysis Services para el acceso HTTP.|  
+|[Proveedores de datos usados para las conexiones de Analysis Services](data-providers-used-for-analysis-services-connections.md)|Analysis Services proporciona tres bibliotecas de cliente para el acceso a operaciones de servidor o a datos de Analysis Services. Este tema proporciona una breve introducción a ADOMD.NET, Objetos de administración de Analysis Services (AMO) y el proveedor OLE DB de Analysis Services (MSOLAP).|  
 |[Desconectar usuarios y sesiones en el servidor de Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Desactive las conexiones y sesiones existentes antes de poner un servidor sin conexión o de realizar pruebas de rendimiento de línea base.|  
   
 ## <a name="see-also"></a>Consulte también  

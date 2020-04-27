@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fe58a49e707bdca231b488ae207d14bbbfc7cb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242535"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>Método SetStrValue (clase ClientNetworkProtocolProperty)
@@ -40,7 +40,7 @@ StrValue
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase ClientNetworkProtocolProperty](clientnetworkprotocolproperty-class.md) que representa un atributo del protocolo de red utilizado por el cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parámetros  
@@ -55,6 +55,6 @@ StrValue
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

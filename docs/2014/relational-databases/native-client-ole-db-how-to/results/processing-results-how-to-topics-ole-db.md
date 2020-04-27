@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225473"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Temas de procedimientos de procesamiento de resultados (OLE DB)
@@ -24,7 +24,7 @@ ms.locfileid: "63225473"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Ejecutar un procedimiento almacenado &#40;mediante la sintaxis CALL de ODBC&#41; y procesar códigos de retorno y parámetros de salida &#40;OLE DB&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [Ejecutar un procedimiento almacenado &#40;mediante la sintaxis ODBC CALL&#41; y procesar códigos de retorno y parámetros de salida &#40;OLE DB&#41;](execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
 -   [Ejecutar un procedimiento almacenado &#40;mediante la sintaxis RPC&#41; y procesar códigos de retorno y parámetros de salida &#40;OLE DB&#41;](execute-stored-procedure-with-rpc-and-process-output.md)  
   

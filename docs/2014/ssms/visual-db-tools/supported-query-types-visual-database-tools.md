@@ -23,29 +23,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 752467d058a6618ccfa44d7e2f75ac33b632878e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204650"
 ---
 # <a name="supported-query-types-visual-database-tools"></a>Tipos de consultas compatibles (Visual Database Tools)
-  Puede crear los siguientes tipos de consultas en los paneles Diagrama y criterios (paneles gráficos) del [Diseñador de consultas y vistas](visual-database-tools.md):  
+  Puede crear los siguientes tipos de consulta en los paneles Diagrama y Criterios (paneles gráficos) del [Diseñador de consultas y vistas](visual-database-tools.md):  
   
--   **Seleccionar consulta** Recupera datos de una o varias tablas o vistas. Este tipo de consulta crea una instrucción SQL SELECT.  
+-   **Consulta Select** Recupera datos de una o más tablas o vistas. Este tipo de consulta crea una instrucción SQL SELECT.  
   
--   **Insertar resultados** Crea filas nuevas copiando las filas existentes de una tabla en otra o en la misma tabla como nuevas filas. Este tipo de consulta crea una instrucción SQL INSERT INTO...SELECT.  
+-   **Insertar resultados** Crea filas nuevas mediante la copia de filas existentes de una tabla a otra, o a la misma tabla como nuevas filas. Este tipo de consulta crea una instrucción SQL INSERT INTO...SELECT.  
   
--   **Insertar valores** Crea una nueva fila e inserta valores en las columnas especificadas. Este tipo de consulta crea una instrucción SQL INSERT INTO...VALUES.  
+-   **Insertar valores** Crea una nueva fila e inserta valores en columnas especificadas. Este tipo de consulta crea una instrucción SQL INSERT INTO...VALUES.  
   
--   **Actualizar consulta** Cambia los valores de columnas individuales de una o más filas existentes en una tabla. Este tipo de consulta crea una instrucción SQL UPDATE...SET.  
+-   **Consulta de actualización** Cambia los valores de columnas individuales de una o más filas existentes en una tabla. Este tipo de consulta crea una instrucción SQL UPDATE...SET.  
   
--   **Eliminar consulta** Quita una o más filas de una tabla. Este tipo de consulta crea una instrucción SQL DELETE.  
+-   **Consulta de eliminación** Quita una o más filas de una tabla. Este tipo de consulta crea una instrucción SQL DELETE.  
   
     > [!NOTE]  
     >  Una consulta Delete quita filas completas de la tabla. Si desea eliminar valores de columnas de datos individuales, utilice una consulta Update.  
   
--   **Consulta make Table** Crea una nueva tabla y crea filas en ella copiando los resultados de una consulta en ella. Este tipo de consulta crea una instrucción SQL SELECT...INTO.  
+-   **Consulta de creación de tabla** Crea una nueva tabla y crea filas en ella copiando los resultados de una consulta en la misma. Este tipo de consulta crea una instrucción SQL SELECT...INTO.  
   
  Además de las consultas que puede crear mediante el uso de los paneles gráficos, puede especificar cualquier instrucción SQL en el panel SQL, como consultas de unión.  
   

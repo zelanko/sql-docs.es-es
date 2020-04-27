@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233079"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuevas características de fecha y hora con versiones de SQL Server anteriores (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233079"
   
 |Tipo de cliente OLE DB|Tipo de SQL Server 2005|SQL Server tipo 2008 (o posterior)|Conversión del resultado (servidor a cliente)|Conversión de parámetros (cliente a servidor)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Date|Aceptar|Aceptar|  
+|DBTYPE_DBDATE|Datetime|Fecha|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si el campo de hora es distinto de cero.|  
 |DBTYPE_DBTIME||Time(0)|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si las fracciones de segundo son distintas de cero.<br /><br /> Se omite la fecha.|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233079"
 |DBTYPE_DBTIMESTAMP|||Error: literal de hora no válido.|Aceptar|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|Aceptar|Aceptar|  
-|DBTYPE_DBDATE|Smalldatetime|Date|Aceptar|Aceptar|  
+|DBTYPE_DBDATE|Smalldatetime|Fecha|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si el campo de hora es distinto de cero.|  
 |DBTYPE_DBTIME||Time(0)|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si las fracciones de segundo son distintas de cero.<br /><br /> Se omite la fecha.|  
@@ -55,7 +55,7 @@ ms.locfileid: "63233079"
   
 -   Cambio a `datetime2` porque se trata del tipo de datos preferido para la fecha y hora.  
   
- Las aplicaciones que utilizan metadatos de servidor obtenidos a través de ICommandWithParameters:: GetParameterInfo o conjuntos de filas de esquema para establecer la información de tipo de parámetro mediante ICommandWithParameters:: SetParameterInfo producirán errores durante las conversiones de cliente donde la cadena la representación de un tipo de origen es mayor que la representación de cadena del tipo de destino. Por ejemplo, si un enlace de cliente utiliza DBTYPE_DBTIMESTAMP y la columna Server es Date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Native Client convertirá el valor a "YYYY-dd-mm HH: mm: SS. fff", pero los metadatos del servidor `nvarchar(10)`se devolverán como. El desbordamiento resultante produce DBSTATUS_E_CATCONVERTVALUE. Se producen problemas similares con las conversiones de datos de IRowsetChange, ya que los metadatos del conjunto de filas se establecen a partir de los metadatos del conjunto de resultados.  
+ Las aplicaciones que utilizan metadatos de servidor obtenidos a través de ICommandWithParameters:: GetParameterInfo o conjuntos de filas de esquema para establecer la información de tipo de parámetro mediante ICommandWithParameters:: SetParameterInfo producirán errores durante las conversiones de cliente en las que la representación de cadena de un tipo de origen es mayor que la representación de cadena del tipo de destino. Por ejemplo, si un enlace de cliente utiliza DBTYPE_DBTIMESTAMP y la columna Server es Date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Native Client convertirá el valor a "YYYY-dd-mm HH: mm: SS. fff", pero los metadatos del servidor `nvarchar(10)`se devolverán como. El desbordamiento resultante produce DBSTATUS_E_CATCONVERTVALUE. Se producen problemas similares con las conversiones de datos de IRowsetChange, ya que los metadatos del conjunto de filas se establecen a partir de los metadatos del conjunto de resultados.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Parámetros y metadatos de conjuntos de filas  
  En esta sección se describen los metadatos de los parámetros, las columnas de resultados y los conjuntos de filas de esquema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los clientes que [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]se compilan con una versión de Native Client anterior a.  

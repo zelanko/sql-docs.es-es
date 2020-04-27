@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231269"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
-  Como se describe en el tema [generar XML mediante for XML](../xml/for-xml-sql-server.md), el modo Raw y auto no proporciona mucho control sobre la forma del XML generado a partir del resultado de una consulta. Sin embargo, el modo EXPLICIT ofrece la máxima flexibilidad para generar el XML que se desee a partir del resultado de una consulta.  
+  Como se describe en el tema [Generar XML mediante FOR XML](../xml/for-xml-sql-server.md), los modos RAW y AUTO no proporcionan demasiado control sobre la forma del XML generado a partir del resultado de una consulta. Sin embargo, el modo EXPLICIT ofrece la máxima flexibilidad para generar el XML que se desee a partir del resultado de una consulta.  
   
  La consulta en modo EXPLICIT debe escribirse de una determinada manera para poder especificar explícitamente la información adicional sobre el XML requerido, como el anidamiento esperado en el XML, como parte de la propia consulta. Dependiendo del XML que se solicite, la escritura de consultas en modo EXPLICIT puede resultar complicada. Tal vez, una alternativa más sencilla que escribir consultas en modo EXPLICIT sea [usar el modo PATH](../xml/use-path-mode-with-for-xml.md) con anidamiento.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63231269"
   
     -   Para las filas con valor 2 en la columna **Tag**, las columnas **Order!2!id** y **Order!2!date** forman un grupo que se usa después para construir elementos, <`Order id=... date=... /`>.  
   
-    -   Para las filas con valor 3 en la columna **Tag**, las columnas **OrderDetail!3!id!id** y **OrderDetail!3!pid!idref** forman un grupo. Cada una de estas filas genera un elemento, <`OrderDetail id=... pid=...`>, a partir de estas columnas.  
+    -   Para las filas con valor 3 en la columna **Tag** , las columnas **OrderDetail!3!id!id** y **OrderDetail!3!pid!idref** forman un grupo. Cada una de estas filas genera un elemento, <`OrderDetail id=... pid=...`>, a partir de estas columnas.  
   
 -   Tenga en cuenta que, al generar la jerarquía en XML, las filas se procesan por orden. La jerarquía XML se determina como se indica a continuación:  
   
@@ -111,7 +111,7 @@ ElementName!TagNumber!AttributeName!Directive
  A continuación, se describe cada parte del formato.  
   
  *ElementName*  
- Es el identificador genérico resultante del elemento. Por ejemplo, si se especifica **Customers** como *ElementName*, \<se genera el elemento customers>.  
+ Es el identificador genérico resultante del elemento. Por ejemplo, si se especifica **Customers** como *ElementName*, se genera el elemento \<Customers>.  
   
  *TagNumber*  
  Es un valor de etiqueta único asignado a un elemento. Este valor, junto con las dos columnas de metadatos **Tag** y **Parent**, determina el anidamiento de los elementos en el XML resultante.  
@@ -123,14 +123,14 @@ ElementName!TagNumber!AttributeName!Directive
   
  Si se especifica *Directive*, *AttributeName* puede estar vacío. Por ejemplo, ElementName!TagNumber!!Directive. En este caso, el valor de la columna está incluido directamente en el *ElementName*.  
   
- *Directiva*  
- *Directive* es opcional y se puede usar para proporcionar información adicional para la construcción del XML. *La Directiva* tiene dos propósitos.  
+ *Directive*  
+ *Directive* es opcional y se puede usar para proporcionar información adicional para generar el XML. *Directive* tiene dos objetivos.  
   
  Uno de los objetivos es codificar valores como ID, IDREF e IDREFS. Puede especificar palabras clave **ID**, **IDREF**e **IDREFS** como valores de *Directive*. Estas directivas sobrescriben los tipos de atributo. De este modo, puede crear vínculos entre documentos.  
   
  También puede usar *Directive* para indicar la forma de asignar los datos de cadena a XML. Las palabras clave **hide**, **element, elementxsinil**, **xml**, **xmltext**y **cdata** se pueden usar como *Directive*. La directiva **hide** oculta el nodo. Es útil cuando se recuperan valores solo para ordenarlos, sin incluirlos en el XML resultante.  
   
- La directiva **element** genera un elemento contenido en lugar de un atributo. Los datos contenidos se codifican como entidad. Por ejemplo, el **<** carácter se &lt;convierte en. En el caso de valores de columna NULL, no se genera ningún elemento. Si desea que se genere un elemento para valores de columna NULL, puede especificar la directiva **elementxsinil** . De este modo, se generará un elemento con el atributo sxi:nil=TRUE.  
+ La directiva **element** genera un elemento contenido en lugar de un atributo. Los datos contenidos se codifican como entidad. Por ejemplo, el carácter **<** pasa a ser &lt;. En el caso de valores de columna NULL, no se genera ningún elemento. Si desea que se genere un elemento para valores de columna NULL, puede especificar la directiva **elementxsinil** . De este modo, se generará un elemento con el atributo sxi:nil=TRUE.  
   
  La directiva **xml** es la misma que la directiva **element** , excepto en que no se produce la codificación de entidades. Observe que la directiva **element** se puede combinar con **ID**, **IDREF**o **IDREFS**, mientras que la directiva **xml** no se puede combinar con ninguna otra directiva, excepto **hide**.  
   

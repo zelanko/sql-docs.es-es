@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200488"
 ---
 # <a name="use-cursors-odbc"></a>Usar cursores (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200488"
   
      Establezca los atributos SQL_ATTR_CURSOR_TYPE y SQL_ATTR_CONCURRENCY (ésta es la opción preferida).  
   
-     Or  
+     O bien  
   
      Establezca los atributos SQL_CURSOR_SCROLLABLE y SQL_CURSOR_SENSITIVITY.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63200488"
   
      Use el enlace de modo de columna.  
   
-     \- O bien  
+     \- o -  
   
      Use el enlace de modo de fila.  
   

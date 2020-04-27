@@ -1,5 +1,5 @@
 ---
-title: Trabajar con aislamiento de instantánea | Microsoft Docs
+title: Trabajo con aislamiento de instantánea | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,14 +24,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcf2003873de6f6ca15fed4d0818337ce4920906
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205858"
 ---
 # <a name="working-with-snapshot-isolation"></a>Trabajar con aislamiento de instantánea
-  
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un nuevo nivel de aislamiento de "instantánea" pensado para mejorar la simultaneidad en las aplicaciones de procesamiento de transacciones en línea (OLTP). En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la simultaneidad se basada únicamente en el bloqueo, lo que podía provocar problemas de bloqueo e interbloqueo en algunas aplicaciones. El aislamiento de instantánea depende de las mejoras de las versiones de fila y está pensado para mejorar el rendimiento evitando situaciones de bloqueo de lectura-escritura.  
   
  Las transacciones que se inician bajo el aislamiento de instantánea leen una instantánea de la base de datos realizada al comenzar la transacción. Un resultado de esta acción es que los cursores estáticos, dinámicos y controlados por conjunto de claves, al abrirse dentro de un contexto de transacciones de instantánea, actúan de forma muy similar a los cursores estáticos que se abren desde transacciones serializables. Sin embargo, cuando los cursores se abren bajo el nivel de aislamiento de instantánea no se toman bloqueos, lo que puede reducir el bloqueo en el servidor.  
@@ -56,7 +55,7 @@ ms.locfileid: "63205858"
 > [!NOTE]  
 >  Si se establece DBPROPVAL_TI_SNAPSHOT con las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se generan los errores DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED.  
   
- Para obtener información sobre cómo se admite el aislamiento de instantáneas en transacciones, vea [admitir transacciones locales](../../native-client-ole-db-transactions/transactions.md).  
+ Para más información sobre cómo se admite el aislamiento de instantánea en transacciones, consulte [Compatibilidad con transacciones locales](../../native-client-ole-db-transactions/transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client proporciona compatibilidad para el aislamiento de instantáneas a través de las mejoras realizadas en las funciones [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetInfo](../../native-client-odbc-api/sqlgetinfo.md) .  
@@ -70,7 +69,7 @@ ms.locfileid: "63205858"
  Para obtener información sobre cómo se admite el aislamiento de instantáneas en transacciones, vea [cursor TRANSACTION ISOLATION LEVEL](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Características de SQL Server Native Client](sql-server-native-client-features.md)   
+ [SQL Server Native Client características](sql-server-native-client-features.md)   
  [Propiedades y comportamientos de conjuntos de filas](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204975"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Mostrar en pantalla los paneles del Diseñador de consultas y vistas (Visual Database Tools)
@@ -35,6 +35,6 @@ ms.locfileid: "63204975"
   
 ## <a name="see-also"></a>Consulte también  
  [Crear consultas &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Abra el diseñador de consultas y vistas &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
+ [Abrir el Diseñador de consultas y vistas &#40;Visual Database Tools&#41;](open-the-query-and-view-designer-visual-database-tools.md)  
   
   

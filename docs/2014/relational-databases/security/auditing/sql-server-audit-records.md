@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238388"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
@@ -29,13 +29,13 @@ ms.locfileid: "63238388"
 |**event_time**|Fecha y hora en la que se desencadena la acción auditable.|`datetime2`|Sí|  
 |**sequence_no**|Realiza un seguimiento de la secuencia de registros de un único registro de auditoría que era demasiado grande para caber en el búfer de escritura destinado a las auditorías.|`int`|Sí|  
 |**action_id**|Identificador de la acción.<br /><br /> Sugerencia: Para usar **action_id** como un predicado, debe convertirse de una cadena de caracteres a un valor numérico. Para obtener más información, vea [Filtrar SQL Server Audit por el predicado action_id / class_type](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|Sí|  
-|**succeeded**|Indica si la acción que desencadenó el evento se ha llevado a cabo correctamente|`bit`-1 = correcto, 0 = error|Sí|  
+|**completa**|Indica si la acción que desencadenó el evento se ha llevado a cabo correctamente|`bit`-1 = correcto, 0 = error|Sí|  
 |**permission_bitmask**|Cuando es aplicable, muestra los permisos concedidos, denegados, o revocados.|`bigint`|No|  
 |**is_column_permission**|Marca que especifica un permiso de nivel de columna|`bit`-1 = verdadero, 0 = falso|No|  
 |**session_id**|Identificador de la sesión en la que se produjo el evento.|`int`|Sí|  
 |**server_principal_id**|Identificador del contexto de inicio de sesión en el que se realiza la acción.|`int`|Sí|  
 |**database_principal_id**|Identificador del contexto de usuario de la base de datos en el que se realiza la acción.|`int`|No|  
-|**object_ id**|El identificador principal de la entidad en la que se produjo la auditoría. Esto incluye:<br /><br /> objetos de servidor<br /><br /> databases<br /><br /> Objetos de base de datos<br /><br /> objetos de esquema|`int`|No|  
+|**identificador de object_**|El identificador principal de la entidad en la que se produjo la auditoría. Esto incluye:<br /><br /> objetos de servidor<br /><br /> databases<br /><br /> Objetos de base de datos<br /><br /> objetos de esquema|`int`|No|  
 |**target_server_principal_id**|Entidad de seguridad del servidor a la que se aplica la acción auditable.|`int`|Sí|  
 |**target_database_principal_id**|Entidad de seguridad de la base de datos a la que se aplica la acción auditable.|`int`|No|  
 |**class_type**|Tipo de entidad auditable en la que se produce la auditoría.|`varchar(2)`|Sí|  
@@ -56,13 +56,11 @@ ms.locfileid: "63238388"
 ## <a name="remarks"></a>Observaciones  
  Algunas acciones no rellenan el valor de una columna porque es posible que no sea aplicable a la acción.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit almacena 4.000 caracteres de datos en los campos de carácter de un registro de auditoría. Si los valores **additional_information** y **statement** devueltos por una acción auditable contienen más de 4000 caracteres, la columna **sequence_no** se usa para escribir varios registros en el informe de auditoría para que una única acción de auditoría registre estos datos. El proceso es el siguiente:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit almacena 4.000 caracteres de datos en los campos de carácter de un registro de auditoría. Si los valores **additional_information** y **statement** devueltos por una acción auditable contienen más de 4000 caracteres, la columna **sequence_no** se usa para escribir varios registros en el informe de auditoría para que una única acción de auditoría registre estos datos. El proceso es el siguiente:  
   
 -   La columna **statement** se divide en 4.000 caracteres.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit escribe como primera fila del registro de auditoría los datos parciales. Los demás campos se duplican en cada fila.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit escribe como primera fila del registro de auditoría los datos parciales. Los demás campos se duplican en cada fila.  
   
 -   Se incrementa el valor **sequence_no** .  
   

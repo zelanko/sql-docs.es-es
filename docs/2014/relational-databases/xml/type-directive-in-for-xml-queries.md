@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193286"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la compatibilidad con [xml &#40;&#41;de Transact-SQL](/sql/t-sql/xml/xml-transact-sql) permite solicitar opcionalmente que el resultado de una consulta for XML se devuelva como `xml` tipo de datos especificando la Directiva Type. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una expresión XQuery en ella, asignar el resultado a una `xml` variable de tipo o escribir [consultas for XML anidadas](use-nested-for-xml-queries.md).  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve al cliente datos de instancia de tipo XML como resultado de distintas construcciones de servidor, como por ejemplo consultas FOR XML que utilizan la directiva TYPE o en las que se utiliza el tipo de datos `xml` para devolver valores de datos de instancia XML procedentes de columnas de tablas SQL y parámetros de salida. En el código de las aplicaciones cliente, el proveedor ADO.NET solicita que se envíe esta información de tipo de datos XML con una codificación binaria desde el servidor. Sin embargo, si utiliza FOR XML sin la directiva TYPE, se devolverán los datos XML en forma de cadena. En cualquier caso, el proveedor del cliente siempre podrá controlar cualquier formato de tipo XML. Tenga en cuenta que la cláusula FOR XML de nivel superior sin la directiva TYPE no puede utilizarse con cursores.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve al cliente datos de instancia de tipo XML como resultado de distintas construcciones de servidor, como por ejemplo consultas FOR XML que utilizan la directiva TYPE o en las que se utiliza el tipo de datos `xml` para devolver valores de datos de instancia XML procedentes de columnas de tablas SQL y parámetros de salida. En el código de las aplicaciones cliente, el proveedor ADO.NET solicita que se envíe esta información de tipo de datos XML con una codificación binaria desde el servidor. Sin embargo, si utiliza FOR XML sin la directiva TYPE, se devolverán los datos XML en forma de cadena. En cualquier caso, el proveedor del cliente siempre podrá controlar cualquier formato de tipo XML. Tenga en cuenta que la cláusula FOR XML de nivel superior sin la directiva TYPE no puede utilizarse con cursores.  
   
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestra el uso de la directiva TYPE con consultas FOR XML.  

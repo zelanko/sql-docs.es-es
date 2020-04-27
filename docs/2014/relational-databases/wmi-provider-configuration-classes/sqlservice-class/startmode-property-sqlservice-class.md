@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187822"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propiedad StartMode (clase SqlService)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlService](sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
@@ -48,7 +48,7 @@ object
  Arranque  
  Valor = 0. Servicio iniciado por el cargador del sistema operativo. Esta opción solo es válida para los servicios del controlador.  
   
- Sistema  
+ System  
  Valor = 1. Servicio iniciado por el método `IoInitSystem`. Esta opción solo es válida para los servicios del controlador.  
   
  Automático  
@@ -57,7 +57,7 @@ object
  Manual  
  Valor = 3. Servicio que Computer Manager iniciará cuando un proceso llame al método `StartService`.  
   
- Disabled  
+ Deshabilitada  
  Valor = 4. El servicio no se puede iniciar.  
   
 ## <a name="remarks"></a>Observaciones  

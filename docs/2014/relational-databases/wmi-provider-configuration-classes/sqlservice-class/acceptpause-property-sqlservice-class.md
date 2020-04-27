@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f28c72a291c145171f7084524fe5dd5cce7c12a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63223272"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Propiedad AcceptPause (clase SqlService)
@@ -37,12 +37,11 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlService](sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- Valor booleano que especifica si se puede poner en pausa el servicio. 
-  `true` si se puede poner en pausa el servicio; en caso contrario, `false`.  
+ Valor booleano que especifica si se puede poner en pausa el servicio. `true` si se puede poner en pausa el servicio; en caso contrario, `false`.  
   
 ## <a name="remarks"></a>Observaciones  
   

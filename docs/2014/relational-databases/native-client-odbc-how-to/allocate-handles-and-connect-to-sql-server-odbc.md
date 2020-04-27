@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225503"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Asignar identificadores y conectarse a SQL Server (ODBC)
@@ -31,7 +31,7 @@ ms.locfileid: "63225503"
   
 3.  Llame a [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) con `HandleType` un de SQL_HANDLE_ENV para inicializar ODBC y asignar un identificador de entorno.  
   
-4.  Llame [](../native-client-odbc-api/sqlsetenvattr.md) a SQLSetEnvAttr `Attribute` con establecido en SQL_ATTR_ODBC_VERSION `ValuePtr` y establezca en SQL_OV_ODBC3 para indicar que la aplicación usará las llamadas de función de formato ODBC 3. x.  
+4.  Llame [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) a SQLSetEnvAttr `Attribute` con establecido en SQL_ATTR_ODBC_VERSION `ValuePtr` y establezca en SQL_OV_ODBC3 para indicar que la aplicación usará las llamadas de función de formato ODBC 3. x.  
   
 5.  Opcionalmente, llame a [SQLSetEnvAttr](../native-client-odbc-api/sqlsetenvattr.md) para establecer otras opciones de entorno, o llame a [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) para obtener opciones de entorno.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63225503"
   
 8.  Llame a SQLConnect para usar un origen de datos existente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]el que conectarse.  
   
-     Or  
+     O bien  
   
      Llame a [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) para usar una cadena de conexión para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]conectarse a.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63225503"
   
      Si la cadena de conexión no se ha completado, `SQLDriverConnect` puede solicitar la información necesaria. Esto se controla mediante el valor especificado para el parámetro *DriverCompletion* .  
   
-     \- O bien  
+     \- o -  
   
      Llame a [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) varias veces de manera iterativa para compilar la cadena de conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y conectarse a.  
   

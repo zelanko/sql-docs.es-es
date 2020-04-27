@@ -1,5 +1,5 @@
 ---
-title: Quitar una columna de una tabla SQL Server | Microsoft Docs
+title: Eliminación de una columna de una tabla de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 919bd28a82171068349e4019bb1bd5c190d08cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213920"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Quitar una columna de una tabla de SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "63213920"
   
  Los consumidores especifican el nombre de la tabla como una cadena de caracteres Unicode en el miembro *pwszName* de la unión *uName* en el parámetro *pTableID*. El miembro *eKind* de *pTableID* debe ser DBKIND_NAME.  
   
- El consumidor indica un nombre de columna en el miembro *pwszName*de la Unión *uname* en el parámetro *pColumnID* . El nombre de la columna es una cadena de caracteres Unicode. El miembro *eKind* de *pColumnID* debe ser DBKIND_NAME.  
+ El consumidor indica un nombre de columna en el miembro *pwszName* de la unión *uName* en el parámetro *pColumnID*. El nombre de la columna es una cadena de caracteres Unicode. El miembro *eKind* de *pColumnID* debe ser DBKIND_NAME.  
   
 ## <a name="example"></a>Ejemplo  
   

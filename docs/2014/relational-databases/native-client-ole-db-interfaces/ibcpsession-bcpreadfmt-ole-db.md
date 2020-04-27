@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a82cd2b9261b8f8c26e4e37636423cc27603fcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192413"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
@@ -52,13 +52,13 @@ const wchar_t *pwszFormatFile);
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se ha producido un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
+ Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
   
  E_OUTOFMEMORY  
  Error de memoria insuficiente.  
   
  E_UNEXPECTED  
- No se esperaba la llamada al método. Por ejemplo, no se ha llamado al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) antes de llamar a este método.  
+ No se esperaba la llamada al método. Por ejemplo, no se llamó al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) antes de llamar a este método.  
   
 ## <a name="see-also"></a>Consulte también  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   

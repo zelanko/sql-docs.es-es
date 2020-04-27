@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d5f15222caab52732dff3d6c5faf37b11d4a057
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192916"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocolos de cliente: Propiedades de Memoria compartida (pestaña Protocolo)
-  En el Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilice la pestaña **Protocolo** del cuadro de diálogo **Propiedades de Memoria compartida** para ver o modificar la memoria compartida. Para obtener más información sobre cadenas de conexión, vea [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
+  En el Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice la pestaña **Protocolo** del cuadro de diálogo **Propiedades de Memoria compartida** para ver o modificar la memoria compartida. Para obtener más información sobre cadenas de conexión, vea [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
   
 ## <a name="options"></a>Opciones  
  **Enabled**  

@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192311"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -35,7 +35,7 @@ HRESULT WaitForAsynchCompletion(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *dwMillisecTimeOut*[in]  
+ *dwMillisecTimeOut*[entrada]  
  Tiempo de espera en milisegundos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -52,7 +52,7 @@ HRESULT WaitForAsynchCompletion(
  La operación todavía no se ha completado aunque se ha alcanzado el tiempo de espera especificado.  
   
 > [!NOTE]  
->  Además de los valores de código de retorno enumerados anteriormente, el método **ISSAsynchStatus::WaitForAsynchCompletion** también admite los valores de código de retorno que devuelven los métodos **ICommand::Execute** e **IDBInitialize::Initialize** de OLEDB básicos.  
+>   Además de los valores de código de retorno enumerados anteriormente, el método **ISSAsynchStatus::WaitForAsynchCompletion** también admite los valores de código de retorno que devuelven los métodos **ICommand::Execute** e **IDBInitialize::Initialize** de OLEDB básicos.  
   
 ## <a name="remarks"></a>Observaciones  
  No se devolverá el método **ISSAsynchStatus::WaitForAsynchCompletion** hasta que haya transcurrido el valor de tiempo de espera (en milisegundos) o se haya completado la operación pendiente. El objeto **Command** tiene una propiedad **CommandTimeout** que controla el número de segundos que se ejecutará una consulta antes de que se agote el tiempo de espera. La propiedad **CommandTimeout** se omitirá si se utiliza junto con el método **ISSAsynchStatus:: WaitForAsynchCompletion** .  

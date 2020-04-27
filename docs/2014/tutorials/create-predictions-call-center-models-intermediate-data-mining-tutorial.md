@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217883"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Crear predicciones para los modelos de centro de llamadas (Tutorial intermedio de minería de datos)
@@ -83,7 +83,7 @@ ms.locfileid: "63217883"
   
 5.  Haga clic con el botón secundario en el panel diseño vacío y seleccione **nueva consulta con nombre**.  
   
-6.  En el cuadro de diálogo **crear consulta con** nombre ****, en nombre `Shifts for Call Center`, escriba.  
+6.  En el cuadro de diálogo **crear consulta con** nombre **Name**, en nombre `Shifts for Call Center`, escriba.  
   
      Este nombre aparecerá en el diseñador de vistas del origen de datos como nombre de la consulta con nombre.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63217883"
   
 2.  En el panel **modelo de minería de datos** , haga clic en **Seleccionar modelo**y elija centro de llamadas-LR en la lista de modelos disponibles.  
   
-3.  En el menú **modelo de minería de datos** , desactive la opción **consulta singleton**. Una advertencia indica que se perderán las entradas de la consulta singleton. Haga clic en **OK**.  
+3.  En el menú **modelo de minería de datos** , desactive la opción **consulta singleton**. Una advertencia indica que se perderán las entradas de la consulta singleton. Haga clic en **Aceptar**.  
   
      El cuadro de diálogo **entrada de consulta singleton** se reemplaza por el cuadro de diálogo **seleccionar tabla (s) de entrada** .  
   
@@ -181,7 +181,7 @@ ms.locfileid: "63217883"
  Hay varias consultas de predicción diferentes que puede crear en este modelo. Por ejemplo, puede predecir cuántos operadores son necesarios para cumplir un determinado nivel de servicio o para responder a un cierto número de llamadas entrantes. Dado que puede incluir varias salidas en un modelo de regresión logística, es fácil experimentar con variables independientes y resultados diferentes sin tener que crear varios modelos distintos.  
   
 ## <a name="remarks"></a>Observaciones  
- Los complementos de minería de datos para Excel 2007 ofrecen asistentes de regresión logística que facilitan el poder responder a cuestiones complejas, como cuántos operadores de nivel dos se necesitarían para mejorar el grado de servicio a un nivel determinado para un turno concreto. Los complementos de minería de datos se pueden descargar de forma gratuita e incluyen asistentes que se basan en los algoritmos de red neuronal o de regresión logística. Para obtener más información, consulte los vínculos siguientes:  
+ Los complementos de minería de datos para Excel 2007 ofrecen asistentes de regresión logística que facilitan el poder responder a cuestiones complejas, como cuántos operadores de nivel dos se necesitarían para mejorar el grado de servicio a un nivel determinado para un turno concreto. Los complementos de minería de datos se pueden descargar de forma gratuita e incluyen asistentes que se basan en los algoritmos de red neuronal o de regresión logística. Para obtener más información, vea los siguientes vínculos:  
   
 -   [SQL Server 2005 complementos de minería de datos para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): búsqueda de objetivo y análisis de escenario de What if  
   

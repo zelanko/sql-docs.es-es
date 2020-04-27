@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217740"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Crear predicciones en un modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
@@ -37,7 +37,7 @@ ms.locfileid: "63217740"
   
      Se abre el cuadro de diálogo **Seleccionar modelo de minería de datos** .  
   
-4.  Expanda el nodo que representa la estructura de minería **de datos clustering Sequence with region**y seleccione el modelo **Sequence Clustering with region**. Haga clic en **OK**. De momento haga caso omiso al panel de entrada. Especificará los datos de entrada cuando haya configurado las funciones de predicción.  
+4.  Expanda el nodo que representa la estructura de minería **de datos clustering Sequence with region**y seleccione el modelo **Sequence Clustering with region**. Haga clic en **Aceptar**. De momento haga caso omiso al panel de entrada. Especificará los datos de entrada cuando haya configurado las funciones de predicción.  
   
 5.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada debajo de **campo**, seleccione **PredictSequence**.  
   
@@ -151,7 +151,7 @@ NATURAL PREDICTION JOIN
   
 4.  En el cuadro de diálogo **entrada de tabla anidada** , haga clic en **Agregar**.  
   
-5.  En la nueva fila, haga clic en el `Model`cuadro situado debajo de y seleccione Touring neumático en la lista. Haga clic en **OK**.  
+5.  En la nueva fila, haga clic en el `Model`cuadro situado debajo de y seleccione Touring neumático en la lista. Haga clic en **Aceptar**.  
   
 6.  Haga clic en el botón **resultado** para ver las predicciones.  
   
@@ -194,13 +194,13 @@ NATURAL PREDICTION JOIN
   
  Ha completado el tutorial sobre modelos de agrupación en clústeres de secuencia.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Si ha finalizado todas las secciones del [tutorial intermedio de minería de datos &#40;Analysis Services&#41;de minería de datos ](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md), el paso siguiente podría ser aprender a utilizar instrucciones de extensiones de minería de datos (DMX) para crear modelos y generar predicciones. Para obtener más información, vea [crear y consultar modelos de minería de datos con DMX: tutoriales &#40;Analysis Services-&#41;de minería de ](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)datos.  
   
  Si tiene algunos conceptos de programación, también puede utilizar Objetos de administración de análisis (AMO) para trabajar mediante programación con objetos de minería de datos. Para obtener más información, vea [Clases de minería de datos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
 ## <a name="see-also"></a>Consulte también  
  [Ejemplos de consultas de modelos de agrupación en clústeres de secuencia](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services-Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

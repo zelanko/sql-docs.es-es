@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192466"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Iniciar y detener un agente de replicación (SQL Server Management Studio)
-  Inicie y detenga agentes desde la carpeta **trabajos** y la carpeta **replicación** en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y desde el monitor de replicación. Inicie y detenga los siguientes agentes y trabajos:  
+  Puede iniciar y detener agentes desde las carpetas **Trabajos** y **Replicación** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y desde el Monitor de replicación. Inicie y detenga los siguientes agentes y trabajos:  
   
 -   El Agente de instantáneas, utilizado por todas las publicaciones.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63192466"
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisión de la replicación](../monitoring-replication.md)   
- [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md)   
+ [Conceptos de los ejecutables del agente de replicación](../concepts/replication-agent-executables-concepts.md)   
  [Información general sobre los agentes de replicación](replication-agents-overview.md)  
   
   

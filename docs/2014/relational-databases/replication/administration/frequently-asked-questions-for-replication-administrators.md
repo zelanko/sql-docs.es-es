@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207069"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
@@ -42,7 +42,7 @@ ms.locfileid: "63207069"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>¿Cuándo está disponible una suscripción? ¿Cuándo se puede utilizar la base de datos de suscripciones?  
  Una suscripción está disponible después de haber aplicado la instantánea a la base de datos de suscripciones. Aunque se puede obtener acceso a la base de datos de suscripciones con anterioridad, la base de datos no se debe utilizar hasta que se haya aplicado la instantánea. Utilice el Monitor de replicación para comprobar el estado de la aplicación y generación de instantáneas:  
   
--   El Agente de instantáneas genera la instantánea. Vea el estado de la generación de instantáneas en la pestaña **Agentes** de una publicación en el Monitor de replicación. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   El Agente de instantáneas genera la instantánea. Vea el estado de la generación de instantáneas en la pestaña **Agentes** de una publicación en el Monitor de replicación. Para obtener más información, vea [ver información y realizar tareas mediante el monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   La instantánea la aplica el Agente de distribución o el Agente de mezcla. Vea el estado de la aplicación de instantáneas en la página **Agente de distribución** o **Agente de mezcla** del Monitor de replicación. 
   
@@ -103,7 +103,7 @@ ms.locfileid: "63207069"
   
 -   La opción de sincronización web para replicación de mezcla. Para más información, consulte [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Todos los tipos de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden replicar datos a través de VPN, pero tenga en cuenta la sincronización web si está utilizando replicación de combinación.  
+ Todos los tipos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de replicación pueden replicar datos a través de una VPN, pero debe tener en cuenta la sincronización Web si utiliza la replicación de mezcla.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>¿Se reanuda la replicación si se quita una conexión?  
  Sí. El procesamiento de replicación se reanuda en el punto en el que se dejó cuando se quitó la conexión. Si está utilizando la replicación de mezcla a través de una red que no es confiable, considere la posibilidad de utilizar registros lógicos, con lo que se asegurará de que los cambios se procesen como una unidad. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -184,8 +184,7 @@ ms.locfileid: "63207069"
  Primero, quite el artículo de la publicación mediante [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, y después quítelo de la base de datos mediante `DROP <Object>`. No se pueden quitar artículos de publicaciones transaccionales o de instantáneas después de que se hayan agregado suscripciones; es preciso quitar primero las suscripciones. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>¿Cómo se agregan o quitan columnas de una tabla publicada?  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite una amplia variedad de cambios de esquema en objetos publicados, lo que incluye agregar y quitar columnas. Por ejemplo, ejecute ALTER TABLE... DROP COLUMN en el publicador y la instrucción se replica en los suscriptores y, a continuación, se ejecuta para quitar la columna. Los suscriptores que ejecutan versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] admiten agregar y quitar columnas a través de los procedimientos almacenados [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) y [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Para obtener más información, vea [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite una amplia variedad de cambios de esquema en objetos publicados, lo que incluye agregar y quitar columnas. Por ejemplo, ejecute ALTER TABLE... DROP COLUMN en el publicador y la instrucción se replica en los suscriptores y, a continuación, se ejecuta para quitar la columna. Los suscriptores que ejecutan versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] admiten agregar y quitar columnas a través de los procedimientos almacenados [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) y [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql). Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Mantenimiento de la replicación  
   
@@ -231,6 +230,6 @@ ms.locfileid: "63207069"
   
 ## <a name="see-also"></a>Consulte también  
  [Preguntas más frecuentes sobre la administración de replicación](frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
+ [Prácticas recomendadas para la administración de replicación](best-practices-for-replication-administration.md)  
   
   

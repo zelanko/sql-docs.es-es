@@ -1,5 +1,5 @@
 ---
-title: Usar la creación de reflejo de la base de datos | Microsoft Docs
+title: Uso de la creación de reflejo de la base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225330"
 ---
 # <a name="using-database-mirroring"></a>Usar la creación de reflejo de bases de datos
@@ -36,14 +36,14 @@ ms.locfileid: "63225330"
   
  La base de datos de producción se denomina *base de datos principal*y la copia en espera se llama *base de datos reflejada*. La base de datos principal y la base de datos reflejada deben residir en instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancias del servidor) y, si es posible, en equipos diferentes.  
   
- La instancia del servidor de producción, denominado *servidor principal*, se comunica con la instancia del servidor en espera, denominado *servidor reflejado*. Los servidores principal y reflejado actúan como asociados dentro de una *sesión*de creación de reflejo de la base de datos. Si se produce un error en el servidor principal, el servidor reflejado puede convertir su base de datos en la base de datos principal mediante un proceso denominado *conmutación por error*. Por ejemplo, Partner_A y Partner_B son dos servidores asociados, con la base de datos principal inicialmente en Partner_A como servidor principal y la base de datos reflejada en Partner_B como servidor reflejado. Si Partner_A se queda sin conexión, la base de datos de Partner_B puede realizar la conmutación por error para convertirse en la base de datos principal actual. Cuando Partner_A se vuelve a unir a la sesión de creación de reflejo, se convierte en el servidor reflejado y su base de datos pasa a ser la base de datos reflejada.  
+ La instancia del servidor de producción, denominado *servidor principal*, se comunica con la instancia del servidor en espera, denominado *servidor reflejado*. Los servidores principal y reflejado actúan como asociados dentro de una *sesión* de creación de reflejo de la base de datos. Si el servidor principal genera un error, el servidor reflejado puede convertir su base de datos en la base de datos principal mediante un proceso llamado *conmutación por error*. Por ejemplo, Partner_A y Partner_B son dos servidores asociados, con la base de datos principal inicialmente en Partner_A como servidor principal y la base de datos reflejada en Partner_B como servidor reflejado. Si Partner_A se queda sin conexión, la base de datos de Partner_B puede realizar la conmutación por error para convertirse en la base de datos principal actual. Cuando Partner_A se vuelve a unir a la sesión de creación de reflejo, se convierte en el servidor reflejado y su base de datos pasa a ser la base de datos reflejada.  
   
  Las configuraciones alternativas de creación de reflejo de la base de datos proporcionan diferentes niveles de rendimiento y de seguridad de los datos, y admiten varias formas de conmutación por error. Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
  Se puede utilizar un alias al especificar el nombre de la base de datos reflejada.  
   
 > [!NOTE]  
->  Para obtener información acerca de los intentos de conexión inicial y los intentos de reconexión a una base de datos reflejada, vea [conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Para más información sobre los intentos de conexión inicial y de reconexión a una base de datos reflejada, consulte [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Consideraciones sobre la programación  
  Cuando el servidor principal genera un error, la aplicación cliente recibe mensajes de error como respuesta a las llamadas a la API que indican que se ha perdido la conexión a la base de datos. Cuando esto sucede, se pierde cualquier cambio no confirmado en la base de datos y se revierte la transacción actual. Si esto se produce, la aplicación debe cerrar la conexión (o liberar el objeto de origen de datos) y volverla a abrir. La conexión se redirige de forma transparente a la base de datos reflejada, que ahora actúa como servidor principal.  
@@ -51,8 +51,7 @@ ms.locfileid: "63225330"
  Cuando se establece una conexión, el servidor principal envía la identidad de su asociado de conmutación por error al cliente que se va a utilizar cuando se produzca la conmutación por error. Si una aplicación intenta establecer una conexión después de producirse un error en el servidor principal, el cliente no conocerá la identidad del asociado de conmutación por error. Para que los clientes tengan la oportunidad de solucionar esta situación, una propiedad de inicialización y una palabra clave de cadena de conexión asociada permiten al cliente especificar por sí solo la identidad del asociado de conmutación por error. El atributo de cliente solamente se utiliza en esta situación; si el servidor principal está disponible, no se utiliza. Si el servidor asociado de conmutación por error proporcionado por el cliente no corresponde a un servidor que actúa como asociado de conmutación por error, el servidor rechaza la conexión. Para que las aplicaciones puedan adaptarse a los cambios de configuración, se puede determinar la identidad del asociado de conmutación por error real inspeccionando el atributo una vez establecida la conexión. Conviene almacenar en la memoria caché la información del asociado para actualizar la cadena de conexión o concebir una estrategia de reintento en caso de que no se consiga establecer una conexión en el primer intento.   
   
 > [!NOTE]  
->  Debe especificar explícitamente la base de datos que va a ser utilizada por una conexión si desea usar esta característica en un nombre del origen de datos (DSN), una cadena de conexión, o un atributo o propiedad de conexión. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no intentará realizar la conmutación por error a la base de datos asociada si no se hace esto.  
+>  Debe especificar explícitamente la base de datos que va a ser utilizada por una conexión si desea usar esta característica en un nombre del origen de datos (DSN), una cadena de conexión, o un atributo o propiedad de conexión. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no intentará realizar la conmutación por error a la base de datos asociada si no se hace esto.  
 >   
 >  La creación de reflejo es una característica de la base de datos. Puede darse el caso de que las aplicaciones que utilizan varias bases de datos no puedan utilizar esta característica.  
 >   
@@ -74,7 +73,7 @@ ms.locfileid: "63225330"
 >  El Administrador de controladores ODBC se ha mejorado para admitir la especificación del nombre del servidor de conmutación por error.  
   
 ## <a name="see-also"></a>Consulte también  
- [Características de SQL Server Native Client](sql-server-native-client-features.md)   
+ [SQL Server Native Client características](sql-server-native-client-features.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

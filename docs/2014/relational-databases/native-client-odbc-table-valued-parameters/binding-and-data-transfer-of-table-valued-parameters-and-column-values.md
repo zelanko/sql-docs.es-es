@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199957"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
@@ -36,7 +36,7 @@ ms.locfileid: "63199957"
 |*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en APD.<br /><br /> Debe ser SQL_C_DEFAULT o SQL_C_BINARY.|  
 |*ParameterType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en IPD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en IPD.<br /><br /> Debe ser SQL_SS_TABLE.|  
 |*ColumnSize*|SQL_DESC_LENGTH o SQL_DESC_PRECISION en IPD.<br /><br /> Esto depende del valor de *ParameterType*.|SQL_DESC_ARRAY_SIZE<br /><br /> También puede establecerse mediante el uso de SQL_ATTR_PARAM_SET_SIZE cuando el foco del parámetro está establecido en el parámetro con valores de tabla.<br /><br /> En el caso de un parámetro con valores de tabla, se trata del número de filas de los búferes de columna del parámetro con valores de tabla.|  
-|*ColumnSize*|SQL_DESC_PRECISION o SQL_DESC_SCALE en IPD.|Sin usar. Debe ser 0.<br /><br /> Si este parámetro no es 0, SQLBindParameter devolverá SQL_ERROR y se generará un registro de diagnóstico con SQLSTATE = HY104 y el mensaje "precisión o escala no válida".|  
+|*DecimalDigits*|SQL_DESC_PRECISION o SQL_DESC_SCALE en IPD.|Sin usar. Debe ser 0.<br /><br /> Si este parámetro no es 0, SQLBindParameter devolverá SQL_ERROR y se generará un registro de diagnóstico con SQLSTATE = HY104 y el mensaje "precisión o escala no válida".|  
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR en APD.|SQL_CA_SS_TYPE_NAME.<br /><br /> Es opcional para las llamadas a procedimientos almacenados y puede especificarse NULL si no se requiere. Debe especificarse para las instrucciones SQL que no sean llamadas a procedimientos.<br /><br /> Este parámetro también actúa como un valor único que la aplicación puede usar para identificar este parámetro con valores de tabla cuando se usa el enlace de filas variable. Para obtener más información, consulte la sección "Enlace de filas variable de parámetros con valores de tabla" más adelante en este mismo tema.<br /><br /> Cuando se especifica un nombre de tipo de parámetro con valores de tabla en una llamada a SQLBindParameter, debe especificarse como un valor Unicode, incluso en aplicaciones compiladas como aplicaciones ANSI. El valor usado para el parámetro *StrLen_or_IndPtr* debe ser SQL_NTS o la longitud de la cadena del nombre multiplicado por SIZEOF (WCHAR).|  
 |*BufferLength*|SQL_DESC_OCTET_LENGTH en APD.|Longitud en bytes del nombre de tipo de parámetro con valores de tabla.<br /><br /> Puede ser SQL_NTS si el nombre de tipo termina en NULL, o 0 si no se requiere el nombre de tipo de parámetro con valores de tabla.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR en APD.|SQL_DESC_OCTET_LENGTH_PTR en APD.<br /><br /> En el caso de los parámetros con valores de tabla, es un recuento de filas en lugar de una longitud de datos.|  

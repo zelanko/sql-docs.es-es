@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 065440d834033d1c1c999ea9d38d321be9a6278c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63223330"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Propiedad Clustered (clase SqlService)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlService](sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

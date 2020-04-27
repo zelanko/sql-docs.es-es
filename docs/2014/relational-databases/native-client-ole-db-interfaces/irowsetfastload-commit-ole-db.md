@@ -1,5 +1,5 @@
 ---
-title: 'IRowsetFastLoad:: Commit (OLE DB) | Microsoft Docs'
+title: IRowsetFastLoad::Commit (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e6983eaccf1a934a318c69e72ebdfebf17d2ad9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224723"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
-  Marca el final de un lote de filas insertadas y escribe las filas en la tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener ejemplos, vea [copiar datos masiva con irowsetfastload &#40;OLE DB&#41;](irowsetfastload-ole-db.md) y [enviar datos de BLOB a SQL Server mediante irowsetfastload y ISEQUENTIALSTREAM &#40;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)OLE DB&#41;.  
+  Marca el final de un lote de filas insertadas y escribe las filas en la tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ver ejemplos, consulte [Copiar datos de forma masiva mediante IRowsetFastLoad &#40;OLE DB&#41;](irowsetfastload-ole-db.md) y [Enviar datos BLOB a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,6 +61,6 @@ fDone
  El consumidor puede procesar por lotes las filas insertadas mediante una llamada al método **Commit** con el argumento *fDone* establecido en FALSE. Cuando *fDone* se establece en TRUE, el conjunto de filas deja de ser válido. Un conjunto de filas de copia masiva que no es válido solo admite la interfaz **ISupportErrorInfo** y el método **IRowsetFastLoad::Release**.  
   
 ## <a name="see-also"></a>Consulte también  
- [OLE DB de &#40;IRowsetFastLoad&#41;](irowsetfastload-ole-db.md)  
+ [IRowsetFastLoad &#40;OLE DB&#41;](irowsetfastload-ole-db.md)  
   
   

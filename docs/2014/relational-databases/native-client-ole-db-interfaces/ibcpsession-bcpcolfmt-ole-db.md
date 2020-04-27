@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63240269"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -64,11 +64,11 @@ DBORDINALidxServerCol);
  En cada llamada a **BCPColFmt** se especifica el formato para un campo de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres campos en un archivo de datos de usuario de cinco campos, primero debe llamar a `BCPColumns(5)`y, a continuación, debe llamar a **BCPColFmt** cinco veces, con tres de cuyas llamadas establecerá el formato personalizado. Para las dos llamadas restantes, establezca *eUserDataType* en BCP_TYPE_DEFAULT y establezca *cbIndicator*, *cbUserData*y *cbUserDataTerm* en 0, BCP_VARIABLE_LENGTH y 0, respectivamente. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
   
 > [!NOTE]  
->  Es necesario llamar al método [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) antes de realizar cualquier llamada a **BCPColFmt**. Debe llamar una vez a **BCPColFmt** para cada columna del archivo de usuario. La llamada a **BCPColFmt** más de una vez para cualquier columna de archivo de usuario produce un error.  
+>  Es necesario llamar al método [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) antes de realizar cualquier llamada a **BCPColFmt**. Debe llamar a **BCPColFmt** una vez para cada columna del archivo de usuario. Si llama más de una vez a **BCPColFmt** para cualquier columna de archivo de usuario, se generará un error.  
   
  No es necesario copiar todos los datos de un archivo de usuario en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para omitir una columna, debe especificar el formato de los datos de la columna estableciendo el parámetro idxServerCol en 0. Si desea omitir un campo, necesitará toda la información para que el método funcione correctamente.  
   
- **Nota:** La función [IBCPSession:: BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) se puede usar para conservar la especificación de formato proporcionada a través de **BCPColFmt**.  
+ **Nota** La función [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) puede usarse para conservar la especificación de formato que se proporciona mediante **BCPColFmt**.  
   
 ## <a name="arguments"></a>Argumentos  
  *idxUserDataCol*[in]  
@@ -95,7 +95,7 @@ DBORDINALidxServerCol);
   
  El `cbUserData` valor representa el recuento de bytes de datos. Si los datos de caracteres se representan mediante caracteres anchos de Unicode `cbUserData` , un valor de parámetro positivo representa el número de caracteres multiplicado por el tamaño, en bytes, de cada carácter.  
   
- *pbUserDataTerm*[size_is] [in]  
+ *pbUserDataTerm*[size_is][in]  
  Secuencia de terminador que se va a usar para el campo. Este parámetro es principalmente útil para los tipos de datos de caracteres porque todos los demás tipos son de longitud fija o, en el caso de los datos binarios, requieren un indicador de longitud que grabe con precisión el número de bytes presentes.  
   
  Para evitar la terminación de los datos extraídos o indicar que no se terminen los datos de un archivo de usuario, establezca este parámetro en NULL.  
@@ -118,7 +118,7 @@ DBORDINALidxServerCol);
  Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) .  
   
  E_UNEXPECTED  
- No se esperaba la llamada al método. Por ejemplo, no se ha llamado al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) antes de llamar a este método.  
+ No se esperaba la llamada al método. Por ejemplo, no se llamó al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) antes de llamar a este método.  
   
  E_INVALIDARG  
  El argumento no era válido.  

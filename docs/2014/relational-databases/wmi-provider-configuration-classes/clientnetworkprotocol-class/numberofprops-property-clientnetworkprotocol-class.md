@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192024"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Propiedad NumberOfProps (clase ClientNetworkProtocol)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [clase ClientNetworkProtocol](clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
@@ -46,6 +46,6 @@ object
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

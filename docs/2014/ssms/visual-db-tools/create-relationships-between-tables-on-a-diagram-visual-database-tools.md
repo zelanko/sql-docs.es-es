@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184279"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Crear relaciones entre tablas en un diagrama (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63184279"
   
 3.  Aparecen dos cuadros de diálogo: **Relación de clave externa** y **Tablas y columnas**, esta última en primer plano.  
   
-4.  El nombre de la **relación** tiene un nombre proporcionado por el sistema con el formato FK_*con*_*tablaExterna*. Se puede modificar este valor.  
+4.  **Nombre de la relación** incluye un nombre proporcionado por el sistema con el formato FK_*tablalocal*_*tablaexterna*. Se puede modificar este valor.  
   
 5.  Compruebe que **Tabla de clave principal** especifica la tabla correcta.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63184279"
   
 7.  Elija **Aceptar**.  
   
-     Aparecerá el cuadro de diálogo **Relación de clave externa** . **Relación seleccionada** muestra la relación que ha creado.  
+     Aparecerá el cuadro de diálogo **Relación de clave externa** . **Relación seleccionada** muestra la relación que haya creado.  
   
 8.  Cambie las propiedades de la relación en la cuadrícula.  
   

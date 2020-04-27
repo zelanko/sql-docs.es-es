@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185575"
 ---
 # <a name="basic-data-mining-tutorial"></a>Tutorial básico de minería de datos
@@ -34,11 +34,11 @@ ms.locfileid: "63185575"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] La minería de datos incluye las siguientes características que le ayudan a desarrollar y comparar varios modelos predictivos con facilidad y, a continuación, realizar acciones en los resultados:  
   
--   *Conjuntos de pruebas de exclusión-* Al crear una estructura de minería de datos, ahora puede dividir los datos de la estructura de minería de datos en conjuntos de entrenamiento y de prueba. Esto permite probar modelos en conjuntos de datos similares y comparar la precisión de los modelos relacionados.  
+-   *Conjuntos de pruebas de datos de exclusión*: al crear una estructura de minería de datos, ahora puede dividir los datos de la estructura en conjuntos de prueba y de entrenamiento. Esto permite probar modelos en conjuntos de datos similares y comparar la precisión de los modelos relacionados.  
   
--   *Filtros del modelo de minería de datos-* Ahora puede adjuntar filtros a un modelo de minería de datos y aplicar el filtro durante el entrenamiento y las pruebas. Esto permite con facilidad generar modelos relacionados en diferentes subconjuntos de datos.  
+-   *Filtros de modelo de minería de datos*: ahora puede adjuntar filtros a un modelo de minería de datos y aplicar el filtro durante el entrenamiento y las pruebas. Esto permite con facilidad generar modelos relacionados en diferentes subconjuntos de datos.  
   
--   *Obtención de detalles para casos de estructura y columnas de estructura:* Ahora puede cambiar fácilmente de los patrones generales del modelo de minería de datos al detalle procesable en el origen de datos.  
+-   *Obtención de detalles para casos de estructura y columnas de estructura* : ahora puede cambiar fácilmente de los patrones generales del modelo de minería de datos al detalle procesable en el origen de datos.  
   
  El tutorial está compuesto por las lecciones siguientes:  
   
@@ -48,14 +48,14 @@ ms.locfileid: "63185575"
  [Lección 2: crear una estructura de distribución de correo directo &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  En esta lección, aprenderá a crear una estructura de modelos de minería de datos que se puede utilizar como parte de un escenario de distribución de correo directo.  
   
- [Lección 3: Agregar y procesar los modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Lección 3: Adición y procesamiento de modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  En esta lección obtendrá información sobre cómo agregar modelos a una estructura. Los modelos que crea se generan con los algoritmos siguientes:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Árboles de decisión  
+-   Árboles de decisión de [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Clústeres  
+-   Agrupación en clústeres de [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Bayes Naive  
+-   Bayes naive de [!INCLUDE[msCoName](../includes/msconame-md.md)]  
   
  [Lección 4: explorar los modelos de correo directo &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  En esta lección obtendrá información sobre cómo explorar e interpretar los hallazgos de cada modelo usando los visores.  
@@ -63,7 +63,7 @@ ms.locfileid: "63185575"
  [Lección 5: probar los modelos &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  En esta lección, realiza una copia de uno de los modelos de distribución de correo directo, agrega un filtro de modelo de minería de datos para restringir los datos de entrenamiento a un conjunto determinado de clientes y, a continuación, evalúa la viabilidad del modelo.  
   
- [Lección 6: crear y trabajar con predicciones &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lección 6: Crear y trabajar con predicciones &#40;Tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  En esta lección final del Tutorial básico de minería de datos, utiliza el modelo para predecir qué clientes tienen más probabilidad de comprar una bicicleta. A continuación, obtendrá detalles de los casos subyacentes para conseguir información de contacto.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -78,11 +78,11 @@ ms.locfileid: "63185575"
  Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para instalar las bases de datos oficiales para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite la página [Bases de datos de ejemplo de Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) y seleccione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Al trabajar con el tutorial, le resultará más fácil avanzar o retroceder pasos si agrega los botones **Tema siguiente** y **Tema anterior** a la barra de herramientas del visor de documentos.  
+>   Al trabajar con el tutorial, le resultará más fácil avanzar o retroceder pasos si agrega los botones **Tema siguiente** y **Tema anterior** a la barra de herramientas del visor de documentos.  
   
 ## <a name="see-also"></a>Consulte también  
  [Soluciones de minería de datos](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Tareas y procedimientos del modelo de minería de datos](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Crear y consultar modelos de minería de datos con DMX: Tutoriales &#40;Analysis Services de minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Crear y consultar modelos de minería de datos con DMX: tutoriales &#40;Analysis Services - minería de datos&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

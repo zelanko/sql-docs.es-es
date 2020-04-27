@@ -13,21 +13,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 623507b4d9e52da376d4c83e4ee5c4d51b15dc39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186263"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>Plan de mantenimiento (página de informes y registro)
-  Utilice el cuadro de diálogo **informes y registro** para configurar los informes y registros que se generan al ejecutar los planes de mantenimiento.  
+  Use el cuadro de diálogo **Informes y registro** para configurar los informes y registros que se generan al ejecutar los planes de mantenimiento.  
   
 ## <a name="options"></a>Opciones  
  **Generar un informe de archivo de texto**  
- Especifique si desea [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribir un informe de archivo de texto.  
+ Especifique si quiere que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escriba un informe de archivo de texto.  
   
  **Crear un nuevo archivo**  
- Crea un nuevo archivo de informe para cada una de las ejecuciones del plan de mantenimiento. De forma predeterminada, los archivos de informe se escriben en el equipo que hospeda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene este plan de mantenimiento, en la carpeta establecida como la carpeta de registro predeterminada durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para especificar una carpeta distinta, escriba la ruta de acceso completa de la carpeta en el cuadro de texto **Carpeta** o haga clic en el botón Examinar (**...**) y vaya a la carpeta deseada.  
+ Crea un nuevo archivo de informe para cada una de las ejecuciones del plan de mantenimiento. De forma predeterminada, los archivos de informe se escriben en el equipo que hospeda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene este plan de mantenimiento, en la carpeta establecida como la carpeta de registro predeterminada durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para especificar una carpeta distinta, escriba la ruta de acceso completa de la carpeta en el cuadro de texto **Carpeta** o haga clic en el botón Examinar ( **...** ) y vaya a la carpeta deseada.  
   
  **Anexar a archivo**  
  Anexe el informe de cada ejecución de planes al archivo especificado en el cuadro de texto **Nombre de archivo** . También puede especificar un archivo si hace clic en el botón examinar (&lt;ui&gt;...&lt;/ui&gt;) y selecciona un archivo del cuadro de diálogo.  

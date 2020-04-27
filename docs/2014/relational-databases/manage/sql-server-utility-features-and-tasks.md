@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63190428"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Características y tareas de la utilidad de SQL Server
@@ -30,7 +30,7 @@ ms.locfileid: "63190428"
 ## <a name="benefits-of-the-sql-server-utility"></a>Ventajas de la Utilidad de SQL Server  
  La Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modela las entidades relacionadas con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de una organización en una vista unificada. Los puntos de vista del Explorador de Utilidad y de la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) proporcionan a los administradores una vista global del estado de los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que actúa como punto de control de la utilidad (UCP). La combinación del resumen y los datos detallados presentados por el UCP sobre directivas de infrautilización o sobreutilización, y sobre diversidad de parámetros clave, habilita posibilidades de consolidación de recursos y de fácil identificación de sobreutilización. Las directivas de mantenimiento se pueden configurar y ajustarse para modificar umbrales de uso mayor o menor de los recursos. Es posible cambiar las directivas de supervisión globales o configurar directivas de supervisión individuales para cada entidad administrada en la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="typical_scenarios"></a> Introducción a la Utilidad de SQL Server  
+##  <a name="getting-started-with-sql-server-utility"></a><a name="typical_scenarios"></a> Introducción a la Utilidad de SQL Server  
  El escenario de usuario típico comienza con la creación de un punto de control de la utilidad  que establece el punto de razonamiento central para la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El UCP proporciona una vista global del estado de los recursos, tomada de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una vez creado el UCP, inscriba instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la Utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que el UCP las pueda administrar.  
   
  Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicación de capa de datos administrada por la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden supervisar dependiendo de definiciones de directiva globales o basándose definiciones de directiva individuales.  

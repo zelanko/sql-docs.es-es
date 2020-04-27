@@ -22,17 +22,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238135"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
   La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos y eventos individuales de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] constan de cero o más elementos de acción de auditoría. Estos elementos pueden ser grupos de acciones, como Server_Object_Change_Group, o acciones individuales tales como las operaciones SELECT en una tabla.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] constan de cero o más elementos de acción de auditoría. Estos elementos pueden ser grupos de acciones, como Server_Object_Change_Group, o acciones individuales tales como las operaciones SELECT en una tabla.  
   
 > [!NOTE]  
 >  Server_Object_Change_Group incluye CREATE, ALTER y DROP para cualquier objeto de servidor (base de datos o extremo).  
@@ -185,7 +184,7 @@ ms.locfileid: "63238135"
 ## <a name="related-content"></a>Contenido relacionado  
  [Crear una auditoría de servidor y una especificación de auditoría de servidor](create-a-server-audit-and-server-audit-specification.md)  
   
- [Crear una auditoría de servidor y una especificación de auditoría de base de datos](create-a-server-audit-and-database-audit-specification.md)  
+ [Crear una especificación de auditoría de servidor y de auditoría de base de datos](create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   

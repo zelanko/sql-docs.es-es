@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224609"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Explorar los modelos Market Basket (tutorial intermedio de minería de datos)
@@ -32,7 +32,7 @@ ms.locfileid: "63224609"
   
  En este tutorial, comenzará en la pestaña **red de dependencias** y, a continuación, utilizará la pestaña **reglas** y la pestaña **conjuntos** para profundizar en el conocimiento de las relaciones que se revelan en el visor. También usará el visor de **árbol de contenido genérico de Microsoft** para recuperar estadísticas detalladas de las reglas individuales o conjuntos.  
   
-##  <a name="bkmk_DepNet"></a>Pestaña red de dependencias  
+##  <a name="dependency-network-tab"></a><a name="bkmk_DepNet"></a>Pestaña red de dependencias  
  Con la pestaña **red de dependencias** , puede investigar la interacción de los distintos elementos del modelo. Cada nodo del visor representa un elemento mientras que las líneas entre ellos representan las relaciones. Al seleccionar un nodo, puede ver qué otros nodos predicen el elemento seleccionado o qué elementos predice el elemento actual. En algunos casos, hay una asociación bidireccional entre elementos, lo que significa que aparecen a menudo en la misma transacción. Puede hacer referencia a la leyenda de color de la parte inferior de la pestaña para determinar la dirección de la asociación.  
   
  Una línea que conecta dos elementos significa que es probable que aparezcan juntos en una transacción. En otras palabras, es probable que los clientes compren estos elementos conjuntamente. El control deslizante se asocia con la probabilidad de una regla. Mueva el control deslizante arriba o abajo para filtrar las asociaciones débiles, lo que significa que las reglas tienen una probabilidad baja.  
@@ -77,7 +77,7 @@ ms.locfileid: "63224609"
   
  [Volver al principio](#bkmk_DepNet)  
   
-##  <a name="bkmk_Itemsets"></a>Pestaña conjuntos  
+##  <a name="itemsets-tab"></a><a name="bkmk_Itemsets"></a>Pestaña conjuntos  
  Luego, obtendrá más información sobre las reglas y conjuntos de elementos generados por el modelo para los productos Touring Tire Tube y Touring Tire. La pestaña **conjuntos** muestra tres partes importantes de la información relacionada con los conjuntos que [!INCLUDE[msCoName](../includes/msconame-md.md)] detecta el algoritmo de asociación:  
   
 -   **Soporte técnico:** Número de transacciones en las que se produce el conjunto de conjuntos.  
@@ -134,7 +134,7 @@ ms.locfileid: "63224609"
   
  [Volver al principio](#bkmk_DepNet)  
   
-##  <a name="bkmk_Rules"></a>Pestaña reglas  
+##  <a name="rules-tab"></a><a name="bkmk_Rules"></a>Pestaña reglas  
  La pestaña **reglas** muestra la siguiente información relacionada con las reglas que el algoritmo encuentra.  
   
 -   **Probabilidad:** La *probabilidad* de una regla, definida como la probabilidad del elemento situado a la derecha, dado el elemento del lado izquierdo.  
@@ -171,7 +171,7 @@ ms.locfileid: "63224609"
   
  [Volver al principio](#bkmk_DepNet)  
   
-##  <a name="bkmk_ContentViewer"></a>Visor de árbol de contenido genérico  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_ContentViewer"></a>Visor de árbol de contenido genérico  
  Este visor se puede usar para todos los modelos, sin tener en cuenta el algoritmo o tipo de modelo. El **visor de árbol de contenido genérico de Microsoft** está disponible en la lista desplegable **visor** .  
   
  Un árbol de contenido es una representación de un modelo de minería como una serie de nodos, donde cada nodo representa el conocimiento adquirido acerca de cierto subconjunto de los datos. El nodo puede contener un modelo, un conjunto de reglas, un clúster o la definición de un intervalo de fechas que comparten ciertas características. El contenido exacto del nodo difiere dependiendo del algoritmo y el tipo del atributo predecible, pero la representación general del contenido es la misma. Puede expandir cada nodo para ver un mayor nivel de detalle y copiar el contenido de cualquier nodo en el Portapapeles.  

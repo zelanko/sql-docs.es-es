@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187927"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|Vistas de catálogo|[!INCLUDE[ssDE](../../includes/ssde-md.md)]**sp_help** procedimientos almacenados|  
+|Vistas de catálogo|Procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**de**|  
 |Funciones integradas que exponen metadatos|Vistas de esquema de información|  
 |Vistas de compatibilidad|Propiedades extendidas|  
   
@@ -51,8 +51,7 @@ GO
   
 |||  
 |-|-|  
-|Tablas de sistema de trasvase de registros|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tablas de sistema del Agente|  
+|Tablas de sistema de trasvase de registros|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tablas de sistema del Agente|  
 |Tablas de sistema de planes de mantenimiento de bases de datos|Tablas de sistema de copia de seguridad|  
 |Tablas de sistema de replicación|Procedimientos almacenados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_help **de replicación y del Agente**|  
   
@@ -64,7 +63,7 @@ GO
   
 -   Las funciones integradas que emiten metadatos, como OBJECTPROPERTYEX, pueden devolver NULL.  
   
--   Los procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
+-   Los procedimientos almacenados [!INCLUDE[ssDE](../../includes/ssde-md.md)]sp_help**de** pueden devolver únicamente un subconjunto de filas, o NULL.  
   
  Los módulos SQL, como procedimientos almacenados y desencadenadores, se ejecutan en el contexto de seguridad del autor de la llamada y, por tanto, tienen un acceso limitado a los metadatos. Por ejemplo, en el siguiente código, cuando el procedimiento almacenado intenta obtener acceso a los metadatos de la tabla `myTable` sobre la que el autor de la llamada no tienen ningún derecho, se devuelve un conjunto de resultados vacío. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]se devuelve una fila.  
   
@@ -105,7 +104,7 @@ GO
   
  Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
- Los metadatos que se muestran a continuación no están sujetos a una divulgación forzada:   
+ Los metadatos que se muestran a continuación no están sujetos a una divulgación forzada:  
   
 -   El valor almacenado en la columna **provider_string** de **sys.servers**. Un usuario que no disponga de permiso ALTER ANY LINKED SERVER verá un valor NULL en esta columna.  
   
@@ -183,16 +182,16 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**Sys. messages**|  
-|**Sys. Schemas**|**sys.configurations**|  
+|**sys.partitions**|**sys.messages**|  
+|**sys.schemas**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
 ## <a name="see-also"></a>Consulte también  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [Denegar &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
+ [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
- [Cláusula EXECUTe AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [EXECUTE AS &#40;cláusula de Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
  [Vistas de compatibilidad &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184411"
 ---
 # <a name="sequence-numbers"></a>Números de secuencia
@@ -396,6 +396,6 @@ GO
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
- [IDENTITY &#40;propiedad de Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
+ [IDENTITY &#40;propiedad&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   
   

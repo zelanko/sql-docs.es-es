@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193248"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar el modo RAW con FOR XML
@@ -39,7 +39,7 @@ ms.locfileid: "63193248"
   
 -   [Ejemplo: Especificar XSINIL con la directiva ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Ejemplo: solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Ejemplo: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Ejemplo: Recuperar datos binarios](example-retrieving-binary-data.md)  
   

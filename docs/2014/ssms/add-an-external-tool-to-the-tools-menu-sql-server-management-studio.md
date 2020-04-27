@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226173"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Agregar una herramienta externa al menú Herramientas (SQL Server Management Studio)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Puede iniciar cualquier aplicación de Windows [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] o desde [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pueden agregarse aplicaciones externas al menú **Herramientas** y ejecutarse en este.  
+  Puede iniciar cualquier aplicación de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] desde [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pueden agregarse aplicaciones externas al menú **Herramientas** y ejecutarse en este.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Para agregar una herramienta externa al menú Herramientas  
   

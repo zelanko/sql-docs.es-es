@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d516901a3e44def9a0d6e19414bf0b972f9b37dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63229083"
 ---
 # <a name="working-with-data-types"></a>Trabajar con tipos de datos
@@ -53,8 +53,7 @@ ms.locfileid: "63229083"
   
  Al establecer el tipo de datos, deben establecerse propiedades concretas para los datos. Por ejemplo, si es un tipo `nchar`, la longitud de los datos de cadena debe establecerse en la propiedad `Length`. Esto mismo se aplica a los valores numéricos, en los que debe especificarse una precisión y una escala.  
   
- Los tipos de datos <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> y <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> hacen referencia a objetos que contienen la definición del tipo de datos definido por el usuario. 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> se basa en los tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la enumeración <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. Se <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> basa en los [!INCLUDE[msCoName](../../../includes/msconame-md.md)] tipos de datos de .net. Normalmente, representarían datos de un tipo específico que la base de datos reutiliza con frecuencia debido a las reglas de negocios definidas por la organización. Por ejemplo, un tipo de datos que almacena una cantidad de dinero y un denominador de divisa resultarían de gran utilidad en una compañía que trabaje con distintas divisas.  
+ Los tipos de datos <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> y <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> hacen referencia a objetos que contienen la definición del tipo de datos definido por el usuario. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedDataType> se basa en los tipos de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la enumeración <xref:Microsoft.SqlServer.Management.Smo.SqlDataType>. Se <xref:Microsoft.SqlServer.Management.Smo.UserDefinedType> basa en los [!INCLUDE[msCoName](../../../includes/msconame-md.md)] tipos de datos de .net. Normalmente, representarían datos de un tipo específico que la base de datos reutiliza con frecuencia debido a las reglas de negocios definidas por la organización. Por ejemplo, un tipo de datos que almacena una cantidad de dinero y un denominador de divisa resultarían de gran utilidad en una compañía que trabaje con distintas divisas.  
   
  La enumeración <xref:Microsoft.SqlServer.Management.Smo.SqlDataType> contiene una lista de todos los tipos de datos compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

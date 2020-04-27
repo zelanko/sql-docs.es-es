@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213510"
 ---
 # <a name="supporting-distributed-transactions"></a>Compatibilidad con transacciones distribuidas
@@ -38,7 +38,7 @@ ms.locfileid: "63213510"
 |---------------|-----------------|  
 |*punkTransactionCoord*|Un puntero a un objeto de transacción de MS DTC.|  
 |*IsoLevel*|El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de Native Client lo omite. El nivel de aislamiento para las transacciones coordinadas por MS DTC está determinado cuando el consumidor adquiere un objeto de transacción de MS DTC.|  
-|*Isoflags*|Debe ser 0. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client devuelve XACT_E_NOISORETAIN si el consumidor especifica cualquier otro valor.|  
+|*IsoFlags*|Debe ser 0. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client devuelve XACT_E_NOISORETAIN si el consumidor especifica cualquier otro valor.|  
 |*POtherOptions*|Si no es NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client solicita el objeto de opciones de la interfaz. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client devuelve XACT_E_NOTIMEOUT si el miembro *ulTimeout* del objeto de opciones no es cero. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client omite el valor del miembro *szDescription* .|  
   
  En este ejemplo se coordina la transacción mediante MS DTC.  
@@ -139,6 +139,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Transactions](transactions.md)  
+ [Transacciones](transactions.md)  
   
   

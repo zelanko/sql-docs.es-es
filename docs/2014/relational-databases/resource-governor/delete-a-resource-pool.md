@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205836"
 ---
 # <a name="delete-a-resource-pool"></a>Eliminar un grupo de recursos de servidor
@@ -27,16 +27,16 @@ ms.locfileid: "63205836"
   
 -   **Para eliminar un grupo de recursos de servidor con:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  No se puede eliminar un grupo de recursos de servidor si contiene grupos de cargas de trabajo.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No se pueden eliminar los grupos de recursos de servidor predeterminados o internos del regulador de recursos. No se puede eliminar un grupo de recursos de servidor si contiene grupos de cargas de trabajo. Para obtener más información, consulte [Delete a Workload Group](delete-a-workload-group.md).  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para eliminar un grupo de recursos de servidor se requiere un permiso CONTROL SERVER.  
   
-##  <a name="DelRPSSMS"></a> Eliminar un grupo de recursos de servidor mediante el Explorador de objetos  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> Eliminar un grupo de recursos de servidor mediante el Explorador de objetos  
  **Para eliminar un grupo de recursos de servidor mediante SQL Server Management Studio**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta e incluyendo el nodo **Regulador de recursos**.  
@@ -48,7 +48,7 @@ ms.locfileid: "63205836"
     > [!NOTE]  
     >  Si el grupo de recursos de servidor que intenta eliminar contiene un grupo de cargas de trabajo, esta acción provocará un error.  
   
-##  <a name="DelRPTSQL"></a> Eliminar un grupo de recursos de servidor mediante Transact-SQL  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> Eliminar un grupo de recursos de servidor mediante Transact-SQL  
  **Para eliminar un grupo de recursos de servidor mediante Transact-SQL**  
   
 1.  Ejecute la instrucción `DROP RESOURCE POOL` especificando el nombre del grupo de recursos de servidor que desea eliminar.  

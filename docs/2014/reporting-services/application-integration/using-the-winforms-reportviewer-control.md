@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63239006"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Usar el control ReportViewer de WinForms
@@ -26,7 +26,7 @@ ms.locfileid: "63239006"
   
 1.  Cree una nueva aplicación de Windows mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-De  
+     \- O bien  
   
      Abra un proyecto de aplicación Windows existente y agregue un nuevo formulario.  
   
@@ -40,8 +40,7 @@ ms.locfileid: "63239006"
   
  Una vez agregado el control al formulario, aparecerá la etiqueta inteligente **ReportViewer Tasks** y le solicitará que seleccione un informe.  
   
- Si el informe que desea ver se ha implementado en un servidor de informes, seleccione la ** \<opción informe de servidor>** de la lista desplegable **elegir informe** . Una vez seleccionada la opción ** \<>del informe de servidor** , aparecen dos propiedades adicionales: **URL del servidor de informes** y ruta de **acceso del informe**. 
-  **Dirección URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa al informe que quiere representar.  
+ Si el informe que desea ver se ha implementado en un servidor de informes, seleccione la ** \<opción informe de servidor>** de la lista desplegable **elegir informe** . Una vez seleccionada la opción ** \<>del informe de servidor** , aparecen dos propiedades adicionales: **URL del servidor de informes** y ruta de **acceso del informe**. **Dirección URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa al informe que quiere representar.  
   
  ![Seleccionar informe del servidor](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Seleccionar informe del servidor")  
   
@@ -163,7 +162,7 @@ End Class
   
 5.  Haga clic con el botón derecho en el archivo Sales Order Detail.rdl en el Explorador de soluciones y seleccione **Cambiar nombre**. Cambie el nombre del informe a **Sales Order Detail.rdlc** y presione ENTRAR.  
   
-     Si Explorador de soluciones no está visible, puede abrirlo desde el menú **Ver** seleccionando **Explorador de soluciones**.  
+     Si el Explorador de soluciones no está visible, puede abrirlo en el menú **Ver** seleccionando **Explorador de soluciones**.  
   
     > [!NOTE]  
     >  El cambio del nombre de la extensión de archivo de rdl a rdlc le permitirá modificar el informe utilizando el diseñador de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  

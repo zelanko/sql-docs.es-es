@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204610"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir o agregar los valores de todas las filas de una tabla (Visual Database Tools)
@@ -51,7 +51,7 @@ FROM titles
   
 1.  Asegúrese de que la tabla que desea agregar ya esté presente en el panel Diagrama.  
   
-2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agrupar por** en el menú contextual. El [Diseñador de consultas y vistas](query-and-view-designer-tools-visual-database-tools.md) agrega una columna **Agrupar por** a la cuadrícula en el panel Criterios.  
+2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agrupar por** en el menú contextual. El [Diseñador de consultas y vistas](query-and-view-designer-tools-visual-database-tools.md) agrega una columna **Agrupar por** a la cuadrícula en el panel criterios.  
   
 3.  Agregue la columna que desee al panel Criterios. Asegúrese de que la columna está marcada para el resultado.  
   

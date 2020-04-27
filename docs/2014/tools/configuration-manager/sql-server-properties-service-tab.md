@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f79b52e62a8080c70865ae8ebe33d1a8a87faa04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237986"
 ---
 # <a name="sql-server-properties-service-tab"></a>Propiedades de SQL Server (pestaña Servicio)
@@ -24,24 +24,23 @@ ms.locfileid: "63237986"
  **Ruta de acceso binaria**  
  Muestra la ubicación de los archivos de programa utilizados por el servicio.  
   
- **Control de errores**  
- 1 indica `SERVICE_ERROR_NORMAL`. Si el servicio no se inicia al iniciar el equipo, el programa de inicio registra el error y muestra un cuadro de mensaje emergente pero continúa con la operación de inicio. No se puede cambiar este valor.  
+ **Control de error**  
+ 1 indica `SERVICE_ERROR_NORMAL`. Si el servicio no se inicia al iniciar el equipo, el programa de inicio registra el error y muestra un cuadro de mensaje emergente pero continúa con la operación de inicio. Este valor no puede modificarse.  
   
  **Código de salida**  
  Si se produce un error, el número de error aparece en este cuadro. Utilice este número para solucionar errores buscando el número en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base o informe del mismo al personal de soporte técnico.  
   
- **Nombre de host**  
- Muestra el nombre del equipo o clúster que ejecuta el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio.  
+ **Host Name**  
+ Muestra el nombre del equipo o clúster que ejecuta el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Nombre**  
  Indica el nombre para mostrar del servicio.  
   
- **Identificador del proceso**  
+ **Id. del proceso**  
  Muestra el identificador de proceso de Windows.  
   
  **Tipo de servicio**  
- Muestra el tipo de servicio proporcionado a los procesos de llamada. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala varios servicios.  
+ Muestra el tipo de servicio proporcionado a los procesos de llamada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala varios servicios.  
   
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  
@@ -53,6 +52,6 @@ ms.locfileid: "63237986"
 -   Deshabilitado: el servicio no se puede iniciar.  
   
  **State**  
- Indica si el servicio está en ejecución, detenido o deshabilitado. "**…**" indica que hay un cambio de estado pendiente.  
+ Indica si el servicio está en ejecución, detenido o deshabilitado. " **…** " indica que hay un cambio de estado pendiente.  
   
   

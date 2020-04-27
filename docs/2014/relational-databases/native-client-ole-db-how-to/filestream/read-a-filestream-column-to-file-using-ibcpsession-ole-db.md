@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233146"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Leer una columna FILESTREAM en un archivo utilizando IBCPSession (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "63233146"
   
  Utilice uno de los siguientes ejemplos para crear la tabla de la que lee este ejemplo:  
   
--   [Enviar datos a una columna FILESTREAM mediante ISequentialStream enlazado al parámetro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Enviar datos a una columna FILESTREAM usando ISequentialStream enlazada al parámetro de ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
 -   [Enviar datos a una columna FILESTREAM mediante IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   

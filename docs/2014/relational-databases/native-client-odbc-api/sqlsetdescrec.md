@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d323b1b92ba02e55064d2f86c62ee36a4a38d904
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188782"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
@@ -29,9 +29,9 @@ ms.locfileid: "63188782"
   
 |Parámetro|Atributo relacionado para tipos de parámetros que no son valores de tabla, incluidas columnas de parámetros con valores de tabla|Atributo relacionado para parámetros con valores de tabla|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*Tipo*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*Subtipo*|Omitido|Para registros de tipo SQL_DATETIME o SQL_INTERVAL, establézcalo en SQL_DESC_DATETIME_INTERVAL_CODE.|  
-|*Length*|SQL_DESC_OCTET_LENGTH|Longitud del nombre de tipo de parámetro con valores de tabla. Puede ser SQL_NTS si el nombre de tipo termina en NULL, o cero si no se requiere el nombre de tipo de parámetro con valores de tabla.|  
+|*Longitud*|SQL_DESC_OCTET_LENGTH|Longitud del nombre de tipo de parámetro con valores de tabla. Puede ser SQL_NTS si el nombre de tipo termina en NULL, o cero si no se requiere el nombre de tipo de parámetro con valores de tabla.|  
 |*Precisión*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
 |*Escala*|SQL_DESC_SCALE|Sin usar. Este parámetro debería ser cero.|  
 |*DataPtr*|SQL_DESC_DATA_PTR en APD|SQL_CA_SS_TYPE_NAME<br /><br /> Este parámetro es opcional para las llamadas a procedimientos almacenados y puede especificarse NULL si no se requiere. Este parámetro se debe especificar en instrucciones SQL que no son llamadas a procedimientos.<br /><br /> *DataPtr* también actúa como un valor único que la aplicación puede usar para identificar este parámetro con valores de tabla cuando se usa el enlace de filas variable.|  
@@ -43,7 +43,7 @@ ms.locfileid: "63188782"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>SQLSetDescRec admite las características mejoradas de fecha y hora  
  Los valores permitidos para los tipos de fecha y hora son los siguientes:  
   
-||*Tipo*|*Subtipo*|*Length*|*Precisión*|*Escala*|  
+||*Type*|*Subtipo*|*Longitud*|*Precisión*|*Escala*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
@@ -55,8 +55,7 @@ ms.locfileid: "63188782"
  Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlsetdescrec-support-for-large-clr-udts"></a>SQLSetDescRec admite UDT CLR grandes  
- 
-  `SQLSetDescRec` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLSetDescRec` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [SQLSetDescRec](https://go.microsoft.com/fwlink/?LinkId=80704)   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186904"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>Elemento DiagnosticInformation (ssbdiagnose)
@@ -37,7 +37,7 @@ ms.locfileid: "63186904"
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`None`|N/D|  
+|`None`|N/A|  
   
 ## <a name="element-characteristics"></a>Características de los elementos  
   
@@ -45,7 +45,7 @@ ms.locfileid: "63186904"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Una vez por archivo de salida XML **ssbdiagnose** .|  
+|**Casos**|Una vez por archivo de salida XML **ssbdiagnose** .|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

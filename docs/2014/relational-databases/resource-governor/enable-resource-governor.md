@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63216026"
 ---
 # <a name="enable-resource-governor"></a>Habilitar el regulador de recursos
@@ -26,7 +26,7 @@ ms.locfileid: "63216026"
   
 -   **Para habilitar Resource Governor, mediante:**  [Explorador de objetos](#RGOnObjEx), [Propiedades de Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Habilitar el regulador de recursos tiene como consecuencia lo siguiente:  
   
 -   La función clasificadora se ejecuta para las nuevas conexiones, de forma que se pueden asignar sus cargas de trabajo a los grupos de cargas de trabajo.  
@@ -35,20 +35,20 @@ ms.locfileid: "63216026"
   
 -   Las solicitudes que existieran antes de habilitar el regulador de recursos resultarán afectadas por cualquier cambio realizado en la configuración en el momento de deshabilitar el regulador de recursos.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede utilizar la instrucción `ALTER RESOURCE GOVERNOR` para habilitar el regulador de recursos durante una transacción del usuario.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Habilitar el regulador de recursos requiere el permiso CONTROL SERVER.  
   
-##  <a name="RGOnObjEx"></a> Habilitar el regulador de recursos mediante el Explorador de objetos  
+##  <a name="enable-resource-governor-using-object-explorer"></a><a name="RGOnObjEx"></a> Habilitar el regulador de recursos mediante el Explorador de objetos  
  **Para habilitar el regulador de recursos utilizando el Explorador de objetos**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
 2.  Haga clic con el botón derecho en **Regulador de recursos**y luego haga clic en **Habilitar**.  
   
-##  <a name="RGOnProp"></a> Habilitar el regulador de recursos mediante Propiedades del regulador de recursos  
+##  <a name="enable-resource-governor-using-resource-governor-properties"></a><a name="RGOnProp"></a> Habilitar el regulador de recursos mediante Propiedades del regulador de recursos  
  **Para habilitar el regulador de recursos mediante la página Propiedades del regulador de recursos**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
@@ -57,7 +57,7 @@ ms.locfileid: "63216026"
   
 3.  Haga clic en la casilla **Habilitar regulador de recursos** y, a continuación, haga clic en **Aceptar**.  
   
-##  <a name="RGOnTSQL"></a> Habilitar el regulador de recursos mediante Transact-SQL  
+##  <a name="enable-resource-governor-using-transact-sql"></a><a name="RGOnTSQL"></a> Habilitar el regulador de recursos mediante Transact-SQL  
  **Para habilitar el regulador de recursos mediante Transact-SQL**  
   
 1.  Ejecute la instrucción **ALTER RESOURCE GOVERNOR RECONFIGURE** .  

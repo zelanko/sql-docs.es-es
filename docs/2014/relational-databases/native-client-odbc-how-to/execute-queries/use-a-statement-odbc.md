@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200323"
 ---
 # <a name="use-a-statement-odbc"></a>Usar una instrucción (ODBC)
@@ -35,11 +35,11 @@ ms.locfileid: "63200323"
   
 5.  Ejecute directamente una instrucción utilizando SQLExecDirect.  
   
-     \- O bien  
+     \- o -  
   
      Si se ha preparado la instrucción, ejecútela varias veces utilizando [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
   
-     \- O bien  
+     \- o -  
   
      Llame a una función de catálogo, que devuelve los resultados.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "63200323"
   
      Capture una fila cada vez del conjunto de resultados de una instrucción.  
   
-     \- O bien  
+     \- o -  
   
      Capture varias filas cada vez del conjunto de resultados mediante un cursor de bloque.  
   
-     \- O bien  
+     \- o -  
   
      Llame a [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) para determinar el número de filas afectado por una instrucción INSERT, UPDATE o DELETE.  
   

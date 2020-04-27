@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184546"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
-  Utilice el **plan de mantenimiento (pestaña diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
  **Agregar subplán**  
@@ -40,7 +40,7 @@ ms.locfileid: "63184546"
  **Quitar programación**  
  Quita una programación del subplán seleccionado.  
   
- **Administración de conexiones**  
+ **Administrar conexiones**  
  Muestra el cuadro de diálogo **Administrar conexiones** . Se utiliza para agregar conexiones adicionales de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al plan de mantenimiento. Las tareas de mantenimiento del editor de subplanes pueden usar cualquiera de estas conexiones. Cuando se ejecuta, el plan de mantenimiento establece una conexión, desde el servidor del plan de mantenimiento, con los servidores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificados, mediante el uso de credenciales de conexión.  
   
  **Informes y registro**  
@@ -68,7 +68,7 @@ ms.locfileid: "63184546"
   
  Después de que una tarea de mantenimiento se coloque en la superficie de diseño, sus propiedades pueden editarse cuando sea necesario. Por ejemplo, la base de datos específica de la que se va a hacer copia de seguridad en una tarea Copia de seguridad de la base de datos se especifica después de que la tarea se haya agregado al plan. Las tareas de la superficie de diseño que no se han configurado correctamente contienen un icono rojo con una x blanca.  
   
- Para agregar una tarea de mantenimiento a un plan, arrastre el icono de la tarea desde el cuadro de herramientas **Tareas de plan de mantenimiento** hasta la superficie de diseño del plan o haga doble clic en la tarea en el cuadro de herramientas, con lo que se agrega esa tarea a la superficie del diseñador activa en ese momento. Si el cuadro de herramientas **Tareas del plan de mantenimiento** no está visible, elija **Cuadro de herramientas** en el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** . Expanda el nodo **Tareas del plan de mantenimiento** en el panel **Cuadro de herramientas** .  
+ Para agregar una tarea de mantenimiento a un plan, arrastre el icono de la tarea desde el cuadro de herramientas **Tareas de plan de mantenimiento** hasta la superficie de diseño del plan o haga doble clic en la tarea en el cuadro de herramientas, con lo que se agrega esa tarea a la superficie del diseñador activa en ese momento. Si el cuadro de herramientas **Tareas del plan de mantenimiento** no está visible, seleccione **Cuadro de herramientas** en el menú [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Vista**de**. Expanda el nodo **Tareas del plan de mantenimiento** en el panel **Cuadro de herramientas** .  
   
  Para eliminar una tarea de un plan, seleccione la tarea en la superficie del diseñador y pulse la tecla **SUPR** o haga clic con el botón derecho en la tarea y luego haga clic en **Eliminar**.  
   
@@ -89,10 +89,10 @@ ms.locfileid: "63184546"
  **Edición**  
  Abre el cuadro de diálogo de propiedades de la tarea.  
   
- **Disable**  
+ **Deshabilitar**  
  De esta manera, la tarea no está disponible temporalmente.  
   
- **Habilitar**  
+ **Habilitación**  
  Restaura una tarea deshabilitada.  
   
  **Grupo**  
@@ -101,13 +101,13 @@ ms.locfileid: "63184546"
  **Desagrupar**  
  Quita tareas de un grupo.  
   
- **AutoSize**  
+ **Ajustar tamaño automáticamente**  
  Establece el tamaño óptimo de cada tarea.  
   
- **Tracción**  
+ **Contraer**  
  Oculta las tareas de un grupo.  
   
- **Extender**  
+ **Expandir**  
  Muestra las tareas de un grupo que se habían ocultado mediante **Contraer**.  
   
  **Zoom**  

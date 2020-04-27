@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228568"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Ejecutar comandos que contienen parámetros con valores de tabla
@@ -29,12 +29,12 @@ ms.locfileid: "63228568"
 ## <a name="table-valued-parameter-specification"></a>Especificación de parámetros con valores de tabla  
  El consumidor puede especificar el tipo del parámetro con valores de tabla. Esta información incluye el nombre del tipo del parámetro con valores de tabla. También incluye el nombre de esquema si el tipo de tabla definido por el usuario para el parámetro con valores de tabla no está en el esquema predeterminado actual para la conexión. Dependiendo de la compatibilidad del servidor, el consumidor también puede especificar información opcional sobre los metadatos, como el orden de las columnas, y puede especificar que todas las filas de ciertas columnas tengan valores predeterminados.  
   
- Para especificar un parámetro con valores de tabla, el consumidor llama a ISSCommandWithParameter:: SetParameterInfo y, opcionalmente, llama a ISSCommandWithParameters:: SetParameterProperties. En el caso de un parámetro con valores de tabla, el campo *pwszDataSourceType* de la estructura DBPARAMBINDINFO tiene un valor de DBTYPE_TABLE. El campo *ulParamSize* se establece en ~0 para indicar que no se conoce la longitud. Las propiedades concretas de los parámetros con valores de tabla, como el nombre de esquema, el nombre de tipo, el orden de las columnas y las columnas predeterminadas, se pueden establecer a través de ISSCommandWithParameters:: SetParameterProperties.  
+ Para especificar un parámetro con valores de tabla, el consumidor llama a ISSCommandWithParameter::SetParameterInfo y, opcionalmente, llama a ISSCommandWithParameters::SetParameterProperties. En el caso de un parámetro con valores de tabla, el campo *pwszDataSourceType* de la estructura DBPARAMBINDINFO tiene un valor de DBTYPE_TABLE. El campo *ulParamSize* se establece en ~0 para indicar que no se conoce la longitud. Algunas propiedades de los parámetros con valores de tabla, como nombre de esquema, nombre de tipo, orden de columnas y columnas predeterminadas, se pueden establecer mediante ISSCommandWithParameters::SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Enlace de parámetros con valores de tabla  
  Un parámetro con valores de tabla puede ser cualquier objeto de conjunto de filas. Durante la ejecución, el proveedor lee en este objeto mientras envía los parámetros con valores de tabla al servidor.  
   
- Para enlazar el parámetro con valores de tabla, el consumidor llama a IAccessor:: CreateAccessor. El campo *wType* de la estructura DBBINDING del parámetro con valores de tabla se establece en DBTYPE_TABLE. El miembro *pObject* de la estructura DBBINDING es distinto de NULL y el miembro *iid* de *pObject* se establece en IID_IRowset o cualquier otra interfaz de objeto de conjunto de filas de parámetro con valores de tabla. Los campos restantes de la estructura DBBINDING se deben establecer de la misma manera que los BLOB transmitidos.  
+ Para enlazar el parámetro con valores de tabla, el consumidor llama a IAccessor::CreateAccessor. El campo *wType* de la estructura DBBINDING del parámetro con valores de tabla se establece en DBTYPE_TABLE. El miembro *pObject* de la estructura DBBINDING es distinto de NULL y el miembro *iid* de *pObject* se establece en IID_IRowset o cualquier otra interfaz de objeto de conjunto de filas de parámetro con valores de tabla. Los campos restantes de la estructura DBBINDING se deben establecer de la misma manera que los BLOB transmitidos.  
   
  En los enlaces para el parámetro con valores de tabla y el objeto de conjunto de filas asociado a un parámetro con valores de tabla, se aplican las restricciones siguientes:  
   

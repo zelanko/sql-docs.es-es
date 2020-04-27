@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6bf69e0baf86cf9e56eddcf926444776b4a2116d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63206952"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lección 2: Crear y aplicar una directiva de normas de denominación
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lección 2: Creación y aplicación de una directiva de normas de denominación
   Algunos tipos de directivas de administración basada en directivas pueden crear desencadenadores para exigir el cumplimiento futuro con la directiva. En esta lección, va a crear una directiva que exige una denominación estándar para tablas. A continuación, va a probar la directiva intentando crear una tabla que infrinja dicha directiva.  
   
  En esta lección se incluyen los temas siguientes:  

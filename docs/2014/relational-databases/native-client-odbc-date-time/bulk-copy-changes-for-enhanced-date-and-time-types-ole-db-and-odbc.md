@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207106"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Cambios de copia masiva para tipos de fecha y hora mejorados (OLE DB y ODBC)
@@ -30,8 +30,8 @@ ms.locfileid: "63207106"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|Date|SQLDATE|de|  
-|Time|SQLTIME|te|  
+|Fecha|SQLDATE|de|  
+|Tiempo|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -88,34 +88,34 @@ ms.locfileid: "63207106"
 |datetimeoffset (do)|11|TDS|  
   
 ## <a name="bcp-types-in-sqlnclih"></a>Tipos BCP en sqlncli.h  
- Los tipos siguientes se definen en sqlncli.h para usarse con las extensiones API de BCP en ODBC. Estos tipos se pasan con el parámetro *eUserDataType* de IBCPSession:: BCPColFmt en OLE DB.  
+ Los tipos siguientes se definen en sqlncli.h para usarse con las extensiones API de BCP en ODBC. Estos tipos se pasan con el parámetro *eUserDataType* de IBCPSession::BCPColFmt en OLE DB.  
   
 |tipo de almacenamiento en archivo|Tipo de datos del archivo host|Escriba SQLNCLI. h para su uso con IBCPSession:: BCPColFmt|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Fecha|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Tiempo|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
 ## <a name="bcp-data-type-conversions"></a>Conversiones de tipos de datos BCP  
  En las tablas siguientes se proporciona información de conversión.  
   
- **OLE DB Nota** IBCPSession realiza las siguientes conversiones. IRowsetFastLoad usa conversiones de OLE DB como se define en las [conversiones realizadas de cliente a servidor](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Tenga en cuenta que los valores datetime se redondean a la fracción 1/300 de segundo y los valores smalldatetime tienen los segundos establecidos en cero después de que se hayan realizado las conversiones de cliente que se describen a continuación. El redondeo de datetime se propaga a las horas y minutos, pero no a la fecha.  
+ **Nota de OLE DB** Las conversiones siguientes se realizan con IBCPSession. IRowsetFastLoad usa conversiones OLE DB tal como se define en [Conversiones realizadas de cliente a servidor](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Tenga en cuenta que los valores datetime se redondean a la fracción 1/300 de segundo y los valores smalldatetime tienen los segundos establecidos en cero después de que se hayan realizado las conversiones de cliente que se describen a continuación. El redondeo de datetime se propaga a las horas y minutos, pero no a la fecha.  
   
 |A --><br /><br /> De|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Time|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Fecha|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
+|Tiempo|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/D|N/D|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|N/D|N/D|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|N/D|N/D|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|N/D|N/D|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|N/A|N/A|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|N/A|N/A|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|N/A|N/A|  
   
 #### <a name="key-to-symbols"></a>Clave de los símbolos  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63207106"
 |-|No se admite la conversión.<br /><br /> Se genera un registro de diagnóstico ODBC con SQLSTATE 07006 y el mensaje "Infracción del atributo de tipo de datos restringido".|  
 |1|Si los datos proporcionados no son válidos, se genera un registro de diagnóstico ODBC con SQLSTATE 22007 y el mensaje "Formato de fecha y hora no válido". Para los valores datetimeoffset, el espacio de tiempo debe estar comprendido dentro del intervalo después de la conversión a UTC, aunque no se haya solicitado ninguna conversión a UTC. Esto se debe a que la secuencia de datos tabulares (TDS) y el servidor siempre normalizan el tiempo en valores datetimeoffset para UTC. Por lo tanto, el cliente debe comprobar que los componentes de tiempo se encuentran dentro del intervalo admitido después de la conversión a UTC.|  
 |2|Se omite el componente de hora.|  
-|3|Para ODBC, si se produce un truncamiento con pérdida de datos, se genera un registro de diagnóstico con SQLSTATE 22001 y los datos de cadena del mensaje, truncados a la derecha, el número de dígitos de fracciones de segundo (la escala) se determina a partir del tamaño de la columna de destino según el valor de tabla siguiente. Si el tamaño de las columnas es mayor que el intervalo de la tabla, se presupone una escala de 7. Esta conversión debería permitir hasta nueve dígitos en las fracciones de segundo, que es el máximo permitido por ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Escala implícita 0** 8<br /><br /> **Escala implícita 1.. 7** 10, 16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Escala implícita 0:** 19<br /><br /> **Escalada 1.. 7:** 21.. 27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Escala implícita 0:** 26<br /><br /> **Escala implícita 1.. 7:** 28.. 34<br /><br /> Para OLE DB, si se produce un truncamiento con pérdida de datos, se expone un error. Para datetime2, el número de dígitos de las fracciones de segundo (la escala) se determina en función del tamaño de la columna de destino, según la tabla siguiente. Si el tamaño de la columna es mayor que el intervalo de la tabla, se presupone una escala de 9. Esta conversión debería permitir hasta nueve dígitos en las fracciones de segundo, que es el máximo permitido por OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Escala implícita 0** 8<br /><br /> **Escala implícita 1.. 9** 1.. 9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Escala implícita 0:** 19<br /><br /> **Escalado 1.. 9:** 21.. 29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Escala implícita 0:** 26<br /><br /> **Escala implícita 1.. 9:** 28.. 36|  
+|3|Para ODBC, si se produce un truncamiento con pérdida de datos, se genera un registro de diagnóstico con SQLSTATE 22001 y los datos de cadena del mensaje, truncados a la derecha, el número de dígitos de fracciones de segundo (la escala) se determina a partir del tamaño de la columna de destino de acuerdo con la tabla siguiente. Si el tamaño de las columnas es mayor que el intervalo de la tabla, se presupone una escala de 7. Esta conversión debería permitir hasta nueve dígitos en las fracciones de segundo, que es el máximo permitido por ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Escala supuesta 0** 8<br /><br /> **Escala implícita 1.. 7** 10, 16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Escala supuesta 0:** 19<br /><br /> **Escalada 1.. 7:** 21.. 27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Escala supuesta 0:** 26<br /><br /> **Escala implícita 1.. 7:** 28.. 34<br /><br /> Para OLE DB, si se produce un truncamiento con pérdida de datos, se expone un error. Para datetime2, el número de dígitos de las fracciones de segundo (la escala) se determina en función del tamaño de la columna de destino, según la tabla siguiente. Si el tamaño de la columna es mayor que el intervalo de la tabla, se presupone una escala de 9. Esta conversión debería permitir hasta nueve dígitos en las fracciones de segundo, que es el máximo permitido por OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **Escala supuesta 0** 8<br /><br /> **Escala supuesta 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **Escala supuesta 0:** 19<br /><br /> **Escala supuesta 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **Escala supuesta 0:** 26<br /><br /> **Escala supuesta 1..9:** 28..36|  
 |4|Se omite el componente de fecha.|  
 |5|Timezone se establece en UTC (por ejemplo, 00:00).|  
 |6|La hora se establece en cero.|  
@@ -134,7 +134,7 @@ ms.locfileid: "63207106"
 |10|Si se produce un truncamiento con pérdida de datos en una conversión de cliente a servidor, se expone un error (OLE DB) o se genera un registro de diagnóstico ODBC con SQLSTATE 22008 y el mensaje "Desbordamiento del campo DateTime". Este error también se produce si el valor está fuera del intervalo que puede representarse mediante el intervalo UTC utilizado por el servidor. Si se produce un truncamiento de segundos o fracciones de segundo en una conversión de servidor a cliente, solo se emite una advertencia.|  
 |11|Si se produce un truncamiento con pérdida de datos, se genera un registro de diagnóstico.<br /><br /> En una conversión de servidor a cliente, es una advertencia (ODBC SQLSTATE S1000).<br /><br /> En una conversión de cliente a servidor, es un error (ODBC SQLSTATE 22001).|  
 |12|Los segundos se establecen en cero y las fracciones de segundo se descartan. No es posible ningún error de truncamiento.|  
-|N/D|Se mantiene el comportamiento de las versiones actuales y anteriores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+|N/A|Se mantiene el comportamiento de las versiones actuales y anteriores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
   
 ## <a name="see-also"></a>Consulte también  
  [Mejoras de fecha y hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)   

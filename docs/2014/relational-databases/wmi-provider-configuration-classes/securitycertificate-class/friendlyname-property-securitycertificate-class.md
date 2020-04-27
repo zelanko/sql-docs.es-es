@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab80d077af7db8fe1162a725bb94f9eec032061c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231266"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>Propiedad FriendlyName (clase SecurityCertificate)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SecurityCertificate](securitycertificate-class.md) que representa un certificado de seguridad.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

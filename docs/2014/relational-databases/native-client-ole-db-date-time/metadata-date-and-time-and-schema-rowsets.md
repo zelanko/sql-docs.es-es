@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238011"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Conjuntos de filas de fecha y hora y de esquema
@@ -27,10 +27,10 @@ ms.locfileid: "63238011"
   
 |Tipo de columna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Borrar|0|  
+|date|DBTYPE_DBDATE|Desactivar|0|  
 |time|DBTYPE_DBTIME2|Set|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Borrar|0|  
-|datetime|DBTYPE_DBTIMESTAMP|Borrar|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Desactivar|0|  
+|datetime|DBTYPE_DBTIMESTAMP|Desactivar|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Set|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Set|0..7|  
   

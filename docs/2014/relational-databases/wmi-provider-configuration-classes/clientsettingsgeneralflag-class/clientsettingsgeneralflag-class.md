@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0a9b52652ec3e684c75a790f41899db2c117b62c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63243156"
 ---
 # <a name="clientsettingsgeneralflag-class"></a>Clase ClientSettingsGeneralFlag
@@ -37,6 +37,6 @@ ms.locfileid: "63243156"
 -   Ver y modificar el valor de la marca.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

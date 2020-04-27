@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a39a6715a9ba8ab08d846aabb96e5b0665a2aa43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200296"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>Recuperar información del conjunto de resultados (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "63200296"
   
     -   Llame a [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) para obtener información sobre la columna de resultados.  
   
-     Or  
+     O bien  
   
     -   Llame a [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) para obtener información específica del descriptor sobre la columna de resultados.  
   

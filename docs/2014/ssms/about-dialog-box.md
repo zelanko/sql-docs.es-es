@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226221"
 ---
 # <a name="about-dialog-box"></a>cuadro de diálogo Acerca de
-  El cuadro **de diálogo acerca de** proporciona información del producto y le permite obtener acceso a información sobre el equipo en el que se está ejecutando el producto. En el caso de las [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] copias de evaluación, la entrada muestra el número de días que quedan hasta que expire la instalación. Este cuadro de diálogo está disponible en el menú **Ayuda** .   
+  El cuadro de diálogo **Acerca de** proporciona información sobre el producto y permite obtener acceso a información acerca del equipo en el que se ejecuta dicho producto. En las copias de evaluación, la entrada [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] indica el número de días que restan hasta la expiración de la instalación. Este cuadro de diálogo está disponible en el menú **Ayuda** .  
   
 ## <a name="options"></a>Opciones  
  **Nombre de componente**  

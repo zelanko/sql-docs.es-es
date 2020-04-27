@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204722"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lección 2: Agregar modelos de minería a la estructura de minería cesta de la compra
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lección 2: Adición de modelos de minería a la estructura de minería cesta de la compra
   En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos Market Basket que creó en la [Lección 1: creación de la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Estos modelos de minería de datos le permitirán crear predicciones.  
   
  Para predecir los tipos de productos que los clientes tienden a comprar al mismo tiempo, creará dos modelos de minería de datos con el [algoritmo de Asociación de Microsoft](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) y dos valores distintos para el parámetro *MINIMUM_PROBABILTY* .  
@@ -121,7 +121,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Market Basket]  
@@ -133,7 +133,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Default Association]  
@@ -149,7 +149,7 @@ ADD MINING MODEL [<mining model name>]
        <nested mining model columns> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     OrderNumber,  
@@ -169,7 +169,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm>( <algorithm parameters> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Using Microsoft_Association_Rules  
@@ -212,7 +212,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Market Basket  
@@ -224,7 +224,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Modified Association]  
@@ -239,7 +239,7 @@ ADD MINING MODEL [<mining model name>]
        <nested mining model columns> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     OrderNumber,  
@@ -256,7 +256,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm>( <algorithm parameters> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     USING Microsoft_Association_Rules (Minimum_Probability = 0.1)  
@@ -285,6 +285,6 @@ ADD MINING MODEL [<mining model name>]
  En esta siguiente lección procesará la estructura de minería de datos Market Basket junto con sus modelos de minería de datos asociados.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Procesar la estructura de minería de datos de la cesta de la compra](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lección 3: Procesar la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

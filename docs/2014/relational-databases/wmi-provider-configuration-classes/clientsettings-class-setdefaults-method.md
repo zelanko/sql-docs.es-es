@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ce71d591dc8f72e6826f7bcd96628fb1898fd7bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242951"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>Método SetDefaults (clase ClientSettings)
@@ -40,15 +40,14 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto `ClientSettings` que representa una instancia del cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 #### <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|*OverwriteAll*|Valor booleano que especifica si se van a sobrescribir los valores existentes en la instancia del cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  `true` si se van a sobrescribir los datos existentes; `false` si no se van a sobrescribir.|  
+|*OverwriteAll*|Valor booleano que especifica si se van a sobrescribir los valores existentes en la instancia del cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . `true` si se van a sobrescribir los datos existentes; `false` si no se van a sobrescribir.|  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor `uint32` que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  

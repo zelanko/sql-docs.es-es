@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192899"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>Ver y modificar parámetros del símbolo del sistema de los agentes de replicación (SQL Server Management Studio)
@@ -31,19 +31,19 @@ ms.locfileid: "63192899"
   
 |Agente|Nombre del trabajo|Para obtener una lista de parámetros, vea...|  
 |-----------|--------------|------------------------------------|  
-|Agente de instantáneas|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-Integer>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
-|Agente de replicación para una partición de publicación de combinación|**Dyn_\<publicador>\<-basededatosdepublicación>\<-publication\<>-GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
+|Agente de instantáneas|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-Integer>**|[Agente de instantáneas de replicación](replication-snapshot-agent.md)|  
+|Agente de replicación para una partición de publicación de combinación|**Dyn_\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<GUID>**|[Agente de instantáneas de replicación](replication-snapshot-agent.md)|  
 |Agente de registro del LOG|**\<> de publicador-\<basededatosdepublicación\<>-entero>**|[Agente de registro del LOG de replicación](replication-log-reader-agent.md)|  
 |Agente de mezcla para suscripciones de extracción|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-Subscriber\<>-basededatosdesuscripción\<>-Integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
 |Agente de mezcla para suscripciones de inserción|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-subscriber\<>-Integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
-|Agente de distribución para suscripciones de inserción|**\<\<\<Publisher>-basededatosdepublicación>-Publication>-Subscriber\<>-Integer>1 \<** <sup></sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
-|Agente de distribución para suscripciones de extracción|**\<\<\<\<Publisher>-basededatosdepublicación>-Publication>-Subscriber>-basededatosdesuscripción\<>-GUID>2 \<** <sup></sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
-|Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-subscriber\<>-Integer>**|[Replication Distribution Agent](replication-distribution-agent.md)|  
+|Agente de distribución para suscripciones de inserción|**\<\<\<Publisher>-basededatosdepublicación>-Publication>-Subscriber\<>-Integer>1 \<** <sup>1</sup>|[Agente de distribución de replicación](replication-distribution-agent.md)|  
+|Agente de distribución para suscripciones de extracción|**\<\<\<\<Publisher>-basededatosdepublicación>-Publication>-Subscriber>-basededatosdesuscripción\<>-GUID>2 \<** <sup>2</sup>|[Agente de distribución de replicación](replication-distribution-agent.md)|  
+|Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-subscriber\<>-Integer>**|[Agente de distribución de replicación](replication-distribution-agent.md)|  
 |Agente de lectura de cola|**[\<Distribuidor>]. \<entero>**|[Agente de lectura de cola de replicación](replication-queue-reader-agent.md)|  
   
- <sup>1</sup> para suscripciones de extracción a publicaciones de Oracle, es ** \<Publisher\<>-Publisher**> en lugar de ** \<Publisher>-\<basededatosdepublicación>**  
+ <sup>1</sup> Para suscripciones de inserción a publicaciones de Oracle, es **\<publicador>-\<publicador**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>**  
   
- <sup>2</sup> para suscripciones de extracción a publicaciones de Oracle, es ** \<Publisher\<>-basededatosdedistribución**> en lugar de ** \<Publisher>-\<basededatosdepublicación>**  
+ <sup>2</sup> Para suscripciones de extracción a publicaciones de Oracle, es **\<publicador>-\<baseDeDatosDeDistribución**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>**  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>Para ver y modificar los parámetros de la línea de comandos del agente de replicación desde Management Studio  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63192899"
   
 2.  Expanda la carpeta **Agente SQL Server** y a continuación la carpeta **Trabajos** .  
   
-3.  Haga clic con el botón secundario en un trabajo y, a continuación, haga clic en **Propiedades**.  
+3.  Haga clic con el botón derecho en un trabajo y, a continuación, haga clic en **Propiedades**.  
   
 4.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>**, seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63192899"
   
 ## <a name="see-also"></a>Consulte también  
  [Administración del agente de replicación](replication-agent-administration.md)   
- [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md)   
+ [Conceptos de los ejecutables del agente de replicación](../concepts/replication-agent-executables-concepts.md)   
  [Información general sobre los agentes de replicación](replication-agents-overview.md)  
   
   

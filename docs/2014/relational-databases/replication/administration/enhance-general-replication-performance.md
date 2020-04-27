@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187083"
 ---
 # <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
@@ -33,7 +33,7 @@ ms.locfileid: "63187083"
   
 ## <a name="server-and-network"></a>Servidor y red  
   
--   Establezca la cantidad mínima y máxima de memoria asignada [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]a.  
+-   Defina la cantidad mínima y máxima de memoria asignada a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].  
   
      De forma predeterminada, el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] cambia dinámicamente sus necesidades de memoria según los recursos del sistema disponibles. Para evitar la disponibilidad insuficiente de memoria durante las actividades de replicación, utilice la opción **min server memory** para establecer la memoria mínima disponible. Para evitar que el sistema operativo tenga que paginar en el disco para disponer de memoria, puede definir también una cantidad máxima de memoria con la opción **max server memory** . Para obtener más información, consulte [Opciones de configuración del servidor de memoria del servidor](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63187083"
   
      Cuando sea necesario enviar grandes cantidades de cambios a los suscriptores, reinicializarlos con una nueva instantánea puede ser más rápido que utilizar la replicación para mover los cambios individuales. Para obtener más información, vea [Reinicializar suscripciones](../reinitialize-subscriptions.md).  
   
-     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     En la replicación transaccional, el Monitor de replicación muestra, en la pestaña **Comandos sin distribuir** , información acerca del número de transacciones de la base de datos de distribución que aún no se han distribuido a un suscriptor, así como el tiempo estimado para la distribución de dichas transacciones. Para obtener más información, vea [ver información y realizar tareas mediante el monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="snapshot-considerations"></a>Consideraciones acerca de las instantáneas  
   

@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c8a7a607221599d599438352eab5add1cc94e5d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186234"
 ---
 # <a name="synchronize-a-pull-subscription"></a>Sincronización de una suscripción de extracción
   En este tema se describe cómo sincronizar una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](agents/replication-agents-overview.md) o Replication Management Objects (RMO).  
   
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  El Agente de distribución (para las instantáneas y la replicación transaccional) o el Agente de mezcla (para la replicación de mezcla) sincronizan las suscripciones. Los agentes pueden ejecutarse continuamente, a petición o según una programación. Para más información sobre la configuración de las programaciones de sincronización, vea [Especificar programaciones de sincronización](specify-synchronization-schedules.md).  
   
  Sincronice una suscripción a petición desde la carpeta **Suscripciones locales** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "63186234"
   
 5.  Haga clic en **Cerrar**.  
   
-##  <a name="ReplProg"></a>Agentes de replicación  
+##  <a name="replication-agents"></a><a name="ReplProg"></a>Agentes de replicación  
  Se pueden sincronizar las suscripciones de extracción mediante programación y a petición invocando el archivo ejecutable del agente de replicación adecuado del símbolo del sistema. El archivo ejecutable de agente de replicación que se invoca dependerá del tipo de publicación a la que pertenece la suscripción de extracción. Para más información, consulte [Agentes de replicación](agents/replication-agents-overview.md).  
   
 > [!NOTE]  
@@ -132,7 +132,7 @@ ms.locfileid: "63186234"
   
     -   **-SubscriberSecurityMode** = **0**  
   
-###  <a name="TsqlExample"></a>Ejemplos (agentes de replicación)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Ejemplos (agentes de replicación)  
  El ejemplo siguiente inicia el Agente de distribución para sincronizar una suscripción de extracción. Todas las conexiones se realizan con la autenticación de Windows.  
   
  [!code-sql[HowTo#bat_synctranpullsub_10](../../snippets/tsql/SQL15/replication/howto/tsql/synctranpullsub_10.bat)]  
@@ -141,7 +141,7 @@ ms.locfileid: "63186234"
   
  [!code-sql[HowTo#bat_syncmergepullsub_10](../../snippets/tsql/SQL15/replication/howto/tsql/syncmergepullsub_10.bat)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Puede sincronizar suscripciones de extracción mediante programación con Replication Management Objects (RMO) y el acceso de código administrado a las funcionalidades del agente de replicación. Las clases que se usan para crear una suscripción de extracción dependen del tipo de publicación al que pertenece la suscripción.  
   
 > [!NOTE]  
@@ -201,7 +201,7 @@ ms.locfileid: "63186234"
         > [!NOTE]  
         >  Si especificó un valor de `false` para <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A> (predeterminado) cuando creó la suscripción de extracción, también debe especificar <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Distributor%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>,, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.HostName%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriptionType%2A>, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.ExchangeType%2A>y, opcionalmente <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A>,, y, <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A> porque los metadatos relacionados con el trabajo del agente para la suscripción no están disponibles en [MSsubscription_properties](/sql/relational-databases/system-tables/mssubscription-properties-transact-sql).  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a>Ejemplos (RMO)  
  Este ejemplo sincroniza una suscripción de extracción con una publicación transaccional, en la que el agente se inicia de forma asincrónica con el trabajo del agente.  
   
  [!code-csharp[HowTo#rmo_SyncTranPullSub_WithJob](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_synctranpullsub_withjob)]  
@@ -235,6 +235,6 @@ ms.locfileid: "63186234"
 ## <a name="see-also"></a>Consulte también  
  [Sincronizar datos](synchronize-data.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
+ [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md)  
   
   

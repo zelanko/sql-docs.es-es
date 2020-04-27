@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ef6334f6fe4671f2563add857f6dd58ce67a2840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237844"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Compatibilidad de API de OLE DB con las mejoras de fecha y hora
@@ -24,15 +24,15 @@ ms.locfileid: "63237844"
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|Se agrega una marca en la estructura DBBINDING para habilitar las aplicaciones para diferenciar entre valores `datetime`, `datetime2` y `smalldatetime`. Para obtener más información, vea [metadatos de parámetros y conjuntos de filas](metadata-parameter-and-rowset.md).|  
+|IAccessor::CreateAccessor|Se agrega una marca en la estructura DBBINDING para habilitar las aplicaciones para diferenciar entre valores `datetime`, `datetime2` y `smalldatetime`. Para más información, consulte [Parámetros y metadatos de conjuntos de filas](metadata-parameter-and-rowset.md).|  
 |IBCPSession::BCPColFmt|Para obtener más información, vea [cambios de copia masiva para tipos de fecha y hora mejorados &#40;OLE DB y ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).|  
-|ICommandWithParameters::GetParameterInfo|Para obtener más información, vea[metadatos de parámetros y conjuntos de filas](metadata-parameter-and-rowset.md).|  
-|ICommandWithParameters::SetParameterinfo|Para obtener más información, vea[metadatos de parámetros y conjuntos de filas](metadata-parameter-and-rowset.md).|  
-|IColumnsRowset::GetColumnsRowset|Para obtener más información, vea[metadatos de parámetros y conjuntos de filas](metadata-parameter-and-rowset.md).|  
-|IColumnsInfo::GetColumnInfo|Para obtener más información, vea[metadatos de parámetros y conjuntos de filas](metadata-parameter-and-rowset.md).|  
-|IDBSchemaRowset::GetRowset|Para obtener más información sobre los conjuntos de filas de esquema afectados, vea[filas de fecha y hora y conjuntos de filas de esquema](../native-client-ole-db-rowsets/rowsets.md).|  
+|ICommandWithParameters::GetParameterInfo|Para más información, consulte [Parámetros y metadatos de conjuntos de filas](metadata-parameter-and-rowset.md).|  
+|ICommandWithParameters::SetParameterinfo|Para más información, consulte [Parámetros y metadatos de conjuntos de filas](metadata-parameter-and-rowset.md).|  
+|IColumnsRowset::GetColumnsRowset|Para más información, consulte [Parámetros y metadatos de conjuntos de filas](metadata-parameter-and-rowset.md).|  
+|IColumnsInfo::GetColumnInfo|Para más información, consulte [Parámetros y metadatos de conjuntos de filas](metadata-parameter-and-rowset.md).|  
+|IDBSchemaRowset::GetRowset|Para obtener detalles de los conjuntos de filas de esquema afectados, consulte [Fecha y hora y conjuntos de filas de esquema](../native-client-ole-db-rowsets/rowsets.md).|  
 |IRowsetFastLoad|Esta interfaz admite los nuevos tipos de fecha y hora, pero no hay ningún cambio en su interfaz.|  
-|ITableDefinition::CreateTable|Para obtener más información, vea [compatibilidad con tipos de datos para obtener OLE DB mejoras de fecha y hora](data-type-support-for-ole-db-date-and-time-improvements.md).|  
+|ITableDefinition::CreateTable|Para obtener más información [Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB](data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
 ## <a name="see-also"></a>Consulte también  
  [Mejoras de fecha y hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  

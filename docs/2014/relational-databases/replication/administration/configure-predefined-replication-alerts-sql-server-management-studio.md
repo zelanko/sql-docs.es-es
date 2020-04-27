@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187262"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Configurar alertas de replicación predefinidas (SQL Server Management Studio)
@@ -27,9 +27,9 @@ ms.locfileid: "63187262"
 -   **Replicación: error de agente**    
 -   **Replicación: reintento de agente**    
 -   **Replicación: suscripción expirada quitada**    
--   **Replicación: suscripción reinicializada por no pasar la validación**    
+-   **Replicación: Suscripción reinicializada por no pasar la validación**    
 -   **Replicación: el suscriptor no ha superado la validación de datos**    
--   **Replicación: el suscriptor ha superado la validación de datos**    
+-   **Replicación: El suscriptor ha pasado la validación de datos**    
 -   **Replicación: cierre personalizado del agente**  
   
  Configure estas alertas en la carpeta **Alertas** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o en la pestaña **Advertencias** del Monitor de replicación. Para obtener más información acerca de cómo obtener acceso a esta pestaña, vea [ver información y realizar tareas mediante el monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
@@ -41,11 +41,11 @@ ms.locfileid: "63187262"
 1.  Conéctese al distribuidor en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]y expanda el nodo de servidor.    
 2.  Expanda la carpeta **Agente SQL Server** y, a continuación, la carpeta **Alertas** .    
 3.  Haga clic con el botón secundario en una alerta de replicación y, a continuación, haga clic en **Propiedades**.    
-4.  Establezca opciones en el cuadro de diálogo **\<Propiedades de la alerta <nombreDeAlerta**:    
+4.  Establezca las opciones en ** \<** el cuadro de diálogo Propiedades de alerta de AlertName>:    
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.    
     -   En la página **Respuesta** , especifique si desea que se envíe un mensaje de correo electrónico o que se ejecute un trabajo.  
   
-         Si la alerta es **Replicación: el suscriptor no ha superado la validación de datos**, puede especificar el trabajo de respuesta que la replicación proporciona para esta alerta: Haga clic en **Ejecutar trabajo** y después en el botón Examinar ( **…** ). En el cuadro de diálogo **Buscar trabajo** , haga clic en **Examinar**. En el cuadro de diálogo **Buscar objetos** , seleccione **Reinicializar suscripciones con errores de validación de datos**. Haga clic en **Aceptar** en los dos cuadros de diálogo abiertos. Cuando se ejecuta el trabajo, usa una llamada a procedimiento remoto (RPC) a un procedimiento almacenado que reinicializa la suscripción. Si el publicador usa un distribuidor remoto, debe definir un inicio de sesión de servidor remoto en el publicador, de manera que se pueda llevar a cabo la RPC del distribuidor al publicador.   
+         Si la alerta es **replicación: el suscriptor no ha superado la validación de datos**, puede especificar el trabajo de respuesta que la replicación proporciona para esta alerta: seleccione **Ejecutar trabajo**y, a continuación, haga clic en el botón Examinar (**...**). En el cuadro de diálogo **Buscar trabajo** , haga clic en **examinar**. En el cuadro de diálogo **Buscar objetos** , seleccione **Reinicializar suscripciones con errores de validación de datos**. Haga clic en **Aceptar** en los dos cuadros de diálogo abiertos. Cuando se ejecuta el trabajo, usa una llamada a procedimiento remoto (RPC) a un procedimiento almacenado que reinicializa la suscripción. Si el publicador usa un distribuidor remoto, debe definir un inicio de sesión de servidor remoto en el publicador, de manera que se pueda llevar a cabo la RPC del distribuidor al publicador.   
     -   En la página **Opciones** , personalice el texto de la respuesta.    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -53,10 +53,10 @@ ms.locfileid: "63187262"
   
 1.  En la pestaña **Advertencias** , haga clic en **Configurar alertas**.    
 2.  En el cuadro de diálogo **Configurar alertas de replicación** , seleccione una alerta y haga clic en **Configurar**.    
-3.  Establezca opciones en el cuadro de diálogo **\<Propiedades de la alerta <nombreDeAlerta**:    
+3.  Establezca las opciones en ** \<** el cuadro de diálogo Propiedades de alerta de AlertName>:    
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.    
     -   En la página **Respuesta** , especifique si desea que se envíe un mensaje de correo electrónico o que se ejecute un trabajo.    
-         Si la alerta es **Replicación: el suscriptor no ha superado la validación de datos**, puede especificar el trabajo de respuesta que la replicación proporciona para esta alerta: Haga clic en **Ejecutar trabajo** y después en el botón Examinar ( **…** ). En el cuadro de diálogo **Buscar trabajo** , haga clic en **Examinar**. En el cuadro de diálogo **Buscar objetos** , seleccione **Reinicializar suscripciones con errores de validación de datos**. Haga clic en **Aceptar** en los dos cuadros de diálogo abiertos. Cuando se ejecuta el trabajo, usa una llamada a procedimiento remoto (RPC) a un procedimiento almacenado que reinicializa la suscripción. Si el publicador usa un distribuidor remoto, debe definir un inicio de sesión de servidor remoto en el publicador, de manera que se pueda llevar a cabo la RPC del distribuidor al publicador.   
+         Si la alerta es **replicación: el suscriptor no ha superado la validación de datos**, puede especificar el trabajo de respuesta que la replicación proporciona para esta alerta: seleccione **Ejecutar trabajo**y, a continuación, haga clic en el botón Examinar (**...**). En el cuadro de diálogo **Buscar trabajo** , haga clic en **examinar**. En el cuadro de diálogo **Buscar objetos** , seleccione **Reinicializar suscripciones con errores de validación de datos**. Haga clic en **Aceptar** en los dos cuadros de diálogo abiertos. Cuando se ejecuta el trabajo, usa una llamada a procedimiento remoto (RPC) a un procedimiento almacenado que reinicializa la suscripción. Si el publicador usa un distribuidor remoto, debe definir un inicio de sesión de servidor remoto en el publicador, de manera que se pueda llevar a cabo la RPC del distribuidor al publicador.   
     -   En la página **Opciones** , personalice el texto de la respuesta.    
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
 5.  Haga clic en **Cerrar**.  

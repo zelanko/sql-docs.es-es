@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241205"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar y consultar datos XML
   En este tema se describen las opciones de consulta que se tienen que especificar para consultar datos XML. También describe las partes de las instancias XML que no se conservan cuando se almacenan en bases de datos.  
   
-##  <a name="features"></a> Características de una instancia de XML que no se mantienen  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Características de una instancia de XML que no se mantienen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva el contenido de la instancia XML, pero no conserva los aspectos de la instancia XML que no se consideran significativos en el modelo de datos XML. Esto significa que una instancia XML recuperada no podría ser idéntica a la instancia que se almacenó en el servidor pero contendrá la misma información.  
   
 ### <a name="xml-declaration"></a>Declaración XML  
@@ -86,7 +86,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Establecer opciones de consulta necesarias  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Establecer opciones de consulta necesarias  
  Al consultar las `xml` columnas de tipo o las `xml` variables mediante métodos de tipo de datos, se deben establecer las siguientes opciones como se muestra.  
   
 |Opciones de SET|Valores requeridos|  

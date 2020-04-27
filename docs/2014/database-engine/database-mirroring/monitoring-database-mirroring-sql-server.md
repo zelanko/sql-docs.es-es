@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755365"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Supervisar la creación de reflejo de la base de datos (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "62755365"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="MonitoringStatus"></a> Supervisar el estado de la creación de reflejo  
+##  <a name="monitoring-mirroring-status"></a><a name="MonitoringStatus"></a> Supervisar el estado de la creación de reflejo  
  Para configurar y administrar la supervisión de una o varias bases de datos reflejadas en una instancia de servidor, se puede usar el Monitor de creación de reflejo de la base de datos o los procedimientos almacenados del sistema **dbmmonitor** . Se puede supervisar una base de datos reflejada durante una sesión de creación de reflejo para comprobar si hay flujo de datos y si éste es correcto.  
   
  En concreto, la supervisión de una base de datos reflejada permite:  
@@ -62,7 +62,7 @@ ms.locfileid: "62755365"
   
      Si una nueva fila de estado contiene un valor que excede un umbral, se envía un evento informativo al registro de eventos de Windows. A continuación, un administrador del sistema puede configurar manualmente las alertas basadas en estos eventos. Para obtener más información, vea [Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
-###  <a name="tools_for_monitoring_dbm_status"></a> Herramientas para la supervisión del estado de la creación de reflejo de la base de datos  
+###  <a name="tools-for-monitoring-database-mirroring-status"></a><a name="tools_for_monitoring_dbm_status"></a> Herramientas para la supervisión del estado de la creación de reflejo de la base de datos  
  Se puede supervisar el estado de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado del sistema **sp_dbmmonitorresults** . Los administradores del sistema, es decir, los miembros del rol fijo de servidor **sysadmin** , y los usuarios que un administrador del sistema ha agregado al rol fijo de base de datos **dbm_monitor** de la base de datos **msdb** , pueden usar estas herramientas para supervisar la creación de reflejo de la base de datos en cualquier base de datos reflejada de la instancia de servidor local. Cuando se utilizan, un administrador del sistema puede actualizar manualmente el estado de la creación de reflejo.  
   
 > [!NOTE]  
@@ -137,7 +137,7 @@ ms.locfileid: "62755365"
 #### <a name="dropping-the-database-mirroring-monitor-job"></a>Quitar el Trabajo del Monitor de creación de reflejo de la base de datos  
  El **Trabajo del Monitor de creación de reflejo de la base de datos**se mantendrá hasta su eliminación. El administrador del sistema debe administrar el trabajo de supervisión. Para quitar el **Trabajo del Monitor de creación de reflejo de la base de datos**, use **sp_dbmmonitordropmonitoring**. Para obtener más información, vea [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql).  
   
-###  <a name="perf_metrics_of_dbm_monitor"></a> Estado que muestra el Monitor de creación de reflejo de la base de datos  
+###  <a name="status-displayed-by-the-database-mirroring-monitor"></a><a name="perf_metrics_of_dbm_monitor"></a> Estado que muestra el Monitor de creación de reflejo de la base de datos  
  En la página **Estado** del Monitor de creación de reflejo de la base de datos se describen los asociados y el estado de la sesión de creación de reflejo. El estado incluye las estadísticas de rendimiento como, por ejemplo, el estado del registro de transacciones y otra información que se utiliza para realizar una estimación del tiempo necesario para completar una conmutación por error y la potencial pérdida de datos, si no se sincroniza la sesión. Además, en la página **Estado** se muestra el estado y la información sobre la sesión de creación de reflejo en general.  
   
 > [!NOTE]  
@@ -247,7 +247,7 @@ ms.locfileid: "62755365"
   
     -   Seguridad alta con conmutación automática por error (sincrónico)  
   
-##  <a name="AdditionalSources"></a> Fuentes adicionales de información acerca de una base de datos reflejada  
+##  <a name="additional-sources-of-information-about-a-mirrored-database"></a><a name="AdditionalSources"></a> Fuentes adicionales de información acerca de una base de datos reflejada  
  Además de usar el Monitor de creación de reflejo de la base de datos y los procedimientos almacenados dbmmonitor para supervisar una base de datos reflejada y configurar alertas de las variables de rendimiento supervisadas, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona vistas de catálogo, contadores de rendimiento y notificaciones de eventos para la creación de reflejo de la base de datos.  
   
  **En esta sección:**  
@@ -258,7 +258,7 @@ ms.locfileid: "62755365"
   
 -   [Notificaciones de eventos de la creación de reflejo de la base de datos](#DbmEventNotif)  
   
-###  <a name="DbmMetadata"></a> Metadatos de creación de reflejo de la base de datos  
+###  <a name="database-mirroring-metadata"></a><a name="DbmMetadata"></a> Metadatos de creación de reflejo de la base de datos  
  Cada sesión de creación de reflejo de la base de datos se describe en metadatos que se exponen mediante las siguientes vistas de catálogo o de administración dinámica:  
   
 -   **sys.database_mirroring**  
@@ -279,7 +279,7 @@ ms.locfileid: "62755365"
   
      Para obtener más información, vea [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections).  
   
-###  <a name="DbmPerfCounters"></a> Contadores de rendimiento de creación de reflejo de la base de datos  
+###  <a name="database-mirroring-performance-counters"></a><a name="DbmPerfCounters"></a> Contadores de rendimiento de creación de reflejo de la base de datos  
  Los contadores de rendimiento le permiten supervisar el rendimiento de la creación de reflejo de la base de datos. Por ejemplo, puede examinar el contador **Retraso de transacción** para ver si la creación de reflejo de la base de datos está afectando al rendimiento del servidor principal; puede examinar los contadores **Cola rehecha** y **Envío de registro en cola** para ver el comportamiento de la base de datos reflejada con respecto a la base de datos principal. Puede examinar el contador **Bytes de registro enviados/s** para supervisar la parte del registro enviada por segundo.  
   
  En el Monitor de rendimiento de cada asociado, los contadores de rendimiento están disponibles en el objeto de rendimiento de la creación de reflejo de la base de datos (**SQLServer:Database Mirroring**). Para más información, consulte [SQL Server, Database Mirroring Object](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md).  
@@ -288,7 +288,7 @@ ms.locfileid: "62755365"
   
 -   [Iniciar el Monitor de sistema &#40;Windows&#41;](../../relational-databases/performance/start-system-monitor-windows.md)  
   
-###  <a name="DbmEventNotif"></a> Notificaciones de eventos de la creación de reflejo de la base de datos  
+###  <a name="database-mirroring-event-notifications"></a><a name="DbmEventNotif"></a> Notificaciones de eventos de la creación de reflejo de la base de datos  
  Las notificaciones de eventos son una clase especial de objetos de base de datos. Las notificaciones de eventos se ejecutan en respuesta a una variedad de instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL y eventos de Seguimiento de SQL, y envían información acerca de los eventos de servidor y base de datos a un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Los siguientes eventos están disponibles en la creación de reflejo de la base de datos:  
@@ -301,7 +301,7 @@ ms.locfileid: "62755365"
   
      Este evento le permite emitir mensajes de auditoría relacionados con la seguridad de transporte de la creación de reflejo de la base de datos. Para obtener más información, consulte [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   

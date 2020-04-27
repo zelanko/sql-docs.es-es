@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f541ad24e87bf5bdea9ed8b8c2523a73c81daa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768007"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Instrucción Create Table de SQL (Asistente para importación y exportación de SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62768007"
 > [!NOTE]  
 >  Si desea incluir un retorno de carro en la instrucción SQL, presione CTRL+ENTRAR. Si presiona solamente ENTRAR, se cierra el cuadro de diálogo.  
   
- **Autogenerate (Generar automáticamente)**  
+ **Autogenerar**  
  Restaura la instrucción SQL predeterminada (si se ha modificado) al hacer clic en **Autogenerar**.  
   
   

@@ -21,21 +21,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9a300ce29141ed0a065b4186b737c4d8c294820
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768909"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Plan de ejecución y asignación de búfer
   Antes de la ejecución, la tarea de flujo de datos examina sus componentes y genera un plan de ejecución para cada secuencia de componentes. En esta sección se proporcionan detalles sobre el plan de ejecución, cómo ver el plan y cómo se asignan búferes de entrada y salida en función del plan de ejecución.  
   
 ## <a name="understanding-the-execution-plan"></a>Descripción del plan de ejecución  
- Un plan de ejecución contiene subprocesos de origen y de trabajo; cada subproceso contiene listas de trabajo que especifican listas de trabajo de salida para los subprocesos de origen o listas de trabajo de entrada y salida para los subprocesos de trabajo. Los subprocesos de origen de un plan de ejecución representan los componentes de origen del flujo de datos y se identifican en el plan de ejecución mediante *SourceThread * * n*, donde *n* es el número de base cero del subproceso de origen.  
+ Un plan de ejecución contiene subprocesos de origen y de trabajo; cada subproceso contiene listas de trabajo que especifican listas de trabajo de salida para los subprocesos de origen o listas de trabajo de entrada y salida para los subprocesos de trabajo. Los subprocesos de origen de un plan de ejecución representan los componentes de origen del flujo de datos y se identifican en el plan de ejecución mediante *SourceThread**n*, donde *n* es el número de base cero del subproceso de origen.  
   
  Cada subproceso de origen crea un búfer, establece un agente de escucha y llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> en el componente de origen. Aquí es donde se inicia la ejecución y se original los datos, a medida que el componente de origen comienza a agregar filas a los búferes de salida que le proporciona la tarea de flujo de datos. Una vez que los subprocesos de origen se están ejecutando, el equilibrio de trabajo se distribuye entre subprocesos de trabajo.  
   
- Un subproceso de trabajo puede contener listas de trabajo de entrada y salida y se identifica en el plan de ejecución como *WorkThread * * n*, donde *n* es el número de base cero del subproceso de trabajo. Estos subproceso contienen listas de trabajo de salida cuando el gráfico contiene un componente con salidas asincrónicas.  
+ Un subproceso de trabajo puede contener listas de trabajo de entrada y salida, y se identifica en el plan de ejecución como *WorkThread**n*, donde *n* es el número de base cero del subproceso de trabajo. Estos subproceso contienen listas de trabajo de salida cuando el gráfico contiene un componente con salidas asincrónicas.  
   
  El plan de ejecución de ejemplo siguiente representa un flujo de datos que contiene un componente de origen conectado a una transformación con una salida asincrónica conectada a un componente de destino. En este ejemplo, WorkThread0 contiene una lista de trabajo de salida porque el componente de transformación tiene una salida asincrónica.  
   

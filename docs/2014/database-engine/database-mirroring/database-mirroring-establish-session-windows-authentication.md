@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755507"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
@@ -71,7 +71,7 @@ ms.locfileid: "62755507"
   
      TCP<strong>://</strong>\<*dirección del sistema>* <strong>:</strong>\<*Puerto>*  
   
-     donde \<la *>de dirección del sistema* es una cadena que identifica de forma inequívoca el sistema del \<equipo de destino y el *Puerto>* es el número de puerto utilizado por el extremo de la creación de reflejo de la instancia del servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md).  
+     donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto>*, el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md).  
   
      Por ejemplo, en la instancia del servidor reflejado, el siguiente parámetro ALTER DATABASE establece el asociado como la instancia de servidor principal original. El nombre de la base de datos es **AdventureWorks**, la dirección del sistema es DBSERVER1 (el nombre del sistema del asociado) y el puerto usado por el punto de conexión de reflejo de la base de datos del asociado es 7022:  
   
@@ -98,13 +98,13 @@ ms.locfileid: "62755507"
   
 6.  De forma predeterminada, una sesión se configura con la seguridad de las transacciones completa (SAFETY se establece en FULL), lo que inicia la sesión en modo sincrónico de alta seguridad sin conmutación automática por error. Puede volver a configurar la sesión para ejecutarla en modo de alta seguridad con conmutación automática por error o en modo asincrónico de alto rendimiento, como se indica a continuación:  
   
-    -   **Modo de seguridad alta con conmutación automática por error**  
+    -   **Modo de alta seguridad con conmutación automática por error**  
   
          Si desea que una sesión en modo de alta seguridad admita la conmutación automática por error, agregue una instancia de servidor testigo. Para obtener más información, vea [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md).  
   
     -   **Modo de alto rendimiento**  
   
-         Otra opción, si no desea la conmutación automática por error y prefiere poner más énfasis en el rendimiento en lugar de la disponibilidad, es desactivar la seguridad de las transacciones. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+         Otra opción, si no desea la conmutación automática por error y prefiere poner más énfasis en el rendimiento en lugar de la disponibilidad, es desactivar la seguridad de las transacciones. Para obtener más información, vea [cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
         >  En el modo de alto rendimiento, WITNESS debe establecerse en OFF. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
@@ -214,12 +214,12 @@ ms.locfileid: "62755507"
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Permitir el acceso de red a un extremo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Crear un extremo de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [&#40;SQL Server de creación de reflejo de la base de datos y trasvase de registros&#41;](database-mirroring-and-log-shipping-sql-server.md)   
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring-sql-server.md)   
+ [&#40;de replicación y creación de reflejo de la base de datos SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Especifique una dirección de red de servidor &#40;la creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)  
   
   

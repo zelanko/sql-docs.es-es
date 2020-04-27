@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755597"
 ---
 # <a name="connect-to-server-analysis-services"></a>Conectar al servidor (Analysis Services)
-  Use este cuadro de diálogo para ver o especificar opciones al [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]conectarse a.  
+  Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
@@ -41,7 +41,7 @@ ms.locfileid: "62755597"
  **Contraseña**  
  Esta opción no está disponible en esta versión. Escriba la contraseña del inicio de sesión. Esta opción solo es editable si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse.  
   
- **Conectar**  
+ **Conexión**  
  Haga clic aquí para conectarse al servidor seleccionado anteriormente.  
   
  **Opciones**  

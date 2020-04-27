@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767947"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar asignación de tipos de datos (Asistente para importación y exportación de SQL Server)
@@ -53,12 +53,12 @@ ms.locfileid: "62767947"
 |**Tipo de destino**|Muestra el tipo de datos de la columna de destino.|  
 |**Verso**|Especifique si la conversión planeada debería continuar:<br /><br /> Active la casilla para hacer que el asistente continúe con la conversión planeada.<br /><br /> Desactive la casilla para cancelar la conversión de los tipos de datos.|  
 |**En error**|Especifique cómo controla el asistente los errores:<br /><br /> Use la opción **en el error (global)** .<br /><br /> Termine con un error y detenga el proceso de importación o exportación.<br /><br /> Omita el error.|  
-|**Al truncarse**|Especifique cómo controla el asistente el truncamiento:<br /><br /> Use la opción al **truncarse (global)** .<br /><br /> Se produce un error y se detiene el proceso de importación o exportación<br /><br /> Omita el truncamiento.|  
+|**Al producirse truncamiento**|Especifique cómo controla el asistente el truncamiento:<br /><br /> Use la opción al **truncarse (global)** .<br /><br /> Se produce un error y se detiene el proceso de importación o exportación<br /><br /> Omita el truncamiento.|  
   
  Para ver información detallada sobre la conversión de una columna de datos en particular, haga doble clic en cualquier fila de la lista. El cuadro de diálogo **Detalles de conversión de columna** se abre y muestra información de conversión más detallada para la columna.  
   
 ### <a name="error-handling-options"></a>Opciones de control de errores  
- **En error (global)**  
+ **Al producirse un error (global)**  
  Especifique cómo controla el asistente los errores:  
   
 -   Termine con un error y detenga el proceso de importación o exportación.  

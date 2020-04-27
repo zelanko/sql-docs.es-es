@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761457"
 ---
 # <a name="create-unique-constraints"></a>Crear restricciones UNIQUE
@@ -36,28 +36,28 @@ ms.locfileid: "62761457"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-constraint"></a>Para crear una restricción UNIQUE  
   
 1.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla a la que quiera agregar una restricción UNIQUE y haga clic en **Diseño**.  
   
-2.  En el menú **Diseñador de tablas** , haga clic en **Índices o claves**.  
+2.  En el menú **Diseñador de tablas** , haga clic en **índices o claves**.  
   
 3.  En el cuadro de diálogo **Índices o claves** , haga clic en **Agregar**.  
   
 4.  En la cuadrícula situada debajo de **General**, haga clic en **Tipo** y elija **Clave UNIQUE** en el cuadro de lista desplegable situado a la derecha de la propiedad.  
   
-5.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
+5.  En el menú **Archivo**, haga clic en ***Guardar**_nombre de tabla_.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>Para crear una restricción UNIQUE  
   

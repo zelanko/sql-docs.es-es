@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a028c880d87e21e1fcc63ffc605e7d375619dbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767867"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server)
@@ -36,13 +36,13 @@ FROM Sales.SalesPerson
 WHERE CommissionPct > 0.015  
 ```  
   
- **Analizar**  
+ **Analiza**  
  Comprueba la sintaxis de la instrucción SQL en el cuadro de texto **Instrucción SQL**.  
   
 > [!NOTE]  
 >  Si el tiempo necesario para comprobar la sintaxis de la instrucción supera el valor de tiempo de espera de 30 segundos, el análisis se detiene y se genera un error. No podrá pasar esta página del asistente hasta que el análisis se realice correctamente. Una solución es crear una vista de base de datos basada en la consulta y consultar la vista del asistente, en lugar de escribir directamente el texto de la consulta.  
   
- **Browse**  
+ **Examinar**  
  Seleccione un archivo que contenga una instrucción SQL mediante el cuadro de diálogo **abrir** . Al seleccionar un archivo se copiará el texto del archivo en el cuadro de texto **Instrucción de consulta** .  
   
   

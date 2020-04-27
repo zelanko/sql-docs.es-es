@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768030"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Elegir un destino (Asistente para importación y exportación de SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62768030"
  **Nombre de archivo**  
  Especifique la ruta de acceso y el nombre de archivo correspondiente al archivo en el que almacenará los datos. O bien, haga clic en **Examinar** para buscar un archivo.  
   
- **Browse**  
+ **Examinar**  
  Busque un archivo mediante el cuadro de diálogo **Abrir**.  
   
  **Configuración regional**  
@@ -102,7 +102,7 @@ ms.locfileid: "62768030"
  **Ruta de acceso del archivo Excel**  
  Especifique la ruta de acceso y el nombre de archivo del libro en el que se almacenarán los datos ( \\por ejemplo, C:\MyData.xls, \Sales\Database\Northwind.xls). O bien, haga clic en **Examinar** para buscar un libro.  
   
- **Browse**  
+ **Examinar**  
  Busque un libro de Excel mediante el cuadro de diálogo **abrir** .  
   
  **Versión de Excel**  
@@ -119,7 +119,7 @@ ms.locfileid: "62768030"
  **Nombre de archivo**  
  Especifique la ruta de acceso y el nombre de archivo del archivo de base de datos en el que se almacenarán \\los datos (por ejemplo, C:\MyData.mdb, \Sales\Database\Northwind.mdb). O bien, haga clic en **Examinar** para buscar un archivo de base de datos.  
   
- **Browse**  
+ **Examinar**  
  Busque el archivo de base de datos mediante el cuadro de diálogo **abrir** .  
   
  **Nombre de usuario**  

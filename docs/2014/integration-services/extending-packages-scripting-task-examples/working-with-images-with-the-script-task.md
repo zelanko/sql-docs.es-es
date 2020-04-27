@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768451"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabajar con imágenes con la tarea Script
@@ -40,7 +40,7 @@ ms.locfileid: "62768451"
 > [!NOTE]  
 >  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Ejemplo 1: Descripción: convertir las imágenes al formato JPEG  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a> Ejemplo 1: Descripción: convertir las imágenes al formato JPEG  
  En el ejemplo siguiente se abre un archivo de imagen especificado por una variable y se guarda como un archivo JPEG comprimido mediante un codificador. El código para recuperar la información del codificador se encapsula en una función privada.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar este ejemplo de la tarea Script para su uso con un archivo de imagen único  
@@ -149,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Ejemplo 2: Descripción: crear y guardar las imágenes en miniatura  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a> Ejemplo 2: Descripción: crear y guardar las imágenes en miniatura  
  En el ejemplo siguiente se abre un archivo de imagen especificado por una variable, se crea una miniatura de la imagen a la vez que se mantiene una relación de aspecto constante y se guarda la miniatura con un nombre de archivo modificado. El código que calcula el alto y ancho de la miniatura a la vez que mantiene una relación de aspecto constante se encapsula en una subrutina privada.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar este ejemplo de la tarea Script para su uso con un archivo de imagen único  

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62756991"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -93,7 +93,7 @@ REM Gather information about the instance of LocalDB
 |Propietario|"\<Su usuario de Windows>"|  
 |Creación automática|No|  
 |State|en ejecución|  
-|Última hora de inicio|\<> de fecha y hora|  
+|Última hora de inicio|\<Fecha y hora>|  
 |Nombre de canalización de instancia|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
   
 > [!NOTE]  

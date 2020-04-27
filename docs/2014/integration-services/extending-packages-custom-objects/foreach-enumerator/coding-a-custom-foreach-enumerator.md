@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 84e1b606c9eedaf4ae1d4b8394b8bf8d2bdcb140
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768631"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Codificar un enumerador foreach personalizado
@@ -110,7 +110,7 @@ End Function
 ![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear un enumerador Para cada uno personalizado](creating-a-custom-foreach-enumerator.md)   
- [Desarrollar una interfaz de usuario para un enumerador ForEach personalizado](developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Crear un enumerador Foreach personalizado](creating-a-custom-foreach-enumerator.md)   
+ [Desarrollar una interfaz de usuario para un enumerador foreach personalizado](developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   

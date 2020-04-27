@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6451e2a02bbaf7ef8a58b63c75838023433ff563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076207"
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Crear y ejecutar un script MDX en Herramientas de datos de SQL Server
@@ -37,6 +37,6 @@ ms.locfileid: "66076207"
 ## <a name="see-also"></a>Consulte también  
  [Script MDX básico &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)   
  [Aspectos básicos de scripting de MDX &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Instrucciones de scripting de MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
+ [Instrucciones para scripting de MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx)  
   
   

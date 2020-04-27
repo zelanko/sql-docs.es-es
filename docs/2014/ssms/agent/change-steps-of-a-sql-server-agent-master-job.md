@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017588"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -28,23 +28,23 @@ ms.locfileid: "63017588"
   
      [Seguridad](#Security)  
   
--   **Para realizar cambios en los pasos de un trabajo maestro de Agente SQL Server, utilizando:**  
+-   **Para realizar cambios en los pasos de un trabajo maestro del Agente SQL Server mediante:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  No se puede destinar un trabajo principal del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a servidores locales y remotos.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad. Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Para realizar cambios en los pasos de un trabajo maestro del Agente SQL Server  
   
@@ -60,11 +60,11 @@ ms.locfileid: "63017588"
   
 6.  Haga clic en **Editar** para abrir el cuadro **de diálogo Propiedades de paso de trabajo-**_job_step_name_ . Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, vea [propiedades de paso de trabajo: nuevo paso de trabajo &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md) y [propiedades de paso de trabajo: nuevo paso de trabajo &#40;página avanzadas&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
-7.  Cuando termine, haga clic en **Aceptar**.  
+7.  Cuando haya terminado, haga clic en **Aceptar**.  
   
 8.  En el cuadro de diálogo **propiedades del trabajo-**_job_name_ , haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-make-changes-to-the-steps-of-a-sql-server-agent-master-job"></a>Para realizar cambios en los pasos de un trabajo maestro del Agente SQL Server  
   

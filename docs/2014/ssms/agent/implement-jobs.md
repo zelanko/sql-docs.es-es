@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074030"
 ---
 # <a name="implement-jobs"></a>Implementar trabajos
@@ -33,7 +33,7 @@ ms.locfileid: "63074030"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema.**|  
+|**Descripción**|**Tema**|  
 |Contiene información sobre cómo crear trabajos y asignar su propiedad.|[Crear trabajos](create-jobs.md)|  
 |Contiene información sobre cómo organizar trabajos en categorías.|[organizar los trabajos](organize-jobs.md)|  
 |Contiene información acerca de los diferentes tipos de pasos de trabajo que puede crear y cómo administrarlos.|[Administrar pasos de trabajo](manage-job-steps.md)|  

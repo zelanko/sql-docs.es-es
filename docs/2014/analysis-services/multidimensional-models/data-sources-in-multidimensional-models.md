@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076043"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Orígenes de datos en modelos multidimensionales
@@ -56,14 +56,14 @@ ms.locfileid: "66076043"
 |-----------|-----------------|  
 |[Orígenes de datos admitidos &#40;&#41;de SSAS multidimensionales](supported-data-sources-ssas-multidimensional.md)|Describe los tipos de orígenes de datos que puede usar en un modelo multidimensional.|  
 |[Crear un origen de datos &#40;SSAS multidimensional&#41;](create-a-data-source-ssas-multidimensional.md)|Explica cómo agregar un objeto de origen de datos a un modelo multidimensional.|  
-|[Eliminar un origen de datos en Explorador de soluciones &#40;SSAS multidimensional&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Use este procedimiento para eliminar un objeto de origen de datos de un modelo multidimensional.|  
-|[Establecer propiedades de origen de datos &#40;&#41;de SSAS multidimensional](set-data-source-properties-ssas-multidimensional.md)|Describe cada propiedad y explica cómo configurar cada una.|  
-|[Establecer opciones de suplantación &#40;SSAS-&#41;multidimensional](set-impersonation-options-ssas-multidimensional.md)|Explica cómo configurar opciones en el cuadro de diálogo información de suplantación.|  
+|[Eliminar un origen de datos en el Explorador de soluciones &#40;SSAS multidimensional&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Use este procedimiento para eliminar un objeto de origen de datos de un modelo multidimensional.|  
+|[Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md)|Describe cada propiedad y explica cómo configurar cada una.|  
+|[Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md)|Explica cómo configurar opciones en el cuadro de diálogo información de suplantación.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Objetos de base de datos &#40;Analysis Services de datos multidimensionales&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Arquitectura lógica &#40;Analysis Services de datos multidimensionales&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   
- [Orígenes de datos y enlaces &#40;&#41;de SSAS multidimensionales](data-sources-and-bindings-ssas-multidimensional.md)  
+ [Orígenes de datos y enlaces &#40;SSAS multidimensional&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

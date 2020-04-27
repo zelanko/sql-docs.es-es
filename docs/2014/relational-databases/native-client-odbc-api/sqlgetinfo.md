@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128658"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   En la tabla se muestran los valores devueltos por **SQLGetInfo**. Estos valores pueden variar en función del número de versión del servidor conectado.  
   
- **SQLGetInfo** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es diferente de **SQLGetInfo** en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC (SQLSRV32. DLL) cuando se llama a **SQLGetInfo** con SQL_KEYWORDS y una longitud de búfer de 0.  El controlador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client devuelve SQL_SUCCESS, pero el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve SQL_SUCCESS_WITH_INFO.  Sin embargo, cuando se llama con una longitud de búfer distinta de cero que es menor que la **** cadena de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la palabra clave output, SQLGetInfo en Native Client devuelve SQL_SUCCESS_WITH_INFO y un SQLSTATE de 01004.  
+ **SQLGetInfo** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es diferente de **SQLGetInfo** en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC (SQLSRV32. DLL) cuando se llama a **SQLGetInfo** con SQL_KEYWORDS y una longitud de búfer de 0.  El controlador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client devuelve SQL_SUCCESS, pero el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve SQL_SUCCESS_WITH_INFO.  Sin embargo, cuando se llama con una longitud de búfer distinta de cero que es menor que la **SQLGetInfo** cadena de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la palabra clave output, SQLGetInfo en Native Client devuelve SQL_SUCCESS_WITH_INFO y un SQLSTATE de 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  

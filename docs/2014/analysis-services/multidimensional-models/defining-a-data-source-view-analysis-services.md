@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075400"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definir una vista del origen de datos (Analysis Services)
@@ -45,7 +45,7 @@ ms.locfileid: "66075400"
   
  [Agregar un origen de datos secundario](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a>Composición de la vista del origen de datos  
+##  <a name="data-source-view-composition"></a><a name="bkmk_dsvdef"></a>Composición de la vista del origen de datos  
  Una vista del origen de datos se compone de los siguientes elementos:  
   
 -   Un nombre y una descripción.  
@@ -78,7 +78,7 @@ ms.locfileid: "66075400"
   
     -   Relaciones entre claves principales lógicas y claves externas entre tablas, vistas y consultas con nombre.  
   
-##  <a name="bkmk_startWiz"></a>Crear una DSV mediante el Asistente para vistas del origen de datos  
+##  <a name="create-a-dsv-using-the-data-source-view-wizard"></a><a name="bkmk_startWiz"></a>Crear una DSV mediante el Asistente para vistas del origen de datos  
  Para crear una DSV, ejecute el Asistente para vistas del origen de datos desde el Explorador de soluciones en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 > [!NOTE]  
@@ -104,14 +104,14 @@ ms.locfileid: "66075400"
   
 5.  Para los orígenes de datos relacionales que no tienen definidas relaciones entre tablas, aparece una página **Coincidencia de nombres** para que seleccione el método de coincidencia de nombres adecuado. Para obtener más información, vea la sección [Especificar criterios de coincidencia de nombres para las relaciones](#bkmk_NameMatch) en este tema.  
   
-##  <a name="bkmk_secondaryDS"></a>Agregar un origen de datos secundario  
+##  <a name="add-a-secondary-data-source"></a><a name="bkmk_secondaryDS"></a>Agregar un origen de datos secundario  
  Al definir una vista del origen de datos con tablas, vistas o columnas de varios orígenes de datos, el primer origen de datos desde el que agrega objetos a la vista del origen de datos se designa como origen de datos principal (una vez que se ha definido, no se puede cambiar). Después de definir una vista del origen de datos basada en objetos de un solo origen de datos, puede agregar objetos de otros orígenes de datos.  
   
  Si una consulta de procesamiento OLAP o de minería de datos requiere datos de varios orígenes de datos en una sola consulta, el origen de datos principal debe admitir consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, si designa una dimensión OLAP que contenga atributos enlazados a columnas de varios orígenes de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generará una consulta `OpenRowset` para llenar esta dimensión durante el procesamiento. Sin embargo, si un objeto OLAP se puede llenar o una consulta de minería de datos se puede resolver desde un solo origen de datos, no se creará una consulta `OpenRowset`. En ciertas situaciones, podría definir relaciones de atributo entre atributos para que no sea necesaria una consulta `OpenRowset`. Para más información sobre las relaciones de atributos, vea [Relaciones de atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) y [Definir relaciones de atributo](attribute-relationships-define.md).  
   
  Para agregar tablas y columnas de un segundo origen de datos, haga doble clic en la DSV en el Explorador de soluciones para abrirla en el Diseñador de vistas del origen de datos y, a continuación, use el cuadro de diálogo Agregar o quitar tablas para incluir objetos de otros orígenes de datos que estén definidos en el proyecto. Para más información, vea [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md).  
   
-##  <a name="bkmk_NameMatch"></a>Especificar criterios de coincidencia de nombres para las relaciones  
+##  <a name="specify-name-matching-criteria-for-relationships"></a><a name="bkmk_NameMatch"></a>Especificar criterios de coincidencia de nombres para las relaciones  
  Cuando se crea una DSV, se crean relaciones entre las tablas basadas en las restricciones de clave externa del origen de datos. Estas relaciones son necesarias para que el motor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genere las consultas adecuadas de minería de datos y de procesamiento OLAP. A veces, sin embargo, el origen de datos tiene varias tablas que no tienen restricciones de clave externa. Si el origen de datos no tiene restricciones de clave externa, el Asistente para vistas del origen de datos le pide que defina el modo en que desea que el asistente trate de hacer coincidir los nombres de columna de las diferentes tablas.  
   
 > [!NOTE]  
@@ -121,8 +121,8 @@ ms.locfileid: "66075400"
   
 |Criterios de coincidencia de nombres|Descripción|  
 |----------------------------|-----------------|  
-|**Mismo nombre que la clave principal**|El nombre de la columna de clave externa de la tabla de origen es igual que el nombre de la columna de clave principal de la tabla de destino. Por ejemplo, la columna de clave externa `Order.CustomerID` es igual que la columna de clave principal `Customer.CustomerID`.|  
-|**Mismo nombre que el nombre de la tabla de destino**|El nombre de la columna de clave externa de la tabla de origen es igual que el nombre de la tabla de destino. Por ejemplo, la columna de clave externa `Order.Customer` es igual que la columna de clave principal `Customer.CustomerID`.|  
+|**Mismo nombre que el de la clave principal**|El nombre de la columna de clave externa de la tabla de origen es igual que el nombre de la columna de clave principal de la tabla de destino. Por ejemplo, la columna de clave externa `Order.CustomerID` es igual que la columna de clave principal `Customer.CustomerID`.|  
+|**Mismo nombre que el nombre de tabla de destino**|El nombre de la columna de clave externa de la tabla de origen es igual que el nombre de la tabla de destino. Por ejemplo, la columna de clave externa `Order.Customer` es igual que la columna de clave principal `Customer.CustomerID`.|  
 |**Nombre de la tabla de destino + nombre de la clave principal**|El nombre de la columna de clave externa en la tabla de origen es igual que el nombre de la tabla de destino concatenado con el nombre de la columna de clave principal. Se admite un espacio o un carácter de subrayado como separador. Por ejemplo, los siguientes pares de clave externa y principal coinciden:<br /><br /> `Order.CustomerID` y `Customer.ID`<br /><br /> `Order.Customer ID` y `Customer.ID`<br /><br /> `Order.Customer_ID` y `Customer.ID`|  
   
  El criterio seleccionado cambia la configuración de la propiedad **NameMatchingCriteria** de la DSV. Esta configuración determina cómo agrega el asistente las tablas relacionadas. Cuando se cambia la vista del origen de datos con el Diseñador de vistas del origen de datos, esta especificación determina el modo en que el diseñador hace coincidir las columnas para crear relaciones entre las tablas de la DSV. Puede cambiar la configuración de la propiedad **NameMatchingCriteria** en el Diseñador de vistas del origen de datos. Para más información, vea [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md).  

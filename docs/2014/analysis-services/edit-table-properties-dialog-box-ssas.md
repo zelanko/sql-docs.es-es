@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081434"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Editar propiedades de tabla, cuadro de diálogo (SSAS)
@@ -35,7 +35,7 @@ ms.locfileid: "66081434"
  **Nombre de la conexión**  
  Muestra el nombre de la conexión que se usa actualmente.  
   
- **Nombre del origen**  
+ **Nombre de origen**  
  Se usa para mostrar o cambiar la tabla de la que se obtienen los datos.  
   
  Si se cambia el origen a una tabla que tiene columnas distintas que la tabla actual, aparece un mensaje que advierte que las columnas son distintas. En ese caso, debe seleccionar las columnas que desea poner en la tabla actual y hacer clic en **Guardar**. Puede reemplazar toda la tabla activando la casilla de la izquierda de la tabla.  
@@ -67,7 +67,7 @@ ms.locfileid: "66081434"
  **Borrar filtros de fila**  
  Haga clic en esta opción para quitar los filtros que se hayan aplicado.  
   
- **OK (CORRECTO)**  
+ **Aceptar**  
  Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
   
 ## <a name="query-design-mode"></a>Modo de diseño de consulta  
@@ -89,16 +89,16 @@ ms.locfileid: "66081434"
  **Instrucción SQL**  
  Muestra la instrucción SQL que se emite al origen de datos actual para recuperar filas. De forma predeterminada, se recuperan todas las filas, pero se puede recuperar un subconjunto de filas diseñando un filtro o editando la instrucción SQL manualmente.  
   
- **Validación**  
+ **Vali**  
  Haga clic en esta opción para comprobar si la instrucción es sintácticamente correcta para el origen de datos y el proveedor seleccionados.  
   
  **Diseño**  
  Haga clic en esta opción para abrir un diseñador de consultas visual y generar una instrucción de consulta. Para obtener información acerca de cómo utilizar el diseñador, presione F1 desde el diseñador.  
   
- **OK (CORRECTO)**  
+ **Aceptar**  
  Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas y columnas &#40;SSAS tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Definir tablas y columnas &#40;SSAS tabular&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

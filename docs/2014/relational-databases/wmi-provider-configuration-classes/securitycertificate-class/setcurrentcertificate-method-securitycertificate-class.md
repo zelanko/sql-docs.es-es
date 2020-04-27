@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 32af70857eac43a99257444081c1bcbdc842a2e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270641"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>Método SetCurrentCertificate (clase SecurityCertificate)
@@ -40,7 +40,7 @@ SHA , SQLInstance
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto [SecurityCertificate Class] SecurityCertificate-class.md) que representa un certificado de seguridad.  
   
 #### <a name="parameters"></a>Parámetros  

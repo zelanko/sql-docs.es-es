@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144346"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
@@ -30,22 +30,22 @@ ms.locfileid: "63144346"
   
      [Seguridad](#Security)  
   
--   [Crear un plan de mantenimiento mediante el plan de mantenimiento Superficie de diseño](#SSMSProcedure)  
+-   [Crear un plan de mantenimiento mediante la superficie de diseño del plan de mantenimiento](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Para crear un plan de mantenimiento multiservidor, se debe configurar un entorno multiservidor que contenga un servidor maestro y uno o varios servidores de destino. Los planes de mantenimiento multiservidor se deben crear y mantener en el servidor maestro. Estos planes se pueden ver, pero no mantener, en servidores de destino.  
   
--   Los miembros de los roles **db_ssisadmin** y **dc_admin** quizá puedan elevar sus privilegios a **sysadmin**. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; estos paquetes los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de **sysadmin** del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datos y otros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paquetes, configure los trabajos del agente que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin** .  
+-   Los miembros de los roles **db_ssisadmin** y **dc_admin** quizá puedan elevar sus privilegios a **sysadmin**. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ; estos paquetes los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de **sysadmin** del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para usar una cuenta de proxy con privilegios limitados o agregar solo los miembros de **sysadmin** a los roles **db_ssisadmin** y **dc_admin** .  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear o administrar planes de mantenimiento, debe ser miembro del rol fijo de servidor **sysadmin** . El Explorador de objetos solo muestra el nodo **Planes de mantenimiento** para los usuarios que son miembros del rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a>Uso del plan de mantenimiento Superficie de diseño  
+##  <a name="using-maintenance-plan-design-surface"></a><a name="SSMSProcedure"></a> Usar la Superficie de diseño del plan de mantenimiento  
   
 #### <a name="to-create-a-maintenance-plan"></a>Para crear un plan de mantenimiento  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63144346"
   
 3.  Haga clic con el botón derecho en la carpeta **Planes de mantenimiento** y seleccione **Nuevo plan de mantenimiento**.  
   
-4.  En el cuadro de diálogo **Nuevo plan de mantenimiento** , en el cuadro **Nombre** , escriba un nombre para el plan y, a continuación, haga clic en **Aceptar**. De este modo se abre el cuadro de herramientas y la superficie _maintenance_plan_name_ **[Diseño]** con el subplán **Subplan_1** creado en la cuadrícula principal.  
+4.  En el cuadro de diálogo **Nuevo plan de mantenimiento** , en el cuadro **Nombre** , escriba un nombre para el plan y, a continuación, haga clic en **Aceptar**. De este modo se abre el cuadro de herramientas y la superficie _maintenance_plan_name_ **[Design]** con el subplán **Subplan_1** creado en la cuadrícula principal.  
   
      Las siguientes opciones están disponibles en el encabezado del espacio de diseño.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144346"
      **Quitar programación**  
      Quita una programación del subplán seleccionado.  
   
-     **Administración de conexiones**  
+     **Administrar conexiones**  
      Muestra el cuadro de diálogo **Administrar conexiones** . Se utiliza para agregar conexiones adicionales de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al plan de mantenimiento. Vea a continuación para obtener más información sobre este cuadro de diálogo.  
   
      **Informes y registro**  
@@ -107,7 +107,7 @@ ms.locfileid: "63144346"
      **Programación**  
      Indica en qué programación se ejecutó el subplán. Haga clic en **Programación del subplán** para abrir el cuadro de diálogo **Nueva programación de trabajo** . Haga clic en **Quitar programación** para eliminar la programación del subplán.  
   
-     Lista **de ejecución**  
+     Lista de**Ejecutar como**  
      Seleccione la cuenta que se utilizará para ejecutar esta subtarea.  
   
 6.  Haga clic en **Programación del subplán** para escribir detalles de programación en el cuadro de diálogo **Nueva programación del trabajo** .  
@@ -116,7 +116,7 @@ ms.locfileid: "63144346"
   
      Las siguientes tareas del plan de mantenimiento están disponibles en **Cuadro de herramientas**:  
   
-    -   **Tarea copia de seguridad de base de datos**  
+    -   **Tarea Copia de seguridad de la base de datos**  
   
     -   **Tarea Comprobar la integridad de la base de datos**  
   
@@ -126,15 +126,15 @@ ms.locfileid: "63144346"
   
     -   **Tarea Limpieza de historial**  
   
-    -   **tarea, Limpieza de mantenimiento**  
+    -   **Tarea Limpieza de mantenimiento**  
   
-    -   **Notificar al operador, tarea**  
+    -   **Tarea Notificar al operador**  
   
-    -   **Volver a generar índice, tarea**  
+    -   **Tarea Volver a generar índice**  
   
     -   **Tarea Reorganizar índice**  
   
-    -   **Reducir base de datos, tarea**  
+    -   **Tarea Reducir base de datos**  
   
     -   **Tarea Actualizar estadísticas**  
   
@@ -144,7 +144,7 @@ ms.locfileid: "63144346"
   
     2.  Seleccione las herramientas que desee que aparezcan en el **Cuadro de herramientas**y, a continuación, haga clic en **Aceptar**.  
   
-     Agregar tareas del plan de mantenimiento al **Cuadro de herramientas** también hace que estén disponibles en el **Asistente para planes de mantenimiento**. Para obtener más información sobre las tareas individuales anteriores, vea [Using Maintenance Plan Wizard (Usar el Asistente para planes de mantenimiento)](use-the-maintenance-plan-wizard.md#SSMSProcedure) en **Start the Maintenance Plan Wizard (Iniciar el Asistente para planes de mantenimiento)**.  
+     Agregar tareas del plan de mantenimiento al **Cuadro de herramientas** también hace que estén disponibles en el **Asistente para planes de mantenimiento**. Para obtener más información sobre las tareas individuales anteriores, vea [Using Maintenance Plan Wizard (Usar el Asistente para planes de mantenimiento)](use-the-maintenance-plan-wizard.md#SSMSProcedure) en **Start the Maintenance Plan Wizard (Iniciar el Asistente para planes de mantenimiento)** .  
   
 8.  Para definir un flujo de trabajo entre tareas:  
   
@@ -159,11 +159,11 @@ ms.locfileid: "63144346"
          **Opción de restricción**  
          Define cómo funciona una restricción entre dos tareas.  
   
-         Lista de **operaciones de evaluación**  
+         Lista**Operación de evaluación**  
          Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción**, y **Expresión o restricción**.  
   
-         Lista de **valores**  
-         Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**. El valor predeterminado es **Success** .  
+         Lista**Valor**  
+         Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**. **Correcto** es el valor predeterminado.  
   
         > [!NOTE]  
         >  La línea de restricción de precedencia es verde para **Correcto**, roja para **Error**y azul para **Conclusión**.  
@@ -171,7 +171,7 @@ ms.locfileid: "63144346"
          **Expression**  
          Si usa las operaciones **Expresión**, **Expresión y restricción**o **Expresión o restricción**, escriba una expresión. La expresión debe evaluarse como un valor booleano.  
   
-         **Muestre**  
+         **Test**  
          Permite validar la expresión.  
   
          **Varias restricciones**  
@@ -232,10 +232,10 @@ ms.locfileid: "63144346"
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **visor del archivo de registros-**_SERVER_NAME_ .  
   
-     **Registro de carga**  
+     **Cargar registro**  
      Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  
   
-     **Exportación**  
+     **Exportarar**  
      Abre un cuadro de diálogo que permite exportar la información que se muestra en la cuadrícula **Resumen de archivos de registro** a un archivo de texto.  
   
      **Actualizar**  
@@ -251,7 +251,7 @@ ms.locfileid: "63144346"
      Detiene la carga de las entradas del archivo de registro. Por ejemplo, puede utilizar esta opción si la carga de un archivo de registro remoto o sin conexión tarda mucho tiempo y solo desea ver las entradas más recientes.  
   
      **Resumen de archivos de registro**  
-     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplica un filtro al registro, se mostrará el texto **Filtrar entradas del registro en:** \<criteriosDeFiltro>.  
+     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplica un filtro al registro, se ve el texto siguiente, **Filtrar entradas del registro en:**  \<criterios de filtro>.  
   
      **Date**  
      Muestra la fecha del evento.  
@@ -265,13 +265,13 @@ ms.locfileid: "63144346"
      **Tipo de registro**  
      Muestra el tipo de registro al que pertenece el evento. Todos los registros seleccionados aparecen en la ventana de resumen del archivo de registro.  
   
-     **Origen de registro**  
+     **Origen del registro**  
      Muestra una descripción del registro de origen en el que se captura el evento.  
   
-     **Detalles de la fila seleccionada**  
+     **Detalles de las filas seleccionadas**  
      Seleccione una fila para mostrar detalles adicionales sobre la fila de evento seleccionada en la parte inferior de la página. Puede ordenar de nuevo las columnas arrastrándolas a nuevas ubicaciones de la cuadrícula. Puede modificar el tamaño de las columnas arrastrando las barras de separación de las columnas del encabezado de la cuadrícula hacia la izquierda o hacia la derecha. Haga doble clic en las barras de separación de las columnas del encabezado de la cuadrícula para ajustar automáticamente el tamaño de la columna al ancho del contenido.  
   
      **Instancia**  
-     Nombre de la instancia en que se produjo el evento. Esto se muestra como nombre de *equipo*\\nombre de*instancia*.  
+     Nombre de la instancia en que se produjo el evento. Esto se muestra como *nombre de equipo*\\*nombre de instancia*.  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8ad75e136c4bef59f24b451b84f03e06d71a32ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62912549"
 ---
 # <a name="mssqlserver_8992"></a>MSSQLSERVER_8992
@@ -30,7 +30,7 @@ ms.locfileid: "62912549"
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC3_CHECK_CATALOG|  
-|Texto del mensaje|Mensaje de comprobación del catálogo ERROR nivel LEVEL estado STATE: MESSAGE.|  
+|Texto del mensaje|Mensaje de comprobación del catálogo ERROR, nivel LEVEL, estado STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Explicación  
  DBCC CHECKCATALOG o DBCC CHECKDB encontró una incoherencia en las tablas de metadatos de sistema para el objeto especificado. Es decir, hay una incoherencia entre el identificador de objeto registrado y el objeto especificado en el mensaje de error.  

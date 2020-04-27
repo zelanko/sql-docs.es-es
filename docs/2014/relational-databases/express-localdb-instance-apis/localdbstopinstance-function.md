@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63135283"
 ---
 # <a name="localdbstopinstance-function"></a>Función LocalDBStopInstance
   Detiene la ejecución de la instancia de SQL Server Express LocalDB especificada.  
   
- **Archivo de encabezado:** SQLNCLI. h  
+ **Archivo de encabezado:** sqlncli.h  
   
 ## <a name="syntax"></a>Sintaxis  
   

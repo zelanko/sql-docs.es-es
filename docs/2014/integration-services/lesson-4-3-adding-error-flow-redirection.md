@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891407"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>Paso 3: Agregar redirección de flujo de errores
+# <a name="step-3-adding-error-flow-redirection"></a>Paso 3: Adición de redirección de flujo de errores
   Como se ha mostrado en la tarea anterior, la transformación Lookup Currency Key no puede generar una coincidencia cuando la transformación intenta procesar el archivo plano de ejemplo dañado que ha generado un error. Puesto que la transformación utiliza la configuración de salida de error predeterminada, cualquier error da lugar a un error de la transformación. Cuando se produce un error en la transformación, también se produce un error en el resto del paquete.  
   
  En lugar de permitir que se produzca un error en la transformación, puede configurar el componente de modo que la fila que genera el error se redirija a otra ruta de procesamiento mediante la salida de error. El uso de una ruta de procesamiento independiente permite hacer varias cosas. Por ejemplo, puede intentar eliminar los datos y luego volver a procesar la fila con error. O bien, puede guardar la fila con error junto con otra información adicional sobre el error para comprobarla y procesarla de nuevo más adelante.  
@@ -95,7 +95,7 @@ ms.locfileid: "62891407"
   
 13. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación Script** .  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  [Paso 4: agregar un destino de archivo plano] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

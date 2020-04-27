@@ -11,22 +11,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891800"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Paso 2: agregar y configurar un administrador de conexiones de archivos planos
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Paso 2: Adición y configuración de un administrador de conexiones de archivos planos
   En esta tarea, agregará un administrador de conexiones de archivos planos al paquete que acaba de crear. Un administrador de conexiones de archivos planos permite a un paquete extraer datos de un archivo plano. Mediante el administrador de conexiones de archivos planos puede especificar el nombre y la ubicación del archivo, la configuración regional y la página de códigos, y el formato del archivo, incluyendo los delimitadores de columna, que deben aplicarse cuando el paquete extrae datos del archivo plano. Además, puede especificar de forma manual el tipo de datos para columnas individuales, o usar el cuadro de diálogo **Sugerir tipos de columna** para asignar de forma automática las columnas de datos extraídos a los tipos de datos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Debe crear un administrador de conexiones de archivos planos para cada formato de archivo que utilice. En este tutorial se extraen datos de varios archivos planos que tienen exactamente el mismo formato de datos, por lo que tendrá que agregar y configurar solamente un administrador de conexiones de archivos planos para el paquete.  
   
  En este tutorial, configurará las propiedades siguientes en el administrador de conexiones de archivos planos:  
   
--   **Nombres de columna:** Dado que el archivo plano no tiene nombres de columna, el administrador de conexiones de archivos planos crea nombres de columna predeterminados. Estos nombres predeterminados no son útiles para identificar qué representa cada columna. Para que estos nombres predeterminados sean más útiles, debe cambiar los nombres predeterminados por nombres que coincidan con la tabla de hechos en la que deben cargarse los datos del archivo plano.  
+-   **Nombres de columna:** El archivo plano no tiene nombres de columna, por lo que el administrador de conexiones de archivos planos crea nombres de columna predeterminados. Estos nombres predeterminados no son útiles para identificar qué representa cada columna. Para que estos nombres predeterminados sean más útiles, debe cambiar los nombres predeterminados por nombres que coincidan con la tabla de hechos en la que deben cargarse los datos del archivo plano.  
   
--   **Asignaciones de datos:** Todas las asignaciones de tipos de datos que especifique para el administrador de conexiones de archivos planos se utilizarán en todos los componentes de origen de datos de archivo plano que hagan referencia al administrador de conexiones. Puede asignar los tipos de datos de forma manual mediante el administrador de conexiones de archivos planos o usar el cuadro de diálogo **Sugerir tipos de columna** . En este tutorial, verá las asignaciones sugeridas en el cuadro de diálogo **Sugerir tipos de columna** y luego realizará de forma manual las asignaciones necesarias en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
+-   **Asignaciones de datos:** Las asignaciones de tipo de datos que especifique para el administrador de conexiones de archivos planos se usarán en todos los componentes de origen de datos de archivo plano que hagan referencia al administrador de conexiones. Puede asignar los tipos de datos de forma manual mediante el administrador de conexiones de archivos planos o usar el cuadro de diálogo **Sugerir tipos de columna** . En este tutorial, verá las asignaciones sugeridas en el cuadro de diálogo **Sugerir tipos de columna** y luego realizará de forma manual las asignaciones necesarias en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
   
  El administrador de conexiones de archivos planos proporciona información de configuración regional acerca del archivo de datos. Si el equipo no está configurado para usar la opción regional inglés (Estados Unidos), debe establecer propiedades adicionales en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62891800"
   
      Los datos de ejemplo se incluyen con los paquetes de lecciones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para descargar los datos de ejemplo y los paquetes de lecciones, haga lo siguiente.  
   
-    1.  Vaya a [Integration Services ejemplos de productos](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Haga clic en la pestaña **descargas** .  
   
@@ -77,8 +77,7 @@ ms.locfileid: "62891800"
   
 1.  En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** , haga clic en **Sugerir tipos**.  
   
-     
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sugiere de forma automática los tipos de datos más adecuados en función de las 200 primeras filas de datos. También puede cambiar estas opciones de sugerencia para obtener más o menos datos de ejemplo, especificar el tipo de datos predeterminado para datos enteros o booleanos, o agregar espacios como relleno para las columnas de cadena.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sugiere de forma automática los tipos de datos más adecuados en función de las 200 primeras filas de datos. También puede cambiar estas opciones de sugerencia para obtener más o menos datos de ejemplo, especificar el tipo de datos predeterminado para datos enteros o booleanos, o agregar espacios como relleno para las columnas de cadena.  
   
      De momento, no cambie las opciones del cuadro de diálogo **Sugerir tipos de columna** y haga clic en **Aceptar** para que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sugiera los tipos de datos para las columnas. Esto le devuelve al panel **Avanzadas** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** , donde puede ver los tipos de datos de columna sugeridos por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. (Si hace clic en **Cancelar**, no se realizan sugerencias en los metadatos de columna y se usa el tipo de datos predeterminado de cadena [DT_STR]).  
   
@@ -97,10 +96,10 @@ ms.locfileid: "62891800"
   
 3.  En el panel de propiedades, cambie el tipo de datos `CurrencyDate` de la columna de fecha [DT_DATE] a fecha de base de datos [DT_DBDATE].  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 3: agregar y configurar un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [Paso 3: Adición y configuración de un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Administrador de conexiones de archivos planos](connection-manager/file-connection-manager.md)   

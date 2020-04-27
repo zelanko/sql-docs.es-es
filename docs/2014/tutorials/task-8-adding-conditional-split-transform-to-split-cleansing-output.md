@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489671"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tarea 8: agregar la transformación División condicional para dividir el resultado de la limpieza
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tarea 8: Adición de la transformación División condicional para dividir el resultado de la limpieza
   En esta tarea, agregará una transformación División condicional al flujo de datos. La transformación División condicional puede dirigir filas a salidas diferentes en función del contenido de los datos. En este tutorial, usará la columna salida del **Estado de registro** de la transformación limpieza de DQS. En este tutorial solo cargará los registros correctos o corregidos en el servidor MDS. Por lo tanto, se comprueba si el **Estado del registro** es **correcto** o **corregido**, y se combinan los registros antes de cargar los registros en MDS.  
   
 1.  Arrastre y coloque la **transformación división condicional** desde la sección **común** del **cuadro de herramientas de SSIS** hasta la pestaña flujo de **datos** en **limpiar datos del proveedor**.  
@@ -45,6 +45,6 @@ ms.locfileid: "65489671"
 10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación división condicional** .  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 9: agregar la transformación Unión de todo para combinar los registros correctos y corregidos](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
+ [Tarea 9: Adición de la transformación Unión de todo para combinar los registros correctos y corregidos](../../2014/tutorials/task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md)  
   
   

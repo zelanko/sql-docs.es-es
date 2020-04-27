@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071049"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Iniciar o detener un servidor de PowerPivot para SharePoint
@@ -28,12 +28,12 @@ ms.locfileid: "66071049"
   
  [Efectos de la detención de un servidor de PowerPivot](#effects)  
   
-##  <a name="dependencies"></a>Dependencias de servicio  
+##  <a name="service-dependencies"></a><a name="dependencies"></a>Dependencias de servicio  
  El Servicio de sistema de PowerPivot depende de la instancia de servidor de Analysis Services local que se instala con él en el mismo servidor físico. Si detiene el Servicio de sistema de PowerPivot, también debe detener manualmente la instancia de servidor de Analysis Services local. Si un servicio se está ejecutando sin el otro, se producirán errores de asignación de solicitudes para el procesamiento de datos PowerPivot.  
   
  El servidor de Analysis Services solo se debería ejecutar si va a diagnosticar o solucionar un problema. En todos los demás casos, el servidor requiere que el Servicio de sistema de PowerPivot se ejecute localmente en el mismo servidor.  
   
-##  <a name="startstop"></a>Iniciar o detener los servicios  
+##  <a name="start-or-stop-the-services"></a><a name="startstop"></a>Iniciar o detener los servicios  
  Utilice siempre Administración central para iniciar o detener el Servicio de sistema de PowerPivot o la instancia del servidor de Analysis Services. Administración central le permite iniciar o detener servicios juntos desde la misma página. Además, la Administración central usa un trabajo de temporizador denominado **Uno o más servicios se iniciaron o detuvieron inesperadamente** para reiniciar los servicios que cree que deberían estar en ejecución. Si detiene el Servicio de sistema de PowerPivot o Analysis Services mediante una herramienta que no es de SharePoint, los servicios se reiniciarán cuando se ejecute el trabajo de temporizador.  
   
  El inicio y la detención de los servicios son acciones que se aplican a una instancia de servicio física. Si tiene servidores de PowerPivot para SharePoint adicionales en la granja, los demás servidores dentro de la granja continuarán aceptando solicitudes de los datos PowerPivot.  
@@ -42,7 +42,7 @@ ms.locfileid: "66071049"
   
  No puede iniciar, pausar ni detener un Servicio de sistema de PowerPivot para una aplicación web concreta, pero puede quitar un servicio de la lista de conexiones predeterminada para conseguir que no esté disponible. Para obtener más información, vea [conectar una aplicación de servicio PowerPivot a una aplicación Web de SharePoint en administración central](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
-1.  En administración central, en **configuración del sistema**, haga clic en **administrar servicios en el servidor**.  
+1.  En Administración central, en **Configuración del sistema**, haga clic en **Administrar los servicios del servidor**.  
   
 2.  En la parte superior de la página, en Servidor, haga clic en la flecha abajo y, a continuación, haga clic en **Cambiar el servidor**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66071049"
   
 4.  Seleccione el servicio y haga clic en la acción. Recuerde iniciar o detener los servicios como un par. Si inicia o detiene el Servicio de sistema de PowerPivot, asegúrese de iniciar o detener también la instancia de servidor de Analysis Services que se ejecuta en el mismo equipo.  
   
-##  <a name="effects"></a>Efectos de la detención de un servidor de PowerPivot  
+##  <a name="effects-of-stopping-a-powerpivot-server"></a><a name="effects"></a>Efectos de la detención de un servidor de PowerPivot  
  La siguiente tabla describe los efectos que tiene detener el servicio de Analysis Services y el Servicio de sistema de PowerPivot en un servidor de SharePoint.  
   
 |Efecto en|Descripción|  

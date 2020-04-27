@@ -17,14 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ad6d24495bb44a7bd1013dbc822eefe346f02d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126157"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrar Reporting Services en las aplicaciones
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es una plataforma de informe abierta y extensible diseñada para proporcionar un conjunto completo de API a los programadores para desarrollar soluciones.  
   
  Existen tres [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] opciones para integrar en aplicaciones personalizadas: el servicio Web del servidor de informes, también conocido como [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la API SOAP, los controles ReportViewer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]para y el acceso URL. Cada opción proporciona un enfoque diferente para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en las aplicaciones.  

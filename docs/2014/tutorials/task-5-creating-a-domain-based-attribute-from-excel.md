@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489105"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tarea 5: crear un atributo basado en dominio desde Excel
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tarea 5: Creación de un atributo basado en dominio desde Excel
   En esta tarea, convierta el atributo **Estado** de la entidad **proveedor** como un **atributo basado en dominio**. Después de configurar el atributo State para que sea uno basado en dominio y publicarlo en MDS, se creará una nueva entidad denominada **State** en el servidor MDS con todos los valores de la columna y el atributo **State** de la entidad **proveedor** se rellenará con los valores de la entidad **Estado** . Ahora, el modelo **proveedores** debe tener dos entidades: **proveedor** y **Estado** , donde el atributo **Estado** de la entidad **proveedor** es un atributo basado en dominio que depende de la entidad **Estado** .  
   
 1.  Cambie a la ventana de **Excel** que tiene abierto los **proveedores limpiados y coincidentes. xlsx** .  
@@ -41,6 +41,6 @@ ms.locfileid: "65489105"
      ![Excel - Lista desplegable con los estados](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - Lista desplegable con los estados")  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 6: comprobar que se crea el atributo basado en dominio mediante Master Data Manager](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [Tarea 6: Comprobación de que el atributo basado en dominio se crea mediante Master Data Manager](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

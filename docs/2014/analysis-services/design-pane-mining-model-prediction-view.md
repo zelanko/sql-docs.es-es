@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081849"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Diseño (panel de la vista Predicción de modelo de minería de datos)
@@ -29,7 +29,7 @@ ms.locfileid: "66081849"
 > [!NOTE]  
 >  Si hace algún cambio manualmente en la consulta, los cambios se perderán al volver a la vista Diseño. Si desea guardar la consulta DMX, puede copiar la consulta en el Portapapeles de Windows y, a continuación, pegarlo en un archivo de texto.  
   
- **Para obtener más información: consultas de minería de** [datos](data-mining/data-mining-queries.md)  
+ **Para obtener más información:** [Consultas de minería de datos](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Opciones  
  **Cambiar a vista de resultado de consulta**  
@@ -81,11 +81,11 @@ ms.locfileid: "66081849"
  **Campo**  
  En la tabla de origen, seleccione una columna de la lista de columnas derivadas. Si ha seleccionado **Función de predicción** en **Origen**, ésta contiene la función de predicción disponible para el modelo de minería de datos seleccionado.  
   
- **Grupo**  
- Use esta opción con la columna **Y/O** para agrupar expresiones. Por ejemplo, `(expr1 Or expr2) And expr3`.  
+ **Agrupamiento**  
+ Use esta opción con la columna **Y/O** para agrupar expresiones. Por ejemplo: `(expr1 Or expr2) And expr3`.  
   
  **Y/o**  
- Utilice esta opción para crear una consulta lógica. Por ejemplo, `(expr1 Or expr2) And expr3`.  
+ Utilice esta opción para crear una consulta lógica. Por ejemplo: `(expr1 Or expr2) And expr3`.  
   
  **Criterios o argumento**  
  Especifique una condición o una expresión de usuario que se aplica a la columna. Se puede arrastrar las columnas de las tablas que contienen el modelo de minería de datos y las tablas de entrada a la celda.  
@@ -93,6 +93,6 @@ ms.locfileid: "66081849"
 ## <a name="see-also"></a>Consulte también  
  [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Interfaces de consulta de minería de datos](data-mining/data-mining-query-tools.md)   
- [Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)  
+ [Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)  
   
   

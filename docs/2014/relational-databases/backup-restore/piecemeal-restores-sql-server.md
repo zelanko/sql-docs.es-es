@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876089"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restauraciones por etapas (SQL Server)
@@ -173,9 +173,9 @@ ms.locfileid: "62876089"
 4.  Una copia de seguridad diferencial se realiza después de otras copias de seguridad restauradas en la secuencia de restauración por etapas original para restaurar los datos hasta el punto de recuperación original.  
   
 ## <a name="see-also"></a>Consulte también  
- [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Aplicar copias de seguridad de registros de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Restaurar una base de datos SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Planear y realizar secuencias de restauración &#40;modelo de recuperación completa&#41;](plan-and-perform-restore-sequences-full-recovery-model.md)  
   

@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 460d66b7e2d4f314db65213819fca1800af2da4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922904"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Ejecutar los pasos Windows PowerShell del Agente SQL Server
   Use el Agente SQL Server para ejecutar scripts de SQL Server PowerShell en momentos programados.  
   
-1.  **Antes de empezar:**  [limitaciones y restricciones](#LimitationsRestrictions)  
+1.  **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions)  
   
-2.  **Para ejecutar PowerShell desde Agente SQL Server, mediante: paso de trabajo de**  [PowerShell](#PShellJob), paso de [trabajo del símbolo del sistema](#CmdExecJob)  
+2.  **Para ejecutar PowerShell desde Agente SQL Server, mediante:**  [Paso de trabajo de PowerShell](#PShellJob), [paso de trabajo de símbolo del sistema](#CmdExecJob)  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
  Hay varios tipos de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Cada tipo se asocia a un subsistema que implementa un entorno concreto, como un agente de replicación o un entorno del símbolo del sistema. Puede codificar scripts de Windows PowerShell y, a continuación, utilizar el Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para incluir los scripts en trabajos que se ejecuten en los momentos programados o como respuesta a eventos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Los scripts de Windows PowerShell pueden ejecutarse mediante un paso de trabajo del símbolo del sistema o un paso de trabajo de PowerShell.  
@@ -31,12 +31,12 @@ ms.locfileid: "62922904"
   
 2.  Usar un paso de trabajo de símbolo del sistema para ejecutar PowerShell.exe y especificar un script que importa el módulo `sqlps`.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
   
 > [!CAUTION]  
 >  Cada paso de trabajo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ejecuta PowerShell con el módulo `sqlps` inicia un proceso que consume aproximadamente 20 MB de memoria. Si ejecuta muchos pasos de trabajo de Windows PowerShell simultáneos, el rendimiento se puede ver afectado adversamente.  
   
-##  <a name="PShellJob"></a>Crear un paso de trabajo de PowerShell  
+##  <a name="create-a-powershell-job-step"></a><a name="PShellJob"></a>Crear un paso de trabajo de PowerShell  
  **Para crear un paso de trabajo de PowerShell**  
   
 1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](../ssms/agent/create-jobs.md).  
@@ -53,8 +53,8 @@ ms.locfileid: "62922904"
   
 7.  Haga clic en la página **Avanzadas** para establecer las siguientes opciones de paso de trabajo: acción que se llevará a cabo si el paso de trabajo progresa o no, número de veces que el Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe intentar ejecutar el paso de trabajo y frecuencia de los intentos.  
   
-##  <a name="CmdExecJob"></a>Crear un paso de trabajo del símbolo del sistema  
- **Para crear un paso de trabajo CmdExec**  
+##  <a name="create-a-command-prompt-job-step"></a><a name="CmdExecJob"></a>Crear un paso de trabajo del símbolo del sistema  
+ **Para crear un paso de trabajo de CmdExec**  
   
 1.  Expanda el **Agente SQL Server**, cree un trabajo o haga clic con el botón derecho en uno existente y, después, haga clic en **Propiedades**. Para obtener más información acerca de cómo crear un trabajo, vea [Crear trabajos](../ssms/agent/create-jobs.md).  
   

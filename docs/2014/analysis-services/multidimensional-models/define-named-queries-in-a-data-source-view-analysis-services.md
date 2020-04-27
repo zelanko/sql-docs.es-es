@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bbb792ac4e86ae563f80f35f04854f16501b34a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075561"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Definir consultas con nombre en una vista del origen de datos (Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "66075561"
   
  Las tablas y columnas a las que se hace referencia en la consulta SQL no se deben calificar o deben calificarse solo por el nombre de tabla Por ejemplo, para hacer referencia a la columna SaleAmount de una tabla, son válidos los valores `SaleAmount` o `Sales.SaleAmount` , pero `dbo.Sales.SaleAmount` genera un error.  
   
- **Nota:** Al definir una consulta con nombre que realiza [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] consultas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un origen de datos o 7,0, se producirá un error en una consulta con nombre que contiene una subconsulta correlacionada y una cláusula Group by. Para obtener más información, vea el artículo sobre el [error interno con una instrucción SELECT que contiene una subconsulta correlacionada y GROUP BY](https://support.microsoft.com/kb/274729) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
+ **Nota** Cuando defina una consulta con nombre que realiza consultas en un origen de datos [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, se producirá un error en una consulta con nombre que contiene una subconsulta correlacionada y una cláusula GROUP BY. Para obtener más información, vea el artículo sobre el [error interno con una instrucción SELECT que contiene una subconsulta correlacionada y GROUP BY](https://support.microsoft.com/kb/274729) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base.  
   
 ## <a name="add-or-edit-a-named-query"></a>Agregar o editar una consulta con nombre  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66075561"
     > [!NOTE]  
     >  La interfaz de usuario (UI) de generación de consultas depende del origen de datos. En lugar de ver una UI gráfica, puede obtener una UI genérica, basada en texto. Puede realizar las mismas tareas con estas interfaces diferentes, pero debe hacerlo de diferente forma. Para más información, vea [Cuadro de diálogo Crear o Editar consulta con nombre &#40;Analysis Services - Datos multidimensionales&#41;](../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md).  
   
-5.  Haga clic en **OK**. En el encabezado de tabla aparecerá un icono que muestra dos tablas superpuestas para indicar que la tabla ha sido reemplazada por una consulta con nombre.  
+5.  Haga clic en **Aceptar**. En el encabezado de tabla aparecerá un icono que muestra dos tablas superpuestas para indicar que la tabla ha sido reemplazada por una consulta con nombre.  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f84f4fcc8a6dde7dcf9f556a72c2599356e231f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067541"
 ---
 # <a name="select-rows-that-do-not-match-a-value-visual-database-tools"></a>Seleccionar filas que no coinciden con un valor (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63067541"
   
 ### <a name="to-find-rows-that-do-not-match-a-value"></a>Para buscar filas que no coincidan con un valor  
   
-1.  Si aún no lo ha hecho, agregue al [Panel criterios](visual-database-tools.md)las columnas o expresiones que desee utilizar en la condición de búsqueda.  
+1.  Si aún no lo ha hecho, agregue al [panel Criterios](visual-database-tools.md)las columnas o expresiones que desee utilizar en la condición de búsqueda.  
   
 2.  Busque la fila que contiene la columna de datos o la expresión que desea buscar y, a continuación, en la columna de cuadrícula **Filtro** , escriba el operador NOT seguido de un valor de búsqueda.  
   

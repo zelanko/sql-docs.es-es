@@ -11,21 +11,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478913"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Crear una entidad (Complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], los administradores pueden crear nuevas entidades para almacenar datos. Cuando crea una entidad, debe cargar al menos una muestra de los datos que desea almacenar.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales del **Explorador** y de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   Debe tener un modelo existente en el que crear la entidad. Para obtener más información, consulte [Crear un modelo &#40;Master Data Services&#41;](../create-a-model-master-data-services.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "65478913"
   
     -   Los datos deben tener una fila de encabezado.  
   
-    -   Resulta útil tener las columnas **Nombre** y **Código** . El **código** es un identificador único para cada fila.  
+    -   Resulta útil tener las columnas **Nombre** y **Código** . **Código** es un identificador único para cada fila.  
   
     -   Debe tener al menos una fila de datos distinta del encabezado. Todas las columnas no necesitan valores, pero los datos deben ser representativos de los que estarán en la entidad.  
   
@@ -67,15 +67,15 @@ ms.locfileid: "65478913"
   
 11. Opcional. En la lista **Nombre** , seleccione una columna que contenga los nombres de cada miembro.  
   
-12. Haga clic en **OK**. Cuando haya creado la entidad correctamente, aparecerá una nueva fila de encabezado, las celdas se resaltarán y el nombre de la hoja se actualizará para coincidir con el nombre de la entidad.  
+12. Haga clic en **Aceptar**. Cuando haya creado la entidad correctamente, aparecerá una nueva fila de encabezado, las celdas se resaltarán y el nombre de la hoja se actualizará para coincidir con el nombre de la entidad.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   Para ver los errores producidos, en el grupo **Publicar y validar** , haga clic en **Mostrar estado**. Se muestran las columnas ValidationStatus e InputStatus. Para obtener más información, consulte [Validar datos &#40;complemento MDS para Excel&#41;](validating-data-mds-add-in-for-excel.md).  
   
 -   Confirme que los atributos se crearon con el tipo de datos que esperaba.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cree un atributo basado en dominio &#40;Complemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+ [Crear un atributo basado en dominio &#40;complemento MDS para Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

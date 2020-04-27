@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068372"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Especificar tipo de dimensión (Asistente para dimensiones)
@@ -34,15 +34,15 @@ ms.locfileid: "66068372"
 |**Cuentas**|Las dimensiones de cuenta contienen datos y metadatos que representan una lista de cuentas.<br /><br /> Para más información sobre las dimensiones de cuenta, vea [Crear una cuenta financiera de una dimensión de tipo primario-secundario](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**Lista de materiales**|Las dimensiones de lista de materiales (o BOM) son dimensiones normales en las que los datos y los metadatos representan información de inventario o fabricación, como listas de piezas para productos.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Channel**|Las dimensiones de canal son dimensiones normales en las que los datos y los metadatos representan información de canales.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Monetaria**|Las dimensiones de moneda contienen datos y metadatos que representan información de monedas.<br /><br /> Para más información sobre las dimensiones de moneda, vea [Crear una dimensión de tipo moneda](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
+|**Moneda**|Las dimensiones de moneda contienen datos y metadatos que representan información de monedas.<br /><br /> Para más información sobre las dimensiones de moneda, vea [Crear una dimensión de tipo moneda](multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).|  
 |**Compradores**|Las dimensiones de cliente son dimensiones normales en las que los datos y los metadatos representan información de clientes o contactos.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Geográfico**|Las dimensiones de geografía son dimensiones normales en las que los datos y los metadatos representan información geográfica, como ciudades o códigos postales.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Geografía**|Las dimensiones de geografía son dimensiones normales en las que los datos y los metadatos representan información geográfica, como ciudades o códigos postales.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Organización**|Las dimensiones de organización son dimensiones normales en las que los datos y los metadatos representan información organizativa, como empleados o subsidiarias.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Productos**|Las dimensiones de producto son dimensiones normales en las que los datos y los metadatos representan información de productos.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
-|**Ascende**|Las dimensiones de promoción son dimensiones normales en las que los datos y los metadatos representan información de promociones de mercadotecnia.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Promoción**|Las dimensiones de promoción son dimensiones normales en las que los datos y los metadatos representan información de promociones de mercadotecnia.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Cuantitativo**|Las dimensiones cuantitativas son dimensiones normales en las que los datos y los metadatos representan información cuantitativa.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Tarifas**|Las dimensiones de tarifa son dimensiones normales en las que los datos y los metadatos representan información de tasa de cambio y conversión de monedas.|  
-|**Periódico**|Las dimensiones normales son el tipo de dimensión más común [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]que se usa en.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
+|**Normal**|Las dimensiones normales son el tipo de dimensión más común [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]que se usa en.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Escenario**|Las dimensiones de escenario son dimensiones normales en las que los datos y los metadatos representan información de análisis estratégico y de planes.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
 |**Time**|Las dimensiones de tiempo contienen datos y metadatos orientados al tiempo.<br /><br /> Para más información sobre las dimensiones de tiempo, vea [Crear una dimensión de tipo Date](multidimensional-models/database-dimensions-create-a-date-type-dimension.md).|  
 |**Utilidad**|Las dimensiones de utilidad son dimensiones normales en las que los datos y los metadatos representan información que no encaja en otro tipo de dimensión.<br /><br /> Para más información sobre las dimensiones normales, vea [Tipos de dimensiones](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
@@ -52,7 +52,7 @@ ms.locfileid: "66068372"
 > [!NOTE]  
 >  Las opciones de esta sección están disponibles solo si el **Tipo de dimensión** seleccionado tiene tipos de atributo especiales asociados. No todas las dimensiones tienen tipos de atributo especiales asociados.  
   
- **Include**  
+ **Inclui**  
  Seleccione esta opción para incluir el tipo de atributo en la dimensión.  
   
  **Tipo de atributo**  

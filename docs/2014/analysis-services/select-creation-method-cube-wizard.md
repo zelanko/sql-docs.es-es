@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069633"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Seleccionar método de creación (Asistente para cubos)
@@ -40,7 +40,7 @@ ms.locfileid: "66069633"
   
  Si selecciona esta opción, se habilitará la opción **Plantilla** .  
   
- **Plantillas**  
+ **Plantilla**  
  Seleccione la plantilla que desea usar para crear el cubo. Las plantillas proporcionan un conjunto de definiciones orientadas para un motivo** profesional específico.  
   
 > [!NOTE]  

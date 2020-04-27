@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070680"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Progreso del proceso (Analysis Services - Datos multidimensionales)
@@ -32,7 +32,7 @@ ms.locfileid: "66070680"
  **Detención**  
  Haga clic en esta opción para detener el procesamiento de la operación.  
   
- **Volver a procesar**  
+ **Reprocesar**  
  Haga clic para repetir la operación de procesamiento que se muestra en el cuadro de diálogo **Progreso del proceso** .  
   
  **Ver detalles**  

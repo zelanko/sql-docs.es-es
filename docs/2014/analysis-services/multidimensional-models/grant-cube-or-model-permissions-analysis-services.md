@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075025"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Otorgar permisos para cubos o modelos (Analysis Services)
@@ -60,7 +60,7 @@ ms.locfileid: "66075025"
   
 1.  En el panel **cubos** , seleccione un cubo y, a continuación `Read` , haga clic en acceso de **lectura y escritura** .  
   
-     `Read`el acceso es suficiente para la mayoría de las operaciones. **Read/Write** solo se usa para la reescritura, no para el procesamiento. Para obtener más información acerca de esta capacidad, vea [Set Partition Writeback](set-partition-writeback.md) .  
+     `Read`el acceso es suficiente para la mayoría de las operaciones. **Lectura y escritura** solo se usa para reescribir y no para procesar. Para obtener más información acerca de esta capacidad, vea [Set Partition Writeback](set-partition-writeback.md) .  
   
      Tenga en cuenta que puede seleccionar varios cubos, así como otros objetos disponibles en el cuadro de diálogo Crear rol. Cuando se otorgan permisos a un cubo, se está autorizando el acceso a dimensiones y perspectivas asociadas con el cubo. No es necesario agregar manualmente objetos que ya estén representados en el cubo.  
   
@@ -103,6 +103,6 @@ ms.locfileid: "66075025"
 ## <a name="see-also"></a>Consulte también  
  [Metodologías de autenticación admitidas por Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Conceder permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder permisos para un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Otorgar permisos para un objeto de origen de datos &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

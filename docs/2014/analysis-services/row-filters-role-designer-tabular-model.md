@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070132"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtros de fila (Diseñador de roles) (Modelo tabular)
@@ -26,7 +26,7 @@ ms.locfileid: "66070132"
 >  Todas las opciones de esta página estarán deshabilitadas si **Control total (Administrador)** está seleccionado en la página **General** del Diseñador de roles o si el rol permiso se establece en **Procesar**.  
   
 ## <a name="options"></a>Opciones  
- **Table**  
+ **Cuadro**  
  La tabla del modelo cuyo filtro está definido.  
   
  **Filtro DAX**  
@@ -37,6 +37,6 @@ ms.locfileid: "66070132"
   
 ## <a name="see-also"></a>Consulte también  
  [Roles de modelo tabular &#40;&#41;tabular de SSAS](tabular-models/roles-ssas-tabular.md)   
- [Administrar roles mediante el uso de SSMS &#40;SSAS tabular&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [Administrar roles utilizando SSMS &#40;SSAS tabular&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

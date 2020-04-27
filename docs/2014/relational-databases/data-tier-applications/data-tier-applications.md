@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873106"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
@@ -121,11 +121,11 @@ ms.locfileid: "62873106"
 |Describe cómo usar un archivo de paquete DAC para actualizar una instancia a una nueva versión de la DAC.|[Actualizar una aplicación de capa de datos](upgrade-a-data-tier-application.md)|  
 |Describe cómo quitar una instancia de DAC. Puede elegir también separar o quitar la base de datos asociada o dejar la base de datos intacta.|[Eliminar una aplicación de capa de datos](delete-a-data-tier-application.md)|  
 |Describe cómo ver estados de DAC actualmente implementados mediante la utilidad de SQL Server.|[Supervisar aplicaciones de capa de datos](data-tier-applications.md)|  
-|Describe cómo crear un archivo de .bacpac que contiene un archivo de datos y metadatos de la DAC.|[Exportar una aplicación de la capa de datos](export-a-data-tier-application.md)|  
+|Describe cómo crear un archivo de .bacpac que contiene un archivo de datos y metadatos de la DAC.|[Exportar una aplicación de capa de datos](export-a-data-tier-application.md)|  
 |Describe cómo usar un archivo de almacenamiento de DAC (.bacpac) para realizar una restauración lógica de DAC, o migrar DAC a otra instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|[Importar un archivo de bacpac para crear una nueva base de datos de usuario](import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Describe cómo importar un archivo BACPAC para crear una base de datos de usuario en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Extraer una DAC de una base de datos](extract-a-dac-from-a-database.md)|  
 |Describe cómo promover una base de datos existente para que sea una instancia de DAC. La definición de DAC está compilada y almacenada en las bases de datos del sistema.|[Registrar una base de datos como una DAC](register-a-database-as-a-dac.md)|  
-|Describe cómo consultar el contenido de un paquete DAC y las acciones que una actualización de DAC realizará antes de usar el paquete en un sistema de producción.|[Validar un paquete de DAC](validate-a-dac-package.md)|  
+|Describe cómo consultar el contenido de un paquete DAC y las acciones que una actualización de DAC realizará antes de usar el paquete en un sistema de producción.|[Validar un paquete DAC](validate-a-dac-package.md)|  
 |Describe cómo colocar el contenido de un paquete DAC en una carpeta donde un administrador de bases de datos puede revisar lo que hace la DAC antes de implementarlo en un servidor de producción.|[Desempaquetar un paquete de DAC](unpack-a-dac-package.md)|  
 |Describe cómo usar un asistente para implementar una base de datos existente. El asistente usa DAC para realizar la implementación.|[Implementar una base de datos mediante una DAC](deploy-a-database-by-using-a-dac.md)|  
   

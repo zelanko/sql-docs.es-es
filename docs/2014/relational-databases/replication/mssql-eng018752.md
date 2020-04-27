@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0558ded6ed10284df39270ddeca9d92434daf40e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057553"
 ---
 # <a name="mssql_eng018752"></a>MSSQL_ENG018752
@@ -48,7 +48,7 @@ ms.locfileid: "63057553"
 ## <a name="user-action"></a>Acción del usuario  
  Los siguientes pasos pueden ayudar a resolver el problema. Si un paso permite al Agente de registro del LOG iniciarse sin errores, no es necesario completar los pasos restantes.  
   
--   Compruebe en el historial del Agente de registro del LOG otros errores que podrían contribuir a este error. Para obtener información sobre la visualización del estado y los errores en Monitor de replicación, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   Compruebe en el historial del Agente de registro del LOG otros errores que podrían contribuir a este error. Para obtener información acerca de cómo ver el estado del agente y los detalles del error en el monitor de replicación, vea [ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Compruebe el resultado de [sp_who &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql) para los números de identificación de proceso específico (SPID) que estén conectados a la base de datos publicada. Cierre las conexiones que puedan haber ejecutado **sp_repldone**, **sp_replcmds**o **sp_replshowcmds**.  
   

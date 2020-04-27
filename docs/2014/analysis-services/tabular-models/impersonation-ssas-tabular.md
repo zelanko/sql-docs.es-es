@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067058"
 ---
 # <a name="impersonation-ssas-tabular"></a>Suplantación (SSAS tabular)
   Este tema proporciona a los autores de modelos tabulares una descripción de cómo usa Analysis Services las credenciales de inicio de sesión al conectarse a un origen de datos para importar y procesar (actualizar) datos.  
   
- Este artículo contiene las siguientes secciones:  
+ Este artículo contiene las secciones siguientes:  
   
--   [Privilegios](#bkmk_how_imper)  
+-   [Ventajas](#bkmk_how_imper)  
   
 -   [Opciones](#bkmk_imp_info_options)  
   
@@ -32,14 +32,14 @@ ms.locfileid: "66067058"
   
 -   [Configuración de la suplantación](#bkmk_conf_imp_info)  
   
-##  <a name="bkmk_how_imper"></a> Ventajas  
- La *suplantación* es la capacidad de una aplicación de servidor, como Analysis Services, de asumir la identidad de una aplicación cliente. Analysis Services se ejecuta con una cuenta de servicio; sin embargo, cuando el servidor establece conexión con un origen de datos, usa la suplantación, de modo que puedan realizarse las comprobaciones de acceso para la importación y el procesamiento de datos.  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a>Privilegios  
+ La*suplantación* es la capacidad de una aplicación de servidor, como Analysis Services, de asumir la identidad de una aplicación cliente. Analysis Services se ejecuta con una cuenta de servicio; sin embargo, cuando el servidor establece conexión con un origen de datos, usa la suplantación, de modo que puedan realizarse las comprobaciones de acceso para la importación y el procesamiento de datos.  
   
  Las credenciales usadas para la suplantación son diferentes de las credenciales del usuario que ha iniciado sesión actualmente. Las credenciales del usuario que tiene abierta una sesión se usan para determinadas operaciones del lado cliente mientras se crea un modelo.  
   
  Es importante entender cómo se especifican y protegen las credenciales de suplantación, así como la diferencia entre los contextos en los que se usan tanto las credenciales del usuario que ha iniciado sesión como las demás credenciales.  
   
- **Descripción de las credenciales del lado servidor**  
+ **Descripción de las credenciales del servidor**  
   
  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], las credenciales para cada origen de datos se especifican mediante la página **Información de suplantación** del Asistente para la importación de tablas o modificando una conexión de origen de datos existente en el cuadro de diálogo **Conexiones existentes** .  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067058"
 > [!IMPORTANT]  
 >  Al crear un modelo, asegúrese de que las credenciales del usuario que ha iniciado sesión actualmente y las credenciales especificadas para la suplantación tienen derechos suficientes para capturar los datos del origen de datos.  
   
-##  <a name="bkmk_imp_info_options"></a>Opciones  
+##  <a name="options"></a><a name="bkmk_imp_info_options"></a>Opciones  
  Al configurar la suplantación, o al modificar las propiedades de una conexión de origen de datos existente en Analysis Services, puede especificar una de las opciones siguientes:  
   
 |Opción|ImpersonationMode<sup>1</sup>|Descripción|  
@@ -74,20 +74,20 @@ ms.locfileid: "66067058"
   
  <sup>2</sup> Cuando se usa esta opción, si la base de datos del área de trabajo se quita de la memoria, debido a un reinicio o la propiedad **retención del área de trabajo** se establece en **Descargar de la memoria** o **eliminar del área de trabajo**, y el proyecto de modelos está cerrado, en la sesión posterior, si intenta procesar los datos de la tabla, se le pedirá que especifique las credenciales de De forma similar, si una base de datos de modelo implementada se quita de la memoria, se le pedirán las credenciales para cada origen de datos.  
   
-##  <a name="bkmk_impers_sec"></a> Seguridad  
+##  <a name="security"></a><a name="bkmk_impers_sec"></a> Seguridad  
  Las credenciales utilizadas con la suplantación las almacena en memoria el motor analítico en memoria xVelocity (VertiPaq)™ asociado al servidor de Analysis Services que administra la base de datos del área de trabajo o un modelo implementado.  Las credenciales no se almacenan en el disco en ningún momento. Si la base de datos del área de trabajo no está en la memoria cuando se implementa el modelo, se pedirá al usuario que escriba las credenciales necesarias para conectarse al origen de datos y capturar los datos.  
   
 > [!NOTE]  
 >  Se recomienda especificar una cuenta de usuario y una contraseña de Windows para las credenciales de suplantación. Una cuenta de usuario de Windows se puede configurar para que use los privilegios mínimos necesarios para conectarse al origen de datos y leer datos del mismo.  
   
-##  <a name="bkmk_imp_newmodel"></a>Suplantación al importar un modelo  
+##  <a name="impersonation-when-importing-a-model"></a><a name="bkmk_imp_newmodel"></a> Suplantación al importar un modelo  
  A diferencia de los modelos tabulares, que pueden usar varios modos de suplantación para admitir la recopilación de datos fuera de proceso, PowerPivot usa un solo modo: ImpersonateCurrentUser. Dado que PowerPivot siempre se ejecuta en proceso, se conecta a orígenes de datos mediante las credenciales del usuario que ha iniciado sesión actualmente. Con los modelos tabulares, las credenciales del usuario que ha iniciado sesión actualmente solo se usan con la característica **Vista previa y filtrar** del Asistente para la importación de tablas y cuando se ven las **Propiedades de tabla**. Las credenciales de suplantación se usan al importar o procesar datos en la base de datos del área de trabajo, o al importar o procesar datos en un modelo implementado.  
   
  Al crear un modelo nuevo importando un libro PowerPivot existente, de forma predeterminada, el diseñador de modelos configurará la suplantación para usar la cuenta de servicio (ImpersonateServiceAccount). Se recomienda cambiar las credenciales de suplantación en los modelos importados desde PowerPivot a una cuenta de usuario de Windows. Una vez importado el libro PowerPivot y creado el nuevo modelo en el diseñador de modelos, puede cambiar las credenciales mediante el cuadro de diálogo **conexiones existentes** .  
   
  Al crear un modelo nuevo importando desde un modelo existente en un servidor de Analysis Services, las credenciales de suplantación se pasan de la base de datos del modelo existente a la base de datos del área de trabajo del modelo nuevo. Si fuera necesario, puede cambiar las credenciales en el modelo nuevo mediante el cuadro de diálogo **Conexiones existentes** .  
   
-##  <a name="bkmk_conf_imp_info"></a>Configuración de la suplantación  
+##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a> Configurar la suplantación  
  El lugar y el contexto en el que existe un modelo determinarán cómo se configura la información de suplantación. Para los proyectos que se crean en el [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede configurar la información de suplantación en la página **Información de suplantación** del Asistente para la importación de tablas o modificando una conexión a un origen de datos en el cuadro de diálogo **Conexiones existentes** . Para ver las conexiones existentes, en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Conexiones existentes**.  
   
  En el caso de los modelos que se implementan en un servidor de Analysis Services, la información de suplantación puede configurarse haciendo clic en los puntos suspensivos (...) de la propiedad **información de suplantación de origen de datos** del cuadro de diálogo Propiedades de la **base** de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

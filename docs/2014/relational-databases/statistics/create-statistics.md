@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033669"
 ---
 # <a name="create-statistics"></a>Crear estadísticas
@@ -42,9 +42,9 @@ ms.locfileid: "63033669"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Antes de crear estadísticas con la instrucción CREATE STATISTICS, compruebe que la opción AUTO_CREATE_STATISTICS está establecida en la base de datos. De este modo se asegurará de que el optimizador de consultas continúe creando rutinariamente estadísticas de una sola columna para las columnas del predicado de la consulta.  
   
@@ -52,12 +52,12 @@ ms.locfileid: "63033669"
   
 -   No se puede quitar, modificar ni cambiar la definición de una columna de la tabla que se define en un predicado de estadísticas filtrado.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere que el usuario sea el propietario de la tabla o vista indexada o un miembro de uno de los roles siguientes: rol fijo de servidor **sysadmin** , rol fijo de base de datos **db_owner** o rol fijo de base de datos **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>Para crear estadísticas  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63033669"
   
 4.  Haga clic con el botón derecho en la carpeta **Estadísticas** y, después, seleccione **Nueva estadística...** .  
   
-     Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **nuevas estadísticas de la tabla**_TABLE_NAME_ .  
+     Las siguientes propiedades se muestran en la página **General** del cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ .  
   
      **Nombre de tabla**  
      Muestra el nombre de la tabla descrita por las estadísticas.  
@@ -113,7 +113,7 @@ ms.locfileid: "63033669"
      **Actualizar estadísticas de estas columnas**  
      Comprueba la actualización de las estadísticas cuando se cierra el cuadro de diálogo.  
   
-     La siguiente propiedad se muestra en la página **filtro** del cuadro de diálogo **nuevas estadísticas de la tabla**_TABLE_NAME_ .  
+     La siguiente propiedad se muestra en la página **Filtro** del cuadro de diálogo **Nuevas estadísticas de la tabla**_nombre_tabla_ .  
   
      **Expresión de filtro**  
      Define qué filas de datos se incluyen en las estadísticas filtradas. Por ejemplo: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
@@ -141,7 +141,7 @@ ms.locfileid: "63033669"
   
 7.  En el cuadro de diálogo **nuevas estadísticas de la tabla**_TABLE_NAME_ , haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Para crear estadísticas  
   

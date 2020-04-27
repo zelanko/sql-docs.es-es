@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900574"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
@@ -83,15 +83,15 @@ ms.locfileid: "62900574"
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Agrupación aproximada** , haga clic en uno de los temas siguientes:  
   
--   [Editor de transformación agrupación aproximada &#40;pestaña administrador de conexiones&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Editor de transformación Agrupación aproximada &#40;pestaña Administrador de conexiones&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Editor de transformación agrupación aproximada &#40;pestaña columnas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Editor de transformación Agrupación aproximada &#40;pestaña Columnas&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Editor de transformación agrupación aproximada &#40;pestaña avanzadas&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Agrupación aproximada &#40;pestaña Avanzadas&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Propiedades comunes](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

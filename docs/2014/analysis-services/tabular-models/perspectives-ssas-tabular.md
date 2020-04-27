@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066880"
 ---
 # <a name="perspectives-ssas-tabular"></a>Perspectivas (SSAS tabular)
@@ -22,13 +22,13 @@ ms.locfileid: "66066880"
   
  Secciones de este tema:  
   
--   [Privilegios](#bkmk_understanding)  
+-   [Ventajas](#bkmk_understanding)  
   
--   [Perspectivas de pruebas](#bkmk_testpersp)  
+-   [Probar perspectivas](#bkmk_testpersp)  
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="bkmk_understanding"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a>Privilegios  
  Los modelos tabulares pueden ser muy complejos para que los usuarios los exploren. Un solo modelo puede representar el contenido de un almacenamiento de datos completo, con muchas tablas, medidas y dimensiones. Esta complejidad puede resultar desalentadora para los usuarios que solo necesitan interactuar con una pequeña parte del modelo para satisfacer sus requisitos de informes y de Business Intelligence.  
   
  En una perspectiva, se definen tablas, columnas y medidas (incluidos los KPI) como objetos de campo. Puede seleccionar los campos visibles para cada perspectiva. Por ejemplo, un único modelo puede contener datos de productos, ventas, financieros, de empleados y geográficos. Si bien un departamento de ventas necesita datos de productos, ventas, promociones y geográficos, probablemente no necesitarán datos de empleados ni financieros. Del mismo modo, un departamento de recursos humanos no necesita datos sobre promociones de ventas ni geográficos.  
@@ -37,10 +37,10 @@ ms.locfileid: "66066880"
   
  Las perspectivas no están diseñadas para usarse como mecanismo de seguridad, sino como una herramienta para proporcionar una mejor experiencia para el usuario. Toda la seguridad de una determinada perspectiva se hereda del modelo subyacente. Las perspectivas no pueden proporcionar acceso a objetos de modelo a los que el usuario no tiene acceso. La seguridad de la base de datos de modelos se debe resolver antes de dar acceso a los objetos del modelo mediante una perspectiva. Los roles de seguridad se pueden usar para proteger los datos y los metadatos de los modelos. Para obtener más información, vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md).  
   
-##  <a name="bkmk_testpersp"></a>Perspectivas de pruebas  
+##  <a name="testing-perspectives"></a><a name="bkmk_testpersp"></a>Perspectivas de pruebas  
  Al crear un modelo, puede usar la característica Analizar en Excel del diseñador de modelos para probar la eficacia de las perspectivas que ha definido. En el menú **Modelo** del diseñador de modelos, al hacer clic en **Analizar en Excel**, y antes de que se inicie Excel, aparecerá el cuadro de diálogo **Elegir credenciales y perspectivas** . En este cuadro de diálogo, puede especificar el nombre de usuario actual, otro usuario, un rol y una perspectiva que usará para conectar con la base de datos del área de trabajo del modelo como origen de datos y para ver los datos.  
   
-##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tareas relacionadas  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
@@ -48,6 +48,6 @@ ms.locfileid: "66066880"
   
 ## <a name="see-also"></a>Consulte también  
  [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md)   
- [Jerarquías &#40;&#41;tabular de SSAS](hierarchies-ssas-tabular.md)  
+ [Jerarquías &#40;SSAS tabular&#41;](hierarchies-ssas-tabular.md)  
   
   

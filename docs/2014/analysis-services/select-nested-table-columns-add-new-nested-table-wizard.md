@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069355"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Seleccionar las columnas de la tabla anidada (Agregar nueva tabla anidada)
   Utilice la página **Seleccionar las columnas de la tabla anidada** para seleccionar los atributos y medidas que se van a incluir en la tabla anidada y para definir cómo utilizará el modelo de minería de datos esos atributos y medidas.  
   
- **Para obtener más información: columnas del** [modelo de minería](data-mining/mining-model-columns.md)de datos, [asistente para minería de datos &#40;Analysis Services-&#41;de minería de datos ](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obtener más información:** [Columnas del modelo de minería de datos](data-mining/mining-model-columns.md), [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md).  
   
 ## <a name="options"></a>Opciones  
  **Columnas**  

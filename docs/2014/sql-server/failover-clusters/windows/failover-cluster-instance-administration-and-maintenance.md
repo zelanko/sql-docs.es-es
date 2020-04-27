@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63049447"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administración y mantenimiento de la instancia de clúster de conmutación por error
@@ -37,11 +37,10 @@ ms.locfileid: "63049447"
  Después de instalar una FCI, puede cambiarla o repararla con el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por ejemplo, puede agregar nodos adicionales a una FCI, ejecutar una FCI como instancia independiente o quitar un nodo de la configuración de una FCI.  
   
 ### <a name="adding-a-node-to-an-existing-failover-cluster-instance"></a>Agregar un nodo a una instancia en clúster de conmutación por error existente  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece la posibilidad de mantener una FCI existente. Si elige esta opción, puede agregar otros nodos a la FCI ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo al que desea agregar la FCI. Para obtener más información, vea [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) y [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece la posibilidad de mantener una FCI existente. Si elige esta opción, puede agregar otros nodos a la FCI ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo al que desea agregar la FCI. Para obtener más información, vea [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) y [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>Quitar un nodo de una instancia en clúster de conmutación por error existente  
- Puede quitar un nodo de una FCI ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo en el que desea reducir la FCI. Cada nodo de una FCI se considera un par sin dependencias de otros nodos de la FCI, así que puede quitar cualquier nodo. Un nodo dañado no tiene que estar disponible para poder quitarlo y el proceso de eliminación no desinstala los binarios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del nodo no disponible. Los nodos quitados se pueden volver a agregar a una FCI en cualquier momento. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ Puede quitar un nodo de una FCI ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el equipo en el que desea reducir la FCI. Cada nodo de una FCI se considera un par sin dependencias de otros nodos de la FCI, así que puede quitar cualquier nodo. Un nodo dañado no tiene que estar disponible para poder quitarlo y el proceso de eliminación no desinstala los binarios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del nodo no disponible. Los nodos quitados se pueden volver a agregar a una FCI en cualquier momento. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;&#41;de instalación ](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="changing-service-accounts"></a>Cambiar cuentas de servicio  
  No debe cambiar las contraseñas de ninguna de las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando un nodo de FCI está inactivo o sin conexión. Si tiene que hacerlo, debe restablecer de nuevo la contraseña mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando todos los nodos vuelvan a estar en línea.  

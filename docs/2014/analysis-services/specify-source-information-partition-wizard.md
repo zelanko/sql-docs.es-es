@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068169"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Especificar información de origen (Asistente para particiones)
@@ -29,7 +29,7 @@ ms.locfileid: "66068169"
  **Grupo de medida**  
  Seleccione un grupo de medida para la partición.  
   
- **Look in**  
+ **Buscar en**  
  Seleccione el origen de datos o la vista del origen de datos que contiene las tablas de origen para la partición. La vista del origen de datos utilizada por el grupo de medida aparece seleccionada de forma predeterminada.  
   
  **Tablas de filtros**  
@@ -49,6 +49,6 @@ ms.locfileid: "66068169"
 >  Si selecciona más de una tabla, no podrá mostrarse la página **Restringir filas** y no podrán restringirse las filas para las particiones creadas a partir de las tablas seleccionadas. Para restringir filas en las particiones, ejecute el Asistente para particiones para cada tabla en la que desea crear una partición.  
   
 ## <a name="see-also"></a>Consulte también  
- [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

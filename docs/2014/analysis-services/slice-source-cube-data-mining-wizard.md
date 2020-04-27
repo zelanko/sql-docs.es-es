@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068596"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Segmentar el cubo de origen (Asistente para minería de datos)
@@ -37,7 +37,7 @@ ms.locfileid: "66068596"
 >   
 >  Si necesita definir un segmento complejo, se recomienda definir las tuplas del segmento con un script Alter de XMLA. Después, puede usar la herramienta de línea de comandos ascmd o la tarea SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) para ejecutar el script y crear el conjunto de miembros especificado inmediatamente antes de procesar la partición.  
   
- **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Dimensión**  
@@ -48,7 +48,7 @@ ms.locfileid: "66068596"
   
  Por ejemplo, si elige la jerarquía Geography y selecciona Country como nivel, no puede crear un modelo que use City como atributo. Por el contrario, si elige City como el nivel de la jerarquía para segmentar, no puede crear un modelo de minería de datos basado en Country.  
   
- **Operator**  
+ **Operador**  
  Seleccione el operador que desea utilizar para generar una expresión de segmentación.  
   
  Por ejemplo, si elige Geography como jerarquía, puede seleccionar el operador = y, a continuación, escribir "Europe" como filtro para obtener datos del cubo solo para Europa.  
@@ -56,7 +56,7 @@ ms.locfileid: "66068596"
  **Expresión de filtro**  
  Escriba una expresión que se usará como criterio para filtrar el cubo en la dimensión seleccionada.  
   
- **Los**  
+ **Parámetros**  
  Esta opción no se utiliza para los modelos de minería de datos.  
   
 ## <a name="see-also"></a>Consulte también  

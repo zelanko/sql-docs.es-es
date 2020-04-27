@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081457"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción de obtención de detalles (pestaña Acciones, Diseñador de cubos) (Analysis Services -  Datos multidimensionales)
@@ -26,7 +26,7 @@ ms.locfileid: "66081457"
 >  Las acciones de obtención de detalles ya no obtienen detalles del almacén de datos subyacente. La información a la que tienen acceso las acciones de obtención de detalles debe modelarse en el cubo utilizando miembros de jerarquía o dimensión.  
   
 ## <a name="options"></a>Opciones  
- **Name**  
+ **name**  
  Escriba el nombre de la acción.  
   
  **Destino de la acción**  
@@ -56,7 +56,7 @@ ms.locfileid: "66081457"
  **Propiedades adicionales**  
  Expanda esta opción para ver las opciones **Predeterminado**, **Número máximo de filas**, **Invocación**, **Aplicación**, **Descripción**, **Título**y **El título es MDX** .  
   
- **Predeterminada**  
+ **Valor predeterminado**  
  Seleccione **True** para incluir esta acción de obtención de detalles como la acción de obtención de detalles predeterminada; en caso contrario, seleccione **False**.  
   
  Si se `RETURN` omite la cláusula en una instrucción `DRILLTHROUGH` MDX ejecutada por una aplicación cliente, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] la instancia de evalúa todas las acciones de obtención de detalles predeterminadas y ejecuta la primera acción de obtención de detalles predeterminada que devuelve un conjunto no vacío. Para obtener más información acerca de `DRILLTHROUGH` la instrucción MDX, vea [instrucción DRILLTHROUGH &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough).  
@@ -78,7 +78,7 @@ ms.locfileid: "66081457"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Batch|La acción debe ejecutarse como parte de una operación de lote o una tarea de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive|La acción se ejecuta cuando el usuario invoca la acción.|  
+|Interactive (Interactivo)|La acción se ejecuta cuando el usuario invoca la acción.|  
 |Al abrir|La acción se ejecuta cuando se abre el cubo por primera vez.|  
   
  **Aplicación**  
@@ -92,7 +92,7 @@ ms.locfileid: "66081457"
  **Descripción**  
  Escriba la descripción opcional de la acción.  
   
- **Caption**  
+ **Hayan**  
  Escriba el título que se mostrará para la acción en la aplicación cliente si establece **El título es MDX** en **False**.  
   
  Escriba la expresión de Expresiones multidimensionales (MDX) que devuelve una cadena para el título si establece **El título es MDX** en **True**.  

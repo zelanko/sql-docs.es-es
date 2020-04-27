@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061257"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, clase de eventos
@@ -28,7 +28,7 @@ ms.locfileid: "63061257"
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se llena con los valores que pasa la aplicación en lugar de llenarse con el nombre que se muestra del programa.|10|Sí|  
+|ApplicationName|`nvarchar`|Nombre de la aplicación cliente que creó la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se llena con los valores que pasa la aplicación en lugar de llenarse con el nombre que se muestra del programa.|10|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se llena si el cliente proporciona el Id. de proceso.|9|Sí|  
 |DatabaseID|`int`|Id. de la base de datos en que se ejecuta el procedimiento almacenado. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta el procedimiento almacenado.|35|Sí|  

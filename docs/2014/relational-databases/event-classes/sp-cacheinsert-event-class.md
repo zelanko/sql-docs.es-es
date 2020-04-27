@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7667a086c8fb5b5f7b17e8baf237e14ffafa1188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63055695"
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert, clase de eventos
@@ -42,7 +42,7 @@ ms.locfileid: "63055695"
 |NTDomainName|`nvarchar`|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|`int`|Identificador asignado por el sistema al procedimiento almacenado.|22|Sí|  
-|ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
 |RequestID|`int`|Id. de la solicitud que contiene la instrucción.|49|Sí|  
 |nombreDeServidor|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión tanto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como de Windows.|64|Sí|  
@@ -53,7 +53,7 @@ ms.locfileid: "63055695"
 |XactSequence|`bigint`|Token que describe la transacción actual.|50|Sí|  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SP:CacheMiss [clase de eventos]](sp-cachemiss-event-class.md)  
   
   

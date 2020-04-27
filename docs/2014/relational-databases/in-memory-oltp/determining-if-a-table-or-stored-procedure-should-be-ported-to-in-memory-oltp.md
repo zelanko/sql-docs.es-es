@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072394"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
@@ -46,7 +46,7 @@ ms.locfileid: "63072394"
   
  El recopilador de rendimiento de las transacciones y la capacidad de generar un informe de análisis de rendimiento de las transacciones se instalan cuando se selecciona **herramientas de administración-básica** o **herramientas de administración-avanzadas** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-## <a name="best-practices"></a>Prácticas recomendadas  
+## <a name="best-practices"></a>Procedimientos recomendados  
  El flujo de trabajo recomendado se muestra en el diagrama de flujo siguiente. Los nodos amarillos representan procedimientos opcionales:  
   
  ![Flujo de trabajo de AMR](../../database-engine/media/amr-1.gif "Flujo de trabajo de AMR")  
@@ -99,7 +99,7 @@ ms.locfileid: "63072394"
   
 7.  En la siguiente pantalla, haga clic en **Finalizar** para salir del asistente.  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Configurar la recopilación de datos en una instancia local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Configurar la recopilación de datos en una instancia local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  La recopilación de datos requiere que el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté iniciado. Solo es necesario configurar un recopilador de datos en un servidor.  
   
  Un recopilador de datos se puede configurar en un SQL Server 2012 o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versión posterior de.  
@@ -116,9 +116,9 @@ ms.locfileid: "63072394"
   
 5.  En el cuadro con la etiqueta **seleccionar conjuntos de recopiladores de datos que desea habilitar**, seleccione **conjuntos de recopilación de rendimiento de transacciones**. Haga clic en **Siguiente** cuando termine.  
   
-6.  Compruebe las selecciones. Haga clic en **atrás** para modificar la configuración. Haga clic en **Finalizar** cuando haya terminado.  
+6.  Compruebe las selecciones. Haga clic en **atrás** para modificar la configuración. Haga clic **Finalizar** cuando haya terminado.  
   
-###  <a name="xxx"></a>Configurar la recopilación de datos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una instancia remota  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurar la recopilación de datos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una instancia remota  
  La recopilación de datos requiere que se inicie el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la instancia que recopilará los datos.  
   
  Un recopilador de datos se puede configurar en un SQL Server 2012 o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versión posterior de.  

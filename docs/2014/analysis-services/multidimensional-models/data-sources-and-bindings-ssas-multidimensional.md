@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076079"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Orígenes de datos y enlaces (SSAS multidimensional)
@@ -49,8 +49,7 @@ ms.locfileid: "66076079"
   
  El medio de expresar el origen de datos varía según el tipo de origen de datos. Por ejemplo, un origen de datos relacional se distingue por una cadena de conexión. Para obtener más información acerca de los orígenes de datos, vea [Data Sources in Multidimensional Models](data-sources-in-multidimensional-models.md).  
   
- Sin tener en cuenta el origen de datos usado, la vista del origen de datos (DSV) contiene los metadatos para el origen de datos. Así, los enlaces para un cubo u otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se expresan como enlaces a DSV. Estos enlaces pueden incluir enlaces a objetos lógicos, como vistas, columnas calculadas y relaciones que no existen físicamente en el origen de datos. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega una columna calculada que encapsula la expresión en la DSV y, a continuación, enlaza la medida de OLAP correspondiente a dicha columna de la DSV. Para obtener más información acerca de DSVs, vea [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md).  
+ Sin tener en cuenta el origen de datos usado, la vista del origen de datos (DSV) contiene los metadatos para el origen de datos. Así, los enlaces para un cubo u otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se expresan como enlaces a DSV. Estos enlaces pueden incluir enlaces a objetos lógicos, como vistas, columnas calculadas y relaciones que no existen físicamente en el origen de datos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega una columna calculada que encapsula la expresión en la DSV y, a continuación, enlaza la medida de OLAP correspondiente a dicha columna de la DSV. Para obtener más información acerca de DSVs, vea [Data Source Views in Multidimensional Models](data-source-views-in-multidimensional-models.md).  
   
  Cada objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enlaza con el origen de datos a su manera. Además, los enlaces de datos para estos objetos y la definición del origen de datos se pueden proporcionar insertados con la definición del objeto enlazado a datos (por ejemplo, la dimensión) o fuera de línea como un conjunto independiente de definiciones.  
   
@@ -60,10 +59,10 @@ ms.locfileid: "66076079"
 |Tipo de datos de Analysis Services|Descripción|  
 |---------------------------------|-----------------|  
 |BigInt|Entero de 64 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int64 en Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I8 en OLE DB.|  
-|Booleano|Valor booleano. Este tipo de datos se asigna internamente al tipo de datos Booleano en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_BOOL en OLE DB.|  
+|Bool|Valor booleano. Este tipo de datos se asigna internamente al tipo de datos Booleano en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_BOOL en OLE DB.|  
 |Moneda|Valor de moneda comprendido entre -263 (o -922.337.203.685.477,5808) y 263-1 (o +922.337.203.685.477,5807) con una precisión de una diezmilésima de unidad de moneda. Este tipo de datos se asigna internamente al tipo de datos Decimal en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_CY en OLE DB.|  
-|Date|Datos de fecha, almacenados como un número de punto flotante de doble precisión. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción del día. Este tipo de datos se asigna internamente al tipo de datos DateTime en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_DATE en OLE DB.|  
-|DOUBLE|Número de punto flotante de doble precisión comprendido entre -1,79E +308 y 1,79E +308. Este tipo de datos se asigna internamente al tipo de datos Doble en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_R8 en OLE DB.|  
+|Fecha|Datos de fecha, almacenados como un número de punto flotante de doble precisión. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción del día. Este tipo de datos se asigna internamente al tipo de datos DateTime en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_DATE en OLE DB.|  
+|Double|Número de punto flotante de doble precisión comprendido entre -1,79E +308 y 1,79E +308. Este tipo de datos se asigna internamente al tipo de datos Doble en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_R8 en OLE DB.|  
 |Entero|Entero de 32 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int32 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I4 en OLE DB.|  
 |Single|Número de punto flotante de precisión simple comprendido entre -3,40E +38 y 3,40E +38. Este tipo de datos se asigna internamente al tipo de datos Single en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_R4 en OLE DB.|  
 |SmallInt|Entero de 16 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int16 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I2 en OLE DB.|  
@@ -73,8 +72,7 @@ ms.locfileid: "66076079"
 |UnsignedSmallInt|Entero de 16 bits sin signo. Este tipo de datos se asigna internamente al tipo de datos UInt16 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_UI2 en OLE DB.|  
 |WChar|Flujo de caracteres Unicode terminado en NULL. Este tipo de datos se asigna internamente al tipo de datos String en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_WSTR en OLE DB.|  
   
- Todos los datos que se reciben del origen de datos se convierten al tipo de [!INCLUDE[ssAS](../../includes/ssas-md.md)] especificado en el enlace (normalmente, durante el procesamiento). Se produce un error si no se puede realizar la conversión (por ejemplo, de String a Int). 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] normalmente establece el tipo de datos del enlace en el que mejor coincide con el tipo de origen del origen de datos. Por ejemplo, los tipos Date, DateTime, SmallDateTime, DateTime2 y DateTimeOffset de SQL se asignan a Date en [!INCLUDE[ssAS](../../includes/ssas-md.md)] , y el tipo Time de SQL se asigna a String.  
+ Todos los datos que se reciben del origen de datos se convierten al tipo de [!INCLUDE[ssAS](../../includes/ssas-md.md)] especificado en el enlace (normalmente, durante el procesamiento). Se produce un error si no se puede realizar la conversión (por ejemplo, de String a Int). [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] normalmente establece el tipo de datos del enlace en el que mejor coincide con el tipo de origen del origen de datos. Por ejemplo, los tipos Date, DateTime, SmallDateTime, DateTime2 y DateTimeOffset de SQL se asignan a Date en [!INCLUDE[ssAS](../../includes/ssas-md.md)] , y el tipo Time de SQL se asigna a String.  
   
 ## <a name="bindings-for-dimensions"></a>Enlaces para dimensiones  
  Cada atributo de una dimensión se enlaza a una columna en una DSV. Todos los atributos de una dimensión deben proceder de un origen de datos único. Sin embargo, los atributos se pueden enlazar a columnas en tablas diferentes. Las relaciones entre las tablas se definen en DSV. En el caso de que exista más de un conjunto de relaciones en la misma tabla, podría ser necesario introducir una consulta con nombre en la DSV para que actúe como una tabla ' alias '. Las expresiones y los filtros se definen en la DSV usando cálculos con nombre y consultas con nombre.  
@@ -183,11 +181,9 @@ ms.locfileid: "66076079"
   
  Cada objeto para el que se especifica el enlace se identifica mediante un elemento XML del \< *objeto* de formulario>identificador (por ejemplo `DimensionID`,). Después de haber identificado el objeto de la forma más específica posible con \<el *objeto* de formulario>identificador, se identifica el elemento para el que se especifica el enlace, que `Source`suele ser. Un caso común para tener en cuenta es en qué `Source` es una propiedad del `DataItem`, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta `DataItem`; en su lugar, simplemente especifica la propiedad `Source`, como si estuviera directamente en la columna que se va a enlazar.  
   
- 
-  `KeyColumns` se identifican por su orden dentro de la colección `KeyColumns`. Allí no es posible especificar, por ejemplo, solo la primera y la tercera columna de clave de un atributo, porque no hay manera de indicar que se va a omitir la segunda columna de clave. Todas las columnas de clave deben encontrarse en el enlace fuera de línea para un atributo de dimensión.  
+ `KeyColumns` se identifican por su orden dentro de la colección `KeyColumns`. Allí no es posible especificar, por ejemplo, solo la primera y la tercera columna de clave de un atributo, porque no hay manera de indicar que se va a omitir la segunda columna de clave. Todas las columnas de clave deben encontrarse en el enlace fuera de línea para un atributo de dimensión.  
   
- 
-  `Translations`, aunque no tienen ningún Id., se identifican semánticamente por su idioma. Por consiguiente, `Translations` dentro de un enlace `Binding` tienen que incluir su identificador de idioma.  
+ `Translations`, aunque no tienen ningún Id., se identifican semánticamente por su idioma. Por consiguiente, `Translations` dentro de un enlace `Binding` tienen que incluir su identificador de idioma.  
   
  Un elemento adicional permitido dentro de un `Binding` que no existe directamente en el DDL es `ParentColumnID`, que se usa para las tablas anidadas para la minería de datos. En este caso, es necesario identificar la columna primaria en la tabla anidada para la que se proporciona el enlace.  
   

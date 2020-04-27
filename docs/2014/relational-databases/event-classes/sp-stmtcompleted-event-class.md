@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050961"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted [clase de eventos]
@@ -28,7 +28,7 @@ ms.locfileid: "63050961"
   
 |Nombre de columna de datos|`Data type`|Descripción|Identificador de columna|Filtrable|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
+|ApplicationName|`nvarchar`|Nombre de la aplicación cliente que creó la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |CPU|`int`|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|18|Sí|  
 |DatabaseID|`int`|Id. de la base de datos en que se ejecuta el procedimiento almacenado. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
@@ -50,7 +50,7 @@ ms.locfileid: "63050961"
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|`int`|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|`nvarchar`|Nombre del objeto al que se hace referencia.|34|Sí|  
-|ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
 |Offset|`int`|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|61|Sí|  
 |Lecturas|`bigint`|Número de lecturas lógicas de disco que realiza el servidor en nombre del evento.|16|Sí|  
 |RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  

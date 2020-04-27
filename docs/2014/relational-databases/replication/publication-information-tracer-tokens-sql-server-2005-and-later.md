@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021697"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>Información de la publicación, Testigos de seguimiento (Publicación transaccional, SQL Server 2005 y posterior)
-  La pestaña **testigos de seguimiento** permite validar las conexiones y medir la latencia de un sistema que utiliza la replicación transaccional. Se escribe un token (una pequeña cantidad de datos) en el registro de transacción de la base de datos de publicaciones, marcado como si fuese una transacción replicada, y se envía a través del sistema, de forma que permite calcular:  
+   La pestaña **Testigos de seguimiento** le permitirá validar las conexiones y medir la latencia de un sistema que utiliza la replicación transaccional. Se escribe un token (una pequeña cantidad de datos) en el registro de transacción de la base de datos de publicaciones, marcado como si fuese una transacción replicada, y se envía a través del sistema, de forma que permite calcular:  
   
 -   Cuánto tiempo transcurre desde que se confirma una transacción en el publicador hasta que se inserta el comando correspondiente en la base de datos de distribución del distribuidor.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "63021697"
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Medir la latencia y validar las conexiones para la replicación transaccional](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [Supervisar el rendimiento con el Monitor de replicación](monitor/monitor-performance-with-replication-monitor.md)   
+ [Supervisar el rendimiento con el monitor de replicación](monitor/monitor-performance-with-replication-monitor.md)   
  [Supervisión de la replicación](monitoring-replication.md)   
  [Información general sobre los agentes de replicación](agents/replication-agents-overview.md)  
   

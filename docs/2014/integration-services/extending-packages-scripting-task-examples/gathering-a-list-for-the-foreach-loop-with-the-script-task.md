@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894984"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Recopilar una lista para el bucle Foreach con la tarea Script
@@ -32,8 +32,7 @@ ms.locfileid: "62894984"
  En el ejemplo siguiente se utilizan métodos del espacio de nombres `System.IO` para recopilar una lista de libros de Excel del equipo que son posteriores o anteriores a un número de días especificado por el usuario en una variable. Busca de forma recursiva en los directorios de la unidad C los archivos que tienen la extensión .xls y examina la fecha en la que cada archivo se modificó por última vez para determinar si el archivo pertenece a la lista. Agrega los archivos correspondientes a un objeto `ArrayList` y guarda el objeto `ArrayList` en una variable para el uso posterior en un contenedor de bucles Foreach. El contenedor de bucles Foreach se configura para utilizar el enumerador de variable para Foreach.  
   
 > [!NOTE]  
->  La variable que utiliza con el enumerador de variable para Foreach debe ser del tipo `Object`. El objeto que incluye en la variable debe implementar una de las interfaces siguientes: `System.Collections.IEnumerable`, `System.Runtime.InteropServices.ComTypes.IEnumVARIANT`, `System.ComponentModel IListSource` o `Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost`. Normalmente se utiliza `Array` o `ArrayList`. 
-  `ArrayList` requiere una referencia y una instrucción `Imports` para el espacio de nombres `System.Collections`.  
+>  La variable que utiliza con el enumerador de variable para Foreach debe ser del tipo `Object`. El objeto que incluye en la variable debe implementar una de las interfaces siguientes: `System.Collections.IEnumerable`, `System.Runtime.InteropServices.ComTypes.IEnumVARIANT`, `System.ComponentModel IListSource` o `Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost`. Normalmente se utiliza `Array` o `ArrayList`. `ArrayList` requiere una referencia y una instrucción `Imports` para el espacio de nombres `System.Collections`.  
   
  Puede experimentar con esta tarea utilizando diferentes valores positivos y negativos en la variable de paquete `FileAge`. Por ejemplo, puede escribir 5 para buscar archivos creados en los cinco últimos días o escribir -3 para buscar archivos creados hace más de tres días. Esta tarea puede tardar un minuto o dos en una unidad de disco con un gran número de carpetas donde buscar.  
   
@@ -249,7 +248,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
 ![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Consulte también  
- [Contenedor de bucles Para cada uno](../control-flow/foreach-loop-container.md)   
+ [Contenedor de bucles foreach](../control-flow/foreach-loop-container.md)   
  [Configurar un contenedor de bucles Foreach](../configure-a-foreach-loop-container.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067632"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Convertir un programa de copia masiva de DB-Library a ODBC
@@ -43,7 +43,7 @@ ms.locfileid: "63067632"
     |-------------------------|--------------------------------|-------------------------|  
     |Se suministraron valores NULL|0|-1 (SQL_NULL_DATA)|  
     |Se suministraron datos variables|-1|-10 (SQL_VARLEN_DATA)|  
-    |Cadena binaria o carácter de longitud cero|N/D|0|  
+    |Cadena binaria o carácter de longitud cero|NA|0|  
   
      En DB-Library, un valor *varlen* de-1 indica que se están suministrando datos de longitud variable, que en el *cbData* de ODBC se interpreta para indicar que solo se proporcionan valores NULL. Cambie cualquier especificación de *varlen* de DB-Library de-1 a SQL_VARLEN_DATA y cualquier especificación de *varlen* de 0 a SQL_NULL_DATA.  
   

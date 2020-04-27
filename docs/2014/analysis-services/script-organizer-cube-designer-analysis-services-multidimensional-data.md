@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069933"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de script (pestaña Cálculo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -26,12 +26,12 @@ ms.locfileid: "66069933"
 >  No se mostrará este panel en la vista de formulario.  
   
 ## <a name="options"></a>Opciones  
- **Paso**  
+ **Step**  
  Muestra el orden de ejecución de los miembros calculados, los conjuntos con nombre y los comandos contenidos en el script del cubo.  
   
  Haga clic en **Subir** o **Bajar** en el panel de la **Barra de herramientas** o en el menú contextual para cambiar el orden de ejecución de los cálculos.  
   
- **Tipo**  
+ **Type**  
  Muestra un icono que identifica el cálculo como miembro calculado, conjunto con nombre o comando de script.  
   
  **Comando**  

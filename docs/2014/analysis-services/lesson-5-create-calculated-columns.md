@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078558"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lección 6: Crear columnas calculadas
-  En esta lección, creará datos en el modelo mediante la adición de columnas calculadas. Una columna calculada está basada en datos que ya existen en el modelo. Para obtener más información, consulte [Columnas calculadas &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns.md).  
+  En esta lección creará nuevos datos en el modelo agregando columnas calculadas. Una columna calculada está basada en datos que ya existen en el modelo. Para obtener más información, consulte [Columnas calculadas &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns.md).  
   
- Creará cinco columnas calculadas en tres tablas diferentes. Los pasos son ligeramente diferentes para cada tarea. El propósito consiste en mostrarle que hay diversas maneras de crear columnas, cambiarles el nombre y colocarlas en ubicaciones diferentes en una tabla.  
+ Creará cinco columnas calculadas en tres tablas diferentes. Los pasos son ligeramente diferentes para cada tarea. Esto es así para mostrarle que hay varias formas de crear nuevas columnas, cambiarles el nombre y colocarlas en distintos lugares de una tabla.  
   
  Tiempo estimado para completar esta lección: **15 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 5: Crear relaciones](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Crear columnas calculadas  
@@ -33,7 +33,7 @@ ms.locfileid: "66078558"
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** , elija **Vista de modelo**y, después, haga clic en **Vista de datos**.  
   
-     Las columnas calculadas solo se pueden crear mediante el diseñador de modelos en la vista de datos.  
+     Las columnas calculadas solo se pueden crear mediante el diseñador de modelos en la Vista de datos.  
   
 2.  En el diseñador de modelos, haga clic en la tabla **Date** (pestaña).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66078558"
 4.  Haga clic en el encabezado de columna y, después, arrastre la columna entre la columna **Day Name** y la columna **Day of Month** .  
   
     > [!TIP]  
-    >  Si mueve las columnas de la tabla, es más fácil navegar.  
+    >  El movimiento de columnas en la tabla simplifica la navegación.  
   
  La columna calculada Día de la semana proporciona un nombre ordenable del día de la semana.  
   

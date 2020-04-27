@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e5c7a01cc2a9569dd8c05316a2aa3314959e894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046530"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Directivas de soporte con SQL Server Native Client
@@ -23,10 +23,10 @@ ms.locfileid: "63046530"
 ## <a name="server-support"></a>Compatibilidad de servidor  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 11,0 admite conexiones a, [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
   
-## <a name="supported-operating-system-versions"></a>Versiones de sistemas operativos admitidos  
+## <a name="supported-operating-system-versions"></a>Versiones de sistema operativo compatibles  
  En la tabla siguiente se enumeran los sistemas operativos admitidos por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-|Versión de SQL Server Native Client|Sistemas operativos compatibles|  
+|Versión de SQL Server Native Client|Sistemas operativos admitidos|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|-Microsoft Windows 2000 Service Pack 4 o posterior<br />-Microsoft Windows Server 2003 o posterior<br />-Microsoft Windows XP Service Pack 1 o posterior<br />-Microsoft Windows Vista (requiere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 o posterior)<br />-Microsoft Windows Server 2008 (requiere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service Pack 2 o posterior)|  
 |SQL Server Native Client 10,0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|-Microsoft Windows Server 2003 Service Pack 2 o posterior<br />-Microsoft Windows XP Service Pack 2 o posterior<br />-Microsoft Windows Vista<br />-Microsoft Windows Server 2008|  

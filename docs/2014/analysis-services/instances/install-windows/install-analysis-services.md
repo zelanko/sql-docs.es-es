@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079910"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Instalar Analysis Services en mode tabular
@@ -45,15 +45,13 @@ ms.locfileid: "66079910"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- 
-  `INSTANCENAME` debe tener menos de 17 caracteres.  
+ `INSTANCENAME` debe tener menos de 17 caracteres.  
   
  Todos los valores de cuenta de marcador de posición se deben reemplazar con cuentas y contraseñas válidas.  
   
  Las herramientas como SQL Server Management Studio o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] no se instalan mediante la sintaxis de la línea de comandos de ejemplo que se proporciona. Para obtener más información acerca de cómo agregar características, consulte [Install SQL Server 2014 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
- 
-  `ASSERVERMODE` distingue mayúsculas de minúsculas.  Todos los valores se deben expresar en mayúsculas. En la tabla siguiente se describen los valores válidos de `ASSERVERMODE`.  
+ `ASSERVERMODE` distingue mayúsculas de minúsculas.  Todos los valores se deben expresar en mayúsculas. En la tabla siguiente se describen los valores válidos de `ASSERVERMODE`.  
   
 |Value|Descripción|  
 |-----------|-----------------|  

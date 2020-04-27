@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074396"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>LANGUAGE y FORMAT_STRING en FORMATED_VALUE
@@ -76,7 +76,7 @@ ms.locfileid: "66074396"
   
  Cuando la consulta MDX anterior se ejecuta utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sobre un servidor y un cliente con la configuración regional 1033, los resultados (transpuestos) son los siguientes:  
   
-|Miembro|FORMATTED_VALUE|Explicación|  
+|Member|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
 |Un|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
 |B|€5.040,00|FORMAT_STRING se establece en `Currency` (al heredar de A) y LANGUAGE se establece explícitamente en `1034` (España); por tanto, se usa el signo de euro, además de un separador decimal y un separador de miles diferentes.|  
@@ -126,7 +126,7 @@ ms.locfileid: "66074396"
   
  Cuando la consulta MDX anterior se ejecuta utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sobre un servidor y un cliente con la configuración regional 1033, los resultados (transpuestos) son los siguientes:  
   
-|Miembro|FORMATTED_VALUE|Explicación|  
+|Member|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
 |Un|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE es `1033` (inglés) al heredar el valor de la configuración regional del sistema.|  

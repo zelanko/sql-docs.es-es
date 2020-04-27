@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127059"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>Ejecutar trabajos de mantenimiento de replicación (SQL Server Management Studio)
@@ -53,7 +53,7 @@ ms.locfileid: "63127059"
   
 2.  Expanda la carpeta **Agente SQL Server** y a continuación la carpeta **Trabajos** .  
   
-3.  Haga clic con el botón secundario en un trabajo y, a continuación, haga clic en **Propiedades**.  
+3.  Haga clic con el botón derecho en un trabajo y, a continuación, haga clic en **Propiedades**.  
   
 4.  En el cuadro de diálogo **Propiedades del trabajo: \<Trabajo>**, modifique las propiedades si es necesario y luego haga clic en **Aceptar**.  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078021"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Generador MDX (Analysis Services - Datos multidimensionales)
@@ -29,8 +29,8 @@ ms.locfileid: "66078021"
 |Término|Definición|  
 |----------|----------------|  
 |**Expression**|Escriba la expresión MDX que debe utilizarse.|  
-|**Casilla**|Haga clic en **Comprobar** para probar la expresión MDX definida en **Expresión**.|  
-|**Metadatos**|Muestra los metadatos del objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] actual que pueden incluirse en la expresión MDX definida en **Expresión**.<br /><br /> Para copiar la sintaxis MDX del elemento seleccionado, haga clic con el botón derecho en el elemento y seleccione **Copiar** en el menú contextual, o bien arrastre el elemento seleccionado a **Expresión**.|  
+|**Comprobación**|Haga clic en **Comprobar** para probar la expresión MDX definida en **Expresión**.|  
+|**Metadata**|Muestra los metadatos del objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] actual que pueden incluirse en la expresión MDX definida en **Expresión**.<br /><br /> Para copiar la sintaxis MDX del elemento seleccionado, haga clic con el botón derecho en el elemento y seleccione **Copiar** en el menú contextual, o bien arrastre el elemento seleccionado a **Expresión**.|  
 |**Funciones**|Muestra las funciones de MDX disponibles para la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] actual. Los elementos enumerados se recuperan del conjunto de filas del esquema MDSCHEMA_FUNCTIONS.<br /><br /> Para copiar la sintaxis MDX del elemento seleccionado, haga clic con el botón derecho en el elemento y seleccione **Copiar** en el menú contextual, o bien arrastre el elemento seleccionado a **Expresión**.|  
   
 ## <a name="see-also"></a>Consulte también  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 57eb4f021a25fa2fa559fa7ff21d12bb621cc53a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126910"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>Configurar alertas para notificar los errores de directiva a los administradores de directivas
@@ -31,11 +31,11 @@ ms.locfileid: "63126910"
   
  Si desea configurar una alerta para responder a los mensajes de error de administración basada en directivas, vea los temas siguientes:  
   
--   [Crear un operador](../../ssms/agent/create-an-operator.md)  
+-   [Create an Operator](../../ssms/agent/create-an-operator.md)  
   
--   [Crear una alerta con un número de error](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [Create an Alert Using an Error Number](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Asignar alertas a un operador](../../ssms/agent/assign-alerts-to-an-operator.md)  
+-   [Assign Alerts to an Operator](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
 ## <a name="permissions"></a>Permisos  
  Cuando las directivas se evalúan a petición, se ejecutan en el contexto de seguridad del usuario. Para escribir en el registro de errores, el usuario debe tener los permisos ALTER TRACE o ser miembro del rol fijo de servidor sysadmin. Las directivas que evalúe un usuario que tenga menos privilegios no escribirán en el registro de eventos y no desencadenarán una alerta.  

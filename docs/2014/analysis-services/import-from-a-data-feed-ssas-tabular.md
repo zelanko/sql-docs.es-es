@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080571"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importar datos de una fuente de distribución de datos (SSAS tabular)
@@ -24,21 +24,21 @@ ms.locfileid: "66080571"
   
 -   [Descripción de la importación desde una fuente de distribución de datos](#prereq)  
   
--   [Importación de datos desde un conjunto de datos de Azure Datamarket](#azure)  
+-   [Importar datos de un conjunto de datos de Azure DataMarket](#azure)  
   
--   [Importar fuentes de datos de orígenes de datos públicos o corporativos](#importdata)  
+-   [Importar fuentes de distribución de datos de orígenes de datos públicos o corporativos](#importdata)  
   
--   [Importar fuentes de datos de listas de SharePoint](#importlist)  
+-   [Importar fuentes de distribución de datos de listas de SharePoint](#importlist)  
   
--   [Importar fuentes de datos de informes de Reporting Services](#importreport)  
+-   [Importar fuentes de distribución de datos de informes de Reporting Services](#importreport)  
   
-##  <a name="prereq"></a>Descripción de la importación desde una fuente de distribución de datos  
+##  <a name="understanding-import-from-a-data-feed"></a><a name="prereq"></a>Descripción de la importación desde una fuente de distribución de datos  
  En un modelo tabular, puede importar datos de los siguientes tipos de fuentes de distribución de datos:  
   
- **Reporting Services informe**  
+ **Informe de Reporting Services**  
  Puede usar un informe de Reporting Services publicado en un sitio de SharePoint o un servidor de informes como origen de datos en un modelo. Al importar datos de un informe de Reporting Services, se debe especificar un archivo de definición de informe (.rdl) como origen de datos.  
   
- **Conjunto de Azure Datamarket**  
+ **Conjunto de datos de Azure DataMarket**  
  Azure DataMarket es un servicio que proporciona un único canal de catálogo de soluciones y entrega de información como servicio basado en la nube. Los conjuntos de datos de Azure DataMarket requieren una clave de cuenta en lugar de una cuenta de usuario de Windows.  
   
  **Fuentes Atom**  
@@ -46,7 +46,7 @@ ms.locfileid: "66080571"
   
  Los datos de una fuente de distribución de datos se agregan a un modelo una sola vez durante la importación. Para obtener datos actualizados desde la fuente, puede actualizar los datos desde el diseñador de modelos o configurar una programación de actualización de datos para el modelo una vez se haya implementado este en una instancia de producción de Analysis Services. Para más información, vea [Procesar datos &#40;SSAS tabular&#41;](process-data-ssas-tabular.md).  
   
-##  <a name="azure"></a>Importación de datos desde un conjunto de datos de Azure Datamarket  
+##  <a name="import-data-from-an-azure-datamarket-dataset"></a><a name="azure"></a>Importación de datos desde un conjunto de datos de Azure Datamarket  
  Puede importar datos de un conjunto de datos de Azure DataMarket como una tabla en el modelo.  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>Para importar datos de un conjunto de datos de Azure DataMarket  
@@ -69,11 +69,11 @@ ms.locfileid: "66080571"
   
 9. En la página del asistente **Seleccionar tablas y vistas** , en el campo **Nombre descriptivo** , escriba un nombre descriptivo que identifique la tabla que contendrá estos datos una vez se hayan importado.  
   
-10. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **OK**.  
+10. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **Aceptar**.  
   
 11. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
-##  <a name="importdata"></a>Importar fuentes de datos de orígenes de datos públicos o corporativos  
+##  <a name="import-data-feeds-from-public-or-corporate-data-sources"></a><a name="importdata"></a>Importar fuentes de datos de orígenes de datos públicos o corporativos  
  Puede tener acceso a fuentes públicas o servicios de datos personalizados que generen fuentes Atom desde sistemas de base de datos propios o heredados.  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>Para importar datos de fuentes de distribución de datos públicos o corporativos  
@@ -107,11 +107,11 @@ ms.locfileid: "66080571"
   
 8.  En la página del asistente **Seleccionar tablas y vistas** , en el campo **Nombre descriptivo** , reemplace el contenido de la fuente de distribución de datos con un nombre descriptivo que identifique la tabla que contendrá estos datos una vez se hayan importado.  
   
-9. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **OK**.  
+9. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **Aceptar**.  
   
 10. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
-##  <a name="importlist"></a>Importar fuentes de datos de listas de SharePoint  
+##  <a name="import-data-feeds-from-sharepoint-lists"></a><a name="importlist"></a>Importar fuentes de datos de listas de SharePoint  
  Puede importar cualquier lista de SharePoint que tenga un botón **Exportar como fuente de distribución de datos** en el menú de la cinta (SharePoint). Puede hacer clic en este botón para exportar la lista como una fuente.  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>Para importar fuentes de distribución de datos de una lista de SharePoint  
@@ -139,11 +139,11 @@ ms.locfileid: "66080571"
     > [!NOTE]  
     >  Solo puede importar listas que contienen columnas.  
   
-9. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **OK**.  
+9. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **Aceptar**.  
   
 10. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
-##  <a name="importreport"></a>Importar fuentes de datos de informes de Reporting Services  
+##  <a name="import-data-feeds-from-reporting-services-reports"></a><a name="importreport"></a>Importar fuentes de datos de informes de Reporting Services  
  Si tiene una implementación de Reporting Services de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , puede usar la extensión de representación de Atom para generar una fuente de distribución de datos a partir de un informe existente.  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>Para importar datos de informe de un informe de Reporting Services publicado  
@@ -185,7 +185,7 @@ ms.locfileid: "66080571"
   
      De forma predeterminada, se usa el nombre del control de Reporting Services si no se ha asignado ningún nombre: por ejemplo, Tablix1 o Tablix2. Recomendamos cambiar este nombre durante la importación para que pueda identificar el origen de la fuente de distribución de datos importada más fácilmente.  
   
-11. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **OK**.  
+11. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **Aceptar**.  
   
 12. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
@@ -194,6 +194,6 @@ ms.locfileid: "66080571"
  [Tipos de datos admitidos &#40;SSAS tabular&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
  [Suplantación &#40;SSAS tabular&#41;](tabular-models/impersonation-ssas-tabular.md)   
  [Procesar datos &#40;SSAS tabular&#41;](process-data-ssas-tabular.md)   
- [Importar datos &#40;&#41;tabular de SSAS](import-data-ssas-tabular.md)  
+ [Importar datos &#40;SSAS tabular&#41;](import-data-ssas-tabular.md)  
   
   

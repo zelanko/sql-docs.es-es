@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066611"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Establecer el tipo de datos de una columna (SSAS tabular)
@@ -50,7 +50,7 @@ ms.locfileid: "66066611"
   
 |Tipos de datos de los modelos|  
 |----------------------|  
-|Texto<br /><br /> Número decimal<br /><br /> Número entero<br /><br /> Moneda<br /><br /> TRUE/FALSE<br /><br /> Date|  
+|Text<br /><br /> Decimal Number<br /><br /> Whole Number<br /><br /> Moneda<br /><br /> TRUE/FALSE<br /><br /> Fecha|  
   
  Si encuentra que sus datos tienen un tipo de datos equivocado, o al menos diferente al que deseaba, tiene varias opciones:  
   
@@ -68,6 +68,6 @@ ms.locfileid: "66066611"
  Para obtener información detallada sobre los tipos de datos que se usan en los modelos semánticos de Business Intelligence, cómo se convierten implícitamente y cómo se usan los diferentes tipos de datos en las fórmulas, vea [Tipos de datos compatibles &#40;SSAS tabular&#41;](data-types-supported-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Tipos de datos admitidos &#40;SSAS tabular&#41;](data-types-supported-ssas-tabular.md)  
+ [Tipos de datos compatibles &#40;SSAS tabular&#41;](data-types-supported-ssas-tabular.md)  
   
   

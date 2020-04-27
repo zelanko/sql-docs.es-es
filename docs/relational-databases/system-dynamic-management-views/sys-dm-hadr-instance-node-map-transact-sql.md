@@ -21,10 +21,10 @@ ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900418"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
@@ -39,15 +39,15 @@ ms.locfileid: "67900418"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|IDENTIFICADOR único del grupo de disponibilidad como un recurso en el WSFC.|  
-|**instance_name**|**nvarchar(256)**|Nombre:**/*instancia*del servidor-de una instancia del servidor que hospeda una réplica para el grupo de disponibilidad.|  
+|**instance_name**|**nvarchar(256)**|Nombre:*server*/*instancia*del servidor-de una instancia del servidor que hospeda una réplica para el grupo de disponibilidad.|  
 |**node_name**|**nvarchar(256)**|Nombre del nodo de WSFC.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [Funciones y vistas de administración dinámica de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Vistas de catálogo de grupos de disponibilidad AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Always On vistas y funciones de administración dinámica de grupos de disponibilidad &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
+ [Always On vistas de catálogo de grupos de disponibilidad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   

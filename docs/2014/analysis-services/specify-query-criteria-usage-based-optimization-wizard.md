@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068222"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Especificar los criterios de consulta (Asistente para optimización basada en el uso)
@@ -40,15 +40,15 @@ ms.locfileid: "66068222"
  Filtra consultas en el registro de consultas basándose en una fecha y hora de inicio. Elija o escriba una fecha en la lista desplegable.  
   
 > [!NOTE]  
->  Si no se selecciona la **Fecha de finalización** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o posteriores a esta.  
+>   Si no se selecciona **Fecha de finalización** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o posteriores a ésta.  
   
  **Fecha de finalización**  
  Filtra consultas en el registro de consultas basándose en una fecha y hora de finalización. Elija o escriba una fecha en la lista desplegable.  
   
 > [!NOTE]  
->  Si no se selecciona la **Fecha de inicio** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o anteriores a esta.  
+>   Si no se selecciona **Fecha de inicio** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o anteriores a ésta.  
   
- **Pueden**  
+ **Usuarios**  
  Filtra consultas en el registro de consultas basándose en un conjunto de usuarios especificado. Haga clic en el botón de puntos suspensivos (**...**) para mostrar el cuadro de diálogo **Selección de usuarios** y elegir los usuarios sobre los que filtrar las consultas. Para obtener más información sobre el cuadro de diálogo **Selección de usuarios**, vea [Cuadro de diálogo Selección de usuarios &#40;Analysis Services - Datos multidimensionales&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Consultas más frecuentes**  

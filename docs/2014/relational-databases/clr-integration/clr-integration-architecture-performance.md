@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874500"
 ---
 # <a name="performance-of-clr-integration"></a>Rendimiento de la integración CLR
@@ -46,8 +46,7 @@ ms.locfileid: "62874500"
 ### <a name="streaming-table-valued-functions"></a>Funciones con valores de tabla de transmisión por secuencias  
  Después de invocar una función, las aplicaciones suelen necesitar devolver una tabla. Entre los ejemplos se incluye la lectura de datos tabulares de un archivo como parte de una operación de importación y la conversión de valores separados por comas en una representación relacional. Normalmente, esto se puede llevar a cabo materializando y rellenando la tabla de resultados antes de que pueda consumirla el autor de las llamadas. La integración de CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] introduce una función con valores de tabla de transmisión por secuencias (STVF), que es un nuevo mecanismo de extensibilidad. Las STVF administradas funcionan mejor que las implementaciones de procedimiento almacenado extendido comparables.  
   
- Las STVF son funciones administradas que devuelven una interfaz `IEnumerable`. 
-  `IEnumerable` tiene métodos para navegar por el conjunto de resultados devuelto por la STVF. Cuando se invoca la STVF, la interfaz `IEnumerable` devuelta se conecta directamente al plan de consulta. El plan de consulta llama a los métodos `IEnumerable` cuando necesita capturar filas. Este modelo de iteración permite utilizar los resultados inmediatamente después de que se genere la primera fila, en lugar de esperar hasta que se rellene la tabla completa. Reduce también significativamente la cantidad de memoria que se utiliza al invocar la función.  
+ Las STVF son funciones administradas que devuelven una interfaz `IEnumerable`. `IEnumerable` tiene métodos para navegar por el conjunto de resultados devuelto por la STVF. Cuando se invoca la STVF, la interfaz `IEnumerable` devuelta se conecta directamente al plan de consulta. El plan de consulta llama a los métodos `IEnumerable` cuando necesita capturar filas. Este modelo de iteración permite utilizar los resultados inmediatamente después de que se genere la primera fila, en lugar de esperar hasta que se rellene la tabla completa. Reduce también significativamente la cantidad de memoria que se utiliza al invocar la función.  
   
 ### <a name="arrays-vs-cursors"></a>Matrices frente a cursores  
  Cuando los cursores de [!INCLUDE[tsql](../../../includes/tsql-md.md)] deben recorrer datos que se expresan más fácilmente como una matriz, se puede utilizar el código administrado con significativas mejoras del rendimiento.  
@@ -66,8 +65,7 @@ ms.locfileid: "62874500"
 >  No se recomienda desarrollar nuevos procedimientos almacenados extendidos, puesto que esta característica ha quedado desusada.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Serialización nativa para los tipos definidos por el usuario  
- Los tipos definidos por el usuario (UDT) están diseñados como un mecanismo de extensibilidad para el sistema de tipo escalar. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementa un formato de serialización para UDT denominado `Format.Native`. Durante la compilación se examina la estructura del tipo para generar el MSIL personalizado para esa definición de tipo concreta.  
+ Los tipos definidos por el usuario (UDT) están diseñados como un mecanismo de extensibilidad para el sistema de tipo escalar. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementa un formato de serialización para UDT denominado `Format.Native`. Durante la compilación se examina la estructura del tipo para generar el MSIL personalizado para esa definición de tipo concreta.  
   
  La serialización nativa es la implementación predeterminada para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La serialización definida por el usuario invoca un método definido por el autor de tipo para realizar la serialización. Se debe utilizar la serialización `Format.Native` siempre que sea posible para obtener el máximo rendimiento.  
   
@@ -80,6 +78,6 @@ ms.locfileid: "62874500"
  Para que la recolección de elementos no utilizados administrada se ejecute y escale correctamente en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], evite grandes asignaciones únicas. Las asignaciones con un tamaño superior a 88 kilobytes (KB) se colocarán en el montón de objeto grande, lo que hará que la recolección de elementos no utilizados se ejecute y escale mucho peor que muchas asignaciones más pequeñas. Por ejemplo, si necesita asignar una matriz multidimensional grande, es preferible asignar una matriz escalonada (dispersa).  
   
 ## <a name="see-also"></a>Consulte también  
- [Tipos definidos por el usuario de CLR](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos CLR definidos por el usuario](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

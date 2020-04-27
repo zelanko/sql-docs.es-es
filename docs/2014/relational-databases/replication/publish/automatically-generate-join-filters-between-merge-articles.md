@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020978"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla (SQL Server Management Studio)
-  Genere automáticamente un conjunto de filtros de combinación en la página **filtrar filas de tabla** del Asistente para nueva publicación o en la página **filtrar filas** del cuadro de diálogo Propiedades de la **publicación \<: publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+  Genere automáticamente un conjunto de filtros de combinación en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
 >  Si genera automáticamente un conjunto de filtros de combinación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** después de haber inicializado las suscripciones para la publicación, deberá generar una nueva instantánea y volver a inicializar todas las suscripciones una vez realizado el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
@@ -80,7 +80,7 @@ ms.locfileid: "63020978"
 1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Join Filters](../merge/join-filters.md)   
+ [Filtros de combinación](../merge/join-filters.md)   
  [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479536"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permisos de entidad (Master Data Services)
@@ -37,7 +37,7 @@ ms.locfileid: "65479536"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Solo lectura**|Se muestra la entidad, pero el usuario no puede agregar, quitar o cambiar miembros.|  
-|**Update**|Se muestra la entidad y el usuario puede agregar, quitar y cambiar los miembros.|  
+|**Actualizar**|Se muestra la entidad y el usuario puede agregar, quitar y cambiar los miembros.|  
 |**Deny**|No se muestra la entidad.|  
   
 ## <a name="see-also"></a>Consulte también  

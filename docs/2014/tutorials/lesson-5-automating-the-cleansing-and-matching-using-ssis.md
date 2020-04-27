@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489753"
 ---
-# <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lección 5: automatizar la limpieza y la búsqueda de coincidencias con SSIS
+# <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lección 5: Automatización de la limpieza y la búsqueda de coincidencias con SSIS
   En la lección 1, ha creado la base de conocimiento proveedores y la ha usado para limpiar los datos de la lección 2 y buscar los datos coincidentes en la lección 3 mediante el **cliente DQS**de la herramienta. En un escenario real, puede que tenga que extraer datos de un origen que DQS no admita o que desee automatizar el proceso de limpieza y búsqueda de coincidencias sin tener que usar la herramienta **cliente DQS** . SQL Server Integration Services (SSIS) tiene componentes que puede usar para integrar datos de varios orígenes heterogéneos y un componente de **[transformación limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx)** para invocar la funcionalidad de limpieza expuesta por DQS. Actualmente, DQS no expone la funcionalidad de búsqueda de coincidencias que debe usar SSIS, pero puede usar la **[transformación agrupación aproximada](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** para identificar duplicados en los datos.  
   
  Puede cargar datos en MDS mediante la **característica de almacenamiento provisional basado en entidad**. Cuando crea una entidad en MDS, se crean automáticamente las tablas de ensayo y los procedimientos almacenados correspondientes. Por ejemplo, al crear la entidad supplier, se crearán automáticamente la tabla **STG. supplier_Leaf** y el procedimiento almacenado **STG. udp_Supplier_Leaf** . Use las tablas de ensayo y los procedimientos para crear, actualizar y eliminar miembros de entidad. En esta lección, creará nuevos miembros para la entidad Proveedor. Para cargar datos en el servidor de MDS, el paquete SSIS los carga primero en la tabla de ensayo stg.supplier_Leaf y después desencadena el procedimiento almacenado stg.udp_Supplier_Leaf asociado. Consulte [importación de datos](../master-data-services/overview-importing-data-from-tables-master-data-services.md) para obtener más información.  

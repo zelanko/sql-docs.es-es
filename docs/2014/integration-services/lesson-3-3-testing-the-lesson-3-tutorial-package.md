@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891593"
 ---
-# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Paso 3: Probar el paquete del tutorial de la lección 3
+# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Paso 3: Prueba del paquete del tutorial de la lección 3
   En esta tarea, ejecutará el paquete Lesson 3.dtsx. Al ejecutar el paquete, en la ventana Registrar eventos se mostrará una lista de las entradas del registro que se escriben en el archivo de registro. Una vez que haya finalizado la ejecución del paquete, comprobará el contenido del archivo de registro generado por el proveedor de registro.  
   
 ## <a name="checking-the-package-layout"></a>Comprobar el diseño del paquete  
@@ -46,6 +46,6 @@ ms.locfileid: "62891593"
 -   Aunque la semántica de la información generada para los `PipelineExecutionPlan` eventos `PipelineExecutionTrees` y está fuera del ámbito de este tutorial, puede ver que la primera línea muestra los campos de información especificados en la pestaña **detalles** del cuadro de diálogo **configurar registros de SSIS** . Además, puede comprobar que los dos eventos que ha seleccionado, PipelineExecutionPlan y PipelineExecutionTrees, se han registrado para cada iteración del bucle Foreach.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Agregar redirección de flujo de errores](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Lección 4: Adición de redirección de flujo de errores](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

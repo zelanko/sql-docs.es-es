@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066263"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Desplazarse por el Diseñador de consultas y vistas (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63066263"
   
 ## <a name="any-pane"></a>En cualquier panel  
   
-|**Para**|**Presione**|**Hizo**|  
+|**To**|**Presione**|**Hacer clic en .**|  
 |------------|---------------|---------------|  
 |Desplazarse por los paneles del Diseñador de consultas y vistas|F6, MAYÚS+F6|En cualquier parte del panel de destino|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63066263"
   
 ## <a name="diagram-pane"></a>panel Diagrama  
   
-|**Para**|**Presione**|**Hizo**|  
+|**To**|**Presione**|**Hacer clic en .**|  
 |------------|---------------|---------------|  
 |Desplazarse por las tablas, objetos con estructura de tabla, y líneas de combinación (si existen)|TAB, o MAYÚS+TAB|En la tabla, el objeto con estructura de tabla o la línea de combinación a la que desea moverse|  
 |Desplazarse por las columnas de una tabla o un objeto con estructura de tabla|Teclas de dirección|En la columna a la que desea ir|  
@@ -51,7 +51,7 @@ ms.locfileid: "63066263"
   
 ## <a name="criteria-pane"></a>Panel de criterios  
   
-|A|Presione|Haga clic en |  
+|A|Presione|Haga clic en|  
 |--------|-----------|-----------|  
 |Desplazarse por las celdas|Teclas de dirección o TAB o MAYÚS+TAB|En la celda de destino|  
 |Desplazarse a la última fila de la columna seleccionada|CTRL+FLECHA ABAJO||  
@@ -61,11 +61,11 @@ ms.locfileid: "63066263"
 |Desplazarse en una lista desplegable|FLECHA ARRIBA o FLECHA ABAJO|En el botón de la celda|  
 |Seleccionar una columna completa de la cuadrícula|CTRL+BARRA ESPACIADORA|El encabezado de columna|  
 |Alternar entre el modo de edición y el modo de selección de celda|F2||  
-|Copiar el texto seleccionado de una celda al Portapapeles (en modo de edición)|Ctrl+C||  
+|Copiar el texto seleccionado de una celda al Portapapeles (en modo de edición)|CTRL+C||  
 |Cortar el texto seleccionado de una celda y copiarlo al Portapapeles (en modo de edición)|CTRL+X||  
 |Pegar texto del Portapapeles (en modo de edición)|CTRL+V||  
 |Alternar entre el modo de inserción y el modo de sobreimpresión mientras se edita una celda|INS||  
-|Activar o desactivar la casilla en la columna de resultados|Barra espaciadora|En la casilla|  
+|Activar o desactivar la casilla en la columna de resultados|BARRA ESPACIADORA|En la casilla|  
 |Borrar el contenido seleccionado de una celda|Delete||  
 |Borrar todos los valores de la columna de cuadrícula seleccionada|Delete||  
 |Insertar una fila entre las filas existentes|INS después de seleccionar la fila de cuadrícula||  
@@ -86,7 +86,7 @@ ms.locfileid: "63066263"
   
 ## <a name="results-pane"></a>Panel Resultados  
   
-|**Para**|**Presione**|**Hizo**|  
+|**To**|**Presione**|**Hacer clic en .**|  
 |------------|---------------|---------------|  
 |Moverse entre los celdas|Teclas de dirección o TAB o MAYÚS+TAB|En la celda de destino|  
 |Desplazarse a la primera o la última celda de la fila actual|INICIO o FIN||  
@@ -101,8 +101,8 @@ ms.locfileid: "63066263"
 |Deshacer los cambios realizados en la celda actual|ESC en la celda modificada||  
 |Deshacer los cambios realizados en la fila actual|ESC en cualquier celda que no se haya modificado||  
 |Escribir un valor NULL en una celda|CTRL+0||  
-|Copiar al Portapapeles las columnas o filas seleccionadas|Ctrl+C||  
-|Copiar el texto seleccionado de una celda al Portapapeles (en modo de edición)|Ctrl+C||  
+|Copiar al Portapapeles las columnas o filas seleccionadas|CTRL+C||  
+|Copiar el texto seleccionado de una celda al Portapapeles (en modo de edición)|CTRL+C||  
 |Cortar el texto seleccionado de una celda al Portapapeles (en modo de edición)|CTRL+X||  
 |Pegar texto del Portapapeles (en modo de edición)|CTRL+V||  
   

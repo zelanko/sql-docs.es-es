@@ -11,32 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071853"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurar y ver archivos de registro de SharePoint y el registro de diagnósticos (PowerPivot para SharePoint)
-  
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se graban en archivos de registro de SharePoint. Use la información de este tema para configurar los niveles de registro y ver la información del archivo de registro. Puede controlar qué eventos de servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se registran en el archivo. También puede controlar la gravedad de los mensajes que se registran. Para obtener más información, consulte [configurar la recopilación de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  En este tema:  
   
 -   [Ubicación del archivo de registro](#bkmk_filelocation)  
   
--   [Modificar los niveles de registro de diagnóstico para categorías de eventos individuales](#bkmk_modifyloglevels)  
+-   [Modificar los niveles mínimos del registro de diagnóstico para categorías de eventos individuales](#bkmk_modifyloglevels)  
   
--   [Cómo ver los archivos de registro de SharePoint](#bkmk_how2viewlogfiles)  
+-   [Ver archivos de registro de SharePoint](#bkmk_how2viewlogfiles)  
   
-##  <a name="bkmk_filelocation"></a>Ubicación del archivo de registro  
+##  <a name="log-file-location"></a><a name="bkmk_filelocation"></a>Ubicación del archivo de registro  
  De manera predeterminada, los archivos de registro de SharePoint se guardan en la ubicación siguiente:  
   
  `C:\Program files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS`  
   
  La carpeta LOGS contiene archivos de registro (`.log`), archivos de datos (`.txt`) y archivos de uso (`.usage`). La convención de nomenclatura de los archivos para un registro de seguimiento de SharePoint es el nombre del servidor seguido de una fecha y una marca de tiempo. Los registros de seguimiento de SharePoint se crean a intervalos normales y siempre que hay IISRESET. Es común tener muchos registros de seguimiento dentro de un período de 24 horas.  
   
-##  <a name="bkmk_modifyloglevels"></a>Modificar los niveles de registro de diagnóstico para categorías de eventos individuales  
+##  <a name="modify-diagnostic-logging-levels-for-individual-event-categories"></a><a name="bkmk_modifyloglevels"></a>Modificar los niveles de registro de diagnóstico para categorías de eventos individuales  
  De forma predeterminada, el registro de ULS de eventos de PowerPivot se establece en *Mediano*. Este valor es nuevo en SQL Server 2012. Si actualizó un servidor de la versión anterior, el nivel de registro podría seguir establecido en *Detallado*, que es el predeterminado en SQL Server 2008 R2. Si está acostumbrado a revisar los registros de ULS para obtener información de uso del servidor PowerPivot, observará que, como resultado de este cambio, hay menos información sobre las operaciones del servidor PowerPivot.  
   
  Salvo por las excepciones, que son de tipo *Alta*, todos los mensajes de PowerPivot pertenecen a la categoría Detallado. Si desea registrar entradas para las operaciones rutinarias de servidor como las conexiones, solicitudes o informes de consulta, debe cambiar el nivel de registro a Detallado.  
@@ -51,9 +50,9 @@ ms.locfileid: "66071853"
   
 4.  Expanda la categoría y seleccione categorías individuales.  
   
-     **Solicitud de página de aplicación** especifica los eventos desencadenados por la aplicación de servicio al localizar [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] un para cargar un origen de datos PowerPivot y comunicarse con otros servidores de la granja.  
+     **Solicitud de página de aplicación** especifica los eventos desencadenados por la aplicación de servicio al localizar un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] para cargar un origen de datos PowerPivot y comunicarse con otros servidores de la granja.  
   
-     El **procesamiento de solicitudes** especifica los eventos desencadenados por las solicitudes de consulta en una base de datos PowerPivot que se carga en un servidor de la granja.  
+     **Procesamiento de solicitudes** especifica los eventos que desencadenan las solicitudes de consultas a un origen de datos PowerPivot cargado en un servidor de la granja.  
   
      **Uso** especifica un evento relacionado con la recopilación de datos de uso de PowerPivot.  
   
@@ -65,9 +64,9 @@ ms.locfileid: "66071853"
   
 8.  Seleccione **Detallado** para registrar todos los eventos en el registro de seguimiento.  
   
-9. Haga clic en **OK**.  
+9. Haga clic en **Aceptar**.  
   
-##  <a name="bkmk_how2viewlogfiles"></a>Cómo ver los archivos de registro de SharePoint  
+##  <a name="how-to-view-sharepoint-log-files"></a><a name="bkmk_how2viewlogfiles"></a>Cómo ver los archivos de registro de SharePoint  
  Los archivos de registro son archivos de texto. Puede abrirlos en cualquier editor de texto. También puede utilizar aplicaciones de visor de registros de otros fabricantes.  
   
 #### <a name="use-a-text-editor"></a>Utilizar un editor de texto  
@@ -127,7 +126,7 @@ ms.locfileid: "66071853"
   
 ## <a name="see-also"></a>Consulte también  
  [Recopilación de datos de uso de PowerPivot](power-pivot-usage-data-collection.md)   
- [Ver y leer los archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [Ver y leer archivos de registro de instalación de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Configurar la recopilación de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

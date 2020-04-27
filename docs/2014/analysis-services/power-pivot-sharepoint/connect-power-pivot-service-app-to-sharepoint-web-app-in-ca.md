@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071679"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Conectar una aplicación de servicio PowerPivot a una aplicación Web de SharePoint en administración central
@@ -29,7 +29,7 @@ ms.locfileid: "66071679"
   
  [Agregar la aplicación de servicios PowerPivot a una lista de asociaciones de servicio personalizada](#custom)  
   
-##  <a name="default"></a>Agregar la aplicación de servicios PowerPivot al grupo predeterminado  
+##  <a name="add-powerpivot-services-application-to-the-default-group"></a><a name="default"></a>Agregar la aplicación de servicios PowerPivot al grupo predeterminado  
  Una lista de asociaciones de servicio es una lista de servicios compartidos que proporcionan recursos a otras aplicaciones web de SharePoint en la granja. Hay un grupo predeterminado de asociaciones del servicio para la granja.  
   
  Para estar en la lista, una aplicación de servicio PowerPivot puede agregarse al crear la aplicación o después siguiendo estos pasos.  
@@ -40,12 +40,12 @@ ms.locfileid: "66071679"
   
 3.  Active la casilla situada al lado de la aplicación de servicio PowerPivot (lo que se indica por el nombre de tipo `PowerPivot Service Application Proxy`). Si tiene más de una aplicación de servicio PowerPivot, simplemente elija una.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
-##  <a name="custom"></a>Agregar la aplicación de servicios PowerPivot a una lista de asociaciones de servicio personalizadas  
+##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>Agregar la aplicación de servicios PowerPivot a una lista de asociaciones de servicio personalizadas  
  El grupo personalizado puede reemplazar a una lista predeterminada. Una lista personalizada se crea específicamente para una sola aplicación web de SharePoint. Invalida el grupo predeterminado y lo reemplaza solo con las asociaciones de servicio que un administrador o servicio de la granja especifique. Si creó varias aplicaciones de servicio PowerPivot, debe utilizar una lista personalizada para especificar cuál utilizar. Otras aplicaciones web no pueden reutilizar una lista personalizada. Solo se aplica a la aplicación web para la que se creó.  
   
-1.  En administración central, en **Administración de aplicaciones**, haga clic en **Administrar aplicaciones web**.  
+1.  En Administración central, en **Administración de aplicaciones**, haga clic en **Administrar aplicaciones web**.  
   
 2.  Seleccione la aplicación (por ejemplo, SharePoint -80).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66071679"
   
 5.  Active la casilla situada al lado de cada conexión de aplicación de servicio que desee utilizar. Si tiene varias aplicaciones de servicio PowerPivot (que se indican con el tipo establecido en `PowerPivot Service Application Proxy`), asegúrese de elegir solo una.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y configurar una aplicación de servicio PowerPivot en administración central](create-and-configure-power-pivot-service-application-in-ca.md)   

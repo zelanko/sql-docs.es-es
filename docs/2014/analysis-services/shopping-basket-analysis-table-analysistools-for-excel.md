@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068681"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Análisis de la cesta de compras (Herramientas de análisis de tabla para Excel)

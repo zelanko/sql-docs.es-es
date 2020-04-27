@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081969"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama de red de dependencias (Complementos de minería de datos)
@@ -45,7 +45,7 @@ ms.locfileid: "66081969"
   
      \<> de unidad: \Archivos de programa (x85) \Microsoft SQL Server 2012 DM-ins  
   
-2.  Arrastre la forma **red de dependencias** hasta la página para iniciar el asistente. Haga clic en **Next**.  
+2.  Arrastre la forma **red de dependencias** hasta la página para iniciar el asistente. Haga clic en **Siguiente**.  
   
 3.  En la página de bienvenida del **Asistente para crear formas red de dependencias de Visio**, haga clic en **siguiente**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66081969"
      **Intensidad del borde**  
      Alterna la presentación de la intensidad del borde para todo el gráfico. Un borde es una conexión entre nodos. Puede utilizar el control deslizante para filtrar las conexiones que no son fuertes.  
   
-     **Hasta**  
+     **Slider**  
      El **control deslizante** le ayuda a controlar la intensidad de las relaciones que se muestran en el diagrama de red de dependencias.  
   
      Cada nodo del gráfico representa un estado. Una flecha representa una transición entre dos estados y la probabilidad asociada a la transición. Para reducir el número de nodos del gráfico, mueva la barra del control deslizante hacia arriba.  

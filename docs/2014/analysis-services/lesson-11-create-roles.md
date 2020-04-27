@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079267"
 ---
 # <a name="lesson-12-create-roles"></a>Lección 12: Crear roles
@@ -27,15 +27,15 @@ ms.locfileid: "66079267"
   
 -   Jefe de ventas: este rol puede incluir a los usuarios de la organización para los que desea tener permiso de lectura para todos los objetos y datos del modelo.  
   
--   Analista de ventas EE. UU.: este rol puede incluir a los usuarios de su organización para los que desea que solo puedan examinar los datos relacionados con las ventas en EE. UU. (Estados Unidos). Para este rol, usará una fórmula DAX para definir un *filtro de fila* que hace que los miembros solo puedan examinar los datos de Estados Unidos.  
+-   Analista de ventas EE. UU.: este rol puede incluir a los usuarios de su organización para los que desea que solo puedan examinar los datos relacionados con las ventas en EE. UU. (Estados Unidos). Para este rol, usará una fórmula DAX para definir un *Filtro de fila*, que restringe los miembros para que solo examinen los datos correspondientes a Estados Unidos.  
   
 -   Administrador: este rol puede incluir a los usuarios para los que desea tener permiso de administrador, lo que permite el acceso ilimitado y permisos para realizar tareas administrativas en la base de datos modelo.  
   
- Dado que las cuentas de usuario y de grupo de Windows de la organización son únicas, puede agregar cuentas de su propia organización a los miembros, Pero para este tutorial también puede dejar los miembros en blanco. Podrá probar el efecto de cada rol más adelante en la Lección 12: Analizar en Excel.  
+ Dado que las cuentas de usuario y grupo de Windows de su organización son únicas, puede agregar cuentas de su propia organización a los miembros. Sin embargo, para este tutorial, también puede dejar los miembros en blanco. Todavía podrá probar el efecto de cada rol más adelante en la lección 12: Analizar en Excel.  
   
  Tiempo estimado para completar esta lección: **15 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 11: Crear particiones](lesson-10-create-partitions.md).  
   
 ## <a name="create-roles"></a>Crear roles  
@@ -58,7 +58,7 @@ ms.locfileid: "66079267"
   
 7.  Compruebe las selecciones y, a continuación, haga clic en **Aceptar** .  
   
-#### <a name="to-create-a-sales-analyst-us-user-role"></a>Para crear el rol de usuario Analista de ventas de EE. UU.  
+#### <a name="to-create-a-sales-analyst-us-user-role"></a>Para crear un rol de usuario Analista de ventas EE. UU.  
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y, luego, en **Roles**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66079267"
   
 6.  Compruebe las selecciones y, a continuación, haga clic en **Aceptar** .  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 13: Analizar en Excel](lesson-12-analyze-in-excel.md).  
   
   

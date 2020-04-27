@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081918"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Características en desuso de Analysis Services en SQL Server 2014
@@ -28,18 +28,18 @@ ms.locfileid: "66081918"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Características no admitidas en la siguiente versión de SQL Server  
  Las características del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] siguientes no se admitirán en la siguiente versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente.  
   
-|Category|Característica desusada|Sustituta|  
+|Categoría|Característica desusada|Sustituta|  
 |--------------|------------------------|-----------------|  
 |Función MDX|Función CalculationPassValue|Ninguno. El motor de OLAP administra el paso de cálculo. Esta función ya no se necesita.|  
 |Función MDX|CalculationCurrentPass, función|Ninguno. El motor de OLAP administra el paso de cálculo. Esta función ya no se necesita.|  
 |Expresiones multidimensionales (MDX)|La sugerencia del optimizador de consultas NON_EMPTY_BEHAVIOR estaba activada de forma predeterminada.|La sugerencia del optimizador de consultas NON_EMPTY_BEHAVIOR estará desactivada de forma predeterminada en una futura versión. Se trata de una sugerencia de optimización MDX que puede generar resultados incorrectos si no se usa correctamente.|  
 |Otros|Propiedad de celda intrínseca CELL_EVALUATION_LIST|Se proporcionaba originalmente una lista de las fórmulas evaluadas que se aplican a una celda. Está en blanco en esta versión de Analysis Services.  El orden de resolución se especifica en un script MDX. Para obtener más información, vea [Descripción de orden de paso y orden de resolución &#40;MDX&#41;](multidimensional-models/mdx/mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|  
-|Objetos|Ensamblados COM|Los ensamblados COM pueden suponer un riesgo para la seguridad. Compatibilidad con los ensamblados COM se quitará en una versión futura.|  
+|de la empresa|Ensamblados COM|Los ensamblados COM pueden suponer un riesgo para la seguridad. Compatibilidad con los ensamblados COM se quitará en una versión futura.|  
   
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Características no admitidas en una versión futura de SQL Server  
  Las características del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] siguientes se admiten en la próxima versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-|Category|Característica desusada|Sustituta|  
+|Categoría|Característica desusada|Sustituta|  
 |--------------|------------------------|-----------------|  
 |Modelos multidimensionales|Particiones remotas|Ninguno. Use particiones locales en su lugar. Vea [crear y administrar una partición Local &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) para obtener más información.|  
 |Modelos multidimensionales|Grupos de medida vinculados remotos|Un grupo de medida vinculado remoto es un grupo de medida vinculado que usa un origen de datos de un servidor remoto. Está previsto desusar la posibilidad de usar un origen de datos remoto para un grupo de medida vinculado.<br /><br /> No hay ningún reemplazo para esta característica. Se recomienda usar grupos de medida vinculados locales en su lugar. Consulte [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) para obtener más información.|  

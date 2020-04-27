@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cf214691c2bcffeb617d3f7534fac94f8941db5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144507"
 ---
 # <a name="open-log-file-viewer"></a>Abrir el Visor de archivos de registro
@@ -40,7 +40,7 @@ ms.locfileid: "63144507"
   
  El Visor del archivo de registros se puede abrir de varias maneras, dependiendo de la información que se desee ver.  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permisos  
  Para tener acceso a los archivos de registro en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en línea, se requiere pertenecer al rol fijo de servidor securityadmin.  
   
  Para tener acceso a los archivos de registro en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin conexión, se debe tener acceso de lectura tanto al espacio de nombres WMI **Root\Microsoft\SqlServer\ComputerManagement10** como a la carpeta donde están almacenados los archivos de registro. Para obtener más información, vea la sección Seguridad del tema [Ver archivos del registro sin conexión](view-offline-log-files.md).  

@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892288"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
-  Las variables almacenan valores [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que un paquete y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
+  Las variables almacenan valores que un paquete [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
   
  Puede usar variables en paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para los siguientes fines:  
   
@@ -43,15 +43,14 @@ ms.locfileid: "62892288"
 -   Generar expresiones que incluyen valores de variable. Por ejemplo, la transformación Columna derivada puede llenar una columna con el resultado obtenido mediante la multiplicación de un valor de variable por un valor de columna.  
   
 ## <a name="system-and-user-defined-variables"></a>Variables del sistema y definidas por el usuario  
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite dos tipos de variables: variables definidas por el usuario y variables del sistema. Las variables definidas por el usuario son definidas por los desarrolladores de paquetes y las variables del sistema son definidas por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Puede crear la cantidad de variables definidas por el usuario que requiera un paquete, pero no puede crear variables del sistema adicionales.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite dos tipos de variables: variables definidas por el usuario y variables del sistema. Las variables definidas por el usuario son definidas por los desarrolladores de paquetes y las variables del sistema son definidas por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Puede crear la cantidad de variables definidas por el usuario que requiera un paquete, pero no puede crear variables del sistema adicionales.  
   
  Todas las variables (del sistema y definidas por el usuario) se pueden usar en los enlaces de parámetros que usa la tarea Ejecutar SQL para asignar variables a parámetros en instrucciones SQL. Para más información, vea [Tarea Ejecutar SQL](control-flow/execute-sql-task.md) y [Parámetros y códigos de retorno en la tarea Ejecutar SQL](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
 > [!NOTE]  
 >  Los nombres de variables definidas por el usuario y variables del sistema distinguen mayúsculas y minúsculas.  
   
- Puede crear variables definidas por el usuario para todos los tipos de contenedores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: paquetes, contenedores de bucles Foreach, contenedores de bucles For, contenedores de secuencias, tareas y controladores de eventos. Las variables definidas por el usuario son miembros de la colección de variables del contenedor.  
+ Puede crear variables definidas por el usuario para todos los tipos de contenedores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : paquetes, contenedores de bucles Foreach, contenedores de bucles For, contenedores de secuencias, tareas y controladores de eventos. Las variables definidas por el usuario son miembros de la colección de variables del contenedor.  
   
  Si crea el paquete mediante el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , puede ver los miembros de las colecciones de variables en las carpetas **Variables** en la pestaña **Explorador de paquetes** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Las carpetas enumeran las variables definidas por el usuario y variables del sistema.  
   
@@ -92,11 +91,11 @@ ms.locfileid: "62892288"
  Expression  
  Especifica la expresión asignada a la variable.  
   
- Nombre  
+ NOMBRE  
  Especifica el nombre de la variable.  
   
  Espacio de nombres  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]proporciona dos espacios de nombres, **User** y **System**. Como opción predeterminada, las variables personalizadas están en el espacio de nombres **User** y las variables del sistema están en el espacio de nombres **System** . Puede crear espacios de nombres adicionales para variables definidas por el usuario y cambiar el nombre del espacio de nombres **User** , pero no puede cambiar el nombre del espacio de nombres **System** , agregar variables al espacio de nombres **System** o asignar variables del sistema a un espacio de nombres diferente.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona dos espacios de nombres, **User** y **System**. Como opción predeterminada, las variables personalizadas están en el espacio de nombres **User** y las variables del sistema están en el espacio de nombres **System** . Puede crear espacios de nombres adicionales para variables definidas por el usuario y cambiar el nombre del espacio de nombres **User** , pero no puede cambiar el nombre del espacio de nombres **System** , agregar variables al espacio de nombres **System** o asignar variables del sistema a un espacio de nombres diferente.  
   
  RaiseChangedEvent  
  Cuando la propiedad está establecida en `True`, se produce el evento de `OnVariableValueChanged` si el valor de la variable cambia.  
@@ -115,15 +114,15 @@ ms.locfileid: "62892288"
  IncludeInDebugDump  
  Indica si el valor variable está incluido en los archivos de volcado de depuración.  
   
- En el caso de las variables definidas por el usuario y las variables del **** sistema, el `true`valor predeterminado de la opción InclueInDebugDump es.  
+ En el caso de las variables definidas por el usuario y las variables del **InclueInDebugDump** sistema, el `true`valor predeterminado de la opción InclueInDebugDump es.  
   
- Sin embargo, para las variables definidas por el usuario, el sistema **** restablece la opción `false` IncludeInDebugDump en cuando se cumplen las condiciones siguientes:  
+ Sin embargo, para las variables definidas por el usuario, el sistema **IncludeInDebugDump** restablece la opción `false` IncludeInDebugDump en cuando se cumplen las condiciones siguientes:  
   
--   Si la propiedad de la variable **EvaluateAsExpression** se `true`establece en, el sistema restablece **** la opción IncludeInDebugDump `false`en.  
+-   Si la propiedad de la variable **EvaluateAsExpression** se `true`establece en, el sistema restablece **IncludeInDebugDump** la opción IncludeInDebugDump `false`en.  
   
-     Para incluir el texto de la expresión como el valor de la variable en los archivos de volcado de **** depuración `true`, establezca la opción IncludeInDebugDump en.  
+     Para incluir el texto de la expresión como el valor de la variable en los archivos de volcado de **IncludeInDebugDump** depuración `true`, establezca la opción IncludeInDebugDump en.  
   
--   Si el tipo de datos de la variable se cambia a una cadena, el sistema **** restablece la opción `false`IncludeInDebugDump en.  
+-   Si el tipo de datos de la variable se cambia a una cadena, el sistema **IncludeInDebugDump** restablece la opción `false`IncludeInDebugDump en.  
   
  Cuando el sistema restablece la opción **IncludeInDebugDump** en `false`, esto podría invalidar el valor seleccionado por el usuario.  
   
@@ -134,14 +133,14 @@ ms.locfileid: "62892288"
   
  ValueType  
  > [!NOTE]  
->  El valor de la propiedad aparece en la columna **Tipo de datos** en la ventana **Variables** .  
+>   El valor de la propiedad aparece en la columna **Tipo de datos** en la ventana **Variables** .  
   
  Especifica el tipo de datos del valor de la variable.  
   
 ## <a name="configuring-variables"></a>Configurar variables  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] o mediante programación.  
   
- Para obtener más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)], consulte [Ventana Variables](../../2014/integration-services/variables-window.md).  
+ Para obtener más información sobre las propiedades que puede configurar en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , consulte [Ventana Variables](../../2014/integration-services/variables-window.md).  
   
  Para obtener más información sobre las propiedades de las variables, así como recabar obtener más información sobre la configuración mediante programación de estas propiedades, vea <xref:Microsoft.SqlServer.Dts.Runtime.Variable>.  
   

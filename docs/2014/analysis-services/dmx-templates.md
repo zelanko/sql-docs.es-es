@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081560"
 ---
 # <a name="dmx-templates"></a>Plantillas DMX
@@ -72,7 +72,7 @@ ms.locfileid: "66081560"
   
 -   Consulta de predicción TOP en tabla anidada  
   
- **A**  
+ **Crear**  
   
  Use estas plantillas para crear modelos o estructuras de datos personalizados. No está limitado a los modelos que admiten los asistentes: puede usar cualquier algoritmo de minería de datos admitido por la instancia [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de a la que está conectado, incluidos los algoritmos de complemento.  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206843"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia masiva de variables de programa
@@ -54,28 +54,28 @@ ms.locfileid: "68206843"
   
 |Tipo de datos SQL de ODBC|Tipo de datos C de ODBC|bcp_bind parámetro de *tipo*|Tipos de datos de SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**óptico**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **variar caracteres**<br /><br /> **char varying**<br /><br /> **sysname**|  
-|SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**negrita**|  
+|SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
-|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**Decimal**<br /><br /> **Dec**<br /><br /> **money**<br /><br /> **SMALLMONEY**|  
-|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**alfanumérico**|  
+|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **Dec**<br /><br /> **money**<br /><br /> **smallmoney**|  
+|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (con signo)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (sin signo)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (con signo)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_SMALL_INT (sin signo)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
 |SQL_INTEGER (con signo)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
-|SQL_INTEGER (sin signo)|SQL_C_CHAR|SQLCHARACTER|**Decimal**<br /><br /> **Dec**|  
-|SQL_BIGINT (con signo y sin signo)|SQL_C_CHAR|SQLCHARACTER|**BIGINT**|  
-|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**impuestos**|  
+|SQL_INTEGER (sin signo)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **Dec**|  
+|SQL_BIGINT (con signo y sin signo)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
+|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
 |SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **variables binarias**|  
-|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**impresión**|  
+|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
@@ -102,8 +102,7 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite directamente los tipos de datos interval. No obstante, una aplicación puede almacenar secuencias de escape interval como cadenas de caracteres en una columna de caracteres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La aplicación puede leerlas para usarlas más tarde, pero no pueden usarse en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite directamente los tipos de datos interval. No obstante, una aplicación puede almacenar secuencias de escape interval como cadenas de caracteres en una columna de caracteres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La aplicación puede leerlas para usarlas más tarde, pero no pueden usarse en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  Las funciones de copia masiva pueden utilizarse para cargar rápidamente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos leídos de un origen de datos ODBC. Use [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) para enlazar las columnas de un conjunto de resultados a las variables de programa y, a continuación, utilice **bcp_bind** para enlazar las mismas variables de programa a una operación de copia masiva. Al llamar a [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md) o **SQLFetch** , se recupera una fila de datos del origen de datos ODBC en las variables de programa y, al llamar a [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) se copian de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forma masiva los datos de las variables de programa en.  
   

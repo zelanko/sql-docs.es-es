@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081316"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Rellenar desde ejemplo (Herramientas de análisis de tabla para Excel)
@@ -41,7 +41,7 @@ ms.locfileid: "66081316"
   
      Por ejemplo, si sabe por experiencia que existe un efecto causal entre una columna y la columna con valores ausentes, puede anular la selección de otras columnas para obtener mejores resultados.  
   
-     Haga clic en **OK**.  
+     Haga clic en **Aceptar**.  
   
 5.  Haga clic en **Ejecutar**.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070538"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Consulta y filtro (pestaña Explorador del Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -34,16 +34,16 @@ ms.locfileid: "66070538"
  **Hierarchy**  
  Seleccione la jerarquía en la que segmentar el subcubo.  
   
- **Operator**  
+ **Operador**  
  Seleccione el operador que define cómo se aplica la expresión de **Expresión de filtro** en la jerarquía seleccionada. En la tabla siguiente se describen los operadores disponibles.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Sea**|Los resultados están restringidos al conjunto definido en **Expresión de filtro**.|  
+|**Igual**|Los resultados están restringidos al conjunto definido en **Expresión de filtro**.|  
 |**No igual**|Los resultados están restringidos a los miembros excluidos por el conjunto definido en **Expresión de filtro**.|  
 |**De**|Los resultados están restringidos al conjunto con nombre seleccionado en **Expresión de filtro**.|  
 |**No en el**|Los resultados están restringidos a los miembros excluidos por el conjunto con nombre seleccionado en **Expresión de filtro**.|  
-|**Tuviera**|El resultado se restringe a los miembros cuyos nombres contienen la cadena de **Expresión de filtro**.|  
+|**Contains**|El resultado se restringe a los miembros cuyos nombres contienen la cadena de **Expresión de filtro**.|  
 |**Comienza por**|El resultado se restringe a los miembros cuyos nombres comienzan con la cadena de **Expresión de filtro**.|  
 |**Intervalo (Inclusivo)**|El resultado se restringe al intervalo elegido en **Expresión de filtro**.|  
 |**Intervalo (Exclusivo)**|El resultado se restringe a los miembros excluidos por el intervalo elegido en **Expresión de filtro**.|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078929"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modificar la dimensión Customer
@@ -50,14 +50,14 @@ ms.locfileid: "66078929"
   
 3.  Arrastre el **atributo City** desde el **Panel atributos** a la ** \<celda nuevo nivel>** del panel **jerarquías** , debajo del `State-Province` nivel.  
   
-4.  En el **Panel jerarquías** de la pestaña **estructura de dimensión** , haga clic con el botón secundario en la barra de título de la jerarquía jerarquía, seleccione `Customer Geography` **cambiar nombre**y, a continuación, escriba. ****  
+4.  En el **Panel jerarquías** de la pestaña **estructura de dimensión** , haga clic con el botón secundario en la barra de título de la jerarquía jerarquía, seleccione `Customer Geography` **cambiar nombre**y, a continuación, escriba. **Hierarchy**  
   
      El nombre de la jerarquía es ahora `Customer Geography`.  
   
 5.  En el menú **Archivo** , haga clic en **Guardar todo**.  
   
 ## <a name="adding-a-named-calculation"></a>Agregar un cálculo con nombre  
- Puede agregar un cálculo con nombre, que es una expresión SQL representada como columna calculada en una tabla de la vista del origen de datos. Aparece la expresión y se comporta como columna en la tabla. Los cálculos con nombre permiten ampliar el esquema relacional de las tablas existentes de la vista del origen de datos sin modificar la tabla en el origen de datos subyacente. Para obtener más información, consulte [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ Puede agregar un cálculo con nombre, que es una expresión SQL representada como columna calculada en una tabla de la vista del origen de datos. Aparece la expresión y se comporta como columna en la tabla. Los cálculos con nombre permiten ampliar el esquema relacional de las tablas existentes de la vista del origen de datos sin modificar la tabla en el origen de datos subyacente. Para obtener más información, vea [definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>Para agregar un cálculo con nombre  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66078929"
   
 3.  Abra la ventana Propiedades y haga clic en el botón **Ocultar automáticamente** de la barra de título para que permanezca abierta.  
   
-4.  En el **** campo de la propiedad nombre `Full Name`, escriba.  
+4.  En el **Name** campo de la propiedad nombre `Full Name`, escriba.  
   
 5.  Haga clic en el campo de la propiedad **NameColumn** situado en la parte inferior y, a continuación, haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **columna de nombre** .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66078929"
   
 2.  En el panel **Atributos** , mantenga pulsada la tecla CTRL mientras hace clic en cada uno de los atributos siguientes para seleccionarlos:  
   
-    -   **City**  
+    -   **Ciudad**  
   
     -   `Country-Region`  
   
@@ -140,15 +140,15 @@ ms.locfileid: "66078929"
   
     -   `Education`  
   
-    -   **Mujer**  
+    -   **Sexo**  
   
-    -   **Marca de propietario de la casa**  
+    -   **House Owner Flag**  
   
     -   **Marital Status**  
   
-    -   **Número de automóviles propiedad**  
+    -   **Number Cars Owned**  
   
-    -   **Número de hijos en casa**  
+    -   **Number Children At Home**  
   
     -   `Occupation`  
   
@@ -162,9 +162,9 @@ ms.locfileid: "66078929"
   
     -   **Dirección de correo electrónico**  
   
-    -   **Número**  
+    -   **Teléfono**  
   
-8.  En el ventana Propiedades, haga clic **** en el campo de la `Contacts`propiedad AttributeHierarchyDisplayFolder y escriba.  
+8.  En el ventana Propiedades, haga clic **AttributeHierarchyDisplayFolder** en el campo de la `Contacts`propiedad AttributeHierarchyDisplayFolder y escriba.  
   
 9. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66078929"
   
      Las columnas **City** y **StateProvinceName** se muestran ahora en la lista **Columnas de clave** .  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 6.  Para establecer la propiedad **NameColumn** del atributo **City** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
   
@@ -203,7 +203,7 @@ ms.locfileid: "66078929"
   
      Las columnas **EnglishCountryRegionName** y **StateProvinceName** se muestran ahora en la lista **Columnas de clave** .  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 6.  Para establecer la propiedad **NameColumn** del `State-Province` atributo, haga clic en el campo **NameColumn** en el ventana Propiedades y, a continuación, haga clic en el botón Examinar (**...**).  
   
@@ -234,7 +234,7 @@ ms.locfileid: "66078929"
   
 8.  En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
   
-9. Haga clic en **OK**.  
+9. Haga clic en **Aceptar**.  
   
 10. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66078929"
   
      El explorador muestra los clientes de la ciudad.  
   
-4.  Cambie al **Diseñador de cubos** para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para ello, haga doble clic en el cubo **Analysis Services tutorial** del nodo **cubos** de **Explorador de soluciones**.  
+4.  Cambie al **Diseñador de cubos** para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para ello, haga doble clic en el cubo **Tutorial de Analysis Services** en el nodo **Cubos** del **Explorador de soluciones**.  
   
 5.  Haga clic en la pestaña **Explorador** y haga clic en el botón Volver a conectar en la barra de herramientas del diseñador.  
   

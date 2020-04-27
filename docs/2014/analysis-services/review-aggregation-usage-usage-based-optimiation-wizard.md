@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070169"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Revisar el uso de agregaciones (Asistente para optimización basada en el uso)
   Utilice la página **Revisar el uso de agregaciones** para configurar el uso de agregaciones.  
   
 ## <a name="options"></a>Opciones  
- **Predeterminada**  
+ **Valor predeterminado**  
  Seleccione esta opción para establecer como predeterminada la configuración del uso de agregaciones del atributo. Esta configuración permite que el diseñador aplique una regla predeterminada basada en el tipo de atributo y dimensión.  
   
  **Completo**  

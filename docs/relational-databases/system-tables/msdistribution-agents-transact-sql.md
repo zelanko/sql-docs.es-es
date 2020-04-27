@@ -18,10 +18,10 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907413"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "67907413"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Id. del Agente de distribución.|  
-|**Name**|**nvarchar(100**|Nombre del Agente de distribución.|  
+|**id**|**int**|Id. del Agente de distribución.|  
+|**name**|**nvarchar(100**|Nombre del Agente de distribución.|  
 |**publisher_database_id**|**int**|El Id. de la base de datos del publicador.|  
 |**publisher_id**|**smallint**|IDENTIFICADOR del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
@@ -58,7 +58,7 @@ ms.locfileid: "67907413"
 |**dts_package_location**|**int**|La ubicación del paquete. La ubicación del paquete puede ser **Distributor** o **Subscriber**.|  
 |**Junction**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server autenticación de<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
+|**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server autenticación de<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**subscriber_login**|**sysname**|Inicio de sesión que se utilizará en la conexión con el suscriptor.|  
 |**subscriber_password**|**nvarchar (524)**|Es el valor cifrado de la contraseña utilizada al conectarse al suscriptor.|  
 |**reset_partial_snapshot_progress**|**bit**|Indica si se descartará una instantánea descargada parcialmente para que todo el proceso de instantánea pueda empezar de nuevo.|  

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031939"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Opciones (Explorador de objetos de SQL Server, página scripting)
@@ -39,7 +39,7 @@ ms.locfileid: "63031939"
   
 ### <a name="general-scripting-options"></a>Opciones generales de scripts  
  **Delimitar instrucciones individuales**  
- Separa instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] individuales mediante un separador de lotes. Para cambiar el separador de lotes predeterminado del **Editor de consultas**, seleccione **Herramientas**/**Opciones**/**Ejecución de la consulta**/**SQL Server**/**General**/**Separador de lotes**. El valor predeterminado es False. Para obtener más información, vea [GO &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
+ Separa instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] individuales mediante un separador de lotes. Para cambiar el separador de lotes predeterminado para el **Editor de consultas**, seleccione **herramientas**/**Opciones**/**ejecución**/de consultas**SQL Server**/**General**/**separador de lotes**general. El valor predeterminado es False. Para obtener más información, vea [GO &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
   
  **Incluir encabezados descriptivos**  
  Agrega comentarios descriptivos al script dividiéndolo en secciones para cada objeto. El valor predeterminado es True. Para obtener más información, vea [comentarios &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql).  
@@ -63,7 +63,7 @@ ms.locfileid: "63031939"
  **Generar script para objetos dependientes**  
  Genera un script para objetos adicionales que son necesarios cuando se ejecuta el script para el objeto seleccionado. El valor predeterminado es False.  
   
- **Incluir cláusula IF NOT EXISTs**  
+ **Incluir cláusula IF NOT EXISTS**  
  Incluye una instrucción para comprobar que los objetos no existen en la base de datos antes de intentar crear el objeto. El valor predeterminado es False. Para obtener más información, vea [si... De lo contrario &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/if-else-transact-sql) y [existe &#40;&#41;de TRANSACT-SQL ](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Nombres de objeto de certificación de esquema**  

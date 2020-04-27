@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876143"
 ---
 # <a name="full-file-backups-sql-server"></a>Copias de seguridad de archivos completas (SQL Server)
@@ -44,11 +44,11 @@ ms.locfileid: "62876143"
   
 -   [Desventajas de las copias de seguridad de archivos](#Disadvantages)  
   
--   [Información general sobre las copias de seguridad de archivos](#Overview)  
+-   [Información general de las copias de seguridad de archivos](#Overview)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a>Ventajas de las copias de seguridad de archivos  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> Ventajas de las copias de seguridad de archivos  
  Las copias de seguridad de archivos ofrecen las siguientes ventajas con respecto a las copias de seguridad de base de datos:  
   
 -   El uso de las copias de seguridad de archivos puede aumentar la velocidad de recuperación ya que se pueden restaurar solo los archivos dañados sin tener que restaurar el resto de la base de datos.  
@@ -57,13 +57,13 @@ ms.locfileid: "62876143"
   
 -   Las copias de seguridad de archivos aumentan la flexibilidad en cuanto a programación y control de medios con respecto a las copias de seguridad completas de la base de datos, que para bases de datos de gran tamaño pueden resultar difíciles de administrar. Esta mayor flexibilidad de las copias de seguridad de archivos o de grupos de archivos también resulta útil en grandes bases de datos que contienen datos con características de actualización diferentes.  
   
-##  <a name="Disadvantages"></a>Desventajas de las copias de seguridad de archivos  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> Desventajas de las copias de seguridad de archivos  
   
 -   El principal inconveniente de las copias de seguridad de archivos, en comparación con las copias de seguridad completas de la base de datos, es la complejidad administrativa adicional. El mantenimiento y seguimiento de un conjunto completo de estas copias de seguridad puede ser una tarea que consume mucho tiempo y que puede contrarrestar los requisitos de espacio de las copias de seguridad completas de la base de datos.  
   
 -   Un error en los medios puede suponer la imposibilidad de recuperar una base de datos completa si un archivo dañado no tiene copia de seguridad. Por lo tanto, debe guardar un conjunto completo de copias de seguridad de archivos y, en los modelos de recuperación completa y recuperación optimizado para cargas masivas de registros, una o varias copias de seguridad de registros que cubran mínimamente el intervalo entre la primera copia de seguridad completa de archivos y la última.  
   
-##  <a name="Overview"></a>Información general sobre las copias de seguridad de archivos  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> Información general de las copias de seguridad de archivos  
  Las copias de seguridad completas de archivos realizan una copia de seguridad de todos los datos de uno o varios archivos o grupos de archivos. De forma predeterminada, las copias de seguridad de archivos contienen suficientes entradas de registro para poner al día el archivo al final de la operación de copia de seguridad.  
   
  La realización de una copia de seguridad de un archivo o grupo de archivos de solo lectura es igual en todos los modelos de recuperación. En el modelo de recuperación completa, un conjunto de copia de seguridad completas de archivos, junto con un número suficiente de copias de seguridad de registros que abarque todas las copias de seguridad de archivos, equivale a una copia de seguridad completa de la base de datos.  
@@ -81,13 +81,13 @@ ms.locfileid: "62876143"
   
  La restauración de una base de datos usando solo copias de seguridad de archivos y de registros puede ser compleja. Por ello, si es posible, se recomienda realizar una copia de seguridad completa de la base de datos e iniciar las copias de seguridad de registros antes de la primera copia de seguridad de archivos. En la siguiente ilustración se muestra una estrategia en la que se realiza un copia de seguridad completa de la base de datos (a la hora t1) poco después de crear la base de datos (a la hora t0). Esta primera copia de seguridad de la base de datos permite que se inicien las copias de seguridad del registro de transacciones. Las copias de seguridad del registro de transacciones se programan para que se realicen a intervalos definidos. Las copias de seguridad de archivos se realizan con el intervalo que mejor se adapta a los requisitos empresariales de la base de datos. En esta ilustración se muestra cada uno de los cuatro grupos de archivos de los que se hace una copia de seguridad (de uno en uno). El orden en que se realiza una copia de seguridad de estos grupos (A, C, B, A) refleja los requisitos empresariales de la base de datos.  
   
- ![Estrategia que combina las copias de seguridad de la base de datos, de los archivos y del registro](../../database-engine/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Estrategia que combina las copias de seguridad de la base de datos, de los archivos y del registro")  
+ ![Estrategia que combina las copias de seguridad de la base de datos, los archivos y el registro](../../database-engine/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Estrategia que combina las copias de seguridad de la base de datos, los archivos y el registro")  
   
 > [!NOTE]  
 >  En el modelo de recuperación completa, al restaurar una copia de seguridad de archivos de lectura/escritura, debe poner al día el registro de transacciones para mantener la coherencia con el resto de la base de datos. Para evitar poner al día muchas copias de seguridad del registro de transacciones, contemple el uso de copias de seguridad diferenciales de archivos. Para obtener más información, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
- **Para crear una copia de seguridad de un archivo o grupo de archivos**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
+ **Crear una copia de seguridad de un archivo o de un grupo de archivos**  
   
 -   [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   

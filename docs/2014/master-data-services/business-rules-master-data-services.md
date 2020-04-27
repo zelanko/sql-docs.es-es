@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d6ad90fe277e76f98298f4e66fe8c652e64fd38d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483655"
 ---
 # <a name="business-rules-master-data-services"></a>Reglas de negocios (Master Data Services)
@@ -84,8 +84,8 @@ ms.locfileid: "65483655"
   
 -   [Versiones &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  
   
--   [Master Data Services de &#40;de validación&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Validación &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Change Tracking &#40;Master Data Services&#41;](change-tracking-master-data-services.md)  
+-   [Seguimiento de cambios &#40;Master Data Services&#41;](change-tracking-master-data-services.md)  
   
   

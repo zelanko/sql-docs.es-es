@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079138"
 ---
 # <a name="lesson-14-deploy"></a>Lección 14: Implementar
@@ -22,7 +22,7 @@ ms.locfileid: "66079138"
   
  Tiempo estimado para completar esta lección: **5 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Este tema forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 13: Analizar en Excel](lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Implementar el modelo  
@@ -54,7 +54,7 @@ ms.locfileid: "66079138"
      Aparece el cuadro de diálogo Implementar en el que se muestra el estado de implementación de los metadatos y las tablas incluidas en el modelo.  
   
 ## <a name="conclusion"></a>Conclusión  
- Felicidades. Ha terminado de crear e implementar su primer modelo tabular de Analysis Services. Este tutorial le ha ayudado a completar las tareas más comunes en la creación de un modelo tabular. Ahora que su modelo Ventas por Internet de Adventure Works está implementado, puede utilizar el SQL Server Management Studio para administrarlo, crear scripts de proceso y realizar un plan de copia de seguridad. Los usuarios pueden conectarse al modelo mediante una aplicación cliente de informes como Microsoft Excel o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
+ ¡Enhorabuena! Ha terminado de crear e implementar su primer modelo tabular de Analysis Services. Este tutorial le ha ayudado a completar las tareas más comunes en la creación de un modelo tabular. Ahora que su modelo Ventas por Internet de Adventure Works está implementado, puede utilizar el SQL Server Management Studio para administrarlo, crear scripts de proceso y realizar un plan de copia de seguridad. Los usuarios pueden conectarse al modelo mediante una aplicación cliente de informes como Microsoft Excel o [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
   
 ## <a name="additional-resources"></a>Recursos adicionales  
  Para obtener más información sobre las propiedades de modelo tabular que admiten informes de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], vea [Propiedades de informes de Power View &#40;SSAS tabular&#41;](tabular-models/properties-ssas-tabular.md).  

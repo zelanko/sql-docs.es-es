@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012017"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Ver un registro de SQL Server Audit
@@ -34,14 +34,14 @@ ms.locfileid: "63012017"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso `CONTROL SERVER`.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-a-sql-server-audit-log"></a>Para ver un registro de auditoría de SQL Server  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63012017"
   
 4.  Cuando termine, haga clic en **Cerrar**.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] le recomienda ver el registro de auditoría mediante el Visor del archivo de registros. Pero, si está creando un sistema de supervisión automatizado, puede leer la información en el archivo de auditoría directamente si usa la función [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql). Si lee el archivo directamente, los datos tendrán un formato ligeramente diferente (sin procesar). Vea **Sys. fn_get_audit_file** para obtener más información.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] le recomienda ver el registro de auditoría mediante el Visor del archivo de registros. Pero, si está creando un sistema de supervisión automatizado, puede leer la información en el archivo de auditoría directamente si usa la función [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql). Si lee el archivo directamente, los datos tendrán un formato ligeramente diferente (sin procesar). Consulte **sys.fn_get_audit_file** para obtener más información  
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md)   

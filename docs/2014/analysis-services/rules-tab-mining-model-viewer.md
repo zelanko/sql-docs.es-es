@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070102"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Pestaña Reglas (Visor de modelos de minería de datos)
@@ -27,7 +27,7 @@ ms.locfileid: "66070102"
 > [!WARNING]  
 >  De forma predeterminada, solo las reglas que están por encima del umbral de probabilidad definidas en **Probabilidad mínima** se muestran en el visor. No puede reducir más este valor utilizando el visor, porque el umbral de probabilidad del resultado de la regla se determina cuando se crea el modelo. Para más información, vea [Referencia técnica del algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Para obtener más información:** [algoritmo de Asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [examinar un modelo mediante el visor de reglas de Asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -36,7 +36,7 @@ ms.locfileid: "66070102"
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para ver el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de cada modelo de minería de datos o el **Visor de árbol de contenido genérico de Microsoft**. También puede utilizar visores de complemento si están disponibles.  
   
  **Probabilidad mínima**  
@@ -56,7 +56,7 @@ ms.locfileid: "66070102"
   
  De forma predeterminada, los criterios de filtro se aplican a todo el nombre de la combinación de atributo-valor; por consiguiente, si solo está viendo el nombre del atributo, podría no ser obvio que los criterios de filtro se han aplicado correctamente. Utilice la lista desplegable **Mostrar** para seleccionar **Mostrar el valor y el nombre del atributo**, y compruebe que la lista de conjuntos de elementos se filtra correctamente.  
   
- **Feria**  
+ **Mostrar**  
  Ajuste el modo en que desea que se muestre la regla en el visor. Puede seleccionar una de las tres opciones siguientes:  
   
 -   Mostrar el valor y el nombre del atributo  
@@ -76,12 +76,12 @@ ms.locfileid: "66070102"
   
  Puede hacer clic en el encabezado de columna para ordenar por probabilidad.  
   
- **Importancia**  
+ **Importance**  
  Esta columna del gráfico muestra la importancia de cada regla.  
   
  Puede hacer clic en el encabezado de columna para ordenar por importancia.  
   
- **Rule**  
+ **Regla**  
  Esta columna del gráfico muestra la descripción de texto de cada regla, según el formato especificado mediante las opciones **Mostrar** y **Mostrar nombre largo**.  
   
  Puede hacer clic en el encabezado de columna para ordenar por el texto de la regla.  

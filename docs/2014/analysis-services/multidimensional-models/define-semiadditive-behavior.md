@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075537"
 ---
 # <a name="define-semiadditive-behavior"></a>Define Semiadditive Behavior
@@ -71,7 +71,7 @@ ms.locfileid: "66075537"
 |Average of Children|La agregación de un miembro es el promedio de sus elementos secundarios.|  
 |ByAccount|El sistema lee el comportamiento de suma parcial especificado para cada tipo de cuenta.|  
 |Count|La agregación es un recuento de miembros.|  
-|Recuento distinto|La agregación es un recuento de miembros únicos.|  
+|Distinct Count|La agregación es un recuento de miembros únicos.|  
 |First Child|El valor de miembro se evalúa como el valor de su primer elemento secundario a lo largo de la dimensión de tiempo.|  
 |FirstNonEmpty|El valor de miembro se evalúa como el valor de su primer elemento secundario a lo largo de la dimensión de tiempo que contiene datos.|  
 |LastChild|El valor de miembro se evalúa como el valor de su último elemento secundario a lo largo de la dimensión de tiempo.|  

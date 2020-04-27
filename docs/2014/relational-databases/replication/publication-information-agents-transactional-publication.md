@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a4542370eff5ad631701f0bf988929ad56e8799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021809"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Información de publicación, Agentes (Publicación transaccional)
@@ -49,7 +49,7 @@ ms.locfileid: "63021809"
 -   Completed  
   
  **Agent**  
- Nombre de cada agente de replicación asociado con la publicación. El Agente de distribución está asociado con suscripciones a esta publicación. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Nombre de cada agente de replicación asociado con la publicación. El Agente de distribución está asociado con suscripciones a esta publicación. Para obtener más información, vea [ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Última hora de inicio**  
  Hora en la que se inició el agente por última vez.  
@@ -61,7 +61,7 @@ ms.locfileid: "63021809"
  La última acción realizada durante la ejecución más reciente del agente.  
   
 ## <a name="see-also"></a>Consulte también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   

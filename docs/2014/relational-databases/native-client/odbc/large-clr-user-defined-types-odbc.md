@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144316"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos CLR grandes definidos por el usuario (ODBC)
@@ -157,7 +157,7 @@ ms.locfileid: "63144316"
 |Versión del servidor|SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |SQL Server 2005|`UDT`|`varbinary(max)`|  
-|SQL Server 2008 y versiones posteriores|`UDT`|`UDT`|  
+|SQL Server 2008 y posterior|`UDT`|`UDT`|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Funciones ODBC compatibles con UDT de CLR grandes  
  En esta sección se describen los cambios realizados en las funciones ODBC de SQL Server Native Client para admitir UDT de CLR grandes.  

@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874767"
 ---
 # <a name="transaction-promotion"></a>Promoción de transacciones
@@ -29,9 +29,7 @@ ms.locfileid: "62874767"
  La propiedad `ConnectionString` de un objeto `SqlConnection` admite la palabra clave `Enlist`, que indica si `System.Data.SqlClient` detecta los contextos transaccionales y da de alta automáticamente la conexión en una transacción distribuida. Si esta palabra clave está establecida en true (el valor predeterminado), la conexión se da de alta automáticamente en el contexto de transacción actual del subproceso de apertura. Si esta palabra clave está establecida en false, la conexión SqlClient no interactúa con una transacción distribuida. Si no se especifica `Enlist` en la cadena de conexión, la conexión se da de alta automáticamente en una transacción distribuida si se detecta una en el momento en que se abre la conexión.  
   
 ## <a name="distributed-transactions"></a>Transacciones distribuidas  
- Las transacciones distribuidas consumen normalmente recursos del sistema significativos. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC (Coordinador de transacciones distribuidas) administra tales transacciones e integra todos los administradores de recursos a los que se obtiene acceso en estas transacciones. La promoción de transacciones, por otro lado, es una forma especial de una transacción `System.Transactions` que delega eficazmente el trabajo a una transacción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simple. 
-  `System.Transactions`, `System.Data.SqlClient` y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordinan el trabajo relacionado con la administración de la transacción, promoviéndola a una transacción distribuida completa, según sea necesario.  
+ Las transacciones distribuidas consumen normalmente recursos del sistema significativos. [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC (Coordinador de transacciones distribuidas) administra tales transacciones e integra todos los administradores de recursos a los que se obtiene acceso en estas transacciones. La promoción de transacciones, por otro lado, es una forma especial de una transacción `System.Transactions` que delega eficazmente el trabajo a una transacción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simple. `System.Transactions`, `System.Data.SqlClient` y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coordinan el trabajo relacionado con la administración de la transacción, promoviéndola a una transacción distribuida completa, según sea necesario.  
   
  La ventaja de utilizar la promoción de transacciones es que cuando se abre una conexión con una transacción `TransactionScope` activa y no hay abierta ninguna otra conexión, se confirma la transacción como una transacción ligera, en lugar de incurrir en la sobrecarga adicional de una transacción completa distribuida. Para obtener más información `TransactionScope`sobre, vea [usar System. Transactions](../native-client-ole-db-transactions/transactions.md).  
   

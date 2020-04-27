@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062196"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Propiedades de alerta-nueva alerta (página respuesta)
@@ -32,7 +32,7 @@ ms.locfileid: "63062196"
  **Ver trabajo**  
  Permite ver o modificar el trabajo seleccionado. Esta opción no está disponible si **Ejecutar trabajo** no está seleccionada.  
   
- **Notificar operadores**  
+ **Notificar a los operadores**  
  Habilita los controles que le permiten agregar, quitar o cambiar operadores.  
   
  **Lista de operadores**  
@@ -54,9 +54,9 @@ ms.locfileid: "63062196"
  Muestra el cuadro de diálogo **Propiedades** para el operador seleccionado actualmente. Puede ver y modificar las propiedades del operador en el cuadro de diálogo **Propiedades del operador**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Alerts](alerts.md)   
+ [Alarmas](alerts.md)   
  [Crear una alerta con nivel de gravedad](create-an-alert-using-severity-level.md)   
- [Alerts](alerts.md)   
+ [Alarmas](alerts.md)   
  [Editar una alerta](edit-an-alert.md)   
  [Delete an Alert](delete-an-alert.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907389"
 ---
 # <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "67907389"
 |**runstatus**|**int**|El estado de ejecución:<br /><br /> **1** = Inicio.<br /><br /> **2** = correcto.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = Reintentar.<br /><br /> **6** = error.|  
 |**start_time**|**datetime**|Hora a la que comienza la ejecución del trabajo.|  
 |**time**|**datetime**|Hora a la que se registra el mensaje.|  
-|**Duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
-|**opiniones**|**nvarchar(4000)**|El texto del mensaje.|  
+|**duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
+|**comentarios**|**nvarchar(4000)**|El texto del mensaje.|  
 |**xact_seqno**|**varbinary(16)**|Número de secuencia de la última transacción procesada.|  
 |**current_delivery_rate**|**float**|Número promedio de comandos entregados por segundo desde la última entrada del historial.|  
 |**current_delivery_latency**|**int**|Latencia entre la entrada del comando en la base de datos de distribución y su aplicación al suscriptor desde la última entrada del historial. En milisegundos.|  
@@ -47,7 +47,7 @@ ms.locfileid: "67907389"
 |**average_commands**|**int**|Número promedio de comandos entregados en la sesión.|  
 |**delivery_rate**|**float**|Promedio de comandos entregados por segundo.|  
 |**delivery_latency**|**int**|Latencia entre la entrada del comando en la base de datos de distribución y su aplicación al suscriptor. En milisegundos.|  
-|**total_delivered_commands**|**BIGINT**|Número total de comandos entregados desde la creación de la suscripción.|  
+|**total_delivered_commands**|**bigint**|Número total de comandos entregados desde la creación de la suscripción.|  
 |**error_id**|**int**|IDENTIFICADOR del error en la **MSrepl_error** tabla del sistema.|  
 |**updateable_row**|**bit**|Se establece en **1** si se puede sobrescribir la fila de historial.|  
 |**timestamp**|**timestamp**|La columna de marca de tiempo de esta tabla.|  

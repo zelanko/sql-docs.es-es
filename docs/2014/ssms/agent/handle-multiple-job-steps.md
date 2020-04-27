@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 379877d3a08c60a293b96c5c57d55a2894ba0a79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63074065"
 ---
 # <a name="handle-multiple-job-steps"></a>Controlar varios pasos del trabajo
   Si el trabajo está formado por varios pasos, debe especificar el orden de ejecución de los pasos del trabajo. Esto se denomina *control de flujo * *.* En cualquier momento puede agregar nuevos pasos del trabajo y reorganizar el flujo de los pasos; los cambios se aplicarán la próxima vez que se ejecute el trabajo. Esta ilustración muestra el control de flujo de un trabajo de copia de seguridad de una base de datos.  
   
- ![Control de flujo de los pasos de trabajo del Agente SQL Server](../../database-engine/media/dbflow01.gif "Control de flujo de los pasos de trabajo del Agente SQL Server")  
+ ![Control de flujo de los pasos de trabajo del Agente SQL Server](../../database-engine/media/dbflow01.gif "Control de flujo de los pasos de trabajo del Agente SQL Server")  
   
  El primer paso es Copia de seguridad de la base de datos. Si este paso genera un error, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informa del error al operador que se ha definido que reciba la notificación. Si el paso Copia de seguridad de la base de datos es correcto, el trabajo pasa al siguiente paso: "Normalizar" los datos del cliente. Si este paso genera un error, el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avanza a Restaurar base de datos. Si "Normalizar" los datos del cliente es correcto, el trabajo avanza al siguiente paso: Actualizar estadísticas y, así sucesivamente, hasta que el paso final da como resultado un informe correcto o con errores.  
   
@@ -40,8 +40,7 @@ ms.locfileid: "63074065"
 > [!NOTE]  
 >  Si crea pasos del trabajo en bucle (el paso del trabajo 1 va seguido del paso del trabajo 2 y, a continuación, del paso del trabajo 2 se vuelve al paso del trabajo 1), aparecerá un mensaje de advertencia cuando cree el trabajo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente registra la información del trabajo y de los pasos de trabajo en el historial de trabajos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente registra la información del trabajo y de los pasos de trabajo en el historial de trabajos.  
   
 ## <a name="see-also"></a>Consulte también  
  [sp_add_job &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)   

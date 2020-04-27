@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077165"
 ---
 # <a name="set-usage-property"></a>Establecer la propiedad Usage
@@ -33,11 +33,11 @@ ms.locfileid: "66077165"
   
 2.  En **Atributos**, haga clic con el botón derecho en el atributo para el que quiera establecer el uso, seleccione **Establecer uso de atributos**y, después, haga clic en una de estas opciones:  
   
-    -   **Periódico**  
+    -   **Normal**  
   
     -   **Clave**  
   
-    -   **Parent**  
+    -   **Aérea**  
   
 ## <a name="see-also"></a>Consulte también  
  [Atributos y jerarquías de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

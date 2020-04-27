@@ -17,13 +17,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874491"
 ---
-# <a name="clr-user-defined-functions"></a>Funciones CLR definidas por el usuario
+# <a name="clr-user-defined-functions"></a>Funciones definidas por el usuario de CLR
   Las funciones definidas por el usuario son rutinas que pueden tomar parámetros, realizar cálculos u otras acciones y devolver un resultado. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], las funciones definidas por el usuario se pueden escribir en cualquier lenguaje de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
  Existen dos tipos de funciones: escalares, que devuelven un valor único, y con valores de tabla, que devuelven un conjunto de filas.  

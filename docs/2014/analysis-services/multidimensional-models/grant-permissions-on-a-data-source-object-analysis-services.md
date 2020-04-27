@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074998"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Otorgar permisos para un objeto de origen de datos (Analysis Services)
@@ -36,14 +36,14 @@ ms.locfileid: "66074998"
 ## <a name="set-read-permissions-to-a-data-source"></a>Establecer permisos de Lectura a un origen de datos  
  A un rol de base de datos se le pueden conceder permisos de lectura o ningún permiso de acceso a un objeto de origen de datos.  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de, expanda **roles** para la base de datos adecuada en el explorador de objetos y, a continuación, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en el Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un rol de base de datos).  
   
 2.  En el panel **Acceso del origen de datos** , busque el objeto de origen de datos en la lista **Origen de datos** y, después, seleccione **Lectura** en la lista **Acceso** para el origen de datos. Si esta opción no está disponible, compruebe el panel **General** para ver si se ha seleccionado Control total. Si Control total ya está proporcionando el permiso, no podrá invalidar los permisos en el origen de datos.  
   
 ## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>Trabajar con la cadena de conexión utilizada por un objeto de origen de datos  
  El objeto de origen de datos contiene la cadena de conexión que se utiliza para conectar con el origen de datos subyacente. Esta cadena de conexión puede especificar uno de los siguientes:  
   
--   **Especificar un nombre de usuario y una contraseña**  
+-   **Un nombre de usuario y una contraseña**  
   
      Si la cadena de conexión que utiliza un objeto de origen de datos especifica un nombre de usuario y una contraseña, podría crear varios objetos de origen de datos, cada uno con cuentas de usuario diferentes. La creación de varios objetos de origen de datos permite a los usuarios obtener acceso a objetos de origen de datos específicos e impide que estos usuarios tengan acceso a otros objetos de origen de datos. Estos otros objetos de origen de datos los puede utilizar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para procesar objetos, por ejemplo, cubos y modelos de minería de datos.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "66074998"
  [Metodologías de autenticación admitidas por Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [Conceder permisos de cubo o de modelo &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Conceder acceso personalizado a los datos de celda &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Otorgar acceso personalizado a los datos de las celdas &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

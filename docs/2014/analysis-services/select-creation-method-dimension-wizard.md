@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069594"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Seleccionar método de creación (Asistente para dimensiones)
@@ -55,7 +55,7 @@ ms.locfileid: "66069594"
   
  Para más información, vea [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md).  
   
- **Plantillas**  
+ **Plantilla**  
  Seleccione la plantilla que desea usar para crear la dimensión. Las plantillas proporcionan un completo conjunto de atributos y definiciones de jerarquías orientadas a un fin empresarial específico.  
   
 > [!NOTE]  

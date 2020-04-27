@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050921"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, clase de eventos
@@ -30,7 +30,7 @@ ms.locfileid: "63050921"
   
 |Nombre de columna de datos|`Data type`|Descripción|Identificador de columna|Filtrable|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
+|ApplicationName|`nvarchar`|Nombre de la aplicación cliente que creó la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se llena si el cliente proporciona el Id. de proceso.|9|Sí|  
 |DatabaseID|`int`|Id. de la base de datos en que se ejecuta el procedimiento almacenado. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta el procedimiento almacenado.|35|Sí|  
@@ -61,7 +61,7 @@ ms.locfileid: "63050921"
 |XactSequence|`bigint`|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [SQL:StmtRecompile (clase de eventos)](sql-stmtrecompile-event-class.md)  
+ [sp_trace_setevent &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [SQL:StmtRecompile, clase de eventos](sql-stmtrecompile-event-class.md)  
   
   

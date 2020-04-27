@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074044"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Crear conjuntos con nombre de ámbito de sesión (MDX)
-  Para crear un conjunto con nombre que esté disponible en una sesión de expresiones multidimensionales (MDX), se usa la instrucción [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Un conjunto con nombre creado mediante la instrucción CREATE SET no se quitará hasta que se cierre la sesión MDX.  
+  Para crear un conjunto con nombre que esté disponible en una sesión de expresiones multidimensionales (MDX), se usa la instrucción [CREATE SET](/sql/mdx/mdx-data-definition-create-set) . Un conjunto con nombre creado mediante la instrucción CREATE SET no se quitará hasta que se cierre la sesión MDX.  
   
  Como se indica en este tema, la sintaxis de la palabra clave WITH es muy simple y fácil de usar.  
   
@@ -53,6 +53,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear conjuntos con nombre de ámbito de consulta &#40;&#41;MDX](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Crear conjuntos con nombre del ámbito de consulta &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

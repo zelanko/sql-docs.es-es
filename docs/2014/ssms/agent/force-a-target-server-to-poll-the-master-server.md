@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044060"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
@@ -30,19 +30,19 @@ ms.locfileid: "63044060"
 > [!NOTE]  
 >  Si no es posible el acceso al servidor maestro cuando el servidor de destino intenta cargar el estado del trabajo, dicho estado de trabajo se coloca en la cola hasta que se pueda obtener acceso al servidor principal.  
   
--   **Antes de empezar:**  [limitaciones y restricciones](#Restrictions), [seguridad](#Security)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
--   **Para forzar que un servidor de destino sondee el servidor maestro, usando:**  [SQL Server Management Studio](#SSMS)  
+-   **Acción de forzar que un servidor de destino sondee el servidor maestro utilizando lo siguiente:**  [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  El servidor de destino debe ser un servidor registrado en el servidor maestro. Debe ejecutar las instrucciones proporcionadas en este tema desde el servidor maestro.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) y [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
-##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Uso de SQL Server Management Studio  
  **Para forzar que un servidor de destino sondee el servidor maestro**  
   
 1.  En el **Explorador de objetos**, expanda el servidor maestro.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066710"
 ---
 # <a name="properties-ssas-tabular"></a>Propiedades (SSAS tabular)
@@ -24,11 +24,11 @@ ms.locfileid: "66066710"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Power View propiedades de informes &#40;SSAS tabular&#41;](power-view-reporting-properties-ssas-tabular.md)|Los temas de esta sección proporcionan descripciones y las opciones de configuración de los modelos tabulares con los que se conectará y se examinarán desde [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].|  
-|[Propiedades del proyecto &#40;&#41;tabular de SSAS](project-properties-ssas-tabular.md)|Proporciona descripciones de las propiedades del proyecto. Las propiedades del proyecto incluyen valores relacionados con las opciones de implementación y el archivo del proyecto.|  
-|[Propiedades del modelo &#40;&#41;tabular de SSAS](model-properties-ssas-tabular.md)|Proporciona descripciones de las propiedades del modelo. Las propiedades del modelo afectan a las acciones de compilación, la copia de seguridad y la base de datos del área de trabajo del proyecto de modelos durante la creación del modelo.|  
-|[Propiedades de tabla &#40;&#41;tabular de SSAS](table-properties-ssas-tabular.md)|Proporciona descripciones de las propiedades básicas de la tabla. Las propiedades de la tabla que se describen aquí son diferentes de las del cuadro de diálogo Editar propiedades de tabla, que muestran y permiten la selección y el filtrado de columnas desde el origen,|  
-|[Propiedades de columna &#40;&#41;tabular de SSAS](column-properties-ssas-tabular.md)|Proporciona descripciones de las propiedades de columna. Las propiedades de columna definen el tipo de datos, el formato y la ocultación de una columna.|  
+|[Propiedades de informes de Vista avanzada &#40;SSAS tabular&#41;](power-view-reporting-properties-ssas-tabular.md)|Los temas de esta sección proporcionan descripciones y las opciones de configuración de los modelos tabulares con los que se conectará y se examinarán desde [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].|  
+|[Propiedades del proyecto &#40;SSAS tabular&#41;](project-properties-ssas-tabular.md)|Proporciona descripciones de las propiedades del proyecto. Las propiedades del proyecto incluyen valores relacionados con las opciones de implementación y el archivo del proyecto.|  
+|[Propiedades del modelo &#40;SSAS tabular&#41;](model-properties-ssas-tabular.md)|Proporciona descripciones de las propiedades del modelo. Las propiedades del modelo afectan a las acciones de compilación, la copia de seguridad y la base de datos del área de trabajo del proyecto de modelos durante la creación del modelo.|  
+|[Propiedades de la tabla &#40;SSAS tabular&#41;](table-properties-ssas-tabular.md)|Proporciona descripciones de las propiedades básicas de la tabla. Las propiedades de la tabla que se describen aquí son diferentes de las del cuadro de diálogo Editar propiedades de tabla, que muestran y permiten la selección y el filtrado de columnas desde el origen,|  
+|[Pestaña Propiedades de columna &#40;SSAS tabular&#41;](column-properties-ssas-tabular.md)|Proporciona descripciones de las propiedades de columna. Las propiedades de columna definen el tipo de datos, el formato y la ocultación de una columna.|  
 |[Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Proporciona descripciones y pasos de configuración de las propiedades predeterminadas de implementación y de modelado de datos. Las propiedades predeterminadas se aplican a los proyectos de modelos tabulares nuevos. Después de crear un proyecto, estas propiedades se pueden cambiar para un proyecto de modelos determinado en función de sus necesidades.|  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b69440f38af5cd71e481325d5d4df577d4c267b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070832"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperar datos de una columna FILESTREAM utilizando ISequentialStream (OLE DB)
@@ -27,7 +27,7 @@ ms.locfileid: "63070832"
   
  Utilice uno de los siguientes ejemplos para crear la tabla de la que lee este ejemplo:  
   
--   [Enviar datos a una columna FILESTREAM mediante ISequentialStream enlazado al parámetro ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Enviar datos a una columna FILESTREAM usando ISequentialStream enlazada al parámetro de ICommandText &#40;OLE DB&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
 -   [Enviar datos a una columna FILESTREAM mediante IRowsetFastUpload &#40;OLE DB&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   

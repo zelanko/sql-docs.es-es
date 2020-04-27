@@ -25,26 +25,25 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889817"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que puede usar para implementar el registro en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
   
- Puede configurar el ámbito del registro que se realiza durante la ejecución de un paquete en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md).  
+ Puede configurar el ámbito del registro que se realiza durante la ejecución de un paquete en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../enable-logging-for-package-execution-on-the-ssis-server.md).  
   
- También puede incluir el registro al ejecutar un paquete con la utilidad del símbolo del sistema **dtexec** . Para obtener información acerca de los argumentos del símbolo del sistema que admiten registro, vea [dtexec Utility](../packages/dtexec-utility.md).  
+ También puede incluir el registro al ejecutar un paquete con la utilidad del símbolo del sistema **dtexec**. Para obtener información acerca de los argumentos del símbolo del sistema que admiten registro, vea [dtexec Utility](../packages/dtexec-utility.md).  
   
 ## <a name="configure-logging-in-sql-server-data-tools"></a>Configurar el registro en SQL Server Data Tools  
  Los registros se asocian a paquetes y se configuran en el nivel de paquete. Cada tarea o contenedor de un paquete puede registrar información en cualquier registro del paquete. Es posible habilitar las tareas y contenedores de un paquete para registro aunque el paquete no lo esté. Por ejemplo, puede habilitar el registro en una tarea Ejecutar SQL sin habilitar el registro en el paquete primario. Un paquete, un contenedor o una tarea pueden escribir en varios registros. Puede habilitar el registro solamente en el paquete, o en cualquier tarea o contenedor individual que incluya el paquete.  
   
  Cuando se agrega el registro a un paquete, se elige el proveedor de registro y la ubicación del registro. El proveedor de registro especifica el formato para los datos del registro: por ejemplo, una base de datos o un archivo de texto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye los siguientes proveedores de registros:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye los siguientes proveedores de registros:  
   
 -   El proveedor de registro de archivo de texto, que escribe entradas de registro en archivos de texto ASCII con un formato de valores separados por comas (CSV). La extensión predeterminada de los nombres de archivo de este proveedor es .log.  
   
@@ -110,8 +109,7 @@ ms.locfileid: "62889817"
 |DataCode|Valor entero opcional que suele contener un valor de la enumeración <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> , que indica el resultado de la ejecución del contenedor o tarea:<br /><br /> 0 (correcto)<br /><br /> 1 (error)<br /><br /> 2 (completado)<br /><br /> 3 (cancelado)|  
   
 ##### <a name="log-entries"></a>Entradas del registro  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite entradas del registro en eventos predefinidos y proporciona entradas del registro personalizadas para muchos objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El cuadro de diálogo **Configurar registros de SSIS** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] enumera estos eventos y entradas del registro personalizadas.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite entradas del registro en eventos predefinidos y proporciona entradas del registro personalizadas para muchos objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El cuadro de diálogo **Configurar registros de SSIS** del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] enumera estos eventos y entradas del registro personalizadas.  
   
  En la tabla siguiente se describen los eventos predefinidos que se pueden habilitar para escribir entradas del registro cuando se producen eventos en tiempo de ejecución. Estas entradas del registro se aplican a los ejecutables, al paquete y a las tareas y contenedores que incluye el paquete. El nombre de la entrada del registro es el nombre del evento que se produjo en tiempo de ejecución y que originó la entrada del registro.  
   
@@ -130,9 +128,9 @@ ms.locfileid: "62889817"
 |**OnVariableValueChanged**|Escribe una entrada del registro cuando cambia el valor de una variable.|  
 |**OnWarning**|Escribe una entrada del registro cuando se produce una advertencia.|  
 |**PipelineComponentTime**|Por cada componente de flujo de datos, escribe una entrada de registro de cada fase de validación y ejecución. La entrada del registro especifica el tiempo de procesamiento para cada fase.|  
-|**Diagnóstico**|Escribe una entrada de registro que proporciona información de diagnóstico.<br /><br /> Por ejemplo, puede registrar un mensaje antes y después de cada llamada a un proveedor de datos externo. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
+|**Diagnostic**|Escribe una entrada de registro que proporciona información de diagnóstico.<br /><br /> Por ejemplo, puede registrar un mensaje antes y después de cada llamada a un proveedor de datos externo. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
   
- El paquete y muchas tareas poseen entradas del registro personalizadas que se pueden habilitar para el registro. Por ejemplo, la tarea Enviar correo proporciona la entrada de registro personalizada **SendMailTaskBegin** , que registra información cuando se inicia la ejecución de la tarea Enviar correo, pero antes de que la tarea envíe un mensaje de correo. Para más información, vea [Custom Messages for Logging](../custom-messages-for-logging.md).  
+ El paquete y muchas tareas poseen entradas del registro personalizadas que se pueden habilitar para el registro. Por ejemplo, la tarea Enviar correo proporciona la entrada de registro personalizada **SendMailTaskBegin** , que registra información cuando se inicia la ejecución de la tarea Enviar correo, pero antes de que la tarea envíe un mensaje de correo. Para obtener más información, consulte [Custom messages for Logging](../custom-messages-for-logging.md).  
   
 ### <a name="differentiating-package-copies"></a>Diferenciar copias de paquetes  
  Los datos del registro incluyen el nombre y GUID del paquete al que pertenecen las entradas del registro. Si crea un nuevo paquete mediante la copia de un paquete existente, también se copian el nombre y GUID del paquete existente. Como resultado, puede tener dos paquetes con el mismo nombre y GUID, lo que dificulta la diferenciación entre los paquetes en los datos del registro.  
@@ -145,7 +143,7 @@ ms.locfileid: "62889817"
 ### <a name="logging-templates"></a>Plantillas de registro  
  En el cuadro de diálogo **Configurar registros de SSIS** , también puede crear y guardar como plantillas las configuraciones del registro que utiliza con frecuencia y después, utilizar las plantillas en distintos paquetes. Esto permite aplicar más fácilmente una estrategia de registro coherente entre varios paquetes y modificar las configuraciones del registro en los paquetes actualizando las plantillas y aplicándolas después. Las plantillas se almacenan en archivos XML.  
   
- **Para configurar el registro mediante el cuadro de diálogo configurar registros de SSIS**  
+ **Para configurar el registro con el cuadro de diálogo Configurar registros de SSIS**  
   
 1.  Habilite el paquete y sus tareas para el registro. El registro se puede producir en el nivel de paquete, de contenedor y de tarea. Puede especificar diferentes registros para paquetes, contenedores y tareas.  
   
@@ -166,8 +164,7 @@ ms.locfileid: "62889817"
  La tarea Flujo de datos proporciona varias entradas del registro personalizadas que pueden utilizarse para supervisar y ajustar el rendimiento. Por ejemplo, puede supervisar componentes que puedan causar pérdidas de memoria o realizar un seguimiento del tiempo que lleva ejecutar un componente determinado. Para obtener una lista de las entradas del registro personalizadas y ejemplos de la salida del registro, vea [Data Flow Task](../control-flow/data-flow-task.md).  
   
 #### <a name="use-the-pipelinecomponenttime-event"></a>Usar el evento PipelineComponentTime  
- Quizás la entrada de registro personalizada más útil es el evento PipelineComponentTime. Esta entrada de registro notifica el número de milisegundos que cada componente del flujo de datos emplea en cada uno de los cinco pasos de procesamiento principales. En la tabla siguiente se describen estos pasos de procesamiento. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Los desarrolladores reconocerán estos pasos como los métodos principales de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
+ Quizás la entrada de registro personalizada más útil es el evento PipelineComponentTime. Esta entrada de registro notifica el número de milisegundos que cada componente del flujo de datos emplea en cada uno de los cinco pasos de procesamiento principales. En la tabla siguiente se describen estos pasos de procesamiento. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Los desarrolladores reconocerán estos pasos como los métodos principales de <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
 |Paso|Descripción|  
 |----------|-----------------|  
@@ -215,7 +212,7 @@ ms.locfileid: "62889817"
 -   [Ver entradas del registro en la ventana Registrar eventos](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Herramienta DTLoggedExec para el registro completo y detallado (proyecto de CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
+ [Herramienta DTLoggedExec para el registro completo y detallado (proyecto CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Consulte también  
  [Ver entradas del registro en la ventana Registrar eventos](../view-log-entries-in-the-log-events-window.md)  

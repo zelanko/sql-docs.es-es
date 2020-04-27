@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891678"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>Paso 1: copiar el paquete de la lección 1
+# <a name="step-1-copying-the-lesson-1-package"></a>Paso 1: Copia del paquete de la lección 1
   En esta tarea, creará una copia del paquete que ha creado en la lección 1, denominado Lesson 1.dtsx. Si no ha completado la lección 1, puede agregar al proyecto el paquete completado de la lección 1 que se incluye con el tutorial y, después, copiar dicho paquete. Usará esta nueva copia en toda la lección 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Para crear el paquete de la lección 2  
@@ -52,7 +52,7 @@ ms.locfileid: "62891678"
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
-    1.  Vaya a [Integration Services ejemplos de productos](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Haga clic en la pestaña **descargas** .  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62891678"
 5.  Copie y pegue el paquete de la lección 1 tal como se describe en los pasos 3 a 8 del procedimiento anterior.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 2: agregar y configurar el contenedor de bucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+ [Paso 2: Adición y configuración del contenedor de bucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
   

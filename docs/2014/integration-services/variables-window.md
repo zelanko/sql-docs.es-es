@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877880"
 ---
 # <a name="variables-window"></a>Ventana Variables
@@ -66,7 +66,7 @@ ms.locfileid: "62877880"
  `Namespace`  
  Presenta el nombre del espacio de nombres. Las variables definidas por el usuario se crean Inicialmente en el espacio de nombres del **usuario** , pero puede cambiar el `Namespace` nombre del espacio de nombres en el campo. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
- **Desencadenar evento de cambio**  
+ **Raise Change Event**  
  Indica si se activa un evento `OnVariableValueChanged` cuando un valor cambia. Puede actualizar el valor de la variable para variables definidas por el usuario y el sistema. De manera predeterminada, la ventana **Variables** no muestra esta columna. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
  **Descripción**  
@@ -78,9 +78,9 @@ ms.locfileid: "62877880"
  Si asigna una expresión a una variable, un marcador especial de icono se muestra junto a la variable. Este marcador de icono especial también aparece junto a los administradores de conexiones y las tareas con expresiones establecidas.  
   
 ## <a name="see-also"></a>Consulte también  
- [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;&#41; variables de SSIS](integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
- [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;expresiones de&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
  [Generar archivos de volcado para la ejecución de paquetes](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

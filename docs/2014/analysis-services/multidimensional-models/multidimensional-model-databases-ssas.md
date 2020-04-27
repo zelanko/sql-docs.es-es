@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073516"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bases de datos de modelos multidimensionales (SSAS)
@@ -36,8 +36,7 @@ ms.locfileid: "66073516"
   
 -   Para crear una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vacía en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y, después, conéctese directamente a esa base de datos con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y cree objetos en esta (en lugar de crearlos en un proyecto). Al trabajar así con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , los cambios que se hacen en los objetos surten efecto en la base de datos a la que se está conectando cuando se guarda el objeto modificado.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa la integración con software de control de código fuente para permitir que varios desarrolladores de software trabajen con objetos distintos de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a la vez. Un programador también puede interactuar con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] directamente, en lugar de hacerlo a través de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero entonces existe el riesgo de que los objetos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dejen de estar sincronizados con el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizado para su implementación. Después de la implementación, una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se administra con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Hay algunos cambios que se pueden hacer en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], por ejemplo en particiones y roles, que pueden hacer que los objetos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dejen de estar sincronizados con el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usado para su implementación.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa la integración con software de control de código fuente para permitir que varios desarrolladores de software trabajen con objetos distintos de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a la vez. Un programador también puede interactuar con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] directamente, en lugar de hacerlo a través de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero entonces existe el riesgo de que los objetos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dejen de estar sincronizados con el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizado para su implementación. Después de la implementación, una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se administra con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Hay algunos cambios que se pueden hacer en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], por ejemplo en particiones y roles, que pueden hacer que los objetos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dejen de estar sincronizados con el proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usado para su implementación.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Adjuntar y separar bases de datos de Analysis Services](attach-and-detach-analysis-services-databases.md)  
@@ -50,7 +49,7 @@ ms.locfileid: "66073516"
   
  [Mover una base de datos de Analysis Services](move-an-analysis-services-database.md)  
   
- [Cambiar el nombre de una base de datos multidimensional &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [Cambie el nombre de una base de datos multidimensional &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
  [Establecer el nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   

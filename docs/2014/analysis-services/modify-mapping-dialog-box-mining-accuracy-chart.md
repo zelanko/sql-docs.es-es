@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077680"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Cuadro de diálogo Modificar asignación (gráfico de precisión de minería de datos)
@@ -26,12 +26,12 @@ ms.locfileid: "66077680"
  **Columna de la estructura de minería de datos**  
  Lista de las columnas de estructura de minería de datos definidas en la estructura de minería seleccionada.  
   
- **Columna de tabla**  
+ **Columna de la tabla**  
  Lista de las columnas de entrada asociadas a cada columna de la estructura de minería de datos. Para cambiar la columna de entrada, haga clic en una celda y seleccione una nueva columna de entrada en la lista de columnas que contiene la tabla de entrada.  
   
 ## <a name="see-also"></a>Consulte también  
  [Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)   
  [Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Pruebas y validación &#40;&#41;de minería de datos](data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

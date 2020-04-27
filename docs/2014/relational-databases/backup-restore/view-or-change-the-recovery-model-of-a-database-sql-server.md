@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875080"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)
@@ -42,13 +42,13 @@ ms.locfileid: "62875080"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Recomendaciones de seguimiento:**  [después de cambiar el modelo de recuperación](#FollowUp)  
+-   **Recomendaciones de seguimiento:**  [Después de cambiar el modelo de recuperación](#FollowUp)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Antes de cambiar del modelo de recuperación completa o del modelo de recuperación optimizado para cargas masivas de registros, haga copia de seguridad del registro de transacciones.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62875080"
 > [!NOTE]  
 >  Si cambia al modelo de recuperación completa durante una operación masiva, el registro de la operación masiva se modifica del registro mínimo al registro completo y viceversa.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>Para ver o cambiar el modelo de recuperación  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62875080"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Para ver el modelo de recuperación  
   
@@ -117,9 +117,9 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a>Recomendaciones de seguimiento: después de cambiar el modelo de recuperación  
+##  <a name="follow-up-recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a>Recomendaciones de seguimiento: después de cambiar el modelo de recuperación  
   
--   **Después de cambiar entre los modelos de recuperación completa y de registro masivo**  
+-   **Después de cambiar entre el modelo de recuperación completa y el modelo de recuperación optimizado para cargas masivas de registros**  
   
     -   Después de haber completado las operaciones masivas, vuelva a cambiar inmediatamente al modelo de recuperación completa.  
   
@@ -128,7 +128,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!NOTE]  
         >  La estrategia de copia de seguridad sigue siendo la misma: siga realizando las copias de seguridad periódicas de la base de datos, del registro y diferenciales.  
   
--   **Después de cambiar del modelo de recuperación simple**  
+-   **Después de cambiar desde el modelo de recuperación simple**  
   
     -   Inmediatamente después de cambiar al modelo de recuperación completa o al optimizado para cargas masivas de registros, realice una copia de seguridad de la base de datos completa o diferencial para iniciar la cadena de registros.  
   
@@ -140,13 +140,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!IMPORTANT]  
         >  Si no realiza la copia de seguridad con la frecuencia suficiente, el registro de transacciones se puede expandir hasta quedarse sin espacio en disco.  
   
--   **Después de cambiar al modelo de recuperación simple**  
+-   **Tras cambiar al modelo de recuperación simple**  
   
     -   Interrumpa cualquier trabajo programado para realizar copia de seguridad del registro de transacciones.  
   
     -   Asegúrese de que estén programadas copias de seguridad periódicas de la base de datos. Es esencial hacer copia de seguridad de la base de datos para proteger los datos y para truncar la parte inactiva del registro de transacciones.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -154,11 +154,11 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Deshabilitar o habilitar un trabajo](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md) de bases [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de datos (en los libros en pantalla de)  
+-   [Planes de mantenimiento de bases de datos](../maintenance-plans/maintenance-plans.md) (en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
 ## <a name="see-also"></a>Consulte también  
  [Modelos de recuperación &#40;SQL Server&#41;](recovery-models-sql-server.md)   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140634"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamiento mejorado de tipos de fecha y hora con versiones anteriores de SQL Server (ODBC)
@@ -33,7 +33,7 @@ ms.locfileid: "63140634"
   
 |Tipo de SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Tipo de  (o posterior)|Tipo de cliente ODBC|Conversión del resultado (SQL a C)|Conversión de parámetros (C a SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|Datetime|Date|SQL_C_TYPE_DATE|Aceptar|ACEPTAR (1)|  
+|Datetime|Fecha|SQL_C_TYPE_DATE|Aceptar|ACEPTAR (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de hora se establecen en cero.|OK (2)<br /><br /> Se produce un error si el campo de hora es distinto de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|Aceptar|ACEPTAR (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de fecha se establecen en la fecha actual.|OK (2)<br /><br /> Fecha omitida. Se produce un error si las fracciones de segundo son distintas de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -41,7 +41,7 @@ ms.locfileid: "63140634"
 |||SQL_C_TYPE_TIMESTAMP|Error: literal de hora no válido.|ACEPTAR (1)|  
 ||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|Aceptar|ACEPTAR (1)|  
 ||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|Aceptar|El valor se redondeará a la fracción 1/300 de segundo por conversión del cliente.|  
-|Smalldatetime|Date|SQL_C_TYPE_DATE|Aceptar|Aceptar|  
+|Smalldatetime|Fecha|SQL_C_TYPE_DATE|Aceptar|Aceptar|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de hora se establecen en cero.|OK (2)<br /><br /> Se produce un error si el campo de hora es distinto de cero. Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|Aceptar|Aceptar|  
 |||SQL_C_TYPE_TIMESTAMP|Los campos de fecha se establecen en la fecha actual.|OK (2)<br /><br /> Fecha omitida. Se produce un error si las fracciones de segundo son distintas de cero.<br /><br /> Funciona con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  

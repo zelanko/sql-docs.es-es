@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074895"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Otorgar permisos Leer definición en metatados de objetos (Analysis Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66074895"
   
  Le recomendamos que incluya el `Read Definition` permiso en el nivel de base de datos cada vez que configure roles para el procesamiento dedicado. Tener `Read Definition` permite a los usuarios que no son administradores ver la jerarquía de objetos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de un modelo en y navegar a objetos individuales para su posterior procesamiento.  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], expanda **Roles** para la base de datos correspondiente en Explorador de objetos y, después, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de, expanda **roles** para la base de datos adecuada en explorador de objetos y, a continuación, haga clic en un rol de base de datos (o cree un nuevo rol de base de datos).  
   
 2.  En la pestaña **General** , seleccione la `Read Definition` opción.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66074895"
   
 ## <a name="see-also"></a>Consulte también  
  [Conceder permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Conceder permisos de proceso &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

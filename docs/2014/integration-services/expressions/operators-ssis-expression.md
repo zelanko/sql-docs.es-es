@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7689110600b7c4cded50572828ab469dd51c1432
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62897364"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (expresión de SSIS)
@@ -37,14 +37,14 @@ ms.locfileid: "62897364"
 |[- &#40;Negativo&#41; &#40;expresión de SSIS&#41;](negate-ssis-expression.md)|Niega una expresión numérica.|  
 |[&#42; &#40;Multiplicar&#41; &#40;expresión de SSIS&#41;](multiply-ssis-expression.md)|Multiplica dos expresiones numéricas.|  
 |[Dividir &#40;expresión de SSIS&#41;](divide-ssis-expression.md)|Divide la primera expresión numérica por la segunda.|  
-|[&#40;módulo&#41; &#40;expresión de SSIS&#41;](modulo-ssis-expression.md)|Proporciona el resto entero después de dividir la primera expresión numérica por la segunda.|  
+|[&#40;Módulo&#41; &#40;expresión de SSIS&#41;](modulo-ssis-expression.md)|Proporciona el resto entero después de dividir la primera expresión numérica por la segunda.|  
 |[&#124;&#124; &#40;OR lógico&#41; &#40;expresión de SSIS&#41;](logical-or-ssis-expression.md)|Realiza una operación lógica OR.|  
 |[&& &#40;AND lógico&#41; &#40;expresión de SSIS&#41;](logical-and-ssis-expression.md)|Realiza una operación lógica AND.|  
 |[\! &#40;NOT lógico&#41; &#40;expresión de SSIS&#41;](logical-not-ssis-expression.md)|Niega un operando booleano.|  
 |[&#124; &#40;OR inclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-inclusive-or-ssis-expression.md)|Lleva a cabo una operación OR bit a bit entre dos valores enteros.|  
 |[^ &#40;OR exclusivo bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-exclusive-or-ssis-expression.md)|Lleva a cabo una operación OR exclusiva bit a bit entre dos valores enteros.|  
 |[& &#40;AND bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-and-ssis-expression.md)|Lleva a cabo una operación AND bit a bit entre dos valores enteros.|  
-|[~ &#40;no&#41; &#40;expresión de SSIS&#41;](bitwise-not-ssis-expression.md)|Realiza una negación bit a bit de un entero.|  
+|[~ &#40;Not bit a bit&#41; &#40;expresión de SSIS&#41;](bitwise-not-ssis-expression.md)|Realiza una negación bit a bit de un entero.|  
 |[== &#40;Igual&#41; &#40;expresión de SSIS&#41;](equal-ssis-expression.md)|Realiza una comparación para determinar si dos expresiones son iguales.|  
 |[\!= &#40;Diferente&#41; &#40;expresión de SSIS&#41;](unequal-ssis-expression.md)|Realiza una comparación para determinar si dos expresiones no son iguales.|  
 |[&#62; &#40;Mayor que&#41; &#40;expresión de SSIS&#41;](greater-than-ssis-expression.md)|Realiza una comparación para determinar si la primera expresión es mayor que la segunda.|  

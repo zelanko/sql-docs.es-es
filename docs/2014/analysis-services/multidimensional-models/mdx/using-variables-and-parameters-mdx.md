@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073708"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Usar variables y parámetros (MDX)
@@ -59,6 +59,6 @@ from [Adventure Works]
  Para utilizar esta funcionalidad con OLE DB, debería usarse la interfaz `ICommandWithParameters`. Para utilizar esta funcionalidad con ADOMD.Net, debería usarse la colección **AdomdCommand.Parameters** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Aspectos básicos de scripting de MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022643"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
-  Los tipos de datos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y los tipos de datos de Oracle no siempre coinciden exactamente. En la medida de lo posible, el tipo de datos coincidentes se selecciona automáticamente al publicar en una tabla Oracle. En los casos en que no queda clara una asignación de tipos de datos única, se proporcionan asignaciones alternativas de tipos de datos. Para obtener información acerca de cómo seleccionar asignaciones alternativas, vea la sección "Especificar asignaciones de tipos de datos alternativas" más adelante en este tema.  
+  Los tipos de datos de Oracle y los de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no siempre coinciden exactamente. En la medida de lo posible, el tipo de datos coincidentes se selecciona automáticamente al publicar en una tabla Oracle. En los casos en que no queda clara una asignación de tipos de datos única, se proporcionan asignaciones alternativas de tipos de datos. Para obtener información acerca de cómo seleccionar asignaciones alternativas, vea la sección "Especificar asignaciones de tipos de datos alternativas" más adelante en este tema.  
   
  En la siguiente tabla se muestra cómo se asignan los tipos de datos de manera predeterminada entre Oracle y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando se mueven datos del publicador de Oracle al distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La columna Alternativas indica si existen asignaciones alternativas disponibles.  
   

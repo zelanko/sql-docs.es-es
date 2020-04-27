@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9123834f1c07a61fa0e1c48d29667d4d71ada359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896121"
 ---
 # <a name="creating-a-custom-task"></a>Crear una tarea personalizada
@@ -94,8 +94,8 @@ End Class 'MyTask
 ![Integration Services icono (pequeño)](../../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Consulte también  
- [Creating a Custom Task](creating-a-custom-task.md)  (Crear una tarea personalizada)  
- [Programar una tarea personalizada](coding-a-custom-task.md)   
+ [Crear una tarea personalizada](creating-a-custom-task.md)   
+ [Codificar una tarea personalizada](coding-a-custom-task.md)   
  [Desarrollar una interfaz de usuario para una tarea personalizada](developing-a-user-interface-for-a-custom-task.md)  
   
   

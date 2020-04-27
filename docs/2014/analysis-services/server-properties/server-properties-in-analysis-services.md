@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068900"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Configurar las propiedades de servidor en Analysis Services
@@ -36,7 +36,7 @@ ms.locfileid: "66068900"
   
  [Referencia de propiedades de servidor](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a>Configurar las propiedades del servidor (instancia)  
+##  <a name="configure-server-instance-properties"></a><a name="bkmk_config"></a>Configurar las propiedades del servidor (instancia)  
  Las páginas de propiedades de SQL Server Management Studio contienen un subconjunto de las propiedades disponibles, que muestran solo las propiedades que es más probable que haya que modificar. El conjunto completo de propiedades se puede encontrar en el archivo msmdsrv.ini.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ ms.locfileid: "66068900"
   
 4.  Después de guardar el archivo, debe reiniciar el servicio.  
   
-##  <a name="bkmk_ref"></a>Referencia de propiedades de servidor  
+##  <a name="server-property-reference"></a><a name="bkmk_ref"></a> Referencia de las propiedades de servidor  
  Las propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son importantes para ajustar bien el sistema. Por ejemplo, para hacer que el comportamiento del registro de consultas sea coherente con los requisitos, puede establecer las propiedades relevantes.  
   
  En los siguientes temas se explican las diversas propiedades de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] :  
@@ -83,7 +83,7 @@ ms.locfileid: "66068900"
 |[Propiedades de minería de datos](data-mining-properties.md)|Las propiedades de minería de datos controlan qué algoritmos de minería de datos están habilitados y cuáles no. De manera predeterminada, todos los algoritmos están habilitados.|  
 |DSO|DSO ya no es compatible. Se omiten las propiedades de DSO.|  
 |[Propiedades de características](feature-properties.md)|Las propiedades de características corresponden a las características del producto, la mayor parte de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.|  
-|[Filestore, propiedades](filestore-properties.md)|Las propiedades de almacén de archivos solamente sirven para uso avanzado. Incluyen valores de configuración avanzada de la administración de memoria.|  
+|[Propiedades de almacén de propiedades](filestore-properties.md)|Las propiedades de almacén de archivos solamente sirven para uso avanzado. Incluyen valores de configuración avanzada de la administración de memoria.|  
 |[Propiedades del administrador de bloqueos](lock-manager-properties.md)|Las propiedades del administrador de bloqueos definen los comportamientos del servidor relativos a bloqueos y tiempos de espera. La mayoría de estas propiedades solo sirven para uso avanzado.|  
 |[Propiedades de registro](log-properties.md)|Las propiedades del registro controlan si los eventos inician la sesión en el servidor, dónde y cómo. Esto incluye el registro de errores, el registro de excepciones, la caja negra SQL, el registro de consultas y los seguimientos.|  
 |[Propiedades de memoria](memory-properties.md)|Las propiedades de memoria controlan la forma en la que el servidor utiliza la memoria. Son fundamentalmente para uso avanzado.|  

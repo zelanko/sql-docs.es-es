@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046520"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Creación de conjuntos de filas de parámetros con valores de tabla
@@ -25,11 +25,11 @@ ms.locfileid: "63046520"
  El consumidor crea explícitamente objetos de conjunto de filas de parámetros con valores de tabla para los parámetros de entrada a través de varias interfaces de nivel de sesión. Hay una instancia de un objeto de conjunto de filas de parámetro con valores de tabla para cada parámetro con valores de tabla. El consumidor puede crear los objetos de conjunto de filas de parámetros con valores de tabla proporcionando información de metadatos que ya se conoce (escenario estático) o detectando esa información a través de interfaces de proveedor (escenario dinámico). En las secciones siguientes se describen los dos escenarios.  
   
 ## <a name="static-scenario"></a>Escenario estático  
- Cuando se conoce la información de tipo, el consumidor utiliza ITableDefinitionWithConstraints:: CreateTableWithConstraints para crear instancias de un objeto de conjunto de filas de parámetros con valores de tabla que corresponde a un parámetro con valores de tabla.  
+ Cuando se conoce el tipo de información, el consumidor usa ITableDefinitionWithConstraints::CreateTableWithConstraints para crear una instancia de un objeto de conjunto de filas de parámetros con valores de tabla que corresponde a un parámetro con valores de tabla.  
   
- El campo *GUID* (parámetro*pTableID* ) contiene el GUID especial (CLSID_ROWSET_TVP). El miembro *pwszName* contiene el nombre del tipo de parámetro con valores de tabla del que el consumidor quiere crear una instancia. El campo *eKind* se establecerá en DBKIND_GUID_NAME. Este nombre es necesario en una instrucción SQL ad hoc, pero es opcional en las llamadas a procedimientos.  
+ El campo *guid* (parámetro *pTableID*) contiene el GUID especial (CLSID_ROWSET_TVP). El miembro *pwszName* contiene el nombre del tipo de parámetro con valores de tabla del que el consumidor quiere crear una instancia. El campo *eKind* se establecerá en DBKIND_GUID_NAME. Este nombre es necesario en una instrucción SQL ad hoc, pero es opcional en las llamadas a procedimientos.  
   
- Para la agregación, el consumidor pasa el parámetro *pUnkOuter* con el IUnknown de control.  
+ Para la agregación, el consumidor pasa el parámetro *pUnkOuter* con el elemento IUnknown de control.  
   
  Las propiedades del objeto de conjunto de filas del parámetro con valores de tabla son de solo lectura, por lo que no se espera que el consumidor establezca ninguna propiedad en *rgPropertySets*.  
   

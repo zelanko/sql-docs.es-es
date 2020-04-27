@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899407"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>Sys. dm_pdw_exec_sessions (Transact-SQL)
@@ -26,9 +26,9 @@ ms.locfileid: "67899407"
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|Identificador de la consulta actual o de la última ejecución de la consulta (si se termina la sesión y la consulta se estaba ejecutando en el momento de la finalización). Clave para esta vista.|Único en todas las sesiones del sistema.|  
+|session_id|**nvarchar(32)**|Identificador de la consulta actual o de la última ejecución de la consulta (si se termina la sesión y la consulta se estaba ejecutando en el momento de la finalización). Clave para esta vista.|Único en todas las sesiones del sistema.|  
 |status|**nvarchar(10**|En el caso de las sesiones actuales, identifica si la sesión está activa o inactiva. En el caso de las sesiones anteriores, el estado de la sesión puede mostrar cerrado o eliminado (si la sesión se cerró de manera forzada).|' ACTIVE ', ' CLOSED ', ' IDLE ', ' TERMINATED '|  
-|request_id|**nvarchar (32)**|Identificador de la consulta actual o de la última ejecución de la consulta.|Único en todas las solicitudes del sistema. Es NULL si no se ha ejecutado ninguno.|  
+|request_id|**nvarchar(32)**|Identificador de la consulta actual o de la última ejecución de la consulta.|Único en todas las solicitudes del sistema. Es NULL si no se ha ejecutado ninguno.|  
 |security_id|**varbinary(85)**|IDENTIFICADOR de seguridad de la entidad de seguridad que ejecuta la sesión.||  
 |login_name|**nvarchar(128)**|Nombre de inicio de sesión de la entidad de seguridad que ejecuta la sesión.|Cualquier cadena que se ajuste a las convenciones de nomenclatura de usuario.|  
 |login_time|**datetime**|Fecha y hora en que se creó el usuario que inició sesión y esta sesión.|**DateTime** válido antes de la hora actual.|  

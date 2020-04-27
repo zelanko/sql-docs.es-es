@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079060"
 ---
 # <a name="defining-a-cube"></a>Definir un cubo
@@ -22,7 +22,7 @@ ms.locfileid: "66079060"
   
 ### <a name="to-define-a-cube-and-its-properties"></a>Para definir un cubo y sus propiedades  
   
-1.  En Explorador de soluciones, haga clic con el botón secundario en **cubos**y, a continuación, haga clic en **nuevo cubo**. Aparece el Asistente para cubos.  
+1.  En el Explorador de soluciones, haga clic con el botón derecho en **Cubos**y, después, haga clic en **Nuevo cubo**. Aparece el Asistente para cubos.  
   
 2.  En la página **Asistente para cubos** , haga clic en **Siguiente**.  
   
@@ -34,27 +34,27 @@ ms.locfileid: "66079060"
   
      El asistente examinará las tablas y sugerirá **InternetSales** como tabla de grupos de medida. Las tablas de grupos de medida, también denominadas tablas de hechos, contienen las medidas que son de su interés, como el número de unidades vendidas.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  En la página **Seleccionar medidas** , revise las medidas seleccionadas en el grupo de medida **Internet Sales** y luego desactive las casillas de las medidas siguientes:  
   
-    -   **Clave de promoción**  
+    -   **Promotion Key**  
   
-    -   **Clave de moneda**  
+    -   **Currency Key**  
   
-    -   **Clave de territorio de ventas**  
+    -   **Sales Territory Key**  
   
-    -   **Número de revisión**  
+    -   **Revision Number**  
   
      De forma predeterminada, el asistente selecciona como medidas todas las columnas numéricas de la tabla de hechos que no están vinculadas a dimensiones. No obstante, estas cuatro columnas no son miembros reales. Las tres primeras son valores clave que vinculan la tabla de hechos con tablas de dimensiones que no se utilizan en la versión inicial de este cubo.  
   
-8.  Haga clic en **Next**.  
+8.  Haga clic en **Siguiente**.  
   
 9. En la página **Seleccionar dimensiones existentes** , asegúrese de que la dimensión **Date** que ha creado anteriormente está seleccionada y haga clic en **Siguiente**.  
   
 10. En la página **Seleccionar nuevas dimensiones** , seleccione las nuevas dimensiones que se van a crear. Para ello, compruebe que las casillas **Customer**, **Geography**y **Product** están activadas y, después, desactive la casilla **InternetSales** .  
   
-11. Haga clic en **Next**.  
+11. Haga clic en **Siguiente**.  
   
 12. En la página **finalización del asistente** , cambie el nombre del cubo a `Analysis Services Tutorial`. En el panel de vista previa, puede ver el grupo de medida **InternetSales** y sus medidas. También puede ver las dimensiones **Date**, **Customer** y **Product** .  
   

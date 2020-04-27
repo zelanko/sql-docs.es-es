@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070296"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción de informe (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -57,7 +57,7 @@ ms.locfileid: "66070296"
  **Nombre del servidor**  
  Escriba el nombre de la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] instancia en la que la acción ejecuta el informe.  
   
- **Ruta de acceso del servidor**  
+ **Ruta de acceso al servidor**  
  Escriba la ruta del informe en la instancia de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Por ejemplo, escriba **Sales/YearlySalesByCategory**.  
   
  **Formato de informe**  
@@ -92,7 +92,7 @@ ms.locfileid: "66070296"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Batch|La acción debe ejecutarse como parte de una operación por lotes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o una tarea.|  
-|Interactive|La acción se ejecuta cuando el usuario invoca la acción.|  
+|Interactive (Interactivo)|La acción se ejecuta cuando el usuario invoca la acción.|  
 |Al abrir|La acción se ejecuta cuando se abre el cubo por primera vez.|  
   
  **Aplicación**  
@@ -106,7 +106,7 @@ ms.locfileid: "66070296"
  **Descripción**  
  Escriba la descripción opcional de la acción.  
   
- **Caption**  
+ **Hayan**  
  Escriba el título que se mostrará para la acción en la aplicación cliente si establece **El título es MDX** en **False**.  
   
  Escriba la expresión MDX que devuelve una cadena para el título si establece **True** en **El título es MDX**.  

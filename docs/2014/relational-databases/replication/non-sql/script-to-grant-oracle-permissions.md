@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022427"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script para conceder permisos en Oracle
-  El script que se proporciona en este tema se utiliza durante la configuración de una base de datos de Oracle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que publicará datos mediante la replicación de. Este script también está disponible en el siguiente directorio después de la instalación: * \<unidad>*\\: \Archivos\\de programa\Microsoft SQL Server*\<InstanceName>* \MSSQL\Install\oracleadmin.SQL. Para más información sobre la configuración de la base de datos de Oracle, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
+  El script que se proporciona en este tema se usa durante la configuración de una base de datos de Oracle que va a publicar datos mediante replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este script también está disponible en el directorio siguiente después de la instalación de: *\<unidad>* :\\\Archivos de programa\Microsoft SQL Server\\ *\<<nombreDeInstancia>* \MSSQL\Install\oracleadmin.sql. Para más información sobre la configuración de la base de datos de Oracle, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Este script incluye la instrucción `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, que es necesaria para los desencadenadores que utiliza la replicación transaccional. Si solo va a utilizar replicación de instantáneas, quite del script esta línea de la línea de comandos.  
   
- **Para ejecutar el script desde la utilidad Oracle\*SQL Plus**  
+ **Para ejecutar el script desde la utilidad SQL\*Plus de Oracle**  
   
 1.  En el distribuidor de SQL Server, abra una ventana del símbolo del sistema.  
   

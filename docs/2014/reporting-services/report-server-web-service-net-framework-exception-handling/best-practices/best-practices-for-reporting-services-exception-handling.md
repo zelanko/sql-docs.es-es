@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd38e382cc0b34de0498dd5ed9ce0237a5a1e07f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046137"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Prácticas recomendadas para la administración de excepciones de Reporting Services
@@ -34,14 +34,14 @@ ms.locfileid: "63046137"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Prevención de solicitudes no válidas](preventing-invalid-requests.md)|Describe las técnicas para evitar que las solicitudes que no sean válidas se envíen al servidor de informes.|  
-|[Uso de los bloques Try/Catch](using-try-and-catch-blocks.md)|Describe cómo mejorar más la confiabilidad de una aplicación con bloques try/catch.|  
-|[Administración de advertencias y casos que no producen excepciones](handling-warnings-and-cases-that-do-not-cause-exceptions.md)|Explica cómo controlar los errores que no producen ninguna excepción que se inicie a través de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
-|[Uso de la propiedad Detail para administrar errores concretos](using-the-detail-property-to-handle-specific-errors.md)|Explica cómo administrar mediante programación errores concretos mediante la propiedad **Detail** del objeto **SoapException**.|  
+|[Impedir las solicitudes no válidas](preventing-invalid-requests.md)|Describe las técnicas para evitar que las solicitudes que no sean válidas se envíen al servidor de informes.|  
+|[Uso de los bloques Try y Catch](using-try-and-catch-blocks.md)|Describe cómo mejorar más la confiabilidad de una aplicación con bloques try/catch.|  
+|[Administrar las advertencias y casos que no producen excepciones](handling-warnings-and-cases-that-do-not-cause-exceptions.md)|Explica cómo controlar los errores que no producen ninguna excepción que se inicie a través de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Usar la propiedad Detail para administrar errores concretos](using-the-detail-property-to-handle-specific-errors.md)|Explica cómo administrar mediante programación errores concretos mediante la propiedad **Detail** del objeto **SoapException**.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedad Detail](../soapexception-class/detail-property.md)   
- [Introducción a la administración de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Propiedad detail](../soapexception-class/detail-property.md)   
+ [Introducción al control de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Clase SoapException de Reporting Services](../soapexception-class/reporting-services-soapexception-class.md)  
   
   

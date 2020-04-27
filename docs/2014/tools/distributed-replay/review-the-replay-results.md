@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149705"
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
-  Una vez [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que la característica de Distributed Replay completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados en cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay**. Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+  Una vez que la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay** . Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
  El elemento XML `<ResultDirectory>` del archivo de configuración del cliente, `DReplayClient.xml`, ubicado en cada cliente, especifica la ubicación donde se almacenan los archivos de seguimiento de resultados. Los archivos de seguimiento del directorio de resultados del cliente se sobrescriben en cada reproducción.  
   
@@ -80,6 +80,6 @@ ms.locfileid: "63149705"
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Requisitos de Distributed Replay](distributed-replay-requirements.md)   
  [Opciones de la línea de comandos de la herramienta de administración &#40;Distributed Replay utilidad&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configure Distributed Replay](configure-distributed-replay.md)  
+ [Configurar Distributed Replay](configure-distributed-replay.md)  
   
   

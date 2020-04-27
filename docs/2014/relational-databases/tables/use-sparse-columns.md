@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196654"
 ---
 # <a name="use-sparse-columns"></a>Usar columnas dispersas
@@ -104,9 +104,9 @@ ms.locfileid: "68196654"
 |Tipo de datos|Bytes no dispersos|Bytes dispersos|Porcentaje de NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Varía con el tipo de datos subyacente|||  
-|`varchar`de`char`|2*|4*|60%|  
-|`nvarchar`de`nchar`|2*|4*+|60%|  
-|`varbinary`de`binary`|2*|4*|60%|  
+|`varchar` o `char`|2*|4*|60%|  
+|`nvarchar` o `nchar`|2*|4*+|60%|  
+|`varbinary` o `binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   

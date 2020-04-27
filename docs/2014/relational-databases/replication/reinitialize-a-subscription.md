@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199229"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar una suscripción
@@ -34,10 +34,10 @@ ms.locfileid: "68199229"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Reinicializar una suscripción es un proceso con dos partes:  
   
-1.  Una o todas las suscripciones a una publicación se *marcan* para reinicializarse. Las suscripciones se marcan para reinicializarlas en el cuadro de diálogo **Reinicializar suscripciones** , disponible en la carpeta **Publicaciones locales** y en la carpeta **Suscripciones locales** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. También puede marcar suscripciones desde la pestaña **Todas las suscripciones** y el nodo de publicaciones del Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md). Al marcar una suscripción para reinicialización, tiene las siguientes opciones:  
+1.  Una o todas las suscripciones a una publicación se *marcan* para reinicializarse. Las suscripciones se marcan para reinicialización en el cuadro de diálogo **Reinicializar suscripciones**, disponible en la carpeta **Publicaciones locales** y en la carpeta **Suscripciones locales** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. También puede marcar suscripciones desde la pestaña **Todas las suscripciones** y el nodo de publicaciones del Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md). Al marcar una suscripción para reinicialización, tiene las siguientes opciones:  
   
      **Utilizar la instantánea actual**  
      Seleccione esta opción para aplicar la instantánea actual al suscriptor la próxima vez que se ejecute el Agente de distribución o el Agente de mezcla. Si no hay ninguna instantánea válida disponible, esta opción no puede seleccionarse.  
@@ -102,7 +102,7 @@ ms.locfileid: "68199229"
   
 3.  En el cuadro de diálogo **Reinicializar suscripciones** , seleccione las opciones y, a continuación, haga clic en **Marcar para reinicializar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Las suscripciones pueden reinicializarse mediante programación con procedimientos almacenados de replicación. El procedimiento almacenado que se usa depende del tipo de suscripción (inserción o extracción) y el tipo de publicación a la que pertenece la suscripción.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar una suscripción de extracción a una publicación transaccional  
@@ -139,29 +139,29 @@ ms.locfileid: "68199229"
   
 1.  En el publicador de la base de datos de publicación, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), especificando uno de los valores siguientes para **@automatic_reinitialization_policy**:  
   
-    -   **1** : los cambios se cargan desde el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio en la publicación.  
+    -   **1** : los cambios se cargan en el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio a la publicación.  
   
-    -   **0** : los cambios en el suscriptor se descartan cuando una suscripción se reinicializa automáticamente según lo requiera un cambio en la publicación.  
+    -   **0** : los cambios en el suscriptor se descartan cuando una suscripción se reinicializa automáticamente según lo requiera un cambio a la publicación.  
   
     > [!IMPORTANT]  
     >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
   
-     Para obtener más información, vea [Crear una suscripción](publish/create-a-publication.md).  
+     Para obtener más información, vea [crear una publicación](publish/create-a-publication.md).  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Para cambiar la directiva de reinicialización para una publicación de combinación existente  
   
 1.  En el publicador de la base de datos de publicación, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **automatic_reinitialization_policy** para **@property** y uno de los siguientes valores para **@value**:  
   
-    -   **1** : los cambios se cargan desde el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio en la publicación.  
+    -   **1** : los cambios se cargan en el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio a la publicación.  
   
-    -   **0** : los cambios en el suscriptor se descartan cuando una suscripción se reinicializa automáticamente según lo requiera un cambio en la publicación.  
+    -   **0** : los cambios en el suscriptor se descartan cuando una suscripción se reinicializa automáticamente según lo requiera un cambio a la publicación.  
   
     > [!IMPORTANT]  
     >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
   
      Para más información, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Las suscripciones individuales se pueden marcar para reinicialización de manera que, durante la siguiente sincronización, se aplique una nueva instantánea. Las suscripciones se pueden reinicializar mediante programación usando Replication Management Objects (RMO). Las clases RMO que usa dependen del tipo de publicación a la que pertenece la suscripción y del tipo de suscripción (es decir, una suscripción de inserción o de extracción).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar una suscripción de extracción a una publicación transaccional  
@@ -230,7 +230,7 @@ ms.locfileid: "68199229"
   
 5.  Sincronice la suscripción de inserción. Para obtener más información, consulte [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a>Ejemplos (RMO)  
  En este ejemplo reinicializa una suscripción de extracción para una publicación transaccional.  
   
  [!code-csharp[HowTo#rmo_ReinitTranPullSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_reinittranpullsub)]  
@@ -245,7 +245,7 @@ ms.locfileid: "68199229"
   
 ## <a name="see-also"></a>Consulte también  
  [Reinicializar suscripciones](reinitialize-subscriptions.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
+ [Conceptos de Replication Management Objects](concepts/replication-management-objects-concepts.md)   
+ [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md)  
   
   

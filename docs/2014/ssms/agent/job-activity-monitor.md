@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211378"
 ---
 # <a name="job-activity-monitor"></a>Monitor de actividad de trabajo
@@ -27,7 +27,7 @@ ms.locfileid: "68211378"
  **Nombre**  
  Nombre del trabajo.  
   
- **Enabled**  
+ **Habilitado**  
  Indica si el trabajo está habilitado (**sí**) o no (**no**).  
   
  **Estado** <sup>1</sup>  
@@ -46,10 +46,10 @@ ms.locfileid: "68211378"
  Categoría asignada al trabajo.  
   
  **Ejecutable**  
- **Sí** , si se puede ejecutar el trabajo; **No** si el trabajo no se puede ejecutar. No puede ejecutarse un trabajo que no disponga de pasos o de un servidor de destino.  
+ **Sí** si el trabajo puede ejecutarse; **No** si el trabajo no puede ejecutarse. No puede ejecutarse un trabajo que no disponga de pasos o de un servidor de destino.  
   
- **Programada**  
- **Sí** , si el trabajo está asignado a una programación de trabajo; **No** si el trabajo no tiene ninguna programación.  
+ **Programado**  
+ **Sí** si se ha asignado el trabajo a una programación de trabajo; **No** si el trabajo no tiene ninguna programación.  
   
  <sup>1</sup> Solo los miembros del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol fijo de servidor sysadmin y del grupo administradores de servidor pueden ver los valores de esta columna. Los miembros del rol SQLAgentOperatorRole no pueden ver los valores en esta columna.  
   

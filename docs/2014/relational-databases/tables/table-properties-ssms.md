@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196714"
 ---
 # <a name="table-properties"></a>Propiedades de tabla
@@ -36,7 +36,7 @@ ms.locfileid: "68196714"
   
 4.  [Página Almacenamiento](#Storage)  
   
-##  <a name="GeneralPage"></a> Página General  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Página General  
  **Base de datos**  
  Nombre de la base de datos que contiene esta tabla.  
   
@@ -80,10 +80,10 @@ ms.locfileid: "68196714"
  DISABLE  
  Evita la extensión de bloqueo en la mayoría de los casos. No siempre se evitan los bloqueos de nivel de la tabla. Por ejemplo, si está examinando una tabla que no tiene ningún índice clúster en el nivel de aislamiento serializable, [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe realizar un bloqueo de la tabla para proteger la integridad de los datos.  
   
- **La tabla está replicada**  
+ **Tabla replicada**  
  Indica si se ha replicado la tabla en otra base de datos mediante la replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los valores posibles son `True` o `False`.  
   
-##  <a name="ChangeTracking"></a>Change Tracking página  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a>Change Tracking página  
  **Seguimiento de cambios**  
  Indica si el seguimiento de cambios está habilitado para la tabla. El valor predeterminado es `False`.  
   
@@ -96,10 +96,10 @@ ms.locfileid: "68196714"
   
  Para obtener más información sobre el seguimiento de cambios, vea [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a>Página de FileTable  
+##  <a name="filetable-page"></a><a name="FileTable"></a>Página de FileTable  
  Muestra las propiedades de la tabla relacionada con las tablas FileTable. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
- **Intercalación de columna de nombre de FileTable**  
+ **Intercalación de la columna Nombre de una tabla FileTable**  
  La intercalación que se aplica a la columna **Nombre** de FileTable. La columna **Nombre** contiene nombres de archivo y de directorio.  
   
  **Nombre del directorio de FileTable**  
@@ -108,14 +108,14 @@ ms.locfileid: "68196714"
  **Espacio de nombres de FileTable habilitado**  
  Si es `True`, este valor indica que la tabla es una tabla FileTable. Si cambia este valor a `False`, cambiará la tabla FileTable a una tabla de usuario ordinaria. Si posteriormente desea cambiar la tabla a una tabla FileTable, la tabla tiene que pasar una comprobación de coherencia de FileTable antes de que la conversión se realice correctamente.  
   
-##  <a name="Storage"></a>Página almacenamiento  
+##  <a name="storage-page"></a><a name="Storage"></a>Página almacenamiento  
  Muestra las propiedades relacionadas con el almacenamiento de la tabla seleccionada.  
   
 ### <a name="compression"></a>Compresión  
  **Tipo de compresión**  
  El tipo de compresión de la tabla. Esta propiedad solo está disponible para tablas que no tienen particiones. Para obtener más información, consulte [Data Compression](../data-compression/data-compression.md).  
   
- **Particiones que usan la compresión de página**  
+ **Particiones que utilizan la compresión de página**  
  El número de particiones que están utilizando la compresión de página. Esta propiedad solo está disponible para tablas con particiones.  
   
  **Particiones no comprimidas**  
@@ -134,13 +134,13 @@ ms.locfileid: "68196714"
  **La tabla tiene particiones**  
  Los valores posibles son `True` y `False`.  
   
- **Grupo de archivos FileStream**  
+ **Grupo de archivos de flujo de archivos**  
  Especifique el nombre del grupo de archivos de datos FILESTREAM si la tabla tiene una columna `varbinary(max)` con el atributo FILESTREAM. El valor predeterminado es el grupo de archivos de datos de FILESTREAM predeterminado.  
   
  Si la tabla no contiene datos de FILESTREAM, el campo estará en blanco.  
   
 ### <a name="general"></a>General  
- **El formato de almacenamiento vardecimal está habilitado**  
+ **El formato de almacenamiento Vardecimal está habilitado**  
  Cuando `True`es, este valor de solo lectura indica `decimal` que `numeric` los tipos de datos y se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, utilice la `vardecimal storage format` opción de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
   
  **Espacio de índice**  
@@ -171,6 +171,6 @@ ms.locfileid: "68196714"
   
 ## <a name="see-also"></a>Consulte también  
  [Ver la definición de tabla](view-the-table-definition.md)   
- [Modificar columnas &#40;Motor de base de datos&#41;](../tables/modify-columns-database-engine.md)  
+ [Modificar columnas &#40;motor de base de datos&#41;](../tables/modify-columns-database-engine.md)  
   
   

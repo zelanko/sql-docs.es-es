@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 77fbdc3bf2f579d585a802d5ed137cfe2a149c2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196449"
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funciones definidas por el usuario
@@ -34,9 +34,9 @@ ms.locfileid: "68196449"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  ALTER FUNCTION no se puede utilizar para realizar ninguna de estas acciones:  
   
 -   Cambiar una función escalar a una función con valores de tabla, o viceversa.  
@@ -45,12 +45,12 @@ ms.locfileid: "68196449"
   
 -   Cambiar una función de Transact-SQL en una función CLR, o viceversa.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER para la función o para el esquema. Si la función especifica un tipo definido por el usuario, requiere el permiso EXECUTE para ese tipo.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-a-user-defined-function"></a>Para modificar una función definida por el usuario  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68196449"
   
 6.  En el menú **Archivo** , haga clic en **Guardar**_nombre_de_función_.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>Para modificar una función definida por el usuario  
   

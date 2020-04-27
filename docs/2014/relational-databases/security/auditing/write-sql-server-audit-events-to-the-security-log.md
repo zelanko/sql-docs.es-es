@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211976"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Escribir eventos de auditoría de SQL Server en el registro de seguridad
@@ -47,25 +47,25 @@ ms.locfileid: "68211976"
   
      [Seguridad](#Security)  
   
--   **Para escribir SQL Server eventos de auditoría en el registro de seguridad:**  
+-   **Para escribir eventos de auditoría de SQL Server en el registro de seguridad:**  
   
-     [Configurar el valor auditar el acceso a objetos en Windows mediante Auditpol](#auditpolAccess)  
+     [Configurar el valor Auditar el acceso a objetos en Windows utilizando auditpol](#auditpolAccess)  
   
-     [Configurar el valor auditar el acceso a objetos en Windows mediante secpol](#secpolAccess)  
+     [Configurar el valor Auditar el acceso a objetos en Windows utilizando secpol](#secpolAccess)  
   
-     [Conceder el permiso generar auditorías de seguridad a una cuenta mediante secpol](#secpolPermission)  
+     [Conceder el permiso Generar auditorías de seguridad a una cuenta utilizando secpol](#secpolPermission)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
- Los administradores del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deberían saber que una directiva de dominio puede sobrescribir la configuración regional del registro de seguridad. En este caso, la directiva de dominio puede sobrescribir el valor de subcategoría (**auditpol /get /subcategory:"aplicación generada"** ). Esto puede afectar a la capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de registrar los eventos sin que haya ninguna manera de detectar que los eventos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está intentando auditar no van a ser grabados.  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
+ Los administradores del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deberían saber que una directiva de dominio puede sobrescribir la configuración regional del registro de seguridad. En este caso, la directiva de dominio puede sobrescribir el valor de subcategoría (**auditpol /get /subcategory:"aplicación generada"**). Esto puede afectar a la capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de registrar los eventos sin que haya ninguna manera de detectar que los eventos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está intentando auditar no van a ser grabados.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe ser administrador de Windows para configurar estos valores.  
   
-##  <a name="auditpolAccess"></a> Para configurar el valor Auditar el acceso a objetos en Windows utilizando auditpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a>Para configurar el valor auditar el acceso a objetos en Windows mediante Auditpol  
   
 1.  Abra un símbolo del sistema con permisos administrativos.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "68211976"
   
 3.  Cierre la ventana del símbolo del sistema.  
   
-##  <a name="secpolAccess"></a> Para conceder el permiso Generar auditorías de seguridad a una cuenta utilizando secpol  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a> Para conceder el permiso Generar auditorías de seguridad a una cuenta utilizando secpol  
   
 1.  En cualquier sistema operativo Windows, en el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  Escriba **secpol.msc** y, a continuación, haga clic en **Aceptar**. Si aparece el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar**.  
+2.  Escriba **secpol.msc** y, a continuación, haga clic en **Aceptar**. Si aparece el cuadro de diálogo **Control de acceso de usuarios**, haga clic en **Continuar**.  
   
 3.  En la herramienta Directiva de seguridad local, expanda **Configuración de seguridad**, expanda **Directivas locales**y, a continuación, haga clic en **Asignación de derechos de usuario**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68211976"
   
 5.  En la pestaña **Configuración de seguridad local** , haga clic en **Agregar usuario o grupo**.  
   
-6.  En el cuadro de diálogo **Seleccionar usuarios, equipos o grupos** , escriba el nombre de la cuenta de usuario, como **domain1\user1** y, después, haga clic en **Aceptar**, o haga clic en **Opciones avanzadas** y busque la cuenta.  
+6.  En el cuadro de diálogo **Seleccionar usuarios, equipos o grupos**, escriba el nombre de la cuenta de usuario, como **dominio1\usuario1** y, a continuación, haga clic en **Aceptar**, o haga clic en **Opciones avanzadas** y busque la cuenta.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,11 +101,11 @@ ms.locfileid: "68211976"
   
 9. Reinicie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para habilitar este valor.  
   
-##  <a name="secpolPermission"></a> Para configurar el valor Auditar el acceso a objetos en Windows utilizando secpol  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> Para configurar el valor Auditar el acceso a objetos en Windows utilizando secpol  
   
 1.  Si el sistema operativo es anterior a [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] o Windows Server 2008, en el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  Escriba **secpol.msc** y, a continuación, haga clic en **Aceptar**. Si aparece el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar**.  
+2.  Escriba **secpol.msc** y, a continuación, haga clic en **Aceptar**. Si aparece el cuadro de diálogo **Control de acceso de usuarios**, haga clic en **Continuar**.  
   
 3.  En la herramienta Directiva de seguridad local, expanda **Configuración de seguridad**, expanda **Directivas locales**y, a continuación, haga clic en **Directiva de auditoría**.  
   

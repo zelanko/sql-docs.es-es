@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212134"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Suscribir una base de datos a una categoría de directiva o anular la suscripción
@@ -34,14 +34,14 @@ ms.locfileid: "68212134"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere pertenencia al rol fijo de base de datos db_owner.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>Para suscribir una base de datos a una categoría de directiva o anular la suscripción  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68212134"
      **Directiva**  
      Cuando se expanden los grupos de directivas, muestra las directivas de la categoría de directiva.  
   
-     **Enabled**  
+     **Habilitado**  
      Indica si las directivas están habilitadas o deshabilitadas.  
   
      **Modo de ejecución**  
@@ -76,9 +76,9 @@ ms.locfileid: "68212134"
   
 4.  Para suscribirse a una categoría de administración basada en directivas, active la casilla de la categoría en la columna **Subscribed** . Para anular la suscripción de una categoría, desactive la casilla.  
   
-5.  Cuando termine, haga clic en **Aceptar**.  
+5.  Cuando haya terminado, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-subscribe-a-database-to-a-policy-category"></a>Para suscribir una base de datos a una categoría de directiva  
   

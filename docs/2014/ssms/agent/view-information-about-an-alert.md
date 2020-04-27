@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211292"
 ---
 # <a name="view-information-about-an-alert"></a>Ver información acerca de una alerta
@@ -38,14 +38,14 @@ ms.locfileid: "68211292"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ver información acerca de una alerta. A otros usuarios debe concederse el rol fijo de base de datos **SQLAgentOperatorRole** en la base de datos **msdb** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>Para ver información acerca de una alerta  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68211292"
   
 4.  Haga clic con el botón derecho en la alerta que tiene la información que desea ver y seleccione **Propiedades**.  
   
-     Para obtener más información sobre las opciones disponibles contenidas en el cuadro de diálogo _alert_name_**propiedades de alerta** , consulte:  
+     Para más información sobre las opciones disponibles presentes en el cuadro de diálogo _nombre_alerta_**Propiedades de la alerta** , consulte:  
   
     -   [Propiedades de alerta-nueva alerta &#40;página general&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "68211292"
   
     -   [Propiedades de alerta: nueva página de opciones de &#40;de alertas&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Propiedades de alerta &#40;página historial&#41;](alert-properties-history-page.md)  
+    -   [Propiedades de alerta &#40;Página Historial&#41;](alert-properties-history-page.md)  
   
-5.  Cuando termine, haga clic en **Aceptar**.  
+5.  Cuando haya terminado, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>Para ver información acerca de una alerta  
   

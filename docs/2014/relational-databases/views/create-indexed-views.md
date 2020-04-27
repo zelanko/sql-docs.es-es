@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196428"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
@@ -29,7 +29,7 @@ ms.locfileid: "68196428"
   
   
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Para crear una vista indizada, es necesario seguir los pasos descritos a continuación, que son fundamentales para la correcta implementación de la vista indizada:  
   
 1.  Compruebe que las opciones SET sean correctas para todas las tablas existentes a las que se hará referencia en la vista.  
@@ -42,7 +42,7 @@ ms.locfileid: "68196428"
   
 5.  Cree el índice clúster único en la vista.  
   
-###  <a name="Restrictions"></a>Opciones SET requeridas para vistas indizadas  
+###  <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a>Opciones SET requeridas para vistas indizadas  
  La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET CONCAT_NULL_YIELDS_NULL en ON, la expresión **'** abc **'** + NULL devuelve el valor NULL, aunque al establecer CONCAT_NULL_YIEDS_NULL en OFF, la misma expresión genera **'** abc **'**.  
   
  Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Las opciones SET de la tabla siguiente deben establecerse en los valores que se muestran en la columna **RequiredValue** siempre que se den las siguientes condiciones:  
@@ -55,7 +55,7 @@ ms.locfileid: "68196428"
   
 -   El optimizador de consultas utiliza la vista indizada para producir el plan de consulta.  
   
-    |Opciones de Set|Valor requerido|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
+    |Opciones de Set|Valor requerido|Valor de servidor predeterminado|Default<br /><br /> Valor de OLE DB y ODBC|Default<br /><br /> predeterminado|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
     |ANSI_PADDING|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
@@ -130,12 +130,12 @@ ms.locfileid: "68196428"
   
 -   Si la definición de vista contiene una cláusula GROUP BY, la clave del índice clúster único solo puede hacer referencia a las columnas especificadas en esta cláusula.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  Cuando haga referencia a los literales de cadena `datetime` y `smalldatetime` de las vistas indizadas, se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Las expresiones que implican la conversión implícita de cadenas de caracteres a `datetime` o `smalldatetime` se consideran no deterministas. Esto se debe a que los resultados dependen de los valores LANGUAGE y DATEFORMAT de la sesión de servidor. Por ejemplo, los resultados de la expresión `CONVERT (datetime, '30 listopad 1996', 113)` dependen del valor de LANGUAGE porque la cadena '`listopad`' significa distintos meses en distintos idiomas. De forma similar, en la expresión `DATEADD(mm,3,'2000-12-01')`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretará la cadena `'2000-12-01'` en función del valor de DATEFORMAT.  
   
  La conversión implícita de los datos de caracteres no Unicode entre intercalaciones también se considera no determinista.  
   
-###  <a name="Considerations"></a>Temas  
+###  <a name="considerations"></a><a name="Considerations"></a>Temas  
  La configuración de la opción **large_value_types_out_of_row** de las columnas de una vista indexada se hereda de la configuración de la columna correspondiente de la tabla base. Este valor se establece mediante [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). La configuración predeterminada de las columnas formadas a partir de expresiones es 0. Esto significa que los tipos de valores grandes se almacenan de forma consecutiva.  
   
  En una tabla con particiones se pueden crear vistas indizadas, en las que a su vez se pueden crear particiones.  
@@ -146,12 +146,12 @@ ms.locfileid: "68196428"
   
  Los índices de las tablas y las vistas se pueden deshabilitar. Cuando se deshabilita un índice clúster de una tabla, también se deshabilitan los índices de las vistas asociadas a la tabla.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Se necesita el permiso CREATE VIEW en la base de datos y el permiso ALTER en el esquema en que se crea la vista.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>Para crear una vista indizada  
   
@@ -212,9 +212,9 @@ ms.locfileid: "68196428"
   
 ## <a name="see-also"></a>Consulte también  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [ESTABLECER ANSI_NULLS &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [ESTABLECER ANSI_PADDING &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [ESTABLECER ANSI_WARNINGS &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
  [ESTABLECER CONCAT_NULL_YIELDS_NULL &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [ESTABLECER NUMERIC_ROUNDABORT &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   

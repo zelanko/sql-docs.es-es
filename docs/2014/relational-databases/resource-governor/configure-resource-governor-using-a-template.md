@@ -13,27 +13,27 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198933"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar el regulador de recursos utilizando una plantilla
   Puede configurar el regulador de recursos utilizando una plantilla que se proporciona en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   **Antes de empezar:**  [permisos](#Permissions)  
+-   **Antes de empezar:**  [Permisos](#Permissions)  
   
--   **Para crear un grupo de cargas de trabajo, utilizando:**  [una plantilla](#ConfRGTemplate)  
+-   **Para crear un grupo de cargas de trabajo mediante:** [una plantilla](#ConfRGTemplate)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Siga los pasos que se detallan a continuación para abrir y modificar una plantilla que crea un grupo de recursos de servidor y un grupo de cargas de trabajo para el grupo de recursos. Además, esta plantilla le permite crear una función clasificadora definida por el usuario que enruta las nuevas conexiones al grupo predeterminado o al grupo de cargas de trabajo que está creando.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] del regulador de recursos de la plantilla requieren el permiso CONTROL SERVER.  
   
-##  <a name="ConfRGTemplate"></a>Configuración de Resource Governor mediante una plantilla  
- **Para configurar el regulador de recursos mediante una plantilla en[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="configure-resource-governor-using-a-template"></a><a name="ConfRGTemplate"></a> Configurar el regulador de recursos utilizando una plantilla  
+ **Para configurar el regulador de recursos utilizando una plantilla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el menú **Ver** , haga clic en el **Explorador de plantillas**.  
   
@@ -52,10 +52,10 @@ ms.locfileid: "68198933"
  [Habilitar el regulador de recursos](enable-resource-governor.md)   
  [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   
  [Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)   
- [Resource Governor función clasificadora](resource-governor-classifier-function.md)   
- [Ver Resource Governor propiedades](view-resource-governor-properties.md)   
- [Crear grupo de recursos de &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [Crear grupo de cargas de trabajo &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [Función clasificadora del regulador de recursos](resource-governor-classifier-function.md)   
+ [Ver las propiedades del regulador de recursos](view-resource-governor-properties.md)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199449"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
@@ -89,7 +89,7 @@ ms.locfileid: "68199449"
   
 -   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y después, ejecute ALTER TABLE \<tabla> ADD \<columna>.  
   
--   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+-   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
   
      Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md). Será necesario reinicializar las suscripciones.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "68199449"
   
 -   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<tabla> DROP \<columna>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
   
--   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
+-   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
   
      Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md). Será necesario generar una instantánea nueva.  
   
@@ -146,8 +146,7 @@ ms.locfileid: "68199449"
         |`hierarchyid`|Permitir cambio|Bloquear cambio|Bloquear cambio|  
         |`geography` y `geometry`|Permitir cambio|Permitir cambio<sup>1</sup>|Bloquear cambio|  
         |`filestream`|Permitir cambio|Bloquear cambio|Bloquear cambio|  
-        |
-  `date`, `time`, `datetime2` y `datetimeoffset`|Permitir cambio|Permitir cambio<sup>1</sup>|Bloquear cambio|  
+        |`date`, `time`, `datetime2` y `datetimeoffset`.|Permitir cambio|Permitir cambio<sup>1</sup>|Bloquear cambio|  
   
          <sup>1</sup> SQL Server Compact los suscriptores convierten estos tipos de datos en el suscriptor.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082988"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
@@ -30,19 +30,18 @@ ms.locfileid: "66082988"
   
  En este tema se describen otras características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que, a menudo, son parte de una solución de predicción de análisis, ya sea para respaldar los procesos de preparación y de minería de datos o a los usuarios proporcionándoles herramientas para el análisis y la acción.  
   
- [Integration Services](#bkmk_SSIS)  
+ [Servicio de integración](#bkmk_SSIS)  
   
  [Reporting Services](#bkmk_SSRS)  
   
- [Data Quality Service](#bkmk_DQSetc)  
+ [Data Quality Services](#bkmk_DQSetc)  
   
  [Búsqueda de texto completo](#bkmk_FTSetc)  
   
  [Indización semántica](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a>SQL Server Integration Services  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona los componentes y las características necesarias para las fases de entrenamiento y de preparación de los datos de un proyecto de minería de datos. Aunque puede realizar numerosas tareas de preparación o de limpieza de datos con otras herramientas, como scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] presenta numerosas ventajas para la minería de datos:  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a> SQL Server Integration Services  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona los componentes y las características necesarias para las fases de entrenamiento y de preparación de los datos de un proyecto de minería de datos. Aunque puede realizar numerosas tareas de preparación o de limpieza de datos con otras herramientas, como scripts, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] presenta numerosas ventajas para la minería de datos:  
   
 -   Representa las tareas como parte de un flujo de trabajo, que puede repetirse, automatizarse, bifurcarse y ampliarse.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66082988"
   
 -   [Componentes del flujo de CDC](../../integration-services/data-flow/cdc-flow-components.md)  
   
--   [División condicional, transformación](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
+-   [Transformación División condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
 -   [Conversión de datos, transformación](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66082988"
   
 -   [Consulta de minería de datos, transformación](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
--   [Transformación Columna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
+-   [Transformación columna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
 -   [Muestreo de porcentaje, transformación](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66082988"
   
 -   [Búsqueda de términos, transformación](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a>SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Aunque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se vea normalmente como un componente esencial de las soluciones de minería de datos, proporciona las siguientes características útiles para la presentación de las soluciones de minería de datos.  
   
 -   Integración de datos de varios orígenes en informes complejos. Creación de consultas con el contenido de modelos para los analistas e informes que muestran predicciones y tendencias de los usuarios finales.  
@@ -107,18 +106,18 @@ ms.locfileid: "66082988"
   
  [Interfaz de usuario del Diseñador de consultas DMX de Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Analysis Services tipo de conexión para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Sin embargo, no es necesario utilizar DMX como origen de datos. Los componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para minería de datos también permite guardar los resultados de una consulta de predicción en una base de datos relacional. Si tiene un flujo de trabajo establecido para actualizar los modelos con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], las predicciones de persistencia y otros resultados de consulta de minería de datos en SQL Server le permiten utilizar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para los informes, así como otras herramientas que no interactúen con DMX.  
   
  Para obtener más información sobre cómo usar Reporting Services como nivel de presentación para los orígenes de datos, vea [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
-##  <a name="bkmk_DQSetc"></a>Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) es nuevo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Como los problemas con datos pueden imposibilitar la minería de datos, se espera que los responsables de la minería de datos que realizan análisis repetidos o que trabajan en grandes organizaciones con orígenes de datos complejos encuentren que un proyecto de datos bien planeado que use DQS es una solución más confiable para admitir la minería de datos, en lugar de la limpieza ad hoc de los datos con [!INCLUDE[tsql](../../includes/tsql-md.md)] u otros scripts.  
   
  Las siguientes características de DQS deben considerarse para la preparación y la integridad de los datos en una solución de minería de datos.  
   
- **Proceso de limpieza de datos asistido por PC que analiza los datos de origen y propone cambios.**  
+ **Un proceso de limpieza de datos asistido por PC que analice los datos de origen y proponga cambios.**  
  DQS puede comparar los datos de un origen con los datos de referencia basados en nube que son mantenidos y garantizados por los proveedores de calidad de los datos.  
   
  DQS también puede analizar los datos de origen sin formato y crear una base de conocimiento a partir de los datos de usuario. Los datos procesados se clasifican y muestran después al usuario para seguir procesándose. El proceso de limpieza es interactivo, lo que significa que el administrador de datos puede aprobar, rechazar o modificar los datos propuestos por el proceso de limpieza de datos asistido por PC.  
@@ -127,7 +126,7 @@ ms.locfileid: "66082988"
   
  Para más información, consulte [Data Cleansing](../../data-quality-services/data-cleansing.md).  
   
- **Un proceso de búsqueda de coincidencias asistido por PC que analiza los datos de origen y propone cambios.**  
+ **Un proceso de correspondencia asistido por PC que analice los datos de origen y proponga cambios.**  
  Para evitar la duplicación de los datos, puede realizar una limpieza adicional del origen de datos, para identificar coincidencias exactas o aproximadas. Estos componentes permiten especificar las reglas de correspondencia y los umbrales en los que aplicarlas.  
   
  Al buscar correspondencias en los datos, puede quitar los duplicados, que pueden constituir un problema para la minería de datos. La no duplicación de los datos no es automática; el administrador de datos o el profesional de TI debe comprobar tanto el conocimiento de la base de conocimiento como los cambios que se realizan en los datos.  
@@ -138,7 +137,7 @@ ms.locfileid: "66082988"
   
  Al realizar las actividades de correspondencia y limpieza en un proyecto de calidad de los datos, puede obtener estadísticas e información en tiempo real de los datos que DQS procesó. Los perfiles de datos le ayudan a evaluar en qué medida la correspondencia o la limpieza de los datos ayudaron a mejorar su calidad y a conocer los cambios realizados. Para obtener información acerca de las notificaciones y de los perfiles de datos, vea [Data Profiling and Notifications in DQS](../../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
- **Una base de conocimiento que representa tres tipos de conocimiento: información actualizada, conocimiento generado por el servidor DQS y conocimiento generado por el usuario.**  
+ **Una base de conocimiento que representa tres tipos de conocimiento: el conocimiento previo, el generado por el servidor de DQS y el generado por el usuario.**  
  Una vez que haya creado una base de conocimiento, puede utilizarla continuamente para limpiar y comprobar otros datos.  
   
  Puede importar los datos nuevos en los datos de la base de conocimiento de varios orígenes, ya sean los datos limpios conocidos de proveedores de referencia o los datos sin formato que coinciden con los datos existentes en la base de conocimiento.  
@@ -149,7 +148,7 @@ ms.locfileid: "66082988"
   
  Para obtener más información, consulte [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="bkmk_FTSetc"></a>Búsqueda de texto completo  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>Búsqueda de texto completo  
  La búsqueda de texto completo de SQL Server permite a las aplicaciones y a los usuarios ejecutar consultas de texto completo en datos basados en caracteres en las tablas de SQL Server. Cuando se habilita la búsqueda de texto completo, puede realizar búsquedas en los datos de texto que son mejoradas mediante reglas específicas del idioma acerca de las diversas formas de una palabra o frase. También puede configurar las condiciones de búsqueda, como la distancia entre varios términos, y utilizar funciones para restringir los resultados devueltos por orden de probabilidad.  
   
  Puesto que las consultas de texto completo son una característica que proporciona el motor de SQL Server, puede crear consultas con parámetros, generar conjuntos de datos personalizados o vectores de términos mediante características de búsqueda de texto completo en un origen de datos de texto y utilizar estos orígenes de minería de datos.  
@@ -176,7 +175,7 @@ ms.locfileid: "66082988"
   
 -   La indización de texto completo solo se admite para las columnas con estos tipos de datos: char, varchar, nchar, nvarchar, text, ntext, image, xml, varbinary y varbinary(max). Si la columna es varbinary, varbinary (max), image o XML, debe especificar la extensión de archivo del documento indizable (.doc, .pdf, .xls, etc.), en una columna de tipo independiente.  
   
-##  <a name="bkmk_SemSearch"></a>Indización semántica  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>Indización semántica  
  La búsqueda semántica se basa en las características de búsqueda de texto completo existentes en SQL Server, pero utiliza estadísticas y funciones adicionales para escenarios como la extracción automática de palabras clave y la detección de documentos relacionados. Por ejemplo, puede usar la búsqueda semántica para generar una taxonomía base para una organización u ordenar un corpus de documentos. O bien, podría utilizar la combinación de los términos extraídos y las clasificaciones de similitud de los documentos en los modelos de árbol de decisión o de un clúster.  
   
  Después de habilitar la búsqueda semántica correctamente e indizar sus columnas de datos, puede utilizar las funciones que se proporcionan de modo nativo con la indización semántica para lo siguiente:  
@@ -203,6 +202,6 @@ ms.locfileid: "66082988"
   
 ## <a name="see-also"></a>Consulte también  
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Soluciones de modelos tabulares &#40;&#41;tabular de SSAS](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluciones de modelos tabulares &#40;SSAS tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092232"
 ---
 # <a name="setup-role"></a>Rol de instalación
@@ -38,8 +38,7 @@ ms.locfileid: "66092232"
  **Todas las características con valores predeterminados**  
  Elija este rol de instalación para instalar todas las características que están disponibles para esta versión. Observe que PowerPivot para SharePoint se excluye de este rol. Debe utilizar el rol de instalación de PowerPivot para SharePoint para instalar esa característica.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] está configurado para empezar a usar la cuenta **NT AUTHORITY\NETWORK SERVICE**. El usuario actual se aprovisionará como un miembro del rol [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**de** . Los valores establecidos por esta opción se pueden invalidar especificando otros parámetros de línea de comandos.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] está configurado para empezar a usar la cuenta **NT AUTHORITY\NETWORK SERVICE**. El usuario actual se aprovisionará como un miembro del rol [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**de** . Los valores establecidos por esta opción se pueden invalidar especificando otros parámetros de línea de comandos.  
   
  Cuando el sistema operativo no sea un controlador de dominio, de forma predeterminada, Reporting Services y el Motor de base de datos utilizarán la cuenta NTAUTHORITY\NETWORK SERVICE, Integration Services utilizará la cuenta NTAUTHORITY\NETWORK SERVICE y el selector de demonio de filtro de texto completo de SQL utilizará la cuenta NTAUTHORITY\LOCAL SERVICE.  
   

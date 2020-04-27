@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083368"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxis y ejemplos del filtro de modelos (Analysis Services: Minería de datos)
@@ -27,7 +27,7 @@ ms.locfileid: "66083368"
   
  
   
-##  <a name="bkmk_Syntax"></a>Sintaxis de filtro  
+##  <a name="filter-syntax"></a><a name="bkmk_Syntax"></a>Sintaxis de filtro  
  Las expresiones de filtro generalmente equivalen al contenido de una cláusula WHERE. Puede conectar varias condiciones usando los operadores lógicos `AND`, `OR` y `NOT`.  
   
  En tablas anidadas, también puede usar los operadores `EXISTS` y `NOT EXISTS`. Una condición `EXISTS` se evalúa como `true` si la subconsulta devuelve al menos una fila. Esto es útil en casos en los que desea restringir el modelo a los casos que contienen un valor determinado en la tabla anidada: por ejemplo, los clientes que han comprado un artículo al menos una vez.  
@@ -47,7 +47,7 @@ ms.locfileid: "66083368"
 <subquery>::=SELECT * FROM <columnName>[ WHERE  <predicate list> ]  
 ```  
   
- *filtro*  
+ *filter*  
  Contiene uno o más predicados, conectados por operadores lógicos.  
   
  *lista de predicados*  
@@ -111,7 +111,7 @@ ms.locfileid: "66083368"
 ## <a name="examples-of-filters"></a>Ejemplos de filtros  
  Los ejemplos siguientes muestran el uso de filtros aplicados a un modelo de minería de datos. Si crea la expresión de filtro usando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en la ventana **Propiedad** y el panel **Expresión** del cuadro de diálogo de filtros, vería solamente la cadena que aparece después de las palabras clave WITH FILTER. Aquí, la definición de la estructura de minería de datos está incluida para facilitar la comprensión del uso y del tipo de columna.  
   
-###  <a name="bkmk_Ex1"></a>Ejemplo 1: filtrado de nivel de caso típico  
+###  <a name="example-1-typical-case-level-filtering"></a><a name="bkmk_Ex1"></a> Ejemplo 1: Filtrado de nivel de caso típico  
  Este ejemplo muestra un filtro simple que restringe los casos usados en el modelo a los clientes cuya profesión sea arquitecto y sean mayores de 30 años.  
   
 ```  
@@ -127,7 +127,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
   
 
   
-###  <a name="bkmk_Ex2"></a>Ejemplo 2: filtrado de nivel de caso usando atributos de tabla anidada  
+###  <a name="example-2-case-level-filtering-using-nested-table-attributes"></a><a name="bkmk_Ex2"></a> Ejemplo 2: filtrado de nivel de caso usando atributos de tabla anidada  
  Si su estructura de minería de datos contiene tablas anidadas, puede filtrar por la existencia de un valor en una tabla anidada o filtrar en filas de tabla anidada que contienen un valor concreto. Este ejemplo restringe los casos usados para el modelo a los clientes mayores de 30 años que realizaron al menos una compra que incluía la leche.  
   
  Como se muestra en este ejemplo, no es necesario que el filtro use solamente las columnas incluidas en el modelo. La tabla anidada **Products** forma parte de la estructura de minería de datos pero no está incluida en el modelo de minería de datos. Sin embargo, todavía puede filtrar por los valores y atributos de la tabla anidada. Para ver los detalles de estos casos, la obtención de detalles debe estar habilitada.  
@@ -147,7 +147,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')
   
  
   
-###  <a name="bkmk_Ex3"></a>Ejemplo 3: filtrado de nivel de caso en varios atributos de tabla anidada  
+###  <a name="example-3-case-level-filtering-on-multiple-nested-table-attributes"></a><a name="bkmk_Ex3"></a> Ejemplo 3: filtrado del nivel de caso en varios atributos de tabla anidada  
  En este ejemplo se muestra un filtro de tres partes: se aplica una condición a la tabla de casos, otra condición a un atributo de la tabla anidada y otra, en un valor concreto de una de las columnas de tabla anidada.  
   
  La primera condición del filtro, `Age > 30`, se aplica a una columna de la tabla de casos. Las condiciones restantes se aplican a la tabla anidada.  
@@ -173,7 +173,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AN
   
 
   
-###  <a name="bkmk_Ex4"></a>Ejemplo 4: filtrado de nivel de caso en ausencia de atributos de tabla anidada  
+###  <a name="example-4-case-level-filtering-on-absence-of-nested-table-attributes"></a><a name="bkmk_Ex4"></a> Ejemplo 4: filtrado del nivel de caso en ausencia de atributos de tabla anidada  
  En este ejemplo se muestra cómo limitar los casos al cliente que no compró un artículo específico, filtrando por la ausencia de un atributo en la tabla anidada. En este ejemplo, el modelo se entrena usando clientes mayores de 30 años que nunca han comprado leche.  
   
 ```  
@@ -193,7 +193,7 @@ FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk'
   
 
   
-###  <a name="bkmk_Ex5"></a>Ejemplo 5: filtrado en varios valores de tabla anidada  
+###  <a name="example-5-filtering-on-multiple-nested-table-values"></a><a name="bkmk_Ex5"></a> Ejemplo 5: filtrado por varios valores de tabla anidada  
  El propósito del ejemplo es mostrar el filtrado de tabla anidada. El filtro de tabla anidada se aplica después del filtro de casos y solamente restringe las filas de tabla anidada.  
   
  Este modelo podría contener varios casos con tablas anidadas vacías porque no se especifica EXISTS.  
@@ -216,7 +216,7 @@ WITH DRILLTHROUGH
   
 
   
-###  <a name="bkmk_Ex6"></a>Ejemplo 6: filtrar los atributos de tabla anidada y EXISTs  
+###  <a name="example-6-filtering-on-nested-table-attributes-and-exists"></a><a name="bkmk_Ex6"></a> Ejemplo 6: filtrar por los atributos de tabla anidada y EXISTS  
  En este ejemplo, el filtro en la tabla anidada restringe las filas a aquéllas que contienen leche o agua embotellada. A continuación, los casos del modelo se restringen usando una instrucción `EXISTS`. Esto asegura que la tabla anidada no está vacía.  
   
 ```  
@@ -237,7 +237,7 @@ FILTER (EXISTS (Products))
   
 
   
-###  <a name="bkmk_Ex7"></a>Ejemplo 7: combinaciones de filtros complejos  
+###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> Ejemplo 7: combinaciones de filtros complejas  
  El escenario para este modelo se parece al del ejemplo 4 pero es mucho más complejo. La tabla anidada, **ProductsOnSale**, tiene la condición `(OnSale)` de filtro que significa que el valor de **alventa** debe ser `true` para el producto enumerado en **ProductName**. Aquí, **OnSale** es una columna de estructura.  
   
  La segunda parte del filtro, para **ProductsNotOnSale**, repite esta sintaxis, pero filtra los productos para los que el valor de **alventa** es `not true``(!OnSale)`.  
@@ -280,7 +280,7 @@ FILTER (EXISTS (Products))
   
   
   
-###  <a name="bkmk_Ex8"></a>Ejemplo 8: filtrar según las fechas  
+###  <a name="example-8-filtering-on-dates"></a><a name="bkmk_Ex8"></a> Ejemplo 8: filtrar según las fechas  
  Puede filtrar las columnas de entrada según fechas, como con cualquier otro dato. Las fechas contenidas en una columna del tipo de fecha y hora son valores continuos; por consiguiente, puede especificar un intervalo de fechas utilizando a operadores como mayor que (>) o menor que (<). Si el origen de datos no representa las fechas por un tipo de datos continuo, sino como valores discretos o de texto, no puede filtrar en un intervalo de fechas, sino que debe especificar valores discretos e individuales.  
   
  Sin embargo, no puede crear un filtro en la columna de fecha en un modelo del serie temporal si la columna de fecha utilizada para el filtro también es la columna de clave para el modelo. Eso se debe a que, en los modelos de series temporales y de agrupación en clústeres de secuencia, la columna de fecha podría tratarse como de tipo `KeyTime` o `KeySequence`.  
@@ -305,6 +305,6 @@ FILTER (EXISTS (Products))
   
 ## <a name="see-also"></a>Consulte también  
  [Filtros para modelos de minería de datos &#40;Analysis Services-minería de datos&#41;](mining-models-analysis-services-data-mining.md)   
- [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
   

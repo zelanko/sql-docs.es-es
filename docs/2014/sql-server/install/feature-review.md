@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095329"
 ---
 # <a name="feature-review"></a>Revisión de características
@@ -26,13 +26,8 @@ ms.locfileid: "66095329"
   
 |Grupo de componentes|Componentes y características|  
 |---------------------|-----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Servicios|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] incluye los siguientes componentes:<br /><br /> Replicación: (opcional) la replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos desde una base de datos a otra, para luego sincronizar ambas bases de datos y mantener su coherencia.<br /><br /> Búsqueda de texto completo: (opcional) la búsqueda de texto completo proporciona la funcionalidad necesaria para realizar consultas de texto completo en datos formados por caracteres sin formato contenidos en tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> 
-  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Opcional): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) es una solución de limpieza de datos que permite detectar datos incoherentes e incorrectos en el origen de datos y proporciona formas automatizadas e interactivas de limpiar los datos.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye componentes de servidor y de cliente para crear, administrar e implementar informes tabulares, matriciales, gráficos y de forma libre. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es también una plataforma extensible que se puede usar para desarrollar aplicaciones de informes.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Servicios|[!INCLUDE[ssDE](../../includes/ssde-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] incluye los siguientes componentes:<br /><br /> Replicación: (opcional) la replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos desde una base de datos a otra, para luego sincronizar ambas bases de datos y mantener su coherencia.<br /><br /> Búsqueda de texto completo: (opcional) la búsqueda de texto completo proporciona la funcionalidad necesaria para realizar consultas de texto completo en datos formados por caracteres sin formato contenidos en tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Opcional): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) es una solución de limpieza de datos que permite detectar datos incoherentes e incorrectos en el origen de datos y proporciona formas automatizadas e interactivas de limpiar los datos.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye componentes de servidor y de cliente para crear, administrar e implementar informes tabulares, matriciales, gráficos y de forma libre. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es también una plataforma extensible que se puede usar para desarrollar aplicaciones de informes.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Instalar SQL Server 2014 mediante SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  

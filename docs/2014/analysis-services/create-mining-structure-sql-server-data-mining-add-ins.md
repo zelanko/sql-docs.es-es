@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086818"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crear estructura de minería de datos (Complementos de minería de datos de SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "66086818"
   
 2.  En el cuadro de diálogo **seleccionar datos de origen** , especifique el intervalo de Excel, la tabla de datos de Excel o el origen de datos externo que contiene los datos que desea utilizar para el análisis.  
   
-     Haga clic en **Next**.  
+     Haga clic en **Siguiente**.  
   
 3.  En el cuadro de diálogo **seleccionar columnas** , revise la lista de columnas disponibles en el origen de datos seleccionado.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66086818"
   
      Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
      Según el tipo de datos que esté usando, puede completar el asistente después de este paso. En ese caso, vaya a la página **Finalizar** para asignar un nombre a la estructura de minería de datos.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66086818"
   
      Opcionalmente, escriba el número máximo de filas que desea usar para las pruebas.  
   
-     Haga clic en **Next**.  
+     Haga clic en **Siguiente**.  
   
 8.  En el cuadro de diálogo **Finalizar** , escriba un nombre y una descripción para la nueva estructura de minería de datos.  
   
@@ -89,12 +89,12 @@ ms.locfileid: "66086818"
 |**Dividir datos en conjuntos de entrenamiento y de prueba**|Un valor recomendado para el entrenamiento y los conjuntos de pruebas es del 70 por ciento para el entrenamiento y el 30 por ciento para las pruebas; sin embargo, si tiene muchos datos, puede especificar un número máximo de filas para las pruebas.|  
 |Cuadro de diálogo Finalizar|En algunos tipos de modelo hay disponibles opciones de obtención de detalles, que son muy útiles si incluyó columnas de detalles en la estructura de minería de datos. Por ejemplo, si crea un modelo de clústeres, puede incluir detalles como el nombre o la dirección de correo electrónico para la obtención de detalles pero no para el análisis, lo que facilitar ponerse en contacto con los clientes de un clúster determinado.|  
   
-###  <a name="Bkmk_strctcolumn"></a>Establecer el uso de columnas en el Asistente para crear estructuras de minería de datos  
+###  <a name="setting-column-usage-in-the-create-mining-structure-wizard"></a><a name="Bkmk_strctcolumn"></a>Establecer el uso de columnas en el Asistente para crear estructuras de minería de datos  
  Al crear una nueva estructura de minería de datos, puede especificar qué columnas del origen de datos deben incluirse en la estructura de minería de datos y cómo deben usarse esas columnas. Recuerde que una estructura de minería de datos puede admitir varios modelos de minería de datos.  
   
 |Valores|Descripción|  
 |------------|-----------------|  
-|**Include**|Especifica que la columna contiene datos quede pueden usarse para análisis o para predicción.|  
+|**Inclui**|Especifica que la columna contiene datos quede pueden usarse para análisis o para predicción.|  
 |**Clave**|Especifica que la columna contiene un identificador de transacción, un identificador de serie u otra clave necesaria para el procesamiento.<br /><br /> Todos los algoritmos requieren una columna de clave. No obstante, algunos algoritmos admiten una sola clave, mientras que otros admiten varias.<br /><br /> Si la columna contiene una clave pero no es necesaria para el procesamiento, seleccione no **usar**.|  
 |**Key Time**|Especifica que la columna contiene una fecha u otro valor numérico que puede usarse para identificar de forma única los elementos de una serie temporal.|  
 |**No usar**|Especifica que la columna debe omitirse. No se procesarán los datos de la columna.|  

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089209"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opciones (Editor de texto - XML - Página Varios)
@@ -28,7 +28,7 @@ El cuadro de diálogo **Opciones** permite modificar las opciones de finalizaci�
  **Comillas para atributos**  
  Al crear atributos XML, el editor inserta los caracteres `="``"` y coloca el símbolo de intercalación (**^)** dentro de las comillas. Esta casilla está activada de forma predeterminada.  
   
- **Declaraciones de espacios de nombres**  
+ **Declaraciones de espacio de nombres**  
  El editor inserta automáticamente declaraciones de espacios de nombres cuando son necesarias. Esta casilla está activada de forma predeterminada.  
   
  **Otro tipo de marcado (Comentarios, CDATA)**  
@@ -38,7 +38,7 @@ El cuadro de diálogo **Opciones** permite modificar las opciones de finalizaci�
  **Descargar automáticamente DTD y esquemas**  
  Los esquemas y las definiciones de tipos de documentos (DTD) se descargan automáticamente desde ubicaciones HTTP. Esta función utiliza System.Net con la opción de detección de servidores proxy automáticos habilitada. Esta casilla está activada de forma predeterminada.  
   
-## <a name="outlining"></a>Esquematización  
+## <a name="outlining"></a>esquematizar  
  **Especificar el modo de esquematización al abrir los archivos**  
  Activa la función de esquematización al abrir un archivo. Esta casilla está activada de forma predeterminada.  
   

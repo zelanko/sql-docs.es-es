@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083622"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de regresión logística (Analysis Services - Minería de datos)
@@ -167,7 +167,7 @@ ms.locfileid: "66083622"
  MSOLAP_NODE_SHORT_CAPTION  
  En modelos de regresión logística, siempre está en blanco.  
   
-##  <a name="bkmk_NodeIDs"></a>Usar nombres de nodo e identificadores  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>Usar nombres de nodo e identificadores  
  La denominación de los nodos en un modelo de regresión logística proporciona información adicional sobre las relaciones entre los nodos del modelo. En la tabla siguiente se muestran las convenciones para los identificadores que están asignados a los nodos de cada nivel.  
   
 |Tipo de nodo|Convención para el identificador de nodo|  

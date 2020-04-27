@@ -16,13 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094917"
 ---
-# <a name="how-to-install-upgrade-advisor"></a>Instalar el Asesor de actualizaciones
+# <a name="how-to-install-upgrade-advisor"></a>Procedimientos: Instalar el Asesor de actualizaciones
   El Asesor de actualizaciones admite el análisis remoto de todos los componentes admitidos excepto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si no está analizando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede instalar el Asesor de actualizaciones en cualquier equipo que pueda conectarse a sus instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El equipo también debe cumplir los requisitos previos del Asesor de actualizaciones. Si está examinando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe instalar el Asesor de actualizaciones en el servidor de informes.  
   
  Para obtener más información, vea [instalar el asesor de actualizaciones](../../../2014/sql-server/install/installing-upgrade-advisor.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "66094917"
   
 4.  En la página **información de registro** , escriba su nombre y su compañía.  
   
-5.  En la página **selección de características** , revise el valor de la ruta de **instalación** . Si es necesario, use el botón **examinar** para cambiar la ubicación. Haga clic en **Next**.  
+5.  En la página **selección de características** , revise el valor de la ruta de **instalación** . Si es necesario, use el botón **examinar** para cambiar la ubicación. Haga clic en **Siguiente**.  
   
 6.  En la página **listo para instalar el programa** , haga clic en **instalar** para instalar el asesor de actualizaciones.  
   

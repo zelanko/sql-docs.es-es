@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082800"
 ---
 # <a name="testing-and-validation-data-mining"></a>Prueba y validación (minería de datos)
@@ -54,15 +54,14 @@ ms.locfileid: "66082800"
 ## <a name="definition-of-criteria-for-validating-data-mining-models"></a>Definición de los criterios para validar los modelos de minería de datos  
  Las medidas de minería de datos se suelen agrupar en las categorías de precisión, confiabilidad y utilidad.  
   
- La *precisión* es una medida de lo bien que el modelo correlaciona un resultado con los atributos de los datos que se han proporcionado. Existen varias medidas de precisión, pero todas ellas dependen de los datos que se utilicen. En realidad, podrían faltar valores o éstos ser aproximados, o incluso diferentes procesos podrían cambiar los datos. En particular, en la fase de exploración y desarrollo, podría decidir aceptar una cierta cantidad de errores en los datos, sobre todo si éstos son suficientemente uniformes en sus características. Por ejemplo, un modelo que predice las ventas para un almacén determinado en base a las ventas pasadas puede estar muy correlacionado y ser muy preciso, incluso si ese almacén ha utilizado un método de contabilidad equivocado continuamente. Por tanto, es necesario equilibrar las mediciones de precisión mediante las valoraciones de confiabilidad.  
+ La*precisión* es una medida que indica hasta qué punto el modelo pone en correlación un resultado con los atributos de los datos que se han proporcionado. Existen varias medidas de precisión, pero todas ellas dependen de los datos que se utilicen. En realidad, podrían faltar valores o éstos ser aproximados, o incluso diferentes procesos podrían cambiar los datos. En particular, en la fase de exploración y desarrollo, podría decidir aceptar una cierta cantidad de errores en los datos, sobre todo si éstos son suficientemente uniformes en sus características. Por ejemplo, un modelo que predice las ventas para un almacén determinado en base a las ventas pasadas puede estar muy correlacionado y ser muy preciso, incluso si ese almacén ha utilizado un método de contabilidad equivocado continuamente. Por tanto, es necesario equilibrar las mediciones de precisión mediante las valoraciones de confiabilidad.  
   
- La *confiabilidad* evalúa la manera en que se realiza un modelo de minería de datos en conjuntos de datos diferentes. Un modelo de minería de datos es confiable si genera el mismo tipo de predicciones o encuentra los mismos tipos generales de patrones independientemente de los datos de prueba que se proporcionen. Por ejemplo, el modelo que ha generado para el almacén que utilizó un método de contabilidad equivocado no podría extrapolarse correctamente a otros almacenes, y por tanto, no sería confiable.  
+ La*confiabilidad* evalúa la manera en la que se comporta un modelo de minería de datos en conjuntos de datos diferentes. Un modelo de minería de datos es confiable si genera el mismo tipo de predicciones o encuentra los mismos tipos generales de patrones independientemente de los datos de prueba que se proporcionen. Por ejemplo, el modelo que ha generado para el almacén que utilizó un método de contabilidad equivocado no podría extrapolarse correctamente a otros almacenes, y por tanto, no sería confiable.  
   
- La *utilidad* incluye varias métricas que indican si el modelo proporciona información útil. Por ejemplo, un modelo de minería de datos que pone en correlación la ubicación del almacén con las ventas podría ser preciso y fiable, pero podría no ser útil, ya que no se podría generalizar ese resultado si se agregaran más almacenes en la misma ubicación. Es más, no responde a la pregunta comercial fundamental de porqué ciertas ubicaciones tienen más ventas que otras. También podría descubrir que un modelo que parece correcto, en realidad no tiene sentido porque está basado en correlaciones cruzadas de los datos.  
+ La*utilidad* incluye diferentes métricas que le indican si el modelo proporciona información útil. Por ejemplo, un modelo de minería de datos que pone en correlación la ubicación del almacén con las ventas podría ser preciso y fiable, pero podría no ser útil, ya que no se podría generalizar ese resultado si se agregaran más almacenes en la misma ubicación. Es más, no responde a la pregunta comercial fundamental de porqué ciertas ubicaciones tienen más ventas que otras. También podría descubrir que un modelo que parece correcto, en realidad no tiene sentido porque está basado en correlaciones cruzadas de los datos.  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>Herramientas de prueba y validación de modelos de minería de datos  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite varios enfoques para la validación de soluciones de minería de datos, que abarcan todas las fases de la metodología de prueba de la minería de datos.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite varios enfoques para la validación de soluciones de minería de datos, que abarcan todas las fases de la metodología de prueba de la minería de datos.  
   
 -   Crear particiones de los datos de los conjuntos de prueba y entrenamiento.  
   
@@ -87,13 +86,13 @@ ms.locfileid: "66082800"
 |Temas|Vínculos|  
 |------------|-----------|  
 |Obtenga información sobre cómo configurar un conjunto de datos de prueba mediante un asistente o mediante los comandos DMX|[Conjuntos de datos de entrenamiento y de prueba](training-and-testing-data-sets.md)|  
-|Obtenga información sobre cómo probar la distribución y la representatividad de los datos de una estructura de minería de datos|[Analysis Services de &#40;de validación cruzada&#41;de minería de datos](cross-validation-analysis-services-data-mining.md)|  
-|Obtenga información sobre los tipos de gráficos de precisión proporcionados en [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Gráfico de elevación &#40;Analysis Services:&#41;de minería de datos](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services:&#41;de minería de datos](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services de minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Aprenda a crear una matriz de clasificación, a veces denominada una matriz de confusión, para evaluar el número de verdaderos positivos, falsos positivos, verdaderos negativos y falsos negativos.|[Matriz de clasificación &#40;Analysis Services:&#41;de minería de datos](classification-matrix-analysis-services-data-mining.md)|  
+|Obtenga información sobre cómo probar la distribución y la representatividad de los datos de una estructura de minería de datos|[Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Obtenga información sobre los tipos de gráficos de precisión proporcionados en [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de beneficios &#40;Analysis Services - Minería de datos&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Gráfico de dispersión &#40;Analysis Services - Minería de datos&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Aprenda a crear una matriz de clasificación, a veces denominada una matriz de confusión, para evaluar el número de verdaderos positivos, falsos positivos, verdaderos negativos y falsos negativos.|[Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Consulte también  
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Soluciones de minería de datos](data-mining-solutions.md)   
- [Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

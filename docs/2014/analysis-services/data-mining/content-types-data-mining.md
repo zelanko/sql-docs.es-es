@@ -27,10 +27,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085661"
 ---
 # <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
@@ -45,21 +45,21 @@ ms.locfileid: "66085661"
  En la lista siguiente se describen los tipos de contenido que se usan en la minería de datos y se identifican los tipos de datos que admiten cada tipo.  
   
 ## <a name="discrete"></a>Discrete  
- *Discreta* significa que la columna contiene un número finito de valores sin continuum entre valores. Por ejemplo, una columna de género es una columna de atributos discreta muy habitual, en la que los datos representan un número específico de categorías.  
+ El tipo de contenido*discreto* indica que la columna contiene un número finito de valores no continuos. Por ejemplo, una columna de género es una columna de atributos discreta muy habitual, en la que los datos representan un número específico de categorías.  
   
  Los valores de una columna de atributos discreta no pueden implicar la ordenación, aun cuando los valores sean numéricos. Además, aunque los valores utilizados para la columna discreta sean numéricos, no se pueden calcular valores fraccionarios. Los códigos telefónicos de cada zona son un buen ejemplo de datos numéricos discretos.  
   
  El tipo de contenido `Discrete` es compatible con todos los tipos de datos de minería de datos.  
   
 ## <a name="continuous"></a>Continuo  
- *Continuous* significa que la columna contiene valores que representan datos numéricos en una escala que permite valores provisionales. A diferencia de una columna discreta, que representa datos numerables y finitos, una columna continua representa medidas escalables; además, es posible que los datos contengan un número infinito de valores fraccionarios. Una columna de temperaturas es un ejemplo de una columna de atributos continua.  
+ *Continuo* indica que la columna contiene valores que representan datos numéricos en una escala que permite valores intermedios. A diferencia de una columna discreta, que representa datos numerables y finitos, una columna continua representa medidas escalables; además, es posible que los datos contengan un número infinito de valores fraccionarios. Una columna de temperaturas es un ejemplo de una columna de atributos continua.  
   
  Cuando una columna contiene datos numéricos y se sabe cómo deben distribuirse los datos, se podrían obtener análisis más exactos especificando la distribución prevista de los valores. La distribución de columnas se especifica en el nivel de la estructura de minería. Por lo tanto, la configuración se aplica a todos los modelos basados en la estructura. Para más información, vea [Distribuciones de columnas &#40;Minería de datos&#41;](column-distributions-data-mining.md).  
   
  El tipo de contenido `Continuous` es compatible con los siguientes tipos de datos: `Date`, `Double` y `Long`.  
   
 ## <a name="discretized"></a>Discretized  
- La *discretización* es el proceso de colocar valores de un conjunto continuo de datos en cubos para que haya un número limitado de valores posibles. Solo se pueden discretizar los datos numéricos.  
+ La*discretización* es el proceso mediante el cual los valores de un conjunto de datos continuo se incluyen en depósitos para que haya un número limitado de valores posibles. Solo se pueden discretizar los datos numéricos.  
   
  Por tanto, el tipo de contenido *discretized* indica que la columna contiene valores que representan grupos o depósitos de valores que se derivan de una columna continua. Los depósitos se tratan como si fueran valores ordenados y discretos.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66085661"
   
  El tipo de contenido `Discretized` es compatible con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
-## <a name="key"></a>Clave  
+## <a name="key"></a>Key  
  El tipo de contenido *clave* indica que la columna identifica una fila de forma inequívoca. Normalmente, en una tabla de casos, la columna de clave es un identificador numérico o de texto. Establezca el tipo de contenido en `key` para indicar que la columna no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros.  
   
  Las tablas anidadas también tienen claves, pero el uso de la clave de tabla anidada es ligeramente diferente. En una tabla anidada debe establecer el tipo de contenido en `key` si la columna es el atributo que desea analizar. Los valores de la clave de tabla anidada deben ser únicos para cada caso, pero puede haber duplicados en todo el conjunto de casos.  

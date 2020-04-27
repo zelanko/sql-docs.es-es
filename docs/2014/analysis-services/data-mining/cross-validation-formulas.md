@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085151"
 ---
 # <a name="cross-validation-formulas"></a>Fórmulas de validación cruzada
@@ -27,7 +27,7 @@ ms.locfileid: "66085151"
 ## <a name="formulas-used-for-cross-validation-measures"></a>Fórmulas utilizadas para las medidas de validación cruzada  
   
 > [!NOTE]  
->  **Importante:** Estas medidas de precisión se calculan para cada atributo de destino. Para cada atributo, puede especificar u omitir un valor de destino. Si un caso del conjunto de datos no tiene ningún valor para el atributo de destino, el caso se trata como si tuviera un valor especial denominado *valor ausente*. Las filas que tienen valores ausentes no se cuentan al calcular la medida de precisión para un atributo de destino concreto. Observe que, dado que las puntuaciones se calculan para cada atributo individualmente, si los valores están presentes para el atributo de destino pero faltan para otros atributos, no afectan a la puntuación para el atributo de destino.  
+>  **Importante:** estas medidas de precisión se calculan para cada atributo de destino. Para cada atributo, puede especificar u omitir un valor de destino. Si un caso del conjunto de datos no tiene ningún valor para el atributo de destino, el caso se trata como si tuviera un valor especial denominado *valor ausente*. Las filas que tienen valores ausentes no se cuentan al calcular la medida de precisión para un atributo de destino concreto. Observe que, dado que las puntuaciones se calculan para cada atributo individualmente, si los valores están presentes para el atributo de destino pero faltan para otros atributos, no afectan a la puntuación para el atributo de destino.  
   
 |Measure|Se aplica a|Implementación|  
 |-------------|----------------|--------------------|  
@@ -36,16 +36,16 @@ ms.locfileid: "66085151"
 |**Falso positivo**|Atributo discreto, se especifica el valor.|Recuento de casos que cumplen estas condiciones:<br /><br /> El valor real es igual al valor de destino.<br /><br /> El modelo predijo que ese caso contendría el valor de destino.|  
 |**Falso negativo**|Atributo discreto, se especifica el valor.|Recuento de casos que cumplen estas condiciones:<br /><br /> El valor real no es igual al valor de destino.<br /><br /> El modelo predijo que el caso no contendría el valor de destino.|  
 |**Pass/Fail**|Atributo discreto, sin destino especificado|Recuento de casos que cumplen estas condiciones:<br /><br /> Sin errores en caso de que el estado predicho con la máxima probabilidad es igual al estado de entrada y la probabilidad es mayor que el valor de **Umbral de estado**.<br /><br /> De lo contrario, se producirá un error.|  
-|**Mejora respecto al modelo predictivo**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|La probabilidad de logaritmo medio para todas las filas con valores para el atributo de destino, donde la probabilidad de logaritmo para cada caso se calcula como Log(ActualProbability/MarginalProbability). Para calcular la media, la suma de los valores de probabilidad logarítmica se divide entre el número de filas del conjunto de datos de entrada, excluidas las filas sin valores para el atributo de destino.<br /><br /> La mejora respecto al modelo predictivo puede ser un valor positivo o negativo. Un valor positivo indica que estamos ante un modelo eficaz que supera la estimación aleatoria.|  
+|**Levantamiento**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|La probabilidad de logaritmo medio para todas las filas con valores para el atributo de destino, donde la probabilidad de logaritmo para cada caso se calcula como Log(ActualProbability/MarginalProbability). Para calcular la media, la suma de los valores de probabilidad logarítmica se divide entre el número de filas del conjunto de datos de entrada, excluidas las filas sin valores para el atributo de destino.<br /><br /> La mejora respecto al modelo predictivo puede ser un valor positivo o negativo. Un valor positivo indica que estamos ante un modelo eficaz que supera la estimación aleatoria.|  
 |**Puntuación de registro**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|Logaritmo de la probabilidad real de cada caso, sumada y después dividida entre el número de filas del conjunto de datos de entrada, excluidas las filas sin valores para el atributo de destino.<br /><br /> Como la probabilidad se representa como una fracción decimal, las puntuaciones del registro son siempre números negativos. Una puntuación más cercana a 0 es una puntuación mejor.|  
 |**Probabilidad de casos**|Clúster|Suma de las puntuaciones de probabilidad de clúster para todos los casos, dividida entre el número de casos de la partición, excluidas las filas sin valores para el atributo de destino.|  
-|**Error medio absoluto**|Atributo continuo|Suma del error absoluto para todos los casos de la partición, dividida entre el número de casos de la partición.|  
+|**Desviación media**|Atributo continuo|Suma del error absoluto para todos los casos de la partición, dividida entre el número de casos de la partición.|  
 |**Error medio cuadrado raíz**|Atributo continuo|Raíz cuadrada del error cuadrático medio para la partición.|  
 |**Error medio cuadrado de raíz**|Atributo discreto. Se puede especificar el valor de destino pero no es necesario.|Raíz cuadrada de la media de los cuadrados del complemento de la puntuación de probabilidad, dividida entre el número de casos de la partición, excluidas las filas sin valores para el atributo de destino.|  
 |**Error medio cuadrado de raíz**|Atributo discreto, sin destino especificado.|Raíz cuadrada de la media de los cuadrados del complemento de la puntuación de probabilidad, dividida entre el número de casos de la partición, excluidos los casos sin valores para el atributo de destino.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)   
- [Analysis Services de &#40;de validación cruzada&#41;de minería de datos](cross-validation-analysis-services-data-mining.md)  
+ [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

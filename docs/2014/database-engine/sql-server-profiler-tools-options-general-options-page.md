@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089622"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-herramientas-opciones (página Opciones generales)
@@ -42,11 +42,11 @@ ms.locfileid: "66089622"
 > [!NOTE]  
 >  Si activa o desactiva esta casilla se cambia el formato de presentación de las columnas de hora como **Hora de inicio** y **Hora de finalización**. Pero no cambia los parámetros del valor **DateTime** dentro de los eventos de lenguaje o las llamadas a procedimientos remotos (RPC).  
   
- **Mostrar valores en la columna duración en microsegundos**  
+ **Mostrar valores en la columna Duración en microsegundos**  
  Muestra los valores en microsegundos en la columna de datos **Duración** de los seguimientos. De manera predeterminada, la columna **Duración** muestra los valores en milisegundos.  
   
 ### <a name="tracing-options"></a>Opciones de traza  
- **Iniciar el seguimiento inmediatamente después de establecer la conexión**  
+ **Iniciar la traza inmediatamente tras realizar la conexión**  
  Inicia un seguimiento con la plantilla predeterminada en cuanto se establece una conexión.  
   
  **Actualizar definición de seguimiento cuando cambie la versión del proveedor**  
@@ -59,9 +59,8 @@ ms.locfileid: "66089622"
  **Preguntar antes de cargar archivos de sustitución incremental**  
  Cuando se abre un archivo de seguimiento, el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pregunta antes de agregar un archivo de sustitución incremental.  
   
- **No cargar nunca los archivos de sustitución incremental posteriores**  
- 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
+ **No cargar nunca los archivos siguientes de sustitución incremental**  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
   
 ### <a name="replay-options"></a>Opciones de reproducción  
  **Número predeterminado de subprocesos de reproducción**  
@@ -75,12 +74,12 @@ ms.locfileid: "66089622"
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Establecer los valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Establecer valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproducir seguimientos](../tools/sql-server-profiler/replay-traces.md)   
  [Establecer opciones globales de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
- [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler plantillas y permisos](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

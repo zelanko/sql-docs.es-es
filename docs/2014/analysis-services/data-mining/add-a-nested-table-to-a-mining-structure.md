@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086362"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>Agregar una tabla anidada a una estructura de minería de datos
@@ -39,7 +39,7 @@ ms.locfileid: "66086362"
   
 5.  En **Columna de origen**, seleccione la columna de clave para la tabla anidada.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
      Una nueva columna de tabla que contiene la columna de clave se agrega a la estructura de minería de datos. Para obtener información sobre cómo agregar columnas adicionales, vea [Agregar columnas a una estructura de minería de datos](add-columns-to-a-mining-structure.md).  
   

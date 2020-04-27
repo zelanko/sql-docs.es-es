@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083490"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tareas y procedimientos de los modelos de minería de datos
@@ -35,7 +35,7 @@ ms.locfileid: "66083490"
   
 -   [Cambiar la discretización de una columna en un modelo de minería de datos](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Ver o cambiar las marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
+-   [Ver o cambiar marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
   
 -   [Especificar una columna para utilizar como regresor en un modelo](specify-a-column-to-use-as-regressor-in-a-model.md)  
   

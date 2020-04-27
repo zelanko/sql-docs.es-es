@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f99a2dc218543faa4d862fa7520c1618ec307ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083706"
 ---
 # <a name="mining-model-columns"></a>Columnas del modelo de minería de datos
@@ -30,9 +30,9 @@ ms.locfileid: "66083706"
   
  En una columna de minería de datos puede definir dos elementos adicionales de información: uso y marcas de modelado.  
   
--   El **uso** es una propiedad que define cómo el modelo utiliza la columna. Las columnas se pueden usar como columnas de entrada, de clave o de predicción.  
+-   El**uso** es una propiedad que define cómo el modelo va a usar la columna. Las columnas se pueden usar como columnas de entrada, de clave o de predicción.  
   
--   Las **marcas de modelado** proporcionan al algoritmo información adicional sobre los datos que se definen en la tabla de casos, de modo que el algoritmo pueda generar un modelo más preciso. Puede definir marcas de modelado mediante programación con el lenguaje DMX (Extensiones de minería de datos) o en el **Diseñador de minería de datos** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+-   Las**marcas de modelado** proporcionan al algoritmo información adicional sobre los datos que se definen en la tabla de casos, de forma que el algoritmo pueda generar un modelo más preciso. Puede definir marcas de modelado mediante programación con el lenguaje DMX (Extensiones de minería de datos) o en el **Diseñador de minería de datos** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  La siguiente lista describe las marcas de modelado que puede definir en una columna de modelo de minería de datos.  
   

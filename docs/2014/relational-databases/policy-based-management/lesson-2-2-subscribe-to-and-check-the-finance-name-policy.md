@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090701"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Suscribirse a, y comprobar, la directiva Finance Name
@@ -62,13 +62,12 @@ ms.locfileid: "66090701"
   
 2.  En el cuadro de diálogo **Administrar categorías de directiva** , busque la categoría Finance y seleccione la casilla **Suscripciones de base de datos de mandatos** para la categoría Finance.  
   
-3.  
-  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Ahora la categoría Finance se aplica a todas las bases de datos, pero la condición que ha creado restringe la directiva Finance Name a la base de datos Finance. De esta forma, se muestra cómo se pueden utilizar combinaciones complejas de condiciones para destinar las directivas de modo que se apliquen correctamente en muchos servidores.  
+3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Ahora la categoría Finance se aplica a todas las bases de datos, pero la condición que ha creado restringe la directiva Finance Name a la base de datos Finance. De esta forma, se muestra cómo se pueden utilizar combinaciones complejas de condiciones para destinar las directivas de modo que se apliquen correctamente en muchos servidores.  
   
 ## <a name="summary"></a>Resumen  
  En este tutorial se ha demostrado cómo crear condiciones de la administración basada en directivas, directivas y grupos de directivas, y cómo aplicar los filtros y comprobar la compatibilidad de los destinos de la administración basada en directivas.  
   
-## <a name="next"></a>Pasos siguientes  
+## <a name="next"></a>Siguiente  
  Este tutorial ha finalizado. Para volver al inicio, haga clic en [Tutorial: Administrar servidores mediante administración basada en directivas](tutorial-administering-servers-by-using-policy-based-management.md).  
   
  Para obtener una lista de tutoriales, consulte los [tutoriales de SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  

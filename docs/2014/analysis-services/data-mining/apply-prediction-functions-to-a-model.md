@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086136"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Aplicar funciones de predicción a un modelo
@@ -68,7 +68,7 @@ ms.locfileid: "66086136"
     |||  
     |-|-|  
     |**\<nombre del modelo>**|Seleccione esta opción para incluir los valores del modelo de minería de datos en la salida. Solo puede agregar nuevas columnas de predicción.<br /><br /> Cuando se agrega una columna del modelo, el resultado devuelto es la lista de valores no distintivos de esa columna.<br /><br /> Las columnas que agrega con esta opción se incluyen en la parte SELECT de la instrucción DMX resultante.|  
-    |**función de predicción**|Seleccione esta opción para examinar una lista de funciones de predicción.<br /><br /> Los valores o funciones que seleccione se agregan a la parte SELECT de la instrucción DMX resultante.<br /><br /> La lista de funciones de predicción no se filtra ni se restringe por el tipo de modelo que ha seleccionado. Por consiguiente, si tiene alguna duda sobre si la función se admite para el tipo actual del modelo, basta con agregar la función a la lista y verla si hay un error.<br /><br /> Los elementos de lista que van precedidos por $ (como $AdjustedProbability) representan las columnas de la tabla anidada que se genera cuando se utiliza la función `PredictHistogram`. Estos son los métodos abreviados que puede usar para devolver una columna y no una tabla anidada.|  
+    |**Prediction Function**|Seleccione esta opción para examinar una lista de funciones de predicción.<br /><br /> Los valores o funciones que seleccione se agregan a la parte SELECT de la instrucción DMX resultante.<br /><br /> La lista de funciones de predicción no se filtra ni se restringe por el tipo de modelo que ha seleccionado. Por consiguiente, si tiene alguna duda sobre si la función se admite para el tipo actual del modelo, basta con agregar la función a la lista y verla si hay un error.<br /><br /> Los elementos de lista que van precedidos por $ (como $AdjustedProbability) representan las columnas de la tabla anidada que se genera cuando se utiliza la función `PredictHistogram`. Estos son los métodos abreviados que puede usar para devolver una columna y no una tabla anidada.|  
     |**Expresión personalizada**|Seleccione esta opción para escribir una expresión personalizada y asignar después un alias a la salida.<br /><br /> La expresión personalizada se agrega a la parte SELECT de la consulta de predicción resultante DMX.<br /><br /> Esta opción es útil si desea agregar el texto de la salida a cada fila, llamar a funciones de VB o llamar a procedimientos almacenados personalizados.<br /><br /> Para más información sobre cómo usar funciones de Excel y VBA desde DMX, vea [Funciones de VBA en MDX y DAX](/sql/mdx/vba-functions-in-mdx-and-dax).|  
   
 3.  Después de agregar cada función o expresión, cambie a la vista DMX para ver cómo se agrega la función dentro de la instrucción DMX.  
@@ -118,7 +118,7 @@ ms.locfileid: "66086136"
   
      En la tabla siguiente se muestran los resultados esperados:  
   
-    |Bike Buyer|$Cluster|SOPORTE TÉCNICO|CEILING|  
+    |Bike Buyer|$Cluster|Support|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|Clúster 8|954|953.948638926372|  
   

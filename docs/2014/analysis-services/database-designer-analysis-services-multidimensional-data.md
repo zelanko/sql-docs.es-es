@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082410"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Diseñador de bases de datos (Analysis Services - Datos multidimensionales)
@@ -24,7 +24,7 @@ ms.locfileid: "66082410"
  El Diseñador de bases de datos incluye las siguientes pestañas:  
   
  [General](general-database-designer-analysis-services-multidimensional-data.md)  
- Use la pestaña **General** para cambiar las propiedades de una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+ Use la pestaña **General** para cambiar las propiedades de una base de datos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  [Advertencias](warnings-database-designer-analysis-services-multidimensional-data.md)  
  Use la pestaña **Advertencias** para ver y descartar reglas globalmente, así como para ver y volver a habilitar instancias específicas de advertencias descartadas.  

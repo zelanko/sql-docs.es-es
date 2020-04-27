@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084061"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión lineal de Microsoft
@@ -36,7 +36,7 @@ ms.locfileid: "66084061"
   
 |Algoritmo|Método de análisis|Comentarios|  
 |---------------|------------------------|--------------|  
-|Regresión lineal|Puntuación interestingness|Default.<br /><br /> Otros métodos de selección de características que están disponibles con el algoritmo de árboles de decisión se aplican únicamente a las variables discretas y, por consiguiente, no son aplicables a los modelos de regresión lineal.|  
+|Regresión lineal|Puntuación interestingness|Predeterminada.<br /><br /> Otros métodos de selección de características que están disponibles con el algoritmo de árboles de decisión se aplican únicamente a las variables discretas y, por consiguiente, no son aplicables a los modelos de regresión lineal.|  
 |Árboles de decisión|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Si alguna columna contiene valores continuos no binarios, se utiliza la puntuación interestingness (grado de interés) en todas las columnas para asegurar la coherencia. En caso contrario, se utiliza el método predeterminado o el especificado.|  
   
  Los parámetros del algoritmo que controlan la selección de características para el modelo de árboles de decisión son MAXIMUM_INPUT_ATTRIBUTES y MAXIMUM_OUTPUT.  
@@ -74,7 +74,7 @@ ms.locfileid: "66084061"
  Un modelo de regresión lineal debe contener una columna de clave, columnas de entrada y al menos una columna de predicción.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
- El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
+ El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
 |Columna|Tipos de contenido|  
 |------------|-------------------|  
@@ -87,6 +87,6 @@ ms.locfileid: "66084061"
 ## <a name="see-also"></a>Consulte también  
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
  [Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

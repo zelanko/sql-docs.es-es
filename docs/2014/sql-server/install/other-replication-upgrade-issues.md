@@ -18,18 +18,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093643"
 ---
 # <a name="other-replication-upgrade-issues"></a>Otros problemas de actualización de replicación
   En este tema se analiza una serie de problemas de actualización que el Asesor de actualizaciones no notifica.  
   
 ## <a name="versions-supported"></a>Versiones admitidas  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la actualización de bases de datos replicadas de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No es necesario detener la actividad en otros nodos mientras se actualiza un nodo. Asegúrese de cumplir las reglas relativas a las versiones admitidas en una topología.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la actualización de bases de datos replicadas de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No es necesario detener la actividad en otros nodos mientras se actualiza un nodo. Asegúrese de cumplir las reglas relativas a las versiones admitidas en una topología.  
   
  Cuando se usa la replicación entre versiones diferentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], normalmente se está limitado por las funciones de la versión más antigua que se está usando.  
   

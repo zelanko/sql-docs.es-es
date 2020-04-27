@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082528"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vista del origen de datos (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -57,13 +57,13 @@ ms.locfileid: "66082528"
  Seleccione esta opción para organizar los objetos en un patrón diagonal.  
   
 > [!NOTE]  
->  Esta opción solo se muestra si selecciona **Cambiar a diseño rectangular** .  
+>   Esta opción solo se muestra si selecciona **Cambiar a diseño rectangular** .  
   
  **Cambiar a diseño rectangular**  
  Seleccione esta opción para organizar los objetos en un patrón rectangular.  
   
 > [!NOTE]  
->  Esta opción solo se muestra si selecciona **Cambiar a diseño diagonal** .  
+>   Esta opción solo se muestra si selecciona **Cambiar a diseño diagonal** .  
   
  **Editar vista del origen de datos**  
  Muestra el Diseñador de vistas del origen de datos correspondiente a la vista del origen de datos asociada al objeto. Para más información sobre el Diseñador de vistas del origen de datos, vea [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  

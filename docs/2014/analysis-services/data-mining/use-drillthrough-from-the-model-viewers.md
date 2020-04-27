@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082836"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar la obtención de detalles desde los visores de modelos
@@ -24,7 +24,7 @@ ms.locfileid: "66082836"
   
 ### <a name="use-drillthrough-in-the-microsoft-tree-viewer"></a>Utilizar la obtención de detalles en el Visor de árboles de Microsoft  
   
-1.  En el Diseñador de minería de datos, seleccione un modelo de árboles de decisión y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de árboles de Microsoft**. En SQL Server Management Studio, haga clic con el botón secundario en el modelo y seleccione **examinar** .  
+1.  En el Diseñador de minería de datos, seleccione un modelo de árboles de decisión y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de árboles de Microsoft**. En SQL Server Management Studio, haga clic con el botón derecho en el modelo y seleccione **Examinar**.  
   
 2.  Haga clic con el botón derecho en cualquier nodo del gráfico de árbol y seleccione **Explorar en profundidad**.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66082836"
   
 ### <a name="use-drillthrough-in-the-microsoft-cluster-viewer"></a>Utilizar la obtención de detalles en el Visor de clústeres de Microsoft  
   
-1.  En el Diseñador de minería de datos, seleccione un modelo de agrupación en clústeres y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de clústeres de Microsoft**. En SQL Server Management Studio, haga clic con el botón derecho en el modelo y seleccione **Examinar**.  
+1.  En el Diseñador de minería de datos, seleccione un modelo de agrupación en clústeres y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de clústeres de Microsoft**. En SQL Server Management Studio, haga clic con el botón secundario en el modelo y seleccione **examinar**.  
   
 2.  En la pestaña **Clúster** , haga clic con el botón derecho en cualquier nodo.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66082836"
   
 ### <a name="use-drillthrough-in-the-microsoft-association-rules-viewer"></a>Utilizar la obtención de detalles en el Visor de reglas de asociación de Microsoft  
   
-1.  En el Diseñador de minería de datos, seleccione un modelo de asociación y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de reglas de asociación de Microsoft**. En SQL Server Management Studio, haga clic con el botón secundario en el modelo y seleccione **examinar** .  
+1.  En el Diseñador de minería de datos, seleccione un modelo de asociación y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de reglas de asociación de Microsoft**. En SQL Server Management Studio, haga clic con el botón derecho en el modelo y seleccione **Examinar**.  
   
 2.  En la pestaña **Reglas** , haga clic con el botón derecho en cualquier fila que represente una regla. En la pestaña **Conjuntos de elementos** , haga clic en cualquier fila que contenga un conjunto de elementos.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66082836"
   
 ### <a name="use-drillthrough-in-the-microsoft-sequence-cluster-viewer"></a>Utilizar la obtención de detalles en el Visor de clústeres de secuencia de Microsoft  
   
-1.  En el Diseñador de minería de datos, seleccione un modelo de agrupación en clústeres y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de clústeres de Microsoft**. En SQL Server Management Studio, haga clic con el botón derecho en el modelo y seleccione **Examinar**.  
+1.  En el Diseñador de minería de datos, seleccione un modelo de agrupación en clústeres y, a continuación, seleccione **Examinar modelo** para abrir el modelo en el **Visor de clústeres de Microsoft**. En SQL Server Management Studio, haga clic con el botón secundario en el modelo y seleccione **examinar**.  
   
 2.  En la **pestaña Diagrama del clúster**, haga clic con el botón derecho en un nodo que represente a un clúster. En la pestaña **Perfiles del clúster** , haga clic en cualquier lugar de un perfil de clúster o en el clúster que represente a la población total del modelo.  
   

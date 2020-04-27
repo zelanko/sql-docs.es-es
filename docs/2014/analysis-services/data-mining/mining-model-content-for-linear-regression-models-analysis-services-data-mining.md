@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083643"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de regresión lineal (Analysis Services - Minería de datos)
@@ -45,15 +45,15 @@ ms.locfileid: "66083643"
  Nombre del modelo.  
   
  ATTRIBUTE_NAME  
- **Nodo raíz:** En blanco  
+ **Nodo raíz:** en blanco  
   
- **Nodo de regresión:** Nombre del atributo de predicción.  
+ **Nodo de regresión:** el nombre del atributo de predicción.  
   
  NODE_NAME  
  Siempre lo mismo que NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
- Identificador único para el nodo dentro del modelo. No se puede cambiar este valor.  
+ Identificador único para el nodo dentro del modelo. Este valor no puede modificarse.  
   
  NODE_TYPE  
  Un modelo de regresión lineal genera los tipos de nodos siguientes:  
@@ -65,16 +65,16 @@ ms.locfileid: "66083643"
  NODE_CAPTION  
  Etiqueta o título asociado al nodo. Esta propiedad se usa principalmente para la presentación.  
   
- **Nodo raíz:** En blanco  
+ **Nodo raíz:** en blanco  
   
- **Nodo de regresión:** Todos.  
+ **Nodo de regresión:** todos.  
   
  CHILDREN_CARDINALITY  
  Cálculo del número de elementos secundarios que tiene el nodo.  
   
- **Nodo raíz:** Indica el número de nodos de regresión. Se crea un nodo de regresión para cada atributo de predicción del modelo.  
+ **Nodo raíz:** indica el número de nodos de regresión. Se crea un nodo de regresión para cada atributo de predicción del modelo.  
   
- **Nodo de regresión:** Siempre es 0.  
+ **Nodo de regresión:** siempre es 0.  
   
  PARENT_UNIQUE_NAME  
  Nombre único del nodo primario del nodo. Se devuelve NULL para todos los nodos del nivel raíz.  
@@ -82,9 +82,9 @@ ms.locfileid: "66083643"
  NODE_DESCRIPTION  
  Descripción del nodo.  
   
- **Nodo raíz:** En blanco  
+ **Nodo raíz:** en blanco  
   
- **Nodo de regresión:** Todos.  
+ **Nodo de regresión:** todos.  
   
  NODE_RULE  
  No se utiliza para los modelos de regresión lineal.  
@@ -111,7 +111,7 @@ ms.locfileid: "66083643"
   
  **Nodo raíz:** 0  
   
- **Nodo de regresión:** Tabla que contiene los elementos utilizados para generar la fórmula de regresión. Un nodo de regresión contiene los tipos de valores siguientes:  
+ **Nodo de regresión:** tabla que contiene los elementos que se usan para generar la fórmula de regresión. Un nodo de regresión contiene los tipos de valores siguientes:  
   
 |VALUETYPE|  
 |---------------|  
@@ -127,7 +127,7 @@ ms.locfileid: "66083643"
   
  **Nodo raíz:** 0  
   
- **Nodo de regresión:** Recuento de casos de entrenamiento.  
+ **Nodo de regresión:** recuento de casos de entrenamiento.  
   
  MSOLAP_MODEL_COLUMN  
  Nombre del atributo de predicción.  
@@ -145,10 +145,10 @@ ms.locfileid: "66083643"
   
  Además, al crear un modelo de árboles de decisión que incluye un atributo de predicción continuo, a veces el árbol tiene nodos de regresión que comparten las propiedades de los nodos del árbol de regresión.  
   
-##  <a name="NodeDist_Regression"></a>Distribución de nodos para atributos continuos  
+##  <a name="node-distribution-for-continuous-attributes"></a><a name="NodeDist_Regression"></a>Distribución de nodos para atributos continuos  
  La mayoría de la información importante en un nodo de regresión está incluida en la tabla NODE_DISTRIBUTION. En el ejemplo siguiente se muestra el diseño de la tabla NODE_DISTRIBUTION. En este ejemplo, la estructura de minería de datos de Targeted Mailing se ha utilizado para crear un modelo de regresión lineal que predice los ingresos de los clientes según su edad. La finalidad del modelo es únicamente ilustrativo, porque puede generarse con facilidad utilizando los datos y la estructura de minería de datos de ejemplo existentes de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SOPORTE TÉCNICO|PROBABILITY|varianza|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|varianza|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -162,8 +162,7 @@ ms.locfileid: "66083643"
 ### <a name="elements-of-the-regression-formula"></a>Elementos de la fórmula de regresión  
  La tabla NODE_DISTRIBUTION anidada contiene cada elemento de la fórmula de regresión en una fila independiente. Las dos primeras filas de datos en los resultados del ejemplo contienen información sobre el atributo de predicción, **Yearly Income**, que modela la variable dependiente. La columna SUPPORT muestra el recuento de casos de compatibilidad de los dos estados de este atributo: o bien hay disponible un valor **Yearly Income** o el valor **Yearly Income** no está.  
   
- La columna VARIANCE indica la varianza calculada del atributo de predicción. La *varianza* es una medida de la diseminación de los valores en un ejemplo, dada una distribución esperada. La varianza aquí se calcula tomando el promedio de la desviación cuadrada de la media. La raíz cuadrada de la varianza también se conoce como desviación estándar. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no proporciona la desviación estándar pero se puede calcular fácilmente.  
+ La columna VARIANCE indica la varianza calculada del atributo de predicción. La*varianza* es una medida de la dispersión de los valores de un ejemplo, dada una distribución esperada. La varianza aquí se calcula tomando el promedio de la desviación cuadrada de la media. La raíz cuadrada de la varianza también se conoce como desviación estándar. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no proporciona la desviación estándar pero se puede calcular fácilmente.  
   
  Para cada regresor se generan tres filas. Contienen el coeficiente, la ganancia de puntuación y estadísticas de regresores.  
   

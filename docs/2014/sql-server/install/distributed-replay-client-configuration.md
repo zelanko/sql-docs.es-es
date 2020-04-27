@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095477"
 ---
 # <a name="distributed-replay-client-configuration"></a>Configuración de Distributed Replay Client
@@ -37,11 +37,11 @@ ms.locfileid: "66095477"
  **Directorio de trabajo**  
  Especifique el directorio de trabajo para el servicio Distributed Replay Client.  
   
- El directorio de trabajo predeterminado es \<*letra de unidad*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+ El directorio de trabajo predeterminado \<es la *letra de unidad*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Archivos de programa \DReplayClient\WorkingDir.  
   
  **Directorio de resultados**  
  Especifique el directorio de resultados para el servicio Distributed Replay Client.  
   
- El directorio de resultados predeterminado es \<*letra de unidad*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+ El directorio de resultados predeterminado \<es la *letra de unidad*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Archivos de programa \DReplayClient\ResultDir.  
   
   

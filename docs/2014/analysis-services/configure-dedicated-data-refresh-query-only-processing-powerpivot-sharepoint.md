@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087509"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurar la actualización de datos dedicada o el proceso de una sola consulta (PowerPivot para SharePoint)
@@ -31,9 +31,9 @@ ms.locfileid: "66087509"
   
  [Cambiar el número de trabajos de actualización de datos que se pueden ejecutar en paralelo](#change)  
   
-##  <a name="config"></a>Configurar un modo de procesamiento  
+##  <a name="configure-a-processing-mode"></a><a name="config"></a>Configurar un modo de procesamiento  
   
-1.  En Administración central, en Configuración del sistema, haga clic en **Administrar servicios en el servidor**.  
+1.  En administración central, en configuración del sistema, haga clic en **administrar servicios en el servidor**.  
   
 2.  En la parte superior de la página, en Servidor, haga clic en la flecha abajo y, a continuación, haga clic en **Cambiar el servidor**.  
   
@@ -54,12 +54,12 @@ ms.locfileid: "66087509"
   
 7.  Guarde los cambios. El servidor no validará sus entradas hasta que se produzca un evento de procesamiento. Si escribe un número no válido de trabajos simultáneos, el error se detectará y registrar cuando se procese la solicitud siguiente.  
   
-##  <a name="change"></a>Cambiar el número de trabajos de actualización de datos que se pueden ejecutar en paralelo  
+##  <a name="change-the-number-of-data-refresh-jobs-that-can-run-in-parallel"></a><a name="change"></a>Cambiar el número de trabajos de actualización de datos que se pueden ejecutar en paralelo  
  Un trabajo de actualización de datos es una tarea programada que se agrega a una cola de procesamiento que una aplicación de servicio PowerPivot mantiene y supervisa. Un trabajo está compuesto de información de programación para uno o más orígenes de datos en un libro PowerPivot. Para cada programación que se define se crea un trabajo independiente. Si el propietario de un libro define una programación para todos los orígenes de datos, solo se creará un trabajo para toda la operación de actualización de datos. Si el propietario de un libro crea programaciones individuales para orígenes de datos externos, se crearán varios trabajos y se ejecutarán para completar una actualización de datos completa para ese libro.  
   
  Puede aumentar el número de trabajos de actualización de datos que se pueden ejecutar al mismo tiempo si el sistema tiene la capacidad de admitir carga adicional.  
   
-|Configuración|Valores válidos|Descripción|  
+|Valor|Valores válidos|Descripción|  
 |-------------|------------------|-----------------|  
 |Valor predeterminado|Se calcula en función de la RAM.|El valor predeterminado se basa en la cantidad de memoria disponible dividida entre 4 gigabytes. Una fórmula calcula el valor predeterminado para que la configuración se pueda ajustar en función de las capacidades del sistema.<br /><br /> Nota: el divisor de 4 gigabytes se seleccionó en función del uso de RAM para un gran muestreo de orígenes de datos PowerPivot reales. No se basa en la arquitectura física o lógica de PowerPivot.|  
 |Valor máximo|Se calcula en función del número de CPU.|El número máximo de trabajos simultáneos que puede especificar se basa en el número de procesadores del equipo. Por ejemplo, en un equipo de cuatro núcleos y cuatros sockets, el número máximo de trabajos que puede ejecutar de forma simultánea es 16.|  

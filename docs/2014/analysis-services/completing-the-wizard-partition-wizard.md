@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087525"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Finalización del asistente (Asistente para particiones)
@@ -38,9 +38,9 @@ ms.locfileid: "66087525"
 |**Copiar el diseño de las agregaciones de una partición existente**|Copia en al nueva partición el diseño de agregaciones de una partición existente en el grupo de medida. Al hacer clic en esta opción, se habilita la opción **Copiar de** . Utilice la opción **Copiar de** para seleccionar la partición desde la cual se va a copiar el diseño de agregaciones.<br /><br /> Tenga en cuenta que las particiones que se puedan mezclar en el futuro deben tener la misma estructura de tabla y el mismo diseño de agregaciones. Si desea mezclar la nueva partición con una partición existente en el grupo de medida, deberá copiar el diseño de agregaciones de la partición existente en la partición nueva.|  
   
  **Implementar y procesar ahora**  
- Implementa y procesa la partición en la instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificada en la página **Ubicaciones de procesamiento y almacenamiento**. El asistente implementa y procesa la partición una vez que se ha hecho clic en **Finalizar** en esta página.  
+ Implementa y procesa la partición en la instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificada en la página **Ubicaciones de procesamiento y almacenamiento**. El asistente implementa y procesa la partición una vez que se ha hecho clic en **Finalizar** en esta página.  
   
 ## <a name="see-also"></a>Consulte también  
- [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

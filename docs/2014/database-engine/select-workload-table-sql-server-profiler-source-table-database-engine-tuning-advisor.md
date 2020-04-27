@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 973680d07c3bd6a304e63f4b3fde0e228f0f7bff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088879"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>Tabla de SQL Server Profiler de origen-Asistente para la optimización de motor de base de datos-seleccionar tabla de carga de trabajo
@@ -39,12 +39,12 @@ ms.locfileid: "66088879"
  **Propietario**  
  Specifies the owner of the trace table. Este campo se llena automáticamente como **dbo**.  
   
- **Table**  
+ **Cuadro**  
  Especifica el nombre de la tabla de seguimiento desde la que debe leerse el seguimiento.  
   
 ## <a name="see-also"></a>Consulte también  
  [Guardar los resultados de un seguimiento en una tabla &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
- [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [SQL Server Profiler plantillas y permisos](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Asistente para la optimización de motor de base de datos](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

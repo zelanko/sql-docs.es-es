@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085760"
 ---
 # <a name="choose-and-map-model-testing-data"></a>Elegir y asignar datos de prueba para el modelo
@@ -47,9 +47,9 @@ ms.locfileid: "66085760"
   
  [Asignar columnas del modelo a las columnas de los datos de prueba](#bkmk_MapColumns)  
   
- [Cambiar la manera en que las columnas de los datos de prueba se asignan al modelo](#bkmk_ChangeMappings)  
+ [Cambiar la forma en la que las columnas de los datos de prueba se asignan al modelo](#bkmk_ChangeMappings)  
   
-##  <a name="bkmk_SelectInputs"></a>Para seleccionar tablas de entrada para probar la precisión de un modelo de minería de datos  
+##  <a name="to-select-input-tables-to-test-the-accuracy-of-a-mining-model"></a><a name="bkmk_SelectInputs"></a> Para seleccionar tablas de entrada para probar la precisión de un modelo de minería de datos  
   
 1.  En el Diseñador de minería de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga doble clic en la estructura de minería de datos que contiene los modelos de los que desea crear un gráfico.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "66085760"
   
      **Usar casos de prueba de estructura de minería de datos**  
   
-     **Especificar un conjunto de datos diferente**  
+     **Especificar otro conjunto de datos**  
   
 4.  Si ha seleccionado **Especificar otro conjunto de datos**, puede hacer clic en **Abrir editor de filtros** para crear condiciones de filtro en el conjunto de datos de entrada. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 5.  Haga clic en la pestaña **Gráfico de elevación** o la pestaña **Matriz de clasificación** para generar automáticamente el gráfico utilizando los datos de prueba que especificó.  
   
-##  <a name="bkmk_MapColumns"></a>Para asignar columnas del modelo a las columnas de los datos de prueba  
+##  <a name="to-map-model-columns-to-the-columns-in-the-testing-data"></a><a name="bkmk_MapColumns"></a> Para asignar columnas del modelo a las columnas de los datos de prueba  
   
 1.  Haga doble clic en la estructura de minería de datos que contiene los modelos de los que desea crear un gráfico para abrir la estructura y los modelos en el Diseñador de minería de datos.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66085760"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="bkmk_ChangeMappings"></a>Para modificar la forma en que los datos de entrada se asignan al modelo  
+##  <a name="to-modify-the-way-input-data-is-mapped-to-the-model"></a><a name="bkmk_ChangeMappings"></a>Para modificar la forma en que los datos de entrada se asignan al modelo  
   
 1.  En el Diseñador de minería de datos, haga doble clic en la estructura que contiene los modelos que quiere incluir en un gráfico.  
   
@@ -120,6 +120,6 @@ ms.locfileid: "66085760"
      Las nuevas asignaciones de columna se muestran en el cuadro de diálogo **Especificar asignación de columnas** . Puede quitar una asignación seleccionando la línea entre las columnas y presionando la tecla Supr. Para crear una conexión, seleccione una columna de la tabla **Estructura de minería de datos** y arrástrela hasta la columna correspondiente de la tabla **Seleccionar tabla(s) de entrada** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Tareas y procedimientos de prueba y validación &#40;&#41;de minería de datos](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081977"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Definir períodos de tiempo (Asistente para dimensiones)
   Use la página **Definir períodos de tiempo** para definir la información del año natural y las frecuencias de tiempo que se deben incluir en la dimensión de tiempo o en la dimensión de tiempo de servidor.  
   
 > [!NOTE]  
->  Esta página se muestra solo si se ha seleccionado la opción **Dimensión de tiempo de servidor** en la página **Seleccionar el tipo de dimensión** , o si se ha seleccionado la opción **Build the dimension without using a data source** (Generar la dimensión sin un origen de datos) en la página **Select Build Method** (Seleccionar método de generación) y se ha seleccionado **Dimensión de tiempo** en la página **Seleccionar el tipo de dimensión** .  
+>   Esta página se muestra solo si se ha seleccionado la opción **Dimensión de tiempo de servidor** en la página **Seleccionar el tipo de dimensión** o se ha seleccionado la opción **Generar la dimensión sin un origen de datos** en la página **Seleccionar método de generación** y se ha seleccionado **Dimensión de tiempo** en la página **Seleccionar el tipo de dimensión** .  
   
 > [!IMPORTANT]  
 >  Esta página se usa para definir el año natural de una dimensión de tiempo. Para definir un año fiscal, de fabricación, de informe u 8601 ISO (Organización Internacional de Normalización) para la dimensión de tiempo, use la página **Seleccionar calendarios** .  

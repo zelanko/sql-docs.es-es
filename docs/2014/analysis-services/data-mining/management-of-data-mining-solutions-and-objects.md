@@ -14,23 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084202"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]proporciona herramientas de cliente que puede utilizar para administrar estructuras y modelos de minería de datos existentes. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona herramientas cliente que puede utilizar para administrar estructuras y modelos de minería de datos existentes. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
   
  Además de estas herramientas, puede administrar los objetos de minería de datos mediante programación con AMO, o utilizar otros clientes que puedan conectarse con una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como, por ejemplo, los complementos de minería de datos para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Mover objetos de minería de datos](moving-data-mining-objects.md)  
   
- [Requisitos y consideraciones de procesamiento &#40;la minería de datos&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md)  
   
- [Usar SQL Server Profiler para supervisar la minería de datos &#40;Analysis Services de minería de datos&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
+ [Usar SQL Server Profiler para supervisar la minería de datos &#40;Analysis Services - Minería de datos&#41;](using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
 ## <a name="location-of-data-mining-objects"></a>Ubicación de los objetos de minería de datos  
  Las estructuras y los modelos de minería de datos que se han procesado se almacenan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -41,8 +41,7 @@ ms.locfileid: "66084202"
 >  Algunos clientes, como los complementos de minería de datos para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, también permiten crear modelos de minería de datos y estructuras de minería de datos de sesión que usan una conexión a una instancia, aunque solo almacenan la estructura y los modelos de minería de datos en el servidor durante el transcurso de la sesión. Aun así, podrá administrar estos modelos a través del cliente, al igual que si las estructuras y los modelos estuvieran almacenados en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sin embargo, los objetos no se conservarán después de que se desconecte de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>Administrar objetos de minería de datos en herramientas de datos de SQL Server  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporciona características que facilitan la creación, exploración y edición de los objetos de minería de datos.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporciona características que facilitan la creación, exploración y edición de los objetos de minería de datos.  
   
  Los vínculos siguientes proporcionan información sobre cómo puede modificar objetos de minería de datos utilizando [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]:  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66084202"
   
 -   [Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md)  
   
--   [Ver o cambiar las marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
+-   [Ver o cambiar marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
   
 -   [Ver o cambiar parámetros del algoritmo](view-or-change-algorithm-parameters.md)  
   
@@ -80,19 +79,19 @@ ms.locfileid: "66084202"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restricciones:** Ninguna.  
+ **Restricciones:** ninguna.  
   
 ### <a name="data-mining-extensions-dmx"></a>Extensiones de minería de datos (DMX)  
  Las extensiones de minería de datos (DMX) se pueden utilizar con otras interfaces de comandos, como [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net para crear, eliminar y consultar estructuras y modelos de minería de datos.  
   
--   [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](/sql/dmx/dmx-statements-data-definition)  
+-   [Instrucciones de definición de datos de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/dmx-statements-data-definition)  
   
- **Restricciones:** Algunas propiedades no se pueden cambiar mediante DMX.  
+ **Restricciones:** algunas propiedades no se pueden cambiar utilizando DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) es el lenguaje de definición de datos para todos los Analysis Services. XMLA proporciona control sobre la mayoría de los objetos de minería de datos y las operaciones del servidor. Todas las operaciones de administración entre el cliente y el servidor se pueden realizar usando XMLA. Para su comodidad, puede usar el lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) para encapsular el XML.  
   
- **Restricciones:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] genera algunas instrucciones XMLA que solo se admiten para uso interno y que no se pueden usar en scripts DDL XML.  
+ **Restricciones:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] genera algunas instrucciones XMLA que solo se admiten para uso interno y que no se pueden utilizar en scripts DDL de XML.  
   
 ## <a name="see-also"></a>Consulte también  
  [Guía del desarrollador &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  

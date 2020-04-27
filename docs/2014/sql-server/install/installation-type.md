@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094289"
 ---
 # <a name="installation-type"></a>Tipo de instalación
@@ -31,6 +31,6 @@ ms.locfileid: "66094289"
   
  Solo puede Agregar las características admitidas de SysPrep[!INCLUDE[ssDE](../../includes/ssde-md.md)] ( [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y) a una imagen preparada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Otras características que no admita SysPrep se pueden agregar después de que se haya completado la instancia preparada.  
   
- **Nota:** No se pueden agregar características a una instancia de clúster de conmutación por error una vez instalada. Para agregar características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un clúster de conmutación por error existente, debe realizar una nueva instalación para instalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Nota** No puede agregar características a una instancia en clúster de conmutación por error una vez instalada. Para agregar características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un clúster de conmutación por error existente, debe realizar una nueva instalación para instalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e13882cf6186632b893b18369aef263e6cdd6445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086051"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Examinar un modelo usando el Visor de clústeres de Microsoft
@@ -35,7 +35,7 @@ ms.locfileid: "66086051"
 > [!NOTE]  
 >  Para ver información detallada sobre las ecuaciones utilizadas en el modelo y los modelos que se detectaron, utilice el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Pestañas del visor  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Pestañas del visor  
  Cuando se explora un modelo de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el modelo aparece en la pestaña **Visor de modelos de minería de datos** del visor del diseñador de minería de datos apropiado para el modelo. El Visor de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ofrece las siguientes pestañas para la exploración de modelos de minería de datos de agrupación en clústeres:  
   
 -   [Diagrama del clúster](#BKMK_Diagram)  
@@ -46,7 +46,7 @@ ms.locfileid: "66086051"
   
 -   [Distinción del clúster](#BKMK_Discrimination)  
   
-###  <a name="BKMK_Diagram"></a>Diagrama del clúster  
+###  <a name="cluster-diagram"></a><a name="BKMK_Diagram"></a>Diagrama del clúster  
  La pestaña **Diagrama del clúster** del Visor de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] muestra todos los clústeres de un modelo de minería de datos. El sombreado de la línea que conecta un clúster con otro representa la importancia de la similitud de los clústeres. Si el sombreado es claro o inexistente, los clústeres no son muy similares. A medida que la línea se va oscureciendo, va aumentando la similitud de los vínculos. Puede ajustar el número de líneas que muestra el visor ajustando el control deslizante situado a la derecha de los clústeres. Si desplaza el control deslizante hacia abajo, sólo se verán los vínculos más similares.  
   
  De forma predeterminada, el sombreado representa el llenado del clúster. Mediante el uso de las opciones de **sombreado** y **Estado** , puede seleccionar el par de atributo y estado que representa el sombreado. Cuanto más oscuro sea el sombreado, mayor será la distribución del atributo para un estado concreto. La distribución disminuye a medida que se aclara el sombreado.  
@@ -57,7 +57,7 @@ ms.locfileid: "66086051"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Profile"></a>Perfiles del clúster  
+###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>Perfiles del clúster  
  La pestaña **Perfiles del clúster** proporciona una vista general de los clústeres que crea el algoritmo en el modelo. Esta vista muestra cada atributo, junto con su distribución en cada clúster. Un recuadro informativo por cada celda muestra las estadísticas de la distribución y otro por cada encabezado de columna muestra el llenado del clúster. Los atributos discretos se muestran como barras de color y los atributos continuos se muestran como un gráfico en forma de rombo que representa la media y la desviación estándar de cada cluster. La opción **Barras de histograma** controla el número de barras que están visibles en el histograma. Si hay más barras de las que elige que se muestren, se retienen las de mayor importancia y las restantes se agrupan en un depósito gris.  
   
  Puede cambiar los nombres predeterminados de los clústeres para hacerlos más descriptivos. Puede cambiar el nombre de un clúster haciendo clic con el botón derecho en su encabezado de columna y seleccionando **Cambiar nombre de clúster**. También puede ocultar clústeres seleccionando **Ocultar columna**.  
@@ -68,12 +68,12 @@ ms.locfileid: "66086051"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a>Características del clúster  
+###  <a name="cluster-characteristics"></a><a name="BKMK_Characteristics"></a>Características del clúster  
  Para utilizar la pestaña **Características del clúster** , seleccione un clúster de la lista **Clúster** . Tras seleccionar un clúster, puede examinar las características que lo componen. Los atributos que contiene el clúster se enumeran en las columnas **Variables** ; el estado del atributo se indica en la columna **Valores** . Los estados del atributo se enumeran por orden de importancia, según la probabilidad que tienen de aparecer en el clúster. La probabilidad se muestra en la columna **Probabilidad** .  
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Discrimination"></a>Distinción del clúster  
+###  <a name="cluster-discrimination"></a><a name="BKMK_Discrimination"></a>Distinción del clúster  
  Puede utilizar la ficha **Distinción del clúster** para comparar los atributos de dos clústeres. Utilice las listas **Clúster 1** y **Clúster 2** para seleccionar los clústeres que desea comparar. El visor determina las diferencias más importantes entre los clústeres y muestra los estados de atributo asociados con las diferencias por orden de importancia. Una barra a la derecha del atributo muestra el clúster que favorece el estado; el tamaño de la barra muestra la intensidad con la que lo favorece.  
   
  [Volver al principio](#BKMK_ViewerTabs)  

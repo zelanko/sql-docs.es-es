@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089249"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opciones (Editor de texto - Todos los idiomas - Página General)
@@ -35,14 +35,14 @@ ms.locfileid: "66089249"
  **Ocultar miembros avanzados**  
  Reduce las listas emergentes de finalización de instrucciones reducidas y muestra solo los elementos de uso más frecuente. Los demás elementos se extraen de la lista. Esta opción no está disponible si no existen miembros marcados como miembros avanzados.  
   
- **Información de parámetros**  
+ **Información del parámetro**  
  Muestra la sintaxis completa para la declaración o procedimiento actual a la izquierda del punto de inserción del editor, con todos sus parámetros disponibles. El siguiente parámetro que puede asignar aparece en negrita.  
   
 ## <a name="settings"></a>Configuración  
  **Habilitar espacio virtual**  
  Permite colocar comentarios en un punto coherente junto al código. Si activa esta casilla, puede colocar el cursor después del último carácter de la fila. Cuando se escribe, se agregan tabuladores o espacios de forma automática para completar la fila hasta el punto de inserción.  
   
- **Ajuste de palabra**  
+ **Ajuste de línea**  
  Muestra, en la siguiente línea, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor. Cuando se selecciona esta casilla, se habilita la opción **Mostrar glifos visuales para ajuste de línea** .  
   
  **Mostrar glifos visuales para ajuste de línea**  

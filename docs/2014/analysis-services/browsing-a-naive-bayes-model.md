@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088481"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Examinar un modelo Bayes naive
@@ -22,20 +22,20 @@ ms.locfileid: "66088481"
   
 -   [Red de dependencias](#bkmk_DepNet)  
   
--   [Perfiles de atributo](#bkmk_AttProf)  
+-   [Perfiles del atributo](#bkmk_AttProf)  
   
 -   [Características del atributo](#bkmk_AttChar)  
   
--   [Distinción de atributos](#bkmk_AttDisc)  
+-   [Distinción del atributo](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>Explorar el modelo  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorar el modelo  
  El visor tiene por objeto ayudarle a explorar la interacción entre los atributos de entrada y los atributos de salida (las entradas y variables dependientes) que se detectaron mediante el modelo Bayes naive de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
  Si desea experimentar con el visor Bayes de Naive, use el asistente [para clasificar &#40;complementos de minería de datos para el Asistente para&#41;de Excel](classify-wizard-data-mining-add-ins-for-excel.md) en la cinta de opciones minería de datos, haga clic en la opción **avanzadas** y cambie el algoritmo para que use el algoritmo Bayes Naive.  
   
  En estos ejemplos, usamos los datos de origen en el libro de ejemplo y agrupamos la columna **ingresos anuales**en cinco grupos de ingresos, de **muy bajo** a **muy alto**. Posteriormente, el modelo Bayes naive analiza los factores en correlación con cada categoría de ingresos.  
   
-###  <a name="bkmk_DepNet"></a>Red de dependencias  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>Red de dependencias  
  La primera ventana que se va a usar es la **red de dependencias**. Muestra de un solo vistazo las entradas que están estrechamente correlacionadas con el resultado seleccionado.  
   
  ![red de dependencias en visor Bayes naive](media/dm13-nb.gif "red de dependencias en visor Bayes naive")  
@@ -56,7 +56,7 @@ ms.locfileid: "66088481"
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>Perfiles de atributo  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a>Perfiles de atributo  
  Las ventanas **perfiles de atributo** le ofrecen una indicación visual de cómo todas las demás variables están relacionadas con los resultados individuales.  
   
 ##### <a name="explore-the-profiles"></a>Explorar los perfiles  
@@ -73,7 +73,7 @@ ms.locfileid: "66088481"
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>Características del atributo  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a>Características del atributo  
  La vista **características del atributo** resulta útil para el examen exhaustivo de una variable de resultado determinada y los factores que contribuyen.  
   
  ![características del atributo en visor Bayes naive](media/dm13-nb-viewer.gif "características del atributo en visor Bayes naive")  
@@ -90,7 +90,7 @@ ms.locfileid: "66088481"
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>Distinción de atributos  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a>Distinción de atributos  
  La vista de **distinción de atributos** ayuda a comparar dos resultados, o un resultado frente a todos los demás resultados.  
   
  ![distinción del atributo en visor Bayes naive](media/dm13-nb-attdisc.gif "distinción del atributo en visor Bayes naive")  

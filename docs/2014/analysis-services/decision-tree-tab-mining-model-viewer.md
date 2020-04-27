@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082298"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Pestaña Árbol de decisión (Visor de modelos de minería de datos)
   El panel **Árbol de decisión** muestra una representación visual de las reglas de decisión que se crean en un modelo de árbol de decisión. Las reglas de decisión describen las rutas hacia un determinado resultado.  
   
- **Para obtener más información:** [algoritmo de árboles de decisión de Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [examinar un modelo usando el visor de árboles de Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Para más información:** [Algoritmo de árboles de decisión de Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [Examinar un modelo usando el Visor de árboles de Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -31,7 +31,7 @@ ms.locfileid: "66082298"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos de los de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Acercar**  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086381"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Agregar un modelo de minería de datos a una estructura de minería de datos existente
@@ -34,7 +34,7 @@ ms.locfileid: "66086381"
   
 3.  En **Nombre del algoritmo**, seleccione el algoritmo a partir del cual se va a generar el modelo de minería de datos.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
  Aparece un nuevo modelo de minería de datos en la pestaña **modelos de minería de datos** . El modelo utiliza las columnas predeterminadas que existen en la estructura. Para obtener información sobre cómo modificar las columnas, vea [Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md).  
   

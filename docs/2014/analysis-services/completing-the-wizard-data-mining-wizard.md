@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087707"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Finalización del asistente (Asistente para minería de datos)
@@ -27,7 +27,7 @@ ms.locfileid: "66087707"
 > [!NOTE]  
 >  Esta página cambia en función de si se selecciona **A partir de una base de datos relacional o un almacenamiento de datos** o **A partir de un cubo existente** en la página **Seleccionar el método de definición** del asistente.  
   
- **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services-&#41;de minería ](data-mining/data-mining-wizard-analysis-services-data-mining.md)de datos, [Diseñador de minería de datos](data-mining/data-mining-designer.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Diseñador de minería de datos](data-mining/data-mining-designer.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md).  
   
 ## <a name="options"></a>Opciones  
  **Nombre de la estructura de minería de datos**  
@@ -44,7 +44,7 @@ ms.locfileid: "66087707"
   
  Para obtener más información sobre las opciones de obtención de detalles, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](data-mining/drillthrough-queries-data-mining.md).  
   
- **Versión preliminar**  
+ **Vista previa**  
  Muestra la estructura de minería de datos que se va a crear.  
   
  **Crear dimensión de modelo de minería de datos**  
@@ -53,7 +53,7 @@ ms.locfileid: "66087707"
 > [!NOTE]  
 >  Esta opción se encuentra disponible si ha seleccionado **A partir de un cubo existente** en la página **Seleccionar el método de definición** del asistente.  
   
- **Crear un cubo con la dimensión del modelo de minería de datos**  
+ **Crear el cubo con la dimensión del modelo de minería de datos**  
  Seleccione esta opción para crear un cubo en función del modelo de minería de datos que se va a crear. Después de seleccionar esta opción, indique el nombre del cubo que se va a crear.  
   
 > [!NOTE]  

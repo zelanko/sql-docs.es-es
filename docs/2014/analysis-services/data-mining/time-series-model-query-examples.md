@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082749"
 ---
 # <a name="time-series-model-query-examples"></a>Ejemplos de consultas de modelos de serie temporal
@@ -46,14 +46,14 @@ ms.locfileid: "66082749"
   
  [Realización de predicciones con EXTEND_MODEL_CASES](#bkmk_EXTEND)  
   
- [Realización de predicciones con REPLACE_MODEL_CASES](#bkmk_REPLACE)  
+ [Realizar predicciones con REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
- [Sustitución de valores que faltan en los modelos de serie temporal](#bkmk_MissingValues)  
+ [Sustitución de valores ausentes en modelos de serie temporal](#bkmk_MissingValues)  
   
 ## <a name="getting-information-about-a-time-series-model"></a>Obtener información sobre un modelo de serie temporal  
  Una consulta de contenido del modelo puede proporcionar información básica sobre el modelo, como los parámetros que se utilizaron cuando se creó o el momento en que se procesó por última vez. En el ejemplo siguiente se muestra la sintaxis básica para consultar el contenido del modelo utilizando los conjuntos de filas de esquema de minería de datos.  
   
-###  <a name="bkmk_Query1"></a>Consulta de ejemplo 1: recuperar las sugerencias de periodicidad para el modelo  
+###  <a name="sample-query-1-retrieving-periodicity-hints-for-the-model"></a><a name="bkmk_Query1"></a> Ejemplo de consulta 1: Recuperar las sugerencias de periodicidad para el modelo  
  Puede recuperar las periodicidades que se encontraron dentro de la serie temporal consultando el árbol ARIMA o el árbol ARTXP. Sin embargo, las periodicidades en el modelo completado podrían no ser iguales que los segmentos de tiempo que especificó como sugerencias cuando creó el modelo. Para recuperar las sugerencias que se proporcionaron como parámetros cuando creó el modelo, puede consultar el conjunto de filas de esquema de contenido del modelo de minería de datos utilizando la instrucción DMX siguiente:  
   
 ```  
@@ -73,7 +73,7 @@ WHERE MODEL_NAME = '<model name>'
 > [!NOTE]  
 >  Los resultados se han truncado aquí para facilitar la lectura.  
   
-###  <a name="bkmk_Query2"></a>Consulta de ejemplo 2: recuperar la ecuación para un modelo ARIMA  
+###  <a name="sample-query-2-retrieving-the-equation-for-an-arima-model"></a><a name="bkmk_Query2"></a> Ejemplo de consulta 2: Recuperar la ecuación para un modelo ARIMA  
  Puede recuperar la ecuación para un modelo ARIMA consultando cualquier nodo en un árbol individual. Recuerde que cada árbol dentro de un modelo ARIMA representa una periodicidad diferente y, si hay varias series de datos, cada una tendrá su propio conjunto de árboles de periodicidad. Por consiguiente, para recuperar la ecuación de una serie de datos concreta debe identificar primero el árbol.  
   
  Por ejemplo, el prefijo TA le indica que el nodo forma parte de un árbol ARIMA, mientras que el prefijo TS se utiliza para los árboles ARTXP. Puede buscar todos los árboles de raíz de ARIMA consultando los nodos en el contenido del modelo con el valor 27 en NODE_TYPE. También puede utilizar el valor de ATTRIBUTE_NAME para buscar el nodo raíz ARIMA para una serie de datos determinada. Este ejemplo de consulta busca los nodos ARIMA que representan las cantidades vendidas del modelo R250 en la región de Europa.  
@@ -97,15 +97,15 @@ WHERE NODE_NAME = 'TA00000007'
   
  Resultados de ejemplo:  
   
-|Ecuación corta|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|Ecuación corta|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15,24....|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europa:Quantity(Intercept)|15,24....|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europa:Quantity(Periodicity)|1|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europa:Quantity(Periodicity)|12|  
   
  Para obtener más información sobre cómo interpretar estos datos, vea [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query3"></a>Consulta de ejemplo 3: recuperar la ecuación para un modelo ARTXP  
+###  <a name="sample-query-3-retrieving-the-equation-for-an-artxp-model"></a><a name="bkmk_Query3"></a>Consulta de ejemplo 3: recuperar la ecuación para un modelo ARTXP  
  Para un modelo ARTXP, se almacena información diferente en cada nivel del árbol. Para obtener más información sobre la estructura de un modelo ARTXP y sobre cómo interpretar la información en la ecuación, vea [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md).  
   
  La instrucción DMX siguiente recupera información de una parte del árbol ARTXP que representa la cantidad de ventas del modelo R250 en Europa.  
@@ -132,16 +132,16 @@ AND NODE_TYPE = 15
   
 -   Usando una consulta de predicción singleton para proporcionar los datos segmento a segmento. Para obtener información sobre cómo crear una consulta de predicción singleton, vea [interfaces de consulta de minería de datos](data-mining-query-tools.md).  
   
-###  <a name="bkmk_ReplaceExtend"></a>Descripción del comportamiento de las operaciones de reemplazo y extensión  
+###  <a name="understanding-the-behavior-of-replace-and-extend-operations"></a><a name="bkmk_ReplaceExtend"></a> Descripción del comportamiento de las operaciones Reemplazar y Ampliar  
  Al agregar nuevos datos a un modelo de serie temporal, puede especificar si deben ampliar o reemplazar a los datos de aprendizaje:  
   
--   **Extender:** Al extender una serie de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega los nuevos datos al final de los datos de entrenamiento existentes. El número de casos de aprendizaje también aumenta.  
+-   **Ampliar:** cuando se amplía una serie de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega los nuevos datos al final de los datos de aprendizaje. El número de casos de aprendizaje también aumenta.  
   
      La ampliación de los casos del modelo resulta útil para actualizar continuamente el modelo con nuevos datos. Por ejemplo, si desea que el conjunto de aprendizaje crezca con el paso del tiempo, lo único que debe hacer es ampliar el modelo.  
   
      Para ampliar los datos, se crea una instrucción `PREDICTION JOIN` en un modelo de serie temporal, se especifica el origen de los nuevos datos y se usa el argumento `EXTEND_MODEL_CASES`.  
   
--   **Reemplace:** Cuando se reemplazan los datos de la serie de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] datos, mantiene el modelo entrenado, pero usa los nuevos valores de datos para reemplazar algunos o todos los casos de aprendizaje existentes. De esta forma, el tamaño de los datos de aprendizaje nunca cambia, pero los propios casos se reemplazan continuamente con nuevos datos. Si proporciona suficientes datos nuevos, puede reemplazar los datos de aprendizaje con una serie completamente nueva.  
+-   **Reemplazar:** cuando se reemplazan los datos de una serie de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene el modelo de aprendizaje, pero usa los nuevos valores de datos para reemplazar algunos o todos los casos de aprendizaje existentes. De esta forma, el tamaño de los datos de aprendizaje nunca cambia, pero los propios casos se reemplazan continuamente con nuevos datos. Si proporciona suficientes datos nuevos, puede reemplazar los datos de aprendizaje con una serie completamente nueva.  
   
      La sustitución de los casos del modelo resulta útil si desear entrenar un modelo en un conjunto de casos y, a continuación, aplicar ese modelo a una serie de datos diferente.  
   
@@ -158,7 +158,7 @@ AND NODE_TYPE = 15
   
  Para obtener ejemplos de consultas y más información sobre la sintaxis `REPLACE_MODEL_CASES` para `EXTEND_MODEL_CASES`usar y, consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
-###  <a name="bkmk_EXTEND"></a>Realización de predicciones con EXTEND_MODEL_CASES  
+###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> Realizar predicciones con EXTEND_MODEL_CASES  
  El comportamiento de la predicción varía en función de si se amplían o se reemplazan los casos del modelo. Al ampliar un modelo, los nuevos datos se asocian al final de la serie y el tamaño del conjunto de aprendizaje aumenta. Sin embargo, los intervalos de tiempo usados en las consultas de predicción siempre se inician al final de la serie original. Por tanto, si agrega tres nuevos puntos de datos y solicita seis predicciones, las tres primeras predicciones devueltas se superponen a los nuevos datos. En este caso, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] devuelve los nuevos puntos de datos reales en lugar de realizar una predicción, hasta que se agoten los nuevos puntos de datos. A continuación, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] realiza predicciones basadas en la serie compuesta.  
   
  Este comportamiento permite agregar nuevos datos y, a continuación, mostrar las cifras de ventas reales en el gráfico de predicción, en lugar de ver proyecciones.  
@@ -175,15 +175,14 @@ AND NODE_TYPE = 15
   
      Se devuelven las cifras de ventas reales de los tres primeros intervalos de tiempo y las predicciones basadas en el modelo ampliado de los tres intervalos de tiempo siguientes.  
   
-###  <a name="bkmk_REPLACE"></a>Realización de predicciones con REPLACE_MODEL_CASES  
+###  <a name="making-predictions-with-replace_model_cases"></a><a name="bkmk_REPLACE"></a>Realización de predicciones con REPLACE_MODEL_CASES  
  Al reemplazar los casos de un modelo, el tamaño del modelo no se modifica, sino que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los casos individuales del modelo. Esto es útil para predicciones cruzadas y escenarios en los que resulta importante mantener el conjunto de datos de aprendizaje con un tamaño uniforme.  
   
  Por ejemplo, una de sus tiendas no dispone de suficientes datos de ventas. Podría crear un modelo general calculando el promedio de las ventas de todas las tiendas de una región determinada y, a continuación, entrenar un modelo. Posteriormente, para realizar predicciones sobre la tienda con datos de ventas insuficientes, crearía una instrucción `PREDICTION JOIN` para los nuevos datos de ventas únicamente de dicha tienda. Al hacer esto, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene los patrones derivados del modelo regional, pero reemplaza los casos de aprendizaje existentes con los datos de la tienda individual. Como resultado, los valores de predicción estarán más próximos a las líneas de tendencia de la tienda individual.  
   
  Al usar el argumento `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega continuamente los nuevos casos al final del conjunto de casos y elimina un número correspondiente del principio del conjunto. Si agrega nuevos datos en un número mayor que el conjunto de aprendizaje original, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] descarta los primeros datos. Si proporciona suficientes valores nuevos, las predicciones se pueden basar en datos completamente nuevos.  
   
- Por ejemplo, supongamos que entrenó el modelo con un conjunto de datos de casos que contenía 1000 filas. A continuación agrega 100 filas de datos nuevos. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita las 100 primeras filas del conjunto de entrenamiento y agrega las 100 filas de datos nuevos al final del conjunto, para obtener un total de 1000 filas. Si agrega 1100 filas de nuevos datos, solo se usan las 1000 filas más recientes.  
+ Por ejemplo, supongamos que entrenó el modelo con un conjunto de datos de casos que contenía 1000 filas. A continuación agrega 100 filas de datos nuevos. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita las 100 primeras filas del conjunto de entrenamiento y agrega las 100 filas de datos nuevos al final del conjunto, para obtener un total de 1000 filas. Si agrega 1100 filas de nuevos datos, solo se usan las 1000 filas más recientes.  
   
  A continuación se muestra otro ejemplo. Para agregar datos acerca de tres nuevos meses y realizar tres nuevas predicciones, realizaría las siguientes acciones:  
   
@@ -201,7 +200,7 @@ AND NODE_TYPE = 15
   
  Para obtener ejemplos de consultas y más información sobre la sintaxis `REPLACE_MODEL_CASES` para `EXTEND_MODEL_CASES`usar y, consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
-###  <a name="bkmk_MissingValues"></a>Sustitución de valores que faltan en los modelos de serie temporal  
+###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>Sustitución de valores que faltan en los modelos de serie temporal  
  Al agregar nuevos datos a un modelo de serie temporal con una instrucción `PREDICTION JOIN`, en el nuevo conjunto de datos no puede faltar ningún valor. Si alguna serie está incompleta, el modelo debe proporcionar los valores ausentes mediante un valor NULL, una media numérica, una media numérica concreta o un valor de predicción. Si especifica `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores ausentes con predicciones basadas en el modelo original. Si usa `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores que faltan por el valor que especifique en el parámetro *MISSING_VALUE_SUBSTITUTION* .  
   
 ## <a name="list-of-prediction-functions"></a>Lista de funciones de predicción  
@@ -211,17 +210,17 @@ AND NODE_TYPE = 15
 |-|-|  
 |función de predicción|Uso|  
 |[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|Devuelve un número de intervalos de tiempo entre la fecha del caso actual y la última fecha del conjunto de entrenamiento.<br /><br /> Un uso típico de esta función consiste en identificar los recientes escenarios de aprendizaje con el fin de poder recuperar datos detallados sobre los escenarios.|  
-|[&#41;PredictNodeId &#40;DMX](/sql/dmx/predictnodeid-dmx)|Devuelve el ID del nodo para la columna predecible especificada.<br /><br /> Un uso típico de esta función consiste en identificar el nodo que generó un determinado valor predicho de forma que se puedan revisar los escenarios asociados al nodo o recuperar la ecuación y otros detalles.|  
-|[&#41;PredictStdev &#40;DMX](/sql/dmx/predictstdev-dmx)|Devuelve la desviación estándar de las predicciones de la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
-|[&#41;PredictVariance &#40;DMX](/sql/dmx/predictvariance-dmx)|Devuelve la varianza de las predicciones para la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
-|[&#41;PredictTimeSeries &#40;DMX](/sql/dmx/predicttimeseries-dmx)|Devuelve valores históricos o futuros predichos en una serie temporal.<br /><br /> También puede consultar los modelos de serie temporal usando la función de predicción general, [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Devuelve el ID del nodo para la columna predecible especificada.<br /><br /> Un uso típico de esta función consiste en identificar el nodo que generó un determinado valor predicho de forma que se puedan revisar los escenarios asociados al nodo o recuperar la ecuación y otros detalles.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Devuelve la desviación estándar de las predicciones de la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Devuelve la varianza de las predicciones para la columna predecible especificada.<br /><br /> Esta función reemplaza el argumento INCLUDE_STATISTICS, que no se admite para los modelos de serie temporal.|  
+|[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)|Devuelve valores históricos o futuros predichos en una serie temporal.<br /><br /> También puede consultar los modelos de serie temporal usando la función de predicción general, [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).|  
   
- Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Para obtener más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
+ Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Consulte también  
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)   
  [Referencia técnica del algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

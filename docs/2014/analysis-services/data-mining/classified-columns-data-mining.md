@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085686"
 ---
 # <a name="classified-columns-data-mining"></a>Columnas clasificadas (Minería de datos)
@@ -61,6 +61,6 @@ ms.locfileid: "66085686"
 ## <a name="see-also"></a>Consulte también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
  [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-structures-analysis-services-data-mining.md)   
- [Tipos de datos &#40;&#41;de minería de datos](data-types-data-mining.md)  
+ [Tipos de datos &#40;minería de datos&#41;](data-types-data-mining.md)  
   
   

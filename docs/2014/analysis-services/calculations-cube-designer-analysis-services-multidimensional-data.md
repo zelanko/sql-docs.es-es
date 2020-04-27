@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088289"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Cálculos (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -34,7 +34,7 @@ ms.locfileid: "66088289"
      Para usuarios avanzados, esta vista muestra todo el script MDX asociado con el cubo, y también muestra metadatos, funciones y herramientas disponibles en el cubo.  
   
 ## <a name="panes"></a>Paneles  
- **Barra de herramientas**  
+ **Barra**  
  Use la barra de herramientas de la vista de formulario y la vista de script para realizar operaciones comunes en esta pestaña. Para obtener más información sobre este panel, vea [barra de herramientas &#40;pestaña cálculos, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Organizador de script**  

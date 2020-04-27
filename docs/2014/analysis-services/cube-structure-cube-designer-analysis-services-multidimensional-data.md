@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086577"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Estructura de cubo (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -28,7 +28,7 @@ ms.locfileid: "66086577"
   
 |Panel|Definición|  
 |----------|----------------|  
-|**Barra de herramientas**|Use la barra de herramientas para realizar acciones comunes en esta pestaña. Para obtener más información sobre este panel, vea [barra de herramientas &#40;pestaña estructura de cubo, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Barra**|Use la barra de herramientas para realizar acciones comunes en esta pestaña. Para obtener más información sobre este panel, vea [barra de herramientas &#40;pestaña estructura de cubo, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**medidas**|Utilice el panel **Medidas** para crear y modificar grupos de medida y medidas para el cubo seleccionado. Para obtener más información sobre este panel, vea [Medidas &#40;pestaña Estructura de cubo, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Dimensions**|Utilice el panel **Dimensiones** para incluir y modificar las dimensiones del cubo seleccionado. Para obtener más información sobre este panel, vea [Dimensiones &#40;pestaña Estructura de cubo, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Vista del origen de datos**|Utilice el panel **Vista del origen de datos** para ver y editar la vista del origen de datos asociada al cubo seleccionado. Para obtener más información sobre este panel, vea [Vista del origen de datos &#40;pestaña Estructura de cubo, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  

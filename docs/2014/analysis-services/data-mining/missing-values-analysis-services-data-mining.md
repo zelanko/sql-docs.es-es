@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083357"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Minería de datos)
@@ -59,7 +59,7 @@ ms.locfileid: "66083357"
  Si la entrada es una columna continua, el modelo tabula dos posibles estados para el atributo: `Existing` y `Missing`. En otras palabras, o la columna contiene un valor de algún tipo de datos numéricos o no contiene ningún valor. Para los casos que tienen un valor, el modelo calcula la media, la desviación estándar y otras estadísticas significativas. Para los casos que no tienen ningún valor, el modelo proporciona un recuento de los valores `Missing` y ajusta las predicciones de la forma apropiada. El método para ajustar la predicción difiere dependiendo del algoritmo y se describe en la sección siguiente.  
   
 > [!NOTE]  
->  Para los atributos de una tabla anidada, los valores ausentes no son informativos. Por ejemplo, si un cliente no ha comprado un producto, la tabla anidada **Productos** no tendrá ninguna fila para dicho producto y el modelo de minería no creará ningún atributo para el producto ausente. Sin embargo, si le interesan los clientes que no han comprado determinados productos, puede crear un modelo cuyo filtro esté basado en la inexistencia de los productos en la tabla anidada, usando para ello una instrucción NOT EXISTS en el filtro del modelo. Para obtener más información, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
+>  Para los atributos de una tabla anidada, los valores ausentes no son informativos. Por ejemplo, si un cliente no ha comprado un producto, la tabla anidada **Productos** no tendrá ninguna fila para dicho producto y el modelo de minería no creará ningún atributo para el producto ausente. Sin embargo, si le interesan los clientes que no han comprado determinados productos, puede crear un modelo cuyo filtro esté basado en la inexistencia de los productos en la tabla anidada, usando para ello una instrucción NOT EXISTS en el filtro del modelo. Para más información, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
   
 ## <a name="adjusting-probability-for-missing-states"></a>Ajustar la probabilidad para los estados ausentes  
  Además de contar los valores, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] calcula la probabilidad de cualquier valor en el conjunto de datos. Esto también se aplica al valor `Missing`. Por ejemplo, la tabla siguiente muestra las probabilidades para los casos del ejemplo anterior:  
@@ -108,13 +108,13 @@ ms.locfileid: "66083357"
   
 |Tareas|Vínculos|  
 |-----------|-----------|  
-|Agregar marcas a columnas del modelo individuales para controlar la administración de los valores ausentes|[Ver o cambiar las marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
+|Agregar marcas a columnas del modelo individuales para controlar la administración de los valores ausentes|[Ver o cambiar marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
 |Establecer propiedades en un modelo de minería de datos para controlar la administración de los valores ausentes|[Cambiar las propiedades de un modelo de minería de datos](change-the-properties-of-a-mining-model.md)|  
 |Obtenga información acerca de cómo especificar las marcas de modelado en DMX|[Marcas de modelado &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Modificar la forma en la que la estructura de minería de datos administra los valores ausentes|[Cambiar las propiedades de una estructura de minería de datos](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Consulte también  
  [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
- [Marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
+ [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md)  
   
   

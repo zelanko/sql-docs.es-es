@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086056"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Examinar un modelo usando el Visor de redes neuronales de Microsoft
@@ -43,16 +43,16 @@ ms.locfileid: "66086056"
   
  Si necesita información más detallada, como las ecuaciones que representan cada patrón descubierto, puede cambiar de vista y usar el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Pestañas del visor  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Pestañas del visor  
  Cuando se explora un modelo de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el modelo aparece en la pestaña **Visor de modelos de minería de datos** del visor del diseñador de minería de datos apropiado para el modelo. El Visor de redes neuronales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ofrece las siguientes pestañas para usarlas con el fin de explorar modelos de minería de datos de redes neuronales:  
   
--   [Entradas](#BKMK_Inputs)  
+-   [Comentarios](#BKMK_Inputs)  
   
 -   [Salidas](#BKMK_Outputs)  
   
 -   [Variables](#BKMK_Characteristics)  
   
-###  <a name="BKMK_Inputs"></a>Comentarios  
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Comentarios  
  Use la pestaña **Entradas** para elegir los atributos y los valores que usará el modelo como entradas. De forma predeterminada, el visor se abre con todos los atributos incluidos. En esta vista predeterminada, el modelo elige qué valores de los atributos son los más importantes que se van a mostrar.  
   
  Para seleccionar un atributo de entrada, haga clic en la columna **Atributo** de la cuadrícula **Entrada** y, después, seleccione un atributo de la lista desplegable. (En la lista solo están incluidos los atributos presentes en el modelo).  
@@ -61,14 +61,14 @@ ms.locfileid: "66086056"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Outputs"></a>Salidas  
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Salidas  
  Use la pestaña **Salidas** para elegir el atributo de resultados que se debe investigar. Puede elegir dos estados resultantes cualesquiera para compararlos, suponiendo que las columnas se definieron como atributos de predicción cuando se creó el modelo.  
   
  Use la lista **Atributo de salida** para seleccionar un atributo. Después puede seleccionar dos estados asociados con el atributo en las listas **Valor 1** y **Valor 2** . Estos dos estados del atributo de salida se compararán en el panel **Variables** .  
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a>Variable  
+###  <a name="variables"></a><a name="BKMK_Characteristics"></a>Variable  
  La cuadrícula de la pestaña **Variables** contiene las columnas siguientes: **Atributo**, **Valor**, **Favorece [valor 1]** y **Favorece [valor 2]**. De forma predeterminada, las columnas se ordenan por la intensidad de **Favorece [valor 1]**. Si hace clic en un encabezado de columna, cambia el orden de la columna seleccionada.  
   
  Una barra a la derecha del atributo muestra el estado del atributo de entrada que el estado del atributo de salida favorece. El tamaño de la barra muestra la intensidad con la que el estado de salida favorece al estado de entrada.  

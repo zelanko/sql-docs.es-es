@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084729"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Eliminar un filtro de un modelo de minería de datos
@@ -32,13 +32,13 @@ ms.locfileid: "66084729"
   
 3.  Seleccione el modelo y haga clic con el botón secundario del mouse para abrir el menú contextual.  
   
-     O bien  
+     o bien  
   
      Seleccione el modelo. En el menú **Minería de datos** , seleccione **Establecer filtro de modelos**.  
   
 4.  En el cuadro de diálogo **Filtro del modelo** , haga clic con el botón derecho en la fila de la cuadrícula que contiene la condición que quiere eliminar.  
   
-5.  Seleccione **eliminar**.  
+5.  Seleccione **Eliminar**.  
   
 ### <a name="to-clear-the-filter-on-a-mining-model-in-the-filter-editor-dialog-box"></a>Para borrar el filtro de un modelo de minería de datos en el cuadro de diálogo Editor de filtros  
   
@@ -61,6 +61,6 @@ ms.locfileid: "66084729"
 ## <a name="see-also"></a>Consulte también  
  [Obtener detalles de los datos de los casos de un modelo de minería de datos](drill-through-to-case-data-from-a-mining-model.md)   
  [Tareas y procedimientos del modelo de minería de datos](mining-model-tasks-and-how-tos.md)   
- [Filtros para modelos de minería de datos &#40;Analysis Services-minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
   
   

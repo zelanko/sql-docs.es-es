@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088984"
 ---
 # <a name="query-options-results-text-page"></a>Resultados de Opciones de consulta (página Texto)
@@ -37,10 +37,10 @@ ms.locfileid: "66088984"
  **Alinear a la derecha los valores numéricos**  
  Active esta casilla para alinear los valores numéricos a la derecha de la columna. Esto puede ser de ayuda a la hora de revisar números con un número fijo de posiciones decimales.  
   
- **Descartar resultado tras ejecutar la consulta**  
+ **Descartar resultados tras la ejecución**  
  Si descarta los resultados de la consulta después de que la pantalla los reciba, liberará memoria.  
   
- **Mostrar los resultados en una pestaña independiente**  
+ **Mostrar resultados en otra pestaña**  
  Active esta casilla para mostrar el conjunto de resultados en una nueva ventana de documento, en lugar de en la parte inferior de la ventana de documento de la consulta.  
   
  **Cambiar a la pestaña de resultados tras ejecutar la consulta**  
@@ -49,7 +49,7 @@ ms.locfileid: "66088984"
  **Número máximo de caracteres mostrados en cada columna**  
  El valor predeterminado es 256. Aumente este valor para poder mostrar conjuntos de resultados mayores sin truncamientos.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Guardar un conjunto de resultados de texto con encabezados  

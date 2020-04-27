@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084130"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Referencia técnica del algoritmo de asociación de Microsoft
@@ -42,11 +42,11 @@ ms.locfileid: "66084130"
  Los modelos de asociación se pueden crear también para atributos numéricos. Si los atributos son continuos, los números se pueden *discretizar* o agruparse en depósitos. A continuación, los valores de datos discretos se pueden tratar como booleanos o como pares atributo-valor.  
   
 ### <a name="support-probability-and-importance"></a>Soporte, probabilidad e importancia  
- La *compatibilidad*, que también a la que se hace referencia como *frecuencia*, significa el número de casos que contienen el elemento o la combinación de elementos de destino. Solo se pueden incluir en el modelo los elementos que tienen al menos el soporte especificado.  
+ *Soporte*, también denominado *frecuencia*, es el número de casos que contiene el elemento o la combinación de elementos de destino. Solo se pueden incluir en el modelo los elementos que tienen al menos el soporte especificado.  
   
  Se denomina *conjunto de elementos frecuente* a una colección de elementos cuya combinación de elementos también admite cantidades superiores al umbral definido por el parámetro MINIMUM_SUPPORT. Por ejemplo, si el conjunto de elementos es {A,B,C} y el valor de MINIMUM_SUPPORT es 10, cada uno de los elementos individuales A, B y C debe hallarse en al menos 10 casos para ser incluido en el modelo, y la combinación de elementos {A,B,C} debe hallarse también en al menos 10 casos.  
   
- **Nota:** También puede controlar el número de conjuntos en un modelo de minería de datos especificando la longitud máxima de un conjunto de elementos, donde longitud indica el número de elementos.  
+ **Nota** : también puede controlar el número de conjuntos de elementos de un modelo de minería de datos especificando la longitud máxima, es decir, el número de elementos, que puede tener un conjunto de elementos.  
   
  De forma predeterminada, el soporte para cualquier elemento o conjunto de elementos determinado representa un recuento de los casos que contienen dichos elementos. Sin embargo, también se puede expresar MINIMUM_SUPPORT como un porcentaje de los casos totales en el conjunto de datos, escribiendo el número como un valor decimal inferior a 1. Por ejemplo, si especifica un valor MINIMUM_SUPPORT de 0,03, significa que al menos el 3% del total de casos del conjunto de datos debe contener este elemento o conjunto de elementos para su inclusión en el modelo. Experimente con el modelo para determinar si resulta más apropiado usar un recuento o un porcentaje.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "66084130"
 ## <a name="see-also"></a>Consulte también  
  [Algoritmo de Asociación de Microsoft](microsoft-association-algorithm.md)   
  [Ejemplos de consultas de modelos de asociación](association-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

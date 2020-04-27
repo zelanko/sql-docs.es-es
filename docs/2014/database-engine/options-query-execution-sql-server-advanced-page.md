@@ -13,38 +13,38 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089372"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Opciones (Ejecución de la consulta/SQL Server/página Avanzadas)
   Hay varias opciones disponibles cuando se utiliza el comando SET. Utilice esta página para especificar una opción **set** para ejecutar consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el Editor de consultas de SQL Server. No tendrán efecto en otros editores de código. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o en el menú contextual de la ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . En **Ejecución**, haga clic en **Avanzadas**. Para obtener más información sobre cada una estas opciones, consulte los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
- **ESTABLECER NOCOUNT**  
+ **SET NOCOUNT**  
  No devuelve el recuento del número de filas, como un mensaje con el conjunto de resultados. Esta casilla está desactivada de forma predeterminada.  
   
- **ESTABLECER NOEXEC**  
+ **SET NOEXEC**  
  No ejecuta la consulta. Esta casilla está desactivada de forma predeterminada.  
   
- **ESTABLECER PARSEONLY**  
+ **SET PARSEONLY**  
  Comprueba la sintaxis de cada consulta, pero no las ejecuta. Esta casilla está desactivada de forma predeterminada.  
   
- **ESTABLECER CONCAT_NULL_YIELDS_NULL**  
+ **SET CONCAT_NULL_YIELDS_NULL**  
  Cuando esta casilla está activada, las consultas que concatenan un valor existente con un valor NULL devuelven siempre un valor NULL como resultado. Cuando esta casilla está desactivada, un valor existente concatenado con un valor NULL devolverá el valor existente. Esta casilla está activada de forma predeterminada.  
   
- **ESTABLECER ARITHABORT**  
+ **SET ARITHABORT**  
  Cuando esta casilla está activada, el hecho de que una instrucción INSERT, DELETE o UPDATE encuentre un error aritmético (desbordamiento, división por cero o error de dominio) al evaluar una expresión, hará que la consulta o proceso por lotes finalicen. Cuando esta casilla está desactivada, se proporciona si es posible un valor NULL para dicho valor, la consulta continúa y se incluye un mensaje con el resultado. Para obtener más información, vea [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql). Esta casilla está activada de forma predeterminada.  
   
- **ESTABLECER SHOWPLAN_TEXT**  
+ **SET SHOWPLAN_TEXT**  
  Cuando esta casilla está activada, el plan de consulta se devuelve en formato de texto con cada consulta. Esta casilla está desactivada de forma predeterminada.  
   
- **ESTABLECER HORA DE ESTADÍSTICAS**  
+ **SET STATISTICS TIME**  
  Cuando se activa esta casilla, las estadísticas de tiempo se devuelven con cada consulta. Esta casilla está desactivada de forma predeterminada.  
   
- **ESTABLECER E/S DE ESTADÍSTICAS**  
+ **SET STATISTICS IO**  
  Cuando esta casilla está activada, las estadísticas de entrada y salida se devuelven con cada consulta. Esta casilla está desactivada de forma predeterminada.  
   
  **SET TRANSACTION ISOLATION LEVEL**  
@@ -70,7 +70,7 @@ GO
  **Desconectar tras la ejecución de la consulta**  
  Cuando esta casilla está activada, la conexión a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] finaliza después de completarse la consulta. Esta casilla está desactivada de forma predeterminada.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

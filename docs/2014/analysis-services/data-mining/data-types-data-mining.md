@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084799"
 ---
 # <a name="data-types-data-mining"></a>Tipos de datos (minería de datos)
@@ -28,8 +28,7 @@ ms.locfileid: "66084799"
   
  Por ejemplo, si tiene datos numéricos en una columna, puede elegir que se traten como tipos de datos numéricos o como texto. Si elige el tipo de datos numérico, puede establecer varios tipos de contenido diferentes: puede discretizar los números o tratarlos como valores continuos. Para obtener una lista de todos los tipos de contenido, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite los tipos de datos siguientes para las columnas de estructura de minería:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite los tipos de datos siguientes para las columnas de estructura de minería:  
   
 |Tipo de datos|Tipos de contenido admitidos|  
 |---------------|-----------------------------|  

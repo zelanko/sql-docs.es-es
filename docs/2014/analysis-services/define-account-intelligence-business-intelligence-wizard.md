@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082199"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Definir la inteligencia de cuentas (Asistente de Business Intelligence)
@@ -38,10 +38,10 @@ ms.locfileid: "66082199"
 |-----------|-----------------|  
 |**Recurso**|Valor de cosas en propiedad en un momento dado.|  
 |**Saldo**|Cuenta de algo en un momento dado.|  
-|**Gastos**|Valor de cosas consumidas.|  
-|**Transmite**|Cuenta incremental de cosas.|  
-|**Regular**|Valor de las cosas recibidas.|  
-|**Asumir**|Valor de cosas debidas en un momento dado.|  
+|**Expense**|Valor de cosas consumidas.|  
+|**Flujo**|Cuenta incremental de cosas.|  
+|**Income**|Valor de las cosas recibidas.|  
+|**Liability**|Valor de cosas debidas en un momento dado.|  
 |**Estadística**|Proporción calculada de algo o cuenta de algo que no se agrega.|  
   
 ## <a name="see-also"></a>Consulte también  

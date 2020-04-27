@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083151"
 ---
 # <a name="processing-data-mining-objects"></a>Procesar objetos de minería de datos
-  Un objeto de minería de datos solo es un contenedor vacío hasta que se procesa. El *procesamiento* de un modelo de minería de datos también se denomina *entrenamiento*.  
+  Un objeto de minería de datos solo es un contenedor vacío hasta que se procesa. El*procesamiento* de un modelo de minería de datos también se denomina *entrenamiento*.  
   
- **Procesando estructuras de minería de datos:** Una estructura de minería de datos obtiene los datos de un origen de datos externo, definidos por los enlaces de columna y los metadatos de uso, y Lee los datos. Se leen todos los datos y, a continuación, se analizan para extraer varias estadísticas. Analysis Services almacena una representación compacta de los datos, que puede ser analizada por los algoritmos de minería de datos, en una caché local. Una vez procesados los modelos, puede conservar esta caché o eliminarla. De forma predeterminada, la caché se almacena. Para más información, consulte [Process a Mining Structure](process-a-mining-structure.md).  
+ **Procesar estructuras de minería de datos** : una estructura de minería de datos obtiene los datos de un origen de datos externo, definido por los enlaces de columna y el uso de los metadatos, y los lee. Se leen todos los datos y, a continuación, se analizan para extraer varias estadísticas. Analysis Services almacena una representación compacta de los datos, que puede ser analizada por los algoritmos de minería de datos, en una caché local. Una vez procesados los modelos, puede conservar esta caché o eliminarla. De forma predeterminada, la caché se almacena. Para más información, consulte [Process a Mining Structure](process-a-mining-structure.md).  
   
- **Procesar modelos de minería de datos:** Un modelo de minería de datos está vacío y solo contiene definiciones, hasta que se procesa. Para procesar un modelo de minería de datos, se debe haber procesado antes la estructura de minería de datos en la que está basado. El modelo de minería de datos obtiene los datos de la caché de la estructura de minería de datos, aplica los filtros que se han creado en el modelo y, a continuación, pasa el conjunto de datos por el algoritmo para detectar patrones. Una vez procesado el modelo, éste solo almacena los resultados del procesamiento, no los propios datos. Para más información, vea [Procesar un modelo de minería de datos](process-a-mining-model.md).  
+ **Procesar modelos de minería de datos** : un modelo de minería de datos está vacío y solo contiene definiciones, hasta que se procesa. Para procesar un modelo de minería de datos, se debe haber procesado antes la estructura de minería de datos en la que está basado. El modelo de minería de datos obtiene los datos de la caché de la estructura de minería de datos, aplica los filtros que se han creado en el modelo y, a continuación, pasa el conjunto de datos por el algoritmo para detectar patrones. Una vez procesado el modelo, éste solo almacena los resultados del procesamiento, no los propios datos. Para más información, vea [Procesar un modelo de minería de datos](process-a-mining-model.md).  
   
  El siguiente diagrama muestra el flujo de datos cuando se procesa una estructura de minería de datos y cuando se procesa un modelo de minería de datos.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66083151"
   
  Para el origen de datos relacional, el procesamiento solo requiere que cree datos de entrenamiento y ejecute algoritmos de minería de datos en dichos datos. Sin embargo, los modelos de minería de datos basados en objetos OLAP, como dimensiones y medidas, requieren que los datos subyacentes estén en un estado procesado. Esto puede requiere que los objetos multidimensionales se procesarán para rellenar el modelo de minería de datos.  
   
- Para obtener más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md).  
+ Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Consultas de obtención de detalles &#40;&#41;de minería de datos](drillthrough-queries-data-mining.md)   
  [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-structures-analysis-services-data-mining.md)   
  [Modelos de minería de datos &#40;Analysis Services&#41;de minería de datos](mining-models-analysis-services-data-mining.md)   
- [Arquitectura lógica &#40;Analysis Services:&#41;de minería de datos](logical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

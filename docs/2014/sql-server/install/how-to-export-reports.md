@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094899"
 ---
-# <a name="how-to-export-reports"></a>Cómo exportar informes
+# <a name="how-to-export-reports"></a>Procedimientos: Export Reports
   El Visor de informes del Asesor de actualizaciones le permite exportar una versión plana del archivo de informe. Esto le permite trabajar con la información en una hoja de cálculo o un documento de procesador de textos, así como enviar la información a otras personas por correo electrónico.  
   
 ### <a name="to-export-a-report"></a>Para exportar un informe  

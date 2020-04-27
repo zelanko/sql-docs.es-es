@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083565"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia(Analysis Services - Minería de datos)
@@ -71,11 +71,11 @@ ms.locfileid: "66083565"
  CHILDREN_CARDINALITY  
  Cálculo del número de elementos secundarios que tiene el nodo.  
   
- **Raíz del modelo** El valor de la cardinalidad es igual al número de clústeres más uno. Para obtener más información, vea [Cardinalidad](#bkmk_cardinality).  
+ **Raíz del modelo** : el valor de la cardinalidad es igual al número de clústeres más uno. Para obtener más información, vea [Cardinalidad](#bkmk_cardinality).  
   
- **Nodos de clúster** La cardinalidad siempre es 1, porque cada clúster tiene un único nodo secundario, que contiene la lista de secuencias del clúster.  
+ **Nodos de clúster** : la cardinalidad siempre es 1, porque cada clúster tiene un único nodo secundario, que contiene la lista de secuencias en el clúster.  
   
- **Nodos de secuencia** La cardinalidad indica el número de transiciones que se incluyen en ese clúster. Por ejemplo, la cardinalidad del nodo de secuencia para la raíz del modelo indica cuántas transiciones se encontraron en todo el modelo.  
+ **Nodos de secuencia** : la cardinalidad indica el número de transiciones que están incluidas en ese clúster. Por ejemplo, la cardinalidad del nodo de secuencia para la raíz del modelo indica cuántas transiciones se encontraron en todo el modelo.  
   
  PARENT_UNIQUE_NAME  
  Nombre único del nodo primario del nodo.  
@@ -94,20 +94,20 @@ ms.locfileid: "66083565"
  NODE_PROBABILITY  
  **Raíz del modelo** Siempre es 0.  
   
- **Nodos de clúster** La probabilidad ajustada del clúster en el modelo. Las probabilidades ajustadas no suman 1, porque el método de agrupación en clústeres utilizado en la agrupación en clústeres de secuencia permite la pertenencia parcial en varios clústeres.  
+ **Nodos de clúster** : la probabilidad ajustada del clúster en el modelo. Las probabilidades ajustadas no suman 1, porque el método de agrupación en clústeres utilizado en la agrupación en clústeres de secuencia permite la pertenencia parcial en varios clústeres.  
   
- **Nodos de secuencia** Siempre es 0.  
+ **Nodos de secuencia** : siempre es 0.  
   
- **Nodos de transición** Siempre es 0.  
+ **Nodos de transición** : siempre es 0.  
   
  MARGINAL_PROBABILITY  
  **Raíz del modelo** Siempre es 0.  
   
  **Nodos de clúster** El mismo valor que NODE_PROBABILITY.  
   
- **Nodos de secuencia** Siempre es 0.  
+ **Nodos de secuencia** : siempre es 0.  
   
- **Nodos de transición** Siempre es 0.  
+ **Nodos de transición** : siempre es 0.  
   
  NODE_DISTRIBUTION  
  Tabla que contiene probabilidades y otra información. Para más información, vea [Tabla NODE_DISTRIBUTION](#bkmk_NODEDIST).  
@@ -115,13 +115,13 @@ ms.locfileid: "66083565"
  NODE_SUPPORT  
  Número de transiciones que admiten este nodo. Por consiguiente, si hay 30 ejemplos de secuencia "Producto A seguido de producto B" en los datos de entrenamiento, la compatibilidad total es 30.  
   
- **Raíz del modelo** Número total de transiciones en el modelo.  
+ **Modelo raíz** : número total de transiciones en el modelo.  
   
- **Nodos de clúster** Compatibilidad sin procesar para el clúster, es decir, el número de casos de entrenamiento que contribuyen a los casos para este clúster.  
+ **Nodos de clústeres** : compatibilidad neta para el clúster, que indica el número de casos de entrenamiento que contribuyen a los casos para este clúster.  
   
- **Nodos de secuencia** Siempre es 0.  
+ **Nodos de secuencia** : siempre es 0.  
   
- **Nodos de transición** Porcentaje de casos del clúster que representan una transición concreta. Puede ser 0 o un valor positivo. Se calcula tomando la compatibilidad neta para el nodo del clúster y multiplicándola por la probabilidad del clúster.  
+ **Nodos de transición** : porcentaje de casos en el clúster que representan una transición concreta. Puede ser 0 o un valor positivo. Se calcula tomando la compatibilidad neta para el nodo del clúster y multiplicándola por la probabilidad del clúster.  
   
  A partir de este valor, puede indicar cuántos casos de entrenamiento contribuyeron a la transición.  
   
@@ -151,14 +151,14 @@ ms.locfileid: "66083565"
 |Nodos de secuencia para clústeres individuales|Varios nodos con transiciones para las secuencias en ese clúster únicamente|Exactamente la misma información que en los nodos de clúster individuales.|  
 |Transiciones|Ningún nodo secundario|Muestra las transiciones para el primer estado relacionado.<br /><br /> La compatibilidad un valor ajustado, que indica los casos que toman parte en cada transición. La probabilidad es la probabilidad ajustada, representada como un porcentaje.|  
   
-###  <a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION tabla  
+###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION tabla  
  En la tabla NODE_DISTRIBUTION se proporciona información detallada de la compatibilidad y la probabilidad de las transiciones y secuencias de un clúster concreto.  
   
  Una fila siempre se agrega a la tabla de transiciones para representar los posibles valores `Missing`. Para obtener información sobre lo `Missing` que significa el valor y cómo afecta a los cálculos, vea [valores ausentes &#40;Analysis Services-&#41;de minería de datos ](missing-values-analysis-services-data-mining.md).  
   
  Los cálculos de compatibilidad y probabilidad difieren en función de si el cálculo se aplica a los casos de entrenamiento o al modelo terminado. Esto se debe a que el método de agrupación en clústeres predeterminado, maximización de la expectativa (EM), supone que cualquier caso puede pertenecer a más de un clúster. Al calcular la compatibilidad para los casos en el modelo, es posible utilizar recuentos netos y probabilidades netas. Sin embargo, las probabilidades de una secuencia determinada en un clúster deben ser compensadas por la suma de todas las combinaciones posibles de clústeres y secuencias.  
   
-###  <a name="bkmk_cardinality"></a>Cardinalidad  
+###  <a name="cardinality"></a><a name="bkmk_cardinality"></a>Cardinalidad  
  En un modelo de agrupación en clústeres, la cardinalidad del nodo primario generalmente indica cuántos clústeres contiene el modelo. Sin embargo, un modelo de agrupación en clústeres de secuencia tiene dos tipos de nodos en el nivel de clúster: un tipo de nodo contiene los clústeres y el otro contiene una lista de secuencias para el modelo como un todo.  
   
  Por consiguiente, para obtener información sobre el número de clústeres del modelo, puede tomar el valor de NODE_CARDINALITY para el nodo (Todos) y restar uno. Por ejemplo, si el modelo creara 9 clústeres, la cardinalidad de la raíz del modelo sería de 10. Esto es porque el modelo contiene 9 nodos de clúster, cada uno con su propio nodo de secuencia, más un nodo de secuencia adicional denominado clúster 10, que representa las secuencias para el modelo.  

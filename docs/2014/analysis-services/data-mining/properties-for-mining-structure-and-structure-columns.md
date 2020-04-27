@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083063"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propiedades de estructuras de minería de datos y columnas de estructuras
@@ -46,7 +46,7 @@ ms.locfileid: "66083063"
 |**HoldoutMaxCases**|Especifica el número máximo de casos de estructura que se pueden reservar como un conjunto de datos de prueba.  Si se especifican valores tanto para **HoldoutMaxCases** como para **HoldoutPercent**, se combinan las condiciones.<br /><br /> Nota: para establecer esta propiedad, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> debe establecerse en `KeepTrainingCases`.|  
 |**HoldoutPercent**|Especifica el porcentaje de los casos de estructura para reservar como un conjunto de datos de prueba. Si se especifican valores tanto para **HoldoutMaxCases** como para **HoldoutPercent**, se combinan las condiciones.<br /><br /> Nota: para establecer esta propiedad, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> debe establecerse en `KeepTrainingCases`.|  
 |**HoldoutSeed**|Especifica un valor de inicialización para inicializar la creación de particiones del conjunto de prueba de exclusión, para asegurarse de que se puede volver a crear el conjunto de datos de prueba.<br /><br /> Nota: para establecer esta propiedad, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> debe establecerse en `KeepTrainingCases`.|  
-|**SESIÓN**|Muestra el identificador único de la estructura de minería de datos.<br /><br /> El nombre que asignó a la estructura de minería de datos cuando creó la estructura se usa como Id. Si cambia posteriormente el nombre escribiendo un nuevo valor para la propiedad `Name`, el nuevo nombre solamente se usa como un alias; el Id. no cambia.|  
+|**Id**|Muestra el identificador único de la estructura de minería de datos.<br /><br /> El nombre que asignó a la estructura de minería de datos cuando creó la estructura se usa como Id. Si cambia posteriormente el nombre escribiendo un nuevo valor para la propiedad `Name`, el nuevo nombre solamente se usa como un alias; el Id. no cambia.|  
 |**Lenguaje**|Especifica el idioma para los títulos de la estructura de minería de datos.|  
 |`Name`|Especifica el nombre o el alias de la estructura de minería de datos.<br /><br /> Si cambia el valor para la propiedad Name,el nuevo nombre se usa solo como un título o alias; el identificador para la estructura de minería de datos no cambia.|  
 |**Origen**|Muestra el nombre del origen de datos y el tipo de origen de datos.|  
@@ -56,12 +56,12 @@ ms.locfileid: "66083063"
 |Propiedad|Descripción|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifica la columna que describe una columna clasificada.|  
-|**Content**|El tipo de contenido de la columna.|  
+|**Contenido**|El tipo de contenido de la columna.|  
 |**Descripción**|Describe la columna. Como práctica recomendada, la descripción de la columna debería proporcionar información sobre cómo se han obtenido los datos de la columna o se han modificado para la minería de datos.|  
 |**DiscretizationBucketCount**|Muestra el número de cubos de la columna de datos discretos.<br /><br /> Se habilita solo si el tipo de contenido se establece en `Discretized`.<br /><br /> Esta propiedad es de solo lectura.|  
 |**DiscretizationMethod**|Muestra el método usado para discretizar la columna.<br /><br /> Se habilita solo si el tipo de contenido se establece en `Discretized`.<br /><br /> Esta propiedad es de solo lectura.|  
 |**Distribución**|Especifica la distribución del contenido de la columna.|  
-|**SESIÓN**|Muestra el identificador de la columna.<br /><br /> Si cambia el valor de la propiedad Name de la columna, no afecta al valor de la propiedad ID.|  
+|**Id**|Muestra el identificador de la columna.<br /><br /> Si cambia el valor de la propiedad Name de la columna, no afecta al valor de la propiedad ID.|  
 |**IsKey**|Indica si la columna es una columna de clave.|  
 |**KeyColumns**|Contiene la definición de una columna que es la clave o parte de la clave de un atributo.|  
 |**ModelingFlags**|Establece parámetros adicionales que el algoritmo establece como disponibles.|  
@@ -69,7 +69,7 @@ ms.locfileid: "66083063"
 |**NameColumn**|Identifica la columna que proporciona el nombre del elemento primario.|  
 |**Origen**|Muestra el origen de la columna.<br /><br /> Para los orígenes de datos no relacionales, el valor siempre es **(ninguno)**.<br /><br /> Para las estructuras que se basan en un cubo OLAP, el valor es la instrucción MDX que define el segmento que se usa como origen para la tabla anidada.|  
 |**SourceMeasureGroup**|Muestra el origen del grupo de medida.<br /><br /> Para los orígenes de datos no relacionales, el valor siempre es **(ninguno)**.<br /><br /> Para las estructuras que se basan en un cubo OLAP, el valor es la instrucción MDX que define el segmento que se usa como origen para la tabla anidada.|  
-|**Tipo**|El tipo de datos del contenido de la columna.|  
+|**Type**|El tipo de datos del contenido de la columna.|  
   
  Para obtener más información sobre cómo establecer o modificar las propiedades, vea [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md).  
   

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083671"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
   
-##  <a name="bkmk_Top"></a>Descripción de la estructura de un modelo de árboles de decisión  
+##  <a name="understanding-the-structure-of-a-decision-trees-model"></a><a name="bkmk_Top"></a>Descripción de la estructura de un modelo de árboles de decisión  
  Un modelo de árboles de decisión tiene un nodo primario único que representa el modelo y sus metadatos. Debajo del nodo primario aparecen árboles independientes que representan los atributos de predicción que se seleccionan. Por ejemplo, si configura su modelo de árboles de decisión para predecir si los clientes comprarán algo y, a continuación, proporciona entradas para el género y los ingresos, el modelo creará un árbol único para el atributo de compra, con muchas bifurcaciones que se dividen en función de condiciones relacionadas con el género y los ingresos.  
   
  Sin embargo, si después agrega un atributo de predicción independiente para la participación en un programa de premios para los clientes, el algoritmo creará dos árboles independientes bajo el nodo primario. Un árbol contendrá el análisis para las compras, y el otro el análisis correspondiente al programa de premios para los clientes.  Si usa el algoritmo de árboles de decisión para crear un modelo de asociación, el algoritmo crea un árbol independiente para cada producto que se predice, y dicho árbol contiene las demás combinaciones de productos que contribuyen a la selección del atributo de destino.  
@@ -45,10 +45,9 @@ ms.locfileid: "66083671"
  El algoritmo de árboles de decisión de Microsoft no admite tipos de datos continuos como entradas; por lo tanto, si alguna columna tiene un tipo de datos numérico continuo, los valores se discretizan. El algoritmo realiza su propia discretización en el punto de una división para todos los atributos continuos.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elige automáticamente un método para colocar en cubos los atributos continuos; sin embargo, se puede controlar cómo se discretizan los valores continuos de las entradas estableciendo el tipo de contenido de la columna de estructura de minería de datos en `Discretized` y, a continuación, estableciendo la propiedad <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elige automáticamente un método para colocar en cubos los atributos continuos; sin embargo, se puede controlar cómo se discretizan los valores continuos de las entradas estableciendo el tipo de contenido de la columna de estructura de minería de datos en `Discretized` y, a continuación, estableciendo la propiedad <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A>.  
   
-##  <a name="bkmk_ModelContent"></a>Contenido del modelo para un modelo de árboles de decisión  
+##  <a name="model-content-for-a-decision-trees-model"></a><a name="bkmk_ModelContent"></a> Contenido del modelo para un modelo de árboles de decisión  
  En esta sección solo se proporcionan detalles y ejemplos de las columnas del contenido del modelo de minería de datos que tienen una relevancia especial para los modelos de árboles de decisión. Para obtener información sobre las columnas de uso general en el conjunto de filas de esquema y para obtener una explicación de la terminología del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
@@ -64,7 +63,7 @@ ms.locfileid: "66083671"
  Siempre lo mismo que NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
- Identificador único para el nodo dentro del modelo. No se puede cambiar este valor.  
+ Identificador único para el nodo dentro del modelo. Este valor no puede modificarse.  
   
  En los modelos de árboles de decisión, los nombres únicos siguen la convención indicada a continuación, que no se aplica a todos los algoritmos:  
   
@@ -91,15 +90,15 @@ ms.locfileid: "66083671"
  CHILDREN_CARDINALITY  
  Cálculo del número de elementos secundarios que tiene el nodo.  
   
- **Nodo primario** Indica el número de atributos de predicción que se modelaron. Se crea un árbol para cada atributo de predicción.  
+ **Nodo primario** : indica el número de atributos de predicción que se modelaron. Se crea un árbol para cada atributo de predicción.  
   
- **Nodo de árbol** El nodo **todos** para cada árbol indica cuántos valores se usaron para el atributo de destino.  
+ **Nodo de árbol** : el nodo **Todos** para cada árbol indica cuántos valores se usaron para el atributo de destino.  
   
 -   Si el atributo de destino es discreto, el valor es igual al número de valores distintos más 1 para el estado `Missing`.  
   
 -   Si el atributo de predicción es continuo, el valor indica cuántos cubos se usaron para modelar el atributo continuo.  
   
- **Nodos hoja** Siempre es 0.  
+ **Nodos hoja** : siempre 0.  
   
  PARENT_UNIQUE_NAME  
  Nombre único del nodo primario del nodo. Se devuelve NULL para todos los nodos del nivel raíz.  
@@ -134,15 +133,15 @@ ms.locfileid: "66083671"
  NODE_DISTRIBUTION  
  Tabla que contiene el histograma de probabilidad del nodo. La información de esta tabla varía dependiendo de si el atributo de predicción es una variable continua o discreta.  
   
- **Nodo raíz del modelo** Esta tabla está vacía.  
+ **Nodo raíz del modelo** : esta tabla está vacía.  
   
- **Nodo (todos)** Contiene un resumen del modelo en su conjunto.  
+ **Nodo (Todos)** : contiene un resumen del modelo en su conjunto.  
   
- **Nodo interior** Contiene estadísticas agregadas para sus nodos hoja.  
+ **Nodo interior** : contiene estadísticas acumuladas para sus nodos hoja.  
   
- **Nodo hoja** Contiene compatibilidad y probabilidad para los resultados predichos dadas todas las condiciones de la ruta de acceso que conducen al nodo hoja actual.  
+ **Nodo hoja** : contiene soporte y probabilidad para los resultados predichos dadas todas las condiciones en la ruta de acceso que lleva al nodo hoja actual.  
   
- **Nodo de regresión** Contiene la fórmula de regresión que representa la relación entre las entradas y el atributo de predicción.  
+ **Nodo de regresión** : contiene la fórmula de regresión que representa la relación entre las entradas y el atributo de predicción.  
   
  Para obtener más información, vea [Distribución de nodos para los atributos discretos](#bkmk_NodeDist_Discrete) y [Distribución de nodos para los atributos continuos](#bkmk_RegressionNodes).  
   
@@ -185,7 +184,7 @@ ms.locfileid: "66083671"
   
  Si el atributo de predicción es un número continuo, el algoritmo intenta crear una fórmula de regresión que modele la relación entre dicho atributo y las entradas.  
   
-###  <a name="NodeCaption"></a>Título del nodo y descripción del nodo  
+###  <a name="node-caption-and-node-description"></a><a name="NodeCaption"></a>Título del nodo y descripción del nodo  
  En un modelo de árboles de decisión, el título y la descripción del nodo contienen información similar. Sin embargo, la descripción del nodo es más completa y contiene más información a medida que nos acercamos a los nodos hoja. Tanto el título como la descripción del nodo son cadenas traducidas.  
   
 |||  
@@ -193,7 +192,7 @@ ms.locfileid: "66083671"
 |**NODE_CAPTION**|Muestra el atributo que distingue ese nodo concreto respecto al nodo primario. El título del nodo define un subsegmento del rellenado en función de la condición de división. Por ejemplo, si la división se realizó en [Age] y fue una división de tres vías, los títulos de nodo para los tres nodos secundarios podrían ser "[Age] < 40", "40 <= [Age] \< 50", "[age] >= 50".|  
 |**NODE_DESCRIPTION**|Contiene una lista completa de los atributos que distinguen ese nodo de otros nodos, empezando por el nodo primario del modelo. Por ejemplo, Nombre de producto = Manzana y Color = Rojo.|  
   
-###  <a name="NodeRule"></a>Regla de nodo y regla marginal  
+###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> Regla de nodo y regla marginal  
  Las columnas NODE_RULE y MARGINAL_RULE contienen la misma información que las columnas NODE_CAPTION y NODE_DESCRIPTION, pero la representan como fragmentos XML. La regla de nodo es una versión XML de la ruta de acceso completa, mientras que la regla marginal indica la división más reciente.  
   
  El atributo representado por el fragmento XML puede ser simple o complejo. Un atributo simple contiene el nombre de la columna del modelo y el valor del atributo. Si la columna del modelo contiene una tabla anidada, el atributo de tabla anidada se representa como una concatenación del nombre de tabla, el valor de clave y el atributo.  
@@ -201,7 +200,7 @@ ms.locfileid: "66083671"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la versión 2,0 del estándar PMML, con extensiones para admitir el uso de tablas anidadas. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
   
-###  <a name="bkmk_NodeDist_Discrete"></a>Distribución de nodos para los atributos discretos  
+###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>Distribución de nodos para los atributos discretos  
  En un modelo de árboles de decisión, la tabla NODE_DISTRIBUTION contiene estadísticas útiles. Sin embargo, el tipo de estadísticas depende de si el árbol predice un atributo discreto o un atributo continuo. En esta sección se describe el significado de las estadísticas de distribución de nodos para los atributos discretos.  
   
 #### <a name="attribute-name-and-attribute-value"></a>Nombre y valor del atributo  
@@ -232,8 +231,7 @@ ms.locfileid: "66083671"
   
  Probabilidad = (soporte para el estado + soporte para el estado anterior) / (soporte del nodo más el soporte del nodo anterior)  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa probabilidades para cada nodo para comparar la probabilidad almacenada con la probabilidad anterior y determinar si la ruta de acceso desde el nodo primario al nodo secundario indica una inferencia fuerte.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa probabilidades para cada nodo para comparar la probabilidad almacenada con la probabilidad anterior y determinar si la ruta de acceso desde el nodo primario al nodo secundario indica una inferencia fuerte.  
   
  Al realizar predicciones, la probabilidad de la distribución debe estar equilibrada con la probabilidad del nodo para facilitar las probabilidades. Por ejemplo, si una división en el árbol separa los casos mediante una proporción de 9000/1000, el árbol está muy desequilibrado. Como resultado, una predicción que provenga de la bifurcación pequeña no debería llevar el mismo peso que una que provenga de una bifurcación con muchos casos.  
   
@@ -254,7 +252,7 @@ ms.locfileid: "66083671"
   
  Si el modelo incluye un atributo de predicción continuo, el árbol también podría contener tipos de valores que son únicos de las fórmulas de regresión. Para obtener una lista de los tipos de valores usados en los árboles de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-###  <a name="NodeScore"></a>Puntuación de nodo  
+###  <a name="node-score"></a><a name="NodeScore"></a> Puntuación del nodo  
  La puntuación del nodo representa información ligeramente distinta en cada nivel del árbol. En general, la puntuación es un valor numérico que le indica la calidad con la que se ha realizado una división basándose en la condición. El valor se representa como un tipo de datos Double, donde un valor mayor es mejor.  
   
  Por definición, el nodo del modelo y todos los nodos hoja tienen una puntuación de nodo de 0.  
@@ -268,7 +266,7 @@ ms.locfileid: "66083671"
 > [!NOTE]  
 >  Si crea un modelo de árboles de decisión que tenga atributos de predicción continuos y discretos, verá puntuaciones completamente diferentes en los nodos (Todos) que representan cada tipo de árbol. Cada modelo se debería considerar de forma individual, ya que los métodos usados para puntuar la regresión son completamente diferentes de los usados para puntuar la clasificación. Los valores de puntuación de nodo no se pueden comparar.  
   
-##  <a name="bkmk_RegressionNodes"></a>Nodos de regresión dentro de un modelo de árbol de decisión  
+##  <a name="regression-nodes-within-a-decision-tree-model"></a><a name="bkmk_RegressionNodes"></a>Nodos de regresión dentro de un modelo de árbol de decisión  
  Si un modelo de árboles de decisión contiene un atributo de predicción con datos numéricos continuos, el algoritmo de árboles de decisión de Microsoft busca áreas en los datos donde la relación entre el estado predicho y las variables de entrada sea lineal. Si el algoritmo es capaz de encontrar una relación lineal, crea un árbol especial (NODE_TYPE = 25) que representa una regresión lineal. Estos nodos de árbol de regresión son más complejos que los nodos que representan valores discretos.  
   
  En general, una regresión asigna los cambios en el dependiente continuo (variable de predicción) como una función de los cambios en las entradas. Si la variable dependiente tiene entradas continuas, y la relación entre la entrada y el valor de predicción es lo suficientemente estable para calcularse como un gráfico de líneas, el nodo para la regresión contiene una fórmula.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087460"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurar las credenciales almacenadas para la actualización de datos PowerPivot (PowerPivot para SharePoint)
@@ -36,7 +36,7 @@ ms.locfileid: "66087460"
   
  Si tiene problemas para configurar o usar la actualización de datos, consulte la página de solución de problemas de la [actualización de datos PowerPivot](https://go.microsoft.com/fwlink/?LinkID=223279) en el sitio wiki de TechNet para ver posibles soluciones.  
   
-##  <a name="configAny"></a>Configurar cualquier cuenta de Windows para la actualización de datos  
+##  <a name="configure-any-windows-account-for-data-refresh"></a><a name="configAny"></a>Configurar cualquier cuenta de Windows para la actualización de datos  
  Cuando un usuario de SharePoint define una programación de actualización de datos, debe especificar la identidad del usuario bajo la que se realiza la actualización de datos. Para hacerlo, puede seleccionar la cuenta de actualización de datos desatendida de PowerPivot, escribir su cuenta de usuario de dominio de Windows, o escribir otra cuenta de usuario de Windows que sea válida con fines de actualización de datos. Los pasos descritos en esta sección son para realizar la última opción: especificar otra cuenta de Windows.  
   
  Puede elegir este método si desea una alternativa al uso de la cuenta de actualización de datos desatendida de PowerPivot (disponible para todos los usuarios de PowerPivot en SharePoint) o de las credenciales del propietario del libro. Por ejemplo, podría interesarle poner varias cuentas de actualización de datos a disposición de distintos grupos de trabajo, de forma que le sea más fácil realizar el seguimiento y administrar la actividad de actualización de datos en el nivel de la organización.  
@@ -56,7 +56,7 @@ ms.locfileid: "66087460"
   
 ### <a name="step-1-create-a-target-application"></a>Paso 1: crear un identificador de la aplicación de destino  
   
-1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en **servicio de almacenamiento seguro**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66087460"
   
 8.  Omita la dirección URL de la página de la aplicación de destino. La actualización de datos PowerPivot no la utiliza.  
   
-9. Haga clic en **Next**.  
+9. Haga clic en **Siguiente**.  
   
 10. En la página **especificar los campos de credenciales para la aplicación de destino de almacenamiento seguro** , acepte los valores predeterminados. Los nombres de campo y los tipos deben ser el nombre de usuario de Windows y la contraseña de Windows.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66087460"
   
     3.  Agregue cuentas de usuario y grupo de Windows que vayan a tener acceso a esta aplicación de destino en las programaciones de la actualización de datos.  
   
-14. Haga clic en **OK**.  
+14. Haga clic en **Aceptar**.  
   
 15. Seleccione la aplicación de destino que acaba de crear, haga clic en la flecha abajo y seleccione **establecer credenciales.**  
   
@@ -99,9 +99,9 @@ ms.locfileid: "66087460"
   
      En Nombre de usuario de Windows y Contraseña de Windows, escriba las credenciales de la cuenta de usuario de Windows que se utilizará para ejecutar la actualización de datos.  
   
-17. Haga clic en **OK**.  
+17. Haga clic en **Aceptar**.  
   
-###  <a name="bkmk_grant"></a>Paso 2: conceder permisos de contribución a la cuenta  
+###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>Paso 2: conceder permisos de contribución a la cuenta  
  Para poder utilizar las credenciales almacenadas, la cuenta debe tener asignados permisos de contribución en cualquier libro PowerPivot para el que se use. Este nivel de permisos es necesario para abrir el libro desde una biblioteca y, a continuación, volver a guardarlo en la biblioteca antes de que se actualicen los datos.  
   
  La asignación de permisos es un paso que lo realiza el administrador de la colección de sitios. Los permisos de SharePoint se pueden asignar en la colección de sitios raíz o en cualquier nivel inferior a este, incluidos documentos y elementos individuales. La forma en la que establezca los permisos variará en función de la pormenorización que necesite. En los siguientes pasos se muestra un enfoque para conceder permisos.  
@@ -116,7 +116,7 @@ ms.locfileid: "66087460"
   
 5.  Seleccione **contribuir**y, a continuación, haga clic en **Aceptar**.  
   
-###  <a name="bkmk_dbread"></a>Paso 3: conceder permisos de lectura para tener acceso a los orígenes de datos externos utilizados en la actualización de datos  
+###  <a name="step-3-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>Paso 3: conceder permisos de lectura para tener acceso a los orígenes de datos externos utilizados en la actualización de datos  
  Al importar datos a un libro PowerPivot, las conexiones con datos externos se suelen basar en conexiones de confianza o en conexiones suplantadas que utilizan la identidad del usuario actual para conectarse al origen de datos. Estos tipos de conexiones solo funcionan cuando el usuario actual tiene permiso para leer los datos que va a importar.  
   
  En un escenario de actualización de datos, la misma cadena de conexión que se usó para importar los datos se reutiliza ahora para actualizarlos. Si la cadena de conexión supone que el usuario es el actual (por ejemplo, una cadena que incluye Integrated_Security=SSPI), el Servicio de sistema de PowerPivot pasará la identidad del usuario especificado en la aplicación de destino como usuario actual. Esta conexión solo tendrá éxito si la cuenta dispone de permisos de lectura en el origen de datos externo.  
@@ -125,7 +125,7 @@ ms.locfileid: "66087460"
   
  Si es administrador de los orígenes de datos que se usan en su organización, puede crear un inicio de sesión y asignar los permisos necesarios. De lo contrario, debe ponerse en contacto con los propietarios de los datos y proporcionarles la información de las cuentas. Asegúrese de especificar la cuenta de usuario de dominio de Windows que se asigne a la aplicación de destino. Esta es la cuenta que especificó en "paso 1: crear una aplicación de destino" en este tema.  
   
-###  <a name="bkmk_verify"></a>Paso 4: comprobar la disponibilidad de la cuenta en las páginas de configuración de actualización de datos  
+###  <a name="step-4-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>Paso 4: comprobar la disponibilidad de la cuenta en las páginas de configuración de actualización de datos  
   
 1.  Abra una página de configuración de la actualización de datos para un libro publicado que contenga los datos PowerPivot. Para obtener instrucciones sobre cómo abrir la página, vea [programar una actualización de datos &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -139,14 +139,14 @@ ms.locfileid: "66087460"
   
  Para obtener más información acerca de la solución de problemas, consulte solución de problemas de la [actualización de datos PowerPivot](https://go.microsoft.com/fwlink/p/?LinkID=223279) en el sitio wiki de TechNet.  
   
-##  <a name="config3rd"></a>Configurar una cuenta predefinida para tener acceso a orígenes de datos externos o de terceros  
+##  <a name="configure-a-predefined-account-for-accessing-external-or-third-party-data-sources"></a><a name="config3rd"></a>Configurar una cuenta predefinida para tener acceso a orígenes de datos externos o de terceros  
  Los servidores de la base de datos a menudo vienen con sus propios métodos de autenticación. Si tiene un libro PowerPivot que requiere que las credenciales de la base de datos tengan acceso a un origen de datos externo durante la actualización de datos, puede crear un identificador de la aplicación de destino para las credenciales y, a continuación, especificar la aplicación de destino en la sección Orígenes de datos de la página de actualización de datos de programación.  
   
  Este paso solo es necesario si desea proporcionar a los usuarios una opción para invalidar las credenciales de la base de datos que ya estén incrustadas en el libro PowerPivot.  
   
  Este paso solo funciona si la cadena de conexión ya incluye un nombre de usuario y una contraseña. Tenga en cuenta que tener credenciales en la cadena de conexión es relativamente raro, de modo que su capacidad para utilizar esta opción será, en cierto modo, limitada. En la mayoría de los casos, tendrá solo un identificador de usuario y una contraseña en la cadena de conexión si utiliza la autenticación de la base de datos para conectarse al origen de datos. Para obtener más información acerca de cómo comprobar la cadena de conexión para ver si incluye un identificador de usuario y una contraseña, vea la sección "conceder permisos para crear programaciones y obtener acceso a datos externos" en la [actualización de datos PowerPivot con SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md).  
   
-1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en **servicio de almacenamiento seguro**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66087460"
   
 8.  Omita la dirección URL de la página de la aplicación de destino. La actualización de datos PowerPivot no la utiliza.  
   
-9. Haga clic en **Next**.  
+9. Haga clic en **Siguiente**.  
   
 10. En la página **especificar los campos de credenciales para la aplicación de destino de almacenamiento seguro** , acepte los valores predeterminados solo si el origen de datos usa la autenticación de Windows. En caso contrario, elija los tipos de campo que sean válidos para el origen de datos y, a continuación, modifique los nombres de campo de forma que coincidan con el tipo.  
   
@@ -180,13 +180,13 @@ ms.locfileid: "66087460"
   
     3.  Agregue las cuentas de usuario y grupo de Windows que vayan a tener acceso a esta aplicación de destino en la sección de orígenes de datos de una página de programación de actualización de datos.  
   
-14. Haga clic en **OK**.  
+14. Haga clic en **Aceptar**.  
   
 15. Seleccione la aplicación de destino que acaba de crear, haga clic en la flecha abajo y seleccione **establecer credenciales.**  
   
 16. Escriba las credenciales que se utilizarán para conectarse al origen de datos (por ejemplo, el nombre de usuario y la contraseña de un inicio de sesión de SQL Server).  
   
-17. Haga clic en **OK**.  
+17. Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Programar una actualización de datos &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)   

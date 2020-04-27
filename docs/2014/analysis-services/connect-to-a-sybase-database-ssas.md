@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087182"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>Conectarse a una base de datos de Sybase (SSAS)
@@ -49,9 +49,9 @@ ms.locfileid: "66087182"
  Seleccione una base de datos en la lista de bases de datos.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** . Para obtener más información, vea [Establecer propiedades avanzadas &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
+ Establezca las propiedades de conexión adicionales con el cuadro de diálogo **Establecer propiedades avanzadas** . Para obtener más información, vea [Establecer propiedades avanzadas &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
   

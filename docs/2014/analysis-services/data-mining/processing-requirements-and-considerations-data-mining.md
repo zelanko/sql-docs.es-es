@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083127"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos y consideraciones de procesamiento (minería de datos)
@@ -30,7 +30,7 @@ ms.locfileid: "66083127"
   
  [Procesar modelos de minería de datos](#bkmk_ProcessModels)  
   
-##  <a name="bkmk_QueryReqs"></a>Consultas en el almacén relacional durante el procesamiento  
+##  <a name="queries-on-the-relational-store-during-processing"></a><a name="bkmk_QueryReqs"></a> Consultas en el almacén relacional durante el procesamiento  
  En la minería de datos, hay tres fases para el procesamiento: consultar los datos de origen, determinar las estadísticas sin tratar y usar la definición del modelo y el algoritmo para entrenar el modelo de minería de datos.  
   
  El servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] emite consultas a la base de datos que proporciona los datos sin procesar. Esta base de datos puede ser una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o una versión anterior del motor de base de datos de SQL Server. Cuando se procesa una estructura de minería de datos, los datos del origen se transfieren a la estructura de minería de datos y se conservan en el disco en un nuevo formato comprimido. No se procesan todas las columnas del origen de datos sino únicamente aquellas que están incluidas en la estructura de minería de datos, de acuerdo con la definición de los enlaces.  
@@ -41,7 +41,7 @@ ms.locfileid: "66083127"
   
  Para obtener más información sobre las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de que admiten el procesamiento de modelos en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
-##  <a name="bkmk_ProcessStructures"></a>Procesar estructuras de minería de datos  
+##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a> Procesar estructuras de minería de datos  
  Una estructura de minería de datos se puede procesar con todos los modelos dependientes, o por separado. Procesar una estructura de minería de datos independientemente de los modelos puede ser útil cuando se prevé que el procesamiento de algunos modelos llevará mucho tiempo y se desee diferir esa operación.  
   
  Para más información, consulte [Process a Mining Structure](process-a-mining-structure.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "66083127"
   
  Por otra parte, si borra la caché, no podrá utilizar el conjunto de pruebas de exclusión, si definió uno, y se perderá la definición de la partición del conjunto de pruebas. Para más información sobre los conjuntos de pruebas de exclusión, vea [Conjuntos de datos de entrenamiento y de prueba](training-and-testing-data-sets.md).  
   
-##  <a name="bkmk_ProcessModels"></a>Procesar modelos de minería de datos  
+##  <a name="processing-mining-models"></a><a name="bkmk_ProcessModels"></a> Procesar modelos de minería de datos  
  Puede procesar un modelo de minería de datos independientemente de su estructura de minería de datos asociados, o puede procesar todos los modelos basados en la estructura, junto con la estructura.  
   
  Para más información, vea [Procesar un modelo de minería de datos](process-a-mining-model.md).  
@@ -62,13 +62,13 @@ ms.locfileid: "66083127"
   
  Los modelos de minería de datos también se procesan en estos casos:  
   
- **Implementación de un proyecto**: dependiendo de la configuración del proyecto y del estado actual del proyecto, los modelos de minería de datos del proyecto normalmente se procesan en su totalidad cuando se implementa el proyecto.  
+ **Implementación de un proyecto**: dependiendo de la configuración del proyecto y de su estado actual, los modelos de minería de datos del proyecto normalmente se procesan por completo cuando se implementa el proyecto.  
   
  Cuando se inicia la implementación, el procesamiento se inicia automáticamente, a menos que haya una versión procesada anteriormente en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y que no se hayan producido cambios estructurales. Puede implementar un proyecto seleccionando **Implementar solución** en la lista desplegable o presionando la tecla F5. Puede  
   
  Para más información sobre cómo establecer las propiedades de implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que controlan cómo se implementan los modelos de minería de datos, vea [Implementación de soluciones de minería de datos](deployment-of-data-mining-solutions.md).  
   
- **Mover un modelo de minería de datos**: al mover un modelo de minería de datos mediante el comando export, solo se exporta la definición del modelo, que incluye el nombre de la estructura de minería de datos que se espera que proporcione datos al modelo.  
+ **Mover un modelo de minería de datos**: al mover un modelo de minería de datos usando el comando EXPORT, solo se exportará la definición del modelo, lo que incluye el nombre de la estructura de minería de datos que se espera que proporcione datos al modelo.  
   
  Requisitos de nuevo procesamiento en los siguientes escenarios con los comandos EXPORT e IMPORT:  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5dce0aa56997537e4911b0607ca9fba392dd847
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087642"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>Finalización del Asistente (Asistente para vistas del origen de datos) (Analysis Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66087642"
  **Nombre**  
  Escriba un nombre para la vista del origen de datos. El valor predeterminado es el nombre del origen de datos.  
   
- **Versión preliminar**  
+ **Vista previa**  
  Muestra las tablas y las vistas incluidas en la vista del origen de datos. Haga clic en **Atrás** para realizar cambios.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085387"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>Crear una estructura de minería de datos relacional
@@ -48,14 +48,14 @@ ms.locfileid: "66085387"
   
      Después de seleccionar la columna de predicción, puede hacer clic en el botón **Sugerir** para abrir el cuadro de diálogo **Sugerir columnas relacionadas** . Para aceptar las columnas sugeridas, haga clic en **Aceptar** en este cuadro de diálogo para incluir las columnas seleccionadas en la estructura de minería de datos, o cambie primero las selecciones de la columna **Entrada** y, a continuación, haga clic en **Aceptar**. Para hacer caso omiso de las sugerencias, haga clic en **Cancelar**.  
   
-8.  Haga clic en **Next**.  
+8.  Haga clic en **Siguiente**.  
   
 9. En la página **Especificar el contenido y el tipo de datos de las columnas** , en **Estructura del modelo de minería de datos**, puede ajustar el tipo de contenido y el tipo de datos de cada columna.  
   
     > [!NOTE]  
     >  Puede hacer clic en **Detectar** para detectar automáticamente si una columna contiene datos continuos o discretos. Después de hacer clic en este botón, el contenido de la columna y los tipos de datos se actualizarán en las columnas **Tipo de contenido** y **Tipo de datos** . Para más información sobre tipos de contenido y tipos de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md) y [Tipos de datos &#40;minería de datos&#41;](data-types-data-mining.md).  
   
-10. Haga clic en **Next**.  
+10. Haga clic en **Siguiente**.  
   
 11. En la página **Finalización del asistente** , asigne un nombre a la estructura de minería de datos y al modelo de minería de datos inicial relacionado que se creará y, a continuación, haga clic en **Finalizar**.  
   

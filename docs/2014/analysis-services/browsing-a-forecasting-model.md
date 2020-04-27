@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088488"
 ---
 # <a name="browsing-a-forecasting-model"></a>Examinar un modelo de pronóstico
   Al abrir un modelo de previsión mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de modelos de serie temporal de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar las tendencias, comparar series, crear predicciones y obtener información sobre el modelo y los datos subyacentes.  
   
-##  <a name="bkmk_Top"></a>Explorar el modelo  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorar el modelo  
  El visor de **búsqueda** de modelos de predicción proporciona una vista de gráfico, que muestra las tendencias a lo largo del tiempo y permite crear predicciones, y una vista de modelo, que representa la serie temporal como un árbol de decisión o un árbol de regresión.  
   
 -   [Vista de gráfico](#bkmk_charts)  
@@ -35,7 +35,7 @@ ms.locfileid: "66088488"
   
  Para experimentar con un modelo de predicción, puede utilizar los datos de ejemplo de la pestaña Previsión del libro de datos de ejemplo y generar un modelo de serie temporal mediante el [Asistente para previsión &#40;complementos de minería de datos para excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) en la cinta de opciones **minería de datos** o [previsión &#40;herramientas de análisis de tabla para Excel&#41;](forecast-table-analysis-tools-for-excel.md) en la cinta de opciones **analizar** .  
   
-###  <a name="bkmk_charts"></a>Gráfica  
+###  <a name="chart"></a><a name="bkmk_charts"></a>Gráfica  
  La pestaña **gráfico** muestra la tendencia de la serie de datos a lo largo del tiempo, junto con los valores de predicción. El eje vertical del gráfico representa los valores de la serie y el eje horizontal representa el tiempo.  
   
 ##### <a name="explore-the-forecasting-chart"></a>Explorar el gráfico de predicción  
@@ -66,7 +66,7 @@ ms.locfileid: "66088488"
   
      Las barras de error permiten evaluar visualmente la variabilidad de las predicciones. La calidad de las predicciones varía en función de los datos de origen pero a medida que aumenta el número de pasos de predicción, debería ver las desviaciones en constante aumento.  
   
- **Útiles**  
+ **Sugerencias**  
   
 -   Para alternar la presentación de la **leyenda de minería de datos**, haga clic con el botón secundario en cualquier punto del gráfico.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66088488"
   
  [Explorar el modelo](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>Modela  
+###  <a name="model"></a><a name="bkmk_Model"></a>Modela  
  Un modelo de predicción también se puede representar como un árbol de decisión o bien, si la serie es básicamente lineal, un modelo de regresión.  
   
  Por ejemplo, en este modelo hay una diferencia en la fórmula de regresión según cierta condición, por lo que el árbol se divide en dos bifurcaciones, cada una con una fórmula de regresión distinta.  
@@ -97,7 +97,7 @@ ms.locfileid: "66088488"
   
 1.  Haga clic en la lista desplegable **árbol** y elija el modelo que desea mostrar.  
   
-     Se muestra un árbol independiente o un nodo de regresión para cada atributo de predicción. Por ejemplo, si los datos contienen las ventas para Europa, América del Norte y el Pacífico, habría tres modelos distintos, uno para cada serie de datos.  
+     Se muestra un árbol independiente o un nodo de regresión para cada atributo de predicción. Por ejemplo, si los datos contienen las ventas para Europa, Norteamérica y el Pacífico, habría tres modelos distintos, uno para cada serie de datos.  
   
 2.  Arrastre el control deslizante **Mostrar nivel** para filtrar los niveles inferiores del árbol y céntrese en las divisiones más importantes.  
   

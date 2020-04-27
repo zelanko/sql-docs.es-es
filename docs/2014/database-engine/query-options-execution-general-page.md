@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089043"
 ---
 # <a name="query-options-execution-general-page"></a>Ejecución de Opciones de consulta (página General)
-  Utilice esta página para especificar las opciones de ejecución [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de consultas. Para tener acceso a este cuadro de diálogo, haga clic con el botón derecho en el cuerpo de una ventana del Editor de consultas y haga clic en **Opciones de consulta**.  
+  Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para tener acceso a este cuadro de diálogo, haga clic con el botón derecho en el cuerpo de una ventana del Editor de consultas y haga clic en **Opciones de consulta**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **ESTABLECER ROWCOUNT**  
+ **SET ROWCOUNT**  
  El valor predeterminado 0 indica que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esperará a que se reciban todos los resultados. Especifique un valor mayor que 0 si desea que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detenga la consulta después de obtener el número de filas especificado. Para desactivar esta opción (de modo que se devuelvan todas las filas), especifique SET ROWCOUNT 0.  
   
- **ESTABLECER TEXTSIZE**  
+ **SET TEXTSIZE**  
  El valor predeterminado, 2.147.483.647 bytes, indica que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporcionará un campo de datos completo hasta el límite de los campos de datos `text`, `ntext`, `nvarchar(max)` y `varchar(max)`. No afecta al tipo de datos XML. Especifique un número menor para limitar los resultados en caso de que los valores sean elevados. Las columnas que superen el número especificado se truncarán.  
   
  **Tiempo de espera de ejecución**  
@@ -36,7 +36,7 @@ ms.locfileid: "66089043"
  Escriba la palabra que utilice para separar instrucciones Transact-SQL en lotes. El separador predeterminado es GO.  
   
  **De forma predeterminada, abrir nuevas consultas en modo SQLCMD**  
- Active esta casilla para abrir nuevas consultas en modo SQLCMD. Esta casilla solo se muestra cuando el cuadro de diálogo se abre desde el menú **Herramientas** .  
+ Active esta casilla para abrir nuevas consultas en modo SQLCMD. Esta casilla solo está visible cuando el cuadro de diálogo se abre a través del menú **herramientas** .  
   
  Cuando seleccione esta opción, tenga en cuenta las siguientes limitaciones:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66089043"
   
 -   Dado que el Editor de consultas no puede responder a comandos del sistema operativo, debe tener cuidado de no ejecutar instrucciones interactivas.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087383"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Conectarse a una base de datos de DB2 (SSAS)
@@ -55,9 +55,9 @@ ms.locfileid: "66087383"
  Especifique el nombre del esquema predeterminado para la base de datos seleccionada.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales al usar el cuadro de diálogo **Establecer propiedades avanzadas** .  
+ Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** .  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
   

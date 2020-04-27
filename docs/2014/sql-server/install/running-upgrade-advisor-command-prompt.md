@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092439"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ejecutar el Asesor de actualizaciones (símbolo del sistema)
@@ -50,10 +50,10 @@ where <server_info> is any combination of the following:
   
  *<server_info>* puede ser cualquier combinación de los cuatro argumentos siguientes:  
   
- **-SERVER_NAME de servidor** __  
+ **-SERVER_NAME de servidor** _server_name_  
  Especifica el nombre del equipo que se va a analizar. Éste puede ser el equipo local, que es el valor predeterminado, o un equipo remoto.  
   
- **-Instance_name de instancia** __  
+ **-Instance_name de instancia** _instance_name_  
  Especifica el nombre de la instancia que se va a analizar. No hay ningún valor predeterminado. Si no especifica este parámetro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se examina. El valor para una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es MSSQLSERVER. Para una instancia con nombre, utilice el nombre de la instancia.  
   
  **-Instance**  _AS_instance_name_  
@@ -77,7 +77,7 @@ where <server_info> is any combination of the following:
 |Value|Descripción|  
 |-----------|-----------------|  
 |0|El análisis se llevó a cabo correctamente y no se encontró ningún problema de actualización.|  
-|número entero positivo|El análisis se llevó a cabo correctamente pero se encontraron problemas de actualización.|  
+|entero positivo|El análisis se llevó a cabo correctamente pero se encontraron problemas de actualización.|  
 |entero negativo|Error en el análisis.|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -124,14 +124,12 @@ where <server_info> is any combination of the following:
 |Etiqueta|Definición|Repetición|  
 |---------|----------------|----------------|  
 |`Configuration`|Elemento primario para el archivo de configuración del Asesor de actualizaciones.|Se requiere una vez por cada archivo de configuración.|  
-|`Server`|Nombre del servidor que se debe analizar.|Se puede utilizar una vez por cada archivo de configuración. El valor predeterminado es el equipo local.|  
+|`Server`|Nombre del servidor que se debe analizar.|Se puede utilizar una vez por cada archivo de configuración. El valor predeterminado es el nombre del equipo local.|  
 |`Instance`|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se va a analizar.|Se puede utilizar una vez por cada archivo de configuración. El valor predeterminado es la instancia predeterminada.<br /><br /> Si hay un elemento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de `IntegrationServices` presente en el servidor, se requiere una vez por archivo de configuración.|  
 |`Components`|Contiene elementos que especifican qué componentes se van a analizar.|Se requiere una vez por cada archivo de configuración.|  
 |`SQLServer`|Contiene la configuración del análisis para una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)].|Se puede utilizar una vez por cada archivo de configuración. Si no se especifica, no se analizarán las bases de datos de [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
-|
-  `Databases` para el elemento `SQLServer`|Contiene una lista de bases de datos que se van a analizar.|Opcional una vez `SQLServer` por elemento. Si este elemento no está presente, se analizarán todas las bases de datos en la instancia.|  
-|
-  `Database` para el elemento `SQLServer`|Especifica el nombre de la base de datos que se va a analizar.|Se requiere una vez o más en caso de que esté presente el elemento `Databases`. Si un elemento `Database` contiene el valor "*", se analizarán todas las bases de datos de la instancia. No hay ningún valor predeterminado.|  
+|`Databases` para el elemento `SQLServer`|Contiene una lista de bases de datos que se van a analizar.|Opcional una vez `SQLServer` por elemento. Si este elemento no está presente, se analizarán todas las bases de datos en la instancia.|  
+|`Database` para el elemento `SQLServer`|Especifica el nombre de la base de datos que se va a analizar.|Se requiere una vez o más en caso de que esté presente el elemento `Databases`. Si un elemento `Database` contiene el valor "*", se analizarán todas las bases de datos de la instancia. No hay ningún valor predeterminado.|  
 |`TraceFiles`|Contiene una lista de los archivos de seguimiento que se van a analizar.|Opcional una vez `SQLServer` por elemento.|  
 |`TraceFile`|Especifica la ruta y el nombre del archivo de seguimiento que se va a analizar.|Se requiere una vez o más en caso de que esté presente el elemento `TraceFiles`. No hay ningún valor predeterminado.|  
 |`BatchFiles`|Contiene una lista de los archivos por lotes que se van a analizar.|Opcional una vez `SQLServer` por elemento.|  
@@ -139,10 +137,8 @@ where <server_info> is any combination of the following:
 |`BatchSeparator`|Especifica el separador de lotes utilizado en sus archivos por lotes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Opcional una vez `SQLServer` por elemento. El valor predeterminado es GO.|  
 |`AnalysisServices`|Contiene la configuración de análisis para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Se puede utilizar una vez por cada archivo de configuración. Si no se especifica, no se analizarán las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |`ASInstance`|Especifica el nombre de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Se requiere una vez por elemento `AnalysisServices`. No hay ningún valor predeterminado.|  
-|
-  `Databases` para el elemento `Analysis Services`|Contiene una lista de bases de datos que se van a analizar.|Opcional una vez `AnalysisServices` por elemento. Si este elemento no está presente, se analizarán todas las bases de datos en la instancia.|  
-|
-  `Database` para el elemento `AnalysisServices`|Especifica el nombre de la base de datos que se va a analizar.|Se requiere una vez o más en caso de que esté presente el elemento `Databases`. Si un elemento `Database` contiene el valor "*", se analizarán todas las bases de datos de la instancia. No hay ningún valor predeterminado.|  
+|`Databases` para el elemento `Analysis Services`|Contiene una lista de bases de datos que se van a analizar.|Opcional una vez `AnalysisServices` por elemento. Si este elemento no está presente, se analizarán todas las bases de datos en la instancia.|  
+|`Database` para el elemento `AnalysisServices`|Especifica el nombre de la base de datos que se va a analizar.|Se requiere una vez o más en caso de que esté presente el elemento `Databases`. Si un elemento `Database` contiene el valor "*", se analizarán todas las bases de datos de la instancia. No hay ningún valor predeterminado.|  
 |`ReportingServices`|Especifica que se ejecute análisis contra [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Se puede utilizar una vez por cada archivo de configuración. Si no se especifica, no se analizará [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |`RSInstance`|Especifica el nombre de una instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Se requiere una vez por elemento `ReportingServices`. No hay ningún valor predeterminado.|  
 |`IntegrationServices`|Contiene la configuración de análisis para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Se puede utilizar una vez por cada archivo de configuración. Si no se especifica, no se analizará [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
@@ -164,7 +160,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
 UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst   
 ```  
   
-### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>C. Ejecutar el Asesor de actualizaciones mediante el sistema de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="c-run-upgrade-advisor-using-ssnoversion-authentication"></a>C. Ejecutar el Asesor de actualizaciones mediante el sistema de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  En el ejemplo siguiente se muestra cómo ejecutar el Asesor de actualizaciones desde el símbolo del sistema mediante un archivo de configuración. En este ejemplo se especifica un nombre de usuario y una contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  

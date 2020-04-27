@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086597"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Propiedades del cubo o Propiedades del modelo (cuadro de diálogo) (SSAS)
@@ -35,15 +35,15 @@ ms.locfileid: "66086597"
 |Término|Definición|  
 |----------|----------------|  
 |**Nombre**|Muestra el nombre del cubo o del modelo.|  
-|**SESIÓN**|Muestra el identificador del cubo o del modelo.|  
+|**Id**|Muestra el identificador del cubo o del modelo.|  
 |**Descripción**|Muestra la descripción del cubo o del modelo.|  
-|**Crear marca de tiempo**|Muestra la fecha y la hora de creación del cubo o del modelo.|  
+|**Marca de tiempo de creación**|Muestra la fecha y la hora de creación del cubo o del modelo.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora en la que se actualizaron por última vez los metadatos del cubo o del modelo.|  
 |**Modo de procesamiento de caché de script**|Selecciona el modo de procesamiento que se va a utilizar para la memoria caché de scripts del cubo o del modelo. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Modo de procesamiento**|Selecciona el modo de procesamiento que se va a utilizar para el cubo o el modelo. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
 |**Ubicación de almacenamiento**|Escriba la carpeta que se va a usar como la ubicación de almacenamiento predeterminada para los grupos de medida y las particiones asociadas con el cubo o el modelo, o haga clic en el botón de puntos suspensivos (**...**) para mostrar el cuadro de diálogo **Buscar carpeta remota** y seleccionar una carpeta. Para obtener más información sobre el cuadro de diálogo **Buscar carpeta remota**, vea [Cuadro de diálogo Buscar carpeta remota &#40;Analysis Services - Datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
 |**State**|Muestra el estado de procesamiento del cubo o del modelo. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
-|**Procesado por última vez**|Muestra la fecha y la hora en la que se procesó por última vez el cubo o el modelo.|  
+|**LastProcessed**|Muestra la fecha y la hora en la que se procesó por última vez el cubo o el modelo.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

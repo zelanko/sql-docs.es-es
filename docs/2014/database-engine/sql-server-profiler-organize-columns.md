@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f0ad3d1204e8c27d91ecb3b586d56a27d45eeb4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089755"
 ---
 # <a name="sql-server-profiler---organize-columns"></a>SQL Server Profiler (Organizar columnas)
@@ -28,7 +28,7 @@ ms.locfileid: "66089755"
   
  Cuando agrupa o agrega eventos en una ventana de seguimiento, las columnas seleccionadas para agrupar o agregar permanecen fijas en la ventana, pero puede desplazarse a la derecha o la izquierda para ver las demás columnas de datos.  
   
- Para tener acceso a este cuadro de diálogo, abra un archivo o una tabla de seguimiento existente y haga clic en **Propiedades** en el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **del** . En el cuadro de diálogo **Propiedades de seguimiento** , haga clic en la pestaña **Selección de eventos** y, a continuación, haga clic en **Organizar columnas**. También puede hacer clic en **Organizar columnas** en la pestaña **Selección de eventos** cuando crea un nuevo seguimiento.  
+ Para tener acceso a este cuadro de diálogo, abra un archivo o una tabla de seguimiento existente y haga clic en **Propiedades** en el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Archivo** de . En el cuadro de diálogo **Propiedades de seguimiento** , haga clic en la pestaña **Selección de eventos** y, a continuación, haga clic en **Organizar columnas**. También puede hacer clic en **Organizar columnas** en la pestaña **Selección de eventos** cuando crea un nuevo seguimiento.  
   
 ## <a name="options"></a>Opciones  
  **Grupos**  
@@ -41,17 +41,17 @@ ms.locfileid: "66089755"
  **Columnas**  
  Muestra las columnas de datos que se pueden desplazar a **Grupos**. Haga clic en el signo**+** más () situado a la izquierda de **columnas** para expandir la lista.  
   
- **Up** (Arriba)  
+ **Arriba**  
  Después de seleccionar una columna de datos, haga clic en **Subir** para subir las columnas a **Grupos**. También puede hacer clic en **Subir** para volver a organizar la visualización de las columnas en la ventana de seguimiento.  
   
- **Vertical**  
+ **Bajar**  
  Después de seleccionar una columna de datos, haga clic en **Bajar** para quitar las columnas de **Grupos**. También puede hacer clic en **Bajar** para volver a organizar la visualización de las columnas en la ventana de seguimiento.  
   
 ## <a name="see-also"></a>Consulte también  
  [Organizar las columnas mostradas en un SQL Server Profiler de seguimiento &#40;&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
- [Crear un seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [Cree un SQL Server Profiler de &#40;de seguimiento&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Cree una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Abra un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)  
   
   

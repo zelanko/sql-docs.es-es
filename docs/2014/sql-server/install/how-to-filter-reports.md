@@ -14,13 +14,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094886"
 ---
-# <a name="how-to-filter-reports"></a>Cómo filtrar informes
+# <a name="how-to-filter-reports"></a>Procedimientos: Filtrar informes
   En este tema se describe cómo puede usar el Visor de informes del Asesor de actualizaciones para aplicar filtros a un informe.  
   
 ### <a name="to-filter-reports"></a>Para filtrar informes  

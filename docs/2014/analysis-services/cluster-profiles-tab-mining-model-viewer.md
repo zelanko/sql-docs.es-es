@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087870"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Pestaña Perfiles del clúster (Visor de modelos de minería de datos)
   Utilice la pestaña **Perfiles del clúster** para obtener una vista general de los clústeres que ha descubierto el algoritmo en un modelo de agrupación en clústeres. La pestaña muestra cada atributo junto con la distribución del atributo en cada clúster.  
   
- **Para obtener más información: algoritmo de** [clústeres de Microsoft](data-mining/microsoft-clustering-algorithm.md), [examinar un modelo usando el visor de clústeres de Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Para obtener más información:** [Algoritmo de clústeres de Microsoft](data-mining/microsoft-clustering-algorithm.md), [Examinar un modelo usando el Visor de clústeres de Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -31,7 +31,7 @@ ms.locfileid: "66087870"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos de los de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para ver el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado del modelo de minería de datos o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Mostrar leyenda**  

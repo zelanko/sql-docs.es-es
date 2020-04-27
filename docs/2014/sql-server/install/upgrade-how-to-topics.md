@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091483"
 ---
 # <a name="upgrade-how-to-topics"></a>Temas de procedimientos de actualización
@@ -26,7 +26,7 @@ ms.locfileid: "66091483"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Actualice a SQL Server 2014 mediante el Asistente para la instalación &#40;la instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|El tema de procedimientos para actualizar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;la instalación&#41;](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|El tema de procedimientos para actualizar una instancia de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|El tema de procedimientos para actualizar una instancia de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Proporciona una sintaxis de ejemplo para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un símbolo del sistema.|  
   
 ## <a name="see-also"></a>Consulte también  

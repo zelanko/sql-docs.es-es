@@ -14,13 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089240"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página Barra de estado)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página de la barra de estado)
   La **página Barra de estado y pestaña de editor** permite personalizar la información mostrada por los editores de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Puede especificar el nivel de información que se muestra en la pestaña y en la barra de estado de la ventana del editor de consultas y si la barra de estado debe aparecer en la parte superior o inferior de la ventana del editor.  
   
 ## <a name="option-settings-by-editor"></a>Configuración de las opciones de editor  
@@ -37,7 +37,7 @@ ms.locfileid: "66089240"
  **None**  
  La barra de estado no muestra ninguna información horaria.  
   
- **Fin**  
+ **Extremo**  
  La barra de estado muestra la hora actual del día mientras se ejecuta el script. Cuando se completa el script, la pantalla muestra la hora del día a la que se ha completado el script.  
   
  **Transcurrido**  
@@ -70,7 +70,7 @@ ms.locfileid: "66089240"
  **Arriba**  
  La barra de estado aparece en la parte superior de la ventana del Editor de consultas.  
   
- **Inferior**  
+ **Descendente**  
  La barra de estado aparece en la parte inferior de la ventana del Editor de consultas.  
   
 ## <a name="tab-text"></a>Texto de pestaña  

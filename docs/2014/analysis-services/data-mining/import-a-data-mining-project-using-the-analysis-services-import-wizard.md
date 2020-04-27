@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084367"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Cantidad un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services
@@ -52,13 +52,13 @@ ms.locfileid: "66084367"
     > [!WARNING]  
     >  No puede especificar los objetos que desea importar; al elegir una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , se importan todos los objetos multidimensionales y de minería de datos.  
   
-     Haga clic en **Next**.  
+     Haga clic en **Siguiente**.  
   
-5.  La página **Finalización del asistente**muestra el progreso de la operación de importación. No puede cancelar la operación ni cambiar los objetos que se están importando. Haga clic en **Finalizar** cuando haya terminado.  
+5.  La página **Finalización del asistente**muestra el progreso de la operación de importación. No puede cancelar la operación ni cambiar los objetos que se están importando. Haga clic **Finalizar** cuando haya terminado.  
   
      El nuevo proyecto se abre de modo automático mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedades del proyecto &#40;&#41;tabular de SSAS](../tabular-models/properties-ssas-tabular.md)  
+ [Propiedades del proyecto &#40;SSAS tabular&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

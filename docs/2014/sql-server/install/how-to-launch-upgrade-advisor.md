@@ -16,13 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094905"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>Cómo iniciar el Asesor de actualizaciones
+# <a name="how-to-launch-upgrade-advisor"></a>Procedimientos: Iniciar el Asesor de actualizaciones
   El Asesor de actualizaciones proporciona una consola central que puede utilizar para iniciar el Asistente para análisis del Asesor de actualizaciones y el Visor de informes del Asesor de actualizaciones. En este tema se describe cómo iniciar el Asesor de actualizaciones.  
   
 ### <a name="to-launch-upgrade-advisor"></a>Para iniciar el Asesor de actualizaciones  

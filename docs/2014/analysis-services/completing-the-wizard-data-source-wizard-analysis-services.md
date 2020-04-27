@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087668"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Finalización del asistente (Asistente para origen de datos) (Analysis Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66087668"
  **Nombre del origen de datos**  
  Escriba un nombre o utilice el nombre predeterminado proporcionado para el origen de datos.  
   
- **Versión preliminar**  
+ **Vista previa**  
  Muestra la cadena de conexión para el origen de datos. Haga clic en **Atrás** para realizar cambios en estos valores.  
   
 ## <a name="see-also"></a>Consulte también  

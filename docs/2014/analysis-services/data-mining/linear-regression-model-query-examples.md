@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084296"
 ---
 # <a name="linear-regression-model-query-examples"></a>Ejemplos de consultas de modelos de regresión lineal
@@ -31,7 +31,7 @@ ms.locfileid: "66084296"
   
  **Consultas de contenido**  
   
- [Usar el conjunto de filas de esquema de minería de datos para determinar los parámetros utilizados para un modelo](#bkmk_Query1)  
+ [Usar el conjunto de filas de esquema de minería de datos para determinar los parámetros que se usan para un modelo](#bkmk_Query1)  
   
  [Usar DMX para devolver la fórmula de regresión del modelo](#bkmk_Query2)  
   
@@ -43,12 +43,12 @@ ms.locfileid: "66084296"
   
  [Usar funciones de predicción con un modelo de regresión](#bkmk_Query5)  
   
-##  <a name="bkmk_top"></a>Buscar información sobre el modelo de regresión lineal  
+##  <a name="finding-information-about-the-linear-regression-model"></a><a name="bkmk_top"></a>Buscar información sobre el modelo de regresión lineal  
  La estructura de un modelo de regresión lineal es sumamente simple: el modelo de minería de datos representa los datos como un nodo único, que define la fórmula de regresión. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md).  
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a>Consulta de ejemplo 1: usar el conjunto de filas de esquema de minería de datos para determinar los parámetros usados para un modelo  
+###  <a name="sample-query-1-using-the-data-mining-schema-rowset-to-determine-parameters-used-for-a-model"></a><a name="bkmk_Query1"></a>Consulta de ejemplo 1: usar el conjunto de filas de esquema de minería de datos para determinar los parámetros usados para un modelo  
  Al consultar el conjunto de filas de esquema de minería de datos, puede buscar los metadatos acerca del modelo. Podría incluirse cuándo se creó el modelo, cuándo se procesó en último lugar, el nombre de la estructura de minería de datos en la que se basa y el nombre de la columna que se usa como atributo de predicción. También se pueden devolver los parámetros que se utilizaron cuando se creó el modelo por primera vez.  
   
 ```  
@@ -68,10 +68,10 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a>Consulta de ejemplo 2: recuperar la fórmula de regresión del modelo  
+###  <a name="sample-query-2-retrieving-the-regression-formula-for-the-model"></a><a name="bkmk_Query2"></a>Consulta de ejemplo 2: recuperar la fórmula de regresión del modelo  
  La consulta siguiente devuelve el contenido del modelo de minería de datos de un modelo de regresión lineal que se generó utilizando el mismo origen de datos que Targeted Mailing, que se utilizó en el [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md). Este modelo predice los ingresos de los clientes en función de la edad.  
   
- La consulta devuelve el contenido del nodo que contiene la fórmula de regresión. Cada variable y coeficiente están almacenados en una fila independiente de la tabla NODE_DISTRIBUTION anidada. Si quiere ver la fórmula de regresión completa, use el [Visor de árboles de Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md), haga clic en el nodo **(Todo)** y abra la **Leyenda de minería de datos**.  
+ La consulta devuelve el contenido del nodo que contiene la fórmula de regresión. Cada variable y coeficiente están almacenados en una fila independiente de la tabla NODE_DISTRIBUTION anidada. Si desea ver la fórmula de regresión completa, utilice el [visor de árboles de Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md), haga clic en el nodo **(todos)** y abra la **leyenda de minería de datos**.  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -83,7 +83,7 @@ FROM LR_PredictIncome.CONTENT
   
  Resultados esperados:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
@@ -116,7 +116,7 @@ FROM LR_PredictIncome.CONTENT
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a>Consulta de ejemplo 3: devolver solo el coeficiente para el modelo  
+###  <a name="sample-query-3-returning-only-the-coefficient-for-the-model"></a><a name="bkmk_Query3"></a>Consulta de ejemplo 3: devolver solo el coeficiente para el modelo  
  Utilizando la enumeración VALUETYPE, puede devolver solo el coeficiente para la ecuación de regresión, como se muestra en la consulta siguiente:  
   
 ```  
@@ -145,7 +145,7 @@ FROM LR_PredictIncome.CONTENT
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a>Consulta de ejemplo 4: predecir los ingresos utilizando una consulta singleton  
+###  <a name="sample-query-4-predicting-income-using-a-singleton-query"></a><a name="bkmk_Query4"></a>Consulta de ejemplo 4: predecir los ingresos utilizando una consulta singleton  
  La manera más fácil de crear una sola consulta en un modelo de regresión es usar el cuadro de diálogo **Entrada de consulta singleton** . Por ejemplo, puede generar la consulta DMX siguiente seleccionando el modelo de regresión adecuado, eligiendo **consulta singleton**y escribiendo `20` como el valor de **Age**.  
   
 ```  
@@ -163,7 +163,7 @@ NATURAL PREDICTION JOIN
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a>Consulta de ejemplo 5: usar funciones de predicción con un modelo de regresión  
+###  <a name="sample-query-5-using-prediction-functions-with-a-regression-model"></a><a name="bkmk_Query5"></a>Consulta de ejemplo 5: usar funciones de predicción con un modelo de regresión  
  Puede utilizar muchas de las funciones de predicción estándar con modelos de regresión lineal. En el ejemplo siguiente se muestra cómo agregar algunas estadísticas descriptivas a los resultados de las consultas de predicción. A partir de estos resultados, puede que hay una desviación considerable de la media para este modelo.  
   
 ```  
@@ -190,13 +190,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |función de predicción|Uso|  
-|[&#41;IsDescendant &#40;DMX](/sql/dmx/isdescendant-dmx)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
-|[&#41;IsInNode &#40;DMX](/sql/dmx/isinnode-dmx)|Indica si el nodo especificado contiene el caso actual.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica si el nodo especificado contiene el caso actual.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Devuelve un valor o un conjunto de valores predichos para una columna especificada.|  
-|[&#41;PredictNodeId &#40;DMX](/sql/dmx/predictnodeid-dmx)|Devuelve el Node_ID de cada caso.|  
-|[&#41;PredictStdev &#40;DMX](/sql/dmx/predictstdev-dmx)|Devuelve la desviación estándar del valor predicho.|  
-|[&#41;PredictSupport &#40;DMX](/sql/dmx/predictsupport-dmx)|Devuelve el valor de soporte de un estado especificado.|  
-|[&#41;PredictVariance &#40;DMX](/sql/dmx/predictvariance-dmx)|Devuelve la varianza de una columna especificada.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Devuelve el Node_ID de cada caso.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Devuelve la desviación estándar del valor predicho.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Devuelve el valor de soporte de un estado especificado.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Devuelve la varianza de una columna especificada.|  
   
  Para obtener una lista de las funciones que son comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md). Para más información sobre cómo usar estas funciones, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
@@ -204,6 +204,6 @@ NATURAL PREDICTION JOIN
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

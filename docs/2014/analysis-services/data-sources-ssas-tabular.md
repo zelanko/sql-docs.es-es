@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082332"
 ---
 # <a name="data-sources-ssas-tabular"></a>Orígenes de datos (SSAS tabular)
@@ -24,11 +24,11 @@ ms.locfileid: "66082332"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Orígenes de datos admitidos &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|Este tema contiene información sobre los distintos orígenes de datos desde los que puede importar datos.|  
-|[Tipos de datos admitidos &#40;SSAS tabular&#41;](tabular-models/data-types-supported-ssas-tabular.md)|Este tema contiene información sobre los distintos tipos de datos admitidos en un modelo tabular.|  
+|[Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)|Este tema contiene información sobre los distintos orígenes de datos desde los que puede importar datos.|  
+|[Tipos de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-types-supported-ssas-tabular.md)|Este tema contiene información sobre los distintos tipos de datos admitidos en un modelo tabular.|  
 |[Suplantación &#40;SSAS tabular&#41;](tabular-models/impersonation-ssas-tabular.md)|Este tema contiene información sobre la suplantación, que proporciona las credenciales de inicio de sesión que usa Analysis Services cuando se conecta a un origen de datos para importar y actualizar datos.|  
-|[Importar datos &#40;&#41;tabular de SSAS](import-data-ssas-tabular.md)|En las tareas de esta sección se describe cómo importar datos de varios orígenes de datos.|  
+|[Importar datos &#40;SSAS tabular&#41;](import-data-ssas-tabular.md)|En las tareas de esta sección se describe cómo importar datos de varios orígenes de datos.|  
 |[Procesar datos &#40;SSAS tabular&#41;](process-data-ssas-tabular.md)|En las tareas de esta sección se describe cómo procesar (actualizar) o cambiar los datos que se han importado en un modelo.|  
-|[Editar una conexión de origen de datos existente &#40;tabla tabular&#41;SSAS](edit-an-existing-data-source-connection-ssas-tabular.md)|Describe cómo modificar una conexión a un origen de datos que se ha creado y se ha utilizado previamente para importar datos de un origen.|  
+|[Editar una conexión de origen de datos existente &#40;SSAS tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)|Describe cómo modificar una conexión a un origen de datos que se ha creado y se ha utilizado previamente para importar datos de un origen.|  
   
   

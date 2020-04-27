@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8c46cc7bb06a66c358c0be4adc9be050774172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082497"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Propiedades de vista del origen de datos (cuadro de diálogo) (SSAS)
@@ -27,9 +27,9 @@ ms.locfileid: "66082497"
 |Término|Definición|  
 |----------|----------------|  
 |**Nombre**|Muestra el nombre de la vista del origen de datos.|  
-|**SESIÓN**|Muestra el identificador de la vista del origen de datos.|  
+|**Id**|Muestra el identificador de la vista del origen de datos.|  
 |**Descripción**|Muestra la descripción de la vista del origen de datos.|  
-|**Crear marca de tiempo**|Muestra la fecha y la hora de creación de la vista del origen de datos.|  
+|**Marca de tiempo de creación**|Muestra la fecha y la hora de creación de la vista del origen de datos.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora de la última actualización de los metadatos de la vista del origen de datos.|  
 |**Origen de datos principal**|Muestra el nombre del origen de datos principal asociado con la vista del origen de datos.|  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086941"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Cuadros de diálogo Crear relación de atributo y Editar relación de atributo (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -28,7 +28,7 @@ ms.locfileid: "66086941"
   
 2.  En la barra de herramientas, haga clic en el icono Nueva relación de atributo.  
   
-     O bien  
+     o bien  
   
      En el diagrama de relación de los atributos o en la lista **Atributos** , haga clic con el botón derecho en un atributo y, después, haga clic en **Nueva relación de atributo**.  
   

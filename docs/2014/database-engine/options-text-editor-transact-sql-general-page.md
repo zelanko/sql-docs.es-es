@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089170"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opciones (editor de texto-Transact-SQL-página general)
   Utilice el cuadro de diálogo **General** para cambiar el comportamiento general de la edición del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] , que se utiliza para modificar los scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] . Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas**, expanda la subcarpeta **Transact-SQL** y luego haga clic en **General**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
- Las opciones del [!INCLUDE[ssDE](../includes/ssde-md.md)] editor de consultas también se pueden establecer en el cuadro de diálogo **General de todos los idiomas** . Si usa los cuadros de diálogo **todos los lenguajes** para establecer diferentes opciones para [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] los demás editores, como los editores DMX o MDX, debe restablecer las [!INCLUDE[ssDE](../includes/ssde-md.md)] opciones del editor de consultas mediante este cuadro de diálogo.  
+ Las opciones del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] también se pueden establecer en el cuadro de diálogo **General de Todos los idiomas** . Si utiliza los cuadros de diálogo **Todos los lenguajes** para establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] mediante este cuadro de diálogo.  
   
 ## <a name="statement-completion"></a>Finalización de instrucciones  
  **Lista de miembros automática**  
@@ -34,14 +34,14 @@ ms.locfileid: "66089170"
  **Ocultar miembros avanzados**  
  Esta casilla no está disponible.  
   
- **Información de parámetros**  
+ **Información del parámetro**  
  Cuando se selecciona esta casilla, se muestra información sobre los parámetros para una función o un procedimiento almacenado que se encuentre inmediatamente a la izquierda del punto de inserción (cursor). Esta información incluye una lista de todos los parámetros disponibles con sus nombres y tipos de datos.  
   
 ## <a name="settings"></a>Configuración  
  **Habilitar espacio virtual**  
  Cuando esta casilla está activada, puede hacer clic en cualquier parte situada más allá del final de una línea de código y escribir. Seleccione esta casilla para colocar comentarios en un punto coherente junto al código. Si se activa esta casilla, se deshabilita la casilla **Ajuste de línea** .  
   
- **Ajuste de palabra**  
+ **Ajuste de línea**  
  Cuando se selecciona esta casilla, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor se mostrará automáticamente en la siguiente línea. La activación de esta casilla habilita la casilla **Mostrar glifos visuales para ajuste de línea** y deshabilita la casilla **Habilitar espacio virtual** .  
   
  **Mostrar glifos visuales para ajuste de línea**  

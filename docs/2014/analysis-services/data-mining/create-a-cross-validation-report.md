@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29a60a5b14b1d9a73e0a9a1bdc84a314b55cd1f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085527"
 ---
 # <a name="create-a-cross-validation-report"></a>Crear un informe de validación cruzada
@@ -66,7 +66,7 @@ ms.locfileid: "66085527"
 4.  Si lo desea, en **Estado de destino**, escriba el valor del atributo de predicción que desea modelar. Por ejemplo, si la columna [Bike Buyer] tiene dos valores posibles, 1 (Sí) y 2 (No), puede especificar el valor 1 para evaluar la exactitud del modelo solo para el resultado deseado.  
   
     > [!NOTE]  
-    >  Si no especifica un valor, la opción **Umbral de destino** no estará disponible y el modelo se evaluará para todos los valores posibles del atributo de predicción.  
+    >   Si no especifica un valor, la opción **Umbral de destino** no está disponible y el modelo se evalúa para todos los valores posibles del atributo de predicción.  
   
 5.  Opcionalmente, en **Umbral de destino**, escriba un número decimal comprendido entre 0 y 1 para especificar la probabilidad mínima que una predicción debe tener para que se considere que es precisa.  
   

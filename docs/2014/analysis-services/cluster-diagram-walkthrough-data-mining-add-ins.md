@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087910"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama del clúster (Complementos de minería de datos)
@@ -76,7 +76,7 @@ ms.locfileid: "66087910"
   
      Sin embargo, la opción actúa como filtro en los datos del gráfico, por lo que no puede aumentar el número de elementos más adelante.  
   
-8.  Haga clic en **Avanzadas**.  
+8.  Haga clic en **Avanzada**.  
   
      El cuadro de diálogo **Opciones de clúster** es donde se personaliza la apariencia visual de las formas utilizadas en el diagrama. Puede cambiar los colores que se usan en el gráfico, así como las formas de los clústeres.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66087910"
   
      Sin embargo, si aplica algún formato especial distinto del predeterminado que genera el asistente, lo cual incluye algunos fondos, es posible que estos números no estén visibles.  
   
-     **Hasta**  
+     **Slider**  
      Filtra las líneas entre los clústeres. Si se sube el control deslizante, se quitan todas las asociaciones salvo las más importantes.  
   
      **Sombreado**  

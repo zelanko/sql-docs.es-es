@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082610"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Cuadro de diálogo Filtro de conjunto de datos o Filtro de modelo
@@ -29,19 +29,19 @@ ms.locfileid: "66082610"
 -   La cuadrícula **Condiciones** contiene las columnas en las que puede especificar un nombre de columna o de tabla, un operador y los valores deseados. Mediante esta cuadrícula, básicamente está creando una cláusula WHERE.  
   
 > [!TIP]  
->  Para probar la exactitud en un subconjunto de los datos de aprendizaje originales, puede agregar la vista del origen de datos que se usó para definir el conjunto de aprendizaje como datos de prueba externos y, después, agregar las condiciones en la cuadrícula **Filtro de conjunto de datos**.  
+>   Para probar la exactitud en un subconjunto de los datos de entrenamiento originales, puede agregar la vista del origen de datos que se usó para definir el conjunto de entrenamiento como datos de prueba externos y, a continuación, agregar las condiciones en la cuadrícula **Filtro de conjunto de datos** .  
   
- **Para obtener más información:** [prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opciones  
- **Cumplen**  
+ **Condiciones**  
  Muestra los nombres de tabla, seguidos de los nombres de columna y las condiciones.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Y/o**|Elija un operador para unir varias condiciones.|  
 |**Columna de la estructura de minería de datos**|Haga clic para seleccionar un origen de datos y, a continuación, haga clic en las líneas sucesivas en la cuadrícula para agregar las columnas del origen de datos.<br /><br /> La primera línea de la cuadrícula especifica la vista del origen de datos. Después de seleccionar una vista del origen de datos, **Columna de la estructura de minería de datos** muestra un icono de tabla y el campo **Valor** muestra la combinación de todos los criterios que ha definido para este origen de datos.<br /><br /> Después de haber seleccionado un origen de datos, el cuadro **Columna de la estructura de minería de datos** proporciona una lista desplegable de columnas individuales del origen de datos.|  
-|**Operator**|Seleccione un operador de la lista.|  
+|**Operador**|Seleccione un operador de la lista.|  
 |**Valor**|Para las tablas, el campo **Valor** muestra la combinación de todos los filtros que se aplican al origen de datos. También puede hacer clic en el botón compilar **(...)** que se encuentra a la derecha del cuadro de texto para abrir el cuadro de diálogo **filtro** y generar una condición.|  
   
  **Expression**  

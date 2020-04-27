@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 83c0d1ad4d63d361754c5e2183081c30c7c51f2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089992"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Opciones (ejecución de consultas-SQL Server-página general)
-  Use esta página para especificar las opciones de ejecución de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de una consulta actual, haga clic en **Opciones de consulta** en el menú **Consulta** o, en una ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic con el botón derecho y seleccione **Opciones de consulta**.  
+  Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de una consulta actual, haga clic en **Opciones de consulta** en el menú **Consulta** o, en una ventana Consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic con el botón derecho y seleccione **Opciones de consulta**.  
   
 ## <a name="options"></a>Opciones  
- **ESTABLECER ROWCOUNT**  
+ **SET ROWCOUNT**  
  El valor predeterminado 0 indica que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esperará a que se reciban todos los resultados. Especifique un valor mayor que 0 si desea que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detenga la consulta después de obtener el número de filas especificado. Para desactivar esta opción (de modo que se devuelvan todas las filas), especifique SET ROWCOUNT 0.  
   
- **ESTABLECER TEXTSIZE**  
+ **SET TEXTSIZE**  
  El valor predeterminado de 2.147.483.647 bytes indica que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporcionará campos de datos completos hasta el límite de los campos de datos `text` y `ntext`. Especifique un número menor para limitar los resultados en caso de que los valores sean elevados. Las columnas que superen el número especificado se truncarán.  
   
  **Tiempo de espera de ejecución**  
@@ -36,7 +36,7 @@ ms.locfileid: "66089992"
  Escriba la palabra que utilice para separar instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] en lotes. El separador predeterminado es GO.  
   
  **De forma predeterminada, abrir nuevas consultas en modo SQLCMD**  
- Active esta casilla para abrir nuevas consultas en modo SQLCMD. Para obtener más información sobre el modo SQLCMD, vea [editar scripts SQLCMD con el editor de consultas](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
+ Active esta casilla para abrir nuevas consultas en modo SQLCMD. Para obtener más información sobre el modo SQLCMD, consulte [Modificar scripts SQLCMD con el Editor de consultas](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  Cuando seleccione esta opción, tenga en cuenta las siguientes limitaciones:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66089992"
   
 -   Dado que el Editor de consultas no puede responder a comandos del sistema operativo, debe tener cuidado de no ejecutar instrucciones interactivas.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Haga clic en esta opción para restablecer todos los valores de esta página a los valores predeterminados originales.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -15,18 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84d04729e2f4c00c5d127a706727567c44855cd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093679"
 ---
 # <a name="only-sysadmin-users-can-write-job-step-log-files-to-the-file-system"></a>Los administradores del sistema son los únicos usuarios que pueden escribir archivos de registro de paso de trabajo en el sistema de archivos
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] escribe opcionalmente un registro para cada paso de trabajo.  
   
 ## <a name="component"></a>Componente  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Directivas  
+ e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="description"></a>Descripción  
  En [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el agente puede escribir registros en el sistema de archivos para los trabajos que son propiedad de los miembros del rol fijo de servidor **sysadmin** . Si el propietario del trabajo no es miembro del rol **sysadmin** y la cuenta de proxy está habilitada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el agente puede escribir registros en el sistema de archivos mediante las credenciales de la cuenta de proxy.  

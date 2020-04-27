@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092987"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>Quitar UDT&#39;s con el nombre de los tipos de datos de fecha y hora reservados

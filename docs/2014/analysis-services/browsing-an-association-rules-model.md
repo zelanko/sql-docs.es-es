@@ -16,21 +16,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088468"
 ---
 # <a name="browsing-an-association-rules-model"></a>Examinar un modelo de reglas de asociación
   Al abrir un modelo de asociación mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de reglas de asociación [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de.  El visor le permite comprobar de un vistazo qué elementos estaban en correlación entre sí y muestra las reglas que puede utilizar para la predicción o para realizar recomendaciones.  
   
-##  <a name="BKMK_ViewerTabs"></a>Explorar el modelo  
+##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Explorar el modelo  
  Al abrir un modelo de minería de datos que se creó [!INCLUDE[msCoName](../includes/msconame-md.md)] mediante el algoritmo reglas de Asociación de, la ventana **examinar** incluye las siguientes vistas, cada una diseñada para que pueda explorar un aspecto diferente del modelo:  
   
--   [Conjuntos](#BKMK_Itemsets)  
+-   [Conjuntos de elementos](#BKMK_Itemsets)  
   
--   [Reglamento](#BKMK_Rules)  
+-   [Reglas](#BKMK_Rules)  
   
 -   [Red de dependencias](#BKMK_Dependency)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66088468"
   
  Para experimentar con un modelo de asociación, puede utilizar los datos de ejemplo en la pestaña Asociado del libro de ejemplo y generar un modelo de asociación con todos los valores predeterminados. También puede crear un modelo de análisis de la cesta de compras y abrirlo con **examinar**.  
   
-###  <a name="BKMK_Itemsets"></a>Conjuntos  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>Conjuntos  
  La pestaña **conjuntos** es un buen lugar para empezar a explorar un modelo de asociación. Esta pestaña muestra una lista de los elementos que el modelo encontró juntos con frecuencia.  
   
  ![Lista de elementos de un modelo de asociación](media/dm13-association-itemsets.gif "Lista de elementos de un modelo de asociación")  
@@ -83,7 +83,7 @@ ms.locfileid: "66088468"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>Reglamento  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>Reglamento  
  La pestaña **reglas** combina información sobre conjuntos y su valor relativo.  
   
  ![Lista de reglas creadas por un modelo de asociación](media/dm13-association-rules.gif "Lista de reglas creadas por un modelo de asociación")  
@@ -114,7 +114,7 @@ ms.locfileid: "66088468"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>Red de dependencias  
+###  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>Red de dependencias  
  La pestaña **red de dependencias** es un mapa visual de las correlaciones entre elementos. Cada óvalo del gráfico (denominado *nodo*) representa un par atributo-valor, como "chaleco = Existing" o "Age = 1-30".  Cada línea que conecta los óvalos (a la que se hace referencia como un *borde*) representa un tipo de correlación.  
   
  ![Gráfico de redes de dependencias para un modelo de asociación](media/dm13-association-dependencynetwork.gif "Gráfico de redes de dependencias para un modelo de asociación")  

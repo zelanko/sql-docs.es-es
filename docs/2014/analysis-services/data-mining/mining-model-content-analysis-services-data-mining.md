@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083776"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenido del modelo de minería de datos (Analysis Services - Minería de datos)
@@ -38,7 +38,7 @@ ms.locfileid: "66083776"
   
  [Estructura del contenido del modelo de minería de datos](#bkmk_Structure)  
   
- [Nodos del contenido del modelo](#bkmk_Nodes)  
+ [Nodos en el contenido del modelo](#bkmk_Nodes)  
   
  [Contenido del modelo de minería de datos por tipo de algoritmo](#bkmk_AlgoType)  
   
@@ -46,14 +46,14 @@ ms.locfileid: "66083776"
   
  [Herramientas para consultar el contenido del modelo de minería de datos](#bkmk_Querying)  
   
-##  <a name="bkmk_Structure"></a>Estructura del contenido del modelo de minería de datos  
+##  <a name="structure-of-mining-model-content"></a><a name="bkmk_Structure"></a>Estructura del contenido del modelo de minería de datos  
  El contenido de cada modelo se presenta como una serie de *nodos*. Un nodo es un objeto dentro de un modelo de minería de datos que contiene metadatos e información sobre una parte del mismo. Los nodos están organizados en una jerarquía. La organización exacta de los nodos en la jerarquía y el significado de esta dependen del algoritmo utilizado. Por ejemplo, si crea un modelo de árboles de decisión, puede contener varios árboles, todos conectados a la raíz del modelo; si crea un modelo de red neuronal, el modelo puede contener una o varias redes, además de un nodo de estadísticas.  
   
  El primer nodo de cada modelo se denomina *nodo raíz*o nodo *primario del modelo* . Cada modelo tiene un nodo raíz (NODE_TYPE = 1). El nodo raíz suele contener algunos metadatos sobre el modelo y el número de nodos secundarios, pero poca información adicional sobre los patrones detectados por el modelo.  
   
  Según el algoritmo que se usara para crear el modelo, el nodo raíz tiene un número variable de nodos secundarios. Los nodos segundarios tienen significados diferentes y contenidos distintos, según el algoritmo y la profundidad y complejidad de los datos.  
   
-##  <a name="bkmk_Nodes"></a>Nodos del contenido del modelo de minería de datos  
+##  <a name="nodes-in-mining-model-content"></a><a name="bkmk_Nodes"></a>Nodos del contenido del modelo de minería de datos  
  En un modelo de minería de datos, un nodo es un contenedor de uso general que almacena una parte de información sobre todo o parte del modelo. La estructura de cada nodo siempre es la misma y contiene las columnas definidas por el conjunto de filas de esquema de minería de datos. Para obtener más información, vea [Conjunto de filas DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Cada nodo incluye los metadatos sobre el nodo, incluido un identificador que es único dentro de cada modelo, el identificador del nodo primario y el número de nodos secundarios que tiene el nodo. Los metadatos identifican el modelo al que pertenece el nodo y el catálogo de la base de datos donde ese modelo en particular está almacenado. El contenido adicional que se proporciona en el nodo difiere en función del tipo de algoritmo que se usara para crear el modelo y podría incluir lo siguiente:  
@@ -81,14 +81,14 @@ ms.locfileid: "66083776"
 |3|Interior|Nodo de división interior en un árbol. Se aplica a los modelos del árbol de decisión.|  
 |4|Distribución|Nodo terminal de un árbol. Se aplica a los modelos del árbol de decisión.|  
 |5|Clúster|Clúster detectado por el algoritmo. Se aplica a los modelos de agrupación en clústeres y a los modelos de clústeres de secuencia.|  
-|6|Desconocido|Tipo de nodo desconocido.|  
+|6|Unknown|Tipo de nodo desconocido.|  
 |7|ItemSet|Conjunto de elementos detectado por el algoritmo. Se aplica a modelos de asociación o modelos de agrupación en clústeres de secuencia.|  
 |8|AssociationRule|Regla de asociación detectada por el algoritmo. Se aplica a modelos de asociación o modelos de agrupación en clústeres de secuencia.|  
 |9|PredictableAttribute|Atributo de predicción. Se aplica a todos los tipos de modelos.|  
 |10|InputAttribute|Atributo de entrada. Se aplica a los árboles de decisión y los modelos Bayes Naïve.|  
 |11|InputAttributeState|Estadísticas sobre los estados de un atributo de entrada. Se aplica a los árboles de decisión y los modelos Bayes Naïve.|  
 |13|Secuencia|Nodo superior para un componente del modelo Markov de un clúster de secuencia. Se aplica a los modelos de agrupación en clústeres.|  
-|14|Transition|Matriz de transición de Markov. Se aplica a los modelos de agrupación en clústeres.|  
+|14|Transición|Matriz de transición de Markov. Se aplica a los modelos de agrupación en clústeres.|  
 |15|TimeSeries|Nodo no raíz de un árbol de serie temporal. Solo se aplica a los modelos de serie temporal.|  
 |16|TsTree|Nodo raíz de un árbol de serie temporal que corresponde a una serie temporal de predicción. Se aplica a los modelos de serie temporal y solo si el modelo se creó utilizando el parámetro MIXED.|  
 |17|NNetSubnetwork|Una subred. Se aplica a los modelos de red neuronal.|  
@@ -131,7 +131,7 @@ ms.locfileid: "66083776"
   
 -   Puede utilizar funciones dentro de una consulta de Extensiones de minería de datos (DMX) para encontrar los descendientes o los elementos primarios de un nodo determinado. Para obtener más información sobre cómo usar funciones en las consultas, vea [Consultas de minería de datos](data-mining-queries.md).  
   
- La *cardinalidad* hace referencia al número de elementos de un conjunto. En el contexto de un modelo de minería de datos procesado, la cardinalidad indica el número de elementos secundarios de un nodo determinado. Por ejemplo, si un modelo de árbol de decisión tuviera un nodo para [Ingresos anuales] y ese nodo tuviera dos nodos secundarios, uno para la condición [Ingresos anuales] = Altos y otro para la condición [Ingresos anuales] = Bajos, el valor de CHILDREN_CARDINALITY para el nodo [Ingresos anuales] sería 2.  
+ La*cardinalidad* hace referencia al número de elementos en un conjunto. En el contexto de un modelo de minería de datos procesado, la cardinalidad indica el número de elementos secundarios de un nodo determinado. Por ejemplo, si un modelo de árbol de decisión tuviera un nodo para [Ingresos anuales] y ese nodo tuviera dos nodos secundarios, uno para la condición [Ingresos anuales] = Altos y otro para la condición [Ingresos anuales] = Bajos, el valor de CHILDREN_CARDINALITY para el nodo [Ingresos anuales] sería 2.  
   
 > [!NOTE]  
 >  En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], únicamente los nodos secundarios inmediatos se cuentan al calcular la cardinalidad de un nodo. Sin embargo, si crea un algoritmo complementario personalizado, puede sobrecargar CHILDREN_CARDINALITY para contar la cardinalidad de manera diferente. Por ejemplo, esto puede ser útil si deseara contabilizar el número total de descendientes, no simplemente los elementos secundarios inmediatos.  
@@ -163,7 +163,7 @@ ms.locfileid: "66083776"
   
  Por ejemplo, si un modelo se configura para encontrar los clientes que han comprado por lo menos una vez un elemento determinado, la columna ATTRIBUTE_NAME podría contener el par atributo-valor que define el elemento de interés, como `Model = 'Water bottle'` y la columna ATTRIBUTE_VALUE contendría únicamente la palabra clave `Existing` o `Missing`.  
   
- SOPORTE TÉCNICO  
+ Support  
  Recuento de los casos que tienen este par atributo-valor o que contienen este conjunto de elementos o regla.  
   
  En general, para cada nodo, el valor de compatibilidad indica cuántos casos en el conjunto de entrenamiento están incluidos en el nodo actual. En la mayor parte de los tipos de modelo, la compatibilidad representa un recuento exacto de casos. Los valores de compatibilidad son útiles porque se puede ver la distribución de los datos dentro de los casos de entrenamiento sin tener que consultar los datos de entrenamiento. El servidor de Analysis Services también utiliza estos valores almacenados para calcular la probabilidad almacenada con respecto a la probabilidad anterior, a fin de determinar si la inferencia es fuerte o débil.  
@@ -216,7 +216,7 @@ ms.locfileid: "66083776"
 |1|Missing|Indica que los datos del caso no contenían un valor para este atributo. El estado `Missing` se calcula de forma independiente de los atributos que tienen valores.|  
 |2|Existing|Indica que los datos del caso contienen un valor para este atributo.|  
 |3|Continuo|Indica que el valor del atributo es un valor numérico continuo y, por consiguiente, puede ser representado por una media, junto con la varianza y la desviación estándar.|  
-|4|Discrete|Indica un valor, numérico o de texto, que se trata como discreto.<br /><br /> **Nota:** También pueden faltar valores discretos; sin embargo, se tratan de forma diferente al realizar cálculos. Para obtener información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).|  
+|4|Discrete|Indica un valor, numérico o de texto, que se trata como discreto.<br /><br /> **Nota** Los valores discretos también pueden ser ausentes; sin embargo, se tratan de forma diferente al realizar cálculos. Para obtener información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).|  
 |5|Discretized|Indica que el atributo contiene valores numéricos que se han convertido en datos discretos. El valor será una cadena con formato que describe los depósitos de discretización.|  
 |6|Existing|Indica que el atributo tiene valores numéricos continuos y que los valores se han proporcionado en los datos, frente a los valores que están ausentes o se han deducido.|  
 |7|Coeficiente|Indica un valor numérico que representa un coeficiente.<br /><br /> Un coeficiente es un valor que se aplica al calcular el valor de la variable dependiente. Por ejemplo, si un modelo crea una fórmula de regresión que predice los ingresos según la edad, el coeficiente se utiliza en la fórmula que relaciona la edad con los ingresos.|  
@@ -232,7 +232,7 @@ ms.locfileid: "66083776"
 |17|Otros|Representa un valor personalizado definido por el algoritmo.|  
 |18|Cadena representada|Representa un valor personalizado que el algoritmo representa como una cadena. El modelo de objetos no aplicó ningún formato.|  
   
- Los tipos de valores se derivan de la enumeración ADMOMD.NET. Para más información, consulte <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Los tipos de valores se derivan de la enumeración ADMOMD.NET. Para obtener más información, vea <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
   
 ### <a name="node-score"></a>Puntuación del nodo  
  El significado de la puntuación del nodo difiere en función del tipo de modelo y también puede ser específico del tipo de nodo. Para obtener información sobre cómo se calcula NODE_SCORE para cada modelo y tipo de nodo, vea [Contenido del modelo de minería de datos por tipo de algoritmo](#bkmk_AlgoType).  
@@ -242,18 +242,18 @@ ms.locfileid: "66083776"
   
  En aquellos nodos que proporcionan puntuaciones de probabilidad, la probabilidad de nodo y las probabilidades marginales representan cálculos diferentes.  
   
--   La **probabilidad marginal** es la probabilidad de alcanzar el nodo desde su elemento primario.  
+-   **La probabilidad marginal** es la probabilidad de alcanzar el nodo a partir de su elemento primario.  
   
--   La **probabilidad de nodo** es la probabilidad de alcanzar el nodo desde la raíz.  
+-   **La probabilidad de nodo** es la probabilidad de alcanzar el nodo desde la raíz.  
   
--   La **probabilidad de nodo** siempre es menor o igual que la **probabilidad marginal**.  
+-   **La probabilidad de nodo** siempre es mayor o igual que **la probabilidad marginal**.  
   
  Por ejemplo, si la población de todos los clientes en un árbol de decisión está dividida por igual por el género (y no falta ningún valor), la probabilidad de los nodos secundarios debería ser 5. Sin embargo, suponga que cada uno de los nodos del sexo se divide por igual en los niveles de ingresos: alto, medio y bajo. En este caso, la puntuación MARGINAL_PROBABILITY de cada nodo secundario siempre debería ser 0,33, pero el valor NODE_PROBABILTY será el producto de todas las probabilidades que conducen a ese nodo y, por tanto, siempre será menor que el valor de MARGINAL_PROBABILITY.  
   
 |Nivel de nodo/atributo y valor|La probabilidad marginal|La probabilidad de nodo|  
 |----------------------------------------|--------------------------|----------------------|  
 |Raíz del modelo<br /><br /> Todos los clientes de destino|1|1|  
-|Los clientes de destino divididos por género|0,5|0,5|  
+|Los clientes de destino divididos por género|.5|.5|  
 |Los clientes de destino divididos por género y divididos de nuevo de tres maneras por ingresos|.33|.5 * .33 = .165|  
   
 ### <a name="node-rule-and-marginal-rule"></a>Regla de nodo y regla marginal  
@@ -261,33 +261,33 @@ ms.locfileid: "66083776"
   
  Se proporcionan dos tipos de reglas XML, similares a los dos tipos de valores de probabilidad. El fragmento XML en MARGINAL_RULE define el atributo y el valor para el nodo actual, mientras que el fragmento XML en NODE_RULE describe la ruta de acceso al nodo actual desde la raíz del modelo.  
   
-##  <a name="bkmk_AlgoType"></a>Contenido del modelo de minería de datos por tipo de algoritmo  
+##  <a name="mining-model-content-by-algorithm-type"></a><a name="bkmk_AlgoType"></a>Contenido del modelo de minería de datos por tipo de algoritmo  
  Cada algoritmo almacena tipos diferentes de información como parte de su esquema de contenido. Por ejemplo, el algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] genera muchos nodos secundarios, cada uno de los cuales representa un posible clúster. Cada nodo de clúster contiene las reglas que describen las características que comparten los elementos en el clúster. Por el contrario, el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no contiene ningún nodo secundario; en su lugar, el nodo primario para el modelo contiene la ecuación que describe la relación lineal detectada mediante el análisis.  
   
  En la tabla siguiente se proporcionan vínculos a temas correspondientes a cada tipo de algoritmo.  
   
--   **Temas de contenido del modelo:** Explique el significado de cada tipo de nodo para cada tipo de algoritmo y proporcione orientación sobre qué nodos son de mayor interés en un tipo de modelo determinado.  
+-   **Temas de contenido del modelo:** explican el significado de cada tipo de nodo para cada tipo de algoritmo y proporcionan orientación sobre qué nodos son de más interés en un tipo de modelo determinado.  
   
--   **Temas de consulta:** Proporcione ejemplos de consultas en un tipo de modelo determinado e instrucciones sobre cómo interpretar los resultados.  
+-   **Temas de consulta:** proporcionan ejemplos de consultas de un tipo de modelo determinado y orientación para interpretar los resultados.  
   
 |Algoritmo o tipo de modelo|contenido del modelo|Consultar modelos de minería de datos|  
 |-----------------------------|-------------------|----------------------------|  
-|Modelos de reglas de asociación|[Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)|  
-|Modelos de agrupación en clústeres|[Contenido del modelo de minería de datos para los modelos de árbol de decisión &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)|  
-|Modelo de árboles de decisión|[Contenido del modelo de minería de datos para los modelos de árbol de decisión &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de árboles de decisión](decision-trees-model-query-examples.md)|  
-|Modelos de regresión lineal|[Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)|  
-|Modelos de regresión logística|[Contenido del modelo de minería de datos para los modelos de regresión logística &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-logistic-regression-models.md)|[Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)|  
-|Modelos Bayes Naïve|[Contenido del modelo de minería de datos para los modelos Bayes Naive &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md)|  
-|Modelos de red neuronal|[Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de red neuronal](neural-network-model-query-examples.md)|  
-|Agrupación en clústeres de secuencia|[Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Ejemplos de consultas de modelos de clústeres de secuencia](sequence-clustering-model-query-examples.md)|  
-|Modelos de serie temporal|[Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services-minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md)|  
+|Modelos de reglas de asociación|[Contenido del modelo de minería de datos para los modelos de asociación &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Ejemplos de consultas del modelo de asociación](association-model-query-examples.md)|  
+|Modelos de agrupación en clústeres|[Contenido del modelo de minería de datos para los modelos de árboles de decisión &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)|  
+|Modelo de árboles de decisión|[Contenido del modelo de minería de datos para los modelos de árboles de decisión &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de árboles de decisión](decision-trees-model-query-examples.md)|  
+|Modelos de regresión lineal|[Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)|  
+|Modelos de regresión logística|[Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md)|[Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)|  
+|Modelos Bayes Naïve|[Contenido del modelo de minería de datos para los modelos Bayes naive &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Ejemplos de consultas del modelo Bayes naive](naive-bayes-model-query-examples.md)|  
+|Modelos de red neuronal|[Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de red neuronal](neural-network-model-query-examples.md)|  
+|Agrupación en clústeres de secuencia|[Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)|[Ejemplos de consultas de modelos de clústeres de secuencia](sequence-clustering-model-query-examples.md)|  
+|Modelos de serie temporal|[Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md)|  
   
-##  <a name="bkmk_Viewing"></a>Herramientas para ver el contenido del modelo de minería de datos  
+##  <a name="tools-for-viewing-mining-model-content"></a><a name="bkmk_Viewing"></a>Herramientas para ver el contenido del modelo de minería de datos  
  Cuando se examina o explora un modelo en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], se puede ver la información en el **Visor de árbol de contenido genérico de Microsoft**, que está disponible en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  El Visor de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] muestra las columnas, las reglas, las propiedades, los atributos, los nodos y otro tipo de contenido del modelo utilizando la misma información que está disponible en el conjunto de filas de esquema de contenido del modelo de minería de datos. El conjunto de filas de esquema de contenido es un marco genérico para presentar información detallada sobre el contenido de un modelo de minería de datos. Puede ver el contenido del modelo en cualquier cliente que admita los conjuntos de filas jerárquicos. El visor de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] presenta esta información en un visor de tablas HTML que representa todos los modelos en un formato coherente, lo que facilita la comprensión de la estructura de los modelos que se crean. Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
-##  <a name="bkmk_Querying"></a>Herramientas para consultar el contenido del modelo de minería de datos  
+##  <a name="tools-for-querying-mining-model-content"></a><a name="bkmk_Querying"></a>Herramientas para consultar el contenido del modelo de minería de datos  
  Para recuperar el contenido del modelo de minería de datos, debe crear una consulta que lo use.  
   
  La manera más fácil de crear una consulta de contenido es ejecutar la instrucción DMX siguiente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
@@ -304,6 +304,6 @@ SELECT * FROM [<mining model name>].CONTENT
   
 ## <a name="see-also"></a>Consulte también  
  [Visor de árbol de contenido genérico de Microsoft &#40;minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

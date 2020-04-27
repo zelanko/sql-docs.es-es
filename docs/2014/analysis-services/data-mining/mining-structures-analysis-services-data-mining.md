@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083377"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estructuras de minería de datos (Analysis Services - Minería de datos)
@@ -35,11 +35,11 @@ ms.locfileid: "66083377"
   
  La estructura de minería de datos del diagrama está basada en un origen de datos que contiene varias tablas o vistas, combinadas en el campo CustomerID. Una tabla contiene información sobre los clientes, como la región geográfica, la edad, los ingresos y el sexo, mientras que la tabla anidada relacionada contiene varias filas de información adicional sobre cada cliente, como los productos que ha adquirido. En el diagrama, se muestra que se pueden generar varios modelos de minería de datos a partir de una misma estructura de minería de datos, y que los modelos pueden usar columnas de la estructura diferentes.  
   
- **Modelo 1** Usa CustomerID, Income, Age, region y filtra los datos de la región.  
+ **Modelo 1** : usa CustomerID, Income, Age, Region y filtra los datos de Region.  
   
- **Modelo 2** Usa CustomerID, Income, Age, region y filtra los datos de Age.  
+ **Modelo 2** : usa CustomerID, Income, Age, Region y filtra los datos de Age.  
   
- **Modelo 3** Usa CustomerID, Age, Gender y la tabla anidada, sin ningún filtro.  
+ **Modelo 3** : usa CustomerID, Age, Gender y la tabla anidada, sin filtros.  
   
  Dado que los modelos usan columnas diferentes para la entrada, y dado que dos de los modelos, además, restringen sus datos mediante la aplicación de un filtro, los modelos pueden tener resultados muy diferentes aunque estén basados en los mismos datos. Observe que la columna CustomerID es obligatoria en todos los modelos porque es la única columna disponible que se puede usar como clave de caso.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66083377"
   
 -   Procesar la estructura.  
   
- Estos pasos se describen con más detalle en las secciones siguientes.  
+ En las secciones siguientes se describen estos pasos de forma más detallada.  
   
 ### <a name="data-sources-for-mining-structures"></a>Orígenes de datos para estructuras de minería de datos  
  Cuando se define una estructura de minería de datos, se usan columnas que están disponibles en una vista del origen de datos existente. Una vista del origen de datos es un objeto compartido que permite combinar varios orígenes de datos y usarlos como un origen único. Los orígenes de datos originales no son visibles para las aplicaciones cliente, y puede usar las propiedades de la vista del origen de datos para modificar tipos de datos, crear agregaciones o asignar alias a las columnas.  
@@ -95,7 +95,7 @@ ms.locfileid: "66083377"
   
  También puede descartar la memoria caché después del procesamiento, si esta es muy grande o desea quitar los datos detallados. Si no desea almacenar los datos en la memoria caché, puede cambiar la propiedad `CacheMode` de la estructura de minería de datos a `ClearAfterProcessing`. Esto destruirá la caché una vez procesados los modelos. Al establecer la propiedad `CacheMode` en `ClearAfterProcessing`, se deshabilita la obtención de detalles del modelo de minería de datos.  
   
- Sin embargo, una vez destruida la memoria caché, no podrá agregar nuevos modelos a la estructura de minería de datos. Si agrega un nuevo modelo de minería de datos a la estructura, o cambia las propiedades de los modelos existentes, primero deberá volver a procesar la estructura de minería de datos. Para obtener más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md).  
+ Sin embargo, una vez destruida la memoria caché, no podrá agregar nuevos modelos a la estructura de minería de datos. Si agrega un nuevo modelo de minería de datos a la estructura, o cambia las propiedades de los modelos existentes, primero deberá volver a procesar la estructura de minería de datos. Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md).  
   
 ### <a name="viewing-mining-structures"></a>Ver estructuras de minería de datos  
  No se pueden usar los visores para examinar los datos de una estructura de minería de datos. Sin embargo, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], es posible utilizar la pestaña **Estructura de minería de datos** del Diseñador de minería de datos para ver las columnas de estructura y sus definiciones. Para más información, consulte [Data Mining Designer](data-mining-designer.md).  
@@ -122,6 +122,6 @@ ms.locfileid: "66083377"
   
 ## <a name="see-also"></a>Consulte también  
  [Objetos de base de datos &#40;Analysis Services de datos multidimensionales&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Modelos de minería de datos &#40;Analysis Services&#41;de minería de datos](mining-models-analysis-services-data-mining.md)  
+ [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
   
   

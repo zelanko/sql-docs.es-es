@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084029"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de Microsoft
@@ -35,7 +35,7 @@ ms.locfileid: "66084029"
   
  Para obtener información adicional sobre cómo usar los modelos de agrupación en clústeres, vea los temas siguientes:  
   
--   [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66084029"
  CLUSTERING_METHOD  
  Especifica el método de agrupación en clústeres que va a usar el algoritmo. Los métodos de agrupación en clústeres disponibles son:  
   
-|id|Método|  
+|Id.|Método|  
 |--------|------------|  
 |1|EM escalable|  
 |2|EM no escalable|  
@@ -113,7 +113,7 @@ ms.locfileid: "66084029"
   
  Cambiando este número, se puede cambiar la manera en que se generan los clústeres iniciales y, a continuación, comparar modelos que se han generado usando inicializaciones diferentes. Si se cambia la inicialización pero los clústeres hallados no cambian en gran medida, el modelo se puede considerar relativamente estable.  
   
- El valor predeterminado es 0.  
+ El valor predeterminado es 0.  
   
  MINIMUM_SUPPORT  
  Especifica el número mínimo de casos requeridos para generar un clúster. Si el número de casos del clúster es inferior a este número, el clúster se trata como vacío y se descarta.  
@@ -168,7 +168,7 @@ ms.locfileid: "66084029"
  Un modelo de agrupación en clústeres debe contener una columna de clave y columnas de entrada. También se pueden definir columnas de entrada como columnas de predicción. Las columnas establecidas en `Predict Only` no se usan para generar clústeres. La distribución de estos valores en los clústeres se calcula después de que se hayan generado los clústeres.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
- El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
+ El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
 |Columna|Tipos de contenido|  
 |------------|-------------------|  
@@ -181,6 +181,6 @@ ms.locfileid: "66084029"
 ## <a name="see-also"></a>Consulte también  
  [Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)   
  [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

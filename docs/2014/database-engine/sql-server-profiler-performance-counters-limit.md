@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e64c5cc39ed8634ef2ec74f8680c84f7b66b98f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088820"
 ---
 # <a name="sql-server-profiler---performance-counters-limit"></a>Límite de contadores de rendimiento (SQL Server Profiler)
@@ -35,6 +35,6 @@ ms.locfileid: "66088820"
      Si desea seleccionar todos los contadores para un objeto de rendimiento, active la casilla que se encuentra junto a dicho objeto. Si selecciona el nodo superior, que indica el equipo, selecciona todos los objetos y contadores de rendimiento que contiene el archivo de registro de rendimiento.  
   
 ## <a name="see-also"></a>Consulte también  
- [Correlacionar un seguimiento con los datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)  
+ [Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)  
   
   

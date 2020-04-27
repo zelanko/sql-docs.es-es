@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084417"
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
@@ -44,8 +44,7 @@ ms.locfileid: "66084417"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Selección de características en minería de datos de Analysis Services  
  Normalmente, la selección de características se realiza automáticamente en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], y cada algoritmo tiene un conjunto de técnicas predeterminadas para aplicar de forma inteligente la reducción de características. La selección de características siempre se realiza antes del entrenamiento del modelo y permite elegir automáticamente en un conjunto de datos los atributos que con toda probabilidad se usarán en el mismo. Sin embargo, también puede establecer parámetros manualmente para influir en el comportamiento de la selección de características.  
   
- En general, la selección de características funciona calculando una puntuación para cada atributo y seleccionando a continuación solo los atributos que han obtenido las mejores puntuaciones. También puede ajustar el umbral para las puntuaciones más altas. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para calcular estas puntuaciones, y el método exacto que se aplica en un modelo depende de estos factores:  
+ En general, la selección de características funciona calculando una puntuación para cada atributo y seleccionando a continuación solo los atributos que han obtenido las mejores puntuaciones. También puede ajustar el umbral para las puntuaciones más altas. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para calcular estas puntuaciones, y el método exacto que se aplica en un modelo depende de estos factores:  
   
 -   El algoritmo usado en el modelo  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66084417"
   
  La puntuación *interestingness* (medida del interés) se usa para clasificar y ordenar los atributos de las columnas que contienen datos numéricos continuos no binarios.  
   
- *La entropía de Shannon* y dos puntuaciones *bayesiana* están disponibles para las columnas que contienen datos discretos y de datos discretos. Sin embargo, si el modelo contiene columnas continuas, se usará la puntuación de grado de interés para evaluar todas las columnas de entrada, con objeto de asegurarse de que son coherentes.  
+ La*entropía de Shannon* y dos puntuaciones *bayesianas* están disponibles para las columnas que contengan datos discretos y discretizados. Sin embargo, si el modelo contiene columnas continuas, se usará la puntuación de grado de interés para evaluar todas las columnas de entrada, con objeto de asegurarse de que son coherentes.  
   
  En la sección siguiente se describe cada uno de los métodos de selección de características.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "66084417"
 |Árboles de decisión|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Si alguna columna contiene valores continuos no binarios, se utiliza la puntuación interestingness (grado de interés) en todas las columnas para asegurar la coherencia. De lo contrario, se usa el método de selección de características predeterminado o el método que se haya especificado al crear el modelo.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Red neuronal|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo de redes neuronales de Microsoft puede usar el método bayesiano y el método basado en la entropía, siempre y cuando los datos contengan columnas continuas.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md).|  
 |Regresión logística|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Aunque el algoritmo de regresión logística de Microsoft se basa en el algoritmo de red neuronal de Microsoft, no se pueden personalizar los modelos de regresión logística para controlar el comportamiento de la selección de características; por lo tanto, la selección de características siempre usa de manera predeterminada el método más apropiado para el atributo.<br /><br /> Si todos los atributos son discretos o de datos discretos, el valor predeterminado es BDEU.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md).|  
-|agrupación en clústeres|Puntuación interestingness|El algoritmo de clústeres de Microsoft puede usar datos discretos o discretizados. Sin embargo, dado que la puntuación de cada atributo se calcula como una distancia y se representa como un número continuo, se debe usar la puntuación interestingness.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md).|  
+|Agrupación en clústeres|Puntuación interestingness|El algoritmo de clústeres de Microsoft puede usar datos discretos o discretizados. Sin embargo, dado que la puntuación de cada atributo se calcula como una distancia y se representa como un número continuo, se debe usar la puntuación interestingness.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md).|  
 |Regresión lineal|Puntuación interestingness|El algoritmo de regresión lineal de Microsoft solo puede usar la puntuación interestingness porque solamente admite columnas continuas.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md).|  
 |Reglas de asociación<br /><br /> Agrupación en clústeres de secuencia|No se usa|La selección de características no se invoca con estos algoritmos.<br /><br /> Sin embargo, se puede controlar el comportamiento del algoritmo y reducir el tamaño de los datos de entrada, si es necesario, al establecer el valor de los parámetros MINIMUM_SUPPORT y MINIMUM_PROBABILITY.<br /><br /> Para obtener más información, consulte [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) y [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
 |Serie temporal|No se usa|La selección de características no se aplica a los modelos de serie temporal.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).|  

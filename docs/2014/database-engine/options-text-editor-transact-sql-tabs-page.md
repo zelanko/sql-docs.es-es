@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: cc649ee021012774a0f199b97ea3cbf6bae4adef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089136"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>Opciones (editor de texto-Transact-SQL-página tabulaciones)
-  Utilice este cuadro de diálogo para cambiar el comportamiento de tabulación del Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)], que se utiliza para programar scripts de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la carpeta **Transact-SQL** , expanda la subcarpeta **SQL** y, a continuación, haga clic en **Tabulaciones**.  
+  Utilice este cuadro de diálogo para cambiar el comportamiento de tabulación del Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)] , que se utiliza para programar scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] . Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la carpeta **Transact-SQL** , expanda la subcarpeta **SQL** y, a continuación, haga clic en **Tabulaciones**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
- Las opciones del Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)] también se pueden establecer en el cuadro de diálogo **Tabulaciones de Todos los lenguajes** . Si usa los cuadros de diálogo **todos los lenguajes** para establecer diferentes opciones para [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] los demás editores, como los editores DMX o MDX, debe restablecer las [!INCLUDE[ssDE](../includes/ssde-md.md)] opciones del editor de consultas mediante este cuadro de diálogo.  
+ Las opciones del Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)] también se pueden establecer en el cuadro de diálogo **Tabulaciones de Todos los lenguajes**. Si utiliza los cuadros de diálogo **Todos los lenguajes** para establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] mediante este cuadro de diálogo.  
   
 ## <a name="indenting"></a>Sangrías  
  **None**  

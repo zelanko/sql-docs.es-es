@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084823"
 ---
 # <a name="data-mining-ssas"></a>Minería de datos (SSAS)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona una plataforma integrada para las soluciones que incorporan la minería de datos. Puede usar datos relacionales o de cubo para crear soluciones de Business Intelligence con análisis predictivos.  
   
 ## <a name="benefits-of-data-mining"></a>Ventajas de la minería de datos  
@@ -52,13 +51,13 @@ ms.locfileid: "66084823"
   
 -   [Conceptos de minería de datos](data-mining-concepts.md)  
   
--   [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-structures-analysis-services-data-mining.md)  
+-   [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [Modelos de minería de datos &#40;Analysis Services&#41;de minería de datos](mining-models-analysis-services-data-mining.md)  
+-   [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)  
+-   [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)  
   
 -   [Consultas de minería de datos](data-mining-queries.md)  
   
@@ -68,6 +67,6 @@ ms.locfileid: "66084823"
   
 -   [Arquitectura de minería de datos](data-mining-architecture.md)  
   
--   [Información general de seguridad &#40;minería de datos&#41;](security-overview-data-mining.md)  
+-   [Información general de Seguridad &#40;minería de datos&#41;](security-overview-data-mining.md)  
   
   

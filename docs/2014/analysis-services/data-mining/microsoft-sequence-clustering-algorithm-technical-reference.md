@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083837"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
@@ -49,7 +49,7 @@ ms.locfileid: "66083837"
 |Tipo de modelo|Método de selección de características|Comentarios|  
 |----------------|------------------------------|--------------|  
 |Agrupación en clústeres de secuencia|No se usa|No se invoca la selección de características; sin embargo, se puede controlar el comportamiento del algoritmo estableciendo el valor de los parámetros MINIMUM_SUPPORT y MINIMUM_PROBABILITY.|  
-|agrupación en clústeres|Puntuación interestingness|Aunque el algoritmo de clústeres puede utilizar algoritmos discretos o de datos discretos, la puntuación de cada atributo se calcula como una distancia y es continua; por consiguiente, se utiliza la puntuación de grado de interés.|  
+|Agrupación en clústeres|Puntuación interestingness|Aunque el algoritmo de clústeres puede utilizar algoritmos discretos o de datos discretos, la puntuación de cada atributo se calcula como una distancia y es continua; por consiguiente, se utiliza la puntuación de grado de interés.|  
   
  Para más información, consulte [Feature Selection](../../sql-server/install/feature-selection.md).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66083837"
 >  Si crea un modelo que usa el algoritmo de clústeres de secuencia de Microsoft pero no emplea una columna de secuencia, el modelo resultante no contendrá ninguna secuencia, sino que simplemente creará clústeres de casos en función de otros atributos incluidos en el modelo.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
- El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
+ El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
 |Columna|Tipos de contenido|  
 |------------|-------------------|  
@@ -145,6 +145,6 @@ ms.locfileid: "66083837"
 ## <a name="see-also"></a>Consulte también  
  [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
  [Ejemplos de consultas de modelos de agrupación en clústeres de secuencia](clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

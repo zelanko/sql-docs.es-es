@@ -15,19 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092288"
 ---
 # <a name="server-configuration---collation"></a>Configurar servidor - Intercalación
-  En la página Configuración del servidor - Intercalación del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede modificar los valores de intercalación que [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizan para la ordenación. Seleccione la opción que coincida con los valores de intercalación de distintas instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o de otro equipo.  
+  En la página Configuración del servidor - Intercalación del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede modificar los valores de intercalación que [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizan para la ordenación. Seleccione la opción que coincida con los valores de intercalación de distintas instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o de otro equipo.  
   
 ## <a name="options"></a>Opciones  
  Personalizar para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona dos grupos de intercalaciones: las de Windows y las de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede especificar unos valores de intercalación independientes para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] y para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o puede especificar la misma intercalación para ambos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona dos grupos de intercalaciones: las de Windows y las de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede especificar unos valores de intercalación independientes para el [!INCLUDE[ssDE](../../includes/ssde-md.md)] y para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o puede especificar la misma intercalación para ambos.  
   
  De forma predeterminada, se selecciona una intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las configuraciones regionales en idioma inglés. El valor de configuración regional del sistema de Windows del equipo determina la intercalación predeterminada de las versiones localizadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66092288"
   
  Para obtener más información, vea [Configuración de intercalación en el programa de instalación](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
-## <a name="best-practices"></a>Prácticas recomendadas  
+## <a name="best-practices"></a>Procedimientos recomendados  
  Para obtener más información acerca de una tabla de configuraciones regionales del sistema de Windows y las intercalaciones predeterminadas correspondientes utilizadas por el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Configuración de intercalación en el programa de instalación](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
  Si es posible, utilice una sola intercalación para su organización. De esta manera no tiene que especificar explícitamente la intercalación para cada base de datos, columna, expresión o identificador. Si tiene que trabajar con varias intercalaciones y configuraciones de páginas de códigos distintas, codifique sus consultas para que tengan en cuenta las reglas de prioridad de intercalación. Para obtener más información, vea el tema de los Libros en pantalla correspondiente a [Prioridad de intercalación &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql).  

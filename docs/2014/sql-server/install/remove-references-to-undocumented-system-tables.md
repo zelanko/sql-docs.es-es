@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093146"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Quitar referencias a tablas del sistema no documentadas
@@ -80,12 +80,12 @@ ms.locfileid: "66093146"
 ## <a name="corrective-action"></a>Acción correctora  
  Modifique las aplicaciones según la tabla siguiente.  
   
-|En lugar de|Uso|  
+|En lugar de|Use|  
 |----------------|---------|  
-|**sysfulltextnotify**|Propiedad **TableFulltextPendingChanges** de la función OBJECTPROPERTYEX.|  
-|**syslocks**|**Sys. dm_tran_locks** vista de administración dinámica, o sp_lock o la vista de compatibilidad **Sys. syslockinfo** .|  
-|**sysproperties**|vista de catálogo **Sys. extended_properties** o la función **fn_ListExtendedProperty**|  
-|**sysxlogins**|**Sys. server_principals** vista de catálogo o vista de compatibilidad **syslogins** .|  
+|**sysfulltextnotify**|La propiedad**TableFulltextPendingChanges** de la función OBJECTPROPERTYEX.|  
+|**syslocks**|La vista de administración dinámica**sys.dm_tran_locks** , sp_lock o la vista de compatibilidad **sys.syslockinfo** .|  
+|**sysproperties**|La vista de catálogo**sys.extended_properties** o la función **fn_listextendedproperty**|  
+|**sysxlogins**|La vista de catálogo**sys.server_principals** o la vista de compatibilidad **syslogins** .|  
 |todas las tablas **spt_**|Ningún reemplazo disponible|  
   
 ## <a name="see-also"></a>Consulte también  

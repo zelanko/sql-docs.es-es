@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083586"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de red neuronal (Analysis Services - Minería de datos)
@@ -191,7 +191,7 @@ ms.locfileid: "66083586"
 ## <a name="remarks"></a>Observaciones  
  El propósito de entrenar un modelo de red neuronal es determinar los pesos que están asociados a cada transición de una entrada a un punto medio y de un punto medio a un extremo. Por consiguiente, el nivel de entrada del modelo existe principalmente para almacenar los valores reales que se usaron para generarlo. El nivel oculto almacena los pesos que se calcularon y proporciona punteros a los atributos de entrada. El nivel de salida almacena los valores de predicción y también proporciona punteros a los puntos medios en el nivel oculto.  
   
-##  <a name="bkmk_NodeIDs"></a>Usar nombres de nodo e identificadores  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a>Usar nombres de nodo e identificadores  
  La denominación de los nodos de un modelo de red neuronal proporciona información adicional sobre el tipo de nodo, para facilitar relacionar el nivel oculto con el nivel de entrada y el nivel de salida con el nivel oculto. En la tabla siguiente se muestra la convención para los identificadores que están asignados a los nodos de cada nivel.  
   
 |Tipo de nodo|Convención para el identificador de nodo|  
@@ -210,17 +210,17 @@ ms.locfileid: "66083586"
   
  De igual forma, puede determinar qué niveles ocultos se relacionan con un atributo de salida viendo la tabla NODE_DISTRIBUTION en el nodo de salida (NODE_TYPE = 23). Cada fila de la tabla NODE_DISTRIBUTION contiene el identificador de un nodo del nivel oculto, junto con el coeficiente relacionado.  
   
-##  <a name="bkmk_NodeDistTable"></a>Interpretar la información de la tabla NODE_DISTRIBUTION  
+##  <a name="interpreting-the-information-in-the-node_distribution-table"></a><a name="bkmk_NodeDistTable"></a> Interpretar la información de la tabla NODE_DISTRIBUTION  
  La tabla NODE_DISTRIBUTION puede estar vacía en algunos nodos. Sin embargo, para los nodos de entrada, los nodos del nivel oculto y los nodos de salida, la tabla NODE_DISTRIBUTION almacena información importante e interesante sobre el modelo. Como ayuda para interpretar esta información, la tabla NODE_DISTRIBUTION contiene una columna VALUETYPE para cada fila que indica si el valor de la columna ATTRIBUTE_VALUE es Discreto (4), Discretizado (5) o Continuo (3).  
   
 ### <a name="input-nodes"></a>Nodos de entrada  
  El nivel de entrada contiene un nodo para cada valor del atributo que se utilizó en el modelo.  
   
- **Atributo discreto:** El nodo de entrada solo almacena el nombre del atributo y su valor en las columnas ATTRIBUTE_NAME y ATTRIBUTE_VALUE. Por ejemplo, si [Work Shift] es la columna, se crea un nodo independiente para cada valor de esa columna que se utilizó en el modelo, como AM y PM. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo discreto:** el nodo de entrada solo almacena el nombre del atributo y su valor en las columnas ATTRIBUTE_NAME y ATTRIBUTE_VALUE. Por ejemplo, si [Work Shift] es la columna, se crea un nodo independiente para cada valor de esa columna que se utilizó en el modelo, como AM y PM. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
- **Atributo numérico de datos discretos:** El nodo de entrada almacena el nombre del atributo y el valor, que puede ser un intervalo o un valor específico. Las expresiones, como '77.4 - 87.4' o ' < 64.0', representan todos los valores para el valor de [Time Per Issue]. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo numérico de datos discretos:** el nodo de entrada almacena el nombre del atributo y el valor, que puede ser un intervalo o un valor concreto. Las expresiones, como '77.4 - 87.4' o ' < 64.0', representan todos los valores para el valor de [Time Per Issue]. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
- **Atributo continuo:** El nodo de entrada almacena el valor medio del atributo. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo continuo:** el nodo de entrada almacena el valor medio del atributo. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
 ### <a name="hidden-layer-nodes"></a>Nodos del nivel oculto  
  El nivel oculto contiene un número variable de nodos. En cada uno, la tabla NODE_DISTRIBUTION contiene las asignaciones del nivel oculto a los nodos del nivel de entrada. La columna ATTRIBUTE_NAME contiene un identificador de nodo que corresponde a un nodo del nivel de entrada. La columna ATTRIBUTE_VALUE contiene el peso asociado a esa combinación de nodo de entrada y nodo de nivel oculto. La última fila de la tabla contiene un coeficiente que representa el peso de ese nodo oculto en el nivel oculto.  
@@ -230,11 +230,11 @@ ms.locfileid: "66083586"
   
  La tabla NODE_DISTRIBUTION tiene la información adicional siguiente, en función de si el tipo del atributo es:  
   
- **Atributo discreto:** Las dos filas finales de la tabla NODE_DISTRIBUTION contienen un coeficiente para el nodo en conjunto y el valor actual del atributo.  
+ **Atributo discreto:** las dos filas finales de la tabla NODE_DISTRIBUTION contienen un coeficiente para el nodo en conjunto y el valor actual del atributo.  
   
- **Atributo numérico de datos discretos:** Es idéntico a los atributos discretos, salvo que el valor del atributo es un intervalo de valores.  
+ **Un atributo numérico de datos discretos:** idéntico a los atributos discretos, solo que el valor del atributo es un intervalo de valores.  
   
- **Atributo continuo:** Las dos filas finales de la tabla NODE_DISTRIBUTION contienen la media del atributo, el coeficiente para el nodo como un todo y la varianza del coeficiente.  
+ **Atributo continuo:** las dos filas finales de la tabla NODE_DISTRIBUTION contienen la media del atributo, el coeficiente para el nodo en conjunto y la varianza del coeficiente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)   

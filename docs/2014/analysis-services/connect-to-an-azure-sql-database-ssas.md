@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9032249e880f11f27edd53e23d4ca54a47b920db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087149"
 ---
 # <a name="connect-to-an-azure-sql-database-ssas"></a>Conexión con una Azure SQL Database (SSAS)
@@ -25,8 +25,7 @@ ms.locfileid: "66087149"
 > [!NOTE]  
 >  Si va a conectarse a un conjunto de datos de Azure DataMarket, vea [Conectarse a un informe o a una fuente de distribución de datos &#40;SSAS&#41;](connect-to-a-report-or-data-feed-ssas.md).  
   
- 
-  [!INCLUDE[ssSDS](../includes/sssds-md.md)] es una base de datos relacional hospedada con la que se conecta usando la autenticación de SQL Server. Para obtener más información sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)], vea el sitio web [Base de datos SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
+ [!INCLUDE[ssSDS](../includes/sssds-md.md)] es una base de datos relacional hospedada con la que se conecta usando la autenticación de SQL Server. Para obtener más información sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)], vea el sitio web [Base de datos SQL](https://go.microsoft.com/fwlink/?LinkID=157856). Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
   
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar una base de datos en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer la base de datos seleccionada.  
@@ -53,9 +52,9 @@ ms.locfileid: "66087149"
  Seleccione una base de datos en la lista de bases de datos.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** . Para obtener más información, vea [Establecer propiedades avanzadas &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
+ Establezca las propiedades de conexión adicionales con el cuadro de diálogo **Establecer propiedades avanzadas** . Para obtener más información, vea [Establecer propiedades avanzadas &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
   

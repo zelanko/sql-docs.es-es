@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088906"
 ---
 # <a name="script-an-extended-event-session"></a>Crear un script para una sesión de eventos extendidos
@@ -38,7 +38,7 @@ ms.locfileid: "66088906"
   
 1.  En el Explorador de objetos, expanda el nodo **Administración** y, a continuación, expanda **Eventos extendidos**.  
   
-2.  Haga clic con el botón derecho en **Sesiones**y, luego, haga clic en **Nueva sesión**.  
+2.  Haga clic con el botón secundario en **Sesiones**y, a continuación, haga clic en **Nueva sesión**.  
   
 3.  En la interfaz de usuario **Nueva sesión** , cree la sesión de eventos y, a continuación, seleccione dónde desea crear un script para la sesión de eventos en la lista desplegable **Script** .  
   

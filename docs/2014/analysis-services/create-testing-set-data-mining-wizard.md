@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086790"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crear conjunto de pruebas (Asistente para minería de datos)
@@ -34,7 +34,7 @@ ms.locfileid: "66086790"
   
 -   No se pueden dividir los datos si está intentando predecir un valor que está almacenado en una tabla anidada.  
   
- **Para obtener más información:** [prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md), [tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Para más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md), [Crear una estructura de min6ería de datos relacional](data-mining/create-a-relational-mining-structure.md), [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opciones  
  **Porcentaje de datos para pruebas**  

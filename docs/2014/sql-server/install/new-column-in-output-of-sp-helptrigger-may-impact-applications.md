@@ -13,18 +13,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093739"
 ---
 # <a name="new-column-in-output-of-sp_helptrigger-may-impact-applications"></a>La nueva columna de la salida de sp_helptrigger podría afectar a las aplicaciones
   trigger_schemaias la última columna del conjunto de resultados devuelto por el procedimiento almacenado del sistema sp_helptrigger.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Para obtener más información acerca de los desencadenadores definidos en una tabla determinada, consulte la vista de catálogo sys.triggers.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Para obtener más información acerca de los desencadenadores definidos en una tabla determinada, consulte la vista de catálogo sys.triggers.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

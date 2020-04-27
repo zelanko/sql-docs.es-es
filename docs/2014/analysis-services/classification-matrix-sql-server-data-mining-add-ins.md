@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087969"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matriz de clasificación (Complementos de minería de datos de SQL Server)
@@ -36,9 +36,9 @@ ms.locfileid: "66087969"
   
 ||Bronce (real)|Oro (real)|Plata (real)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronze|**94,45%**|15,18%|1,70 %|  
-|Gold|2,72 %|**84,82%**|0.00%|  
-|Silver|1,84%|0.00%|**93,80%**|  
+|Bronce|**94,45%**|15,18%|1,70 %|  
+|Oro|2,72 %|**84,82%**|0.00%|  
+|Plata|1,84%|0.00%|**93,80%**|  
 |*Correcto*|*95,45%*|*84,82%*|*98,30%*|  
 |*Incorrectas*|*4,55%*|*15,18%*|*1,70%*|  
   

@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094795"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>Cómo ver un informe del Asesor de actualizaciones
+# <a name="how-to-view-an-upgrade-advisor-report"></a>Procedimientos: Ver un informe del Asesor de actualizaciones
   El Asesor de actualizaciones crea informes de cada componente que haya seleccionado para su análisis. En este tema se describe cómo ver un informe del Asesor de actualizaciones desde la página de inicio de este último.  
   
 > [!IMPORTANT]  

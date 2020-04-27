@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7c3764d18d26d739023bbbb744236273e5cfd1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086159"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Examinar un modelo usando el Visor de reglas de asociación de Microsoft
@@ -41,18 +41,18 @@ ms.locfileid: "66086159"
   
  Para consultar un tutorial que muestre cómo crear, explorar y usar un modelo de minería de datos de asociación, vea [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Pestañas del visor  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Pestañas del visor  
  Cuando se explora un modelo de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el modelo aparece en la pestaña **Visor de modelos de minería de datos** del visor del diseñador de minería de datos apropiado para el modelo. El Visor de reglas de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] incluye las siguientes pestañas:  
   
--   [Conjuntos](#BKMK_Itemsets)  
+-   [Conjuntos de elementos](#BKMK_Itemsets)  
   
--   [Reglamento](#BKMK_Rules)  
+-   [Reglas](#BKMK_Rules)  
   
 -   [Red de dependencias](#BKMK_Dependency)  
   
  Cada pestaña contiene la casilla **Mostrar nombre largo** , que puede utilizar para ocultar o mostrar la tabla desde la que se origina el conjunto de elementos en la regla o el conjunto de elementos.  
   
-###  <a name="BKMK_Itemsets"></a>Conjuntos  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>Conjuntos  
  La pestaña **Conjuntos de elementos** muestra una lista de los conjuntos de elementos que el modelo identifica como encontrados juntos con frecuencia. La pestaña muestra una cuadrícula con las columnas siguientes: **Soporte**, **Tamaño**y **Conjunto de elementos**. Para obtener más información sobre el soporte, vea [Microsoft Association Algorithm](microsoft-association-algorithm.md). La columna **Tamaño** muestra el número de elementos del conjunto de elementos. La columna **Conjunto de elementos** muestra el conjunto de elementos real que ha descubierto el modelo. Puede controlar el formato del conjunto de elementos mediante la lista **Mostrar** , en la que puede establecer las siguientes opciones:  
   
 -   **Mostrar el valor y el nombre del atributo**  
@@ -67,7 +67,7 @@ ms.locfileid: "66086159"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>Reglamento  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>Reglamento  
  La ficha **Reglas** muestra las reglas que ha descubierto el algoritmo de asociación. La ficha **Reglas** incluye una cuadrícula que contiene las siguientes columnas: **Probabilidad**, **Importancia**y **Regla**. La primera columna describe la probabilidad de que se produzca el resultado de una regla. La importancia está diseñada para medir la utilidad de una regla. Aunque la probabilidad de que una regla se cumpla puede ser alta, puede que la utilidad de la propia regla no sea muy importante. Ésta es la finalidad de la columna de importancia. Por ejemplo, si cada conjunto de elementos contiene un estado específico de un atributo, una regla que predice el estado no será muy significativa, aunque la probabilidad sea muy alta. Cuando mayor sea la importancia, más importante será la regla.  
   
  Puede usar la **probabilidad mínima** y la **importancia mínima** para filtrar las reglas, de forma similar al filtrado que puede realizar en la pestaña **conjuntos** . También puede usar la **regla de filtro** para filtrar una regla en función de los Estados de los atributos que contiene.  
@@ -76,7 +76,7 @@ ms.locfileid: "66086159"
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>Red de dependencias  
+###  <a name="dependency-net"></a><a name="BKMK_Dependency"></a>Red de dependencias  
  La pestaña **Red de dependencias** incluye un visor de redes de dependencias. Cada nodo del visor representa un elemento, por ejemplo, "state = WA". La flecha entre los nodos representa la asociación entre los elementos. La dirección de la flecha indica la asociación entre los elementos según las reglas que haya descubierto el algoritmo. Por ejemplo, si el visor contiene tres elementos, A, B y C, y C lo predice a y B, si selecciona el nodo C, dos flechas apuntan hacia el nodo C-A a C y B a C.  
   
  El control deslizante de la izquierda del visor actúa como un filtro vinculado a la probabilidad de las reglas. Si desplaza el control deslizante hacia abajo, sólo se verán los vínculos más similares.  

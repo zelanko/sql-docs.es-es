@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089199"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
@@ -30,14 +30,14 @@ ms.locfileid: "66089199"
  **Ocultar miembros avanzados**  
  Esta casilla no está disponible.  
   
- **Información de parámetros**  
+ **Información del parámetro**  
  Cuando se selecciona esta casilla, la sintaxis completa para la declaración o procedimiento actual aparece a la izquierda del punto de inserción del editor, con todos sus parámetros disponibles. El siguiente parámetro que puede asignar aparece en negrita.  
   
 ## <a name="settings"></a>Configuración  
  **Habilitar espacio virtual**  
  Cuando se selecciona esta casilla, los espacios se insertan al final de cada línea de código. Seleccione esta casilla para colocar comentarios en un punto coherente junto al código.  
   
- **Ajuste de palabra**  
+ **Ajuste de línea**  
  Cuando se selecciona esta casilla, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor se mostrará automáticamente en la siguiente línea. Cuando se selecciona esta casilla, se habilita la casilla **Mostrar glifos visuales para ajuste de línea** .  
   
  **Mostrar glifos visuales para ajuste de línea**  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085490"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Crear una consulta de predicción singleton desde una plantilla
@@ -65,7 +65,7 @@ AS [t]
   
      Si escribe *, se devuelve la columna de predicción, junto con cualquier columna para la que proporciona nuevos valores en el paso 6.  
   
-     Para el código de ejemplo mostrado al inicio de este tema, la fila **seleccionar lista** se ha definido en *.  
+     En el código de ejemplo que se muestra al principio de este tema, la fila **Select List** se estableció en *.  
   
 5.  En la fila **modelo de minería de datos** , escriba el nombre del modelo de minería de datos entre la lista de modelos de minería de datos que aparecen en el **Explorador de objetos**.  
   
@@ -77,7 +77,7 @@ AS [t]
   
 7.  En la fila **column** , escriba el nombre de la columna del modelo de minería de datos al que deberían estar asignados los nuevos datos.  
   
-     En el código de ejemplo que se muestra al principio de este tema **** , la fila de la `Number Children at Home`columna estaba establecida en.  
+     En el código de ejemplo que se muestra al principio de este tema **column** , la fila de la `Number Children at Home`columna estaba establecida en.  
   
     > [!NOTE]  
     >  Al usar el cuadro de diálogo **Especificar valores para parámetros de plantilla** , no tiene que agregar corchetes al nombre de columna. Los corchetes se agregarán automáticamente.  
@@ -93,6 +93,6 @@ AS [t]
 11. Haga clic en **Ejecutar**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear predicciones &#40;tutorial básico de minería de datos&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Crear predicciones &#40;Tutorial básico de minería de datos&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

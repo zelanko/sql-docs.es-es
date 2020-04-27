@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089277"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Editor de texto - Texto sin formato - Página General)
@@ -30,14 +30,14 @@ ms.locfileid: "66089277"
  **Ocultar miembros avanzados**  
  El editor de texto simple no admite esta característica.  
   
- **Información de parámetros**  
+ **Información del parámetro**  
  El editor de texto simple no admite esta característica.  
   
 ## <a name="settings"></a>Configuración  
  **Habilitar espacio virtual**  
  Inserta espacios al final de cada línea de texto. Seleccione esta casilla para colocar comentarios en un punto coherente junto al texto.  
   
- **Ajuste de palabra**  
+ **Ajuste de línea**  
  Muestra, en la siguiente línea, cualquier parte de una línea que se extienda horizontalmente fuera del área visible del editor. Cuando se selecciona esta casilla, se habilita la opción **Mostrar glifos visuales para ajuste de línea** .  
   
  **Mostrar glifos visuales para ajuste de línea**  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086216"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar un filtro a un modelo de minería de datos
@@ -46,7 +46,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Seleccione el modelo y haga clic con el botón secundario del mouse para abrir el menú contextual.  
   
-     O bien  
+     o bien  
   
      Seleccione el modelo. A continuación, en el menú **Modelo de minería de datos** , seleccione **Establecer filtro de modelos**.  
   
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. Haga clic en la siguiente fila de la cuadrícula.  
   
-     La condición de filtro creada se agrega automáticamente al cuadro de texto Expresión. Por ejemplo: `[Income] > '30000'`  
+     La condición de filtro creada se agrega automáticamente al cuadro de texto Expresión. Por ejemplo, `[Income] > '30000'`.  
   
 10. Haga clic en el cuadro de texto **Y/O** de la siguiente fila de la cuadrícula para agregar una condición.  
   

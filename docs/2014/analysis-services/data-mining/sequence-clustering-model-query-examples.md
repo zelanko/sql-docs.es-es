@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082922"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Ejemplos de consultas de modelos de clústeres de secuencia
@@ -38,12 +38,12 @@ ms.locfileid: "66082922"
   
  **Consultas de predicción**  
   
- [Predecir el estado o Estados siguientes](#bkmk_Query4)  
+ [Predecir el estado o estados siguientes](#bkmk_Query4)  
   
-##  <a name="bkmk_ContentQueries"></a>Buscar información sobre el modelo de agrupación en clústeres de secuencia  
+##  <a name="finding-information-about-the-sequence-clustering-model"></a><a name="bkmk_ContentQueries"></a>Buscar información sobre el modelo de agrupación en clústeres de secuencia  
  Para crear consultas significativas del contenido de un modelo de minería de datos, se debe entender la estructura del contenido del modelo, así como qué tipos de nodo almacenan información y de qué clase es esta. Para más información, vea [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md).  
   
-###  <a name="bkmk_Query1"></a>Consulta de ejemplo 1: usar el conjunto de filas de esquema de minería de datos para devolver los parámetros del modelo  
+###  <a name="sample-query-1-using-the-data-mining-schema-rowset-to-return-model-parameters"></a><a name="bkmk_Query1"></a>Consulta de ejemplo 1: usar el conjunto de filas de esquema de minería de datos para devolver los parámetros del modelo  
  Al consultar el conjunto de filas de esquema de minería de datos, se pueden encontrar varias clases de información sobre el modelo, por ejemplo los metadatos básicos, la fecha y la hora en que el modelo se creó y se procesó por última vez, el nombre de la estructura de minería de datos en que se basa el modelo y el nombre de la columna que se usa como atributo de predicción.  
   
  La consulta siguiente devuelve los parámetros que se usaron para generar y entrenar el modelo, `[Sequence Clustering]`. Puede crear este modelo en la lección 5 de [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md).  
@@ -66,7 +66,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  De forma predeterminada se utiliza el valor 10 porque al reducir el número de clústeres se facilita la exploración y comprensión de las agrupaciones de los datos. Sin embargo, cada modelo y conjunto de datos son diferentes. Puede que desee experimentar con números de clústeres diferentes para ver qué valor de parámetro produce el modelo más preciso.  
   
-###  <a name="bkmk_Query2"></a>Consulta de ejemplo 2: obtener una lista de secuencias para un estado  
+###  <a name="sample-query-2-getting-a-list-of-sequences-for-a-state"></a><a name="bkmk_Query2"></a>Consulta de ejemplo 2: obtener una lista de secuencias para un estado  
  El contenido del modelo de minería de datos almacena las secuencias que se encuentran en los datos de entrenamiento como un primer estado junto con una lista de todos los segundos estados relacionados. El primer estado se utiliza como etiqueta para la secuencia y los segundos estados relacionados se denominan transiciones.  
   
  Por ejemplo, la consulta siguiente devuelve la lista completa de los primeros estados del modelo, antes de que las secuencias se agrupen en clústeres.  Puede obtener esta lista devolviendo la lista de secuencias (NODE_TYPE = 13) que tienen el nodo raíz del modelo como elemento primario (PARENT_UNIQUE_NAME = 0). La palabra clave FLATTENED facilita la lectura de los resultados.  
@@ -142,7 +142,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  Por ejemplo, si hay cuatro clústeres, una secuencia determinada podría tener una posibilidad del 40% de pertenecer al clúster 1, una posibilidad del 30% de pertenecer al clúster 2, una posibilidad del 20% de pertenecer al grupo 3 y una posibilidad del 10% de pertenecer al clúster 4. Después de que el algoritmo determine el clúster al que es más probable que la transición pertenezca, compensa las probabilidades dentro del clúster con la probabilidad del clúster anterior.  
   
-###  <a name="bkmk_Query3"></a>Consulta de ejemplo 3: usar procedimientos almacenados del sistema  
+###  <a name="sample-query-3-using-system-stored-procedures"></a><a name="bkmk_Query3"></a>Consulta de ejemplo 3: usar procedimientos almacenados del sistema  
  En estos ejemplos de consultas se puede ver que la información almacenada en el modelo es compleja y que podría ser necesario crear varias consultas para obtener la información que precisa. Sin embargo, el visor de agrupaciones en clústeres de secuencia de Microsoft proporciona un conjunto eficaz de herramientas para examinar gráficamente la información contenida en un modelo de agrupación en clústeres de secuencia y también puede utilizar el visor para consultar y explorar en profundidad en el modelo.  
   
  En la mayoría de los casos, la información que se presenta en el visor de agrupaciones en clústeres de secuencia de Microsoft se crea utilizando los procedimientos almacenados de sistema de Analysis Services para consultar el modelo. Puede escribir las consultas de Extensiones de minería de datos (DMX) con el contenido del modelo para recuperar la misma información, pero los procedimientos almacenados del sistema de Analysis Services proporcionan un acceso directo conveniente para los modelos de prueba o exploración.  
@@ -155,11 +155,9 @@ WHERE NODE_UNIQUE_NAME = '1081365'
 #### <a name="cluster-profiles-and-sample-cases"></a>Perfiles de clústeres y casos de ejemplo  
  La pestaña Perfiles del clúster muestra una lista de los clústeres del modelo, el tamaño de cada clúster y un histograma que indica los estados incluidos en el clúster. Puede usar dos procedimientos almacenados del sistema en las consultas para recuperar información similar:  
   
--   
-  `GetClusterProfile` devuelve las características del clúster con toda la información que se encuentra en la tabla NODE_DISTRIBUTION para el clúster.  
+-   `GetClusterProfile` devuelve las características del clúster con toda la información que se encuentra en la tabla NODE_DISTRIBUTION para el clúster.  
   
--   
-  `GetNodeGraph` devuelve los nodos y bordes que se pueden utilizar para construir una representación gráfica matemática de los clústeres, que se corresponde con lo que se ve en la primera pestaña de la vista de agrupación en clústeres de secuencia. Los nodos son los clústeres y los bordes representan los pesos o intensidad.  
+-   `GetNodeGraph` devuelve los nodos y bordes que se pueden utilizar para construir una representación gráfica matemática de los clústeres, que se corresponde con lo que se ve en la primera pestaña de la vista de agrupación en clústeres de secuencia. Los nodos son los clústeres y los bordes representan los pesos o intensidad.  
   
  En el ejemplo siguiente se muestra cómo utilizar el procedimiento almacenado del sistema `GetClusterProfiles`para devolver todos los clústeres del modelo, con sus perfiles respectivos. Este procedimiento almacenado ejecuta una serie de instrucciones DMX que devuelven el conjunto completo de perfiles en el modelo. Sin embargo, para utilizar este procedimiento almacenado, debe conocer la dirección del modelo.  
   
@@ -216,7 +214,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 ## <a name="using-the-model-to-make-predictions"></a>Usar el modelo para realizar predicciones  
  Las consultas de predicción en un modelo de agrupación en clústeres de secuencia pueden utilizar muchas de las funciones de predicción que se utilizan con otros modelos de agrupación en clústeres. Además, puede usar la función de predicción especial, [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx), para realizar recomendaciones o predecir los estados siguientes.  
   
-###  <a name="bkmk_Query4"></a>Consulta de ejemplo 4: predecir el estado o Estados siguientes  
+###  <a name="sample-query-4-predict-next-state-or-states"></a><a name="bkmk_Query4"></a>Consulta de ejemplo 4: predecir el estado o Estados siguientes  
  Puede usar la función [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para predecir el siguiente estado más probable según un valor proporcionado. También puede predecir varios de los estados siguientes: por ejemplo, puede devolver una lista de los tres primeros productos que es probable que un cliente compre, para presentar una lista de recomendaciones.  
   
  La consulta de ejemplo siguiente es una consulta de predicción singleton que devuelve las cinco primeras predicciones, junto con su probabilidad. Dado que el modelo incluye una tabla anidada, `[v Assoc Seq Line Items]`, debe utilizarla como referencia al realizar las predicciones. Además, al proporcionar los valores como entrada, debe unir tanto la tabla de casos como las columnas de la tabla anidadas, como se muestra en las instrucciones SELECT anidadas.  
@@ -256,27 +254,27 @@ AS t
 |||  
 |-|-|  
 |función de predicción|Uso|  
-|[&#41;de &#40;DMX de clúster](/sql/dmx/cluster-dmx)|Devuelve el clúster que tiene la mayor probabilidad de contener el caso de entrada.|  
-|[&#41;ClusterDistance &#40;DMX](/sql/dmx/clusterdistance-dmx)|Devuelve la distancia del caso de entrada con relación al clúster especificado o, si no se ha especificado ninguno, la distancia del caso de entrada del clúster más probable.<br /><br /> Esta función se puede usar con cualquier tipo de modelo de agrupación en clústeres (EM, mediana-K, etc.), pero los resultados difieren según el algoritmo.|  
-|[&#41;ClusterProbability &#40;DMX](/sql/dmx/clusterprobability-dmx)|Devuelve la probabilidad de que el caso de entrada pertenezca al clúster especificado.|  
-|[&#41;IsInNode &#40;DMX](/sql/dmx/isinnode-dmx)|Indica si el nodo especificado contiene el caso actual.|  
-|[&#41;PredictAdjustedProbability &#40;DMX](/sql/dmx/predictadjustedprobability-dmx)|Devuelve la probabilidad ajustada de un estado especificado.|  
-|[&#41;PredictAssociation &#40;DMX](/sql/dmx/predictassociation-dmx)|Predice los miembros de asociaciones.|  
-|[&#41;PredictCaseLikelihood &#40;DMX](/sql/dmx/predictcaselikelihood-dmx)|Devuelve la probabilidad de que un caso de entrada se ajuste al modelo existente.|  
+|[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|Devuelve el clúster que tiene la mayor probabilidad de contener el caso de entrada.|  
+|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|Devuelve la distancia del caso de entrada con relación al clúster especificado o, si no se ha especificado ninguno, la distancia del caso de entrada del clúster más probable.<br /><br /> Esta función se puede usar con cualquier tipo de modelo de agrupación en clústeres (EM, mediana-K, etc.), pero los resultados difieren según el algoritmo.|  
+|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|Devuelve la probabilidad de que el caso de entrada pertenezca al clúster especificado.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Indica si el nodo especificado contiene el caso actual.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Devuelve la probabilidad ajustada de un estado especificado.|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Predice los miembros de asociaciones.|  
+|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|Devuelve la probabilidad de que un caso de entrada se ajuste al modelo existente.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Devuelve una tabla que representa un histograma para la predicción de una columna determinada.|  
-|[&#41;PredictNodeId &#40;DMX](/sql/dmx/predictnodeid-dmx)|Devuelve el Node_ID del nodo en que está clasificado el caso.|  
-|[&#41;PredictProbability &#40;DMX](/sql/dmx/predictprobability-dmx)|Devuelve la probabilidad de un estado especificado.|  
-|[&#41;PredictSequence &#40;DMX](/sql/dmx/predictsequence-dmx)|Predice valores de secuencia futuros para un conjunto de datos de secuencia especificado.|  
-|[&#41;PredictStdev &#40;DMX](/sql/dmx/predictstdev-dmx)|Devuelve la desviación estándar predicha para la columna especificada.|  
-|[&#41;PredictSupport &#40;DMX](/sql/dmx/predictsupport-dmx)|Devuelve el valor de soporte de un estado especificado.|  
-|[&#41;PredictVariance &#40;DMX](/sql/dmx/predictvariance-dmx)|Devuelve la varianza de una columna especificada.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Devuelve el Node_ID del nodo en que está clasificado el caso.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Devuelve la probabilidad de un estado especificado.|  
+|[PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)|Predice valores de secuencia futuros para un conjunto de datos de secuencia especificado.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Devuelve la desviación estándar predicha para la columna especificada.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Devuelve el valor de soporte de un estado especificado.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Devuelve la varianza de una columna especificada.|  
   
- Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Para obtener más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
+ Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Consulte también  
  [Consultas de minería de datos](data-mining-queries.md)   
  [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
- [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

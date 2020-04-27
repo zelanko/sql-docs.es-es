@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085349"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Crear una consulta de predicción con el Generador de consultas de predicción
@@ -31,7 +31,7 @@ ms.locfileid: "66085349"
   
 -   **Resultado**  
   
- El modo de **diseño** permite generar una consulta de predicción eligiendo los datos de entrada, asignando los datos al modelo y, a continuación, agregando funciones de predicción a las instrucciones que se crean mediante la cuadrícula. La cuadrícula de diseño contiene estos bloques de creación:  
+ El modo**Diseño** permite generar una consulta de predicción eligiendo los datos de entrada, asignando los datos al modelo y, después, agregando funciones de predicción en instrucciones que se generan utilizando la cuadrícula. La cuadrícula de diseño contiene estos bloques de creación:  
   
  **Origen**  
  Elija el origen de la nueva columna. Puede utilizar columnas del modelo de minería de datos, las tablas de entrada incluidas en la vista del origen de datos, una función de predicción o una expresión personalizada.  
@@ -42,10 +42,10 @@ ms.locfileid: "66085349"
  **Alias**  
  Determina cuál será el nombre de la columna en el conjunto de resultados.  
   
- **Feria**  
+ **Mostrar**  
  Determina si la selección de la columna **Origen** aparecerá en los resultados.  
   
- **Grupo**  
+ **Agrupamiento**  
  Funciona con la columna **Y/O** para agrupar expresiones mediante paréntesis. Por ejemplo, (expr1 o expr2) y expr3.  
   
  **Y/o**  
@@ -54,9 +54,9 @@ ms.locfileid: "66085349"
  **Criterios o argumento**  
  Especifica una condición o expresión de usuario que se aplica a la columna. Puede arrastrar columnas desde las tablas a la celda.  
   
- El modo de **consulta** proporciona un editor de texto que le proporciona acceso directo al lenguaje de extensiones de minería de datos (DMX), junto con una vista de los datos de entrada y las columnas del modelo. Cuando selecciona el modo **Consulta** , la cuadrícula que ha usado para definir la consulta se reemplaza por un editor de texto básico. Puede utilizar este editor para copiar y guardar las consultas que haya creado o para pegar las consultas DMX existentes y desde el Portapapeles y ejecutarlas después.  
+ El modo**Consulta** proporciona un editor de texto que le da acceso directo al lenguaje de extensiones de minería de datos (DMX), junto con una vista de los datos de entrada y las columnas del modelo. Cuando selecciona el modo **Consulta** , la cuadrícula que ha usado para definir la consulta se reemplaza por un editor de texto básico. Puede utilizar este editor para copiar y guardar las consultas que haya creado o para pegar las consultas DMX existentes y desde el Portapapeles y ejecutarlas después.  
   
- La vista **resultado** ejecuta la consulta actual y muestra los resultados en una cuadrícula. Si los datos subyacentes han cambiado y desea volver a ejecutar la consulta, haga clic en el botón Reproducir en la barra de estado.  
+ La vista**Resultado** ejecuta la consulta actual y muestra los resultados en una cuadrícula. Si los datos subyacentes han cambiado y desea volver a ejecutar la consulta, haga clic en el botón Reproducir en la barra de estado.  
   
  Puede diseñar una consulta de minería de datos mediante una combinación de las herramientas visuales y el editor de texto. Si escribe los cambios de la consulta en el editor de texto y vuelve a la vista **Diseño** , todos los cambios se perderán y la consulta revierte a la original que se creó en el Generador de consultas de predicción. Este tema le dirige en el uso del generador de consultas gráfico.  
   

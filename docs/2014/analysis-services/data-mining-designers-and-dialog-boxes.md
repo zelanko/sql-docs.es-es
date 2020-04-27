@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e2d8784c79ed4bbce63d8f9a18dce6b1b12f33f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086472"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>Cuadros de diálogo y diseñadores de minería de datos
@@ -28,11 +28,11 @@ ms.locfileid: "66086472"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Diseñador de modelos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-model-designer-analysis-services-data-mining.md)|Use las herramientas de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir una nueva estructura de minería de datos y los modelos de minería de datos asociados.|  
-|[Visores de modelos de minería de datos &#40;diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)|Utilice los visores que se proporcionan tanto en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para examinar el modelo completo y comprender mejor los patrones en los datos.|  
+|[Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)|Utilice los visores que se proporcionan tanto en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para examinar el modelo completo y comprender mejor los patrones en los datos.|  
 |[Diseñador de gráficos de precisión de minería de datos &#40;&#41;de minería de datos](mining-accuracy-chart-designer-data-mining.md)|Utilice las herramientas de gráficos de precisión, como gráficos de elevación, la matriz de clasificación y la validación cruzada, para evaluar los modelos de minería de datos y los conjuntos de datos que se usan para el entrenamiento. Todas las herramientas de precisión están disponibles en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .|  
-|[Predicción Generador de consultas &#40;de minería de datos&#41;](prediction-query-builder-data-mining.md)|Use el Generador de consultas de predicción que se proporciona en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para|  
+|[Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)|Use el Generador de consultas de predicción que se proporciona en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para|  
 |[Cuadro de diálogo Propiedades de la estructura de minería de datos &#40;Analysis Services-minería de datos&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)<br /><br /> [Cuadro de diálogo Propiedades del modelo de minería de datos &#40;Analysis Services-minería de datos&#41;](mining-model-properties-dialog-box-analysis-services-data-mining.md)|Cambiar las propiedades de la estructura o el modelo de minería de datos para afectar a la forma en que los datos se administran, agregar marcas de modelado o modificar los metadatos.|  
-|[Editor de consultas DMX &#40;Analysis Services:&#41;de minería de datos](dmx-query-editor-analysis-services-data-mining.md)|Use el Editor de consultas DMX para diseñar y ejecutar instrucciones escritas en el lenguaje de Extensiones de minería de datos (DMX).|  
+|[Editor de consultas DMX &#40;Analysis Services: minería de datos&#41;](dmx-query-editor-analysis-services-data-mining.md)|Use el Editor de consultas DMX para diseñar y ejecutar instrucciones escritas en el lenguaje de Extensiones de minería de datos (DMX).|  
   
 ## <a name="see-also"></a>Consulte también  
  [Herramientas de minería de datos](data-mining/data-mining-tools.md)   

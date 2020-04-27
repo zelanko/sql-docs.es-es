@@ -19,17 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086552"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversiones de moneda (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensional  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una combinación de características, guiadas por scripts MDX (Expresiones multidimensionales), para proporcionar compatibilidad con la conversión de divisa en cubos que admiten varias divisas.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa una combinación de características, guiadas por scripts MDX (Expresiones multidimensionales), para proporcionar compatibilidad con la conversión de divisa en cubos que admiten varias divisas.  
   
 ## <a name="currency-conversion-terminology"></a>Terminología de conversión de monedas  
  La siguiente terminología se utiliza en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para describir la funcionalidad de conversión de moneda.  
@@ -85,7 +84,7 @@ ms.locfileid: "66086552"
 ## <a name="defining-currency-conversions"></a>Definir las conversiones de moneda  
  Puede utilizar el Asistente de Business Intelligence para definir la funcionalidad de conversión de moneda en un cubo o puede definir manualmente las conversiones de moneda mediante scripts MDX.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Requisitos previos  
  Antes de que pueda definir una conversión de moneda en un cubo mediante el Asistente de Business Intelligence, debe definir, al menos, una dimensión de moneda, una dimensión temporal y un grupo de medida de tarifas. Desde estos objetos, el Asistente de Business Intelligence puede recuperar los datos y metadatos que se usan para construir la dimensión de moneda del informe y el script MDX necesarios para proporcionar la funcionalidad de conversión de moneda.  
   
 ### <a name="decisions"></a>Decisiones  

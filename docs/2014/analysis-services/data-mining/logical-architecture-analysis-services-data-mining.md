@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084267"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitectura lógica (Analysis Services - Minería de datos)
@@ -38,7 +38,7 @@ ms.locfileid: "66084267"
   
 
   
-##  <a name="bkmk_SourceData"></a>Datos de origen de minería de datos  
+##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a>Datos de origen de minería de datos  
  Los datos que se usan en la minería de datos no se almacenan en la solución de minería de datos; solo se almacenan los enlaces. Los datos podrían residir en una base de datos creada en una versión anterior de SQL Server, en un sistema CRM o incluso en un archivo plano. Cuando se entrena la estructura o el modelo mediante un proceso, se crea un resumen estadístico de los datos y se almacena en una memoria caché que puede conservarse para usarse en operaciones posteriores, o puede eliminarse después del procesamiento. Para obtener más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md).  
   
  Combine datos dispares dentro del objeto de vista del origen de datos (DSV) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , que proporciona una capa de abstracción sobre el origen de datos. También puede especificar combinaciones entre tablas o agregar tablas que tengan una relación de varios a uno para crear columnas de tabla anidadas. La definición de estos objetos, el origen de datos y la vista del origen de datos se almacenan en la solución con las extensiones de nombre de archivo *.ds y \*.dsv. Para obtener más información acerca de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creación y el uso de orígenes de datos y vistas del origen de datos, vea orígenes de datos [compatibles &#40;SSAS multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
@@ -47,13 +47,12 @@ ms.locfileid: "66084267"
   
 
   
-##  <a name="bkmk_Structures"></a>Estructuras de minería de datos  
+##  <a name="mining-structures"></a><a name="bkmk_Structures"></a>Estructuras de minería de datos  
  Una estructura de minería de datos es un contenedor de datos lógico que define el dominio de datos a partir del cual se generan los modelos de minería de datos. Una sola estructura de minería de datos puede admitir varios modelos de minería de datos.  
   
  Cuando tenga que usar los datos en la solución de minería de datos, Analysis Services leerá los datos del origen y genera una memoria caché de agregados y otra información. De forma predeterminada, esta memoria caché se mantiene para poder reutilizar datos de entrenamiento y admitir modelos adicionales. Si necesita eliminar la memoria caché, cambie la propiedad `CacheMode` en el objeto de estructura de minería de datos por el valor `ClearAfterProcessing`. Para obtener más información, vea [Clases de minería de datos de AMO](https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes).  
   
- 
-  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] también proporciona la capacidad de separar los datos en conjuntos de datos de prueba y de entrenamiento, para que pueda probar sus modelos de minería de datos en un conjunto de datos representativo y seleccionado de forma aleatoria. Los datos no se almacenan en realidad por separado; en su lugar, los datos de caso de la memoria caché de la estructura se marcan con una propiedad que indica si ese caso se utiliza para el entrenamiento o para las pruebas. Si la memoria caché se elimina, esta información no se puede recuperar.  
+ [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] también proporciona la capacidad de separar los datos en conjuntos de datos de prueba y de entrenamiento, para que pueda probar sus modelos de minería de datos en un conjunto de datos representativo y seleccionado de forma aleatoria. Los datos no se almacenan en realidad por separado; en su lugar, los datos de caso de la memoria caché de la estructura se marcan con una propiedad que indica si ese caso se utiliza para el entrenamiento o para las pruebas. Si la memoria caché se elimina, esta información no se puede recuperar.  
   
  Para obtener más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md).  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66084267"
   
  
   
-##  <a name="bkmk_Models"></a>Modelos de minería de datos  
+##  <a name="mining-models"></a><a name="bkmk_Models"></a>Modelos de minería de datos  
  Antes del procesamiento un modelo de minería de datos solo es una combinación de propiedades de metadatos. Estas propiedades especifican una estructura de minería de datos, especifican un algoritmo de minería de datos y definen una colección de parámetros y configuraciones de filtro que afectan al modo en que se procesan los datos. Para obtener más información, vea [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md).  
   
  Al procesar el modelo, los datos de entrenamiento que se almacenan en la memoria caché de la estructura de minería de datos se utilizan para generar los patrones, según las propiedades estadísticas de los datos y la heurística definida por el algoritmo y sus parámetros. Esto se conoce como *entrenar* el modelo.  
@@ -72,7 +71,7 @@ ms.locfileid: "66084267"
   
 
   
-##  <a name="bkmk_CustomObjects"></a>Objetos de minería de datos personalizados  
+##  <a name="custom-data-mining-objects"></a><a name="bkmk_CustomObjects"></a>Objetos de minería de datos personalizados  
  Otros objetos que se usan en el contexto de un proyecto de minería de datos, como los gráficos de precisión o las consultas de predicción, no se conservan en la solución, pero se pueden incluir en un script mediante ASSL o se pueden generar con AMO.  
   
  Además, puede ampliar los servicios y las características disponibles en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agregando estos objetos personalizados:  
@@ -83,20 +82,18 @@ ms.locfileid: "66084267"
  Para obtener más información, vea [Administración de ensamblados de modelos multidimensionales](../multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  **Procedimientos almacenados personalizados**  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] La minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] La minería de datos admite el uso de procedimientos almacenados para trabajar con objetos de minería de datos. Puede crear sus propios procedimientos almacenados para ampliar la funcionalidad y trabajar más fácilmente con los datos devueltos por las consultas de predicción y las consultas de contenido.  
   
  [Definir procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
  Los procedimientos almacenados siguientes pueden usarse al realizar la validación cruzada.  
   
- [Procedimientos almacenados de minería de datos &#40;Analysis Services:&#41;de minería de datos](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimientos almacenados de minería de datos &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
  Además, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiene muchos procedimientos almacenados del sistema que se usan internamente para la minería de datos. Aunque los procedimientos almacenados del sistema son para uso interno, es posible le resulten útiles. Microsoft se reserva el derecho de cambiar estos procedimientos almacenados según sea necesario; por consiguiente, para utilizarlos en producción, se recomienda crear consultas con DMX, AMO o XMLA.  
   
- **Algoritmos de complementos personalizados**  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un mecanismo para crear sus propios algoritmos y, después, agregar los algoritmos como un nuevo servicio de minería de datos en la instancia de servidor.  
+ **Crear algoritmos de complemento**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona un mecanismo para crear sus propios algoritmos y, después, agregar los algoritmos como un nuevo servicio de minería de datos en la instancia de servidor.  
   
  Analysis Services utiliza las interfaces COM para comunicarse con los algoritmos de complemento. Para obtener más información sobre cómo implementar nuevos algoritmos, vea [Plugin Algorithms](plugin-algorithms.md).  
   
@@ -106,6 +103,6 @@ ms.locfileid: "66084267"
   
 ## <a name="see-also"></a>Consulte también  
  [Procesamiento de objetos del modelo multidimensional](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Referencia de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

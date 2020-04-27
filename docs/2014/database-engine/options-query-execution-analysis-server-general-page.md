@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9d299e8ffc5faceb86bcccd6bd508f09ef3c80b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089421"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Opciones (ejecución de consultas-Analysis Server-página general)
-  Use esta página para especificar las opciones de ejecución de consultas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para mostrar esta configuración, en el menú **Herramientas** , haga clic en **Opciones**. En **Ejecución de la consulta** , expanda la carpeta **Analysis Server** y haga clic en **General**.  
+  Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar esta configuración, en el menú **Herramientas** , haga clic en **Opciones**. En **Ejecución de la consulta** , expanda la carpeta **Analysis Server** y haga clic en **General**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Tiempo de espera de ejecución**  
  Establece el valor predeterminado en el cuadro de diálogo **Nueva conexión** . Este cuadro indica el número de segundos de espera antes de cancelar la consulta. Un valor de 0 indica una espera infinita o ningún tiempo de espera. Este valor es 0 en una nueva instalación.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

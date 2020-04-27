@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083830"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo de clústeres de secuencia de Microsoft
@@ -48,11 +48,11 @@ ms.locfileid: "66083830"
   
  Los requisitos de un modelo de agrupación en clústeres de secuencia son los siguientes:  
   
--   **Una columna de clave única** Un modelo de agrupación en clústeres de secuencia requiere una clave que identifique los registros.  
+-   **Una columna de clave única** Un modelo de agrupación en clústeres de secuencia necesita una clave que identifique los registros.  
   
--   **Una columna de secuencia** En el caso de los datos de secuencia, el modelo debe tener una tabla anidada que contenga una columna de identificador de secuencia. El identificador de secuencia puede ser cualquier tipo de datos ordenable. Por ejemplo, puede usar el identificador de una página web, un número entero o una cadena de texto, con tal de que la columna identifique los eventos en una secuencia. Solo se admite un identificador de secuencia por cada secuencia y un tipo de secuencia en cada modelo.  
+-   **Una columna de secuencia** : para los datos de la secuencia, el modelo debe tener una tabla anidada que contenga una columna de identificador de secuencia. El identificador de secuencia puede ser cualquier tipo de datos ordenable. Por ejemplo, puede usar el identificador de una página web, un número entero o una cadena de texto, con tal de que la columna identifique los eventos en una secuencia. Solo se admite un identificador de secuencia por cada secuencia y un tipo de secuencia en cada modelo.  
   
--   **Atributos no Sequence opcionales** El algoritmo admite la adición de otros atributos que no están relacionados con la secuenciación. Estos atributos pueden incluir las columnas anidadas.  
+-   **Atributos opcionales no relacionados con la secuencia** : el algoritmo admite la incorporación de otros atributos que no tengan que ver con las secuencias. Estos atributos pueden incluir las columnas anidadas.  
   
  Como muestra, en el ejemplo citado anteriormente del sitio web de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] , un modelo de agrupación en clústeres de secuencia podría incluir información de los pedidos como tabla de casos, datos demográficos sobre el cliente concreto de cada pedido como atributos no relacionados con la secuencia y una tabla anidada que contenga la secuencia que siguió el cliente al examinar el sitio o colocar los artículos en el carro de la compra como información de la secuencia.  
   

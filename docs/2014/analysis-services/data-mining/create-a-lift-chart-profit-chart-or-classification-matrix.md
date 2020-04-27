@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085404"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Crear un gráfico de mejora respecto al modelo predictivo, un gráfico de beneficios o una matriz de clasificación
@@ -74,7 +74,7 @@ ms.locfileid: "66085404"
          Si está utilizando un conjunto de datos externos, opcionalmente puede filtrar el conjunto de datos de entrada. Para obtener más información, vea [Aplicar filtros a los datos de prueba del modelo](apply-filters-to-model-testing-data.md).  
   
 > [!NOTE]  
->  No se puede crear un filtro en los casos de prueba del modelo ni en los casos de prueba de la estructura de minería de datos en la pestaña **selección de entrada** . Para crear un filtro en el modelo de minería de datos, modifique la propiedad Filter del modelo. Para obtener más información, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
+>  No se puede crear un filtro en los casos de prueba del modelo ni en los casos de prueba de la estructura de minería de datos en la pestaña **selección de entrada** . Para crear un filtro en el modelo de minería de datos, modifique la propiedad Filter del modelo. Para más información, vea [Aplicar un filtro a un modelo de minería de datos](apply-a-filter-to-a-mining-model.md).  
   
 ### <a name="configure-chart-settings-and-generate-the-chart"></a>Configurar los valores del gráfico y generarlo  
   
@@ -112,6 +112,6 @@ ms.locfileid: "66085404"
   
 ## <a name="see-also"></a>Consulte también  
  [Gráfico de elevación &#40;Analysis Services:&#41;de minería de datos](lift-chart-analysis-services-data-mining.md)   
- [Matriz de clasificación &#40;Analysis Services:&#41;de minería de datos](classification-matrix-analysis-services-data-mining.md)  
+ [Matriz de clasificación &#40;Analysis Services - Minería de datos&#41;](classification-matrix-analysis-services-data-mining.md)  
   
   

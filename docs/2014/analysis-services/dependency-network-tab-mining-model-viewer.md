@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081940"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Pestaña Red de dependencias (Visor de modelos de minería de datos)
@@ -37,7 +37,7 @@ ms.locfileid: "66081940"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos que desea ver de los modelos de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en un visor personalizado. El algoritmo que se usa para crear el modelo determina el tipo de visor personalizado que se utiliza para cada modelo.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Para cada modelo, puede utilizar el visor personalizado que se proporciona para cada modelo de minería de datos o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles. El Visor de árbol de contenido genérico de Microsoft se puede utilizar con todos los modelos, y representa el contenido del modelo en una tabla HTML.  
   
  **Acercar**  

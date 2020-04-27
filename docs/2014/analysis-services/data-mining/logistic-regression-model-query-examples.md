@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084233"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Ejemplos de consultas de modelos de regresión logística
@@ -29,15 +29,15 @@ ms.locfileid: "66084233"
   
  [Recuperar parámetros del modelo utilizando el conjunto de filas de esquema de minería de datos](#bkmk_Query1)  
   
- [Buscar detalles adicionales sobre el modelo mediante DMX](#bkmk_Query2)  
+ [Buscar información adicional sobre el modelo utilizando DMX](#bkmk_Query2)  
   
  **Consultas de predicción**  
   
- [Realización de predicciones para un valor continuo](#bkmk_Query3)  
+ [Realizar predicciones para un valor continuo](#bkmk_Query3)  
   
- [Realización de predicciones para un valor discreto](#bkmk_Query4)  
+ [Realizar predicciones para un valor discreto](#bkmk_Query4)  
   
-##  <a name="bkmk_top"></a>Obtención de información sobre el modelo de regresión logística  
+##  <a name="getting-information-about-the-logistic-regression-model"></a><a name="bkmk_top"></a>Obtención de información sobre el modelo de regresión logística  
  Los modelos de regresión logística se crean utilizando el algoritmo de red neuronal de Microsoft con un conjunto especial de parámetros; por consiguiente, contienen parte de la misma información que los modelos de redes neuronales, pero son menos complejos. Para entender la estructura del contenido del modelo, así como qué tipos de nodo almacenan qué clase de información, vea [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md).  
   
  Para continuar con los escenarios de la consulta, puede crear un modelo de regresión logística como se describe en la siguiente sección del tutorial intermedio de minería de datos: [Lección 5: Generar modelos de red neuronal y de regresión logística &#40;Tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
@@ -64,7 +64,7 @@ Gender,
 USING Microsoft_Logistic_Regression  
 ```  
   
-###  <a name="bkmk_Query1"></a>Consulta de ejemplo 1: recuperar parámetros del modelo utilizando el conjunto de filas de esquema de minería de datos  
+###  <a name="sample-query-1-retrieving-model-parameters-by-using-the-data-mining-schema-rowset"></a><a name="bkmk_Query1"></a>Consulta de ejemplo 1: recuperar parámetros del modelo utilizando el conjunto de filas de esquema de minería de datos  
  Al consultar el conjunto de filas de esquema de minería de datos, se pueden encontrar metadatos sobre el modelo, como cuándo se creó, cuándo se procesó por última vez, el nombre de la estructura de minería de datos en que se basa el modelo, y el nombre de la columna que se usa como atributo de predicción. El ejemplo siguiente devuelve los parámetros que se utilizaron cuando se creó por primera vez el modelo, junto con el nombre y el tipo del modelo, y la fecha en que se creó.  
   
 ```  
@@ -79,7 +79,7 @@ WHERE MODEL_NAME = 'Call Center_LR'
 |-----------------|-------------------|-------------------|------------------------|  
 |Call Center_LR|Microsoft_Logistic_Regression|04/07/2009 20:38:33|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, SAMPLE_SIZE=10000|  
   
-###  <a name="bkmk_Query2"></a>Consulta de ejemplo 2: Buscar detalles adicionales sobre el modelo mediante DMX  
+###  <a name="sample-query-2-finding-additional-detail-about-the-model-by-using-dmx"></a><a name="bkmk_Query2"></a>Consulta de ejemplo 2: Buscar detalles adicionales sobre el modelo mediante DMX  
  La consulta siguiente devuelve información básica sobre el modelo de regresión logística. Un modelo de regresión logística es similar a un modelo de red neuronal en muchos sentidos, por ejemplo en la presencia de un nodo estadístico marginal (NODE_TYPE = 24) que describe los valores que se usan como entradas. En esta consulta de ejemplo se utiliza el modelo de distribución de correo directo y se obtienen los valores de todas las entradas recuperándolos de la tabla anidada NODE_DISTRIBUTION.  
   
 ```  
@@ -89,7 +89,7 @@ FROM [TM_Logistic Regression].CONTENT
   
  Resultados parciales:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Age|Missing|0|0|0|1|  
 |Age|45.43491192|17484|1|126.9544114|3|  
@@ -107,7 +107,7 @@ FROM [TM_Logistic Regression].CONTENT
 ## <a name="prediction-queries-on-a-logistic-regression-model"></a>Consultas de predicción en un modelo de regresión logística  
  Puede usar la función [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx) con cada tipo de modelo de minería de datos para proporcionar nuevos datos al modelo y realizar predicciones basadas en los nuevos valores. También puede utilizar funciones para devolver información adicional sobre la predicción, como la probabilidad de que una predicción sea correcta. En esta sección se proporcionan algunos ejemplos de consultas de predicción en un modelo de regresión logística.  
   
-###  <a name="bkmk_Query3"></a>Consulta de ejemplo 3: realizar predicciones para un valor continuo  
+###  <a name="sample-query-3-making-predictions-for-a-continuous-value"></a><a name="bkmk_Query3"></a>Consulta de ejemplo 3: realizar predicciones para un valor continuo  
  Dado que la regresión logística admite el uso de atributos continuos para entrada y predicción, resulta fácil crear modelos que pongan en correlación varios factores de los datos. Puede utilizar las consultas de predicción para explorar la relación entre estos factores.  
   
  La siguiente consulta de ejemplo se basa en el modelo de centro de llamadas del tutorial intermedio. En ella se crea una consulta singleton que predice el nivel del servicio del turno de la mañana del viernes. La función [PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx) devuelve una tabla anidada que proporciona las estadísticas pertinentes para conocer la validez del valor predicho.  
@@ -136,7 +136,7 @@ NATURAL PREDICTION JOIN
   
  Para más información sobre los valores de probabilidad, soporte y desviación estándar de la tabla anidada NODE_DISTRIBUTION, vea [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md).  
   
-###  <a name="bkmk_Query4"></a>Consulta de ejemplo 4: realizar predicciones para un valor discreto  
+###  <a name="sample-query-4-making-predictions-for-a-discrete-value"></a><a name="bkmk_Query4"></a>Consulta de ejemplo 4: realizar predicciones para un valor discreto  
  La regresión logística se suele usar en los escenarios en los que se desea analizar los factores que contribuyen a un resultado binario. Aunque el modelo usado en el tutorial predice un valor continuo, **ServiceGrade**, en la vida real es posible que quiera configurar el modelo para predecir si el nivel de servicio cumplió un valor esperado de datos discretos. También podría generar las predicciones mediante un valor continuo pero, posteriormente, agrupar los resultados en **Bueno**, **Aceptable**o **Malo**.  
   
  En el siguiente ejemplo se muestra cómo cambiar la manera en que se agrupa el atributo predecible. Para hacerlo, debe crear una copia de la estructura de minería de datos y, a continuación, cambiar el método de discretization de la columna de destino para que los valores sean agrupados en lugar de continuos.  
@@ -194,15 +194,15 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |función de predicción|Uso|  
-|[&#41;IsDescendant &#40;DMX](/sql/dmx/isdescendant-dmx)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
-|[&#41;PredictAdjustedProbability &#40;DMX](/sql/dmx/predictadjustedprobability-dmx)|Devuelve la probabilidad ajustada de un estado especificado.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Devuelve la probabilidad ajustada de un estado especificado.|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Devuelve un valor o un conjunto de valores predichos para una columna especificada.|  
-|[&#41;PredictProbability &#40;DMX](/sql/dmx/predictprobability-dmx)|Devuelve la probabilidad de un estado especificado.|  
-|[&#41;PredictStdev &#40;DMX](/sql/dmx/predictstdev-dmx)|Devuelve la desviación estándar del valor predicho.|  
-|[&#41;PredictSupport &#40;DMX](/sql/dmx/predictsupport-dmx)|Devuelve el valor de soporte de un estado especificado.|  
-|[&#41;PredictVariance &#40;DMX](/sql/dmx/predictvariance-dmx)|Devuelve la varianza de una columna especificada.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Devuelve la probabilidad de un estado especificado.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Devuelve la desviación estándar del valor predicho.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Devuelve el valor de soporte de un estado especificado.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Devuelve la varianza de una columna especificada.|  
   
- Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Para obtener más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
+ Para consultar una lista de las funciones comunes a todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)], vea [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Para más información sobre la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 > [!NOTE]  
 >  En los modelos de regresión logística y red neuronal, la función [PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx) devuelve un valor único que representa el tamaño del conjunto de entrenamiento para todo el modelo.  
@@ -212,6 +212,6 @@ NATURAL PREDICTION JOIN
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;&#41;de minería de datos Analysis Services](mining-model-content-for-logistic-regression-models.md)   
- [Lección 5: generar modelos de red neuronal y de regresión logística &#40;tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lección 5: Generar modelos de red neuronal y de regresión logística &#40;Tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

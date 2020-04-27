@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089539"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Propiedades de la tabla de seguimiento (pestaña Selección de eventos)
@@ -27,7 +27,7 @@ ms.locfileid: "66089539"
  Para ver esta ventana, use [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para abrir una tabla de seguimiento. A continuación, en el menú **archivo** , haga clic en **propiedades**y, a continuación, haga clic en la pestaña **selección de eventos** .  
   
 ## <a name="options"></a>Opciones  
- Columna **eventos**  
+ Columna**Eventos**  
  Muestra los eventos de los que se hace el seguimiento y que están organizados por categoría de eventos. Para seleccionar un evento, debe activarse la casilla o la columna de datos de dicho evento. Si la casilla del evento está activada, se seleccionan todas las columnas de datos disponibles para dicho evento. Si la columna de datos de un evento está activada, se activa el evento, y cualquier otra columna requerida también se activa automáticamente. Si se está viendo un archivo o una tabla de seguimiento, al desactivar las casillas de las columnas de datos o eventos, se reduce la cantidad de datos visibles en la ventana de seguimiento para simplificar el análisis. Se pueden cambiar los filtros de las columnas para reducir la cantidad de datos visibles en la ventana de seguimiento. Para obtener más información sobre las clases de eventos, vea [Referencia de las clase de eventos de SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Otras columnas de datos  
@@ -48,8 +48,8 @@ ms.locfileid: "66089539"
  Después de seleccionar la columna **Eventos** y la columna de datos de las que se va a realizar un seguimiento, haga clic en **Organizar columnas** para que la cuadrícula reordene la columna en la ventana de resultados del seguimiento.  
   
 ## <a name="see-also"></a>Consulte también  
- [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Abra una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [SQL Server Profiler plantillas y permisos](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084824"
 ---
 # <a name="data-mining-tools"></a>Herramientas de minería de datos
@@ -29,12 +29,11 @@ ms.locfileid: "66084824"
   
      En el asistente, elija los datos que desee utilizar y, a continuación, aplique técnicas de minería de datos específicas, como agrupación en clústeres, redes neurales o modelado de series temporales.  
   
--   Los **visores de modelos** se proporcionan tanto [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]como en, para explorar los modelos de minería de datos una vez creados.  Puede examinar los modelos mediante visores adaptados a cada algoritmo o analizar con mayor profundidad utilizando el visor de contenido del modelo.  
+-   **y** disponen de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] visores de modelos [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]para explorar los modelos de minería de datos una vez creados.  Puede examinar los modelos mediante visores adaptados a cada algoritmo o analizar con mayor profundidad utilizando el visor de contenido del modelo.  
   
 -   El **Generador de consultas de predicción** se proporciona en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para ayudarle a crear consultas de predicción. También puede probar la exactitud de los modelos respecto a un conjunto de datos de exclusión o datos externos, o utilizar validación cruzada para evaluar la calidad del conjunto de datos.  
   
--   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es la interfaz en la que administra las soluciones de minería de datos implementadas en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede volver a procesar las estructuras y modelos para actualizar los datos que contienen.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es la interfaz en la que administra las soluciones de minería de datos implementadas en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede volver a procesar las estructuras y modelos para actualizar los datos que contienen.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene herramientas que puede utilizar para limpiar datos, automatizar tareas como la creación de predicciones y la actualización de modelos, y para crear soluciones de minería de texto.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66084824"
 ## <a name="data-mining-wizard"></a>Asistente para minería de datos  
  Utilice el Asistente para minería de datos para empezar a crear soluciones de minería de datos. El asistente es rápido y sencillo, y le guía en el proceso de creación de una estructura de minería de datos y un modelo inicial de minería de datos relacionado. Asimismo, incluye las tareas necesarias para seleccionar un tipo de algoritmo y un origen de datos, y para definir los datos del caso usados para el análisis.  
   
- **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services-Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md)  
+ **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md).  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  Después de crear una estructura y modelo de minería de datos mediante el Asistente para minería de datos, puede utilizar el Diseñador de minería de datos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para trabajar con las estructuras y modelos de minería de datos existentes.  
@@ -62,13 +61,12 @@ ms.locfileid: "66084824"
   
 -   Crear predicciones y consultas de contenido en los modelos de minería de datos existentes. Compilar consultas únicas, o configurar consultas para generar predicciones para tablas de datos externos completas.  
   
- **Para obtener más información: diseñador de minería de** [datos](data-mining-designer.md)  
+ **Para obtener más información:** [Diseñador de minería de datos](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Después de crear e implementar los modelos de minería de datos en un servidor, puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para administrar la base de datos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda los objetos de minería de datos. También puede seguir realizando tareas que utilizan el modelo, como explorar modelos, procesar nuevos datos y crear predicciones.  
   
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] también contiene editores de consultas que puede usar para diseñar y ejecutar consultas de extensiones de minería de datos (DMX) o trabajar con objetos de minería de datos con XMLA.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] también contiene editores de consultas que puede usar para diseñar y ejecutar consultas de extensiones de minería de datos (DMX) o trabajar con objetos de minería de datos con XMLA.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Transformaciones y tareas de minería de datos en Integration Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona muchos componentes que admiten la minería de datos.  
@@ -89,7 +87,7 @@ ms.locfileid: "66084824"
   
 -   Usar la regresión logística para segmentar los clientes de entrada por riesgo.  
   
- **Para obtener más información:** [proyectos relacionados para soluciones de minería de datos](data-mining-solutions.md)  
+ **Para más información:** [Proyectos relacionados para soluciones de minería de datos](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   

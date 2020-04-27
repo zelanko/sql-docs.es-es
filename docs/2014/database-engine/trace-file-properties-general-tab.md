@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089609"
 ---
 # <a name="trace-file-properties-general-tab"></a>Propiedades del archivo de seguimiento (pestaña General)
@@ -36,7 +36,7 @@ ms.locfileid: "66089609"
  **Tipo de proveedor de seguimiento**  
  Muestra el tipo de proveedor que ha proporcionado el seguimiento.  
   
- **Versión**  
+ **version**  
  Muestra la versión del proveedor que ha proporcionado el seguimiento.  
   
  **Tamaño de archivo (KB)**  
@@ -45,11 +45,11 @@ ms.locfileid: "66089609"
  **Creado**  
  Fecha y hora en que se creó el archivo de seguimiento.  
   
- **Modified**  
+ **Modificado**  
  Fecha y hora en que se modificó el archivo de seguimiento.  
   
 ## <a name="see-also"></a>Consulte también  
- [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [Abra un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
  [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

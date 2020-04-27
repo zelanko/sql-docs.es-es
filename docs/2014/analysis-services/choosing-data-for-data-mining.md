@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088031"
 ---
 # <a name="choosing-data-for-data-mining"></a>Elegir datos para minería de datos
@@ -38,7 +38,7 @@ ms.locfileid: "66088031"
   
  [Otros requisitos de datos](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a>Elegir datos  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>Elegir datos  
  La selección de los datos empleados para el análisis es quizás la parte importante del proceso de minería de datos, más incluso que la selección de un algoritmo. El motivo es que la minería de datos no suele estar controlada por hipótesis, sino por datos. En lugar de seleccionar y probar variables de antemano, como podría hacer con el modelo estadístico tradicional, la minería de datos puede tomar datos y detectar nuevas correlaciones (o no detectar ningún patrón). La calidad y la cantidad de los datos pueden tener un efecto significativo sobre los resultados.  
   
  En general, tenga en cuenta las reglas siguientes:  
@@ -81,11 +81,11 @@ ms.locfileid: "66088031"
   
  Es posible que también decida tratar números como discretos cuando los valores están claramente separados y no existe ninguna posibilidad de que se den valores fraccionarios, o cuando los valores fraccionarios no son útiles.  
   
- Los datos numéricos *continuos* pueden contener un número infinito de valores fraccionarios. Una columna de ingresos es un ejemplo de una columna de atributos continua. Si especifica que una columna es numérica, cada valor de esa columna debe ser un número, excepto los valores NULL. Tenga en cuenta que, en Excel, se pueden considerar las marcas de tiempo y cualquier otra representación de fecha y hora que se pueda convertir a un tipo de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Los datos numéricos*continuos* pueden incluir un número de valores fraccionales infinito. Una columna de ingresos es un ejemplo de una columna de atributos continua. Si especifica que una columna es numérica, cada valor de esa columna debe ser un número, excepto los valores NULL. Tenga en cuenta que, en Excel, se pueden considerar las marcas de tiempo y cualquier otra representación de fecha y hora que se pueda convertir a un tipo de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Convertir números en variables de categorías**  
   
- Solo porque una columna contiene números no significa que debe tratarlos como números continuos. La *discretización* proporciona muchas ventajas para el análisis. Una es que el problema de espacio se reduce. Other es que a veces los números no son la forma adecuada de expresar un resultado.  
+ Solo porque una columna contiene números no significa que debe tratarlos como números continuos. La*discretización* proporciona muchas ventajas para el análisis. Una es que el problema de espacio se reduce. Other es que a veces los números no son la forma adecuada de expresar un resultado.  
   
  Por ejemplo, el número de hijos por familia se puede tratar como un valor continuo o discreto. Como no es posible tener 2,5 hijos en el hogar, y los hogares con 3 o más hijos pueden comportarse de forma muy diferente a los hogares con 2 hijos, podría obtener mejores resultados si tratara este número como una categoría. Sin embargo, si va a crear un modelo de regresión o necesita un promedio (como 1,357 hijos por hogar), usaría un tipo de datos de número continuo.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66088031"
   
 -   Aproximando valores a una media central o a un valor representativo.  
   
-##  <a name="bkmk_CommonDataProblems"></a>Problemas comunes de datos  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>Problemas comunes de datos  
   
 ### <a name="excel-number-formats"></a>Formatos de números de Excel  
  Excel es una herramienta fácil de usar porque es permisivo. puede colocar prácticamente cualquier tipo de datos en cualquier lugar. Sin embargo, antes de empezar a buscar patrones y analizar correlaciones, debe imponer alguna estructura o restricciones en los datos.  
@@ -145,7 +145,7 @@ ms.locfileid: "66088031"
   
  Si tiene dificultades a la hora de trabajar con fechas y desea analizar fechas mediante agrupaciones comunes como mes o día, puede usar las funciones DATE de Excel para extraer el año, el mes o el día en una columna independiente y, posteriormente, usar esa columna para la clasificación.  
   
-##  <a name="bkmk_OtherRequirements"></a>Otros requisitos de datos  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>Otros requisitos de datos  
   
 ### <a name="requirements-by-algorithm-type"></a>Requisitos por tipo de algoritmo  
  Algunos de los algoritmos que se emplean en los complementos requieren determinados tipos de datos o de contenido para crear un modelo.  
@@ -205,7 +205,7 @@ ms.locfileid: "66088031"
   
  Normalmente, la columna de clave es un identificador numérico o de texto que no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros. Las excepciones son las claves de serie temporal y las claves de secuencia.  
   
- **Las claves de tabla anidada** solo se utilizan al obtener datos de un origen de datos externo definido como una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vista del origen de datos. Para obtener más información acerca de las tablas anidadas, vea [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx):  
+ Las**claves de tabla anidada** solo se utilizan al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información acerca de las tablas anidadas, vea [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx):  
   
  Este tipo de contenido se puede utilizar con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "66088031"
   
  Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long` y `Date`.  
   
- **Table**  
+ **Cuadro**  
  Este tipo de contenido también se utiliza únicamente al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Lo que significa es que cada fila de datos contiene realmente una tabla de datos anidada, con una o más columnas y una o más filas.  

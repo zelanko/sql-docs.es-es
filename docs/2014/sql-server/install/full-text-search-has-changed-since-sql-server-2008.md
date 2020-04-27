@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095144"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>La búsqueda de texto completo ha cambiado desde SQL Server 2008
-  El Asesor de actualizaciones detectó que la búsqueda de texto completo va a ser actualizada. Muchas opciones y valores de configuración de la búsqueda de texto completo han cambiado. Por consiguiente, al actualizar a la búsqueda de texto completo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], es posible que sea necesario modificar algunos valores.  
+  El Asesor de actualizaciones detectó que la búsqueda de texto completo va a ser actualizada. Muchas opciones y valores de configuración de la búsqueda de texto completo han cambiado. Por consiguiente, al actualizar a la búsqueda de texto completo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , es posible que sea necesario modificar algunos valores.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

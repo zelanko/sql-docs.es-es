@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083648"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos Bayes naive (Analysis Services - Minería de datos)
@@ -49,15 +49,15 @@ ms.locfileid: "66083648"
  ATTRIBUTE_NAME  
  Nombres de los atributos que corresponden a este nodo.  
   
- **Raíz del modelo** Nombre del atributo de predicción.  
+ **Raíz del modelo** : nombre del atributo de predicción.  
   
- **Estadísticas marginales** No aplicable  
+ **Estadísticas marginales** : no aplicable.  
   
- **Atributo de predicción** Nombre del atributo de predicción.  
+ **Atributo de predicción** : nombre del atributo de predicción.  
   
- **Atributo de entrada** Nombre del atributo de entrada.  
+ **Atributo de entrada** : nombre del atributo de entrada.  
   
- **Estado de atributo de entrada** Solo el nombre del atributo de entrada. Para obtener el estado, use MSOLAP_NODE_SHORT_CAPTION.  
+ **Estado de atributo de entrada** : solo el nombre del atributo de entrada. Para obtener el estado, use MSOLAP_NODE_SHORT_CAPTION.  
   
  NODE_NAME  
  El nombre del nodo.  
@@ -82,32 +82,32 @@ ms.locfileid: "66083648"
  NODE_CAPTION  
  Etiqueta o título asociado al nodo. Esta propiedad se usa principalmente para la presentación.  
   
- **Raíz del modelo** en blanco  
+ **Raíz del modelo** : en blanco.  
   
  **Estadísticas marginales** en blanco  
   
- **Atributo de predicción** Nombre del atributo de predicción.  
+ **Atributo de predicción** : nombre del atributo de predicción.  
   
- **Atributo de entrada** Nombre del atributo de predicción y del atributo de entrada actual. Por ejemplo:  
+ **Atributo de entrada** : nombre del atributo de predicción y del atributo de entrada actual. Por ejemplo:  
   
  Bike Buyer -> Age  
   
- **Estado de atributo de entrada** Nombre del atributo de predicción y del atributo de entrada actual, más el valor de la entrada. Por ejemplo:  
+ **Estado de atributo de entrada** : nombre del atributo de predicción y del atributo de entrada actual, más el valor de la entrada. Por ejemplo:  
   
  Bike Buyer -> Age = Missing  
   
  CHILDREN_CARDINALITY  
  Número de elementos secundarios que tiene el nodo.  
   
- **Raíz del modelo** Recuento de atributos de predicción en el modelo más 1 para el nodo de estadísticas marginales.  
+ **Raíz del modelo** : recuento de los atributos de predicción del modelo, más 1 para el nodo de estadísticas marginales.  
   
- **Estadísticas marginales** Por definición no tiene elementos secundarios.  
+ **Estadísticas marginales** : por definición, no tiene elementos secundarios.  
   
- **Atributo de predicción**  Recuento de los atributos de entrada que estaban relacionados con el atributo de predicción actual.  
+ **Atributo de predicción**  : recuento de los atributos de entrada que estaban relacionados con el atributo de predicción actual.  
   
- **Atributo de entrada** Recuento de los valores discretos o de datos discretos del atributo de entrada actual.  
+ **Atributo de entrada** : recuento de los valores discretos o discretizados para el atributo de entrada actual.  
   
- **Estado de atributo de entrada** Siempre es 0.  
+ **Estado de atributo de entrada** : siempre es 0.  
   
  PARENT_UNIQUE_NAME  
  Nombre único del nodo primario. Para obtener más información sobre cómo relacionar nodos primarios y secundarios, vea [Usar nombres de nodo e identificadores](#bkmk_nodenames).  
@@ -126,13 +126,13 @@ ms.locfileid: "66083648"
   
  **Raíz del modelo** Siempre es 0.  
   
- **Estadísticas marginales** Siempre es 0.  
+ **Estadísticas marginales** : siempre es 0.  
   
- **Atributo de predicción**  Siempre es 1.  
+ **Atributo de predicción**  : siempre es 1.  
   
- **Atributo de entrada** Siempre es 1.  
+ **Atributo de entrada** : siempre es 1.  
   
- **Estado de atributo de entrada** Número decimal que representa la probabilidad del valor actual. Los valores de todos los estados de los atributos de entrada bajo el nodo de atributo de entrada primario suman 1.  
+ **Estado de atributo de entrada** : número decimal que representa la probabilidad del valor actual. Los valores de todos los estados de los atributos de entrada bajo el nodo de atributo de entrada primario suman 1.  
   
  MARGINAL_PROBABILITY  
  Coincide con la probabilidad del nodo.  
@@ -143,15 +143,15 @@ ms.locfileid: "66083648"
  NODE_SUPPORT  
  Número de casos que admiten este nodo.  
   
- **Raíz del modelo** Recuento de todos los casos en los datos de entrenamiento.  
+ **Raíz del modelo** : recuento de todos los casos de los datos de entrenamiento.  
   
- **Estadísticas marginales** Siempre es 0.  
+ **Estadísticas marginales** : siempre es 0.  
   
- **Atributo de predicción** Recuento de todos los casos en los datos de entrenamiento.  
+ **Atributo de predicción** : recuento de todos los casos de los datos de entrenamiento.  
   
- **Atributo de entrada** Recuento de todos los casos en los datos de entrenamiento.  
+ **Atributo de entrada** : recuento de todos los casos de los datos de entrenamiento.  
   
- **Estado de atributo de entrada** Recuento de casos en los datos de entrenamiento que solo contienen este valor concreto.  
+ **Estado de atributo de entrada** : recuento de los casos de los datos de entrenamiento que solo contienen este valor concreto.  
   
  MSOLAP_MODEL_COLUMN  
  Etiqueta que se utiliza para la visualización. Normalmente, coincide con ATTRIBUTE_NAME.  
@@ -161,28 +161,28 @@ ms.locfileid: "66083648"
   
  **Raíz del modelo** Siempre es 0.  
   
- **Estadísticas marginales** Siempre es 0.  
+ **Estadísticas marginales** : siempre es 0.  
   
- **Atributo de predicción**  Siempre es 0.  
+ **Atributo de predicción**  : siempre es 0.  
   
- **Atributo de entrada** Puntuación de interés del atributo de entrada actual en relación con el atributo de predicción actual.  
+ **Atributo de entrada** : Puntuación interestingness para el atributo de entrada actual en relación con el atributo de predicción actual.  
   
- **Estado de atributo de entrada** Siempre es 0.  
+ **Estado de atributo de entrada** : siempre es 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Cadena de texto que representa el nombre o el valor de una columna.  
   
  **Raíz del modelo** En blanco  
   
- **Estadísticas marginales** En blanco  
+ **Estadísticas marginales** : en blanco.  
   
  **Atributo de predicción**  Nombre del atributo de predicción.  
   
- **Atributo de entrada** Nombre del atributo de entrada.  
+ **Atributo de entrada** : nombre del atributo de entrada.  
   
- **Estado de atributo de entrada** Valor o valor de datos discretos del atributo de entrada.  
+ **Estado de atributo de entrada** : valor o valor de datos discretos del atributo de entrada.  
   
-##  <a name="bkmk_nodenames"></a>Usar nombres de nodo e identificadores  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a>Usar nombres de nodo e identificadores  
  La denominación de los nodos en un modelo Bayes naive proporciona información adicional sobre el tipo de nodo, lo que facilita la comprensión de las relaciones entre los tipos de información del modelo. En la tabla siguiente se muestra la convención para los identificadores asignados a los distintos tipos de nodos.  
   
 |Tipo de nodo|Convención para el identificador de nodo|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a>NODE_DISTRIBUTION tabla  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>NODE_DISTRIBUTION tabla  
  La columna de tabla anidada, NODE_DISTRIBUTION, normalmente contiene estadísticas sobre la distribución de los valores en el nodo. En un modelo Bayes naive, esta tabla se rellena solo para los nodos siguientes:  
   
 |Tipo de nodo|Contenido de la tabla anidada|  
@@ -257,7 +257,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Resultados esperados:  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
@@ -265,10 +265,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  En estos resultados, el valor de la columna SUPPORT le indica el recuento de clientes con el estado civil especificado que compraron una bicicleta. La columna PROBABILITY contiene la probabilidad de cada valor de atributo, calculada solo para este nodo. Para obtener definiciones generales de los términos usados en la tabla NODE_DISTRIBUTION, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_margstats"></a>Información en el nodo de estadísticas marginales  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a> Información en el nodo de estadísticas marginales  
  En un modelo Bayes naive, la tabla anidada para el nodo de estadísticas marginales contiene la distribución de los valores para el conjunto completo de datos de entrenamiento. Por ejemplo, la tabla siguiente contiene una lista parcial de las estadísticas de la tabla anidada NODE_DISTRIBUTION para el modelo `TM_NaiveBayes`:  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SOPORTE TÉCNICO|PROBABILITY|varianza|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|varianza|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  

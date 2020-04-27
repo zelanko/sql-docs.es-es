@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089532"
 ---
 # <a name="trace-properties-general-tab"></a>Propiedades de seguimiento (pestaña General)
@@ -34,10 +34,10 @@ ms.locfileid: "66089532"
  **Tipo de proveedor de seguimiento**  
  Muestra el tipo de proveedor que proporciona el seguimiento. El archivo de definición de seguimiento rellena el campo **Tipo de proveedor de seguimiento** automáticamente. No se puede modificar este campo.  
   
- **Versión**  
+ **version**  
  Muestra la versión del servidor que proporciona el seguimiento. El archivo de definición de seguimiento rellena el campo **Versión** automáticamente. No se puede modificar este campo.  
   
- **Uso de la plantilla**  
+ **Usar la plantilla**  
  Selecciona una plantilla del directorio de plantillas. El directorio se rellena con las plantillas predeterminadas y con cualquier tipo de plantilla definida por el usuario que se haya creado para el tipo de proveedor de seguimiento actual.  
   
  **Guardar en el archivo**  

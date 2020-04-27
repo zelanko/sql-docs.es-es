@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084612"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Obtener detalles de datos de caso a partir de un modelo de minería de datos
@@ -34,8 +34,8 @@ ms.locfileid: "66084612"
 |**Visor de árboles de Microsoft**|Pestaña **árbol de decisión**|Haga clic en un nodo de árbol.<br /><br /> **Nota:** Evite el uso de la `All` obtención de detalles en el nodo, ya que puede tardar mucho tiempo en devolver resultados.|  
 |**Visor de clústeres de Microsoft**|**Diagrama del clúster**|Haga clic en un nodo de clúster.|  
 |**Visor de clústeres de Microsoft**|**Perfiles del clúster**|Haga clic en cualquier lugar de la columna de clúster.|  
-|**Visor de asociaciones de Microsoft**|Pestaña **reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
-|**Visor de asociaciones de Microsoft**|Pestaña **conjuntos**|Haga clic en una fila que contenga un conjunto de elementos.|  
+|**Visor de asociación de Microsoft**|Pestaña **reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
+|**Visor de asociación de Microsoft**|Pestaña **conjuntos**|Haga clic en una fila que contenga un conjunto de elementos.|  
 |**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña **reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
 |**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña **conjuntos**|Haga clic en una fila que contenga un conjunto de elementos.|  
   
@@ -57,6 +57,6 @@ ms.locfileid: "66084612"
 6.  Para copiar los datos en el Portapapeles, haga clic con el botón derecho en cualquier fila de la tabla y seleccione **Copiar todo**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Consultas de obtención de detalles &#40;&#41;de minería de datos](drillthrough-queries-data-mining.md)  
+ [Consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md)  
   
   

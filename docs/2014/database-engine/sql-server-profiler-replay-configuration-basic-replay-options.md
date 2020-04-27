@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089719"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>Analizador SQL Server (Configuración de reproducción/página Opciones básicas de reproducción)
@@ -34,12 +34,10 @@ ms.locfileid: "66089719"
  Inicia el cuadro de diálogo **Conectar al servidor** para conectarse a otro servidor.  
   
  **Guardar en el archivo**  
- Guarda los resultados de la reproducción en un archivo. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de archivo estándar, en el puede especificar la ubicación en la que se guarda el archivo.  
+ Guarda los resultados de la reproducción en un archivo. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de archivo estándar, en el puede especificar la ubicación en la que se guarda el archivo.  
   
  **Guardar en la tabla**  
- Guarda los resultados de la reproducción en una tabla. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de selección de tabla, en el puede especificar la ubicación en la que se guarda la tabla.  
+ Guarda los resultados de la reproducción en una tabla. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de selección de tabla, en el puede especificar la ubicación en la que se guarda la tabla.  
   
  **Número de subprocesos de reproducción**  
  Especifique el número de subprocesos de reproducción que se utilizarán simultáneamente. Un número mayor consume más recursos durante la reproducción, pero ésta es más rápida y simultánea.  

@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd865b3bf80c930fe2bb8e23f5ea807717f2b1d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092050"
 ---
 # <a name="sql-server-2014-upgrade-advisor"></a>SQL Server 2014 Upgrade Advisor
   El Asesor de actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] analiza la configuración de componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados y, a continuación, genera un informe de problemas que debe resolver para asegurar una actualización correcta.  
   
- Obtenga el archivo de instalación del Asesor de actualizaciones (sqlua.msi) en la carpeta redistribuible de los medios de instalación o como parte de la [descarga Feature Pack de SQL 2014](https://www.microsoft.com/download/details.aspx?id=42295).  
+ Obtenga el archivo de instalación del Asesor de actualizaciones (sqlua.msi) en la carpeta redistribuible de los medios de instalación o como parte de la [descarga SQL 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=42295).  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

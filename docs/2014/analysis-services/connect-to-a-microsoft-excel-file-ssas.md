@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e49b37a6f344b7fc6c45c9767a05c7f7d5bfe6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087321"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Conectar con un archivo de Microsoft Excel (SSAS)
@@ -34,16 +34,16 @@ ms.locfileid: "66087321"
  **Ruta de acceso del archivo de Excel**  
  Especifique la ruta de acceso completa para el archivo de Excel.  
   
- **Browse**  
+ **Examinar**  
  Navegue a una ubicación donde haya un archivo de Excel.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales al usar el cuadro de diálogo **Establecer propiedades avanzadas** .  
+ Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** .  
   
  **Usar primera fila como encabezados de columna**  
  Especifique si utilizar la primera fila de datos como encabezados de columna de la tabla de destino.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
   

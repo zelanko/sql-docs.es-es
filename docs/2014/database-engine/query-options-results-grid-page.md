@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089007"
 ---
 # <a name="query-options-results-grid-page"></a>Resultados de Opciones de consulta (página Cuadrícula)
@@ -32,7 +32,7 @@ ms.locfileid: "66089007"
  **Descartar resultados tras la ejecución**  
  Si descarta los resultados de la consulta después de que la pantalla los reciba, liberará memoria.  
   
- **Mostrar los resultados en una pestaña independiente**  
+ **Mostrar resultados en otra pestaña**  
  Muestra el conjunto de resultados en una nueva ventana de documento, en lugar de mostrarlos en la parte inferior de la ventana del documento de consulta.  
   
  **Cambiar a la pestaña de resultados tras ejecutar la consulta**  
@@ -50,7 +50,7 @@ ms.locfileid: "66089007"
   
  Seleccione **1 MB**, **2 MB**o **5 MB**. Seleccione **Ilimitados** para recuperar todos los caracteres.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

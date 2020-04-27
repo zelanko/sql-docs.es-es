@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a6c6da76bd89b4686791087e558ae1f329f57a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088802"
 ---
 # <a name="trace-file-properties-events-selection-tab"></a>Propiedades del archivo de seguimiento (pestaña Selección de eventos)
@@ -27,7 +27,7 @@ ms.locfileid: "66088802"
  Para ver esta ventana, abra un archivo de seguimiento. Después, en el menú **Archivo** , haga clic en **Propiedades**y, a continuación, haga clic en la pestaña **Selección de eventos** .  
   
 ## <a name="options"></a>Opciones  
- Columna **eventos**  
+ Columna**Eventos**  
  Muestra los eventos de los que se hace el seguimiento y que están organizados por categoría de eventos. Inicialmente, se seleccionan todos los eventos del seguimiento. Para seleccionar un evento, debe activarse la casilla o la columna de datos de dicho evento. Si la casilla del evento está activada, se seleccionan todas las columnas de datos disponibles para dicho evento. Si la columna de datos de un evento está activada, se activa el evento, y cualquier otra columna requerida también se activa automáticamente. Si se está viendo un archivo o una tabla de seguimiento, al desactivar las casillas de las columnas de datos o eventos, se reduce la cantidad de datos visibles en la ventana de seguimiento para simplificar el análisis. Se pueden cambiar los filtros de las columnas para reducir la cantidad de datos visibles en la ventana de seguimiento. Para obtener más información sobre las clases de eventos, vea [Referencia de las clase de eventos de SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Columnas de datos  

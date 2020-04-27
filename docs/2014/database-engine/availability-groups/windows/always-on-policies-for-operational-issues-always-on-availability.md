@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815760"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62815760"
   
  
   
-##  <a name="TermsAndDefinitions"></a>Términos y definiciones  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Términos y definiciones  
  Directivas predefinidas AlwaysOn  
  Un conjunto de directivas integradas que permiten que un administrador de bases de datos pueda comprobar un grupo de disponibilidad, así como sus réplicas y bases de datos de disponibilidad, para probar el cumplimiento de los estados definidos por las directivas de AlwaysOn.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62815760"
  Panel de AlwaysOn  
  Un panel [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] que proporciona una vista global del estado de un grupo de disponibilidad. Para obtener más información, vea [Panel AlwaysOn](#Dashboard), más adelante en este tema.  
   
-##  <a name="AlwaysOnPBM"></a>Directivas y problemas predefinidos  
+##  <a name="predefined-policies-and-issues"></a><a name="AlwaysOnPBM"></a> Directivas predefinidas y problemas  
  En la siguiente tabla se resumen las directivas predefinidas.  
   
 |Nombre de la directiva|Problema|Categoría**<sup>*</sup>**|Faceta|  
@@ -66,7 +66,7 @@ ms.locfileid: "62815760"
 > [!IMPORTANT]  
 >  **<sup>*</sup>** En el caso de las directivas de AlwaysOn, los nombres de categoría se usan como identificadores. La acción de cambiar el nombre de una categoría de AlwaysOn interrumpiría la funcionalidad de la evaluación de estado. Por consiguiente, no modifique los nombres de las categorías de AlwaysOn.  
   
-##  <a name="Dashboard"></a>Panel de AlwaysOn  
+##  <a name="alwayson-dashboard"></a><a name="Dashboard"></a>Panel de AlwaysOn  
  El panel AlwaysOn proporciona una vista global del estado de un grupo de disponibilidad. El panel AlwaysOn incluye las siguientes características:  
   
 -   Permite mostrar fácilmente los detalles sobre un grupo de disponibilidad determinado, sus réplicas de disponibilidad y sus bases de datos.  
@@ -81,20 +81,20 @@ ms.locfileid: "62815760"
   
 -   Si la conmutación por error del grupo de disponibilidad es una solución posible para un problema, proporciona un punto de inicio para los vínculos del[Asistente para grupo de disponibilidad de conmutación por error](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md). Este asistente usa un administrador de bases de datos a través del proceso de conmutación por error manual.  
   
-##  <a name="ExtendHealthModel"></a>Extender el modelo de estado AlwaysOn  
+##  <a name="extending-the-alwayson-health-model"></a><a name="ExtendHealthModel"></a>Extender el modelo de estado AlwaysOn  
  Extender el modelo de estados de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es simplemente cuestión de crear sus propias directivas definidas por el usuario y ponerlas en determinadas categorías según el tipo de objeto que se está supervisando.  Después de modificar algunos valores, el panel AlwaysOn evaluará automáticamente sus propias directivas definidas por el usuario, junto con las directivas predefinidas AlwaysOn.  
   
- Una directiva definida por el usuario puede usar cualquiera de las facetas PBM disponibles, incluidas las usadas por las directivas predefinidas AlwaysOn (vea [Directivas predefinidas y problemas](#AlwaysOnPBM), anteriormente en este tema). La faceta de servidor proporciona las siguientes propiedades para supervisar el estado de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (`IsHadrEnabled` y `HadrManagerStatus`). La faceta de servidor también proporciona a las propiedades las siguientes directivas para supervisar la configuración de clúster de WSFC: `ClusterQuorumType` y `ClusterQuorumState`.  
+ Una directiva definidas por el usuario puede utilizar cualquiera de las facetas PBM disponibles, incluidas las utilizadas por las directivas predefinidas AlwaysOn (vea [Directiva predefinidas y problemas](#AlwaysOnPBM), anteriormente en este tema). La faceta de servidor proporciona las siguientes propiedades para supervisar el estado de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (`IsHadrEnabled` y `HadrManagerStatus`). La faceta de servidor también proporciona a las propiedades las siguientes directivas para supervisar la configuración de clúster de WSFC: `ClusterQuorumType` y `ClusterQuorumState`.  
   
- Para más información, vea [Modelo de estado AlwaysOn Parte 2: ampliando el modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (un blog del equipo de SQL Server AlwaysOn).  
+ Para obtener más información, vea [Modelo de estado AlwaysOn Parte 2: el modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (un blog del equipo de SQL Server AlwaysOn).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
--   [Recuperación ante desastres de WSFC mediante &#40;de Cuórum SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+-   [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 -   [Forzar el inicio de un clúster WSFC sin un quórum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62815760"
   
 -   [Solucionar problemas de una operación Add-File &#40;Grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Modelo de estado AlwaysOn Parte 1: arquitectura del modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   

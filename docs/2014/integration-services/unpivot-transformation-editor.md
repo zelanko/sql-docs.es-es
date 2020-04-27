@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a0222627860b70059163bff1dd989e230c1cb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054837"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor de transformación Anulación de dinamización
   Use el cuadro de diálogo **Editor de transformación Anulación de dinamización** para seleccionar las columnas que se van a dinamizar en filas y especificar la columna de datos y la nueva columna de salida del valor dinámico.  
   
 > [!NOTE]  
->  Este tema usa el escenario Anulación de dinamización descrito en [Transformación Anulación de dinamización](data-flow/transformations/unpivot-transformation.md) para mostrar el uso de las opciones.  
+>   Este tema utiliza el escenario Anulación de dinamización descrito en [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md) para ilustrar el uso de las opciones.  
   
  Para obtener más información acerca de la transformación Anulación de dinamización, vea [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md).  
   
@@ -56,13 +56,13 @@ ms.locfileid: "66054837"
   
  En el escenario Anulación de dinamización descrito en [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), los valores de dinamización se mostrarán como valores de texto en la nueva columna Product, designada en la opción **Nombre de la columna del valor de clave dinámica** , como los valores de texto **Ham**, **Soda**, **Milk**, **Beer**y **Chips**.  
   
- **Nombre de columna del valor de clave dinámica**  
+ **Nombre de la columna del valor de clave dinámica**  
  Escriba un nombre para la columna del valor de dinamización. El valor predeterminado es "Valor de clave dinámica", pero podrá elegir cualquier nombre descriptivo único.  
   
  En el escenario Anulación de dinamización descrito en [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), el Nombre de la columna del valor de clave dinámica es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas **Ham**, **Soda**, **Milk**, **Beer**y **Chips** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Dinámica, transformación](data-flow/transformations/pivot-transformation.md)  
+ [Transformación dinámica](data-flow/transformations/pivot-transformation.md)  
   
   

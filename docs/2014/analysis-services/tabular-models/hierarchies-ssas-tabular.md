@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067079"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Jerarquías (SSAS tabular)
@@ -22,24 +22,24 @@ ms.locfileid: "66067079"
   
  Secciones de este tema:  
   
--   [Privilegios](#bkmk_benefits)  
+-   [Ventajas](#bkmk_benefits)  
   
 -   [Definir jerarquías](#bkmk_define)  
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Privilegios  
  Las tablas pueden incluir docenas o incluso centenares de columnas con nombres de columna inusuales sin ningún orden aparente. Esto puede ofrecer un aspecto desordenado en las listas de campos del cliente de informes, dificultando a los usuarios la búsqueda e inclusión de datos en un informe. Las jerarquías pueden proporcionar una vista sencilla e intuitiva de las normalmente complejas estructuras de datos.  
   
  Por ejemplo, en una tabla Fecha puede crear una jerarquía Calendario. Año natural se usa como nivel primario superior, incluyéndose Mes, Semana y Día como niveles secundarios (Año natural->Mes->Semana->Día). Esta jerarquía muestra una relación lógica desde Año natural hasta Día. A continuación, el usuario del cliente puede seleccionar Año natural en una lista de campos para incluir todos los niveles en una tabla dinámica, o expandir la jerarquía y seleccionar solo aquellos niveles que desea incluir en la tabla dinámica.  
   
  Puesto que cada nivel de una jerarquía es una representación de una columna de una tabla, se puede cambiar de nombre de nivel. Aunque no es algo exclusivo de las jerarquías (se puede cambiar el nombre de cualquier columna de un modelo tabular), el cambio de nombre de los niveles de jerarquía puede facilitar a los usuarios la búsqueda e inclusión de niveles en un informe. Al cambiar el nombre de un nivel no se cambiará el nombre de la columna a la que hace referencia; simplemente se facilitará la identificación del nivel. Por ejemplo, en la jerarquía Año natural, en la vista de datos de la tabla Fecha, se cambió el nombre de las columnas CalendarYear, CalendarMonth, CalendarWeek y CalendarDay a Calendar Year, Month, Week y Day para facilitar su identificación. El cambio de nombre de los niveles tiene la ventaja adicional de proporcionar coherencia en los informes, puesto que así será menos probable que los usuarios necesiten cambiar los nombres de las columnas para que sean más legibles en las tablas dinámicas, los gráficos, etc.  
   
- Es posible incluir jerarquías en perspectivas. Las perspectivas definen subconjuntos visibles de un modelo que ofrecen puntos de vista centrados, específicos del negocio o específicos de la aplicación del modelo. Por ejemplo, una perspectiva puede ofrecer a los usuarios una lista visible (jerarquía) que contiene solo los elementos de datos necesarios para sus requisitos específicos de informes. Para obtener más información, vea [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md).  
+ Es posible incluir jerarquías en perspectivas. Las perspectivas definen subconjuntos visibles de un modelo que ofrecen puntos de vista centrados, específicos del negocio o específicos de la aplicación del modelo. Por ejemplo, una perspectiva puede ofrecer a los usuarios una lista visible (jerarquía) que contiene solo los elementos de datos necesarios para sus requisitos específicos de informes. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md).  
   
  Las jerarquías no están diseñadas para usarse como mecanismo de seguridad, sino como una herramienta para proporcionar una mejor experiencia para el usuario. Toda la seguridad de una determinada jerarquía se hereda del modelo subyacente. Las jerarquías no pueden proporcionar acceso a objetos del modelo a los que el usuario no tiene acceso. La seguridad de la base de datos del modelo se debe resolver antes de tener acceso a los objetos del modelo mediante una jerarquía. Los roles de seguridad se pueden usar para proteger los datos y los metadatos de los modelos. Para obtener más información, vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md).  
   
-##  <a name="bkmk_define"></a>Definir jerarquías  
+##  <a name="defining-hierarchies"></a><a name="bkmk_define"></a>Definir jerarquías  
  Las jerarquías se crean y administran en la vista de diagrama del diseñador de modelos. La creación y administración de jerarquías no se admite en la vista de datos del diseñador de modelos. Para ver el diseñador de modelos en la Vista Diagrama, haga clic en el menú **Modelo** , a continuación seleccione **Vista de modelo**y haga clic en **Vista Diagrama**.  
   
  Para crear una jerarquía, haga clic con el botón derecho en la columna que quiera especificar como nivel primario y, después, haga clic en **Crear jerarquía**. Puede seleccionar e incluir varias columnas (en una única tabla), o puede agregarlas posteriormente como niveles secundarios haciendo clic y arrastrándolas al nivel primario. Cuando se seleccionan varias columnas, estas se colocan automáticamente en un orden basado en la cardinalidad. Puede cambiar este orden haciendo clic y arrastrando una columna (nivel) a un orden diferente o usando los controles de navegación Subir y Bajar del menú contextual. Al agregar una columna como nivel secundario, puede usar la detección automática arrastrando y colocando las columnas en el nivel primario.  
@@ -50,11 +50,11 @@ ms.locfileid: "66067079"
   
  Una vez creadas las jerarquías, puede probar su eficacia mediante la característica Analizar en Excel. Para obtener más información, vea [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tareas relacionadas  
   
 |Tarea|Descripción|  
 |----------|-----------------|  
-|[Crear y administrar jerarquías &#40;&#41;tabular de SSAS](hierarchies-ssas-tabular.md)|Describe cómo crear y administrar jerarquías mediante la vista de diagrama del diseñador de modelos.|  
+|[Crear y administrar jerarquías &#40;SSAS tabular&#41;](hierarchies-ssas-tabular.md)|Describe cómo crear y administrar jerarquías mediante la vista de diagrama del diseñador de modelos.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Diseñador de modelos tabulares &#40;&#41;tabular de SSAS](../tabular-model-designer-ssas-tabular.md)   

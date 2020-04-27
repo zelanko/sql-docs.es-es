@@ -10,17 +10,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0ec03cf9cdf8ce0f86d321126fc0bea11efc587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065685"
 ---
 # <a name="ui-designers-and-dialogs-for-data-mining-analysis"></a>Diseñadores y cuadros de diálogo para el análisis de minería de datos
 
 Esta sección contiene documentación sobre los diseñadores y cuadros de diálogo de la interfaz de usuario (UI) para el análisis de minería de datos.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Pasos a seguir
 
 - [Cuadros de diálogo y diseñadores de minería de datos](../data-mining-designers-and-dialog-boxes.md)
 

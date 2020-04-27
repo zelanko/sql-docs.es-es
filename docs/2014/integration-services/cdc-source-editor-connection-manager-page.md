@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061061"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor de origen de CDC (página Administrador de conexiones)
@@ -25,7 +25,7 @@ ms.locfileid: "66061061"
  Para obtener más información acerca del origen de CDC, vea [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Lista de tareas  
- **Para abrir la página Administrador de conexiones del editor de origen de CDC**  
+ **Para abrir la página Administrador de conexiones del Editor de origen de CDC**  
   
 1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], abra el paquete [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] que tiene el origen de CDC.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66061061"
  **Instancia de captura**  
  Seleccione o escriba el nombre de la instancia de captura CDC con la tabla CDC que se va a leer.  
   
- Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre predeterminado de la instancia de captura para una tabla [esquema].[tabla] es \<schema>_\<table>, pero los nombres de instancia de captura reales en uso podrían ser distintos. La tabla real de la que se lee es la tabla CDC **cdc.\<capture-instance>_CT**.  
+ Una tabla de origen capturada puede tener una o dos instancias capturadas para controlar que la transición de una definición de tabla a través de los cambios en el esquema se realice sin problemas. Si se define más de una instancia de captura para la tabla de origen que se va a capturar, seleccione aquí la instancia de captura que desee usar. El nombre predeterminado de la instancia de captura para una tabla [esquema].[tabla] es \<schema>_\<table>, pero los nombres de instancia de captura reales en uso podrían ser distintos. La tabla real de la que se lee es la tabla CDC **CDC\< .>_CT de la instancia de captura**.  
   
  **Modo de procesamiento CDC**  
  Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
@@ -67,7 +67,7 @@ ms.locfileid: "66061061"
  **Variable que contiene el estado CDC**  
  Seleccione la variable de paquete de la cadena de SSIS que mantenga el estado CDC para el contexto CDC actual. Para obtener más información sobre la variable de estado CDC, vea [Definir una variable de estado](data-flow/define-a-state-variable.md).  
   
- **Incluir columna de indicador de reprocesamiento**  
+ **Incluir una columna de indicador de reprocesamiento**  
  Active esta casilla para crear una columna especial de salida denominada **__$reprocessing**.  
   
  Esta columna tiene un valor **true** cuando el intervalo de procesamiento CDC se superpone con el intervalo de procesamiento inicial (el intervalo de LSN correspondiente al periodo de carga inicial) o cuando un intervalo de procesamiento CDC se vuelve a procesar tras un error en una ejecución anterior. Con esta columna de indicador, el desarrollador de SSIS puede controlar los errores de manera diferente a cuando se vuelven a procesar los cambios (por ejemplo, se pueden omitir acciones como la eliminación de una fila que no existe o una inserción que causó un error en una clave duplicada).  
@@ -75,7 +75,7 @@ ms.locfileid: "66061061"
  Para más información, consulte [CDC Source Custom Properties](data-flow/cdc-source-custom-properties.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Editor de origen de CDC &#40;página Columnas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [Editor de origen de CDC &#40;página columnas&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [Editor de origen de CDC &#40;página Salida de error&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

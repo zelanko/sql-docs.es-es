@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8319699dd58039b918f0715e5b2293a7990108f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057383"
 ---
 # <a name="odata-connection-manager-editor"></a>Editor del administrador de conexiones OData
@@ -32,7 +32,7 @@ ms.locfileid: "66057383"
  **Autenticación**  
  Seleccione **Autenticación de Windows** o use **este nombre de usuario y contraseña** para **autenticación**. Si selecciona la segunda opción, escriba el **nombre de usuario** y la **contraseña**.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Haga clic en este botón para probar la conexión con el origen OData.  
   
 ## <a name="see-also"></a>Consulte también  

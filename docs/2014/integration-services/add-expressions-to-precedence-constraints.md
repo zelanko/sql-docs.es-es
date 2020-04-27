@@ -18,15 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061900"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Agregar expresiones a las restricciones de precedencia
-  Una restricción de precedencia puede utilizar una expresión para definir la restricción entre dos aplicaciones ejecutables: el ejecutable de precedencia y el ejecutable restringido. Los ejecutables pueden ser tareas o contenedores. La expresión se puede usar por sí sola o combinada con el resultado de la ejecución del ejecutable de precedencia. El resultado de la ejecución de un ejecutable es su ejecución correcta o un error. Cuando configura el resultado de ejecución de una restricción de precedencia, puede establecer el resultado de ejecución en `Success`, `Failure` o `Completion`. 
-  `Success` exige la ejecución correcta del ejecutable de precedencia, `Failure` requiere que el ejecutable de precedencia genere un error y `Completion` indica que el ejecutable restringido se debe ejecutar independientemente de si la tarea de precedencia se ejecuta correctamente o genera un error. Para obtener más información, vea [Restricciones de precedencia](control-flow/precedence-constraints.md).  
+  Una restricción de precedencia puede utilizar una expresión para definir la restricción entre dos aplicaciones ejecutables: el ejecutable de precedencia y el ejecutable restringido. Los ejecutables pueden ser tareas o contenedores. La expresión se puede usar por sí sola o combinada con el resultado de la ejecución del ejecutable de precedencia. El resultado de la ejecución de un ejecutable es su ejecución correcta o un error. Cuando configura el resultado de ejecución de una restricción de precedencia, puede establecer el resultado de ejecución en `Success`, `Failure` o `Completion`. `Success` exige la ejecución correcta del ejecutable de precedencia, `Failure` requiere que el ejecutable de precedencia genere un error y `Completion` indica que el ejecutable restringido se debe ejecutar independientemente de si la tarea de precedencia se ejecuta correctamente o genera un error. Para obtener más información, vea [Restricciones de precedencia](control-flow/precedence-constraints.md).  
   
  La expresión debe evaluarse como `True` o `False` y debe ser una expresión válida de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. La expresión puede usar literales, variables del sistema y personalizadas, y las funciones y operadores que proporciona la gramática de expresiones de [!INCLUDE[ssIS](../includes/ssis-md.md)] . Por ejemplo, la expresión `@Count == SQRT(144) + 10` usa la variable `Count`, la función SQRT y los operadores igual (==) y sumar (+). Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
@@ -47,10 +46,10 @@ ms.locfileid: "66061900"
   
 |Operación de evaluación|La restricción se evalúa como|La expresión se evalúa como|El ejecutable restringido se ejecuta|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Restricción|True|N/D|True|  
-|Restricción|False|N/D|False|  
-|Expression|N/D|True|True|  
-|Expression|N/D|False|False|  
+|Restricción|True|N/A|True|  
+|Restricción|False|N/A|False|  
+|Expression|N/A|True|True|  
+|Expression|N/A|False|False|  
 |Restricción y expresión|True|True|True|  
 |Restricción y expresión|True|False|False|  
 |Restricción y expresión|False|True|False|  

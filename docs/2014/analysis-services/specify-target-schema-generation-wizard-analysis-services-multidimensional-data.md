@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068249"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar destino (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
@@ -30,13 +30,13 @@ ms.locfileid: "66068249"
  Escriba el nombre de la nueva vista del origen de datos.  
   
 > [!NOTE]  
->  Esta opción solo está habilitada si se ha seleccionado la opción **Crear una nueva vista del origen de datos** .  
+>   Esta opción solo está habilitada si se ha seleccionado la opción **Crear una nueva vista del origen de datos** .  
   
  **Origen de datos**  
  Seleccione el origen de datos que se asociará con la nueva vista del origen de datos.  
   
 > [!NOTE]  
->  Esta opción solo está habilitada si se ha seleccionado la opción **Crear una nueva vista del origen de datos** .  
+>   Esta opción solo está habilitada si se ha seleccionado la opción **Crear una nueva vista del origen de datos** .  
   
  **Nuevo**  
  Haga clic para mostrar el Asistente para orígenes de datos y definir el nuevo origen de datos que se asociará con la nueva vista del origen de datos.  

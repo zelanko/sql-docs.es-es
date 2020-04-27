@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef503e88e66bd6f89cac8d235f7175fb4cefe4e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060339"
 ---
 # <a name="copy-project-items"></a>Copiar los elementos de proyectos
@@ -40,7 +40,7 @@ ms.locfileid: "66060339"
      Los elementos se copian automáticamente en la carpeta correcta. Si copia elementos en el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que no son paquetes, estos elementos se copian a la carpeta **Varios** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;paquetes&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Copiar objetos de paquete](../../2014/integration-services/copy-package-objects.md)  
   
   

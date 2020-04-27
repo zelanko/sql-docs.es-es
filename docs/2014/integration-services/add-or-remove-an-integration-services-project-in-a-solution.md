@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061838"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Agregar o quitar un proyecto de Integration Services en una solución
@@ -43,7 +43,7 @@ ms.locfileid: "66061838"
   
 3.  Opcionalmente, modifique el nombre y ubicación del proyecto.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 #### <a name="to-add-an-existing-integration-services-project-to-a-solution"></a>Para agregar un proyecto de Integration Services existente a una solución  
   

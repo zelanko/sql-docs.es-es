@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c506b72f48206f5a68dc10d0b236aa7fb934435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067091"
 ---
 # <a name="hide-or-freeze-columns-ssas-tabular"></a>Ocultar o inmovilizar columnas (SSAS tabular)
@@ -44,7 +44,7 @@ ms.locfileid: "66067091"
   
 3.  En el cuadro de diálogo **Ocultar y mostrar columnas** , busque cada columna que desee ocultar y, a continuación, anule la selección de una de las opciones **En diseñador** y **En informes**, o ambas.  
   
-4.  Haga clic en **OK**.  
+4.  Haga clic en **Aceptar**.  
   
 ### <a name="to-freeze-columns"></a>Para inmovilizar columnas  
   

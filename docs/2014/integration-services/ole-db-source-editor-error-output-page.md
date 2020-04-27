@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057013"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Editor de origen de OLE DB (página Salida de error)
@@ -36,7 +36,7 @@ ms.locfileid: "66057013"
  **Error**  
  Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Temas relacionados:** [control de errores en los datos](data-flow/error-handling-in-data.md)  
+ **Temas relacionados:** [Control de errores en los datos](data-flow/error-handling-in-data.md)  
   
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  
@@ -55,6 +55,6 @@ ms.locfileid: "66057013"
  [OLE DB Editor de origen &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [&#40;página columnas del editor de origen de OLE DB&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Extraer datos mediante el origen de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [OLE DB, administrador de conexiones](connection-manager/ole-db-connection-manager.md)  
+ [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

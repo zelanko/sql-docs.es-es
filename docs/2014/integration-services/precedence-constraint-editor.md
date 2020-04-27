@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056685"
 ---
 # <a name="precedence-constraint-editor"></a>Editor de restricciones de precedencia
@@ -32,12 +32,12 @@ ms.locfileid: "66056685"
  Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**.  
   
 > [!NOTE]  
->  La línea de restricción de precedencia es verde para **Correcto**, resaltada para **Error**y azul para **Conclusión**.  
+>   La línea de restricción de precedencia es verde para **Correcto**, resaltada para **Error**y azul para **Conclusión**.  
   
  **Expression**  
  Si usa las operaciones **Expresión**, **Expresión y restricción**o **Expresión o restricción**, escriba una expresión o inicie el Generador de expresiones para crear la expresión. La expresión debe evaluarse como un valor booleano.  
   
- **Muestre**  
+ **Prueba**  
  Permite validar la expresión.  
   
  **Y lógico**  

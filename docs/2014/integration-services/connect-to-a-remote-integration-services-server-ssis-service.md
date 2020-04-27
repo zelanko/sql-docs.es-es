@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060420"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Conectarse a un servidor remoto de Integration Services (servicio SSIS)
     
 > [!IMPORTANT] 
-> En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]admite el servicio para mantener la compatibilidad con versiones anteriores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]de. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
+> En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
  Para conectarse a una instancia de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en un servidor remoto, desde [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] u otra aplicación de administración, los usuarios de la aplicación deben tener un conjunto específico de derechos para el servidor.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66060420"
   
 3.  Seleccione **Integration Services** en la lista **Tipo de servidor** .  
   
-4.  Escriba el nombre de un servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el cuadro de texto **Nombre del servidor** .  
+4.  Escriba el nombre de un servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el cuadro de texto **Nombre del servidor**.  
   
     > [!NOTE]  
     >  El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no es específico de la instancia. La conexión al servicio se realiza utilizando el nombre del equipo en el que el servicio de Integration Services se está ejecutando.  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068552"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Especificar una cadena de conexión (SSAS)
@@ -31,10 +31,10 @@ ms.locfileid: "66068552"
  **Cadena de conexión**  
  Escriba la cadena de conexión que desea utilizar para conectarse al origen de datos OLE DB o ODBC.  
   
- **Build**  
+ **Compilar**  
  Especifique las propiedades de una cadena de conexión con el cuadro de diálogo **Propiedades de vínculo de datos** . Para obtener más información, vea la Ayuda de Vínculos a datos de Microsoft, que está disponible en ese cuadro de diálogo.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la cadena de conexión especificada. Se muestra un mensaje que indica si la conexión es correcta.  
   
   

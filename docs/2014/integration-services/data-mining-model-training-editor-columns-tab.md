@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059887"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Columnas)
@@ -41,6 +41,6 @@ ms.locfileid: "66059887"
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de entrenamiento de modelos de minería de datos &#40;pestaña conexión&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
+ [Editor de entrenamiento de modelos de minería de datos &#40;pestaña Conexión&#41;](../../2014/integration-services/data-mining-model-training-editor-connection-tab.md)  
   
   

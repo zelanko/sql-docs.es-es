@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055537"
 ---
 # <a name="source-database-files"></a>Archivos de base de datos de origen
@@ -26,13 +26,13 @@ ms.locfileid: "66055537"
   
 ## <a name="options"></a>Opciones  
  **Archivo de origen**  
- Nombres de los archivos de la base de datos del servidor de origen que se van a transferir. El **archivo de origen** es de solo lectura.  
+ Nombres de los archivos de la base de datos del servidor de origen que se van a transferir. El**Archivo de origen** es de solo lectura.  
   
  **Carpeta de origen**  
- Carpeta del servidor de origen en la que se encuentran los archivos de la base de datos que se van a transferir. La **carpeta de origen** es de solo lectura.  
+ Carpeta del servidor de origen en la que se encuentran los archivos de la base de datos que se van a transferir. La**Carpeta de origen** es de solo lectura.  
   
  **Recurso compartido de archivos de red**  
- Carpeta compartida de red del servidor de origen desde donde se transferirán los archivos de la base de datos. Use **recurso compartido de archivos de red** cuando transfiera una base de datos en modo sin conexión especificando **DatabaseOffline** para el **método** en la página **bases** de datos del cuadro de diálogo Editor de la **tarea transferir bases de datos** .  
+ Carpeta compartida de red del servidor de origen desde donde se transferirán los archivos de la base de datos. Utilice **Recurso compartido de archivos de red** cuando transfiera una base de datos en el modo sin conexión especificando el **Método****DatabaseOffline** en la página **Bases de datos** del cuadro de diálogo **Editor de la tarea Transferir bases de datos** .  
   
  Especifique la ubicación del recurso compartido de archivos de red, o bien haga clic en el botón Examinar **(…)** para buscar la ubicación del recurso compartido de archivos de red.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "66055537"
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de la tarea transferir bases de datos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de la tarea transferir bases de datos &#40;página bases de datos&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Editor de la tarea Transferir bases de datos &#40;página Bases de datos&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

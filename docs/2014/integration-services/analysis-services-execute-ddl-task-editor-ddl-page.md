@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061606"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor de la tarea Ejecutar DDL de Analysis Services (página DDL)
@@ -28,11 +28,11 @@ ms.locfileid: "66061606"
   
 ## <a name="static-options"></a>Opciones estáticas  
  **Connection**  
- Seleccione un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o un administrador de conexiones de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la lista, o bien haga clic en \<**Nueva conexión…**> y use el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** para crear una conexión.  
+ Seleccione un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto o un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] administrador de conexiones de la lista o haga \<clic en **nueva conexión...**> y use el cuadro de diálogo **Agregar administrador de conexiones de Analysis Services** para crear una nueva conexión.  
   
- **Temas relacionados:** [Agregar Analysis Services referencia de la interfaz de usuario del cuadro de diálogo Administrador de conexiones](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services administrador de conexiones](connection-manager/analysis-services-connection-manager.md)  
+ **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Administrador de conexiones de Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
- **SourceType**  
+ **Tipo de origen**  
  Especifique el tipo de origen de las instrucciones de DDL. Esta propiedad presenta las opciones indicadas en la siguiente tabla:  
   
 |Value|Descripción|  
@@ -45,11 +45,11 @@ ms.locfileid: "66061606"
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Entrada directa  
  **Origen**  
- Escriba las instrucciones de DDL, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, escriba las instrucciones en el cuadro de diálogo **Instrucciones DDL**.  
+ Escriba las instrucciones de DDL o haga clic en los puntos suspensivos **(...)** y, a continuación, escriba las instrucciones en el cuadro de diálogo **instrucciones de DDL** .  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = Conexión de archivos  
  **Origen**  
- Seleccione una conexión de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> y use el cuadro de diálogo **Administrador de conexiones de archivos** para crear una conexión.  
+ Seleccione una conexión de archivo de la lista o haga \<clic en **nueva conexión...**> y use el cuadro de diálogo **Administrador de conexiones de archivos** para crear una nueva conexión.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md)  
   
@@ -57,14 +57,14 @@ ms.locfileid: "66061606"
  **Origen**  
  Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…**> y use el cuadro de diálogo **Agregar variable** para crear una variable.  
   
- **Temas relacionados:** [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Analysis Services &#40;página general del editor de la tarea ejecutar DDL&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expresiones](expressions/expressions-page.md)   
+ [Página expresiones](expressions/expressions-page.md)   
  [Flujo de control](control-flow/control-flow.md)   
  [Referencia de ASSL&#41; &#40;de lenguaje de scripting Analysis Services](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Referencia&#41; &#40;de XML for Analysis XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Referencia XML for Analysis &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
   
   

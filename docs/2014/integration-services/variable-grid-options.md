@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054676"
 ---
 # <a name="variable-grid-options"></a>Opciones de la cuadrícula de variables
-  Utilice el cuadro de diálogo **Opciones de la cuadrícula de variables** para seleccionar las columnas que se mostrarán en la ventana **Variables** y seleccionar los filtros para aplicarlos a la lista de variables. Para más información sobre las propiedades de variable correspondientes, vea [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+  Utilice el cuadro de diálogo **Opciones de la cuadrícula de variables** para seleccionar las columnas que se mostrarán en la ventana **Variables** y seleccionar los filtros para aplicarlos a la lista de variables. Para más información sobre las propiedades de variable correspondientes, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="options-for-filter"></a>Opciones del filtro  
  **Mostrar variables del sistema**  
@@ -54,7 +54,7 @@ ms.locfileid: "66054676"
   
 ## <a name="see-also"></a>Consulte también  
  [Ventana variables](../../2014/integration-services/variables-window.md)   
- [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;&#41; variables de SSIS](integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
  [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   

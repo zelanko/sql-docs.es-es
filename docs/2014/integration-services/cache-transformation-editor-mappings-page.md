@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061176"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor de transformación de caché (página Asignaciones)
@@ -47,6 +47,6 @@ ms.locfileid: "66061176"
  Muestra cada columna de destino disponible.  
   
 ## <a name="see-also"></a>Consulte también  
- [Editor de transformación de caché &#40;página Administrador de conexiones&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [Editor de transformación Caché &#40;página Administrador de conexiones&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

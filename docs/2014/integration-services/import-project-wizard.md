@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058050"
 ---
 # <a name="import-project-wizard"></a>Asistente para importar proyectos
@@ -24,7 +24,7 @@ ms.locfileid: "66058050"
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>Para crear un proyecto basado en un proyecto del archivo .ispac o del catálogo  
   
-1.  Haga clic en **archivo**, seleccione **nuevo**y haga clic en proyecto.  
+1.  Haga clic en **Archivo**, seleccione **Nuevo**y haga clic en Proyecto.  
   
 2.  Expanda **Business Intelligence**y haga clic en **Integration Services**.  
   

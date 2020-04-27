@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055110"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor de la tarea Transferir bases de datos (página Bases de datos)
@@ -26,10 +26,10 @@ ms.locfileid: "66055110"
   
 ## <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de destino.  
   
  **DestinationDatabaseName**  
  Especifique el nombre de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el servidor de destino.  
@@ -55,8 +55,8 @@ ms.locfileid: "66055110"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**True**|Sobrescribir la base de datos del servidor de destino.|  
-|**False**|No sobrescribir la base de datos del servidor de destino.|  
+|**Reales**|Sobrescribir la base de datos del servidor de destino.|  
+|**Es**|No sobrescribir la base de datos del servidor de destino.|  
   
 > [!CAUTION]  
 >  Los datos de la base de datos del servidor de destino se sobrescribirán si especifica **True** para **DestinationOverwrite**, lo cual puede conllevar una pérdida de datos. Para evitar que ésta se produzca, realice una copia de seguridad de la base de datos del servidor de destino en otra ubicación antes de ejecutar la tarea Transferir bases de datos.  
@@ -84,14 +84,14 @@ ms.locfileid: "66055110"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**True**|Volver a adjuntar la base de datos de origen.|  
-|**False**|No volver a adjuntar la base de datos de origen.|  
+|**Reales**|Volver a adjuntar la base de datos de origen.|  
+|**Es**|No volver a adjuntar la base de datos de origen.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor de la tarea transferir bases de datos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expresiones](expressions/expressions-page.md)   
+ [Página expresiones](expressions/expressions-page.md)   
  [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
   
   

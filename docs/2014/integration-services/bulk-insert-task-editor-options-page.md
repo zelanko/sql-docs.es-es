@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061189"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor de la tarea Inserción masiva (página Opciones)
@@ -27,10 +27,10 @@ ms.locfileid: "66061189"
  Para más información sobre las inserciones masivas, vea [Tarea Inserción masiva](control-flow/bulk-insert-task.md) y [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 ## <a name="options"></a>Opciones  
- **CodePage**  
+ **737**  
  Especifique la página de códigos de los datos incluidos en el archivo de datos.  
   
- **Especific**  
+ **DataFileType**  
  Especifique el valor del tipo de datos que desea utilizar en la operación de carga.  
   
  **BatchSize**  
@@ -52,7 +52,7 @@ ms.locfileid: "66061189"
 |**Activar desencadenadores**|Seleccione esta opción para activar desencadenadores de inserción, actualización o eliminación en la tabla.|  
   
  **SortedData**  
- Especifique la cláusula ORDER BY en la instrucción de inserción masiva. El nombre de columna que proporcione debe ser una columna válida de la tabla de destino. El valor predeterminado es `false`. Significa que los datos están ordenados mediante una cláusula ORDER BY.  
+ Especifique la cláusula ORDER BY en la instrucción de inserción masiva. El nombre de columna que proporcione debe ser una columna válida de la tabla de destino. De manera predeterminada, es `false`. Significa que los datos están ordenados mediante una cláusula ORDER BY.  
   
  **MaxErrors**  
  Especifique el número máximo de errores que pueden producirse antes de que se cancele la operación de inserción masiva. El valor 0 indica que se permite un número infinito de errores.  
@@ -64,7 +64,7 @@ ms.locfileid: "66061189"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de la tarea inserción masiva &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de la tarea inserción masiva &#40;página de conexión&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Página Expresiones](expressions/expressions-page.md)   
+ [Página expresiones](expressions/expressions-page.md)   
  [Flujo de control](control-flow/control-flow.md)  
   
   

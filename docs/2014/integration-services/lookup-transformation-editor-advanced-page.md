@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f78c568d467601b2f23ae8952036764ea2b464d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057878"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>Editor de transformación Búsqueda (página Avanzadas)
@@ -36,7 +36,7 @@ ms.locfileid: "66057878"
  **Habilitar caché para filas sin entradas coincidentes**  
  Almacene en caché filas sin entradas coincidentes en el conjunto de datos de referencia.  
   
- **Asignación desde caché**  
+ **Asignación de caché**  
  Especifique el porcentaje de caché que se debe asignar a las filas sin entradas coincidentes en el conjunto de datos de referencia.  
   
  **Modificar la instrucción SQL**  
@@ -54,7 +54,7 @@ ms.locfileid: "66057878"
 ## <a name="see-also"></a>Consulte también  
  [Editor de transformación búsqueda &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de transformación búsqueda &#40;página de conexión&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [Editor de transformación Búsqueda &#40;página Columnas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [Editor de transformación búsqueda &#40;página columnas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Editor de transformación búsqueda &#40;página salida de error&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Búsqueda aproximada, transformación](data-flow/transformations/fuzzy-lookup-transformation.md)  

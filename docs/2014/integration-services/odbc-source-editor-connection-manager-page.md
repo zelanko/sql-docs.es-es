@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057221"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Editor de origen de ODBC (página Administrador de conexiones)
@@ -34,9 +34,9 @@ ms.locfileid: "66057221"
 ## <a name="options"></a>Opciones  
   
 ### <a name="connection-manager"></a>Administrador de conexiones  
- Seleccione un administrador de conexiones de ODBC existente en la lista o haga clic en **Nueva** para crear una nueva conexión. La conexión puede ser a cualquier base de datos compatible con ODBC.  
+ Seleccione un administrador de conexiones ODBC existente en la lista o haga clic en **nuevo** para crear una nueva conexión. La conexión puede ser a cualquier base de datos compatible con ODBC.  
   
-### <a name="new"></a>Nuevo  
+### <a name="new"></a>New  
  Haga clic en **Nueva**. Se abrirá el cuadro de diálogo **Configurar el administrador de conexiones ODBC** , donde puede crear un administrador de conexiones ODBC nuevo.  
   
 ### <a name="data-access-mode"></a>Modo de acceso a datos  
@@ -57,7 +57,7 @@ ms.locfileid: "66057221"
   
 ## <a name="see-also"></a>Consulte también  
  [Propiedades personalizadas del origen ODBC](data-flow/odbc-source-custom-properties.md)   
- [Editor de orígenes ODBC &#40;página Columnas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
+ [Editor de origen ODBC &#40;página columnas&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [Editor de orígenes ODBC &#40;página Salida de error&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

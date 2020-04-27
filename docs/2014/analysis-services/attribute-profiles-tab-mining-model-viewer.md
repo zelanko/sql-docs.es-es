@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063170"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Pestaña Perfiles del atributo (Visor de modelos de minería de datos)
   Utilice la pestaña **Perfiles del atributo** para ver cómo la distribución de los valores de entrada en un estado del modelo Bayes naive contribuye a cada estado del atributo de resultados. La distribución de los valores se muestra como un histograma con colores, todas las distribuciones se presentan en un formato tabular, para facilitar la comparación de los valores.  
   
- **Para obtener más información:** [algoritmo Bayes Naive de Microsoft](data-mining/microsoft-naive-bayes-algorithm.md), [examinar un modelo usando el visor Bayes Naive de Microsoft](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Para más información:** [Algoritmo Bayes naive de Microsoft](data-mining/microsoft-naive-bayes-algorithm.md), [Examinar un modelo usando el visor Bayes naive de Microsoft](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -31,7 +31,7 @@ ms.locfileid: "66063170"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos que desea ver de los modelos de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede elegir el visor personalizado proporcionado para cada modelo de minería de datos o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede usar visores de complemento, si están disponibles.  
   
  **Mostrar leyenda**  
@@ -43,7 +43,7 @@ ms.locfileid: "66063170"
  **Predicción**  
  Seleccione una columna de predicción del modelo de minería de datos.  
   
- **Perfiles de atributo**  
+ **Perfiles del atributo**  
  La tabla contiene las columnas siguientes:  
   
 |Value|Descripción|  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055940"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Seleccionar ubicación de origen (Asistente para actualización del paquete SSIS)
@@ -42,7 +42,7 @@ ms.locfileid: "66055940"
  **Carpeta**  
  Escriba el nombre de una carpeta que contenga los paquetes que quiere actualizar o haga clic en **Examinar** y busque la carpeta.  
   
- **Browse**  
+ **Examinar**  
  Busque la carpeta que contiene los paquetes que desea actualizar.  
   
 ## <a name="package-source-dynamic-options"></a>Opciones dinámicas de Origen del paquete  
@@ -55,10 +55,10 @@ ms.locfileid: "66055940"
  **Server**  
  Escriba el nombre del servidor que tiene los paquetes que se van a actualizar o seleccione este servidor en la lista.  
   
- **Usar autenticación de Windows**  
+ **Usar la autenticación de Windows**  
  Seleccione esta opción para utilizar la autenticación de Windows para conectarse al servidor.  
   
- **Usar autenticación SQL Server**  
+ **Utilizar autenticación de SQL Server**  
  Seleccione esta opción para usar la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para conectarse al servidor. Si usa la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
  **Nombre de usuario**  

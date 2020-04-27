@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059962"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de rutas de flujo de datos (página General)
@@ -30,7 +30,7 @@ ms.locfileid: "66059962"
  **Nombre**  
  Proporcione un nombre único para la ruta.  
   
- **SESIÓN**  
+ **Id**  
  El identificador de linaje de la ruta. Esta propiedad es de solo lectura.  
   
  **IdentificationString**  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056144"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Restricciones de esquema, cuadro de diálogo
@@ -29,11 +29,11 @@ ms.locfileid: "66056144"
  Seleccione las restricciones que se van a aplicar al esquema.  
   
  **Variable**  
- Utilice una variable para definir restricciones. Seleccione una variable de la lista o haga clic en **Nueva variable** para crear una nueva.  
+ Utilice una variable para definir restricciones. Seleccione una variable de la lista o haga clic en **nueva variable..** . para crear una nueva variable.  
   
- **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md) , [Agregar variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
- **Negrita**  
+ **Texto**  
  Proporciona el texto para definir restricciones.  
   
 ## <a name="see-also"></a>Consulte también  

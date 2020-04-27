@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063188"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Relación de los atributos (Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -25,7 +25,7 @@ ms.locfileid: "66063188"
 ## <a name="panes"></a>Paneles  
  La página **Relación de los atributos** contiene los paneles siguientes:  
   
- [Barra de herramientas](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)  
  Use la barra de herramientas para llevar a cabo operaciones en la pestaña **Relación de los atributos** del Diseñador de dimensiones.  
   
  [Diagrama Relación de los atributos](attribute-relationship-diagram-analysis-services-multidimensional-data.md)  

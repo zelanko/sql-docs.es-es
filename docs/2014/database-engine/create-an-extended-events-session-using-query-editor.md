@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065029"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Crear una sesión de eventos extendidos mediante el Editor de consultas
@@ -35,7 +35,7 @@ ms.locfileid: "66065029"
   
  Para obtener más información sobre cómo crear una sesión de eventos extendidos con el Asistente para nueva sesión, vea [Crear una sesión de Extended Events utilizando el asistente &#40;Explorador de objetos&#41;](../ssms/object/object-explorer.md). Para obtener más información sobre cómo crear una sesión de eventos extendidos con la interfaz de usuario de nueva sesión, vea [Crear una sesión de eventos extendidos utilizando el cuadro de diálogo Nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permisos  
  Para crear una sesión de eventos extendidos, debe disponer del permiso ALTER ANY EVENT SESSION.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>Crear una sesión de eventos extendidos mediante el Editor de consultas  
@@ -47,7 +47,7 @@ ms.locfileid: "66065029"
      Determine los eventos que desea utilizar en la sesión. Para ver todos los eventos disponibles, junto con la palabra clave y el canal, utilice la siguiente consulta:  
   
     > [!NOTE]  
-    >  Para obtener más información sobre las palabras clave y los canales, vea [Paquetes de SQL Server Extended Events](../relational-databases/extended-events/sql-server-extended-events-packages.md).  
+    >   Para obtener información acerca de las palabras clave y los canales, vea [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md).  
   
     ```  
     SELECT p.name, c.event, k.keyword, c.channel, c.description FROM  
@@ -184,7 +184,7 @@ ms.locfileid: "66065029"
     ```  
   
     > [!NOTE]  
-    >  Para obtener más información sobre los diferentes tipos de destino, vea [Destinos de SQL Server Extended Events](../../2014/database-engine/sql-server-extended-events-targets.md).  
+    >   Para obtener información acerca de los diferentes tipos de destino, vea [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
 6.  Revise y agregue las opciones de configuración adicionales que desee. Por ejemplo, puede configurar opciones tales como el modo de retención de eventos, el tiempo que los eventos se almacenan en búfer en memoria, o si la sesión de eventos debe iniciarse automáticamente cuando se inicie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las opciones se describen en el tema [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql). Tenga en cuenta que se asignan los valores predeterminados si no se especifican estas opciones.  
   
@@ -219,8 +219,8 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [Destinos de SQL Server Extended Events](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [CREAR sesión de eventos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinos de eventos extendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [Paquetes de SQL Server Extended Events](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

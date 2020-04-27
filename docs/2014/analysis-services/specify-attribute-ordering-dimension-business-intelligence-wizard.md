@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c15fdcc6d36383f8a1561259e7a876ebea7ba800
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068489"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>Especificar el orden de los atributos (Dimensión del Asistente de Business Intelligence)

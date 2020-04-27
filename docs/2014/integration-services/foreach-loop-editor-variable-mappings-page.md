@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058531"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor de bucles Foreach (página Asignaciones de variables)
@@ -35,7 +35,7 @@ ms.locfileid: "66058531"
   
  **Temas relacionados**: [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
- **Ajustar**  
+ **Índice**  
  Si utiliza el enumerador de elementos para Foreach, especifique el índice de la columna en el valor de la colección para asignarlo a la variable. Si utiliza otros tipos de enumeradores, el índice será de solo lectura.  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.locfileid: "66058531"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de bucles foreach &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Página colección de &#40;del editor de bucles foreach&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Página Expresiones](expressions/expressions-page.md)   
+ [Página expresiones](expressions/expressions-page.md)   
  [Contenedor de bucles For](control-flow/for-loop-container.md)  
   
   

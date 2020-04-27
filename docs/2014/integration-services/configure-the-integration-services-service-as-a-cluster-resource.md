@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060569"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurar el servicio Integration Services como recurso de clúster
@@ -78,15 +78,15 @@ ms.locfileid: "66060569"
   
 4.  En el menú **Archivo** , seleccione **Nuevo**y, a continuación, haga clic en **Recurso**.  
   
-5.  En la página **Nuevo recurso** del **Asistente para recursos**, escriba un nombre y seleccione **“Servicio genérico”** como el tipo de servicio. No cambie el valor de **Group**(Grupo). Haga clic en **Next**.  
+5.  En la página **Nuevo recurso** del **Asistente para recursos**, escriba un nombre y seleccione **“Servicio genérico”** como el tipo de servicio. No cambie el valor de **Group**(Grupo). Haga clic en **Siguiente**.  
   
-6.  En la página **Possible Owners** (Posibles propietarios), agregue o quite los nodos del clúster como posibles propietarios del recurso. Haga clic en **Next**.  
+6.  En la página **Possible Owners** (Posibles propietarios), agregue o quite los nodos del clúster como posibles propietarios del recurso. Haga clic en **Siguiente**.  
   
 7.  Para agregar dependencias, en la página **Dependencias** , seleccione un recurso en **Recursos disponibles**y, a continuación, haga clic en **Agregar**. En caso de una conmutación por error, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y el disco compartido que almacena los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] deberían volver a ponerse en línea antes de que se conecte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cuando haya seleccionado las dependencias, haga clic en **Siguiente**.  
   
      Para más información, consulte [Add Dependencies to a SQL Server Resource](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md).  
   
-8.  En la página **Generic Service Parameters** (Parámetros de servicio genéricos), especifique **MsDtsServer** como nombre del servicio. Haga clic en **Next**.  
+8.  En la página **Generic Service Parameters** (Parámetros de servicio genéricos), especifique **MsDtsServer** como nombre del servicio. Haga clic en **Siguiente**.  
   
 9. En la página **Replicación de Registro** , haga clic en **Agregar** para agregar la clave del Registro que identifica la ubicación del archivo de configuración para el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Este archivo debe estar ubicado en un disco compartido que esté en el mismo grupo de recursos que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   

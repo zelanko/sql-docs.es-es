@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060850"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>Configurar Firewall de Windows para el acceso al servicio SSIS
     
 > [!IMPORTANT]  
->  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]admite el servicio para mantener la compatibilidad con versiones anteriores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]de. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
+>  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
  El sistema Firewall de Windows impide el acceso no autorizado a los recursos de los equipos de una conexión de red. Para obtener acceso a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mediante este firewall, debe configurarlo para permitir el acceso.  
   
@@ -74,8 +74,7 @@ ms.locfileid: "66060850"
 5.  En el cuadro de diálogo **Agregar un puerto** , escriba **RPC(TCP/135)** u otro nombre descriptivo en el cuadro **Nombre**, escriba **135** en el cuadro **Número de puerto** y seleccione **TCP**.  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utiliza siempre el puerto 135. No se puede especificar un puerto diferente.  
+    >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utiliza siempre el puerto 135. No se puede especificar un puerto diferente.  
   
 6.  En el cuadro de diálogo **Agregar un puerto** , puede hacer clic en **Cambiar ámbito** para modificar el ámbito predeterminado.  
   

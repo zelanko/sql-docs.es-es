@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059880"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Editor de entrenamiento de modelos de minería de datos (pestaña Conexión)
@@ -27,7 +27,7 @@ ms.locfileid: "66059880"
  Para obtener más información acerca del destino de Entrenamiento del modelo de minería de datos, vea [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
 ## <a name="options"></a>Opciones  
- **Connection manager**  
+ **Administrador de conexiones**  
  Seleccione una conexión de la lista de conexiones existentes de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , o bien cree una conexión de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] con el botón **Nueva** que se describe más adelante.  
   
  **Nuevo**  
@@ -44,6 +44,6 @@ ms.locfileid: "66059880"
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de entrenamiento de modelos de minería de datos &#40;pestaña columnas&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Editor de entrenamiento de modelos de minería de datos &#40;pestaña Columnas&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

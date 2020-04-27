@@ -15,20 +15,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057599"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Editor de la tarea Cola de mensajes (página Enviar)
-  Utilice la página **Enviar** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea Cola de mensajes para enviar mensajes desde un paquete de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  Utilice la página **Enviar** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea Cola de mensajes para enviar mensajes desde un paquete de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Para obtener información acerca de esta tarea, vea [Message Queue Task](control-flow/message-queue-task.md).  
   
 ## <a name="options"></a>Opciones  
  **UseEncryption**  
- Indica si se debe cifrar el mensaje. El valor predeterminado es `False`.  
+ Indica si se debe cifrar el mensaje. De manera predeterminada, es `False`.  
   
  **EncryptionAlgorithm**  
  Si opta por usar cifrado, especifique el nombre del algoritmo de cifrado que debe utilizarse. La tarea Cola de mensajes puede utilizar los algoritmos RC2 y RC4. El valor predeterminado es **RC2**.  
@@ -52,17 +52,17 @@ ms.locfileid: "66057599"
   
 ### <a name="messagetype--data-file-message"></a>MessageType = Mensaje de archivo de datos  
  **DataFileMessage**  
- Escriba la ruta de acceso del archivo de datos, o bien haga clic en el botón de puntos suspensivos **(…)** y busque el archivo.  
+ Escriba la ruta de acceso del archivo de datos o haga clic en los puntos suspensivos **(...)** y, a continuación, busque el archivo.  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Mensaje de variable  
  **VariableMessage**  
- Escriba los nombres de variable, o bien haga clic en el botón de puntos suspensivos **(…)** y seleccione las variables. Las variables se separan con comas.  
+ Escriba los nombres de las variables o haga clic en los puntos suspensivos **(...)** y, a continuación, seleccione las variables. Las variables se separan con comas.  
   
  **Temas relacionados:** Seleccionar variables  
   
 ### <a name="messagetype--string-message"></a>MessageType = Mensaje de cadena  
  **StringMessage**  
- Escriba el mensaje de cadena, o bien haga clic en el botón de puntos suspensivos **(…)** y escriba el mensaje en el cuadro de diálogo **Escribir mensaje de cadena**.  
+ Escriba el mensaje de cadena o haga clic en los puntos suspensivos **(...)** y escriba el mensaje en el cuadro de diálogo **escribir mensaje de cadena** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069232"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Seleccionar la dimensión de cubo de origen (Asistente para minería de datos)
   Utilice la página **Seleccionar la dimensión de cubo de origen** para seleccionar la dimensión desde el cubo que contiene los casos que desea analizar. Por ejemplo, si crea un modelo que analiza el comportamiento adquisitivo de los clientes basándose en los datos demográficos, seleccionaría la dimensión de cliente, que suele contener un registro único para cada cliente y diferentes atributos que representan datos demográficos, como el género, la ubicación o los ingresos. Más adelante en el asistente tendrá la oportunidad de agregar una tabla relacionada con esta tabla de casos: por ejemplo, puede agregar una tabla anidada que muestre los productos que ha comprado el cliente.  
   
 > [!NOTE]  
->  Esta página solo aparecerá si ha seleccionado **A partir de un cubo existente** en la página **Seleccionar el método de definición** del asistente.  
+>  Esta página aparecerá solo si ha seleccionado **A partir de un cubo existente** en la página **Seleccionar el método de definición** del asistente.  
   
 ## <a name="options"></a>Opciones  
  **Seleccione una dimensión de cubo de origen**  

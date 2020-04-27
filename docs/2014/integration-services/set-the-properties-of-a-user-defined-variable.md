@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055650"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Establecer las propiedades de una variable definida por el usuario
@@ -28,8 +28,7 @@ ms.locfileid: "66055650"
 -   Ventana Propiedades. En la ventana **Propiedades** se muestra una lista de propiedades para configurar variables que no están disponibles en la ventana **Variables** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType yIncludeInDebugDump.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] también proporciona un conjunto de variables del sistema cuyas propiedades no se pueden actualizar, excepto la propiedad de RaiseChangedEvent.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] también proporciona un conjunto de variables del sistema cuyas propiedades no se pueden actualizar, excepto la propiedad de RaiseChangedEvent.  
   
  **Expresiones de valor en variables**  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66055650"
 8.  Para guardar el paquete actualizado, en el menú **Archivo** , haga clic en **Guardar los elementos seleccionados**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;&#41; variables de SSIS](integration-services-ssis-variables.md)   
  [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)   
  [Agregar, eliminar, cambiar el ámbito de la variable definida por el usuario en un paquete](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   

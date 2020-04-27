@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068136"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Especificar tipos de tablas (Asistente para minería de datos)
@@ -25,7 +25,7 @@ ms.locfileid: "66068136"
 > [!NOTE]  
 >  Puede agregar tablas posteriormente desde la pestaña **Estructura de minería de datos** del **Diseñador de minería de datos**.  
   
- **Para obtener más información:** [tablas anidadas &#40;Analysis Services-Data Mining&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [asistente para minería de datos &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para más información:** [Tablas anidadas &#40;Analysis Services - Minería de datos&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Tablas**  

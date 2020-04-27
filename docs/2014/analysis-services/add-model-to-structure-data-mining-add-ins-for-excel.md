@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062878"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Agregar modelo a estructura (Complementos de minería de datos para Excel)
@@ -44,7 +44,7 @@ ms.locfileid: "66062878"
   
 4.  Se recomienda hacer clic también en el botón **parámetros** para abrir el cuadro de diálogo **parámetros de algoritmo** y personalizar los parámetros en el algoritmo. Esta opción es la manera más fácil de crear modelos de minería de datos personalizados.  
   
-5.  Haga clic en **Next**.  
+5.  Haga clic en **Siguiente**.  
   
 6.  En el cuadro de diálogo **seleccionar columnas** , revise la lista de columnas y, si es necesario, cambie el uso de las columnas a uno de estos valores:  
   
@@ -89,12 +89,11 @@ ms.locfileid: "66062878"
 |Opción|Comentarios|  
 |------------|--------------|  
 |Cuadro **de diálogo Seleccionar estructura o modelo**|Elija una estructura de minería de datos existente para usarla como base para generar un nuevo modelo.  La estructura que elija debe estar en la conexión actual. Si no es así, cambie las conexiones con la herramienta [conectar con datos de origen &#40;cliente de minería de datos para Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md) .|  
-|**Seleccionar algoritmo de minería de datos** (cuadro de diálogo)|La lista de los algoritmos de minería de datos depende del servidor al que está conectado. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona diferentes algoritmos en las ediciones Standard y Enterprise. El administrador puede haber agregado también algoritmos personalizados.<br /><br /> Si no puede ver ningún algoritmo, compruebe que está conectado a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|**Seleccionar algoritmo de minería de datos** (cuadro de diálogo)|La lista de los algoritmos de minería de datos depende del servidor al que está conectado. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona diferentes algoritmos en las ediciones Standard y Enterprise. El administrador puede haber agregado también algoritmos personalizados.<br /><br /> Si no puede ver ningún algoritmo, compruebe que está conectado a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |**Parámetros de algoritmo** Cuadro de diálogo|En estos valores, puede personalizar cada algoritmo usando parámetros específicos del método analítico. También puede establecer un valor de inicialización para asegurarse de que los resultados del modelo se pueden reproducir en varios pasos de entrenamiento.<br /><br /> Para obtener más información, vea [parámetros de algoritmo &#40;SQL Server complementos de minería de datos&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Establecer marcas de modelo de columna** Cuadro de diálogo|Los marcadores de modelado pueden mejorar el modelo especificando cómo se deben tratar los datos que faltan. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](data-mining/modeling-flags-data-mining.md).|  
   
-###  <a name="Bkmk_mdlcolumn"></a>Establecer el uso de las columnas  
+###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>Establecer el uso de las columnas  
  Al agregar un nuevo modelo a una estructura de minería de datos existente, debe especificar la forma en que el modelo usará cada una de las columnas de datos en la estructura de minería de datos. Probablemente observará que las opciones de este asistente son mucho más detalladas que las opciones de la estructura de minería de datos. ¿Por qué?  
   
  El motivo es que cuando crea un modelo y una estructura a la vez con un asistente, muchas de las opciones que controlan cómo usa el algoritmo los datos se establecen automáticamente. Sin embargo, al agregar un modelo nuevo a uno existente, debe ver estas opciones manualmente y especificar si los datos se deben usar para el análisis, si el tipo de datos es correcto, etc.  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055278"
 ---
 # <a name="technical-reference-integration-services"></a>Referencia técnica (Integration Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66055278"
   
  [Diseñador de captura de datos modificados para Oracle de Attunity](change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
- ![Icono pequeño de carpeta de archivos](media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **errores y eventos**  
+ ![Icono pequeño de carpeta de archivos](media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Errores y eventos**  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
  ![Icono pequeño de carpeta de archivos](media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **referencia de Transact-SQL**  

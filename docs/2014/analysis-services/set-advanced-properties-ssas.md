@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068832"
 ---
 # <a name="set-advanced-properties-ssas"></a>Establecer propiedades avanzadas (SSAS)
@@ -29,7 +29,7 @@ ms.locfileid: "66068832"
  **Cadena de conexión**  
  Valores que usa el diseñador de modelos al establecer una conexión con un origen de datos. Esta información resulta útil para solucionar problemas de las conexiones.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
   

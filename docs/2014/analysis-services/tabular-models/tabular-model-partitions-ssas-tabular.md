@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaa2b608665e50b25b39d78a39a57bb08b55cf31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066385"
 ---
 # <a name="tabular-model-partitions-ssas-tabular"></a>Particiones de modelos tabulares (SSAS tabular)
@@ -24,7 +24,7 @@ ms.locfileid: "66066385"
   
  Secciones de este tema:  
   
--   [Privilegios](#bkmk_benefits)  
+-   [Ventajas](#bkmk_benefits)  
   
 -   [Permisos](#bkmk_permissions)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66066385"
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Privilegios  
  Un diseño de modelos eficientes usa particiones para eliminar el procesamiento innecesario y la subsiguiente carga del procesador en los servidores de Analysis Services, asegurándose al mismo tiempo de que los datos se procesan y actualizan con la frecuencia suficiente para reflejar los datos más recientes de los orígenes de datos.  
   
  Por ejemplo, un modelo tabular puede tener una tabla de ventas que incluya los datos de ventas del año fiscal 2011 actual y de cada uno de los años fiscales anteriores. La tabla sales del modelo tiene las tres particiones siguientes:  
@@ -51,7 +51,7 @@ ms.locfileid: "66066385"
   
  La forma de implementar una estrategia de partición para los modelos tabulares de la organización dependerá en gran medida de las necesidades de procesamiento de datos del modelo y los recursos disponibles.  
   
-##  <a name="bkmk_permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permisos  
  Para crear, administrar y procesar particiones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], es necesario disponer de los permisos adecuados de Analysis Services definidos en un rol de seguridad. Cada rol de seguridad tiene uno de los siguientes permisos:  
   
 |Permiso|Acciones|  
@@ -62,10 +62,10 @@ ms.locfileid: "66066385"
   
  Para más información sobre cómo crear roles durante la creación de modelos con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md). Para más información sobre cómo administrar miembros de roles para roles de modelos tabulares implementados con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea [Roles de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-roles-ssas-tabular.md).  
   
-##  <a name="bkmk_process_partitions"></a>Procesar particiones  
+##  <a name="process-partitions"></a><a name="bkmk_process_partitions"></a>Procesar particiones  
  Las particiones se pueden procesar (actualizar) de forma independiente de las demás particiones con el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o con un script. Existen las opciones siguientes de procesamiento:  
   
-|Modo|Descripción|  
+|Mode|Descripción|  
 |----------|-----------------|  
 |Proceso predeterminado|Detecta el estado de proceso de un objeto de partición y realiza el procesamiento necesario para devolver objetos de partición sin procesar o procesados parcialmente a un estado de procesamiento completo. Se cargan los datos de las tablas vacías y las particiones; se generan o se vuelven a generar las jerarquías, las columnas calculadas y las relaciones.|  
 |Proceso completo|Procesa un objeto de partición y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto.|  
@@ -73,7 +73,7 @@ ms.locfileid: "66066385"
 |Procesar borrado|Quita todos los datos de una partición.|  
 |Procesar adición|Actualiza la partición con nuevos datos de forma incremental.|  
   
-##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tareas relacionadas  
   
 |Tarea|Descripción|  
 |----------|-----------------|  

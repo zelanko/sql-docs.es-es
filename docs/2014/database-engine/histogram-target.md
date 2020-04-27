@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064699"
 ---
 # <a name="histogram-target"></a>Destino del histograma
@@ -49,7 +49,7 @@ ms.locfileid: "66064699"
 |wait_info|file_io|  
 |wait_info|red|  
 |wait_info|red|  
-|wait_info|sleep|  
+|wait_info|en reposo|  
   
  Los valores de tipo de espera se clasificarían en tres ranuras, con los valores y recuentos de ranura siguientes:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66064699"
 |-----------|----------------|  
 |file_io|2|  
 |red|2|  
-|sleep|1|  
+|en reposo|1|  
   
  El destino del histograma solo conserva los datos del evento correspondientes al origen especificado. En algunos casos, es posible que los datos del evento sean demasiado grandes para conservarlos al completo, en cuyo caso se truncan los datos. Cuando se truncan los datos de eventos, el número de bytes se graba y se muestra como una salida XML.  
   
@@ -102,9 +102,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Destinos de SQL Server Extended Events](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinos de eventos extendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [Sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CREAR sesión de eventos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

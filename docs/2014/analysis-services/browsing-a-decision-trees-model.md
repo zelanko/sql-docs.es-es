@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064668"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Examinar un modelo de árboles de decisión
   Al abrir un modelo de clasificación con **examinar**, el modelo se muestra en un visor de árbol de decisión interactivo, similar [!INCLUDE[msCoName](../includes/msconame-md.md)] al visor de árboles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de decisión de. El visor muestra los resultados de clasificación en forma de gráfico, que se ha diseñado para resaltar los criterios que distinguen un grupo de datos de otro. También puede explorar en profundidad los subconjuntos individuales del árbol y recuperar los datos subyacentes.  
   
-##  <a name="bkmk_Top"></a>Explorar el modelo  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorar el modelo  
  Los modelos basados en el algoritmo de árboles de decisión tienen gran cantidad de información interesante que se puede explorar. La ventana **examinar** incluye las pestañas y los paneles siguientes para ayudarle a conocer los patrones y predecir los resultados con el gráfico:  
   
 -   [Árbol de decisión](#BKMK_DecisionTree)  
@@ -36,7 +36,7 @@ ms.locfileid: "66064668"
   
  Para experimentar con árboles de decisión, puede utilizar los datos de ejemplo en la pestaña Datos de aprendizaje (o Datos de origen) del libro de datos de ejemplo y generar un modelo de árbol de decisión con Bike Buyer como atributo de predicción.  
   
-###  <a name="BKMK_DecisionTree"></a>Árbol de decisión  
+###  <a name="decision-tree"></a><a name="BKMK_DecisionTree"></a>Árbol de decisión  
  Esta vista se ha diseñado para ayudarle a conocer y explorar los factores que generan resultados.  
   
  El gráfico de árboles de decisión se puede leer de izquierda a derecha como sigue:  
@@ -103,7 +103,7 @@ ms.locfileid: "66064668"
   
      ![Gráfico de redes de dependencias para un modelo de asociación](media/dm13-dec-tree-background-no.gif "Gráfico de redes de dependencias para un modelo de asociación")  
   
- **Útiles**  
+ **Sugerencias**  
   
 -   Si los datos se pueden dividir en varias series, se crea otro modelo para cada conjunto de datos que desee modelar.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66064668"
   
  [Volver al principio](#bkmk_Top)  
   
-###  <a name="BKMK_DNetwork"></a>Red de dependencias  
+###  <a name="dependency-network"></a><a name="BKMK_DNetwork"></a>Red de dependencias  
  La vista **red de dependencias** muestra las conexiones entre los atributos de entrada y los atributos de predicción del modelo.  
   
 1.  Haga clic en el control deslizante y arrástrelo a la izquierda del visor  

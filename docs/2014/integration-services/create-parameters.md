@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060140"
 ---
 # <a name="create-parameters"></a>Creación de parámetros
@@ -33,7 +33,7 @@ ms.locfileid: "66060140"
   
 2.  Haga clic en el botón **Agregar parámetro** de la barra de herramientas.  
   
-     ![Botón Agregar barra de herramientas](media/denali-parameter-add.gif "Agregar botón de la barra de herramientas")  
+     ![Agregar botón de la barra de herramientas](media/denali-parameter-add.gif "Agregar botón de la barra de herramientas")  
   
 3.  Escriba valores para las propiedades **Nombre**, **Tipo de datos**, **Valor**, **Con distinción**y **Obligatorio** en la propia lista o en la ventana **Propiedades** . Estas propiedades se describen en la tabla siguiente.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66060140"
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
     |Sensible|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
-    |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
+    |Requerido|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
     |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
     > [!NOTE]  
@@ -67,7 +67,7 @@ ms.locfileid: "66060140"
   
 3.  Haga clic en el botón **Agregar parámetro** de la barra de herramientas.  
   
-     ![Botón Agregar barra de herramientas](media/denali-parameter-add.gif "Agregar botón de la barra de herramientas")  
+     ![Agregar botón de la barra de herramientas](media/denali-parameter-add.gif "Agregar botón de la barra de herramientas")  
   
 4.  Escriba valores para las propiedades **Nombre**, **Tipo de datos**, **Valor**, **Con distinción**y **Obligatorio** .  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66060140"
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
     |Sensible|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
-    |Obligatorio|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
+    |Requerido|Requiere que un valor, distinto del valor predeterminado de diseño, se especifique antes de que el paquete se ejecute.|  
     |Descripción|Descripción del parámetro en cuanto a capacidad de mantenimiento. En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], establezca la descripción del parámetro en la ventana Propiedades de Visual Studio cuando el parámetro esté seleccionado en la ventana de parámetros aplicable.|  
   
 5.  Guarde el proyecto para guardar los cambios realizados en los parámetros. Los valores de parámetro se almacenan en configuraciones en el archivo de proyecto. Guarde el archivo de proyecto para confirmar en el disco los cambios en los valores de parámetro.  

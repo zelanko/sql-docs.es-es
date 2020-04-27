@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056338"
 ---
 # <a name="save-a-package-as-a-package-template"></a>guardar un paquete como una plantilla de paquete
@@ -41,7 +41,7 @@ ms.locfileid: "66056338"
   
 2.  En el Explorador de soluciones, haga clic con el botón derecho en el proyecto, seleccione **Agregar** y, después, haga clic en **Nuevo elemento**.  
   
-3.  En el cuadro de diálogo **Agregar nuevo elemento -\<nombre de proyecto>**, haga clic en el paquete que quiera usar como plantilla.  
+3.  En el cuadro de diálogo **agregar\<nuevo elemento-nombre del proyecto>** , haga clic en el paquete que desea utilizar como plantilla.  
   
      La lista de plantillas incluye la plantilla de paquetes predeterminada denominada Nuevo paquete de SSIS. El icono de paquete identifica plantillas que se pueden utilizar como plantillas de paquetes.  
   

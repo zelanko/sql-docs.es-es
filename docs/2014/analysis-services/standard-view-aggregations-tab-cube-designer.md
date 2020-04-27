@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068058"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>Vista Estándar (pestaña Agregaciones, Diseñador de cubos)
@@ -27,7 +27,7 @@ ms.locfileid: "66068058"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Diseñar agregaciones**|Haga clic para mostrar el **Asistente para diseñar agregación**.|  
-|**Optimización basada en uso**|Haga clic para mostrar el Asistente para **optimización basada** en el uso.|  
+|**Optimización basada en uso**|Haga clic para mostrar el **Asistente para optimización basada en el uso** .|  
 |**Asignar diseño de agregaciones**|Haga clic para mostrar el cuadro de diálogo **Asignar diseño de agregaciones** .|  
 |**Eliminar**|Haga clic para eliminar el diseño de agregaciones seleccionado.|  
 |**Propiedades**|Haga clic para ver las propiedades de la agregación.|  

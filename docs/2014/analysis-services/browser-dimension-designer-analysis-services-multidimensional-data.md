@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064627"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Explorador (Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -27,7 +27,7 @@ ms.locfileid: "66064627"
 ## <a name="panes"></a>Paneles  
  La pestaña **Explorador** incluye los paneles siguientes:  
   
- [Barra de herramientas](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barra](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Use la barra de herramientas para realizar acciones comunes en la pestaña **Explorador** del Diseñador de dimensiones.  
   
  [Nivel y miembros](level-members-dimension-designer-analysis-services-multidimensional-data.md)  

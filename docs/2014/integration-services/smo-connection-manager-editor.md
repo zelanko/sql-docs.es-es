@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055595"
 ---
 # <a name="smo-connection-manager-editor"></a>administrador de conexiones SMO, editor del
@@ -45,7 +45,7 @@ ms.locfileid: "66055595"
  **Contraseña**  
  Si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , escriba la contraseña.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Pruebe la conexión con la configuración establecida.  
   
 ## <a name="see-also"></a>Consulte también  

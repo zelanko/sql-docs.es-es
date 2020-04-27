@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056028"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Seleccionar opciones de administración de paquetes (Asistente para actualización del paquete SSIS)
@@ -43,13 +43,13 @@ ms.locfileid: "66056028"
   
  La validación agrega tiempo al proceso de actualización. Se recomienda no seleccionar esta opción con paquetes grandes que probablemente se actualizarán correctamente.  
   
- **Crear nuevos ID. de paquete**  
+ **Crear nuevo id. de paquete**  
  Se crean nuevos identificadores de paquete para los paquetes de actualización.  
   
- **Continuar el proceso de actualización cuando se produce un error en la actualización del paquete**  
+ **Continuar el proceso de actualización cuando la actualización de un paquete genera un error**  
  Se especifica que cuando un paquete no se pueda actualizar, el Asistente para actualizar paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] continúe actualizando el resto de los paquetes.  
   
- **Conflictos de nombres de paquetes**  
+ **Conflictos con nombres de paquete**  
  Se especifica cómo debe administrar el asistente los paquetes que tienen el mismo nombre. Esta opción tiene los valores que figuran en la siguiente tabla.  
   
  **Sobrescribir archivos de paquete existentes**  
@@ -66,7 +66,7 @@ ms.locfileid: "66056028"
  **Omitir configuraciones**  
  No carga configuraciones de paquetes durante la actualización del paquete. Si se selecciona esta opción se reduce el tiempo necesario para actualizar el paquete.  
   
- **Copia de seguridad de paquetes originales**  
+ **Realizar copia de seguridad de paquetes originales**  
  El asistente hace una copia de seguridad de los paquetes originales en una carpeta **SSISBackupFolder** . El asistente crea la carpeta **SSISBackupFolder** como una subcarpeta de la carpeta que contiene los paquetes originales y los paquetes actualizados.  
   
 > [!NOTE]  

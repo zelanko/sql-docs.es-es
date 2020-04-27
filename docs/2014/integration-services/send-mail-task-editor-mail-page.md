@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055831"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor de la tarea Enviar correo (página Correo)
@@ -35,10 +35,10 @@ ms.locfileid: "66055831"
   
  **Temas relacionados:** [Administrador de conexiones SMTP](connection-manager/smtp-connection-manager.md)  
   
- **De**  
+ **From**  
  Especifique la dirección de correo electrónico del remitente.  
   
- **Para**  
+ **To**  
  Escriba las direcciones de correo electrónico de los destinatarios, separadas con punto y coma.  
   
  **Correos**  
@@ -47,7 +47,7 @@ ms.locfileid: "66055831"
  **BCC**  
  Escriba las direcciones de correo electrónico de los destinatarios ocultos de copia del mensaje, separadas con punto y coma.  
   
- **Asunto**  
+ **Subject**  
  Escriba el asunto del mensaje de correo electrónico.  
   
  **MessageSourceType**  
@@ -59,7 +59,7 @@ ms.locfileid: "66055831"
 |**Conexión de archivos**|Establezca el origen al archivo que incluye el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
 |**Variable**|Establezca el origen para la variable que incluye el texto del mensaje. Si selecciona este valor, se mostrará la opción dinámica **MessageSource**.|  
   
- **Priority**  
+ **Prioridad**  
  Establezca la prioridad del mensaje.  
   
  **Datos adjuntos**  
@@ -76,13 +76,13 @@ ms.locfileid: "66055831"
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Conexión de archivos  
  **MessageSource**  
- Seleccione un administrador de conexiones de archivos de la lista \<o haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
- Seleccione una variable de la lista o haga \<clic en **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…**> para crear una.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   

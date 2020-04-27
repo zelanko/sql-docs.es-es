@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063049"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>Pestaña Características del atributo (Visor de modelos de minería de datos)
   Utilice el panel **Características del atributo** para explorar las relaciones entre los resultados y los atributos de entrada en un modelo Bayes Naïve. Puede elegir el valor del atributo de destino y, a continuación, ver una lista de los atributos de entrada que tienen el efecto más fuerte sobre los resultados.  
   
- **Para obtener más información:** [algoritmo Bayes Naive de Microsoft](data-mining/microsoft-naive-bayes-algorithm.md), [examinar un modelo usando el visor Bayes Naive de Microsoft](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Para más información:** [Algoritmo Bayes naive de Microsoft](data-mining/microsoft-naive-bayes-algorithm.md), [Examinar un modelo usando el visor Bayes naive de Microsoft](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -31,7 +31,7 @@ ms.locfileid: "66063049"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos que se desea ver de los modelos de la estructura de minería de datos actual. El modelo de minería de datos se abrirá automáticamente en el visor personalizado más adecuado para el tipo de modelo elegido.  
   
- **Lector**  
+ **Visor**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Para cada modelo, tiene la opción de un visor personalizado o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . Los visores de complemento también aparecen en esta lista si están disponibles.  
   
  **Atributo**  

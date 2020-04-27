@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062365"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analizar en Excel (pestaña Explorador de cubo del Diseñador de cubos) (Analysis Services - Datos multidimensionales)
-  **Analizar en Excel** proporciona al desarrollador de cubos una manera de revisar rápidamente el aspecto que tendría un proyecto al usuario final. La característica **Analizar en Excel** abre Microsoft Excel, crea una conexión de origen de datos con la base de datos del área de trabajo y agrega automáticamente una tabla dinámica a la hoja de cálculo. Esta característica reemplaza al control Web de Office que, en versiones anteriores, proporcionaba una tabla dinámica incrustada en la pestaña Explorador.  
+  **Analizar en Excel** proporciona al desarrollador de cubos un mecanismo para ver rápidamente cómo se mostraría un proyecto al usuario final. La característica **Analizar en Excel** abre Microsoft Excel, crea una conexión de origen de datos con la base de datos del área de trabajo y agrega automáticamente una tabla dinámica a la hoja de cálculo. Esta característica reemplaza al control Web de Office que, en versiones anteriores, proporcionaba una tabla dinámica incrustada en la pestaña Explorador.  
   
  **Para ver los datos del cubo:**  
   

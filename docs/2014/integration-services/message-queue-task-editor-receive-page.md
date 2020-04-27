@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057673"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
@@ -28,10 +28,10 @@ ms.locfileid: "66057673"
   
 ## <a name="options"></a>Opciones  
  **RemoveFromMessageQueue**  
- Indique si desea eliminar el mensaje de la cola una vez recibido. De forma predeterminada, este valor se establece `False`en.  
+ Indique si desea eliminar el mensaje de la cola una vez recibido. De forma predeterminada, este valor está establecido en `False`.  
   
  **ErrorIfMessageTimeOut**  
- Indique si desea mostrar un mensaje de error si se produce un error en la tarea al exceder el tiempo de espera. El valor predeterminado es `False`.  
+ Indique si desea mostrar un mensaje de error si se produce un error en la tarea al exceder el tiempo de espera. De manera predeterminada, es `False`.  
   
  **TimeoutAfter**  
  Si elige mostrar un mensaje de error al producirse errores en la tarea, indique el número de segundos que deben transcurrir antes de mostrar el mensaje de tiempo de espera.  
@@ -44,7 +44,7 @@ ms.locfileid: "66057673"
 |**Mensaje de archivo de datos**|El mensaje se almacena en un archivo. Al seleccionar este valor se muestra la opción dinámica **DataFileMessage**.|  
 |**Mensaje de variable**|El mensaje se almacena en una variable. Al seleccionar este valor se muestra la opción dinámica **VariableMessage**.|  
 |**Mensaje de cadena**|El mensaje se almacena en la tarea Cola de mensajes. Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
-|**Mensaje de cadena a variable**|El mensaje.<br /><br /> Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
+|**Mensaje de cadena para variable**|El mensaje.<br /><br /> Al seleccionar este valor se muestra la opción dinámica **StringMessage**.|  
   
 ## <a name="messagetype-dynamic-options"></a>Opciones dinámicas de MessageType  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66057673"
  Escriba la ruta del archivo que quiere usar, o bien haga clic en el botón de puntos suspensivos **(…)** para buscar el archivo.  
   
  **Sobrescribir**  
- Indique si desea sobrescribir los datos de un archivo existente al guardar el contenido del mensaje de archivo de datos. El valor predeterminado es `False`.  
+ Indique si desea sobrescribir los datos de un archivo existente al guardar el contenido del mensaje de archivo de datos. De manera predeterminada, es `False`.  
   
  **Filter**  
  Indique si desea aplicar un filtro al mensaje. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -61,7 +61,7 @@ ms.locfileid: "66057673"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Sin filtro**|La tarea no filtra mensajes. Al seleccionar este valor se muestra la opción dinámica **IdentifierReadOnly**.|  
-|**Del paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
+|**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
 ### <a name="filter-dynamic-options"></a>Opciones dinámicas de Filtro  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66057673"
  **Identificador**  
  Si decide aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, especifique el paquete.  
   
- **Temas relacionados:** [seleccionar un paquete](control-flow/select-a-package.md)  
+ **Temas relacionados:** [Seleccionar un paquete](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--variable-message"></a>MessageType = Mensaje de variable  
  **Filter**  
@@ -82,7 +82,7 @@ ms.locfileid: "66057673"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Sin filtro**|La tarea no filtra mensajes. Al seleccionar este valor se muestra la opción dinámica **IdentifierReadOnly**.|  
-|**Del paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
+|**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
  Escriba el nombre de la variable, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
@@ -99,10 +99,10 @@ ms.locfileid: "66057673"
  **Identificador**  
  Si decide aplicar un filtro, escriba el identificador único del paquete del que se recibirán los mensajes, o bien haga clic en el botón de puntos suspensivos **(…)** y, después, especifique el paquete.  
   
- **Temas relacionados:** [seleccionar un paquete](control-flow/select-a-package.md)  
+ **Temas relacionados:** [Seleccionar un paquete](control-flow/select-a-package.md)  
   
 ### <a name="messagetype--string-message"></a>MessageType = Mensaje de cadena  
- **Compare**  
+ **Comparar**  
  Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
 |Value|Descripción|  
@@ -110,13 +110,13 @@ ms.locfileid: "66057673"
 |**None**|Los mensajes no se comparan.|  
 |**Coincidencia exacta**|Los mensajes deben coincidir exactamente con la cadena de la opción **CompareString** .|  
 |**Omitir mayúsculas y minúsculas**|El mensaje debe coincidir con la cadena de la opción **CompareString** , pero la comparación no distingue mayúsculas de minúsculas.|  
-|**Con**|El mensaje debe contener la cadena de la opción **CompareString** .|  
+|**Que contenga**|El mensaje debe contener la cadena de la opción **CompareString** .|  
   
- **API**  
+ **CompareString**  
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
 ### <a name="messagetype--string-message-to-variable"></a>MessageType = Mensaje de cadena para variable  
- **Compare**  
+ **Comparar**  
  Especifica si se desea aplicar un filtro a los mensajes. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
 |Value|Descripción|  
@@ -124,9 +124,9 @@ ms.locfileid: "66057673"
 |**None**|Los mensajes no se comparan.|  
 |**Coincidencia exacta**|Los mensajes deben coincidir exactamente con la cadena de la opción **CompareString** .|  
 |**Omitir mayúsculas y minúsculas**|El mensaje debe coincidir con la cadena de la opción **CompareString** , pero la comparación no distingue mayúsculas de minúsculas.|  
-|**Con**|El mensaje debe contener la cadena de la opción **CompareString** .|  
+|**Que contenga**|El mensaje debe contener la cadena de la opción **CompareString** .|  
   
- **API**  
+ **CompareString**  
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
@@ -138,7 +138,7 @@ ms.locfileid: "66057673"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de la tarea cola de mensajes &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de la tarea cola de mensajes &#40;página envío&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
- [Página Expresiones](expressions/expressions-page.md)   
+ [Página expresiones](expressions/expressions-page.md)   
  [Message Queue Task](control-flow/message-queue-task.md)  
   
   

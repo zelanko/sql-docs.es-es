@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059408"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Editor de destino de procesamiento de dimensiones (página Asignaciones)
@@ -42,6 +42,6 @@ ms.locfileid: "66059408"
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Editor de destino de procesamiento de dimensiones &#40;página avanzadas&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Editor de destino de procesamiento de dimensiones &#40;página Avanzadas&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

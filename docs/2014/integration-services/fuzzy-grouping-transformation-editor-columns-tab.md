@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058356"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de transformación Agrupación aproximada (pestaña Columnas)
@@ -59,9 +59,9 @@ ms.locfileid: "66058356"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Había**|Los números iniciales y finales no son significativos.|  
-|**Mejor**|Solo son significativos los números iniciales.|  
-|**Finales**|Solo son significativos los números finales.|  
+|**Neither**|Los números iniciales y finales no son significativos.|  
+|**Leading**|Solo son significativos los números iniciales.|  
+|**Trailing**|Solo son significativos los números finales.|  
 |**LeadingAndTrailing**|Tanto los números iniciales como los finales son significativos.|  
   
  **Marcas de comparación**  

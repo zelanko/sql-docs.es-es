@@ -11,19 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059904"
 ---
 # <a name="data-flow-taps"></a>Derivaciones de flujo de datos
-  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] presenta una nueva característica que le permite agregar una derivación de datos en la ruta de flujo de datos en tiempo de ejecución y dirigir la salida de la derivación de datos a un archivo externo. Para usar esta característica, debe implementar el proyecto de SSIS con el modelo de implementación de proyectos en un servidor de SSIS. Después de implementar el paquete en el servidor, debe ejecutar scripts T-SQL en la base de datos SSISDB para agregar derivaciones de datos antes de ejecutar el paquete. Este es un escenario de ejemplo:  
   
 1.  Cree una instancia de ejecución de un paquete con el procedimiento almacenado [catalog.create_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database).  
   
-2.  Para agregar una derivación de datos, use el procedimiento almacenado [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) o [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid).  
+2.  Para agregar una derivación de datos, use el procedimiento almacenado [catalog.add_data_tap](/sql/integration-services/system-stored-procedures/catalog-add-data-tap) o [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid) .  
   
 3.  Inicie la instancia de ejecución del paquete con [catalog.start_execution &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).  
   
@@ -83,6 +82,6 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ## <a name="related-tasks"></a>Related Tasks  
  [Depurar el flujo de datos](troubleshooting/debugging-data-flow.md)  
   
- [Herramientas para solucionar problemas de la ejecución de paquetes](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas con la ejecución de paquetes](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

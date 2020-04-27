@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055949"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Seleccionar enumeración de SMO, cuadro de diálogo
@@ -28,7 +28,7 @@ ms.locfileid: "66055949"
  **Enumerar**  
  Expanda el servidor y seleccione el objeto SMO.  
   
- **Objetos**  
+ **de la empresa**  
  Utilice el tipo de enumeración Objetos.  
   
  **Rellenar previamente**  
@@ -37,14 +37,14 @@ ms.locfileid: "66055949"
  **Nombres**  
  Utilice el tipo de enumeración Nombres.  
   
- **Urn**  
+ **URN**  
  Utilice el tipo de enumeración URN.  
   
- **Lugar**  
+ **Ubicaciones**  
  Utilice el tipo de enumeración Ubicaciones. Esta opción solo está disponible para archivos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Contenedor de bucles Para cada uno](control-flow/foreach-loop-container.md)   
+ [Contenedor de bucles foreach](control-flow/foreach-loop-container.md)   
  [Guía de programación para objetos de administración de SQL Server &#40;SMO&#41;](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

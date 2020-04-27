@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062136"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Agregar un origen mediante el Asistente de orígenes
-  En este tema se proporcionan los pasos para agregar un nuevo origen con el Asistente de orígenes y también se muestran las opciones disponibles en el cuadro de diálogo **Agregar nuevo origen**, que verá al arrastrar y colocar el Asistente de orígenes al Diseñador SSIS.  
+  En este tema se proporcionan los pasos para agregar un nuevo origen con el Asistente de orígenes y también se muestran las opciones disponibles en el cuadro de diálogo **Agregar nuevo origen** , que verá al arrastrar y colocar el Asistente de orígenes al Diseñador SSIS.  
   
 ### <a name="to-use-source-assistant-to-add-a-source"></a>Para utilizar el Asistente de orígenes para agregar un origen  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66062136"
   
 3.  Seleccione el tipo de destino en la lista **Tipos** .  
   
-4.  Seleccione un administrador de conexiones existente en la lista **Administradores de conexiones** o seleccione **\<Nuevo>** para crear un administrador de conexiones.  
+4.  Seleccione un administrador de conexiones existente en la lista **administradores de conexiones** o seleccione ** \<nuevo>** para crear un nuevo administrador de conexiones.  
   
 5.  Si selecciona un administrador de conexiones existente, haga clic **Aceptar** para cerrar el cuadro de diálogo **Agregar nuevo destino** . Debería ver el destino y los administradores de conexiones agregados al flujo de datos.  
   

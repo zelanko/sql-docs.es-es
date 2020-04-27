@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066155"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -38,7 +38,7 @@ ms.locfileid: "66066155"
  **Filtrar miembros**  
  Haga clic para mostrar el cuadro de diálogo **Filtrar miembros** y filtre los miembros que aparecen en **Level and Members** (Nivel y miembros) para la jerarquía seleccionada.  
   
- **Diferi**  
+ **Reescritura**  
  Seleccione para establecer el panel **Level and Members** (Nivel y miembros) en el modo de reescritura de dimensiones.  
   
  **Disminuir sangría**  

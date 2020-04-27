@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065851"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalles de la traducción (pestaña Traducciones, Diseñador de dimensiones) (Analysis Services – Datos multidimensionales)
@@ -52,12 +52,12 @@ ms.locfileid: "66065851"
   
 -   Nivel  
   
-     `Caption`propiedad  
+     Propiedad `Caption`  
   
  **\<>de idioma**  
  Escriba o seleccione el valor de la propiedad del objeto de la dimensión en el idioma seleccionado. Si hace clic en el botón de puntos suspensivos (**…**), se abrirán otros cuadros de diálogo, según la propiedad que edite:  
   
--   `NamingTemplate`propiedad  
+-   Propiedad `NamingTemplate`  
   
      Muestra el [Cuadro de diálogo Plantilla de asignación de nombres de nivel &#40;Analysis Services - Datos multidimensionales&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -83,11 +83,11 @@ ms.locfileid: "66065851"
 > [!NOTE]  
 >  Esta opción solo se habilita si hizo clic con el botón secundario en una celda para eliminar la columna de traducción de un atributo.  
   
- **Editar columna de título**  
+ **Editar columna de leyenda**  
  Seleccione esta opción para mostrar el cuadro de diálogo **Traducción de datos de atributos** y modificar una columna de leyendas existente al modificar un atributo en la cuadrícula **Detalles de traducción** .  
   
 > [!NOTE]  
->  La opción solo se habilita si se ha seleccionado una celda de una columna traducción que contiene una columna de leyenda de un atributo en la cuadrícula **Detalles de traducción** .  
+>   La opción solo se habilita si se ha seleccionado una celda de una columna traducción que contiene una columna de leyenda de un atributo en la cuadrícula **Detalles de traducción** .  
   
  **Eliminar columna de leyenda**  
  Elija esta opción para eliminar la columna de leyendas del atributo seleccionado en la cuadrícula **Detalles de traducción** .  

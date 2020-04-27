@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061115"
 ---
 # <a name="cdc-control-task-editor"></a>Editor de la tarea Control de CDC
@@ -80,7 +80,7 @@ ms.locfileid: "66061115"
  Esto solo está disponible si se ha seleccionado **Persistencia de estado automática** y es un parámetro obligatorio.  
   
  **Tabla que se va a usar para almacenar el estado**  
- Escriba el nombre de la tabla de estado que se va a usar para almacenar el estado de CDC. La tabla especificada debe tener dos columnas denominadas **nombre** y **estado** y ambas columnas deben ser del tipo de datos **varchar (256)** .  
+ Escriba el nombre de la tabla de estado que se va a usar para almacenar el estado de CDC. La tabla especificada debe tener dos columnas denominadas **nombre** y **estado** y ambas columnas deben ser del tipo de datos **varchar (256)**.  
   
  Opcionalmente, puede seleccionar **Nueva** para obtener un script SQL que cree una nueva tabla de estado con las columnas necesarias. Cuando se selecciona **Persistencia de estado automática** , el desarrollador debe crear una tabla de estado según los requisitos descritos anteriormente.  
   
@@ -90,6 +90,6 @@ ms.locfileid: "66061115"
  Escriba un nombre para asociar al estado CDC persistente. Los paquetes de carga completa y CDC que funcionan con el mismo contexto CDC especificarán un nombre común para el estado. Este nombre se usa para buscar la fila de estado en la tabla de estado.  
   
 ## <a name="see-also"></a>Consulte también  
- [Propiedades personalizadas de la tarea Control CDC](control-flow/cdc-control-task-custom-properties.md)  
+ [Propiedades personalizadas de la tarea de control CDC](control-flow/cdc-control-task-custom-properties.md)  
   
   

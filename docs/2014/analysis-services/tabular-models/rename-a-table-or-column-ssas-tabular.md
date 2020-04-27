@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066688"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Cambiar el nombre de una tabla o una columna (SSAS tabular)
@@ -58,6 +58,6 @@ ms.locfileid: "66066688"
 ## <a name="see-also"></a>Consulte también  
  [Tablas y columnas &#40;SSAS tabular&#41;](tables-and-columns-ssas-tabular.md)   
  [Importar desde PowerPivot &#40;SSAS tabular&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Importar desde Analysis Services &#40;SSAS tabular&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Importación desde Analysis Services &#40;SSAS tabular&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

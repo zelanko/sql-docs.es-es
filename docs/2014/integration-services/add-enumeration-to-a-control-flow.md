@@ -17,14 +17,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061908"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>Agregar enumeración a un flujo de control
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para cada uno, un elemento de flujo de control que simplifica la inclusión de una construcción de bucle que enumera archivos y objetos en el flujo de control de un paquete. Para más información, vea [Contenedor Foreach Loop](control-flow/foreach-loop-container.md).  
   
  El contenedor de bucles Foreach no proporciona una funcionalidad, sino solamente la estructura en la que se genera el flujo de control repetible, se especifica un tipo de enumerador y se configura el enumerador. Para proporcionar la funcionalidad del contenedor, debe incluir por lo menos una tarea en el contenedor de bucles Foreach. Para más información, consulte [Integration Services Tasks](control-flow/integration-services-tasks.md).  
@@ -44,7 +43,7 @@ ms.locfileid: "66061908"
 4.  Configure el contenedor de bucles Foreach. Para más información, vea [configurar un contenedor de bucles Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Agregar o eliminar tareas o contenedores en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Agregar o eliminar una tarea o un contenedor en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Agrupar o desagrupar componentes](group-or-ungroup-components.md)   
  [Restricciones de precedencia](control-flow/precedence-constraints.md)   
  [Agregar iteración a un flujo de control](add-iteration-to-a-control-flow.md)   

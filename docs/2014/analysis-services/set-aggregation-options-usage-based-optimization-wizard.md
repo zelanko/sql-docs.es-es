@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068762"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Establecer las opciones de agregaciones (Asistente para optimización basada en el uso)
@@ -32,13 +32,13 @@ ms.locfileid: "66068762"
  **Haré clic en Detener**  
  Limita el diseño de agregaciones al hacer clic en **Detener** durante el proceso de diseño.  
   
- **Iniciar**  
+ **Start**  
  Empieza el proceso de diseño de agregaciones.  
   
  **Detención**  
  Finaliza el proceso de diseño de agregaciones.  
   
- **Reset**  
+ **Restablecer**  
  Restablece todas las opciones de agregaciones de esta página a sus valores predeterminados.  
   
 ## <a name="see-also"></a>Consulte también  

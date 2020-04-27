@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057948"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Editor de transformación Búsqueda (página Conexión)
@@ -33,7 +33,7 @@ ms.locfileid: "66057948"
  Seleccione un administrador de conexiones de caché de la lista o cree una conexión haciendo clic en **Nueva**.  
   
  **Nuevo**  
- Cree una nueva conexión mediante el cuadro de diálogo **Editor del administrador de conexiones de caché** .  
+ Cree una conexión mediante el cuadro de diálogo **Editor del administrador de conexiones de caché** .  
   
  Las opciones siguientes están disponibles al seleccionar **Caché completa**, **Caché parcial**o **Sin caché**, y **Administrador de conexiones OLE DB**en la página General del cuadro de diálogo **Editor de transformación Búsqueda** .  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66057948"
  Cree una conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
  **Usar una tabla o una vista**  
- Seleccione una tabla o vista de la lista o cree una tabla haciendo clic en **Nueva**.  
+ Seleccione una tabla o vista existente de la lista o cree una nueva tabla haciendo clic en **nueva**.  
   
 > [!NOTE]  
 >  Si especifica una instrucción SQL en la página **Avanzadas** del **Editor de transformación Búsqueda**, esa instrucción SQL invalida y reemplaza el nombre de tabla seleccionado aquí. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Avanzadas&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md).  
@@ -58,13 +58,13 @@ ms.locfileid: "66057948"
  **Generar consulta**  
  Cree la instrucción Transact-SQL para ejecutarla mediante el **Generador de consultas**, herramienta gráfica que se usa para crear consultas examinando datos.  
   
- **Browse**  
+ **Examinar**  
  Utilice esta opción para examinar una consulta preexistente guardada como un archivo.  
   
  **Analizar consulta**  
  Compruebe la sintaxis de la consulta.  
   
- **Versión preliminar**  
+ **Vista previa**  
  Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . Esta opción muestra hasta 200 filas.  
   
 ## <a name="external-resources"></a>Recursos externos  
@@ -72,7 +72,7 @@ ms.locfileid: "66057948"
   
 ## <a name="see-also"></a>Consulte también  
  [Editor de transformación búsqueda &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor de transformación Búsqueda &#40;página Columnas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
+ [Editor de transformación búsqueda &#40;página columnas&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Editor de transformación búsqueda &#40;página avanzadas&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [Editor de transformación búsqueda &#40;página salida de error&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [Búsqueda aproximada, transformación](data-flow/transformations/fuzzy-lookup-transformation.md)  

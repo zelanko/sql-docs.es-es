@@ -22,16 +22,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056824"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la instalación de paquetes
   Use el **Asistente para la instalación de paquetes** para implementar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , incluidos los paquetes y los distintos archivos que contienen, así como las dependencias del paquete.  
   
- Antes de implementar paquetes, puede crear configuraciones y después implementarlas con los paquetes. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]usa configuraciones para actualizar dinámicamente las propiedades de los paquetes y los objetos de paquete en tiempo de ejecución. Por ejemplo, la cadena de conexión de una conexión OLE DB puede establecerse dinámicamente en tiempo de ejecución proporcionando una configuración que asigne un valor a la propiedad que contiene la cadena de conexión.  
+ Antes de implementar paquetes, puede crear configuraciones y después implementarlas con los paquetes. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utiliza configuraciones para actualizar dinámicamente las propiedades de los paquetes y los objetos de paquete en tiempo de ejecución. Por ejemplo, la cadena de conexión de una conexión OLE DB puede establecerse dinámicamente en tiempo de ejecución proporcionando una configuración que asigne un valor a la propiedad que contiene la cadena de conexión.  
   
  No se puede ejecutar el Asistente para la instalación de paquetes hasta que se genere un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y se cree una utilidad de implementación. Para más información, consulte [Deploy Packages by Using the Deployment Utility](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66056824"
  **No volver a mostrar esta página**  
  Seleccione para omitir la página de inicio al volver a ejecutar el asistente.  
   
- **Nueva**  
+ **Siguiente**  
  Va a la siguiente página del asistente.  
   
  **Finalizar**  
@@ -56,18 +56,18 @@ ms.locfileid: "66056824"
  **Archivo de configuración**  
  Para modificar el contenido de un archivo de configuración, seleccione el archivo en la lista.  
   
- **Temas relacionados:** [crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md)  
+ **Related Topics:** [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)  
   
  **Path**  
  Muestra la ruta de acceso de la propiedad que debe configurarse.  
   
- **Tipo**  
+ **Type**  
  Muestra el tipo de datos de la propiedad.  
   
  **Valor**  
  Especifique el valor de la configuración.  
   
- **Nueva**  
+ **Siguiente**  
  Va a la siguiente página del asistente.  
   
  **Finalizar**  
@@ -76,7 +76,7 @@ ms.locfileid: "66056824"
 ## <a name="confirm-installation-page"></a>Página Confirmar la instalación  
  Use la página **Confirmar la instalación** para iniciar la instalación de paquetes, ver el estado y ver la información que utilizará el asistente para instalar los archivos del proyecto especificado.  
   
- **Nueva**  
+ **Siguiente**  
  Instale los paquetes y sus dependencias y vaya a la siguiente página del asistente una vez completada la instalación.  
   
  **Estado**  
@@ -98,7 +98,7 @@ ms.locfileid: "66056824"
  **Validar los paquetes después de la instalación**  
  Indica si se van a validar los paquetes después de la instalación.  
   
- **Nueva**  
+ **Siguiente**  
  Va a la siguiente página del asistente.  
   
  **Finalizar**  
@@ -107,7 +107,7 @@ ms.locfileid: "66056824"
 ## <a name="packages-validation-page"></a>Página Validación de paquetes  
  Use la página **Validación de paquetes** para ver el progreso y los resultados de la validación del paquete.  
   
- **Nueva**  
+ **Siguiente**  
  Va a la siguiente página del asistente.  
   
 ## <a name="select-installation-folder-page"></a>Página Seleccionar la carpeta de instalación  
@@ -117,10 +117,10 @@ ms.locfileid: "66056824"
  **Carpeta**  
  Permite especificar la ruta y la carpeta en la que se desea copiar el paquete y sus dependencias.  
   
- **Browse**  
+ **Examinar**  
  Permite ir a la carpeta de destino mediante el cuadro de diálogo **Buscar carpeta** .  
   
- **Nueva**  
+ **Siguiente**  
  Va a la siguiente página del asistente.  
   
  **Finalizar**  
@@ -145,7 +145,7 @@ ms.locfileid: "66056824"
  **Contraseña**  
  Especifique una contraseña.  
   
- **Ruta de acceso del paquete**  
+ **Ruta de acceso de paquete**  
  Especifique el nombre de la carpeta lógica o escribe "/" para la carpeta predeterminada.  
   
  Para seleccionar la carpeta en el cuadro de diálogo **paquete SSIS** , haga clic en examinar (...). Sin embargo, el cuadro de diálogo no proporciona un medio para seleccionar la carpeta predeterminada. Si desea utilizar la carpeta predeterminada, tiene que escribir "/" en el cuadro de texto.  
@@ -156,7 +156,7 @@ ms.locfileid: "66056824"
  **Basar el cifrado en el almacenamiento del servidor**  
  Seleccione estas características de seguridad del [!INCLUDE[ssDE](../includes/ssde-md.md)] para contribuir a proteger los paquetes.  
   
- **Nueva**  
+ **Siguiente**  
  Va a la siguiente página del asistente.  
   
  **Finalizar**  

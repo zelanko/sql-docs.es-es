@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055456"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Editor de destino de SQL (página Avanzadas)
@@ -27,7 +27,7 @@ ms.locfileid: "66055456"
  Para obtener más información acerca del destino de SQL Server, vea [SQL Server Destination](data-flow/sql-server-destination.md).  
   
 ## <a name="options"></a>Opciones  
- **Mantener la identidad**  
+ **Mantener valores de identidad**  
  Especifique si la tarea debe insertar valores en columnas de identidad. El valor predeterminado de esta propiedad es `False`.  
   
  **Mantener valores NULL**  
@@ -60,7 +60,7 @@ ms.locfileid: "66055456"
 > [!NOTE]  
 >  Borre el cuadro de texto del **Editor de destino de SQL** para indicar que no desea asignar un valor a esta propiedad. Use -1 en la ventana **Propiedades** , el **Editor avanzado**y el modelo de objetos.  
   
- **Super**  
+ **Tiempo de espera**  
  Especifique el número de segundos que se debe esperar antes de que la inserción masiva se detenga debido a un tiempo de espera.  
   
  **Columnas de orden**  

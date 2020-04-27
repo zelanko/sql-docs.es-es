@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056086"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Editor de transformación Script (página Columnas de entrada)
   Utilice la página **Columnas de entrada** del cuadro de diálogo **Editor de transformación Script** para definir las propiedades de las columnas de entrada.  
   
 > [!NOTE]  
->  La página **Columnas de entrada** no se muestra para los componentes de origen, que tienen salidas, pero no entradas.  
+>   La página **Columnas de entrada** no se muestra para los componentes de origen, que tienen salidas pero no entradas.  
   
  Para obtener más información acerca del componente de script, vea [Script Component](data-flow/transformations/script-component.md) y [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obtener información acerca de cómo programar el componente de script, vea [Ampliar el flujo de datos con el componente de script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   

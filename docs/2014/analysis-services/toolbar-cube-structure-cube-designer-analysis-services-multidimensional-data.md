@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066028"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -38,6 +38,6 @@ ms.locfileid: "66066028"
 |**Ocultar tabla**|Haga clic para ocultar la tabla seleccionada en el panel **Vista del origen de datos** .<br /><br /> Nota: Esta opción se deshabilitará si no se selecciona una tabla del panel **Vista del origen de datos** .|  
 |**Buscar tabla**|Haga clic para mostrar el cuadro de diálogo **Buscar tabla** y buscar una tabla en el panel **Vista origen de datos** .|  
 |**Zoom**|Haga clic para recorrer las opciones de porcentaje de zoom o para seleccionar una opción de porcentaje de zoom disponible para el panel **Vista del origen de datos** .|  
-|**Feria**|Haga clic para recorrer las siguientes opciones o seleccione una de las siguientes opciones para cambiar la vista del panel **Vista del origen de datos** .<br /><br /> **Vista de árbol**: muestra tablas, consultas con nombre, columnas, cálculos con nombre y relaciones en una vista de árbol.<br /><br /> **Vista de diagrama**: muestra tablas, consultas con nombre, columnas, cálculos con nombre y relaciones en un diagrama de base de datos.|  
+|**Mostrar**|Haga clic para recorrer las siguientes opciones o seleccione una de las siguientes opciones para cambiar la vista del panel **Vista del origen de datos** .<br /><br /> **Vista de árbol**: muestra tablas, consultas con nombre, columnas, cálculos con nombre y relaciones en una vista de árbol.<br /><br /> **Vista de diagrama**: muestra tablas, consultas con nombre, columnas, cálculos con nombre y relaciones en un diagrama de base de datos.|  
   
   

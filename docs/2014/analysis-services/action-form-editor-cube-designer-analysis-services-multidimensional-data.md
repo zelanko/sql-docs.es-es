@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062958"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -54,7 +54,7 @@ ms.locfileid: "66062958"
  **Contenido de la acción**  
  Expanda esta opción para ver las opciones **Tipo** y **Expresión de acción** .  
   
- **Tipo**  
+ **Type**  
  Seleccione el tipo de acción que desea realizar durante la ejecución de la acción. Están disponibles los siguientes tipos de acciones:  
   
 |Value|Descripción|  
@@ -84,7 +84,7 @@ ms.locfileid: "66062958"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Batch|La acción debe ejecutarse como parte de una operación de lote o una tarea de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive|La acción se ejecuta cuando el usuario invoca la acción.|  
+|Interactive (Interactivo)|La acción se ejecuta cuando el usuario invoca la acción.|  
 |Al abrir|La acción se ejecuta cuando se abre el cubo por primera vez.|  
   
  **Aplicación**  
@@ -98,7 +98,7 @@ ms.locfileid: "66062958"
  **Descripción**  
  Escriba la descripción opcional de la acción.  
   
- **Caption**  
+ **Hayan**  
  Escriba el título que se mostrará para la acción en la aplicación cliente si establece **El título es MDX** en **False**.  
   
  Escriba la expresión de Expresiones multidimensionales (MDX) que devuelve una cadena para el título si establece **El título es MDX** en **True**.  

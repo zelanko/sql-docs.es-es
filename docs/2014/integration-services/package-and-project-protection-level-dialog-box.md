@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056946"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Nivel de protección de paquetes y del proyecto, cuadro de diálogo
@@ -34,7 +34,7 @@ ms.locfileid: "66056946"
  **Contraseña**  
  Si usa el nivel de protección **Cifrar la información confidencial con una contraseña** o **Cifrar todos los datos con una contraseña** , escriba una contraseña.  
   
- **Vuelva a escribir la contraseña**  
+ **Volver a escribir la contraseña**  
  Escriba la contraseña nuevamente.  
   
 ## <a name="see-also"></a>Consulte también  

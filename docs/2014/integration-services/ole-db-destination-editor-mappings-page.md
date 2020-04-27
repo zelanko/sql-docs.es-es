@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c79715803d598b3f30eb5b54bd6ddcb77f1aae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057088"
 ---
 # <a name="ole-db-destination-editor-mappings-page"></a>Editor de destino de OLE DB (página Asignaciones)
@@ -34,7 +34,7 @@ ms.locfileid: "66057088"
  Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles de la tabla a columnas de entrada.  
   
  **Columna de entrada**  
- Permite ver las columnas de entrada seleccionadas. Para quitar asignaciones, seleccione **\<ignore>** con el fin de excluir columnas de la salida.  
+ Permite ver las columnas de entrada seleccionadas. Puede quitar las asignaciones seleccionando ** \<omitir>** para excluir las columnas de la salida.  
   
  **Columna de destino**  
  Muestra todas las columnas de destino disponibles, tanto si están asignadas como si no lo están.  

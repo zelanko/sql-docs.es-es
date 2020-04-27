@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059236"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Editor de destino de Excel (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de Excel** para especificar la información de orígenes de datos y para obtener una vista previa de los resultados. El destino de Excel carga los datos en una hoja de cálculo o en un rango con nombre de un libro de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
   
 > [!NOTE]  
->  La `CommandTimeout` propiedad del destino de Excel no está disponible en el **Editor de destino de Excel**, pero se puede establecer mediante el **editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de Excel en [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  La `CommandTimeout` propiedad del destino de Excel no está disponible en el **Editor de destino de Excel**, pero se puede establecer mediante el **editor avanzado**. Además, ciertas opciones de carga rápida solo están disponibles en el **Editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre el destino de Excel en [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Para obtener más información acerca del destino de Excel, vea [Excel Destination](data-flow/excel-destination.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66059236"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Tabla o vista|Carga datos en una hoja de cálculo o en un rango con nombre del origen de datos de Excel.|  
-|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada**: [usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Cargue datos en el destino de Excel utilizando una consulta SQL.|  
   
  **Nombre de la hoja de Excel**  
@@ -55,7 +55,7 @@ ms.locfileid: "66059236"
  Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . La vista previa puede mostrar hasta 200 filas.  
   
 > [!WARNING]  
->  Si el **Administrador de conexiones con Excel** que ha seleccionado apunta a un archivo de Excel que no existe, verá un mensaje de error al hacer clic en este botón.  
+>   Si el **Administrador de conexiones con Excel** que ha seleccionado señala a un archivo de Excel que no existe, verá un mensaje de error al hacer clic en este botón.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66059236"
  **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Browse**  
+ **Examinar**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  

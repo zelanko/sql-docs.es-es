@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058078"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Importar paquete
@@ -52,7 +52,7 @@ ms.locfileid: "66058078"
  **Contraseña**  
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
- **Ruta de acceso del paquete**  
+ **Ruta de acceso de paquete**  
  Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque el paquete.  
   
  **Nombre del paquete**  

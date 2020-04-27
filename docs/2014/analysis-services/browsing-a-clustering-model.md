@@ -16,16 +16,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064680"
 ---
 # <a name="browsing-a-clustering-model"></a>Examinar un modelo de clústeres
   Al abrir un modelo de agrupación en clústeres mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]agrupación en clústeres de. El visor le ayudará a explorar los clústeres que se han creado y a conocer las características del clúster. Asimismo, podrá comparar y contrastar segmentos individuales con otros segmentos o con la población.  
   
-##  <a name="BKMK_Tabs"></a>Explorar el modelo  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorar el modelo  
  La ventana **examinar** incluye las siguientes herramientas para ayudarle a entender el modelo de agrupación en clústeres y explorar los atributos de los grupos de datos subyacentes:  
   
 -   [Diagrama del clúster](#BKMK_ClusterDiagram)  
@@ -38,7 +38,7 @@ ms.locfileid: "66064680"
   
  Para experimentar con un modelo de agrupación en clústeres, puede usar los datos de ejemplo de la pestaña entrenamiento del libro de datos de ejemplo y generar un modelo de agrupación en clústeres mediante el [Asistente para clúster &#40;complementos de minería de datos para Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) y todos los valores predeterminados.  
   
-###  <a name="BKMK_ClusterDiagram"></a>Diagrama del clúster  
+###  <a name="cluster-diagram"></a><a name="BKMK_ClusterDiagram"></a>Diagrama del clúster  
  La pestaña **Diagrama del clúster** muestra todos los clústeres que se encuentran en un modelo de minería de datos. Aquí puede comprobar la cantidad de agrupaciones que se encontraron en el conjunto de datos y lo cerca o lejos que se encuentran entre sí.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Explorar el diagrama del clúster  
@@ -85,7 +85,7 @@ ms.locfileid: "66064680"
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a>Perfiles del clúster  
+###  <a name="cluster-profiles"></a><a name="BKMK_ClusterProfiles"></a>Perfiles del clúster  
  La pestaña **perfiles del clúster** le permite comparar la composición de todos los clústeres de un vistazo. Es un buen punto de partida cuando se empieza a familiarizar con el modelo. Esta vista será también útil más adelante, si ha estado explorando un clúster determinado y decide que necesita buscar clústeres relacionados.  
   
  Los **perfiles de clúster** también proporcionan una buena información general sobre el modo en que los clústeres son diferentes entre sí. Por consiguiente, se recomienda usar esta vista para asignar a cada clúster un nombre descriptivo.  
@@ -132,7 +132,7 @@ ms.locfileid: "66064680"
   
      ![Cambiar el nombre de los clústeres para que el gráfico sea más fácil de utilizar](media/dm13-cluster-rename.gif "Cambiar el nombre de los clústeres para que el gráfico sea más fácil de utilizar")  
   
- **Útiles**  
+ **Sugerencias**  
   
 -   Haga clic en un encabezado de columna para ordenar los atributos por orden de importancia respecto a ese clúster.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66064680"
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a>Características del clúster  
+###  <a name="cluster-characteristics"></a><a name="BKMK_ClusterCharacteristics"></a>Características del clúster  
  Con la vista Características de clúster, podrá realizar una exploración profunda de un solo clúster, para buscar los atributos que mejor definen a este grupo de datos.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Explorar las características del clúster  
@@ -177,7 +177,7 @@ ms.locfileid: "66064680"
   
      Tenga en cuenta que el nuevo gráfico de características del clúster se ha agregado en su propia hoja de cálculo. Puede moverla a la misma hoja de cálculo que el otro perfil para facilitar su comparación, lo que hará en el paso siguiente.  
   
- **Útiles**  
+ **Sugerencias**  
   
 -   Tenga en cuenta que la principal característica del cliente en el clúster de más de 65 es que no compran el producto. Si quiere saber por qué es así, puede examinar los clústeres y comparar los grupos o bien, puede crear un modelo relacionado con un algoritmo que sea bueno para examinar las causas y los resultados, como un modelo de árbol de decisión o un modelo Bayes naive.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66064680"
   
  [Volver al principio](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a>Distinción del clúster  
+###  <a name="cluster-discrimination"></a><a name="BKMK_ClusterDiscrimination"></a>Distinción del clúster  
  Utilice la pestaña **distinción del clúster** para comparar los atributos entre dos clústeres, o entre un clúster y todos los demás casos del conjunto de datos.  
   
  Para resaltar las características de este visor, se comparará con las tablas en paralelo de Excel que se crearon en función de la vista **características del clúster** .  
@@ -216,7 +216,7 @@ ms.locfileid: "66064680"
   
      Además de utilizar Excel, se recomienda que pruebe el visor de clústeres para Visio, el cual permite no solo ver los puntos de datos, sino también modificar y mejorar ampliamente el gráfico. Para obtener más información, vea [tutorial del diagrama del clúster &#40;complementos de minería de datos&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
   
- **Útiles**  
+ **Sugerencias**  
   
  Después de obtener información sobre los grupos de clientes, pruebe a usar el [escenario de escenarios condicionales &#40;herramientas de análisis de tabla para excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md) o el [escenario de búsqueda de objetivos &#40;herramientas de análisis de tabla para Excel&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md) herramientas para explorar los factores del modelo que podrían cambiarse para afectar al resultado.  
   

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060166"
 ---
 # <a name="create-package-configurations"></a>Crear configuraciones de paquetes
@@ -69,7 +69,7 @@ ms.locfileid: "66060166"
  Cuando finaliza el asistente, la nueva configuración se agrega a la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
 > [!NOTE]  
->  La última página del Asistente para la configuración de paquetes, la página Finalización del asistente, enumera las propiedades de destino de la configuración. Si quiere actualizar propiedades cuando ejecuta paquetes mediante la utilidad del símbolo del sistema **dtexec**, puede generar las cadenas que representan las rutas de acceso a las propiedades con el Asistente para configuración de paquetes, y, después, copiarlas y pegarlas en la ventana del símbolo del sistema para usarlas con la opción establecida de **dtexec**.  
+>  La última página del Asistente para la configuración de paquetes, la página Finalización del asistente, enumera las propiedades de destino de la configuración. Si quiere actualizar propiedades cuando ejecuta paquetes mediante la utilidad del símbolo del sistema **dtexec** , puede generar las cadenas que representan las rutas de acceso a las propiedades con el Asistente para configuración de paquetes, y, después, copiarlas y pegarlas en la ventana del símbolo del sistema para usarlas con la opción establecida de **dtexec**.  
   
  En la tabla siguiente se describen las columnas de la lista de configuraciones del cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   

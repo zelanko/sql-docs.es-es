@@ -18,14 +18,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061982"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Agregar iteración a un flujo de control
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para, un elemento de flujo de control que simplifica la inclusión de bucles que repiten condicionalmente un flujo de control en un paquete. Para más información, vea [Contenedor de bucles For](control-flow/for-loop-container.md).  
   
  El contenedor de bucles For evalúa una condición en cada iteración del bucle y se detiene cuando la condición es false. El contenedor de bucles For incluye expresiones para inicializar el bucle, especificando la condición de evaluación que detiene la ejecución del flujo de control repetido y asignando un valor a una expresión que actualiza el valor con el que se compara la condición de evaluación. Debe proporcionar una condición de evaluación, pero las expresiones de inicialización y asignación son opcionales.  
@@ -58,7 +57,7 @@ ms.locfileid: "66061982"
 4.  Configure el contenedor de bucles For. Para más información, vea [Configurar un contenedor de bucles For](../../2014/integration-services/configure-a-for-loop-container.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Agregar o eliminar tareas o contenedores en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Agregar o eliminar una tarea o un contenedor en un flujo de control](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Agrupar o desagrupar componentes](group-or-ungroup-components.md)   
  [Conectar tareas y contenedores mediante una restricción de precedencia predeterminada](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Agregar enumeración a un flujo de control](../../2014/integration-services/add-enumeration-to-a-control-flow.md)   

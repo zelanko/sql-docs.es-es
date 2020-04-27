@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056790"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parámetros y códigos de retorno en la tarea Ejecutar SQL
@@ -44,7 +44,7 @@ ms.locfileid: "66056790"
   
 -   [Configurar parámetros y códigos de retorno en el Editor de la tarea Ejecutar SQL](#Configure_parameters_and_return_codes)  
   
-##  <a name="Parameter_names_and_markers"></a>Usar nombres de parámetros y marcadores  
+##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>Usar nombres de parámetros y marcadores  
  En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo de administrador de conexiones requiere que el comando SQL utilice un marcador de parámetro con el formato ** \@varParameter**, mientras que el tipo de conexión OLE DB requiere el marcador de parámetro de signo de interrogación (?).  
   
  Los nombres que puede utilizar como nombres de parámetros en las asignaciones entre variables y parámetros también varían según el tipo de Administrador de conexiones. Por ejemplo, el tipo de Administrador de conexiones de [!INCLUDE[vstecado](../includes/vstecado-md.md)] utiliza un nombre definido por el usuario con el prefijo \@, mientras que el tipo de Administrador de conexiones OLE DB requiere que se utilice el valor numérico de un ordinal basado en 0 como nombre de parámetro.  
@@ -54,7 +54,7 @@ ms.locfileid: "66056790"
 |Tipo de conexión|Marcador de parámetro|Nombre de parámetro|Comando SQL (ejemplo)|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<nombre del parámetro>|\@\<nombre del parámetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<nombre de parámetro>|\@\<nombre de parámetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL y OLE DB|?|0, 1, 2, 3…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66056790"
   
  Cuando se usa un Administrador de conexiones OLE DB, no se pueden utilizar subconsultas con parámetros, ya que la tarea Ejecutar SQL no puede derivar la información de los parámetros a través del proveedor OLE DB. Sin embargo, puede utilizar una expresión para concatenar los valores de los parámetros en la cadena de consulta y establecer la propiedad SqlStatementSource de la tarea.  
   
-##  <a name="Date_and_time_data_types"></a>Usar parámetros con tipos de datos de fecha y hora  
+##  <a name="using-parameters-with-date-and-time-data-types"></a><a name="Date_and_time_data_types"></a>Usar parámetros con tipos de datos de fecha y hora  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usar parámetros de fecha y hora con administradores de conexión ADO y ADO.NET  
  Al leer datos de los tipos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], `time` y `datetimeoffset`, una tarea Ejecutar SQL que utiliza el Administrador de conexiones ADO o [!INCLUDE[vstecado](../includes/vstecado-md.md)] tiene los requisitos adicionales siguientes:  
@@ -103,7 +103,7 @@ ms.locfileid: "66056790"
   
 -   Un parámetro de salida del tipo de datos adecuado, tal y como se enumera en la tabla siguiente.  
   
-    |`Output`tipo de parámetro|Tipo de datos de fecha|  
+    |Tipo de parámetro `Output`|Tipo de datos de fecha|  
     |-------------------------------|--------------------|  
     |DBDATE|`date`|  
     |DBTIME2|`time`|  
@@ -119,16 +119,16 @@ ms.locfileid: "66056790"
   
 -   Un parámetro `output` del tipo de datos adecuado, tal y como se enumera en la tabla siguiente.  
   
-    |`Output`tipo de parámetro|Tipo de datos de fecha|  
+    |Tipo de parámetro `Output`|Tipo de datos de fecha|  
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> O bien<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> o bien<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
     |SQL_SS_TIMESTAMPOFFSET|`datetimeoffset`|  
   
  Si los datos no están almacenados en el parámetro de entrada o de salida adecuado, se produce un error en el paquete.  
   
-##  <a name="WHERE_clauses"></a>Usar parámetros en cláusulas WHERE  
+##  <a name="using-parameters-in-where-clauses"></a><a name="WHERE_clauses"></a>Usar parámetros en cláusulas WHERE  
  Los comandos SELECT, INSERT, UPDATE y DELETE suelen incluir cláusulas WHERE para especificar filtros que definen las condiciones que debe cumplir cada fila de las tablas de origen con el fin de satisfacer los requisitos de un comando SQL. Los parámetros proporcionan los valores de filtro en las cláusulas WHERE.  
   
  Puede utilizar marcadores de parámetros para proporcionar valores de parámetros de forma dinámica. Las reglas para los marcadores y nombres de parámetros que se pueden utilizar en la instrucción SQL dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL.  
@@ -149,7 +149,7 @@ ms.locfileid: "66056790"
   
 -   El tipo de conexión de [!INCLUDE[vstecado](../includes/vstecado-md.md)] utiliza los nombres de parámetros \@parmMinProductID y \@parmMaxProductID.  
   
-##  <a name="Stored_procedures"></a>Usar parámetros con procedimientos almacenados  
+##  <a name="using-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>Usar parámetros con procedimientos almacenados  
  Los comandos SQL que ejecutan procedimientos almacenados también pueden usar la asignación de parámetros. Las reglas sobre el uso de marcadores y nombres de parámetros dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL, del mismo modo que sucede con las consultas con parámetros.  
   
  La tabla siguiente enumera ejemplos del comando EXEC por tipo de Administrador de conexiones. Los ejemplos ejecutan el procedimiento almacenado **uspGetBillOfMaterials** en [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. El procedimiento almacenado usa los `@StartProductID` parámetros `@CheckDate` `input` y.  
@@ -165,7 +165,7 @@ ms.locfileid: "66056790"
   
  Para más información sobre el uso de parámetros de entrada y salida con procedimientos almacenados de Transact-SQL, vea [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
-##  <a name="Return_codes"></a>Obtener valores de códigos de retorno  
+##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>Obtener valores de códigos de retorno  
  Un procedimiento almacenado puede devolver un valor entero, denominado código de retorno, para indicar el estado de ejecución de un procedimiento. Para implementar códigos de retorno en la tarea Ejecutar SQL, debe utilizar los parámetros del tipo `ReturnValue`.  
   
  La tabla siguiente enumera, por tipo de conexión, algunos ejemplos de comandos EXEC que implementan códigos de retorno. Todos los ejemplos utilizan un parámetro de `input`. Las reglas para usar marcadores de parámetros y nombres de parámetros son las mismas para todos los tipos de`Input`parámetros `Output`:, `ReturnValue`y.  
@@ -183,7 +183,7 @@ ms.locfileid: "66056790"
   
  Para más información sobre el uso de códigos de retorno con procedimientos almacenados de Transact-SQL, vea [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql).  
   
-##  <a name="Configure_parameters_and_return_codes"></a>Configurar parámetros y códigos de retorno en la tarea ejecutar SQL  
+##  <a name="configuring-parameters-and-return-codes-in-the-execute-sql-task"></a><a name="Configure_parameters_and_return_codes"></a>Configurar parámetros y códigos de retorno en la tarea ejecutar SQL  
  Para obtener más información acerca de las propiedades de los parámetros y códigos de devolución que puede establecer en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , haga clic en el tema siguiente:  
   
 -   [&#40;página de asignación de parámetros del editor de la tarea ejecutar SQL&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)  
@@ -202,7 +202,7 @@ ms.locfileid: "66056790"
 -   Ejemplo CodePlex, [Ejecutar conjuntos de resultados y parámetros de SQL](https://go.microsoft.com/fwlink/?LinkId=157863)(en inglés), en msftisprodsamples.codeplex.com  
   
 ## <a name="see-also"></a>Consulte también  
- [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)   
+ [Tarea ejecutar SQL](control-flow/execute-sql-task.md)   
  [Conjuntos de resultados en la tarea Ejecutar SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
   

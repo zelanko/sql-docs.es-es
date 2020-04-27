@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee8ee5b2113d6fda6aaac72b407c899a610960bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055852"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Establecer o cambiar el nivel de protección de los paquetes
@@ -73,6 +73,6 @@ ms.locfileid: "66055852"
          Si utiliza un comando similar en un archivo por lotes, escriba el marcador de posición del archivo, "% f", como "%% f" en el archivo por lotes.  
   
 ## <a name="see-also"></a>Consulte también  
- [dtutil (utilidad)](dtutil-utility.md)  
+ [dtutil, utilidad](dtutil-utility.md)  
   
   

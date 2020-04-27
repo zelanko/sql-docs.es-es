@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057709"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor de transformación Combinación de mezcla
@@ -51,7 +51,7 @@ ms.locfileid: "66057709"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Ordenar datos para las transformaciones mezclar y combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Extender un conjunto de objetos mediante la transformación combinación de mezcla](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
- [Transformación Mezclar](data-flow/transformations/merge-transformation.md)   
- [Transformación Unión de todo](data-flow/transformations/union-all-transformation.md)  
+ [Transformación mezclar](data-flow/transformations/merge-transformation.md)   
+ [Unión de todo, transformación](data-flow/transformations/union-all-transformation.md)  
   
   

@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067036"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Administrar roles utilizando SSMS (SSAS tabular)
   Puede crear, modificar, y administrar roles para un modelo tabular implementado mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Tareas de este tema:  
+ Tareas en este tema:  
   
 -   [Para crear un nuevo rol](#bkmk_new_role)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66067036"
 > [!CAUTION]  
 >  Si se utiliza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para administrar una base de datos del área de trabajo del modelo tabular mientras está abierto el proyecto de modelos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , se puede dañar el archivo Model.bim. Al crear y administrar roles para una base de datos del área de trabajo del modelo tabular, utilice el Administrador de roles de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-###  <a name="bkmk_new_role"></a>Para crear un nuevo rol  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a> Para crear un rol  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda la base de datos de modelos tabulares en la que desee crear un rol, haga clic con el botón secundario en **Roles**y después en **Nuevo rol**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66067036"
     |Permiso|Descripción|  
     |----------------|-----------------|  
     |**Control total (Administrador)**|Los miembros pueden realizar modificaciones en el esquema del modelo y pueden ver todos los datos.|  
-    |**Procesar base de datos**|Los modelos pueden ejecutar las operaciones Procesar y Procesar todo. No pueden modificar el esquema del modelo y no pueden ver los datos.|  
+    |**Process Database**|Los modelos pueden ejecutar las operaciones Procesar y Procesar todo. No pueden modificar el esquema del modelo y no pueden ver los datos.|  
     |**Lectura**|Los miembros pueden ver los datos (según los filtros de fila), pero no pueden realizar cambios en el esquema del modelo.|  
   
 5.  En el cuadro de diálogo **Crear rol** , en la ventana Seleccionar una página, haga clic en **Pertenencia**.  
@@ -67,17 +67,17 @@ ms.locfileid: "66067036"
   
 9. Haga clic en **Aceptar** para guardar el rol.  
   
-###  <a name="bkmk_copy_role"></a>Para copiar un rol  
+###  <a name="to-copy-a-role"></a><a name="bkmk_copy_role"></a> Para copiar un rol  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda la base de datos de modelos tabulares que contiene el rol que desea copiar, expanda **Roles**, haga clic con el botón secundario en el rol y después haga clic en **Duplicar**.  
   
-###  <a name="bkmk_edit_role"></a>Para editar un rol  
+###  <a name="to-edit-a-role"></a><a name="bkmk_edit_role"></a> Para modificar un rol  
   
 -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda la base de datos de modelos tabulares que contiene el rol que desea modificar, expanda **Roles**, haga clic con el botón secundario en el rol y después haga clic en **Propiedades**.  
   
      En el cuadro de diálogo **propiedades** \<de rol roleName>, puede cambiar los permisos, agregar o quitar miembros y agregar o modificar filtros de fila.  
   
-###  <a name="bkmk_deletet_role"></a>Para eliminar un rol  
+###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a> Para eliminar un rol  
   
 -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda la base de datos de modelos tabulares que contiene el rol que desea quitar, expanda **Roles**, haga clic con el botón secundario en el rol y después haga clic en **Eliminar**.  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 995afe55c1cd1b7d925c9267ba5dfa3aed038358
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057758"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL
@@ -57,10 +57,10 @@ ms.locfileid: "66057758"
   
      En general, puede usar el nombre de columna como nombre del conjunto de resultados, o puede usar la posición ordinal de la columna en la lista de columnas como conjunto de resultados. La posibilidad de usar un nombre de columna como el nombre del conjunto de resultados depende del proveedor para el que se haya configurado la tarea. No todos los proveedores ponen los nombres de columna a disposición.  
   
-11. Haga clic en **OK**.  
+11. Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)   
+ [Tarea ejecutar SQL](control-flow/execute-sql-task.md)   
  [Conjuntos de resultados en la tarea ejecutar SQL](result-sets-in-the-execute-sql-task.md)   
  [Tarea ejecutar paquete](control-flow/execute-package-task.md)   
  [Configuraciones de paquetes](../../2014/integration-services/package-configurations.md)   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058009"
 ---
 # <a name="integration-services-deployment-wizard"></a>Asistente para implementación de Integration Services
@@ -44,13 +44,13 @@ ms.locfileid: "66058009"
   
  Si inicia el asistente en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], de forma predeterminada, el asistente selecciona la instancia de servidor conectado y especifica la ruta de acceso para el proyecto seleccionado. Puede cambiar estos valores para implementar el proyecto en una ubicación diferente.  
   
-## <a name="review"></a>Revisión  
+## <a name="review"></a>Revisar  
  El asistente le permite revisar los valores de configuración que ha seleccionado antes de implementar el proyecto. Puede cambiar las selecciones si hace clic en **Anterior**o si hace clic en cualquiera de los pasos del panel izquierdo.  
   
 ## <a name="deployresults"></a>Implementar/Resultados  
  Al hacer clic en **implementar** en la página **revisar** , el proyecto se implementa y la página **resultados** muestra si cada acción se ha realizado correctamente o no. Si la acción no se realiza correctamente, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error. Haga clic en **Guardar Informe** para guardar los resultados en un archivo XML.  
   
- Haga clic en **Cerrar** para salir del asistente.  
+ Haz clic en **Cerrar** para salir del asistente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Implementación de proyectos en Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   

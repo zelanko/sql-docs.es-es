@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058489"
 ---
 # <a name="ftp-connection-manager-editor"></a>Editor del administrador de conexiones FTP
@@ -45,7 +45,7 @@ ms.locfileid: "66058489"
  **Tiempo de espera (en segundos)**  
  Especifique el número de segundos que tarda la tarea en agotarse el tiempo de espera. Un valor de **0** indica una cantidad de tiempo infinita. El valor predeterminado de esta propiedad es **60**.  
   
- **Usar el modo pasivo**  
+ **Usar modo pasivo**  
  Especifique si inicia la conexión el servidor o el cliente. El servidor inicia la conexión en modo activo y el cliente en modo pasivo. El valor predeterminado de esta propiedad es **active mode**.  
   
  **Reintentos**  
@@ -54,7 +54,7 @@ ms.locfileid: "66058489"
  **Tamaño del fragmento (en KB)**  
  Indique un tamaño de fragmento en kilobytes para transmitir datos.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Después de configurar el Administrador de conexiones FTP, haga clic en **Probar conexión**para confirmar que la conexión es viable.  
   
 ## <a name="see-also"></a>Consulte también  

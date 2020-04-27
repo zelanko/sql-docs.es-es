@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067002"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS tabular)
@@ -22,7 +22,7 @@ ms.locfileid: "66067002"
   
  Secciones de este tema:  
   
--   [Privilegios](#bkmk_benefits)  
+-   [Ventajas](#bkmk_benefits)  
   
 -   [Ejemplo](#bkmk_example)  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66067002"
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Privilegios  
  En la terminología empresarial, un indicador clave de rendimiento (KPI) es una medida cuantificable para valorar los objetivos empresariales. Un KPI se evalúa con frecuencia a lo largo del tiempo. Por ejemplo, el departamento de ventas de una organización puede usar un KPI para medir el beneficio bruto mensual frente al beneficio bruto previsto. El departamento de contabilidad puede medir los gastos mensuales frente a los ingresos para evaluar los costos y un departamento de recursos humanos puede medir la rotación trimestral de los empleados. Cada uno de ellos es un ejemplo de KPI. Los profesionales de una empresa suelen usar KPI agrupados en un cuadro de mandos empresarial para obtener un resumen histórico rápido y preciso de los éxitos empresariales o para identificar tendencias.  
   
  Un KPI de un modelo tabular incluye:  
@@ -38,13 +38,13 @@ ms.locfileid: "66067002"
  **Valor base**  
  Un valor base está definido por una medida que se resuelve como un valor. Este valor, por ejemplo, puede ser un agregado de las ventas reales o una medida calculada como los beneficios para un período determinado.  
   
- **Valor de destino**  
+ **Valor del objetivo**  
  Un valor de destino está definido por una medida que se resuelve como un valor o por un valor absoluto. Por ejemplo, un valor de destino podría ser la cantidad en la que los responsables de una organización desean incrementar las ventas o los beneficios.  
   
  **Umbrales de estado**  
  Un umbral de estado se define mediante el intervalo entre un umbral inferior y uno superior o mediante un valor fijo. El umbral de estado muestra un gráfico que ayuda a los usuarios a determinar fácilmente el estado del valor base en comparación con el valor de destino.  
   
-##  <a name="bkmk_example"></a>Ejemplo  
+##  <a name="example"></a><a name="bkmk_example"></a>Ejemplo  
  La directora de ventas de Adventure Works desea crear una tabla dinámica que pueda usar para ver rápidamente si los empleados de ventas están cumpliendo o no sus cuotas de ventas durante un periodo determinado (un año). Para cada empleado de ventas, desea que la tabla dinámica muestre el importe de ventas real en dólares, el importe de la cuota de ventas en dólares y un gráfico sencillo que muestre el estado de si cada empleado de ventas está por debajo o por encima de su cuota de ventas. Desea poder segmentar los datos por año.  
   
  Para ello, el director de ventas da de alta la ayuda del desarrollador de soluciones de BI de su organización a agregar un KPI de ventas al modelo tabular AdventureWorks. La directora de ventas usará [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectarse al modelo tabular de Adventure Works como origen de datos y crear una tabla dinámica con campos (medidas y KPI) y segmentaciones de datos para analizar si el personal de ventas cumple sus cuotas.  
@@ -74,16 +74,16 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Ahora, la directora de ventas puede segmentar por año el importe de ventas real, la cuota de ventas y el estado de cada empleado de ventas. Puede analizar las tendencias de ventas a lo largo de los años para determinar si necesita ajustar o no la cuota de ventas para un empleado.  
   
-##  <a name="bkmk_create"></a>Crear y editar KPI  
+##  <a name="create-and-edit-kpis"></a><a name="bkmk_create"></a>Crear y editar KPI  
  Para crear KPI, en el diseñador de modelos, usará el cuadro de diálogo Indicador clave de rendimiento. Puesto que los KPI deben asociarse a una medida, para crear un KPI se extiende una medida que se evalúa como un valor base; a continuación, se crea una medida que se evalúa como un valor de destino o especificando un valor absoluto. Después de definir la medida base (valor) y el valor de destino, podrá definir los parámetros del umbral de estado entre el valor base y el valor de destino. El estado se muestra en un formato gráfico mediante iconos, barras, gráficos o colores seleccionables. El valor base y el valor de destino, junto con el estado se pueden agregar a un informe o una tabla dinámica como valores que se pueden segmentar con respecto a otros campos de datos.  
   
  Para ver el cuadro de diálogo Indicador clave de rendimiento, en la cuadrícula de medida de la tabla, haga clic con el botón secundario en la medida que servirá como valor base y, a continuación, haga clic en **Crear KPI**. Después de extender una medida a un KPI como valor base, aparecerá un icono junto al nombre de la medida en la cuadrícula de medidas que identifica la medida como asociada a un KPI.  
   
-##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tareas relacionadas  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Crear y administrar KPI &#40;&#41;tabular de SSAS](kpis-ssas-tabular.md)|Describe cómo crear un KPI con una medida base, una medida de destino y umbrales de estado.|  
+|[Crear y administrar KPI &#40;SSAS tabular&#41;](kpis-ssas-tabular.md)|Describe cómo crear un KPI con una medida base, una medida de destino y umbrales de estado.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Medidas &#40;&#41;tabular de SSAS](measures-ssas-tabular.md)   

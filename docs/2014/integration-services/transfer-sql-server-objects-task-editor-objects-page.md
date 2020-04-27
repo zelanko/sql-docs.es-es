@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054867"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor de la tarea Transferir objetos de SQL Server (página Objetos)
@@ -29,13 +29,13 @@ ms.locfileid: "66054867"
   
 ## <a name="static-options"></a>Opciones estáticas  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de origen.  
   
  **SourceDatabase**  
  Seleccione una base de datos en el servidor de origen desde donde se copiarán los objetos.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de destino.  
   
  **DestinationDatabase**  
  Seleccione una base de datos en el servidor de destino al que se copiarán los objetos.  
@@ -54,11 +54,11 @@ ms.locfileid: "66054867"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Reemplace**|Se sobrescribirán los datos del servidor de destino.|  
+|**Sustituya**|Se sobrescribirán los datos del servidor de destino.|  
 |**Append**|Los datos copiados desde el servidor de origen se anexarán a los datos existentes en el servidor de destino.|  
   
 > [!NOTE]  
->  La opción **ExistingData** solo está disponible cuando **CopyData** se establece en **True**.  
+>   La opción **ExistingData** solo está disponible cuando **CopyData** se establece en **True**.  
   
  **CopySchema**  
  Seleccione esta opción si el esquema se copia durante la tarea Transferir objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -79,7 +79,7 @@ ms.locfileid: "66054867"
  Expanda **ObjectsToCopy** para especificar los objetos que se deben copiar desde la base de datos de origen a la base de datos de destino.  
   
 > [!NOTE]  
->  **ObjectsToCopy** solo está disponible cuando **CopyAllObjects** se establece en **false**.  
+>  **ObjectsToCopy** solo está disponible cuando **CopyAllObjects** se establece en **False**.  
   
  Las opciones para copiar los siguientes tipos de objetos solo son compatibles con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
@@ -212,8 +212,8 @@ ms.locfileid: "66054867"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [&#40;página general del editor de la tarea transferir objetos de SQL Server&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expresiones](expressions/expressions-page.md)   
- [Formatos de datos para importación o exportación masivas &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
+ [Página expresiones](expressions/expressions-page.md)   
+ [Formatos de datos para importación en bloque o exportación masiva &#40;SQL Server&#41;](../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

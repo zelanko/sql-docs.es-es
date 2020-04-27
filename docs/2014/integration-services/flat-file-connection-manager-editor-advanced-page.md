@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058788"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de archivos planos (página Avanzadas)
@@ -35,20 +35,20 @@ ms.locfileid: "66058788"
  **Descripción**  
  Describa el administrador de conexiones. Como método recomendado, describa el administrador de conexiones desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
- **Configurar las propiedades de cada columna**  
+ **Configure las propiedades de cada columna**  
  Seleccione una columna del panel izquierdo para ver sus propiedades en el panel derecho. Consulte la siguiente tabla para obtener una descripción de las propiedades de los tipos de datos. Algunas de las propiedades que aparecen en la lista solo son configurables en algunos formatos de archivos planos.  
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
 |**ColumnType**|Denota si la columna es delimitada, de ancho fijo o derecho irregular. Esta propiedad es de solo lectura. Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.|  
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor corresponde a un recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano.<br /><br /> Nota: en el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
-|**DataType**|Seleccione los tipos de datos disponibles en la lista. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
+|**DataType**|Seleccione los tipos de datos disponibles en la lista. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indica si los datos de texto están rodeados por caracteres de calificador de texto como caracteres de Comillas. Los valores válidos son:<br /><br /> **True**: se califican los datos de texto del archivo plano.<br /><br /> **False**: no se califican los datos de texto del archivo plano.|  
 |**Nombre**|Proporcione un nombre de columna descriptivo. Si no se escribe un nombre, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crea uno automáticamente con el formato Columna 0, Columna 1, etc.|  
-|**Escala de los**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
+|**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR} {LF}**. Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}**. Las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}**. Las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Dos puntos {:}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Coma {,} **. Las columnas se delimitan mediante una coma.<br /><br /> **Tabulación {t}**. Las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**. Las columnas se delimitan mediante una barra vertical.|  
-|**La precisión de los**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota:** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|  
+|**DataPrecision**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).|  
+|**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|  
   
  **Nuevo**  
  Para agregar una columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón siempre tiene las siguientes opciones, disponibles en la lista desplegable.  
@@ -56,8 +56,8 @@ ms.locfileid: "66058788"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Agregar columna**|Agrega una nueva columna al final de la lista.|  
-|**Insertar antes**|Inserta una nueva columna antes de la columna seleccionada.|  
-|**Insertar después**|Inserta una nueva columna detrás de la columna seleccionada.|  
+|**Insertar delante**|Inserta una nueva columna antes de la columna seleccionada.|  
+|**Insertar detrás**|Inserta una nueva columna detrás de la columna seleccionada.|  
   
  **Eliminar**  
  Seleccione una columna y, después, haga clic en **Eliminar**para quitarla.  
@@ -69,6 +69,6 @@ ms.locfileid: "66058788"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página general del editor del administrador de conexiones de archivos planos &#40;&#41;](general-page-of-integration-services-designers-options.md)   
  [Página &#40;columnas del editor del administrador de conexiones de archivos planos&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [Página de vista previa del editor del administrador de conexiones de archivos planos &#40;&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
+ [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

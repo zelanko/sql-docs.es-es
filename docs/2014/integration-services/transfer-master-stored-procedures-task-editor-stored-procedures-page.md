@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054860"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor de la tarea Transferir procedimientos almacenados principales (página Procedimientos almacenados)
@@ -29,10 +29,10 @@ ms.locfileid: "66054860"
   
 ## <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de destino.  
   
  **IfObjectExists**  
  Seleccione el modo en que la tarea debe controlar los procedimientos almacenados definidos por el usuario que tengan el mismo nombre que los que ya existen en la base de datos **maestra** del servidor de destino.  
@@ -50,8 +50,8 @@ ms.locfileid: "66054860"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**True**|Copie todos los procedimientos almacenados definidos por el usuario de la base de datos **maestra** .|  
-|**False**|Copie solamente los procedimientos almacenados especificados.|  
+|**Reales**|Copie todos los procedimientos almacenados definidos por el usuario de la base de datos **maestra** .|  
+|**Es**|Copie solamente los procedimientos almacenados especificados.|  
   
  **StoredProceduresList**  
  Seleccione los procedimientos almacenados definidos por el usuario de la base de datos **maestra** del servidor de origen que deben copiarse a la base de datos **maestra** de destino. Esta opción solo está disponible cuando **TransferAllStoredProcedures** se establece en **False**.  
@@ -60,7 +60,7 @@ ms.locfileid: "66054860"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor de la tarea transferir procedimientos almacenados principales &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expresiones](expressions/expressions-page.md)   
+ [Página expresiones](expressions/expressions-page.md)   
  [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
   
   

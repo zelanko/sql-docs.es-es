@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054819"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>utilizar una expresión en un componente de flujo de datos
@@ -57,7 +57,7 @@ ms.locfileid: "66054819"
     -   En el cuadro de diálogo **Editor de transformación Columna derivada** , arrastre las variables, columnas, funciones, operadores y conversiones a la columna **Expresión** . O bien, puede escribir una expresión directamente en la columna **Expresión** .  
   
         > [!NOTE]  
-        >  Al quitar el foco de la columna **Condición** o **Expresión** , el texto de la expresión podría resaltarse para indicar que la sintaxis de la expresión es incorrecta.  
+        >   Al quitar el foco de la columna **Condición** o **Expresión** , el texto de la expresión podría resaltarse para indicar que la sintaxis de la expresión es incorrecta.  
   
 10. Haga clic en **Aceptar** para salir del cuadro de diálogo.  
   
@@ -65,10 +65,10 @@ ms.locfileid: "66054819"
     >  Si la expresión no es válida, aparece una alerta que describe los errores de sintaxis de la expresión.  
   
 ## <a name="see-also"></a>Consulte también  
- [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
- [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
- [Tarea Flujo de datos](control-flow/data-flow-task.md)   
+ [Integration Services &#40;expresiones de&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
+ [División condicional, transformación](data-flow/transformations/conditional-split-transformation.md)   
+ [Transformación columna derivada](data-flow/transformations/derived-column-transformation.md)   
+ [Tarea flujo de datos](control-flow/data-flow-task.md)   
  [Flujo de datos](data-flow/data-flow.md)  
   
   

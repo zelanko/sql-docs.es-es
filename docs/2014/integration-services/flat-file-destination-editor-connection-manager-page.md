@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058696"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Editor de destino de archivos planos (página Administrador de conexiones)
@@ -37,17 +37,17 @@ ms.locfileid: "66058696"
   
  La opción **Ancho fijo con delimitadores de fila** no está disponible en el **Editor del administrador de conexiones de archivos planos**. Si es necesario, puede emular esta opción en el editor. Para emular esta opción, en la página **General** del **Editor del administrador de conexiones de archivos planos**seleccione **Desigual a la derecha**en **Formato**, . A continuación en la página **Avanzadas** del editor, agregue una nueva columna ficticia como última columna de datos.  
   
- **Sobrescribir datos en el archivo**  
+ **Sobrescribir los datos del archivo**  
  Indique si desea sobrescribir un archivo existente o anexar datos en él.  
   
  **Encabezado**  
  Escriba un bloque de texto para insertarlo en el archivo antes de que se escriban datos. Utilice esta opción para incluir información adicional, como encabezados de columna.  
   
- **Versión preliminar**  
+ **Vista previa**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La vista previa puede mostrar hasta 200 filas.  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Página asignaciones &#40;del editor de destino de archivos planos&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+ [Editor de destino de archivos planos &#40;página Asignaciones&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

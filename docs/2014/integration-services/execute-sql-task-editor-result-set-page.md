@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058966"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor de la tarea Ejecutar SQL (página Conjunto de resultados)
@@ -34,7 +34,7 @@ ms.locfileid: "66058966"
   
  Si el tipo de conjunto de resultados es **Conjunto de resultados completo** o **XML**, debe utilizar 0 como nombre del conjunto de resultados.  
   
- **Temas relacionados**: [conjuntos de resultados en la tarea ejecutar SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
+ **Temas relacionados**: [Conjuntos de resultados en la tarea Ejecutar SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **Nombre de variable**  
  Para asignar el conjunto de resultados a una variable, seleccione una variable o haga clic en \<**Nueva variable…**> para agregar una variable nueva con el cuadro de diálogo **Agregar variable**.  

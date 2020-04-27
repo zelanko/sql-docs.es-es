@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5dd80a1f6645e7d1c766e88de653fa1e8f1f4cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066899"
 ---
 # <a name="partitions-ssas-tabular"></a>Particiones (SSAS tabular)
@@ -22,11 +22,11 @@ ms.locfileid: "66066899"
   
  Secciones de este tema:  
   
--   [Privilegios](#bkmk_benefits)  
+-   [Ventajas](#bkmk_benefits)  
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Privilegios  
  En los modelos tabulares, las particiones dividen una tabla en objetos de partición lógicos. A continuación, cada partición se puede procesar de forma independiente de las demás particiones. Por ejemplo, una tabla puede incluir ciertos conjuntos de filas cuyos datos apenas cambian y otros conjuntos de filas cuyos datos cambian con frecuencia. En estos casos, no hay necesidad de procesar todos los datos si solo se desea procesar una parte de ellos. Las particiones le permiten separar los datos que necesita procesar con frecuencia de los datos que se pueden procesar con una frecuencia menor.  
   
  Un diseño de modelos eficientes usa particiones para eliminar el procesamiento innecesario y la subsiguiente carga del procesador en los servidores de Analysis Services, asegurándose al mismo tiempo de que los datos se procesan y actualizan con la frecuencia suficiente para reflejar los datos más recientes de los orígenes de datos. El modo en que se implementan y usan las particiones durante la creación de modelos puede ser muy diferente del modo en que se implementan y se usan en los modelos implementados. Tenga presente que durante la fase de creación del modelo, es posible que trabaje con un único subconjunto de datos que finalmente estará en el modelo implementado.  
@@ -44,7 +44,7 @@ ms.locfileid: "66066899"
 ### <a name="partitions-in-a-deployed-model-database"></a>Particiones en una base de datos del modelo implementada  
  Cuando se implementa un modelo, las particiones de la base de datos del modelo implementada aparecen como objetos de base de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puede crear, modificar, combinar y eliminar particiones de un modelo implementado con el cuadro de diálogo Particiones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Administrar particiones para un modelo implementado en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] queda fuera del ámbito de este tema. Para obtener información sobre cómo administrar particiones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea [Crear y administrar particiones de modelos tabulares &#40;SSAS tabular&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
-##  <a name="bkmk_related_tasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Tareas relacionadas  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

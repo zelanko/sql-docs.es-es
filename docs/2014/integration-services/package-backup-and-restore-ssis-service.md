@@ -18,26 +18,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056930"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>Copias de seguridad y restauración de paquetes (servicio SSIS)
     
 > [!IMPORTANT]  
->  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]admite el servicio para mantener la compatibilidad con versiones anteriores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]de. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
+>  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] los paquetes se pueden guardar en el sistema de archivos o en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, una base de datos del sistema. Se puede crear una copia de seguridad de los paquetes guardados en msdb y restaurarlos con las características de copia de seguridad y restauración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Para más información sobre la copia de seguridad y la restauración de la base de datos msdb, haga clic en uno de los temas siguientes:  
   
--   [Copia de seguridad y restauración de bases de datos de SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+-   [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
 -   [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]incluye la utilidad del símbolo del sistema **DTUtil** (DTUtil. exec), que puede usar para administrar paquetes. Para más información, consulte [dtutil Utility](dtutil-utility.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye la utilidad del símbolo del sistema **dtutil** (dtutil.exec), que puede usarse para administrar paquetes. Para más información, consulte [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Todos los archivos de configuración incluidos en los paquetes se almacenan en el sistema de archivos. Estos archivos no se incluyen en la copia de seguridad de la base de datos msdb; por lo tanto, debe crear periódicamente una copia de seguridad de los archivos de configuración como parte del plan para proteger los paquetes guardados en msdb. Para incluir las configuraciones en la copia de seguridad de la base de datos msdb, puede usar el tipo de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , en lugar de las configuraciones basadas en archivos.  

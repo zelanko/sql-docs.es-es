@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058521"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor de bucles Foreach (página General)
@@ -38,8 +38,8 @@ ms.locfileid: "66058521"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página colección de &#40;del editor de bucles foreach&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Editor de bucles foreach &#40;página asignaciones de variables&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Página Expresiones](expressions/expressions-page.md)   
- [Contenedor de bucles Para cada uno](control-flow/foreach-loop-container.md)   
+ [Página expresiones](expressions/expressions-page.md)   
+ [Contenedor de bucles foreach](control-flow/foreach-loop-container.md)   
  [Contenedor de bucles For](control-flow/for-loop-container.md)  
   
   

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065049"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows (SQL Server Profiler)
@@ -29,7 +29,7 @@ ms.locfileid: "66065049"
   
 1.  En [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], abra un archivo de seguimiento o una tabla de seguimiento guardados. No puede establecer correlaciones de un seguimiento en ejecución que aún está recopilando datos de eventos. Para lograr una correlación precisa con los datos del Monitor de sistema, el seguimiento debe contener las columnas de datos **StartTime** y **EndTime** .  
   
-2.  En el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **del** , haga clic en **Importar datos de rendimiento**.  
+2.  En el menú  **Archivo** de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], haga clic en **Importar datos de rendimiento**.  
   
 3.  En el cuadro de diálogo **Abrir** , seleccione un archivo que contenga un registro de rendimiento. Los datos del registro de rendimiento deben haber sido capturados durante el mismo período de tiempo en que se capturaron los datos de seguimiento.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66065049"
 11. Haga clic en **Aceptar** para crear el registro de rendimiento.  
   
 ## <a name="see-also"></a>Consulte también  
- [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler plantillas y permisos](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Iniciar SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

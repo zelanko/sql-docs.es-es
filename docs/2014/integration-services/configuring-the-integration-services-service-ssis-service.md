@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060500"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Configurar el servicio Integration Services (servicio SSIS)
     
 > [!IMPORTANT]  
->  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]admite el servicio para mantener la compatibilidad con versiones anteriores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]de. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
+>  En este tema se describe el servicio de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , un servicio Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] admite el servicio para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], puede administrar objetos como paquetes en el servidor de Integration Services.  
   
  El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se basa en un archivo de configuración para sus valores. De forma predeterminada, el nombre de este archivo de configuración es MsDtsSrvr. ini. XML y el archivo se encuentra en la carpeta%ProgramFiles%\Microsoft SQL Server\120\dts\binn  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66060500"
   
 -   Los paquetes del sistema de archivos que administra [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] el servicio se encuentran en%ProgramFiles%\Microsoft SQL Server\120\DTS\Packages.  
   
- Este archivo de configuración también especifica qué base de datos msdb contiene los paquetes que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administrará. De forma predeterminada, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configura para administrar los paquetes de la base de datos msdb de la instancia del [!INCLUDE[ssDE](../includes/ssde-md.md)] que se instala al mismo tiempo que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si no se instala al mismo tiempo una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)], el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configura para administrar paquetes de la base de datos msdb de la instancia local predeterminada del [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+ Este archivo de configuración también especifica qué base de datos msdb contiene los paquetes que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] administrará. De forma predeterminada, el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configura para administrar los paquetes de la base de datos msdb de la instancia del [!INCLUDE[ssDE](../includes/ssde-md.md)] que se instala al mismo tiempo que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si no se instala al mismo tiempo una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] , el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configura para administrar paquetes de la base de datos msdb de la instancia local predeterminada del [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ### <a name="default-configuration-file-example"></a>Ejemplo de archivo de configuración predeterminado  
  En el ejemplo siguiente se muestra un archivo de configuración predeterminado que especifica los valores siguientes:  
@@ -53,7 +53,7 @@ ms.locfileid: "66060500"
   
 -   El servicio administra los paquetes que están almacenados en el sistema de archivos en la carpeta Paquetes.  
   
- **Ejemplo de un archivo de configuración predeterminado**  
+ **Ejemplo de archivo de configuración predeterminado**  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -122,8 +122,7 @@ La clave del registro **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Ser
   
   
 > [!CAUTION]  
->  Editar el Registro de forma incorrecta puede originar problemas graves que requieran volver a instalar el sistema operativo. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] no puede garantizar la resolución de dichos problemas. Haga una copia de seguridad de los datos importantes antes de modificar el Registro. Para obtener información sobre cómo hacer una copia de seguridad, restaurar y modificar el Registro, vea el artículo de [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base, [Definición del Registro de Microsoft Windows](https://support.microsoft.com/kb/256986).  
+>  Editar el Registro de forma incorrecta puede originar problemas graves que requieran volver a instalar el sistema operativo. [!INCLUDE[msCoName](../includes/msconame-md.md)] no puede garantizar la resolución de dichos problemas. Haga una copia de seguridad de los datos importantes antes de modificar el Registro. Para obtener información sobre cómo hacer una copia de seguridad, restaurar y modificar el Registro, vea el artículo de [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base, [Definición del Registro de Microsoft Windows](https://support.microsoft.com/kb/256986).  
   
  El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] carga el archivo de configuración cuando se inicia el servicio. Si se cambia la entrada del Registro, es preciso reiniciar el servicio.  
   

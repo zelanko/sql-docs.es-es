@@ -13,21 +13,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04dd01f5a91e95152b66247182027c0ba8b5025c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065247"
 ---
 # <a name="analysis-services-query-results-general-page"></a>Resultados de la consulta de Analysis Services (página General)
-  Use esta página para especificar las opciones de ejecución de consultas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Tiempo de espera de ejecución**  
  Indica el número de segundos de espera antes de cancelar la consulta.  
   
  El valor 0 indica una espera infinita o que no hay tiempo de espera.  
   
- **Restablecer valores predeterminados**  
+ **Valores predeterminados**  
  Restablece todos los valores de esta página a los valores predeterminados originales.  
   
   

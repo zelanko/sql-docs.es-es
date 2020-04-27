@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e33ff166f07c10ee8b0b32eac5590f486e70c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483914"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar una transacción (Master Data Services)
@@ -25,11 +25,11 @@ ms.locfileid: "65483914"
 > [!NOTE]  
 >  Las anotaciones no se pueden eliminar.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
   
 -   Para agregar transacciones que creó, debe contar con el permiso para obtener acceso al área funcional de **Explorador** y tener como mínimo el permiso **Actualizar** para el objeto del modelo al que desea agregar anotaciones.  
   
--   Para agregar anotaciones a las transacciones para todos los usuarios, debe tener permiso de acceso al área funcional **Administración de versiones** y ser administrador de modelos. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Para agregar anotaciones a las transacciones para todos los usuarios, debe tener permiso de acceso al área funcional **Administración de versiones** y ser administrador de modelos. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>Para agregar anotaciones a una transacción en el Explorador  
   
@@ -61,7 +61,7 @@ ms.locfileid: "65483914"
   
 4.  En el panel **Anotaciones de transacción** , en el cuadro **Anotación** , escriba su anotación.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Anotaciones &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)   

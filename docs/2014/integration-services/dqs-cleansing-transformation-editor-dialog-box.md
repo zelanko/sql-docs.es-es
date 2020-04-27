@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059420"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Cuadro de diálogo Editor de transformación Limpieza de DQS
@@ -29,21 +29,21 @@ ms.locfileid: "66059420"
   
 -   [Abrir el Editor de transformación Limpieza de DQS](#open)  
   
--   [Establecer opciones en la pestaña Administrador de conexiones](#connection)  
+-   [Establecer opciones en la pestaña administrador de conexiones](#connection)  
   
 -   [Establecer opciones en la pestaña Asignación](#mapping)  
   
 -   [Establecer opciones en la pestaña Avanzadas](#advanced)  
   
--   [Establecer las opciones en el cuadro de diálogo Administrador de conexiones de limpieza de DQS](#manager)  
+-   [Establecer las opciones del cuadro de diálogo Administrador de conexiones de limpieza de DQS](#manager)  
   
-##  <a name="open"></a> Abrir el Editor de transformación Limpieza de DQS  
+##  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a>Abrir el editor de transformación limpieza de DQS  
   
 1.  Agregue la Transformación Limpieza de DQS al paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Haga clic con el botón derecho en el componente y, después, haga clic en **Editar**.  
   
-##  <a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a> Establecer opciones en la pestaña Administrador de conexiones  
  **Administrador de conexiones de calidad de datos**  
  Seleccione un administrador de conexiones DQS existente de la lista, o bien haga clic en **Nuevo**para crear una conexión.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66059420"
   
 -   **Redirigir fila**, que indica que los datos de entrada no se insertan en la base de datos de Data Quality Services y se redirigen a la salida de error.  
   
-##  <a name="mapping"></a> Establecer opciones en la pestaña Asignación  
+##  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a>Establecer opciones en la pestaña asignación  
  Para obtener información acerca de cómo asignar columnas a dominios compuestos, vea [Map Columns to Composite Domains](data-flow/transformations/map-columns-to-composite-domains.md).  
   
  **Columnas de entrada disponibles**  
@@ -97,14 +97,14 @@ ms.locfileid: "66059420"
  **Alias de estado**  
  Muestra la columna que contiene información de estado sobre los datos corregidos. Haga clic en este campo para modificar el nombre de columna.  
   
-##  <a name="advanced"></a> Establecer opciones en la pestaña Avanzadas  
+##  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a>Establecer opciones en la pestaña avanzadas  
  **Estandarizar salida**  
  Indica si los datos se van a generar en el formato estandarizado según el formato de salida que se haya definido para los dominios. Para más información sobre el formato estandarizado, vea [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md).  
   
- **Confidence**  
+ **Confianza**  
  Indica si se debe incluir el nivel de confianza para los datos corregidos. El nivel de confianza indica el grado de certeza de DQS para la corrección o sugerencia. Para más información sobre los niveles de confianza, vea [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md).  
   
- **Reason**  
+ **Razón**  
  Indica si se debe incluir el motivo de la corrección de los datos.  
   
  **Datos anexados**  
@@ -113,11 +113,11 @@ ms.locfileid: "66059420"
  **Esquema de datos anexados**  
  Indica si se va a generar el esquema de datos. Para obtener más información, vea [adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
-##  <a name="manager"></a> Establecer las opciones en el cuadro de diálogo Administrador de conexiones de limpieza de DQS  
+##  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a>Establecer las opciones del cuadro de diálogo Administrador de conexiones de limpieza de DQS  
  **Nombre del servidor**  
  Seleccione o escriba el nombre del servidor DQS al que desee conectarse. Para obtener más información acerca del servidor, vea [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Haga clic para confirmar que la conexión especificada es viable.  
   
  También puede abrir el cuadro de diálogo **Administrador de conexiones de limpieza de DQS** desde el área de conexiones; para ello, haga lo siguiente:  
@@ -129,6 +129,6 @@ ms.locfileid: "66059420"
 3.  Haga clic en **Agregar**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Aplicación de reglas de calidad de los datos al origen de datos](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
+ [Aplicar reglas de calidad de los datos al origen de datos](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056318"
 ---
 # <a name="save-copy-of-package"></a>Guardar copia del paquete
@@ -52,7 +52,7 @@ ms.locfileid: "66056318"
  **Contraseña**  
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
- **Ruta de acceso del paquete**  
+ **Ruta de acceso de paquete**  
  Escriba la ruta de acceso del paquete o haga clic en el botón examinar **(...)** y busque la carpeta en la que desea almacenar el paquete.  
   
  **Nivel de protección**  

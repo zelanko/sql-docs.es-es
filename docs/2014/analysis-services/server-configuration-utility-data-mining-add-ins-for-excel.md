@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069068"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilidad de configuración del servidor (Complementos de minería de datos para Excel)
@@ -22,7 +22,7 @@ ms.locfileid: "66069068"
   
 
   
-##  <a name="bkmk_step1"></a>Paso 1: conexión a Analysis Services  
+##  <a name="step-1-connect-to-analysis-services"></a><a name="bkmk_step1"></a>Paso 1: conexión a Analysis Services  
  Elija el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que proporciona los algoritmos de minería de datos y almacena los modelos de minería de datos.  
   
  Cuando cree una conexión para habilitar la minería de datos, debe elegir un servidor en el que pueda probar con los modelos de minería de datos. Se recomienda crear una nueva base de datos en el servidor y dedicar la nueva base de datos a la minería de datos; o bien, pida al administrador que le prepare un servidor de minería de datos. De esa forma puede crear modelos sin afectar al rendimiento de otros servicios.  
@@ -35,7 +35,7 @@ ms.locfileid: "66069068"
  **Autenticación**  
  Especifique los métodos de autenticación. La autenticación de Windows es necesaria para las conexiones con [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], a menos que el administrador haya configurado el acceso al servidor mediante HTTPPump.  
   
-##  <a name="bkmk_step2"></a>Paso 2: permitir modelos temporales  
+##  <a name="step-2-allow-temporary-models"></a><a name="bkmk_step2"></a>Paso 2: permitir modelos temporales  
  Para poder usar los complementos, se debe cambiar una propiedad del servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para permitir la creación de modelos de minería de datos temporales.  
   
  Los modelos de minería de datos temporales también se denominan *modelos de sesión*. Esto se debe a que los modelos sólo se almacenan mientras la sesión actual permanece abierta. Al cerrar la conexión con el servidor, se da por finalizada la sesión y se eliminan todos los modelos que se usaron durante la misma.  
@@ -44,7 +44,7 @@ ms.locfileid: "66069068"
   
  El asistente detecta primero la configuración en el servidor que especificó. Si el servidor ya permite modelos de minería de datos temporales, puede hacer clic en **siguiente** para continuar. El asistente también proporciona instrucciones sobre cómo habilitar modelos de minería de datos temporales en el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificado o cómo realizar una solicitud al administrador de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_step3"></a>Paso 3: crear una base de datos para los usuarios del complemento  
+##  <a name="step-3-create-database-for-add-in-users"></a><a name="bkmk_step3"></a>Paso 3: crear una base de datos para los usuarios del complemento  
  En esta página del asistente para instalación y configuración, puede crear una base de datos nueva dedicada a la minería de datos o puede seleccionar una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existente.  
   
 > [!WARNING]  
@@ -66,7 +66,7 @@ ms.locfileid: "66069068"
  **Base de datos**  
  Si eligió la opción para usar una base de datos existente, debe seleccionar el nombre de la base de datos en la lista.  
   
-##  <a name="bkmk_step4"></a>Paso 4: conceder los permisos adecuados a los usuarios del complemento  
+##  <a name="step-4-give-add-in-users-appropriate-permissions"></a><a name="bkmk_step4"></a>Paso 4: conceder los permisos adecuados a los usuarios del complemento  
  Debe asegurarse de que tanto usted como los demás usuarios que van a emplear los complementos tienen los permisos necesarios para examinar, editar, procesar o crear estructuras y modelos de minería de datos.  
   
  De forma predeterminada, para usar los complementos se requiere la autenticación integrada de Windows.  

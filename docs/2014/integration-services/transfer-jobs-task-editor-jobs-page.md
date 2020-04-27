@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43066d036a23a063c218234b3a346bf89560994f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054988"
 ---
 # <a name="transfer-jobs-task-editor-jobs-page"></a>Editor de la tarea Transferir trabajos (página Trabajos)
@@ -29,10 +29,10 @@ ms.locfileid: "66054988"
   
 ## <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de destino.  
   
  **TransferAllJobs**  
  Seleccione si la tarea debe copiar todos los trabajos del Agente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o solo los trabajos especificados del origen al servidor de destino.  
@@ -41,8 +41,8 @@ ms.locfileid: "66054988"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**True**|Copia todos los trabajos.|  
-|**False**|Copia solo los trabajos especificados.|  
+|**Reales**|Copia todos los trabajos.|  
+|**Es**|Copia solo los trabajos especificados.|  
   
  **JobsList**  
  Haga clic en el botón Examinar **(…)** para seleccionar los trabajos que quiere copiar. Se debe seleccionar al menos un trabajo.  
@@ -70,14 +70,14 @@ ms.locfileid: "66054988"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**True**|Habilita los trabajos en el servidor de destino.|  
-|**False**|Deshabilita los trabajos en el servidor de destino.|  
+|**Reales**|Habilita los trabajos en el servidor de destino.|  
+|**Es**|Deshabilita los trabajos en el servidor de destino.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
- [Editor de la tarea Transferir trabajos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
- [Página Expresiones](expressions/expressions-page.md)   
+ [Editor de la tarea transferir trabajos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
+ [Página expresiones](expressions/expressions-page.md)   
  [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
   
   

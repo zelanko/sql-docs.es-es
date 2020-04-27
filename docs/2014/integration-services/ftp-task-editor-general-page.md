@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058432"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor de la tarea FTP (página General)
@@ -28,12 +28,12 @@ ms.locfileid: "66058432"
   
 ## <a name="options"></a>Opciones  
  **FtpConnection**  
- Seleccione un administrador de conexiones FTP existente o haga clic en \<**Nueva conexión...**> para crear uno nuevo.  
+ Seleccione un administrador de conexiones FTP existente o haga \<clic en **nueva conexión...**> para crear un administrador de conexiones.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones FTP solo admite la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- **Temas relacionados**: [Administrador de conexiones FTP](connection-manager/ftp-connection-manager.md), [Editor del administrador de conexiones FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Temas relacionados**: [FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **StopOnFailure**  
  Indica si la tarea FTP termina si se produce un error en una opción FTP.  

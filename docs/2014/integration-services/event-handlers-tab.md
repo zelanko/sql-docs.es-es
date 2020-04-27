@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d614f3479dac0abcf5b1d6c5ae69dff3dfedf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059293"
 ---
 # <a name="event-handlers-tab"></a>Pestaña Controladores de eventos
   Utilice la pestaña **Controladores de eventos** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] para generar un flujo de control en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Un controlador de eventos se ejecuta en respuesta a un evento generado por el paquete o por una tarea o un contenedor de un paquete.  
   
 ## <a name="options"></a>Opciones  
- **Ejecutable**  
+ **Executable**  
  Seleccione el ejecutable para el cual desea generar un controlador de eventos. El ejecutable puede ser el paquete, o una tarea o contenedores del paquete.  
   
  **Controlador de eventos**  
@@ -40,7 +40,7 @@ ms.locfileid: "66059293"
  Además, para agregar anotaciones, haga clic con el botón derecho en la superficie de diseño y, después, en el menú, haga clic en **Agregar anotación**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
+ [Controladores de eventos Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Flujo de control](control-flow/control-flow.md)   
  [Diseñador SSIS](ssis-designer.md)   
  [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  

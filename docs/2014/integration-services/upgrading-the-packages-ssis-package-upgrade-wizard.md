@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054736"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Actualizar los paquetes (Asistente para actualización del paquete SSIS)
@@ -46,7 +46,7 @@ ms.locfileid: "66054736"
  **Detención**  
  Detenga la actualización del paquete.  
   
- **Report**  
+ **Informe**  
  Seleccione lo que desea hacer con el informe que contiene los resultados de la actualización del paquete:  
   
 -   Ver el informe en línea.  

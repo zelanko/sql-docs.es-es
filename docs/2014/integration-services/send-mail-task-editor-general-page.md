@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055857"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Editor de la tarea Enviar correo (página General)
@@ -30,7 +30,7 @@ ms.locfileid: "66055857"
  **Nombre**  
  Proporcione un nombre único para la tarea Enviar correo. Este nombre se utiliza como etiqueta en el icono de tarea.  
   
- **Nota:** Los nombres de tarea deben ser únicos en un paquete.  
+ **Nota** : los nombres de tarea deben ser únicos en un paquete.  
   
  **Descripción**  
  Escriba una descripción de la tarea Enviar correo.  

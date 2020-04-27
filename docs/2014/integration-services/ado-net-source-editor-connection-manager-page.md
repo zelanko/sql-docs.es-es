@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061687"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor de orígenes de ADO NET (página Administrador de conexiones)
@@ -47,8 +47,8 @@ ms.locfileid: "66061687"
 |Tabla o vista|Recupera datos de una tabla o vista del origen de datos [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Comando SQL|Recupera datos del origen de datos [!INCLUDE[vstecado](../includes/vstecado-md.md)] mediante una consulta SQL.|  
   
- **Versión preliminar**  
- Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La **vista previa** puede mostrar hasta 200 filas.  
+ **Vista previa**  
+ Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
   
 > [!NOTE]  
 >  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, se muestran los valores \<value too big to display> o System.Byte[]. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor [!INCLUDE[vstecado](../includes/vstecado-md.md)] y el último, cuando se utiliza el proveedor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  
@@ -66,7 +66,7 @@ ms.locfileid: "66061687"
  **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Browse**  
+ **Examinar**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
 ## <a name="see-also"></a>Consulte también  

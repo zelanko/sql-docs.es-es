@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056020"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Seleccionar paquetes (Asistente para actualización del paquete SSIS)
@@ -30,7 +30,7 @@ ms.locfileid: "66056020"
  **Nombre del paquete existente**  
  Seleccione uno o varios paquetes para actualizar.  
   
- **Nombre del paquete de actualización**  
+ **Actualizar nombre de paquete**  
  Proporcione el nombre del paquete de destino o use el nombre predeterminado que proporciona el asistente.  
   
 > [!NOTE]  

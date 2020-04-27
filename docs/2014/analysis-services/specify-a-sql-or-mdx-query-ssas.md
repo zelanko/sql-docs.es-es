@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: baf3349bc72a6d6baff4defd9a9cd4799397b716
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068510"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>Especificar una consulta SQL o MDX (SSAS)
@@ -31,7 +31,7 @@ ms.locfileid: "66068510"
 |Término|Definición|  
 |**Nombre descriptivo de la consulta**|Escriba un nombre único para la consulta. Este campo es obligatorio.|  
 |**Instrucción SQL**|Escriba o pegue una instrucción SQL.|  
-|**Validación**|Determine si la instrucción SQL es válida.|  
+|**Vali**|Determine si la instrucción SQL es válida.|  
 |**Diseño**|Diseñe una instrucción SQL utilizando el cuadro de diálogo de diseñador de consultas. Para más información, vea [Diseñador de consultas relacionales &#40;SSAS&#41;](relational-query-designer-ssas.md).|  
   
   

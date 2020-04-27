@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 431e01df40ab3a531af21977b85253d84768118f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059751"
 ---
 # <a name="data-mining-query-transformation-editor-query-tab"></a>Editor de transformación Consulta de minería de datos (pestaña Consulta)
@@ -30,11 +30,11 @@ ms.locfileid: "66059751"
  **Consulta de minería de datos**  
  Escriba una consulta DMS (Extensiones de minería de datos) directamente en el cuadro de texto.  
   
- **Crear nueva consulta**  
+ **Generar nueva consulta**  
  Haga clic en **Generar nueva consulta** para crear una consulta DMS (Extensiones de minería de datos) mediante el generador de consultas gráfico.  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación consulta de minería de datos &#40;pestaña modelo de minería de datos&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
+ [Editor de transformación Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../2014/integration-services/data-mining-query-transformation-editor-mining-model-tab.md)  
   
   

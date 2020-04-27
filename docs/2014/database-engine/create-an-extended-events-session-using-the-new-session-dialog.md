@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39dd8c4f333df1528f3894ffc6dfe01a48a91f2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065015"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Crear una sesión de eventos extendidos utilizando el cuadro de diálogo Nueva sesión
@@ -32,9 +32,9 @@ ms.locfileid: "66065015"
  El [Asistente para nueva sesión](../ssms/object/object-explorer.md) también permite definir una sesión de Extended Events que admita la mayor parte de la funcionalidad de Extended Events.  
   
 ## <a name="before-you-begin"></a>Introducción  
- Para abrir el cuadro de diálogo Nueva sesión, en el Explorador de objetos, expanda el nodo **Administración** y, a continuación, expanda **Extended Events**. Haga clic con el botón derecho en **Sesiones**y, luego, haga clic en **Nueva sesión**.  
+ Para abrir el cuadro de diálogo Nueva sesión, en el Explorador de objetos, expanda el nodo **Administración** y, a continuación, expanda **Extended Events**. Haga clic con el botón secundario en **Sesiones**y, a continuación, haga clic en **Nueva sesión**.  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permisos  
  Para crear una sesión de eventos extendidos, debe disponer del permiso ALTER ANY EVENT SESSION.  
   
 ## <a name="to-create-an-extended-events-session-using-the-new-session-dialog"></a>Para crear una sesión de Extended Events utilizando el cuadro de diálogo Nueva sesión  
@@ -42,7 +42,7 @@ ms.locfileid: "66065015"
   
 #### <a name="to-select-a-template-and-schedule-an-event-session"></a>Para seleccionar una plantilla y programar una sesión de eventos  
   
-1.  En el Explorador de objetos, expanda el nodo **Administración** y, a continuación, expanda **Eventos extendidos**. Haga clic con el botón derecho en **Sesiones**y, luego, haga clic en **Nueva sesión**.  
+1.  En el Explorador de objetos, expanda el nodo **Administración** y, a continuación, expanda **Eventos extendidos**. Haga clic con el botón secundario en **Sesiones**y, a continuación, haga clic en **Nueva sesión**.  
   
 2.  En la página **General** , en el cuadro **Nombre de sesión** , escriba un nombre descriptivo para la sesión de eventos.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66065015"
      Para agregar eventos a la sesión, en la sección **Seleccionar una página** , haga clic en **Eventos**.  
   
     > [!NOTE]  
-    >  No haga clic en **Aceptar** hasta haber terminado de crear la sesión de eventos.  
+    >   No haga clic en **Aceptar** hasta haber terminado de crear la sesión de eventos.  
   
  Utilice la página **Eventos** para buscar y agregar los eventos que desee capturar para la sesión.  
   
@@ -87,12 +87,12 @@ ms.locfileid: "66065015"
 4.  Seleccione los eventos que quiere capturar y, luego, haga clic en la flecha derecha para moverlos a la sección **Eventos seleccionados** .  
   
     > [!NOTE]  
-    >  Puede seleccionar varios eventos al mismo tiempo de la **Biblioteca de eventos** utilizando las teclas CTRL o MAYÚS.  
+    >   Puede seleccionar varios eventos al mismo tiempo de la **Biblioteca de eventos** utilizando las teclas CTRL o MAYÚS.  
   
      Para configurar los eventos seleccionados, haga clic en **Configurar**.  
   
     > [!NOTE]  
-    >  No haga clic en **Aceptar** hasta haber terminado de crear la sesión de eventos.  
+    >   No haga clic en **Aceptar** hasta haber terminado de crear la sesión de eventos.  
   
  La página **Almacenamiento de datos** se utiliza para agregar destinos a una sesión de eventos. Los destinos almacenan datos de evento y pueden realizar acciones como guardar eventos en un archivo para verlos posteriormente y agregar datos de evento para la sesión. Para obtener más información acerca de los destinos de eventos extendidos, vea [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66065015"
 5.  Para agregar destinos a una sesión de eventos, en la sección **Seleccionar una página**, seleccione **Almacenamiento de datos**.  
   
     > [!NOTE]  
-    >  No haga clic en **Aceptar** hasta haber terminado de crear la sesión de eventos.  
+    >   No haga clic en **Aceptar** hasta haber terminado de crear la sesión de eventos.  
   
 #### <a name="to-add-targets-to-an-event-session"></a>Para agregar destinos a una sesión de eventos  
   
@@ -161,17 +161,17 @@ ms.locfileid: "66065015"
   
     |Destino|Propiedad del destino|  
     |------------|-----------------------|  
-    |**etw_classic_sync_target**|**Nombre del archivo de registro de sesión en el servidor**. Escriba el directorio y el nombre de archivo de registro en el servidor, o haga clic en **Examinar** para buscar y seleccionar el archivo de registro.<br /><br /> **Tamaño máximo del archivo de registro**. Especifique el tamaño máximo del archivo de registro para el evento de seguimiento de eventos para Windows (ETW). El valor predeterminado es de 20 megabytes. Puede seleccionar otra unidad de almacenamiento de la lista desplegable.<br /><br /> **Tamaño del búfer**. Especifique el tamaño del búfer en memoria para la sesión de eventos. El valor predeterminado es 128 kilobytes (KB). Puede seleccionar otra unidad de almacenamiento de la lista desplegable.<br /><br /> **Nombre**de la sesión. Escriba un nombre descriptivo de la sesión ETW.<br /><br /> **Reintentar tras un error al escribir en ETW**. Active esta casilla para reintentar la publicación del evento al subsistema de ETW.<br /><br /> **Número máximo de reintentos**. Especifique el número máximo de veces que desea que se reintente la publicación del evento en el subsistema de ETW antes de quitar el evento. El número predeterminado de reintentos es cero (0). Para esta propiedad de destino, cero (0) indica que no hay ningún reintento.|  
+    |**etw_classic_sync_target**|**Nombre del archivo de registro de sesión en el servidor**. Escriba el directorio y el nombre de archivo de registro en el servidor, o haga clic en **Examinar** para buscar y seleccionar el archivo de registro.<br /><br /> **Tamaño máximo del archivo de registro**. Especifique el tamaño máximo del archivo de registro para el evento de seguimiento de eventos para Windows (ETW). El valor predeterminado es de 20 megabytes. Puede seleccionar otra unidad de almacenamiento de la lista desplegable.<br /><br /> **Tamaño del búfer**. Especifique el tamaño del búfer en memoria para la sesión de eventos. El valor predeterminado es 128 kilobytes (KB). Puede seleccionar otra unidad de almacenamiento de la lista desplegable.<br /><br /> **Nombre**de la sesión. Escriba un nombre descriptivo de la sesión ETW.<br /><br /> **Volver a intentar tras error al escribir en ETW**. Active esta casilla para reintentar la publicación del evento al subsistema de ETW.<br /><br /> **Número máximo de reintentos**. Especifique el número máximo de veces que desea que se reintente la publicación del evento en el subsistema de ETW antes de quitar el evento. El número predeterminado de reintentos es cero (0). Para esta propiedad de destino, cero (0) indica que no hay ningún reintento.|  
     |**event_counter**|No hay propiedades de destino para el contador de eventos.|  
     |**event_file**|**Nombre de archivo en el servidor**. Escriba el directorio y el nombre de archivo de destino en el servidor, o haga clic en **Examinar** para buscar y seleccionar el archivo de destino.<br /><br /> **Tamaño máximo de archivo**. Especifique el tamaño máximo de archivo para el destino del archivo. Si no especifica el tamaño máximo de archivo, el archivo crecerá hasta llenar el disco. El tamaño de archivo predeterminado es 1 gigabyte (GB). Puede seleccionar otra unidad de almacenamiento de la lista desplegable.<br /><br /> **Habilitar sustitución incremental de archivos**. Active esta casilla para habilitar la sustitución incremental de archivos para el destino de archivos.<br /><br /> **Número máximo de archivos**. Especifique el número máximo de archivos que desea conservar en el sistema de archivos.|  
-    |**cargas**|**Evento por el que se va a filtrar**. Seleccione el evento en que desea filtrar en la lista desplegable. Puede filtrar en cualquier evento que existe en la sesión de eventos. También puede seleccionar ** \<ninguna>** de la lista desplegable para incluir todos los eventos y cubos base en la acción.<br /><br /> **Cubos base en: acción**. Seleccione esta opción para basar los depósitos en el nombre de acción que se utiliza como origen de datos y, a continuación, seleccione la acción en la lista desplegable.<br /><br /> **Base depósitos en: campo**. Seleccione esta opción para basar los depósitos en el campo de evento que se utiliza como origen de datos y, a continuación, seleccione el campo en la lista desplegable.<br /><br /> **Número máximo de depósitos**. Escriba el número máximo de depósitos que desea conservar. Cuando se alcance este valor, la sesión de eventos omitirá cualquier evento nuevo que no pertenezca a los depósitos existentes.|  
-    |**pair_matching**|**Eventos: comenzar con**. Seleccione el nombre de evento en la lista desplegable que especifica el evento de comienzo en una secuencia emparejada.<br /><br /> **Eventos: terminar con**. Seleccione el nombre de evento en la lista desplegable que especifica el evento de terminación en una secuencia emparejada.<br /><br /> **Campos y acciones: comenzar con**. Seleccione el campo y/o acción de comienzo en una secuencia emparejada en la lista desplegable.<br /><br /> **Campos y acciones: terminar con**. Seleccione el campo y/o acción de terminación en una secuencia emparejada en la lista desplegable.<br /><br /> **Descartar nuevos eventos no emparejados si se produce presión de memoria**. Active esta casilla para detener la recopilación de eventos en el destino pair_matching cuando el equipo está bajo presión de memoria. Cuando ya no haya presión de memoria, la recopilación de eventos se reanudará.<br /><br /> **Número máximo de eventos huérfanos**. Especifique el número máximo de eventos huérfanos que desea conservar en memoria.|  
-    |**ring_buffer**|**Número de eventos que se van a conservar**. Utilice las flechas arriba y abajo para especificar el número de eventos que desea conservar. El valor predeterminado es 1000.<br /><br /> **Tamaño máximo**de la memoria del búfer. Especifique la cantidad máxima de memoria que se va a utilizar. Los eventos existentes se quitan al alcanzar este valor. El tamaño de memoria predeterminado es 0 megabytes (MB), lo que significa valor ilimitado. Puede seleccionar otra unidad de almacenamiento de la lista desplegable.<br /><br /> **Mantenga un número especificado de eventos (por tipo) cuando el búfer esté lleno**. Seleccione esta opción para mantener un número especificado de eventos de cada tipo en el búfer.<br /><br /> **Número de eventos que se van a mantener (por tipo)**. Especifique el número preferido de eventos de cada tipo que desea conservar en el búfer.|  
+    |**cargas**|**Evento para filtrar**. Seleccione el evento en que desea filtrar en la lista desplegable. Puede filtrar en cualquier evento que existe en la sesión de eventos. También puede seleccionar ** \<ninguna>** de la lista desplegable para incluir todos los eventos y cubos base en la acción.<br /><br /> **Basar depósitos en: Acción**. Seleccione esta opción para basar los depósitos en el nombre de acción que se utiliza como origen de datos y, a continuación, seleccione la acción en la lista desplegable.<br /><br /> **Basar depósitos en: Campo**. Seleccione esta opción para basar los depósitos en el campo de evento que se utiliza como origen de datos y, a continuación, seleccione el campo en la lista desplegable.<br /><br /> **Número máximo de depósitos**. Escriba el número máximo de depósitos que desea conservar. Cuando se alcance este valor, la sesión de eventos omitirá cualquier evento nuevo que no pertenezca a los depósitos existentes.|  
+    |**pair_matching**|**Eventos: Comenzar con**. Seleccione el nombre de evento en la lista desplegable que especifica el evento de comienzo en una secuencia emparejada.<br /><br /> **Eventos: Terminar con**. Seleccione el nombre de evento en la lista desplegable que especifica el evento de terminación en una secuencia emparejada.<br /><br /> **Campos y acciones: Comenzar con**. Seleccione el campo y/o acción de comienzo en una secuencia emparejada en la lista desplegable.<br /><br /> **Campos y acciones: Terminar con**. Seleccione el campo y/o acción de terminación en una secuencia emparejada en la lista desplegable.<br /><br /> **Descartar nuevos eventos desemparejados en caso de presión de memoria**. Active esta casilla para detener la recopilación de eventos en el destino pair_matching cuando el equipo está bajo presión de memoria. Cuando ya no haya presión de memoria, la recopilación de eventos se reanudará.<br /><br /> **Máximo de eventos huérfanos**. Especifique el número máximo de eventos huérfanos que desea conservar en memoria.|  
+    |**ring_buffer**|**Número de eventos para mantener**. Utilice las flechas arriba y abajo para especificar el número de eventos que desea conservar. El valor predeterminado es 1000.<br /><br /> **Tamaño máximo del búfer de memoria** Especifique la cantidad máxima de memoria que se va a utilizar. Los eventos existentes se quitan al alcanzar este valor. El tamaño de memoria predeterminado es 0 megabytes (MB), lo que significa valor ilimitado. Puede seleccionar otra unidad de almacenamiento de la lista desplegable.<br /><br /> **Mantener un número especificado de eventos (por tipo) cuando el búfer esté lleno**. Seleccione esta opción para mantener un número especificado de eventos de cada tipo en el búfer.<br /><br /> **Número de eventos para mantener (por tipo)**. Especifique el número preferido de eventos de cada tipo que desea conservar en el búfer.|  
   
 5.  Si desea establecer propiedades de configuración avanzadas, seleccione **Avanzadas** en la sección **Seleccionar una página** .  
   
     > [!NOTE]  
-    >  No haga clic en **Aceptar** hasta haber terminado de crear la sesión de eventos.  
+    >   No haga clic en **Aceptar** hasta haber terminado de crear la sesión de eventos.  
   
 #### <a name="to-set-advanced-configurations"></a>Para establecer configuraciones avanzadas  
   
@@ -181,7 +181,7 @@ ms.locfileid: "66065015"
   
     1.  **Pérdida de evento único**. Seleccione esta opción para permitir la pérdida de un solo evento.  
   
-    2.  **Pérdida de varios eventos**. Seleccione esta opción para permitir la pérdida de varios eventos.  
+    2.  **Pérdida de eventos múltiples**. Seleccione esta opción para permitir la pérdida de varios eventos.  
   
     3.  **Sin pérdida de eventos**. Seleccione esta opción si desea evitar la pérdida de eventos. No se recomienda seleccionar esta opción.  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059894"
 ---
 # <a name="data-flow-tab"></a>Pestaña Flujo de datos
@@ -35,8 +35,8 @@ ms.locfileid: "66059894"
  Para agregar estas funciones en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] , haga clic con el botón secundario en la superficie de diseño y, a continuación, seleccione la opción que desee.  
   
 ## <a name="see-also"></a>Consulte también  
- [Rutas de Integration Services](data-flow/integration-services-paths.md)   
- [Tarea Flujo de datos](control-flow/data-flow-task.md)   
+ [Integration Services trazados](data-flow/integration-services-paths.md)   
+ [Tarea flujo de datos](control-flow/data-flow-task.md)   
  [Diseñador SSIS](ssis-designer.md)   
  [Flujo de datos](data-flow/data-flow.md)  
   

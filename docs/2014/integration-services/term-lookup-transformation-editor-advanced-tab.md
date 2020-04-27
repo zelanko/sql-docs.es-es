@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 692cde14a9cc8add332a4bbf6abe9518d3de642f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055209"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de transformación Búsqueda de términos (pestaña Avanzadas)
@@ -27,8 +27,8 @@ ms.locfileid: "66055209"
  Para obtener más información acerca de la transformación Búsqueda de términos, vea [Term Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Usar búsqueda de términos con distinción de mayúsculas y minúsculas**  
- Indique si desea que en la búsqueda se distingan las mayúsculas de las minúsculas. El valor predeterminado es `False`.  
+ **Utilizar búsqueda de términos con distinción de mayúsculas y minúsculas**  
+ Indique si desea que en la búsqueda se distingan las mayúsculas de las minúsculas. De manera predeterminada, es `False`.  
   
  **Configurar la salida de errores**  
  Use el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) para especificar las opciones de control de errores de las filas que provocan errores.  

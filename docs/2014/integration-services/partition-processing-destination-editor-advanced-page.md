@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056776"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de particiones (página Avanzadas)
@@ -30,10 +30,10 @@ ms.locfileid: "66056776"
 >  Las tareas aquí descritas no se aplican a los modelos tabulares de Analysis Services.  No se pueden asignar las columnas de entrada a las de partición para los modelos tabulares. En su lugar puede usar la tarea Ejecutar DDL de Analysis Services [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) para procesar la partición.  
   
 ## <a name="options"></a>Opciones  
- **Usar la configuración de error predeterminada.**  
+ **Utilizar la configuración de error predeterminada**  
  Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . De manera predeterminada, este valor es `True`.  
   
- **Acción de error de clave**  
+ **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
   
 |Value|Descripción|  
@@ -44,13 +44,13 @@ ms.locfileid: "66056776"
  **Omitir errores**  
  Especifica que deben omitirse los errores.  
   
- **Detener tras error**  
+ **Detenerse ante errores**  
  Especifica que el procesamiento debe detenerse cuando se produce un error.  
   
  **Número de errores**  
  Especifica el umbral de error donde debe detenerse el procesamiento, en caso de que se haya seleccionado **Detenerse ante errores**.  
   
- **Acción en el error**  
+ **Acción ante el error**  
  Especifica la acción que debe llevarse a cabo cuando se alcanza el umbral de error, en caso de que se haya seleccionado **Detenerse ante errores**.  
   
 |Value|Descripción|  
@@ -58,7 +58,7 @@ ms.locfileid: "66056776"
 |**StopProcessing**|Detiene el procesamiento.|  
 |**StopLogging**|Detiene el registro de errores.|  
   
- **No se encontró la clave**  
+ **Clave no encontrada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
   
 |Value|Descripción|  
@@ -102,6 +102,6 @@ ms.locfileid: "66056776"
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [&#40;página asignaciones del editor de destino de procesamiento de particiones&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
+ [Editor de destino de procesamiento de particiones &#40;página Asignaciones&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057640"
 ---
 # <a name="msmq-connection-manager-editor"></a>administrador de conexiones MSMQ, editor del
@@ -41,14 +41,12 @@ ms.locfileid: "66057640"
   
 |Tipo de cola|Ruta de acceso de ejemplo|  
 |----------------|-----------------|  
-|Público|
-  \<nombre del equipo>\\<nombre de la cola\>|  
-|Private|
-  \<nombre del equipo>\Private$\\<nombre de la cola\>|  
+|Public|\<nombre del equipo>\\<nombre de la cola\>|  
+|Private|\<nombre del equipo>\Private$\\<nombre de la cola\>|  
   
  Puede utilizar "." para representar el equipo local.  
   
- **Muestre**  
+ **Prueba**  
  Después de configurar el Administrador de conexiones MSMQ, confirme que la conexión es viable haciendo clic en **Probar**.  
   
 ## <a name="see-also"></a>Consulte también  

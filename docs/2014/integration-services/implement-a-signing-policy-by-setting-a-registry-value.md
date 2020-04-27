@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058215"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar una directiva de firma estableciendo un valor del Registro
@@ -46,7 +46,7 @@ ms.locfileid: "66058215"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Para implementar una directiva de firma para paquetes  
   
-1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
+1.  En el menú **Inicio**, haga clic en **Ejecutar**.  
   
 2.  En el cuadro de diálogo Ejecutar, `Regedit`escriba y, a continuación, haga clic en **Aceptar**.  
   
@@ -60,12 +60,12 @@ ms.locfileid: "66058215"
   
 7.  En el cuadro de diálogo **Editar valor DWORD** , escriba el valor 0, 1, 2 o 3.  
   
-8.  Haga clic en **OK**.  
+8.  Haga clic en **Aceptar**.  
   
 9. En el menú **Archivo** , haga clic en **Salir**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Información general sobre seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
+ [Información general de seguridad &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Identificar el origen de paquetes con firmas digitales](security/identify-the-source-of-packages-with-digital-signatures.md)  
   
   

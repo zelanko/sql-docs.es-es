@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061077"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor del administrador de conexiones de caché
@@ -35,7 +35,7 @@ ms.locfileid: "66061077"
   
  Para obtener más información sobre el administrador de conexiones de caché, vea [Administrador de conexiones de caché](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a>Pestaña General  
+##  <a name="general-tab"></a><a name="generaltab"></a>Pestaña General  
  Use la pestaña **General** del cuadro de diálogo **Editor del administrador de conexiones de caché** para indicar si la memoria caché se leerá desde un archivo o se guardará en un archivo.  
   
 ### <a name="options"></a>Opciones  
@@ -45,7 +45,7 @@ ms.locfileid: "66061077"
  **Descripción**  
  Describe la conexión. Como método recomendado, describa la conexión en función de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
- **Usar caché de archivos**  
+ **Utilizar la caché del archivo.**  
  Indicar si se ha de utilizar un archivo caché.  
   
 > [!NOTE]  
@@ -60,13 +60,13 @@ ms.locfileid: "66061077"
  **Nombre de archivo**  
  Escriba la ruta y el nombre de archivo del archivo caché.  
   
- **Browse**  
+ **Examinar**  
  Busque el archivo caché.  
   
- **Actualizar metadatos**  
+ **Actualizar los metadatos**  
  Elimine los metadatos de columna del administrador de conexiones de caché y vuelva a llenar el administrador de conexiones de caché con los metadatos de la columna del archivo caché seleccionado.  
   
-##  <a name="columnstab"></a>Pestaña columnas  
+##  <a name="columns-tab"></a><a name="columnstab"></a>Pestaña columnas  
  Utilice la pestaña **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de caché** para configurar las propiedades de cada columna en la caché.  
   
 ### <a name="options"></a>Opciones  
@@ -83,7 +83,7 @@ ms.locfileid: "66061077"
 > [!NOTE]  
 >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas.  
   
- **Tipo**  
+ **Type**  
  Especifica el tipo de datos de la columna.  
   
  `Length`  
@@ -99,6 +99,6 @@ ms.locfileid: "66061077"
  Especifica la página de códigos para el tipo de columna. Si procede en el caso del tipo de datos, puede actualizar la `Code Page`.  
   
 ## <a name="see-also"></a>Consulte también  
- [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)  
+ [Transformación búsqueda](data-flow/transformations/lookup-transformation.md)  
   
   

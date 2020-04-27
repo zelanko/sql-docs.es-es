@@ -15,15 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061418"
 ---
 # <a name="audit-transformation-editor"></a>Editor de transformación Auditar
-  La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  
+  La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  
   
  Para obtener más información acerca de la transformación Auditar, vea [Audit Transformation](data-flow/transformations/audit-transformation.md).  
   
@@ -37,14 +36,14 @@ ms.locfileid: "66061418"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**GUID de instancia de ejecución**|Inserte el GUID que identifica exclusivamente la instancia de ejecución del paquete.|  
-|**IDENTIFICADOR de paquete**|Inserte el GUID que identifica exclusivamente el paquete.|  
+|**Id. de paquete**|Inserte el GUID que identifica exclusivamente el paquete.|  
 |**Nombre del paquete**|Inserte el nombre del paquete.|  
-|**Id. de la versión**|Inserte el GUID que identifica exclusivamente la versión del paquete.|  
-|**Hora de inicio de la ejecución**|Inserte la hora en la que se iniciará la ejecución del paquete.|  
-|**Nombre de equipo**|Inserte el nombre del equipo en el que se inició el paquete.|  
+|**Id. de versión**|Inserte el GUID que identifica exclusivamente la versión del paquete.|  
+|**Hora de inicio de ejecución**|Inserte la hora en la que se iniciará la ejecución del paquete.|  
+|**Nombre de la máquina**|Inserte el nombre del equipo en el que se inició el paquete.|  
 |**Nombre de usuario**|Inserte el nombre de inicio de sesión del usuario que inició el paquete.|  
-|**Nombre de tarea**|Inserte el nombre de la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
-|**Identificador de la tarea**|Inserte el GUID que identifica exclusivamente la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
+|**Nombre de la tarea**|Inserte el nombre de la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
+|**Id. de tarea**|Inserte el GUID que identifica exclusivamente la tarea Flujo de datos con la que está asociada la transformación Auditar.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  

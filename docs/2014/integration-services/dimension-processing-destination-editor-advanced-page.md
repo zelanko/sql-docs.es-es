@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059485"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de dimensiones (página Avanzadas)
@@ -27,10 +27,10 @@ ms.locfileid: "66059485"
  Para obtener más información acerca del destino de procesamiento de dimensiones, vea [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
 ## <a name="options"></a>Opciones  
- **Usar la configuración de error predeterminada.**  
+ **Utilizar la configuración de error predeterminada**  
  Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . De manera predeterminada, este valor es `True`.  
   
- **Acción de error de clave**  
+ **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  
   
 |Value|Descripción|  
@@ -41,13 +41,13 @@ ms.locfileid: "66059485"
  **Omitir errores**  
  Especifica que deben omitirse los errores.  
   
- **Detener tras error**  
+ **Detenerse ante errores**  
  Especifica que el procesamiento debe detenerse cuando se produce un error.  
   
  **Número de errores**  
  Especifica el umbral de error donde tiene que detenerse el procesamiento (si ha seleccionado **Detenerse ante errores**).  
   
- **Acción en el error**  
+ **Acción ante el error**  
  Especifica la acción que se realizará cuando se alcance el umbral de error (si ha seleccionado **Detenerse ante errores**).  
   
 |Value|Descripción|  
@@ -55,7 +55,7 @@ ms.locfileid: "66059485"
 |**StopProcessing**|Detiene el procesamiento.|  
 |**StopLogging**|Detiene el registro de errores.|  
   
- **No se encontró la clave**  
+ **Clave no encontrada**  
  Especifica la acción que debe llevarse a cabo en caso de que se produzca un error de clave no encontrada. Este valor es **ReportAndContinue**de forma predeterminada.  
   
 |Value|Descripción|  
@@ -100,6 +100,6 @@ ms.locfileid: "66059485"
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Editor de destino de procesamiento de dimensiones &#40;página asignaciones&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
+ [Editor de destino de procesamiento de dimensiones &#40;página Asignaciones&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  
   
   

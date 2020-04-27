@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055432"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Editor del administrador de conexiones con SQL Server Compact Edition (página Conexión)
@@ -27,10 +27,10 @@ ms.locfileid: "66055432"
  Para obtener más información acerca del administrador de conexiones con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition, vea [Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
 ## <a name="options"></a>Opciones  
- **Escriba el nombre y la ruta de acceso del archivo de base de datos**  
+ **Especifique el nombre y la ruta del archivo de base de datos**  
  Escriba la ruta de acceso y el nombre de archivo de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
- **Browse**  
+ **Examinar**  
  Busque el archivo de base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact deseado mediante el cuadro de diálogo **Select SQL Server Compact Edition database** (Seleccionar la base de datos de SQL Server Compact Edition).  
   
  **Escriba la contraseña de la base de datos**  
@@ -38,6 +38,6 @@ ms.locfileid: "66055432"
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor del administrador de conexiones de SQL Server Compact Edition &#40;página todas&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ [Editor del administrador de conexiones con SQL Server Compact Edition &#40;página Todo&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
   

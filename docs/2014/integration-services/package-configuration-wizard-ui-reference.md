@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056936"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la configuración de paquetes
@@ -37,7 +37,7 @@ ms.locfileid: "66056936"
  **No volver a mostrar esta página**  
  Omite la página de bienvenida la próxima vez que abre el asistente.  
   
- **Nueva**  
+ **Siguiente**  
  Avanza a la página siguiente del asistente.  
   
 ## <a name="select-configuration-type-page"></a>Página Seleccionar tipo de configuración  
@@ -52,12 +52,12 @@ ms.locfileid: "66056936"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Archivo de configuración XML**|Almacenar la configuración como un archivo XML. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
-|**Variable de entorno**|Almacenar la configuración en una de las variables de entorno. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
-|**Entrada del Registro**|Almacenar la configuración en el Registro. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
+|**Variable del entorno**|Almacenar la configuración en una de las variables de entorno. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
+|**Entrada del registro**|Almacenar la configuración en el Registro. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
 |**Variable de paquete primario**|Almacenar la configuración como una variable en el paquete que contiene la tarea.  Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
 |**SQL Server**|Almacenar la configuración en una tabla en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al seleccionar este valor se muestran las opciones dinámicas de la sección **Tipo de configuración**.|  
   
- **Nueva**  
+ **Siguiente**  
  Muestra la siguiente página en la secuencia del asistente.  
   
 ### <a name="dynamic-options"></a>Opciones dinámicas  
@@ -69,17 +69,17 @@ ms.locfileid: "66056936"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Nombre del archivo de configuración**|Escriba la ruta de acceso del archivo de configuración que genera el asistente.|  
-|**Browse**|Use el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** para especificar la ruta de acceso del archivo de configuración que genera el asistente. Si el archivo no existe, el asistente lo crea.|  
+|**Examinar**|Use el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** para especificar la ruta de acceso del archivo de configuración que genera el asistente. Si el archivo no existe, el asistente lo crea.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se usa para especificar la variable de entorno donde se almacena la configuración.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
+|**Variable del entorno**|Seleccione una variable de entorno de la lista.|  
   
 #### <a name="configuration-type-option--environment-variable"></a>Opción de tipo de configuración = Variable de entorno  
- **Variable de entorno**  
+ **Variable del entorno**  
  Seleccione la variable de entorno que contiene la información de configuración.  
   
 #### <a name="configuration-type-option--registry-entry"></a>Opción de tipo de configuración = Entrada del Registro  
@@ -88,14 +88,14 @@ ms.locfileid: "66056936"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Entrada del Registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<clave del Registro>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\…> para identificarla.|  
+|**Entrada del registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<clave del Registro>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\…> para identificarla.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde debe almacenarse la configuración.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
+|**Variable del entorno**|Seleccione una variable de entorno de la lista.|  
   
 #### <a name="configuration-type-option--parent-package-variable"></a>Opción de tipo de configuración = Variable de paquete primario  
  **Especificar valores de configuración directamente**  
@@ -110,7 +110,7 @@ ms.locfileid: "66056936"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
+|**Variable del entorno**|Seleccione una variable de entorno de la lista.|  
   
 #### <a name="configuration-type-options--sql-server"></a>Opción de tipo de configuración = SQL Server  
  **Especificar valores de configuración directamente**  
@@ -127,19 +127,19 @@ ms.locfileid: "66056936"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Variable de entorno**|Seleccione una variable de entorno de la lista.|  
+|**Variable del entorno**|Seleccione una variable de entorno de la lista.|  
   
 ## <a name="select-objects-to-export-page"></a>Página Seleccionar objetos para la exportación  
  Use la página **Seleccionar propiedad de destino o Seleccionar propiedades para la exportación** para especificar las propiedades de objetos contenidas en la configuración. La posibilidad de seleccionar varias propiedades solo está disponible si se selecciona el tipo de configuración XML.  
   
 ### <a name="options"></a>Opciones  
- **Objetos**  
+ **de la empresa**  
  Expanda la jerarquía de paquetes y seleccione las propiedades que desea exportar.  
   
  **Atributos de propiedad**  
  Permite ver los atributos de una propiedad.  
   
- **Nueva**  
+ **Siguiente**  
  Va a la siguiente página del asistente.  
   
 ## <a name="completing-the-wizard-page"></a>Página Finalización del asistente  
@@ -149,7 +149,7 @@ ms.locfileid: "66056936"
  **Nombre de configuración**  
  Escriba el nombre de la configuración.  
   
- **Versión preliminar**  
+ **Vista previa**  
  Muestra los valores utilizados por el asistente para crear la configuración.  
   
  **Finalizar**  

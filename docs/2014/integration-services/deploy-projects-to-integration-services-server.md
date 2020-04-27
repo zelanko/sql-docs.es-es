@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059578"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implementación de paquetes en el servidor de Integration Services
@@ -27,7 +27,7 @@ ms.locfileid: "66059578"
   
  Para implementar un proyecto en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , debe completar las tareas siguientes:  
   
-1.  Crear un catálogo de SSISDB, si aún no lo ha hecho. Para más información, vea [Crear el catálogo de SSIS](catalog/ssis-catalog.md).  
+1.  Crear un catálogo de SSISDB, si aún no lo ha hecho. Para obtener más información, vea [Crear el catálogo de SSIS](catalog/ssis-catalog.md).  
   
 2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para obtener más información, vea las instrucciones siguientes: [Para convertir un proyecto al modelo de implementación de proyectos](#convert)  
   
@@ -50,29 +50,29 @@ ms.locfileid: "66059578"
   
      Para obtener más información sobre la actualización de paquetes, vea [Actualizar paquetes de Integration Services](install-windows/upgrade-integration-services-packages.md) y [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Implemente el proyecto en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información, vea las instrucciones siguientes: [Para implementar un proyecto en el servidor de Integration Services](#deploy).  
+3.  Implemente el proyecto en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información, vea las instrucciones siguientes: [para implementar un proyecto en el servidor de Integration Services](#deploy).  
   
 4.  (Opcional) Crear un entorno para el proyecto implementado. Para obtener más información, vea [Crear y asignar un entorno de servidor](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a>Para convertir un proyecto al modelo de implementación de proyectos  
+##  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a>Para convertir un proyecto al modelo de implementación de proyectos  
   
 1.  Abra el proyecto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]y, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto y seleccione **Convertir al modelo de implementación de proyectos**.  
   
-     O bien  
+     o bien  
   
      En el Explorador de objetos de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], haga clic con el botón derecho en el nodo **Proyectos** y seleccione **Importar paquetes**.  
   
-2.  Realice los pasos del asistente. Para más información, consulte [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
+2.  Complete el asistente. Para más información, consulte [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a>Para implementar un proyecto en el servidor de Integration Services  
+##  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a>Para implementar un proyecto en el servidor de Integration Services  
   
 1.  Abra el proyecto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]y, en el menú **Proyecto** , seleccione **Implementar** para iniciar el **Asistente para implementación de Integration Services**.  
   
-     O bien  
+     o bien  
   
-     En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda el nodo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** en el Explorador de objetos y busque la carpeta Proyectos correspondiente al proyecto que quiere implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
+     En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  > el nodo **SSISDB** en explorador de objetos y busque la carpeta proyectos del proyecto que desea implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
   
-     O bien  
+     o bien  
   
      En el símbolo del sistema, ejecute **isdeploymentwizard.exe** desde **%Archivos de programa%\Microsoft SQL Server\110\DTS\Binn**. En equipos de 64 bits, también hay una versión de 32 bits de la herramienta en **%Archivos de programa (x86)%\Microsoft SQL Server\100\DTS\Binn**.  
   
@@ -82,6 +82,6 @@ ms.locfileid: "66059578"
   
      Haga clic en **Catálogo de Integration Services** para seleccionar un proyecto que ya se haya implementado en el catálogo de SSISDB.  
   
-3.  Realice los pasos del asistente. Para más información, consulte [Integration Services Deployment Wizard](../../2014/integration-services/integration-services-deployment-wizard.md).  
+3.  Complete el asistente. Para más información, consulte [Integration Services Deployment Wizard](../../2014/integration-services/integration-services-deployment-wizard.md).  
   
   

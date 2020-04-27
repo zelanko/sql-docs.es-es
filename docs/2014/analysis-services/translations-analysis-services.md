@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065883"
 ---
 # <a name="translations-analysis-services"></a>Traducciones (Analysis Services)
@@ -53,7 +53,7 @@ ms.locfileid: "66065883"
   
  Los formatos de fecha, hora y moneda no se implementan con traducciones. Para proporcionar dinámicamente formatos específicos de cada cultura en función de la configuración regional del cliente, utilice el Asistente de conversión de moneda y la propiedad `FormatString`. Para más información, vea [Conversiones de moneda &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) y [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Lección 9: definir perspectivas y traducciones](lesson-9-defining-perspectives-and-translations.md) en el Analysis Services tutorial le guiará por los pasos necesarios para crear y probar traducciones.  
+ [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) , en el Tutorial de Analysis Services, le guiará por los pasos necesarios para crear y probar las traducciones.  
   
 ## <a name="defining-translations"></a>Definir traducciones  
  Al definir una traducción se crea un objeto `Translation` como un elemento secundario de la base de datos, de la dimensión o del objeto de cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Utilice [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para abrir la solución y definir las traducciones.  
@@ -120,6 +120,6 @@ ms.locfileid: "66065883"
  [Escenarios de globalización para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Idiomas e intercalaciones &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Establecer o cambiar la intercalación de columnas](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Sugerencias de globalización y prácticas recomendadas &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064477"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -40,11 +40,11 @@ ms.locfileid: "66064477"
   
 ### <a name="shortcut-menu-options"></a>Opciones de menú contextual  
  **Nueva relación de atributo**  
- Abre el cuadro de diálogo **Crear relación de atributo** en el que puede definir una nueva relación de atributo.  
+ Abre el cuadro de diálogo **Crear relación de atributo**, donde se puede definir una nueva relación de atributo.  
   
  Para más información, vea [Cuadros de diálogo Crear relación de atributo y Editar relación de atributo &#40;pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones&#41; &#40;Analysis Services - Datos multidimensionales&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) y [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md).  
   
- **Cambiar el nombre**  
+ **Cambiar nombre**  
  Resalta el nombre del atributo en la lista y le permite modificar este texto.  
   
  **Propiedades**  

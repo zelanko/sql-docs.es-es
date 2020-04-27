@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061112"
 ---
 # <a name="catalog-properties-dialog-box"></a>Propiedades del catálogo, cuadro de diálogo
@@ -33,7 +33,7 @@ ms.locfileid: "66061112"
   
 -   [Configurar las opciones](#options)  
   
-##  <a name="open_dialog"></a>Abrir el cuadro de diálogo Propiedades del catálogo  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>Abrir el cuadro de diálogo Propiedades del catálogo  
   
 1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66061112"
   
 3.  En el Explorador de objetos, expanda el nodo **Integration Services** , haga clic con el botón derecho en **SSISDB**y luego haga clic en **Propiedades**.  
   
-##  <a name="options"></a> Configurar las opciones  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurar las opciones  
   
 ### <a name="options"></a>Opciones  
  En la tabla siguiente se describen algunas propiedades del cuadro de diálogo y las propiedades correspondientes de la vista catalog.catalog_property.  

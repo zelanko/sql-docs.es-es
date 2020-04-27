@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0881624f421cba5bda5d2b0ba8f9d3732efd2497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059265"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor de Administrador de conexiones con Excel
@@ -36,7 +36,7 @@ ms.locfileid: "66059265"
 > [!WARNING]  
 >  El **Editor de destino de Excel** creará automáticamente el archivo de Excel cuando seleccione una **conexión de Excel** que señale a un archivo nuevo o que no existe y, a continuación, haga clic en **nuevo** en **nombre de la hoja de Excel**.  
   
- **Browse**  
+ **Examinar**  
  Utilice el cuadro de diálogo **abrir** para ir a la carpeta en la que se encuentra el archivo de Excel o donde desea crear el nuevo archivo.  
   
  **Versión de Excel**  

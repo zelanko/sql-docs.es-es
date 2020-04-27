@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058811"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor de la tarea Sistema de archivos (página General)
@@ -42,8 +42,8 @@ ms.locfileid: "66058811"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**True**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica, **DestinationVariable**.|  
-|**False**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción `DestinationConnection`dinámica,.|  
+|**Reales**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica, **DestinationVariable**.|  
+|**Es**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción `DestinationConnection`dinámica,.|  
   
  **OverwriteDestination**  
  Especifique si la operación puede sobrescribir archivos en el directorio de destino.  
@@ -57,7 +57,7 @@ ms.locfileid: "66058811"
  **Descripción**  
  Escriba una descripción de la tarea Sistema de archivos.  
   
- **Operación**  
+ **operación**  
  Seleccione la operación del sistema de archivos que se debe llevar a cabo. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
 |Value|Descripción|  
@@ -78,8 +78,8 @@ ms.locfileid: "66058811"
   
 |Value||  
 |-----------|-|  
-|**True**|La ruta de destino está almacenada en una variable. Si selecciona este valor, se mostrará la opción dinámica **SourceVariable**.|  
-|**False**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica, **DestinationVariable**.|  
+|**Reales**|La ruta de destino está almacenada en una variable. Si selecciona este valor, se mostrará la opción dinámica **SourceVariable**.|  
+|**Es**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica, **DestinationVariable**.|  
   
 ## <a name="isdestinationpathvariable-dynamic-options"></a>Opciones dinámicas de IsDestinationPathVariable  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66058811"
  `DestinationConnection`  
  Seleccione un administrador de conexiones de archivos de la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>Opciones dinámicas de IsSourcePathVariable  
   
@@ -107,12 +107,12 @@ ms.locfileid: "66058811"
  `SourceConnection`  
  Seleccione un administrador de conexiones de archivos de la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Opciones dinámicas de Operación  
   
 ### <a name="operation--set-attributes"></a>Operación = Establecer atributos  
- **Hidden**  
+ **Plusvalía**  
  Indique si el archivo o el directorio está visible.  
   
  **ReadOnly**  

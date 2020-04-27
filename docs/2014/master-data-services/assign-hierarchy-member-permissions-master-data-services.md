@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a12a46c1a250ce3d93c9ec2091dc5048ceebd61e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483732"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>Asignar los permisos de los miembros de una jerarquía (Master Data Services)
@@ -25,12 +25,12 @@ ms.locfileid: "65483732"
   
  Los permisos de los miembros de la jerarquía son opcionales. Proporcionan una granularidad agregada para los permisos de objetos de modelo, que son obligatorios.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-assign-hierarchy-member-permissions"></a>Asignar los permisos de los miembros de una jerarquía  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65483732"
   
 10. En el menú, seleccione **solo lectura**, **Actualizar**o **denegar**.  
   
-11. Haga clic en **Save**(Guardar).  
+11. Haga clic en **Guardar**.  
   
     > [!NOTE]  
     >  Los permisos de los miembros de la jerarquía no surten efecto inmediatamente. Consulte [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md) para obtener más información.  

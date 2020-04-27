@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065766"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Solucionar problemas del procesamiento de datos (SSAS tabular)
@@ -24,7 +24,7 @@ ms.locfileid: "66065766"
   
 -   [Cómo funciona el procesamiento de datos](#bkmk_how_df_works)  
   
--   [Impacto del procesamiento de datos](#bkmk_impact_of_df)  
+-   [Efectos del procesamiento de datos](#bkmk_impact_of_df)  
   
 -   [Determinar el origen de datos](#bkmk_det_source)  
   
@@ -32,16 +32,16 @@ ms.locfileid: "66065766"
   
 -   [Restricciones en los orígenes de datos actualizables](#bkmk_restrictions)  
   
--   [Restricciones en los cambios en un origen de datos](#bkmk_rest_changes)  
+-   [Restricciones en los cambios de un origen de datos](#bkmk_rest_changes)  
   
-##  <a name="bkmk_how_df_works"></a>Cómo funciona el procesamiento de datos  
+##  <a name="how-data-processing-works"></a><a name="bkmk_how_df_works"></a>Cómo funciona el procesamiento de datos  
  Cuando se procesan datos, los datos del Diseñador de modelos se reemplazan por los nuevos datos. No se pueden importar únicamente las filas de datos que son nuevas, o solo los datos que han cambiado, ya que el Diseñador de modelos no realiza un seguimiento de las filas que se agregaron anteriormente.  
   
  El procesamiento de datos funciona como una transacción. Esto significa que, una vez iniciada la actualización de datos, esta debe completarse o no efectuarse; nunca tendrá datos que sean parcialmente correctos.  
   
  El procesamiento manual de datos, que se inicia desde la ventana de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], se administra mediante la instancia en memoria local de Analysis Services. Por consiguiente, la operación de procesamiento de datos puede afectar al rendimiento de otras tareas del equipo. Sin embargo, si programa el procesamiento automático de datos en un modelo implementado mediante un script, la instancia de Analysis Services administrará el proceso de importación y el momento en que se realiza.  
   
-##  <a name="bkmk_impact_of_df"></a>Impacto del procesamiento de datos  
+##  <a name="impact-of-data-processing"></a><a name="bkmk_impact_of_df"></a>Impacto del procesamiento de datos  
  El procesamiento de datos suele desencadenar el nuevo cálculo de estos.  Procesar los datos significa obtener los datos más recientes de los orígenes externos; recalcular significa actualizar el resultado de todas las fórmulas que usan datos que han cambiado. Una operación de procesamiento normalmente conlleva otra de recálculo.  
   
  Por lo tanto, antes de modificar los orígenes de datos o de procesar los datos que se obtienen del origen de datos, siempre hay que tener en cuenta los posibles efectos y consecuencias:  
@@ -56,7 +56,7 @@ ms.locfileid: "66065766"
   
 -   Cuando se cambia un filtro, es necesario recalcular el modelo completo.  
   
-##  <a name="bkmk_det_source"></a>Determinar el origen de datos  
+##  <a name="determining-the-source-of-data"></a><a name="bkmk_det_source"></a>Determinar el origen de datos  
  Si no está seguro de la procedencia de los datos de un modelo, puede usar las herramientas de la ventana de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para obtener los detalles, incluido el nombre y la ruta de acceso del archivo de origen.  
   
 #### <a name="to-find-the-source-of-existing-data"></a>Para encontrar el origen de datos existentes  
@@ -73,7 +73,7 @@ ms.locfileid: "66065766"
   
 6.  En el cuadro de diálogo **Editar conexiones** , consulte la información de conexión, como el nombre de la base de datos, ruta de acceso del archivo o ruta de acceso del informe.  
   
-##  <a name="bkmk_det_last_ref"></a>Determinar cuándo se actualizaron los datos por última vez  
+##  <a name="determining-when-data-was-last-refreshed"></a><a name="bkmk_det_last_ref"></a>Determinar cuándo se actualizaron los datos por última vez  
  Use las propiedades de la tabla para determinar cuándo se actualizaron los datos por última vez.  
   
 #### <a name="to-find-the-date-and-time-that-a-table-was-last-processed"></a>Para conocer la fecha y hora en que se procesó una tabla por última vez  
@@ -84,7 +84,7 @@ ms.locfileid: "66065766"
   
 3.  En el cuadro de diálogo **Editar propiedades de tabla** , **Última actualización** muestra la última fecha en que se actualizó la tabla.  
   
-##  <a name="bkmk_restrictions"></a>Restricciones en los orígenes de datos actualizables  
+##  <a name="restrictions-on-refreshable-data-sources"></a><a name="bkmk_restrictions"></a>Restricciones en los orígenes de datos actualizables  
  Algunas restricciones se aplican a los orígenes de datos que se pueden procesar de forma automática desde un modelo implementado en una instancia de Analysis Services. Asegúrese de seleccionar solo los orígenes de datos que cumplan los siguientes criterios:  
   
 -   El origen de datos debe estar disponible en la ubicación indicada en el momento en que se produce el procesamiento de datos. Si el origen de datos original está en una unidad de disco local del usuario que creó el modelo, debe excluir ese origen de datos de la operación de procesamiento de datos o encontrar una manera de publicar ese origen de datos en una ubicación que sea accesible a través de una conexión de red. Si mueve un origen de datos a una ubicación de red, asegúrese de abrir el modelo en el Diseñador de modelos y repita los pasos de recuperación de datos. Esto es necesario para restablecer la información de conexión que está almacenada en las propiedades de conexión del origen de datos.  
@@ -97,7 +97,7 @@ ms.locfileid: "66065766"
   
      A un origen de datos externo se tiene acceso a través de una cadena de conexión incrustada, una dirección URL o una ruta UNC que se especifica al importar los datos originales en el modelo usando el Asistente para la importación de tablas. La información de conexión original que está almacenada en la conexión de origen de datos se vuelve a usar para las siguientes operaciones de actualización de los datos. No hay ninguna información de conexión independiente que se cree y se administre con fines de procesamiento de datos; solo se usa la información de conexión existente.  
   
-##  <a name="bkmk_rest_changes"></a>Restricciones en los cambios en un origen de datos  
+##  <a name="restrictions-on-changes-to-a-data-source"></a><a name="bkmk_rest_changes"></a>Restricciones en los cambios en un origen de datos  
  Hay algunas restricciones en los cambios que se pueden realizar en un origen de datos:  
   
 -   Los tipos de datos de una columna solo se pueden cambiar a un tipo de datos compatible. Por ejemplo, si los datos de la columna contienen números decimales, el tipo de datos no se puede cambiar a un entero. Sin embargo, los datos numéricos se pueden cambiar a texto. Para obtener más información sobre los tipos de datos, vea [Tipos de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-types-supported-ssas-tabular.md).  
@@ -106,6 +106,6 @@ ms.locfileid: "66065766"
   
 ## <a name="see-also"></a>Consulte también  
  [Procesar manualmente los datos &#40;&#41;tabular de SSAS](manually-process-data-ssas-tabular.md)   
- [Editar una conexión de origen de datos existente &#40;tabla tabular&#41;SSAS](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Editar una conexión de origen de datos existente &#40;SSAS tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

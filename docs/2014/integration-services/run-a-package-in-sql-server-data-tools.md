@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056422"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Ejecutar un paquete en SQL Server Data Tools
@@ -50,7 +50,7 @@ ms.locfileid: "66056422"
 3.  Actualice el valor de la propiedad OutputPath para especificar la carpeta que quiere usar para la implementación en tiempo de diseño y haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Execution of Projects and Packages](packages/run-integration-services-ssis-packages.md)  (Ejecución de proyectos y paquetes)  
+ [Ejecución de proyectos y paquetes](packages/run-integration-services-ssis-packages.md)   
  [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)  
   
   

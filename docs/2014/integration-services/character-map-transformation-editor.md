@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060982"
 ---
 # <a name="character-map-transformation-editor"></a>Editor de transformación Mapa de caracteres
@@ -41,7 +41,7 @@ ms.locfileid: "66060982"
 |Nueva columna|Guardar los datos en una columna nueva. Asigne el nombre de columna en **Alias de salida**.|  
 |Modificación en contexto|Guardar los datos modificados en la columna existente.|  
   
- **Operación**  
+ **operación**  
  Seleccione de la lista las funciones de cadena que se aplicarán a los datos de la columna.  
   
 |Value|Descripción|  

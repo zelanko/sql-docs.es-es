@@ -11,24 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067382"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Orígenes de datos compatibles (SSAS tabular)
   En este tema se describen los tipos de orígenes de datos que se pueden usar con los modelos tabulares.  
   
- Este artículo contiene las siguientes secciones:  
+ Este artículo contiene las secciones siguientes:  
   
 -   [Orígenes de datos compatibles](#bkmk_supported_ds)  
   
--   [Orígenes no compatibles](#bkmk_unsupported_ds)  
+-   [Orígenes no admitidos](#bkmk_unsupported_ds)  
   
 -   [Sugerencias para elegir los orígenes de datos](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a>Orígenes de datos admitidos  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Orígenes de datos admitidos  
  Puede importar datos de los siguientes orígenes de datos en la tabla siguiente. Al instalar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el programa de instalación no instala los proveedores enumerados para cada origen de datos. Algunos proveedores ya podrían estar instalados con otras aplicaciones en el equipo; en otros casos tendrá que descargar e instalar el proveedor.  
   
 |||||  
@@ -45,7 +45,7 @@ ms.locfileid: "66067382"
 |Otras bases de datos relacionales|(no aplicable)|(no aplicable)|Proveedor OLE DB o controlador ODBC|  
 |Archivos de texto|(no aplicable)|.txt, .tab, .csv|Proveedor OLE DB ACE 14 para Microsoft Access|  
 |Archivos de Microsoft Excel|Excel 97-2003, 2007, 2010|.xlsx, xlsm, .xlsb, .xltx, .xltm|Proveedor OLE DB de ACE 14|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]cálculo|Microsoft SQL Server 2008 R2 Analysis Services|.xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (solo se usa con libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se publican en granjas de servidores de SharePoint que tienen instalado [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] )|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libro|Microsoft SQL Server 2008 R2 Analysis Services|.xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> (solo se usa con libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se publican en granjas de servidores de SharePoint que tienen instalado [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] )|  
 |Cubo de Analysis Services|Microsoft SQL Server 2005, 2008, 2008 R2 Analysis Services|(no aplicable)|ASOLEDB 10|  
 |Fuentes de distribución de datos<br /><br /> (se usa para importar datos de informes de Reporting Services, documentos de servicio de Atom, Microsoft Azure Marketplace DataMarket y fuentes de distribución de datos únicas)|Formato Atom 1.0<br /><br /> Cualquier base de datos o documento que se exponen como servicio de datos de Windows Communication Foundation (WCF) (antes ADO.NET Data Services).|.atomsvc para un documento de servicio que define una o más fuentes<br /><br /> .atom para un documento de fuente web de Atom|Proveedor de fuentes de distribución de datos de Microsoft para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> Proveedor de datos de fuentes de distribución de datos de .NET Framework para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Archivos de Office Database Connection||.odc||  
@@ -58,12 +58,12 @@ ms.locfileid: "66067382"
   
  <sup>4</sup> en algunos casos, el uso del proveedor de OLE DB MSDAORA puede producir errores de conexión, especialmente con las versiones más recientes de Oracle. Si encuentra cualquier error, le recomendamos que use otro de los proveedores enumerados para Oracle.  
   
-##  <a name="bkmk_unsupported_ds"></a>Orígenes no admitidos  
+##  <a name="unsupported-sources"></a><a name="bkmk_unsupported_ds"></a>Orígenes no admitidos  
  El siguiente origen de datos no se admite actualmente:  
   
 -   Los documentos de servidor, como bases de datos de Access que ya se han publicado en SharePoint, no se pueden importar.  
   
-##  <a name="bkmk_tips"></a>Sugerencias para elegir los orígenes de datos  
+##  <a name="tips-for-choosing-data-sources"></a><a name="bkmk_tips"></a>Sugerencias para elegir los orígenes de datos  
   
 1.  La importación de tablas desde bases de datos relacionales ahorra trabajo porque durante la importación se usan relaciones de *clave externa* para crear relaciones entre las tablas en el Diseñador de modelos.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "66067382"
   
 ## <a name="see-also"></a>Consulte también  
  [Orígenes de datos &#40;SSAS tabular&#41;](../data-sources-ssas-tabular.md)   
- [Importar datos &#40;&#41;tabular de SSAS](../import-data-ssas-tabular.md)  
+ [Importar datos &#40;SSAS tabular&#41;](../import-data-ssas-tabular.md)  
   
   

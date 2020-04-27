@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055039"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor de la tarea Transferir mensajes de error (página Mensajes)
@@ -26,10 +26,10 @@ ms.locfileid: "66055039"
   
 ## <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista, o bien haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<Nueva conexión…>** para crear una conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de destino.  
   
  **IfObjectExists**  
  Seleccione si la tarea debe sobrescribir mensajes de error definidos por el usuario existentes, omitir mensajes existentes o generar un error si existen ya mensajes de error con el mismo nombre en el servidor de destino.  
@@ -41,17 +41,17 @@ ms.locfileid: "66055039"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**True**|Copiar todos los mensajes definidos por el usuario.|  
-|**False**|Copiar solo los mensajes definidos por el usuario especificados.|  
+|**Reales**|Copiar todos los mensajes definidos por el usuario.|  
+|**Es**|Copiar solo los mensajes definidos por el usuario especificados.|  
   
  **ErrorMessagesList**  
- Haga clic en el botón Examinar **(…)** para seleccionar los mensajes de error que quiera copiar.  
+ Haga clic en el botón examinar **(...)** para seleccionar los mensajes de error que se van a copiar.  
   
 > [!NOTE]  
 >  Para poder seleccionar los mensajes de error que se van a copiar, debe especificar el parámetro **SourceConnection** .  
   
  **ErrorMessageLanguagesList**  
- Haga clic en el botón Examinar **(…)** para seleccionar los idiomas para los que se van a copiar mensajes de error definidos por el usuario al servidor de destino. Debe existir una versión en us_english (página de códigos 1033) del mensaje en el servidor de destino para poder transferir versiones en otros idiomas del mensaje a ese servidor.  
+ Haga clic en el botón examinar **(...)** para seleccionar los idiomas en los que se van a copiar los mensajes de error definidos por el usuario en el servidor de destino. Debe existir una versión en us_english (página de códigos 1033) del mensaje en el servidor de destino para poder transferir versiones en otros idiomas del mensaje a ese servidor.  
   
 > [!NOTE]  
 >  Para poder seleccionar los mensajes de error que se van a copiar, debe especificar el parámetro **SourceConnection** .  

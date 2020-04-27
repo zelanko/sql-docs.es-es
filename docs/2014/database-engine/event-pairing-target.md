@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064849"
 ---
 # <a name="event-pairing-target"></a>Destino de emparejamiento de eventos
@@ -38,7 +38,7 @@ ms.locfileid: "66064849"
 |end_matching_columns|Una lista ordenada y delimitada por comas de nombres de columna.|Las columnas en las que realizar la asociación.|  
 |begin_matching_actions|Una lista de acciones ordenada y delimitada por comas.|Las acciones en las que se debe realizar la asociación.|  
 |end_matching_actions|Una lista de acciones ordenada y delimitada por comas.|Las acciones en las que se debe realizar la asociación.|  
-|respond_to_memory_pressure|Uno de los valores siguientes:<br /><br /> 0 = No responder.<br /><br /> 1 = Dejar de agregar nuevos elementos huérfanos a la lista en caso de que exista presión de memoria.|La respuesta del destino a los eventos de memoria. Si se estable en 1 y la memoria del servidor es insuficiente, se quitará la información no emparejada.|  
+|respond_to_memory_pressure|Uno de los siguientes valores:<br /><br /> 0 = No responder.<br /><br /> 1 = Dejar de agregar nuevos elementos huérfanos a la lista en caso de que exista presión de memoria.|La respuesta del destino a los eventos de memoria. Si se estable en 1 y la memoria del servidor es insuficiente, se quitará la información no emparejada.|  
 |max_orphans||Especifica el número total de eventos no emparejados que se recopilarán en el destino. Una vez alcanzado el límite, los eventos no emparejados se quitan con un orden FIFO (primero en entrar, primero en salir). Valor predeterminado = 10,000.|  
   
  Todos los datos asociados a un evento se capturan y almacenan para futuros emparejamientos. Además, se recopilan los datos agregados por las acciones. Los datos de eventos recopilados se almacenan en la memoria y, por lo tanto, tienen un límite finito. Este límite depende de la actividad y capacidad del sistema. En lugar de tomar la cantidad de memoria máxima que se va a utilizar como un parámetro, la memoria utilizada dependerá de los recursos disponibles del sistema. Cuando no hay recursos, se quitarán los eventos no emparejados que se han conservado. Si un evento no se ha emparejado y se quita, el evento asociado aparecerá como un evento no emparejado.  
@@ -90,9 +90,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Destinos de SQL Server Extended Events](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [SQL Server destinos de eventos extendidos](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [Sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [CREAR sesión de eventos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

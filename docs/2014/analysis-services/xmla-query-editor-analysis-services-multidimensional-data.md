@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065308"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>Editor de consultas XMLA (Analysis Services - Datos multidimensionales)
@@ -42,21 +42,21 @@ ms.locfileid: "66065308"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Conectar**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Conecto**|Desconecta el Editor de consultas XMLA de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Cambiar conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Nueva consulta con conexión actual**|Abre una nueva ventana del Editor de consultas XMLA utilizando la información de conexión de la ventana actual del Editor de consultas XMLA.|  
+|**Consulta con conexión actual**|Abre una nueva ventana del Editor de consultas XMLA utilizando la información de conexión de la ventana actual del Editor de consultas XMLA.|  
 |**Bases de datos disponibles**|Cambia la conexión a una base de datos distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la misma instancia.|  
 |**Ejecut**|Ejecuta el código seleccionado o, si no se ha seleccionado ningún código, esta opción ejecuta todo el código del Editor de consultas XMLA.|  
-|**Analizar**|Comprueba la sintaxis del código seleccionado. Si no se ha seleccionado ningún código, esta opción comprueba la sintaxis de toda la ventana del Editor de consultas XMLA.|  
-|**Cancelar la ejecución de la consulta**|Envía una solicitud de cancelación al servidor. Algunas consultas no pueden cancelarse inmediatamente, sino que deben esperar a una condición de cancelación adecuada. Al cancelar las consultas, podrían producirse retrasos mientras se revierten las transacciones.|  
+|**Analiza**|Comprueba la sintaxis del código seleccionado. Si no se ha seleccionado ningún código, esta opción comprueba la sintaxis de toda la ventana del Editor de consultas XMLA.|  
+|**Cancelar ejecución de la consulta**|Envía una solicitud de cancelación al servidor. Algunas consultas no pueden cancelarse inmediatamente, sino que deben esperar a una condición de cancelación adecuada. Al cancelar las consultas, podrían producirse retrasos mientras se revierten las transacciones.|  
   
 ## <a name="xmla-query-editor-window"></a>Editor de consultas XMLA (ventana)  
  Las siguientes opciones están disponibles en el Editor de consultas XMLA:  
   
 |Término|Definición|  
 |----------|----------------|  
-|**Ventana del editor de consultas**|Escriba las instrucciones y scripts XMLA que desee ejecutar con el Editor de consultas XMLA.<br /><br /> El menú contextual del editor de consultas proporciona las siguientes opciones:<br /><br /> **Cortar**: copia la selección actual en el portapapeles y quita la selección de la ventana del editor de consultas.<br />**Copiar**: copia la selección actual en el portapapeles.<br />**Pegar**: pega el contenido del portapapeles en la selección actual.<br />**Conectar**: abre el cuadro de diálogo **conectar con el servidor** para establecer una conexión a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] una instancia de.<br />**Desconectar**: desconecta el editor de consultas actual de una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de.<br />**Desconectar todas las consultas**: desconecta todos los editores de consultas abiertos.<br />**Cambiar conexión**: abre el cuadro de diálogo **conectar con el servidor** para establecer una conexión a una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia diferente.<br />**Abrir servidor en explorador de objetos**: abre la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de a la que está conectado el editor de consultas actual en **Explorador de objetos**.<br />**Ejecutar**: ejecuta el código seleccionado o, si no se selecciona ningún código, ejecuta todo el código en el editor de consultas actual.<br />**Ventana Propiedades**: muestra la ventana **propiedades** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para la ventana de consulta actual.<br />**Opciones de consulta**: muestra el cuadro de diálogo **Opciones de consulta** .|  
+|**Ventana del editor de consultas**|Escriba las instrucciones y scripts XMLA que desee ejecutar con el Editor de consultas XMLA.<br /><br /> El menú contextual del editor de consultas proporciona las siguientes opciones:<br /><br /> **Cortar**: copia la selección actual en el portapapeles y quita la selección de la ventana del editor de consultas.<br />**Copiar**: copia la selección actual en el Portapapeles.<br />**Pegar**: pega el contenido del portapapeles en la selección actual.<br />**Conectar**: abre el cuadro de diálogo **Conectar con el servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .<br />**Desconectar**: desconecta el editor de consultas actual de una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de.<br />**Desconectar todas las consultas**: desconecta todos los editores de consultas abiertos.<br />**Cambiar conexión**: abre el cuadro de diálogo **conectar con el servidor** para establecer una conexión a una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia diferente.<br />**Abrir servidor en explorador de objetos**: abre la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de a la que está conectado el editor de consultas actual en **Explorador de objetos**.<br />**Ejecutar**: ejecuta el código seleccionado o, si no se selecciona ningún código, ejecuta todo el código en el editor de consultas actual.<br />**Ventana Propiedades**: muestra la ventana **propiedades** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para la ventana de consulta actual.<br />**Opciones de consulta**: muestra el cuadro de diálogo **Opciones de consulta** .|  
 |**Ventana Resultados**|Muestra los resultados de una instrucción o script XMLA en formato de texto.|  
 |**Ventana Mensajes**|Muestra información sobre cómo se ejecutan una instrucción o script XMLA. Por ejemplo, esta ventana muestra todos los errores encontrados durante la ejecución o el número de celdas recuperadas tras la ejecución.|  
   

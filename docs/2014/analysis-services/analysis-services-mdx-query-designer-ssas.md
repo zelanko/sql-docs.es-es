@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062506"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Diseñador de consultas MDX de Analysis Services (SSAS)
@@ -46,13 +46,13 @@ ms.locfileid: "66062506"
 |Panel Filtro|Se usa a fin de elegir dimensiones y jerarquías relacionadas para filtrar datos en el origen y limitar datos devueltos.|  
 |Panel Datos|Muestra los encabezados de columna del conjunto de resultados mientras arrastra elementos de los paneles Metadatos y Miembros calculados. Actualiza automáticamente el conjunto de resultados si el botón **Ejecución automática** está seleccionado.|  
   
- Puede arrastrar dimensiones, medidas y KPI desde el panel Metadatos, y los miembros calculados desde el panel Miembros calculados al panel Datos. En el panel Filtro, puede seleccionar dimensiones y jerarquías relacionadas, y establecer expresiones de filtro para limitar los datos disponibles en la consulta. Si el botón de alternancia **ejecución** automática (![ejecutar la consulta](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")automáticamente) de la barra de herramientas está seleccionado, el diseñador de consultas ejecuta la consulta cada vez que coloque un objeto de metadatos en el panel datos. Puede ejecutar manualmente la consulta mediante el botón **Ejecutar** (![ejecutar la consulta](media/rsqdicon-run.gif "Ejecutar la consulta")) de la barra de herramientas.  
+ Puede arrastrar dimensiones, medidas y KPI desde el panel Metadatos, y los miembros calculados desde el panel Miembros calculados al panel Datos. En el panel Filtro, puede seleccionar dimensiones y jerarquías relacionadas, y establecer expresiones de filtro para limitar los datos disponibles en la consulta. Si el botón de alternancia **Ejecución automática** (![Ejecutar la consulta automáticamente](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")) de la barra de herramientas está seleccionado, el diseñador de consultas ejecuta la consulta cada vez que coloque un objeto de metadatos en el panel Datos. Puede ejecutar la consulta manualmente con el botón **Ejecutar** (![Ejecutar la consulta](media/rsqdicon-run.gif "Ejecutar la consulta")) de la barra de herramientas.  
   
  Al crear una consulta MDX en este modo, se incluyen automáticamente en la consulta las propiedades adicionales siguientes:  
   
  **Propiedades de miembro** MEMBER_CAPTION, MEMBER_UNIQUE_NAME  
   
- **Propiedades de celda** VALOR, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
+ **Propiedades de la celda** VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
   
  Si desea especificar sus propias propiedades adicionales, debe modificar manualmente la consulta MDX en el modo de consulta.  
   
@@ -110,10 +110,10 @@ ms.locfileid: "66062506"
   
 -   **Agregar miembro calculado** (![Agregar miembro calculado](media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))  
   
--   **Mostrar celdas vacías** (![alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
+-   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
   
--   **Ejecución** automática (![ejecución automática de la consulta](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))  
+-   **Ejecutar automáticamente** (![Ejecutar la consulta automáticamente](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))  
   
--   **Mostrar agregaciones** (![botón Mostrar agregaciones](media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))  
+-   **Mostrar agregaciones** (![Botón Mostrar agregaciones](media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))  
   
   

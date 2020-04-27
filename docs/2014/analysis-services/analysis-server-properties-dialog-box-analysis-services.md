@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062621"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Cuadro de diálogo Propiedades de Analysis Server (Analysis Services)
-  Use el cuadro de diálogo **Propiedades de Analysis Server** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer la configuración general, de idioma o intercalación, y de seguridad para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para mostrar el cuadro de diálogo **Propiedades de Analysis Server**, haga clic con el botón derecho en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el **Explorador de objetos** y seleccione **Propiedades** en el menú contextual. El cuadro de diálogo **Propiedades de Analysis Server** contiene las propiedades siguientes.  
+  Use el cuadro de diálogo **Propiedades de Analysis Server** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer la configuración general, de idioma o intercalación, y de seguridad para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Propiedades de Analysis Server** , haga clic con el botón derecho en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el **Explorador de objetos** y seleccione **Propiedades** en el menú contextual. El cuadro de diálogo **Propiedades de Analysis Server** contiene las propiedades siguientes.  
   
 ## <a name="information-properties"></a>Propiedades de información  
  Use esta página para ver el modo, la versión y el nivel de compatibilidad del servidor. Cada instancia se instala en modo de servidor tabular o multidimensional, con la posibilidad de cargar modelos tabulares o multidimensionales. Si necesita admitir ambos modos, debe instalar dos instancias.  
@@ -32,9 +32,9 @@ ms.locfileid: "66062621"
   
 -   **1100** es el nivel de compatibilidad predeterminado para un modo de implementación de 0, para el modo multidimensional y de minería de datos.  
   
--   **1103** es el nivel de compatibilidad predeterminado para los modos de implementación 1 o 2, para las instalaciones [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]que admiten el modo tabular o.  
+-   **1103** es el nivel de compatibilidad predeterminado para los modos de implementación 1 o 2, para las instalaciones que admiten el modo tabular o [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)].  
   
- El servidor devuelve este valor cuando un cliente que admite el espacio de nombres solicita DISCOVER_XML_METADATA. Para más información, vea [Conjunto de filas DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset).  
+ El servidor devuelve este valor cuando un cliente que admite el espacio de nombres solicita DISCOVER_XML_METADATA. Para más información, vea [Conjunto de filas DISCOVER_XML_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-xml-metadata-rowset) .  
   
 ## <a name="general-properties"></a>Propiedades generales  
  Use esta página para establecer las propiedades generales básicas y avanzadas, como la ubicación de carpetas y la configuración de red de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -47,7 +47,7 @@ ms.locfileid: "66062621"
   
 -   [Propiedades de características](server-properties/feature-properties.md)  
   
--   [Filestore, propiedades](server-properties/filestore-properties.md)  
+-   [Propiedades de almacén de propiedades](server-properties/filestore-properties.md)  
   
 -   [Propiedades del administrador de bloqueos](server-properties/lock-manager-properties.md)  
   
@@ -64,30 +64,30 @@ ms.locfileid: "66062621"
 -   [Propiedades de grupos de subprocesos](server-properties/thread-pool-properties.md)  
   
 ## <a name="language-collation-properties"></a>Propiedades de idioma o intercalación  
- Use esta página para establecer las opciones de idioma y de intercalación predeterminadas para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La lista siguiente contiene una breve descripción de cada opción. Para descripciones más detalladas, vea [Idiomas e intercalaciones &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md).  
+ Use esta página para establecer las opciones de idioma y de intercalación predeterminadas para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La lista siguiente contiene una breve descripción de cada opción. Para más información, vea [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  
   
 -   **Binario** se usa para ordenar y comparar datos según los patrones de bits definidos para cada carácter. El orden binario distingue mayúsculas de minúsculas, es decir, las minúsculas siempre preceden a las mayúsculas, y distingue acentos. Éste es el orden más rápido.  
   
      Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sigue el orden y las reglas de comparación definidas en los diccionarios del idioma o alfabeto asociado.  
   
     > [!NOTE]  
-    >  Si selecciona esta opción, se deshabilitarán las opciones **Distinguir mayúsculas de minúsculas**, **Distinguir acentos**, **Distinguir kana** y **Distinguir ancho**.  
+    >  Si selecciona esta opción, se deshabilitarán las opciones **Distinguir mayúsculas de minúsculas**, **Distinguir acentos**, **Distinguir kana**y **Distinguir ancho** .  
   
 -   **Binario 2** se usa para ordenar y comparar datos Unicode según los patrones de bits definidos para cada carácter. El orden binario distingue mayúsculas de minúsculas, es decir, las minúsculas siempre preceden a las mayúsculas, y distingue acentos. Éste es el orden más rápido.  
   
--   La **distinción de mayúsculas** y minúsculas se usa para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o el alfabeto asociado y para distinguir entre mayúsculas y minúsculas.  
+-   **Distinguir mayúsculas de minúsculas** se usa para ordenar y comparar datos según las reglas de diccionario del idioma o alfabeto asociados y para distinguir letras mayúsculas de minúsculas.  
   
      Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las mayúsculas y las minúsculas son versiones de letras iguales. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]no define si el orden de las letras minúsculas es inferior o superior al de las letras mayúsculas cuando no se selecciona distinguir mayúsculas de **minúsculas** .  
   
--   **Distinguir acentos** se usa para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o el alfabeto asociado y para distinguir entre los caracteres acentuados y los no acentuados. Por ejemplo, 'a' no es igual a 'á'.  
+-   **Distinguir acentos** se usa para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o alfabeto asociados y para distinguir los caracteres acentuados de los no acentuados. Por ejemplo, 'a' no es igual a 'á'.  
   
      Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las letras acentuadas y las no acentuadas son versiones de letras iguales.  
   
--   **Distinguir Kana** se usa para comparar y comparar datos según las reglas de diccionario proporcionadas para el idioma o el alfabeto asociado y para distinguir entre los dos tipos de caracteres kana japoneses: hiragana y katakana.  
+-   **Distinguir kana** se usa para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o el alfabeto asociado y para distinguir entre los dos tipos de caracteres kana japoneses: hiragana y katakana.  
   
      Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que los caracteres hiragana y katakana son iguales.  
   
--   **Distinguir ancho** se usa para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o el alfabeto asociado y para distinguir entre un carácter de un solo byte (medio ancho) y el mismo carácter cuando se representa como un carácter de doble byte (ancho completo).  
+-   **Distinguir ancho** se usa para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o alfabeto asociados y para distinguir entre un carácter de byte único (ancho medio) del mismo carácter representado con un carácter de doble byte (ancho completo).  
   
      Si no se selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que la representación de byte único y la de doble byte del mismo carácter son iguales.  
   

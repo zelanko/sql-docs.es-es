@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057494"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor del administrador de conexiones de varios archivos planos (página Columnas)
@@ -41,9 +41,9 @@ ms.locfileid: "66057494"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**COMPRA LF**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**COMPRA**|Las filas se delimitan mediante un retorno de carro.|  
-|**LF**|Las filas se delimitan mediante un avance de línea.|  
+|**{LF}**|Las filas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las filas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las filas se delimitan mediante dos puntos.|  
 |**Unas{,}**|Las filas se delimitan mediante una coma.|  
@@ -55,9 +55,9 @@ ms.locfileid: "66057494"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**COMPRA LF**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**COMPRA**|Las columnas se delimitan mediante un retorno de carro.|  
-|**LF**|Las columnas se delimitan mediante un avance de línea.|  
+|**{LF}**|Las columnas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las columnas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las columnas se delimitan mediante un punto y coma.|  
 |**Unas{,}**|Las columnas se delimitan mediante una coma.|  
@@ -68,7 +68,7 @@ ms.locfileid: "66057494"
  Al hacer clic en **Restablecer columnas**se eliminará todo, excepto las columnas originales.  
   
 ### <a name="format--fixed-width"></a>Formato = Ancho fijo  
- **Tipo**  
+ **Fuente**  
  Seleccione la fuente en la que se presentará la vista previa de los datos.  
   
  **Columnas de datos de origen**  
@@ -85,7 +85,7 @@ ms.locfileid: "66057494"
 > [!NOTE]  
 >  Los archivos de derecho irregular son aquellos en los que todas las columnas tiene un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.  
   
- **Tipo**  
+ **Fuente**  
  Seleccione la fuente en la que se presentará la vista previa de los datos.  
   
  **Columnas de datos de origen**  
@@ -96,9 +96,9 @@ ms.locfileid: "66057494"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**COMPRA LF**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**{CR}{LF}**|Las filas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**COMPRA**|Las filas se delimitan mediante un retorno de carro.|  
-|**LF**|Las filas se delimitan mediante un avance de línea.|  
+|**{LF}**|Las filas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las filas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las filas se delimitan mediante dos puntos.|  
 |**Unas{,}**|Las filas se delimitan mediante una coma.|  
@@ -112,6 +112,6 @@ ms.locfileid: "66057494"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor del administrador de conexiones de varios archivos planos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor del administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página de vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

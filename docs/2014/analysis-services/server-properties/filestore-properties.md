@@ -25,17 +25,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe11b7a9cda6b3e75cb97faa17a381e2b0ea1afe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069084"
 ---
 # <a name="filestore-properties"></a>Filestore, propiedades
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades del servidor de almacén de archivos que aparecen en las tablas siguientes. Todas son propiedades avanzadas que no se deben cambiar, salvo bajo la orientación de soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Se aplica a:** Modo de servidor multidimensional y tabular  
+ **Se aplica a:** modo de servidor multidimensional y tabular  
   
 ## <a name="properties"></a>Propiedades  
  `MemoryLimit`  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060860"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>Configurar un paquete para el uso de transacciones
@@ -50,7 +50,7 @@ ms.locfileid: "66060860"
 7.  En la ventana **propiedades** , establezca la propiedad TransactionOption en `Supported`.  
   
     > [!NOTE]  
-    >  Para dar de alta una conexión en una transacción, inscriba las tareas que usan la conexión en la transacción. Para obtener más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
+    >  Para dar de alta una conexión en una transacción, inscriba las tareas que usan la conexión en la transacción. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 8.  Repita los pasos 6 y 7 para cada tarea y contenedor que desee inscribir en la transacción.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66060860"
 9. En la ventana **propiedades** , establezca la propiedad TransactionOption en `Supported`.  
   
     > [!NOTE]  
-    >  Para dar de alta una conexión en una transacción, inscriba las tareas que usan la conexión en la transacción. Para obtener más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
+    >  Para dar de alta una conexión en una transacción, inscriba las tareas que usan la conexión en la transacción. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).  
   
 10. Repita los pasos 6 a 9 para cada tarea y cada contenedor que inician una transacción.  
   

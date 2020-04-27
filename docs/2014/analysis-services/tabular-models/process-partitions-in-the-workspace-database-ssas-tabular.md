@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066799"
 ---
 # <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>Procesar particiones en la base de datos del área de trabajo (SSAS tabular)
@@ -22,19 +22,19 @@ ms.locfileid: "66066799"
   
  Una vez implementado un modelo en otra instancia de Analysis Services, los administradores de bases de datos pueden crear y administrar las particiones del modelo (implementado) mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], mediante un script o usando un paquete IS. Para obtener más información, vea [Crear y administrar particiones de modelos tabulares &#40;SSAS tabular&#41;](partitions-ssas-tabular.md).  
   
-###  <a name="bkmk_create_new"></a>Para procesar una partición  
+###  <a name="to-process-a-partition"></a><a name="bkmk_create_new"></a> Para procesar una partición  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** , en **Procesar** (Actualizar) y, por último, en **Procesar particiones**.  
   
 2.  En el cuadro de lista **Modo** , seleccione uno de los modos de procesamiento siguientes:  
   
-    |Modo|Descripción|  
+    |Mode|Descripción|  
     |----------|-----------------|  
     |**Proceso predeterminado**|Detecta el estado de proceso de un objeto de partición y realiza el procesamiento necesario para devolver objetos de partición sin procesar o procesados parcialmente a un estado de procesamiento completo. Se cargan los datos de las tablas vacías y las particiones; se generan o se vuelven a generar las jerarquías, las columnas calculadas y las relaciones.|  
     |**Proceso completo**|Procesa un objeto de partición y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto.|  
     |**Procesar datos**|Carga datos en una partición o en una tabla sin volver a generar las jerarquías o las relaciones, ni volver a calcular las columnas calculadas y las medidas.|  
     |**Procesar borrado**|Quita todos los datos de una partición.|  
-    |**Agregar proceso**|Actualiza la partición con nuevos datos de forma incremental.|  
+    |**Procesar adición**|Actualiza la partición con nuevos datos de forma incremental.|  
   
 3.  En la columna de casilla **Procesar** , seleccione las particiones que desea procesar con el modo seleccionado y haga clic en **Aceptar**.  
   

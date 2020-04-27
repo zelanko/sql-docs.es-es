@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064380"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Copia de seguridad de la base de datos (Analysis Services - Datos multidimensionales)
@@ -25,13 +25,12 @@ ms.locfileid: "66064380"
 > [!IMPORTANT]  
 >  Para cada archivo de copia de seguridad, el usuario que ejecuta el comando de copia de seguridad debe tener permiso para escribir en la ubicación de copia de seguridad especificada. Además, el usuario debe tener uno de los roles siguientes: miembro de un rol de servidor para la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o miembro de un rol de base de datos con permisos de Control total (Administrador) en la base de datos de la que se va a hacer una copia de seguridad.  
   
- 
-  **Para mostrar el cuadro de diálogo Copia de seguridad de la base de datos**  
+ **Para mostrar el cuadro de diálogo Copia de seguridad de la base de datos**  
   
 -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], haga clic con el botón derecho en la carpeta **Bases de datos** de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o en una base de datos del **Explorador de objetos**y, a continuación, haga clic en **Copia de seguridad**.  
   
 ## <a name="options"></a>Opciones  
- **Manuscrit**  
+ **Script**  
  Crea un script de copia de seguridad basado en las opciones seleccionadas en el cuadro de diálogo. El script de restauración se escribe en el lenguaje de scripting de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (ASSL).  
   
  Al hacer clic en el icono **Script** , se envía el script de copia de seguridad a una nueva ventana de consulta, de forma predeterminada.  
@@ -52,7 +51,7 @@ ms.locfileid: "66064380"
  **Archivo de copia de seguridad**  
  Escriba la ruta de acceso completa y el nombre del archivo de copia de seguridad que desea utilizar.  
   
- **Browse**  
+ **Examinar**  
  Haga clic para mostrar el cuadro de diálogo **Guardar archivo como** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad que quiere usar. Para obtener más información sobre el cuadro de diálogo **Guardar archivo como**, vea [Cuadro de diálogo Guardar archivo como &#40;Analysis Services - Datos multidimensionales&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Permitir la sobrescritura de archivos**  
@@ -71,13 +70,13 @@ ms.locfileid: "66064380"
  Escriba la contraseña que desea utilizar para cifrar el archivo de copia de seguridad o los archivos de copia de seguridad remotos especificados.  
   
 > [!NOTE]  
->  Esta opción solo se habilita si se selecciona **Cifrar archivo de copia de seguridad** .  
+>   Esta opción solo se habilita si se selecciona **Cifrar archivo de copia de seguridad** .  
   
- **Confirmar contraseña**  
+ **Confirm Password**  
  Escriba la contraseña proporcionada en **Contraseña** para confirmar la contraseña del archivo de copia de seguridad y los archivos de copia de seguridad remotos especificados.  
   
 > [!NOTE]  
->  Esta opción solo se habilita si se selecciona **Cifrar archivo de copia de seguridad** .  
+>   Esta opción solo se habilita si se selecciona **Cifrar archivo de copia de seguridad** .  
   
  **Copia de seguridad de particiones remotas**  
  Seleccione esta opción para incluir información y datos de la ubicación para las particiones remotas del archivo de copia de seguridad.  

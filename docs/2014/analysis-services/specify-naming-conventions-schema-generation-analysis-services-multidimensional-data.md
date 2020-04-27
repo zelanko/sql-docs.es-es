@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b767484af8266b03cf34ebfe4f625fee6c1ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068353"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar convenciones de nomenclatura (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
@@ -31,7 +31,7 @@ ms.locfileid: "66068353"
 |**Separador**|Especifica el carácter que separa las palabras en el nombre de un objeto. En la columna **Valor** , seleccione **Carácter de subrayado**, **Espacio**o **Ninguno**. El valor predeterminado es **Carácter de subrayado**.|  
 |**Prefijo de la columna de clave principal**|Especifica la cadena del prefijo correspondiente al nombre de cada columna de clave principal. El valor predeterminado es **PK**.|  
 |**Prefijo de la columna de clave externa**|Especifica la cadena del prefijo correspondiente al nombre de cada columna de clave externa. El valor predeterminado es **FK**.|  
-|**Sufijo del nombre del atributo**|Especifica la cadena que se debe anexar al nombre de cada columna de atributos. El valor predeterminado es **Name**.|  
+|**Sufijo del nombre del atributo**|Especifica la cadena que se debe anexar al nombre de cada columna de atributos. El valor predeterminado es **Nombre**.|  
 |**Sufijo del resumen personalizado**|Especifica la cadena que se debe anexar al nombre de cada columna de resúmenes. El valor predeterminado es **CustomRollup**.|  
 |**Sufijo de propiedades del resumen personalizado**|Especifica la cadena que se debe anexar al nombre de cada columna de propiedades del resumen. El valor predeterminado es **CustomRollupProperties**.|  
 |**Sufijo del operador unario**|Especifica la cadena que se debe anexar al nombre de cada columna de operador unario. El valor predeterminado es **UnaryOperator**.|  

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055740"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Establecer las propiedades de una restricción de precedencia
@@ -72,7 +72,7 @@ ms.locfileid: "66055740"
     |EvalOp|Seleccionar una operación de evaluación. Si se `Expression`selecciona la operación, **ExpressionAndConstant**o **ExpressionOrConstant** , puede especificar una expresión.|  
     |Expression|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |AND lógico|Se `LogicalAnd` establece para especificar si la restricción de precedencia se evalúa en conjunto con otras restricciones de precedencia, cuando preceden varios ejecutables y están vinculados al ejecutable restringido.|  
-    |Nombre|Actualizar el nombre de la restricción de precedencia.|  
+    |NOMBRE|Actualizar el nombre de la restricción de precedencia.|  
     |ShowAnnotation|Especificar el tipo de anotación que se va a usar. Elija **Never** para deshabilitar anotaciones, **AsNeeded** para habilitar anotaciones a petición, **ConstraintName** para realizar anotaciones automáticamente usando el valor de la propiedad Name, **ConstraintDescription** para realizar anotaciones automáticamente usando el valor de la propiedad Description y **ConstraintOptions** para realizar anotaciones automáticamente al usar el valor de las propiedades Value y Expression.|  
     |Value|Si la operación de evaluación especificada en la propiedad EvalOP contiene una restricción, seleccione el resultado de la ejecución del ejecutable de restricción.|  
   

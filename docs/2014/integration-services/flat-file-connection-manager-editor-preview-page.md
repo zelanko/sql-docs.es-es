@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058740"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Editor del administrador de conexiones de archivos planos (página Vista previa)
@@ -33,7 +33,7 @@ ms.locfileid: "66058740"
  **Descripción**  
  Describe la conexión. Como método recomendado, describa la conexión desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
- **Filas de datos que se van a omitir**  
+ **Filas de datos que se omitirán**  
  Especifique cuántas filas se omitirán al inicio del archivo plano.  
   
  **Actualizar**  
@@ -46,6 +46,6 @@ ms.locfileid: "66058740"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Página general del editor del administrador de conexiones de archivos planos &#40;&#41;](general-page-of-integration-services-designers-options.md)   
  [Página &#40;columnas del editor del administrador de conexiones de archivos planos&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
- [Página opciones avanzadas del editor del administrador de conexiones de archivos planos &#40;&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
+ [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062388"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Asistentes de Analysis Services (Datos multidimensionales)
@@ -37,7 +37,7 @@ ms.locfileid: "66062388"
 |[Asistente para objetos vinculados (Ayuda F1)](linked-object-wizard-f1-help.md)|Use el Asistente para objetos vinculados para definir una dimensión vinculada o un grupo de medida y, opcionalmente, importar objetos relacionados.|  
 |[Asistente para particiones ayuda F1 &#40;Analysis Services-datos multidimensionales&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Use el Asistente para particiones para definir una partición o una partición remota.|  
 |[Asistente para generar esquemas ayuda F1 &#40;Analysis Services-datos multidimensionales&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Use el Asistente para generar esquemas para definir una vista del origen de datos y, opcionalmente, generar el script del esquema relacional de la vista del origen de datos para un origen de datos, a partir de un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existente.|  
-|[Asistente para optimización basada en el uso (Ayuda F1)](usage-based-optimization-wizard-f1-help.md)|Use el Asistente para optimización basada en el uso para definir agregaciones a un diseño de agregaciones basado en consultas almacenadas en el registro de consultas de una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Asistente para optimización basada en el uso (Ayuda F1)](usage-based-optimization-wizard-f1-help.md)|Use el Asistente para optimización basada en el uso para definir agregaciones a un diseño de agregaciones basado en consultas almacenadas en el registro de consultas de una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Consulte también  
  [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

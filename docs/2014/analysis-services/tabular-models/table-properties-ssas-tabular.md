@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97d6731c5e85c3b37facc7172ecacbd2c7c74176
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066471"
 ---
 # <a name="table-properties-ssas-tabular"></a>Propiedades de la tabla (SSAS tabular)
@@ -28,28 +28,28 @@ ms.locfileid: "66066471"
   
 -   [Para configurar los valores de las propiedades de la tabla](#bkmk_config_prop)  
   
-##  <a name="bkmk_properties"></a>Propiedades de la tabla  
+##  <a name="table-properties"></a><a name="bkmk_properties"></a>Propiedades de la tabla  
  **Basic**  
   
-|Propiedad|Configuración predeterminada|Descripción|  
+|Propiedad|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
-|**Nombre de conexión**|\<nombre de la conexión>|Nombre de la conexión con el origen de datos de la tabla.<br /><br /> Para modificar la conexión, haga clic en el botón.|  
-|**Hidden**|False|Especifica si la tabla se oculta en las listas de campos del cliente de informes.|  
+|**Nombre de la conexión**|\<nombre de la conexión>|Nombre de la conexión con el origen de datos de la tabla.<br /><br /> Para modificar la conexión, haga clic en el botón.|  
+|**Plusvalía**|False|Especifica si la tabla se oculta en las listas de campos del cliente de informes.|  
 |**Particiones**||Las particiones de la tabla no se muestran en la ventana **Propiedades** . Para ver, crear o modificar las particiones, haga clic en el botón para abrir el Administrador de particiones.|  
 |**Datos de origen**||El origen de datos de la tabla no se pueden mostrar en la ventana **Propiedades** . Para ver o modificar los datos de origen, haga clic en el botón para abrir el cuadro de diálogo Editar propiedades de tabla.|  
-|**Descripción de la tabla**||Descripción de la tabla.<br /><br /> En [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], si un usuario final coloca el cursor sobre esta tabla en la lista de campos, aparece la descripción como una información sobre herramientas.|  
+|**Descripción de tabla**||Descripción de la tabla.<br /><br /> En [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], si un usuario final coloca el cursor sobre esta tabla en la lista de campos, aparece la descripción como una información sobre herramientas.|  
 |**Nombre de tabla**|\<nombre descriptivo>|Especifica el nombre descriptivo de la tabla. El nombre de tabla puede especificar cuándo se importa una tabla con el Asistente para la importación de tablas o en cualquier momento después de la importación. El nombre de tabla en el modelo puede ser diferente de la tabla asociada en el origen. El nombre descriptivo de la tabla aparece en la lista de campos de la aplicación cliente de informes como en la base de datos modelo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
   
  **Propiedades de informes**  
   
  Para obtener descripciones detalladas e información sobre la configuración de propiedades de informes, vea [Propiedades de informes de Vista avanzada &#40;SSAS tabular&#41;](properties-ssas-tabular.md).  
   
-|Propiedad|Configuración predeterminada|Descripción|  
+|Propiedad|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
 |**Conjunto de campos predeterminado**|||  
 |Comportamiento de tabla|||  
   
-###  <a name="bkmk_config_prop"></a>Para configurar los valores de las propiedades de tabla  
+###  <a name="to-configure-table-property-settings"></a><a name="bkmk_config_prop"></a>Para configurar los valores de las propiedades de tabla  
   
 1.  En el diseñador de modelos, en la vista de datos, haga clic en una tabla (pestaña), o bien, en la vista de diagramas, haga clic en un encabezado de tabla.  
   

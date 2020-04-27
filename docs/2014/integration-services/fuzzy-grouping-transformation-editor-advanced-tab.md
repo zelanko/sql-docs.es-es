@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058364"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor de transformación Agrupación aproximada (pestaña Avanzadas)
@@ -30,13 +30,13 @@ ms.locfileid: "66058364"
  Para obtener más información acerca de la transformación Agrupación aproximada, vea [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre de columna de clave de entrada**  
+ **Nombre de la columna de clave de entrada**  
  Especifique el nombre de una columna de salida que contenga el identificador único para cada fila de entrada. La columna `_key_in` tiene un valor que identifica de forma exclusiva cada fila.  
   
- **Nombre de columna de clave de salida**  
+ **Nombre de la columna de clave de salida**  
  Especifique el nombre de una columna de salida que contenga el identificador único para la fila canónica de un grupo de filas duplicadas. La columna `_key_out` se corresponde con el valor `_key_in` de la fila de datos canónica.  
   
- **Nombre de columna de puntuación de similitud**  
+ **Nombre de la columna de resultados de similitud**  
  Especifique un nombre para la columna que contiene los resultados de similitud. Los resultados de similitud tienen un valor entre 0 y 1 que indica la similitud de la fila de entrada con la fila canónica. Cuanto más se acerque el resultado a 1, mayor será la coincidencia entre la fila y la fila canónica.  
   
  **Umbral de similitud**  

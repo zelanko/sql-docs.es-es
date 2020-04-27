@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068420"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Cuadro de diálogo Especificar asignación de columna (gráfico de precisión de minería de datos)
   Utilice la pestaña **Especificar asignación de columnas** para seleccionar las tablas de un origen de datos externo y asignar las columnas a un modelo de minería de datos. Después puede utilizar los datos externos para probar la exactitud de un modelo de minería y mostrar los resultados en el gráfico de precisión.  
   
- **Para obtener más información:** [prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opciones  
  **Estructura de minería de datos**  
@@ -43,7 +43,7 @@ ms.locfileid: "66068420"
  **Seleccionar tabla de casos**  
  Haga clic para abrir el cuadro de diálogo **Seleccionar tabla** y seleccione una vista del origen de datos.  
   
- **Nota:** Este botón solo aparece si no se ha seleccionado una tabla de casos. Para habilitar el botón de modo que pueda seleccionar una tabla de casos diferente, borre la lista seleccionando todas las tablas existentes y haciendo clic en **Quitar tabla**.  
+ **Nota** : este botón solo aparece si no se ha seleccionado una tabla de casos. Para habilitar el botón de modo que pueda seleccionar una tabla de casos diferente, borre la lista seleccionando todas las tablas existentes y haciendo clic en **Quitar tabla**.  
   
  **Seleccionar tabla anidada**  
  Abre el cuadro de diálogo **Seleccionar tabla** . Este botón solo aparece si se ha seleccionado una tabla de casos. Este botón se deshabilita si la estructura de minería de datos asociada no contiene una tabla anidada.  

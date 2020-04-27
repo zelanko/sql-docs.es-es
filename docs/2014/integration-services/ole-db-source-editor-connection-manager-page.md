@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057044"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor de origen de OLE DB (página Administrador de conexiones)
@@ -55,12 +55,12 @@ ms.locfileid: "66057044"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Tabla o vista|Obtenga datos de una tabla o vista en el origen de datos OLE DB.|  
-|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada:** [usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada:** [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Obtenga datos del origen de datos OLE DB mediante una consulta SQL.|  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   
- **Versión preliminar**  
- Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La **vista previa** puede mostrar hasta 200 filas.  
+ **Vista previa**  
+ Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . **Vista previa** puede mostrar hasta 200 filas.  
   
 > [!NOTE]  
 >  Cuando genera una vista previa de datos, las columnas con un tipo definido por el usuario CLR no contienen datos. En su lugar, se muestran los valores \<value too big to display> o System.Byte[]. El primero se muestra cuando se tiene acceso al origen de datos mediante el proveedor SQL OLE DB y el último, cuando se utiliza el proveedor Native Client [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -79,13 +79,13 @@ ms.locfileid: "66057044"
  **Texto de comando SQL**  
  Escriba el texto de una consulta SQL, genere la consulta haciendo clic en **Generar consulta**, o bien busque el archivo que contiene el texto de la consulta haciendo clic en **Examinar**.  
   
- **Los**  
+ **Parámetros**  
  Si ha escrito una consulta con parámetros mediante ? como marcador de posición de parámetro en el texto de la consulta, utilice el cuadro de diálogo **Establecer parámetros de consulta** para asignar los parámetros de entrada de las consultas a las variables del paquete.  
   
  **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Browse**  
+ **Examinar**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  
@@ -100,6 +100,6 @@ ms.locfileid: "66057044"
  [&#40;página columnas del editor de origen de OLE DB&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [OLE DB Editor de origen &#40;página salida de error&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [OLE DB, administrador de conexiones](connection-manager/ole-db-connection-manager.md)  
+ [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

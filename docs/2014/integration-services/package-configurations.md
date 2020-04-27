@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056891"
 ---
 # <a name="package-configurations"></a>Configuraciones de paquetes
@@ -44,7 +44,7 @@ ms.locfileid: "66056891"
   
 -   Aumentan la flexibilidad de los paquetes. Por ejemplo, una configuración puede actualizar el valor de una variable que se utiliza en una expresión de propiedad.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]admite varios métodos para almacenar configuraciones de paquetes, como archivos XML, tablas en una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos, y variables de entorno y de paquete.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] admite varios métodos distintos para almacenar configuraciones de paquetes, como archivos XML, tablas de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y variables de entorno y de paquete.  
   
  Cada configuración es una pareja propiedad/valor. El archivo de configuración XML y los tipos de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden incluir varias configuraciones.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66056891"
 |Variable de entorno|Una variable de entorno contiene la configuración.|  
 |Entrada del Registro|Una entrada del Registro contiene la configuración.|  
 |Variable de paquete primario|Una variable del paquete contiene la configuración. Este tipo de configuración se utiliza habitualmente para actualizar las propiedades de los paquetes secundarios.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]cuadro|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
+|Tabla [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene la configuración. La tabla puede incluir varias configuraciones.|  
   
 ### <a name="xml-configuration-files"></a>Archivos de configuración XML  
  Si selecciona el tipo de configuración **Archivo de configuración XML** , puede crear un archivo de configuración, reutilizar un archivo existente y agregarle configuraciones nuevas, o bien reutilizar un archivo existente sobrescribiendo el contenido actual.  
@@ -144,7 +144,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  El nombre que asigna a la configuración es el valor que se almacena en la columna **ConfigurationFilter** .  
   
 ## <a name="direct-and-indirect-configurations"></a>Configuraciones directas e indirectas  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]proporciona configuraciones directas e indirectas. Si especifica las configuraciones directamente, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crea un vínculo directo entre el elemento de configuración y la propiedad del objeto de paquete. Las configuraciones directas son una opción mejor cuando la ubicación del origen no cambia. Por ejemplo, si está seguro de que todas las implementaciones del paquete utilizarán la misma ruta de acceso al archivo, puede especificar un archivo de configuración XML.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona configuraciones directas e indirectas. Si especifica las configuraciones directamente, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crea un vínculo directo entre el elemento de configuración y la propiedad del objeto de paquete. Las configuraciones directas son una opción mejor cuando la ubicación del origen no cambia. Por ejemplo, si está seguro de que todas las implementaciones del paquete utilizarán la misma ruta de acceso al archivo, puede especificar un archivo de configuración XML.  
   
  Las configuraciones indirectas utilizan variables de entorno. En lugar de especificar el entorno de configuración directamente, la configuración apunta a una variable de entorno, que a su vez contiene el valor de configuración. Las configuraciones indirectas son una opción mejor cuando la ubicación de la configuración puede cambiar en cada implementación de un paquete.  
   

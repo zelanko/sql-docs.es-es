@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058306"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor de transformación Búsqueda aproximada (pestaña Tabla de referencia)
@@ -39,16 +39,16 @@ ms.locfileid: "66058306"
  **Nuevo**  
  Cree una conexión mediante el cuadro de diálogo **Configurar el administrador de conexiones OLE DB** .  
   
- **Generar nuevo índice**  
+ **Generar índice nuevo**  
  Especifique que la transformación debe crear un nuevo índice que se utilizará en la búsqueda.  
   
  **Nombre de la tabla de referencia**  
  Seleccione la tabla existente que se utilizará como tabla de referencia (búsqueda).  
   
- **Almacenar nuevo índice**  
+ **Almacenar el nuevo índice**  
  Seleccione esta opción si desea guardar el nuevo índice de búsqueda.  
   
- **Nuevo nombre de índice**  
+ **Nombre del índice nuevo**  
  Si ha elegido guardar el índice de búsqueda nuevo, escriba un nombre descriptivo para el índice.  
   
  **Mantener el índice almacenado**  
@@ -67,7 +67,7 @@ ms.locfileid: "66058306"
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación Búsqueda aproximada &#40;pestaña Columnas&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Editor de transformación búsqueda aproximada &#40;pestaña avanzadas&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [Editor de transformación búsqueda aproximada &#40;pestaña columnas&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [Editor de transformación Búsqueda aproximada &#40;pestaña Avanzadas&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065428"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Advertencias (Diseñador de bases de datos) (Analysis Services - Datos multidimensionales)
@@ -36,7 +36,7 @@ ms.locfileid: "66065428"
  **Descripción**  
  Muestra el nombre de la regla. Las reglas se agrupan por categoría.  
   
- **Importancia**  
+ **Importance**  
  Muestra la importancia asignada a la regla.  
   
  **Comentarios**  
@@ -47,16 +47,16 @@ ms.locfileid: "66065428"
   
  La cuadrícula **Advertencias descartadas** tiene lo siguiente:  
   
- **Object**  
+ **Objeto**  
  Muestra un icono que representa el tipo y el nombre de objeto.  
   
- **Tipo**  
+ **Type**  
  Muestra el tipo de objeto.  
   
  **Descripción**  
  Muestra el nombre de la regla.  
   
- **Importancia**  
+ **Importance**  
  Muestra la importancia asignada a la regla.  
   
  **Comentarios**  

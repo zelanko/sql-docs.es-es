@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068179"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Especificar información de origen (Asistente para dimensiones)
@@ -39,7 +39,7 @@ ms.locfileid: "66068179"
 > [!NOTE]  
 >  Se puede seleccionar más de una columna. Si la tabla contiene una clave principal compuesta, seleccione todas las columnas incluidas en la clave principal compuesta. El orden de las columnas de clave es importante.  
   
- **Columna Nombre**  
+ **Columna de nombre**  
  Seleccione la columna de la tabla especificada en **Tabla principal** que proporciona los nombres de los miembros para la dimensión. Cuando se usa una clave compuesta, se debe especificar una columna de nombre. Para crear una columna de nombre para una clave compuesta, recomendamos que cree un cálculo con nombre en la vista del origen de datos que concatena las columnas de clave especificadas. Cuando se usa una clave única, la columna de nombre es opcional.  
   
 ## <a name="see-also"></a>Consulte también  

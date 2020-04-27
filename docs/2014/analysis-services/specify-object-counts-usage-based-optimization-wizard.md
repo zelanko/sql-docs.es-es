@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e0503192c3c948110f8301c8eb375e1c8203e42f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068234"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>Especificar recuentos de objetos (Asistente para optimización basada en el uso)
@@ -29,10 +29,10 @@ ms.locfileid: "66068234"
  **Recuento estimado**  
  Muestra el número estimado de filas en el grupo de medida y los recuentos estimados de miembros del atributo en las dimensiones de base de datos. Puede escribir un valor para utilizarlo como recuento estimado o calcular los valores estimados del recuento. Para calcular los valores de recuento, escriba 0 en el campo y luego haga clic en **Recuento**. Los campos que muestren un recuento no están actualizados.  
   
- **Recuento de particiones**  
+ **Número de particiones**  
  (Opcional) Escriba el número estimado de filas en el grupo de medida y los recuentos estimados de miembros del atributo en las particiones.  
   
- **Contabiliza**  
+ **Recuento**  
  Calcula y rellena los valores de la columna **Recuento estimado** para todos los campos vacíos. Los campos que muestren un recuento no están actualizados.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058171"
 ---
 # <a name="import-an-integration-services-project"></a>Importar un proyecto de Integration Services
-  Use el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Asistente para importar proyectos** de ** para crear un proyecto a partir de un archivo de implementación (.ispac) existente o de un proyecto implementado en el catálogo de Integration Services. Esta característica resulta especialmente útil si no tiene la copia original del proyecto, pero desea crear uno a partir de un archivo .ispac o un catálogo de SSISDB.  
+  Use el **Asistente para importar proyectos** de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para crear un proyecto a partir de un archivo de implementación (.ispac) existente o de un proyecto implementado en el catálogo de Integration Services. Esta característica resulta especialmente útil si no tiene la copia original del proyecto, pero desea crear uno a partir de un archivo .ispac o un catálogo de SSISDB.  
   
 ### <a name="to-import-a-project"></a>Para importar un proyecto  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061068"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Editor de transformación Caché (página Administrador de conexiones)
@@ -37,6 +37,6 @@ ms.locfileid: "66061068"
  Modifique una conexión existente.  
   
 ## <a name="see-also"></a>Consulte también  
- [Página asignaciones del editor de transformación de caché &#40;&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [Editor de transformación de caché &#40;página Asignaciones&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

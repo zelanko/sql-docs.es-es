@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059229"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor de origen de Excel (página Salida de error)
@@ -36,7 +36,7 @@ ms.locfileid: "66059229"
  **Error**  
  Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Temas relacionados:** [control de errores en los datos](data-flow/error-handling-in-data.md)  
+ **Temas relacionados:** [Control de errores en los datos](data-flow/error-handling-in-data.md)  
   
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  

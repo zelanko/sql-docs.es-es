@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061602"
 ---
 # <a name="analysis-of-data-flow"></a>Análisis de flujo de datos
@@ -36,11 +36,11 @@ order by source_component_name, destination_component_name
   
  El ejemplo siguiente se calcula el número de filas por milisegundo enviadas por cada componente de una ejecución concreta. Los valores calculados son:  
   
--   **total_rows** : la suma de todas las filas enviadas por el componente  
+-   **total_rows** : suma de todas las filas enviadas por el componente.  
   
--   **wall_clock_time_ms** : el tiempo de ejecución total transcurrido, en milisegundos, para cada componente  
+-   **wall_clock_time_ms**: tiempo de ejecución total transcurrido, en milisegundos, para cada componente.  
   
--   **num_rows_per_millisecond** : el número de filas por milisegundo enviadas por cada componente  
+-   **num_rows_per_millisecond**: número de filas por milisegundo enviadas por cada componente.  
   
  La `HAVING` cláusula se usa para evitar un error de división por cero en los cálculos.  
   
@@ -61,7 +61,7 @@ order by source_component_name desc
 ## <a name="related-tasks"></a>Related Tasks  
  [Depurar el flujo de datos](troubleshooting/debugging-data-flow.md)  
   
- [Herramientas para solucionar problemas de la ejecución de paquetes](troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas para solucionar problemas con la ejecución de paquetes](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Datos de flujos de datos](data-flow/data-in-data-flows.md)  

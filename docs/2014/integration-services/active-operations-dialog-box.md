@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062218"
 ---
 # <a name="active-operations-dialog-box"></a>Operaciones activas, cuadro de diálogo
@@ -27,11 +27,11 @@ ms.locfileid: "66062218"
   
  **¿Qué desea hacer?**  
   
-1.  [Abrir el cuadro de diálogo operaciones activas](#open_dialog)  
+1.  [Abrir el cuadro de diálogo Operaciones activas](#open_dialog)  
   
 2.  [Configurar las opciones](#options)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Operaciones activas  
+##  <a name="open-the-active-operations-dialog-box"></a><a name="open_dialog"></a>Abrir el cuadro de diálogo operaciones activas  
   
 1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -39,10 +39,10 @@ ms.locfileid: "66062218"
   
 3.  En el Explorador de objetos, expanda el nodo **Integration Services** , haga clic con el botón derecho en **SSISDB**y, después, haga clic en **Operaciones activas**.  
   
-##  <a name="options"></a> Configurar las opciones  
+##  <a name="configure-the-options"></a><a name="options"></a>Configurar las opciones  
   
 ### <a name="options"></a>Opciones  
- **Tipo**  
+ **Type**  
  Especifica el tipo de operación. A continuación se muestran los valores posibles para el campo de **tipo** y los valores correspondientes en la columna operations_type de la vista `catalog.operations` de Transact-SQL.  
   
 |||  

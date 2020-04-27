@@ -15,17 +15,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062609"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Parámetros de algoritmo (vista Modelos de minería de datos, cuadro de diálogo)
   Utilice el cuadro de diálogo **Parámetros de algoritmo** para ajustar parámetros de algoritmo específicos del modelo seleccionado. Al cambiar un parámetro de algoritmo, normalmente cambiará los resultados del modelo de minería de datos. La manera en que cada parámetro afecta a los resultados depende del algoritmo que se use y de los datos. Para más información, vea [Personalizar la estructura y los modelos de minería de datos](data-mining/customize-mining-models-and-structure.md).  
   
 ## <a name="options"></a>Opciones  
- **Los**  
+ **Parámetros**  
  Enumera los parámetros disponibles para el modelo de minería de datos seleccionado.  
   
  La siguiente lista describe las columnas disponibles.  
@@ -34,11 +34,11 @@ ms.locfileid: "66062609"
 |------------|-----------------|  
 |**Parámetro**|Especifica el nombre del parámetro.|  
 |**Valor**|Especifique un valor únicamente si desea cambiar el valor predeterminado del parámetro.|  
-|**Predeterminada**|Especifica el valor predeterminado del parámetro que utilizará el algoritmo si no indica un valor en la columna **Valor** .|  
-|**Intervalo**|Especifique el intervalo de valores posibles que puede indicar en la columna **Valor** . Los intervalos pueden ser uno de los siguientes:<br /><br /> Una lista discreta, como 1, 2, 3<br /><br /> Un intervalo inclusivo, como [0, 100]<br /><br /> Un intervalo exclusivo, como (0,...)<br /><br /> Una combinación, como [0,...)|  
+|**Valor predeterminado**|Especifica el valor predeterminado del parámetro que utilizará el algoritmo si no indica un valor en la columna **Valor** .|  
+|**Range**|Especifique el intervalo de valores posibles que puede indicar en la columna **Valor** . Los intervalos pueden ser uno de los siguientes:<br /><br /> Una lista discreta, como 1, 2, 3<br /><br /> Un intervalo inclusivo, como [0, 100]<br /><br /> Un intervalo exclusivo, como (0,...)<br /><br /> Una combinación, como [0,...)|  
   
  **Descripción**  
- Describe el parámetro seleccionado en la lista **Parámetros**.  
+ Describe el parámetro seleccionado en la lista **Parámetros** .  
   
  **Add (Agregar)**  
  Haga clic para agregar a la lista parámetros específicos de algoritmo adicionales. Después de agregar el parámetro, puede indicar el nombre correcto en la columna **Parámetro** y proporcionar un valor en la columna **Valor** .  

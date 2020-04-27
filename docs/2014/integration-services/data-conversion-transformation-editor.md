@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060052"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor de transformación Conversión de datos
@@ -40,9 +40,9 @@ ms.locfileid: "66060052"
  Escriba un alias para cada columna nueva. El valor predeterminado es `Copy of` seguido del nombre de la columna de entrada; no obstante, puede elegir un nombre descriptivo exclusivo.  
   
  **Tipo de datos**  
- Seleccione en la lista un tipo de datos disponible. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Seleccione en la lista un tipo de datos disponible. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).  
   
- **Length**  
+ **Longitud**  
  Establezca la longitud de la columna para los datos de cadena.  
   
  **Precisión**  

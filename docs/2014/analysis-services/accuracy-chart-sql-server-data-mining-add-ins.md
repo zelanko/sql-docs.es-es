@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062987"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Gráfico de precisión (Complementos de minería de datos de SQL Server)
@@ -49,12 +49,12 @@ ms.locfileid: "66062987"
   
 2.  En el grupo **precisión y validación** , haga clic en **gráfico de precisión**.  
   
-3.  En el cuadro de diálogo **seleccionar estructura o modelo** , elija el modelo que desea evaluar. Haga clic en **Next**.  
+3.  En el cuadro de diálogo **seleccionar estructura o modelo** , elija el modelo que desea evaluar. Haga clic en **Siguiente**.  
   
     > [!NOTE]  
     >  Debe seleccionar un modelo que coincida con los datos que desea probar.  
   
-4.  En el cuadro de diálogo especificar columna que se va a predecir **y valor que se va a predecir** , elija la columna que desea predecir y, si es necesario, un valor de destino. Haga clic en **Next**.  
+4.  En el cuadro de diálogo especificar columna que se va a predecir **y valor que se va a predecir** , elija la columna que desea predecir y, si es necesario, un valor de destino. Haga clic en **Siguiente**.  
   
      Por ejemplo, en el ejemplo anterior, puede seleccionar la columna que modela la respuesta del cliente y especificar el valor de destino como "Probably Will Buy".  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058819"
 ---
 # <a name="file-connection-manager-editor"></a>Editor del administrador de conexiones de archivos
@@ -40,12 +40,12 @@ ms.locfileid: "66058819"
 |Crear carpeta|Crea una nueva carpeta en tiempo de ejecución.|  
 |Carpeta existente|Utiliza una carpeta existente.|  
   
- **Archivo o carpeta**  
+ **Archivo / Carpeta**  
  Si se trata de **Archivo**, especifica el archivo que se va a usar.  
   
  Si se trata de **Carpeta**, especifica la carpeta que se va a utilizar.  
   
- **Browse**  
+ **Examinar**  
  Seleccione el archivo o la carpeta mediante el cuadro de diálogo **Seleccionar archivo** o **Buscar carpeta** .  
   
 ## <a name="see-also"></a>Consulte también  

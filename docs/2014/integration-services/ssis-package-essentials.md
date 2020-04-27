@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055416"
 ---
 # <a name="ssis-package-essentials"></a>Fundamentos de los paquetes de SSIS
@@ -51,7 +51,7 @@ ms.locfileid: "66055416"
 1.  Vídeo, [Crear un paquete básico (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023), en MSDN.Microsoft.com  
   
 ## <a name="see-also"></a>Consulte también  
- [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40;paquetes&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Restricciones de precedencia](control-flow/precedence-constraints.md)  
   
   

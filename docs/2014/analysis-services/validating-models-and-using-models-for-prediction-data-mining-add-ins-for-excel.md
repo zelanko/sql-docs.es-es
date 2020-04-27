@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065496"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Validar modelos y usar modelos para la predicción (Complementos de minería de datos para Excel)

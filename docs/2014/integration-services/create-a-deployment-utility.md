@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060230"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
@@ -47,13 +47,13 @@ ms.locfileid: "66060230"
   
 3.  En el cuadro de diálogo ** \<nombre del proyecto> páginas de propiedades** , haga clic en **utilidad de implementación**.  
   
-4.  Para actualizar las configuraciones de paquetes cuando se implementan **** paquetes, `True`establezca AllowConfigurationChanges en.  
+4.  Para actualizar las configuraciones de paquetes cuando se implementan **AllowConfigurationChanges** paquetes, `True`establezca AllowConfigurationChanges en.  
   
 5.  Establezca `CreateDeploymentUtility` en `True`.  
   
 6.  Opcionalmente, actualice la ubicación de la utilidad de implementación modificando la propiedad `DeploymentOutputPath`.  
   
-7.  Haga clic en **OK**.  
+7.  Haga clic en **Aceptar**.  
   
 8.  En el Explorador de soluciones, haga clic con el botón derecho en el proyecto y, después, haga clic en **Generar**.  
   

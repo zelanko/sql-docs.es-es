@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066080"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Cálculos, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -36,7 +36,7 @@ ms.locfileid: "66066080"
 |**Vista de formulario**|Seleccione esta opción para usar la pestaña **Cálculos** en la vista de formulario.|  
 |**Vista de script**|Seleccione esta opción para usar la pestaña **Cálculos** en la Vista de script.|  
 |**Comprobar sintaxis**|Haga clic para comprobar la sintaxis del script del cubo.|  
-|**Tipo**|Haga clic para mostrar el cuadro de diálogo **Fuente** e insertar un conjunto válido de valores de propiedad de celda relacionados con la fuente en el punto de selección del script del cubo. Esta opción solamente se habilita en la Vista de script.|  
+|**Fuente**|Haga clic para mostrar el cuadro de diálogo **Fuente** e insertar un conjunto válido de valores de propiedad de celda relacionados con la fuente en el punto de selección del script del cubo. Esta opción solamente se habilita en la Vista de script.|  
 |**Color**|Haga clic para mostrar el cuadro de diálogo **Color** e insertar un valor RGB (Rojo, verde, azul) válido en el punto de selección del script del cubo. Esta opción solamente se habilita en la Vista de script.|  
 |**Propiedades de cálculo**|Haga clic para mostrar el cuadro de diálogo **Propiedades de cálculo** y editar los valores de propiedad de cálculo para los cálculos del script del cubo.|  
 |**Cambiar usuario**|Haga clic para mostrar el cuadro de diálogo **Contexto de seguridad** y cambiar el usuario y el rol usados en la pestaña **Cálculos** .|  

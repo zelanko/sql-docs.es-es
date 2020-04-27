@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069112"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Pestaña Diagrama de agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
@@ -24,7 +24,7 @@ ms.locfileid: "66069112"
   
  Utilice esta vista de un modelo de agrupación en clústeres de secuencia para obtener detalles de cada clúster para llegar a los casos de apoyo, si la obtención de detalles se ha habilitado. También puede asignar nombres descriptivos a los clústeres y cambiar la variable de sombreado para evaluar la distribución de valores de un vistazo  
   
- **Para obtener más información:** [algoritmo de clústeres de secuencia de Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [examinar un modelo usando el visor de clústeres de secuencia de Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Para más información:** [Algoritmo de clústeres de secuencia de Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del visor**  
@@ -33,7 +33,7 @@ ms.locfileid: "66069112"
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Lector**  
+ **Visor**  
  Elija un visor que desee usar para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado o el **Visor de árbol de contenido genérico de Microsoft**. También puede utilizar visores de complemento si están disponibles.  
   
  **Acercar**  

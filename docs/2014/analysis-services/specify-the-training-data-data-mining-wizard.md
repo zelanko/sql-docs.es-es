@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068064"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Especificar los datos de entrenamiento (Asistente para minería de datos)
@@ -27,7 +27,7 @@ ms.locfileid: "66068064"
 > [!NOTE]  
 >  Los diferentes algoritmos de minería utilizan las claves de forma diferente. Para más información sobre los diferentes tipos de claves, vea [Tipos de contenido &#40;minería de datos&#41;](data-mining/content-types-data-mining.md).  
   
- **Para obtener más información:** [estructuras de minería de datos &#40;Analysis Services-Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [columnas del modelo de minería](data-mining/mining-model-columns.md)de datos, [Asistente para minería de datos &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para más información:** [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Columnas del modelo de minería de datos](data-mining/mining-model-columns.md), [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Tablas y columnas**  
@@ -56,12 +56,12 @@ ms.locfileid: "66068064"
   
  Si también marca una tabla anidada como de predicción, la tabla anidada completa se convierte en una tabla de predicción. Si ninguna columna de la tabla anidada está marcada como de entrada o predicción, la tabla anidada aparecerá en la estructura de minería de datos, pero se omitirá en el modelo.  
   
- **Nota:** Esta columna solo está disponible cuando se crea un modelo de minería de datos junto con la estructura de minería de datos.  
+ **Nota** : esta columna solo está disponible cuando se crea un modelo de minería junto con la estructura de minería de datos.  
   
- **Sugerir**  
+ **Propone**  
  Haga clic para abrir el cuadro de diálogo **Sugerir columnas relacionadas** , que realiza un análisis de una muestra de datos para identificar las columnas de entrada más relacionadas con la columna **Predicción** seleccionada según la entropía. Este análisis también se aplica a las columnas de la tabla anidada o a las estructuras de minería basadas en orígenes OLAP.  
   
- **Nota:** Esta columna solo está disponible cuando se crea un modelo de minería de datos junto con la estructura de minería de datos.  
+ **Nota** : esta columna solo está disponible cuando se crea un modelo de minería junto con la estructura de minería de datos.  
   
 ## <a name="see-also"></a>Consulte también  
  [Asistente para minería de datos (ayuda F1) &#40;Analysis Services: minería de datos&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   

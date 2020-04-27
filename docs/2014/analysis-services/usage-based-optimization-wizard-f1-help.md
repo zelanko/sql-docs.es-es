@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065570"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Asistente para optimización basada en el uso (Ayuda F1)
@@ -38,8 +38,7 @@ ms.locfileid: "66065570"
   
 -   Guardar y, opcionalmente, procesar la partición, el grupo de medida o el cubo para generar las agregaciones definidas.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el Asistente para diseñar agregaciones para diseñar agregaciones basadas en el análisis estadístico de la estructura de la partición y ofrecer, de este modo, un diseño de agregaciones que pueda limitarse según el tamaño de almacenamiento o la ganancia de rendimiento estimada. Puede utilizar el Asistente para diseñar agregaciones para mejorar el rendimiento global de una partición, pero el diseño de la agregación no va destinado a las necesidades específicas de los usuarios de empresa. El Asistente para optimización basada en el uso puede proporcionar un diseño de agregaciones destinado a estas necesidades específicas, pero el asistente solo puede hacerlo si el registro de consultas para la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contiene suficiente información para construir dichas consultas.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el Asistente para diseñar agregaciones para diseñar agregaciones basadas en el análisis estadístico de la estructura de la partición y ofrecer, de este modo, un diseño de agregaciones que pueda limitarse según el tamaño de almacenamiento o la ganancia de rendimiento estimada. Puede utilizar el Asistente para diseñar agregaciones para mejorar el rendimiento global de una partición, pero el diseño de la agregación no va destinado a las necesidades específicas de los usuarios de empresa. El Asistente para optimización basada en el uso puede proporcionar un diseño de agregaciones destinado a estas necesidades específicas, pero el asistente solo puede hacerlo si el registro de consultas para la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contiene suficiente información para construir dichas consultas.  
   
  Generalmente, ambos asistentes se utilizan conjuntamente para mejorar el rendimiento durante la implementación y a lo largo del tiempo. El Asistente para diseñar agregaciones debe utilizarse en primer lugar, cuando se implementa inicialmente la partición (o el cubo o grupo de medida que contiene la partición), para proporcionar beneficios sobre el rendimiento general. Tras un período de tiempo durante el que habrá registrado las consultas de los usuarios de empresa para la partición en el registro de consultas, puede utilizar el Asistente para optimización basada en el uso para centrar la agregación en el diseño con el fin de optimizar el rendimiento y satisfacer los requisitos de las consultas de los usuarios de empresa.  
   

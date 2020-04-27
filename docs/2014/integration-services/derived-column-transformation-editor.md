@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059567"
 ---
 # <a name="derived-column-transformation-editor"></a>Columna derivada, editor de transformación
@@ -44,12 +44,12 @@ ms.locfileid: "66059567"
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados**: [Integration Services &#40;expresiones de&#41; ssis](expressions/integration-services-ssis-expressions.md), [operadores &#40;&#41;de expresión de SSIS ](expressions/operators-ssis-expression.md)y [funciones &#40;expresión de SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Temas relacionados**: [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](expressions/functions-ssis-expression.md).  
   
  **Tipo de datos**  
- Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa automáticamente la expresión y establece el tipo de datos según corresponda. El valor de esta columna es de solo lectura. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa automáticamente la expresión y establece el tipo de datos según corresponda. El valor de esta columna es de solo lectura. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).  
   
- **Length**  
+ **Longitud**  
  Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa automáticamente la expresión y establece la longitud de columna para los datos de cadena. El valor de esta columna es de solo lectura.  
   
  **Precisión**  

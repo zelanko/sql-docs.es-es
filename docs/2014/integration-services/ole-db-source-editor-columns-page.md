@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057030"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>Editor de origen de OLE DB (página Columnas)
@@ -41,6 +41,6 @@ ms.locfileid: "66057030"
  [OLE DB Editor de origen &#40;página Administrador de conexiones&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [OLE DB Editor de origen &#40;página salida de error&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
- [OLE DB, administrador de conexiones](connection-manager/ole-db-connection-manager.md)  
+ [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

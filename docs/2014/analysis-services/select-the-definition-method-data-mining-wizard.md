@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069206"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>Seleccionar el método de definición (Asistente para minería de datos)
   Utilice la página **Seleccionar el método de definición** con el fin de seleccionar el origen para la creación del nuevo modelo de minería de datos. La ruta de acceso al asistente será diferente en función de su selección, dado que la estructura de minería de datos basada en un cubo requiere pasos diferentes para la construcción frente a una estructura de minería de datos basada en un origen de datos relacional.  
   
- **Para obtener más información:** [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md), [asistente para minería de datos &#40;Analysis Services-minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **Para obtener más información:** [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md), [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
 ## <a name="options"></a>Opciones  
  **A partir de una base de datos relacional o un almacenamiento de datos**  

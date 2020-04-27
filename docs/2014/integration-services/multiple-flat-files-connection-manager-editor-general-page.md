@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057481"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de varios archivos planos (página General)
@@ -36,7 +36,7 @@ ms.locfileid: "66057481"
  **Nombres de archivo**  
  Escriba la ruta de acceso y los nombres de los archivos que se van a utilizar en la conexión de varios archivos planos. Puede especificar varios archivos mediante el uso de caracteres comodín, como en el ejemplo "C:\\*.txt", o mediante el uso del carácter de barra vertical (|) para separar varios nombres de archivo. Todos los archivos deben tener el mismo formato de datos.  
   
- **Browse**  
+ **Examinar**  
  Busque los nombres de los archivos que se van a utilizar en la conexión de varios archivos planos. Puede seleccionar varios archivos. Todos los archivos deben tener el mismo formato de datos.  
   
  **Configuración regional**  
@@ -60,21 +60,21 @@ ms.locfileid: "66057481"
  **Calificador de texto**  
  Especifique el calificador de texto que se va a utilizar. Por ejemplo, puede especificar que el texto se incluya entre comillas.  
   
- **Delimitador de filas de encabezado**  
+ **Delimitador de filas de encabezados**  
  Seleccione uno de los delimitadores de filas de encabezados de la lista o escriba el texto delimitador.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**COMPRA LF**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
+|**{CR}{LF}**|La fila de encabezado está delimitada por una combinación de retorno de carro y avance de línea.|  
 |**COMPRA**|La fila de encabezado está delimitada por un retorno de carro.|  
-|**LF**|La fila de encabezado está delimitada por un avance de línea.|  
+|**{LF}**|La fila de encabezado está delimitada por un avance de línea.|  
 |**Punto y coma {;}**|La fila de encabezado está delimitada por un punto y coma.|  
 |**Dos puntos {:}**|La fila de encabezado está delimitada por dos puntos.|  
 |**Unas{,}**|La fila de encabezado está delimitada por una coma.|  
 |**Tabulación {t}**|La fila de encabezado está delimitada por una tabulación.|  
 |**Barra vertical {&#124;}**|La fila de encabezado está delimitada por una barra vertical.|  
   
- **Filas de encabezado que se van a omitir**  
+ **Filas de encabezados que se omitirán**  
  Especifica el número de filas de encabezados que se van a omitir, en caso de que esto ocurra.  
   
  **Nombres de columna de la primera fila de datos**  
@@ -84,6 +84,6 @@ ms.locfileid: "66057481"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [&#40;página columnas del editor del administrador de conexiones de varios archivos planos&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [Editor del administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Editor del administrador de conexiones de varios archivos planos &#40;página de vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05e98e0a735cc54e129b82c65841c6db688953de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055668"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>Establecer las propiedades de tareas o contenedores
@@ -55,7 +55,7 @@ ms.locfileid: "66055668"
   
      Para más información sobre cómo configurar el contenedor de bucles For, vea [Configurar un contenedor de bucles For](control-flow/for-loop-container.md).  
   
-     Para obtener más información sobre cómo configurar el contenedor de bucles Foreach, vea [Configurar un contenedor de bucles Foreach](control-flow/foreach-loop-container.md).  
+     Para obtener información sobre cómo configurar el contenedor de bucles foreach, vea [configurar un contenedor de bucles foreach](control-flow/foreach-loop-container.md).  
   
     > [!NOTE]  
     >  El contenedor de secuencias no dispone de ningún editor personalizado.  

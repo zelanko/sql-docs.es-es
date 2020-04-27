@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063098"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Diagrama Relación de los atributos (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -35,7 +35,7 @@ ms.locfileid: "66063098"
  Para abrir el menú contextual para el diagrama de la relación de los atributos, haga clic con el botón secundario en el fondo del diagrama. El menú contextual de diagrama presenta los siguientes comandos:  
   
  **Nueva relación de atributo**  
- Abre el cuadro de diálogo **Crear relación de atributo** en el que puede definir una nueva relación de atributo.  
+ Abre el cuadro de diálogo **Crear relación de atributo**, donde se puede definir una nueva relación de atributo.  
   
  Para más información, vea [Cuadros de diálogo Crear relación de atributo y Editar relación de atributo &#40;pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones&#41; &#40;Analysis Services - Datos multidimensionales&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) y [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md).  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66063098"
  Para abrir el menú contextual de atributo, haga clic con el botón secundario en un atributo del diagrama de la relación de los atributos. El menú contextual de atributo presenta los siguientes comandos:  
   
  **Nueva relación de atributo**  
- Abre el cuadro de diálogo **Crear relación de atributo** en el que puede definir una nueva relación de atributo.  
+ Abre el cuadro de diálogo **Crear relación de atributo**, donde se puede definir una nueva relación de atributo.  
   
  Para más información, vea [Cuadros de diálogo Crear relación de atributo y Editar relación de atributo &#40;pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones&#41; &#40;Analysis Services - Datos multidimensionales&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) y [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md).  
   

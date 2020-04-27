@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069262"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Seleccionar la clave de caso (Asistente para minería de datos)
   Utilice la página **Seleccionar la clave de caso** para seleccionar el atributo de la dimensión de cubo de origen que será la clave de la estructura de minería de datos. Este atributo se debe incluir en una jerarquía o debe tener su jerarquía de atributo habilitada.  
   
 > [!NOTE]  
->  Esta página solo aparecerá si ha seleccionado **A partir de un cubo existente** en la página **Seleccionar el método de definición** del asistente.  
+>  Esta página aparecerá solo si ha seleccionado **A partir de un cubo existente** en la página **Seleccionar el método de definición** del asistente.  
   
- **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Atributos**  

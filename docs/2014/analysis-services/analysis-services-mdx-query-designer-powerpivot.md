@@ -1,5 +1,5 @@
 ---
-title: Diseñador de consultas MDX de Analysis ServicesAnalysis Services (PowerPivot) Microsoft Docs
+title: Analysis Services el diseñador de consultas MDX (PowerPivot) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062469"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Diseñador de consultas MDX de Analysis Services (PowerPivot)
-  El diseñador de consultas de expresiones multidimensionales (MDX) de Analysis ServicesAnalysis Services proporciona interfaces gráficas de usuario para ayudarle a crear consultas MDX para un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origen de datos. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX que recupera los datos que desee usar.  
+  El diseñador de consultas de expresiones multidimensionales (MDX) de Analysis Services proporciona interfaces gráficas de usuario para ayudarle a crear [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consultas MDX para un origen de datos. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX que recupera los datos que desee usar.  
   
 > [!IMPORTANT]  
 >  Los usuarios tienen acceso a los orígenes de datos cuando crean y ejecutan las consultas. Debe conceder permisos mínimos para los orígenes de datos, por ejemplo permisos de solo lectura.  

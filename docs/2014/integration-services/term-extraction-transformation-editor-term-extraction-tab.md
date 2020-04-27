@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d09aa75c3f6c5dd61b257056127ca76b410487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055136"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor de transformación Extracción de términos (pestaña Extracción de términos)
@@ -33,7 +33,7 @@ ms.locfileid: "66055136"
  **Término**  
  Proporcione un nombre para la columna de salida que contendrá los términos extraídos.  
   
- **Carácter**  
+ **Puntuación**  
  Proporcione un nombre para la columna de salida que contendrá la puntuación de cada término extraído.  
   
  **Configurar la salida de errores**  

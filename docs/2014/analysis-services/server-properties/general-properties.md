@@ -39,17 +39,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069031"
 ---
 # <a name="general-properties"></a>Propiedades generales
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. En este tema se documentan las propiedades de servidor en el archivo msmdsrv.ini que no se incluyen de otro modo en una sección concreta, como Seguridad, Red o ThreadPool. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Se aplica a:** Modo de servidor multidimensional y tabular, a menos que se indique lo contrario  
+ **Se aplica a:** modo de servidor multidimensional y tabular, a menos que se especifique lo contrario  
   
 ## <a name="non-specific-category"></a>Categoría no específica  
  `AdminTimeout`  
@@ -77,14 +76,12 @@ ms.locfileid: "66069031"
  `CoordinatorCancelCount`  
  Una propiedad de entero de 32 bits con signo que define la frecuencia con la que el servidor debería comprobar si se ha producido un evento Cancel (según el recuento interno de iteraciones). Disminuya este número para comprobar Cancel más frecuentemente, a expensas del rendimiento general.  
   
- 
-  `CoordinatorCancelCount` se omite en modo de servidor tabular.  
+ `CoordinatorCancelCount` se omite en modo de servidor tabular.  
   
  `CoordinatorExecutionMode`  
  Una propiedad de entero de 32 bits con signo que define el máximo de operaciones paralelas que intentará realizar el servidor, incluidas las operaciones de consulta y procesamiento. Cero (0) indica que el servidor decidirá, según un algoritmo interno. Un número positivo indica el máximo de operaciones en total. Un número negativo, con el signo invertido, indica el máximo de operaciones por procesador.  
   
- 
-  `CoordinatorExecutionMode` se omite en modo de servidor tabular.  
+ `CoordinatorExecutionMode` se omite en modo de servidor tabular.  
   
  El valor predeterminado para esta propiedad es -4, que indica que el servidor está limitado a 4 operaciones paralelas por procesador. Para obtener más información acerca de esta propiedad, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -134,8 +131,7 @@ ms.locfileid: "66069031"
  Para obtener más información acerca de esta propiedad, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  
-  `ForceCommitTimeout` se aplica a los comandos de procesamiento de cubos y a las operaciones de reescritura.  
+>  `ForceCommitTimeout` se aplica a los comandos de procesamiento de cubos y a las operaciones de reescritura.  
   
  `IdleConnectionTimeout`  
  Propiedad de entero que especifica un tiempo de espera, en segundos, para las conexiones que están inactivas.  

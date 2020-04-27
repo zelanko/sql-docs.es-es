@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1cca0a2761f87d6f4f3837df1e9a0bdcc5b91a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058909"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Exportar paquete
@@ -32,7 +32,7 @@ ms.locfileid: "66058909"
   
  **Sistema de archivos**  
   
- **Almacenamiento de paquetes SSIS**  
+ **Almacén de paquetes SSIS**  
   
  **Server**  
  Escriba un nombre de servidor o seleccione un servidor de la lista.  
@@ -52,11 +52,11 @@ ms.locfileid: "66058909"
  **Contraseña**  
  Si está usando la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione una contraseña.  
   
- **Ruta de acceso del paquete**  
- Escriba la ruta de acceso del paquete, o bien haga clic en el botón Examinar **(…)** y busque la carpeta donde quiera guardar el paquete.  
+ **Ruta de acceso de paquete**  
+ Escriba la ruta de acceso del paquete o haga clic en el botón examinar **(...)** y busque la carpeta en la que desea almacenar el paquete.  
   
  **Nivel de protección**  
- Haga clic en el botón Examinar **(…)** y actualice el nivel de protección en el cuadro de diálogo **Nivel de protección de paquetes**. Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
+ Haga clic en el botón examinar **(...)** y actualice el nivel de protección en el cuadro de diálogo **nivel de protección de paquetes** . Para obtener más información, vea [Nivel de protección de paquetes y del proyecto, cuadro de diálogo](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Guardar copia del paquete](../../2014/integration-services/save-copy-of-package.md)   

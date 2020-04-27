@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102165"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar la autenticación básica en el servidor de informes
@@ -27,7 +27,7 @@ ms.locfileid: "66102165"
   
  Antes de habilitar la autenticación básica, compruebe que la infraestructura de seguridad la admite. Con la autenticación básica, el servicio web del servidor de informes pasará las credenciales a la entidad de seguridad local. Si las credenciales especifican una cuenta de usuario local, la entidad de seguridad local autentica al usuario en el equipo del servidor de informes y el usuario obtendrá un token de seguridad válido para los recursos locales. Las credenciales para las cuentas de usuario de dominio se reenvían a un controlador de dominio que las autentica. El vale resultante es válido para los recursos de red.  
   
- Si desea mitigar el riesgo de que se intercepten las credenciales mientras se dirigen a un controlador de dominio de la red, se requiere cifrado en el canal, como Capa de sockets seguros (SSL). Por sí sola, la autenticación básica transmite el nombre de usuario en texto sin cifrar y la contraseña en codificación en base 64. Cuando se agrega cifrado al canal, el paquete es ilegible. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Si desea mitigar el riesgo de que se intercepten las credenciales mientras se dirigen a un controlador de dominio de la red, se requiere cifrado en el canal, como Capa de sockets seguros (SSL). Por sí sola, la autenticación básica transmite el nombre de usuario en texto sin cifrar y la contraseña en codificación en base 64. Cuando se agrega cifrado al canal, el paquete es ilegible. Para obtener más información, vea [configurar conexiones SSL en un servidor de informes en modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md).  
   
  Después de habilitar la autenticación básica, tenga en cuenta que los usuarios no pueden seleccionar la opción **Seguridad integrada de Windows** al establecer las propiedades de conexión en un origen de datos externo que proporciona los datos para un informe. La opción estará deshabilitada en las páginas de propiedades del origen de datos.  
   
@@ -86,10 +86,8 @@ ms.locfileid: "66102165"
   
 |Elemento|Obligatorio|Valores válidos|  
 |-------------|--------------|------------------|  
-|LogonMethod|Sí<br /><br /> Si no especifica un valor, se usará 3.|
-  `2` = inicio de sesión en red; diseñado para servidores de alto rendimiento para autenticar las contraseñas de texto simple.<br /><br /> 
-  `3`: inicio de sesión con texto no cifrado, que conserva las credenciales de inicio de sesión en el paquete de autenticación que se envía con cada solicitud HTTP. Esto permite que el servidor suplante al usuario a la hora de establecer la conexión con otros servidores de la red. (Es el valor predeterminado).<br /><br /> Nota: Los valores 0 (para el inicio de sesión interactivo) y 1 (para el inicio de sesión por lotes) no se admiten en [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
-|Dominio|Opcional|Especifica una partición de recurso que incluye características de autorización y de autenticación que se utilizan para controlar el acceso a los recursos protegidos de una organización.|  
+|LogonMethod|Sí<br /><br /> Si no especifica un valor, se usará 3.|`2` = inicio de sesión en red; diseñado para servidores de alto rendimiento para autenticar las contraseñas de texto simple.<br /><br /> `3`: inicio de sesión con texto no cifrado, que conserva las credenciales de inicio de sesión en el paquete de autenticación que se envía con cada solicitud HTTP. Esto permite que el servidor suplante al usuario a la hora de establecer la conexión con otros servidores de la red. (Es el valor predeterminado).<br /><br /> Nota: Los valores 0 (para el inicio de sesión interactivo) y 1 (para el inicio de sesión por lotes) no se admiten en [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|Dominio|Optional|Especifica una partición de recurso que incluye características de autorización y de autenticación que se utilizan para controlar el acceso a los recursos protegidos de una organización.|  
 |DominioPredeterminado|Opcional|Especifica el dominio que utiliza el servidor para autenticar al usuario. Este valor es opcional, pero si lo omite, el servidor de informes utilizará el nombre de equipo como dominio. Si el equipo es miembro de dominio, ese dominio es el predeterminado. Si instaló el servidor de informes en un controlador de dominio, el dominio que se utilizará será el controlado por el equipo .|  
   
 ## <a name="enabling-anonymous-access-to-report-builder-application-files"></a>Habilitar el acceso anónimo a los archivos de aplicación del Generador de informes  
@@ -139,7 +137,7 @@ ms.locfileid: "66102165"
   
      El modo de autenticación debe estar establecido en `Windows` si incluye un archivo Web.config.  
   
-     `Identity impersonate`puede ser `True` o `False`.  
+     `Identity impersonate` puede ser `True` o `False`.  
   
     -   Establézcalo en `False` si no desea que ASP.NET lea el token de seguridad. La solicitud se ejecutará en el contexto de seguridad del servicio del servidor de informes.  
   
@@ -158,7 +156,7 @@ ms.locfileid: "66102165"
 8.  Reinicie el servidor de informes.  
   
 ## <a name="see-also"></a>Consulte también  
- [Dominios de aplicación para aplicaciones del servidor de informes](../report-server/application-domains-for-report-server-applications.md)   
+ [Dominios de aplicación para las aplicaciones del servidor de informes](../report-server/application-domains-for-report-server-applications.md)   
  [Seguridad y protección de Reporting Services](reporting-services-security-and-protection.md)  
   
   

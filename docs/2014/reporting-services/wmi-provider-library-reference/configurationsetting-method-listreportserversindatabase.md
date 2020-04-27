@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098291"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>Método ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
@@ -45,22 +45,22 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- *MachineNames []*  
+ *MachineNames[]*  
  [out] Matriz que contiene los nombres de equipo para las instalaciones del servidor de informes en la base de datos.  
   
- *InstanceNames []*  
+ *InstanceNames[]*  
  [out] Matriz que contiene los nombres de instancia de cada una de las instalaciones del servidor de informes en la base de datos.  
   
  *InstallationIDs[]*  
  [out] Una matriz que contiene los Id. de instalación de cada instalación del servidor de informes en la base de datos.  
   
- *IsInitialized []*  
+ *IsInitialized[]*  
  [out] Una matriz que contiene el estado de inicialización de cada instalación del servidor de informes en la base de datos.  
   
- *Length*  
+ *Longitud*  
  [out] La longitud de las matrices devueltas por el método. Todas las matrices devueltas tienen la misma longitud.  
   
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
  *ExtendedErrors[]*  
@@ -73,7 +73,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  ListReportServersInDatabase enumera las instalaciones del servidor de informes que se encuentran en la base de datos del servidor de informes, sin tener en cuenta si tienen acceso a información segura, y devuelve un conjunto de matrices que contienen información sobre cada instalación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

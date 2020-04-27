@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104376"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Propiedades del informe (cuadro de diálogo), Configurar página
@@ -48,13 +48,13 @@ ms.locfileid: "66104376"
  **Arriba**  
  Define la distancia entre la parte superior del informe y la parte superior de la primera línea del mismo.  
   
- **Inferior**  
+ **Descendente**  
  Define la distancia entre la parte inferior del informe y la parte inferior de la última línea del mismo.  
   
- **Salido**  
+ **Left**  
  Define la distancia entre el borde izquierdo del informe y el borde izquierdo de las filas del mismo.  
   
- **Correcta**  
+ **Right**  
  Define la distancia entre el borde derecho del informe y el borde derecho de las filas del mismo.  
   
 ## <a name="see-also"></a>Consulte también  

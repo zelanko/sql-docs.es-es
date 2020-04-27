@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099654"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
@@ -46,7 +46,7 @@ ms.locfileid: "66099654"
  **SharePointIntegratedMode**  
  Ésta es una propiedad de solo lectura que indica el modo de servidor. Si este valor es False, el servidor de informes se ejecuta en modo nativo.  
   
- **Nombresitio**  
+ **SiteName**  
  El nombre del sitio del servidor de informes mostrado en el título de la página de Administrador de informes. El valor predeterminado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esta propiedad puede ser una cadena vacía. La longitud máxima es de 8000 caracteres.  
   
  **StoredParametersLifetime**  
@@ -64,11 +64,11 @@ ms.locfileid: "66099654"
  **SnapshotCompression**  
  Define la manera en la que se comprimen las instantáneas. El valor predeterminado es `SQL`. Los valores válidos son los siguientes:  
   
- **SQL =** Las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Éste es el comportamiento actual.  
+ **SQL =** las instantáneas se comprimen cuando se almacenan en la base de datos del servidor de informes. Éste es el comportamiento actual.  
   
- **None** = no se comprimen las instantáneas.  
+ **None =** no se comprimen las instantáneas.  
   
- **Todo =** Las instantáneas se comprimen para todas las opciones de almacenamiento, entre las que se incluyen la base de datos del servidor de informes o el sistema de archivos.  
+ **All =** las instantáneas se comprimen para todas las opciones de almacenamiento, entre las que se incluyen la base de datos del servidor de informes o el sistema de archivos.  
   
  **SystemReportTimeout**  
  El valor de tiempo de espera de procesamiento de informes predeterminado, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no se agota el tiempo de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es `1800`.  
@@ -77,13 +77,11 @@ ms.locfileid: "66099654"
  Número máximo de instantáneas almacenadas para un informe. Los valores válidos son de `-1` a `2`,`147`,`483`,`647`. Si el valor es `-1`, no hay ningún límite de instantáneas.  
   
  **EnableIntegratedSecurity**  
- Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos del informe. El valor predeterminado es `True`. Los valores válidos son los siguientes:  
+ Determina si se admite la seguridad integrada de Windows para las conexiones de origen de datos del informe. De manera predeterminada, es `True`. Los valores válidos son los siguientes:  
   
- 
-  `True` = la seguridad integrada de Windows está habilitada.  
+ `True` = la seguridad integrada de Windows está habilitada.  
   
- 
-  `False` = la seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.  
+ `False` = la seguridad integrada de Windows no está habilitada. No se ejecutarán los orígenes de datos de informes que se configuran para usar la seguridad integrada de Windows.  
   
  `EnableLoadReportDefinition`  
  Seleccione esta opción para especificar si los usuarios pueden realizar la ejecución de notificaciones ad hoc desde un informe del Generador de informes. Al establecer esta opción, se determina el valor de la propiedad `EnableLoadReportDefinition` en el servidor de informes.  
@@ -109,9 +107,9 @@ ms.locfileid: "66099654"
   
 ## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Propiedades de Reporting Services](../report-server-web-service/net-framework/reporting-services-properties.md)   
- [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
+ [Servidor de informes en Management Studio ayuda de F1](report-server-in-management-studio-f1-help.md)   
  [Propiedades del sistema del servidor de informes](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [Crear script de tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md)   
  [Habilitar y deshabilitar Mis informes](../report-server/enable-and-disable-my-reports.md)  

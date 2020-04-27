@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103931"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar y deshabilitar la impresión del lado cliente para Reporting Services
@@ -45,7 +45,7 @@ ms.locfileid: "66103931"
  El control ActiveX **RSClientPrint** está firmado, lo que significa que contiene un certificado digital [!INCLUDE[msCoName](../../includes/msconame-md.md)]válido de.  
   
 ## <a name="enabling-and-disabling-client-side-printing"></a>Habilitar y deshabilitar la impresión de cliente  
- Los administradores del servidor de informes tienen la opción de deshabilitar la característica de impresión estableciendo la propiedad del **** sistema del `false`servidor de informes EnableClientPrinting en. De este modo se deshabilitará la impresión del lado cliente para todos los informes administrados por ese servidor. De forma predeterminada, **EnableClientPrinting** se establece `true`en. Puede deshabilitar la impresión del lado cliente de las siguientes maneras:  
+ Los administradores del servidor de informes tienen la opción de deshabilitar la característica de impresión estableciendo la propiedad del **EnableClientPrinting** sistema del `false`servidor de informes EnableClientPrinting en. De este modo se deshabilitará la impresión del lado cliente para todos los informes administrados por ese servidor. De forma predeterminada, **EnableClientPrinting** se establece `true`en. Puede deshabilitar la impresión del lado cliente de las siguientes maneras:  
   
 -   Para un **servidor de informes en modo nativo**:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66103931"
   
     4.  Seleccione **Habilitar descarga para el control de impresión de ActiveX client**.  
   
-    5.  Haga clic en **OK**.  
+    5.  Haga clic en **Aceptar**.  
   
 -   Para un **servidor de informes en modo de SharePoint**:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66103931"
   
     5.  Seleccione **Habilitar la impresión de cliente**. La opción **Habilitar la impresión de cliente** está cerca de la parte inferior de la página.  
   
-    6.  Haga clic en **OK**.  
+    6.  Haga clic en **Aceptar**.  
   
 -   Escriba el script o el código para establecer la propiedad del sistema del servidor de informes **EnableClientPrinting** en`false.`  
   

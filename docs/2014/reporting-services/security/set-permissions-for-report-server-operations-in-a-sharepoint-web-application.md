@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101552"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
@@ -53,7 +53,7 @@ ms.locfileid: "66101552"
   
  El permiso "Examinar información de usuario" permite al servidor de informes devolver información acerca del usuario que creó el elemento y el usuario que lo modificó por última vez. Sin este permiso, el servidor de informes devolverá los errores siguientes. Para las operaciones de exploración, el error es: "El servidor de informes encontró un error de SharePoint. ---> System.UnauthorizedAccessException: acceso denegado". Para las operaciones de publicación, el error es: "Los permisos concedidos al usuario "\<dominio>\\<usuario\>" son insuficientes para realizar esta operación".  
   
-##  <a name="permissionReports"></a> Permisos para ver y administrar informes  
+##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> Permisos para ver y administrar informes  
  Los permisos de definición de informes se definen mediante permisos de lista de la biblioteca que contiene el informe, pero puede establecer permisos en informes individuales si desea restringir el acceso. En la siguiente tabla se proporciona una lista de las tareas y los permisos compatibles.  
   
 |Tarea|Permiso|  
@@ -71,7 +71,7 @@ ms.locfileid: "66101552"
 |Eliminar instantáneas en el historial de informes y eliminar versiones específicas de las definiciones de informe que hayan sido desprotegidas y modificadas a lo largo del tiempo.|**Eliminar versiones** de la biblioteca que contiene el informe para el que está eliminando el historial de informes.|  
 |Ver instantáneas en el historial de informes y ver versiones específicas de las definiciones de informe que hayan sido desprotegidas y modificadas a lo largo del tiempo.|**Ver versiones** en la biblioteca que contiene el informe.|  
   
-##  <a name="permissionReportBuilder"></a> Permisos para crear informes y usar el Generador de informes  
+##  <a name="permissions-for-creating-reports-and-using-report-builder"></a><a name="permissionReportBuilder"></a> Permisos para crear informes y usar el Generador de informes  
  El Generador de informes es una herramienta de creación de informes que puede usar para crear informes ad hoc. El Generador de informes usa modelos de informe como un origen de datos para permitir la exploración ad hoc. Puede cargar un modelo en el Generador de informes para crear un informe, ejecutarlo, desplazarse por los datos del modelo y, opcionalmente, guardar el informe en una biblioteca. Los usuarios con permisos suficientes podrán abrir posteriormente el mismo informe y realizar también una exploración de datos ad hoc.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "66101552"
   
  Los permisos necesarios para crear y usar suscripciones y el historial de informes, así como para establecer opciones de procesamiento de informes y datos en un informe del Generador de informes, son los mismos que los permisos que se usan para realizar esas mismas acciones en archivos de definición de informes estándar.  
   
-##  <a name="permissionSharedSchedules"></a> Permisos para crear y administrar programaciones compartidas  
+##  <a name="permissions-for-creating-and-managing-shared-schedules"></a><a name="permissionSharedSchedules"></a> Permisos para crear y administrar programaciones compartidas  
  Las programaciones compartidas no son documentos que se almacenen en una biblioteca. Por este motivo, para crear y administrar estas programaciones se requieran permisos de sitio. No puede restringir el acceso a programaciones compartidas específicas. Cualquier programación compartida que cree estará disponible para cualquier usuario que cuente con el permiso Abrir en todo el sitio.  
   
  En la siguiente tabla se proporciona una lista de las tareas y permisos necesarios para crear, administrar y usar programaciones compartidas:  
@@ -102,7 +102,7 @@ ms.locfileid: "66101552"
 |Crear, modificar o eliminar una programación compartida.|**Administración del sitio web** en el sitio.|  
 |Seleccionar una programación compartida para el procesamiento de suscripciones o la recuperación de datos.|**Abrir** en el sitio que contiene la biblioteca.|  
   
-##  <a name="permissionSubscriptions"></a> Permisos para crear y administrar suscripciones  
+##  <a name="permissions-for-creating-and-managing-subscriptions"></a><a name="permissionSubscriptions"></a> Permisos para crear y administrar suscripciones  
  SharePoint exige una dependencia entre los permisos de suscripción y los permisos para ver. No podrá suscribirse a un informe que no tenga permiso para ver. Si concede permisos para suscribirse a un informe, se concederán automáticamente permisos para ver dicho informe.  
   
  En la siguiente tabla se proporciona una lista de las tareas y permisos necesarios para crear, administrar y usar suscripciones:  
@@ -113,7 +113,7 @@ ms.locfileid: "66101552"
 |Seleccionar una programación compartida para usarla con la suscripción.|**Abrir** en el sitio que contiene la biblioteca.|  
 |Crear, modificar o eliminar cualquier suscripción en todo un sitio.|**Administrar alertas** en el sitio.|  
   
-##  <a name="permissionDataSources"></a> Permisos para crear y administrar orígenes de datos compartidos y modelos de informe  
+##  <a name="permissions-for-creating-and-managing-shared-data-sources-and-report-models"></a><a name="permissionDataSources"></a> Permisos para crear y administrar orígenes de datos compartidos y modelos de informe  
  Un archivo de origen de datos compartido (.rsds) contiene información de conexión a orígenes de datos que pueden usar varios informes y modelos. En el caso de los informes estándar, el uso de un archivo .rsds para especificar información de conexión a orígenes de datos es opcional. En el caso de los informes controlados por modelos, se exige el uso de un archivo .rsds. Un modelo de informe siempre usa un archivo .rsds para conectarse a orígenes de datos externos.  
   
  Puede establecer propiedades en orígenes de datos compartidos que determinen si los usuarios individuales pueden ver o administrar orígenes de datos compartidos. Los permisos para ver o administrar un origen de datos compartido son distintos de los permisos para ver informes; puede ver un informe que use un archivo .rsds sin tener el permiso necesario para ver el propio archivo .rsds.  

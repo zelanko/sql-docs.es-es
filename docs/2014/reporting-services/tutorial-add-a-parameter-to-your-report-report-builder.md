@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099089"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
@@ -22,7 +22,7 @@ ms.locfileid: "66099089"
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
   
-##  <a name="BackToTop"></a>Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
 1.  [Crear un informe de matriz y un conjunto de datos con el asistente para tablas o matrices](#Setup)  
@@ -61,7 +61,7 @@ ms.locfileid: "66099089"
 ## <a name="requirements"></a>Requisitos  
  Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a>1. crear un informe de matriz y un conjunto de DataSet desde el Asistente para tablas o matrices  
+##  <a name="1-create-a-matrix-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. crear un informe de matriz y un conjunto de DataSet desde el Asistente para tablas o matrices  
  Cree un informe de matriz, un origen de datos y un conjunto de datos.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ ms.locfileid: "66099089"
   
 1.  Haga clic en **Inicio**, seleccione **Programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**Generador de informes**y luego haga clic en **Generador de informes**.  
   
-     Aparecerá el cuadro de diálogo **Introducción** .  
+     Aparece el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
     >  Si el cuadro de diálogo **Introducción** no aparece, en el botón **generador de informes** , haga clic en **nuevo**.  
@@ -84,11 +84,11 @@ ms.locfileid: "66099089"
   
 5.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos del tipo **SQL Server**. Seleccione un origen de datos en la lista o vaya al servidor de informes para seleccionar uno.  
   
-8.  Haga clic en **Next**.  
+8.  Haga clic en **Siguiente**.  
   
 9. En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "66099089"
   
      Esta consulta no contiene parámetros de consulta. Agregará los parámetros de consulta posteriormente en este tutorial.  
   
-11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes e incluye las columnas siguientes: StoreID, Subcategory, Quantity.  
+11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes e incluye las columnas siguientes: StoreID, Subcategory, Quantity.  
   
-12. Haga clic en **Next**.  
+12. Haga clic en **Siguiente**.  
   
-##  <a name="CompleteWizard"></a>2. organizar datos, elegir el diseño y el estilo desde el Asistente para tablas o matrices  
+##  <a name="2-organize-data-choose-layout-and-style-from-the-table-or-matrix-wizard"></a><a name="CompleteWizard"></a>2. organizar datos, elegir el diseño y el estilo desde el Asistente para tablas o matrices  
  Utilice el asistente para proporcionar un diseño inicial en el que mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar la tabla o el diseño de la matriz.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -135,13 +135,13 @@ ms.locfileid: "66099089"
   
      Ha organizado los valores de cantidad vendida en filas agrupadas por subcategoría. Habrá una columna para cada almacén.  
   
-4.  Haga clic en **Next**.  
+4.  Haga clic en **Siguiente**.  
   
 5.  En la página **elegir un diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
      Al ejecutar el informe, la última columna mostrará la cantidad total de cada subcategoría para todos los almacenes y la última fila mostrará la cantidad total para todas las subcategorías de cada almacén.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  En la página **elegir un estilo** , en el panel estilos, seleccione un estilo.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "66099089"
   
  En esta situación, los encabezados de columna muestran el identificador del almacén, pero no su nombre. Más adelante agregará una expresión para buscar el nombre del almacén en un conjunto de datos que contiene pares identificador/nombre de almacén.  
   
-##  <a name="Query"></a>3. agregar un parámetro de consulta para crear un parámetro de informe  
+##  <a name="3-add-a-query-parameter-to-create-a-report-parameter"></a><a name="Query"></a>3. agregar un parámetro de consulta para crear un parámetro de informe  
  Al agregar un parámetro de consulta a una consulta, el Generador de informes crea automáticamente un parámetro de informe de un solo valor con propiedades predeterminadas para el nombre, mensaje y tipo de datos.  
   
 #### <a name="to-add-a-query-parameter"></a>Para agregar un parámetro de consulta  
@@ -174,7 +174,7 @@ ms.locfileid: "66099089"
   
      La `WHERE` cláusula limita los datos recuperados al identificador del almacén especificado por el parámetro *@StoreID*de consulta.  
   
-4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *@StoreID*.  
+4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *@StoreID*.  
   
 5.  En **Valor de parámetro**, escriba **200**.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66099089"
   
  Observe que ahora hay un parámetro de informe denominado *@StoreID*. De forma predeterminada, el parámetro tiene el tipo de datos **Text**. Como el identificador de almacén es un entero, va a cambiar el tipo de datos a Entero en el procedimiento siguiente.  
   
-##  <a name="ChangeDefaultProperties"></a>4. cambiar el tipo de datos predeterminado y otras propiedades de un parámetro de informe  
+##  <a name="4-change-default-data-type-and-other-properties-for-a-report-parameter"></a><a name="ChangeDefaultProperties"></a>4. cambiar el tipo de datos predeterminado y otras propiedades de un parámetro de informe  
  Después de crear un parámetro, puede ajustar los valores predeterminados de las propiedades.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Para cambiar el tipo de datos predeterminado para un parámetro de informe  
@@ -207,7 +207,7 @@ ms.locfileid: "66099089"
   
 7.  En la barra de herramientas del visor de informes, al lado de Store ID, escriba **200**y, después, haga clic en **Ver informe**.  
   
-##  <a name="AddDataset"></a>4. Agregar un conjunto de datos para proporcionar los valores disponibles y nombres para mostrar  
+##  <a name="4a-add-a-dataset-to-provide-available-values-and-display-names"></a><a name="AddDataset"></a>4. Agregar un conjunto de datos para proporcionar los valores disponibles y nombres para mostrar  
  Para asegurarse de que un usuario solo puede escribir valores válidos para un parámetro, puede crear una lista desplegable de valores entre los que elegir. Los valores pueden proceder de un conjunto de datos o de una lista que se especifique. Se deben proporcionar valores disponibles de un conjunto de datos que tenga una consulta que no contenga una referencia al parámetro.  
   
 #### <a name="to-create-a-dataset-for-valid-values-for-a-parameter"></a>Para crear un conjunto de datos para los valores válidos de un parámetro  
@@ -237,7 +237,7 @@ ms.locfileid: "66099089"
   
      El panel Datos de informe muestra los campos StoreID y StoreName bajo el nodo de conjunto de datos **Almacenes** .  
   
-##  <a name="AvailableValues"></a>4B. Especificar valores disponibles para crear una lista desplegable de valores  
+##  <a name="4b-specify-available-values-to-create-a-drop-down-list-of-values"></a><a name="AvailableValues"></a>4B. Especificar valores disponibles para crear una lista desplegable de valores  
  Después de crear un conjunto de datos para proporcionar los valores disponibles, debe cambiar las propiedades de informe para especificar qué conjunto de datos y qué campo utilizar para llenar la lista desplegable de valores válidos de la barra de herramientas del visor de informes.  
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para proporcionar los valores disponibles para un parámetro desde un conjunto de datos  
@@ -268,7 +268,7 @@ ms.locfileid: "66099089"
   
  El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
-##  <a name="DefaultValues"></a>4C. Especificar valores predeterminados para que el informe se ejecute automáticamente  
+##  <a name="4c-specify-default-values-so-the-report-runs-automatically"></a><a name="DefaultValues"></a>4C. Especificar valores predeterminados para que el informe se ejecute automáticamente  
  Puede especificar un valor predeterminado para cada parámetro de modo que el informe se ejecute automáticamente.  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>Para especificar un valor predeterminado de un conjunto de datos  
@@ -305,7 +305,7 @@ ms.locfileid: "66099089"
   
  Para *@StoreID*, el visor de informes muestra el valor "Contoso Catalog Store". Este es el nombre para mostrar del identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
-##  <a name="NameValue"></a>4D. Buscar un valor de un conjunto de datos que tiene pares de name y valor  
+##  <a name="4d-look-up-a-value-from-a-dataset-that-has-namevalue-pairs"></a><a name="NameValue"></a>4D. Buscar un valor de un conjunto de datos que tiene pares de name y valor  
  Un conjunto de datos podría contener el identificador y el campo de nombre correspondiente. Si solo tiene un identificador, puede buscar el nombre correspondiente en un conjunto de datos que haya creado y que tenga pares de nombre/valor.  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>Para buscar un valor de un conjunto de datos  
@@ -332,7 +332,7 @@ ms.locfileid: "66099089"
   
  El cuadro de texto de la parte superior de cada página muestra el nombre del almacén en lugar del identificador del almacén.  
   
-##  <a name="Expression"></a>5. Mostrar el valor de parámetro seleccionado en el informe  
+##  <a name="5-display-the-selected-parameter-value-in-the-report"></a><a name="Expression"></a>5. Mostrar el valor de parámetro seleccionado en el informe  
  Cuando los usuarios tienen preguntas sobre un informe, resulta útil saber qué valores de parámetro eligieron. Puede conservar los valores seleccionados por el usuario para cada parámetro del informe. Una forma de hacerlo es mostrar los parámetros en un cuadro de texto en el pie de página.  
   
 #### <a name="to-display-the-selected-parameter-value-and-label-on-a-page-footer"></a>Para mostrar el valor del parámetro seleccionado y etiquetarlo en un pie de página  
@@ -353,7 +353,7 @@ ms.locfileid: "66099089"
   
 7.  Obtenga una vista previa del informe.  
   
-##  <a name="Filter"></a>6. usar el parámetro de informe en un filtro  
+##  <a name="6-use-the-report-parameter-in-a-filter"></a><a name="Filter"></a>6. usar el parámetro de informe en un filtro  
  Los filtros ayudan a controlar qué datos se deben usar en un informe una vez que se han recuperado de un origen de datos externo. Para permitir que un usuario controle los datos que desea ver, puede incluir el parámetro de informe en un filtro para la matriz.  
   
 #### <a name="to-specify-a-parameter-in-a-matrix-filter"></a>Para especificar un parámetro en un filtro de la matriz  
@@ -368,8 +368,7 @@ ms.locfileid: "66099089"
   
 5.  En **operador**, compruebe que `equals` (=) está seleccionado.  
   
-6.  En **Valor**, escriba `[@StoreID]`. 
-  `[@StoreID]` es la sintaxis de expresión simple que representa `=Parameters!StoreID.Value`.  
+6.  En **Valor**, escriba `[@StoreID]`. `[@StoreID]` es la sintaxis de expresión simple que representa `=Parameters!StoreID.Value`.  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -381,7 +380,7 @@ ms.locfileid: "66099089"
   
  La matriz muestra los datos correspondientes al almacén que había seleccionado.  
   
-##  <a name="Multivalued"></a>7. cambiar el parámetro de informe para que acepte varios valores  
+##  <a name="7-change-the-report-parameter-to-accept-multiple-values"></a><a name="Multivalued"></a>7. cambiar el parámetro de informe para que acepte varios valores  
  Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la consulta y todas las expresiones que contienen una referencia al parámetro, incluidos los filtros. Un parámetro de varios valores es una matriz de valores. En una consulta de conjunto de datos, la sintaxis de la consulta debe comprobar la inclusión de un valor en un conjunto de valores. En una expresión de informe, la sintaxis de la expresión debe tener acceso a una matriz de valores y no a un valor individual.  
   
 #### <a name="to-change-a-parameter-from-single-to-multivalued"></a>Para cambiar un parámetro de un solo valor a varios valores  
@@ -436,7 +435,7 @@ ms.locfileid: "66099089"
   
 19. En la lista desplegable, haga clic en **Seleccionar todo** para borrar la lista, haga clic en "Contoso Catalog Store" y en "Contoso Asia Online Store" y luego haga clic en **Ver informe**.  
   
-##  <a name="Boolean"></a>8. agregar un parámetro booleano para la visibilidad condicional  
+##  <a name="8-add-a-boolean-parameter-for-conditional-visibility"></a><a name="Boolean"></a>8. agregar un parámetro booleano para la visibilidad condicional  
   
 #### <a name="to-add-a-boolean-parameter"></a>Para agregar un parámetro booleano  
   
@@ -460,7 +459,7 @@ ms.locfileid: "66099089"
   
 1.  En la superficie de diseño, haga clic con el botón derecho en el cuadro de texto del pie de página que muestra los valores de parámetro y luego haga clic en **Propiedades de cuadro de texto**.  
   
-2.  Haga clic en **visibilidad**.  
+2.  Haga clic en **Visibilidad**.  
   
 3.  Seleccione la opción **Mostrar u ocultar en función de una expresión**y, después, haga clic en el botón de expresión **Fx**.  
   
@@ -482,7 +481,7 @@ ms.locfileid: "66099089"
   
  El cuadro de texto del pie de página muestra todos los nombres de almacén que haya seleccionado.  
   
-##  <a name="Title"></a>9. agregar un título de informe  
+##  <a name="9-add-a-report-title"></a><a name="Title"></a>9. agregar un título de informe  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
@@ -490,25 +489,25 @@ ms.locfileid: "66099089"
   
 2.  Escriba Parameterized Product Sales y, a continuación, haga clic fuera del cuadro de texto.  
   
-##  <a name="Save"></a>10. guardar el informe  
+##  <a name="10-save-the-report"></a><a name="Save"></a>10. guardar el informe  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
   
-1.  En el botón **generador de informes** , haga clic en **Guardar como**.  
+1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
 2.  Haga clic en **Sitios y servidores recientes**.  
   
 3.  Seleccione o escriba el nombre del servidor de informes donde tiene el permiso para guardar los informes.  
   
-     Aparece el mensaje **conectándose al servidor de informes**. Una vez completada la conexión, se mostrará el contenido de la carpeta de informes que el administrador del servidor de informes especificó como ubicación predeterminada para los informes.  
+     Aparece el mensaje **Conectándose al servidor de informes**. Una vez completada la conexión, se mostrará el contenido de la carpeta de informes que el administrador del servidor de informes especificó como ubicación predeterminada para los informes.  
   
 4.  En **Nombre**, reemplace el nombre predeterminado por Ventas de productos con parámetros.  
   
-5.  Haga clic en **Save**(Guardar).  
+5.  Haga clic en **Guardar**.  
   
  El informe se guarda en el servidor de informes. El servidor de informes al que está conectado aparece en la barra de estado en la parte inferior de la ventana.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  De esta forma se concluye el tutorial sobre cómo agregar un parámetro a un informe. Para obtener más información sobre los parámetros, consulte [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Consulte también  

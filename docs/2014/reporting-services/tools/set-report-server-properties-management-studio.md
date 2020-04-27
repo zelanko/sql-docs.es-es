@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c6dd1e22f90b834f5683a53d7b206dd1c8ad46e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099512"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Establecer las propiedades del servidor de informes (Management Studio)
-  Puede establecer las propiedades del sistema del servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de informes en para habilitar características o establecer valores predeterminados del servidor.  
+  Puede establecer las propiedades del sistema del servidor de informes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar características o establecer valores predeterminados de servidor.  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>Abrir la página Avanzadas de Propiedades del servidor  
   

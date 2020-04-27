@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099125"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
@@ -30,7 +30,7 @@ ms.locfileid: "66099125"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a>Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
 1.  [Crear un gráfico a partir del Asistente para gráficos](#Chart)  
@@ -59,7 +59,7 @@ ms.locfileid: "66099125"
 ## <a name="requirements"></a>Requisitos  
  Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. crear un informe de gráfico a partir del Asistente para gráficos  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. crear un informe de gráfico a partir del Asistente para gráficos  
  En el cuadro de diálogo **Introducción** , use el Asistente para gráficos con el fin de crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico de columnas.  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ ms.locfileid: "66099125"
   
 1.  Haga clic en **Inicio**, seleccione **Programas**, **Generador de informes de Microsoft SQL Server 2012**y, a continuación, haga clic en **Generador de informes**.  
   
-     Aparecerá el cuadro de diálogo **Introducción** .  
+     Aparece el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
     >  Si el cuadro de diálogo **Introducción** no aparece, en el botón **generador de informes** , haga clic en **nuevo**.  
@@ -78,7 +78,7 @@ ms.locfileid: "66099125"
   
 3.  En el panel derecho, haga clic en **Asistente para gráficos**.  
   
-4.  En la **página Elegir un conjunto de datos**, haga clic en **Crear un conjunto de datos**y,después, haga clic en **Siguiente**.  
+4.  En la **Página elegir un conjunto**de los, haga clic en **crear un conjunto**de los y, a continuación, en **siguiente**.  
   
 5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
@@ -108,22 +108,22 @@ ms.locfileid: "66099125"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
+8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.  
   
 9. Haga clic en **Next**.  
   
-##  <a name="ChartType"></a>2. elegir el tipo de gráfico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. elegir el tipo de gráfico  
  Podrá elegir entre varios tipos de gráfico predefinidos.  
   
 #### <a name="to-add-a-column-chart"></a>Para agregar un gráfico de columnas  
   
-1.  En la página **Elegir un tipo de gráfico** , el gráfico de columnas es el tipo de gráfico predeterminado. Haga clic en **Next**.  
+1.  En la página **Elegir un tipo de gráfico** , el gráfico de columnas es el tipo de gráfico predeterminado. Haga clic en **Siguiente**.  
   
 2.  En la página **Organizar campos del gráfico** , arrastre el campo SalesDate hasta **Categorías**. Categorías se muestra en el eje horizontal.  
   
 3.  Arrastre el campo Sales hasta **Valores**. El cuadro **Valores** muestra Sum(Sales), porque la suma del valor total de ventas se agrega para cada fecha. Valores se muestra en el eje vertical.  
   
-4.  Haga clic en **Next**.  
+4.  Haga clic en **Siguiente**.  
   
 5.  En la página **elegir un estilo** , en el cuadro estilos, seleccione un estilo.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "66099125"
   
 8.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Horizontal"></a>3. dar formato al eje horizontal y etiquetarlo  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. dar formato al eje horizontal y etiquetarlo  
  De forma predeterminada, el eje horizontal muestra los valores en un formato general que se escala automáticamente para ajustarse al tamaño del gráfico.  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>Para dar formato a una fecha en el eje horizontal  
@@ -184,7 +184,7 @@ ms.locfileid: "66099125"
   
  En el gráfico, las etiquetas se giran y se muestra la etiqueta de cada tercera fecha.  
   
-##  <a name="Legend"></a>4. Mueva la leyenda  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. Mueva la leyenda  
  La leyenda se crea automáticamente a partir de los datos de las categorías y las series.  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>Para mover la leyenda debajo del área de gráfico de un gráfico de columnas  
@@ -203,7 +203,7 @@ ms.locfileid: "66099125"
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="ChartTitle"></a>5. título del gráfico  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. título del gráfico  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>Para cambiar el título del gráfico encima del área de gráfico  
   
@@ -213,7 +213,7 @@ ms.locfileid: "66099125"
   
 3.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Vertical"></a>6. dar formato al eje vertical y etiquetarlo  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. dar formato al eje vertical y etiquetarlo  
  De forma predeterminada, el eje vertical muestra los valores en un formato general que se escala automáticamente para ajustarse al tamaño del gráfico.  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>Para dar formato de moneda a los números del eje vertical  
@@ -242,7 +242,7 @@ ms.locfileid: "66099125"
   
 12. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Average"></a>7. agregar una media móvil  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. agregar una media móvil  
   
 #### <a name="to-add-a-moving-average"></a>Para agregar una media móvil  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66099125"
   
  El gráfico muestra una línea que muestra la media móvil del total de ventas por fecha, promediado cada cuatro fechas.  
   
-##  <a name="Title"></a>8. agregar un título de informe  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. agregar un título de informe  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
@@ -290,19 +290,19 @@ ms.locfileid: "66099125"
   
 7.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Save"></a>9. guardar el informe  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. guardar el informe  
   
 #### <a name="to-save-the-report"></a>Para guardar el informe  
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  En el botón Generador de informes, haga clic en **Guardar como**.  
+2.  En el botón Generador de informes , haga clic en **Guardar como**.  
   
 3.  En **Nombre**, escriba **Gráfico de columnas de pedidos de ventas**.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Guardar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha completado correctamente el tutorial Agregar un gráfico de columnas al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte también  

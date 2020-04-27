@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 395392908055a41a8418f02ce3510c050a3447f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102646"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Buscar la versión del esquema de definición de informe (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66102646"
   
 ### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Identificar la versión de esquema RDL del Diseñador de informes  
   
-1.  Abra un proyecto nuevo. La versión del proyecto que elija determina la versión del esquema RDL. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se admite más de una versión de esquema. Para obtener más información, vea [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41; (Implementación y compatibilidad de versiones en SQL Server Data Tools &#40;SSRS&#41;)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+1.  Abra un proyecto nuevo. La versión del proyecto que elija determina la versión del esquema RDL. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se admite más de una versión de esquema. Para obtener más información, vea [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 2.  En el menú **Proyecto** , haga clic en **Agregar nuevo elemento**. Se abre el cuadro de diálogo **Agregar nuevo elemento** .  
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098606"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Método BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
@@ -46,13 +46,13 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  *Contraseña*  
  Cadena utilizada para cifrar la clave de cifrado antes de devolverse.  
   
- *KeyFile []*  
+ *KeyFile[]*  
  [out] Matriz que contiene la clave de cifrado cifrada.  
   
- *Length*  
+ *Longitud*  
  [out] Longitud de la matriz devuelta por el método.  
   
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
  *ExtendedErrors[]*  
@@ -62,7 +62,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

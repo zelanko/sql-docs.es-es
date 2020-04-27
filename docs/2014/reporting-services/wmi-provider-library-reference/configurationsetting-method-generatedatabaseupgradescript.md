@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a095b63f8c42709700f6f338edc409f801f8be3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098461"
 ---
 # <a name="generatedatabaseupgradescript-method-wmi-msreportserver_configurationsetting"></a>Método GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
@@ -43,16 +43,16 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- *DatabaseName*  
+ *Databasename*  
  Cadena que contiene el nombre de la base de datos del servidor de informes que se va a actualizar.  
   
  *ServerVersion*  
  Cadena que contiene la versión del servidor de informes.  
   
- *Manuscrit*  
+ *Script*  
  [out] Cadena que contiene el script SQL generado.  
   
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -62,7 +62,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
  El script generado admite [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

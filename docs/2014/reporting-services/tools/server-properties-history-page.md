@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ce48c964ec756668aa12566c494d9ae9a1e5372
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099574"
 ---
 # <a name="server-properties-history-page"></a>Propiedades del servidor (página Historial)
@@ -29,17 +29,17 @@ ms.locfileid: "66099574"
  Para abrir esta página, inicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a una instancia del servidor de informes, haga clic con el botón derecho en el nombre del servidor de informes y seleccione **Propiedades**. Haga clic en **Historial** para abrir esta página.  
   
 ## <a name="options"></a>Opciones  
- **Conservar un número ilimitado de instantáneas en el historial de informes**  
+ **Conservar un número ilimitado de instantáneas en el historial de informe**  
  Conserve todas las instantáneas del historial de informes. Para reducir el tamaño del historial de informe, debe eliminar las instantáneas manualmente.  
   
- **Limitar las copias del historial del informe**  
+ **Limitar las copias del historial de informe**  
  Conserve un número fijo de instantáneas del historial de informes. Cuando se alcanza el límite, las copias más antiguas se eliminan del historial de informe para dejar sitio para las nuevas.  
   
  Si posteriormente limita el historial del informe, cuando el historial del informe existente exceda el límite especificado, el servidor de informes lo reducirá según el nuevo límite. Las instantáneas de informe más antiguas son las que se eliminan primero. Si el historial del informe está vacío o por debajo del límite, se agregan nuevas instantáneas de informe. Cuando se alcanza el límite, se elimina la instantánea del informe más antigua cuando se agrega una nueva.  
   
 ## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Servidor de informes en Management Studio (Ayuda F1)](report-server-in-management-studio-f1-help.md)  
+ [Conectarse a un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)  
   
   

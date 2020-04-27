@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098845"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
@@ -26,7 +26,7 @@ ms.locfileid: "66098845"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a>Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
 1.  [Crear un informe de tabla y un conjunto de datos con el asistente para tablas o matrices](#Setup)  
@@ -58,7 +58,7 @@ ms.locfileid: "66098845"
 ## <a name="requirements"></a>Requisitos  
  Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a>1. crear un informe de tabla y un conjunto de informes desde el Asistente para tablas o matrices  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. crear un informe de tabla y un conjunto de informes desde el Asistente para tablas o matrices  
  Cree un informe de tabla, un origen de datos y un conjunto de datos. Cuando distribuya la tabla, incluirá solo unos cuantos campos. Después de completar el asistente, agregará manualmente las columnas. El asistente facilita la distribución de la tabla y la aplicación de un estilo.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ ms.locfileid: "66098845"
   
 1.  Haga clic en **Inicio**, **Elija programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]haga clic en **generador de informes**y, a continuación, haga clic en **generador de informes**.  
   
-     Aparecerá el cuadro de diálogo **Introducción** .  
+     Aparece el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
     >  Si el cuadro de diálogo **Introducción** no aparece, en el botón **generador de informes** , haga clic en **nuevo**.  
@@ -85,11 +85,11 @@ ms.locfileid: "66098845"
   
 4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**.  
   
-5.  Haga clic en **Next**.  
+5.  Haga clic en **Siguiente**.  
   
 6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos del tipo **SQL Server**. Seleccione un origen de datos en la lista o vaya al servidor de informes para seleccionar uno.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 8.  En la página **Diseñar una consulta** , haga clic en **Editar como texto**.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "66098845"
   
      La consulta especifica los nombres de columna que incluyen una fecha de nacimiento, un nombre, un apellido, el estado o provincia, el identificador de país o región, el sexo y compras anuales.  
   
-10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 20 filas de datos e incluye las siguientes columnas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
+10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra 20 filas de datos e incluye las siguientes columnas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
   
-11. Haga clic en **Next**.  
+11. Haga clic en **Siguiente**.  
   
 12. En la página **Organizar campos** , arrastre los campos siguientes, en el orden especificado, desde la lista **Campos disponibles** a la lista **Valores** .  
   
@@ -150,13 +150,13 @@ ms.locfileid: "66098845"
   
      La suma ya no se aplica a YTDPurchase.  
   
-15. Haga clic en **Next**.  
+15. Haga clic en **Siguiente**.  
   
 16. En la página **Elegir el diseño**, haga clic en **Siguiente**.  
   
 17. En la página **elegir un estilo** , haga clic en **pizarra**y, a continuación, haga clic en **Finalizar**.  
   
-##  <a name="UpdateNames"></a>2. actualizar los nombres predeterminados del origen de datos y el conjunto de datos  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. actualizar los nombres predeterminados del origen de datos y el conjunto de datos  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>Para actualizar el nombre predeterminado del origen de datos  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66098845"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a>3. Mostrar el nombre, el inicial y el apellido  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. Mostrar el nombre, el inicial y el apellido  
  Use la función **Izquierda** y el operador **Concatenar** (**&**) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .  
   
 #### <a name="to-add-the-name-column"></a>Para agregar la columna Nombre  
@@ -197,7 +197,7 @@ ms.locfileid: "66098845"
   
      La función **Izquierda** se agrega a la expresión.  
   
-6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 7.  En la lista **Valores** , haga doble clic en **FirstName**.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "66098845"
   
      Esta expresión extrae un carácter del valor **FirstName** , contando desde la izquierda.  
   
-9. Escriba **& "" &**  
+9. Escriba **&" "&**  
   
 10. En la lista **Valores** , haga doble clic en **LastName**.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66098845"
   
 12. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Gender"></a>4. usar imágenes para mostrar el sexo  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. usar imágenes para mostrar el sexo  
  Use imágenes para mostrar el sexo de una persona e identifique el sexo desconocido usando una tercera imagen. Agregará al informe tres imágenes ocultas y una nueva columna para mostrar las imágenes y después determinará la imagen que aparece en la columna según el valor del campo Gender.  
   
  Para aplicar un color a la celda de la tabla que contiene la imagen, cuando convierta el informe en un informe con barras, agregará un rectángulo y después agregará la imagen al mismo. Tiene que usar un rectángulo porque puede aplicar un color de fondo a un rectángulo, pero no a una imagen.  
@@ -274,7 +274,7 @@ ms.locfileid: "66098845"
   
 4.  En la lista **Elemento** , haga doble clic en **Cambiar**.  
   
-5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 6.  En la lista **Valores** , haga doble clic en **Gender**.  
   
@@ -296,14 +296,14 @@ ms.locfileid: "66098845"
   
 14. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Lookup"></a>5. Buscar nombre PaísRegión  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. Buscar nombre PaísRegión  
  Cree el conjunto de datos CountryRegion y use la función **Búsqueda** para mostrar el nombre de un país o región en lugar del identificador del mismo.  
   
 #### <a name="to-create-the-countryregion-dataset"></a>Para crear el conjunto de datos CountryRegion  
   
 1.  Haga clic en **Diseño** para volver a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic en **Nuevo** y, después, en **Conjunto de datos**.  
+2.  En el panel datos de informe, haga clic en **nuevo** y, a continuación, en **conjunto**de datos.  
   
 3.  Haga clic en **Usar un conjunto de datos insertado en el informe**.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66098845"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Haga clic en **Ejecutar** ( **!** ) para ejecutar la consulta.  
+9. Haga clic en **Ejecutar** (**!**) para ejecutar la consulta.  
   
      Los resultados de la consulta son los identificadores del país o región y los nombres.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "66098845"
   
 5.  En la lista **Elemento**, haga doble clic en **Búsqueda**.  
   
-6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 7.  En la lista **valores** , haga doble clic `CountryRegionID`en.  
   
@@ -370,8 +370,8 @@ ms.locfileid: "66098845"
   
 11. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Count"></a>6. recuento de días desde la última compra  
- Agregue una columna y, a continuación **** , utilice la función `ExecutionTime` Now o la variable global integrada para calcular el número de días a partir de hoy desde la fecha en que la última compra una persona.  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. recuento de días desde la última compra  
+ Agregue una columna y, a continuación **Now** , utilice la función `ExecutionTime` Now o la variable global integrada para calcular el número de días a partir de hoy desde la fecha en que la última compra una persona.  
   
 #### <a name="to-add-the-days-ago-column"></a>Para agregar la columna Días transcurridos  
   
@@ -393,7 +393,7 @@ ms.locfileid: "66098845"
   
 8.  Escriba **"d",**  
   
-9. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+9. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 10. En la lista **Valores**, haga doble clic en **LastPurchase**.  
   
@@ -416,7 +416,7 @@ ms.locfileid: "66098845"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a>7. usar un indicador para mostrar la comparación de ventas  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. usar un indicador para mostrar la comparación de ventas  
  Agregue una nueva columna y use un indicador para mostrar si las compras anuales hasta la fecha (año) de una persona están por encima o por debajo del promedio de compras de año. La función **Redondear** quita los decimales de los valores.  
   
  La configuración del indicador y sus estados requiere muchos pasos. Si lo desea, en el procedimiento "para configurar el indicador", puede avanzar y copiar o pegar las expresiones completadas de este tutorial en el cuadro de diálogo **expresión** .  
@@ -449,7 +449,7 @@ ms.locfileid: "66098845"
   
 4.  En la lista **Elemento** , haga doble clic en **Redondear**.  
   
-5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 6.  En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -461,7 +461,7 @@ ms.locfileid: "66098845"
   
 10. En la lista **Elemento**, haga doble clic en **Promedio**.  
   
-11. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+11. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 12. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "66098845"
   
 19. En la lista **Elemento** , haga doble clic en **Redondear**.  
   
-20. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+20. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 21. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -493,7 +493,7 @@ ms.locfileid: "66098845"
   
 25. En la lista **Elemento**, haga doble clic en **Promedio**.  
   
-26. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+26. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 27. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -521,7 +521,7 @@ ms.locfileid: "66098845"
   
 38. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="GreenBar"></a>8. convierta el informe en un informe de "barra verde"  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. convierta el informe en un informe de "barra verde"  
  Use un parámetro para especificar el color que se aplicará a filas alternativas del informe, convirtiéndolo en un informe con barras.  
   
 #### <a name="to-add-a-parameter"></a>Para agregar un parámetro  
@@ -588,7 +588,7 @@ ms.locfileid: "66098845"
   
 9. En la lista **Elemento**, haga doble clic en **RunningValue**.  
   
-10. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
+10. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
   
 11. En la lista **Valores** , haga doble clic en **FirstName**.  
   
@@ -638,7 +638,7 @@ ms.locfileid: "66098845"
   
      Los representadores de informes y las filas alternativas tienen el fondo que elija.  
   
-##  <a name="DateFormat"></a>opta Dar formato a la columna de fecha  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>opta Dar formato a la columna de fecha  
  Dé formato a la columna **Last Purchase**, que contiene fechas.  
   
 #### <a name="to-format-date-column"></a>Para dar formato a la columna de fecha  
@@ -651,7 +651,7 @@ ms.locfileid: "66098845"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a>opta Agregar un título de informe  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>opta Agregar un título de informe  
  Agregue un título al informe.  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
@@ -672,14 +672,14 @@ ms.locfileid: "66098845"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>opta Guardar el informe  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>opta Guardar el informe  
  Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo. Para obtener más información, consulte [Guardar informes &#40;Generador de informes&#41;](report-builder/saving-reports-report-builder.md).  
   
  En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  
   
 #### <a name="to-save-the-report-to-a-report-server"></a>Para guardar el informe en un servidor de informes  
   
-1.  En el botón **generador de informes** , haga clic en **Guardar como**.  
+1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
 2.  Haga clic en **Sitios y servidores recientes**.  
   
@@ -689,19 +689,19 @@ ms.locfileid: "66098845"
   
 4.  En **Nombre**, reemplace el nombre predeterminado por **Resumen de comparación de ventas**.  
   
-5.  Haga clic en **Save**(Guardar).  
+5.  Haga clic en **Guardar**.  
   
  El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
 #### <a name="to-save-the-report-to-your-computer"></a>Para guardar el informe en el equipo  
   
-1.  En el botón **generador de informes** , haga clic en **Guardar como**.  
+1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
 2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde desea guardar el informe.  
   
 3.  En **Nombre**, reemplace el nombre predeterminado por **Resumen de comparación de ventas**.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Guardar**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   

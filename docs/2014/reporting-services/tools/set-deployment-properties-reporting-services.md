@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099551"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
@@ -65,7 +65,7 @@ ms.locfileid: "66099551"
   
 10. En el cuadro de texto **TargetServerURL** , escriba la dirección URL del servidor de informes de destino. Antes de publicar un informe, establezca esta propiedad en la dirección URL de un servidor de informes válido. Al publicar en un servidor de informes que se ejecute en modo nativo, use la dirección URL del directorio virtual del servidor de informes (por ejemplo, http: *//servidor/servidorDeInformes* o https: *//servidor/servidorDeInformes)* . Se trata del directorio virtual del servidor de informes, y no del Administrador de informes.  
   
-     Al publicar en un servidor de informes que se ejecute en el modo integrado de SharePoint, use una dirección URL a un sitio de nivel superior o un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de nivel superior predeterminado (por ejemplo, http://*nombreDeServidor*, http://*nombreDeServidor*/*sitio* o http://*nombreDeServidor*/*sitio*/*subsitio*).  
+     Al publicar en un servidor de informes que se ejecute en el modo integrado de SharePoint, use una dirección URL a un sitio de nivel superior o un subsitio de SharePoint. Si no especifica un sitio, se usa el sitio de nivel superior predeterminado (por ejemplo, http://*ServerName*, http://*ServerName*/*site* o http://*ServerName*/*site*/*subsite*).  
   
 ### <a name="to-set-configuration-manager-properties"></a>Para establecer las propiedades del Administrador de configuración  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66099551"
  [Obtener una vista previa de informes](../reports/previewing-reports.md)   
  [Diseñador de informes la ayuda F1](report-designer-f1-help.md)   
  [Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Páginas de propiedades del proyecto (cuadro de diálogo)](project-property-pages-dialog-box.md)   
+ [Cuadro de diálogo páginas de propiedades del proyecto](project-property-pages-dialog-box.md)   
  [Publicación de informes en un servidor de informes](../reports/publishing-reports-to-a-report-server.md)  
   
   

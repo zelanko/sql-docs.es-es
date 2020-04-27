@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099196"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)
@@ -30,7 +30,7 @@ ms.locfileid: "66099196"
   
  ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
-##  <a name="BackToTop"></a>Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a realizar las siguientes tareas:  
   
 1.  [Crear un gráfico a partir del Asistente para gráficos](#Chart)  
@@ -61,7 +61,7 @@ ms.locfileid: "66099196"
 ## <a name="requirements"></a>Requisitos  
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. crear un informe de gráfico a partir del Asistente para gráficos  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. crear un informe de gráfico a partir del Asistente para gráficos  
  En el cuadro de diálogo **Introducción** , cree un conjunto de datos incrustado, elija un origen de datos compartido y cree un gráfico de barras con el Asistente para gráficos.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ ms.locfileid: "66099196"
   
 1.  Haga clic en **Inicio**, seleccione **Programas**, **Generador de informes de Microsoft SQL Server 2012**y, a continuación, haga clic en **Generador de informes**.  
   
-     Aparecerá el cuadro de diálogo **Introducción** .  
+     Aparece el cuadro de diálogo **Introducción** .  
   
     > [!NOTE]  
     >  Si no aparece el cuadro de diálogo **Introducción** , haga clic en el botón generador de informes y, a continuación, haga clic en **nuevo**.  
@@ -80,7 +80,7 @@ ms.locfileid: "66099196"
   
 3.  En el panel derecho, haga clic en **Asistente para gráficos**.  
   
-4.  En la página **elegir un conjunto** de los, haga clic en **crear un conjunto**de los y, a continuación, en **siguiente**.  
+4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**y, después, haga clic en **Siguiente**.  
   
 5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099196"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
+8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.  
   
-9. Haga clic en **Next**.  
+9. Haga clic en **Siguiente**.  
   
-##  <a name="ChartType"></a>2. elegir el tipo de gráfico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. elegir el tipo de gráfico  
  Podrá elegir entre varios tipos de gráfico predefinidos.  
   
 #### <a name="to-add-a-column-chart"></a>Para agregar un gráfico de columnas  
@@ -129,7 +129,7 @@ ms.locfileid: "66099196"
   
 5.  Arrastre SalesYear2008 hacia el panel Valores bajo SalesYear2009. SalesYear2008 representa la cantidad de ventas de cada vendedor durante el año 2008.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  En la página **elegir un estilo** , en el panel estilos, seleccione un estilo.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66099196"
   
  El informe muestra el gráfico de barras de ventas correspondiente a cada vendedor para los años 2008 y 2009. La longitud de la barra corresponde al total de ventas.  
   
-##  <a name="AllValues"></a>3. modificar la presentación de nombres en el eje vertical  
+##  <a name="3-modify-the-display-of-names-on-the-vertical-axis"></a><a name="AllValues"></a>3. modificar la presentación de nombres en el eje vertical  
  De forma predeterminada, solo aparecen algunos de los valores del eje vertical. Puede cambiar el gráfico para mostrar todas las categorías.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>Mostrar todos los vendedores en el eje de categorías de un gráfico de barras  
@@ -165,7 +165,7 @@ ms.locfileid: "66099196"
 > [!NOTE]  
 >  Si no se leen los nombres de vendedor en el eje vertical, puede hacer más alto el gráfico o cambiar las opciones de formato para las etiquetas del eje.  
   
-###  <a name="CategoryExpression"></a>Mostrar los apellidos y el nombre en el eje vertical  
+###  <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>Mostrar los apellidos y el nombre en el eje vertical  
  Puede cambiar la expresión de categoría para incluir para cada vendedor el apellido seguido por el nombre.  
   
 ##### <a name="to-change-the-category-expression"></a>Para cambiar la expresión de categoría  
@@ -193,7 +193,7 @@ ms.locfileid: "66099196"
 > [!NOTE]  
 >  Si no se leen los nombres de vendedor en el eje vertical, puede hacer más alto el gráfico o cambiar las opciones de formato para las etiquetas del eje.  
   
-##  <a name="Sort"></a>4. cambiar el criterio de ordenación de los nombres en el eje vertical  
+##  <a name="4-change-the-sort-order-for-names-on-the-vertical-axis"></a><a name="Sort"></a>4. cambiar el criterio de ordenación de los nombres en el eje vertical  
  Al ordenar los datos en un gráfico, está cambiando el orden de valores en el eje de categoría.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>Ordenar los nombres alfabéticamente en el gráfico de barras  
@@ -210,7 +210,7 @@ ms.locfileid: "66099196"
   
 6.  Escriba la siguiente expresión: `=Fields!LastName.Value & ", " & Fields!FirstName.Value`  
   
-7.  Haga clic en **OK**.  
+7.  Haga clic en **Aceptar**.  
   
 8.  De nuevo en la página **propiedades del grupo de categorías** , en la lista desplegable **orden** , seleccione **Z a a**. Esto selecciona el orden alfabético inverso para que los nombres aparezcan en orden de arriba a abajo.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "66099196"
   
  Los nombres del eje horizontal se ordenan en orden inverso, con **Alerca** en la parte superior y **Zeng** en la parte inferior.  
   
-##  <a name="Legend"></a>5. Mueva la leyenda  
+##  <a name="5-move-the-legend"></a><a name="Legend"></a>5. Mueva la leyenda  
  Para mejorar la legibilidad de los valores del gráfico, es posible que le interese mover la leyenda correspondiente. Por ejemplo, en un gráfico de barras, donde las barras se muestran horizontalmente, puede cambiar la posición de la leyenda para que aparezca debajo o encima del área de gráfico. Esto proporciona más espacio horizontal para las barras.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>Para mostrar la leyenda debajo del área de gráfico de un gráfico de barras  
@@ -239,7 +239,7 @@ ms.locfileid: "66099196"
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="ChartTitle"></a>6. título del gráfico  
+##  <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. título del gráfico  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area-of-a-bar-chart"></a>Cambiar el título del gráfico situado por encima del área de gráfico de un gráfico de barras  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66099196"
   
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Horizontal"></a>7. dar formato al eje horizontal y etiquetarlo  
+##  <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7. dar formato al eje horizontal y etiquetarlo  
  De forma predeterminada, el eje horizontal muestra los valores en un formato general que se escala automáticamente para ajustarse al tamaño del gráfico.  
   
 #### <a name="to-format-the-numbers-on-the-horizontal-axis"></a>Dar formato a los números en el eje horizontal  
@@ -278,7 +278,7 @@ ms.locfileid: "66099196"
   
  El informe muestra el importe de ventas en el eje horizontal como moneda en miles y no tiene ningún dígito decimal.  
   
-##  <a name="Filter"></a>8. agregar un filtro para mostrar los cinco valores superiores  
+##  <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8. agregar un filtro para mostrar los cinco valores superiores  
  Puede agregar un filtro al gráfico para especificar qué datos del conjunto de datos se van a incluir o excluir del gráfico.  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>Agregar un filtro para mostrar los cinco valores superiores  
@@ -309,7 +309,7 @@ ms.locfileid: "66099196"
   
  El gráfico muestra los nombres de los cinco vendedores superiores del conjunto de datos de ventas de 2009.  
   
-##  <a name="Title"></a>9. agregar un título de informe  
+##  <a name="9-add-a-report-title"></a><a name="Title"></a>9. agregar un título de informe  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
@@ -331,21 +331,21 @@ ms.locfileid: "66099196"
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Save"></a>10. guardar el informe  
+##  <a name="10-save-the-report"></a><a name="Save"></a>10. guardar el informe  
   
 #### <a name="to-save-the-report"></a>Para guardar el informe  
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  En el botón **generador de informes** , haga clic en **Guardar como**.  
+2.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
 3.  En **Nombre**, escriba **Gráfico de barras de ventas**.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Guardar**.  
   
  El informe se guardará en el servidor de informes.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha completado correctamente el tutorial Agregar un gráfico de barras al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte también  

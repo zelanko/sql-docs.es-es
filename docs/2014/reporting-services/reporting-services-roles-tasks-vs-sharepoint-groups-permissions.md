@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102812"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint
@@ -30,7 +30,7 @@ ms.locfileid: "66102812"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modo nativo|  
+|[!INCLUDE[applies](../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo|  
   
  **En este tema:**  
   
@@ -40,37 +40,37 @@ ms.locfileid: "66102812"
   
 -   [Comparación de las tareas de modo nativo y los permisos de SharePoint](#bkmk_compare_tasks_permissions)  
   
-##  <a name="bkmk_compare_tools_terms"></a>Comparación de las herramientas y la terminología de permisos  
- **Modo nativo:** Los [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] objetos de permiso en modo nativo (roles y tareas) se [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] crean en y se configuran para usuarios individuales en Administrador de informes.  
+##  <a name="compare-permission-tools-and-terminology"></a><a name="bkmk_compare_tools_terms"></a> Comparación de las herramientas y la terminología de permisos  
+ **Modo nativo:** Los objetos de permiso en modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] (roles y tareas) se crean en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y se configuran para los usuarios individuales en el Administrador de informes.  
   
- **Modo de SharePoint:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] el modo de SharePoint de emplea las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
+ **Modo SharePoint:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] El modo SharePoint usa las características de permisos de SharePoint. Los grupos y los permisos de SharePoint se administran desde la página **Configuración del sitio** .  
   
  En la tabla siguiente se comparan los objetos y conceptos relacionados con los permisos entre el modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y SharePoint.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Modo nativo|SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Rol:** Por ejemplo, "Administrador de contenido".|**Grupo:** Por ejemplo, el grupo predeterminado "visores".|  
-|---|**Grupo de nivel de permisos:** Por ejemplo, "solo ver" para el grupo "visores".|  
-|**Tareas:** por ejemplo "administrar informes".|**Permisos:** Por ejemplo, dentro del grupo "solo ver" hay permisos de lista relacionados de ver elementos, ver versiones y ver páginas de aplicación.|  
+|**Rol:** Por ejemplo, "Administrador de contenido".|**Grupo:** Por ejemplo, el grupo "Visores" predeterminado.|  
+|---|**Grupo de nivel de permiso:** Por ejemplo, "Solo ver" para el grupo "Visores".|  
+|**Tareas:** por ejemplo, "Administrar informes".|**Permisos:** Por ejemplo, dentro del grupo "Solo ver" hay permisos relacionados con listas para ver elementos, ver versiones y ver páginas de aplicación.|  
   
  Para obtener más información sobre los permisos de SharePoint, vea [permisos de usuario y niveles de permisos en SharePoint Server](/sharepoint/sites/user-permissions-and-permission-levels) y [determinar los niveles de permisos y los grupos en SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
-##  <a name="bkmk_compare_roles_groups"></a>Comparación de los roles de modo nativo y los grupos de SharePoint  
+##  <a name="compare-native-mode-roles-and-sharepoint-groups"></a><a name="bkmk_compare_roles_groups"></a> Comparación de los roles de modo nativo y los grupos de SharePoint  
  En la tabla siguiente se comparan las definiciones de roles predefinidas en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo con las de los grupos de SharePoint estándar. Si los grupos de SharePoint no coinciden con el rol específico que desea, puede crear un grupo personalizado y asignar niveles de permiso en SharePoint.  
   
- **Nota**: los grupos predeterminados de SharePoint disponibles dependen de la plantilla de sitio usada para crear el sitio de SharePoint.  
+ **Nota**: Los grupos predeterminados de SharePoint disponibles dependen de la plantilla de sitio usada para crear el sitio de SharePoint.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Role|Grupos de SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Rol|Grupos de SharePoint|  
 |--------------------------------------|-----------------------|  
 |**Browser**<br /><br /> Ver|Use el grupo **Visitantes** para conceder permisos para ver informes. El grupo **Visitantes** tiene permisos del nivel de lectura, lo que permite a los miembros del grupo ver páginas, elementos de lista y documentos.|  
 |**Administrador de contenido**<br /><br /> Permisos totales para todos los elementos y operaciones de nivel de elemento, incluidos los permisos para establecer la seguridad.|Use el grupo **Propietarios** para conceder un control total sobre la administración de los elementos del servidor de informes en un sitio de SharePoint. El grupo **Propietarios** tiene permisos de control total, lo que permite a los miembros del grupo realizar cambios en el contenido, las páginas o la funcionalidad del sitio. El acceso de control total debe estar limitado solamente a los administradores del sitio.|  
-|**Mis informes**|No hay ningún grupo equivalente. **Mis informes** no se admite para un servidor de informes que se ejecute en modo de SharePoint. Puede usar las características de Mis informes en [!INCLUDE[winSPServ](../includes/winspserv-md.md)] si desea usar la funcionalidad equivalente.|  
+|**Mis informes**|No hay ningún grupo equivalente. **Mis informes** no se admite para un servidor de informes que se ejecuta en modo de SharePoint. Puede usar las características de Mis informes en [!INCLUDE[winSPServ](../includes/winspserv-md.md)] si desea usar la funcionalidad equivalente.|  
 |**Publicador**<br /><br /> Agregar, actualizar, ver y eliminar informes, modelos de informe, orígenes de datos compartidos y recursos.|Use el grupo **Miembros** para conceder permisos para agregar elementos, editar elementos y actualizar referencias a elementos dependientes en un sitio de SharePoint. El grupo **Miembros** tiene permisos del nivel Colaborar, lo que permite a los miembros del grupo ver páginas, agregar y actualizar elementos, así como enviar cambios para su aprobación.|  
 |**Generador de informes**<br /><br /> Ver informes, administrar automáticamente la suscripción individual y abrir informes en el Generador de informes.|No hay ningún nivel de permiso o grupo de SharePoint predefinido que sea equivalente a la definición de informe del Generador de informes. De manera predeterminada, los usuarios que pertenecen al grupo **Miembros** o **Propietarios** tienen permiso para usar el Generador de informes. Si desea que el Generador de informes esté disponible para más usuarios, debe crear una configuración de seguridad personalizada para proporcionar un nivel de permiso similar al que ofrece el rol Generador de informes. Para obtener más información, vea [Establecer permisos para elementos del servidor de informes en un sitio de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
-|-|Use el grupo de **Visores** para conceder permisos para ver los informes representados. El grupo **Visores** no puede descargar ni ver el contenido de los elementos de informe.<br /><br /> **Nota:** A partir de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]2012, el grupo **visores** no tiene permisos para crear suscripciones.|  
-|**Administrador del sistema** y **usuario del sistema**|Estos roles no son necesarios para un servidor de informes que se ejecuta en modo de SharePoint. El **usuario del sistema** y el **Administrador del sistema** corresponden a los permisos de nivel de aplicación web o de granja de SharePoint. El servidor de informes no proporciona ninguna funcionalidad que requiera una autorización en dicho nivel.|  
+|-|Use el grupo de **Visores** para conceder permisos para ver los informes representados. El grupo **Visores** no puede descargar ni ver el contenido de los elementos de informe.<br /><br /> **Nota:** A partir de SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], el grupo **Visores** no tiene permisos para crear suscripciones.|  
+|**Usuario del sistema** y **Administrador del sistema**|Estos roles no son necesarios para un servidor de informes que se ejecuta en modo de SharePoint. **Usuario del sistema** y **Administrador del sistema** se corresponden con los permisos del nivel de conjunto de servidores o aplicación web de SharePoint. El servidor de informes no proporciona ninguna funcionalidad que requiera una autorización en dicho nivel.|  
   
-##  <a name="bkmk_compare_tasks_permissions"></a>Comparación de las tareas de modo nativo y los permisos de SharePoint  
+##  <a name="comparing-native-mode-tasks-and-sharepoint-permissions"></a><a name="bkmk_compare_tasks_permissions"></a> Comparación de las tareas de modo nativo y los permisos de SharePoint  
  En la tabla siguiente se comparan las tareas de modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con los permisos de SharePoint. La columna **Tipo** indica si la tarea en modo nativo está relacionada con un rol del sistema o con roles y elementos estándar. Los roles del sistema administran los permisos en el nivel del sistema, como programaciones compartidas.  
   
 |Tarea de modo nativo|Tipo de rol|Permiso de SharePoint equivalente|  

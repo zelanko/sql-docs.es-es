@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099140"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
@@ -55,7 +55,7 @@ ms.locfileid: "66099140"
   
 -   Un parámetro que tiene la propiedad que acepta valores NULL `False` establecida en ha detectado un valor null en el parámetro.  
   
--   Una expresión para la propiedad Hidden de una región de datos contiene un error: Referencia de objeto no definida a una instancia de un objeto.  
+-   Una presión para la propiedad Hidden de una región de datos contiene un error: Referencia a objeto no establecida como instancia de un objeto.  
   
 -   Una expresión incluía una llamada de función no válida o un error de sintaxis.  
   

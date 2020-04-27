@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a88146da815b97cecbdef598d0c75f1f95fcb54c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097220"
 ---
 # <a name="msreportserver_instance-class"></a>MSReportServer_Instance, clase
@@ -45,9 +45,9 @@ public class MSReportServer_Instance
  Todos los miembros estáticos (**compartidos** en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) públicos de este tipo son seguros para operaciones multiproceso. No se garantiza que los miembros de instancia sean seguros para subprocesos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
- **Plataforma:**[!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
+ **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_Instance](msreportserver-instance-members.md)  

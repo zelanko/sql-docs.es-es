@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096432"
 ---
 # <a name="cluster-node-configuration"></a>Configuración del nodo de clúster
@@ -26,6 +26,6 @@ ms.locfileid: "66096432"
 ## <a name="options"></a>Opciones  
  Nombre de instancia: Use la lista desplegable para seleccionar la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de clúster de conmutación por error que se va a modificar. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **Nombre de este nodo** : este campo se rellenará con el nombre del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación de. Este es el nodo de clúster de conmutación por error que se agregará a, o se quitará de, la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ **Nombre de este nodo:** este campo se rellenará con el nombre del equipo que está ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este es el nodo de clúster de conmutación por error que se agregará a, o se quitará de, la instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   

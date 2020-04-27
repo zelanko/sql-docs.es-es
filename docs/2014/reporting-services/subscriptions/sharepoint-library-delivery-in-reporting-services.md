@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100696"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de la biblioteca de SharePoint en Reporting Services
   Un servidor de informes que se configura para la integración de SharePoint incluye una extensión de entrega que usted puede utilizar para enviar un informe a una biblioteca de SharePoint.  
   
- Para usar la extensión de entrega de SharePoint, debe crear una suscripción a partir de una página de aplicación de un sitio de SharePoint y, a continuación, seleccionar **Biblioteca de documentos de SharePoint** como el tipo de entrega. No puede usar la extensión de entrega de SharePoint para las suscripciones que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] cree en o administrador de informes.  
+ Para usar la extensión de entrega de SharePoint, debe crear una suscripción a partir de una página de aplicación de un sitio de SharePoint y, a continuación, seleccionar **Biblioteca de documentos de SharePoint** como el tipo de entrega. No puede usar la extensión de entrega de SharePoint para suscripciones creadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el Administrador de informes.  
   
 > [!NOTE]  
 >  La extensión de entrega no admite la entrega de informes a un sitio de SharePoint si el servidor de informes se ejecuta en modo nativo. Si intenta llamar a la extensión de entrega mediante programación para un servidor de informes en modo nativo, el servidor devuelve el error `rsDeliveryExtensionNotFound` y registra el error `rsOperationNotSupportedSharePointMode` en los archivos de registro del servidor de informes.  
@@ -87,6 +87,6 @@ ms.locfileid: "66100696"
 ## <a name="see-also"></a>Consulte también  
  [Crear y administrar suscripciones para servidores de informes en modo de SharePoint](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

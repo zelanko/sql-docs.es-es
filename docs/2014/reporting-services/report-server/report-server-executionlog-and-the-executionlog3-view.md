@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103473"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
@@ -25,7 +25,7 @@ ms.locfileid: "66103473"
   
  Los servidores de informes configurados para el modo de SharePoint, también pueden usar los registros de ULS de SharePoint. Para obtener más información, vea [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> Ver la información del registro  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> Ver la información del registro  
  La ejecución del servidor de informes registra datos sobre la ejecución de informes en una tabla interna de la base de datos. La información de la tabla está disponible en las vistas de SQL Server.  
   
  El registro de la ejecución de informes se almacena en la base de datos del servidor de informes que se denomina **ReportServer**de forma predeterminada. Las vistas de SQL proporcionan la información del registro de la ejecución. Las vistas "2" y "3" se agregaron en versiones más recientes y contienen campos nuevos o campos con nombres más descriptivos que las versiones anteriores. Permanece en el producto las vistas antiguas para que no se vean afectadas las aplicaciones personalizadas que dependen de ellas. Si no tiene una dependencia en una vista anterior, por ejemplo ExecutionLog, se recomienda utilizar la vista más reciente, ExecutionLog**3**.  
@@ -44,7 +44,7 @@ ms.locfileid: "66103473"
   
 -   [Campos de registro (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> Configuración para un servidor de informes en modo de SharePoint  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> Configuración para un servidor de informes en modo de SharePoint  
  Puede activar o desactivar la ejecución de informes en la configuración del sistema de una aplicación de servicios de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  De forma predeterminada, las entradas de registro se mantienen 60 días. Las entradas que superan esta fecha se quitan a las 2:00 a. m. todos los días. En instalaciones antiguas, solo habrá 60 días de información disponibles en cualquier momento.  
@@ -71,7 +71,7 @@ ms.locfileid: "66103473"
   
 2.  Cambie **ExecutionLogLevel** a **detallado**. Este campo es un campo de entrada de texto y los dos valores posibles son **detallado** y **normal**.  
   
-##  <a name="bkmk_native"></a> Configuración de un servidor de informes en modo nativo  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> Configuración de un servidor de informes en modo nativo  
  Puede activar o desactivar la ejecución de informes en la página propiedades del servidor en SQL Server Management Studio. **EnableExecutionLogging** es una propiedad avanzada.  
   
  De forma predeterminada, las entradas de registro se mantienen 60 días. Las entradas que superan esta fecha se quitan a las 2:00 a. m. todos los días. En instalaciones antiguas, solo habrá 60 días de información disponibles en cualquier momento.  
@@ -98,7 +98,7 @@ ms.locfileid: "66103473"
   
 2.  En la sección **Definido por el usuario** , cambie **ExecutionLogLevel** a **detallado**. Este campo es un campo de entrada de texto y los dos valores posibles son **detallado** y **normal**.  
   
-##  <a name="bkmk_executionlog3"></a> Campos de registro (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> Campos de registro (ExecutionLog3)  
  En esta vista, se agregaron nodos de diagnóstico adicionales en la columna **AdditionalInfo** basada en XML. La columna AdditionalInfo contiene una estructura XML de 1 a muchos campos adicionales de información. La siguiente es una instrucción Transact-SQL de ejemplo para recuperar filas de la vista ExecutionLog3. En el ejemplo se supone que la base de datos del servidor de informes se denomina **ReportServer**:  
   
 ```  
@@ -114,22 +114,22 @@ select * from ExecutionLog3 order by TimeStart DESC
 |ItemPath|Ruta de acceso donde se almacena un informe o un elemento de informe.|  
 |UserName|Identificador del usuario.|  
 |ExecutionID|Identificador interno asociado a una solicitud. Las solicitudes en las mismas sesiones de usuario comparten el mismo identificador de ejecución.|  
-|RequestType|Valores posibles:<br />**Interactive**<br />**Suscripción**<br /><br /> <br /><br /> El análisis de los datos de registro filtrados por RequestType=Subscription y ordenados por TimeStart pueden revelar los periodos de mucho uso de suscripciones y puede indicar la conveniencia de modificar algunas de las suscripciones de informe a un momento diferente.|  
+|RequestType|Valores posibles:<br />**Interactivo**<br />**Suscripción**<br /><br /> <br /><br /> El análisis de los datos de registro filtrados por RequestType=Subscription y ordenados por TimeStart pueden revelar los periodos de mucho uso de suscripciones y puede indicar la conveniencia de modificar algunas de las suscripciones de informe a un momento diferente.|  
 |Formato|Formato de representación.|  
 |Parámetros|Valores de parámetros utilizados para la ejecución de un informe.|  
-|ItemAction|Valores posibles:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Ejecut**<br /><br /> **RenderEdit**|  
+|ItemAction|Valores posibles:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **FindString**<br /><br /> **Ejecut**<br /><br /> **RenderEdit**|  
 |TimeStart|Horas de inicio y detención que indican la duración del procesamiento de un informe.|  
 |TimeEnd||  
 |TimeDataRetrieval|Número de milisegundos empleados en recuperar los datos.|  
 |TimeProcessing|Número de milisegundos empleados en procesar el informe.|  
 |TimeRendering|Número de milisegundos empleados en representar el informe.|  
-|Source|Origen de la ejecución del informe. Valores posibles:<br /><br /> **En vivo**<br /><br /> **Cache**: indica una ejecución almacenada en caché; por ejemplo, no se ejecutan consultas de conjunto de los conjuntos de los mismos.<br /><br /> **Archivos**<br /><br /> **Historial**<br /><br /> **Adhoc** : indica un informe detallado basado en un modelo de informe generado dinámicamente, o un informe generador de informes que se muestra como vista previa en un cliente mediante el servidor de informes para su procesamiento y representación.<br /><br /> **Sesión**: indica una solicitud de seguimiento en una sesión ya establecida.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**: indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
+|Source|Origen de la ejecución del informe. Valores posibles:<br /><br /> **En vivo**<br /><br /> **Cache**: indica una ejecución almacenada en caché; por ejemplo, no se ejecutan consultas de conjunto de los conjuntos de los mismos.<br /><br /> **Instantánea**<br /><br /> **Historial**<br /><br /> **Adhoc** : indica un informe detallado basado en un modelo de informe generado dinámicamente, o un informe generador de informes que se muestra como vista previa en un cliente mediante el servidor de informes para su procesamiento y representación.<br /><br /> **Sesión**: indica una solicitud de seguimiento en una sesión ya establecida.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**: indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
 |Status|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
 |AdditionalInfo|Un contenedor de propiedades XML que incluye información adicional sobre la ejecución. El contenido puede ser diferente para cada fila.|  
   
-##  <a name="bkmk_additionalinfo"></a> El campo AdditionalInfo  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> El campo AdditionalInfo  
  El campo AdditionalInfo es un contenedor de propiedades o estructura XML que incluye información adicional sobre la ejecución. El contenido puede ser diferente para cada fila del registro.  
   
  Las tablas siguientes son ejemplos de los contenidos del campo AddtionalInfo para el registro estándar y el registro detallado:  
@@ -297,7 +297,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> Campos de registro (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a>Campos de registro (ExecutionLog2)  
  Esta vista ha agregado algunos campos nuevos y ha cambiado el nombre de otros. La siguiente es una instrucción Transact-SQL de ejemplo para recuperar filas de la vista ExecutionLog2. En el ejemplo se supone que la base de datos del servidor de informes se denomina **ReportServer**:  
   
 ```  
@@ -323,12 +323,12 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |Source|Origen de la ejecución del informe (1=Activo, 2=Caché, 3=Instantánea, 4=Historial).|  
-|Status|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
+|Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
 |AdditionalInfo|Un contenedor de propiedades XML que incluye información adicional sobre la ejecución.|  
   
-##  <a name="bkmk_executionlog"></a> Campos de registro (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a>Campos de registro (ExecutionLog)  
  La siguiente es una instrucción Transact-SQL de ejemplo para recuperar filas de la vista ExecutionLog. En el ejemplo se supone que la base de datos del servidor de informes se denomina **ReportServer**:  
   
 ```  
@@ -353,12 +353,12 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeProcessing||  
 |TimeRendering||  
 |Source|Origen de la ejecución del informe. Valores posibles: (1=Activo, 2=Caché, 3=Instantánea, 4=Historial, 5=Adhoc, 6=Sesión, 7=RDCE).|  
-|Status|Valores posibles: rsSuccess, rsProcessingAborted o un código de error. Si aparecen varios errores, solo se registra el primero.|  
+|Estado|Valores posibles: rsSuccess, rsProcessingAborted o un código de error. Si aparecen varios errores, solo se registra el primero.|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [Activar Reporting Services eventos para el registro de seguimiento de SharePoint &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

@@ -11,22 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4d8e18215c6078026b617e079879da1eadbca612
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095963"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-reporting-services-standard-and-enterprise"></a>Cambios en los límites de CPU y de memoria de SQL Server Reporting Services Standard y Enterprise
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services Standard y Enterprise admite un máximo de 64 gigabytes de memoria del sistema.  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ### <a name="description"></a>Descripción  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services Standard y Enterprise admite un máximo de 64 gigabytes de memoria del sistema. Puede que tenga que cambiar la configuración actual del sistema para adaptarla a los nuevos límites.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services Standard y Enterprise admite un máximo de 64 gigabytes de memoria del sistema. Puede que tenga que cambiar la configuración actual del sistema para adaptarla a los nuevos límites.  
   
  Para obtener más información acerca de los límites de CPU y memoria [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para otras ediciones de, vea límites de la [capacidad de cálculo por edición de SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)y [memoria compatible con las ediciones de SQL Server](https://go.microsoft.com/fwlink/?LinkId=212633).  
   

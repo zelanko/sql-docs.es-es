@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35ac6191407e02a2dc15ab210c5e9276e761df75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098681"
 ---
 # <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>&#39;novedades de Generador de informes para SQL Server 2014
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] presenta diversas características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
  Para obtener información acerca de las características de esta [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] versión para otros productos y tecnologías, consulte [novedades de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "66098681"
 > [!TIP]  
 >  Para obtener la información y los recursos más recientes con respecto a las nuevas características de esta versión, vea [Información adicional sobre las novedades de SQL Server Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkId=207147).  
   
-##  <a name="ExcelRenderer"></a>Representador de Excel para Microsoft Excel 2007-2010 y Microsoft Excel 2003  
+##  <a name="excel-renderer-for-microsoft-excel-2007-2010-and-microsoft-excel-2003"></a><a name="ExcelRenderer"></a>Representador de Excel para Microsoft Excel 2007-2010 y Microsoft Excel 2003  
  La extensión de representación de Excel de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , nueva en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], procesa un informe como un documento de Excel compatible con [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007-2010, así como con [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003, gracias al Paquete de compatibilidad de Microsoft Office para formatos de archivos de Word, Excel y PowerPoint instalado. El formato es Office Open XML y la extensión de los archivos es .xlsx.  
   
  Esta extensión de representación de Excel elimina las limitaciones de la versión anterior, compatible con Excel 2003. A continuación se indican las mejoras de la extensión de representación:  
@@ -41,7 +40,7 @@ ms.locfileid: "66098681"
   
  Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
-##  <a name="WordRenderer"></a>Representador de Word para Microsoft Word 2007-2010 y Microsoft Word 2003  
+##  <a name="word-renderer-for-microsoft-word-2007-2010-and-microsoft-word-2003"></a><a name="WordRenderer"></a>Representador de Word para Microsoft Word 2007-2010 y Microsoft Word 2003  
  La extensión de representación de Word de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , nueva en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], procesa un informe como un documento de Word compatible con [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2007-2010, así como con [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2003, gracias al Paquete de compatibilidad de [!INCLUDE[msCoName](../includes/msconame-md.md)] Office para formatos de archivos de Word, Excel y PowerPoint instalado. El formato es Office Open XML y la extensión de los archivos es .docx.  
   
  Además de hacer que las características nuevas de Word 2007-2010 estén disponibles en los informes exportados, los archivos *.docx de los informes exportados suelen ser menores. Los informes exportados mediante el representador de Word suelen ser mucho menores que los mismos informes exportados mediante el representador de Word 2003.  

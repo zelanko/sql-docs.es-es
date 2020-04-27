@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 83476172dc43e99394dd1c5d5a71f3d835f47f10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097129"
 ---
 # <a name="editionname-property-wmi-msreportserver_instance"></a>Propiedad EditionName (MSReportServer_Instance de WMI)
@@ -33,14 +33,13 @@ public string EditionName;
 ```  
   
 ## <a name="property-value"></a>Valor de la propiedad  
- 
-  `string` que contiene el nombre legible de la edición del servidor de informes.  
+ `string` que contiene el nombre legible de la edición del servidor de informes.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_Instance](msreportserver-instance-members.md)  

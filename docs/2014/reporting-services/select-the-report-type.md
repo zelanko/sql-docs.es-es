@@ -13,22 +13,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bcb4a2b4a542409e34eddac45b446cbff15c2821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101426"
 ---
 # <a name="select-the-report-type"></a>Seleccionar el tipo de informe
   Utilice esta página del Asistente para informes para seleccionar un informe tabular o un informe de matriz.  
   
 ## <a name="options"></a>Opciones  
- **Tabular**  
+ **Tabla**  
  Cree un informe que contiene una tabla. Una tabla es una región de datos donde los datos se organizan en columnas y filas. Las tablas tienen una conjunto estático de columnas y el número de filas depende de los datos del conjunto de datos.  
   
  Las páginas siguientes del asistente proporcionan opciones para definir la tabla.  
   
- **Matrix**  
+ **Matrices**  
  Cree un informe que contiene una matriz. Una matriz es una región de datos donde los datos se organizan en columnas y filas. Las matrices ofrecen funcionalidad similar a la de las tablas de referencias cruzadas (crosstab) y las tablas dinámicas. A diferencia de las tablas, que contienen un conjunto estático de columnas, las columnas de las matrices pueden ser dinámicas.  
   
  Las páginas siguientes del asistente proporcionan opciones para definir la matriz.  

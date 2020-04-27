@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 555f3e8d88554737a618b6acea76cc8907474ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097375"
 ---
 # <a name="virtualdirectoryreportmanager-property-wmi-msreportserver_configurationsetting"></a>Propiedad VirtualDirectoryReportManager (WMI MSReportServer_ConfigurationSetting)
@@ -33,14 +33,13 @@ public string VirtualDirectoryReportManager;
 ```  
   
 ## <a name="property-values"></a>Valores de propiedad  
- 
-  `string` que contiene el directorio virtual.  
+ `string` que contiene el directorio virtual.  
   
 ## <a name="example-code"></a>Código de ejemplo  
  [Clase MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

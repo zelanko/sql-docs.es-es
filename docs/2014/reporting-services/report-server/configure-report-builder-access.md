@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104026"
 ---
 # <a name="configure-report-builder-access"></a>Configurar el acceso al Generador de informes
-  Generador de informes es una herramienta de notificación ad hoc que se instala con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] un servidor de informes configurado para el modo nativo o para el modo de integración de SharePoint.  
+  El Generador de informes es una herramienta de notificación ad hoc que se instala con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para modo nativo o para modo de integración con SharePoint.  
   
  El acceso al Generador de informes depende de los factores siguientes:  
   
@@ -34,11 +34,10 @@ ms.locfileid: "66104026"
   
  Para utilizar el Generador de informes, debe tener un modelo de informe publicado con el que trabajar.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  El Generador de informes no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- El equipo cliente debe tener [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado 2,0. 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+ El equipo cliente debe tener [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado 2,0. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
   
  Debe utilizar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 o posterior.  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66104026"
   
 7.  Haga clic en la pestaña **Configuración de carpeta** .  
   
-8.  Haga clic en la pestaña **Security**.  
+8.  Haga clic en la pestaña **Security** (Seguridad).  
   
 9. Si ya existe una asignación de roles para el usuario o el grupo cuyo acceso al Generador de informes desea configurar, haga clic en **Editar**.  
   
@@ -161,14 +160,14 @@ ms.locfileid: "66104026"
 |Negotiate (valor predeterminado)<br /><br /> NTLM (valor predeterminado)|Con la seguridad integrada de Windows, las solicitudes autenticadas de ClickOnce y del Generador de informes suelen tener éxito si el cliente y el servidor están implementados en el mismo dominio, el usuario inicia sesión en el equipo cliente utilizando una cuenta de dominio con permiso para tener acceso al Generador de informes y el servidor de informes se configura para la autenticación de Windows.<br /><br /> Las solicitudes tienen éxito porque ClickOnce y la conexión del explorador con el servidor de informes tienen la misma identidad de usuario.<br /><br /> Se producirá un error en las solicitudes si el usuario ha abierto Internet Explorer con Ejecutar como y ha especificado credenciales no predeterminadas. Si la sesión de usuario en el servidor de informes se establece bajo una cuenta concreta y ClickOnce se ejecuta en una cuenta diferente, el servidor de informes denegará el acceso a los archivos.|  
 |Kerberos|Internet Explorer, que es necesario para utilizar el Generador de informes, no admite directamente Kerberos.|  
 |Autenticación básica|ClickOnce no admite la autenticación básica. No formulará solicitudes que especifiquen la autenticación básica en el encabezado de autenticación. No pasará credenciales ni pedirá al usuario que las proporcione. Estos problemas se pueden evitar habilitando el acceso anónimo a los archivos de aplicación del Generador de informes.<br /><br /> Las solicitudes tendrán éxito si se habilita el acceso anónimo a los archivos de aplicación del Generador de informes porque el servidor de informes omite el encabezado de autenticación. Para más información sobre cómo habilitar el acceso anónimo al Generador de informes, vea [Configurar la autenticación básica en el servidor de informes](../security/configure-basic-authentication-on-the-report-server.md).<br /><br /> Una vez que ClickOnce recupera los archivos de aplicación, el Generador de informes abre una conexión independiente con un servidor de informes. Los usuarios deben volver a escribir sus credenciales para conseguir que el Generador de informes se conecte al servidor de informes. El Generador de informes no recopila credenciales de Internet Explorer o de ClickOnce.<br /><br /> Se producirá un error en las solicitudes si el servidor de informes se configura para la autenticación básica y no se ha habilitado el acceso anónimo a los archivos de programa del Generador de informes. Se produce un error en la solicitud porque ClickOnce especifica la seguridad integrada de Windows en sus solicitudes. Si configura el servidor de informes para autenticación básica, el servidor rechazará la solicitud porque especifica un paquete de seguridad no válido y porque carece de las credenciales que el servidor de informes espera.<br /><br /> Además, si el servidor de informes se configura para utilizar el modo integrado de SharePoint y el sitio de SharePoint utiliza la autenticación básica, los usuarios encontrarán un error 401 cuando intenten utilizar ClickOnce para instalar el Generador de informes en sus equipos cliente. Esto ocurre porque SharePoint utiliza una cookie para conservar un usuario autenticado mientras dure la sesión, pero ClickOnce no admite la cookie. Cuando un usuario inicia una aplicación ClickOnce, como el Generador de informes, la aplicación no pasa la cookie a SharePoint y, por tanto, SharePoint deniega el acceso y devuelve un error 401.<br /><br /> Puede solucionar este problema con una de las opciones siguientes:<br /><br /> Seleccione la opción **recordar mi contraseña** cuando proporcione sus credenciales de usuario.<br /><br /> Habilite el acceso anónimo a la colección de sitios de SharePoint.<br /><br /> Configure el entorno para que el usuario no proporcione credenciales. Por ejemplo, en un entorno de intranet puede configurar el servidor de SharePoint para que pertenezca a un grupo de trabajo y, a continuación, crear las cuentas de usuario en el equipo local.|  
-|Personalizado|Cuando se configura un servidor de informes para utilizar la autenticación personalizada, el acceso anónimo se habilita en el servidor de informes y las solicitudes se aceptan sin comprobación de la autenticación.<br /><br /> Una vez que ClickOnce recupera los archivos de aplicación, el Generador de informes abre una conexión independiente con un servidor de informes. Los usuarios deben volver a escribir sus credenciales para conseguir que el Generador de informes se conecte al servidor de informes. El Generador de informes no recopila credenciales de Internet Explorer o de ClickOnce.|  
+|Personalizada|Cuando se configura un servidor de informes para utilizar la autenticación personalizada, el acceso anónimo se habilita en el servidor de informes y las solicitudes se aceptan sin comprobación de la autenticación.<br /><br /> Una vez que ClickOnce recupera los archivos de aplicación, el Generador de informes abre una conexión independiente con un servidor de informes. Los usuarios deben volver a escribir sus credenciales para conseguir que el Generador de informes se conecte al servidor de informes. El Generador de informes no recopila credenciales de Internet Explorer o de ClickOnce.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Autenticación con el servidor de informes](../security/authentication-with-the-report-server.md)   
  [Planeación de la compatibilidad con exploradores de Reporting Services y Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Iniciar Generador de informes &#40;Generador de informes&#41;](../report-builder/start-report-builder.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
- [Conectar con un servidor de informes en Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
  [Propiedades del sistema del servidor de informes](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

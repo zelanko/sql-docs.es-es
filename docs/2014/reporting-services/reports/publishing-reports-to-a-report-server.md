@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102493"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicar informes en un servidor de informes
@@ -58,8 +58,8 @@ ms.locfileid: "66102493"
  Cuando se publica un proyecto del servidor de informes, se publican todos los informes del proyecto. Todos los informes se implementan utilizando la misma configuración de proyecto: el mismo servidor de informes, la misma carpeta en el servidor, etc. Para publicar informes en servidores diferentes, publíquelos uno por uno o incluya solo los que desee en el proyecto del servidor de informes. Una solución puede incluir varios proyectos del servidor de informes. Utilizar varios proyectos podría facilitar la administración de la implementación de informes porque se puede usar una configuración diferente para implementar proyectos distintos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Páginas de propiedades del proyecto (cuadro de diálogo)](../tools/project-property-pages-dialog-box.md)   
+ [Cuadro de diálogo páginas de propiedades del proyecto](../tools/project-property-pages-dialog-box.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Actualización de informes](../install-windows/upgrade-reports.md)  
+ [Actualizar informes](../install-windows/upgrade-reports.md)  
   
   

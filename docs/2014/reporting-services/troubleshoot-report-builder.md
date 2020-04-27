@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099342"
 ---
 # <a name="troubleshoot-report-builder"></a>Solucionar problemas del Generador de informes
@@ -25,7 +25,7 @@ ms.locfileid: "66099342"
  Los temas siguientes pueden ayudarle a solucionar problemas de informes, dependiendo de si es autor del informe o administrador del servidor de informes.  
   
 ## <a name="report-authors"></a>Autores de informes  
- [Solucionar problemas de informes: informes de mapa &#40;Generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [Solucionar problemas de elementos de informe &#40;Generador de informes y SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   

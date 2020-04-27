@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103050"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Elemento web Visor de informes en un sitio de SharePoint
@@ -40,19 +40,19 @@ ms.locfileid: "66103050"
 ## <a name="web-part-components"></a>Componentes del elemento web  
  En el área de visualización se muestra un informe en HTML. Según el modo en que el elemento web esté configurado, el área de visualización puede maximizarse para mostrar el informe en modo de página completa o bien puede compartir el espacio disponible con paneles adyacentes y una barra de herramientas.  
   
- La barra de herramientas proporciona características de navegación en páginas, búsqueda, zoom y exportación para poder ver un informe en otro formato de aplicación. También proporciona funciones de impresión opcionales, incluidas la salida impresa paginada de informes HTML y la capacidad de cambiar el diseño de página y la configuración de los márgenes. En el menú **acciones** de la barra de herramientas, se incluye **abrir con generador de informes, suscribir**, **exportar**e **Imprimir** . Los controles de navegación en páginas y zoom están directamente en la barra de herramientas.  
+ La barra de herramientas proporciona características de navegación en páginas, búsqueda, zoom y exportación para poder ver un informe en otro formato de aplicación. También proporciona funciones de impresión opcionales, incluidas la salida impresa paginada de informes HTML y la capacidad de cambiar el diseño de página y la configuración de los márgenes. Las funciones**Abrir con el Generador de informes, Suscribir**, **Exportar**e **Imprimir** se proporcionan en el menú **Acciones** de la barra de herramientas. Los controles de navegación en páginas y zoom están directamente en la barra de herramientas.  
   
 > [!NOTE]  
 >  No puede personalizar la barra de herramientas a menos que escriba código para ello, pero puede establecer las propiedades para ocultar todos o algunos de sus controles.  
   
 ### <a name="export-action-on-the-report-toolbar"></a>Acción de exportación en la barra de herramientas de informe  
- **Exportar** en el menú **acciones** muestra los formatos de aplicación que están asociados a las extensiones de representación implementadas en un servidor de informes. Para determinar la disponibilidad de un formato específico, puede agregar o quitar una extensión de representación en el servidor de informes o bien puede modificar la configuración para quitar un formato de exportación determinado de la lista. También puede especificar la configuración en el servidor de informes para controlar los formatos que están disponibles. Puede modificar el comportamiento predeterminado de un formato concreto; para ello, agregue y modifique la configuración de esa extensión de representación.  
+ La opción**Exportar** del menú **Acciones** muestra los formatos de aplicación asociados a extensiones de representación implementadas en un servidor de informes. Para determinar la disponibilidad de un formato específico, puede agregar o quitar una extensión de representación en el servidor de informes o bien puede modificar la configuración para quitar un formato de exportación determinado de la lista. También puede especificar la configuración en el servidor de informes para controlar los formatos que están disponibles. Puede modificar el comportamiento predeterminado de un formato concreto; para ello, agregue y modifique la configuración de esa extensión de representación.  
   
 ### <a name="print-action-on-the-report-toolbar"></a>Acción de impresión en la barra de herramientas de informe  
- **Imprimir** en el menú **acciones** es la funcionalidad de impresión personalizada que se [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]proporciona a través de. Al hacer clic en **Imprimir**, se descarga un control de impresión del lado cliente ActiveX en el equipo cliente. En la mayoría de los casos, el usuario que hace clic en **Imprimir** debe tener permisos de administrador en el equipo local. Una práctica habitual es restringir las descargas de controles ActiveX solo a los usuarios que tienen permisos de administrador. Puede usar administración central de SharePoint para habilitar o deshabilitar la descarga del control de impresión del lado cliente.  
+ La opción**Imprimir** del menú **Acciones** es la funcionalidad de impresión personalizada que se proporciona mediante [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Al hacer clic en **Imprimir**, se descarga un control de impresión del lado cliente ActiveX en el equipo cliente. En la mayoría de los casos, el usuario que hace clic en **Imprimir** debe tener permisos de administrador en el equipo local. Una práctica habitual es restringir las descargas de controles ActiveX solo a los usuarios que tienen permisos de administrador. Puede usar administración central de SharePoint para habilitar o deshabilitar la descarga del control de impresión del lado cliente.  
   
 ### <a name="find-action-on-the-report-toolbar"></a>Acción de búsqueda en la barra de herramientas de informe  
- **Buscar** en el menú **acciones** proporciona una manera de moverse a una ubicación de destino en el informe. Puede buscar contenido en un informe si escribe una palabra o frase que desee buscar. El valor máximo de un término de búsqueda es de 256 caracteres. Al encontrar un valor coincidente en el informe, el enfoque se desplaza a la parte del informe que contiene el valor.  
+ La opción**Buscar** del menú **Acciones** proporciona un método para desplazarse hasta una ubicación de destino del informe. Puede buscar contenido en un informe si escribe una palabra o frase que desee buscar. El valor máximo de un término de búsqueda es de 256 caracteres. Al encontrar un valor coincidente en el informe, el enfoque se desplaza a la parte del informe que contiene el valor.  
   
  Al especificar un valor para buscar, escriba el valor tal y como espera que aparezca en el informe. No plantee ninguna pregunta del tipo "¿cuál es el beneficio medio de este mes?", salvo que esté buscando una frase con todas estas palabras en el informe.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66103050"
  La configuración de seguridad de modelos y bases de datos que restringe el acceso a los datos de informe se aplica a las operaciones de búsqueda. Si está buscando un valor en un informe click-through que usa un modelo como origen de datos, y no dispone de acceso a parte del modelo, los datos representados por dicha parte del modelo se excluirán de la búsqueda.  
   
 ### <a name="panes-for-specifying-credentials-and-parameters"></a>Paneles para especificar credenciales y parámetros  
- **Las credenciales** y **los parámetros** son paneles que aparecen junto al área de vista. **Credenciales** aparece cuando la conexión del origen de datos del informe está configurada para solicitar al usuario una cuenta y una contraseña con derechos de acceso al origen de datos. **Parámetros** aparece cuando el informe acepta la entrada del usuario para los parámetros definidos en el informe.  
+ Los paneles**Credenciales** y **Parámetros** aparecen al lado del área de visualización. **Credenciales** aparece cuando la conexión del origen de datos del informe está configurada para solicitar al usuario una cuenta y una contraseña con derechos de acceso al origen de datos. **Parámetros** aparece cuando el informe acepta la entrada del usuario para los parámetros definidos en el informe.  
   
 ### <a name="setting-properties-on-the-report-viewer-web-part"></a>Establecer propiedades en el elemento web Visor de informes  
  Las propiedades del elemento web son propiedades personalizadas específicas para el Visor de informes y propiedades generales que puede establecer para cualquier elemento web. Para obtener más información, vea [Personalizar el elemento web Visor de informes](../../2014/reporting-services/customize-the-report-viewer-web-part.md).  

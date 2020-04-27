@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101382"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Seleccionar color (Generador de informes y SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66101382"
  **Selector de colores**  
  Elija una de las tres opciones para especificar cómo desea seleccionar los colores:  
   
--   **Selector-círculo de colores** Elija un color con los valores de color Hue/saturación/luminosidad (HSB).  
+-   **Selector - Círculo de colores:** elija un color con los valores HSB (matiz/saturación/luminosidad).  
   
--   **Selector-cuadrado de colores** Elija un color con los valores de color rojo, verde y azul (RGB).  
+-   **Selector - Cuadrado de colores:** elija un color con los valores RGB (rojo/verde/azul).  
   
--   **Paleta-colores estándar** Elija un color de una lista predefinida de valores de color.  
+-   **Paleta - Colores estándar:** elija un color de una lista predefinida de valores de color.  
   
  **Círculo de colores**  
  Se usa para los colores HSB porque los valores HSB se asignan a un sistema de coordenadas cilíndrico. El matiz es el color propiamente dicho, la saturación es la pureza del color y la luminosidad es su luminosidad u oscuridad relativa.  
@@ -62,7 +62,7 @@ ms.locfileid: "66101382"
  **Azul**  
  El valor decimal para la parte azul del color RGB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
- **Alfa**  
+ **Alpha**  
  El valor decimal para alfa o la transparencia del color. Cuando este valor está habilitado, puede usar el control deslizante para ajustar el grado de transparencia que desee.  
   
  **Hue**  
@@ -74,7 +74,7 @@ ms.locfileid: "66101382"
  **Brillo**  
  El valor decimal para la luminosidad del color HSB. Use el cuadro de número para cambiar el valor o escriba un valor entre 0 y 255.  
   
- **Ejemplo de color**  
+ **Muestra de color**  
  Muestra el color actual en la mitad izquierda del panel e interactivamente muestra el nuevo color que se está eligiendo en la mitad derecha del panel. Si no hay ningún color predeterminado, la mitad izquierda del panel es blanca. La mayoría de las propiedades RDL no tienen ningún color predeterminado.  
   
 ## <a name="see-also"></a>Consulte también  

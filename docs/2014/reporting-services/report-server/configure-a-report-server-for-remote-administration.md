@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104102"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurar un servidor de informes para la administración remota
@@ -120,7 +120,7 @@ ms.locfileid: "66104102"
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Para establecer permisos para el espacio de nombres de WMI del servidor de informes para usuarios que no son administradores  
   
-1.  En el menú Inicio, seleccione **Herramientas administrativas**y haga clic en **Administración de equipos**.  
+1.  En el menú Inicio, seleccione **Herramientas administrativas** y haga clic en **Administración de equipos**.  
   
 2.  Abra la carpeta Servicios y Aplicaciones.  
   

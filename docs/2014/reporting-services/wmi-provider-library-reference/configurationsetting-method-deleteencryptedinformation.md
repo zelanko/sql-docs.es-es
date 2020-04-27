@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4ffe9834ea57f3f4a0d48387f631ae08a45182ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098522"
 ---
 # <a name="deleteencryptedinformation-method-wmi-msreportserver_configurationsetting"></a>Método DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting)
@@ -39,7 +39,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
  *ExtendedErrors[]*  
@@ -62,7 +62,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
  Llamar al método DeleteEncryptedInformation no afecta al archivo de configuración del servidor de informes.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100921"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Pausar el procesamiento de informes y suscripciones
@@ -47,7 +47,7 @@ ms.locfileid: "66100921"
  Cuando un informe o una suscripción se ejecutan desde una programación compartida, es posible pausar la programación para evitar el procesamiento. Cualquier proceso de informes o suscripciones controlado por una programación se pospone hasta que se vuelve a reanudar la programación. Para obtener más información, vea [pausar y reanudar programaciones compartidas](schedules.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Reporting Services servidor de informes &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md)   
  [Página de propiedades de seguridad, elementos &#40;Administrador de informes&#41;](../security-properties-page-items-report-manager.md)  
   

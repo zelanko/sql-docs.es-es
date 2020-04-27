@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6c4bf8f67f787214d38148db40ea8122a064a42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099826"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
@@ -57,10 +57,10 @@ ms.locfileid: "66099826"
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a>Ubicación del archivo  
- **RS. exe** se encuentra en **\Archivos de programa\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> Ubicación del archivo  
+ **RS.exe** se encuentra en **\Archivos de programa\Microsoft SQL Server\110\Tools\Binn**. Puede ejecutar la utilidad desde cualquier carpeta del sistema de archivos.  
   
-##  <a name="bkmk_arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a>Argumentos  
  **-?**  
  (Opcional) Muestra la sintaxis de los argumentos de **rs** .  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66099826"
  (Opcional) Especifica que los comandos del archivo de script se ejecutan en un lote. Si se produce un error en alguno de los comandos, se revierte el lote. Algunos comandos no se pueden ejecutar por lotes y se ejecutan de la manera habitual. Solo si se producen excepciones que no se controlan dentro del script tiene lugar una operación de reversión. Si el script controla una excepción y vuelve con normalidad desde `Main`, se confirma el lote. Si omite este parámetro, los comandos se ejecutan sin crear un lote. Para obtener más información, consulte [Batching Methods](../report-server-web-service-net-framework-soap-headers/batching-methods.md).  
   
  `-v` *globalvar*  
- (Opcional) Especifica las variables globales que se usan en el script. Si el script utiliza variables globales, debe especificar este argumento. El valor que especifique debe ser válido para la variable global definida en el archivo .rss. Debe especificar una variable global para cada argumento **-v**.  
+ (Opcional) Especifica las variables globales que se usan en el script. Si el script utiliza variables globales, debe especificar este argumento. El valor que especifique debe ser válido para la variable global definida en el archivo .rss. Debe especificar una variable global para cada argumento **-v** .  
   
  El argumento `-v` se especifica en la línea de comandos y se usa para establecer el valor de una variable global que se define en el script en tiempo de ejecución. Por ejemplo, si el script contiene una variable con nombre *parentFolder*, puede especificar un nombre para dicha carpeta en la línea de comandos:  
   
@@ -109,10 +109,10 @@ ms.locfileid: "66099826"
  **-t**  
  (Opcional) Muestra mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permisos  
  Para ejecutar la herramienta, debe tener permiso para conectarse a la instancia del servidor de informes en la que se está ejecutando el script. Puede ejecutar scripts para realizar cambios en el equipo local o en un equipo remoto. Para realizar cambios en un servidor de informes instalado en un equipo remoto, especifique el equipo remoto en el argumento `-s`.  
   
-##  <a name="bkmk_examples"></a>Example  
+##  <a name="examples"></a><a name="bkmk_examples"></a> Ejemplos  
  En el ejemplo siguiente se muestra cómo especificar el archivo de script que contiene el script de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET y los métodos del servicio Web que se desea ejecutar.  
   
 ```  

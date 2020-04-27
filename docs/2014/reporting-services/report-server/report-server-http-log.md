@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103396"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
@@ -35,7 +35,7 @@ ms.locfileid: "66103396"
 |**Creación y retención de archivos**|El registro HTTP se crea tras habilitarlo en el archivo de configuración, de reiniciar el servicio y de que el servidor de informes procese una solicitud HTTP. Si configura los valores pero no ve el archivo de registro, abra un informe o inicie una aplicación de servidor de informes (como el Administrador de informes) para generar una solicitud HTTP y crear el archivo.<br /><br /> Se creará una nueva instancia del archivo de registro después de cada reinicio del servicio y de la solicitud HTTP subsiguiente al servidor de informes.<br /><br /> De manera predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>Parámetros de configuración para el registro HTTP del servidor de informes  
- Para configurar el registro HTTP del servidor de informes, use el Bloc de notas para modificar el archivo **ReportingServicesService. exe. config** . El archivo de configuración se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
+ Para configurar el registro HTTP del servidor de informes, utilice el Bloc de notas para modificar el archivo **ReportingServicesService.exe.config** . El archivo de configuración se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
  Para habilitar el servidor HTTP, agregue `http:4` a la sección RStrace del archivo ReportingServicesService.exe.config. Las restantes entradas del archivo de registro HTTP son opcionales. El ejemplo siguiente incluye todos los valores para que pueda pegar la sección entera sobre la sección RStrace y, a continuación, eliminar los valores que no sean necesarios.  
   

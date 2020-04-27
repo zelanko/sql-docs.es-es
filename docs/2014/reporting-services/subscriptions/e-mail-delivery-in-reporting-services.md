@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100885"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100885"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo de SharePoint &#124; SharePoint 2010 y SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
 ## <a name="e-mail-delivery-options"></a>Opciones de entrega por correo electrónico  
  La entrega por correo electrónico del servidor de informes puede entregar informes de las siguientes maneras:  
@@ -47,8 +47,7 @@ ms.locfileid: "66100885"
   
      Si el explorador es compatible con HTML 4.0 y MHTML, y se elige el formato de representación Archivo web, el informe se incrusta como parte del mensaje. Los demás formatos de representación (CSV, PDF, etc.) entregan los informes como datos adjuntos. Puede deshabilitar esta funcionalidad en el archivo de configuración RSReportServer.  
   
-     
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no comprueba el tamaño de los datos adjuntos ni del mensaje antes de enviar el informe. Si los datos adjuntos o el mensaje superan el límite máximo permitido por el servidor de correo, el informe no se entrega. Elija una de las otras opciones de entrega (como dirección URL o notificación) si el informe es de gran tamaño.  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no comprueba el tamaño de los datos adjuntos ni del mensaje antes de enviar el informe. Si los datos adjuntos o el mensaje superan el límite máximo permitido por el servidor de correo, el informe no se entrega. Elija una de las otras opciones de entrega (como dirección URL o notificación) si el informe es de gran tamaño.  
   
  Establezca las opciones de entrega que determinarán cómo se entrega un informe al crear la suscripción. Por ejemplo, si selecciona **Incluir vínculo** en la suscripción, en el mensaje de correo se incluirá un hipervínculo al informe.  
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096835"
 ---
 # <a name="accept-license-terms"></a>Aceptar los términos de licencia
@@ -27,13 +27,10 @@ ms.locfileid: "66096835"
   
  Puede imprimir el contrato de licencia o copiarlo al Portapapeles. Para continuar, acepte los términos de licencia y, a continuación, haga clic en **Siguiente**. Para cerrar la instalación, haga clic en **Cancelar**.  
   
-## <a name="customer-experience-improvement-program-ceip"></a>Programa para la mejora de la experiencia del cliente (CEIP)  
- Si habilita los informes del CEIP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configura para enviar periódicamente un informe a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Los informes incluyen información acerca de la configuración del hardware y de cómo se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los componentes. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilizará los datos de uso de características para mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Entre los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que supervisa esta característica se incluyen los siguientes:  
+## <a name="customer-experience-improvement-program-ceip"></a>Programa para la mejora de la experiencia del usuario (CEIP)  
+ Si habilita los informes del CEIP, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configura para enviar periódicamente un informe a [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Los informes incluyen información acerca de la configuración del hardware y de cómo se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los componentes. [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilizará los datos de uso de características para mejorar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Entre los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que supervisa esta característica se incluyen los siguientes:  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]
-  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -45,7 +42,7 @@ ms.locfileid: "66096835"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Archivo  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ssNoVersion  
   
  La información sobre el uso de características se envía a [!INCLUDE[msCoName](../../includes/msconame-md.md)], donde se almacena limitando el acceso.  
   
@@ -68,11 +65,9 @@ ms.locfileid: "66096835"
  Informes de errores  
  Si habilita la característica Informes de errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configura para enviar automáticamente un informe a [!INCLUDE[msCoName](../../includes/msconame-md.md)] si se produce un error irrecuperable en alguno de los siguientes componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Directivas  
+-   e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -82,8 +77,7 @@ ms.locfileid: "66096835"
   
 -   Replicación  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] utiliza los informes de errores para mejorar la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y trata toda la información recibida de forma confidencial.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] utiliza los informes de errores para mejorar la funcionalidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y trata toda la información recibida de forma confidencial.  
   
  La información sobre los errores se envía a través de una conexión segura (https) a [!INCLUDE[msCoName](../../includes/msconame-md.md)], donde se almacena con limitación de acceso. O bien, puede enviar los informes de errores a su propio servidor de informes de errores corporativo.  
   
@@ -99,8 +93,7 @@ ms.locfileid: "66096835"
   
 -   Información procedente de la memoria o los archivos del proceso que ha causado el error.  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] no pretende obtener de forma intencionada archivos o información sobre el nombre, la dirección postal, la dirección de correo electrónico o información personal de otro tipo. Sin embargo, el informe de errores puede contener información personal procedente de la memoria o los archivos del proceso que ha causado el error. A pesar de que este tipo de información podría utilizarse potencialmente para determinar la identidad del usuario, [!INCLUDE[msCoName](../../includes/msconame-md.md)] no utiliza la información con este propósito.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] no pretende obtener de forma intencionada archivos o información sobre el nombre, la dirección postal, la dirección de correo electrónico o información personal de otro tipo. Sin embargo, el informe de errores puede contener información personal procedente de la memoria o los archivos del proceso que ha causado el error. A pesar de que este tipo de información podría utilizarse potencialmente para determinar la identidad del usuario, [!INCLUDE[msCoName](../../includes/msconame-md.md)] no utiliza la información con este propósito.  
   
  Para obtener más información sobre la directiva de recopilación de datos y privacidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea la [Declaración de privacidad de Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md).  
   

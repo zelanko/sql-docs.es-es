@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101086"
 ---
 # <a name="subscriptions-page-report-manager"></a>Suscripciones (página del Administrador de informes)
@@ -56,13 +56,13 @@ ms.locfileid: "66101086"
  **Edición**  
  Haga clic para ver o editar la descripción.  
   
- **Report**  
+ **Informe**  
  Cuando se abre esta página desde un origen de datos compartido, esta columna identifica el informe para el que se ha definido la suscripción. La columna **Carpeta** identifica la ubicación del informe.  
   
  **Descripción**  
  Muestra una descripción de la suscripción.  
   
- **Activado**  
+ **Desencadenador**  
  Identifica los criterios que hacen que se ejecute la suscripción. El desencadenador **TimedSubscription** se basa en una programación que define cuándo se ejecuta la suscripción. El desencadenador **SnapshotUpdated** se basa en la actualización de una instantánea de informe.  
   
  **Propietario**  

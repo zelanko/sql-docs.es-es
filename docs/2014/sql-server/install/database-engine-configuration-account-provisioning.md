@@ -11,27 +11,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095872"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Configuración del motor de base de datos - Aprovisionamiento de cuentas
   Use esta página para establecer el modo de seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como para agregar grupos o usuarios de Windows como administradores de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-## <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Consideraciones para ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="considerations-for-running-sscurrent"></a>Consideraciones para ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se aprovisionaba el grupo **BUILTIN\Administrators** como posibilidad en el inicio de sesión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y los miembros del grupo local Administradores podían iniciar sesión con sus credenciales de administrador. El uso de permisos elevados no es una práctica recomendada. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , el grupo **BUILTIN\Administrators** no se aprovisiona como inicio de sesión. En consecuencia, debería crear un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada usuario administrativo y agregarlo al rol fijo de servidor sysadmin durante la instalación de una nueva instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. También debe hacer esto para las cuentas de Windows que se utilizan para ejecutar trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También se incluyen las cuentas utilizadas para ejecutar trabajos del Agente de replicación.  
   
 ## <a name="options"></a>Opciones  
  **Modo de seguridad** : seleccione la autenticación de Windows o la autenticación de modo mixto para la instalación.  
   
- **Aprovisionamiento de entidad** de seguridad de Windows: en las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versiones anteriores de, el grupo local de Windows Builtin\Administrator [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estaba ubicado en el rol de servidor sysadmin, con lo que se concedía [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a los administradores de Windows acceso a la instancia de. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], el grupo Builtin\Administrator no se proporciona en el rol de servidor sysadmin. En su lugar, debería aprovisionar explícitamente administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las nuevas instalaciones durante la instalación.  
+ **Aprovisionamiento de entidad de seguridad de Windows** : en las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el grupo local Windows Builtin\Administrator estaba ubicado en el rol de servidor sysadmin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , con lo que se concedía a los administradores de Windows acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], el grupo Builtin\Administrator no se proporciona en el rol de servidor sysadmin. En su lugar, debería aprovisionar explícitamente administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las nuevas instalaciones durante la instalación.  
   
 > [!IMPORTANT]  
 >  Debe aprovisionar explícitamente administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las nuevas instalaciones durante la instalación. El programa de instalación no le permitirá continuar hasta que complete este paso.  
   
- **Especificar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administradores** : debe especificar al menos una entidad de seguridad de Windows para la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en el botón **Usuario actual** . Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, edite la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ **Especificar administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: debe especificar por lo menos una entidad de seguridad de Windows para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en el botón **Usuario actual** . Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Cuando termine de modificar la lista, haga clic en **Aceptar**y, a continuación, compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66095872"
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]No establezca nunca una contraseña de SA en blanco o no segura.  
+>  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] No establezca nunca una contraseña en blanco o no segura.  
   
  **Modo mixto (autenticación de Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticación de)**  
  Permite a los usuarios conectarse con la autenticación de Windows o la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los usuarios que se conectan mediante una cuenta de usuario de Windows pueden usar conexiones de confianza validadas por Windows.  
@@ -55,7 +55,7 @@ ms.locfileid: "66095872"
  Si tiene que elegir el modo de autenticación mixto y necesita utilizar inicios de sesión de SQL para incluir aplicaciones heredadas, debe establecer contraseñas seguras para todas las cuentas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]La autenticación solo se proporciona por motivos de compatibilidad con versiones anteriores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+>  La autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona únicamente por motivos de compatibilidad con versiones anteriores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
  **Escribir contraseña**  
  Escriba y confirme el inicio de sesión del administrador del sistema (sa). Las contraseñas son la primera línea de defensa contra los intrusos, por lo que establecer contraseñas seguras es esencial para la seguridad del sistema. No establezca nunca una contraseña en blanco o no segura.  

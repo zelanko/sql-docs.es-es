@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c3e943bcf63f4bcdff22d5425bf474d8aa4d80d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098176"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>Método RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
@@ -50,13 +50,13 @@ public void RemoveSSLCertificateBindings(string Application,
  *Puerto*  
  Puerto SSL asociado al enlace.  
   
- *LCID*  
+ *lcid*  
  Configuración regional que se utilizará para los mensajes de error que se devuelven.  
   
  *Error*  
  [out] Descripción del error que se produjo.  
   
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -66,7 +66,7 @@ public void RemoveSSLCertificateBindings(string Application,
  Este método quita el enlace específico del archivo rsreportserver.config y opcionalmente HTTP.SYS.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

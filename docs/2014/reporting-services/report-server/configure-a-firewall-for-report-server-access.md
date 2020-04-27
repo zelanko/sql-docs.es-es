@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104162"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurar un firewall para el acceso al servidor de informes
@@ -45,27 +45,27 @@ ms.locfileid: "66104162"
   
 3.  Haga clic en **Reglas de entrada**  
   
-4.  Haga clic en **nueva regla** en la ventana **acciones** **.**  
+4.  Haga clic en **Nueva regla** en la ventana **Acciones****.**  
   
 5.  Haga clic en **Puerto** en la sección **Regla de entrada.**  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  En la página **Protocolos y puertos** , haga clic en **TCP**.  
   
 8.  Seleccione **Puertos locales específicos** y escriba un valor de **80**.  
   
-9. Haga clic en **Next**.  
+9. Haga clic en **Siguiente**.  
   
 10. En la página **Acción** , haga clic en **Permitir la conexión**.  
   
-11. Haga clic en **Next**.  
+11. Haga clic en **Siguiente**.  
   
 12. En la página **Perfil** , haga clic en las opciones adecuadas para su entorno.  
   
-13. Haga clic en **Next**.  
+13. Haga clic en **Siguiente**.  
   
-14. En la página **Nombre** , escriba un nombre de**ReportServer (TCP en el puerto 80)** .  
+14. En la página **Nombre** , escriba un nombre de**ReportServer (TCP en el puerto 80)**.  
   
 15. Haga clic en **Finalizar**  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66104162"
   
 11. Reinicie el equipo.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Después de abrir el puerto y antes de confirmar si los usuarios remotos pueden tener acceso al servidor de informes en el puerto que abre, debe conceder acceso de usuario al servidor de informes a través de las asignaciones de roles en Inicio y en el nivel de sitio. Puede abrir un puerto correctamente y seguir teniendo conexiones del servidor de informes erróneas si los usuarios no tienen permisos suficientes. Para más información, vea [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../security/grant-user-access-to-a-report-server.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  También puede comprobar que el puerto se abre correctamente iniciando el Administrador de informes en un equipo diferente. Para más información, vea [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -103,7 +103,7 @@ ms.locfileid: "66104162"
 ## <a name="see-also"></a>Consulte también  
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Crear una base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Administración de un servidor de informes en modo nativo de Reporting Services](manage-a-reporting-services-native-mode-report-server.md)  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05ee617f1a065c44a7c593af244d778f76a7a627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098407"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>Método GetDatabaseVersionDisplayName (WMI)
@@ -39,26 +39,20 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *DisplayName*  
  [out] Una cadena que contiene el nombre para mostrar que corresponde a la versión proporcionada.  
   
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
 ## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se muestra la asignación de la versión de la base de datos para la cadena de nombre para mostrar.  
   
-|**Release**|`Version`|**Nombre para mostrar**|  
+|**Versión**|`Version`|**Nombre para mostrar**|  
 |-----------------|-----------------|----------------------|  
-|RS 2005 SP2|
-  @DBVersion = "C.0.8.54"|SQL Server 2005 SP2|  
-|RS 2005 SP1|
-  @DBVersion = "C.0.8.43"|SQL Server 2005 SP1|  
-|RS 2005 RTM|
-  @DBVersion = "C.0.8.40"|SQL Server 2005|  
-|RS 2000 SP2|
-  @DBVersion = "C.0.6.54"|SQL Server 2000 SP2|  
-|RS 2000 SP1|
-  @DBVersion = "C.0.6.51"|SQL Server 2000 SP1|  
-|RS 2000 RTM|
-  @DBVersion = "C.0.6.43"|SQL Server 2000|  
+|RS 2005 SP2|@DBVersion = "C.0.8.54"|SQL Server 2005 SP2|  
+|RS 2005 SP1|@DBVersion = "C.0.8.43"|SQL Server 2005 SP1|  
+|RS 2005 RTM|@DBVersion = "C.0.8.40"|SQL Server 2005|  
+|RS 2000 SP2|@DBVersion = "C.0.6.54"|SQL Server 2000 SP2|  
+|RS 2000 SP1|@DBVersion = "C.0.6.51"|SQL Server 2000 SP1|  
+|RS 2000 RTM|@DBVersion = "C.0.6.43"|SQL Server 2000|  
 |Revisión||Versión aplicable más cercana|  
   
  Para una *versión* anterior a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 se devuelve un valor de HRESULT de ACT_E_BAD_VERSION.  
@@ -67,7 +61,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  Devuelve *HRESULT* que indica si la llamada al método se realizó correctamente o no. Un valor de 0 indica que la llamada al método se realizó correctamente. Un valor distinto de cero indica que se ha producido un error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

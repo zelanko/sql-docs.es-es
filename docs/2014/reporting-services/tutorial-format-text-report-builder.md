@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098896"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato a texto (Generador de informes)
@@ -28,7 +28,7 @@ ms.locfileid: "66098896"
   
  Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este informe de ejemplo y otros, vea [generador de informes informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
-##  <a name="BackToTop"></a>Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
   
 ### <a name="set-up-the-report"></a>Configurar el informe  
  1. [Crear un informe en blanco con un origen de datos y un conjunto de datos](#CreateReport)  
@@ -53,7 +53,7 @@ ms.locfileid: "66098896"
 ## <a name="requirements"></a>Requisitos  
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a>Crear un informe en blanco con un origen de datos y un conjunto de datos  
+##  <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Crear un informe en blanco con un origen de datos y un conjunto de datos  
   
 #### <a name="to-create-a-blank-report"></a>Para crear un informe en blanco  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66098896"
   
 #### <a name="to-create-a-dataset"></a>Para crear un conjunto de datos  
   
-1.  En el panel datos de informe, haga clic en **nuevo**y, a continuación, en **conjunto**de datos.  
+1.  En el panel Datos de informe, haga clic en **Nuevo**y, a continuación, haga clic en **Conjunto de datos**.  
   
 2.  Compruebe que el origen de datos es **TextDataSource**.  
   
@@ -128,13 +128,13 @@ ms.locfileid: "66098896"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Haga clic en ejecutar (**!**) para ejecutar la consulta.  
+7.  Haga clic en Ejecutar (**!**) para ejecutar la consulta.  
   
      Los resultados de la consulta son los datos disponibles para mostrarse en su informe.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a>Agregar un campo al informe Superficie de diseño  
+##  <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Agregar un campo al informe Superficie de diseño  
  Si desea que un campo del conjunto de datos aparezca en un informe, su primer impulso puede ser arrastrarlo hasta la superficie de diseño directamente. En este ejercicio se describe por qué eso no funciona y lo que se ha de hacer en su lugar.  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>Para agregar un campo al informe (y obtener el resultado incorrecto)  
@@ -189,7 +189,7 @@ ms.locfileid: "66098896"
   
 7.  Seleccione el cuadro de lista y presione la tecla ELIMINAR.  
   
-##  <a name="AddTable"></a>Agregar una tabla al informe Superficie de diseño  
+##  <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Agregar una tabla al informe Superficie de diseño  
  Cree esta tabla para tener un lugar donde colocar los hipervínculos y el texto girado.  
   
 #### <a name="to-add-a-table-to-the-report"></a>Para agregar una tabla al informe  
@@ -220,7 +220,7 @@ ms.locfileid: "66098896"
   
 12. Haga clic en **Ejecutar**.  
   
-##  <a name="AddHyperlink"></a>Agregar un hipervínculo al informe  
+##  <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Agregar un hipervínculo al informe  
  En esta sección, agrega un hipervínculo al texto de la tabla desde la sección anterior.  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>Para agregar un hipervínculo al informe  
@@ -247,7 +247,7 @@ ms.locfileid: "66098896"
   
 10. Haga clic en un vínculo. Si el equipo está conectado a Internet, un explorador abrirá a un tema de la Ayuda del Generador de informes.  
   
-##  <a name="RotateText"></a>Girar texto en el informe  
+##  <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Girar texto en el informe  
  En esta sección, girará parte del texto de la tabla de las secciones anteriores.  
   
 #### <a name="to-rotate-text"></a>Para girar el texto  
@@ -269,15 +269,15 @@ ms.locfileid: "66098896"
   
 7.  En la pestaña **Inicio** de la sección **párrafo** , haga clic en los botones **central** y **central** para buscar el texto en el centro de la celda tanto vertical como horizontalmente.  
   
-8.  Haga clic en ejecutar (**!**).  
+8.  Haga clic en Ejecutar (**!**).  
   
  Ahora el texto de la celda `[Territory]` está situado verticalmente desde la parte inferior a la parte superior de las celdas.  
   
-##  <a name="FormatHTML"></a>Mostrar texto con formato HTML  
+##  <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Mostrar texto con formato HTML  
   
 #### <a name="to-display-text-formatted-as-html"></a>Para mostrar texto con formato HTML  
   
-1.  Haga clic en **diseño** para cambiar a la vista Diseño.  
+1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
   
 2.  En la pestaña **Insertar** , haga clic en **Cuadro de texto**y, después, en la superficie de diseño, haga clic y arrastre para crear un cuadro de texto bajo la tabla, aproximadamente de cuatro pulgadas de ancho y tres de alto.  
   
@@ -307,17 +307,17 @@ ms.locfileid: "66098896"
   
 6.  En la página **General** , en **tipo de marcado**, haga clic en **HTML-interpretar etiquetas HTML como estilos**.  
   
-7.  Haga clic en **OK**.  
+7.  Haga clic en **Aceptar**.  
   
 8.  Haga clic en Ejecutar (**!**) para obtener la vista previa del informe.  
   
  El texto del cuadro de texto se muestra como un encabezado, párrafo y lista con viñetas.  
   
-##  <a name="FormatCurrency"></a>Formato de moneda  
+##  <a name="format-currency"></a><a name="FormatCurrency"></a>Formato de moneda  
   
 #### <a name="to-format-numbers-as-currency"></a>Para dar formato a los números como moneda  
   
-1.  Haga clic en **diseño** para cambiar a la vista Diseño.  
+1.  Haga clic en **Diseño** para cambiar a la vista de diseño.  
   
 2.  Haga clic en la celda de la tabla superior que contiene `[Sum(Sales)]`, mantenga presionada la tecla MAYÚS y haga clic en la celda de la tabla inferior que contiene `[Sum(Sales)]`.  
   
@@ -331,14 +331,14 @@ ms.locfileid: "66098896"
   
  El informe muestra ahora datos dados con formato y es más fácil de leer.  
   
-##  <a name="Save"></a>Guardar el informe  
+##  <a name="save-the-report"></a><a name="Save"></a>Guardar el informe  
  Puede guardar los informes en un servidor de informes, en una biblioteca de SharePoint o en su equipo.  
   
  En este tutorial, guarde el informe en un servidor de informes. Si no tiene acceso a un servidor de informes, guarde el informe en su equipo.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>Para guardar el informe en un servidor de informes  
   
-1.  En el botón **generador de informes** , haga clic en **Guardar como**.  
+1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
 2.  Haga clic en **Sitios y servidores recientes**.  
   
@@ -348,21 +348,21 @@ ms.locfileid: "66098896"
   
 4.  En **Nombre**, reemplace el nombre predeterminado por un nombre de su elección.  
   
-5.  Haga clic en **Save**(Guardar).  
+5.  Haga clic en **Guardar**.  
   
  El informe se guarda en el servidor de informes. El nombre del servidor de informes al que está conectado aparecerá en la barra de estado en la parte inferior de la ventana.  
   
 #### <a name="to-save-the-report-on-your-computer"></a>Para guardar el informe en el equipo  
   
-1.  En el botón **generador de informes** , haga clic en **Guardar como**.  
+1.  En el botón **Generador de informes** , haga clic en **Guardar como**.  
   
 2.  Haga clic en **Escritorio**, **Mis documentos**o **Mi PC**y vaya a la carpeta donde desea guardar el informe.  
   
 3.  En **Nombre**, reemplace el nombre predeterminado por un nombre de su elección.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Guardar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Hay muchas maneras de dar formato al texto en Generador de informes [Tutorial: crear un informe de forma libre &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contiene más ejemplos.  
   
 ## <a name="see-also"></a>Consulte también  

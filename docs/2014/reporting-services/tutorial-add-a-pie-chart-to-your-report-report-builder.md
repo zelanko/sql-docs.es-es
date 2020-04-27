@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099047"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (Generador de informes)
@@ -26,7 +26,7 @@ ms.locfileid: "66099047"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a>Qué aprenderá  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Qué aprenderá  
  En este tutorial, aprenderá a:  
   
 1.  [Crear un gráfico circular a partir del Asistente para gráficos](#Chart)  
@@ -51,7 +51,7 @@ ms.locfileid: "66099047"
 ## <a name="requirements"></a>Requisitos  
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. crear un gráfico circular a partir del Asistente para gráficos  
+##  <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. crear un gráfico circular a partir del Asistente para gráficos  
  En el cuadro de diálogo Introducción, use el Asistente para gráficos con el fin de crear un conjunto de datos incrustado, elegir un origen de datos compartido y crear un gráfico circular.  
   
 > [!NOTE]  
@@ -64,13 +64,13 @@ ms.locfileid: "66099047"
      Aparecerá el cuadro de diálogo Introducción.  
   
     > [!NOTE]  
-    >  Si el cuadro de diálogo Introducción no aparece, en el botón Generador de informes, haga clic en **Nuevo**.  
+    >   Si el cuadro de diálogo Introducción no aparece, en el botón Generador de informes, haga clic en **Nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
 3.  En el panel derecho, haga clic en **Asistente para gráficos**.  
   
-4.  En la página **elegir un conjunto** de los, haga clic en **crear un conjunto**de los y, a continuación, en **siguiente**.  
+4.  En la página **Elegir un conjunto de datos** , haga clic en **Crear un conjunto de datos**y, después, haga clic en **Siguiente**.  
   
 5.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos, y después haga clic en **Siguiente**. Puede que necesite escribir un nombre de usuario y contraseña.  
   
@@ -92,11 +92,11 @@ ms.locfileid: "66099047"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
+8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.  
   
-9. Haga clic en **Next**.  
+9. Haga clic en **Siguiente**.  
   
-##  <a name="ChartType"></a>2. elegir el tipo de gráfico  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. elegir el tipo de gráfico  
  Podrá elegir entre varios tipos de gráfico predefinidos.  
   
 #### <a name="to-add-a-pie-chart"></a>Para agregar un gráfico circular  
@@ -107,7 +107,7 @@ ms.locfileid: "66099047"
   
 2.  Arrastre el campo Sales hasta el panel **Valores** . Sales representa la cantidad de ventas para la subcategoría. El panel **Valores** muestra `[Sum(Sales)]` porque el gráfico muestra al agregado para cada producto.  
   
-3.  Haga clic en **Next**.  
+3.  Haga clic en **Siguiente**.  
   
 4.  En la página **elegir un estilo** , en el panel estilos, seleccione un estilo.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66099047"
   
  El informe muestra el gráfico circular con ocho segmentos, uno para cada producto. El tamaño de cada segmento representa las ventas de ese producto. Tres de los sectores son bastante finos.  
   
-##  <a name="Percentages"></a>3. Mostrar porcentajes en cada sector  
+##  <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Mostrar porcentajes en cada sector  
  En cada sector del gráfico circular, puede mostrar un porcentaje de este sector respecto al círculo entero.  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>Para mostrar porcentajes en cada sector del gráfico circular  
@@ -141,7 +141,7 @@ ms.locfileid: "66099047"
 5.  Opta Para especificar el número de posiciones decimales que muestra `#PERCENT{Pn}` la etiqueta, escriba, donde *n* es el número de posiciones decimales que se van a mostrar. Por ejemplo, para no mostrar ninguna posición decimal, `#PERCENT{P0}`escriba.  
   
     > [!NOTE]  
-    >  El **formato de número** del cuadro de diálogo Propiedades de la etiqueta de la **serie** no tiene ningún efecto al dar formato a los porcentajes. Esto aplica formato de porcentaje a las etiquetas, pero no calcula el porcentaje del gráfico circular que cada sector representa.  
+    >  La opción**Formato de número** del cuadro de diálogo **Propiedades de la etiqueta de la serie** no tiene ningún efecto al dar formato a los porcentajes. Esto aplica formato de porcentaje a las etiquetas, pero no calcula el porcentaje del gráfico circular que cada sector representa.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -149,7 +149,7 @@ ms.locfileid: "66099047"
   
  El informe muestra el porcentaje de la totalidad para cada sector del gráfico circular.  
   
-##  <a name="CombineSlices"></a>4. combinar sectores pequeños en un solo sector  
+##  <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. combinar sectores pequeños en un solo sector  
  Tres de los sectores del gráfico son bastante pequeños. Puede unir varios sectores pequeños en un sector mayor que represente a todos ellos.  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>Para unir los sectores del gráfico circular menores del 5 por ciento en un solo sector  
@@ -172,7 +172,7 @@ ms.locfileid: "66099047"
   
  En la leyenda, ahora existe la categoría "Other". El nuevo sector del gráfico circular combina todos los sectores que estaban por debajo del 5% en un sector que es el 6% de todo el gráfico circular.  
   
-##  <a name="DrawingEffect"></a>5. personalizar el efecto de dibujo  
+##  <a name="5-customize-the-drawing-effect"></a><a name="DrawingEffect"></a>5. personalizar el efecto de dibujo  
  En el Asistente para gráficos, el estilo predeterminado para un gráfico circular es Océano, que tiene un efecto de dibujo Cóncavo. Puede cambiarlo después de ejecutar el asistente.  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>Para agregar un efecto de dibujo al gráfico circular  
@@ -196,7 +196,7 @@ ms.locfileid: "66099047"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a>6. agregar un título de informe  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. agregar un título de informe  
   
 #### <a name="to-add-a-report-title"></a>Para agregar un título de informe  
   
@@ -204,9 +204,9 @@ ms.locfileid: "66099047"
   
 2.  Escriba **Ventas de cámaras y cámaras de vídeo**, pulse ENTRAR y, después, escriba **Como porcentaje de ventas totales**, de modo que tenga este aspecto:  
   
-     **Ventas de cámara y videocámara**  
+     **Ventas de cámaras y cámaras de vídeo**  
   
-     **Como porcentaje del total de ventas**  
+     **Como porcentaje de ventas totales**  
   
 3.  Seleccione **ventas de cámara y**videocámara y haga clic en el botón **negrita** de la sección **fuente** de la pestaña **Inicio** de la cinta de opciones.  
   
@@ -218,21 +218,21 @@ ms.locfileid: "66099047"
   
 6.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
-##  <a name="Save"></a>7. guardar el informe  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. guardar el informe  
   
 #### <a name="to-save-the-report"></a>Para guardar el informe  
   
 1.  Cambie a la vista de diseño del informe.  
   
-2.  En el botón Generador de informes, haga clic en **Guardar como**.  
+2.  En el botón Generador de informes , haga clic en **Guardar como**.  
   
 3.  En **Nombre**, escriba **Gráfico circular de ventas**.  
   
-4.  Haga clic en **Save**(Guardar).  
+4.  Haga clic en **Guardar**.  
   
  El informe se guardará en el servidor de informes.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha completado correctamente el tutorial Agregar un gráfico circular al informe. Para obtener más información sobre los gráficos, vea [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md) y [Minigráficos y barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte también  

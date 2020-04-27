@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099809"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
@@ -75,9 +75,8 @@ ms.locfileid: "66099809"
  `-j`  
  Configura una instancia del servidor de informes remoto para compartir la base de datos del servidor de informes que la instancia del servidor de informes local usa.  
   
- **-r**  *installationID*  
- Quita la información de clave simétrica de una instancia de servidor de informes concreta y, por lo tanto, quita el servidor de informes de una implementación escalada. 
-  *installationID* es un valor de GUID que se puede encontrar en el archivo RSReportserver.config.  
+ **-r**  *IDInstalación*  
+ Quita la información de clave simétrica de una instancia de servidor de informes concreta y, por lo tanto, quita el servidor de informes de una implementación escalada. *installationID* es un valor de GUID que se puede encontrar en el archivo RSReportserver.config.  
   
  `-f`  *filesystem*  
  Especifica una ruta válida al archivo que almacena una copia de seguridad de las claves simétricas.  
@@ -176,8 +175,8 @@ rskeymgmt -r <installationID>
  Para más información sobre las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) e [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Reporting Services servidor de informes &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Configurar una implementación escalada del servidor de informes en modo nativo &#40;SSRS Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Utilidades del símbolo del sistema del servidor de informes &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

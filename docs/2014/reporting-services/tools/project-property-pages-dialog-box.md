@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100040"
 ---
 # <a name="project-property-pages-dialog-box"></a>Páginas de propiedades del proyecto (cuadro de diálogo)
-  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, en el menú **proyecto** , haga clic en _ \<nombre del proyecto de informe>_ **propiedades**.  
+  Utilice las páginas de propiedades del proyecto para configurar las propiedades de implementación de un proyecto del servidor de informes. Para abrir este cuadro de diálogo, en el menú **Proyecto**, haga clic en _\<Nombre del proyecto de informe>_ **Propiedades**.  
   
  Después de definir las propiedades de configuración, puede seleccionar una configuración en la lista desplegable **Configuraciones de soluciones** de la barra de herramientas.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66100040"
  Para crear más configuraciones, haga clic en **Administrador de configuración** en la barra de herramientas.  
   
  **Administrador de configuración**  
- Administre las configuraciones de toda la solución o agregue más configuraciones. Para obtener más información, consulte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] la documentación de.  
+ Administre las configuraciones de toda la solución o agregue más configuraciones. Para obtener más información, consulte la documentación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .  
   
  **OutputPath**  
  Escriba o pegue la ruta de acceso para almacenar la definición de informe utilizada en la comprobación de la compilación, implementación y vista previa de los informes. La ruta de acceso debe ser diferente de la que se utiliza para el proyecto y una ruta de acceso relativa que sea una carpeta secundaria bajo la ruta de acceso del proyecto.  
@@ -79,7 +79,7 @@ ms.locfileid: "66100040"
 ## <a name="see-also"></a>Consulte también  
  [Publicar informes](../publish-reports.md)   
  [Publicar un informe en una biblioteca de SharePoint](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Establecer propiedades de implementación &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
+ [Establecer las propiedades de implementación &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)   
  [Diseñador de informes (Ayuda F1)](report-designer-f1-help.md)  
   
   

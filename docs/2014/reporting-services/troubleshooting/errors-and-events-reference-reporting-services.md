@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2708c2609d23c6094cd69bddd08d958a85262d88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099321"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referencia de errores y eventos (Reporting Services)
@@ -35,11 +35,11 @@ ms.locfileid: "66099321"
 |Id. de evento|Tipo|Category|Source|Descripción|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Error|Scheduling|Servidor de informes|Para definir una operación programada (por ejemplo, la suscripción y entrega de un informe) es necesario que se esté ejecutando el Agente SQL Server.|  
-|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Error|Inicio y cierre|Servidor de informes<br /><br /> Procesador de entrega y programación|>de origen no se puede conectar a la base de datos del servidor de informes. * \<* Para más información, vea [Servicio Servidor de informes de Windows &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
-|108|Error|Extensión|Servidor de informes<br /><br /> Administrador de informes|El>de origen no puede cargar una extensión de entrega, de procesamiento de datos o de representación. * \<*<br /><br /> Lo más probable es que se deba a una implementación incompleta o a la eliminación de una extensión. Para obtener más información, consulte [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md) y [Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
+|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Error|Inicio y cierre|Servidor de informes<br /><br /> Procesador de entrega y programación|*\<Origen>* no se puede conectar a la base de datos del servidor de informes. Para más información, vea [Servicio Servidor de informes de Windows &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
+|108|Error|Extensión|Servidor de informes<br /><br /> Administrador de informes|*\<Origen>* no puede cargar una extensión de entrega, de procesamiento de datos o de representación.<br /><br /> Lo más probable es que se deba a una implementación incompleta o a la eliminación de una extensión. Para obtener más información, consulte [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md) y [Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
 |109|Information|Administración|Servidor de informes<br /><br /> Administrador de informes|Se ha modificado un archivo de configuración. Para más información, consulte [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md).|  
 |110|Advertencia|Administración|Servidor de informes<br /><br /> Administrador de informes|Se ha modificado un valor en uno de los archivos de configuración y ha dejado de ser válido. En su lugar, se utilizará un valor predeterminado. Para más información, consulte [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md).|  
-|111|Error|Registro|Servidor de informes<br /><br /> Administrador de informes|El>de origen no puede crear el registro de seguimiento. * \<* Para obtener más información, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
+|111|Error|Registro|Servidor de informes<br /><br /> Administrador de informes|*\<Origen>* no puede crear el registro de seguimiento. Para obtener más información, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
 |112|Advertencia|Seguridad|Servidor de informes|El servidor de informes ha detectado un posible ataque de denegación de servicio. Para más información, vea [Seguridad y protección de Reporting Services](../security/reporting-services-security-and-protection.md).|  
 |113|Error|Registro|Servidor de informes|El servidor de informes no puede crear un contador de rendimiento.|  
 |114|Error|Inicio y cierre|Administrador de informes|El Administrador de informes no puede conectarse al servicio Servidor de informes.|  
@@ -47,7 +47,7 @@ ms.locfileid: "66099321"
 |116|Error|Interno|Servidor de informes<br /><br /> Administrador de informes<br /><br /> Procesador de entrega y programación|Error interno.|  
 |117|Error|Inicio y cierre|Servidor de informes|La base de datos del servidor de informes tiene una versión no válida.|  
 |118|Advertencia|Registro|Servidor de informes<br /><br /> Administrador de informes|El registro de seguimiento no se encuentra en la ubicación esperada del directorio; se creará un nuevo registro de seguimiento en el directorio predeterminado. Para obtener más información, consulte [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
-|119|Error|Activación|Servidor de informes<br /><br /> Procesador de entrega y programación|No se ha concedido acceso al>de origen al contenido de la base de datos del servidor de informes. * \<*|  
+|119|Error|Activación|Servidor de informes<br /><br /> Procesador de entrega y programación|*\<Origen>* no tiene acceso al contenido de la base de datos del servidor de informes.|  
 |120|Error|Activación|Servidor de informes|No se puede descifrar la clave simétrica. Probablemente se haya producido un cambio en la cuenta con la que se ejecuta el servicio. Para más información, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Error|Inicio y cierre|Servidor de informes|No se pudo iniciar el servicio de llamada a procedimiento remoto (RPC).|  
 |122|Advertencia|Entrega|Procesador de entrega y programación|El Procesador de entrega y programación no se puede conectar al servidor SMTP que se utiliza para la entrega por correo electrónico. Para obtener más información acerca de las conexiones del servidor SMTP, vea [configurar un servidor de informes para la entrega por correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
@@ -56,10 +56,9 @@ ms.locfileid: "66099321"
 |125|Information|Activación|Servidor de informes|Se extrajo correctamente la clave utilizada para cifrar datos. Para más información sobre las claves, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |126|Information|Activación|Servidor de informes|Se aplicó correctamente la clave utilizada para cifrar datos. Para más información sobre las claves, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |127|Information|Activación|Servidor de informes|Se quitó correctamente el contenido cifrado de la base de datos del servidor de informes. Para más información sobre cómo eliminar datos cifrados no recuperables, vea [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|128|Error|Activación|Servidor de informes|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de diferentes ediciones no se pueden usar en conjunto.|  
+|128|Error|Activación|Servidor de informes|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de diferentes ediciones no se pueden usar en conjunto.|  
 |129|Error|Administración|Servidor de informes<br /><br /> Procesador de entrega y programación|Un valor de archivo de configuración cifrado no se puede descifrar.|  
-|130|Error|Administración|Servidor de informes<br /><br /> Procesador de entrega y programación|El>de origen no encuentra el archivo de configuración. * \<* El servidor de informes requiere archivos de configuración.|  
+|130|Error|Administración|Servidor de informes<br /><br /> Procesador de entrega y programación|*\<Origen>* no encuentra el archivo de configuración. El servidor de informes requiere archivos de configuración.|  
 |131|Error|Seguridad|Servidor de informes<br /><br /> Procesador de entrega y programación|No se pudo descifrar un valor de datos de usuario cifrado.|  
 |132|Error|Seguridad|Servidor de informes|Error al cifrar los datos de usuario. No se puede guardar el valor.|  
 |133|Error|Administración|Servidor de informes<br /><br /> Administrador de informes<br /><br /> Procesador de entrega y programación|Error al cargar un archivo de configuración. Este error puede producirse si el código XML no es válido.|  

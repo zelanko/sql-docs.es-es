@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84424e361905121a0e4061f0a6b2d565b79e8ee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100108"
 ---
 # <a name="preview-view"></a>Vista previa, vista
@@ -63,7 +63,7 @@ ms.locfileid: "66100108"
  **Actualizar**  
  Elija esta opción para actualizar la caché de datos y ejecutar el informe de nuevo.  
   
- **Imprime**  
+ **Imprimir**  
  Elija esta opción para imprimir el informe.  
   
  **Diseño de impresión**  
@@ -72,13 +72,13 @@ ms.locfileid: "66100108"
  **Configurar página**  
  Elija esta opción para cambiar las propiedades de impresión y página según sea necesario. Utilice Diseño de impresión para ver los cambios antes de imprimir.  
   
- **Exportación**  
+ **Exportar**  
  Elija esta opción para exportar el informe representado en un formato concreto.  
   
  **Zoom**  
  Seleccione un factor de zoom para acercar o alejar el informe.  
   
- **Buscar texto**  
+ **Texto de búsqueda**  
  Escriba el texto que desea buscar en el informe. No puede utilizar operadores de búsqueda. Haga clic en **Buscar** para buscar la primera instancia.  
   
  **Localización**  

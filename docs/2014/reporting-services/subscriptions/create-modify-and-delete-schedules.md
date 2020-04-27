@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e04f3f9a89fef9c00312ae1622f74fc0a279314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100880"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -40,7 +40,7 @@ ms.locfileid: "66100880"
   
 -   [Crear y administrar programaciones compartidas (modo nativo)](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a>Información general sobre la administración de programaciones compartidas  
+##  <a name="overview-of-managing-shared-schedules"></a><a name="bkmk_overview"></a>Información general sobre la administración de programaciones compartidas  
  Para administrar programaciones compartidas para el modo nativo, use la página Programaciones del Administrador de informes o la carpeta Programaciones compartidas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para el modo de SharePoint, use las páginas de administración para la aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Puede ver todas las programaciones compartidas definidas para el servidor de informes, pausarlas y reanudarlas (solo en el Administrador de informes) e incluso seleccionar las programaciones que desea modificar o eliminar. La página Programaciones compartidas resume la siguiente información sobre el estado de cada programación: frecuencia, propietario, fecha de expiración y estado.  
@@ -51,9 +51,9 @@ ms.locfileid: "66100880"
   
 -   Viendo la página Informes de una programación compartida específica. Esta página enumera todos los informes y los conjuntos de datos compartidos que utilizan la programación compartida.  
   
--   Viendo los archivos de registro de ejecución de informes o registros de seguimiento para determinar si se han ejecutado los informes las veces especificadas por la programación. Para obtener más información, vea [Reporting Services archivos de registro y orígenes](../report-server/reporting-services-log-files-and-sources.md).  
+-   Viendo los archivos de registro de ejecución de informes o registros de seguimiento para determinar si se han ejecutado los informes las veces especificadas por la programación. Para más información, vea [Archivos de registro y orígenes de Reporting Services](../report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint"></a>Crear y administrar programaciones compartidas (modo de SharePoint)  
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>Crear y administrar programaciones compartidas (modo de SharePoint)  
  Una programación compartida es una programación multipropósito que proporciona información de programación lista para utilizar a cualquier número de informes o suscripciones. Estas programaciones se crean una sola vez y se incluyen referencias a las mismas en una página de suscripción o propiedades siempre que se necesita información sobre la programación. Las programaciones compartidas pueden administrarse, pausarse y reanudarse de forma centralizada. Sin embargo, las programaciones personalizadas deben modificarse manualmente para evitar que se ejecute el informe o la suscripción.  
   
  Para poder crear, modificar o eliminar programaciones compartidas, debe ser administrador del sitio de SharePoint.  
@@ -102,7 +102,7 @@ ms.locfileid: "66100880"
   
 4.  Seleccione la programación y haga clic en **Eliminar**.  
   
-##  <a name="bkmk_native"></a>Crear y administrar programaciones compartidas (modo nativo)  
+##  <a name="create-and-manage-shared-schedules-native-mode"></a><a name="bkmk_native"></a>Crear y administrar programaciones compartidas (modo nativo)  
  Las programaciones compartidas se deben eliminar manualmente mediante la página Programaciones del Administrador de informes o la carpeta Programaciones compartidas en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Si se elimina una programación compartida que esté en uso, se sustituirán todas las referencias a la misma por programaciones específicas del informe.  
   
  Se eliminan las programaciones específicas de informes y suscripciones al eliminar el informe o la suscripción, o al elegir un enfoque diferente para ejecutar el informe o la suscripción. Por ejemplo, al seleccionar **Ejecutar este informe siempre con los datos más recientes** , se eliminará una programación específica de informes que creó para ejecutar un informe como una instantánea de ejecución de informes.  
@@ -159,8 +159,7 @@ ms.locfileid: "66100880"
   
  Si elimina una programación compartida usada por varios informes y suscripciones, el servidor de informes creará calendarios individuales para cada informe y suscripción que haya usado anteriormente la programación compartida. Cada nueva programación individual contendrá la fecha, la hora y el patrón de periodicidad que se especificó en la programación compartida. Tenga en cuenta que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no proporciona la administración central de las programaciones individuales. Si elimina una programación compartida, tendrá que mantener la información de programación para cada elemento individual.  
   
- Si no está seguro de que se use una programación compartida, considere su eliminación [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en su lugar. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] proporciona las mismas características de administración de programación compartida que el Administrador de informes, además de una página adicional Informes que muestra el nombre de cada informe que la programación usa.  
+ Si no está seguro de que se use una programación compartida, considere su eliminación [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en su lugar. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] proporciona las mismas características de administración de programación compartida que el Administrador de informes, además de una página adicional Informes que muestra el nombre de cada informe que la programación usa.  
   
 ### <a name="create-delete-or-modify-a-shared-schedule-management-studio"></a>Crear, eliminar o modificar una programación compartida (Management Studio)  
  Una programación compartida contiene la información de programación y periodicidad que se puede usar en un número cualquiera de suscripciones e informes publicados que se ejecutan en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si tiene muchos informes y suscripciones que se ejecutan al mismo tiempo, puede crear una programación compartida para dichos trabajos. Si desea cambiar el patrón de periodicidad o la fecha de finalización con posterioridad, puede realizar la modificación en un lugar.  

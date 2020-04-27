@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35532f3889836aa1a84858fb547f2764b1d4a902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102689"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Tutoriales de Reporting Services (SSRS)
   Esta sección contiene tutoriales para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- [Crear una suscripción controlada por datos &#40;tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
+ [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona suscripciones controladas por datos para que pueda personalizar la distribución de un informe según la lista dinámica de los suscriptores que lo reciben. Normalmente, los administradores del servidor de informes se ocupan de crear y mantener las suscripciones controladas por datos. La posibilidad de crear suscripciones controladas por datos requiere tener conocimientos de creación de consultas, estar familiarizado con los orígenes de datos que contienen datos de suscriptores y tener permisos superiores en un servidor de informes.  
   
  [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  

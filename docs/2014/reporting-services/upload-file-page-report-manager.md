@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098867"
 ---
 # <a name="upload-file-page-report-manager"></a>Cargar archivo (página del Administrador de informes)
@@ -46,7 +46,7 @@ ms.locfileid: "66098867"
  **Archivo para cargar**  
  Muestra la ruta de acceso completa del archivo que se va a copiar desde el sistema de archivos.  
   
- **Browse**  
+ **Examinar**  
  Haga clic para elegir un archivo del sistema de archivos.  
   
  **Nombre**  

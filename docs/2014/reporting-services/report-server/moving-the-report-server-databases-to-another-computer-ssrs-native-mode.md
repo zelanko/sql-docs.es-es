@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103719"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)
@@ -26,15 +26,13 @@ ms.locfileid: "66103719"
   
 -   Las programaciones se volverán a crear la primera vez que se reinicie el servicio del servidor de informes.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los trabajos de agente que se utilizan para activar una programación se volverán a crear en la nueva instancia de la base de datos. No tiene que mover los trabajos al nuevo equipo, pero quizá desee eliminar los trabajos del equipo que ya no se va a utilizar.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los trabajos de agente que se utilizan para activar una programación se volverán a crear en la nueva instancia de la base de datos. No tiene que mover los trabajos al nuevo equipo, pero quizá desee eliminar los trabajos del equipo que ya no se va a utilizar.  
   
 -   Las suscripciones, los informes almacenados en caché y las instantáneas se mantienen en la base de datos que se ha movido. Si una instantánea no está recopilando los datos actualizados después de que se mueve la base de datos, borre las opciones de instantánea en Administrador de informes, haga clic en **Aplicar** para guardar los cambios, vuelva a crear la programación y haga clic en **Aplicar** de nuevo para guardar los cambios.  
   
 -   Los datos temporales de informes y de sesión de usuario que se almacenan en reportservertempdb permanecen al mover esa base de datos.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona varios métodos para mover bases de datos, como las operaciones de copia de seguridad y restauración, adjuntar y separar, y copiar. No todos los métodos son adecuados para reubicar una base de datos existente en una instancia de servidor nueva. El método recomendado para mover una base de datos del servidor de informes varía en función de sus requisitos de disponibilidad del sistema. La manera más sencilla de mover bases de datos del servidor de informes es adjuntarlas y separarlas. Sin embargo, este método requiere que el servidor de informes esté sin conexión mientras se separa la base de datos. Las operaciones de copia de seguridad y restauración son la opción más adecuada si se desean reducir al mínimo las interrupciones del servicio, pero deberán ejecutarse comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizarlas. No se recomienda copiar la base de datos, en especial mediante el Asistente para copiar bases de datos, ya que no se conserva la configuración de permisos de la base de datos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona varios métodos para mover bases de datos, como las operaciones de copia de seguridad y restauración, adjuntar y separar, y copiar. No todos los métodos son adecuados para reubicar una base de datos existente en una instancia de servidor nueva. El método recomendado para mover una base de datos del servidor de informes varía en función de sus requisitos de disponibilidad del sistema. La manera más sencilla de mover bases de datos del servidor de informes es adjuntarlas y separarlas. Sin embargo, este método requiere que el servidor de informes esté sin conexión mientras se separa la base de datos. Las operaciones de copia de seguridad y restauración son la opción más adecuada si se desean reducir al mínimo las interrupciones del servicio, pero deberán ejecutarse comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizarlas. No se recomienda copiar la base de datos, en especial mediante el Asistente para copiar bases de datos, ya que no se conserva la configuración de permisos de la base de datos.  
   
 > [!IMPORTANT]  
 >  Los pasos que se proporcionan en este tema se recomiendan cuando la modificación de la ubicación de la base de datos del servidor de informes es el único cambio que se realiza en la instalación existente. Para migrar una instalación completa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (es decir, mover la base de datos y cambiar la identidad del servicio Windows del servidor de informes que usa la base de datos), es necesario volver a configurar la conexión y restablecer una clave de cifrado.  
@@ -203,20 +201,20 @@ GO
   
 1.  Inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y abra una conexión con el servidor de informes.  
   
-2.  En la página Base de datos, haga clic en **Cambiar base de datos**. Haga clic en **Next**.  
+2.  En la página Base de datos, haga clic en **Cambiar base de datos**. Haga clic en **Siguiente**.  
   
-3.  Haga clic en **Elija una base de datos del servidor de informes existente**. Haga clic en **Next**.  
+3.  Haga clic en **Elija una base de datos del servidor de informes existente**. Haga clic en **Siguiente**.  
   
-4.  Seleccione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ahora aloja la base de datos del servidor de informes y haga clic en **Probar conexión**. Haga clic en **Next**.  
+4.  Seleccione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ahora aloja la base de datos del servidor de informes y haga clic en **Probar conexión**. Haga clic en **Siguiente**.  
   
-5.  En Nombre de la base de datos, seleccione la base de datos del servidor de informes que desea utilizar. Haga clic en **Next**.  
+5.  En Nombre de la base de datos, seleccione la base de datos del servidor de informes que desea utilizar. Haga clic en **Siguiente**.  
   
-6.  En Credenciales, especifique las credenciales que utilizará el servidor de informes para conectarse a la base de datos del servidor de informes. Haga clic en **Next**.  
+6.  En Credenciales, especifique las credenciales que utilizará el servidor de informes para conectarse a la base de datos del servidor de informes. Haga clic en **Siguiente**.  
   
 7.  Haga clic en **Siguiente** y, a continuación, en **Finalizar**.  
   
 > [!NOTE]  
->  Una instalación [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere que la instancia [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] incluya el rol `RSExecRole`. La creación de roles, el registro de inicio de sesión y las asignaciones de roles tienen lugar cuando se establece la conexión de la base de datos del servidor de informes a través de la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si se utilizan métodos alternativos (concretamente, si se utiliza la herramienta del símbolo del sistema rsconfig.exe) para configurar la conexión, el servidor de informes no estará en estado de funcionamiento. Es posible que tenga que escribir código WMI para que el servidor de informes esté disponible. Para más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Una instalación [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere que la instancia [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] incluya el rol `RSExecRole`. La creación de roles, el registro de inicio de sesión y las asignaciones de roles tienen lugar cuando se establece la conexión de la base de datos del servidor de informes a través de la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si se utilizan métodos alternativos (concretamente, si se utiliza la herramienta del símbolo del sistema rsconfig.exe) para configurar la conexión, el servidor de informes no estará en estado de funcionamiento. Es posible que tenga que escribir código WMI para que el servidor de informes esté disponible. Para obtener más información, vea [Obtener acceso al proveedor WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear RSExecRole](../security/create-the-rsexecrole.md)   
@@ -225,7 +223,7 @@ GO
  [Configure la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Utilidad rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Configurar y administrar claves de cifrado &#40;SSRS Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server-database-ssrs-native-mode.md)  
   
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4cb556e127fa23f5b16506abdcc8e04ed433878
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098125"
 ---
 # <a name="restoreencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Método RestoreEncryptionKey (WMI MSReportServer_ConfigurationSetting)
@@ -42,16 +42,16 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- *KeyFile []*  
+ *KeyFile[]*  
  [out] Matriz que contiene la clave de cifrado cifrada.  
   
- *Length*  
+ *Longitud*  
  [out] Longitud de la matriz devuelta por el método.  
   
  *Contraseña*  
  Una cadena utilizada para cifrar la clave de cifrado.  
   
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
  *ExtendedErrors[]*  
@@ -66,7 +66,7 @@ public void RestoreEncryptionKey(out Byte[] KeyFile, out Int32 Length,
  El método es más efectivo cuando se llama después del método [DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md) , que borra la lista de claves de cifrado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

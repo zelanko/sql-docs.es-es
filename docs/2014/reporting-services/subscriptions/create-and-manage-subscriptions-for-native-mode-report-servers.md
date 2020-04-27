@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100988"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Crear, modificar, y eliminar suscripciones estándar (Reporting Services en modo nativo)
@@ -44,7 +44,7 @@ ms.locfileid: "66100988"
   
 -   [Para eliminar una suscripción](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a>Para crear una suscripción  
+##  <a name="to-create-a-subscription"></a><a name="bkmk_create_subscription"></a>Para crear una suscripción  
  Para crear una suscripción, elija la herramienta y el enfoque válidos para su implementación del servidor de informes:  
   
 -   En el contenido de este tema se explica cómo se crean suscripciones en un servidor de informes en modo nativo mediante el Administrador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una vez definida una suscripción, puede tener acceso a ella en el Administrador de informes a través de la página Mis suscripciones o la pestaña **Suscripciones** de un informe específico.  
@@ -61,7 +61,7 @@ ms.locfileid: "66100988"
   
  En este tema no se explica cómo crear una suscripción controlada por datos. Para obtener instrucciones sobre cómo se crea una suscripción controlada por datos, vea [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) o la Ayuda en pantalla de la página Crear una suscripción controlada por datos del Administrador de informes.  
   
-###  <a name="bkmk_create_fileshare_subscription"></a>Para crear una suscripción de recurso compartido de archivos  
+###  <a name="to-create-a-file-share-subscription"></a><a name="bkmk_create_fileshare_subscription"></a>Para crear una suscripción de recurso compartido de archivos  
   
 1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66100988"
   
 8.  En Formato de representación, seleccione un formato de salida de informes para la entrega de archivos. Elija el formato correspondiente a la aplicación de escritorio que utilizará para abrir el informe. Evite formatos que no representen los informes en un solo flujo o que especifiquen una interactividad no admitida en un archivo estático (por ejemplo, HTML 4.0).  
   
-9. En los cuadros de texto **nombre de usuario** y **contraseña** , especifique las credenciales necesarias para tener acceso al recurso compartido de archivos con el formato * \<dominio>* \\ * \<nombre de usuario>* para el nombre de usuario.  
+9. En los cuadros de texto **Nombre de usuario** y **Contraseña**, especifique las credenciales necesarias para obtener acceso al recurso compartido de archivos. Use el formato *\<dominio>* \\ *\<nombreDeUsuario>* para el nombre de usuario.  
   
 10. Especifique las opciones de sobrescritura. Si hace clic en **No sobrescribir el archivo si existe una versión anterior**, la entrega no se realizará cuando se detecte que el archivo ya existe. Si hace clic en **Incrementar los nombres de archivo conforme se agregan versiones más recientes**, el servidor de informes agrega un número al nombre del archivo para distinguirlo de otros archivos existentes que tengan el mismo nombre.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66100988"
   
  El informe se entrega como un archivo estático. Si el informe contiene características interactivas, como por ejemplo, vínculos a otras filas y columnas, éstas no estarán disponibles.  
   
-###  <a name="bkmk_create_email_subscription"></a>Para crear una suscripción de correo electrónico  
+###  <a name="to-create-an-e-mail-subscription"></a><a name="bkmk_create_email_subscription"></a>Para crear una suscripción de correo electrónico  
   
 1.  En el Administrador de informes, navegue por la página **Contenido** hasta el informe al que desea suscribirse. Haga clic en el informe para abrirlo.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66100988"
   
 9. En el caso de informes con parámetros, especifique los parámetros que se van a utilizar en el informe de esta suscripción. Los parámetros especificados pueden ser diferentes de los que se utilizaron para ejecutar el informe a petición o en otras operaciones programadas.  
   
-##  <a name="bkmk_modify_subscription"></a>Para modificar una suscripción  
+##  <a name="to-modify-a-subscription"></a><a name="bkmk_modify_subscription"></a>Para modificar una suscripción  
  Puede modificar una suscripción en cualquier momento. Si modifica una suscripción mientras se está procesando, la configuración actualizada se utilizará si se guarda en la base de datos del servidor de informes antes de que la extensión de entrega reciba los datos de la suscripción. De lo contrario, se utilizará la configuración existente.  
   
  Para buscar una suscripción, utilice la página **Mis suscripciones** o vea las definiciones de suscripción asociadas a un informe. No se pueden buscar suscripciones directamente, ni buscarlas basándose en el nombre del propietario, la información del desencadenador, la información de estado, etc.  
@@ -151,7 +151,7 @@ ms.locfileid: "66100988"
 > [!NOTE]  
 >  El administrador de un servidor de informes no puede administrar desde un lugar todas las suscripciones individuales que estén utilizándose en un servidor de informes determinado. Sin embargo, los administradores del servidor de informes pueden tener acceso a cada suscripción individual para modificarla o eliminarla.  
   
-##  <a name="bkmk_delete_subscription"></a>Para eliminar una suscripción  
+##  <a name="to-delete-a-subscription"></a><a name="bkmk_delete_subscription"></a>Para eliminar una suscripción  
  Para eliminar una suscripción"  
   
 1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md).  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100339"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Acoplar el panel Datos de informe en el Diseñador de informes (SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66100339"
      Para alternar entre los dos últimos estados de presentación, haga doble clic en la barra de título del panel Datos de informe.  
   
 ## <a name="see-also"></a>Consulte también  
- [Panel datos de informe](../report-data/report-data-pane.md)   
+ [Panel Datos de informe](../report-data/report-data-pane.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df4585dfa4b1e45b2de9d396a59dcbf132b1a505
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100247"
 ---
 # <a name="format-a-reporting-services-script-file"></a>Dar formato a un archivo de script de Reporting Services
@@ -48,13 +48,13 @@ End Sub
 > [!IMPORTANT]  
 >  Las credenciales de usuario se administran por el entorno de script y pasan a través de los argumentos del símbolo del sistema mediante el uso de RS.exe. Aunque puede usar la variable *rs* para establecer la autenticación del servicio web, se recomienda que use el entorno de script. No tiene que autenticar el servicio web en el propio archivo de script. Para más información sobre la autenticación del entorno de scripts, vea [Utilidad RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md).  
   
- No declara espacios de nombres dentro del archivo de script. El entorno de scripting hace que varios espacios de nombres [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] útiles estén disponibles: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml**y **System.IO**.  
+ No declara espacios de nombres dentro del archivo de script. El entorno de scripting hace que haya varios espacios de nombres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] útiles disponibles: **System.Web.Services**, **System.Web.Services.Protocols**, **System.Xml** y **System.IO**.  
   
  Para obtener ejemplos del script, vea [Muestras de productos de SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>Consulte también  
  [Servicio web del servidor de informes](../report-server-web-service/report-server-web-service.md)   
  [Referencia técnica &#40;SSRS&#41;](../technical-reference-ssrs.md)   
- [Utilidad RS. exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
+ [Utilidad RS.exe &#40;SSRS&#41;](rs-exe-utility-ssrs.md)  
   
   

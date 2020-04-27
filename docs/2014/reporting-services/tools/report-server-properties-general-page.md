@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93365925d412f672b9e8d3e5a9b5f67a850e508a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100013"
 ---
 # <a name="server-properties-general-page"></a>Propiedades del servidor (página General)
@@ -28,34 +28,34 @@ ms.locfileid: "66100013"
   
 ## <a name="options"></a>Opciones  
  **Nombre**  
- Escriba un nombre de aplicación que aparece en el Administrador de informes. De forma predeterminada, este valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]es. El nombre que especificó solamente aparece en el Administrador de informes.  
+ Escriba un nombre de aplicación que aparece en el Administrador de informes. De manera predeterminada, este valor es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El nombre que especificó solamente aparece en el Administrador de informes.  
   
  **Versión**  
  Esta propiedad es de solo lectura. Especifica la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que está usando.  
   
- **Versión**  
+ **Edición**  
  Esta propiedad es de solo lectura. Especifica la instancia del servidor de informes actual. El Administrador de informes no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  **Modo de autenticación**  
  Esta propiedad es de solo lectura. Identifica los tipos de solicitudes de autenticación aceptados por la instancia del servidor de informes. Para cambiar el modo de autenticación, debe editar el archivo RSReportServer.config. Para más información, consulte [Authentication with the Report Server](../security/authentication-with-the-report-server.md).  
   
- **Dirección**  
+ **URL**  
  Esta propiedad es de solo lectura. Especifica la dirección URL al servicio web del servidor de informes. Este valor se especifica en la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
- **Habilitar una carpeta de Mis informes para cada usuario**  
+ **Habilitar una carpeta Mis informes para cada usuario**  
  Hace que Mis Informes esté disponible para los usuarios. Esta opción solo está disponible para los servidores de informes en modo nativo.  
   
- **Seleccione el rol que se va a aplicar a cada Mis informes carpeta**  
+ **Seleccione el rol que se aplicará a cada una de las carpetas de Mis informes**  
  Especifique una definición de roles para usarla para la seguridad de Mis informes. La definición de roles identifica el conjunto de tareas que se admiten en cada carpeta Mis informes.  
   
  **Habilitar descarga para el control de impresión de ActiveX Client**  
- Establece la propiedad del sistema del servidor de informes `EnableClientPrinting`. Si habilita la impresión del cliente, los usuarios que tienen permisos de administrador local tienen la opción de descargar un control de ActiveX firmado para imprimir informes HTML. Para obtener más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Establece la propiedad del sistema del servidor de informes `EnableClientPrinting`. Si habilita la impresión del cliente, los usuarios que tienen permisos de administrador local tienen la opción de descargar un control de ActiveX firmado para imprimir informes HTML. Para más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Conectar con un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Habilitar y deshabilitar Mis informes](../report-server/enable-and-disable-my-reports.md)   
- [Servidor de informes en Management Studio ayuda F1](report-server-in-management-studio-f1-help.md)   
+ [Servidor de informes en Management Studio ayuda de F1](report-server-in-management-studio-f1-help.md)   
  [Proteger Mis informes](../security/secure-my-reports.md)  
   
   

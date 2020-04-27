@@ -17,18 +17,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 31c5fa6b3ca1f42ea87fc1514f55ce325f8a021a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101988"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Conceder a un usuario acceso a un servidor de informes (Administrador de informes)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]utiliza la seguridad basada en roles para conceder acceso de usuario a un servidor de informes. En una nueva instalación del servidor de informes, solo los usuarios que son miembros del grupo local de administradores tienen los permisos para acceder a las operaciones y al contenido del servidor de informes. Para hacer que el servidor de informes esté disponible para otros usuarios, debe crear asignaciones de roles que asignen cuentas de usuario o de grupo a un rol predefinido que especifique una recopilación de tareas.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la seguridad basada en roles para conceder a un usuario acceso a un servidor de informes. En una nueva instalación del servidor de informes, solo los usuarios que son miembros del grupo local de administradores tienen los permisos para acceder a las operaciones y al contenido del servidor de informes. Para hacer que el servidor de informes esté disponible para otros usuarios, debe crear asignaciones de roles que asignen cuentas de usuario o de grupo a un rol predefinido que especifique una recopilación de tareas.  
   
- **Servidores de informes en modo de SharePoint:** Para un servidor de informes configurado para el modo integrado de SharePoint, configure el acceso desde un sitio de SharePoint mediante los permisos de SharePoint. Los niveles de permisos del sitio de SharePoint determinan el acceso a las operaciones y el contenido del servidor de informes. Debe ser un administrador de sitio para conceder permisos en un sitio de SharePoint. Para obtener más información, vea [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
+ **Servidores de informes en modo de SharePoint** : para un servidor de informes que está configurado para el modo integrado de SharePoint, el acceso se configura desde un sitio de SharePoint mediante los permisos de SharePoint. Los niveles de permisos del sitio de SharePoint determinan el acceso a las operaciones y el contenido del servidor de informes. Debe ser un administrador de sitio para conceder permisos en un sitio de SharePoint. Para obtener más información, vea [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
- **Servidores de informes en modo nativo:** Este tema se centra en un servidor de informes que está configurado para el modo nativo y el uso de Administrador de informes para asignar usuarios a un rol. Hay dos tipos de roles:  
+ **Servidores de informes en modo nativo** : este tema se centra en un servidor de informes configurado para el modo nativo y el uso del Administrador de informes para asignar usuarios a un rol. Hay dos tipos de roles:  
   
 -   Los roles de nivel de elemento se usan para ver, agregar y administrar el contenido del servidor de informes, las suscripciones, el procesamiento de informes y el historial de informes. Las asignaciones de roles de nivel de elemento se definen en el nodo raíz (la carpeta Inicio) o en carpetas o elementos específicos en un nivel inferior de la jerarquía.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66101988"
   
 -   Para delegar esta tarea en otros usuarios, cree asignaciones de roles que asignen cuentas de usuario a los roles de administrador de contenido y de sistema. Los usuarios con permisos de administrador de contenido y de sistema pueden agregar usuarios a un servidor de informes.  
   
--   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vea los roles predefinidos para roles del sistema y roles de usuario para que esté familiarizado con los tipos de tareas de cada rol. Las descripciones de la tarea no están visibles en el Administrador de informes, de modo que si desea  familiarizarse con los roles agregue los usuarios antes de empezar.  
+-   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vea los roles predefinidos para Roles del sistema y Roles del usuario para familiarizarse con los tipos de tareas de cada rol. Las descripciones de la tarea no están visibles en el Administrador de informes, de modo que si desea  familiarizarse con los roles agregue los usuarios antes de empezar.  
   
 -   Si lo desea, personalice los roles o defina roles adicionales para incluir la recopilación de tareas que necesita. Por ejemplo, si piensa usar la configuración de seguridad personalizada para los elementos individuales, quizá desee crear una nueva definición de roles que permita el acceso a la vista de carpetas.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66101988"
 4.  Haga clic en **Nueva asignación de roles**.  
   
     > [!NOTE]  
-    >  Si un elemento hereda la seguridad de un elemento primario, en la barra de herramientas, haga clic en **Editar seguridad del elemento** para cambiar la configuración de seguridad. A continuación, haga clic en **Nuevo rol de funciones**.  
+    >   Si un elemento hereda la seguridad de un elemento primario, en la barra de herramientas, haga clic en **Editar seguridad del elemento** para cambiar la configuración de seguridad. A continuación, haga clic en **Nuevo rol de funciones**.  
   
 5.  En **nombre de grupo o de usuario**, escriba una cuenta de grupo o de usuario de dominio \<de Windows \\ con este\>formato: dominio><cuenta. Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098538"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>Método CreateSSLCertificateBinding (MSReportServer_ConfigurationSetting de WMI)
@@ -50,13 +50,13 @@ public void CreateSSLCertificateBinding(string application,
  *Puerto*  
  Puerto SSL asociado al enlace.  
   
- *LCID*  
+ *Lcid*  
  Configuración regional que se utilizará para los mensajes de error devueltos.  
   
  *Error*  
  [out] Descripción de los errores que se produjeron.  
   
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -80,7 +80,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  Existe una reserva de dirección URL que especifica un nombre de host, pero el nombre de host no coincide con el nombre de host del certificado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cbf0eee13a113dff42a22da3703e60b3869b757f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098530"
 ---
 # <a name="deleteencryptionkey-method-wmi-msreportserver_configurationsetting"></a>Método DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting)
@@ -44,7 +44,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  *InstallationID*  
  El identificador de instalación de un servidor de informes que está en la tabla de claves de la base de datos del servidor de informes.  
   
- *VALOR*  
+ *HRESULT*  
  [out] Valor que indica si la llamada se realizó correctamente o no.  
   
  *ExtendedErrors[]*  
@@ -57,7 +57,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  El método *DeleteEncryptionKey* elimina las entradas en la tabla de claves de todos los servidores de informes que tienen acceso a la información segura en la base de datos del servidor de informes. Si el parámetro *InstallationID* especificado no se corresponde con un identificador de instalación en la base de datos, el método devuelve un error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Espacio de nombres:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-members.md)  

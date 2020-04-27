@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a61ca96aafe0e475d28023276c561f49c13cde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096980"
 ---
 # <a name="rswindowsextendedprotectionscenario-property-wmi-msreportserver_configurationsetting"></a>Propiedad RSWindowsExtendedProtectionScenario (MSReportServer_ConfigurationSetting de WMI)
@@ -44,6 +44,6 @@ public string RSWindowsExtendedProtectionScenario;
  [Propiedad RSWindowsExtendedProtectionLevel &#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionlevel-property.md)   
  [Método SetExtendedProtectionSettings &#40;MSReportServer_ConfigurationSetting de WMI&#41;](configurationsetting-method-setextendedprotectionsettings.md)   
  [Protección ampliada para la autenticación con Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)   
- [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  
+ [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
   
   

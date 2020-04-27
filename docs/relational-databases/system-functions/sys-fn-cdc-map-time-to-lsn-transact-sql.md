@@ -21,10 +21,10 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046332"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
@@ -58,7 +58,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  Es el valor de fecha y hora con el que se hará la comparación. *tracking_time* es **DateTime**.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- **binario (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Observaciones  
  Para entender cómo se puede usar **Sys. fn_cdc_map_time_lsn** para asignar intervalos de fecha y hora a intervalos de LSN, considere el siguiente escenario. Suponga que un consumidor desea extraer los datos de cambios cada día. Es decir, el consumidor solo desea obtener los cambios que se han realizado durante un día determinado hasta la medianoche incluida. El límite inferior del intervalo temporal sería hasta las doce de la noche (no inclusive) del día anterior. El límite superior sería hasta las doce de la noche (inclusive) del día en cuestión. En el ejemplo siguiente se muestra cómo se puede usar la función **Sys. fn_cdc_map_time_to_lsn** para asignar sistemáticamente este intervalo basado en el tiempo al intervalo basado en LSN que necesitan las funciones de enumeración de captura de datos modificados para devolver todos los cambios dentro de ese intervalo.  
@@ -97,6 +97,6 @@ END
  [CDC. lsn_time_mapping &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [Sys. fn_cdc_map_lsn_to_time &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

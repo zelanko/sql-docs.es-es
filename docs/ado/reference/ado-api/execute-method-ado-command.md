@@ -17,10 +17,10 @@ ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918855"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (Command ADO)
@@ -40,7 +40,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *RecordsAffected*  
  Opcional. Variable **larga** a la que el proveedor devuelve el número de registros a los que afecta la operación. El parámetro *RecordsAffected* solo se aplica a las consultas de acción o los procedimientos almacenados. *RecordsAffected* no devuelve el número de registros devueltos por un procedimiento almacenado o una consulta que devuelve resultados. Para obtener esta información, use la propiedad [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . El método **Execute** no devolverá la información correcta cuando se usa con **adAsyncExecute**, simplemente porque cuando un comando se ejecuta de forma asincrónica, es posible que aún no se conozca el número de registros afectados en el momento en que el método vuelve.  
   
- *Los*  
+ *Parámetros*  
  Opcional. Matriz **de** valores de parámetros que se usa junto con la cadena de entrada o el flujo especificado en **CommandText** o **CommandStream**. (Los parámetros de salida no devolverán los valores correctos cuando se pasan en este argumento).  
   
  *Opciones*  

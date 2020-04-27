@@ -22,10 +22,10 @@ ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68055372"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
@@ -50,7 +50,7 @@ sys.fn_translate_permissions ( level , perms )
  Es una máscara de bits que se devuelve en la columna de permisos. *perms* es **varbinary (16)**.  
   
 ## <a name="returns"></a>Devuelve  
- **cuadro**  
+ **table**  
   
 ## <a name="remarks"></a>Observaciones  
  El valor devuelto en la columna **Permissions** de un seguimiento de SQL es una representación de entero de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una máscara de máscara utilizada por para calcular los permisos efectivos. Cada una de las 25 clases de elementos protegibles tiene su propio conjunto de permisos con sus valores numéricos correspondientes. **Sys. fn_translate_permissions** traduce esta máscara de máscara en una tabla de nombres de permisos.  

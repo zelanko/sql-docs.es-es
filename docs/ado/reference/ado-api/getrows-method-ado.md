@@ -17,10 +17,10 @@ ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918450"
 ---
 # <a name="getrows-method-ado"></a>Método GetRows (ADO)
@@ -37,13 +37,13 @@ array = recordset.GetRows(Rows, Start, Fields )
  Devuelve una **variante** cuyo valor es una matriz bidimensional.  
   
 #### <a name="parameters"></a>Parámetros  
- *Las*  
+ *Filas*  
  Opcional. Valor de [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) que indica el número de registros que se van a recuperar. El valor predeterminado es **adGetRowsRest**.  
   
- *Iniciar*  
+ *Start*  
  Opcional. Un valor de **cadena** o una **variante** que se evalúa como el marcador del registro del que debe comenzar la operación de **GetRows** . También puede usar un valor de [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
- *Fields*  
+ *Campos*  
  Opcional. **Variante** que representa un nombre de campo único o una posición ordinal, o una matriz de nombres de campo o números de posición ordinal. ADO solo devuelve los datos de estos campos.  
   
 ## <a name="remarks"></a>Observaciones  

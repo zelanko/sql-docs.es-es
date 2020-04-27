@@ -20,10 +20,10 @@ ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95d9c980927d565b907d666af1317e883126087e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915035"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67915035"
 |**database_id**|**int**|El Id. de la base de datos. Este valor es único dentro de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**directory_name**|**nvarchar(255)**|El directorio de base de datos para todos los espacios de nombres FileTable.|  
 |**non_transacted_access**|**tinyint**|El nivel de acceso no transaccional a los datos de FILESTREAM habilitados. El nivel de acceso se establece mediante la opción NON_TRANSACTED_ACCESS de la instrucción **Create Database** o **ALTER DATABASE** .<br /><br /> Esta configuración tiene uno de los siguientes valores:<br /><br /> 0: no habilitado. Este es el valor predeterminado. Este nivel se establece al proporcionar **el valor para** la opción **NON_TRANSACTED_ACCESS** .<br /><br /> 1: acceso de solo lectura. Este nivel se establece proporcionando el valor **READ_ONLY** para la opción **NON_TRANSACTED_ACCESS** .<br /><br /> 3-acceso completo. Este nivel se establece proporcionando el valor **completo** de la opción **NON_TRANSACTED_ACCESS** .<br /><br /> 5: en transición a READONLY<br /><br /> 6-en transición a desactivado|  
-|**non_transacted_access_desc**|**nvarchar (60)**|La descripción del nivel de acceso no transaccional identificado en non_transacted_access.<br /><br /> Esta configuración tiene uno de los siguientes valores:<br /><br /> NINGUNO: este es el valor predeterminado.<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
+|**non_transacted_access_desc**|**nvarchar(60)**|La descripción del nivel de acceso no transaccional identificado en non_transacted_access.<br /><br /> Esta configuración tiene uno de los siguientes valores:<br /><br /> NINGUNO: este es el valor predeterminado.<br /><br /> READ_ONLY<br /><br /> FULL<br /><br /> IN_TRANSITION_TO_READ_ONLY<br /><br /> IN_TRANSITION_TO_OFF|  
   
 ## <a name="see-also"></a>Consulte también  
  [Habilitar los requisitos previos de FileTables](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  

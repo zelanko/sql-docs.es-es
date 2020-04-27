@@ -16,10 +16,10 @@ ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917341"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
@@ -31,7 +31,7 @@ Especifica si se debe abrir un **registro** existente o crear un nuevo **registr
 |**adCreateNonCollection**|0|Crea un nuevo **registro** de tipo [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  
 |**adCreateOverwrite**|0x4000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection**y **adCreateStructDoc**. Cuando se usa o con este valor y uno de los valores de la marca de creación, si la dirección URL de origen apunta a un nodo o **registro**existente, se sobrescribe el **registro** existente y se crea uno nuevo en su lugar. Este valor no se puede usar junto con **adOpenIfExists**.|  
 |**adCreateStructDoc**|0x80000000|Crea un nuevo **registro** de tipo [adStructDoc](../../../ado/reference/ado-api/recordtypeenum.md), en lugar de abrir un **registro**existente.|  
-|**adFailIfNotExists**|-1|Default. Da como resultado un error en tiempo de ejecución si el *origen* apunta a un nodo no existente.|  
+|**adFailIfNotExists**|-1|Predeterminada. Da como resultado un error en tiempo de ejecución si el *origen* apunta a un nodo no existente.|  
 |**adOpenIfExists**|0x2000000|Modifica las marcas de creación **adCreateCollection**, **adCreateNonCollection**y **adCreateStructDoc**. Cuando se usa o con este valor y uno de los valores de la marca de creación, si la dirección URL de origen apunta a un objeto de **registro** o nodo existente, el proveedor debe abrir el **registro** existente en lugar de crear uno nuevo. Este valor no se puede usar junto con **adCreateOverwrite**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  

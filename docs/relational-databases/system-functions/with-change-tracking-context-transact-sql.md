@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 90610b8b93d0d03a41c6dbbae6c2a9a4e9678aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67950926"
 ---
 # <a name="with-change_tracking_context-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)
@@ -41,7 +41,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *context*  
+ *contextoo*  
  Es la información contextual suministrada por la aplicación que realiza la llamada y está almacenada con la información de seguimiento de cambios para el cambio. el *contexto* es **varbinary (128)**.  
   
  El valor puede ser una constante o una variable, pero no puede ser NULL.  

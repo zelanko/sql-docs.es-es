@@ -24,10 +24,10 @@ ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68120257"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
@@ -61,7 +61,7 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|Identificador del objeto de base de datos. Este valor es NULL para las instrucciones SQL ad hoc.|  
 |number|**smallint**|Indica el número del grupo, si se agrupan los procedimientos.<br /><br /> 0 = Las no son procedimientos.<br /><br /> NULL = Instrucciones SQL ad hoc.|  
 |encrypted|**bit**|Indica si el objeto está cifrado.<br /><br /> 0 = No cifrado<br /><br /> 1 = Cifrada|  
-|text|**negrita**|Texto de la instrucción SQL. Este valor es NULL para objetos cifrados.|  
+|texto|**text**|Texto de la instrucción SQL. Este valor es NULL para objetos cifrados.|  
   
 ## <a name="remarks"></a>Observaciones  
  Puede obtener un identificador SQL válido de la columna sql_handle de la vista de administración dinámica [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  

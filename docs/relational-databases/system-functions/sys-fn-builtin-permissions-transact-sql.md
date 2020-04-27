@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046524"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
@@ -68,18 +68,18 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  Equivalente a DEFAULT.  
   
  **'**<securable_class>**'**  
- Cuando se llama con el nombre de una clase protegible, sys. fn_builtin_permissions devolverá todos los permisos que se aplican a la clase. <securable_class> es un literal de cadena que requiere comillas. **nvarchar (60)**  
+ Cuando se llama con el nombre de una clase protegible, sys. fn_builtin_permissions devolverá todos los permisos que se aplican a la clase. <securable_class> es un literal de cadena que requiere comillas. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
   
-|Nombre de la columna|Tipo de datos|Intercalación|Descripción|  
+|Nombre de la columna|Tipo de datos|Collation|Descripción|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar (60)**|Intercalación del servidor|Descripción de la clase protegible.|  
-|permission_name|**nvarchar (60)**|Intercalación del servidor|Nombre del permiso.|  
-|type|**varchar(4)**|Intercalación del servidor|Código de tipo de permiso compacto. Vea la tabla siguiente.|  
-|covering_permission_name|**nvarchar (60)**|Intercalación del servidor|Si no es NULL, es el nombre del permiso en esta clase que implica los otros permisos en la clase.|  
-|parent_class_desc|**nvarchar (60)**|Intercalación del servidor|S no es NULL, es el nombre de la clase principal que contiene la clase actual.|  
-|parent_covering_permission_name|**nvarchar (60)**|Intercalación del servidor|Si no es NULL, es el nombre del permiso en la clase principal que implica los otros permisos en esa clase.|  
+|class_desc|**nvarchar(60)**|Intercalación del servidor|Descripción de la clase protegible.|  
+|permission_name|**nvarchar(60)**|Intercalación del servidor|Nombre del permiso.|  
+|tipo|**varchar(4)**|Intercalación del servidor|Código de tipo de permiso compacto. Vea la tabla siguiente.|  
+|covering_permission_name|**nvarchar(60)**|Intercalación del servidor|Si no es NULL, es el nombre del permiso en esta clase que implica los otros permisos en la clase.|  
+|parent_class_desc|**nvarchar(60)**|Intercalación del servidor|S no es NULL, es el nombre de la clase principal que contiene la clase actual.|  
+|parent_covering_permission_name|**nvarchar(60)**|Intercalación del servidor|Si no es NULL, es el nombre del permiso en la clase principal que implica los otros permisos en esa clase.|  
   
 ### <a name="permission-types"></a>Tipos de permisos  
   
@@ -163,7 +163,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|CERTIFICADO|  
 |CL|CONTROL|CONTRACT|  
 |CL|CONTROL|DATABASE|  
-|CL|CONTROL<br /> **Se aplica a** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]y. |DATABASE SCOPED CREDENTIAL|
+|CL|CONTROL<br /> **Se aplica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |CL|CONTROL|ENDPOINT|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
@@ -242,7 +242,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |RF|REFERENCES|CERTIFICADO|  
 |RF|REFERENCES|CONTRACT|  
 |RF|REFERENCES|DATABASE|  
-|RF|REFERENCES<br /> **Se aplica a** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]y. |DATABASE SCOPED CREDENTIAL|
+|RF|REFERENCES<br /> **Se aplica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |RF|REFERENCES|FULLTEXT CATALOG|  
 |RF|REFERENCES|FULLTEXT STOPLIST|  
 |RF|REFERENCES|SEARCH PROPERTY LIST|  
@@ -266,7 +266,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|CERTIFICADO|  
 |TO|TAKE OWNERSHIP|CONTRACT|  
 |TO|TAKE OWNERSHIP|DATABASE|  
-|TO|TAKE OWNERSHIP<br /> **Se aplica a** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]y. |DATABASE SCOPED CREDENTIAL|
+|TO|TAKE OWNERSHIP<br /> **Se aplica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |TO|TAKE OWNERSHIP|ENDPOINT|  
 |TO|TAKE OWNERSHIP|FULLTEXT CATALOG|  
 |TO|TAKE OWNERSHIP|FULLTEXT STOPLIST|  
@@ -283,9 +283,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |TO|TAKE OWNERSHIP|TYPE|  
 |TO|TAKE OWNERSHIP|XML SCHEMA COLLECTION|  
 |UMSK|UNMASK<br /> **Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
-|ARRIBA|UPDATE|DATABASE|  
-|ARRIBA|UPDATE|OBJECT|  
-|ARRIBA|UPDATE|SCHEMA|  
+|UP|UPDATE|DATABASE|  
+|UP|UPDATE|OBJECT|  
+|UP|UPDATE|SCHEMA|  
 |VW|VIEW DEFINITION|APPLICATION ROLE|  
 |VW|VIEW DEFINITION|ASSEMBLY|  
 |VW|VIEW DEFINITION|ASYMMETRIC KEY|  
@@ -293,7 +293,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|CERTIFICADO|  
 |VW|VIEW DEFINITION|CONTRACT|  
 |VW|VIEW DEFINITION|DATABASE|  
-|VW|VIEW DEFINITION<br /> **Se aplica a** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] : [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]y. |DATABASE SCOPED CREDENTIAL|
+|VW|VIEW DEFINITION<br /> **Se aplica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. |DATABASE SCOPED CREDENTIAL|
 |VW|VIEW DEFINITION|ENDPOINT|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
@@ -323,14 +323,11 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>Observaciones  
- 
-  `sys.fn_builtin_permissions` es una función con valores de tabla que emite una copia de la jerarquía de permisos predefinida. Esta jerarquía incluye los permisos que cubre. El `DEFAULT` conjunto de resultados describe un grafo dirigido y acíclicos de la jerarquía de permisos, de la que la raíz es (Class = Server, PERMISSION = Control Server).  
+ `sys.fn_builtin_permissions` es una función con valores de tabla que emite una copia de la jerarquía de permisos predefinida. Esta jerarquía incluye los permisos que cubre. El `DEFAULT` conjunto de resultados describe un grafo dirigido y acíclicos de la jerarquía de permisos, de la que la raíz es (Class = Server, PERMISSION = Control Server).  
   
- 
-  `sys.fn_builtin_permissions` no acepta parámetros correlacionados.  
+ `sys.fn_builtin_permissions` no acepta parámetros correlacionados.  
   
- 
-  `sys.fn_builtin_permissions` devolverá un conjunto vacío cuando se llame con un nombre de clase que no sea válido.  
+ `sys.fn_builtin_permissions` devolverá un conjunto vacío cuando se llame con un nombre de clase que no sea válido.  
  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
@@ -360,7 +357,7 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Jerarquía de permisos &#40;Motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   

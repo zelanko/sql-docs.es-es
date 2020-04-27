@@ -16,10 +16,10 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916869"
 ---
 # <a name="stat-method"></a>Stat (método)
@@ -54,7 +54,7 @@ Long stream.Stat(StatStg, StatFlag)
  Cadena que contiene el nombre de la secuencia, si hay una disponible y no se ha especificado el valor de StatFlag STATFLAG_NONAME.  
   
  *cbSize*  
- Especifica el tamaño en bytes de la secuencia o de la matriz de bytes.  
+ Especifica el tamaño, en bytes, de la secuencia o de la matriz de bytes.  
   
  *mtime*  
  Indica la hora de la última modificación de este almacenamiento, secuencia o matriz de bytes.  

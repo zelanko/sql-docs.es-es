@@ -21,10 +21,10 @@ ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046399"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
@@ -46,7 +46,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
  Es el nombre de la instancia de captura. *capture_instance_name* es de **tipo sysname**.  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
- **binario (10)**  
+ **binary(10)**  
   
 ## <a name="remarks"></a>Observaciones  
  Devuelve 0x00000000000000000000 cuando la instancia de captura no existe o cuando la persona que llama no está autorizada para tener acceso a los datos del cambio asociados con la instancia de captura.  

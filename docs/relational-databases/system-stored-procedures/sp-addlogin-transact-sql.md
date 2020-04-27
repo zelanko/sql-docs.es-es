@@ -18,10 +18,10 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072664"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)

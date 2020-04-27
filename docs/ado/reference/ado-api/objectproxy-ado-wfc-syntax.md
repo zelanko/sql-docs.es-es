@@ -14,10 +14,10 @@ ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917956"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - sintaxis WFC)
@@ -45,7 +45,7 @@ public Object ObjectProxy.( String method, Object[] args)
  *ObjectProxy*  
  Objeto **ObjectProxy** que representa el servidor.  
   
- *forma*  
+ *method*  
  Cadena que contiene el nombre del método que se va a invocar en el servidor.  
   
  *args*  

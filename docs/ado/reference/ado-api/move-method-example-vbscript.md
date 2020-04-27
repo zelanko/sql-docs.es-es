@@ -15,16 +15,16 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918163"
 ---
 # <a name="move-method-example-vbscript"></a>Ejemplo del método Move (VBScript)
 En este ejemplo se usa el método [Move](../../../ado/reference/ado-api/move-method-ado.md) para colocar el puntero de registro, en función de los datos proporcionados por el usuario.  
   
- Use el ejemplo siguiente en una página de Active Server (ASP). Para ver este ejemplo totalmente funcional, debe tener el origen de datos AdvWorks. mdb (instalado con el SDK) ubicado en C:\Archivos de Programa\microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o editar la ruta de acceso en el código de ejemplo que se va a reflejar. ubicación real de este archivo. Este es un archivo de base de datos de Microsoft Access.  
+ Use el ejemplo siguiente en una página de Active Server (ASP). Para ver este ejemplo totalmente funcional, debe tener el origen de datos AdvWorks. mdb (instalado con el SDK) ubicado en C:\Archivos de Programa\microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb o editar la ruta de acceso en el código de ejemplo para reflejar la ubicación real de este archivo. Este es un archivo de base de datos de Microsoft Access.  
   
  Use **Buscar** para buscar el archivo adovbs. Inc y colóquelo en el directorio que piensa usar. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **MoveVBS. asp**. Puede ver el resultado en cualquier explorador.  
   

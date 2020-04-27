@@ -16,10 +16,10 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918636"
 ---
 # <a name="filter-property"></a>Propiedad Filter
@@ -56,7 +56,7 @@ La cadena de criterios se compone de cláusulas con el formato *FieldName-Operat
 -   En su lugar, crearía este filtro como  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo, `LastName Like 'Smit*'`.  
+-   En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **like** , solo puede usar un carácter comodín al final del patrón. Por ejemplo: `LastName Like 'Smit*'`.  
   
  Las constantes de filtro facilitan la resolución de conflictos de registros individuales durante el modo de actualización por lotes, ya que permiten ver, por ejemplo, solo los registros que se vieron afectados durante la última llamada al método del [método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
   
@@ -93,8 +93,8 @@ En la tabla siguiente se resumen los efectos de **adFilterPendingRecords** en di
 ||No claves|Clave única|Varias claves|
 |-|--------------|----------------|-------------------|
 |**No claves**|+|+|+|
-|**Clave única**|+|-|N/D|
-|**Varias claves**|+|N/D|+|
+|**Clave única**|+|-|N/A|
+|**Varias claves**|+|N/A|+|
 |||||
   
 ## <a name="applies-to"></a>Se aplica a

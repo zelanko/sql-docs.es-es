@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918625"
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
@@ -43,7 +43,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *SearchDirection*  
  Opcional. Valor [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) que especifica si la búsqueda debe comenzar en la fila actual o en la siguiente fila disponible en la dirección de la búsqueda. Una búsqueda incorrecta se detiene al final del **conjunto de registros** si el valor es **adSearchForward**. Una búsqueda incorrecta se detiene al principio del **conjunto de registros** si el valor es **adSearchBackward**.  
   
- *Iniciar*  
+ *Start*  
  Opcional. Marcador de **variante** que funciona como la posición inicial de la búsqueda.  
   
 ## <a name="remarks"></a>Observaciones  

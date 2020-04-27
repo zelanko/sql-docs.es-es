@@ -17,10 +17,10 @@ ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917032"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
@@ -34,7 +34,7 @@ Stream.SaveToFile FileName, SaveOptions
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Extensión*  
+ *FileName*  
  Valor de **cadena** que contiene el nombre completo del archivo en el que se guardará el contenido de la **secuencia** . Puede guardar en cualquier ubicación local válida o en cualquier ubicación a la que tenga acceso a través de un valor UNC.  
   
  *SaveOptions*  

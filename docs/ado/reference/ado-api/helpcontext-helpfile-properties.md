@@ -22,10 +22,10 @@ ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918482"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext, HelpFile propiedades
@@ -41,7 +41,7 @@ Indica el archivo de ayuda y el tema asociados a un objeto de [error](../../../a
  Si se especifica un archivo de ayuda en la propiedad **HelpFile** , la propiedad **HelpContext** se usa para mostrar automáticamente el tema de ayuda que identifica. Si no hay ningún tema de ayuda relevante disponible, la propiedad **HelpContext** devuelve cero y la propiedad **HelpFile** devuelve una cadena de longitud cero ("").  
   
 ## <a name="applies-to"></a>Se aplica a  
- [Objeto de error](../../../ado/reference/ado-api/error-object.md)  
+ [Error (objeto)](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de las propiedades Description, HelpContext, HelpFile, NativeError, Number, Source y SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   

@@ -17,10 +17,10 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918781"
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
@@ -40,7 +40,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pError*  
  Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Describe el error que se produjo si el valor de **adStatus** es **adStatusErrorsOccurred**; de lo contrario, no se establece.  
   
- *Statu*  
+ *adStatus*  
  Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Cuando se llama a este evento, este parámetro se establece en **adStatusOK** si la operación que causó el evento se realizó correctamente, o en **adStatusErrorsOccurred** si se produjo un error en la operación.  
   
  Antes de que se devuelva este evento, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores.  

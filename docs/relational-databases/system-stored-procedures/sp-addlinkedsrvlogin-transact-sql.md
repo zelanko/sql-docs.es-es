@@ -18,10 +18,10 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072667"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
@@ -54,7 +54,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Es un inicio de sesión en el servidor local. *locallogin* es de **tipo sysname y su**valor predeterminado es NULL. NULL especifica que esta entrada se aplica a todos los inicios de sesión locales que se conectan a *rmtsrvname*. Si no es NULL, *locallogin* puede ser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un inicio de sesión de o un inicio de sesión de Windows. El inicio de sesión de Windows debe disponer de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea directamente o en calidad de miembro de un grupo de Windows al que se ha concedido acceso.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Es el inicio de sesión remoto utilizado para ** conectarse a @useself rmtsrvname cuando es false. Cuando el servidor remoto es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no utiliza la autenticación de Windows, *rmtuser* es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un inicio de sesión. *rmtuser* es de **tipo sysname y su**valor predeterminado es NULL.  
+ Es el inicio de sesión remoto utilizado para *rmtsrvname* conectarse a @useself rmtsrvname cuando es false. Cuando el servidor remoto es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no utiliza la autenticación de Windows, *rmtuser* es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un inicio de sesión. *rmtuser* es de **tipo sysname y su**valor predeterminado es NULL.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  Es la contraseña asociada a *rmtuser*. *rmtpassword* es de **tipo sysname y su**valor predeterminado es NULL.  
@@ -97,7 +97,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- Or  
+ O bien  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  
@@ -118,7 +118,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
   
 ## <a name="see-also"></a>Consulte también  
  [Servidores vinculados vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

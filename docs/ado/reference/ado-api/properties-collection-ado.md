@@ -18,10 +18,10 @@ ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 01c2ea6b885ed2619b79413beb09ca4bf2835162
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917575"
 ---
 # <a name="properties-collection-ado"></a>Colección de propiedades (ADO)
@@ -41,4 +41,4 @@ Contiene todos los objetos de [propiedad](../../../ado/reference/ado-api/propert
   
 ## <a name="see-also"></a>Consulte también  
  [Property (objeto) (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7e736adef1648785ec0d037688c340f31a0e1bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915100"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
@@ -32,8 +32,8 @@ ms.locfileid: "67915100"
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |target_id|**int**|Id. del destino. El Id. es único dentro del objeto de sesión de evento. No admite valores NULL.|  
 |name|**sysname**|Nombre del destino del evento. No admite valores NULL.|  
-|Paquete|**sysname**|Nombre del paquete de eventos que contiene el destino de evento. No admite valores NULL.|  
-|destina|**sysname**|Nombre del módulo que contiene el destino de evento. No admite valores NULL.|  
+|paquete|**sysname**|Nombre del paquete de eventos que contiene el destino de evento. No admite valores NULL.|  
+|module|**sysname**|Nombre del módulo que contiene el destino de evento. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
@@ -43,7 +43,7 @@ ms.locfileid: "67915100"
   
 ||||  
 |-|-|-|  
-|De|A|Relación|  
+|De|En|Relación|  
 |Sys. database_event_session_targets. event_session_id|Sys. database_event_sessions. event_session_id|Varios a uno|  
   
 ## <a name="see-also"></a>Consulte también  

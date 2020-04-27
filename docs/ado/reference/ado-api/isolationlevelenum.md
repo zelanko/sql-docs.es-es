@@ -16,10 +16,10 @@ ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918375"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
@@ -30,7 +30,7 @@ Especifica el nivel de aislamiento de transacción para un objeto de [conexión]
 |**adXactUnspecified**|-1|Indica que el proveedor está utilizando un nivel de aislamiento diferente al especificado, pero que no se puede determinar el nivel.|  
 |**adXactChaos**|16|Indica que no se pueden sobrescribir los cambios pendientes de transacciones más aisladas.|  
 |**adXactBrowse**|256|Indica que desde una transacción puede ver los cambios sin confirmar en otras transacciones.|  
-|**Connection como adxactreaduncommitted**|256|Igual que **adXactBrowse**.|  
+|**adXactReadUncommitted**|256|Igual que **adXactBrowse**.|  
 |**adXactCursorStability**|4096|Indica que desde una transacción puede ver los cambios en otras transacciones solo después de que se hayan confirmado.|  
 |**adXactReadCommitted**|4096|Igual que **adXactCursorStability**.|  
 |**adXactRepeatableRead**|65536|Indica que desde una transacción no se pueden ver los cambios realizados en otras transacciones, pero que la nueva consulta puede recuperar nuevos objetos de **conjunto de registros** .|  

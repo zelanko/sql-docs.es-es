@@ -18,10 +18,10 @@ ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909060"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
@@ -34,9 +34,9 @@ ms.locfileid: "67909060"
 |**repid**|**uniqueidentifier**|Id. único de la réplica.|  
 |**use_interactive_resolver**|**bit**|Especifica si se utiliza el solucionador interactivo durante la reconciliación.<br /><br /> **0** = no se utiliza el solucionador interactivo.<br /><br /> **1** = usar el solucionador interactivo.|  
 |**validation_level**|**int**|Tipo de validación que se llevará a cabo en la suscripción. El nivel de validación especificado puede ser uno de estos valores:<br /><br /> **0** = sin validación.<br /><br /> **1** = validación solo del recuento de filas.<br /><br /> **2** = recuento de filas y validación de suma de comprobación.<br /><br /> **3** = recuento de filas y validación de suma de comprobación binaria.|  
-|**resync_gen**|**BIGINT**|El número de generación que se utiliza para volver a sincronizar la suscripción. Un valor de **-1** indica que la suscripción no está marcada para resincronización.|  
+|**resync_gen**|**bigint**|El número de generación que se utiliza para volver a sincronizar la suscripción. Un valor de **-1** indica que la suscripción no está marcada para resincronización.|  
 |**login_name**|**sysname**|Nombre del usuario que creó la suscripción.|  
-|**host**|**sysname**|El valor que utiliza el filtro de fila con parámetros al generar la partición de la suscripción.|  
+|**hostname**|**sysname**|El valor que utiliza el filtro de fila con parámetros al generar la partición de la suscripción.|  
 |**merge_jobid**|**binario (16)**|Id. de trabajo de mezcla para esta suscripción.|  
 |**sync_info**|**int**|Solo para uso interno.|  
   

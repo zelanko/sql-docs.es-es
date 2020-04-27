@@ -17,10 +17,10 @@ ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917836"
 ---
 # <a name="open-method-ado-stream"></a>Open (método) (Stream de ADO)

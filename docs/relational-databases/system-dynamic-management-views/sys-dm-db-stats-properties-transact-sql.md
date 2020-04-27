@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910711"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
@@ -40,10 +40,10 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>Argumentos  
  *object_id*  
- Es el identificador del objeto en la base de datos actual para el que se han solicitado propiedades de una de sus estadísticas. *object_id* es de **tipo int**.  
+ Es el identificador del objeto en la base de datos actual para el que se han solicitado propiedades de una de sus estadísticas. *object_id* es **int**.  
   
  *stats_id*  
- Es el identificador de estadísticas para el *object_id*especificado. El identificador de estadísticas se puede obtener desde la vista de administración dinámica [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* es de **tipo int**.  
+ Es el identificador de estadísticas para el *object_id*especificado. El identificador de estadísticas se puede obtener desde la vista de administración dinámica [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* es **int**.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -53,13 +53,13 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |stats_id|**int**|Identificador del objeto de estadísticas. Es único dentro de la vista indizada o la tabla. Para obtener más información, vea [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
 |last_updated|**datetime2**|Fecha y hora de la última actualización del objeto de estadísticas. Para más información, vea la sección [Comentarios](#Remarks) en esta página.|  
 |rows|**bigint**|Número total de filas que tenía la tabla o la vista indizada la última vez que se actualizaron las estadísticas. Si las estadísticas se filtran o corresponden a un índice filtrado, el número de filas puede ser inferior al número de filas de la tabla.|  
-|rows_sampled|**BIGINT**|Número total de filas muestreadas para cálculos de estadísticas.|  
+|rows_sampled|**bigint**|Número total de filas muestreadas para cálculos de estadísticas.|  
 |steps|**int**|Número de pasos del histograma. Para obtener más información, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
-|unfiltered_rows|**BIGINT**|Número total de filas de la tabla antes de aplicar la expresión de filtro (para estadísticas filtradas). Si las estadísticas no están filtradas, unfiltered_rows es igual al valor devuelto en la columna rows.|  
-|modification_counter|**BIGINT**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Tablas con optimización para memoria: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] el inicio [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y en esta columna contiene el número total de modificaciones de la tabla desde la última vez que se actualizaron las estadísticas o se reinició la base de datos.|  
-|persisted_sample_percent|**float**|Porcentaje de ejemplo persistente empleado en las actualizaciones de estadísticas en las que no se especifica explícitamente un porcentaje de muestreo. Si el valor es cero, significa que no hay establecido ningún porcentaje de ejemplo persistente para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 Cu4|  
+|unfiltered_rows|**bigint**|Número total de filas de la tabla antes de aplicar la expresión de filtro (para estadísticas filtradas). Si las estadísticas no están filtradas, unfiltered_rows es igual al valor devuelto en la columna rows.|  
+|modification_counter|**bigint**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Tablas con optimización para memoria: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] el inicio [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y en esta columna contiene el número total de modificaciones de la tabla desde la última vez que se actualizaron las estadísticas o se reinició la base de datos.|  
+|persisted_sample_percent|**float**|Porcentaje de ejemplo persistente empleado en las actualizaciones de estadísticas en las que no se especifica explícitamente un porcentaje de muestreo. Si el valor es cero, significa que no hay establecido ningún porcentaje de ejemplo persistente para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
-## Comentarios para <a name="Remarks"></a>  
+## <a name="remarks"></a>Comentarios para <a name="Remarks"></a>  
  **Sys. dm_db_stats_properties** devuelve un conjunto de filas vacío en cualquiera de las siguientes condiciones:  
   
 -   **object_id** o **stats_id** es NULL.    
@@ -106,10 +106,10 @@ WHERE modification_counter > 1000;
   
 ## <a name="see-also"></a>Consulte también  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [Sys. stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funciones y vistas de administración dinámica relacionadas con objetos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  
- [Sys. dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
   
 

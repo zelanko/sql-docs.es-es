@@ -17,10 +17,10 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918073"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
@@ -49,7 +49,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Opciones*  
  Opcional. Un valor de [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) cuyo valor predeterminado es **adMoveUnspecified**. Especifica el comportamiento de este método.  
   
- *Copystreamtostream*  
+ *Async*  
  Opcional. Valor **booleano** que, cuando **es true**, especifica que esta operación debe ser asincrónica.  
   
 ## <a name="return-value"></a>Valor devuelto  

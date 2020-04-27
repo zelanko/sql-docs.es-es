@@ -16,10 +16,10 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918664"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
@@ -42,7 +42,7 @@ Especifica el [Estado](../../../ado/reference/ado-api/status-property-ado-field.
 |**adFieldIntegrityViolation**|10|Indica que el campo no se puede modificar porque es una entidad calculada o derivada.|  
 |**adFieldInvalidURL**|17|Indica que la dirección URL del origen de datos contiene caracteres no válidos.|  
 |**adFieldIsNull**|3|Indica que el proveedor devolvió un valor VARIANT de tipo VT_NULL y que el campo no está vacío.|  
-|**adFieldOK**|0|Default. Indica que el campo se agregó o eliminó correctamente.|  
+|**adFieldOK**|0|Predeterminada. Indica que el campo se agregó o eliminó correctamente.|  
 |**adFieldOutOfSpace**|22|Indica que el proveedor no puede obtener suficiente espacio de almacenamiento para completar una operación de movimiento o copia.|  
 |**adFieldPendingChange**|0x40000|Indica que el campo se ha eliminado y, a continuación, se ha vuelto a agregar, quizás con un tipo de datos diferente, o que el valor del campo que tenía anteriormente un estado **adFieldOK** ha cambiado. La forma final del campo modificará la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) después de que se llame al método [Update](../../../ado/reference/ado-api/update-method.md) .|  
 |**adFieldPendingDelete**|0x20000|Indica que la operación de **eliminación** provocó el establecimiento del estado. El campo se ha marcado para su eliminación de la colección **Fields** después de que se llame al método **Update** .|  

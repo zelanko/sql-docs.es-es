@@ -46,10 +46,10 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918366"
 ---
 # <a name="item-property-ado"></a>Propiedad Item (ADO)
@@ -65,7 +65,7 @@ Set object = collection.Item ( Index )
  Devuelve una referencia de objeto.  
   
 ## <a name="parameters"></a>Parámetros  
- *Ajustar*  
+ *Índice*  
  Expresión **Variant** que se evalúa como el nombre o el número ordinal de un objeto de una colección.  
   
 ## <a name="remarks"></a>Observaciones  

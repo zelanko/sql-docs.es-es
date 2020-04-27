@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046308"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
@@ -52,7 +52,7 @@ fn_ check_object_signatures (
   
 -   'clave asimétrica'  
   
- \@la *clase* es de **tipo sysname**.  
+ \@*class* es **sysname**.  
   
  { \@ *huella digital* }  
  El valor hash SHA-1 del certificado o GUID de la clave asimétrica con el que se cifra la clave. \@la *huella digital* es **varbinary (20)**.  
@@ -62,7 +62,7 @@ fn_ check_object_signatures (
   
 |Columna|Tipo|Descripción|  
 |------------|----------|-----------------|  
-|type|**nvarchar (120)**|Devuelve la descripción del tipo o ensamblado.|  
+|type|**nvarchar(120)**|Devuelve la descripción del tipo o ensamblado.|  
 |entity_id|**int**|Devuelve el identificador de objeto del objeto que se está evaluando.|  
 |is_signed|**int**|Devuelve 0 cuando la huella digital proporcionada no firma el objeto. Devuelve 1 cuando la huella digital proporcionada firma el objeto.|  
 |is_signature_valid|**int**|Cuando el valor de is_signed es 1, devuelve 0 si la firma no es válida. Devuelve 1 cuando la firma es válida.<br /><br /> Cuando el valor de is_signed es 0, siempre devuelve 0.|  
@@ -92,6 +92,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [IS_OBJECTSIGNED &#40;&#41;de Transact-SQL](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+ [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

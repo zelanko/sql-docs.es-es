@@ -17,10 +17,10 @@ ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919082"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord (método, ADO)
@@ -37,7 +37,7 @@ Record.DeleteRecord Source, Async
  *Origen*  
  Opcional. Valor de **cadena** que contiene una dirección URL que identifica la entidad (por ejemplo, el archivo o el directorio) que se va a eliminar. Si se omite *source* o especifica una cadena vacía, se elimina la entidad representada por el [registro](../../../ado/reference/ado-api/record-object-ado.md) actual. Si el registro es un registro de colección ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, como un directorio), todos los elementos secundarios (por ejemplo, subdirectorios) también se eliminarán.  
   
- *Copystreamtostream*  
+ *Async*  
  Opcional. Valor **booleano** que, cuando es **true**, especifica que la operación de eliminación es asincrónica.  
   
 ## <a name="remarks"></a>Observaciones  

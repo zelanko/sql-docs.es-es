@@ -21,10 +21,10 @@ ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059193"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
@@ -53,7 +53,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |msgnum|**int**|Id. del mensaje de error.|  
 |severity|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25.|  
 |state|**smallint**|Número de estado del error que indica el punto dentro del código donde se produjo el error.|  
-|message|**nvarchar (2048)**|Texto del mensaje del error.|  
+|message|**nvarchar(2048)**|Texto del mensaje del error.|  
   
 ## <a name="permissions"></a>Permisos  
  Las guías de plan de ámbito OBJECT requieren el permiso VIEW DEFINITION o ALTER en el objeto al que se hace referencia y permisos para compilar la consulta o lote proporcionado en la guía de plan. Por ejemplo, si un lote contiene las instrucciones SELECT, se requieren los permisos SELECT en los objetos a los que se hace referencia.  

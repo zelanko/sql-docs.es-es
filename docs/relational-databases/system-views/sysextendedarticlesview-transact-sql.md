@@ -18,10 +18,10 @@ ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910115"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
@@ -36,16 +36,16 @@ ms.locfileid: "67910115"
 |**del_cmd**|**nvarchar(255)**|Comando para ejecutar con DELETE; en caso contrario, se construye a partir del registro.|  
 |**denominación**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
 |**dest_table**|**nvarchar(128)**|Nombre de la tabla de destino.|  
-|**filtro**|**int**|Identificador de objeto del procedimiento almacenado utilizado para la partición horizontal.|  
+|**filter**|**int**|Identificador de objeto del procedimiento almacenado utilizado para la partición horizontal.|  
 |**filter_clause**|**ntext**|La cláusula WHERE del artículo, utilizada para el filtrado horizontal.|  
 |**ins_cmd**|**nvarchar(255)**|Comando que se ejecuta con INSERT.|  
-|**Name**|**nvarchar(128)**|El nombre asociado al artículo, único en la publicación.|  
+|**name**|**nvarchar(128)**|El nombre asociado al artículo, único en la publicación.|  
 |**objid**|**int**|El Id. de objeto de la tabla publicada.|  
 |**pubid**|**int**|Id. de la publicación a la que pertenece el artículo.|  
 |**pre_creation_cmd**|**tinyint**|El comando anterior a la creación para DROP TABLE, DELETE TABLE o TRUNCATE:<br /><br /> **0** = ninguno.<br /><br /> **1** = quitar.<br /><br /> **2** = eliminar.<br /><br /> **3** = truncar.|  
-|**estatus**|**int**|Máscara de bits para las opciones y estado del artículo; puede ser el resultado OR lógico bit a bit de uno o más de estos valores:<br /><br /> **1** = el artículo está activo.<br /><br /> **8** = incluir el nombre de la columna en las instrucciones INSERT.<br /><br /> **16** = usar instrucciones con parámetros.<br /><br /> **24** = ambos incluyen el nombre de la columna en las instrucciones INSERT y usan instrucciones con parámetros.<br /><br /> Por ejemplo, un artículo activo que utilice instrucciones con parámetros tendrá un valor de 17 en esta columna. Un valor de 0 significa que el artículo no está activo y no tiene otras propiedades definidas.|  
+|**status**|**int**|Máscara de bits para las opciones y estado del artículo; puede ser el resultado OR lógico bit a bit de uno o más de estos valores:<br /><br /> **1** = el artículo está activo.<br /><br /> **8** = incluir el nombre de la columna en las instrucciones INSERT.<br /><br /> **16** = usar instrucciones con parámetros.<br /><br /> **24** = ambos incluyen el nombre de la columna en las instrucciones INSERT y usan instrucciones con parámetros.<br /><br /> Por ejemplo, un artículo activo que utilice instrucciones con parámetros tendrá un valor de 17 en esta columna. Un valor de 0 significa que el artículo no está activo y no tiene otras propiedades definidas.|  
 |**sync_objid**|**int**|El Id. de la tabla o vista que representa la definición del artículo.|  
-|**automáticamente**|**tinyint**|Tipo de artículo:<br /><br /> **1** = artículo basado en registro.<br /><br /> **3** = artículo basado en registro con filtro manual.<br /><br /> **5** = artículo basado en registro con vista manual.<br /><br /> **7** = artículo basado en registro con filtro manual y vista manual.|  
+|**type**|**tinyint**|Tipo de artículo:<br /><br /> **1** = artículo basado en registro.<br /><br /> **3** = artículo basado en registro con filtro manual.<br /><br /> **5** = artículo basado en registro con vista manual.<br /><br /> **7** = artículo basado en registro con filtro manual y vista manual.|  
 |**upd_cmd**|**nvarchar(255)**|Comando para ejecutar con UPDATE; en caso contrario, se construye a partir del registro.|  
 |**schema_option**|**binary**|Indica qué propiedades del objeto publicado se convierten en script en la instantánea. Para obtener una lista de las opciones de esquema admitidas, vea [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|Propietario de la tabla de la base de datos de destino.|  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 959c595f4ac394bbaf50c07b27a4679d9a30556e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67915132"
 ---
 # <a name="sysdatabase_event_session_events-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
@@ -32,8 +32,8 @@ ms.locfileid: "67915132"
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |event_id|**int**|Id. del evento. Este Id. es único dentro de un objeto de sesión de eventos. No admite valores NULL.|  
 |name|**sysname**|Nombre del evento. No admite valores NULL.|  
-|Paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. No admite valores NULL.|  
-|destina|**sysname**|Nombre del módulo que contiene el evento. No admite valores NULL.|  
+|paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. No admite valores NULL.|  
+|module|**sysname**|Nombre del módulo que contiene el evento. No admite valores NULL.|  
 |predicate|**nvarchar (3000)**|La expresión de predicado aplicada al evento. Acepta valores NULL.|  
 |predicate_xml|**nvarchar (3000)**|La expresión de predicado XML aplicada al evento. Acepta valores NULL.|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67915132"
   
 ||||  
 |-|-|-|  
-|De|A|Relación|  
+|De|En|Relación|  
 |Sys. database_event_session_events. event_session_id|Sys. database_event_sessions. event_session_id|Varios a uno|  
   
 ## <a name="see-also"></a>Consulte también  

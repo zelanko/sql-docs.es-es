@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68103281"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
@@ -56,20 +56,20 @@ ms.locfileid: "68103281"
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de la precisión de datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. De lo contrario, devuelve NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Escala de datos numéricos aproximados, datos numéricos exactos, datos enteros o datos monetarios. De lo contrario, devuelve NULL.|  
 |**DATETIME_PRECISION**|**smallint**|Precisión en fracciones de segundo si el tipo de parámetro es **DateTime** o **smalldatetime**. De lo contrario, devuelve NULL.|  
-|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Reservado para su uso en el futuro:|  
-|**INTERVAL_PRECISION**|**smallint**|NULL. Reservado para su uso en el futuro:|  
-|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Reservado para su uso en el futuro:|  
-|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Reservado para su uso en el futuro:|  
-|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Reservado para su uso en el futuro:|  
-|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Reservado para su uso en el futuro:|  
-|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Reservado para su uso en el futuro:|  
-|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Reservado para su uso en el futuro:|  
+|**INTERVAL_TYPE**|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  
+|**INTERVAL_PRECISION**|**smallint**|NULL. Reservado para uso futuro.|  
+|**USER_DEFINED_TYPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**USER_DEFINED_TYPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**USER_DEFINED_TYPE_NAME**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**SCOPE_CATALOG**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**SCOPE_SCHEMA**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
+|**SCOPE_NAME**|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Vistas de esquema de información &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [Sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [Sys. Parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
+ [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)  
   
   

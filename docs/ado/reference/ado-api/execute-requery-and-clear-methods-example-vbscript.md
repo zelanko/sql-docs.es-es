@@ -17,10 +17,10 @@ ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918814"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Ejemplo de métodos Execute, Requery y Clear (VBScript)

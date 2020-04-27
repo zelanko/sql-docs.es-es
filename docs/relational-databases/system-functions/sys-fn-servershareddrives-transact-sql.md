@@ -21,10 +21,10 @@ ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 71858ee3c57af8d94bdf4ef4addad720655942f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122549"
 ---
 # <a name="sysfn_servershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
@@ -50,8 +50,7 @@ fn_servershareddrives()
  Si la instancia del servidor actual no es un servidor en clúster, **fn_servershareddrives** devuelve un conjunto de filas vacío.  
   
 ## <a name="remarks"></a>Observaciones  
- 
-  `fn_servershareddrives` devuelve una lista de unidades compartidas que utiliza este servidor en clúster. Estas unidades compartidas pertenecen al mismo grupo de clúster [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el recurso. Además, el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de estas unidades.  
+ `fn_servershareddrives` devuelve una lista de unidades compartidas que utiliza este servidor en clúster. Estas unidades compartidas pertenecen al mismo grupo de clúster [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el recurso. Además, el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de estas unidades.  
   
  Esta función resulta útil para identificar las unidades disponibles para los usuarios.  
   

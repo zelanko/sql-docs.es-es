@@ -18,10 +18,10 @@ ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910153"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "67910153"
 |**user_name**|**nvarchar(128)**|Nombre del usuario que realizó la operación de restauración. Puede ser NULL.|  
 |**backup_set_id**|**int**|Número de identificación único que identifica el conjunto de copia de seguridad que se restaura. Conjunto de referencias **(backup_set_id)**.|  
 |**restore_type**|**Char (1)**|Tipo de operación de restauración:<br /><br /> D = Base de datos<br /><br /> F = Archivo <br /><br /> G = Grupo de archivos <br /><br /> I = Diferencial <br /><br /> L = Registro<br /><br /> V = Solo comprobar <br /><br /> Puede ser NULL.|  
-|**Reemplace**|**bit**|Indica si la operación de restauración especificó la opción REPLACE:<br /><br /> 1 = Especificada<br /><br /> 0 = No especificada<br /><br /> Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, 0 es la única opción.|  
-|**recuperación**|**bit**|Indica si la operación de restauración especificó la opción RECOVERY o NORECOVERY:<br /><br /> 1 = RECOVERY <br /><br /> Puede ser NULL.<br /><br /> Cuando una base de datos se revierte a una instantánea de base de datos, 1 es la única opción.<br /><br /> 0 = NORECOVERY|  
-|**volver**|**bit**|Indica si la operación de restauración especificó la opción RESTART:<br /><br /> 1 = Especificada<br /><br /> 0 = No especificada<br /><br /> Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, 0 es la única opción.|  
+|**replace**|**bit**|Indica si la operación de restauración especificó la opción REPLACE:<br /><br /> 1 = Especificada<br /><br /> 0 = No especificada<br /><br /> Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, 0 es la única opción.|  
+|**recovery**|**bit**|Indica si la operación de restauración especificó la opción RECOVERY o NORECOVERY:<br /><br /> 1 = RECOVERY <br /><br /> Puede ser NULL.<br /><br /> Cuando una base de datos se revierte a una instantánea de base de datos, 1 es la única opción.<br /><br /> 0 = NORECOVERY|  
+|**restart**|**bit**|Indica si la operación de restauración especificó la opción RESTART:<br /><br /> 1 = Especificada<br /><br /> 0 = No especificada<br /><br /> Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, 0 es la única opción.|  
 |**stop_at**|**datetime**|Indica el momento hasta el cual se recuperó la base de datos. Puede ser NULL.|  
 |**device_count**|**tinyint**|Número de dispositivos implicados en la operación de restauración. Este número puede ser inferior al número de tipos de medios utilizados para la copia de seguridad. Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, el número es siempre 1.|  
 |**stop_at_mark_name**|**nvarchar(128)**|Indica la recuperación de la transacción que contiene la marca con nombre. Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, este valor es NULL.|  

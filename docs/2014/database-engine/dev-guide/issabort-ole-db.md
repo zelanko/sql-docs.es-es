@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 801eb84df08837ec8e49b6bb0e28fc1f1115e674
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781041"
 ---
 # <a name="issabort-ole-db"></a>ISSAbort (OLE DB)
   La interfaz **ISSAbort** , que se expone en el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, proporciona el método [ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) que se utiliza para cancelar el conjunto de filas actual más los comandos incluidos en el mismo lote que el comando que inicialmente generó el conjunto de filas y que todavía no han completado la ejecución.  
   
- **ISSAbort** es una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfaz específica del proveedor de Native Client disponible mediante **QueryInterface** en el objeto **IMultipleResults** devuelto por **ICommand:: Execute** o **IOpenRowset:: OPENROWSET**.  
+ **ISSAbort** es una interfaz específica del proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Native Client que está disponible cuando se utiliza **QueryInterface** en el objeto **IMultipleResults** devuelto por **ICommand::Execute** o **IOpenRowset::OpenRowset**.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

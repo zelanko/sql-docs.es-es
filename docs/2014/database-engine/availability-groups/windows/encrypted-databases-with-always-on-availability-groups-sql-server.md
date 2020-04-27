@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bafd990a7c115a6108b699a61897f9e587e83c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814641"
 ---
 # <a name="encrypted-databases-with-alwayson-availability-groups-sql-server"></a>Bases de datos cifradas con grupos de disponibilidad AlwaysOn (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62814641"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Restrictions"></a> Limitaciones y restricciones  
+##  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Si una base de datos está cifrada o incluso contiene una clave de cifrado de base de datos (DEK), no puede usar el [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] ni el [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] para agregar la base de datos a un grupo de disponibilidad. Aunque se haya descifrado una base de datos cifrada, sus copias de seguridad de registros pueden contener datos cifrados. En este caso, la sincronización de datos completa inicial podría producir errores en la base de datos. Esto se debe a que la operación de restaurar registro puede requerir el certificado utilizado por las claves de cifrado de base de datos (DEK) y ese certificado podría no estar disponible.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62814641"
   
     5.  Restaure esta copia de seguridad de registros en la base de datos secundaria.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

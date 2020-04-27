@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771658"
 ---
 # <a name="validate-dialog-box"></a>Validar, cuadro de diálogo
@@ -31,7 +31,7 @@ ms.locfileid: "62771658"
   
 -   [Establecer las opciones de la página General](#general)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Validar  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Validar  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62771658"
   
 5.  Haga clic con el botón derecho en el paquete o proyecto y, después, haga clic en **Validar**.  
   
-##  <a name="general"></a> Establecer las opciones de la página General  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Establecer las opciones de la página General  
  **Entorno**  
  Seleccione el entorno que desea usar para validar el proyecto o el paquete.  
   

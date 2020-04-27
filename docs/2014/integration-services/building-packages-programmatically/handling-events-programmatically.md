@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771811"
 ---
 # <a name="handling-events-programmatically"></a>Controlar eventos mediante programación
@@ -250,7 +250,7 @@ End Module
 ![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Consulte también  
- [Controladores de eventos de Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md)   
- [Agregar un controlador de eventos a un paquete](../add-an-event-handler-to-a-package.md)  
+ [Controladores de eventos Integration Services &#40;SSIS&#41;](../integration-services-ssis-event-handlers.md)   
+ [agregar un controlador de eventos a un paquete](../add-an-event-handler-to-a-package.md)  
   
   

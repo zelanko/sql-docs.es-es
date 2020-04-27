@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62769001"
 ---
 # <a name="upgrade-integration-services-packages"></a>Actualizar paquetes de Integration Services
@@ -46,7 +46,7 @@ ms.locfileid: "62769001"
   
 -   Migre los paquetes a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]y después actualice los paquetes a [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
-     Para obtener información sobre cómo migrar paquetes DTS a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] y a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], vea [Migrar paquetes de Servicios de transformación de datos](https://go.microsoft.com/fwlink/?LinkId=251870) (2005) y [Migrar paquetes de Servicios de transformación de datos](https://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
+     Para obtener información sobre cómo migrar paquetes DTS a [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] y a [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], vea [Paquetes de Servicios de transformación de datos (DTS](https://go.microsoft.com/fwlink/?LinkId=251870) (2005) y [Paquetes de Servicios de transformación de datos (DTS](https://go.microsoft.com/fwlink/?LinkId=251871) (2008).  
   
 -   Vuelva a crear los paquetes DTS mediante [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)].  
   
@@ -56,19 +56,18 @@ ms.locfileid: "62769001"
  Puede utilizar distintos métodos para actualizar los paquetes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . En algunos de estos métodos, la actualización solo es temporal. En otros, es definitiva. La tabla siguiente describe cada uno de estos métodos y si la actualización es temporal o definitiva.  
   
 > [!NOTE]  
->  Cuando se ejecuta un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] mediante la utilidad **dtexec** (dtexec.exe) que se instala con la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la actualización temporal del paquete incrementa el tiempo de ejecución. La proporción de incremento de tiempo de ejecución del paquete depende del tamaño del mismo. Para evitar un incremento del tiempo de ejecución, se recomienda actualizar el paquete antes de ejecutarlo.  
+>  Cuando se ejecuta un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] mediante la utilidad **dtexec** que se instala con la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the tempoary package upgrade increases the execution time. La proporción de incremento de tiempo de ejecución del paquete depende del tamaño del mismo. Para evitar un incremento del tiempo de ejecución, se recomienda actualizar el paquete antes de ejecutarlo.  
   
 |Método de actualización|Tipo de actualización|  
 |--------------------|---------------------|  
-|Use la utilidad **dtexec** (dtexec.exe) que se instala con la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> Para obtener más información, vea [DTExec Utility](../packages/dtexec-utility.md).|La actualización del paquete es temporal. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es temporal.<br /><br /> No se pueden guardar los cambios.|  
+|Use la utilidad **dtexec** que se instala con la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> Para obtener más información, consulte [utilidad dtexec](../packages/dtexec-utility.md).|La actualización del paquete es temporal. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es temporal.<br /><br /> No se pueden guardar los cambios.|  
 |Abra un archivo de paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|La actualización del paquete es definitiva si guarda el paquete; de lo contrario, es temporal.<br /><br /> En el caso de un paquete [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración del script es definitiva si guarda el paquete; de lo contrario, es temporal.|  
 |Agregar un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a un proyecto existente en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|La actualización del paquete es definitiva. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es definitiva.|  
 |Abra un archivo de proyecto [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y luego use el Asistente para actualizar paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] para actualizar varios paquetes en el proyecto.<br /><br /> Para obtener más información, vea [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md) y [Ayuda F1 del Asistente para actualización del paquete SSIS](../ssis-package-upgrade-wizard-f1-help.md).|La actualización del paquete es definitiva. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es definitiva.|  
 |Use la utilidad <xref:Microsoft.SqlServer.Dts.Runtime.Application.Upgrade%2A> para actualizar uno o más paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|La actualización del paquete es definitiva. En el caso de un paquete de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la migración de scripts es definitiva.|  
   
 ## <a name="custom-applications-and-custom-components"></a>Aplicaciones y componentes personalizados  
- 
-  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] no funcionarán con la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] no funcionarán con la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Puede usar la versión actual de las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para ejecutar y administrar paquetes que incluyen componentes personalizados de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]. Hemos agregado cuatro reglas de redirección de enlace a los archivos siguientes para redirigir los ensamblados en tiempo de ejecución de la versión 10.0.0.0 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) a la versión 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   

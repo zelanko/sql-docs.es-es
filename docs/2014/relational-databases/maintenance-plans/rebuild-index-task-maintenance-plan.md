@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807040"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tarea Volver a generar índice (Plan de mantenimiento)
@@ -49,17 +49,17 @@ ms.locfileid: "62807040"
   
      Genera un plan de mantenimiento que ejecuta tareas de mantenimiento en todas las bases de datos creadas por usuarios. No se ejecutarán tareas de mantenimiento en las bases de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Estas bases de datos específicas**  
+-   **Las bases de datos**  
   
      Genera un plan de mantenimiento que ejecuta tareas de mantenimiento únicamente en las bases de datos seleccionadas. Si elige esta opción, deberá seleccionar al menos una base de datos de la lista.  
   
     > [!NOTE]  
     >  Los planes de mantenimiento solo se ejecutan en bases de datos con un nivel de compatibilidad de 80 o superior. Las bases de datos con un nivel de compatibilidad de 70 o inferior no se muestran.  
   
- **Object**  
+ **Objeto**  
  Limite la cuadrícula **Selección** para mostrar tablas, vistas o ambas cosas.  
   
- **Seleccione**  
+ **Selección**  
  Especifique las tablas o índices que se ven afectados por esta tarea. No estará disponible cuando se seleccione **Tablas y vistas** en el cuadro Objeto.  
   
  **Reorganizar páginas con la cantidad predeterminada de espacio disponible**  
@@ -68,7 +68,7 @@ ms.locfileid: "62807040"
  **Cambiar el porcentaje de espacio disponible por página a**  
  Quita los índices de las tablas de la base de datos y vuelve a crearlos con un nuevo factor de relleno calculado automáticamente, de forma que reserva la cantidad de espacio disponible especificada en las páginas de índice. Cuanto mayor sea el porcentaje, más espacio disponible se reservará en las páginas de índice y mayor tamaño tendrá el índice. Los valores válidos son de 0 a 100.  
   
- **Ordenar resultados en tempdb**  
+ **Ordenar resultados de tempdb**  
  Use la `SORT_IN_TEMPDB`opción, que determina dónde se almacenan temporalmente los resultados de ordenación intermedios generados durante la creación del índice. En caso de que sea necesario realizar una operación de ordenación o de que esta pueda realizarse en la memoria, se omitirá la opción `SORT_IN_TEMPDB`.  
   
  **Mantener el índice en línea al volver a indizar**  

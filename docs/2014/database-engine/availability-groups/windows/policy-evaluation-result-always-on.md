@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789085"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Resultado de evaluación de directiva (AlwaysOn)
@@ -25,14 +25,14 @@ ms.locfileid: "62789085"
   
 
   
-##  <a name="Options"></a>Opciones del cuadro de diálogo  
+##  <a name="dialog-box-options"></a><a name="Options"></a>Opciones del cuadro de diálogo  
  **Problema detectado**  
  Muestra una fila para cada problema detectado. El icono asociado a un problema proporciona un indicador visual para indicar la gravedad del mismo, del modo siguiente:  
   
 |Icono|severity|  
 |----------|--------------|  
-|![Icono de la interfaz de usuario: error](../../../relational-databases/replication/media/repl-icon-error.gif "Icono de la interfaz de usuario: error")|Crítico|  
-|![Icono de la interfaz de usuario: advertencia](../../../relational-databases/replication/media/repl-icon-warn.gif "Icono de la interfaz de usuario: advertencia")|Advertencia|  
+|![Icono de la IU: error](../../../relational-databases/replication/media/repl-icon-error.gif "Icono de la IU: error")|Crítico|  
+|![Icono de la IU: advertencia](../../../relational-databases/replication/media/repl-icon-warn.gif "Icono de la IU: advertencia")|Advertencia|  
   
  **Descripción**  
  Esta cuadrícula muestra una breve descripción del problema seleccionado.  
@@ -40,9 +40,9 @@ ms.locfileid: "62789085"
  **Más información**  
  Haga clic en este vínculo para abrir el tema de Ayuda para el problema seleccionado.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
--   [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

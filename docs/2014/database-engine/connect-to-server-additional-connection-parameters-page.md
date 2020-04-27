@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808686"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Conectar con el servidor (página Parámetros de conexión adicionales)
-  El cuadro de diálogo **Conectar con** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] presenta los valores de cadena de conexión más comunes como opciones. Utilice la página **Parámetros de conexión adicionales** para agregar más parámetros de conexión a la cadena de conexión.  
+  El cuadro de diálogo **Conectar con[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de ** presenta los valores de cadena de conexión más comunes como opciones. Utilice la página **Parámetros de conexión adicionales** para agregar más parámetros de conexión a la cadena de conexión.  
   
 -   Los parámetros de conexión adicionales pueden ser cualquier parámetro de conexión ODBC.  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774348"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
@@ -38,11 +38,11 @@ ms.locfileid: "62774348"
   
  De forma predeterminada, las siguientes columnas muestran información sobre el estado de mantenimiento con respecto a cada instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   CPU de instancia: muestra el estado de mantenimiento de la utilización del procesador asignado a esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El estado de mantenimiento para este parámetro se determina según la directiva de utilización de la CPU establecida para la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y la opción de configuración para la directiva de evaluación de recursos volátiles. Para obtener más información, vea [reducir el ruido en las directivas de uso de CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU de instancia: muestra el estado de mantenimiento de la utilización del procesador asignado a esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El estado de mantenimiento para este parámetro se determina según la directiva de utilización de la CPU establecida para la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y la opción de configuración para la directiva de evaluación de recursos volátiles. Para obtener más información, vea [Reducir el ruido en las directivas de uso de la CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Para ver el historial de utilización del procesador para esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]o para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso de la CPU** .  
   
--   CPU del sistema informático: muestra el estado de mantenimiento de la utilización del procesador del sistema informático. El estado de mantenimiento para este parámetro se determina según la directiva de utilización de la CPU establecida para el sistema informático y la opción de configuración para la directiva de evaluación de recursos volátiles. Para obtener más información, vea [reducir el ruido en las directivas de uso de CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU del sistema informático: muestra el estado de mantenimiento de la utilización del procesador del sistema informático. El estado de mantenimiento para este parámetro se determina según la directiva de utilización de la CPU establecida para el sistema informático y la opción de configuración para la directiva de evaluación de recursos volátiles. Para obtener más información, vea [Reducir el ruido en las directivas de uso de la CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Para ver el historial de utilización del procesador para esta instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]o para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso de la CPU** .  
   
@@ -178,8 +178,8 @@ ms.locfileid: "62774348"
 ## <a name="see-also"></a>Consulte también  
  [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Utilidad de SQL Server de &#40;del panel de utilidad&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Supervisar instancias de SQL Server en la utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [Supervisar instancias de SQL Server en el Utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Utilidad de SQL Server características y tareas](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas de la Utilidad de SQL Server](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   
   

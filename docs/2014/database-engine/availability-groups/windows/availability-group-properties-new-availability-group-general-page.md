@@ -13,26 +13,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815658"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad (página General)
-  Este tema se aplica a la pestaña **General** del cuadro de diálogo **nuevo grupo de disponibilidad** y del cuadro de diálogo **propiedades de grupo de disponibilidad** .  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
+   Este tema se aplica a la pestaña **General** del cuadro de diálogo **Nuevo grupo de disponibilidad** y el cuadro de diálogo **Propiedades de grupo de disponibilidad**.  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
   
  **Para ver las propiedades del grupo de disponibilidad**  
   
 -   [Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Nombre del grupo de disponibilidad**  
  Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).  
   
-## <a name="availability-databases"></a>bases de datos de disponibilidad  
+## <a name="availability-databases"></a>Bases de datos de disponibilidad  
  **Nombre de la base de datos**  
  Nombre de una base de datos que se ha agregado al grupo de disponibilidad.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62815658"
  **Instancia del servidor**  
  Nombre de servidor de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda esta réplica y, para una instancia no predeterminada, su nombre de instancia.  
   
- **Role**  
+ **Rol**  
  **Principal**  
  Actualmente la réplica principal.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "62815658"
  **Manual**  
  Conmutación por error manual. La réplica solo puede ser objeto de conmutación por error manual por parte del administrador de base de datos.  
   
- **Conexiones en rol principal**  
+ **Conexiones el en rol principal**  
  El tipo de conexiones de cliente admitidas cuando la réplica posee el rol principal.  
   
  **Permitir todas las conexiones**  
  Se permiten todas las conexiones con las bases de datos de la réplica principal. Esta es la configuración predeterminada.  
   
- **Permitir conexiones de lectura/escritura**  
+ **Permitir conexiones de lectura o escritura**  
  No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** . Cuando la propiedad Application Intent se establece en **ReadWrite** o no se establece la propiedad de conexión Application Intent, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  **Secundario legible**  

@@ -17,32 +17,32 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810383"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Configurar opciones de inicio del servidor (Administrador de configuración de SQL Server)
   En este tema se describe cómo configurar las opciones de inicio que se utilizarán cada vez que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se inicie en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de opciones de inicio, vea [Opciones de inicio del servicio de motor de base de datos](database-engine-service-startup-options.md).  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe los parámetros de inicio en el Registro. Estos surten efecto en el siguiente inicio de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  En un clúster, se deben efectuar cambios en el servidor activo cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está en línea y surtirán efecto cuando el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se reinicie. La actualización de las opciones de inicio del Registro del otro nodo se producirá tras la siguiente conmutación por error.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La configuración de opciones de inicio del servidor está restringida a los usuarios que pueden cambiar las entradas relacionadas del Registro. Esto incluye a los usuarios siguientes.  
   
 -   Miembros del grupo local de administradores.  
   
 -   La cuenta de dominio utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] está configurado para ejecutarse bajo una cuenta de dominio.  
   
-##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
   
 #### <a name="to-configure-startup-options"></a>Para configurar las opciones de inicio  
   
@@ -72,6 +72,6 @@ ms.locfileid: "62810383"
 ## <a name="see-also"></a>Consulte también  
  [Iniciar SQL Server en modo de usuario único](start-sql-server-in-single-user-mode.md)   
  [Conectarse a SQL Server cuando los administradores del sistema están bloqueados](connect-to-sql-server-when-system-administrators-are-locked-out.md)   
- [Iniciar, detener o pausar el servicio del Agente SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
+ [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

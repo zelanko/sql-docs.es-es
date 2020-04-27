@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808403"
 ---
 # <a name="connection-properties-dialog-box"></a>Propiedades de conexión, cuadro de diálogo
@@ -43,7 +43,7 @@ ms.locfileid: "62808403"
  **Base de datos**  
  Nombre de la base de datos a la que está conectado. Para efectuar cambios, use la barra de herramientas del Editor SQL.  
   
- **IDENTIFICADOR**  
+ **SPID**  
  Id. de proceso del sistema que asigna el servidor a la conexión. No puede cambiarse para esta conexión.  
   
  **Protocolo de red**  
@@ -52,19 +52,19 @@ ms.locfileid: "62808403"
  **Tamaño de paquete de red**  
  Tamaño del paquete que se utiliza en la comunicación con el servidor. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
- **Tiempo de espera de la conexión**  
+ **Tiempo de espera de conexión**  
  Intervalo de tiempo de espera (en segundos) al conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] antes de que se agote el tiempo y se devuelva un error de conexión al usuario. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
  **Tiempo de espera de ejecución**  
  Intervalo de tiempo (en segundos) que hay que esperar antes de que finalice la ejecución de una tarea en el servidor. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
- **Cifrado**  
+ **Cifrados**  
  Indica si la conexión actual está cifrada. Para cambiar esta opción, conéctese de nuevo con las propiedades de conexión deseadas.  
   
 ## <a name="product-category"></a>Categoría de productos  
  Vea las propiedades del producto de la conexión actual. Estas propiedades describen el producto, la versión, el nombre de instancia y la intercalación del servidor. Las propiedades se configuran durante la instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- **Nombre de producto**  
+ **Nombre del producto**  
  El nombre del producto [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Versión del producto**  
@@ -94,7 +94,7 @@ ms.locfileid: "62808403"
  **Sistema operativo**  
  La versión de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows instalada en el servidor.  
   
- **Incrustrados**  
+ **Procesadores**  
  Número de procesadores del servidor.  
   
  **Memoria del sistema operativo**  
@@ -102,6 +102,6 @@ ms.locfileid: "62808403"
   
 ## <a name="see-also"></a>Consulte también  
  [Páginas de propiedades en SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Conectar al servidor &#40;página de inicio de sesión&#41; Motor de base de datos](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Conectar al servidor &#40;Página Inicio de sesión&#41; Motor de base de datos](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

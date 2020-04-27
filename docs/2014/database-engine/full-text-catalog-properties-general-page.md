@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779668"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propiedades del catálogo de texto completo (página General)
@@ -34,7 +34,7 @@ ms.locfileid: "62779668"
  **Estado del rellenado**  
  Indica el estado del catálogo. Los valores posibles son:  
   
--   **Inactivo**  
+-   **Idle**  
   
 -   **Rastreo en curso**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "62779668"
   
 -   **Limitado**  
   
--   **Recupera**  
+-   **Realizar la recuperación.**  
   
--   **Apagado**  
+-   **Apagar**  
   
 -   **Rellenado incremental en curso**  
   

@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792025"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Conectarse a la página Réplicas secundarias existentes (Asistente para agregar réplica/Asistente para agregar bases de datos)
-  En este tema de ayuda se describen las opciones de la página **conectar a réplicas secundarias existentes** . Este tema se usa en [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   En este tema de Ayuda se describen las opciones de la página **Conectar con réplicas secundarias existentes**. Este tema se usa en [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
  **Columnas de cuadrícula:**  
  **Instancia del servidor**  
@@ -30,7 +30,7 @@ ms.locfileid: "62792025"
  **Conectado como**  
  Muestra la cuenta que está conectada a la instancia de servidor, una vez que se ha establecido la conexión. Si esta columna muestra “**No conectado**” para una instancia de servidor determinada, deberá hacer clic en el botón **Conectar** o **Conectar todo** .  
   
- **Conectar**  
+ **Conexión**  
  Haga clic aquí si esta instancia de servidor se ejecuta en una cuenta diferente a las de otras instancias de servidor a las que necesite conectarse.  
   
  **Conectar todo**  
@@ -41,7 +41,7 @@ ms.locfileid: "62792025"
   
 
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el Asistente para agregar una réplica al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

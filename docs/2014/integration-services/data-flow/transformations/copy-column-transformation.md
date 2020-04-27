@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7ebdcc68c4fe8c4782251e2f4e5896e4557e23e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770331"
 ---
 # <a name="copy-column-transformation"></a>Copiar columna, transformación
@@ -37,7 +37,7 @@ ms.locfileid: "62770331"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Propiedades comunes](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

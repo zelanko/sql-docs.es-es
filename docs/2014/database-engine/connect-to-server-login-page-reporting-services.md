@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808731"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Conectar al servidor (página Inicio de sesión de Reporting Services)
@@ -36,8 +36,7 @@ ms.locfileid: "62808731"
  Con un servidor de informes que se ejecute en el modo integrado de SharePoint, debe especificar un sitio de SharePoint. Puede especificar un sitio de una colección de sitios que esté integrada con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. La dirección URL que proporcione debe incluir el prefijo HTTP o HTTPS. Debe disponer de permiso para tener acceso al sitio de SharePoint con el fin de conectarse a él en Management Studio. El nivel de permisos que se le asigne determinará qué elementos puede ver y administrar. Para obtener más información, consulte [Conectar con un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
  **Autenticación**  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se puede configurar para aceptar solicitudes de autenticación de Windows o solicitudes de autenticación de formularios que son administradas mediante la extensión de autenticación personalizada que proporcione. Seleccione uno de los siguientes modos de autenticación al conectarse a Reporting Services:  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se puede configurar para aceptar solicitudes de autenticación de Windows o solicitudes de autenticación de formularios que son administradas mediante la extensión de autenticación personalizada que proporcione. Seleccione uno de los siguientes modos de autenticación al conectarse a Reporting Services:  
   
  **Modo de autenticación de Windows (autenticación de Windows)**  
  Se conecta a una instancia de servidor de informes usando sus credenciales de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
@@ -45,19 +44,19 @@ ms.locfileid: "62808731"
  **Autenticación básica**  
  Conéctese mediante la **Autenticación básica** si la instalación de Reporting Services está configurada para usar la Autenticación básica.  
   
- **Autenticación mediante formularios**  
+ **Autenticación de formularios**  
  Conéctese mediante la **Autenticación de formularios** si la instalación de Reporting Services está configurada para usar una extensión de autenticación personalizada.  
   
  **Nombre de usuario**  
  Escriba el nombre de inicio de sesión que se va a usar en la conexión. Esta opción solo se encuentra disponible si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
   
  **Contraseña**  
- Escriba la contraseña del nombre de usuario Esta opción solo se puede editar si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
+ Escriba la contraseña del nombre de usuario. Esta opción solo se puede editar si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
   
  **Recordar contraseña**  
  Guarda la contraseña que ha escrito. Esta opción solo se muestra al hacer clic en **Opciones**y solo puede modificarse si ha optado por establecer la conexión mediante **Autenticación básica** o **Autenticación de formularios**.  
   
- **Conectar**  
+ **Conexión**  
  Se conecta al servidor seleccionado.  
   
  **Opciones**  
@@ -65,7 +64,7 @@ ms.locfileid: "62808731"
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar una conexión a la base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Conectar con un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Autenticación con el servidor de informes](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

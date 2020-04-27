@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 270ca92b723aa67938dc1f56d72425d7e1c98040
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774999"
 ---
 # <a name="remove-log-shipping-sql-server"></a>Quitar el trasvase de registros de (SQL Server)
@@ -38,14 +38,14 @@ ms.locfileid: "62774999"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-remove-log-shipping"></a>Para quitar el trasvase de registros  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62774999"
   
 5.  Haga clic en **Aceptar** para quitar el trasvase de registros de esta base de datos principal.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-remove-log-shipping"></a>Para quitar el trasvase de registros  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62774999"
   
 6.  Opcionalmente, si ya utiliza la base de datos secundaria de trasvase de registros, puede eliminarla del servidor secundario.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Actualizar el trasvase de registros a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

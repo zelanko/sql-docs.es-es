@@ -15,16 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781031"
 ---
 # <a name="performing-transactions-odbc"></a>Realizar transacciones (ODBC)
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admiten las funciones de administración de transacciones de la API de ODBC. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona compatibilidad completa para realizar transacciones locales en un servidor individual. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utiliza estas características para admitir las funciones de la API de ODBC que administran las transacciones.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admiten las funciones de administración de transacciones de la API de ODBC. [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona compatibilidad completa para realizar transacciones locales en un servidor individual. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utiliza estas características para admitir las funciones de la API de ODBC que administran las transacciones.  
   
  Mediante el uso de Microsoft DTC (Coordinador de transacciones distribuidas), el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client puede participar en transacciones distribuidas que se realizan en varios servidores.  
   

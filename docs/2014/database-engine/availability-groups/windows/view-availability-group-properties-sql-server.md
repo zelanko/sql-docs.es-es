@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813258"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Ver las propiedades del grupo de disponibilidad (SQL Server)
@@ -24,7 +24,7 @@ ms.locfileid: "62813258"
   
 
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver y cambiar las propiedades de un grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
@@ -33,13 +33,13 @@ ms.locfileid: "62813258"
   
 3.  Haga clic con el botón derecho en el grupo de disponibilidad cuyas propiedades quiere ver y seleccione el comando **Propiedades** .  
   
-4.  En el cuadro de diálogo **Propiedades de grupo de disponibilidad** , use las páginas **General** y **Preferencias de copia de seguridad** para ver y, en algunos casos, cambiar las propiedades del grupo de disponibilidad seleccionado. Para más información, vea [Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad &#40;página General&#41;](availability-group-properties-new-availability-group-general-page.md) y [Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad &#40;página Preferencias de copia de seguridad&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  En el cuadro de diálogo **Propiedades de grupo de disponibilidad**, use las páginas **General** y **Preferencias de copia de seguridad** para ver y, en algunos casos, cambiar las propiedades del grupo de disponibilidad seleccionado. Para más información, vea [Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad &#40;página General&#41;](availability-group-properties-new-availability-group-general-page.md) y [Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad &#40;página Preferencias de copia de seguridad&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      Use la página de **Permisos** para ver los inicios de sesión, roles y permisos explícitos actuales asociados al grupo de disponibilidad. Para más información, consulte [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   
 
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para ver las propiedades y el estado de un grupo de disponibilidad**  
   
  Para consultar las propiedades y los estados de los grupos de disponibilidad en los que la instancia de servidor hospeda una réplica de disponibilidad, use las vistas siguientes:  
@@ -61,7 +61,7 @@ ms.locfileid: "62813258"
   
 
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para obtener más información acerca de los grupos de disponibilidad**  
   
 -   [Ver las propiedades de una réplica de disponibilidad &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "62813258"
   
 -   [Directivas de AlwaysOn para problemas operativos con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62813258"
   
 -   [Quitar una base de datos secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](remove-a-secondary-database-from-an-availability-group-sql-server.md)  
   
--   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Quitar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   

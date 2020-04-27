@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7393fe6d415f8b68758d75fafba91c9ab0a420c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788420"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>Algunas réplicas de disponibilidad están desconectadas
@@ -30,13 +30,13 @@ ms.locfileid: "62788420"
 |**Nombre de directiva**|Estado de conexión de las réplicas de disponibilidad|  
 |**Problema**|Algunas réplicas de disponibilidad están desconectadas.|  
 |**Categoría**|**Warning (ADVERTENCIA)**|  
-|**Faceta**|grupo de disponibilidad|  
+|**Agrupa**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva acumula el estado de todas las réplicas de disponibilidad y comprueba las que están en estado DISCONNECTED. La directiva está en mal estado cuando cualquier réplica de disponibilidad está en estado DISCONNECTED. De lo contrario, la directiva está en un estado correcto.  
   
 > [!NOTE]  
->  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Algunas réplicas de disponibilidad están desconectadas](https://go.microsoft.com/fwlink/p/?LinkId=220855) en TechNet Wiki.  
+>   Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Algunas réplicas de disponibilidad están desconectadas](https://go.microsoft.com/fwlink/p/?LinkId=220855) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Causas posibles  
  En este grupo de disponibilidad, al menos una réplica secundaria no está conectada con la réplica principal. El estado de conexión es DISCONNECTED.  
@@ -46,6 +46,6 @@ ms.locfileid: "62788420"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

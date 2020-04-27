@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771741"
 ---
 # <a name="integration-services-ssis-server"></a>Servidor de Integration Services (SSIS)
@@ -36,7 +36,7 @@ ms.locfileid: "62771741"
   
  También puede proporcionar alta disponibilidad de SSISDB y de su contenido mediante SSIS y los grupos de disponibilidad AlwaysOn. Para obtener más información, vea esta entrada de blog de Matt Masson, [SSIS con AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873), en blogs.msdn.com.  
   
-##  <a name="ssms"></a> Servidor de Integration Services en SQL Server Management Studio  
+##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a>Integration Services Server en SQL Server Management Studio  
  Al conectarse a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que hospeda la base de datos de `SSISDB`, ve los objetos siguientes en el Explorador de objetos:  
   
 -   **Base de datos SSISDB**  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fdf98d461039c5c6fb4f25c8cdf543422e5a0a2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788535"
 ---
 # <a name="service-broker-with-alwayson-availability-groups-sql-server"></a>Service Broker con grupos de disponibilidad AlwaysOn (SQL Server)
@@ -25,17 +25,17 @@ ms.locfileid: "62788535"
   
  **En este tema:**  
   
--   [Requisitos para que un servicio de un grupo de disponibilidad reciba mensajes remotos](#ReceiveRemoteMessages)  
+-   [Requisitos de un servicio en un grupo de disponibilidad para que reciba mensajes remotos](#ReceiveRemoteMessages)  
   
 -   [Requisitos para enviar mensajes a un servicio remoto en un grupo de disponibilidad](#SendRemoteMessages)  
   
-##  <a name="ReceiveRemoteMessages"></a>Requisitos para que un servicio de un grupo de disponibilidad reciba mensajes remotos  
+##  <a name="requirements-for-a-service-in-an-availability-group-to-receive-remote-messages"></a><a name="ReceiveRemoteMessages"></a>Requisitos para que un servicio de un grupo de disponibilidad reciba mensajes remotos  
   
-1.  **Asegúrese de que el grupo de disponibilidad posee un agente de escucha.**  
+1.  **Asegúrese de que el grupo de disponibilidad tiene un agente de escucha.**  
   
      Para obtener más información, vea [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
-2.  **Asegúrese de que el extremo de Service Broker existe y está configurado correctamente.**  
+2.  **Asegúrese de que el extremo de Service Broker existe y está correctamente configurado.**  
   
      En cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospede una réplica de disponibilidad para el grupo de disponibilidad, configure el extremo de Service Broker del modo siguiente:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62788535"
   
      Para obtener más información, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
-3.  **Conceda el permiso CONNECT en el extremo.**  
+3.  **Conceda el permiso CONNECT para usar el extremo.**  
   
      Conceda el permiso CONNECT para usar el extremo de Service Broker a PUBLIC o a un inicio de sesión.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62788535"
   
      Para obtener más información sobre cómo crear rutas, vea [Ejemplos de enrutamiento de Service Broker](https://msdn.microsoft.com/library/ms166090\(SQL.105\).aspx) (en la versión de Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] ) y [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql).  
   
-##  <a name="SendRemoteMessages"></a>Requisitos para enviar mensajes a un servicio remoto en un grupo de disponibilidad  
+##  <a name="requirements-for-sending-messages-to-a-remote-service-in-an-availability-group"></a><a name="SendRemoteMessages"></a>Requisitos para enviar mensajes a un servicio remoto en un grupo de disponibilidad  
   
 1.  **Cree una ruta al servicio de destino.**  
   
@@ -99,15 +99,15 @@ ms.locfileid: "62788535"
   
 2.  **Asegúrese de que msdb contiene una ruta AutoCreatedLocal o una ruta al servicio específico.** (Para obtener más información, vea [Requisitos de un servicio en un grupo de disponibilidad para que reciba mensajes remotos](#ReceiveRemoteMessages), anteriormente en este tema).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [CREAR ruta &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)  
+-   [CREATE ROUTE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-route-transact-sql)  
   
 -   [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
 -   [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62788535"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y &#40;de conmutación por error de aplicación SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
   

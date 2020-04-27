@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815756"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Grupos de disponibilidad AlwaysOn: interoperabilidad (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62815756"
   
 
   
-##  <a name="Interop"></a>Características que interoperan con Grupos de disponibilidad AlwaysOn  
+##  <a name="features-that-interoperate-with-alwayson-availability-groups"></a><a name="Interop"></a>Características que interoperan con Grupos de disponibilidad AlwaysOn  
  En la tabla siguiente se enumeran las características de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que interoperan con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Los vínculos de la columna **Más información** indican que existen consideraciones de interoperabilidad sobre una determinada característica.  
   
 |Característica|Más información|  
@@ -45,9 +45,8 @@ ms.locfileid: "62815756"
 |Service Broker|[Service Broker con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](service-broker-with-always-on-availability-groups-sql-server.md)|  
 |Agente SQL Server||  
   
-##  <a name="NoInterop"></a>Características que no interoperan con Grupos de disponibilidad AlwaysOn  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no interopera con las siguientes características:  
+##  <a name="features-that-do-not-interoperate-with-alwayson-availability-groups"></a><a name="NoInterop"></a>Características que no interoperan con Grupos de disponibilidad AlwaysOn  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no interopera con las siguientes características:  
   
 -   Transacciones entre bases de datos y transacciones distribuidas  
   
@@ -55,11 +54,11 @@ ms.locfileid: "62815756"
   
 -   Creación de reflejo de la base de datos  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   
-     [Guía de migración: migrar a grupos de disponibilidad y clústeres de conmutación por error de SQL Server 2012 desde implementaciones de creación de reflejo y agrupación en clústeres anteriores](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [Guía de migración: migrar a clústeres de conmutación por error y grupos de disponibilidad de SQL Server 2012 desde implementaciones anteriores de agrupación en clústeres y creación de reflejo](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
      [Blogs del equipo de AlwaysOn de SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   

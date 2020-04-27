@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775014"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "62775014"
   
  Puede conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el nuevo nombre del equipo después de haber reiniciado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para asegurarse de que @@SERVERNAME devuelve el nombre actualizado de la instancia del servidor local, conviene ejecutar manualmente el procedimiento correspondiente a su situación de entre los siguientes. El procedimiento que use dependerá de si está actualizando un equipo que hospeda o una instancia predeterminada o con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Para cambiar el nombre de un equipo que hospeda una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-ssnoversion"></a>Para cambiar el nombre de un equipo que hospeda una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   En un equipo con el nombre cambiado que hospeda una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ejecute los procedimientos siguientes:  
   

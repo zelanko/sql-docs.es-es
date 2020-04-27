@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779412"
 ---
 # <a name="full-text-stoplist-properties"></a>Propiedades de lista de palabras irrelevantes de texto completo
@@ -50,9 +50,9 @@ ms.locfileid: "62779412"
  Si seleccionó **Agregar palabra irrelevante**, **Eliminar palabra irrelevante**o **Eliminar todas las palabras irrelevantes**, seleccione el idioma de la palabra o palabras irrelevantes en el cuadro de lista. Este cuadro incluye todos los idiomas de texto completo compatibles con la instancia de servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
- [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)   
- [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/full-text-search.md)   
+ [Sys. fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
+ [Sys. fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)   
+ [Configurar y administrar palabras irrelevantes y palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/full-text-search.md)   
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  

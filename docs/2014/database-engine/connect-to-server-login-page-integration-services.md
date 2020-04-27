@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808742"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Conectar al servidor (página Inicio de sesión de Integration Services)
@@ -45,7 +45,7 @@ ms.locfileid: "62808742"
  **Recordar contraseña**  
  Esta opción no está disponible ya que la autenticación de Windows solo está disponible para [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
- **Conectar**  
+ **Conexión**  
  Se conecta al servidor seleccionado anteriormente.  
   
  **Opciones**  

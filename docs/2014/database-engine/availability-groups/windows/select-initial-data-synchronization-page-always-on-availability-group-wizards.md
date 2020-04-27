@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789476"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad AlwaysOn)
@@ -28,7 +28,7 @@ ms.locfileid: "62789476"
   
 
   
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Suspenda las tareas de copia de seguridad de registros para las bases de datos principales durante la sincronización de datos inicial.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62789476"
   
      Si las operaciones de copia de seguridad y restauración deben estar muy protegidas, se recomienda seleccionar la opción **Solo unión** u **Omitir la sincronización de datos iniciales** .  
   
-##  <a name="Full"></a>Total  
+##  <a name="full"></a><a name="Full"></a>Total  
  Para cada base de datos principal, la opción **Completa** realiza varias operaciones en un flujo de trabajo: crear una copia de seguridad completa y de registros de la base de datos principal, crear las bases de datos secundarias correspondientes restaurando estas copias de seguridad en cada instancia de servidor que está hospedando una réplica secundaria y unir cada base de datos secundaria al grupo de disponibilidad.  
   
  Seleccione esta opción solo si su entorno cumple los requisitos previos para utilizar la sincronización de datos inicial completa y desea que el asistente inicie automáticamente la sincronización de datos.  
@@ -71,7 +71,7 @@ ms.locfileid: "62789476"
 > [!IMPORTANT]  
 >  Las copias de seguridad de registros serán parte de la cadena de copias de seguridad de registros. Almacene adecuadamente los archivos de copia de seguridad.  
   
-##  <a name="Joinonly"></a> Solo unión  
+##  <a name="join-only"></a><a name="Joinonly"></a>Solo unirse  
  Seleccione esta opción solo si las nuevas bases de datos secundarias ya existen en cada instancia de servidor que hospeda una réplica secundaria del grupo de disponibilidad. Para obtener información sobre cómo preparar las bases de datos secundarias, vea la sección [Para preparar las bases de datos secundarias manualmente](#PrepareSecondaryDbs), más adelante en esta sección.  
   
  Si selecciona **Solo unión**, el asistente intentará unir cada base de datos secundaria existente al grupo de disponibilidad.  
@@ -82,7 +82,7 @@ ms.locfileid: "62789476"
 > [!NOTE]  
 >  Para más información, vea [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="PrepareSecondaryDbs"></a> Para preparar una base de datos secundaria manualmente  
+##  <a name="to-prepare-secondary-databases-manually"></a><a name="PrepareSecondaryDbs"></a>Para preparar las bases de datos secundarias manualmente  
  Para preparar las bases de datos secundarias independientemente de cualquier asistente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , puede utilizar cualquiera de los métodos siguientes:  
   
 -   Restaure manualmente una copia de seguridad reciente de la base de datos principal utilizando RESTORE WITH NORECOVERY y restaure después cada copia de seguridad de registros posterior utilizando RESTORE WITH NORECOVERY. Si las bases de datos principal y secundaria tienen distintas rutas de acceso, debe utilizar la opción WITH MOVE. Realice esta secuencia de restauración en cada instancia del servidor que hospeda una réplica secundaria del grupo de disponibilidad.  Puede utilizar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell para realizar este operaciones de copias de seguridad y restauración.  
@@ -106,7 +106,7 @@ ms.locfileid: "62789476"
   
  Opcionalmente, puede preparar todas las bases de datos secundarias antes de ejecutar el asistente. Entonces, en la página **Especificar la sincronización de datos iniciales** del asistente, seleccione **Solo unión** para unir automáticamente las nuevas bases de datos secundarias al grupo de disponibilidad.  
   
-##  <a name="LaunchWiz"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

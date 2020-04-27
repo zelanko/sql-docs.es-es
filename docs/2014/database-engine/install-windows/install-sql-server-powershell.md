@@ -11,19 +11,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775445"
 ---
 # <a name="install-sql-server-powershell"></a>Instalar SQL Server PowerShell
   El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detendrá si detecta que existen características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleccionadas que incluyen componentes de PowerShell, pero no está instalado Windows PowerShell 2.0. Debe instalar PowerShell utilizando Windows Management Framework y, a continuación, volver a ejecutar el programa de instalación.  
   
-## <a name="installing-includessnoversionincludesssnoversion-mdmd-powershell-support"></a>Instalar compatibilidad con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell  
+## <a name="installing-ssnoversion-powershell-support"></a>Instalar compatibilidad con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell  
  Debe instalar el software que proporciona compatibilidad con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Windows PowerShell utilizando el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando selecciona características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que requieren compatibilidad con PowerShell, el programa de instalación comprueba si Windows PowerShell 2.0 está instalado. Si PowerShell 2.0 está presente, el programa de instalación instala los siguientes componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell:  
   
--   Los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Los complementos son archivos DLL que implementan dos tipos de compatibilidad con Windows PowerShell para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+-   Los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] complementos de PowerShell. Los complementos son archivos DLL que implementan dos tipos de compatibilidad con Windows PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]para:  
   
     -   Un conjunto de cmdlets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los cmdlets son comandos que implementan una acción concreta. Por ejemplo, **Invoke-Sqlcmd** ejecuta un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] o XQuery que también se puede ejecutar mediante la utilidad **sqlcmd** e **Invoke-PolicyEvaluation** notifica si los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cumplen las directivas de administración basada en directivas.  
   

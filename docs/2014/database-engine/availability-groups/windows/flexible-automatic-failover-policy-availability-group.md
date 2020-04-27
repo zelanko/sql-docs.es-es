@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789897"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad (SQL Server)
@@ -32,13 +32,13 @@ ms.locfileid: "62789897"
   
   
   
-##  <a name="HCtimeout"></a>Umbral de tiempo de espera de comprobación de estado  
- La DLL de recursos del clúster WSFC del grupo de disponibilidad realiza una *comprobación de estado* de la réplica principal, llamando al procedimiento almacenado [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) en la instancia de SQL Server que hospeda la réplica principal. **sp_server_diagnostics** devuelve resultados en un intervalo que es igual a 1/3 del umbral de tiempo de espera de comprobación de estado para el grupo de disponibilidad. El umbral de tiempo de espera de comprobación de estado predeterminado es 30 segundos, lo que hace que **sp_server_diagnostics** devuelva en un intervalo de 10 segundos. Si **sp_server_diagnostics** es lento o no devuelve información, la DLL de recursos esperará al intervalo completo del umbral de tiempo de espera de comprobación de estado antes de determinar que la réplica primaria no responde. Si la réplica primaria no responde, se inicia una conmutación automática por error, si se admite actualmente.  
+##  <a name="health-check-timeout-threshold"></a><a name="HCtimeout"></a> Umbral de tiempo de espera de comprobación de estado  
+ La DLL de recursos del clúster WSFC del grupo de disponibilidad realiza una *comprobación de estado* de la réplica principal, llamando al procedimiento almacenado [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) en la instancia de SQL Server que hospeda la réplica principal. **sp_server_diagnostics** devuelve resultados en un intervalo que iguala 1/3 del umbral de tiempo de espera de comprobación de estado del grupo de disponibilidad. El umbral de tiempo de espera de comprobación de estado predeterminado es 30 segundos, lo que hace que **sp_server_diagnostics** devuelva en un intervalo de 10 segundos. Si **sp_server_diagnostics** es lento o no devuelve información, la DLL de recursos esperará al intervalo completo del umbral de tiempo de espera de comprobación de estado antes de determinar que la réplica primaria no responde. Si la réplica primaria no responde, se inicia una conmutación automática por error, si se admite actualmente.  
   
 > [!IMPORTANT]  
 >  **sp_server_diagnostics** no realiza comprobaciones de estado en el nivel de base de datos.  
   
-##  <a name="FClevel"></a>Nivel de condición de error  
+##  <a name="failure-condition-level"></a><a name="FClevel"></a> Nivel de condición de error  
  Si **sp_server_diagnostics** devuelve los datos de diagnóstico y la información de estado, se garantiza que una conmutación automática por error dependa del nivel de condición de error del grupo de disponibilidad. El *nivel de condición de error* especifica qué condiciones de error desencadenan una conmutación automática por error. Hay cinco niveles de condición de error que abarcan desde el nivel menos restrictivo (nivel uno) al más restrictivo (nivel cinco). Un nivel dado abarca los niveles menos restrictivos. Así pues, el nivel de condición más estricto, cinco, incluye las condiciones menos restrictivas, y así sucesivamente.  
   
 > [!IMPORTANT]  
@@ -46,7 +46,7 @@ ms.locfileid: "62789897"
   
  En la tabla siguiente se describen las condiciones de error correspondientes a cada nivel.  
   
-|Nivel|Condición de error|[!INCLUDE[tsql](../../../includes/tsql-md.md)]Valor|Valor de PowerShell|  
+|Nivel|Condición de error|Valor de [!INCLUDE[tsql](../../../includes/tsql-md.md)]|Valor de PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
 |Uno|Por inactividad de servidor. Este es el nivel menos restrictivo. Especifica que se inicia una conmutación automática por error en los casos siguientes:<br /><br /> El servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia del servidor. Para obtener más información, vea [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx).|1|`OnServerDown`|  
 |Dos|Al dejar de responder el servidor. Especifica que se inicia una conmutación automática por error en los casos siguientes:<br /><br /> La instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se conecta al clúster y se ha superado el umbral de tiempo de espera de comprobación de estado del grupo de disponibilidad definido por el usuario.<br /><br /> La réplica de disponibilidad tiene un estado de error.|2|`OnServerUnresponsive`|  
@@ -57,16 +57,16 @@ ms.locfileid: "62789897"
 > [!NOTE]  
 >  La falta de respuesta de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a solicitudes del cliente no es pertinente a los grupos de disponibilidad.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para configurar la conmutación automática por error**  
   
--   [Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md) (la conmutación automática por error requiere el modo de disponibilidad de confirmación sincrónica)  
+-   [Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md) (la conmutación automática por error necesita el modo de disponibilidad de confirmación sincrónica)  
   
 -   [Cambiar el modo de conmutación por error de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
 -   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error (grupos de disponibilidad AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
   
@@ -74,8 +74,8 @@ ms.locfileid: "62789897"
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Modos de disponibilidad (Grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
- [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
+ [Los clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Directiva de conmutación por error para instancias de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [sp_server_diagnostics &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
+ [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
   
   

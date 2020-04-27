@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811579"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo
@@ -38,18 +38,18 @@ ms.locfileid: "62811579"
   
 -   **Seguimiento:**  [después de configurar la opción de tamaño de replicación de texto máximo](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Esta opción se aplica a la replicación transaccional y a la captura de datos modificados. Cuando un servidor se configura para la replicación transaccional y la captura de datos modificados, el valor especificado se aplica a ambas características. La replicación de instantáneas y la replicación de mezcla hacen caso omiso de esta opción.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>Para configurar la opción de tamaño de replicación de texto máximo  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62811579"
   
 3.  En **Varios**, cambie la opción **Tamaño de replicación de texto máximo** al valor que desee.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>Para configurar la opción de tamaño de replicación de texto máximo  
   
@@ -84,7 +84,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: después de configurar la opción de tamaño de replicación de texto máximo  
+##  <a name="follow-up-after-you-configure-the-max-text-repl-size-option"></a><a name="FollowUp"></a> Seguimiento: después de configurar la opción de tamaño de replicación de texto máximo  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Consulte también  

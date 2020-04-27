@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815770"
 ---
 # <a name="availability-database-is-suspended"></a>Base de datos de disponibilidad suspendida
@@ -30,13 +30,13 @@ ms.locfileid: "62815770"
 |**Nombre de directiva**|Estado de suspensión de la base de datos de disponibilidad|  
 |**Problema**|Base de datos de disponibilidad suspendida.|  
 |**Categoría**|**Warning (ADVERTENCIA)**|  
-|**Faceta**|Base de datos de disponibilidad|  
+|**Agrupa**|Base de datos de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado del movimiento de datos de la base de datos secundaria (también denominada “réplica de base de datos secundaria”). La directiva está en mal estado cuando se suspende el movimiento de datos. De lo contrario, la directiva está en un estado correcto.  
   
 > [!NOTE]  
->  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Base de datos de disponibilidad suspendida](https://go.microsoft.com/fwlink/p/?LinkId=220860) en TechNet Wiki.  
+>   Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [La base de datos de disponibilidad se ha suspendido](https://go.microsoft.com/fwlink/p/?LinkId=220860) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Causas posibles  
  La sincronización de datos de esta base de datos de disponibilidad podría haberse suspendido debido al siguiente:  
@@ -50,6 +50,6 @@ ms.locfileid: "62815770"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

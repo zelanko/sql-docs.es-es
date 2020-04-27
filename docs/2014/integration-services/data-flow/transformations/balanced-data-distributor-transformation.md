@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770626"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformación Balanced Data Distributor
@@ -24,7 +24,7 @@ ms.locfileid: "62770626"
   
  En el diagrama siguiente se muestra un ejemplo simple de cómo usar la transformación BDD. En este ejemplo, la transformación BDD elige un búfer de canalización cada vez de los datos de entrada de un origen de archivo plano y lo envía a una de las tres rutas de acceso de los resultados en un modo round robin (por turnos). En SQL Server Data Tools, puede comprobar los valores de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>(tamaño predeterminado del búfer de canalización) y de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(número máximo de filas predeterminado de un búfer de canalización) en la ventana **Propiedades** , donde se muestran las propiedades de una tarea Flujo de datos.  
   
- ![Balanced Data Distributor](../../media/balanceddatadistributor.JPG "Balanced Data Distributor")  
+ ![Distribuidor de datos equilibrado](../../media/balanceddatadistributor.JPG "Balanced Data Distributor")  
   
  La transformación Balanced Data Distributor ayuda a mejorar el rendimiento de un paquete en un escenario que cumple las condiciones siguientes:  
   
@@ -37,6 +37,6 @@ ms.locfileid: "62770626"
  Tenga en cuenta que si el cuello de botella en un paquete de SSIS se debe a la velocidad a la que se pueden leer los datos del origen, el componente BDD no ayuda a mejorar el rendimiento. Si el cuello de botella en un paquete de SSIS se debe a que el destino no admite paralelismo, el BDD no es útil; sin embargo, puede realizar todas las transformaciones en paralelo y usar la transformación Unión de todo para combinar los datos de salida que salen de las diferentes rutas de acceso de los resultados de la transformación BDD antes de enviar los datos al destino.  
   
 > [!IMPORTANT]  
->  En el [vídeo sobre el Distribuidor de datos equilibrado](https://go.microsoft.com/fwlink/?LinkID=226278) de la biblioteca de TechNet puede ver una presentación con una demostración del uso de la transformación.  
+>   El [Vídeo de Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278) en TechNet Library muestra una presentación con una demostración de cómo usar la transformación.  
   
   

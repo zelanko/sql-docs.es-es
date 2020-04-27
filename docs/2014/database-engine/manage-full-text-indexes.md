@@ -11,15 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775047"
 ---
 # <a name="manage-full-text-indexes"></a>Administrar índices de texto completo
      
-##  <a name="view"></a>Ver y cambiar las propiedades de un índice de texto completo  
+##  <a name="viewing-and-changing-the-properties-of-a-full-text-index"></a><a name="view"></a>Ver y cambiar las propiedades de un índice de texto completo  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>Para ver o cambiar las propiedades de un índice de texto completo en Management Studio  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62775047"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  
   
-##  <a name="props"></a>Ver las propiedades de las tablas y columnas indizadas  
+##  <a name="viewing-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a>Ver las propiedades de las tablas y columnas indizadas  
  Varias de las funciones de [!INCLUDE[tsql](../includes/tsql-md.md)], como OBJECTPROPERTYEX, se pueden usar para obtener el valor de diversas propiedades de indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
  En la siguiente tabla se enumeran las propiedades de texto completo relacionadas con las tablas y columnas indexadas y sus funciones de [!INCLUDE[tsql](../includes/tsql-md.md)] relacionadas.  
@@ -63,7 +63,7 @@ ms.locfileid: "62775047"
 |`TableFulltextPopulateStatus`|Estado del rellenado de una tabla de texto completo.|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|Si la tabla tiene un índice de texto completo activo.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a>Obtener información sobre la columna de clave de texto completo  
+##  <a name="getting-information-about-the-full-text-key-column"></a><a name="key"></a>Obtener información sobre la columna de clave de texto completo  
  Normalmente, el resultado de las funciones de valores de conjunto de filas CONTAINSTABLE o FREETEXTTABLE tiene que combinarse con la tabla base. En esos casos, necesita conocer el nombre de la columna de clave única. Puede consultar si un índice único determinado se utiliza como clave de texto completo y obtener el identificador de la columna de clave de texto completo.  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Para consultar si un índice único determinado se utiliza como columna de clave de texto completo  
@@ -125,7 +125,7 @@ GO
   
  Este ejemplo devuelve una columna de conjunto de resultados denominada `Unique Key Column`, que muestra una única fila que contiene el nombre de la columna de clave única de la tabla Document, DocumentID. Tenga en cuenta que, si esta consulta contuviera un nombre de índice no válido, el nombre del índice no correspondiera a la tabla, la tabla no existiera, etc., devolvería NULL.  
   
-##  <a name="disable"></a>Deshabilitar o volver a habilitar una tabla para la indización de texto completo  
+##  <a name="disabling-or-re-enabling-a-table-for-full-text-indexing"></a><a name="disable"></a>Deshabilitar o volver a habilitar una tabla para la indización de texto completo  
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], todas las bases de datos creadas por el usuario están habilitadas para texto completo de forma predeterminada. Además, una tabla individual se habilitará automáticamente para la indización de texto completo en cuanto se cree un índice de texto completo en la misma y se agregue una columna al índice. Una tabla se deshabilitará automáticamente para la indización de texto completo cuando se quite la última columna de su índice de texto completo.  
   
  En una tabla que tiene un índice de texto completo, se puede deshabilitar o volver a habilitar manualmente una tabla para la indización de texto completo utilizando [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -138,7 +138,7 @@ GO
   
 3.  Seleccione **Índice de texto completo**y luego haga clic en **Deshabilitar índice de texto completo** o en **Habilitar índice de texto completo**.  
   
-##  <a name="remove"></a>Quitar un índice de texto completo de una tabla  
+##  <a name="removing-a-full-text-index-from-a-table"></a><a name="remove"></a>Quitar un índice de texto completo de una tabla  
   
 #### <a name="to-remove-a-full-text-index-from-a-table"></a>Para quitar un índice de texto completo de una tabla  
   

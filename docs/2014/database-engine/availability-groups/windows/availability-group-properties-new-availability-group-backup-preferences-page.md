@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c60a2de7c36eef7f01338e2b8ea8abe29093490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62790224"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>Propiedades del grupo de disponibilidad: Nuevo grupo de disponibilidad (página Preferencias de copia de seguridad)
@@ -28,7 +28,7 @@ ms.locfileid: "62790224"
   
 -   [Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="where-should-backups-occur"></a>¿Dónde deben realizarse las copias de seguridad?  
  **Preferir secundaria**  
@@ -53,7 +53,7 @@ ms.locfileid: "62790224"
  El nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica de disponibilidad.  
   
  **Prioridad de copia de seguridad (Mínima=1, Máxima=100)**  
- Especifica la prioridad para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. El valor es un número entero en el intervalo de 0..100. 1 indica la prioridad mínima y 100 indica la prioridad máxima. Si **Prioridad de copia de seguridad** = 1, la réplica de disponibilidad se elegiría para realizar copias de seguridad solamente si no hay réplicas de disponibilidad con mayor prioridad disponibles actualmente.  
+ Especifica la prioridad para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. El valor es un número entero en el intervalo de 0..100. 1 indica la prioridad mínima y 100 indica la prioridad máxima. Si **Prioridad de copia de seguridad** = 1, la réplica de disponibilidad se elegiría para realizar copias de seguridad solamente si no hay disponibles actualmente réplicas de disponibilidad con mayor prioridad.  
   
  **Excluir réplica**  
  Seleccione esta opción si no desea que nunca se elija esta réplica de disponibilidad para realizar copias de seguridad. Esto es útil, por ejemplo, para una réplica de disponibilidad remota en la que no desee nunca realizar la conmutación por error para las copias de seguridad.  

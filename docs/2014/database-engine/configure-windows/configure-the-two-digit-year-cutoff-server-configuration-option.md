@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787060"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos
@@ -39,20 +39,20 @@ ms.locfileid: "62787060"
   
 -   **Seguimiento:**  [Después de configurar la opción de fecha límite de año de dos dígitos](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada.  
   
 -   Los objetos de automatización OLE utilizan 2030 como el año límite de dos dígitos. Puede utilizar la opción de **fecha límite de año de dos dígitos** para que los valores de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las aplicaciones cliente sean coherentes. No obstante, para evitar ambigüedades con las fechas, utilice años con cuatro dígitos en los datos.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>Para configurar la opción de fecha límite de año de dos dígitos  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62787060"
   
 3.  En **Compatibilidad con años de dos dígitos**, en el cuadro **Cuando se escriba un año con dos dígitos**, **debe interpretarse como un año entre** , escriba o seleccione un valor que represente el último año del intervalo de tiempo.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-two-digit-year-cutoff-option"></a>Para configurar la opción de fecha límite de año de dos dígitos  
   
@@ -88,7 +88,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de fecha límite de año de dos dígitos  
+##  <a name="follow-up-after-you-configure-the-two-digit-year-cutoff-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción de fecha límite de año de dos dígitos  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Consulte también  

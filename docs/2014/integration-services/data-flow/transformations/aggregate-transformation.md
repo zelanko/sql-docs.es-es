@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770641"
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
@@ -112,13 +112,13 @@ ms.locfileid: "62770641"
   
  Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor de transformación Agregado** , haga clic en uno de los siguientes temas:  
   
--   [Editor de transformación agregado &#40;pestaña agregaciones&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
+-   [Editor de transformación Agregado &#40;pestaña Agregaciones&#41;](../../aggregate-transformation-editor-aggregations-tab.md)  
   
--   [Editor de transformación agregado &#40;pestaña avanzadas&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Agregado &#40;pestaña Avanzadas&#41;](../../aggregate-transformation-editor-advanced-tab.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Propiedades comunes](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "62770641"
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Agregar valores en un conjunto de datos mediante la transformación Agregado](aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  

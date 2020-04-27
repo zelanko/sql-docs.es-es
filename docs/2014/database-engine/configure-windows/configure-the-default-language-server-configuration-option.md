@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811680"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>Establecer la opción de configuración del servidor Idioma predeterminado
@@ -36,20 +36,20 @@ ms.locfileid: "62811680"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [después de configurar la opción de idioma predeterminado](#FollowUp)  
+-   **Seguimiento:**  [Después de configurar la opción de idioma predeterminado](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   El idioma predeterminado de un inicio de sesión se puede invalidar mediante CREATE LOGIN o ALTER LOGIN. El idioma predeterminado de una sesión es el idioma del inicio de esa sesión, a menos que se reemplace para cada sesión mediante las API OLE DB o Conectividad abierta de bases de datos (ODBC). Tenga en cuenta que solo puede establecer la opción **default language** con un identificador de idioma definido en [sys.syslanguages](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) (0-32). Cuando se usan bases de datos independientes, se puede establecer un idioma predeterminado para una base de datos mediante CREATE DATABASE o ALTER DATABASE, y para los usuarios de las bases de datos independientes mediante CREATE USER o ALTER USER. Al establecer los idiomas predeterminados de una base de datos independiente, se acepta el valor de **langid** , el nombre del idioma o el alias del idioma que aparece en **sys.syslanguages.**  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-default-language-option"></a>Para configurar la opción de idioma predeterminado  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62811680"
   
      El idioma predeterminado es el inglés.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-default-language-option"></a>Para configurar la opción de idioma predeterminado  
   
@@ -82,11 +82,11 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a>Seguimiento: después de configurar la opción de idioma predeterminado  
+##  <a name="follow-up-after-you-configure-the-default-language-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción de idioma predeterminado  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [CREAR inicio de sesión &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
  [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)   

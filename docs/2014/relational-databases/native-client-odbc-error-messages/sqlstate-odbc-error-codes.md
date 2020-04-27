@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 253841e26ab7ecbeafb2cfeeed8c090c91650d14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805869"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (códigos de error ODBC)
@@ -28,7 +28,7 @@ ms.locfileid: "62805869"
   
  Para obtener más información sobre los códigos de error de estado, vea los temas siguientes:  
   
--   [Apéndice A: Códigos de error ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Apéndice A: Códigos de error de ADO](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [Asignaciones SQLSTATE](https://go.microsoft.com/fwlink/?LinkId=89355)  
   

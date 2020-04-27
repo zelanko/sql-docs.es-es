@@ -20,14 +20,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1703d70b7760cad2198b3565ce3fc47d44cac409
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768948"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Crear un componente de flujo de datos personalizado
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] En [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], la tarea flujo de datos expone un modelo de objetos que permite a los desarrolladores crear componentes de flujo de datos personalizados (orígenes, transformaciones y destinos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ) mediante el uso de y el código administrado.  
+  En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], la tarea Flujo de datos expone un modelo de objetos que permite a los desarrolladores crear componentes de flujo de datos personalizados, orígenes, transformaciones y destinos mediante [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] y código administrado.  
   
  Una tarea de flujo de datos consta de componentes que contienen una interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> y una colección de objetos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> que definen el movimiento de datos entre los componentes.  
   
@@ -40,8 +40,7 @@ ms.locfileid: "62768948"
  En tiempo de ejecución, la tarea de flujo de datos examina la secuencia de componentes, prepara un plan de ejecución y administra un grupo de subprocesos de trabajo que ejecutan el plan de trabajo. Aunque cada subproceso de trabajo realiza algún trabajo que es interno a la tarea de flujo de datos, la tarea principal del subproceso de trabajo es llamar a los métodos del componente a través de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> de tiempo de ejecución.  
   
 ## <a name="creating-a-component"></a>Crear un componente  
- Para crear un componente de flujo de datos, puede derivar una clase de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>, aplicar la clase <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> y, a continuación, invalidar los métodos adecuados de la clase base. 
-  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> implementa las interfaces <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> y expone sus métodos para que los invalide en el componente.  
+ Para crear un componente de flujo de datos, puede derivar una clase de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>, aplicar la clase <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> y, a continuación, invalidar los métodos adecuados de la clase base. <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> implementa las interfaces <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSDesigntimeComponent100> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100> y expone sus métodos para que los invalide en el componente.  
   
  En función de los objetos que utiliza el componente, el proyecto requerirá las referencias a algunos o a todos los ensamblados siguientes:  
   

@@ -22,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782118"
 ---
 # <a name="logging-in-to-sql-server"></a>Iniciar una sesión en SQL Server
-  Puede iniciar sesión en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante cualquiera de las herramientas de administración gráfica o desde un símbolo del sistema.  
+  Puede iniciar sesión en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cualquiera de las herramientas gráficas de administración o desde un símbolo del sistema.  
   
  Cuando se inicia una sesión en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una herramienta gráfica de administración, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el sistema pedirá el nombre del servidor, un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña, si es necesario. Si inicia una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando la autenticación de Windows, no tendrá que proporcionar un inicio de sesión de SQL Server cada vez que tenga acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza su cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para iniciar la sesión automáticamente. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta con autenticación de modo mixto (modo de autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows) y decide iniciar una sesión mediante la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña. Siempre que sea posible, utilice la autenticación de Windows.  
   
@@ -63,10 +63,8 @@ ms.locfileid: "62782118"
 |Conexión a una instancia con nombre mediante la especificación tanto de la dirección IP como del puerto TCP que se está usando, en este caso 2828.|192.168.17.28,2828|  
 |Conexión a una instancia predeterminada por nombre, lo que fuerza una conexión TCP.|tcp:APPHOST|  
 |Conexión a una instancia con nombre por nombre, lo que fuerza una conexión TCP.|tcp:APPHOST\SQLEXPRESS|  
-|Conexión a una instancia predeterminada mediante la especificación de un nombre de canalización con nombre.|
-  \\\APPHOST\pipe\unit\app|  
-|Conexión a una instancia con nombre mediante la especificación de un nombre de canalización con nombre.|
-  \\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
+|Conexión a una instancia predeterminada mediante la especificación de un nombre de canalización con nombre.|\\\APPHOST\pipe\unit\app|  
+|Conexión a una instancia con nombre mediante la especificación de un nombre de canalización con nombre.|\\\APPHOST\pipe\MSSQL$SQLEXPRESS\SQL\query|  
 |Conexión a una instancia predeterminada por nombre, lo que fuerza una conexión de canalizaciones con nombre.|np:APPHOST|  
 |Conexión a una instancia con nombre por nombre, lo que fuerza una conexión de canalizaciones con nombre.|np:APPHOST\SQLEXPRESS|  
   
@@ -80,11 +78,11 @@ WHERE session_id = @@SPID;
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Inicie sesión en una instancia de SQL Server &#40;símbolo del sistema&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
+ [Iniciar una sesión en una instancia de SQL Server &#40;símbolo del sistema&#41;](log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Los recursos siguientes pueden ayudarle a solucionar problemas de conexión.  
   
--   [Cómo solucionar problemas de conexión al SQL Server Motor de base de datos](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
+-   [Cómo solucionar problemas de conexión al motor de base de datos de SQL Server](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
 -   [Pasos para solucionar problemas de conectividad de SQL](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d4aae8a264bd77d51c3365183ee510043ae814b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787612"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo
@@ -41,13 +41,13 @@ ms.locfileid: "62787612"
   
 -   **Seguimiento:**  [Después de configurar la opción de máximo de subprocesos de trabajo](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Si el número real de solicitudes de consulta es inferior al número establecido en la opción de **máximo de subprocesos de trabajo**, un subproceso controla cada solicitud de consulta. Sin embargo, si el número real de solicitudes de consulta es superior al número establecido en **máximo de subprocesos de trabajo**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrupa los subprocesos de trabajo de manera que el siguiente subproceso de trabajo disponible pueda controlar la solicitud.  
+-   Si el número real de solicitudes de consulta es inferior al número establecido en la opción de **máximo de subprocesos de trabajo**, un subproceso controla cada solicitud de consulta. Sin embargo, si el número real de solicitudes de consulta supera la cantidad establecida en máximo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **subprocesos de trabajo**, agrupa los subprocesos de trabajo para que el siguiente subproceso de trabajo disponible pueda controlar la solicitud.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada.  
   
@@ -100,12 +100,12 @@ WHERE s.is_user_process = 0;
   
 ```  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Para configurar la opción de máximo de subprocesos de trabajo  
   
@@ -117,7 +117,7 @@ WHERE s.is_user_process = 0;
   
      Utilice la opción **max worker threads** para configurar el número de subprocesos de trabajo disponibles para procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El valor predeterminado de la opción **max worker threads** es el óptimo para la mayor parte de los sistemas. No obstante, dependiendo de la configuración del sistema, el uso de un valor inferior para el **máximo de subprocesos de trabajo** puede mejorar el rendimiento a veces.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Para configurar la opción de máximo de subprocesos de trabajo  
   
@@ -143,7 +143,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de máximo de subprocesos de trabajo  
+##  <a name="follow-up-after-you-configure-the-max-worker-threads-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción de máximo de subprocesos de trabajo  
  El cambio tendrá efecto inmediatamente sin necesidad de reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  

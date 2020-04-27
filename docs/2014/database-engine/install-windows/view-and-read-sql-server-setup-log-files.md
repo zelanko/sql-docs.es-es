@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774327"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Ver y leer los archivos de registro de instalación de SQL Server
@@ -59,8 +59,7 @@ ms.locfileid: "62774327"
   
 -   Las propiedades y la configuración del equipo en el que se ejecutó el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas anteriormente en el equipo  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas anteriormente en el equipo  
   
 -   Descripción de la versión de instalación y las propiedades del paquete de instalación  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62774327"
   
 -   Ubicación del archivo de informe de reglas  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en% ProgramFiles% \120\Setup Bootstrap\Log\\.  
   
  Para encontrar errores en el archivo de texto de resumen, busque en el archivo usando las palabras clave "error" o "failed".  
@@ -88,7 +87,7 @@ ms.locfileid: "62774327"
 ### <a name="overview"></a>Información general  
  El archivo base de registro de resumen es similar al archivo de resumen y se genera durante el flujo de trabajo principal.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra en% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>. \\  
   
 ## <a name="summary_engine-base_yyyymmdd_hhmmss_componentupdatetxt"></a>Summary_engine-base_AAAAMMDD_HHMMss_ComponentUpdate.txt  
@@ -96,7 +95,7 @@ ms.locfileid: "62774327"
 ### <a name="overview"></a>Información general  
  El archivo de registro de resumen de actualización de componentes es similar al archivo de resumen y se genera durante el flujo de trabajo de actualización de componentes.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra en% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>. \\  
   
 ## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Summary_engine-base_\<númeroVersión>MMDD_HHMMss_GlobalRules.txt  
@@ -104,7 +103,7 @@ ms.locfileid: "62774327"
 ### <a name="overview"></a>Información general  
  El archivo de registro de resumen de reglas globales es similar al archivo de resumen y se genera durante el flujo de trabajo de reglas globales.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra en% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>. \\  
   
 ## <a name="detailtxt"></a>Detail.txt  
@@ -112,7 +111,7 @@ ms.locfileid: "62774327"
 ### <a name="overview"></a>Información general  
  El archivo Detail.txt se genera durante el flujo de trabajo principal, como la instalación o la actualización, y proporciona los detalles de la ejecución. Los registros del archivo se generan en función del momento en que se invocó cada acción durante la instalación y muestran el orden que se ejecutaron las acciones, y sus dependencias.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra en% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup  
   
  Bootstrap\Log\\<AAAAMMDD_HHMM>\Detail.txt.  
@@ -124,7 +123,7 @@ ms.locfileid: "62774327"
 ### <a name="overview"></a>Información general  
  El archivo Detail_ComponentUpdate.txt se genera durante el flujo de trabajo de actualización de componentes y es similar al archivo Detail.txt.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra en% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>. \\  
   
 ## <a name="detail_globalrulestxt"></a>Detail_GlobalRules.txt  
@@ -132,7 +131,7 @@ ms.locfileid: "62774327"
 ### <a name="overview"></a>Información general  
  El archivo Detail_GlobalRules.txt se genera durante la ejecución de las reglas globales y es similar al archivo Detail.txt.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra en% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>. \\  
   
 ## <a name="msi-log-files"></a>Archivos de registro de MSI  
@@ -142,16 +141,13 @@ ms.locfileid: "62774327"
   
  Tipos de archivos de registro de MSI:  
   
--   
-  \<Feature>_\<Architecture>\_\<Interaction>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log  
   
--   
-  \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
   
--   
-  \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Los archivos de registro de MSI se encuentran en%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ProgramFiles%\\ \120\Setup Bootstrap\Log<\\ YYYYMMDD_HHMM>\><Name. log.  
   
  Al final del archivo se encuentra un resumen de la ejecución que incluye el estado de corrección o error y las propiedades. Para encontrar el error en el archivo de MSI, busque "value 3" y, normalmente, los errores se mostrarán cerca de la cadena.  
@@ -161,7 +157,7 @@ ms.locfileid: "62774327"
 ### <a name="overview"></a>Información general  
  El archivo de configuración contiene la configuración de entrada que se proporciona durante la instalación. Se puede usar para reiniciar la instalación sin tener que especificar la configuración manualmente. Sin embargo, las contraseñas de las cuentas, los PID y algunos parámetros no se guardan en el archivo de configuración. La configuración se puede agregar al archivo o se puede proporcionar usando la línea de comandos o la interfaz de usuario del programa de instalación. Para obtener más información, consulte [instalación de SQL Server 2014 mediante un archivo de configuración](install-sql-server-using-a-configuration-file.md).  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra en% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>. \\  
   
 ## <a name="systemconfigurationcheck_reporthtm"></a>SystemConfigurationCheck_Report.htm  
@@ -169,7 +165,7 @@ ms.locfileid: "62774327"
 ### <a name="overview"></a>Información general  
  El informe de comprobación de la configuración del sistema contiene una descripción breve de cada regla ejecutada y el estado de ejecución.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Ubicación  
  Se encuentra en% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>. \\  
   
 ## <a name="see-also"></a>Consulte también  

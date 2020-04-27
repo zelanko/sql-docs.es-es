@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808716"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>Ver o cambiar las ubicaciones predeterminadas de los archivos de datos y registro (SQL Server Management Studio)
@@ -33,18 +33,18 @@ ms.locfileid: "62808716"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **Seguimiento:**  [cambiar las ubicaciones predeterminadas](#FollowUp)  
+-   **Seguimiento:**  [Cambiar las ubicaciones predeterminadas](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  El mejor procedimiento para proteger los archivos de datos y de registro es asegurarse de que estén protegidos mediante listas de control de acceso (ACL). Las listas de control de acceso se deben establecer en el directorio raíz en el que se crean los archivos.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-default-locations-for-database-files"></a>Para ver o cambiar las ubicaciones predeterminadas de los archivos de base de datos  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62808716"
   
 3.  En **Ubicaciones predeterminadas de la base de datos**, vea las ubicaciones predeterminadas actuales de los archivos de datos y de registro nuevos. Para cambiar una ubicación predeterminada, escriba una nueva ruta de acceso predeterminada en el campo **Datos** o **Registro** , o haga clic en el botón Examinar para buscar y seleccionar una ruta de acceso.  
   
-##  <a name="FollowUp"></a>Seguimiento: después de cambiar las ubicaciones predeterminadas  
+##  <a name="follow-up-after-changing-the-default-locations"></a><a name="FollowUp"></a>Seguimiento: después de cambiar las ubicaciones predeterminadas  
  Debe detener e iniciar el servicio SQL Server para completar el cambio.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789462"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn (SQL Server)
@@ -35,18 +35,18 @@ ms.locfileid: "62789462"
   
 -   [Crear y administrar un grupo de disponibilidad](#DeployManageAGs)  
   
--   [Crear y administrar un agente de escucha del grupo de disponibilidad](#AGlisteners)  
+-   [Crear y administrar un agente de escucha de un grupo de disponibilidad](#AGlisteners)  
   
 -   [Crear y administrar una réplica de disponibilidad](#DeployManageARs)  
   
 -   [Agregar y administrar una base de datos de disponibilidad](#DeployManageDbs)  
   
--   [Supervisión del estado del grupo de disponibilidad](#MonitorTblshtAGs)  
+-   [Supervisar el estado de grupos de disponibilidad](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  Para obtener una lista de los [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] temas de los libros en pantalla de que describen cómo usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] los cmdlets para realizar tareas, vea la sección "tareas relacionadas" de [información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a>Configuración de una instancia de servidor para Grupos de disponibilidad AlwaysOn  
+##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>Configuración de una instancia de servidor para Grupos de disponibilidad AlwaysOn  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "62789462"
 |`New-SqlHadrEndPoint`|Crea un nuevo extremo de creación de reflejo de la base de datos en una instancia de servidor. Este extremo es necesario para el movimiento de datos entre las bases de datos principal y secundaria.|Cualquier instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Cambia las propiedades de un extremo de creación de reflejo de la base de datos existente, como el nombre, el estado o las propiedades de autenticación.|Una instancia de servidor que admite [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y no tiene un extremo de creación de reflejo de la base de datos|  
   
-##  <a name="BnRcmdlets"></a> Copia de seguridad y restauración de bases de datos y registros de transacciones  
+##  <a name="backing-up-and-restoring-databases-and-transaction-logs"></a><a name="BnRcmdlets"></a>Realizar copias de seguridad y restaurar bases de datos y registros de transacciones  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -64,7 +64,7 @@ ms.locfileid: "62789462"
   
  Para obtener más información sobre cómo usar estos cmdlets para preparar una base de datos secundaria, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Crear y administrar un grupo de disponibilidad  
+##  <a name="creating-and-managing-an-availability-group"></a><a name="DeployManageAGs"></a>Crear y administrar un grupo de disponibilidad  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "62789462"
 |`Set-SqlAvailabilityGroup`|Establece las propiedades de un grupo de disponibilidad; poner en línea o sin conexión un grupo de disponibilidad|Instancia del servidor que hospeda la réplica principal|  
 |`Switch-SqlAvailabilityGroup`|Inicia una de las siguientes formas de conmutación por error<br /><br /> Una conmutación por error forzada de un grupo de disponibilidad (con posible pérdida de datos).<br /><br /> Una conmutación por error manual de un grupo de disponibilidad.|Instancia del servidor que hospeda la réplica secundaria de destino|  
   
-##  <a name="AGlisteners"></a> Crear y administrar un agente de escucha del grupo de disponibilidad  
+##  <a name="creating-and-managing-an-availability-group-listener"></a><a name="AGlisteners"></a>Crear y administrar un agente de escucha del grupo de disponibilidad  
   
 |Cmdlet|Descripción|Se admite en|  
 |------------|-----------------|------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "62789462"
 |`Set-SqlAvailabilityGroupListener`|Modifica la configuración del puerto en un agente de escucha del grupo de disponibilidad existente.|Instancia del servidor que hospeda la réplica principal|  
 |`Add-SqlAvailabilityGroupListenerStaticIp`|Agrega una dirección IP estática a una configuración de agente de escucha del grupo de disponibilidad existente. La dirección IP estática puede ser una dirección IPv4 con subred o una dirección IPv6.|Instancia del servidor que hospeda la réplica principal|  
   
-##  <a name="DeployManageARs"></a> Crear y administrar una réplica de disponibilidad  
+##  <a name="creating-and-managing-an-availability-replica"></a><a name="DeployManageARs"></a>Crear y administrar una réplica de disponibilidad  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -90,7 +90,7 @@ ms.locfileid: "62789462"
 |**Remove-SqlAvailabilityReplica**|Elimina una réplica de disponibilidad.|Instancia del servidor que hospeda la réplica principal|  
 |`Set-SqlAvailabilityReplica`|Establece las propiedades de una réplica de disponibilidad.|Instancia del servidor que hospeda la réplica principal|  
   
-##  <a name="DeployManageDbs"></a> Agregar y administrar una base de datos de disponibilidad  
+##  <a name="adding-and-managing-an-availability-database"></a><a name="DeployManageDbs"></a>Agregar y administrar una base de datos de disponibilidad  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
@@ -99,7 +99,7 @@ ms.locfileid: "62789462"
 |`Resume-SqlAvailabilityDatabase`|Reanuda el movimiento de datos en una base de datos de disponibilidad suspendida.|La instancia de servidor en la que se ha suspendido la base de datos.|  
 |`Suspend-SqlAvailabilityDatabase`|Suspende el movimiento de datos en una base de datos de disponibilidad.|Cualquier instancia de servidor que hospeda una réplica de disponibilidad.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="monitoring-availability-group-health"></a><a name="MonitorTblshtAGs"></a>Estado del grupo de disponibilidad de supervisión  
  Los cmdlets siguientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permiten supervisar el estado de un grupo de disponibilidad y sus réplicas y bases de datos.  
   
 > [!IMPORTANT]  
@@ -117,6 +117,6 @@ ms.locfileid: "62789462"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+ [Obtener ayuda SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
   

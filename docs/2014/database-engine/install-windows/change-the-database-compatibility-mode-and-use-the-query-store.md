@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779117"
 ---
 # <a name="migrate-query-plans"></a>Migrar los planes de consulta
@@ -93,7 +93,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [sp_create_plan_guide &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Sugerencias de consulta &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+ [Sugerencias de consulta &#40;&#41;de Transact-SQL](/sql/t-sql/queries/hints-transact-sql-query)   
  [Guías de plan](../../relational-databases/performance/plan-guides.md)  
   
   

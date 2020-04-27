@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789847"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62789847"
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="ConnectAccessForSecondary"></a> Tipos de acceso de conexión admitidos por el rol secundario  
+##  <a name="types-of-connection-access-supported-by-the-secondary-role"></a><a name="ConnectAccessForSecondary"></a>Tipos de acceso de conexión admitidos por el rol secundario  
  El rol secundario admite tres alternativas para las conexiones de cliente, del siguiente modo:  
   
  Sin conexiones  
@@ -60,9 +60,9 @@ ms.locfileid: "62789847"
  Permitir cualquier conexión de solo lectura  
  Todas las bases de datos secundarias están disponibles para conexiones de acceso de lectura. Esta opción permite la conexión a los clientes de una versión anterior.  
   
- Para obtener más información, vea [Configurar el acceso de solo lectura en una réplica de disponibilidad &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Para obtener más información, vea [configurar el acceso de solo lectura en una réplica de disponibilidad &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="ConnectAccessForPrimary"></a> Tipos de acceso de conexión admitidos por el rol principal  
+##  <a name="types-of-connection-access-supported-by-the-primary-role"></a><a name="ConnectAccessForPrimary"></a>Tipos de acceso de conexión admitidos por el rol principal  
  El rol principal admite dos alternativas para las conexiones de cliente, del siguiente modo:  
   
  Todas las conexiones están permitidas  
@@ -73,9 +73,9 @@ ms.locfileid: "62789847"
   
  Para obtener información acerca de esta conexión, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Para obtener más información, vea [Configurar el acceso de solo lectura en una réplica de disponibilidad &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
+ Para obtener más información, vea [configurar el acceso de solo lectura en una réplica de disponibilidad &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
-##  <a name="HowConnectionAccessAffectsConnectivity"></a> Cómo la configuración de acceso de conexión afecta a la conectividad de cliente  
+##  <a name="how-the-connection-access-configuration-affects-client-connectivity"></a><a name="HowConnectionAccessAffectsConnectivity"></a>Cómo la configuración de acceso de conexión afecta a la conectividad de cliente  
  La configuración de acceso de conexión de una réplica determina si un intento de conexión se produce o no correctamente. La tabla siguiente resume si un intento de conexión determinado se produce o no correctamente para cada configuración de acceso de conexión.  
   
 |Rol de réplica|Acceso de conexión admitido en la réplica|Intento de conexión|Resultado del intento de conexión|  
@@ -104,7 +104,7 @@ ms.locfileid: "62789847"
   
  Normalmente, en este escenario de ejemplo, las conmutaciones por error solo se producen entre las réplicas de confirmación sincrónica, e inmediatamente después de la conmutación por error, las aplicaciones de intención de lectura pueden volver a conectarse a una de las réplicas secundarias de confirmación asincrónica. Sin embargo, cuando se produce un desastre en el centro de cálculo principal se pierden las réplicas de confirmación sincrónica. El administrador de base de datos en el sitio satélite responde realizando una conmutación por error manual forzada a una réplica secundaria de confirmación asincrónica. Las bases de datos secundarias de la réplica secundaria restante son suspendidas por la conmutación por error forzada, haciendo que no estén disponibles para las cargas de trabajo de solo lectura. La nueva réplica principal, configurada para las conexiones de lectura/escritura, impide que la carga de trabajo de intención de lectura compita con la carga de trabajo de lectura/escritura. Esto significa que hasta que el administrador de base de datos reanude las bases de datos secundarias de la réplica secundaria de confirmación asincrónica restante, los clientes de intención de lectura no pueden conectarse a ninguna réplica de disponibilidad.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Configurar el acceso de solo lectura en una réplica de disponibilidad &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -116,15 +116,15 @@ ms.locfileid: "62789847"
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [Blog del equipo de AlwaysOn SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: el blog del equipo de AlwaysOn oficial de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y &#40;de conmutación por error de aplicación SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [estadísticas](../../../relational-databases/statistics/statistics.md)  
   
   

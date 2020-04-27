@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774748"
 ---
 # <a name="password-expired"></a>Contraseña expirada
@@ -28,16 +28,16 @@ ms.locfileid: "62774748"
  **Inicio de sesión**  
  Muestra el inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que utiliza.  
   
- **New Password**  
+ **Nueva contraseña**  
  Escriba la nueva contraseña del inicio de sesión.  
   
- **Confirmar contraseña**  
+ **Confirm Password**  
  Escriba de nuevo la contraseña para confirmarla.  
   
 ## <a name="see-also"></a>Consulte también  
  [Contraseñas seguras](../relational-databases/security/strong-passwords.md)   
  [Elegir un modo de autenticación](../relational-databases/security/choose-an-authentication-mode.md)   
  [Cambiar el modo de autenticación del servidor](configure-windows/change-server-authentication-mode.md)   
- [Cambiar la contraseña de las cuentas utilizadas por SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+ [Cambiar la contraseña de las cuentas que usa SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
   

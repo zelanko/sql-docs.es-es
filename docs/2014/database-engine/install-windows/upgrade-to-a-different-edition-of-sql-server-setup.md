@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774579"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Actualizar a una edición diferente de SQL Server 2014 (programa de instalación)
@@ -31,7 +31,7 @@ ms.locfileid: "62774579"
 > [!NOTE]  
 >  **en un entorno en clúster: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** Es suficiente para ejecutar la actualización de la edición [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en uno de los nodos del clúster. Este nodo puede ser activo o pasivo, y el motor no pone los recursos sin conexión durante la actualización de la edición. Después de actualizar la edición, es necesario reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o conmutar por error a otro nodo diferente.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  En instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura para dicho recurso.  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "62774579"
   
 ## <a name="procedure"></a>Procedimiento  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>Para actualizar a una edición diferente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>Para actualizar a una edición diferente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Inserte el medio de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la carpeta raíz, haga doble clic en setup.exe o inicie el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde Herramientas de configuración. Para realizar la instalación desde un recurso compartido de red, localice la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3fa149aa47c99418bd3109829bfffee698ab3f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814147"
 ---
 # <a name="filestream-and-filetable-with-alwayson-availability-groups-sql-server"></a>FILESTREAM y FileTable con grupos de disponibilidad AlwaysOn (SQL Server)
@@ -32,17 +32,17 @@ ms.locfileid: "62814147"
   
 -   [Requisitos previos](#Prerequisites)  
   
--   [Usar nombres de Virtual Network (VNN) para el acceso de FILESTREAM y FileTable](#vnn)  
+-   [Usar nombres de red virtual (VNN) para el acceso de FILESTREAM y FileTable](#vnn)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Para poder agregar una base de datos que utiliza FILESTREAM, con o sin FileTable, a un grupo de disponibilidad, asegúrese de que FILESTREAM está habilitada en cada instancia de servidor que hospeda una replicación de disponibilidad para el grupo de disponibilidad. Para obtener más información, consulte [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md).  
   
-##  <a name="vnn"></a> Usar nombres de red virtual (VNN) para el acceso de FILESTREAM y FileTable  
+##  <a name="using-virtual-network-names-vnns-for-filestream-and-filetable-access"></a><a name="vnn"></a>Usar nombres de Virtual Network (VNN) para el acceso de FILESTREAM y FileTable  
  Al habilitar FILESTREAM en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se crea un recurso compartido de nivel de instancia para proporcionar acceso a los datos de FILESTREAM. Puede obtener acceso a este recurso compartido mediante el nombre de equipo en el siguiente formato:  
   
  `\\<computer_name>\<filestream_share_name>`  
@@ -75,13 +75,13 @@ ms.locfileid: "62814147"
   
  Si la aplicación intenta tener acceso al recurso compartido con una ruta de acceso de ámbito de VNN cuando la base de datos no forma parte de un grupo de disponibilidad, la solicitud puede realizarse correctamente. En este caso, el nombre de red virtual se resuelve en el nombre de equipo. Sin embargo, este uso no se recomienda en absoluto, ya que la ruta de acceso de ámbito de VNN dejará de funcionar si se quita el grupo de disponibilidad.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
--   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Habilitar y configurar FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [Habilitar los requisitos previos de FileTables](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

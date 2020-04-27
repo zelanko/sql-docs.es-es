@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771441"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
@@ -209,9 +209,9 @@ go
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|Número de secuencia de registro (LSN) asociado con la transacción de confirmación para el cambio.<br /><br /> Todos los cambios confirmados en la misma transacción comparten el mismo LSN de confirmación. Por ejemplo, si una operación de actualización en la tabla de origen modifica dos filas diferentes, la tabla de cambios contendrá cuatro filas (dos con los valores anteriores y dos con los valores nuevos), cada una con el mismo valor **__$start_lsn** .|  
-|**_ _ $ seqval**|`binary(10)`|Valor de secuencia que se usa para ordenar los cambios de fila en una transacción.|  
+|**__$seqval**|`binary(10)`|Valor de secuencia que se usa para ordenar los cambios de fila en una transacción.|  
 |**_ _ $ Operation**|`int`|Operación del lenguaje de manipulación de datos (DML) asociada al cambio. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores antes de la operación de actualización)<br /><br /> 4 = actualizar (valores después de la operación de actualización)|  
-|**_ _ $ update_mask**|`varbinary(128)`|Máscara de bits basada en los ordinales de las columnas de la tabla de cambios que identifica las columnas que han cambiado. Puede examinar este valor para determinar las columnas que han cambiado.|  
+|**__$update_mask**|`varbinary(128)`|Máscara de bits basada en los ordinales de las columnas de la tabla de cambios que identifica las columnas que han cambiado. Puede examinar este valor para determinar las columnas que han cambiado.|  
 |**\<columnas de la tabla de origen capturadas>**|Varía|Las columnas restantes devueltas por la función son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó inicialmente ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
   
  Para obtener más información, vea [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
@@ -219,6 +219,6 @@ go
 ## <a name="next-step"></a>siguiente paso  
  Una vez que haya creado la función con valores de tabla que consulta los datos modificados, el paso siguiente consiste en comenzar a diseñar el flujo de datos del paquete.  
   
- **Siguiente tema:** [recuperar y comprender los datos modificados](retrieve-and-understand-the-change-data.md)  
+ **Tema siguiente:** [Recuperar y describir datos modificados](retrieve-and-understand-the-change-data.md)  
   
   

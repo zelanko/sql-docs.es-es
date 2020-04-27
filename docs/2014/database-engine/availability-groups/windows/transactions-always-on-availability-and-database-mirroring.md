@@ -17,14 +17,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813660"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Transacciones entre bases de datos no compatibles para la creación de reflejo de la base de datos o grupos de disponibilidad de AlwaysOn (SQL Server)
-  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la creación de reflejo de la base de datos no admiten las transacciones entre bases de datos ni las transacciones distribuidas. Esto se debe a que la integridad o la atomicidad de las transacciones no se puede garantizar por las siguientes razones:  
   
 -   Para las transacciones entre bases de datos: cada base de datos se confirma independientemente. Por consiguiente, incluso para las bases de datos de un solo grupo de disponibilidad, podría producirse una conmutación por error después de que una base de datos confirme una transacción, pero antes de que lo haga la otra. Para la creación de reflejo de la base de datos este problema puede agravarse porque, después de una conmutación por error, la base de datos reflejada está normalmente en una instancia del servidor diferente al de la otra base de datos, e incluso si ambas bases de datos se reflejan entre los dos mismos asociados, no existe ninguna garantía de que ambas bases de datos se conmutarán por error al mismo tiempo.  

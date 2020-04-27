@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789560"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn (SQL Server)
@@ -36,10 +36,10 @@ ms.locfileid: "62789560"
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="AGPrereqsRealAddress"></a>Requisitos previos de los grupos de disponibilidad  
+##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a>Requisitos previos de los grupos de disponibilidad  
  Para permitir los trabajos de copia de seguridad para ejecutarse en la réplica principal del grupo de disponibilidad, use las siguientes opciones de copia de seguridad de los grupos de disponibilidad AlwaysOn:  
   
-|Propiedad|Configuración|  
+|Propiedad|Valor|  
 |--------------|-------------|  
 |Preferencia de la copia de seguridad automatizada del grupo de disponibilidad|Solo en la réplica principal|  
 |Prioridad de copia de seguridad de la réplica principal.|>0|  
@@ -50,7 +50,7 @@ ms.locfileid: "62789560"
   
  [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="LogShipPrereqs"></a>Requisitos previos del trasvase de registros  
+##  <a name="log-shipping-prerequisites"></a><a name="LogShipPrereqs"></a>Requisitos previos del trasvase de registros  
   
 -   La base de datos principal del trasvase de registros debe residir en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal actual o inicial del grupo de disponibilidad.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "62789560"
   
  **Para obtener más información:**  
   
- [Conversión de una configuración de trasvase en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (un blog SQL Server)  
+ [Convertir una configuración de trasvase de registros en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (blog de SQL Server)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Trasvase de registros**  
   
 -   [Actualizar el trasvase de registros a SQL Server 2014 &#40;Transact-SQL&#41;](../../log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
@@ -89,13 +89,13 @@ ms.locfileid: "62789560"
   
 -   [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   
-     [Convertir una configuración de trasvase en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Convertir una configuración de trasvase de registros en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
   
-     [Agregar una base de datos principal y una base de datos secundaria de trasvase de registros a un grupo de disponibilidad existente](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Agregue una base de datos principal de trasvase de registros y una base de datos secundaria a un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
   
      [Blogs del equipo de AlwaysOn de SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   

@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814071"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Página Resumen (asistentes para grupos de disponibilidad AlwaysOn)
   En este tema de Ayuda se describen las opciones de la página **Resumen** . Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] y [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use la cuadrícula de esta página para revisar las opciones para el nuevo grupo de disponibilidad. Para realizar uno o más cambios, haga clic en **Anterior** para volver a la página o páginas pertinentes. Cuando esté listo, haga clic en **Siguiente** para volver a la página **Resumen** . Cuando esté satisfecho con las opciones seleccionadas, haga clic en **Finalizar**.  
   
-##  <a name="PageOptions"></a>Opciones de la página Resumen  
- **Manuscrit**  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> Opciones de página Resumen  
+ **Script**  
  Haga clic para generar un script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] para las acciones enumeradas en la cuadrícula de resumen. Se le pedirá que especifique un destino para el script.  
   
- **Previo**  
+ **Anterior**  
  Haga clic para volver a la página inmediatamente anterior a la página actual. Puede usar el botón **Anterior** para navegar hacia atrás a cualquiera de las páginas anteriores y, opcionalmente, cambiar cualquiera de los valores especificados.  
   
  **Finalizar**  
@@ -40,7 +40,7 @@ ms.locfileid: "62814071"
   
 
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

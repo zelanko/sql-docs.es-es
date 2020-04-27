@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775331"
 ---
 # <a name="upgrade-replicated-databases"></a>Actualizar bases de datos replicadas
@@ -75,7 +75,7 @@ ms.locfileid: "62775331"
   
 -   [Sincronizar una suscripción de extracción](../../../2014/relational-databases/replication/synchronize-a-pull-subscription.md)  
   
--   [Sincronizar una suscripción de extracción](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
+-   [Sincronizar una suscripción de inserción](../../../2014/relational-databases/replication/synchronize-a-push-subscription.md)  
   
  Después de actualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una topología que utiliza la replicación de mezcla, cambie el nivel de compatibilidad de publicación de todas las publicaciones si desea utilizar nuevas características.  
   

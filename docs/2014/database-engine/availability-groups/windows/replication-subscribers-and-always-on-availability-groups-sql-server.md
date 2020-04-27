@@ -15,24 +15,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789151"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Suscriptores de replicación y grupos de disponibilidad AlwaysOn (SQL Server)
   Cuando el grupo de disponibilidad AlwaysOn que contiene una base de datos que es un suscriptor de replicación realiza una conmutación por error, se puede producir un error en la suscripción de replicación. Para los suscriptores de inserción de replicación transaccional, el agente de distribución se seguirá replicando automáticamente después de una conmutación por error si la suscripción se creó mediante el nombre de la escucha de grupo de disponibilidad. Para los suscriptores de extracción de replicación transaccional, el agente de distribución se seguirá replicando automáticamente después de una conmutación por error si la suscripción se creó mediante el nombre de la escucha de grupo de disponibilidad y el servidor del suscriptor original está activo y en ejecución. El motivo es que los trabajos del agente de distribución solo se crean en el suscriptor original (réplica principal del grupo de disponibilidad). Para los suscriptores de mezcla, un administrador de replicación debe volver a configurar manualmente el suscriptor volviendo a crear la suscripción.  
   
 ## <a name="what-is-supported"></a>Qué se admite  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la conmutación por error automática del publicador, la conmutación por error de suscriptores transaccionales y la conmutación por error manual de los suscriptores de mezcla. No se admite la conmutación por error de un distribuidor de una base de datos de disponibilidad. AlwaysOn no puede combinarse con escenarios de Websync ni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la conmutación por error automática del publicador, la conmutación por error de suscriptores transaccionales y la conmutación por error manual de los suscriptores de mezcla. No se admite la conmutación por error de un distribuidor de una base de datos de disponibilidad. AlwaysOn no puede combinarse con escenarios de Websync ni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact.  
   
  **Conmutación por error de una suscripción de extracción de mezcla**  
   
  Se produce un error en una suscripción de extracción tras la conmutación por error del grupo de disponibilidad porque el agente de extracción no puede encontrar los trabajos almacenados en la base de datos **msdb** de la instancia de servidor que hospeda la réplica principal, que no está disponible porque se ha producido un error en la instancia de servidor.  
   
- **Conmutación por error de una suscripción de extracción de mezcla**  
+ **Conmutación por error de una suscripción de inserción de mezcla**  
   
  Se produce un error en una suscripción de inserción tras la conmutación por error del grupo de disponibilidad porque el agente de inserción ya no puede conectarse a la base de datos de suscripciones original en el suscriptor original.  
   

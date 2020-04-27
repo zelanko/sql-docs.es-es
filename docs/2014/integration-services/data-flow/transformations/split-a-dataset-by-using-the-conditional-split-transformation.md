@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6585733a4b864e14815990189fd6924e217de546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770699"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Dividir un conjunto de datos usando la transformación División condicional
@@ -53,7 +53,7 @@ ms.locfileid: "62770699"
   
 9. Opcionalmente, modifique el nombre de la salida predeterminada para filas de datos que no coinciden con ninguna condición.  
   
-10. Para configurar una salida de error, haga clic en **Configurar la salida de errores**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
+10. Para configurar una salida de error, haga clic en **Configurar la salida de errores**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../../configure-an-error-output-in-a-data-flow-component.md).  
   
 11. Haga clic en **OK**.  
   

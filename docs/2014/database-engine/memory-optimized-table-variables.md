@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774434"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de tabla con optimización para memoria
@@ -60,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  El ejemplo muestra que la sintaxis de los tipos de tabla optimizada para memoria es similar a los tipos de tabla basados en disco, con las siguientes excepciones:  
   
--   
-  `MEMORY_OPTIMIZED=ON` indica que el tipo de tabla está optimizada para memoria.  
+-   `MEMORY_OPTIMIZED=ON` indica que el tipo de tabla está optimizada para memoria.  
   
 -   El tipo debe tener al menos un índice. Como con tablas optimizadas para memoria, puede usar índices de hash e índices no clúster.  
   

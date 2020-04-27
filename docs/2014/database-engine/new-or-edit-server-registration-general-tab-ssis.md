@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774177"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Nuevo o Editar propiedades de registro de servidor (pestaña General de SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62774177"
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
- Cuando registra un servidor en Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y corresponde al tipo de servidor que se muestra en Servidores registrados. Para registrar un tipo diferente de servidor, haga clic en **Motor de base de datos**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition**o **Integration Services** en la barra de herramientas de **Servidores registrados** antes de iniciar el registro de un nuevo servidor.  
+ Cuando registra un servidor en Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y corresponde al tipo de servidor que se muestra en Servidores registrados. Para registrar un tipo diferente de servidor, haga clic en **Motor de base de datos**, **Analysis Server**, **Reporting Services**, **SQL Server Compact** **Edition** o **Integration Services** en la barra de herramientas de **Servidores registrados** antes de iniciar el registro de un nuevo servidor.  
   
  **Nombre del servidor**  
  Seleccione el servidor con el que se va a establecer conexión. De forma predeterminada, aparecerá el servidor con el que se realizó la última conexión.  
@@ -49,7 +49,7 @@ ms.locfileid: "62774177"
  **Descripción del servidor registrado**  
  Escriba una descripción opcional del servidor.  
   
- **Muestre**  
+ **Prueba**  
  Haga clic para probar la conexión al servidor seleccionado en **Nombre del servidor**.  
   
  **Guardar**  

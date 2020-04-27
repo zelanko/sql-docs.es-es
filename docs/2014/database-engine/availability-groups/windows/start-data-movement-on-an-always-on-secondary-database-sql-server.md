@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813565"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn (SQL Server)
@@ -52,7 +52,7 @@ ms.locfileid: "62813565"
   
      [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="LaunchWiz"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

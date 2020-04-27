@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778946"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propiedades del índice de texto completo (página General)
@@ -31,7 +31,7 @@ ms.locfileid: "62778946"
  **Base de datos**  
  Muestra el nombre de la base de datos en la que el índice de texto completo reside.  
   
- **Table**  
+ **Cuadro**  
  Muestra el nombre de la tabla en la que se define el índice de texto completo.  
   
  **Clave de índice de texto completo**  
@@ -119,8 +119,8 @@ ms.locfileid: "62778946"
   
 |||  
 |-|-|  
-|**True**|habilitado|  
-|**False**|Disabled|  
+|**Reales**|Habilitada|  
+|**Es**|Deshabilitada|  
   
  **Seguimiento de cambios**  
  Especifica si la tabla tiene el seguimiento de cambios de texto completo habilitado y, en ese caso, qué tipo. El seguimiento de cambios de texto completo mantiene un registro de las filas que se han modificado en una tabla o vista indizada configurada para la indización de texto completo. Estos cambios se pueden propagar al índice de texto completo.  
@@ -129,7 +129,7 @@ ms.locfileid: "62778946"
   
 |||  
 |-|-|  
-|**Habilitar**|El índice de texto completo no se actualiza con los cambios en los datos subyacentes.|  
+|**Desactivado**|El índice de texto completo no se actualiza con los cambios en los datos subyacentes.|  
 |**Manual**|El índice de texto completo no se actualiza automáticamente cuando se producen cambios en los datos subyacentes. Sin embargo, estos cambios se mantienen y puede propagarlos al índice de texto completo según una programación usando el Agente SQL Server o de forma manual.|  
 |**Automático**|El índice de texto completo se actualiza automáticamente cuando se producen cambios en los datos subyacentes de la tabla base.|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "62778946"
 |-|-|  
 |**Completo**|Durante el rellenado completo de una tabla, se crean entradas de índice para todas las filas.|  
 |**Incremental**|El rellenado incremental actualiza el índice de texto completo de las filas que se hayan agregado, eliminado o modificado desde el último rellenado o en su transcurso. Realizar un rellenado incremental requiere que la tabla base contenga una columna del tipo de datos `timestamp`.|  
-|**Update**|El índice de texto completo se actualiza siempre que se modifican los datos de la tabla base.|  
+|**Actualizar**|El índice de texto completo se actualiza siempre que se modifican los datos de la tabla base.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Introducción a la búsqueda de texto completo](../relational-databases/search/get-started-with-full-text-search.md)  

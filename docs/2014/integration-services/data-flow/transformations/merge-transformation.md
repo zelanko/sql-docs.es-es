@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770431"
 ---
 # <a name="merge-transformation"></a>Mezclar, transformación
@@ -60,7 +60,7 @@ ms.locfileid: "62770431"
   
  Para obtener más información acerca de las propiedades que puede establecer mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Propiedades comunes](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
@@ -69,10 +69,10 @@ ms.locfileid: "62770431"
   
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Transformación Combinación de mezcla](merge-join-transformation.md)   
+ [Combinación de mezcla, transformación](merge-join-transformation.md)   
  [Transformación Unión de todo](union-all-transformation.md)   
  [Flujo de datos](../data-flow.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771041"
 ---
 # <a name="odata-source"></a>Origen OData
@@ -45,11 +45,11 @@ ms.locfileid: "62771041"
   
 -   [Modificar una consulta de origen OData en tiempo de ejecución](modify-odata-source-query-at-runtime.md)  
   
--   [Editor de origen OData &#40;página de conexión&#41;](../odata-source-editor-connection-page.md)  
+-   [Editor de origen OData &#40;página Conexión&#41;](../odata-source-editor-connection-page.md)  
   
--   [Editor de origen OData &#40;página columnas&#41;](../odata-source-editor-columns-page.md)  
+-   [Editor de origen OData &#40;página Columnas&#41;](../odata-source-editor-columns-page.md)  
   
--   [Editor de origen OData &#40;página salida de error&#41;](../odata-source-editor-error-output-page.md)  
+-   [Editor de origen OData &#40;página Salida de error&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [Propiedades de orígenes OData](odata-source-properties.md)  
   

@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779599"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar un Service Pack en un sistema con un tiempo de inactividad mínimo para bases de datos reflejadas
@@ -72,11 +72,11 @@ ms.locfileid: "62779599"
   
 ### <a name="to-change-a-session-from-high-performance-mode-to-high-safety-mode"></a>Para cambiar una sesión del modo de alto rendimiento al modo de alta seguridad  
   
-1.  Si una sesión de creación de reflejo se está ejecutando en modo de alto rendimiento, antes de realizar una actualización gradual, cambie al modo operativo de seguridad alta sin conmutación automática por error. Use uno de los métodos siguientes:  
+1.  Si una sesión de creación de reflejo se está ejecutando en modo de alto rendimiento, antes de realizar una actualización gradual, cambie al modo operativo de seguridad alta sin conmutación automática por error. Utilice uno de los métodos siguientes:  
   
     -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Seguridad alta sin conmutación automática por error (sincrónico)** mediante la página [Creación de reflejo](../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos**. Para obtener información sobre cómo obtener acceso a esta página, vea [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   En [!INCLUDE[tsql](../includes/tsql-md.md)]: establezca la seguridad de transacciones en FULL. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+    -   En [!INCLUDE[tsql](../includes/tsql-md.md)]: establezca la seguridad de transacciones en FULL. Para obtener más información, vea [cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-perform-the-rolling-update"></a>Para realizar la actualización gradual  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62779599"
   
      Una vez actualizada, una instancia de servidor vuelve a unirse automáticamente a cada una de sus sesiones de creación de reflejo.  
   
-     **Para realizar una conmutación por error manual**  
+     **Para realizar una conmutación manual por error**  
   
     -   [Realizar manualmente la conmutación por error de una sesión de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
@@ -138,12 +138,12 @@ ms.locfileid: "62779599"
     -   [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring/database-mirroring-operating-modes.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Modos de funcionamiento de la creación de reflejo de base de datos](database-mirroring/database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
- [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Iniciar Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Ver el estado de una base de datos reflejada &#40;SQL Server Management Studio&#41;](database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md)  
   
   

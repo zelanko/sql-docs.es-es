@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812304"
 ---
 # <a name="change-server-authentication-mode"></a>Cambiar el modo de autenticación del servidor
@@ -39,12 +39,12 @@ ms.locfileid: "62812304"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  La cuenta sa es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de los usuarios malintencionados. No habilite la cuenta sa a menos que su aplicación lo requiera. Es muy importante que utilice una contraseña segura para el inicio de sesión de sa.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-change-security-authentication-mode"></a>Para cambiar el modo de autenticación de seguridad  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62812304"
   
 3.  En el cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , haga clic en **Aceptar** para confirmar el requisito de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  En el Explorador de objetos, haga clic con el botón derecho en el servidor y, después, haga clic en **Reiniciar**. Si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando, también debe reiniciarse.  
+4.  En Explorador de objetos, haga clic con el botón secundario en el servidor y, a continuación, haga clic en **reiniciar**. Si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando, también debe reiniciarse.  
   
 #### <a name="to-enable-the-sa-login"></a>Para habilitar el inicio de sesión sa  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62812304"
   
 3.  En la página **Estado** , en la sección **Inicio de sesión** , haga clic en **Habilitado**y, a continuación, en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para habilitar el inicio de sesión sa**  
   
 1.  En el Explorador de objetos, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

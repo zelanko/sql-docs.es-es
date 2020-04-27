@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780705"
 ---
 # <a name="program-exception-message-box"></a>Programar cuadros de mensajes de excepción
@@ -61,8 +61,7 @@ ms.locfileid: "62780705"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>enumeración que especifica los botones que se van a mostrar en el cuadro de mensaje de excepción.  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A>: título del cuadro de diálogo del cuadro de mensajes de excepción.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A>: título del cuadro de diálogo del cuadro de mensajes de excepción.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>enumeración que especifica el botón predeterminado del cuadro de diálogo del cuadro de mensaje de excepción.  
   
@@ -90,8 +89,7 @@ ms.locfileid: "62780705"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore>: muestra los botones **anular**, **Reintentar**y **omitir** .  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom>: muestra los botones personalizados.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom>: muestra los botones personalizados.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK>: muestra el botón **Aceptar** .  
   

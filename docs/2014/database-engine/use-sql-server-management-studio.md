@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773907"
 ---
 # <a name="use-sql-server-management-studio"></a>Usar SQL Server Management Studio
@@ -62,13 +62,13 @@ ms.locfileid: "62773907"
  [Métodos abreviados de teclado de SQL Server Management Studio](../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
  Enumera los métodos abreviados de teclado disponibles en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
- [Personalizar los menús y los métodos abreviados de teclado](../ssms/customize-menus-and-shortcut-keys.md)  
+ [Personalización de menús y teclas de método abreviado](../ssms/customize-menus-and-shortcut-keys.md)  
  Describe cómo crear menús y métodos abreviados personalizados.  
   
  [Soluciones &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
  Describe cómo desarrollar soluciones y proyectos de script.  
   
- [Explorador de plantillas](../ssms/template/template-explorer.md)  
+ [Template Explorer](../ssms/template/template-explorer.md)  
  Describe cómo utilizar las plantillas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y cómo crear plantillas personalizadas.  
   
  [Páginas de propiedades de SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)  

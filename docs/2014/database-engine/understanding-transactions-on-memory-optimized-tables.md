@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773388"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>Descripción de las transacciones en tablas con optimización para memoria
@@ -38,6 +38,6 @@ ms.locfileid: "62773388"
  Para saber más, vea [Control de la durabilidad de las transacciones](../relational-databases/logs/control-transaction-durability.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas optimizadas para la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

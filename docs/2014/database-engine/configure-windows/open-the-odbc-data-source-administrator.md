@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781405"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Abrir el Administrador de orígenes de datos ODBC
@@ -27,7 +27,7 @@ ms.locfileid: "62781405"
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>Para abrir el Administrador de orígenes de datos ODBC en Windows Server 2008  
   
-1.  En el menú **Inicio** , seleccione **Herramientas administrativas**y, después, haga clic en **Orígenes de datos (ODBC)** .  
+1.  En el menú **Inicio** , seleccione **Herramientas administrativas**y, después, haga clic en **Orígenes de datos (ODBC)**.  
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Para abrir el Administrador de orígenes de datos ODBC en Windows 7  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62781405"
   
 2.  En el **Panel de control**, haga clic en **Herramientas administrativas**.  
   
-3.  En **Herramientas administrativas**, haga clic en **Orígenes de datos (ODBC)** .  
+3.  En **Herramientas administrativas**, haga clic en **Orígenes de datos (ODBC)**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Comprobar la versión del controlador ODBC de SQL Server &#40;Windows&#41;](check-the-odbc-sql-server-driver-version-windows.md)  

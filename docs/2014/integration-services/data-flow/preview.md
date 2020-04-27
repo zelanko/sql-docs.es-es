@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0b0f81c5de267d6e85525714d19999920ba9c71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770971"
 ---
 # <a name="preview"></a>Vista previa
@@ -52,7 +52,7 @@ ms.locfileid: "62770971"
  No hay otras opciones en este cuadro de diálogo.  
   
 ## <a name="see-also"></a>Consulte también  
- [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW editor de origen &#40;página Administrador de conexiones&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Ayuda F1 de Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef1a7101a0bd16c3ee2868f47a8dc15f29092621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806717"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>Forzar el servicio en una sesión de creación de reflejo de la base de datos (Transact-SQL)
@@ -46,6 +46,6 @@ ms.locfileid: "62806717"
   
 ## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)  
   
   

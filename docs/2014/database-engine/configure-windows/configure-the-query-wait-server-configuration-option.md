@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f5aa6fd5a6ebc10cc91f749ee4745e3676c4a3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811419"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Establecer la opción de configuración del servidor Espera de consulta
@@ -43,18 +43,18 @@ ms.locfileid: "62811419"
   
 -   **Seguimiento:**  [Después de configurar la opción Espera de consulta](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Esta opción es avanzada y solo debe cambiarla un administrador de base de datos con experiencia o un técnico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la titulación apropiada.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-query-wait-option"></a>Para configurar la opción query wait  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62811419"
   
 3.  En **Paralelismo**, escriba el valor que desee para la opción **Espera de consulta** .  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-query-wait-option"></a>Para configurar la opción query wait  
   
@@ -90,7 +90,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción Espera de consulta  
+##  <a name="follow-up-after-you-configure-the-query-wait-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción Espera de consulta  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Consulte también  

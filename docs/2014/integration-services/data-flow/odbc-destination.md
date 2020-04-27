@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771031"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
@@ -26,7 +26,7 @@ ms.locfileid: "62771031"
   
  El destino ODBC tiene una salida normal y una salida de error.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> Opciones de carga  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Opciones de carga  
  El destino ODBC puede usar uno de dos módulos de de carga de acceso. Establezca el modo en el [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../odbc-source-editor-connection-manager-page.md). Los dos modos son:  
   
 -   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
@@ -83,6 +83,6 @@ ms.locfileid: "62771031"
   
 -   [Cargar datos mediante el destino de ODBC](odbc-destination.md)  
   
--   [Propiedades personalizadas de los destinos de ODBC](odbc-destination-custom-properties.md)  
+-   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
   
   

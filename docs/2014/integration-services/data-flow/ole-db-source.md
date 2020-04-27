@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771001"
 ---
 # <a name="ole-db-source"></a>Origen de OLE DB
@@ -90,15 +90,15 @@ ms.locfileid: "62771001"
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de origen de OLE DB** , haga clic en uno de los temas siguientes:  
   
--   [OLE DB Editor de origen &#40;página Administrador de conexiones&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Editor de origen de OLE DB &#40;página Administrador de conexiones&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [&#40;página columnas del editor de origen de OLE DB&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Editor de origen de OLE DB &#40;página Columnas&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [OLE DB Editor de origen &#40;página salida de error&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Editor de origen de OLE DB &#40;página Salida de error&#41;](../ole-db-source-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas de OLE DB](ole-db-custom-properties.md)  
   
@@ -110,14 +110,14 @@ ms.locfileid: "62771001"
   
 -   [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md)  
   
--   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Artículo wiki, sobre [SSIS con conectores Oracle](https://go.microsoft.com/fwlink/?LinkId=220670), en social.technet.microsoft.com.  
+ Artículo wiki, sobre [SSIS con conectores de Oracle](https://go.microsoft.com/fwlink/?LinkId=220670), en social.technet.Microsoft.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Destino de OLE DB](ole-db-destination.md)   
- [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;&#41; variables de SSIS](../integration-services-ssis-variables.md)   
  [Flujo de datos](data-flow.md)  
   
   

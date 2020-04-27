@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774509"
 ---
 # <a name="new-search-property-list"></a>Nueva lista de propiedades de búsqueda
@@ -51,7 +51,7 @@ ms.locfileid: "62774509"
  Para obtener información sobre cómo crear, ver, cambiar o eliminar una lista de propiedades de búsqueda, y sobre cómo configurar un índice de texto completo para la búsqueda de propiedades, vea [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
+ [CREAR lista de propiedades de búsqueda &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
  [Buscar propiedades de documento con listas de propiedades de búsqueda](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   

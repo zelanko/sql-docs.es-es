@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782388"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectarse a SQL Server cuando los administradores del sistema no tienen acceso

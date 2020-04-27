@@ -17,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806746"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Tarea Reducir base de datos (Plan de mantenimiento)
-  Utilice el cuadro de diálogo **tarea reducir base de datos** para crear una tarea que intente reducir el tamaño de las bases de datos seleccionadas. Utilice las opciones que se indican a continuación para determinar el espacio disponible que se mantiene en la base de datos después de reducir su tamaño (cuanto mayor sea el porcentaje, menos se podrá reducir la base de datos). El valor se basa es un porcentaje de los datos reales de la base de datos. Por ejemplo, una base de datos de 100 MB que contenga 60 MB de datos y 40 MB de espacio disponible, con un porcentaje de espacio disponible del 50 por ciento, dará como resultado 60 MB de datos y 30 MB de espacio disponible (porque el 50 por ciento de 60 MB es 30 MB). Solo se elimina el espacio de la base de datos que exceda el porcentaje indicado. Los valores válidos son de 0 a 100.  
+  Utilice el cuadro de diálogo **Tarea Reducir base de datos** para crear una tarea que intente reducir el tamaño de las bases de datos seleccionadas. Utilice las opciones que se indican a continuación para determinar el espacio disponible que se mantiene en la base de datos después de reducir su tamaño (cuanto mayor sea el porcentaje, menos se podrá reducir la base de datos). El valor se basa es un porcentaje de los datos reales de la base de datos. Por ejemplo, una base de datos de 100 MB que contenga 60 MB de datos y 40 MB de espacio disponible, con un porcentaje de espacio disponible del 50 por ciento, dará como resultado 60 MB de datos y 30 MB de espacio disponible (porque el 50 por ciento de 60 MB es 30 MB). Solo se elimina el espacio de la base de datos que exceda el porcentaje indicado. Los valores válidos son de 0 a 100.  
   
  La reducción de los archivos de datos permite recuperar espacio moviendo páginas de datos del final del archivo a espacio desocupado próximo al principio del archivo. Cuando se crea suficiente espacio disponible al final del archivo, las páginas de datos situadas al final del mismo se pueden desasignar y devolver al sistema de archivos.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62806746"
   
 -   **Todas las bases de datos**  
   
-     Genera un plan de mantenimiento que ejecuta tareas de mantenimiento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en todas las bases de datos, excepto tempdb.  
+     Genere un plan de mantenimiento que ejecute tareas de mantenimiento en todas las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a excepción de tempdb.  
   
 -   **Todas las bases de datos del sistema**  
   
@@ -55,17 +55,17 @@ ms.locfileid: "62806746"
   
      Genera un plan de mantenimiento que ejecuta tareas de mantenimiento en todas las bases de datos creadas por usuarios. No se ejecutarán tareas de mantenimiento en las bases de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Estas bases de datos**  
+-   **Las bases de datos**  
   
      Genera un plan de mantenimiento que ejecuta tareas de mantenimiento únicamente en las bases de datos seleccionadas. Si elige esta opción, deberá seleccionar al menos una base de datos de la lista.  
   
     > [!NOTE]  
     >  Los planes de mantenimiento solo se ejecutan en bases de datos con un nivel de compatibilidad de 80 o superior. Las bases de datos con un nivel de compatibilidad de 70 o inferior no se muestran.  
   
- **Reducir la base de datos cuando crezca más allá**  
+ **Reducir la base de datos cuando se incremente por encima de**  
  Especifique el tamaño en megabytes que provoca la ejecución de esta tarea.  
   
- **Cantidad de espacio libre que se va a mantener después de la reducción**  
+ **Espacio disponible tras la reducción**  
  Detiene la reducción cuando el espacio disponible en los archivos de base de datos alcanza este tamaño.  
   
  **Ver T-SQL**  
@@ -88,10 +88,10 @@ ms.locfileid: "62806746"
  Especifica el modo de autenticación en el servidor.  
   
  **Usar seguridad integrada de Windows NT**  
- Se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con [!INCLUDE[msCoName](../../includes/msconame-md.md)] la autenticación de Windows.  
+ Conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con autenticación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Utilizar un nombre de usuario y una contraseña específicos**  
- Se conecta a una instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta opción no está disponible.  
+ Conéctese a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta opción no está disponible.  
   
  **Nombre de usuario**  
  Proporcione un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. Esta opción no está disponible.  

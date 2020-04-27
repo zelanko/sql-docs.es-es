@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774668"
 ---
 # <a name="upgrade-master-data-services"></a>Actualizar Master Data Services
   Existen cuatro escenarios para actualizarse a Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Elija el escenario que se corresponde con su situación.  
   
--   [Actualizar sin Motor de base de datos actualización](#noengine)  
+-   [Actualizar sin actualización del motor de base de datos](#noengine)  
   
--   [Actualización con Motor de base de datos actualización](#engine)  
+-   [Actualizar con actualización del motor de base de datos](#engine)  
   
 -   [Actualización en un escenario de dos equipos](#twocomputer)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62774668"
 > -   Los paquetes de implementación de modelos solo se pueden usar en la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se crearon. No se pueden implementar paquetes de implementación de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] modelos [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]creados en en.  
 > -   Puede continuar con la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 de servicios del complemento Master Data Services para Excel después de actualizar Master Data Services y Data Quality Services a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Sin embargo, las versiones anteriores del complemento de Master Data Services para Excel no funcionarán después de actualizar a SQL Server 2014 CTP2. Puede descargar la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 del complemento de Master Data Services para Excel [aquí](https://go.microsoft.com/fwlink/?LinkId=328664).  
   
-##  <a name="noengine"></a>Actualizar sin Motor de base de datos actualización  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a>Actualizar sin Motor de base de datos actualización  
  Este escenario se puede considerar una instalación en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] paralelo, porque y [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] están instalados en paralelo, en el mismo equipo o en equipos independientes.  
   
  En este escenario se sigue usando [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para hospedar la base de datos de MDS. Sin embargo, debe actualizar el esquema de la base de datos de MDS y, posteriormente, crear una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para tener acceso a la base de datos de MDS. La aplicación web de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ya no puede tener acceso a la base de datos de MDS.  
@@ -60,7 +60,7 @@ ms.locfileid: "62774668"
   
     4.  En la página de **Selección de características** , seleccione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** y cualquier otra característica que desee instalar.  
   
-    5.  Realice los pasos del asistente.  
+    5.  Complete el asistente.  
   
 2.  Una vez completada la instalación, actualice el esquema de la base de datos de MDS.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, haga clic en **Seleccionar base de datos** y especifique [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] información de la instancia de o de la base de datos.  
   
-    4.  Haga clic en **Actualizar base de datos** para iniciar el **Asistente para actualizar base de datos**. Para obtener más información, vea [Asistente para actualizar base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
+    4.  Haga clic en **Actualizar base de datos** para iniciar el **Asistente para actualizar base de datos**. Para más información, vea [Asistente para actualizar base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
 3.  Una vez completada la actualización, cree una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, en la lista de **Sitio web** , seleccione una de las opciones siguientes:  
   
-        -   **Sitio web predeterminado**y, a continuación, haga clic en **crear aplicación**.  
+        -   **Sitio web predeterminado**y, después, haga clic en **Crear aplicación**.  
   
         -   **Crear nuevo sitio**. Se creará automáticamente una aplicación web cuando se cree el sitio web.  
   
@@ -100,12 +100,12 @@ ms.locfileid: "62774668"
   
     3.  Haga clic en **Aplicar**.  
   
-##  <a name="engine"></a>Actualización con Motor de base de datos actualización  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Actualizar con actualización del motor de base de datos  
  En este escenario se actualizará el motor de base de datos y la aplicación de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o SQL Server 2012 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Para realizar esta tarea, complete los siguientes pasos.  
   
-1.  **Solo [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] para**: Abra el **Panel** > de control**programas y características** y desinstale Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Solo en el caso de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : abra el **Panel de control** > **Programas y características** y desinstale Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Actualice el motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -115,7 +115,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, haga clic en **actualizar desde SQL Server 2005, SQL Server 2008, SQL Server 2008 R2 o SQL Server 2012**.  
   
-    4.  Realice los pasos del asistente.  
+    4.  Complete el asistente.  
   
 3.  **Solo [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] para**: una vez completada la actualización, agregue **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** la característica.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62774668"
   
     5.  En la página **selección de características** , en **características compartidas**, seleccione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
   
-    6.  Realice los pasos del asistente.  
+    6.  Complete el asistente.  
   
 4.  Actualice el esquema de la base de datos de MDS.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, haga clic en **Seleccionar base de datos** y especifique la información de la instancia de base de datos.  
   
-    4.  Haga clic en **Actualizar base de datos** para iniciar el **Asistente para actualizar base de datos**. Para obtener más información, vea [Asistente para actualizar base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
+    4.  Haga clic en **Actualizar base de datos** para iniciar el **Asistente para actualizar base de datos**. Para más información, vea [Asistente para actualizar base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
     5.  Haga clic en **Aplicar**.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, en la lista de **Sitio web** , seleccione una de las opciones siguientes:  
   
-        -   **Sitio web predeterminado**y, a continuación, haga clic en **crear aplicación**.  
+        -   **Sitio web predeterminado**y, después, haga clic en **Crear aplicación**.  
   
         -   **Crear nuevo sitio**. Se creará automáticamente una aplicación web cuando se cree el sitio web.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62774668"
   
     3.  Haga clic en **Aplicar**.  
   
-##  <a name="twocomputer"></a>Actualización en un escenario de dos equipos  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Actualización en un escenario de dos equipos  
  Este escenario conlleva la actualización de un sistema en el que SQL Server está instalado en dos equipos: uno con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y otro con SQL Server 2008 R2 o SQL Server 2012.  
   
  Si está instalado [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], continúe usando [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], respectivamente, para hospedar la base de datos MDS en un equipo. Sin embargo, debe actualizar el esquema de la base de datos de MDS y, posteriormente, usar la aplicación web [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para tener acceso a la base de datos de MDS. La aplicación web de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ya no puede tener acceso a la base de datos de MDS.  
@@ -194,7 +194,7 @@ ms.locfileid: "62774668"
   
     4.  En la página de **Selección de características** , seleccione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** y cualquier otra característica que desee instalar.  
   
-    5.  Realice los pasos del asistente.  
+    5.  Complete el asistente.  
   
 2.  Una vez completada la instalación, actualice el esquema de la base de datos de MDS.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, haga clic en **Seleccionar base de datos** y especifique [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] información de la instancia de base de datos [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o en el otro equipo, si o está instalado en el otro equipo.  
   
-    4.  Haga clic en **Actualizar base de datos** para iniciar el **Asistente para actualizar base de datos**. Para obtener más información, vea [Asistente para actualizar base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
+    4.  Haga clic en **Actualizar base de datos** para iniciar el **Asistente para actualizar base de datos**. Para más información, vea [Asistente para actualizar base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
 3.  Una vez completada la actualización, cree una aplicación web de SQL Server 2014.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, en la lista de **Sitio web** , seleccione una de las opciones siguientes:  
   
-        -   **Sitio web predeterminado**y, a continuación, haga clic en **crear aplicación**.  
+        -   **Sitio web predeterminado**y, después, haga clic en **Crear aplicación**.  
   
         -   **Crear nuevo sitio**. Se creará automáticamente una aplicación web cuando se cree el sitio web.  
   
@@ -234,7 +234,7 @@ ms.locfileid: "62774668"
   
     3.  Haga clic en **Aplicar**.  
   
-##  <a name="restore"></a>Actualizar con la restauración de una base de datos a partir de una copia de seguridad  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Actualización con restauración de una base de datos desde la copia de seguridad  
  En este escenario, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está instalado junto con SQL Server 2008 R2 o SQL Server 2012 en el mismo equipo o en dos equipos diferentes. También se realizó una copia de seguridad de una base de datos en una versión anterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP, antes de la actualización, y hay que restaurar la base de datos.  
   
 -   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los archivos se instalan de forma predeterminada en *unidad*:\Archivos de programa\Microsoft SQL Server\120\Master Data Services.  
@@ -255,7 +255,7 @@ ms.locfileid: "62774668"
   
     4.  En la página de **Selección de características** , seleccione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** y cualquier otra característica que desee instalar.  
   
-    5.  Realice los pasos del asistente.  
+    5.  Complete el asistente.  
   
 2.  Restaure la base de datos de la que se realizó la copia de seguridad.  
   
@@ -270,7 +270,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, haga clic en **Seleccionar base de datos** y especifique [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] información de la instancia de o de la base de datos.  
   
-    4.  Haga clic en **Actualizar base de datos** para iniciar el **Asistente para actualizar base de datos**. Para obtener más información, vea [Asistente para actualizar base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
+    4.  Haga clic en **Actualizar base de datos** para iniciar el **Asistente para actualizar base de datos**. Para más información, vea [Asistente para actualizar base de datos &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md).  
   
 4.  Una vez completada la actualización, cree una aplicación web de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -280,7 +280,7 @@ ms.locfileid: "62774668"
   
     3.  En el panel derecho, en la lista de **Sitio web** , seleccione una de las opciones siguientes:  
   
-        -   **Sitio web predeterminado**y, a continuación, haga clic en **crear aplicación**.  
+        -   **Sitio web predeterminado**y, después, haga clic en **Crear aplicación**.  
   
         -   **Crear nuevo sitio**. Se creará automáticamente una aplicación web cuando se cree el sitio web.  
   

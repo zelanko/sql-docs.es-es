@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812277"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Establecer la opción de configuración del servidor Aumento de prioridad
-  En este tema se describe cómo configurar la opción de configuración de **aumento de prioridad** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use la opción de **aumento de prioridad** para especificar si [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ejecutarse con una prioridad de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 o Windows 2008 R2 superior a la de otros procesos del mismo equipo. Si establece esta opción en 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutará con una prioridad base de 13 en el programador de Windows 2008 o Windows Server 2008 R2. El valor predeterminado es 0, que equivale a una prioridad base de 7.  
+  En este tema se describe cómo configurar la opción de configuración de **aumento de prioridad** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use la opción **Aumento de prioridad** para especificar si [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ejecutarse con una prioridad de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 o Windows 2008 R2 superior a la de otros procesos del mismo equipo. Si establece esta opción en 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutará con una prioridad base de 13 en el programador de Windows 2008 o Windows Server 2008 R2. El valor predeterminado es 0, que equivale a una prioridad base de 7.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
@@ -39,20 +39,20 @@ ms.locfileid: "62812277"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [después de configurar la opción de aumento de prioridad](#FollowUp)  
+-   **Seguimiento:**  [Después de configurar la opción de aumento de prioridad](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El aumento excesivo de la prioridad puede reducir los recursos para funciones fundamentales de la red y del sistema operativo, lo que causaría problemas al cerrar SQL Server o al usar otras tareas del sistema operativo en el servidor.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-priority-boost-option"></a>Para configurar la opción de aumento de prioridad  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62812277"
   
 4.  Detenga y reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-the-priority-boost-option"></a>Para configurar la opción de aumento de prioridad  
   
@@ -90,7 +90,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a>Seguimiento: después de configurar la opción de aumento de prioridad  
+##  <a name="follow-up-after-you-configure-the-priority-boost-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción de aumento de prioridad  
  El servidor debe reiniciarse para que el valor surta efecto.  
   
 ## <a name="see-also"></a>Consulte también  

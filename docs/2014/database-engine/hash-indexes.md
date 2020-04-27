@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779501"
 ---
 # <a name="hash-indexes"></a>Índices hash
@@ -26,8 +26,7 @@ ms.locfileid: "62779501"
   
  La función hash que se utiliza para los índices hash tiene las siguientes características:  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una función hash que se utiliza para todos los índices hash.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene una función hash que se utiliza para todos los índices hash.  
   
 -   La función hash es determinista. La misma clave de índice se asigna siempre al mismo cubo en el índice hash.  
   
@@ -48,6 +47,6 @@ ms.locfileid: "62779501"
  Para obtener más información acerca de los índices para tablas optimizadas para memoria, vea [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md):  
   
 ## <a name="see-also"></a>Consulte también  
- [Índices de las tablas con optimización para memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [Índices en tablas optimizadas para memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

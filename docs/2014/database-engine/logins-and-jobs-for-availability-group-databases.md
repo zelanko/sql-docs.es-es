@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774287"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Administración de inicios de sesión y de trabajos para las bases de datos de un grupo de disponibilidad (SQL Server)
   Debe mantener de forma sistemática el mismo conjunto de inicios de sesión de usuario y de trabajos del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en cada base de datos principal de un grupo de disponibilidad AlwaysOn y sus correspondientes bases de datos secundarias. Los inicios de sesión y los trabajos se deben reproducir en cada instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que hospede una réplica de disponibilidad para el grupo de disponibilidad.  
   
--   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Trabajos de agente**  
+-   **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Trabajos del agente**  
   
      Debe copiar manualmente los trabajos pertinentes de la instancia de servidor que hospeda la réplica principal original a las instancias de servidor que hospedan las réplicas secundarias originales. Para todas las bases de datos, debe agregar lógica al principio de cada trabajo importante para que el trabajo solo se ejecute en la base de datos principal; es decir, solo cuando la réplica local sea la réplica principal de la base de datos.  
   
@@ -43,23 +43,23 @@ ms.locfileid: "62774287"
   
 -   **Metadatos adicionales**  
   
-     Los inicios de sesión y los trabajos no son la única información que es necesario volver a crear en cada instancia de servidor que hospeda una réplica secundaria para un grupo de disponibilidad determinado. Por ejemplo, quizás necesite volver a crear la configuración del servidor, las credenciales, los datos cifrados, los permisos, la configuración de replicación, las aplicaciones de Service Broker, los desencadenadores (en el nivel de servidor), etc. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+     Los inicios de sesión y los trabajos no son la única información que es necesario volver a crear en cada instancia de servidor que hospeda una réplica secundaria para un grupo de disponibilidad determinado. Por ejemplo, quizás necesite volver a crear la configuración del servidor, las credenciales, los datos cifrados, los permisos, la configuración de replicación, las aplicaciones de Service Broker, los desencadenadores (en el nivel de servidor), etc. Para obtener más información, vea [administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="SSauthentication"></a> Inicios de sesión de aplicaciones que usan la autenticación de SQL Server o un inicio de sesión local de Windows  
+##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Inicios de sesión de aplicaciones que usan la autenticación de SQL Server o un inicio de sesión local de Windows  
  Si una aplicación usa la Autenticación de SQL Server o un inicio de sesión local de Windows, los SID que no coinciden pueden impedir que el inicio de sesión de la aplicación se resuelva en una instancia remota de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los SID que no coincidan harán que el inicio de sesión sea un usuario huérfano en la instancia del servidor remoto. Este problema puede producirse cuando una aplicación se conecta con una base de datos reflejada o de trasvase de registros después de una conmutación por error o con una base de datos Suscriptor de replicación que se inicializó desde una copia de seguridad.  
   
- Para evitar que se produzca este problema, se recomienda tomar medidas preventivas al configurar una aplicación de este tipo para que utilice una base de datos hospedada por una instancia remota de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La prevención implica la transferencia de los inicios de sesión y las contraseñas de la instancia local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la instancia remota de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información sobre cómo evitar que se produzca este problema, vea el artículo de KB 918992:[Cómo transferir inicios de sesión y contraseñas entre instancias de SQL Server](https://support.microsoft.com/kb/918992/).  
+ Para evitar que se produzca este problema, se recomienda tomar medidas preventivas al configurar una aplicación de este tipo para que utilice una base de datos hospedada por una instancia remota de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La prevención implica la transferencia de los inicios de sesión y las contraseñas de la instancia local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la instancia remota de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información acerca de cómo evitar este problema, vea el artículo de KB 918992:[Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server](https://support.microsoft.com/kb/918992/)).  
   
 > [!NOTE]  
 >  Este problema afecta a las cuentas locales de Windows en distintos equipos. Sin embargo, este problema no ocurre en las cuentas de dominio debido a que el SID es el mismo en todos los equipos.  
   
  Para obtener más información, vea [Usuarios huérfanos con creación de reflejo de la base de datos y trasvase de registros](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (un blog del motor de base de datos).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un inicio de sesión](../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Create a Database User](../relational-databases/security/authentication-access/create-a-database-user.md).  
+-   [Cree un usuario de base de datos](../relational-databases/security/authentication-access/create-a-database-user.md).  
   
 -   [Crear un trabajo](../ssms/agent/create-a-job.md)  
   

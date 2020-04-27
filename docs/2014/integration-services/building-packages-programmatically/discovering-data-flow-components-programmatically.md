@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92cd83935ef4cb76c40aae0964100c7b88d847e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771803"
 ---
 # <a name="discovering-data-flow-components-programmatically"></a>Detectar componentes de flujo de datos mediante programación

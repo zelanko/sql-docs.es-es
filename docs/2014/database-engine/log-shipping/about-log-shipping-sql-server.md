@@ -26,28 +26,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774562"
 ---
 # <a name="about-log-shipping-sql-server"></a>Acerca del trasvase de registros (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El trasvase de registros permite enviar automáticamente copias de seguridad del registro de transacciones desde una *base de datos principal* de una instancia del *servidor principal* a una o varias bases de datos *secundarias* en instancias independientes del *servidor secundario* . Las copias de seguridad del registro de transacciones se aplican a cada una de las bases de datos secundarias de forma individual. En una tercera instancia de servidor opcional, denominado *servidor de supervisión*, se registra el historial y el estado de las operaciones de copias de seguridad y restauración y, opcionalmente, se activan alertas si estas operaciones no se producen según lo programado.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El trasvase de registros permite enviar automáticamente copias de seguridad del registro de transacciones desde una *base de datos principal* de una instancia del *servidor principal* a una o varias *bases de datos secundarias* en instancias independientes del *servidor secundario* . Las copias de seguridad del registro de transacciones se aplican a cada una de las bases de datos secundarias de forma individual. En una tercera instancia de servidor opcional, denominado *servidor de supervisión*, se registra el historial y el estado de las operaciones de copias de seguridad y restauración y, opcionalmente, se activan alertas si estas operaciones no se producen según lo programado.  
   
  **En este tema:**  
   
--   [Privilegios](#Benefits)  
+-   [Ventajas](#Benefits)  
   
 -   [Términos y definiciones](#TermsAndDefinitions)  
   
--   [Introducción al trasvase de registros](#ComponentsAndConcepts)  
+-   [Información general de trasvase de registros](#ComponentsAndConcepts)  
   
 -   [Interoperabilidad](#Interoperability)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="Benefits"></a> Ventajas  
   
 -   Proporciona una solución de recuperación ante desastres para una sola base de datos principal y una o más bases de datos secundarias, cada una en una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774562"
   
 -   Permite un retraso especificado por el usuario entre el momento en que el servidor principal realiza una copia de seguridad del registro de la base de datos principal y el momento en que los servidores secundarios deben restaurar (aplicar) la copia de seguridad de registros. Un retraso más largo puede ser útil, por ejemplo, si los datos se cambian en la base de datos principal de manera accidental. Si se detecta rápidamente el cambio accidental, un retraso puede permitirle recuperar los datos aún sin modificar de una base de datos secundaria antes de que el cambio se refleje en ella.  
   
-##  <a name="TermsAndDefinitions"></a>Términos y definiciones  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Términos y definiciones  
  servidor principal  
  La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que es el servidor de producción.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62774562"
 > [!TIP]  
 >  Para cada alerta, debe especificar un número de alerta. Además, asegúrese de configurar la alerta para notificar a un operador cuándo se activa una alerta.  
   
-##  <a name="ComponentsAndConcepts"></a>Introducción al trasvase de registros  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Información general de trasvase de registros  
  El trasvase de registros consta de tres operaciones:  
   
 1.  Realizar una copia de seguridad del registro de transacciones en la instancia del servidor principal.  
@@ -123,22 +123,21 @@ ms.locfileid: "62774562"
   
  Las instancias del servidor principal y secundario envían su propio historial y estado a la instancia del servidor de supervisión.  
   
- ![Configuración que muestra trabajos de copia de seguridad, copia & restauración](../media/ls-typical-configuration.gif "Configuración que muestra trabajos de copia de seguridad, copia y restauración")  
+ ![Configuración que muestra trabajos de copia de seguridad, copia y restauración](../media/ls-typical-configuration.gif "Configuración que muestra trabajos de copia de seguridad, copia y restauración")  
   
-##  <a name="Interoperability"></a>Interoperabilidad  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Interoperabilidad  
  El trasvase de registros se puede usar con las siguientes características o componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Requisitos previos para la migración desde el trasvase de registros a Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
--   [&#40;SQL Server de creación de reflejo de la base de datos y trasvase de registros&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [Crear reflejo de la base de datos y trasvase de registros &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
--   [SQL Server de &#40;de replicación y trasvase de registros&#41;](log-shipping-and-replication-sql-server.md)  
+-   [Trasvase de registros y replicación &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] y la creación de reflejo de la base de datos son mutuamente excluyentes. Una base de datos configurada para una de estas características no puede configurarse para la otra.  
+>  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] y la creación de reflejo de la base de datos son mutuamente excluyentes. Una base de datos configurada para una de estas características no puede configurarse para la otra.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Actualizar el trasvase de registros a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

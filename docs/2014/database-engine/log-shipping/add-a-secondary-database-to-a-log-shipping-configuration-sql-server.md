@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22f1fbc9470eb4002bb40f0e4e513f35134c442e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774367"
 ---
 # <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>Agregar una base de datos secundaria a la configuración del trasvase de registros (SQL Server)
@@ -39,14 +39,14 @@ ms.locfileid: "62774367"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>Para agregar una base de datos secundaria de trasvase de registros  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62774367"
   
 4.  Haga clic en **Conectar** para conectarse a la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desee utilizar como servidor secundario.  
   
-5.  En el cuadro **Base de datos secundaria** , elija una base de datos de la lista o escriba el nombre de la base de datos que desea crear.  
+5.  En el cuadro **base de datos secundaria** , elija una base de datos de la lista o escriba el nombre de la base de datos que desea crear.  
   
 6.  En la pestaña **Inicializar base de datos secundaria** , elija la opción que desee utilizar para inicializar la base de datos secundaria.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "62774367"
   
 13. Tenga presente la programación de la restauración que aparece en el cuadro **Programación** bajo **Trabajo de restauración**. Si desea personalizar la programación de su instalación, haga clic en **Programar** y, a continuación, ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades. El programa debe parecerse al de la copia de seguridad.  
   
-14. Haga clic en **OK**.  
+14. Haga clic en **Aceptar**.  
   
 15. Haga clic en **Aceptar** en el cuadro de diálogo Propiedades de la base de datos para empezar el proceso de configuración.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-add-a-log-shipping-secondary-database"></a>Para agregar una base de datos secundaria de trasvase de registros  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62774367"
   
 5.  En el servidor secundario, habilite los trabajos de copia y restauración. Para obtener más información, consulte [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Actualizar el trasvase de registros a SQL Server 2014 &#40;Transact-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
@@ -112,6 +112,6 @@ ms.locfileid: "62774367"
   
 ## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [Tablas y procedimientos almacenados de trasvase de registros](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

@@ -15,24 +15,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813201"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Cambios de comportamiento en la búsqueda de texto completo
   En este tema se describen los cambios de comportamiento en la búsqueda de texto completo. Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Cambios de comportamiento en la búsqueda de texto completo de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql14"></a>Cambios de comportamiento en la búsqueda de texto completo de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  La información se proporcionará posteriormente.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Cambios de comportamiento en la búsqueda de texto completo de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] instala una versión nueva de los separadores de palabras y los lematizadores para inglés de EE.UU. (LCID 1033) e inglés de Reino Unido (LCID 2057). Aunque puede cambiar a la versión anterior de estos componentes si desea conservar el comportamiento anterior. Para obtener más información, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+## <a name="behavior-changes-in-full-text-search-in-sssql11"></a>Cambios de comportamiento en la búsqueda de texto completo de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] instala una versión nueva de los separadores de palabras y los lematizadores para inglés de EE.UU. (LCID 1033) e inglés de Reino Unido (LCID 2057). Aunque puede cambiar a la versión anterior de estos componentes si desea conservar el comportamiento anterior. Para obtener más información, vea [Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Nuevos separadores de palabras y lematizadores instalados  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]actualiza todos los separadores de palabras y lematizadores utilizados por la búsqueda de texto completo y la búsqueda semántica. Para que haya coherencia entre el contenido de los índices y los resultados de las consultas, se recomienda que vuelva a rellenar los índices de texto completo existentes.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] actualiza todos los separadores de palabras y lematizadores que se utilizan en la búsqueda de texto completo y en la búsqueda semántica. Para que haya coherencia entre el contenido de los índices y los resultados de las consultas, se recomienda que vuelva a rellenar los índices de texto completo existentes.  
   
 1.  Existen nuevos separadores de palabras para inglés. Si tiene que conservar el comportamiento anterior, vea [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -95,8 +94,7 @@ ms.locfileid: "62813201"
   
 -   Las listas de palabras irrelevantes han reemplazado a los archivos de palabras irrelevantes. Una lista de palabras irrelevantes es un objeto de base de datos que facilita las tareas de administración de las palabras irrelevantes y mejora la integridad entre instancias de servidor y entornos diferentes. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y versiones posteriores incluyen nuevos separadores de palabras para muchos de los idiomas de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Los únicos separadores de palabras que siguen siendo iguales son los de inglés, coreano, tailandés y chino (tradicional y simplificado). En el caso de otros idiomas, si se importó un catálogo [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] de texto completo cuando una base [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] de datos se actualizó a o a una versión posterior, es posible que uno o varios de los idiomas usados por los índices de texto completo del catálogo de texto completo estén asociados a nuevos separadores de palabras que podrían comportarse de forma ligeramente diferente a los separadores de palabras importados Para obtener más información sobre cómo garantizar la coherencia entre las consultas y el contenido del índice de texto completo, vea [actualizar la búsqueda de texto completo](../relational-databases/search/upgrade-full-text-search.md).  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y versiones posteriores incluyen nuevos separadores de palabras para muchos de los idiomas de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. Los únicos separadores de palabras que siguen siendo iguales son los de inglés, coreano, tailandés y chino (tradicional y simplificado). En el caso de otros idiomas, si se importó un catálogo [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] de texto completo cuando una base [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] de datos se actualizó a o a una versión posterior, es posible que uno o varios de los idiomas usados por los índices de texto completo del catálogo de texto completo estén asociados a nuevos separadores de palabras que podrían comportarse de forma ligeramente diferente a los separadores de palabras importados Para obtener más información sobre cómo garantizar la coherencia entre las consultas y el contenido del índice de texto completo, vea [actualizar la búsqueda de texto completo](../relational-databases/search/upgrade-full-text-search.md).  
   
 -   Se ha agregado un nuevo servicio del iniciador del FDHOST (MSSQLFDLauncher). Para obtener más información, consulte Introducción [a la búsqueda de texto completo](../relational-databases/search/get-started-with-full-text-search.md).  
   

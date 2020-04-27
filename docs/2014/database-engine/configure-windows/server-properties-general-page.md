@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809357"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Propiedades del servidor (página General) - SQL Server Management Studio
-  Use esta página para ver información de solo lectura sobre la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación de.  
+  Use esta página para ver información de solo lectura sobre la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-grid"></a>Cuadrícula de propiedades  
  Presenta las propiedades del servidor seleccionado, como el nombre del servidor, el sistema operativo del servidor o el número de procesadores.  
@@ -48,7 +48,7 @@ ms.locfileid: "62809357"
  **Memoria**  
  Muestra la cantidad de RAM instalada en el servidor.  
   
- **Incrustrados**  
+ **Procesadores**  
  Muestra el número de CPU instaladas.  
   
  **Directorio raíz**  
@@ -57,7 +57,7 @@ ms.locfileid: "62809357"
  **Intercalación del servidor**  
  Muestra la intercalación compatible con el servidor. Una intercalación especifica la página de códigos y el orden específicos que se van a utilizar con los datos Unicode y no Unicode.  
   
- **Está en clúster**  
+ **En clúster**  
  Muestra **True** si la instancia del servidor está configurada en un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o **False** si la instancia del servidor no pertenece a ningún clúster.  
   
  **Habilitado para HADR**  

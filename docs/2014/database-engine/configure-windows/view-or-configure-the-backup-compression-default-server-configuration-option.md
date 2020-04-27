@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed7b46308c7ffc39117accbb68dfd68b9847f721
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808756"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada
@@ -41,26 +41,26 @@ ms.locfileid: "62808756"
   
 -   **Seguimiento:**  [Después de configurar la opción de valor predeterminado de compresión de copia de seguridad](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
--   La compresión no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   La compresión no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Al crear una copia de seguridad individual, establecer una configuración de trasvase de registros o crear un plan de mantenimiento, puede invalidar el valor predeterminado de nivel de servidor.  
   
 -   La compresión de copia de seguridad se admite para dispositivos de copia de seguridad en disco y en cinta.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-the-backup-compression-default-option"></a>Para ver o configurar la opción de valor predeterminado de compresión de copia  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62808756"
   
      Si es miembro de los roles fijos de servidor **sysadmin** o **serveradmin** , puede cambiar también el valor predeterminado haciendo clic en la casilla **Comprimir copia de seguridad** .  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-the-backup-compression-default-option"></a>Para ver la opción de valor predeterminado de compresión de copia de seguridad  
   
@@ -115,7 +115,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de valor predeterminado de compresión de copia de seguridad  
+##  <a name="follow-up-after-you-configure-the-backup-compression-default-option"></a><a name="FollowUp"></a> Seguimiento: Después de configurar la opción de valor predeterminado de compresión de copia de seguridad  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Consulte también  

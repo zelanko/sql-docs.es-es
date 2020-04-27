@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807429"
 ---
 # <a name="cross-container-transactions"></a>Transacciones entre contenedores
@@ -24,7 +24,7 @@ ms.locfileid: "62807429"
   
  Cualquier consulta interpretada que hace referencia a tablas optimizadas para memoria se considera parte de una transacción entre contenedores, tanto si se ejecuta desde una transacción explícita o implícita como si se ejecuta en modo de confirmación automática.  
   
-##  <a name="isolation"></a>Aislamiento de operaciones individuales  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>Aislamiento de operaciones individuales  
  Cada transacción de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un nivel de aislamiento. El nivel de aislamiento predeterminado es Lectura confirmada. Para usar un nivel de aislamiento diferente, puede establecer el nivel de aislamiento mediante [SET TRANSACTION ISOlation level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Suele ser necesario realizar operaciones en tablas optimizadas para memoria en otro nivel de aislamiento diferente al de las operaciones en tablas basadas en disco. En una transacción, es posible establecer otro nivel de aislamiento diferente para una colección de instrucciones o para una operación de lectura individual.  
@@ -99,7 +99,7 @@ commit
  Se garantiza que la lectura de datos se confirma y es estable hasta la hora de finalización lógica de la transacción.  
   
  SERIALIZABLE  
- Todas las garantías de lectura REPETIble más la coherencia de la transacción y de la operación ficticia con respecto a todas las operaciones de lectura serializable realizadas por T. la prevención ficticia significa que la operación de examen solo puede devolver filas adicionales escritas por T, pero no filas escritas por otras transacciones.  
+ Todas las garantías de la prevención y la coherencia de las transacciones de lectura REPETIble y la coherencia transaccional con respecto a todas las operaciones de lectura serializable realizadas por T. la prevención ficticia significa que la operación de examen solo puede devolver filas adicionales escritas por T, pero no filas escritas por otras transacciones.  
   
  Considere la transacción siguiente,  
   
@@ -172,7 +172,7 @@ commit
   
  Las tablas con optimización para memoria admiten los niveles de aislamiento SNAPSHOT, REPEATABLE READ y SERIALIZABLE. Para las transacciones de confirmación automática, las tablas optimizadas para memoria admiten el nivel de aislamiento READ COMMITTED.  
   
- Se admiten los siguientes escenarios:  
+ Se admiten los escenarios siguientes:  
   
 -   Las transacciones entre contenedores READ UNCOMMITTED, READ COMMITTED y READ_COMMITTED_SNAPSHOT pueden tener acceso a tablas optimizadas para memoria con el aislamiento SNAPSHOT, REPEATABLE READ y SERIALIZABLE. La garantía de READ COMMITTED se mantiene para la transacción; todas las filas leídas por la transacción se han confirmado en la base de datos.  
   

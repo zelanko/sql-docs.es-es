@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792008"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Clúster de conmutación por error y grupos de disponibilidad de AlwaysOn (SQL Server)
@@ -32,29 +32,26 @@ ms.locfileid: "62792008"
   
 
   
-##  <a name="WSFC"></a> Grupos de disponibilidad y clústeres de conmutación por error de Windows Server  
+##  <a name="windows-server-failover-clustering-and-availability-groups"></a><a name="WSFC"></a>Clústeres de conmutación por error de Windows Server y grupos de disponibilidad  
  La implementación de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requiere un clúster de WSFC (clústeres de conmutación por error de Windows Server). Para que una instancia de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se habilite para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe residir en un nodo de WSFC y el clúster y el nodo de WSFC deben estar en línea. Además, cada réplica de disponibilidad de un determinado grupo de disponibilidad debe residir en otro nodo del mismo clúster de WSFC. La única excepción es que mientras se migra a otro clúster de WSFC, un grupo de disponibilidad puede ocupar temporalmente dos clústeres.  
   
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se basa en el clúster de clústeres de conmutación por error de Windows (WSFC) para supervisar y administrar los roles actuales de las réplicas de disponibilidad que pertenecen a un grupo de disponibilidad concreto, así como para determinar cómo afecta un evento de conmutación por error a las réplicas de disponibilidad. Por cada grupo de disponibilidad que cree, se creará un grupo de recursos de WSFC. El clúster de WSFC supervisa este grupo de recursos para evaluar el estado de la réplica principal.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se basa en el clúster de clústeres de conmutación por error de Windows (WSFC) para supervisar y administrar los roles actuales de las réplicas de disponibilidad que pertenecen a un grupo de disponibilidad concreto, así como para determinar cómo afecta un evento de conmutación por error a las réplicas de disponibilidad. Por cada grupo de disponibilidad que cree, se creará un grupo de recursos de WSFC. El clúster de WSFC supervisa este grupo de recursos para evaluar el estado de la réplica principal.  
   
  El quorum para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se basa en todos los nodos del clúster de WSFC independientemente de si un nodo de clúster determinado hospeda alguna réplica de disponibilidad. A diferencia de la creación de reflejo de la base de datos, no hay ningún rol testigo en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
  Los votos de quórum de nodos del clúster determinan el estado general de un clúster de WSFC. Si el clúster de WSFC se queda sin conexión debido a un desastre no planeado, o a un error persistente de hardware o de comunicaciones, se necesita la intervención manual del administrador. Un administrador de clústeres de Windows Server o de WSFC necesitará forzar un quórum y volver a poner en línea los nodos del clúster superviviente en una configuración sin tolerancia a errores.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] son subclaves del clúster de WSFC. Si elimina y vuelve a crear un clúster de WSFC, debe deshabilitar y volver a habilitar la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedaba una réplica de disponibilidad en el clúster de WSFC original.  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] son subclaves del clúster de WSFC. Si elimina y vuelve a crear un clúster de WSFC, debe deshabilitar y volver a habilitar la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedaba una réplica de disponibilidad en el clúster de WSFC original.  
   
  Para obtener información sobre cómo ejecutar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nodos de clústeres de conmutación por error de Windows Server (WSFC) y sobre el cuórum de WSFC, vea [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ### <a name="cross-cluster-migration-of-alwayson-availability-groups-for-os-upgrade"></a>Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo  
- A partir de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite la migración entre clústeres de grupos de disponibilidad para las implementaciones en un nuevo clúster de Clústeres de conmutación por error de Windows Server (WSFC). Una migración entre clústeres mueve un grupo de disponibilidad o un lote de grupos de disponibilidad al nuevo clúster de WSFC de destino con un tiempo de inactividad mínimo. El proceso de migración entre clústeres le permite mantener los contratos de nivel de servicio (SLA) al actualizar a un clúster de [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . 
-  [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (o una versión posterior) debe estar instalado y habilitado para AlwaysOn en el clúster de WSFC de destino. El éxito de una migración entre clústeres depende de un planeamiento y una preparación exhaustivos del clúster de WSFC de destino.  
+ A partir de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite la migración entre clústeres de grupos de disponibilidad para las implementaciones en un nuevo clúster de Clústeres de conmutación por error de Windows Server (WSFC). Una migración entre clústeres mueve un grupo de disponibilidad o un lote de grupos de disponibilidad al nuevo clúster de WSFC de destino con un tiempo de inactividad mínimo. El proceso de migración entre clústeres le permite mantener los contratos de nivel de servicio (SLA) al actualizar a un clúster de [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (o una versión posterior) debe estar instalado y habilitado para AlwaysOn en el clúster de WSFC de destino. El éxito de una migración entre clústeres depende de un planeamiento y una preparación exhaustivos del clúster de WSFC de destino.  
   
  Para obtener más información, vea [Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo](https://msdn.microsoft.com/library/jj873730.aspx).  
   
-##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instancias de clúster de conmutación por error (FCI) y grupos de disponibilidad  
+##  <a name="ssnoversion-failover-cluster-instances-fcis-and-availability-groups"></a><a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instancias de clúster de conmutación por error (FCI) y grupos de disponibilidad  
  Puede configurar un segundo nivel de conmutación por error en el nivel de instancia de servidor si implementa los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] junto con el clúster de WSFC. Una réplica de disponibilidad se puede hospedar en una instancia independiente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o una instancia de FCI. Solo un asociado de FCI puede hospedar una réplica para un grupo de disponibilidad dado. Cuando una réplica de disponibilidad se ejecuta en una instancia de clúster de conmutación por error (FCI), la lista de posibles propietarios del grupo de disponibilidad contendrá solo el nodo de FCI activo.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no depende de ninguna forma de almacenamiento compartido. Sin embargo, si usa una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar una o varias réplicas de disponibilidad, cada una de las FCI requerirá almacenamiento compartido según la instalación típica de la instancia de clúster de conmutación por error de SQL Server.  
@@ -68,7 +65,7 @@ ms.locfileid: "62792008"
 |-|-------------------------|-------------------------------------------|  
 |**Usa el clúster de WSFC**|Sí|Sí|  
 |**Nivel de protección**|Instancia|Base de datos|  
-|**Tipo de almacenamiento**|Compartido|No compartidos<br /><br /> Tenga en cuenta que mientras las réplicas de un grupo de disponibilidad no comparten almacenamiento, una réplica hospedada por una FCI usa una solución de almacenamiento compartido de acuerdo con esa FCI. La solución de almacenamiento es compartida solo por los nodos en la FCI y no entre las réplicas del grupo de disponibilidad.|  
+|**Tipo de almacenamiento**|Shared|No compartidos<br /><br /> Tenga en cuenta que mientras las réplicas de un grupo de disponibilidad no comparten almacenamiento, una réplica hospedada por una FCI usa una solución de almacenamiento compartido de acuerdo con esa FCI. La solución de almacenamiento es compartida solo por los nodos en la FCI y no entre las réplicas del grupo de disponibilidad.|  
 |**Soluciones de almacenamiento**|Se adjuntan directamente, SAN, puntos de montaje, SMB|Depende del tipo de nodo|  
 |**Secundarios legibles**|No*|Sí|  
 |**Opciones aplicables de la directiva de conmutación por error**|Quórum de WSFC<br /><br /> Específico de FCI<br /><br /> Configuración de grupo de disponibilidad**|Quórum de WSFC<br /><br /> Configuración de grupos de disponibilidad|  
@@ -84,7 +81,7 @@ ms.locfileid: "62792008"
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Consideraciones para hospedar una réplica de disponibilidad en una FCI  
   
 > [!IMPORTANT]  
->  Si tiene previsto hospedar una réplica de disponibilidad en una instancia de clúster de conmutación por error (FCI) de SQL Server, asegúrese de que los nodos de host de Windows Server 2008 cumplen con los requisitos previos y las restricciones de AlwaysOn para las instancias de clúster de conmutación por error (FCI). Para obtener más información, consulte [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+>  Si tiene previsto hospedar una réplica de disponibilidad en una instancia de clúster de conmutación por error (FCI) de SQL Server, asegúrese de que los nodos de host de Windows Server 2008 cumplen con los requisitos previos y las restricciones de AlwaysOn para las instancias de clúster de conmutación por error (FCI). Para más información, vea [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Las instancias de clúster de conmutación por error (FCI) no admiten la conmutación automática por error de grupos de disponibilidad; por lo tanto, todas las réplicas de disponibilidad hospedadas por un FCI solo se pueden configurar para la conmutación por error manual.  
   
@@ -102,7 +99,7 @@ ms.locfileid: "62792008"
   
  Para más información sobre los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vea [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
-##  <a name="FCMrestrictions"></a> Restricciones en el uso del Administrador de clústeres de conmutación por error de WSFC con grupos de disponibilidad  
+##  <a name="restrictions-on-using-the-wsfc-failover-cluster-manager-with-availability-groups"></a><a name="FCMrestrictions"></a>Restricciones en el uso del Administrador de clústeres de conmutación por error WSFC con grupos de disponibilidad  
  No use el Administrador de clústeres de conmutación por error para manipular grupos de disponibilidad, por ejemplo:  
   
 -   No agregue ni quite recursos en el servicio en clúster (grupo de recursos) para el grupo de disponibilidad.  
@@ -111,7 +108,7 @@ ms.locfileid: "62792008"
   
 -   No use el Administrador de clústeres de conmutación por error para mover los grupos de disponibilidad a otros nodos o para conmutar los grupos de disponibilidad. El Administrador de clústeres de conmutación por error no conoce el estado de sincronización de las réplicas de disponibilidad y hacer esto puede conducir a un tiempo de inactividad extendido. Debe usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   

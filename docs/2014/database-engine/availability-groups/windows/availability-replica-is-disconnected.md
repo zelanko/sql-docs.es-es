@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791859"
 ---
 # <a name="availability-replica-is-disconnected"></a>Réplica de disponibilidad desconectada
@@ -30,13 +30,13 @@ ms.locfileid: "62791859"
 |**Nombre de directiva**|Estado de conexión de la réplica de disponibilidad|  
 |**Problema**|La réplica de disponibilidad está desconectada.|  
 |**Categoría**|**Critical)** (Crítico)|  
-|**Faceta**|réplica de disponibilidad|  
+|**Agrupa**|réplica de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado de conexión entre las réplicas de disponibilidad. La directiva está en mal estado cuando el estado de conexión de la réplica de disponibilidad es DISCONNECTED. De lo contrario, la directiva está en un estado correcto.  
   
 > [!NOTE]  
->  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Réplica de disponibilidad desconectada](https://go.microsoft.com/fwlink/p/?LinkId=220857) en TechNet Wiki.  
+>   Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [La réplica de disponibilidad está desconectada](https://go.microsoft.com/fwlink/p/?LinkId=220857) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Causas posibles  
  La réplica secundaria no está conectada a la réplica principal. El estado de conexión es DISCONNECTED. Este problema puede deberse a lo siguiente:  
@@ -58,6 +58,6 @@ ms.locfileid: "62791859"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

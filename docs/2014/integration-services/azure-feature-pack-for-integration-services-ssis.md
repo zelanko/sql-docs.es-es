@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772151"
 ---
 # <a name="azure-feature-pack"></a>Feature Pack de Azure
@@ -73,7 +73,7 @@ Descargue Feature Pack de SQL Server Integration Services (SSIS) para Azure.
   
 -   [Feature Pack de Microsoft SQL Server 2014 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
 Necesita instalar los siguientes requisitos previos antes de instalar este Feature Pack.  
   
 -   SQL Server Integration Services  

@@ -11,15 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814556"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>Almacén remoto de blobs (RBS) y grupos de disponibilidad AlwaysOn (SQL Server)
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]puede proporcionar una solución de alta disponibilidad y recuperación ante desastres [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]para los objetos BLOB (blobs) del [almacén remoto de blobs (RBS](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) ). 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] protege los metadatos y esquema de RBS almacenados en una base de datos de disponibilidad replicándolos en las réplicas secundarias. Se trata de la base de datos de contenido de SharePoint. En general, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacena estos metadatos de RBS independientemente del blob.  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]puede proporcionar una solución de alta disponibilidad y recuperación ante desastres [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]para los objetos BLOB (blobs) del [almacén remoto de blobs (RBS](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) ). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] protege los metadatos y esquema de RBS almacenados en una base de datos de disponibilidad replicándolos en las réplicas secundarias. Se trata de la base de datos de contenido de SharePoint. En general, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacena estos metadatos de RBS independientemente del blob.  
   
  La protección de los datos BLOB de RBS depende de la ubicación del almacén de BLOB, de la manera siguiente:  
   
@@ -30,21 +29,21 @@ ms.locfileid: "62814556"
 |Otra base de datos de otra instancia diferente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (almacenada mediante un proveedor remoto FILESTREAM de RBS)|Sí<br /><br /> Esta base de datos debe estar en un grupo de disponibilidad diferente.|  
 |Un almacén de blobs de terceros|No<br /><br /> Para proteger estos datos BLOB, use los mecanismos de alta disponibilidad del proveedor de almacenes de blobs.|  
   
-##  <a name="Limitations"></a>Límite  
+##  <a name="limitations"></a><a name="Limitations"></a> Limitaciones  
   
 -   Los mantenedores de RBS deben tener como destino la réplica principal.  
   
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Use un agente de escucha del grupo de disponibilidad. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Mantener almacén remoto de blobs](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] los libros en pantalla de)  
+-   [Mantener un almacén remoto de blobs](https://msdn.microsoft.com/library/gg316773\(SQL.105\).aspx) (en los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] )  
   
--   [Ejecutar el mantenedor de RBS](https://blogs.msdn.com/b/sqlrbs/archive/2010/03/19/running-rbs-maintainer.aspx) (blog)  
+-   [Ejecutar el Mantenedor de RBS](https://blogs.msdn.com/b/sqlrbs/archive/2010/03/19/running-rbs-maintainer.aspx) (blog)  
   
--   [Configurar el almacenamiento remoto de blobs (RBS) con el proveedor FileStream (SharePoint 2010)](https://blogs.msdn.com/b/mvpawardprogram/archive/2012/04/02/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010.aspx) (blog)  
+-   [Configurar el almacenamiento remoto de blobs (RBS) con el proveedor FILESTREAM (SharePoint 2010)](https://blogs.msdn.com/b/mvpawardprogram/archive/2012/04/02/configure-remote-blob-storage-rbs-with-the-filestream-provider-sharepoint-2010.aspx) (blog)  
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server de conectividad de cliente de AlwaysOn &#40;&#41;](always-on-client-connectivity-sql-server.md)   

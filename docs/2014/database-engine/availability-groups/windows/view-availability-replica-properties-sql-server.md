@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788011"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Ver las propiedades de una réplica de disponibilidad (SQL Server)
   En este tema se describe cómo pueden verse las propiedades de una réplica de un grupo disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver y cambiar las propiedades de una réplica de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
@@ -37,7 +37,7 @@ ms.locfileid: "62788011"
 5.  En el cuadro de diálogo **Propiedades de réplica de disponibilidad** , utilice la página **General** para ver las propiedades de esta réplica. Si está conectado a la réplica principal, puede cambiar las propiedades siguientes: modo de disponibilidad, modo de conmutación por error, acceso de conexión para el rol principal, acceso de lectura para el rol secundario (legible-secundario), y el valor de tiempo de espera de la sesión. Para obtener más información, vea propiedades de la [réplica de disponibilidad &#40;página General&#41;](availability-replica-properties-general-page.md).  
   
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para ver las propiedades y estados de las réplicas de disponibilidad**  
   
  Para ver las propiedades y estados de las réplicas de disponibilidad, utilice las siguientes vistas y la función del sistema:  
@@ -74,7 +74,7 @@ ms.locfileid: "62788011"
 >  Para obtener más información sobre los contadores de rendimiento para réplicas de disponibilidad (el objeto de rendimiento **SQLServer:Availability Replica**  ), vea [SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para obtener más información acerca de los grupos de disponibilidad**  
   
 -   [Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
@@ -83,7 +83,7 @@ ms.locfileid: "62788011"
   
 -   [Directivas de AlwaysOn para problemas operativos con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)
   
--   [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   

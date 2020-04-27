@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768037"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Ejecutar el Asistente para importación y exportación de SQL Server
@@ -31,19 +31,19 @@ ms.locfileid: "62768037"
   
 -   En el menú **Inicio** , seleccione **todos los programas**,**Microsoft SQL Server** y, a continuación, haga clic en **importar y exportar datos**.  
   
-     O bien  
+     o bien  
   
      En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic con el botón secundario en la carpeta **paquetes SSIS** y, a continuación, haga clic en **Asistente para SSISImport y exportar**.  
   
-     O bien  
+     o bien  
   
      En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en el menú **proyecto** , haga clic en **Asistente para SSISImport y exportar**.  
   
-     O bien  
+     o bien  
   
      En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bases de datos, haga clic con el botón secundario en una base de datos, seleccione **tareas**y, a continuación, haga clic en **importar datos** o **exportar datos**.  
   
-     O bien  
+     o bien  
   
      En una ventana de símbolo del sistema, ejecute DTSWizard.exe, ubicado en C:\Archivos de programa\Microsoft SQL Server\100\DTS\Binn.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62768037"
   
         |Propiedad|Value|  
         |--------------|-----------|  
-        |Intercalación|Latin1_General_CS_AS_KS_WS|  
+        |Collation|Latin1_General_CS_AS_KS_WS|  
         |modelo de recuperación|Completo|  
         |Usar indización de texto completo|True|  
   

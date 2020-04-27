@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c7a9b107a05b0645f2286f534f457d46a1b6f11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771101"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extraer datos mediante el origen de XML
@@ -55,7 +55,7 @@ ms.locfileid: "62771101"
   
 8.  Para actualizar los nombres de las columnas de salida, haga clic en **Columnas** y modifique los valores en la lista **Columna de salida** .  
   
-9. Para configurar la salida de error, haga clic en **Salida de error**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
+9. Para configurar la salida de error, haga clic en **Salida de error**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
   
 10. Haga clic en **OK**.  
   

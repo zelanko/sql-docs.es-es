@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770321"
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
@@ -78,8 +78,7 @@ ms.locfileid: "62770321"
   
  Las columnas de salida de transformación cuya propiedad InputColumnType se establece en 0 o 2 incluyen la propiedad CustomLineageID para una columna, que contiene el identificador de linaje asignado a la columna por un componente de flujo de datos requerido.  
   
- La transformación Búsqueda de términos agrega dos columnas a la salida de transformación, que se denomina de forma predeterminada `Term` y `Frequency`. 
-  `Term` contiene un término de la tabla de búsqueda y `Frequency` contiene el número de veces que el término en la tabla de referencia aparece en el conjunto de datos de entrada establecidos. Estas columnas no incluyen la propiedad CustomLineageID.  
+ La transformación Búsqueda de términos agrega dos columnas a la salida de transformación, que se denomina de forma predeterminada `Term` y `Frequency`. `Term` contiene un término de la tabla de búsqueda y `Frequency` contiene el número de veces que el término en la tabla de referencia aparece en el conjunto de datos de entrada establecidos. Estas columnas no incluyen la propiedad CustomLineageID.  
   
  La tabla de búsqueda debe ser una tabla en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Access. Si la salida de transformación Extracción de términos se guarda en una tabla, esta tabla se puede usar como tabla de referencia, pero también se pueden usar otras tablas. El texto en archivos planos, libros de Excel u otros orígenes se debe importar a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Access antes de poder usar la transformación Búsqueda de términos.  
   
@@ -95,15 +94,15 @@ ms.locfileid: "62770321"
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de transformación Búsqueda de términos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de transformación búsqueda de términos &#40;pestaña tabla de referencia&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de transformación Búsqueda de términos &#40;pestaña Tabla de referencia&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor de transformación Búsqueda de términos &#40;pestaña Búsqueda de términos&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [Editor de transformación búsqueda de términos &#40;pestaña avanzadas&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Búsqueda de términos &#40;pestaña Avanzadas&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Propiedades comunes](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

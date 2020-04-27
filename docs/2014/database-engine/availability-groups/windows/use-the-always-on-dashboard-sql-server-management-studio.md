@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788732"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Usar el Panel de AlwaysOn (SQL Server Management Studio)
@@ -51,24 +51,24 @@ ms.locfileid: "62788732"
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Debe estar conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancia del servidor) que hospeda la réplica principal o una réplica secundaria de un grupo de disponibilidad.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere permisos CONNECT TO, VIEW SERVER STATE y VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a>Para iniciar el panel de AlwaysOn  
+##  <a name="to-start-the-alwayson-dashboard"></a><a name="SSMSProcedure"></a>Para iniciar el panel de AlwaysOn  
   
 1.  En el Explorador de objetos, conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que desea ejecutar el Panel AlwaysOn.  
   
 2.  Expanda el nodo **Alta disponibilidad de AlwaysOn** , haga clic con el botón secundario en el nodo **Grupos de disponibilidad** y, a continuación, haga clic en **Mostrar panel**.  
   
-###  <a name="DashboardOptions"></a>Para cambiar las opciones del panel de AlwaysOn  
- Puede usar el cuadro de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]Opciones** de ** para configurar el comportamiento del Panel AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] respecto a la actualización y habilitación automática de una directiva de AlwaysOn autodefinida.  
+###  <a name="to-change-alwayson-dashboard-options"></a><a name="DashboardOptions"></a>Para cambiar las opciones del panel de AlwaysOn  
+ Puede usar el cuadro de diálogo **Opciones** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para configurar el comportamiento del Panel AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] respecto a la actualización y habilitación automática de una directiva de AlwaysOn autodefinida.  
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62788732"
   
 3.  Para habilitar una directiva definida por el usuario, seleccione **Habilitar la directiva de AlwaysOn definida por el usuario**.  
   
-##  <a name="AvGroupsView"></a>Resumen de grupo de disponibilidad  
+##  <a name="availability-group-summary"></a><a name="AvGroupsView"></a> Resumen de grupos de disponibilidad  
  La pantalla de grupos de disponibilidad muestra una línea de resumen para cada grupo de disponibilidad para el que la instancia del servidor conectado hospeda una réplica. Este panel muestra las columnas siguientes.  
   
  **Nombre del grupo de disponibilidad**  
@@ -92,19 +92,19 @@ ms.locfileid: "62788732"
   
 -   **Manual**. Indica que ninguna réplica está en modo de conmutación por error automática.  
   
- **Issues**  
+ **Problemas**  
  Haga clic en el vínculo **Problemas** para abrir documentación de solución de problemas relativa a un problema determinado. Para obtener una lista de todos los problemas de directivas de AlwaysOn, vea [directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Haga clic en los encabezados de columna para ordenar la información de grupos de disponibilidad por nombre de grupo de disponibilidad, instancia principal, modo de conmutación por error o problema.  
   
-##  <a name="AvGroupDetails"></a>Detalles del grupo de disponibilidad  
+##  <a name="availability-group-details"></a><a name="AvGroupDetails"></a> Detalles de grupos de disponibilidad  
  Se muestra la información detallada siguiente para el grupo de disponibilidad seleccionado de la pantalla de resumen:  
   
- **Estado del grupo de disponibilidad**  
+ **Estado de grupo de disponibilidad**  
  Muestra el estado de mantenimiento del grupo de disponibilidad.  
   
- **Instancia principal**  
+ **Primary instance**  
  Nombre de la instancia de servidor que hospeda la réplica de disponibilidad del grupo de disponibilidad.  
   
  **Modo de conmutación por error**  
@@ -114,16 +114,16 @@ ms.locfileid: "62788732"
   
 -   **Manual**. Indica que ninguna réplica está en modo de conmutación por error automática.  
   
- **Estado del clúster**  
+ **Estado de clúster**  
  Nombre y estado del clúster donde la instancia del servidor conectado y el grupo e disponibilidad es un nodo de miembro.  
   
-##  <a name="AvReplicaDetails"></a>Detalles de la réplica de disponibilidad  
+##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a> Detalles de la réplica de disponibilidad  
  El panel **Réplica de disponibilidad** muestra las columnas siguientes:  
   
  **Nombre**  
  El nombre de la instancia de servidor que hospeda la réplica de disponibilidad. Esta columna se muestra de forma predeterminada.  
   
- **Role**  
+ **Rol**  
  Indica el rol actual de la réplica de disponibilidad, **Principal** o **Secundaria**. Para más información sobre los roles de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md). Esta columna se muestra de forma predeterminada.  
   
  **Modo de conmutación por error**  
@@ -136,18 +136,18 @@ ms.locfileid: "62788732"
  **Estado de sincronización**  
  Indica si una réplica secundaria está sincronizada actualmente con la réplica principal. Esta columna se muestra de forma predeterminada. Los valores posibles son:  
   
--   **No sincronizado**. Una o más bases de datos de la réplica no están sincronizadas todavía no se han unido al grupo de disponibilidad.  
+-   **No sincronizada** Una o más bases de datos de la réplica no están sincronizadas todavía no se han unido al grupo de disponibilidad.  
   
--   **Sincronizando**. Una o más bases de datos de la réplica se están sincronizando.  
+-   **En proceso de sincronización** Una o más bases de datos de la réplica se están sincronizando.  
   
--   **Sincronizado**. Todas las bases de datos de la réplica secundaria están sincronizadas con las bases de datos principales correspondientes en la réplica principal actual, si hay alguna, o en la última réplica principal.  
+-   **Sincronizada** Todas las bases de datos de la réplica secundaria están sincronizadas con las bases de datos principales correspondientes en la réplica principal actual, si hay alguna, o en la última réplica principal.  
   
     > [!NOTE]  
     >  En modo de rendimiento, la base de datos nunca está en estado sincronizado.  
   
 -   **Null**. Estado desconocido. Este valor aparece cuando la instancia del servidor local no puede comunicarse con el clúster de conmutación por error de WSFC (es decir, el nodo local no forma parte del quórum de WSFC).  
   
- **Issues**  
+ **Problemas**  
  Muestra el nombre del problema. Este valor se muestra de forma predeterminada. Para obtener una lista de todos los problemas de directivas de AlwaysOn, vea [directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Modo de disponibilidad**  
@@ -174,36 +174,36 @@ ms.locfileid: "62788732"
   
 -   **Conectado**. Una réplica de disponibilidad remota que está conectada actualmente a la réplica local.  
   
- **Estado de funcionamiento**  
+ **Estado operativo**  
  Indica el estado operativo actual de la réplica secundaria. Este valor está oculto de forma predeterminada. Los valores posibles son:  
   
- **0**. conmutación por error pendiente  
+ **0**. Conmutación por error pendiente  
   
- **1**. pendiente  
+ **1**. Pendiente  
   
- **2**. en línea  
+ **2**. En línea  
   
- **3**. sin conexión  
+ **3**. Sin conexión  
   
- **4**. error  
+ **4**. Error  
   
- **5**. error, sin cuórum  
+ **5**. No se pudo establecer quórum  
   
  **Null**. La réplica no es local  
   
- **No se pudo obtener el último error de conexión.**  
+ **Nº del último error de conexión**  
  Número del último error de conexión.  Este valor está oculto de forma predeterminada.  
   
  **Descripción del último error de conexión**  
  Descripción del último error de conexión.  Este valor está oculto de forma predeterminada.  
   
- **Marca de tiempo de último error de conexión**  
+ **Marca de tiempo del último error de conexión**  
  Marca de tiempo del último error de conexión. Este valor está oculto de forma predeterminada.  
   
 > [!NOTE]  
 >  Para obtener más información sobre los contadores de rendimiento para réplicas de disponibilidad, vea [SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a>Para agrupar la información del grupo de disponibilidad  
+##  <a name="to-group-availability-group-information"></a><a name="AvDbDetails"></a> Para agrupar la información del grupo de disponibilidad  
  Para agrupar la información, haga clic en **Agrupar por**y seleccione una de las opciones siguientes:  
   
 -   **Réplicas de disponibilidad**  
@@ -214,7 +214,7 @@ ms.locfileid: "62788732"
   
 -   **Preparación para la conmutación por error**  
   
--   **Issues**  
+-   **Problemas**  
   
  El panel que muestra que muestra la información agrupada tiene las siguientes columnas:  
   
@@ -227,13 +227,13 @@ ms.locfileid: "62788732"
  **Estado de sincronización**  
  Indica si la base de datos de disponibilidad está sincronizada actualmente con la réplica principal. Este valor se muestra de forma predeterminada. Los posibles estados de sincronización son los siguientes:  
   
--   **No se está sincronizando**.  
+-   **No se están sincronizando**  
   
     -   En el rol principal, indica que la base de datos no está lista para sincronizar su registro de transacciones con las bases de datos secundarias correspondientes.  
   
     -   En una base de datos secundaria, indica que la base de datos no ha iniciado la sincronización del registro debido a un problema de conexión, se está suspendiendo o está pasando por estados de transición durante el inicio o en una conmutación de roles.  
   
--   **Sincronizando**.  
+-   **En proceso de sincronización**  
   
      En una réplica principal:  
   
@@ -243,7 +243,7 @@ ms.locfileid: "62788732"
   
      En una réplica secundaria, indica que hay en curso un movimiento de datos activo para esa réplica.  
   
--   **Sincronizado**.  
+-   **Sincronizada**  
   
      Para una base de datos principal, indica que al menos una base de datos secundaria está sincronizada.  
   
@@ -300,13 +300,13 @@ ms.locfileid: "62788732"
  **Tasa de envío del registro (KB/seg)**  
  Indica la velocidad en KB por segundo a la que las entradas de registro se envían a la réplica secundaria. Este valor está oculto de forma predeterminada.  
   
- **Tamaño de la cola rehacer (KB)**  
+ **Tamaño de la cola Rehacer (KB)**  
  Indica la cantidad de entradas de registro en los archivos de registro de la réplica secundaria que no se han rehecho todavía. Este valor está oculto de forma predeterminada.  
   
- **Tasa de puesta al día (KB/s)**  
+ **Tasa de puesta al día (KB/seg)**  
  Indica la velocidad en KB por segundo a la que las entradas de registro se están rehaciendo. Este valor está oculto de forma predeterminada.  
   
- **Velocidad de envío de FileStream (KB/s)**  
+ **Tasa de envío de secuencia de archivos (KB/seg)**  
  Indica la velocidad de la secuencia de archivos en KB por segundo a la se envían las transacciones a la réplica. Este valor está oculto de forma predeterminada.  
   
  **LSN de fin de registro**  
@@ -348,7 +348,7 @@ ms.locfileid: "62788732"
  **Última hora de rehacer**  
  Indica la hora en que la última entrada de registro se rehízo en la base de datos secundaria. Este valor está oculto de forma predeterminada.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

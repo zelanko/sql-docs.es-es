@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773673"
 ---
 # <a name="search-property-list-editor"></a>Editor de lista de propiedades de búsqueda
@@ -26,8 +26,8 @@ ms.locfileid: "62773673"
  Para obtener información sobre cómo crear, ver o eliminar una lista de propiedades de búsqueda, y sobre cómo configurar un índice de texto completo para la búsqueda de propiedades, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre de propiedad**  
- Especifique el nombre que se va a usar para identificar la propiedad en consultas de texto completo. El nombre de una propiedad puede contener espacios internos. La longitud máxima del atributo **Property Name** es de 256 caracteres. Este nombre puede ser un nombre descriptivo, como "Autor" o "Dirección particular", o bien el nombre canónico de Windows de la propiedad, como `System.Author` o `System.Contact.HomeAddress`. El **nombre de propiedad** debe identificar de forma única la propiedad dentro del conjunto de propiedades.  
+ **Nombre de la propiedad**  
+ Especifique el nombre que se va a usar para identificar la propiedad en consultas de texto completo. El nombre de una propiedad puede contener espacios internos. La longitud máxima del atributo **Property Name** es de 256 caracteres. Este nombre puede ser un nombre descriptivo, como "Autor" o "Dirección particular", o bien el nombre canónico de Windows de la propiedad, como `System.Author` o `System.Contact.HomeAddress`. **Nombre de propiedad** debe identificar exclusivamente la propiedad en el conjunto de propiedades.  
   
  Los desarrolladores usan el nombre de propiedad para identificar la propiedad en el predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Por tanto, cuando se agregue una propiedad es importante especificar un valor que represente significativamente la propiedad.  
   

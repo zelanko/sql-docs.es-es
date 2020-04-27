@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 46d6fd5d4ecd821a3ccfeb35679e8fa7bab6104e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771725"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Examinar todas las entidades (cuadro de diálogo)
@@ -28,7 +28,7 @@ ms.locfileid: "62771725"
   
 -   [Configurar las opciones](#options)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Examinar todas las entidades  
+##  <a name="open-the-browse-all-principals-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Examinar todas las entidades  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62771725"
   
 5.  Seleccione la página **Permisos** y haga clic en **Examinar**.  
   
-##  <a name="options"></a> Configurar las opciones  
+##  <a name="configure-the-options"></a><a name="options"></a> Configurar las opciones  
  En esta página se muestran las entidades de seguridad de la vista de catálogo, sys.database_principals, de la base de datos de SSISDB.  
   
  Si selecciona las entidades de seguridad, se agregarán a la lista **Inicios de sesión o roles** de la página **Permisos** del cuadro de diálogo principal cuando haga clic en **Aceptar** y cierre el cuadro de diálogo **Examinar todas las entidades** . Después de agregar entidades de seguridad a la lista de **Inicios de sesión o roles** , puede cambiar sus permisos en el proyecto seleccionado.  

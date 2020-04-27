@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808714"
 ---
 # <a name="connect-to-server-integration-services"></a>Conectar al servidor (Integration Services)
-  Use este cuadro de diálogo para ver o especificar opciones al [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]conectarse a.  
+  Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
@@ -41,7 +41,7 @@ ms.locfileid: "62808714"
  **Contraseña**  
  Esta opción no está disponible ya que la autenticación de Windows solo está disponible para [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
- **Conectar**  
+ **Conexión**  
  Haga clic aquí para conectarse al servidor seleccionado anteriormente.  
   
  **Opciones**  

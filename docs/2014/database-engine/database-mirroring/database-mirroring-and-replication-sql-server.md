@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807468"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "62807468"
   
     -   Establezca el valor del **@working_directory** parámetro en la carpeta de instantáneas usada por la entidad de seguridad.  
   
-4.  Especifique el nombre de la entidad reflejada para el parámetro de agente **- PublisherFailoverPartner**. Este parámetro es necesario para que los siguientes agentes identifiquen la entidad reflejada después de una conmutación por error:  
+4.  Especifique el nombre del reflejo para el parámetro **-PublisherFailoverPartner** Agent. Este parámetro es necesario para que los siguientes agentes identifiquen la entidad reflejada después de una conmutación por error:  
   
     -   Agente de instantáneas (para todas las publicaciones)  
   
@@ -85,20 +85,19 @@ ms.locfileid: "62807468"
   
     -   Agente de mezcla (para suscripciones de mezcla)  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escucha de replicación (replisapi.dll: para suscripciones de mezcla sincronizadas mediante sincronización web)  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Escucha de replicación (replisapi.dll: para suscripciones de mezcla sincronizadas mediante sincronización web)  
   
     -   Control ActiveX de mezcla de SQL (para suscripciones de mezcla sincronizadas con el control)  
   
      El Agente de distribución y el Control ActiveX de distribución de SQL no tienen este parámetro porque no se conectan al publicador.  
   
-     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para más información, consulte:  
+     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para obtener más información, consulte:  
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Conceptos de los ejecutables del Agente de replicación](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-     Se recomienda agregar el parámetro **-PublisherFailoverPartner** a un perfil de agente y, después, especificar el nombre de la entidad reflejada en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
+     Se recomienda agregar **-PublisherFailoverPartner** a un perfil de agente y, a continuación, especificar el nombre del reflejo en el perfil. Por ejemplo, si configura la replicación con procedimientos almacenados:  
   
     ```  
     -- Execute sp_help_agent_profile in the context of the distribution database to get the list of profiles.  
@@ -163,6 +162,6 @@ ms.locfileid: "62807468"
   
 ## <a name="see-also"></a>Consulte también  
  [Replicación de SQL Server](../../relational-databases/replication/sql-server-replication.md)   
- [SQL Server de &#40;de replicación y trasvase de registros&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
+ [Trasvase de registros y replicación &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

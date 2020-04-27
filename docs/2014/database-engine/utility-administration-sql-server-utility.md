@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773757"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administración de la utilidad (utilidad de SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "62773757"
 -   El valor mínimo predeterminado de utilización de espacio de volumen en el sistema informático es 0%.  
   
  Reducción del ruido que provoca la infracción de directivas en recursos muy volátiles. Para expandir los controles correspondientes a esta característica, haga clic en la flecha hacia abajo a la derecha de la pantalla.  
- Para obtener más información, vea [Reducir el ruido en las directivas de uso de la CPU &#40;utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+ Para obtener más información, vea [reducir el ruido en las directivas de uso de CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  Pestaña Seguridad: muestra los nombres de inicio de sesión con permisos para administrar el UCP o poder leer desde él.  
@@ -104,7 +104,7 @@ ms.locfileid: "62773757"
 ## <a name="see-also"></a>Consulte también  
  [Utilidad de SQL Server de &#40;del panel de utilidad&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [Instancia administrada detalles &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Supervisar instancias de SQL Server en la utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

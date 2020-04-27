@@ -13,29 +13,29 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808666"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Conectar al servidor (página Propiedades de conexión de Reporting Services)
-  Use esta pestaña para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o cuando registre [!INCLUDE[ssRS](../includes/ssrs.md)] en **Servidores registrados**. **Las opciones** **conectar** y solo aparecen en este cuadro de diálogo al conectarse. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrarse [!INCLUDE[ssRS](../includes/ssrs.md)].  
+  Use esta pestaña para ver o especificar opciones al conectarse a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **servidores registrados**o [!INCLUDE[ssRS](../includes/ssrs.md)] registrarlos en ellos. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectar. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssRS](../includes/ssrs.md)].  
   
 ## <a name="options"></a>Opciones  
- **Tiempo de espera de la conexión (en MS)**  
+ **Tiempo de espera de la conexión (en milisegundos)**  
  Escriba el número de milisegundos de tiempo que espera la conexión para establecerse antes de agotarse.  
   
- **Usar siempre SSL**  
+ **Utilizar siempre SSL**  
  La conexión se realiza mediante Capa de sockets seguros (SSL).  
   
- **Conectar**  
+ **Conexión**  
  Intenta establecer una conexión utilizando los valores de la lista.  
   
  **Opciones**  
  Haga clic aquí para modificar el cuadro de diálogo y ocultar las opciones adicionales de conexión al servidor, como recordar la contraseña.  
   
- **Muestre**  
+ **Prueba**  
  Al registrar [!INCLUDE[ssRS](../includes/ssrs.md)] en **Servidores registrados**, haga clic para probar la conexión.  
   
  **Guardar**  
@@ -43,7 +43,7 @@ ms.locfileid: "62808666"
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar una conexión a la base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Conectar con un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
+ [Conectarse a un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Autenticación con el servidor de informes](../reporting-services/security/authentication-with-the-report-server.md)  
   
   

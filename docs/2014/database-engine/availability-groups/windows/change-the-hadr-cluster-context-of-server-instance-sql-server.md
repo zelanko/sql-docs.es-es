@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815408"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Cambiar el contexto de clúster de HADR de la instancia de servidor (SQL Server)
@@ -27,12 +27,12 @@ ms.locfileid: "62815408"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
 > [!CAUTION]  
 >  Cambie el contexto de clúster de HADR solo durante la migración entre clústeres de implementaciones [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Solo puede cambiar el contexto de clúster de HADR desde el clúster local de WSFC a un clúster remoto y viceversa. No puede cambiar el contexto de clúster de HADR desde un clúster remoto a otro clúster remoto.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62815408"
   
 -   Un contexto de clúster de HADR remoto se puede volver a cambiar al clúster local en cualquier momento. Sin embargo, el contexto no se puede cambiar de nuevo si la instancia de servidor hospeda réplicas de disponibilidad.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   La instancia de servidor en la que se cambia el contexto de clúster de HADR debe ejecutar [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] o superior (edición Enterprise o superior).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62815408"
   
 -   Antes de poder cambiar de un clúster remoto al clúster local, todas las réplicas con confirmación sincrónica deben estar en el estado SYNCHRONIZED.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Se recomienda especificar el nombre de dominio completo. Esto es porque para buscar la dirección IP de destino de un nombre corto, ALTER SERVER CONFIGURATION usa la resolución de DNS. En algunas situaciones, en función del orden de búsqueda de DNS, el uso de un nombre corto puede producir confusiones. Por ejemplo, considere el comando siguiente, que se ejecuta en un nodo del dominio `abc` (`node1.abc.com`). El clúster de destino previsto es el clúster `CLUS01` del dominio `xyz` (`clus01.xyz.com`). Sin embargo, el dominio local hospeda también un clúster denominado `CLUS01` (`clus01.abc.com`).  
   
@@ -67,15 +67,15 @@ ms.locfileid: "62815408"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 -   **inicio de sesión de SQL Server**  
   
      Requiere el permiso CONTROL SERVER.  
   
--   **Cuenta de servicio de SQL Server**  
+-   **SQL Server cuenta de servicio**  
   
      La cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la instancia de servidor debe tener:  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62815408"
   
  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para cambiar el contexto de clúster de WSFC de una réplica de disponibilidad**  
   
 1.  Conéctese a la instancia de servidor que hospeda la réplica principal o una réplica secundaria del grupo de disponibilidad.  
@@ -97,7 +97,7 @@ ms.locfileid: "62815408"
      donde,  
   
      *windows_cluster*  
-     Nombre de objeto de clúster (CON) de un clúster de WSFC. Puede especificar el nombre corto o el nombre de dominio completo. Se recomienda especificar el nombre de dominio completo. Para obtener más información, vea [Recomendaciones](#Recommendations), anteriormente en este tema.  
+     Nombre de objeto de clúster (CON) de un clúster de WSFC. Puede especificar el nombre corto o el nombre de dominio completo. Se recomienda especificar el nombre de dominio completo. Para obtener más información, vea [recomendaciones](#Recommendations), anteriormente en este tema.  
   
      LOCAL  
      Clúster local de WSFC.  
@@ -117,7 +117,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;
   
 
   
-##  <a name="FollowUp"></a> Seguimiento: Después de cambiar el contexto de clúster de una réplica de disponibilidad  
+##  <a name="follow-up-after-switching-the-cluster-context-of-an-availability-replica"></a><a name="FollowUp"></a> Seguimiento: Después de cambiar el contexto de clúster de una réplica de disponibilidad  
  El nuevo contexto de clúster de HADR surte efecto inmediatamente, sin necesidad de reiniciar la instancia de servidor. El valor de contexto del clúster de HADR es una configuración persistente de nivel de instancia que permanece sin modificar si se reinicia la instancia de servidor.  
   
  Confirme el nuevo contexto de clúster de HADR consultando la vista de administración dinámica [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) , de la manera siguiente:  
@@ -136,7 +136,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Quitar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
@@ -146,17 +146,17 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Quitar una réplica secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Artículos técnicos de SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog del equipo de AlwaysOn SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn de SQL Server: el blog del equipo de AlwaysOn oficial de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
   
   

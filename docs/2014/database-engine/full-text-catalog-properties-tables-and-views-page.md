@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779196"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propiedades del catálogo de texto completo (Tablas/página Vistas)
@@ -57,7 +57,7 @@ ms.locfileid: "62779196"
 |**No realizar seguimiento de cambios**|Con esta opción activa, no se registran los cambios realizados en los datos indizados del catálogo. Un administrador debe generar el índice utilizando FULLTEXT del ALTER INDICE con POBLACIÓN COMPLETA o la POBLACIÓN INCREMENTAL.|  
   
 ## <a name="see-also"></a>Consulte también  
- [CREAR catálogo de texto completo &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Rellenar índices de texto completo](../relational-databases/indexes/indexes.md)  
   

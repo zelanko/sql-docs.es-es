@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768172"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>Asistente para importación y exportación de SQL Server
@@ -81,8 +81,7 @@ ms.locfileid: "62768172"
   
  El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los archivos de asignación que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona para asignar tipos de datos de una versión de base de datos o sistema a otro. Por ejemplo, puede crear una asignación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. De forma predeterminada, los archivos de asignación en formato XML se instalan en C:\Archivos de programa\Microsoft SQL Server\100\DTS\MappingFiles. Si su empresa requiere diferentes asignaciones entre tipos de datos, puede actualizar las asignaciones para que tengan efecto en las asignaciones que realiza el asistente. Por ejemplo, si desea que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos **nchar** se asigne al tipo de datos **Graphic** de DB2 en lugar de al tipo de datos **VARGRAPHIC** de DB2 al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transferir datos de a DB2, debe cambiar la asignación de **nchar** en el archivo de asignación SqlClientToIBMDB2. XML para que use un **gráfico** en lugar de **VARGRAPHIC.**  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye asignaciones entre varias combinaciones de orígenes y destinos habitualmente utilizadas, y puede agregar nuevos archivos de asignaciones al directorio de archivos de asignación para admitir destinos y orígenes adicionales. Los nuevos archivos de asignaciones deben ajustarse al esquema XSD publicado y asignar entre una combinación única de origen y destino.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye asignaciones entre varias combinaciones de orígenes y destinos habitualmente utilizadas, y puede agregar nuevos archivos de asignaciones al directorio de archivos de asignación para admitir destinos y orígenes adicionales. Los nuevos archivos de asignaciones deben ajustarse al esquema XSD publicado y asignar entre una combinación única de origen y destino.  
   
 > [!NOTE]  
 >  Si modifica un archivo de asignación existente o agrega un nuevo archivo de asignación a la carpeta, debe cerrar y volver a abrir el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para que se reconozcan los archivos nuevos o modificados.  

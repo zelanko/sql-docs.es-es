@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791996"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Mantener una base de datos de publicación AlwaysOn (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62791996"
   
  
   
-##  <a name="MaintainPublDb"></a> Mantener una base de datos publicada en un grupo de disponibilidad  
+##  <a name="maintaining-a-published-database-in-an-availability-group"></a><a name="MaintainPublDb"></a>Mantener una base de datos Publicada en un grupo de disponibilidad  
  El mantenimiento de una base de datos de publicación AlwaysOn se realiza básicamente de la misma forma que para una base de datos de publicación estándar, con las siguientes salvedades:  
   
 -   La administración debe producirse en el host de réplica principal. En [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], las publicaciones aparecen bajo la carpeta de **Publicaciones locales** para el host de réplica principal y también para las réplicas secundarias legibles. Después de la conmutación por error, puede que tenga que actualizar manualmente [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] para que el cambio quede reflejado si el elemento secundario promovido a principal no era legible.  
@@ -39,7 +39,7 @@ ms.locfileid: "62791996"
   
 -   Para sincronizar una suscripción en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] tras una conmutación por error, sincronice las suscripciones de extracción del suscriptor y sincronice las suscripciones de inserción del publicador activo.  
   
-##  <a name="RemovePublDb"></a> Quitar una base de datos publicada de un grupo de disponibilidad  
+##  <a name="removing-a-published-database-from-an-availability-group"></a><a name="RemovePublDb"></a> Quitar una base de datos publicada de un grupo de disponibilidad  
  Tenga en cuenta los siguientes problemas si quita una base de datos publicada de un grupo de disponibilidad, o si quita un grupo de disponibilidad que tiene una base de datos de miembros publicada.  
   
 -   Si la base de datos de publicación del publicador original se quita de una réplica principal del grupo de `sp_redirect_publisher` disponibilidad, debe ejecutar sin especificar un *@redirected_publisher* valor para el parámetro con el fin de quitar el redireccionamiento del par de publicador y base de datos.  
@@ -100,7 +100,7 @@ ms.locfileid: "62791996"
   
      En este momento, la copia de la base de datos publicada se puede conservar o quitar.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Configurar la replicación para grupos de disponibilidad AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)  
   

@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780354"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Características de Herramientas de administración no incluidas en SQL Server 2014
   Este tema describe las características de Herramientas de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ya no están disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Características eliminadas en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="features-removed-in-sscurrent"></a>Características eliminadas en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  None  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Características eliminadas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="features-removed-in-sssql11"></a>Características eliminadas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  El editor de código de SQL Server Compact Edition se ha quitado de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. También se ha quitado la compatibilidad con SQL Server Compact Edition del Explorador de objetos, del Explorador de soluciones y del Explorador de plantillas. Utilice los editores de Transact-SQL en Microsoft Visual Studio 2010 Service Pack 1 o si no, de Webmatrix.  

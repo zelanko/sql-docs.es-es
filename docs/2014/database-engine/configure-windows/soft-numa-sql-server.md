@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809049"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurar SQL Server para que use NUMA de software (SQL Server)
@@ -84,7 +84,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para q
   
      En el ejemplo siguiente, suponga que tiene un servidor DL580 G9 con 18 núcleos por socket (en 4 sockets) y que cada socket está en su propio grupo K. La configuración NUMA de software que cree será parecida a la siguiente. (6 núcleos por nodo, 3 nodos por grupo, 4 grupos).  
   
-    |Ejemplo de un servidor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] con varios grupos K|Tipo|Nombre del valor|Datos del valor|  
+    |Ejemplo de un servidor [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] con varios grupos K|Tipo|Nombre del valor|Datos de valor|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Grupo|0|  
@@ -113,7 +113,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para q
   
      Otros ejemplos:  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Tipo|Nombre del valor|Datos del valor|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Tipo|Nombre del valor|Datos de valor|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Grupo|0|  
@@ -125,7 +125,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para q
     > [!TIP]  
     >  Para especificar las CPU 60 a 63, use un valor QWORD de F000000000000000 o un valor binario de 1111000000000000000000000000000000000000000000000000000000000000.  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Tipo|Nombre del valor|Datos del valor|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Tipo|Nombre del valor|Datos de valor|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|Grupo|0|  
@@ -134,7 +134,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para q
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|Grupo|0|  
   
-    |SQL Server 2008 R2|Tipo|Nombre del valor|Datos del valor|  
+    |SQL Server 2008 R2|Tipo|Nombre del valor|Datos de valor|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|Grupo|0|  
@@ -143,13 +143,13 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para q
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|Grupo|0|  
   
-    |SQL Server 2008|Tipo|Nombre del valor|Datos del valor|  
+    |SQL Server 2008|Tipo|Nombre del valor|Datos de valor|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|Tipo|Nombre del valor|Datos del valor|  
+    |SQL Server 2005|Tipo|Nombre del valor|Datos de valor|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770221"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Tutorial: Usar el origen OData [SSIS]
@@ -46,7 +46,7 @@ ms.locfileid: "62770221"
   
 6.  Escriba la dirección URL del servicio OData en **Ubicación de documento de servicio**. Puede ser la dirección URL del documento de servicio, o de una fuente o una entidad específica. Para este tutorial, escriba [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
   
-7.  Confirme que se ha seleccionado **Autenticación de Windows** como la **autenticación** que se usará para tener acceso al servicio OData. La **autenticación de Windows** está seleccionada de forma predeterminada. Para usar la autenticación básica, seleccione **Usar este nombre de usuario y esta contraseña**.  
+7.  Confirme que se ha seleccionado **Autenticación de Windows** como la **autenticación** que se usará para tener acceso al servicio OData. **Autenticación de Windows** está seleccionada de forma predeterminada. Para usar la autenticación básica, seleccione **Usar este nombre de usuario y esta contraseña**.  
   
 8.  Haga clic en **Probar conexión** y, a continuación, haga clic en **Aceptar** para crear una instancia del Administrador de conexiones OData.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62770221"
   
 10. En la lista desplegable **Colección** , seleccione **Employees**.  
   
-11. Especifique cualquier otra opción o filtro de consulta adicional de OData en **Opciones de consulta**. Ejemplo: $orderby=CompanyName&$top=100. Para este tutorial, escriba **$top=5**.  
+11. Especifique cualquier otra opción o filtro de consulta adicional de OData en **Opciones de consulta**. Por ejemplo: $orderby=CompanyName&$top=100. Para este tutorial, escriba **$top=5**.  
   
 12. Haga clic en **Vista previa** para obtener una vista previa de los datos.  
   

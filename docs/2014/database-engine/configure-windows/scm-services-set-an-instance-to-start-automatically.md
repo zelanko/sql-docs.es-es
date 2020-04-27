@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 300b539e132b9bda9bc6540c0aadcac6ab9f11a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810046"
 ---
 # <a name="set-an-instance-of-sql-server-to-start-automatically-sql-server-configuration-manager"></a>Configurar una instancia de SQL Server para que se inicie automáticamente (Administrador de configuración de SQL Server)
   En este tema se describe cómo establecer una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se inicie automáticamente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Durante la instalación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configura normalmente para iniciarse automáticamente. Si esto no se ha hecho, puede modificar la configuración en cualquier momento.  
   
-##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
   
 #### <a name="to-set-an-instance-of-sql-server-to-start-automatically"></a>Para configurar que una instancia de SQL Server se inicie automáticamente  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62810046"
   
 3.  En el panel de detalles, haga clic con el botón derecho en el nombre de la instancia que quiera iniciar automáticamente y, después, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de \<***nombredeinstancia***> de SQL Server**, establezca **Modo de inicio** en **Automático**.  
+4.  En el cuadro de diálogo **SQL Server \< ***InstanceName***> propiedades** , establezca **modo de inicio** en **automático**.  
   
 5.  Haga clic en **Aceptar**y, a continuación, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

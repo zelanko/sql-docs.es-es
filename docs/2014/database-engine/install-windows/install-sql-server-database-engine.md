@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779366"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Acerca del motor de base de datos de SQL Server
   El componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona un acceso controlado y un procesamiento de transacciones rápido para cumplir los requisitos de las aplicaciones consumidoras de datos más exigentes de su empresa.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite hasta 50 instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en un único equipo. Para crear una instalación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] típica, consulte instalación [de SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación ](install-sql-server-from-the-installation-wizard-setup.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta 50 instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en un solo equipo. Para crear una instalación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] típica, consulte instalación [de SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación ](install-sql-server-from-the-installation-wizard-setup.md).  
   
- **Importante** En las instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura y ejecución para dicho recurso.  
+ **Importante** : en las instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura y ejecución para dicho recurso.  
   
  Las siguientes características se instalan al seleccionar ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos** en la página componentes para instalar del asistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instalación de:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62779366"
 -   Componentes de documentación  
   
 > [!NOTE]  
->  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para instalar las bases de datos y el código de ejemplo, vea el [sitio web de CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+>  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar las bases de datos y el código de ejemplo, vea el [sitio web de CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
 ## <a name="see-also"></a>Consulte también  
  [Características admitidas por las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

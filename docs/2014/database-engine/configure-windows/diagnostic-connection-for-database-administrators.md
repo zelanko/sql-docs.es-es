@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810426"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexión de diagnóstico para administradores de bases de datos
@@ -74,7 +74,7 @@ ms.locfileid: "62810426"
   
 -   Consultas en vistas de catálogo.  
   
--   Comandos DBCC básicos como DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` y DBCC SQLPERF. No ejecute comandos que consumen muchos recursos, como **DBCC** CHECKDB, DBCC DBREINDEX o DBCC SHRINKDATABASE.  
+-   Comandos DBCC básicos como DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` y DBCC SQLPERF. No ejecute comandos que consumen muchos recursos, como **DBCC** , CHECKDB, DBCC DBREINDEX o DBCC SHRINKDATABASE.  
   
 -   Comando KILL[!INCLUDE[tsql](../../includes/tsql-md.md)]*spid>\< de* . Dependiendo del estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que el comando KILL no siempre se ejecute correctamente; en tal caso, la única opción puede ser reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Éstas son algunas directrices generales:  
   

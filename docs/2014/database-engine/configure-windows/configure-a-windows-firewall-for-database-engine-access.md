@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812307"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar Firewall de Windows para el acceso al motor de base de datos
@@ -52,10 +52,10 @@ ms.locfileid: "62812307"
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  El hecho de abrir puertos en el firewall puede dejar el servidor expuesto a ataques malintencionados. Asegúrese de que conoce los sistemas de firewall antes de abrir puertos. Para obtener más información, consulte [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
  Se aplica a Windows Vista, Windows 7 y Windows Server 2008  
   
  El siguiente procedimiento configura el Firewall de Windows mediante el complemento Microsoft Management Console (MMC) de Firewall de Windows con seguridad avanzada. El Firewall de Windows con seguridad avanzada solo configura el perfil actual. Para obtener más información sobre Firewall de Windows con seguridad avanzada, vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

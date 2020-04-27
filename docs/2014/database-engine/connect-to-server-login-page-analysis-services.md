@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3209028d8d30d9a7bae991ecb01462a5a203f7f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808766"
 ---
 # <a name="connect-to-server-login-page-analysis-services"></a>Conectar al servidor (página Inicio de sesión de Analysis Services)
@@ -35,7 +35,7 @@ ms.locfileid: "62808766"
  **Modo de autenticación de Windows (autenticación de Windows)**  
  Windows permite al usuario conectarse mediante una cuenta de usuario de Windows.  
   
- **Conectar**  
+ **Conexión**  
  Se conecta al servidor seleccionado anteriormente.  
   
  **Opciones**  

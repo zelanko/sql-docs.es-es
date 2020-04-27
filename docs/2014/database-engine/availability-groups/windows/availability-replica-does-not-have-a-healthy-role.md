@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815602"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>La réplica de disponibilidad no tiene un rol en buen estado
@@ -30,7 +30,7 @@ ms.locfileid: "62815602"
 |**Nombre de directiva**|Estado del rol de réplica de disponibilidad|  
 |**Problema**|La réplica de disponibilidad no tiene un rol en buen estado.|  
 |**Categoría**|**Critical)** (Crítico)|  
-|**Faceta**|réplica de disponibilidad|  
+|**Agrupa**|réplica de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado del rol de la réplica de disponibilidad. La directiva está en mal estado cuando el rol de la réplica de disponibilidad no es principal ni secundario. De lo contrario, la directiva está en un estado correcto.  
@@ -45,6 +45,6 @@ ms.locfileid: "62815602"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

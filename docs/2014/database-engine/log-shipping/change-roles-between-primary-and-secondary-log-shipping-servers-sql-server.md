@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774569"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Cambiar los roles entre el servidor de trasvase de registros primario y secundario (SQL Server)
@@ -78,15 +78,15 @@ ms.locfileid: "62774569"
 3.  Habilite el trabajo de copia de seguridad de trasvase de registros en el servidor secundario (el nuevo servidor principal), así como los trabajos de copia y restauración en el servidor primario (el nuevo servidor secundario).  
   
 > [!IMPORTANT]  
->  Al cambiar una base de datos secundaria a la base de datos principal, para proporcionar una experiencia coherente a los usuarios y las aplicaciones, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos; por ejemplo los inicios de sesión y los trabajos, en la nueva instancia del servidor principal. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+>  Al cambiar una base de datos secundaria a la base de datos principal, para proporcionar una experiencia coherente a los usuarios y las aplicaciones, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos; por ejemplo los inicios de sesión y los trabajos, en la nueva instancia del servidor principal. Para obtener más información, vea [administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 -   [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas y procedimientos almacenados de trasvase de registros](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

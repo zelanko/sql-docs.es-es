@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62806934"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows (SQL Server Management Studio)
@@ -43,7 +43,7 @@ ms.locfileid: "62806934"
   
 2.  Expanda **Bases de datos**y seleccione la base de datos que se va a reflejar.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Se abrirá la página **creación de reflejo** del cuadro de diálogo Propiedades de la base de **datos** .  
   
 4.  Para empezar la configuración de la creación de reflejo, haga clic en **Configurar seguridad** para iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62806934"
   
     -   Las direcciones TCP completas de las instancias del servidor principal y reflejado están especificadas (en la sección **Direcciones de red de servidor** ).  
   
-    -   Si el modo operativo está establecido en **Seguridad alta con conmutación automática por error (sincrónico)** , también se especifica la dirección TCP completa de la instancia del servidor testigo.  
+    -   Si el modo operativo está establecido en **Seguridad alta con conmutación automática por error (sincrónico)**, también se especifica la dirección TCP completa de la instancia del servidor testigo.  
   
 8.  Una vez iniciada la creación de reflejo, puede cambiar el modo operativo y guardar el cambio haciendo clic en **Aceptar**. Tenga en cuenta que solo puede cambiar al modo de alta seguridad con conmutación automática por error si antes ha especificado la dirección de un servidor testigo.  
   
@@ -81,13 +81,13 @@ ms.locfileid: "62806934"
 ## <a name="see-also"></a>Consulte también  
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Propiedades de la base de datos &#40;página creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Pausar o reanudar una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)   
  [Configurar una base de datos reflejada para usar la propiedad Trustworthy &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
  [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Agregar o reemplazar un testigo de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

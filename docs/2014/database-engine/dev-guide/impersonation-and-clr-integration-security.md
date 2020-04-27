@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781133"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Suplantación y seguridad de la integración CLR
@@ -39,7 +39,7 @@ ms.locfileid: "62781133"
   
  Cuando el código se ejecuta en un contexto suplantado distinto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no puede realizar llamadas de acceso a datos en proceso; debe deshacer el contexto de suplantación para poder realizar llamadas de acceso a datos en proceso. Cuando el acceso a datos en proceso se realiza desde el código administrado, el contexto de ejecución original del punto de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] en el código administrado siempre se utiliza para la autorización.  
   
- Los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` obtienen acceso a los recursos del sistema operativo con la cuenta de servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que suplanten voluntariamente el contexto de seguridad actual tal y como se ha descrito anteriormente. Debido a ello, los autores de ensamblados `EXTERNAL_ACCESS` requieren un mayor nivel de confianza que los autores de ensamblados `SAFE`, que se especifica mediante el permiso de nivel de inicio de sesión `EXTERNAL ACCESS`. Solo debe concederse el permiso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los inicios de sesión en los que se confíe para ejecutar código con la cuenta del servicio `EXTERNAL ACCESS`.  
+ Los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` obtienen acceso a los recursos del sistema operativo con la cuenta de servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a menos que suplanten voluntariamente el contexto de seguridad actual tal y como se ha descrito anteriormente. Debido a ello, los autores de ensamblados `EXTERNAL_ACCESS` requieren un mayor nivel de confianza que los autores de ensamblados `SAFE`, que se especifica mediante el permiso de nivel de inicio de sesión `EXTERNAL ACCESS`. Solo debe concederse el permiso `EXTERNAL ACCESS` a los inicios de sesión en los que se confíe para ejecutar código con la cuenta del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
  [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788044"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Ver las propiedades del agente de escucha del grupo de disponibilidad (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62788044"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver las propiedades del agente de escucha**  
   
 1.  En el Explorador de objetos, conéctese a una instancia del servidor que hospeda una réplica de disponibilidad del grupo disponibilidad cuyo agente de escucha desea ver. Haga clic en el nombre del servidor para expandir el árbol.  
@@ -43,7 +43,7 @@ ms.locfileid: "62788044"
   
 5.  Se abrirá el cuadro de diálogo de **Propiedades del agente de escucha del grupo de disponibilidad** . Para obtener más información, vea [Propiedades del agente de escucha de grupo de disponibilidad (cuadro de diálogo)](#AgListenerPropertiesDialog), más adelante en este tema.  
   
-###  <a name="AgListenerPropertiesDialog"></a> Propiedades del agente de escucha de grupo de disponibilidad (cuadro de diálogo)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a>Propiedades del agente de escucha del grupo de disponibilidad (cuadro de diálogo)  
  **Nombre DNS del agente de escucha**  
  El nombre de red del agente de escucha del grupo de disponibilidad.  
   
@@ -59,12 +59,12 @@ ms.locfileid: "62788044"
  **DHCP**  
  El agente de escucha utiliza una dirección IP dinámica asignada por un servidor que ejecute el protocolo DHCP (Protocolo de configuración dinámica de host).  
   
- **Dirección IP estática**  
+ **IP estática**  
  El agente de utiliza una o más direcciones IP estáticas. Para tener acceso a las diferentes subredes, un agente de escucha del grupo de disponibilidad debe utilizar direcciones IP estáticas.  
   
  La cuadrícula muestra cada una de las subredes en que el agente de escucha escucha y la dirección IP asociada a esa subred.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para ver las propiedades del agente de escucha**  
   
  Para supervisar los agentes de escucha del grupo de disponibilidad, utilice las vistas siguientes:  
@@ -87,15 +87,15 @@ ms.locfileid: "62788044"
 > [!NOTE]  
 >  Para obtener más información sobre cómo usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] para supervisar el entorno de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vea [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
--   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Quitar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y &#40;de conmutación por error de aplicación SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

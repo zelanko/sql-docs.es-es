@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775425"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Actualizar a SQL Server 2014 mediante el Asistente para la instalación (programa de instalación)
@@ -29,7 +29,7 @@ ms.locfileid: "62775425"
   
 -   [Trabajar con varias versiones e instancias de SQL Server](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
   
--   [Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;la instalación&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
+-   [Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)  
   
 -   [Instalar SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62775425"
 > [!NOTE]  
 >  La actualización de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se admite en un equipo que ejecute [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1. Para obtener más información sobre las instalaciones Server Core, consulte [instalación de SQL Server 2014 en Server Core](install-sql-server-on-server-core.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, debe usar una cuenta de dominio que tenga permisos de lectura y ejecución para el recurso compartido remoto y que sea de un administrador local.  
   
  Antes de actualizar el [!INCLUDE[ssDE](../../includes/ssde-md.md)], revise los siguientes temas:  
@@ -58,7 +58,7 @@ ms.locfileid: "62775425"
   
 ## <a name="procedure"></a>Procedimiento  
   
-#### <a name="to-upgrade-to-includesscurrentincludessscurrent-mdmd"></a>Para actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#### <a name="to-upgrade-to-sscurrent"></a>Para actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, vaya a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62775425"
   
 7.  En la página Actualizaciones del producto se muestran las actualizaciones del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más recientes disponibles. Si no quiere incluir las actualizaciones, desactive la casilla **Incluir actualizaciones de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Si no se detectan actualizaciones de producto, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no muestra esta página y pasa automáticamente a la página **Instalar archivos de instalación** .  
   
-8.  En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y se especifica que debe incluirse, esa actualización también se instalará.  
+8.  En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se especifica que debe incluirse, esa actualización también se instalará.  
   
 9. En la ventana Reglas de actualización, el procedimiento de instalación avanzará automáticamente hasta la ventana Seleccionar instancia si no hay ningún error de regla.  
   
@@ -82,8 +82,7 @@ ms.locfileid: "62775425"
   
 11. En la página Seleccionar características, aparecen seleccionadas previamente las características que se van a actualizar. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho.  
   
-     Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
+     Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   
     > [!NOTE]  
     >  Si ha optado por actualizar las características compartidas seleccionando ** \<actualizar solo características compartidas>** en la página **seleccionar instancia** , todas las características compartidas están preseleccionadas en la página selección de características. Todos los componentes compartidos se actualizan al mismo tiempo.  
@@ -94,18 +93,17 @@ ms.locfileid: "62775425"
   
      Todos los Service Pack y actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplicarán a cada componente de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     **Instancias instaladas** : la cuadrícula mostrará las instancias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de que se encuentran en el equipo en el que se ejecuta el programa de instalación. Si ya hay una instancia predeterminada instalada en el equipo, debe instalar una instancia con nombre de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+     **Instancias instaladas**: la cuadrícula mostrará las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación. Si ya hay una instancia predeterminada instalada en el equipo, debe instalar una instancia con nombre de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 13. El flujo de trabajo para el resto del tema depende de las características que haya especificado para la instalación. Dependiendo de las selecciones, es posible que no vea todas las páginas.  
   
 14. En la página Configuración del servidor - Cuentas de servicio, las cuentas de servicio predeterminadas se muestran para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a actualizar.  
   
-     La información sobre autenticación e inicio de sesión se obtiene de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o configurar cada cuenta de servicio individualmente. También puede especificar si los servicios se inician de forma automática o manual, o si están deshabilitados. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para que se concedan a los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [configurar los permisos y las cuentas de servicio de Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     La información sobre autenticación e inicio de sesión se obtiene de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o configurar cada cuenta de servicio individualmente. También puede especificar si los servicios se inician de forma automática o manual, o si están deshabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para que se concedan a los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [configurar los permisos y las cuentas de servicio de Windows](../configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Para especificar la misma cuenta de inicio de sesión para todas las cuentas de servicio en esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se han de proporcionar credenciales en los campos de la parte inferior de la página.  
   
-     **Nota de seguridad**[!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+     **Nota de seguridad** [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
      Cuando termine de especificar la información de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Siguiente**.  
   
@@ -113,8 +111,7 @@ ms.locfileid: "62775425"
   
 16. La ventana Reglas de características se pasará automáticamente si se cumplen todas las reglas.  
   
-17. La página Listo para actualizar muestra una vista de árbol de las opciones de instalación que se especificaron durante la instalación. Para continuar, haga clic en **Instalar**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará primero los requisitos previos necesarios para las características seleccionadas y a continuación realizará la instalación de características.  
+17. La página Listo para actualizar muestra una vista de árbol de las opciones de instalación que se especificaron durante la instalación. Para continuar, haga clic en **Instalar**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará primero los requisitos previos necesarios para las características seleccionadas y a continuación realizará la instalación de características.  
   
 18. Durante la instalación, la página de progreso muestra el estado para que pueda supervisar el progreso de la instalación durante la ejecución del programa de instalación.  
   
@@ -122,14 +119,14 @@ ms.locfileid: "62775425"
   
 20. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Después de actualizar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], complete las tareas siguientes:  
   
--   **Registrar los servidores** : la actualización quita la configuración del registro de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia anterior de. Tras la actualización, debe volver a registrar los servidores.  
+-   **Registrar los servidores**: la actualización quita la configuración del Registro de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tras la actualización, debe volver a registrar los servidores.  
   
--   **Actualizar estadísticas** : para ayudar a optimizar el rendimiento de las consultas, se recomienda actualizar las estadísticas de todas las bases de datos después de la actualización. Use el procedimiento almacenado `sp_updatestats` para actualizar las estadísticas de las tablas definidas por el usuario en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Actualizar las estadísticas**: para poder optimizar el rendimiento de las consultas, es recomendable actualizar las estadísticas de todas las bases de datos tras la actualización. Use el procedimiento almacenado `sp_updatestats` para actualizar las estadísticas de las tablas definidas por el usuario en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Configurar la nueva [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación** : para reducir el área expuesta ATACable de un sistema, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita de manera selectiva los servicios y las características clave. Para obtener más información sobre la configuración del área expuesta, vea el archivo Léame correspondiente a esta versión.  
+-   **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información sobre la configuración del área expuesta, vea el archivo Léame correspondiente a esta versión.  
   
 ## <a name="see-also"></a>Consulte también  
  [Actualización a SQL Server 2014](upgrade-sql-server.md)   

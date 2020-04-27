@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773817"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Panel de la utilidad (utilidad de SQL Server)
@@ -103,7 +103,7 @@ ms.locfileid: "62773817"
  En la parte inferior derecha del panel, el gráfico circular sobre la utilización de almacenamiento muestra la proporción de espacio utilizado en comparación con el espacio disponible en los volúmenes de los equipos que contienen instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los datos de esta presentación se actualizan cada 15 minutos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
+ [Usar el explorador de la utilidad para administrar la Utilidad de SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [Inscriba una instancia de SQL Server &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Modificar una definición de la directiva de mantenimiento de recursos &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   

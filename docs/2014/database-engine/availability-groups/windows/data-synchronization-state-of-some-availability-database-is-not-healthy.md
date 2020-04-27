@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 45f1479d96838ce69a7bde35cd2a2fbd9c7e684d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814253"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>El estado de sincronización de datos de alguna base de datos de disponibilidad no está en buen estado
@@ -30,7 +30,7 @@ ms.locfileid: "62814253"
 |**Nombre de directiva**|Estado de sincronización de datos de las réplicas de disponibilidad|  
 |**Problema**|El estado de sincronización de datos de alguna base de datos de disponibilidad no es correcto.|  
 |**Categoría**|**Warning (ADVERTENCIA)**|  
-|**Faceta**|réplica de disponibilidad|  
+|**Agrupa**|réplica de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado de sincronización de datos de la base de datos de disponibilidad (también denominada “réplica de base de datos”). La directiva está en mal estado cuando el estado de sincronización de datos es NOT SYNCHRONIZING o cuando no es SYNCHRONIZED para la réplica de base de datos de confirmación sincrónica.  
@@ -54,6 +54,6 @@ ms.locfileid: "62814253"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

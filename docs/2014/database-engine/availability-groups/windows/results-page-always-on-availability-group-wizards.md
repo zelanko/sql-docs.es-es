@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789016"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Página Resultados (asistentes para grupos de disponibilidad AlwaysOn)
   En este tema de Ayuda se describen las opciones de la página **Resultados** . Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]y [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilice esta página para ver los resultados del asistente.  
   
-##  <a name="PageOptions"></a> Opciones de la página Resultados  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> Opciones de la página Resultados  
  La cuadrícula **Resumen** contiene las columnas siguientes:  
   
  **Nombre**  
@@ -37,11 +37,11 @@ ms.locfileid: "62789016"
 |Resultado|Descripción|  
 |------------|-----------------|  
 |**Error**|Indica que se produjo un error en el paso de la validación. Haga clic en el vínculo para ver el mensaje de error.|  
-|**Success**|Indica que el paso de la validación se completó correctamente.|  
+|**Correcto**|Indica que el paso de la validación se completó correctamente.|  
   
 
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

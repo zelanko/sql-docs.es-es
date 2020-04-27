@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35d8f9cdda7c3b85c77d290f9c793640705438e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815441"
 ---
 # <a name="availability-group-is-offline"></a>Grupo de disponibilidad sin conexión
@@ -30,7 +30,7 @@ ms.locfileid: "62815441"
 |**Nombre de directiva**|Estado en línea del grupo de disponibilidad|  
 |**Problema**|El grupo de disponibilidad está sin conexión.|  
 |**Categoría**|**Critical)** (Crítico)|  
-|**Faceta**|grupo de disponibilidad|  
+|**Agrupa**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva comprueba el estado en línea o sin conexión del grupo de disponibilidad. La directiva está en mal estado y se genera una alerta cuando el recurso de clúster del grupo de disponibilidad está sin conexión o no tiene una réplica principal.  
@@ -38,7 +38,7 @@ ms.locfileid: "62815441"
  El estado de la directiva es correcto cuando el recurso de clúster del grupo de disponibilidad está en línea y el grupo de disponibilidad tiene una réplica principal.  
   
 > [!NOTE]  
->  Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [Grupo de disponibilidad sin conexión](https://go.microsoft.com/fwlink/p/?LinkId=220850) en TechNet Wiki.  
+>   Para esta versión de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], la información sobre las posibles causas y soluciones se encuentra en el artículo [El grupo de disponibilidad está desconectado](https://go.microsoft.com/fwlink/p/?LinkId=220850) en TechNet Wiki.  
   
 ## <a name="possible-causes"></a>Causas posibles  
  Este problema se puede deber a un error en la instancia del servidor que hospeda la réplica principal o a que el recurso de grupo de disponibilidad del clúster de conmutación por error de Windows Server (WSFC) se ha quedado sin conexión. A continuación se indican las posibles causas de que el grupo de disponibilidad esté sin conexión:  
@@ -74,6 +74,6 @@ ms.locfileid: "62815441"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

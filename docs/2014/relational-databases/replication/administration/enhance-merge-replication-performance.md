@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805899"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
@@ -33,7 +33,7 @@ ms.locfileid: "62805899"
   
 -   Indice las columnas utilizadas en filtros de fila y de combinación.  
   
-     Cuando utilice un filtro de fila en un artículo publicado, cree un índice en cada una de las columnas utilizadas en la cláusula WHERE del filtro. Sin un índice, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene que leer cada fila de la tabla para determinar si la fila debe incluirse en la partición. Con los índices, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede encontrar rápidamente qué filas se deben incluir. El procesamiento es más rápido si la replicación puede resolver completamente la cláusula WHERE del filtro solamente a partir del índice.  
+     Cuando utilice un filtro de fila en un artículo publicado, cree un índice en cada una de las columnas utilizadas en la cláusula WHERE del filtro. Sin un índice, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene que leer todas las filas de la tabla para determinar si la fila debe incluirse en la partición. Con los índices, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede encontrar rápidamente qué filas se deben incluir. El procesamiento es más rápido si la replicación puede resolver completamente la cláusula WHERE del filtro solamente a partir del índice.  
   
      La indización de todas las columnas utilizadas en los filtros de combinación también es importante. Cada vez que se ejecuta el Agente de mezcla, busca la tabla base para determinar qué filas de la tabla principal y qué filas de las tablas relacionadas están incluidas en la partición. La creación de un índice en las columnas de combinación evita que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lea todas las filas de la tabla cada vez que se ejecute el Agente de mezcla.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62805899"
   
 -   Establezca programaciones para sincronizar las suscripciones.  
   
-     Si un gran número de suscriptores se sincronizan con un publicador, considere la posibilidad de escalonar las programaciones con el fin de que el Agente de mezcla se ejecute en distintos momentos. Para obtener más información, vea [especificar programaciones de sincronización](../specify-synchronization-schedules.md).  
+     Si un gran número de suscriptores se sincronizan con un publicador, considere la posibilidad de escalonar las programaciones con el fin de que el Agente de mezcla se ejecute en distintos momentos. Para obtener más información, consulte [Specify Synchronization Schedules](../specify-synchronization-schedules.md).  
   
 ## <a name="merge-agent-parameters"></a>Parámetros del Agente de mezcla  
  Para obtener información sobre el Agente de mezcla y sus parámetros, vea [Replication Merge Agent](../agents/replication-merge-agent.md).  
@@ -102,7 +102,7 @@ ms.locfileid: "62805899"
   
 -   Si una suscripción se sincroniza mediante una conexión rápida y los cambios se envían desde el publicador y el suscriptor, use el parámetro **-ParallelUploadDownload** en el Agente de mezcla.  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]se presentó un nuevo parámetro de Agente de mezcla: **-ParallelUploadDownload**. Establecer este parámetro permite al Agente de mezcla procesar en paralelo los cambios cargados en el publicador y los descargados en el suscriptor. Esto resulta útil en entornos de grandes volúmenes con gran ancho de banda de red. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para más información, consulte:  
+     En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] se introdujo un nuevo parámetro del Agente de mezcla: **-ParallelUploadDownload**. Establecer este parámetro permite al Agente de mezcla procesar en paralelo los cambios cargados en el publicador y los descargados en el suscriptor. Esto resulta útil en entornos de grandes volúmenes con gran ancho de banda de red. Los parámetros del agente se pueden especificar en los perfiles del agente y en la línea de comandos. Para más información, consulte:  
   
     -   [Trabajar con perfiles del Agente de replicación](../agents/replication-agent-profiles.md)  
   
@@ -144,6 +144,6 @@ ms.locfileid: "62805899"
   
 -   Supervise el rendimiento de la sincronización utilizando la pestaña **Historial de sincronizaciones** del Monitor de replicación.  
   
-     En la replicación de mezcla, el Monitor de replicación muestra en la pestaña **Historial de sincronizaciones** estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para obtener más información sobre cómo ver estadísticas detalladas, vea [ver información y realizar tareas mediante el monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     En la replicación de mezcla, el Monitor de replicación muestra en la pestaña **Historial de sincronizaciones** estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para más información sobre cómo ver estadísticas detalladas, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

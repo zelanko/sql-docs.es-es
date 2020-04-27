@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788496"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Página seleccionar bases de datos (Asistente para nuevo grupo de disponibilidad-Asistente para agregar bases de datos)
-  En este tema de Ayuda se describen las opciones de la página **Especificar bases de datos** . Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   En este tema de Ayuda se describen las opciones de la página **Especificar bases de datos**. Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-##  <a name="PageOptions"></a> Seleccionar opciones de las bases de datos  
+##  <a name="select-databases-options"></a><a name="PageOptions"></a> Seleccionar opciones de las bases de datos  
  La cuadrícula **Usar bases de datos en esta instancia de SQL Server** muestra cada base de datos de usuario local. Estas son sus columnas:  
   
  **Nombre**  
@@ -40,7 +40,7 @@ ms.locfileid: "62788496"
  **Actualizar**  
  Haga clic para actualizar la cuadrícula. Esto es útil después de realizar acciones en una base de datos para que se cumpla un requisito previo.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

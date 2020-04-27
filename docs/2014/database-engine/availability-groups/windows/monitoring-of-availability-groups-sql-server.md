@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1793032a72ae1dd150caa5ddd1739f7f5620bce1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62790201"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>Supervisión de los grupos de disponibilidad (SQL Server)
@@ -30,9 +30,9 @@ ms.locfileid: "62790201"
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|El panel **Detalles del Explorador de objetos** muestra información básica acerca de los grupos de disponibilidad hospedados en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que está conectado.<br /><br /> Sugerencia: Utilice este panel para seleccionar varios grupos, réplicas o bases de datos de disponibilidad y para realizar tareas administrativas rutinarias en los objetos seleccionados; por ejemplo, quitar de un grupo de disponibilidad varias réplicas o bases de datos de disponibilidad.|[Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Los cuadros de diálogo**Propiedades** permiten ver las propiedades de los grupos de disponibilidad, las réplicas o los agentes de escucha y, en algunos casos, para cambiar la configuración.|[Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)<br /><br /> [Ver las propiedades de una réplica de disponibilidad &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)<br /><br /> [Ver las propiedades del agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)|  
 |Monitor de sistema|El objeto de rendimiento **SQLServer:Availability Replica** contiene contadores de rendimiento que proporcionan información sobre las réplicas de disponibilidad.|[SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|Monitor de sistema|El objeto de rendimiento **SQLServer:Database Replica** contiene contadores de rendimiento que proporcionan información sobre las bases de datos secundarias en una réplica secundaria dada.<br /><br /> El objeto **SQLServer:Databases** de SQL Server contiene contadores de rendimiento que supervisan las actividades del registro de transacciones, entre otras cosas. Los siguientes contadores son especialmente importantes para supervisar la actividad del registro de transacciones en bases de datos de disponibilidad: **Tiempo de escritura de vaciados de registro (ms)** , **Vaciados de registro/s**, **Errores de memoria caché de grupo de registros/s**, **Lecturas de disco de grupo de registros/s**y **Solicitudes de grupo de registros/s**.|[SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md) y [SQL Server, objeto Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|Monitor de sistema|El objeto de rendimiento **SQLServer:Database Replica** contiene contadores de rendimiento que proporcionan información sobre las bases de datos secundarias en una réplica secundaria dada.<br /><br /> El objeto **SQLServer:Databases** de SQL Server contiene contadores de rendimiento que supervisan las actividades del registro de transacciones, entre otras cosas. Los siguientes contadores son especialmente importantes para supervisar la actividad del registro de transacciones en bases de datos de disponibilidad: **Tiempo de escritura de vaciados de registro (ms)**, **Vaciados de registro/s**, **Errores de memoria caché de grupo de registros/s**, **Lecturas de disco de grupo de registros/s**y **Solicitudes de grupo de registros/s**.|[SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md) y [SQL Server, objeto Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   
@@ -64,6 +64,6 @@ ms.locfileid: "62790201"
  [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md)   
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [&#40;de reparación de página automática para grupos de disponibilidad y creación de reflejo de la base de datos&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

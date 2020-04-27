@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774424"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
@@ -31,20 +31,19 @@ ms.locfileid: "62774424"
   
      [Seguridad](#Security)  
   
--   [Para establecer un alias de SQL Server para el servicio Agente SQL Server mediante SQL Server Management Studio](#SSMSProcedure)  
+-   [Para establecer un alias de SQL Server para el servicio del Agente SQL Server utilizando SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no funcionará correctamente si no se selecciona un alias que haga referencia a la instancia local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no funcionará correctamente si no se selecciona un alias que haga referencia a la instancia local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   El Explorador de objetos solo muestra el nodo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] si se tiene permiso para usarlo.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para realizar sus funciones, el Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe configurarse de modo que use las credenciales de una cuenta que sea miembro del rol fijo de servidor **sysadmin** en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La cuenta debe tener los siguientes permisos de Windows:  
   
 -   Iniciar sesión como servicio (SeServiceLogonRight)  
@@ -57,7 +56,7 @@ ms.locfileid: "62774424"
   
  Para obtener más información acerca de los permisos de Windows [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesarios para la cuenta de servicio del agente, consulte [seleccionar una cuenta para el servicio de Agente SQL Server](../ssms/agent/select-an-account-for-the-sql-server-agent-service.md) y [configurar los permisos y las cuentas de servicio de Windows](configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-set-a-sql-server-alias-for-the-sql-server-agent-service"></a>Para establecer un alias de SQL Server para servicio del Agente SQL Server  
   

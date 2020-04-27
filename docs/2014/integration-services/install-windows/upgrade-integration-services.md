@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768097"
 ---
 # <a name="upgrade-integration-services"></a>Actualizar Integration Services
@@ -64,7 +64,7 @@ ms.locfileid: "62768097"
   
  Al actualizar, puede actualizar tanto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] como el [!INCLUDE[ssDE](../../includes/ssde-md.md)], actualizar solo el [!INCLUDE[ssDE](../../includes/ssde-md.md)]o simplemente actualizar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si solo actualiza [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] siguen siendo funcionales, pero no dispone de la funcionalidad de [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]. Si solo actualiza [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] es totalmente funcional, pero solo puede almacenar paquetes en el sistema de archivos, a menos que se disponga de una instancia de [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] en otro equipo.  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Actualizar tanto Integration Services como el Motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Actualizar tanto Integration Services como el Motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  En esta sección se describen los efectos de realizar una actualización que tenga los criterios siguientes:  
   
 -   Actualiza [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -124,7 +124,7 @@ ms.locfileid: "62768097"
   
 -   De forma predeterminada, en una instalación de actualización, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se configura para registrar en el registro de eventos de aplicación los eventos relacionados con la ejecución de paquetes. Esta configuración podría generar demasiadas entradas en el registro de eventos al utilizar la característica de recopilador de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los eventos que se registran incluyen EventID 12288, "Se ha iniciado el paquete" y EventID 12289, "El paquete finalizó correctamente". Para detener el registro de estos dos eventos en el registro de eventos de aplicación, abra el Registro para editarlo. A continuación, en el Registro, busque el nodo HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS y cambie el valor DWORD de la configuración LogPackageExecutionToEventLog de 1 a 0.  
   
-## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Actualizar solo el Motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>Actualizar solo el Motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  En esta sección se describen los efectos de realizar una actualización que tenga los criterios siguientes:  
   
 -   Actualiza únicamente una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Es decir, la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] ahora es una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], pero la instancia de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y las herramientas cliente son de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  

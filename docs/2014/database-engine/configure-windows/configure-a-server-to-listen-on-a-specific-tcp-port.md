@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813591"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurar un servidor para que escuche en un puerto TCP específico (Administrador de configuración de SQL Server)
@@ -37,17 +37,17 @@ ms.locfileid: "62813591"
   
  **En este tema**  
   
--   **Para configurar un servidor para que escuche en un puerto TCP específico, utilizando:**  
+-   **Para configurar un servidor de modo que la escucha se realice en un puerto TCP específico, utilizando:**  
   
      [Administrador de configuración de SQL Server](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Para asignar un número de puerto TCP/IP al Motor de base de datos de SQL Server  
   
-1.  En Administrador de configuración de SQL Server, en el panel de la consola, expanda **SQL Server configuración de red**, expanda **protocolos \<para nombre de instancia>** y, a continuación, haga doble clic en **TCP/IP**.  
+1.  En el panel de la consola del Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y **Protocolos de \<nombre de instancia>** . Después, haga doble clic en **TCP/IP**.  
   
-2.  En el cuadro de diálogo **Propiedades de TCP/IP**, en la pestaña **Direcciones IP**, aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP del equipo. Haga clic con el botón derecho en cada dirección y luego haga clic en **Propiedades** para identificar la dirección IP que quiera configurar.  
+2.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP del equipo. Haga clic con el botón derecho en cada dirección y luego haga clic en **Propiedades** para identificar la dirección IP que quiera configurar.  
   
 3.  Si el cuadro de diálogo **Puertos dinámicos TCP** contiene **0**, que indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] escucha en los puertos dinámicos, elimine el 0.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "62813591"
 -   Programar el cliente para conectarse mediante una cadena de conexión personalizada.  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear o eliminar un alias de servidor para que lo use un cliente &#40;Administrador de configuración de SQL Server&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
+ [Crear o eliminar un alias de servidor para que lo utilice un cliente &#40;Administrador de configuración de SQL Server&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
   

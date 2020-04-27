@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807303"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>Creación de reflejo de la base de datos y catálogos de texto completo (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62807303"
   
 -   Si el seguimiento de cambios está DESACTIVADO en un índice de texto completo, debe iniciar un rastreo completo en ese índice con la siguiente instrucción:  
   
-     ALTER FULLTEXT INDEX ON *table_name* START FULL POPULATION  
+     ALTER FULLTEXT INDEX ON *TABLE_NAME* iniciar rellenado completo  
   
 -   Si un índice de texto completo está configurado para seguimiento de cambios automático, el índice de texto completo se sincronizará automáticamente. Sin embargo, la sincronización reduce el rendimiento de texto completo en cierta medida. Si el rendimiento es demasiado lento, puede desencadenar un rastreo completo desactivando el seguimiento de cambios y restableciéndolo al modo automático.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62807303"
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/indexes/indexes.md)  
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring-sql-server.md)   
+ [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/indexes/indexes.md)  
   
   

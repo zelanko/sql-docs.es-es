@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775338"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Instalar SQL Server con el recurso compartido de archivos SMB como opción de almacenamiento
@@ -32,7 +32,7 @@ ms.locfileid: "62775338"
   
 -   \\\NombreDeServidor\NombreDeRecursoCompartido  
   
- Para obtener más información sobre la Convención de nomenclatura [](https://go.microsoft.com/fwlink/?LinkId=245534) universal,https://go.microsoft.com/fwlink/?LinkId=245534)vea UNC (.  
+ Para obtener más información sobre la Convención de nomenclatura [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) universal,https://go.microsoft.com/fwlink/?LinkId=245534)vea UNC (.  
   
  No se permite usar la ruta UNC de bucle invertido (una ruta UNC cuyo nombre de servidor es localhost, 127.0.0.1 o el nombre del equipo local). Como caso especial, tampoco se admite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el clúster de servidor de archivos que se hospeda en el mismo nodo en que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar esta situación, se recomienda que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el clúster del servidor de archivos se creen en clústeres de Windows independientes.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "62775338"
   
 4.  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)  
   
-5.  [sp_attach_db &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
+5.  [sp_attach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
   
-6.  [sp_attach_single_file_db &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
+6.  [sp_attach_single_file_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
 ### <a name="installation-options"></a>Opción de instalación  
   
@@ -81,19 +81,15 @@ ms.locfileid: "62775338"
   
      Para obtener más información sobre el uso de varias opciones de parámetros de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]línea de comandos en, vea [install SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-ssnoversion"></a>Consideraciones sobre el sistema operativo (protocolo SMB frente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Los distintos sistemas operativos Windows tienen diferentes versiones del protocolo SMB y la versión del protocolo SMB es transparente para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación se muestran las ventajas de las distintas versiones del protocolo SMB con respecto a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 |Sistema operativo|Versión del protocolo SMB2|Ventajas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
-|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Rendimiento mejorado con respecto a las versiones anteriores de SMB.<br /><br /> Durabilidad, que ayuda a recuperarse de problemas temporales de red.|  
-|
-  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluido Server Core|2.1|Compatibilidad con MTU grande, lo que beneficia a las transferencias de datos grandes, como operaciones de copia de seguridad y restauración de SQL. Esta capacidad la debe habilitar el usuario. Para obtener más información sobre cómo habilitar esta funcionalidad, vea [novedades de SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Mejoras significativas en el rendimiento, concretamente para las cargas de trabajo de estilo OLTP de SQL. Estas mejoras de rendimiento necesitan la aplicación de una revisión. Para obtener más información acerca de la revisión [](https://go.microsoft.com/fwlink/?LinkId=237320) , consultehttps://go.microsoft.com/fwlink/?LinkId=237320)este (.|  
-|
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluido Server Core|3.0|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes del servidor, vea [información general del bloque de mensajes del servidor](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.|  
-|
-  [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluido Server Core|3.2|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red, con SMB multicanal.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA con SMB Direct.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes del servidor, vea [información general del bloque de mensajes del servidor](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.<br /><br /> Optimizado para E/S pequeñas de lectura/escritura aleatoria comunes para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Se activa la Unidad de transmisión máxima (MTU) de forma predeterminada, lo que mejora significativamente el rendimiento en las transferencias secuenciales grandes como el almacenamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la copia de seguridad o restauración de la base de datos.|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|Rendimiento mejorado con respecto a las versiones anteriores de SMB.<br /><br /> Durabilidad, que ayuda a recuperarse de problemas temporales de red.|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1, incluido Server Core|2.1|Compatibilidad con MTU grande, lo que beneficia a las transferencias de datos grandes, como operaciones de copia de seguridad y restauración de SQL. Esta capacidad la debe habilitar el usuario. Para obtener más información sobre cómo habilitar esta funcionalidad, vea [novedades de SMB](https://go.microsoft.com/fwlink/?LinkID=237319) (https://go.microsoft.com/fwlink/?LinkID=237319).<br /><br /> Mejoras significativas en el rendimiento, concretamente para las cargas de trabajo de estilo OLTP de SQL. Estas mejoras de rendimiento necesitan la aplicación de una revisión. Para obtener más información acerca de la revisión [this](https://go.microsoft.com/fwlink/?LinkId=237320) , consultehttps://go.microsoft.com/fwlink/?LinkId=237320)este (.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)], incluido Server Core|3.0|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes del servidor, vea [información general del bloque de mensajes del servidor](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2, incluido Server Core|3.2|Admite conmutación por error transparente de los recursos compartidos de archivos que proporcionan cero tiempo de inactividad sin que sea necesaria la intervención del administrador DBA o del servidor de archivos de SQL en las configuraciones de clúster de servidores de archivos.<br /><br /> Compatibilidad con E/S usando varias interfaces de red simultáneamente, así como tolerancia a errores de interfaz de red, con SMB multicanal.<br /><br /> Compatibilidad con interfaces de red con funciones de RDMA con SMB Direct.<br /><br /> Para obtener más información sobre estas características y el bloque de mensajes del servidor, vea [información general del bloque de mensajes del servidor](https://go.microsoft.com/fwlink/?LinkId=253174) (https://go.microsoft.com/fwlink/?LinkId=253174).<br /><br /> Compatibilidad de la escala del servidor de archivos (SoFS) con disponibilidad continua.<br /><br /> Optimizado para E/S pequeñas de lectura/escritura aleatoria comunes para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP.<br /><br /> Se activa la Unidad de transmisión máxima (MTU) de forma predeterminada, lo que mejora significativamente el rendimiento en las transferencias secuenciales grandes como el almacenamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la copia de seguridad o restauración de la base de datos.|  
   
 ## <a name="security-considerations"></a>Consideraciones sobre la seguridad  
   

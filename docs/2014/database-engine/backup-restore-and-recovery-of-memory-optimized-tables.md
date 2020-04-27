@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b710812bdc0ca8992b6eb865be8fac7787acff0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812609"
 ---
 # <a name="backup-restore-and-recovery-of-memory-optimized-tables"></a>Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria

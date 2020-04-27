@@ -42,14 +42,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770743"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
-  Además de las propiedades que son comunes a la mayoría de los objetos de flujo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] de datos en el modelo de objetos de, muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
+  Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
   
  En este tema se enumeran y describen las propiedades personalizadas de las diversas transformaciones de flujo de datos. Para obtener información sobre las propiedades comunes a la mayor parte de los objetos de flujo de datos, vea [Propiedades comunes](../../common-properties.md).  
   
@@ -59,20 +59,20 @@ ms.locfileid: "62770743"
   
 ||||  
 |-|-|-|  
-|[Agregado](#aggregate)|[Exportar columna](#extract)|[Recuento de filas](#rowcount)|  
+|[Agregada](#aggregate)|[Exportar columna](#extract)|[Recuento de filas](#rowcount)|  
 |[Auditoría](#audit)|[agrupación aproximada](#fgroup)|[Muestreo de fila](#rowsamp)|  
 |[Transformación de caché](#cachetransform)|[Búsqueda aproximada](#flookup)|[Componente de script](#script)|  
 |[Mapa de caracteres](#charmap)|[Importar columna](#insert)|[Dimensión de variación lenta](#scd)|  
-|[División condicional](#condsplit)|[Búsqueda](#lookup)|[Sort](#sort)|  
+|[División condicional](#condsplit)|[Lookup](#lookup)|[Sort](#sort)|  
 |[Copiar columna](#copymap)|[Merge Join](#mjoin)|[Extracción de términos](#textract)|  
-|[Conversión de datos](#dataconv)|[Comando OLE DB](#oledbcmd)|[Búsqueda de términos](#tlookup)|  
+|[Conversión de datos](#dataconv)|[Comando de OLE DB](#oledbcmd)|[Búsqueda de términos](#tlookup)|  
 |[Consulta de minería de datos](#dmquery)|[Muestreo de porcentaje](#percent)|[Anulación de dinamización](#unpivot)|  
 |[Columna derivada](#derived)|[Dinamización](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>Transformaciones sin propiedades personalizadas  
- Las transformaciones siguientes no tienen ninguna propiedad personalizada en los niveles de componentes, entradas o salidas: [transformación Mezclar](merge-transformation.md), [transformación Multidifusión](multicast-transformation.md)y [transformación Unión de todo](union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
+ Las transformaciones siguientes no tienen ninguna propiedad personalizada en los niveles de componente, entrada o salida: [Transformación Mezclar](merge-transformation.md), [Transformación Multidifusión](multicast-transformation.md), y [Transformación Unión de todo](union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
   
-##  <a name="aggregate"></a>Propiedades personalizadas de la transformación agregado  
+##  <a name="aggregate-transformation-custom-properties"></a><a name="aggregate"></a> Propiedades personalizadas de la transformación Agregado  
  La transformación Agregado tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Agregado. Todas las propiedades son de lectura y escritura.  
@@ -81,47 +81,46 @@ ms.locfileid: "62770743"
 |--------------|---------------|-----------------|  
 |AutoExtendFactor|Entero|Valor comprendido entre 1 y 100 que especifica el porcentaje en el que se puede ampliar la memoria durante la agregación. El valor predeterminado de esta propiedad es **25**.|  
 |CountDistinctKeys|Entero|Valor que especifica el número exacto de recuentos distintos que la agregación puede escribir. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene precedencia.|  
-|CountDistinctScale|Integer (enumeración)|Valor que describe el número aproximado de valores distintos en una columna que la agregación puede contar. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Low** (1): indica hasta 500.000 valores clave<br /><br /> **Medium** (2): indica hasta 5 millones valores de clave<br /><br /> **Alto** (3): indica más de 25 millones valores de clave.<br /><br /> No **especificado** (0): indica que no se usa ningún valor de CountDistinctScale. El uso de la opción **No especificado** (0) puede afectar al rendimiento en conjuntos de datos grandes.|  
+|CountDistinctScale|Integer (enumeración)|Valor que describe el número aproximado de valores distintos en una columna que la agregación puede contar. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale. El uso de la opción **No especificado** (0) puede afectar al rendimiento en conjuntos de datos grandes.|  
 |Claves|Entero|Valor que especifica el número exacto de claves Group By que la agregación escribe. Si se especifica un valor de KeyScale, el valor de Keys tiene precedencia.|  
-|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Low** (1): indica hasta 500.000 valores de clave.<br /><br /> **Medium** (2): indica hasta 5 millones valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones valores de clave.<br /><br /> No **especificado** (0): indica que no se usa ningún valor de KeyScale.|  
+|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de la salida de transformación Agregado. Todas las propiedades son de lectura y escritura.  
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |Claves|Entero|Valor que especifica el número exacto de las claves Group By que la agregación puede escribir. Si se especifica un valor de KeyScale, el valor de Keys tiene precedencia.|  
-|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Low** (1): indica hasta 500.000 valores de clave.<br /><br /> **Medium** (2): indica hasta 5 millones valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones valores de clave.<br /><br /> No **especificado** (0): indica que no se usa ningún valor de KeyScale.|  
+|KeyScale|Integer (enumeración)|Valor que describe aproximadamente cuántos valores de clave Group By puede escribir el agregado. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de KeyScale.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Agregado. Todas las propiedades son de lectura y escritura.  
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|AggregationColumnId|Entero|
-  `LineageID` de una columna que participa en las funciones de agregado o GROUP BY.|  
+|AggregationColumnId|Entero|`LineageID` de una columna que participa en las funciones de agregado o GROUP BY.|  
 |AggregationComparisonFlags|Entero|Valor que especifica cómo compara la transformación Agregado los datos de cadena de una columna. Para más información, consulte [Comparing String Data](../comparing-string-data.md).|  
-|AggregationType|Integer (enumeración)|Valor que especifica la operación de la agregación que se va a realizar en la columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Recuento** (1)<br /><br /> **Recuento total** (2)<br /><br /> **Countdistinct** (3)<br /><br /> **SUM** (4)<br /><br /> **Promedio** (5)<br /><br /> **Máximo** (7)<br /><br /> **Mínimo** (6)<br /><br /> **Agrupar por** (0)|  
+|AggregationType|Integer (enumeración)|Valor que especifica la operación de la agregación que se va a realizar en la columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Recuento** (1)<br /><br /> **Contar todos** (2)<br /><br /> **CountDistinct** (3)<br /><br /> **Suma** (4)<br /><br /> **Promedio** (5)<br /><br /> **Máximo** (7)<br /><br /> **Mínimo** (6)<br /><br /> **Agrupar por** (0)|  
 |CountDistinctKeys|Entero|Cuando el tipo de agregación es **Count distinct**, valor que especifica el número exacto de claves que la agregación puede escribir. Si se especifica un valor de CountDistinctScale, el valor de CountDistinctKeys tiene precedencia.|  
-|CountDistinctScale|Integer (enumeración)|Cuando el tipo de agregación es **Count distinct**, un valor que describe aproximadamente cuántos valores de clave puede escribir la agregación. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Low** (1): indica hasta 500.000 valores de clave.<br /><br /> **Medium** (2): indica hasta 5 millones valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones valores de clave.<br /><br /> No **especificado** (0): indica que no se usa ningún valor de CountDistinctScale.|  
+|CountDistinctScale|Integer (enumeración)|Cuando el tipo de agregación es **Count distinct**, un valor que describe aproximadamente cuántos valores de clave puede escribir la agregación. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Bajo** (1): indica hasta 500 000 valores de clave.<br /><br /> **Medio** (2): indica hasta cinco millones de valores de clave.<br /><br /> **Alto** (3): indica más de 25 millones de valores de clave.<br /><br /> **No especificado** (0): indica que no se usa ningún valor de CountDistinctScale.|  
 |IsBig|Boolean|Valor que indica si la columna contiene un valor mayor que cuatro mil millones o un valor con más precisión que un valor de coma flotante de precisión doble. El valor puede ser 0 o 1. 0 indica que IsBig es `False` y la columna no contiene un valor grande o preciso. El valor predeterminado de esta propiedad es 1.|  
   
  La entrada y las columnas de entrada de la transformación Agregado no tienen ninguna propiedad personalizada.  
   
  Para obtener más información, vea [Transformación Agregado](aggregate-transformation.md).  
   
-##  <a name="audit"></a>Propiedades personalizadas de la transformación auditar  
+##  <a name="audit-transformation-custom-properties"></a><a name="audit"></a> Propiedades personalizadas de la transformación Auditar  
  La transformación Auditar tiene solo las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Auditar. Todas las propiedades son de lectura y escritura.  
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|LineageItemSelected|Integer (enumeración)|Elemento de auditoría seleccionado para la salida. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **GUID de instancia de ejecución** (0)<br /><br /> **Hora de inicio** de la ejecución (4)<br /><br /> **Nombre** de la máquina (5)<br /><br /> **Identificador del paquete** (1)<br /><br /> **Nombre del paquete** (2)<br /><br /> **Identificador de tarea** (8)<br /><br /> **Nombre de tarea** (7)<br /><br /> **Nombre de usuario** (6)<br /><br /> **Identificador de versión** (3)|  
+|LineageItemSelected|Integer (enumeración)|Elemento de auditoría seleccionado para la salida. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **GUID de instancia de ejecución** (0)<br /><br /> **Hora de inicio de ejecución** (4)<br /><br /> **Nombre de la máquina** (5)<br /><br /> **Identificador del paquete** (1)<br /><br /> **Nombre del paquete** (2)<br /><br /> **Identificador de tarea** (8)<br /><br /> **Nombre de tarea** (7)<br /><br /> **Nombre de usuario** (6)<br /><br /> **Identificador de versión** (3)|  
   
  La entrada, las columnas de entrada y la salida de transformación Auditar no tienen ninguna propiedad personalizada.  
   
  Para obtener más información, consulte [Audit Transformation](audit-transformation.md).  
   
-##  <a name="cachetransform"></a>Propiedades personalizadas de la transformación transformación de caché  
+##  <a name="cache-transform-transformation-custom-properties"></a><a name="cachetransform"></a> Propiedades personalizadas de la transformación Transformación de caché  
  La transformación Transformación de caché tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades de la transformación Transformación de caché. Todas las propiedades son de lectura y escritura.  
@@ -134,7 +133,7 @@ ms.locfileid: "62770743"
 |InputColumns|String|Lista de las columnas de entrada seleccionadas.|  
 |CacheColumnName|String|Especifica el nombre de la columna que está asignada a una columna de entrada seleccionada.<br /><br /> El nombre de la columna en la propiedad CacheColumnName debe coincidir con el nombre de la columna correspondiente que se muestra en la página **Columnas** del **Editor del administrador de conexiones de caché**.<br /><br /> Para obtener más información, vea [Editor del administrador de conexiones de caché](../../cache-connection-manager-editor.md).|  
   
-##  <a name="charmap"></a>Propiedades personalizadas de la transformación mapa de caracteres  
+##  <a name="character-map-transformation-custom-properties"></a><a name="charmap"></a> Propiedades personalizadas de la transformación Mapa de caracteres  
  La transformación Mapa de caracteres tiene solo las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Mapa de caracteres. Todas las propiedades son de lectura y escritura.  
@@ -142,13 +141,13 @@ ms.locfileid: "62770743"
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |InputColumnLineageId|Entero|Valor que especifica el `LineageID` de la columna de entrada que es el origen de la columna de salida.|  
-|MapFlags|Integer (enumeración)|Valor que especifica las operaciones de cadena que la transformación Mapa de caracteres realiza en la columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Inversión de byte** (2)<br /><br /> **Ancho completo** (6)<br /><br /> **Formato medio** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Grafía lingüística** (7)<br /><br /> **Minúsculas** (0)<br /><br /> **Chino simplificado** (8)<br /><br /> **Chino tradicional**(9)<br /><br /> **Mayúsculas** (1)|  
+|MapFlags|Integer (enumeración)|Valor que especifica las operaciones de cadena que la transformación Mapa de caracteres realiza en la columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Inversión de byte** (2)<br /><br /> **Formato completo** (6)<br /><br /> **Formato medio** (5)<br /><br /> **Hiragana** (3)<br /><br /> **Katakana** (4)<br /><br /> **Utilización lingüística de mayúsculas y minúsculas** (7)<br /><br /> **Minúsculas** (0)<br /><br /> **Chino simplificado** (8)<br /><br /> **Chino tradicional**(9)<br /><br /> **Mayúsculas** (1)|  
   
  La entrada, las columnas de entrada y la salida de transformación Mapa de caracteres no tienen ninguna propiedad personalizada.  
   
  Para obtener más información, vea [Transformación Mapa de caracteres](character-map-transformation.md).  
   
-##  <a name="condsplit"></a>Propiedades personalizadas de la transformación división condicional  
+##  <a name="conditional-split-transformation-custom-properties"></a><a name="condsplit"></a> Propiedades personalizadas de la transformación División condicional  
  La transformación División condicional tiene solo las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación División condicional. Todas las propiedades son de lectura y escritura.  
@@ -164,36 +163,34 @@ ms.locfileid: "62770743"
   
  Para más información, consulte [Conditional Split Transformation](conditional-split-transformation.md).  
   
-##  <a name="copymap"></a>Propiedades personalizadas de la transformación copiar columna  
+##  <a name="copy-column-transformation-custom-properties"></a><a name="copymap"></a> Propiedades personalizadas de la transformación Copiar columna  
  La transformación Copiar columna solo tiene las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Copiar columna. Todas las propiedades son de lectura y escritura.  
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|copyColumnId|Entero|
-  `LineageID` de la columna de entrada de la que se copia la columna de resultados.|  
+|copyColumnId|Entero|`LineageID` de la columna de entrada de la que se copia la columna de resultados.|  
   
  La entrada, las columnas de entrada y la salida de transformación Copiar columna no tienen ninguna propiedad personalizada.  
   
  Para obtener más información, vea [Transformación Copiar columna](copy-column-transformation.md).  
   
-##  <a name="dataconv"></a>Propiedades personalizadas de la transformación conversión de datos  
+##  <a name="data-conversion-transformation-custom-properties"></a><a name="dataconv"></a> Propiedades personalizadas de la transformación Conversión de datos  
  La transformación Conversión de datos tiene solo las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Conversión de datos. Todas las propiedades son de lectura y escritura.  
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es `False`. Para obtener más información, consulte [Fast Parse](../../fast-parse.md) y [Standard Parse](../../standard-parse.md). .<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Conversión de datos**, pero se puede establecer con el **Editor avanzado**.|  
-|SourceInputColumnLineageId|Entero|
-  `LineageID` de la columna de entrada que es el origen de la columna de resultados.|  
+|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es `False`. Para obtener más información, consulte [Fast Parse](../../fast-parse.md) y [Standard Parse](../../standard-parse.md). .<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Conversión de datos**, pero se puede definir con el **Editor avanzado**.|  
+|SourceInputColumnLineageId|Entero|`LineageID` de la columna de entrada que es el origen de la columna de resultados.|  
   
  La entrada, las columnas de entrada y la salida de transformación Conversión de datos no tienen ninguna propiedad personalizada.  
   
  Para más información, consulte [Data Conversion Transformation](data-conversion-transformation.md).  
   
-##  <a name="dmquery"></a>Propiedades personalizadas de la transformación consulta de minería de datos  
+##  <a name="data-mining-query-transformation-custom-properties"></a><a name="dmquery"></a> Propiedades personalizadas de la transformación Consulta de minería de datos  
  La transformación Consulta de minería de datos tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Consulta de minería de datos. Todas las propiedades son de lectura y escritura.  
@@ -212,7 +209,7 @@ ms.locfileid: "62770743"
   
  Para obtener más información, vea [Transformación Consulta de minería de datos](data-mining-query-transformation.md).  
   
-##  <a name="derived"></a>Propiedades personalizadas de la transformación columna derivada  
+##  <a name="derived-column-transformation-custom-properties"></a><a name="derived"></a> Propiedades personalizadas de la transformación Columna derivada  
  La transformación Columna derivada solo tiene las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de entrada y de las columnas de salida de transformación Columna derivada. Cuando elige agregar la columna derivada como una columna nueva, estas propiedades personalizadas se aplican a la nueva columna de resultados; cuando decide reemplazar el contenido de una columna de entrada existente con los resultados derivados, estas propiedades personalizadas se aplican a la columna de entrada existente. Todas las propiedades son de lectura y escritura.  
@@ -226,7 +223,7 @@ ms.locfileid: "62770743"
   
  Para más información, consulte [Derived Column Transformation](derived-column-transformation.md).  
   
-##  <a name="extract"></a>Propiedades personalizadas de la transformación exportar columna  
+##  <a name="export-column-transformation-custom-properties"></a><a name="extract"></a> Propiedades personalizadas de la transformación Exportar columna  
  La transformación Exportar columna solo tiene las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de entrada de la transformación Exportar columna. Todas las propiedades son de lectura y escritura.  
@@ -242,7 +239,7 @@ ms.locfileid: "62770743"
   
  Para obtener más información, vea [Transformación Exportar columna](export-column-transformation.md).  
   
-##  <a name="insert"></a>Propiedades personalizadas de la transformación importar columna  
+##  <a name="import-column-transformation-custom-properties"></a><a name="insert"></a> Propiedades personalizadas de la transformación Importar columna  
  La transformación Importar columna solo tiene las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de entrada de la transformación Importar columna. Todas las propiedades son de lectura y escritura.  
@@ -256,7 +253,7 @@ ms.locfileid: "62770743"
   
  Para obtener más información, vea [Transformación Importar columna](import-column-transformation.md).  
   
-##  <a name="fgroup"></a>Propiedades personalizadas de la transformación agrupación aproximada  
+##  <a name="fuzzy-grouping-transformation-custom-properties"></a><a name="fgroup"></a> Propiedades personalizadas de la transformación Agrupación aproximada  
  La transformación Agrupación aproximada tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Agrupación aproximada. Todas las propiedades son de lectura y escritura.  
@@ -264,9 +261,9 @@ ms.locfileid: "62770743"
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |Delimitadores|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
-|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede establecer con el **Editor avanzado**.|  
-|MaxMemoryUsage|Entero|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede establecer con el **Editor avanzado**.|  
-|MinSimilarity|DOUBLE|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
+|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
+|MaxMemoryUsage|Entero|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
+|MinSimilarity|Double|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de entrada de la transformación Agrupación aproximada. Todas las propiedades son de lectura y escritura.  
   
@@ -275,22 +272,21 @@ ms.locfileid: "62770743"
 |ExactFuzzy|Integer (enumeración)|Valor que especifica si la transformación realiza una coincidencia aproximada o una coincidencia exacta. Los valores válidos son **Exacta** y **Aproximada**. El valor predeterminado de esta propiedad es **Aproximada**.|  
 |FuzzyComparisonFlags|Integer (enumeración)|Valor que especifica cómo compara la transformación los datos de cadena de una columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Para más información, consulte [Comparing String Data](../comparing-string-data.md).|  
 |LeadingTrailingNumeralsSignificant|Integer (enumeración)|Valor que especifica la importancia de los numerales. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **LeadingNumeralsSignificant** (1): se usa si los números iniciales son significativos.<br /><br /> **TrailingNumeralsSignificant** (2): se usa si los números finales son significativos.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3): se usa si los números iniciales y finales son significativos.<br /><br /> **NumeralsNotSpecial** (0): se usa si los números no son significativos.|  
-|MinSimilarity|DOUBLE|Umbral de similitud que se usa para la combinación en la columna, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
+|MinSimilarity|Double|Umbral de similitud que se usa para la combinación en la columna, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
 |ToBeCleaned|Boolean|Valor que especifica si la columna se utiliza para identificar los duplicados; es decir, si se trata de una columna en la que está agrupando. El valor predeterminado de esta propiedad es `False`.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Agrupación aproximada. Todas las propiedades son de lectura y escritura.  
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|ColumnType|Integer (enumeración)|Valor que identifica el tipo de columna de resultados. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similitud** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **Passthru** (5)<br /><br /> **Canonical**l (6)<br /><br /> **Undefined** (0)|  
-|InputID|Entero|
-  `LineageID` de la columna de entrada correspondiente.|  
+|ColumnType|Integer (enumeración)|Valor que identifica el tipo de columna de resultados. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **KeyIn** (1)<br /><br /> **KeyOut** (2)<br /><br /> **Similarity** (3)<br /><br /> **ColumnSimilarity** (4)<br /><br /> **PassThru** (5)<br /><br /> **Canonical**(6)<br /><br /> **Undefined** (0)|  
+|InputID|Entero|`LineageID` de la columna de entrada correspondiente.|  
   
  La entrada y la salida de transformación Agrupación aproximada no tienen ninguna propiedad personalizada.  
   
  Para obtener más información, vea [Transformación Agrupación aproximada](fuzzy-grouping-transformation.md).  
   
-##  <a name="flookup"></a>Propiedades personalizadas de la transformación búsqueda aproximada  
+##  <a name="fuzzy-lookup-transformation-custom-properties"></a><a name="flookup"></a> Propiedades personalizadas de la transformación Búsqueda aproximada  
  La transformación Búsqueda aproximada tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Búsqueda aproximada. Todas las propiedades excepto `ReferenceMetadataXML` son de lectura y escritura.  
@@ -300,10 +296,10 @@ ms.locfileid: "62770743"
 |CopyReferenceTable|Boolean|Especifica si se debería crear una copia de la tabla de referencia para la construcción del índice de búsqueda aproximada y las búsquedas subsiguientes. El valor predeterminado de esta propiedad es `True`.|  
 |Delimitadores|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |DropExistingMatchIndex|Boolean|Valor que especifica si el índice de coincidencia especificado en MatchIndexName se elimina cuando MatchIndexOptions no se establece en ReuseExistingIndex. El valor predeterminado de esta propiedad es `True`.|  
-|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer con el **Editor avanzado**.|  
+|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MatchIndexName|String|Nombre del índice de coincidencia. El índice de coincidencia es la tabla en la que la transformación crea y guarda el índice que utiliza. Si se reutiliza el índice de coincidencia, MatchIndexName especifica el índice que se reutilizará. MatchIndexName debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  
-|MatchIndexOptions|Integer (enumeración)|Valor que especifica cómo administra la transformación el índice de coincidencia. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `ReuseExistingIndex`0,1<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Entero|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **0**, lo que significa que el tamaño de la memoria caché no tiene límite.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer con el **Editor avanzado**.|  
+|MatchIndexOptions|Integer (enumeración)|Valor que especifica cómo administra la transformación el índice de coincidencia. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
+|MaxMemoryUsage|Entero|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **0**, lo que significa que el tamaño de la memoria caché no tiene límite.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MaxOutputMatchesPerInput|Entero|Número máximo de coincidencias que la transformación puede devolver para cada fila de entrada. El valor predeterminado de esta propiedad es **1**.<br /><br /> Nota: Los valores mayores que 100 solo se pueden especificar con el **Editor avanzado**.|  
 |MinSimilarity|Entero|El umbral de similitud que la transformación usa en el nivel de componente, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
@@ -315,10 +311,10 @@ ms.locfileid: "62770743"
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |FuzzyComparisonFlags|Entero|Valor que especifica cómo compara la transformación los datos de cadena de una columna. Para más información, consulte [Comparing String Data](../comparing-string-data.md).|  
-|FuzzyComparisonFlagsEx|Integer (enumeración)|Valor que especifica qué marcas de comparación extendida usa la transformación. Los valores pueden incluir **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**y **NoMapping**. **Nomapping** no se puede usar con otras marcas.|  
+|FuzzyComparisonFlagsEx|Integer (enumeración)|Valor que especifica qué marcas de comparación extendida usa la transformación. Los valores pueden incluir **MapExpandLigatures, MapFoldCZone**, **MapFoldDigits**, **MapPrecomposed**y **NoMapping**. **NoMapping** no se puede usar con otras marcas.|  
 |JoinToReferenceColumn|String|Valor que especifica el nombre de la columna en la tabla de referencia con la que se combina la columna.|  
 |JoinType|Entero|Valor que especifica si la transformación realiza una coincidencia aproximada o exacta. El valor predeterminado de esta propiedad es **Aproximada**. El valor entero para el tipo de combinación exacta es **1** y para el tipo de combinación aproximado es **2**.|  
-|MinSimilarity|DOUBLE|Umbral de similitud que la transformación usa en el nivel de columna, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
+|MinSimilarity|Double|Umbral de similitud que la transformación usa en el nivel de columna, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Búsqueda aproximada. Todas las propiedades son de lectura y escritura.  
   
@@ -327,7 +323,7 @@ ms.locfileid: "62770743"
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|ColumnType|Integer (enumeración)|Valor que identifica el tipo de columna de resultados para las columnas que la transformación agrega a la salida. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Similitud** (1)<br /><br /> **Confianza** (2)<br /><br /> **ColumnSimilarity** (3)<br /><br /> **Undefined** (0)|  
+|ColumnType|Integer (enumeración)|Valor que identifica el tipo de columna de resultados para las columnas que la transformación agrega a la salida. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **Similarity** (1)<br /><br /> **Confidence** (2)<br /><br /> **ColumnSimilarity** (3)<br /><br /> **Undefined** (0)|  
 |CopyFromReferenceColumn|String|Valor que especifica el nombre de la columna en la tabla de referencia que proporciona el valor en una columna de resultados.|  
 |SourceInputColumnLineageId|Entero|Valor que identifica la columna de entrada que proporciona los valores de esta columna de resultados.|  
   
@@ -335,7 +331,7 @@ ms.locfileid: "62770743"
   
  Para obtener más información, vea [Transformación Búsqueda aproximada](lookup-transformation.md).  
   
-##  <a name="lookup"></a>Propiedades personalizadas de la transformación búsqueda  
+##  <a name="lookup-transformation-custom-properties"></a><a name="lookup"></a> Propiedades personalizadas de la transformación Búsqueda  
  La transformación Búsqueda tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Búsqueda. Todas las propiedades excepto `ReferenceMetadataXML` son de lectura y escritura.  
@@ -346,7 +342,7 @@ ms.locfileid: "62770743"
 |DefaultCodePage|Entero|Página de códigos predeterminada que se usa cuando no hay información disponible de la misma en el origen de datos.|  
 |MaxMemoryUsage|Entero|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **25**, lo que significa que el tamaño de la memoria caché no tiene límite.|  
 |MaxMemoryUsage64|Entero|Tamaño de caché máximo para la tabla de búsqueda en un equipo de 64 bits.|  
-|NoMatchBehavior|Integer (enumeración)|Valor que especifica si las filas que no tienen entradas coincidentes del conjunto de datos de referencia se tratan como errores.<br /><br /> Cuando la propiedad se establece en `Treat rows with no matching entries as errors` (0), las filas sin entradas coincidentes se tratan como errores. Puede especificar lo que debería pasar cuando se produce este tipo de error con la página **Salida de error** del cuadro de diálogo **Editor de transformación Búsqueda**. Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../lookup-transformation-editor-error-output-page.md).<br /><br /> Cuando la propiedad está establecida en `Send rows with no matching entries to the no match output` (1), las filas no se tratan como errores.<br /><br /> El valor predeterminado es `Treat rows with no matching entries as errors` (0).|  
+|NoMatchBehavior|Integer (enumeración)|Valor que especifica si las filas que no tienen entradas coincidentes del conjunto de datos de referencia se tratan como errores.<br /><br /> Cuando la propiedad se establece en `Treat rows with no matching entries as errors` (0), las filas sin entradas coincidentes se tratan como errores. Puede especificar lo que debería pasar cuando se produce este tipo de error con la página **Salida de error** del cuadro de diálogo **Editor de transformación Búsqueda** . Para obtener más información, vea [Editor de transformación Búsqueda &#40;página Salida de error&#41;](../../lookup-transformation-editor-error-output-page.md).<br /><br /> Cuando la propiedad está establecida en `Send rows with no matching entries to the no match output` (1), las filas no se tratan como errores.<br /><br /> El valor predeterminado es `Treat rows with no matching entries as errors` (0).|  
 |ParameterMap|String|Lista delimitada por puntos y comas de identificadores de linaje que se asignan a los parámetros que se usan en la instrucción `SqlCommand`.|  
 |ReferenceMetadataXML|String|Metadatos para las columnas en la tabla de búsqueda que la transformación copia en su salida.|  
 |SqlCommand|String|La instrucción SELECT que rellena la tabla de búsqueda.|  
@@ -367,9 +363,9 @@ ms.locfileid: "62770743"
   
  La entrada y la salida de transformación Búsqueda no tienen ninguna propiedad personalizada.  
   
- Para obtener más información, vea [lookup Transformation](lookup-transformation.md).  
+ Para más información, consulte [Lookup Transformation](lookup-transformation.md).  
   
-##  <a name="mjoin"></a>Propiedades personalizadas de la transformación combinación de mezcla  
+##  <a name="merge-join-transformation-custom-properties"></a><a name="mjoin"></a> Propiedades personalizadas de la Transformación Combinación de mezcla  
  La transformación Combinación de mezcla tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Combinación de mezcla.  
@@ -385,21 +381,20 @@ ms.locfileid: "62770743"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|InputColumnID|Entero|
-  `LineageID` de la columna de entrada desde la que los datos se copian en esta columna de resultados.|  
+|InputColumnID|Entero|`LineageID` de la columna de entrada desde la que los datos se copian en esta columna de resultados.|  
   
  La entrada, las columnas de entrada y la salida de transformación Combinación de mezcla no tienen ninguna propiedad personalizada.  
   
  Para obtener más información, vea [Transformación Combinación de mezcla](merge-join-transformation.md).  
   
-##  <a name="oledbcmd"></a>OLE DB propiedades personalizadas de la transformación comando  
+##  <a name="ole-db-command-transformation-custom-properties"></a><a name="oledbcmd"></a> Propiedades personalizadas de la transformación Comando de OLE DB  
  La transformación Comando de OLE DB tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Comando de OLE DB.  
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|CommandTimeout|Entero|Número máximo de segundos que el comando SQL puede ejecutar antes de que se agote el tiempo de espera. Un valor de **0** indica una hora infinita. El valor predeterminado de esta propiedad es **0**.|  
+|CommandTimeout|Entero|Número máximo de segundos que el comando SQL se puede ejecutar antes de superar el tiempo de espera. Si el valor es **0** , indica un tiempo infinito. El valor predeterminado de esta propiedad es **0**.|  
 |DefaultCodePage|Entero|Página de códigos que se usa cuando no hay información disponible de la misma en el origen de datos.|  
 |SqlCommand|String|La instrucción de Transact-SQL que la transformación ejecuta para cada fila en el flujo de datos.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
   
@@ -413,7 +408,7 @@ ms.locfileid: "62770743"
   
  Para más información, consulte [OLE DB Command Transformation](ole-db-command-transformation.md).  
   
-##  <a name="percent"></a>Propiedades personalizadas de la transformación muestreo de porcentaje  
+##  <a name="percentage-sampling-transformation-custom-properties"></a><a name="percent"></a> Propiedades personalizadas de la transformación Muestreo de porcentaje  
  La transformación Muestreo de porcentaje tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Muestreo de porcentaje.  
@@ -433,7 +428,7 @@ ms.locfileid: "62770743"
   
  Para obtener más información, vea [Transformación Muestreo de porcentaje](percentage-sampling-transformation.md).  
   
-##  <a name="pivot"></a>Propiedades personalizadas de la transformación dinámica  
+##  <a name="pivot-transformation-custom-properties"></a><a name="pivot"></a> Propiedades personalizadas de la transformación Dinámica  
  En la tabla siguiente se describen las propiedades de componentes personalizadas de la transformación dinámica.  
   
 |Propiedad|Tipo de datos|Descripción|  
@@ -451,12 +446,11 @@ ms.locfileid: "62770743"
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |PivotKeyValue|String|Uno de los valores posibles de la columna que se marca como la clave dinámica por el valor de su propiedad PivotUsage.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.|  
-|SourceColumn|Entero|
-  `LineageID` de una columna de entrada que contiene un valor dinamizado o -1. El valor -1 indica que la columna no se utiliza en una operación dinámica.|  
+|SourceColumn|Entero|`LineageID` de una columna de entrada que contiene un valor dinamizado o -1. El valor -1 indica que la columna no se utiliza en una operación dinámica.|  
   
  Para obtener más información, vea [Transformación dinámica](pivot-transformation.md).  
   
-##  <a name="rowcount"></a>Propiedades personalizadas de la transformación recuento de filas  
+##  <a name="row-count-transformation-custom-properties"></a><a name="rowcount"></a> Propiedades personalizadas de la transformación Recuento de filas  
  La transformación Recuento de filas tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Recuento de filas. Todas las propiedades son de lectura y escritura.  
@@ -469,7 +463,7 @@ ms.locfileid: "62770743"
   
  Para más información, consulte [Row Count Transformation](row-count-transformation.md).  
   
-##  <a name="rowsamp"></a>Propiedades personalizadas de la transformación muestreo de fila  
+##  <a name="row-sampling-transformation-custom-properties"></a><a name="rowsamp"></a> Propiedades personalizadas de la transformación Muestreo de fila  
  La transformación Muestreo de fila tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Muestreo de fila. Todas las propiedades son de lectura y escritura.  
@@ -495,7 +489,7 @@ ms.locfileid: "62770743"
   
  Para más información, consulte [Row Sampling Transformation](row-sampling-transformation.md).  
   
-##  <a name="script"></a>Propiedades personalizadas del componente de script  
+##  <a name="script-component-custom-properties"></a><a name="script"></a> Propiedades personalizadas del Componente de script  
  El componente de script tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos. Las mismas propiedades personalizadas están disponibles si el componente de script funciona como un origen, transformación o destino.  
   
  En la tabla siguiente se describen las propiedades personalizadas del componente de script. Todas las propiedades son de lectura y escritura.  
@@ -509,7 +503,7 @@ ms.locfileid: "62770743"
   
  Para más información, consulte [Script Component](script-component.md).  
   
-##  <a name="scd"></a>Propiedades personalizadas de la transformación dimensión de variación lenta  
+##  <a name="slowly-changing-dimension-transformation-custom-properties"></a><a name="scd"></a> Propiedades personalizadas de la transformación Dimensión de variación lenta  
  La transformación Dimensión de variación lenta tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Dimensión de variación lenta. Todas las propiedades son de lectura y escritura.  
@@ -535,7 +529,7 @@ ms.locfileid: "62770743"
   
  Para obtener más información, vea [Transformación Dimensión de variación lenta](slowly-changing-dimension-transformation.md).  
   
-##  <a name="sort"></a>Propiedades personalizadas de la transformación ordenar  
+##  <a name="sort-transformation-custom-properties"></a><a name="sort"></a> Propiedades personalizadas de la transformación Ordenar  
  La transformación Ordenar tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Ordenar. Todas las propiedades son de lectura y escritura.  
@@ -556,14 +550,13 @@ ms.locfileid: "62770743"
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|SortColumnID|Entero|
-  `LineageID` de una columna de ordenación.|  
+|SortColumnID|Entero|`LineageID` de una columna de ordenación.|  
   
  La entrada y la salida de transformación Ordenación no tienen ninguna propiedad personalizada.  
   
  Para más información, consulte [Sort Transformation](sort-transformation.md).  
   
-##  <a name="textract"></a>Propiedades personalizadas de la transformación extracción de términos  
+##  <a name="term-extraction-transformation-custom-properties"></a><a name="textract"></a> Propiedades personalizadas de la transformación Extracción de términos  
  La transformación Extracción de términos tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Extracción de términos. Todas las propiedades son de lectura y escritura.  
@@ -583,7 +576,7 @@ ms.locfileid: "62770743"
   
  Para obtener más información, vea [Transformación Extracción de términos](term-extraction-transformation.md).  
   
-##  <a name="tlookup"></a>Propiedades personalizadas de la transformación búsqueda de términos  
+##  <a name="term-lookup-transformation-custom-properties"></a><a name="tlookup"></a> Propiedades personalizadas de la transformación Búsqueda de términos  
  La transformación Búsqueda de términos tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas de la transformación Búsqueda de términos. Todas las propiedades son de lectura y escritura.  
@@ -604,14 +597,13 @@ ms.locfileid: "62770743"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|CustomLineageID|Entero|
-  `LineageID` de la columna de entrada correspondiente si `InputColumnType` de esa columna tiene 0 ó 2 años.|  
+|CustomLineageID|Entero|`LineageID` de la columna de entrada correspondiente si `InputColumnType` de esa columna tiene 0 ó 2 años.|  
   
  La entrada y la salida de transformación Búsqueda de términos no tienen ninguna propiedad personalizada.  
   
  Para obtener más información, vea [Transformación Búsqueda de términos](term-lookup-transformation.md).  
   
-##  <a name="unpivot"></a>Propiedades personalizadas de la transformación anulación de dinamización  
+##  <a name="unpivot-transformation-custom-properties"></a><a name="unpivot"></a> Propiedades personalizadas de la transformación Anulación de dinamización  
  La transformación Anulación de dinamización tiene solo las propiedades comunes a todos los componentes de flujo de datos en el nivel de componente.  
   
 > [!NOTE]  
@@ -621,8 +613,7 @@ ms.locfileid: "62770743"
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|DestinationColumn|Entero|
-  `LineageID` de la columna de resultados a la que asigna la columna de entrada. El valor -1 indica que la columna de entrada no está asignada a una columna de resultados.|  
+|DestinationColumn|Entero|`LineageID` de la columna de resultados a la que asigna la columna de entrada. El valor -1 indica que la columna de entrada no está asignada a una columna de resultados.|  
 |PivotKeyValue|String|Valor que se copia en una columna de salida de transformación.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> En el escenario Anulación de dinamización que se describe en [Transformación Anulación de dinamización](unpivot-transformation.md), los valores de dinamización son los valores de texto Ham, Coke, Milk, Beer y Chips. Estos aparecerán como valores de texto en la nueva columna Product designada por la opción **Nombre de la columna del valor de clave dinámica** .|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Anulación de dinamización. Todas las propiedades son de lectura y escritura.  
@@ -636,7 +627,7 @@ ms.locfileid: "62770743"
  Para obtener más información, vea [Transformación Anulación de dinamización](unpivot-transformation.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Transformaciones de Integration Services](integration-services-transformations.md)   
+ [Integration Services transformaciones](integration-services-transformations.md)   
  [Propiedades comunes](../../common-properties.md)   
  [Propiedades de ruta de acceso](../../path-properties.md)   
  [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](../../data-flow-properties-that-can-be-set-by-using-expressions.md)  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815730"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)
@@ -36,12 +36,12 @@ ms.locfileid: "62815730"
   
      [Seguridad](#Security)  
   
--   **Para agregar una base de datos, mediante:**  [Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para agregar una base de datos mediante:**  [Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Si nunca ha agregado una base de datos a un grupo de disponibilidad, consulte la sección "bases de datos de disponibilidad" en [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Requisitos previos, restricciones y recomendaciones  
+###  <a name="prerequisites-restrictions-and-recommendations"></a><a name="Prerequisites"></a>Requisitos previos, restricciones y recomendaciones  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal actual.  
   
@@ -69,12 +69,12 @@ ms.locfileid: "62815730"
   
      Si no puede utilizar el asistente para realizar la sincronización de datos inicial completa, debe preparar las bases de datos secundarias manualmente. Puede hacerlo antes o después de ejecutar el asistente. Para obtener más información, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a>Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)  
+##  <a name="using-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)  
  **Para usar el Asistente para agregar una base de datos al grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal del grupo de disponibilidad y expanda el árbol.  
@@ -134,7 +134,7 @@ ms.locfileid: "62815730"
   
 11. Si la sincronización de datos iniciales no se inició automáticamente en todas sus bases de datos secundarias, debe configurar las bases de datos secundarias no unidas todavía. Para más información, vea [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

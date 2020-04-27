@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791909"
 ---
 # <a name="availability-replica-properties-general-page"></a>Propiedades de las réplicas de disponibilidad (página General)
   Use este cuadro de diálogo para ver las propiedades de una réplica de disponibilidad.  
   
 ## <a name="task-list"></a>Lista de tareas  
- **Para ver las propiedades de la réplica de disponibilidad**  
+ **Para ver las propiedades de una réplica de disponibilidad**  
   
 -   [Ver las propiedades de una réplica de disponibilidad &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Nombre del grupo de disponibilidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "62791909"
  **Instancia del servidor**  
  Nombre de servidor de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda esta réplica y, para una instancia no predeterminada, su nombre de instancia.  
   
- **Role**  
+ **Rol**  
  **Principal**  
  Actualmente la réplica principal.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62791909"
  **Permitir todas las conexiones**  
  Se permiten todas las conexiones con las bases de datos de la réplica principal. Esta es la configuración predeterminada.  
   
- **Permitir conexiones de lectura/escritura**  
+ **Permitir conexiones de lectura o escritura**  
  No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** . Cuando la propiedad Application Intent se establece en **ReadWrite** o no se establece la propiedad de conexión Application Intent, se permite la conexión.  
   
  **Secundario legible**  

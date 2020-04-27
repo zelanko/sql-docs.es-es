@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770730"
 ---
 # <a name="sql-server-destination"></a>SQL Server, destino
@@ -61,7 +61,7 @@ ms.locfileid: "62770730"
   
  Para obtener más información sobre las opciones de carga masiva, vea [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
-#### <a name="performance-improvements"></a>Mejoras en el rendimiento  
+#### <a name="performance-improvements"></a>Mejoras de rendimiento  
  Para mejorar el rendimiento de una inserción masiva y el acceso a los datos de tablas durante la operación de inserción masiva, se deben cambiar las opciones predeterminadas de la manera siguiente:  
   
 -   No comprobar las restricciones en la tabla o vista de destino durante la operación de importación masiva.  
@@ -93,15 +93,15 @@ ms.locfileid: "62770730"
   
 -   [Editor de destino de SQL &#40;página Administrador de conexiones&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [&#40;página asignaciones del editor de destino de SQL&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Editor de destino de SQL &#40;página Asignaciones&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Editor de destino de SQL &#40;página avanzadas&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Editor de destino de SQL &#40;página Avanzadas&#41;](../sql-destination-editor-advanced-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
--   [Propiedades personalizadas del destino de SQL Server](sql-server-destination-custom-properties.md)  
+-   [Propiedades personalizadas del destino SQL Server](sql-server-destination-custom-properties.md)  
   
  Para obtener más información sobre cómo establecer valores de propiedades, haga clic en uno de los temas siguientes:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62770730"
   
 -   Artículo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), en msdn.microsoft.com.  
   
--   Artículo técnico [Usar SQL Server Integration Services para cargar datos de forma masiva](https://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
+-   Artículo técnico sobre cómo [usar SQL Server Integration Services para la carga masiva de datos](https://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Flujo de datos](data-flow.md)  

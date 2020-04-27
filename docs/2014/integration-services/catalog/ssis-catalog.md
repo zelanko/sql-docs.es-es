@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771581"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
@@ -41,12 +41,11 @@ ms.locfileid: "62771581"
 >  Si los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conmutan por error como parte de una conmutación por error de clúster, los paquetes en ejecución no se reinician. Puede usar los puntos de comprobación para reiniciar los paquetes. Para obtener más información, vea [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Identificadores de objeto de catálogo  
- Cuando cree un nuevo objeto en el catálogo, asígnele un nombre El nombre del objeto es un identificador. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define las reglas para las que los caracteres se pueden usar en un identificador. Los nombres de los siguientes objetos deben seguir las reglas de identificador.  
+ Cuando cree un nuevo objeto en el catálogo, asígnele un nombre El nombre del objeto es un identificador. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define las reglas para las que los caracteres se pueden usar en un identificador. Los nombres de los siguientes objetos deben seguir las reglas de identificador.  
   
 -   Carpeta  
   
--   proyecto  
+-   Proyecto  
   
 -   Entorno  
   
@@ -61,8 +60,7 @@ ms.locfileid: "62771581"
   
 -   El nombre no puede contener espacios delante ni detrás.  
   
--   
-  \@ no se permite como primer carácter, pero los caracteres subsiguientes pueden utilizar \@.  
+-   \@ no se permite como primer carácter, pero los caracteres subsiguientes pueden utilizar \@.  
   
 -   La longitud del nombre debe ser mayor que 0 y menor o igual que 128.  
   
@@ -80,8 +78,7 @@ ms.locfileid: "62771581"
   
 -   El nombre no puede contener espacios delante ni detrás.  
   
--   
-  \@ no se permite como primer carácter, pero los caracteres subsiguientes pueden utilizar \@.  
+-   \@ no se permite como primer carácter, pero los caracteres subsiguientes pueden utilizar \@.  
   
 -   La longitud del nombre debe ser mayor que 0 y menor o igual que 128.  
   
@@ -107,7 +104,7 @@ ms.locfileid: "62771581"
   
  El valor mínimo es un día. El valor máximo solo está limitado por el valor máximo de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` datos. Para más información sobre este tipo de datos, vea [int, bigint, smallint y tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
   
- **Quitar versiones anteriores periódicamente**  
+ **Quitar periódicamente versiones anteriores**  
  El paso de trabajo de limpieza de versiones del proyecto se ejecuta cuando esta propiedad se establece en `True`.  
   
  **Número máximo de versiones por proyecto**  
@@ -134,15 +131,15 @@ ms.locfileid: "62771581"
   
  Cambiar el algoritmo de cifrado es una operación que lleva mucho tiempo. En primer lugar, el servidor tiene que utilizar el algoritmo especificado previamente para descifrar todos los valores de configuración. A continuación, el servidor tiene que utilizar el nuevo algoritmo para volver a cifrar los valores. Durante este tiempo, no puede haber otras operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor. Así, para que las operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] continúen sin interrupción, el algoritmo de cifrado es un valor de solo lectura en el cuadro de diálogo de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Para cambiar la configuración de la propiedad **algoritmo de cifrado** , establezca la `SSISDB` base de datos en modo de usuario único y, a continuación, llame al procedimiento almacenado Catalog. configure_catalog. Use ENCRYPTION_ALGORITHM para el argumento *property_name*. Para más información sobre los valores de propiedad admitidos, vea [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Para más información sobre el procedimiento almacenado, vea [catalog.configure_catalog &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Para cambiar la configuración de la propiedad **algoritmo de cifrado** , establezca la `SSISDB` base de datos en modo de usuario único y, a continuación, llame al procedimiento almacenado Catalog. configure_catalog. Use ENCRYPTION_ALGORITHM para el argumento *property_name* . Para más información sobre los valores de propiedad admitidos, vea [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Para más información sobre el procedimiento almacenado, vea [catalog.configure_catalog &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Para más información sobre el modo de usuario único, vea [Establecer una base de datos en modo de usuario único](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Para más información sobre el cifrado y los algoritmos de cifrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea los temas de la sección [Cifrado de SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
- Para el cifrado se utiliza una clave maestra de base de datos. La clave se crea al crear el catálogo. Para más información, vea [Crear el catálogo de SSIS](ssis-catalog.md).  
+ Para el cifrado se utiliza una clave maestra de base de datos. La clave se crea al crear el catálogo. Para obtener más información, vea [Crear el catálogo de SSIS](ssis-catalog.md).  
   
  En la tabla siguiente se muestran los nombres de propiedad que aparecen en el cuadro de diálogo **Propiedades del catálogo** y las propiedades correspondientes de la vista de base de datos.  
   
-|Nombre de la propiedad (cuadro de diálogo**Propiedades del catálogo** )|Nombre de la propiedad (vista de base de datos)|  
+|Nombre de propiedad (cuadro de diálogo**propiedades del catálogo** )|Nombre de la propiedad (vista de base de datos)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Nombre del algoritmo de cifrado|ENCRYPTION_ALGORITHM|  
 |Borrar registros periódicamente|OPERATION_CLEANUP_ENABLED|  
@@ -171,7 +168,7 @@ ms.locfileid: "62771581"
   
 -   Para un proyecto, use la página **Permisos** del [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- Para administrar permisos mediante Transact-SQL, llame a [Catalog. grant_permission &#40;base de datos de ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog. deny_permission &#40;base](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) de datos de SSISDB&#41;y [Catalog. revoke_permission ](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database)&#40;&#41;de base de datos de SSISDB. Para ver los permisos efectivos de la entidad de seguridad actual para todos los objetos, consulte [catalog.effective_object_permissions &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). Este tema proporciona descripciones de los diferentes tipos de permisos. Para ver los permisos asignados explícitamente al usuario, consulte [catalog.explicit_object_permissions &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
+ Para administrar permisos mediante Transact-SQL, llame a [catalog.grant_permission &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) y [catalog.revoke_permission &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Para ver los permisos efectivos de la entidad de seguridad actual para todos los objetos, consulte [catalog.effective_object_permissions &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database). Este tema proporciona descripciones de los diferentes tipos de permisos. Para ver los permisos asignados explícitamente al usuario, consulte [catalog.explicit_object_permissions &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database).  
   
 ## <a name="folders"></a>Carpetas  
  Una carpeta contiene uno o más proyectos y entornos en el `SSISDB` catálogo. Puede usar la vista [catalog.folders &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) para acceder a información sobre las carpetas del catálogo. Puede utilizar los siguientes procedimientos almacenados para administrar carpetas.  

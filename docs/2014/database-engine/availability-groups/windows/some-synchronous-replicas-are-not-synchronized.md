@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2423a011e75d346d196ebe5ebac2597ac30914a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788268"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Algunas réplicas sincrónicas no están sincronizadas
@@ -30,7 +30,7 @@ ms.locfileid: "62788268"
 |**Nombre de directiva**|Estado de sincronización de los datos de réplicas sincrónicas|  
 |**Problema**|Algunas réplicas sincrónicas no están sincronizadas.|  
 |**Categoría**|**Warning (ADVERTENCIA)**|  
-|**Faceta**|grupo de disponibilidad|  
+|**Agrupa**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva acumula el estado de sincronización de datos de todas las réplicas de disponibilidad y comprueba que no están en el estado de sincronización esperado. La directiva está en mal estado cuando alguna réplica asincrónica no está en un estado SYNCHRONIZING y alguna réplica sincrónica no tiene un estado SYNCHRONIZED. De lo contrario, el estado de la directiva es correcto.  
@@ -46,6 +46,6 @@ ms.locfileid: "62788268"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

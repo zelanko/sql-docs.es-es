@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0fb7d422687d0bc956937b30bae261b28edb3931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788264"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Algunas réplicas de disponibilidad no sincronizan datos
@@ -30,7 +30,7 @@ ms.locfileid: "62788264"
 |**Nombre de directiva**|Estado de sincronización de datos de las réplicas de disponibilidad|  
 |**Problema**|Algunas réplicas de disponibilidad no sincronizan datos.|  
 |**Categoría**|**Warning (ADVERTENCIA)**|  
-|**Faceta**|grupo de disponibilidad|  
+|**Agrupa**|grupo de disponibilidad|  
   
 ## <a name="description"></a>Descripción  
  Esta directiva acumula el estado de sincronización de datos de todas las réplicas de disponibilidad en el grupo de disponibilidad y comprueba si la sincronización de alguna réplica de disponibilidad no está operativa. La directiva está en mal estado si alguno de los estados de sincronización de datos de la réplica de disponibilidad es NOT SYNCHRONIZING.  
@@ -48,6 +48,6 @@ ms.locfileid: "62788264"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Usar el panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+ [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

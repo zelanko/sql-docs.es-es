@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245343"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de destino (pestaña Descargar instrucciones)
@@ -32,25 +32,25 @@ ms.locfileid: "63245343"
  **Servidor de destino**  
  Vea el nombre del servidor al que se aplicarán las instrucciones de descarga.  
   
- **Operación**  
+ **operación**  
  Vea la operación que realizará la instrucción de descarga.  
   
  **Nombre de objeto**  
  Muestra el nombre del objeto que se verá afectado por la instrucción de descarga.  
   
- **Fecha de publicación**  
+ **Fecha de exposición**  
  Muestra la fecha y la hora local en la que se expuso la instrucción.  
   
  **Fecha de descarga**  
  Muestra la fecha y la hora local en la que el servidor de destino descargó la instrucción. Si se produce un error durante la descarga, se indicará.  
   
- **Estado de la descarga de instrucciones**  
+ **Estado de instrucciones de descarga**  
  Vea el estado más reciente de la instrucción de descarga seleccionada.  
   
  **Eliminar**  
  Elimina la instrucción de descarga seleccionada.  
   
- **Borrar**  
+ **Claridad**  
  Borra el estado de la instrucción de descarga seleccionada.  
   
 ## <a name="see-also"></a>Consulte también  

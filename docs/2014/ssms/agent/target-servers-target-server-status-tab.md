@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245721"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Servidores de destino (pestaña Estado de servidor de destino)
@@ -29,7 +29,7 @@ ms.locfileid: "63245721"
  **Hora local**  
  Muestra la fecha y la hora del servidor de destino en la zona horaria local de dicho servidor.  
   
- **Último sondeo**  
+ **Sondeo más reciente**  
  Presenta la fecha y hora local en que el servidor de destino sondeó por última vez al servidor principal.  
   
  **Instrucciones no leídas**  
@@ -47,7 +47,7 @@ ms.locfileid: "63245721"
  **Exponer instrucciones**  
  Expone instrucciones en los servidores de destino seleccionados.  
   
- **Habilitar la actualización automática**  
+ **Habilitar actualización automática**  
  Seleccione esta opción para actualizar automáticamente la información mostrada.  
   
  **Actualizar cada**  

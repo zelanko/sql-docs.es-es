@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250270"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Replicación de SQL Server propiedades de suscripción 
@@ -54,17 +54,17 @@ En esta sección se proporciona información sobre el cuadro de diálogo **propi
  **Definición de partición (HOST_NAME)**  
  Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de las dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Tipo de suscripción** y **prioridad**  
+ **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  
   
  Si ha seleccionado un tipo de suscripción de servidor en el Asistente para nueva suscripción, el suscriptor recibe la prioridad que se utiliza durante la resolución de conflictos.  
   
- **Resolver conflictos de forma interactiva**  
+ **Solucionar conflictos de manera interactiva**  
  Establece si se va a utilizar la interfaz de usuario Solucionador interactivo para solucionar conflictos durante la sincronización de mezcla. Requiere un valor de **Habilitado** en **Utilizar el Administrador de sincronización de Windows**. Para obtener más información, consulte [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
 
 
 ## <a name="subscriber-properties"></a>Propiedades del suscriptor
-  El cuadro de diálogo **propiedades de suscripción** del suscriptor le permite ver y establecer las propiedades de las suscripciones de extracción.  
+  El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite ver y establecer las propiedades de las suscripciones de extracción.  
   
  Cada una de las propiedades del cuadro de diálogo **Propiedades de la suscripción** incluye una descripción. Haga clic en una propiedad para mostrar la descripción en la parte inferior del cuadro de diálogo. Este tema ofrece información adicional acerca de varias propiedades. Las propiedades se agrupan en las siguientes categorías:  
   
@@ -84,15 +84,15 @@ En esta sección se proporciona información sobre el cuadro de diálogo **propi
  **Ubicación de la instantánea**  
  Determina la ubicación desde la que se tiene acceso a los archivos de instantáneas durante la inicialización o la reinicialización. La ubicación puede ser uno de los siguientes valores:  
   
--   **Ubicación predeterminada**: la ubicación predeterminada, que se define al configurar un distribuidor. Para obtener más información, vea [especificar la ubicación de instantáneas predeterminada](snapshot-options.md#snapshot-folder-locations).    
--   **Carpeta alternativa**: ubicación alternativa, que puede especificarse en el cuadro de diálogo Propiedades de la **publicación** . Para más información, consulte [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
--   **Carpeta de instantáneas dinámica**: una ubicación de instantáneas para publicaciones de combinación que utilizan filtros de fila con parámetros. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](snapshots-for-merge-publications-with-parameterized-filters.md).  
--   **Carpeta ftp**: una carpeta accesible para un servidor File Transfer Protocol (FTP). Para obtener más información, vea [Transferir instantáneas mediante FTP](transfer-snapshots-through-ftp.md).  
+-   **Ubicación predeterminada**: muestra la ubicación predeterminada, definida al configurar el distribuidor. Para obtener más información, vea [especificar la ubicación de instantáneas predeterminada](snapshot-options.md#snapshot-folder-locations).    
+-   **Carpeta alternativa**: muestra una ubicación alternativa, que puede especificarse en el cuadro de diálogo **Propiedades de la publicación** . Para más información, consulte [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
+-   **Carpeta de instantáneas dinámicas**: muestra una ubicación de instantáneas para las publicaciones de combinación que utilizan filtros de fila con parámetros. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   **Carpeta FTP**: carpeta desde la que se tiene acceso al servidor Protocolo de transferencia de archivos (FTP). Para obtener más información, vea [Transferir instantáneas mediante FTP](transfer-snapshots-through-ftp.md).  
   
  **Carpeta de instantáneas**  
  Si selecciona un valor distinto de **Ubicación predeterminada** en la opción **Ubicación de la instantánea** , deberá especificar la ruta a la carpeta de instantáneas.  
   
- **Usar el administrador de sincronización de Windows**  
+ **Utilizar el Administrador de sincronización de Windows**  
  Determina si es posible sincronizar la suscripción con el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Seguridad**  
@@ -112,16 +112,16 @@ En esta sección se proporciona información sobre el cuadro de diálogo **propi
  **Definición de partición (HOST_NAME)**  
  Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de las dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
- **Tipo de suscripción** y **prioridad**  
+ **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  
   
  Si ha seleccionado un tipo de suscripción de servidor en el Asistente para nueva suscripción, el suscriptor recibe la prioridad que se usa durante la resolución de conflictos.  
   
- **Resolver conflictos de forma interactiva**  
+ **Solucionar conflictos de manera interactiva**  
  Establece si se va a utilizar la interfaz de usuario Solucionador interactivo para solucionar conflictos durante la sincronización de mezcla. Requiere un valor de **Habilitado** en **Utilizar el Administrador de sincronización de Windows**. Para obtener más información, consulte [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
  **Sincronización web**  
- **Usar la sincronización web** determina si se va a [!INCLUDE[msCoName](../../includes/msconame-md.md)] conectar a un servidor Internet Information Services (IIS) para sincronizar la suscripción. Esta opción solo está disponible si la sincronización web está habilitada en la publicación. Para más información, consulte [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
+ **Usar sincronización web** determina si se va a establecer la conexión con un servidor de Internet Information Services (IIS) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar la suscripción. Esta opción solo está disponible si la sincronización web está habilitada en la publicación. Para más información, consulte [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  Si selecciona **True** para **Usar sincronización web**:  
   
@@ -133,7 +133,7 @@ En esta sección se proporciona información sobre el cuadro de diálogo **propi
   
 ## <a name="see-also"></a>Consulte también  
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  
- [Ver y modificar las propiedades de una suscripción de inserción](view-and-modify-push-subscription-properties.md)   
- [Suscribirse a publicaciones](subscribe-to-publications.md)  
+ [Ver y modificar las propiedades de una suscripción de extracción](view-and-modify-push-subscription-properties.md)   
+ [Subscribe to Publications](subscribe-to-publications.md)  
   
   

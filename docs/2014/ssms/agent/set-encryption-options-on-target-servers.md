@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b27dd81df572e289d182fdaa637a3af972b3d603
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63244976"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Establecer opciones de cifrado en servidores de destino
   Si no puede usar un certificado para comunicaciones cifradas con Capa de sockets seguros (SSL) entre servidores principales y alguno o todos los servidores de destino, pero desea cifrar el canal entre ellos, configure el servidor de destino para usar el nivel de seguridad necesario.  
   
- Para configurar el nivel de seguridad adecuado necesario para un canal de comunicación específico entre un servidor maestro y un servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino, establezca la subclave del registro del agente **\\\HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server****>**** \<instance_name \SQLServerAgent\MsxEncryptChannelOptions (REG_DWORD) en el servidor de destino en uno de los siguientes valores. El valor de \< *instance_name*> es **MSSQL.** _n_. Por ejemplo, **MSSQL.1** o **MSSQL.3**.  
+ Para configurar el nivel de seguridad adecuado necesario para un canal de comunicación específico entre un servidor maestro y un servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino, establezca la subclave del registro del agente **\\\HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server***instance_name*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** \<instance_name \SQLServerAgent\MsxEncryptChannelOptions (REG_DWORD) en el servidor de destino en uno de los siguientes valores. El valor de \<*nombre_instancia*> es **MSSQL.**_n_. Por ejemplo, **MSSQL.1** o **MSSQL.3**.  
   
 |Value|Descripción|  
 |-----------|-----------------|  

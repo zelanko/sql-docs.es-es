@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250647"
 ---
 # <a name="sql-server-databases-object"></a>Databases (objeto de SQL Server)
@@ -32,36 +32,36 @@ ms.locfileid: "63250647"
 |Contadores de Databases de SQL Server|Descripción|  
 |-----------------------------------|-----------------|  
 |**Transacciones activas**|Número de transacciones activas de la base de datos|  
-|**Rendimiento de copia de seguridad/restauración/s**|Rendimiento de lectura/escritura por segundo en copias de seguridad y restauración de bases de datos. Por ejemplo, puede medir la variación en el rendimiento de la operación de copia de seguridad de una base de datos cuando se utilizan en paralelo más dispositivos de copia de seguridad o cuando se utilizan dispositivos más rápidos. El rendimiento de la operación de copia de seguridad o restauración de una base de datos permite determinar el progreso y el rendimiento de estas operaciones.|  
-|**Filas de copia masiva/s**|Número de filas copiadas de forma masiva por segundo.|  
-|**Rendimiento de copia masiva/s**|Cantidad de datos copiados de forma masiva (en kilobytes) por segundo.|  
-|**Entradas de tabla de confirmación**|Tamaño de la parte de memoria de la tabla de confirmación para la base de datos. Para obtener más información, vea [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table).|  
+|**Rendimiento de copia de seguridad y restauración/seg.**|Rendimiento de lectura/escritura por segundo en copias de seguridad y restauración de bases de datos. Por ejemplo, puede medir la variación en el rendimiento de la operación de copia de seguridad de una base de datos cuando se utilizan en paralelo más dispositivos de copia de seguridad o cuando se utilizan dispositivos más rápidos. El rendimiento de la operación de copia de seguridad o restauración de una base de datos permite determinar el progreso y el rendimiento de estas operaciones.|  
+|**Copia masiva de filas/seg.**|Número de filas copiadas de forma masiva por segundo.|  
+|**Rendimiento de la copia masiva/seg.**|Cantidad de datos copiados de forma masiva (en kilobytes) por segundo.|  
+|**Entradas de la tabla de confirmación**|Tamaño de la parte de memoria de la tabla de confirmación para la base de datos. Para obtener más información, vea [sys.dm_tran_commit_table &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table).|  
 |**Tamaño de los archivos de datos (KB)**|Tamaño acumulado (en kilobytes) de todos los archivos de datos de la base de datos, incluido el crecimiento automático. La supervisión de este contador resulta útil, por ejemplo, para determinar el tamaño correcto de **tempdb**.|  
 |**Bytes de recorrido lógico DBCC/seg.**|Número de bytes del examen de lectura lógica por segundo para los comandos de la consola de base de datos (DBCC).|  
-|**Frecuencia de aciertos de caché de registro**|Porcentaje de lecturas de la caché del registro atendidas desde la caché del registro.|  
-|**Lecturas de caché de registro/s**|Lecturas realizadas por segundo a través de la caché del administrador de registros.|  
+|**Frecuencia de aciertos de caché del registro**|Porcentaje de lecturas de la caché del registro atendidas desde la caché del registro.|  
+|**Lecturas de caché del registro/seg.**|Lecturas realizadas por segundo a través de la caché del administrador de registros.|  
 |**Tamaño de los archivos de registro (KB)**|Tamaño acumulado (en kilobytes) de todos los archivos de registro de transacciones de la base de datos.|  
-|**Tamaño de los archivos de registro (KB)**|Tamaño acumulado de todos los archivos de registro de la base de datos.|  
+|**Tamaño (KB) utilizado en los archivos de registro**|Tamaño acumulado de todos los archivos de registro de la base de datos.|  
 |**Tiempo de espera de vaciado de registro**|Tiempo de espera total (en milisegundos) para vaciar el registro. En una base de datos secundaria de AlwaysOn, este valor indica el tiempo de espera para que las entradas de registro se protejan en el disco.|  
-|**Esperas de vaciado de registro/s**|Número de confirmaciones por segundo que esperan el vaciado del registro.|  
-|**Tiempo de escritura de vaciado de registro (MS)**|Tiempo, en milisegundos, para realizar operaciones de escritura de vaciados de registro que se completaron en el último segundo.|  
-|**Vaciados de registro/s**|Número de vaciados del registro por segundo.|  
-|**Aumentos de registros**|Número total de ampliaciones del registro de transacciones de la base de datos.|  
-|**Reducciones de registro**|Número total de reducciones del registro de transacciones de la base de datos.|  
+|**Esperas al vaciar el registro/seg.**|Número de confirmaciones por segundo que esperan el vaciado del registro.|  
+|**Tiempo de escritura de vaciados de registro (ms)**|Tiempo, en milisegundos, para realizar operaciones de escritura de vaciados de registro que se completaron en el último segundo.|  
+|**Vaciados del registro/seg.**|Número de vaciados del registro por segundo.|  
+|**Ampliaciones del registro**|Número total de ampliaciones del registro de transacciones de la base de datos.|  
+|**Reducciones del registro**|Número total de reducciones del registro de transacciones de la base de datos.|  
 |**Errores de caché de grupo de registros/s**|Número de solicitudes para las que no estuvo disponibles el bloque de registro en el grupo de registros. El *grupo de registro* es una memoria caché en memoria del registro de transacciones. Esta memoria caché se utiliza para optimizar la lectura en el registro para la recuperación, la replicación de transacciones, la recuperación y [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
 |**Lecturas de disco de grupo de registros/s**|Número de lecturas de disco que el grupo de registros emitió para capturar bloques de registro.|  
 |**Solicitudes de grupo de registros/s**|Número de solicitudes de bloque de registro procesadas por el grupo de registros.|  
 |**Truncamientos de registro**|El número de veces que se ha reducido el registro de transacciones.|  
-|**Porcentaje de registro usado**|Porcentaje de espacio del registro que está en uso.|  
+|**Porcentaje utilizado del registro**|Porcentaje de espacio del registro que está en uso.|  
 |**Repl. Pending transacciones**|Número de transacciones del registro de transacciones de la base de datos de publicación que están marcadas para replicación, pero que no se han entregado todavía a la base de datos de distribución.|  
 |**Tasa repl. trans.**|Número de transacciones leídas por segundo del registro de transacciones de la base de datos de publicación y entregadas a la base de datos de distribución.|  
 |**Bytes de movimiento de datos de reducción/seg.**|Cantidad de datos que se mueven por segundo en operaciones de reducción automática, o instrucciones DBCC SHRINKDATABASE o DBCC SHRINKFILE.|  
-|**Transacciones con seguimiento/seg.**|Número de transacciones confirmadas que se registraron en la tabla de confirmación para la base de datos.|  
-|**Transacciones por segundo**|Número de transacciones iniciadas para la base de datos por segundo.<br /><br /> **Transacciones/s** no cuenta las transacciones solo de XTP (las transacciones iniciadas por un procedimiento almacenado compilado de forma nativa).|  
+|**Transacciones con seguimiento/s**|Número de transacciones confirmadas que se registraron en la tabla de confirmación para la base de datos.|  
+|**Transacciones/seg.**|Número de transacciones iniciadas para la base de datos por segundo.<br /><br /> **Transacciones/s** no cuenta las transacciones solo de XTP (las transacciones iniciadas por un procedimiento almacenado compilado de forma nativa).|  
 |**Transacciones de escritura/s**|Número de transacciones que se escribieron en la base de datos y se confirmaron, en el último segundo.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)   
+ [Supervisar el uso de recursos &#40;el monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de base de datos](sql-server-database-replica.md)  
   
   

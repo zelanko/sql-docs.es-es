@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245749"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propiedades de Agente SQL Server (página Sistema de alerta)
@@ -26,7 +26,7 @@ ms.locfileid: "63245749"
  **Sesión de correo**  
  Las opciones de esta sección configuran el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Habilitar Perfil de correo**  
+ **Habilitar perfil de correo**  
  Habilita el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma predeterminada, el correo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está habilitado.  
   
  **Sistema de correo**  
@@ -44,10 +44,10 @@ ms.locfileid: "63245749"
  **Formato de dirección para correo electrónico de buscapersonas**  
  Esta sección le permite especificar el formato de las direcciones y la línea de asunto que se incluyen en los mensajes de correo electrónico de buscapersonas.  
   
- **A línea**  
+ **Línea Para**  
  Especifica las opciones de la línea **Para** del mensaje  
   
- **Prefijo**  
+ **Ceder**  
  Escriba cualquier tipo de texto fijo que su sistema exija al principio de la línea **Para** de los mensajes que se envían a un buscapersonas.  
   
  **Buscapersonas**  
@@ -59,7 +59,7 @@ ms.locfileid: "63245749"
  **Línea CC**  
  Especifica las opciones de la línea **CC** del mensaje.  
   
- **Prefijo**  
+ **Ceder**  
  Escriba cualquier tipo de texto fijo que su sistema exija al principio de la línea **CC** de los mensajes que se envían a un buscapersonas.  
   
  **Buscapersonas**  
@@ -68,16 +68,16 @@ ms.locfileid: "63245749"
  **Sufijo**  
  Escriba cualquier tipo de texto fijo que su sistema de localización exija al final de la línea **CC** de los mensajes que se envían a un buscapersonas.  
   
- **Asunto**  
+ **Subject**  
  Especifica las opciones del asunto del mensaje  
   
- **Prefijo**  
+ **Ceder**  
  Escriba cualquier tipo de texto fijo que su sistema de localización exija al principio de la línea **Asunto** de los mensajes que se envían a un buscapersonas.  
   
  **Sufijo**  
  Escriba cualquier tipo de texto fijo que su sistema de localización exija al final de la línea **Asunto** de los mensajes que se envían a un buscapersonas.  
   
- **Incluir el cuerpo del correo electrónico en el mensaje de notificación**  
+ **Incluir cuerpo del mensaje en la notificación**  
  Incluye el cuerpo de un mensaje de correo electrónico en el mensaje que se envía al buscapersonas.  
   
  **Operador para notificaciones de error**  
@@ -86,7 +86,7 @@ ms.locfileid: "63245749"
  **Habilitar operador para notificaciones de error**  
  Especifica un operador para notificaciones de error.  
   
- **Operator**  
+ **Operador**  
  Establece el nombre del operador para recibir notificaciones de error.  
   
  **Notificar mediante**  

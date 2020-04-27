@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245009"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Propiedades de Protocolos de MSSQLSERVER (pestaña Certificado)
@@ -33,7 +33,7 @@ ms.locfileid: "63245009"
  **Borrar**  
  Quita la selección del cuadro **Certificado** .  
   
- **Certificado**  
+ **Certificate**  
  Nombre del certificado determinado por el proveedor de seguridad. Seleccione un certificado para ver los detalles en la cuadrícula de propiedades.  
   
 ## <a name="options"></a>Opciones  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249400"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personalizar y procesar el modelo de pronóstico (tutorial intermedio de minería de datos)
@@ -57,12 +57,12 @@ ms.locfileid: "63249400"
   
 3.  En la `FORECAST_METHOD` fila, compruebe que el cuadro de texto **valor** está en blanco o establecido `MIXED`en. Si se ha especificado un valor diferente, escriba `MIXED` para volver a cambiar el parámetro al valor predeterminado.  
   
-4.  En la fila **PREDICTION_SMOOTHING** , compruebe que el cuadro de texto **valor** está en blanco o establecido en 0,5. Si se ha especificado un valor diferente, haga **** clic en valor `0.5` y escriba para volver a cambiar el parámetro al valor predeterminado.  
+4.  En la fila **PREDICTION_SMOOTHING** , compruebe que el cuadro de texto **valor** está en blanco o establecido en 0,5. Si se ha especificado un valor diferente, haga **Value** clic en valor `0.5` y escriba para volver a cambiar el parámetro al valor predeterminado.  
   
     > [!NOTE]  
     >  El parámetro PREDICTION_SMOOTHING solo está disponible en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise. Por consiguiente, en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard no puede ver ni cambiar el valor del parámetro PREDICTION_SMOOTHING. Sin embargo, el comportamiento predeterminado es utilizar los dos algoritmos y ponderarlos de forma equitativa.  
   
-5.  Haga clic en **OK**.  
+5.  Haga clic en **Aceptar**.  
   
 ## <a name="handling-missing-data-optional"></a>Manejar la ausencia de datos (opcional)  
  En muchos casos, los datos de ventas podrían tener huecos que se rellenan con caracteres nulos, o es posible que un almacén no haya podido cumplir la fecha tope de notificación, con lo que se ha dejado una celda vacía al final de la serie. En estos escenarios, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] genera el error siguiente y no procesa el modelo.  
@@ -106,6 +106,6 @@ ms.locfileid: "63249400"
 ## <a name="see-also"></a>Consulte también  
  [Referencia técnica del algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Algoritmo de serie temporal de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Requisitos y consideraciones de procesamiento &#40;la minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

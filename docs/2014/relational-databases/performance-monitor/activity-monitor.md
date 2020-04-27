@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249340"
 ---
 # <a name="activity-monitor"></a>Monitor de actividad
@@ -38,7 +38,7 @@ ms.locfileid: "63249340"
   
 |||  
 |-|-|  
-|**Descripción**|**Tema.**|  
+|**Descripción**|**Tema**|  
 |Describe cómo abrir el Monitor de actividad y la forma en que se establece el intervalo de actualización del Monitor de actividad.|[Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |Vínculos a temas de supervisión de la actividad y el rendimiento del servidor.|[Supervisión de la actividad y rendimiento del servidor](../performance/server-performance-and-activity-monitoring.md)|  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245421"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Solucionar problemas de trabajos multiservidor que usan servidores proxy
@@ -25,7 +25,7 @@ ms.locfileid: "63245421"
   
 -   "Este trabajo requiere una cuenta de proxy, pero la coincidencia de proxy se ha deshabilitado en el servidor de destino."  
   
-     Para resolver este error, establezca el valor de **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\Mssql.** >**** _ \<n_subclave del registro \SQLServerAgent\AllowDownloadedJobsToMatchProxyName en **1 (true)**. De forma predeterminada, esta subclave se **** establece en`false`0 (). El valor de **MSSQL.** \< *n*> es el nombre de la instancia; por ejemplo, **MSSQL. 1** o **MSSQL. 3**.  
+     Para resolver este error, establezca el valor de **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\Mssql.** >**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** _ \<n_subclave del registro \SQLServerAgent\AllowDownloadedJobsToMatchProxyName en **1 (true)**. De forma predeterminada, esta subclave se **0** establece en`false`0 (). El valor de **MSSQL.** \< *n*> es el nombre de la instancia; por ejemplo, **MSSQL. 1** o **MSSQL. 3**.  
   
 -   "No se encontró el proxy".  
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921179"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar una base de datos a una nueva ubicación (SQL Server)
@@ -49,33 +49,33 @@ ms.locfileid: "62921179"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El administrador del sistema encargado de restaurar una copia de seguridad de la base de datos completa debe ser la única persona que esté utilizando la base de datos que se va a restaurar.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   En el modelo de recuperación optimizado para cargas masivas de registros o completo, para poder restaurar una base de datos, se debe realizar una copia de seguridad del registro de transacciones activo. Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)).  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
--   Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, vea [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+-   Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
 -   Para obtener información sobre consideraciones adicionales para mover una base de datos, vea [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md).  
   
--   Si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Sin embargo, si [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] una base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, dependiendo de la configuración de la propiedad **upgrade_option** Server. Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option** , use [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql).  
+-   Si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero si la base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor  **upgrade_option** . Si la opción de actualización se establece en importar (**upgrade_option** = 2) o en volver a generar (**upgrade_option** = 0), los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Observe también que cuando la opción de actualización se establece en importar, se vuelven a generar los índices de texto completo asociados si no se dispone de un catálogo de texto completo. Para cambiar el valor de la propiedad de servidor **upgrade_option** , use [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql).  
   
-###  <a name="Security"></a> Seguridad  
- Por razones de seguridad, se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar una base de datos de un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos en un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
+ Por razones de seguridad, se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos.  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-restore-a-database-to-a-new-location-and-optionally-rename-the-database"></a>Para restaurar una base de datos en una nueva ubicación y, opcionalmente, cambiar el nombre de la base de datos  
   
@@ -94,13 +94,13 @@ ms.locfileid: "62921179"
   
     1.  **Dispositivo**  
   
-         Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad**, seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad**, haga clic en **Agregar**.  
   
-         Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
+         Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad**, haga clic en **Aceptar** para volver a la página **General**.  
   
          En el cuadro de lista **Origen: Dispositivo: Base de datos** , seleccione el nombre de la base de datos que se debe restaurar.  
   
-         **Nota** : esta lista solo está disponible cuando se selecciona **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.  
+         **Nota:** Esta lista solo está disponible cuando se selecciona **dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.  
   
 4.  En la sección **Destino** , el cuadro **Base de datos** se rellena automáticamente con el nombre de la base de datos que se va a restaurar. Para cambiar el nombre de la base de datos, especifique el nuevo nombre en el cuadro **Base de datos** .  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62921179"
   
 8.  Si lo desea, en la página **Opciones** ajuste las opciones. Para obtener más información sobre estas opciones, vea [Restaurar base de datos &#40;página Opciones&#41;](restore-database-options-page.md).  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-restore-a-database-to-a-new-location-and-optionally-rename-the-database"></a>Para restaurar una base de datos en una nueva ubicación y, opcionalmente, cambiar el nombre de la base de datos  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62921179"
   
      {  
   
-     [ **RECOVERY** | NORECOVERY ]  
+     [ **Recuperación** | NORECOVERY  
   
      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
@@ -162,11 +162,11 @@ ms.locfileid: "62921179"
      *backup_device* [ `,`... *n* ]  
      Especifica una lista que contiene entre 1 y 64 dispositivos de copia de seguridad (separados por comas) desde los que se restaurará la copia de seguridad de la base de datos. Puede especificar un dispositivo físico de copia de seguridad o puede especificar el dispositivo de copia de seguridad lógico correspondiente, si se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:  
   
-     {DISCO | Cinta} `=` *physical_backup_device_name*  
+     { DISK | TAPE } `=`*physical_backup_device_name*  
   
      Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
-     { **Recuperación** | NORECOVERY  
+     { **RECOVERY** | NORECOVERY }  
      Si la base de datos usa el modelo de recuperación completa, es posible que deba aplicar copias de seguridad de registros de transacciones después de restaurar la base de datos. En este caso, especifique la opción NORECOVERY.  
   
      En caso contrario, use la opción RECOVERY, que es la predeterminada.  
@@ -187,7 +187,7 @@ ms.locfileid: "62921179"
     |*operating_system_file_name*|Especifica una nueva ubicación para el archivo especificado por *logical_file_name_in_backup*. El archivo se restaurará en esta ubicación.<br /><br /> Opcionalmente, *operating_system_file_name* especifica un nombre de archivo nuevo para el archivo restaurado. Lo cual sería necesario si fuese a crear una copia de una base de datos existente en la misma instancia de servidor.|  
     |*n*|Es un marcador de posición que indica que puede especificar instrucciones MOVE adicionales.|  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Ejemplo (Transact-SQL)  
  En este ejemplo se crea una base de datos denominada `MyAdvWorks` restaurando una copia de seguridad de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , que incluye dos archivos: [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log. Esta base de datos usa el modelo de recuperación simple. La base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ya existe en la instancia de servidor y, por lo tanto, los archivos de la copia de seguridad deben restaurarse en una nueva ubicación. La instrucción RESTORE FILELISTONLY se utiliza para determinar el número y los nombres de los archivos de la base de datos que se restaura. La copia de seguridad de la base de datos es el primer conjunto de copia de seguridad del dispositivo de copia de seguridad.  
   
 > [!NOTE]  
@@ -212,7 +212,7 @@ GO
   
  Para obtener un ejemplo de cómo crear una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -223,7 +223,7 @@ GO
 -   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](../databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md)  
   

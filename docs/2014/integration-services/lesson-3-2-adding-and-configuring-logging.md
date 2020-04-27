@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892441"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>Paso 2: Agregar y configurar el registro
+# <a name="step-2-adding-and-configuring-logging"></a>Paso 2: Adición y configuración de registro
   En esta tarea, habilitará el registro del flujo de datos del paquete Lesson 3.dtsx. A continuación, configurará un proveedor de registro de archivos de texto para registrar los eventos PipelineExecutionPlan y PipelineExecuteTrees. El proveedor de registro de archivos de texto crea registros que pueden verse y transportarse con facilidad. La sencillez de estos archivos de registro hace que sean especialmente útiles durante la fase de prueba básica de un paquete. También puede ver las entradas del archivo de registro en la ventana Registrar eventos del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ### <a name="to-add-logging-to-the-package"></a>Para agregar el registro al paquete  
@@ -45,7 +45,7 @@ ms.locfileid: "62892441"
 9. En el panel **Contenedores** , expanda todos los nodos de la jerarquía del contenedor de paquetes y, a continuación, desactive todas las casillas, incluida **Extract Sample Currency Data** . Ahora, active la casilla **Extract Sample Currency Data** para obtener solo los eventos de este nodo.  
   
     > [!IMPORTANT]  
-    >  Si la casilla **Extract Sample Currency Data** está atenuada en lugar de activada, la tarea usa la configuración de registro del contenedor primario y no se pueden habilitar los eventos de registro específicos de la tarea.  
+    >   Si la casilla **Extract Sample Currency Data** está atenuada en lugar de activada, la tarea utiliza la configuración de registro del contenedor primario y no se pueden habilitar los eventos de registro específicos de la tarea.  
   
 10. En la columna **Eventos** de la pestaña **Detalles** , seleccione los eventos **PipelineExecutionPlan** y **PipelineExecutionTrees** .  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62892441"
   
 13. En la pestaña **proveedor y registros** , en la columna **nombre** , seleccione `Lesson 3 Log File`. Una vez que haya creado un proveedor de registro para el paquete, si lo desea, puede anular su selección para desactivar temporalmente el registro, sin tener que eliminar un proveedor de registro y crearlo de nuevo.  
   
-14. Haga clic en **OK**.  
+14. Haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
- [Paso 3: Probar el paquete del tutorial de la lección 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+## <a name="next-steps"></a>Pasos a seguir  
+ [Paso 3: Prueba del paquete del tutorial de la lección 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

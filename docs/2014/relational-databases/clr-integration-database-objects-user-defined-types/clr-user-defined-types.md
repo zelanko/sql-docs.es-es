@@ -33,14 +33,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7044fdc4c29110870e20cd2f9fe4f2140659e551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874435"
 ---
-# <a name="clr-user-defined-types"></a>Tipos definidos por el usuario de CLR
-  
+# <a name="clr-user-defined-types"></a>Tipos CLR definidos por el usuario
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece la posibilidad de crear objetos de base de datos programados en un ensamblado creado en Common Language Runtime (CLR) de .NET Framework. Los objetos de base de datos que pueden aprovechar el complejo modelo de programación que proporciona CLR incluyen desencadenadores, procedimientos almacenados, funciones, funciones de agregado y tipos.  
   
 > [!NOTE]  
@@ -79,7 +78,7 @@ ms.locfileid: "62874435"
  [Trabajar con tipos definidos por el usuario en SQL Server](working-with-user-defined-types-in-sql-server.md)  
  Describe cómo crear consultas mediante los UDT.  
   
- [Obtener acceso a tipos definidos por el usuario en ADO.NET](accessing-user-defined-types-in-ado-net.md)  
+ [Acceso a tipos definidos por el usuario en ADO.NET](accessing-user-defined-types-in-ado-net.md)  
  Describe cómo trabajar con los UDT mediante el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ADO.NET.  
   
   

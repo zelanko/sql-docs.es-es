@@ -33,18 +33,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917282"
 ---
 # <a name="database-files-and-filegroups"></a>Archivos y grupos de archivos de base de datos
   Como mínimo, todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen dos archivos del sistema operativo: un archivo de datos y un archivo de registro. Los archivos de datos contienen datos y otros objetos, como tablas, índices, procedimientos almacenados y vistas. Los archivos de registro contienen la información necesaria para recuperar todas las transacciones de la base de datos. Los archivos de datos se pueden agrupar en grupos de archivos para su asignación y administración.  
   
 ## <a name="database-files"></a>Archivos de la base de datos  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen tres tipos de archivos, tal como se muestra en la tabla siguiente.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen tres tipos de archivos, tal como se muestra en la tabla siguiente.  
   
 |Archivo|Descripción|  
 |----------|-----------------|  

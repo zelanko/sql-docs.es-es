@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fea64ffe80475bf1dca380c3ca416a9e2a449213
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911715"
 ---
 # <a name="isreadonly-property-sqlserviceadvancedproperty-class"></a>Propiedad IsReadOnly (clase SqlServiceAdvancedProperty)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlServiceAdvancedProperty](sqlserviceadvancedproperty-class.md) que representa una propiedad avanzada.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

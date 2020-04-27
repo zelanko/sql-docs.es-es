@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920684"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Copias de seguridad de registros de transacciones (SQL Server)
@@ -37,10 +37,10 @@ ms.locfileid: "62920684"
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a>Cómo funciona una secuencia de copias de seguridad de registros  
+##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>Cómo funciona una secuencia de copias de seguridad de registros  
  La secuencia de las copias de seguridad del registro de transacciones ( *cadena de registros* ) es independiente de las copias de seguridad de los datos. Por ejemplo, suponga la siguiente secuencia de eventos.  
   
-|Time|Evento|  
+|Tiempo|Evento|  
 |----------|-----------|  
 |8:00 a. m.|Copia de seguridad de la base de datos.|  
 |Mediodía|Copia de seguridad del registro de transacciones.|  
@@ -50,7 +50,7 @@ ms.locfileid: "62920684"
   
  La copia de seguridad de registros de transacciones creada a las 8:00 p.m contiene las entradas de registros de transacciones comprendidas entre las 4:00 p.m. y las 8:00 p.m., período que abarca el momento en que se creó la copia de seguridad de base de datos completa (a las 6:00 p.m.). La secuencia de copias de seguridad de registros de transacciones es continua desde la primera copia de seguridad de base de datos completa, creada a las 8:00 a.m. hasta la última copia de seguridad de registros de transacciones, creada a las 8:00 p.m. Para obtener más información sobre cómo aplicar estas copias de seguridad de registros, vea el ejemplo de [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-##  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Si el registro de transacciones resulta dañado, perderá el trabajo realizado desde la última copia de seguridad válida. Por tanto, le recomendamos encarecidamente que sitúe los archivos de registro en un almacenamiento con tolerancia a errores.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62920684"
   
 -   De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si hace una copia de seguridad del registro de transacciones con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, con lo que se crean registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro utilizando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para crear una copia de seguridad del registro de transacciones**  
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
@@ -67,7 +67,7 @@ ms.locfileid: "62920684"
   
  Para programar trabajos de copia de seguridad, vea [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

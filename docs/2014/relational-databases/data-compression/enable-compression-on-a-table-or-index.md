@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c3515610a0c833a17c78602ff48ed488b739ec5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918320"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Habilitar compresión de una tabla o un índice
@@ -46,9 +46,9 @@ ms.locfileid: "62918320"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   En las tablas del sistema no se puede habilitar la compresión.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "62918320"
   
 -   No se puede cambiar la configuración de compresión de una partición única si la tabla tiene índices no alineados.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o índice.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-enable-compression-on-a-table-or-index"></a>Para habilitar la compresión de una tabla o un índice  
   
@@ -197,7 +197,7 @@ ms.locfileid: "62918320"
   
      Cuando termine, haga clic en **Cerrar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-enable-compression-on-a-table"></a>Para habilitar la compresión en una tabla  
   

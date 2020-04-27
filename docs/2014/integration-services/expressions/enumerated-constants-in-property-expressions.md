@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898903"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas en expresiones de propiedad
@@ -43,7 +43,7 @@ ms.locfileid: "62898903"
   
  [Common Properties](#CommonProperties)  
   
-##  <a name="Package"></a> Paquete  
+##  <a name="package"></a><a name="Package"></a> Paquete  
  Las siguientes tablas enumeran los nombres descriptivos y los equivalentes de valores numéricos de las propiedades de paquetes que se establecen utilizando valores de un enumerador.  
   
  `PackageType`propiedad: se establece mediante el uso de `DTSPackageType` valores de la enumeración.  
@@ -86,7 +86,7 @@ ms.locfileid: "62898903"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> Restricciones de precedencia  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> Restricciones de precedencia  
  `EvalOp`propiedad: se establece mediante el uso de `DTSPrecedenceEvalOp` valores de la enumeración.  
   
 |Nombre descriptivo en DTSPrecedenceEvalOp|Valor numérico|  
@@ -105,7 +105,7 @@ ms.locfileid: "62898903"
 |Completion|2|  
 |Canceled|3|  
   
-##  <a name="Foreach"></a> Enumeradores de bucle Foreach  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Enumeradores de bucle Foreach  
  El bucle Foreach incluye un conjunto de enumeradores con propiedades que se pueden establecer a partir de expresiones de propiedad.  
   
 ### <a name="foreach-ado-enumerator"></a>Enumerador de ADO para Foreach  
@@ -143,7 +143,7 @@ ms.locfileid: "62898903"
 |Nodo|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> Tareas  
+##  <a name="tasks"></a><a name="Tasks"></a> Tareas  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye numerosas tareas con propiedades que se establecen a partir de expresiones de propiedad.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services  
@@ -475,7 +475,7 @@ ms.locfileid: "62898903"
 |Fast (rápido)|1|  
 |Preciso|2|  
   
-##  <a name="MaintenancePlanTasks"></a> Tareas del plan de mantenimiento  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Tareas del plan de mantenimiento  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye un conjunto de tareas que realiza tareas de SQL Server para utilizar en planes de mantenimiento y paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite el trabajo con estas tareas mediante programación y la documentación de referencia de programación no incluye documentación de API de estas tareas y sus enumeradores.  
@@ -568,7 +568,7 @@ ms.locfileid: "62898903"
 |Índice|2|  
 |All|3|  
   
-##  <a name="CommonProperties"></a> Propiedades comunes  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> Propiedades comunes  
  Los paquetes, tareas, y los contenedores de secuencias, de bucles Foreach y de bucles For pueden utilizar las siguientes enumeraciones para establecer las propiedades especificadas.  
   
  `ForceExecutionResult`propiedad: se establece mediante el uso de `DTSForcedExecResult` valores de la enumeración.  

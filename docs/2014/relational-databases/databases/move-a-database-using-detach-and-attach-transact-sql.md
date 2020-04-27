@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917101"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover una base de datos mediante Separar y Adjuntar (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62917101"
     > [!NOTE]  
     >  Si intenta adjuntar la base de datos sin especificar el archivo de registro, la operación de adjuntar buscará el archivo de registro en su ubicación original. Si aún hay una copia del registro en la ubicación original, se adjunta esa copia. Para evitar que se utilice el archivo de registro original, especifique la ruta de acceso del nuevo archivo de registro o elimine la copia original del archivo de registro (después de copiarlo en la nueva ubicación).  
   
-3.  Adjunte los archivos copiados. Para más información, consulte [Asociar una base de datos](attach-a-database.md).  
+3.  Adjunte los archivos copiados. Para obtener más información, consulte [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se crea una copia [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] de las instrucciones que se ejecutan en una ventana del editor de consultas que está conectada a la instancia del servidor a la que está asociada.  

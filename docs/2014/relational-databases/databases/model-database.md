@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916951"
 ---
 # <a name="model-database"></a>Base de datos model
@@ -89,7 +89,7 @@ ms.locfileid: "62916951"
   
 -   Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  
   
--   Cambiar el propietario de la base de datos. el **modelo** es propiedad de **SA**.  
+-   Cambiar el propietario de la base de datos. **model** es propiedad de **sa**.  
   
 -   Eliminar la base de datos.  
   

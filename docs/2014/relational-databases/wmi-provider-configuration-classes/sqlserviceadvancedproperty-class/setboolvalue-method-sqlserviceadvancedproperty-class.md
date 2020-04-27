@@ -15,20 +15,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62911407"
 ---
 # <a name="set-breakpoints"></a>Establecer puntos de interrupción
   Utilice el cuadro de diálogo **Establecer puntos de interrupción** para especificar los eventos en los que se deben habilitar puntos de interrupción y para controlar el comportamiento del punto de interrupción.  
   
 ## <a name="options"></a>Opciones  
- **Enabled**  
+ **Habilitado**  
  Seleccione esta opción para habilitar un punto de interrupción en un evento.  
   
- **Condición de interrupción**  
+ **Break Condition**  
  Vea una lista de los eventos disponibles en los que se establecen puntos de interrupción.  
   
  **Tipo de número de llamadas**  
@@ -36,7 +36,7 @@ ms.locfileid: "62911407"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Siempre**|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
+|**Deben**|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
 |**Número de llamadas igual a**|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual al número de llamadas.|  
 |**Recuento de visitas mayor que o igual a**|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual a o mayor que el número de llamadas.|  
 |**Múltiplo del número de llamadas**|La ejecución se suspende cuando se produce un múltiplo de número de llamadas. Por ejemplo, si establece esta opción en 5, la ejecución se suspende cada cinco veces.|  

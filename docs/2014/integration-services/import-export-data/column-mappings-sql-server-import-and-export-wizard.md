@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893046"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "62893046"
  **Crear tabla o archivo de destino**  
  Especifique si debe crearse una tabla de destino si todavía no existe.  
   
- **Eliminar filas en la tabla o el archivo de destino**  
+ **Eliminar filas en la tabla o archivo de destino**  
  Especifique si deben eliminarse datos de una tabla existente antes de cargar datos nuevos.  
   
  **Anexar filas a la tabla o archivo de destino**  
@@ -65,10 +65,10 @@ ms.locfileid: "62893046"
  **Destino**  
  Especifique si desea omitir una columna durante la operación de copia. Puede copiar solo un subconjunto de columnas si selecciona ** \<omitir>** en esta columna para las columnas que desea omitir. Antes de asignar columnas, debe omitir todas las columnas que no se asignarán.  
   
- **Tipo**  
+ **Type**  
  Seleccione un tipo de datos para la columna.  
   
- **Nullable**  
+ **Admisión de valores NULL**  
  Especifique si una columna aceptará un valor NULL.  
   
  **Tamaño**  

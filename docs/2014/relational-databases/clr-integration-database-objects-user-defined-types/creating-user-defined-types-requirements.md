@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919662"
 ---
 # <a name="user-defined-type-requirements"></a>Requisitos de tipos definidos por el usuario
@@ -35,8 +35,7 @@ ms.locfileid: "62919662"
   
  El UDT debe especificar `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`. El uso de `System.SerializableAttribute` es opcional, aunque recomendable.  
   
--   El UDT debe implementar la interfaz `System.Data.SqlTypes.INullable` en la clase o estructura mediante la creación de un método público `static` (`Shared` en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) `Null`. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene en cuenta el valor NULL de forma predeterminada. Esto es necesario para que el código que se ejecuta en el UDT pueda reconocer un valor NULL.  
+-   El UDT debe implementar la interfaz `System.Data.SqlTypes.INullable` en la clase o estructura mediante la creación de un método público `static` (`Shared` en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) `Null`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene en cuenta el valor NULL de forma predeterminada. Esto es necesario para que el código que se ejecuta en el UDT pueda reconocer un valor NULL.  
   
 -   El UDT debe contener un método `static` (o `Shared`) `Parse` público que admita el análisis y un método `ToString` público para la conversión en una representación de cadena del objeto.  
   
@@ -46,8 +45,7 @@ ms.locfileid: "62919662"
   
 -   Solo debe haber una serialización de un objeto UDT. Se produce un error en la validación si las rutinas de serialización o deserialización reconocen más de una representación de un objeto determinado.  
   
--   
-  `SqlUserDefinedTypeAttribute.IsByteOrdered` debe ser `true` para comparar los datos en orden de bytes. Si no se implementa la interfaz IComparable e `SqlUserDefinedTypeAttribute.IsByteOrdered` es `false`, las comparaciones del orden de bytes no se realizarán correctamente.  
+-   `SqlUserDefinedTypeAttribute.IsByteOrdered` debe ser `true` para comparar los datos en orden de bytes. Si no se implementa la interfaz IComparable e `SqlUserDefinedTypeAttribute.IsByteOrdered` es `false`, las comparaciones del orden de bytes no se realizarán correctamente.  
   
 -   Un UDT definido en una clase debe tener un constructor público que no tome ningún argumento. Si lo desea, puede crear otros constructores de clase sobrecargados.  
   
@@ -81,8 +79,7 @@ ms.locfileid: "62919662"
   
 -   Todos los campos deben ser serializables.  
   
--   Debe especificarse `System.Runtime.InteropServices.StructLayoutAttribute` como `StructLayout.LayoutKindSequential` si el UDT se define en una clase y no en una estructura. Este atributo controla el diseño físico de los campos de datos y se usa para imponer a los miembros que se coloquen en el orden en que aparecen. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa este atributo para determinar el orden de los campos para los UDT con varios valores.  
+-   Debe especificarse `System.Runtime.InteropServices.StructLayoutAttribute` como `StructLayout.LayoutKindSequential` si el UDT se define en una clase y no en una estructura. Este atributo controla el diseño físico de los campos de datos y se usa para imponer a los miembros que se coloquen en el orden en que aparecen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa este atributo para determinar el orden de los campos para los UDT con varios valores.  
   
  Para obtener un ejemplo de un UDT definido `Native` con serialización, vea el UDT Point en [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
   
@@ -103,8 +100,7 @@ ms.locfileid: "62919662"
 ## <a name="serialization-attributes"></a>Atributos de serialización  
  Los atributos determinan el modo de usar la serialización para construir la representación de almacenamiento de los UDT y para transmitirlos por valor al cliente. Es necesario que especifique `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` al crear el UDT. El atributo `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` indica que la clase es un UDT y especifica el almacenamiento para el UDT. Si lo desea, puede especificar el atributo `Serializable`, aunque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no lo requiere.  
   
- 
-  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` tiene las siguientes propiedades.  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` tiene las siguientes propiedades.  
   
  `Format`  
  Especifica el formato de serialización, que puede ser `Native` o `UserDefined`, en función de los tipos de datos del UDT.  

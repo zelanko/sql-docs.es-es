@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62895494"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Mejorar una salida de errores con el componente de script
@@ -89,7 +89,7 @@ public class ScriptMain:
   
 ## <a name="see-also"></a>Consulte también  
  [Control de errores en los datos](../data-flow/error-handling-in-data.md)   
- [Usar salidas de error en un componente de flujo de datos](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
+ [Usar las salidas de error en un componente de flujo de datos](../extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Crear una transformación sincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) 
   
   

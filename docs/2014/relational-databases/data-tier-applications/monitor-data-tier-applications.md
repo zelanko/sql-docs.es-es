@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918147"
 ---
 # <a name="monitor-data-tier-applications"></a>Supervisar aplicaciones de capa de datos
-  Una aplicación de capa de datos (DAC) se puede supervisar desde el **Explorador** de la utilidad [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y **Explorador de objetos** en (SSMS), junto con las vistas del sistema y las tablas. Además, todos los objetos de la base de datos contenida en la DAC se pueden supervisar usando las técnicas de supervisión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y base de datos estándar.  
+  Una aplicación de capa de datos (DAC) se puede supervisar desde el **Explorador de Utilidad** y el **Explorador de objetos** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), junto con las vistas de sistema y las tablas. Además, todos los objetos de la base de datos contenida en la DAC se pueden supervisar usando las técnicas de supervisión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y base de datos estándar.  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
- Si implementa una DAC en una instancia administrada del [!INCLUDE[ssDE](../../includes/ssde-md.md)], la información acerca de la DAC implementada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Después puede ver la información básica de estado acerca de la DAC mediante el Explorador de la utilidad[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ****.  
+ Si implementa una DAC en una instancia administrada del [!INCLUDE[ssDE](../../includes/ssde-md.md)], la información acerca de la DAC implementada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Después puede ver información básica de estado sobre la DAC mediante el [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Explorador de la utilidad**de**.  
   
  El **Explorador de objetos** SSMS muestra información de configuración básica acerca de cada DAC implementada en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], independientemente de si la instancia está administrada en la utilidad de SQL Server. Además, la base de datos asociada con la DAC implementada puede supervisarse con los mismos procedimientos usados para supervisar cualquier base de datos.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62918147"
   
  Las directivas de supervisión de aplicaciones definidas en la página de detalles **Administración de la utilidad** define los límites mínimo y máximo para el uso de recursos. Los administradores de bases de datos pueden personalizar las directivas para que cumplan los límites establecidos por las organizaciones. Por ejemplo, una compañía podría establecer 75% como la utilización máxima de CPU para una DAC, mientras que otra compañía podría establecer en un 80% el máximo. Para obtener más información sobre cómo establecer las directivas de supervisión de aplicaciones, vea [Administración de la utilidad &#40;Utilidad de SQL Server&#41;](../../database-engine/utility-administration-sql-server-utility.md).  
   
- Para ver la página de detalles **Aplicaciones de capa de datos implementadas**:  
+ Para ver la página de detalles **Aplicaciones de capa de datos implementadas** :  
   
 1.  Seleccione el menú **Ver/Explorador de utilidades** .  
   

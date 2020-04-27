@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876698"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de copia de seguridad (página Contenido de los medios)
@@ -68,7 +68,7 @@ ms.locfileid: "62876698"
 |**Nombre de usuario**|Nombre del usuario que realizó la operación de copia de seguridad.|  
 |**Expiración**|Fecha y hora de expiración del conjunto de copias de seguridad.|  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902477"
 ---
 # <a name="flat-file-destination"></a>Destino de archivo plano
@@ -46,11 +46,11 @@ ms.locfileid: "62902477"
   
 -   [Editor de destino de archivos planos &#40;página Administrador de conexiones&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Página asignaciones &#40;del editor de destino de archivos planos&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Editor de destino de archivos planos &#40;página Asignaciones&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas de archivo plano](flat-file-custom-properties.md)  
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891768"
 ---
-# <a name="step-1-creating-a-new-integration-services-project"></a>Paso 1: Crear un nuevo proyecto de Integration Services
+# <a name="step-1-creating-a-new-integration-services-project"></a>Paso 1: Creación de un proyecto de Integration Services
   El primer paso al crear un paquete en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es crear un proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . En este proyecto, se incluyen las plantillas de los objetos (orígenes de datos, vistas de orígenes de datos y paquetes) que se usan en una solución de transformación de datos.  
   
  Los paquetes que creará en este tutorial de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interpretan los valores de los datos dependientes de la configuración regional. Si no tiene configurado el equipo para usar la opción de configuración regional Inglés (Estados Unidos), debe establecer propiedades adicionales en el paquete. Los paquetes utilizados en las lecciones 2 a 5 se copian del paquete creado en la lección 1, y no necesita actualizar las propiedades dependientes de la configuración regional en los paquetes copiados.  
@@ -39,13 +39,13 @@ ms.locfileid: "62891768"
   
 5.  Acepte la ubicación predeterminada o haga clic en **Examinar** para desplazarse a la carpeta que desee utilizar. En el cuadro de diálogo **Ubicación del proyecto** , haga clic en la carpeta y, a continuación, haga clic en **Seleccionar carpeta**.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
      De forma predeterminada, se creará un paquete vacío, denominado **Package.dtsx**, que se agregará al proyecto bajo Paquetes SSIS.  
   
 7.  En la barra de herramientas del **Explorador de soluciones** , haga clic con el botón derecho en **Package.dtsx**, haga clic en **Cambiar nombre**y cambie el nombre del paquete predeterminado por **Lesson 1.dtsx**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 2: agregar y configurar un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [Paso 2: Adición y configuración de un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
   

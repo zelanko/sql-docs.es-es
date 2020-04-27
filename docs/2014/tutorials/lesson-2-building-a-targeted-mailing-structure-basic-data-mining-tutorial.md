@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62931505"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lección 2: Generar una estructura de distribución de correo directo (Tutorial básico de minería de datos)
@@ -35,7 +35,7 @@ ms.locfileid: "62931505"
  [Lección 1: preparar la base de datos de Analysis Services &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
   
 ## <a name="next--lesson"></a>Lección siguiente  
- [Lección 3: Agregar y procesar los modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Lección 3: Adición y procesamiento de modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear la estructura de minería de datos &#40;Asistente para minería de datos&#41;](../../2014/analysis-services/create-the-data-mining-structure-data-mining-wizard.md)   

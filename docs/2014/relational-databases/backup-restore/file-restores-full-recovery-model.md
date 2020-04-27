@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921946"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restauraciones de archivos (modelo de recuperación completa)
@@ -54,7 +54,7 @@ ms.locfileid: "62921946"
   
   
   
-##  <a name="Overview"></a> Restaurar archivos dañados a partir de copias de seguridad de archivo  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Restaurar archivos dañados a partir de copias de seguridad de archivo  
   
 1.  Antes de restaurar uno o varios archivos dañados, intente crear una [copia del final del registro](tail-log-backups-sql-server.md).  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Ejemplo: restauración sin conexión del grupo de archivo principal y de otro grupo de archivos &#40;modelo de recuperación completa&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para restaurar archivos y grupos de archivos**  
   
 -   [Restaurar archivos en una nueva ubicación &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  

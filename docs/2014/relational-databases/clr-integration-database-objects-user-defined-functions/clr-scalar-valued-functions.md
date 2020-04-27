@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919590"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funciones escalares de CLR
@@ -82,9 +82,7 @@ End Class
   
  La primera línea de código hace referencia a `Microsoft.SqlServer.Server` para tener acceso a los atributos y a `System.Data.SqlClient` para tener acceso al espacio de nombres de ADO.NET. (Este espacio de nombres contiene `SqlClient`, el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- Después, la función recibe el atributo personalizado `SqlFunction`, que se encuentra en el espacio de nombres `Microsoft.SqlServer.Server`. El atributo personalizado indica si la función definida por el usuario (UDF) utiliza o no el proveedor en proceso para leer los datos en el servidor. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite a las UDF actualizar, insertar o eliminar datos. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede optimizar la ejecución de una UDF que no usa el proveedor en proceso. Esto se indica estableciendo `DataAccessKind` en `DataAccessKind.None`. En la línea siguiente, el método de destino es una estática pública (se comparte en Visual Basic .NET).  
+ Después, la función recibe el atributo personalizado `SqlFunction`, que se encuentra en el espacio de nombres `Microsoft.SqlServer.Server`. El atributo personalizado indica si la función definida por el usuario (UDF) utiliza o no el proveedor en proceso para leer los datos en el servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite a las UDF actualizar, insertar o eliminar datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede optimizar la ejecución de una UDF que no usa el proveedor en proceso. Esto se indica estableciendo `DataAccessKind` en `DataAccessKind.None`. En la línea siguiente, el método de destino es una estática pública (se comparte en Visual Basic .NET).  
   
  La clase `SqlContext`, ubicada en el espacio de nombres `Microsoft.SqlServer.Server`, puede tener acceso a un objeto `SqlCommand` con una conexión a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ya está establecida. Aunque no se usa aquí, el contexto de transacción actual también está disponible a través de la interfaz de programación de aplicaciones (API) `System.Transactions`.  
   
@@ -130,8 +128,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  
-  `/t:library` indica que se debe generar una biblioteca, en lugar de un ejecutable. Los ejecutables no se pueden registrar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  `/t:library` indica que se debe generar una biblioteca, en lugar de un ejecutable. Los ejecutables no se pueden registrar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Los objetos de base de datos de Visual C++ compilados con `/clr:pure` no se admiten para la ejecución en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, esos objetos de base de datos incluyen funciones escalares.  

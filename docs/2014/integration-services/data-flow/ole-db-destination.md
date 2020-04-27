@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901626"
 ---
 # <a name="ole-db-destination"></a>Destino de OLE DB
@@ -61,7 +61,7 @@ ms.locfileid: "62901626"
   
  El destino de OLE DB tiene una entrada normal y una salida de error.  
   
- Para obtener más información acerca de los tipos de datos, vea [Integration Services Data Types](integration-services-data-types.md).  
+ Para obtener más información sobre los tipos de datos, vea [Integration Services tipos de datos](integration-services-data-types.md).  
   
 ## <a name="fast-load-options"></a>Opciones de carga rápida  
  Si el destino de OLE DB usa el modo de acceso a datos de carga rápida, puede especificar las siguientes opciones de carga rápida en la interfaz de usuario del **Editor de destino de OLE DB**para el destino:  
@@ -101,15 +101,15 @@ ms.locfileid: "62901626"
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de destino de OLE DB** , haga clic en uno de los siguientes temas:  
   
--   [OLE DB Editor de destino &#40;página Administrador de conexiones&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [Editor de destino de OLE DB &#40;página Administrador de conexiones&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB página asignaciones de &#40;del editor de destino&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Editor de destino de OLE DB &#40;página Asignaciones&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [OLE DB Editor de destino &#40;página salida de error&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Editor de destino de OLE DB &#40;página Salida de error&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas de OLE DB](ole-db-custom-properties.md)  
   

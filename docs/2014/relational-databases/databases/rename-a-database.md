@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916775"
 ---
 # <a name="rename-a-database"></a>Cambiar el nombre de una base de datos
@@ -39,22 +39,22 @@ ms.locfileid: "62916775"
   
 -   **Seguimiento:**  [Después de cambiar el nombre de una base de datos](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   No se puede cambiar el nombre de las bases de datos del sistema.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-rename-a-database"></a>Para cambiar el nombre de una base de datos  
   
-1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
+1.  En **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
   
 2.  Asegúrese de que nadie usa la base de datos y luego [establezca la base de datos en modo de usuario único](set-a-database-to-single-user-mode.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62916775"
   
 4.  Escriba el nuevo nombre de la base de datos y haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-rename-a-database"></a>Para cambiar el nombre de una base de datos  
   
@@ -81,7 +81,7 @@ GO
 ```  
   
 ###  <a name="TsqlExample"></a>   
-##  <a name="FollowUp"></a>Seguimiento: después de cambiar el nombre de una base de datos  
+##  <a name="follow-up-after-renaming-a-database"></a><a name="FollowUp"></a>Seguimiento: después de cambiar el nombre de una base de datos  
  Después de cambiar el nombre de cualquier base de datos, realice una copia de seguridad de la base de datos **maestra** .  
   
 ## <a name="see-also"></a>Consulte también  

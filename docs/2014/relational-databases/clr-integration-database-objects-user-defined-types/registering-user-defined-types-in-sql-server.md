@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919948"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrar tipos definidos por el usuario en SQL Server
@@ -64,8 +64,7 @@ ms.locfileid: "62919948"
 ### <a name="using-create-assembly"></a>Usar CREATE ASSEMBLY  
  La sintaxis de la instrucción CREATE ASSEMBLY registra el ensamblado en la base de datos en la que se desea usar el UDT. Cuando se registra el ensamblado, no tiene ninguna dependencia.  
   
- No está permitido crear varias versiones del mismo ensamblado en una base de datos determinada. Sin embargo, es posible crear varias versiones del mismo ensamblado basadas en la referencia cultural en una base de datos determinada. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distingue varias versiones de referencia cultural de un ensamblado mediante los distintos nombres registrados en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea el tema sobre la forma de crear y utilizar ensamblados con nombres seguros en .NET Framework SDK.  
+ No está permitido crear varias versiones del mismo ensamblado en una base de datos determinada. Sin embargo, es posible crear varias versiones del mismo ensamblado basadas en la referencia cultural en una base de datos determinada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distingue varias versiones de referencia cultural de un ensamblado mediante los distintos nombres registrados en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea el tema sobre la forma de crear y utilizar ensamblados con nombres seguros en .NET Framework SDK.  
   
  Al ejecutar CREATE ASSEMBLY con los conjuntos de permisos SAFE o EXTERNAL_ACCESS, se comprueba el ensamblado para garantizar que sea comprobable y presente seguridad de tipos. Si no se especifica ningún conjunto de permisos, se usa el conjunto de permisos SAFE. El código con el conjunto de permisos UNSAFE no se comprueba. Para obtener más información sobre los conjuntos de permisos de ensamblado, vea [Diseño de ensamblados](../../relational-databases/clr-integration/assemblies-designing.md).  
   
@@ -172,13 +171,13 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **assembly_id**  
  Identificador definido para el ensamblado. Este número se asigna a todos los objetos relacionados con el mismo ensamblado.  
   
- **Name**  
+ **name**  
  Nombre del objeto.  
   
  **file_id**  
  Número que identifica cada objeto, con el primer objeto asociado a una **assembly_id** determinada a la que se proporciona el valor 1. Si hay varios objetos asociados al mismo **assembly_id**, cada valor de **file_id** subsiguiente se incrementa en 1.  
   
- **Content**  
+ **content**  
  Representación hexadecimal del ensamblado o archivo.  
   
  Puede utilizar la función CAST o CONVERT para convertir el contenido de la columna **Content** en texto legible. La consulta siguiente convierte el contenido del archivo Point.cs en texto legible, utilizando el nombre de la cláusula WHERE para restringir el conjunto de resultados a una única fila.  
@@ -217,6 +216,6 @@ SELECT CAST(content AS varchar(8000))
  Tenga en cuenta que no es necesario realizar ninguna acción para usar UDT cuando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crea tablas de trabajo en la base de datos del sistema **tempdb** . Esto incluye el control de cursores, variables de tabla y funciones con valores de tabla definidas por el usuario que incluyen UDT y que usan de forma transparente **tempdb**. Sin embargo, si crea explícitamente una tabla temporal en **tempdb** que define una columna UDT, el UDT debe registrarse en **tempdb** del mismo modo que para una base de datos de usuario.  
   
 ## <a name="see-also"></a>Consulte también  
- [Tipos definidos por el usuario de CLR](clr-user-defined-types.md)  
+ [Tipos CLR definidos por el usuario](clr-user-defined-types.md)  
   
   

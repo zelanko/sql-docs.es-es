@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899938"
 ---
 # <a name="term-extraction-transformation"></a>Extracción de términos, transformación
@@ -44,7 +44,7 @@ ms.locfileid: "62899938"
   
  La transformación Extracción de términos genera una puntuación para cada término que extrae. La puntuación puede ser un valor TFIDF o simplemente la frecuencia, que es la cantidad de veces en que aparece el término normalizado en la entrada. En cualquier caso, un número real mayor que cero representa la puntuación. Por ejemplo, la puntuación TFIDF podría tener el valor 0,5 y la frecuencia sería un valor como 1,0 o 2,0.  
   
- La salida de transformación Extracción de términos incluye solo dos columnas. Una columna contiene los términos extraídos y la otra columna contiene la puntuación. Los nombres predeterminados de las **** columnas son `Score`term y. Debido a que la columna de texto de la entrada puede contener varios términos, la salida de transformación Extracción de términos normalmente tiene más filas que la entrada.  
+ La salida de transformación Extracción de términos incluye solo dos columnas. Una columna contiene los términos extraídos y la otra columna contiene la puntuación. Los nombres predeterminados de las **Term** columnas son `Score`term y. Debido a que la columna de texto de la entrada puede contener varios términos, la salida de transformación Extracción de términos normalmente tiene más filas que la entrada.  
   
  Si los términos extraídos se escriben en una tabla, pueden ser usados por otra transformación de búsqueda, como las transformaciones Búsqueda de términos, Búsqueda aproximada y Búsqueda.  
   
@@ -173,15 +173,15 @@ ms.locfileid: "62899938"
   
  Para obtener más información sobre las propiedades que se pueden configurar en el cuadro de diálogo **Editor de transformación Extracción de términos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de transformación extracción de términos &#40;pestaña extracción de términos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Editor de transformación Extracción de términos &#40;pestaña Extracción de términos&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Editor de transformación extracción de términos &#40;pestaña exclusión&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Editor de transformación Extracción de términos &#40;pestaña Exclusión&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Editor de transformación extracción de términos &#40;pestaña avanzadas&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Extracción de términos &#40;pestaña Avanzadas&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Propiedades comunes](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   

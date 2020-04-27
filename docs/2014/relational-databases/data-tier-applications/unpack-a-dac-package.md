@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14e699be884ff24136b8bae1a744593be86c42ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918008"
 ---
 # <a name="unpack-a-dac-package"></a>Desempaquetar un paquete de DAC
@@ -29,10 +29,10 @@ ms.locfileid: "62918008"
   
 2.  **Para desempaquetar un paquete DAC con:**  [cuadro de diálogo Desempaquetar aplicación de capa de datos](#UnpackDACDial), [Examinar el contenido de un paquete DAC](#ExamDACPack)  
   
-##  <a name="Security"></a> Seguridad  
+##  <a name="security"></a><a name="Security"></a> Seguridad  
  Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estas DAC contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema. Antes de usar una DAC de un origen desconocido o que no es de confianza, impleméntela en una instancia de prueba aislada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], desempaquete la DAC y examine el código, como los procedimientos almacenados o el código definido por el usuario.  
   
-##  <a name="UnpackDACDial"></a> Cuadro de diálogo Desempaquetar aplicación de capa de datos  
+##  <a name="unpack-data-tier-application-dialog"></a><a name="UnpackDACDial"></a> Cuadro de diálogo Desempaquetar aplicación de capa de datos  
  **Para desempaquetar un archivo de paquete DAC**  
   
 -   En el **Explorador de Windows**, vaya a la ubicación de un archivo de paquete DAC (.dacpac).  
@@ -49,7 +49,7 @@ ms.locfileid: "62918008"
   
     -   [Buscar carpeta](#Browse)  
   
-###  <a name="Unpack"></a> Desempaquetar archivo de paquete DAC de Microsoft SQL Server  
+###  <a name="unpack-microsoft-sql-server-dac-package-file"></a><a name="Unpack"></a> Desempaquetar archivo de paquete DAC de Microsoft SQL Server  
  Use esta página para especificar la carpeta de destino en la que colocar los archivos desempaquetados y, a continuación, proceda a desempaquetar los archivos.  
   
  **Los archivos se desempaquetarán en esta carpeta:** Especifique la ruta de acceso completa a la carpeta para los archivos desempaquetados. Si la carpeta existe y conoce la ruta de acceso completa, escriba la ruta en el cuadro. Si no, haga clic en el botón **Examinar** para navegar hasta una carpeta o crear una nueva carpeta.  
@@ -60,7 +60,7 @@ ms.locfileid: "62918008"
   
  **Cancelar** Cierra el cuadro de diálogo sin desempaquetar el paquete DAC.  
   
-###  <a name="Browse"></a> Buscar carpeta  
+###  <a name="browse-for-folder"></a><a name="Browse"></a> Buscar carpeta  
  Use esta página para elegir la carpeta de destino para desempaquetar los archivos. Opcionalmente, también puede crear una nueva carpeta.  
   
  **Lista de carpetas** Muestra la jerarquía de archivos del equipo. Expanda los nodos para navegar hasta la carpeta en la que desempaquetar el paquete DAC. Haga clic en la carpeta y luego en **Aceptar**.  
@@ -71,7 +71,7 @@ ms.locfileid: "62918008"
   
  **Cancelar** Cierra el cuadro de diálogo sin seleccionar una carpeta.  
   
-##  <a name="ExamDACPack"></a> Examinar el contenido de un paquete DAC  
+##  <a name="examine-the-contents-of-a-dac-package"></a><a name="ExamDACPack"></a> Examinar el contenido de un paquete DAC  
  Después de desempaquetar el paquete, puede examinar los archivos generados por el cuadro de diálogo **Desempaquetar aplicación de capa de datos** . El cuadro de diálogo compila los siguientes archivos en la carpeta de destino seleccionada:  
   
 1.  Un script Transact-SQL que contiene las instrucciones para crear los objetos definidos en la DAC. El nombre de archivo es *NombreDAC*.sql, donde *NombreDAC* es el nombre de la DAC.  

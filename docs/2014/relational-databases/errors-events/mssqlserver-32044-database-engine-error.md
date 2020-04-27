@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c6fd8fceb0ad7f9f724ccfecab8da1c0e34a7f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62914162"
 ---
 # <a name="mssqlserver_32044"></a>MSSQLSERVER_32044
@@ -41,7 +41,7 @@ ms.locfileid: "62914162"
  Compruebe las cargas en las instancias del servidor principal y reflejado y su conexión de red para localizar la causa.  
   
 ## <a name="see-also"></a>Consulte también  
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)  
   
   

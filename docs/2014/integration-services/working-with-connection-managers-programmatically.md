@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877719"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabajar con administradores de conexiones mediante programación
@@ -68,8 +68,8 @@ ms.locfileid: "62877719"
 ![Integration Services icono (pequeño)](media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
 ## <a name="see-also"></a>Consulte también  
- [Conectarse a orígenes de datos de la tarea Script](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
- [Conectarse a orígenes de datos del componente de script](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
+ [Conexión a orígenes de datos en la tarea script](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
+ [Conectarse a orígenes de datos en el componente de script](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Conectarse a orígenes de datos de una tarea personalizada](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
   
   

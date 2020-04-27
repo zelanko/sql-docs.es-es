@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921055"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa)
@@ -33,28 +33,28 @@ ms.locfileid: "62921055"
   
      [Seguridad](#Security)  
   
--   **Para restaurar una base de datos SQL Server a un momento dado, utilizando:**  
+-   **Para restaurar una base de datos de SQL Server a un momento dado, mediante:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Usar STANDBY para encontrar un momento dado desconocido.  
   
 -   Especificar el momento dado al principio de una secuencia de restauración.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para restaurar una base de datos a un momento dado**  
   
 1.  En el Explorador de objetos, conéctese a la instancia adecuada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y expanda el árbol de servidores.  
@@ -84,7 +84,7 @@ ms.locfileid: "62921055"
   
 5.  En la sección **Destino** , el cuadro **Base de datos** se rellena automáticamente con el nombre de la base de datos que se va a restaurar. Para cambiar el nombre de la base de datos, especifique el nuevo nombre en el cuadro **Base de datos** .  
   
-6.  Haga clic **Escala de tiempo** para tener acceso al cuadro de diálogo **Escala de tiempo de la copia de seguridad**.  
+6.  Haga clic **Escala de tiempo** para tener acceso al cuadro de diálogo **Escala de tiempo de la copia de seguridad** .  
   
 7.  En la sección **Restaurar en** , haga clic **Fecha y hora específicas**.  
   
@@ -117,31 +117,31 @@ ms.locfileid: "62921055"
   
      Para obtener descripciones de las opciones, consulte [Restaurar base de datos &#40;página Opciones&#41;](restore-database-options-page.md).  
   
-12. **Realice una copia del final del registro antes** de que se seleccione la restauración si es necesario para el momento dado que ha seleccionado. No es necesario modificar este valor, pero puede optar por realizar la copia del final del registro incluso si no es necesario.  
+12. **Realizar copia del final del registro de la cola antes de la restauración** se seleccionará si es necesario en el momento dado que ha seleccionado. No es necesario modificar este valor, pero puede optar por realizar la copia del final del registro incluso si no es necesario.  
   
 13. Puede haber errores en las operaciones de restauración si hay conexiones activas con la base de datos. Active la opción **Cerrar conexiones existentes** para asegurarse de que se cierren todas las conexiones activas entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y la base de datos. Esta casilla establece la base de datos en modo de usuario único antes de realizar las operaciones de restauración, y establece la base de datos en modo multiusuario una vez completadas.  
   
 14. Seleccione **Preguntar antes de restaurar cada copia de seguridad** si desea que se le pregunte en cada operación de restauración. No suele ser necesario a menos que la base de datos sea grande y desee supervisar el estado de la operación de restauración.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Antes de empezar**  
   
  La restauración a un momento específico siempre se realiza a partir de una copia de seguridad de registros. En cada instrucción RESTORE LOG de la secuencia de restauración, debe especificar el momento de destino o transacción en una cláusula STOPAT idéntica. Como requisito previo para la restauración a un momento específico, debe restaurar primero una copia de seguridad completa de la base de datos cuyo punto final sea anterior al momento de restauración de destino. La copia de seguridad completa de la base de datos puede ser anterior a la copia de seguridad completa de la base de datos más reciente siempre y cuando restaure cada copia de seguridad del registro siguiente, hasta la copia de seguridad del registro que contiene el momento específico de destino, inclusive.  
   
  Para ayudarle a identificar qué copia de seguridad de base de datos debe restaurar, puede especificar opcionalmente la cláusula WITH STOPAT en la instrucción RESTORE DATABASE para que se produzca un error si una copia de seguridad de los datos es demasiado reciente para el momento específico de destino. La copia de seguridad completa de los datos se restaura siempre, aunque contenga el momento de destino.  
   
- **Sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] básica**  
+ **Sintaxis básica de [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
  Restaurar *database_name* de registro desde <backup_device> con STOPAT ** = *`time`*,** Recovery...  
   
  El punto de recuperación es la última confirmación de transacción que se produjo en `datetime` o antes del valor especificado por *Time*.  
   
- Para restaurar únicamente las modificaciones que se realizaron antes de un momento concreto, especifique with STOPAT **=** *Time* para cada copia de seguridad que restaure. Esto garantiza que no se pasará el momento de destino.  
+ Para restaurar únicamente las modificaciones realizadas antes de un momento concreto, especifique WITH STOPAT **=** *hora* para cada copia de seguridad que restaure. Esto garantiza que no se pasará el momento de destino.  
   
  **Para restaurar una base de datos a un momento dado**  
   
 > [!NOTE]  
->  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample) más adelante en esta sección.  
+>  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample)más adelante en esta sección.  
   
 1.  Conéctese a la instancia de servidor en la que desea restaurar la base de datos.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "62921055"
     > [!NOTE]  
     >  Las opciones RECOVERY y STOPAT. Si la copia de seguridad de registros de transacciones no contiene la hora solicitada (por ejemplo, si la hora especificada está fuera de los límites del intervalo cubierto por el registro de transacciones), se genera una advertencia y no se recupera la base de datos.  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  En el ejemplo siguiente se restaura una base de datos al estado en que se encontraba a las `12:00 AM` del `April 15, 2020` y se muestra una operación de restauración que implica varias copias de seguridad de registros. En el dispositivo de copia de seguridad, `AdventureWorksBackups`, la copia de seguridad de base de datos completa que se va a restaurar es el tercer conjunto de copia de seguridad en el dispositivo (`FILE = 3`), la primera copia de seguridad de registros es el cuarto conjunto de copia de seguridad (`FILE = 4`) y la segunda copia de seguridad de registros es el quinto conjunto de copia de seguridad (`FILE = 5`).  
   
 > [!IMPORTANT]  
@@ -180,7 +180,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
@@ -193,7 +193,7 @@ GO
 -   [Recuperar a un número de secuencia de registro &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+ [conjunto de &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

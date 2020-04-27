@@ -21,26 +21,26 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927105"
 ---
 # <a name="security-overview-integration-services"></a>Información general sobre seguridad (Integration Services)
-  La seguridad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en consta de varios niveles que proporcionan un entorno de seguridad enriquecido y flexible. Estos niveles de seguridad incluyen el uso de firmas digitales, propiedades de paquete, roles de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y permisos del sistema operativo. La mayoría de estas características de seguridad pertenecen a las categorías de identidad y control de acceso.  
+  La seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consta de varios niveles que proporcionan un entorno de seguridad sofisticado y flexible. Estos niveles de seguridad incluyen el uso de firmas digitales, propiedades de paquete, roles de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y permisos del sistema operativo. La mayoría de estas características de seguridad pertenecen a las categorías de identidad y control de acceso.  
   
 ## <a name="identity-features"></a>Características de identidad  
  Si implementa características de identidad en los paquetes, puede lograr el objetivo siguiente:  
   
- **Asegúrese de que solo se abren y ejecutan paquetes de orígenes de confianza**.  
+ **Asegurarse de que solo se abren y se ejecutan paquetes de orígenes de confianza**.  
   
  Para asegurarse de que solamente se abren y se ejecutan paquetes de orígenes de confianza, primero debe identificar el origen de los paquetes. Para ello, firme los paquetes con certificados. De esta forma, al abrir o ejecutar los paquetes, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede comprobar la presencia y la validez de las firmas digitales. Para más información, vea [Identificar el origen de paquetes con firmas digitales](identify-the-source-of-packages-with-digital-signatures.md).  
   
 ## <a name="access-control-features"></a>Características de control de acceso  
  Si implementa características de identidad en los paquetes, puede lograr el objetivo siguiente:  
   
- **Asegúrese de que solo los usuarios autorizados abren y ejecutan paquetes**.  
+ **Asegurarse de que solo los usuarios autorizados abren y ejecutan paquetes**.  
   
  Para asegurarse de que solo los usuarios autorizados abren y ejecutan paquetes, debe controlar el acceso a la información siguiente:  
   
@@ -67,9 +67,7 @@ ms.locfileid: "62927105"
 #### <a name="saving-packages-to-the-msdb-database"></a>Guardar paquetes en la base de datos msdb  
  Guardar los paquetes en la base de datos msdb proporciona seguridad en los siguientes niveles: servidor, base de datos y tabla. En la base de datos msdb, los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se almacenan en la tabla sysssispackages. Dado que los paquetes se guardan en las tablas sysssispackages y sysdtspackages de la base de datos msdb, se realiza una copia de seguridad de dichos paquetes de forma automática al crear una copia de seguridad de la base de datos msdb.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los paquetes almacenados en la base de datos msdb también se pueden proteger aplicando los roles de nivel de base de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye tres roles fijos de nivel de base de datos db_ssisadmin, db_ssisltduser y db_ssisoperator para controlar el acceso a los paquetes. Se puede asociar un rol de lector y de escritor a cada paquete. También se pueden definir roles personalizados de nivel de base de datos para usarlos en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Los roles solo se pueden implementar en los paquetes que se guardan en la base de datos msdb en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](integration-services-roles-ssis-service.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los paquetes almacenados en la base de datos msdb también se pueden proteger aplicando los roles de nivel de base de datos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye tres roles fijos de nivel de base de datos db_ssisadmin, db_ssisltduser y db_ssisoperator para controlar el acceso a los paquetes. Se puede asociar un rol de lector y de escritor a cada paquete. También se pueden definir roles personalizados de nivel de base de datos para usarlos en los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Los roles solo se pueden implementar en los paquetes que se guardan en la base de datos msdb en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Roles de Integration Services &#40;servicio SSIS&#41;](integration-services-roles-ssis-service.md).  
   
 #### <a name="saving-packages-to-the-file-system"></a>Guardar paquetes en el sistema de archivos  
  Si almacena los paquetes en el sistema de archivos en lugar de en la base de datos msdb, no olvide asegurar los archivos de los paquetes y las carpetas que contienen los archivos de los paquetes.  
@@ -89,8 +87,7 @@ ms.locfileid: "62927105"
  Para obtener más información acerca de las configuraciones, vea [Package Configurations](../package-configurations.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Controlar el acceso al servicio Integration Services  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mostrar los paquetes almacenados. Restrinja el acceso a los equipos que ejecutan el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para evitar que los usuarios no autorizados tengan acceso a la información sobre los paquetes almacenados en equipos locales y remotos, y obtengan información privada.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mostrar los paquetes almacenados. Restrinja el acceso a los equipos que ejecutan el servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para evitar que los usuarios no autorizados tengan acceso a la información sobre los paquetes almacenados en equipos locales y remotos, y obtengan información privada.  
   
  Para más información, vea [Acceso al servicio Integration Services](../access-to-the-integration-services-service.md).  
   

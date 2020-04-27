@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889843"
 ---
 # <a name="performance-counters"></a>Contadores de rendimiento
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]instala un conjunto de contadores de rendimiento que puede usar para supervisar el rendimiento del motor de flujo de datos. Por ejemplo, puede observar el contador "Búferes puestos en cola" para determinar si se están escribiendo búferes de datos en el disco temporalmente mientras se ejecuta un paquete. Este intercambio reduce el rendimiento e indica que el equipo no tiene memoria suficiente.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala un conjunto de contadores de rendimiento que pueden usarse para supervisar el rendimiento del motor de flujo de datos. Por ejemplo, puede observar el contador "Búferes puestos en cola" para determinar si se están escribiendo búferes de datos en el disco temporalmente mientras se ejecuta un paquete. Este intercambio reduce el rendimiento e indica que el equipo no tiene memoria suficiente.  
   
 > [!NOTE]  
 >  Si instala [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en un equipo que está ejecutando [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]y, a continuación, actualiza el equipo a [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], el proceso de actualización quita del equipo los contadores de rendimiento de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para restaurar en el equipo los contadores de rendimiento de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de reparación.  
@@ -78,6 +78,6 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
 -   Artículo de soporte técnico, [El contador de rendimiento de SSIS ya no está disponible en el monitor de rendimiento después de actualizar a Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), en support.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte también  
- [Execution of Projects and Packages](../packages/run-integration-services-ssis-packages.md) (Ejecución de proyectos y paquetes)  
+ [Ejecución de proyectos y paquetes](../packages/run-integration-services-ssis-packages.md)  
   
   

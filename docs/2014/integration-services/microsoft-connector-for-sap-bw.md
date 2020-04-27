@@ -11,14 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cd4cf8f8fe90afcda343b2b494e0b0b050c8c951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890612"
 ---
 # <a name="microsoft-connector-11-for-sap-bw"></a>Microsoft Connector 1.1 for SAP BW
-  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW consta de un conjunto de tres componentes que le permiten tanto extraer datos de un sistema SAP NetWeaver BW versión 7 como cargarlos en él.  
   
 > [!IMPORTANT]  
@@ -28,14 +27,13 @@ ms.locfileid: "62890612"
 >  La extracción de datos de SAP Netweaver BW requiere una licencia SAP adicional. Póngase en contacto con SAP para comprobar estos requisitos.  
   
 ## <a name="components"></a>Componentes  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW tiene los componentes siguientes:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW tiene los componentes siguientes:  
   
 -   **Origen de SAP BW**: el origen de SAP BW es un componente de origen de flujo de datos que le permite extraer datos de un sistema SAP Netweaver BW versión 7.  
   
--   **Destino de SAP BW**: el destino de SAP BW es un componente de destino de flujo de datos que le permite cargar datos en un sistema SAP Netweaver BW versión 7.  
+-   **Destino de SAP BW**: el SAP BW destino es un componente de destino de flujo de datos que le permite cargar datos en un sistema SAP Netweaver BW versión 7.  
   
--   **Administrador de conexiones de SAP BW**: el administrador de conexiones de SAP BW conecta un origen o un destino de SAP BW con un sistema SAP Netweaver BW versión 7.  
+-   **Administrador de conexiones de SAP BW**: el administrador de conexiones de SAP BW conecta un origen de SAP BW o un destino de SAP BW a un sistema SAP Netweaver BW versión 7.  
   
  Para obtener instrucciones sobre cómo configurar y utilizar el administrador de conexiones, el origen y el destino de SAP BW, vea las notas del producto, [Usar SQL Server Integration Services con SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). Estas notas del producto también muestran cómo configurar los objetos necesarios en SAP BW.  
   

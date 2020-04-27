@@ -13,15 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ac9035865a472b4f6c019124f6b3fd337e27f77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893174"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Cuadro de diálogo Detalles de conversión de columna (Asistente para importación y exportación de SQL Server)
-  Utilice el cuadro de diálogo **detalles de conversión de columna** para revisar información de conversión detallada sobre una columna individual. Esta información de conversión contiene el tipo de datos de la columna en el origen y el destino, y la conversión que el asistente realizará. En esta página también se enumeran los archivos de asignación de tipos de datos que el asistente utiliza para determinar las conversiones de tipos de datos que se requieren. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala estos archivos de asignación de tipos de datos durante la instalación.  
+  Utilice el cuadro de diálogo **detalles de conversión de columna** para revisar información de conversión detallada sobre una columna individual. Esta información de conversión contiene el tipo de datos de la columna en el origen y el destino, y la conversión que el asistente realizará. En esta página también se enumeran los archivos de asignación de tipos de datos que el asistente utiliza para determinar las conversiones de tipos de datos que se requieren. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala estos archivos de asignación de tipos de datos durante la instalación.  
   
  **Para abrir el cuadro de diálogo Detalles de conversión de columna**  
   

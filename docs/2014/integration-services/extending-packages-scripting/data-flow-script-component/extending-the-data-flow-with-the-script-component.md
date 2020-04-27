@@ -25,14 +25,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 051f2ed14e8218a3909a43052f08e0e339138dab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894809"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Ampliar el flujo de datos con el componente de script
-  El componente de script amplía las capacidades de flujo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] de datos de los paquetes con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] código personalizado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] escrito en Visual Basic o Visual C# que se compila y ejecuta en tiempo de ejecución del paquete. El componente de script simplifica el desarrollo de un origen, transformación o destino de flujo de datos personalizado cuando los orígenes, las transformaciones y los destinos incluidos en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no se adaptan totalmente a sus requisitos. Después de configurar el componente con las entradas y salidas esperadas, éste escribe todo el código de infraestructura necesario, lo que le permite centrarse exclusivamente en el código requerido para su procesamiento personalizado.  
+  El componente de script amplía las funcionalidades de flujo de datos de los paquetes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] con código personalizado escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# compilado y ejecutado en tiempo de ejecución del paquete. El componente de script simplifica el desarrollo de un origen, transformación o destino de flujo de datos personalizado cuando los orígenes, las transformaciones y los destinos incluidos en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no se adaptan totalmente a sus requisitos. Después de configurar el componente con las entradas y salidas esperadas, éste escribe todo el código de infraestructura necesario, lo que le permite centrarse exclusivamente en el código requerido para su procesamiento personalizado.  
   
  Un componente de script interactúa con el paquete contenedor y con el flujo de datos a través de las clases autogeneradas en los elementos de proyecto `ComponentWrapper` y `BufferWrapper`, que son instancias de las clases <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> y <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> respectivamente. Estas clases hacen que las conexiones, las variables y otros elementos del paquete estén disponibles como objetos con tipo y administran las entradas y salidas. El componente de script también puede utilizar el espacio de nombres de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] y la biblioteca de clases de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], además de ensamblados personalizados, para implementar la funcionalidad personalizada.  
   
@@ -47,12 +47,12 @@ ms.locfileid: "62894809"
  Las propiedades que se configuran en el **Editor de transformación Script** afectan a las funcionalidades y al rendimiento del código del componente de script.  
   
  [Codificar y depurar el componente de script] (coding-and-debugging-the-script-component.md  
- Use el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] entorno de desarrollo de Tools para aplicaciones (VSTA) para desarrollar los scripts contenidos en el componente de script.  
+ Se usa el entorno de desarrollo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) para desarrollar los scripts incluidos en el componente de script.  
   
  [Descripción del modelo de objetos del componente de script](understanding-the-script-component-object-model.md)  
  Un proyecto de componente de script nuevo contiene tres elementos de proyecto con varias clases, así como propiedades y métodos autogenerados.  
   
- [Utilizar variables en el componente de script](using-variables-in-the-script-component.md)  
+ [Usar variables en el componente de script](using-variables-in-the-script-component.md)  
  El elemento de proyecto `ComponentWrapper` contiene propiedades de descriptor de acceso con establecimiento inflexible de tipos para variables de paquete.  
   
  [Conectarse a orígenes de datos del componente de script](connecting-to-data-sources-in-the-script-component.md)  

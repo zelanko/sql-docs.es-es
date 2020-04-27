@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893600"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
@@ -85,7 +85,7 @@ ms.locfileid: "62893600"
  **Ruta de acceso del archivo Excel**  
  Especifique la ruta de acceso y el nombre de archivo correspondientes a la hoja de cálculo desde la que se importarán los datos. Por ejemplo, **C:\MyData.xls, \\\Sales\Database\Northwind.xls**. O bien, haga clic en **Examinar**.  
   
- **Browse**  
+ **Examinar**  
  Busque la hoja de cálculo desde el cuadro de diálogo **Abrir**.  
   
  **Versión de Excel**  
@@ -102,7 +102,7 @@ ms.locfileid: "62893600"
  **Nombre de archivo**  
  Especifique la ruta de acceso y el nombre de archivo correspondientes al archivo de base de datos desde el que se importarán los datos. Por ejemplo, **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**. O bien, haga clic en **Examinar**.  
   
- **Browse**  
+ **Examinar**  
  Busque el archivo de base de datos desde el cuadro de diálogo **Abrir**.  
   
  **Nombre de usuario**  
@@ -117,12 +117,12 @@ ms.locfileid: "62893600"
 ### <a name="data-source--flat-file-source"></a>Origen de datos = Origen de archivo plano  
  Vea los temas siguientes para obtener información acerca de las opciones para un origen de datos de archivo plano.  
   
- [Página general del editor del administrador de conexiones de archivos planos &#40;&#41;](../general-page-of-integration-services-designers-options.md)  
+ [Editor del administrador de conexiones de archivos planos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
- [Página &#40;columnas del editor del administrador de conexiones de archivos planos&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
- [Página opciones avanzadas del editor del administrador de conexiones de archivos planos &#40;&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [Página de vista previa del editor del administrador de conexiones de archivos planos &#40;&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
   

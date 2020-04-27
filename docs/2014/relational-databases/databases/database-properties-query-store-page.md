@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917216"
 ---
 # <a name="database-properties-query-store-page"></a>Propiedades de base de datos (página del Almacén de consultas)
@@ -63,7 +63,7 @@ ms.locfileid: "62917216"
  La característica del almacén de consultas ofrece a los DBA conocimientos sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente diferencias de rendimiento provocadas por cambios en los planes de consulta. Captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución, y los conserva para su revisión. Separa los datos por ventanas de tiempo, lo que permite ver patrones de uso la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El almacén de consultas se puede configurar con esta página de propiedades de base de datos de almacén de consultas o mediante la opción [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) . El almacén de consultas presenta información mediante un cuadro de diálogo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Para más información sobre el almacén de consultas, vea [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
+ [Almacén de consultas procedimientos almacenados &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
  [Query Store Catalog Views (Vistas de catálogo del almacén de consultas) &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
   
   

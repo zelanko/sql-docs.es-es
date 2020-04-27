@@ -24,14 +24,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890241"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes (DtExecUI)
-  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La utilidad ejecuta los paquetes que se almacenan en una de estas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tres ubicaciones: [!INCLUDE[ssIS](../../includes/ssis-md.md)] base de datos, almacén de paquetes y sistema de archivos. Esta interfaz de usuario, que se puede abrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] desde o escribiendo `dtexecui` en un símbolo del sistema, es una alternativa a la ejecución de paquetes mediante la herramienta del símbolo del sistema **DTExec** .  
+  Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede abrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] desde o escribiendo `dtexecui` en un símbolo del sistema, es una alternativa a la ejecución de paquetes mediante la herramienta del símbolo del sistema **DTExec** .  
   
  Los paquetes se ejecutan en el mismo proceso que la utilidad **dtexecui.exe** . Como esta utilidad es una herramienta de 32 bits, los paquetes que se ejecutan con **dtexecui.exe** en un entorno de 64 bits se ejecutan en Windows en Win32 (WOW). Al desarrollar y probar comandos mediante la utilidad dtexecui.exe en un equipo de 64 bits, debe probar los comandos en modo de 64 bits mediante la versión de 64 bits de **dtexecui.exe** antes de implementar o programar los comandos en un servidor de producción.  
   
@@ -67,16 +67,16 @@ ms.locfileid: "62890241"
 |||  
 |-|-|  
 |Value|Descripción|  
-|**SQL Server**|Seleccione esta opción si el paquete reside en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporcione un nombre de usuario y una contraseña para llevar a cabo la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nombre de usuario y contraseña agrega las opciones **/USER** _username_ y **/PASSWORD** _password_ options to the commy prompt.|  
+|**SQL Server**|Seleccione esta opción si el paquete reside en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifique una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporcione un nombre de usuario y una contraseña para llevar a cabo la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada nombre de usuario y contraseña agrega las opciones **/USER** _username_ y **/PASSWORD** _password_ al símbolo del sistema.|  
 |**Sistema de archivos**|Seleccione esta opción si el paquete reside en el sistema de archivos.|  
 |**Almacén de paquetes SSIS**|Seleccione esta opción si el paquete reside en el Almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Cada una de estas selecciones tiene el siguiente conjunto de opciones.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ### <a name="dynamic-options"></a>Opciones dinámicas  
@@ -88,10 +88,10 @@ ms.locfileid: "62890241"
  **Iniciar sesión en el servidor**  
  Especifique si el paquete debe usar autenticación de Windows o autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una mayor seguridad, es recomendable utilizar la autenticación de Windows. Si se utiliza la autenticación de Windows, no será necesario especificar un nombre de usuario y una contraseña.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Seleccione esta opción para usar la autenticación de Windows e iniciar sesión con una cuenta de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Usar autenticación SQL Server**  
+ **Utilizar autenticación de SQL Server**  
  Elija esta opción para usar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando un usuario se conecta con un nombre y una contraseña de inicio de sesión determinados desde una conexión no de confianza, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza la autenticación y comprueba si se ha configurado una cuenta de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si la contraseña especificada coincide con la almacenada anteriormente. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no encuentra la cuenta de inicio de sesión, la autenticación no se realizará correctamente y el usuario recibirá un mensaje de error.  
   
 > [!IMPORTANT]  
@@ -111,10 +111,10 @@ ms.locfileid: "62890241"
  **Iniciar sesión en el servidor**  
  Especifique si el paquete debe utilizar la autenticación de Microsoft Windows para conectarse al origen del paquete. Para obtener una mayor seguridad, es recomendable utilizar la autenticación de Windows. Si se utiliza la autenticación de Windows, no será necesario especificar un nombre de usuario y una contraseña.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Seleccione esta opción para utilizar la autenticación de Windows e iniciar sesión con una cuenta de usuario de Microsoft Windows.  
   
- **Usar autenticación SQL Server**  
+ **Utilizar autenticación de SQL Server**  
  Esta opción no está disponible si ejecuta un paquete almacenado en el **Almacén de paquetes SSIS**.  
   
  **Package**  
@@ -139,10 +139,10 @@ ms.locfileid: "62890241"
  **Remove**  
  Seleccione un archivo de configuración de la lista y, después, haga clic en **Quitar**.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="command-files-page"></a>Página Archivos de comandos  
@@ -161,17 +161,17 @@ ms.locfileid: "62890241"
  **Remove**  
  Para quitar un archivo de comandos, selecciónelo en el cuadro de texto y haga clic en el botón **Quitar** .  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="connection-managers-page"></a>Página Administradores de conexión  
  Use la página **Administradores de conexiones** del cuadro de diálogo **Utilidad de ejecución de paquetes** para editar las cadenas de conexión de los administradores de conexión que el paquete usa.  
   
 ### <a name="options"></a>Opciones  
- **Administrador de conexiones**  
+ **Connection Manager**  
  Active esta casilla para que la columna **Cadena de conexión** se pueda editar.  
   
  **Descripción**  
@@ -180,17 +180,17 @@ ms.locfileid: "62890241"
  **Cadena de conexión**  
  Edite la cadena de conexión para un administrador de conexiones. Este campo solamente se puede editar si la casilla **Administrador de conexiones** está activada.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="execution-options-page"></a>Página Opciones de ejecución  
  Use la página **Opciones de ejecución** del cuadro de diálogo **Utilidad de ejecución de paquetes** para especificar opciones de tiempo de ejecución para el paquete.  
   
 ### <a name="options"></a>Opciones  
- **Error de paquete en advertencias de validación**  
+ **Rechazar el paquete cuando haya advertencias de validación**  
  Indique si debe rechazarse el paquete cuando se produce una advertencia de validación.  
   
  **Validar el paquete sin ejecutarlo**  
@@ -208,16 +208,16 @@ ms.locfileid: "62890241"
  **Browse**  
  Haga clic en el botón Examinar **(…)** para buscar el archivo de punto de control mediante el cuadro de diálogo **Abrir** si ha habilitado los puntos de control de los paquetes. Si ya se ha especificado un punto de comprobación, se sustituye por el archivo seleccionado.  
   
- **Invalidar opciones de reinicio**  
+ **Omitir opciones de reinicio**  
  Indique si deben reemplazarse las opciones de reinicio si se habilitan los puntos de comprobación de los paquetes.  
   
  **Opción de reinicio**  
  Seleccione cómo deben utilizarse los puntos de comprobación si se reemplazan las opciones de reinicio.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="reporting-page"></a>Página de informe  
@@ -230,7 +230,7 @@ ms.locfileid: "62890241"
  **None**  
  Seleccione esta opción para no obtener elaborar ningún informe.  
   
- **Errors**  
+ **Errores**  
  Seleccione esta opción para notificar mensajes de error.  
   
  **Advertencias**  
@@ -242,25 +242,25 @@ ms.locfileid: "62890241"
  **Eventos de canalización**  
  Seleccione esta opción notificar mensajes de eventos de flujo de datos.  
   
- **Information**  
+ **Información**  
  Seleccione esta opción para notificar mensajes informativos.  
   
  **Detallado**  
  Seleccione esta opción para utilizar informes detallados.  
   
- **Registro de la consola**  
+ **Registro de consolas**  
  Especifique la información que desea escribir en el registro cuando se produzca el evento seleccionado.  
   
  **Nombre**  
  Seleccione esta opción para notificar el nombre de la persona que creó el paquete.  
   
- **Computer**  
+ **Equipo**  
  Seleccione esta opción para notificar el nombre del equipo donde se está ejecutando el paquete.  
   
- **Operator**  
+ **Operador**  
  Seleccione esta opción para notificar el nombre de la persona que inició el paquete.  
   
- **Nombre del origen**  
+ **Nombre de origen**  
  Seleccione esta opción para notificar el nombre del paquete.  
   
  **GUID de origen**  
@@ -272,13 +272,13 @@ ms.locfileid: "62890241"
  **Mensaje**  
  Seleccione esta opción para notificar mensajes.  
   
- **Hora de inicio y hora de finalización**  
+ **Hora de inicio y finalización**  
  Seleccione esta opción para notificar cuándo el paquete comienza y termina.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="logging-page"></a>Página Registro  
@@ -294,17 +294,17 @@ ms.locfileid: "62890241"
  **Remove**  
  Seleccione un proveedor de registro y haga clic para quitarlo.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="set-values-page"></a>Página Valores establecidos  
  Use la página **Valores establecidos** del cuadro de diálogo **Utilidad de ejecución de paquetes** para establecer los valores de las propiedades de paquetes, ejecutables, conexiones, variables y proveedores de registro escribiendo las rutas de acceso de las propiedades y los valores de las propiedades. Cada entrada de ruta agrega una opción **/SET**_propertypath;value_ al símbolo del sistema.  
   
 ### <a name="options"></a>Opciones  
- **Ruta de acceso de propiedad**  
+ **Ruta de acceso de la propiedad**  
  Escriba la ruta de acceso de la propiedad. En la sintaxis de la ruta se usa una barra diagonal inversa (\\) para indicar que el elemento siguiente es un contenedor, un punto (.) para indicar que el elemento siguiente es una propiedad y corchetes para indicar que es un miembro de una colección. Es posible identificar al miembro por su índice o nombre. Por ejemplo, la ruta de acceso de la propiedad de una variable de un paquete es \Package.Variables[MyVariable].Value.  
   
  **Valor**  
@@ -313,41 +313,41 @@ ms.locfileid: "62890241"
  **Remove**  
  Seleccione una ruta de acceso a una propiedad y haga clic para quitarla.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="verification-page"></a>Página Comprobación  
  Use la página **Comprobación** del cuadro de diálogo **Ejecutar paquete** para establecer los criterios para comprobar el paquete.  
   
 ### <a name="options"></a>Opciones  
- **Ejecutar solo paquetes firmados**  
+ **Ejecutar solo los paquetes firmados**  
  Seleccione esta opción para ejecutar solamente los paquetes que se han firmado.  
   
- **Comprobar la compilación del paquete**  
+ **Comprobar la generación del paquete**  
  Seleccione esta opción para comprobar la generación del paquete.  
   
  Build  
  Especifique el número secuencial de versión asociado a la compilación.  
   
- **Comprobar el identificador del paquete**  
+ **Comprobar el Id. del paquete**  
  Seleccione esta opción para comprobar el identificador del paquete.  
   
  Id. de paquete  
  Especifique el número de identificación del paquete.  
   
- **Comprobar el ID. de versión**  
+ **Comprobar el Id. de versión**  
  Seleccione esta opción para comprobar el identificador de la versión.  
   
  Id. de la versión  
  Especifique el número de identificación de la versión.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="command-line-page"></a>Página Línea de comandos  
@@ -363,10 +363,10 @@ ms.locfileid: "62890241"
  **Línea de comandos**  
  Muestra la línea de comandos actual. Podrá editarla si ha seleccionado la opción para editar la línea de comandos manualmente.  
   
- **Ejecut**  
+ **Ejecutar**  
  Haga clic para ejecutar el paquete.  
   
- **Cercanos**  
+ **Close**  
  Haga clic en esta opción para cerrar el cuadro de diálogo **Utilidad de ejecución de paquetes** .  
   
 ## <a name="see-also"></a>Consulte también  

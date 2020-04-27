@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891714"
 ---
-# <a name="step-1-copying-the-deployment-bundle"></a>Paso 1: Copiar el paquete de implementación
+# <a name="step-1-copying-the-deployment-bundle"></a>Paso 1: Copia del paquete de implementación
   En esta tarea, copiará el paquete de implementación en el equipo de destino.  
   
  La forma más fácil de copiar el paquete de implementación en el equipo de destino es crear primero un recurso compartido público en dicho equipo, asignar una unidad al recurso compartido público y, a continuación, copiar el paquete de implementación en el recurso compartido. Si no sabe cómo crear y configurar carpetas públicas o asignar unidades, vea la documentación de Windows.  

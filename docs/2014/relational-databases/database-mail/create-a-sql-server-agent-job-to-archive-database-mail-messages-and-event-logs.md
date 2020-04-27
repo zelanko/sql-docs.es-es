@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917597"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
@@ -29,21 +29,21 @@ ms.locfileid: "62917597"
   
 -   **Para almacenar mensajes y los registros de Correo electrónico de base de datos mediante:**  [Agente SQL Server](#Process_Overview)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Las nuevas tablas para almacenar los datos del archivo se pueden ubicar en una base de datos de archivo especial. De forma alternativa, las filas se pudieron exportar a un archivo de texto.  
  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
  En su entorno de producción, puede agregar otros procedimientos de comprobación de errores y enviar un mensaje de correo electrónico a los operadores si el trabajo provoca un error.  
   
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe ser miembro del rol fijo de servidor **sysadmin** para ejecutar los procedimientos almacenados que se describen en este tema.  
   
   
-###  <a name="Process_Overview"></a> Información general acerca del proceso de inicialización  
+###  <a name="overview-of-the-process"></a><a name="Process_Overview"></a> Información general acerca del proceso de inicialización  
   
 -   En el primer procedimiento se crea con cuatro pasos un trabajo denominado Archivar mensajes del Correo electrónico de base de datos.  
   

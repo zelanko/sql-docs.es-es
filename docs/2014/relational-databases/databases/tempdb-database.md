@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916895"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
@@ -79,7 +79,7 @@ ms.locfileid: "62916895"
 |CONCAT_NULL_YIELDS_NULL|Apagado|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|Apagado|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sin<br /><br /> Sin|  
 |DATE_CORRELATION_OPTIMIZATION|Apagado|Sí|  
 |DB_CHAINING|ACTIVAR|No|  
 |ENCRYPTION|Apagado|No|  

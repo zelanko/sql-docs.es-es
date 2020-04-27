@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919255"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Generar objetos de base de datos con la integración de Common Language Runtime (CLR)
@@ -59,16 +59,16 @@ ms.locfileid: "62919255"
  [Información general de los atributos personalizados de la integración CLR](../../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)  
  Proporciona información sobre los atributos personalizados de integración CLR.  
   
- [Funciones CLR definidas por el usuario](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
+ [Funciones definidas por el usuario de CLR](../../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Describe cómo implementar y usar los distintos tipos de funciones CLR: funciones de agregado definidas por el usuario, escalares y con valores de tabla.  
   
- [Tipos definidos por el usuario de CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipos CLR definidos por el usuario](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Describe cómo implementar y usar los tipos definidos por el usuario CLR.  
   
- [Procedimientos almacenados de CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)  
+ [Procedimientos almacenados CLR](../../../database-engine/dev-guide/clr-stored-procedures.md)  
  Describe cómo implementar y usar los procedimientos almacenados CLR.  
   
- [Desencadenadores CLR](../../../database-engine/dev-guide/clr-triggers.md)  
+ [Desencadenadores de CLR](../../../database-engine/dev-guide/clr-triggers.md)  
  Describe cómo implementar y usar los desencadenadores CLR.  
   
 ## <a name="see-also"></a>Consulte también  

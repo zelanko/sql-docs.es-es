@@ -11,17 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890258"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Implementación de proyectos y paquetes
-  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] admite dos modelos de implementación, el modelo de implementación del proyecto y el modelo de implementación de paquetes. El modelo de implementación del proyecto le permite implementar sus proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Para más información sobre la implementación de proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
+ Para más información sobre la implementación de proyectos en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [Implementación de paquetes en el servidor de Integration Services](../deploy-projects-to-integration-services-server.md).  
   
  Para obtener más información sobre el modelo de implementación de paquetes, vea [implementación de paquetes &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
   

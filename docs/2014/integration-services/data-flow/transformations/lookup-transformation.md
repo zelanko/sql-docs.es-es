@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900291"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
@@ -59,7 +59,7 @@ ms.locfileid: "62900291"
   
 -   Si hay varias coincidencias en la tabla de referencia, la transformación Búsqueda devuelve solo la primera coincidencia devuelta por la consulta de búsqueda. Si se encuentran varias coincidencias, la transformación Búsqueda genera un error o advertencia solo cuando la transformación se ha configurado para cargar todo el conjunto de datos de referencia en la memoria caché. En este caso, la transformación Búsqueda genera una advertencia cuando detecta varias coincidencias mientras la transformación llena la memoria caché.  
   
- La combinación puede ser compuesta, lo que indica que pueden combinarse varias columnas de la entrada de transformación con columnas del conjunto de datos de referencia. La transformación admite la combinación de columnas con cualquier tipo de datos, a excepción de DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md).  
+ La combinación puede ser compuesta, lo que indica que pueden combinarse varias columnas de la entrada de transformación con columnas del conjunto de datos de referencia. La transformación admite la combinación de columnas con cualquier tipo de datos, a excepción de DT_R4, DT_R8, DT_TEXT, DT_NTEXT o DT_IMAGE. Para obtener más información, vea [Integration Services tipos de datos](../integration-services-data-types.md).  
   
  Normalmente, los valores del conjunto de datos de referencia se agregan a la salida de transformación. Por ejemplo, la transformación Búsqueda puede extraer un nombre de producto de una tabla mediante un valor de una columna de entrada y, después, agregar el nombre del producto a la salida de transformación. Los valores de la tabla de referencia pueden reemplazar valores de columnas o agregarse a nuevas columnas.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62900291"
   
  A continuación se describen otras ventajas relacionadas con guardar la memoria caché en un archivo:  
   
--   ***Compartir el archivo caché entre varios paquetes. Para obtener más información, vea***  [implementar una transformación de búsqueda en el modo de caché completa mediante el administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
+-   ***El archivo caché se puede compartir entre varios paquetes. Para más información, vea***  [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
--   El archivo caché se puede implementar con un paquete. ***Después, puede usar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   El archivo caché se puede implementar con un paquete. ***De esta forma, podrá utilizar los datos en varios equipos.*** Para obtener información, vea [Cómo crear e implementar una memoria caché para la transformación Búsqueda](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Usar el origen de archivo sin formato para leer datos del archivo caché. A continuación, puede utilizar otros componentes de flujo de datos para transformar o mover los datos. Para más información, consulte [Raw File Source](../raw-file-source.md).  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62900291"
   
      Esta opción de almacenamiento en caché es compatible con la opción sin almacenamiento en caché disponible para la transformación Búsqueda en [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] difieren en el modo en que comparan cadenas. Si la transformación Búsqueda se configura para cargar el conjunto de datos de referencia en la memoria caché antes de que se ejecute la transformación Búsqueda, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lleva a cabo la comparación de búsqueda en la memoria caché. En caso contrario, la operación de búsqueda utiliza una instrucción SQL con parámetros y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza la comparación de búsqueda. Por lo tanto, es posible que la transformación Búsqueda devuelva un número de coincidencias diferentes a partir de la misma tabla de búsqueda, en función del tipo de caché.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] difieren en el modo en que comparan cadenas. Si la transformación Búsqueda se configura para cargar el conjunto de datos de referencia en la memoria caché antes de que se ejecute la transformación Búsqueda, [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] lleva a cabo la comparación de búsqueda en la memoria caché. En caso contrario, la operación de búsqueda utiliza una instrucción SQL con parámetros y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza la comparación de búsqueda. Por lo tanto, es posible que la transformación Búsqueda devuelva un número de coincidencias diferentes a partir de la misma tabla de búsqueda, en función del tipo de caché.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación. Para obtener información detallada, vea los siguientes temas.  

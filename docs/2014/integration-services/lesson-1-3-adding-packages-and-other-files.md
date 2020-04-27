@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892210"
 ---
-# <a name="step-3-adding-packages-and-other-files"></a>Paso 3: agregar paquetes y otros archivos
+# <a name="step-3-adding-packages-and-other-files"></a>Paso 3: Adición de paquetes y otros archivos
   En esta tarea, agregará paquetes existentes, archivos auxiliares que admitan paquetes individuales y un archivo Léame al proyecto Deployment Tutorial que ha creado en la tarea anterior. Por ejemplo, agregará un archivo de datos XML que contiene los datos de un paquete y un archivo de texto que proporciona información del archivo Léame sobre todos los paquetes del proyecto.  
   
  Cuando se implementan paquetes a un entorno de prueba o producción, normalmente no se incluyen los archivos de datos en la implementación, sino que se utilizan configuraciones para actualizar las rutas de acceso de los orígenes de datos para tener acceso a las versiones de prueba o producción de las bases de datos o los archivos de datos. Para explicar las instrucciones, este tutorial incluye archivos de datos en la implementación de paquetes.  

@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900336"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
@@ -126,15 +126,15 @@ ms.locfileid: "62900336"
   
  Para obtener más información acerca de las propiedades que puede establecer en el cuadro de diálogo **Editor de transformación Búsqueda aproximada** , haga clic en uno de los temas siguientes:  
   
--   [Editor de transformación búsqueda aproximada &#40;pestaña tabla de referencia&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Editor de transformación Búsqueda aproximada &#40;pestaña Tabla de referencia&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
 -   [Editor de transformación Búsqueda aproximada &#40;pestaña Columnas&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Editor de transformación búsqueda aproximada &#40;pestaña avanzadas&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Editor de transformación Búsqueda aproximada &#40;pestaña Avanzadas&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Propiedades comunes](../../common-properties.md)  
   
 -   [Propiedades personalizadas de transformación](transformation-custom-properties.md)  
   
@@ -143,7 +143,7 @@ ms.locfileid: "62900336"
   
 ## <a name="see-also"></a>Consulte también  
  [Transformación búsqueda](lookup-transformation.md)   
- [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
+ [Transformación agrupación aproximada](fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   
   

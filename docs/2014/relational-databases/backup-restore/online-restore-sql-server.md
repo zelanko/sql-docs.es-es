@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876199"
 ---
 # <a name="online-restore-sql-server"></a>Restauración en línea (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "62876199"
     > [!NOTE]  
     >  Como alternativa, puede dejar el archivo sin conexión manualmente antes de la secuencia de restauración. Para obtener más información, vea "Dejar sin conexión una base de datos o un archivo" más adelante en este tema.  
   
-##  <a name="taking_db_or_file_offline"></a>Dejar sin conexión una base de datos o un archivo  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>Dejar sin conexión una base de datos o un archivo  
  Si no desea utilizar la restauración en línea, puede dejar sin conexión la base de datos antes de iniciar la secuencia de restauración; para ello, puede usar uno de los métodos siguientes:  
   
 -   En todos los modelos de recuperación puede dejar sin conexión la base de datos con la siguiente instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
@@ -91,7 +91,7 @@ ms.locfileid: "62876199"
   
 -   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación completa&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Restaurar archivos y grupos de archivos &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917824"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Programación de procedimientos almacenados extendidos de motor de base de datos
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]En su lugar, use la integración con CLR. Para obtener más información, consulte [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] En su lugar, utilice la integración con CLR. Para obtener más información, consulte [Conceptos de programación en el ámbito de la integración de Common Language Runtime &#40;CLR&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  La [!INCLUDE[msCoName](../includes/msconame-md.md)] API de procedimientos almacenados extendidos proporciona una interfaz de programación de aplicaciones (API) basada [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en servidor para extender la funcionalidad. La API está compuesta de funciones y macros de C y C++ que se utilizan para crear aplicaciones de las siguientes categorías: procedimientos almacenados extendidos y aplicaciones de puerta de enlace.  
   

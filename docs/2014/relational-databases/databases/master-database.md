@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917048"
 ---
 # <a name="master-database"></a>Base de datos maestra
@@ -53,7 +53,7 @@ ms.locfileid: "62917048"
 |CONCAT_NULL_YIELDS_NULL|Apagado|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|Apagado|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Sin<br /><br /> Sin<br /><br /> Sin|  
 |DATE_CORRELATION_OPTIMIZATION|Apagado|Sí|  
 |DB_CHAINING|ACTIVAR|No|  
 |ENCRYPTION|Apagado|No|  
@@ -76,7 +76,7 @@ ms.locfileid: "62917048"
   
 -   Cambiar intercalaciones. La intercalación predeterminada es la intercalación de servidor.  
   
--   Cambiar el propietario de la base de datos. **Master** es propiedad de **SA**.  
+-   Cambiar el propietario de la base de datos. **master** es propiedad de **sa**.  
   
 -   Crear un catálogo de texto completo o un índice de texto completo.  
   

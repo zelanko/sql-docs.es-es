@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894769"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Guardar y ejecutar el paquete (Asistente para importación y exportación de SQL Server)
   Utilice el cuadro de diálogo **Guardar y ejecutar paquete** para ejecutar el paquete inmediatamente, guardarlo para ejecutarlo más tarde o ambos.  
   
 > [!NOTE]  
->  Si detiene un paquete antes de que termine de ejecutarse, el paquete no se guardará, aunque haya activado la casilla **Guardar** .  
+>   Si detiene el paquete antes de que termine la ejecución, éste no se guardará, aunque haya activado la casilla **Guardar** .  
   
  Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -65,14 +65,14 @@ ms.locfileid: "62894769"
 > [!NOTE]  
 >  Esta opción solo está disponible si se ha establecido la opción **nivel de protección de paquetes** en **cifrar la información confidencial con una contraseña** o **cifrar todos los datos con una contraseña**.  
   
- **Vuelva a escribir la contraseña**  
+ **Volver a escribir la contraseña**  
  Escriba la contraseña nuevamente.  
   
 > [!NOTE]  
 >  Esta opción solo está disponible si se ha establecido la opción **nivel de protección de paquetes** en **cifrar la información confidencial con una contraseña** o **cifrar todos los datos con una contraseña**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Execution of Projects and Packages](../packages/run-integration-services-ssis-packages.md)  (Ejecución de proyectos y paquetes)  
+ [Ejecución de proyectos y paquetes](../packages/run-integration-services-ssis-packages.md)   
  [Guardar paquetes](../save-packages.md)  
   
   

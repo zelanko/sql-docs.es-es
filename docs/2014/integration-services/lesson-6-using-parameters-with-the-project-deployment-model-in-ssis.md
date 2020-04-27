@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890550"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lección 6: usar parámetros con el modelo de implementación de proyectos
+# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lección 6: Uso de parámetros con el modelo de implementación de proyectos
   SQL Server 2012 presenta un nuevo modelo de implementación en el que puede implementar sus proyectos en el servidor de Integration Services. El servidor de Integration Services permite administrar y ejecutar paquetes, así como configurar valores en tiempo de ejecución para los paquetes.  
   
  En esta lección, modificará el paquete que creó en la [Lección 5: agregar configuraciones de paquetes para el modelo de implementación de paquetes](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) para usar el modelo de implementación de proyectos. Reemplazará el valor de configuración con un parámetro para especificar la ubicación de los datos de ejemplo. También puede copiar el paquete de la lección 5 completada que se incluye con el tutorial.  
@@ -32,15 +32,15 @@ ms.locfileid: "62890550"
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  Esta lección contiene las siguientes tareas:  
   
-1.  [Paso 1: copiar el paquete de la lección 5](lesson-6-1-copying-the-lesson-5-package.md)  
+1.  [Paso 1: Copia del paquete de la lección 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [Paso 2: Convertir el proyecto al modelo de implementación de proyectos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [Paso 2: Convertir el proyecto al modelo de implementación del proyectos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [Paso 3: Probar el paquete de la lección 6](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [Paso 3: Prueba del paquete de la lección 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [Paso 4: implementar el paquete de la lección 6](lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [Paso 4: Implementación del paquete de la lección 6](lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
- [Paso 1: copiar el paquete de la lección 5](lesson-6-1-copying-the-lesson-5-package.md)  
+ [Paso 1: Copia del paquete de la lección 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
   

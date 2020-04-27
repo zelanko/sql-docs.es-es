@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889801"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerar los paquetes disponibles mediante programación
   Cuando trabaja mediante programación con paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede determinar si existe un paquete o una carpeta individual o enumerar los paquetes guardados que están disponible para cargarse y ejecutarse. La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona diferentes métodos para satisfacer estos requisitos.  
   
-##  <a name="exists"></a> Determinar si existe un paquete o una carpeta  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Determinar si existe un paquete o una carpeta  
  Para determinar mediante programación si existe un paquete guardado, llame a uno de los métodos siguientes antes de intentar cargarlo y ejecutarlo:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -41,7 +41,7 @@ ms.locfileid: "62889801"
   
  [Volver arriba](#top)  
   
-##  <a name="listing"></a> Enumerar los paquetes disponibles  
+##  <a name="enumerating-available-packages"></a><a name="listing"></a> Enumerar los paquetes disponibles  
  Para obtener una lista de los paquetes guardados mediante programación, llame a uno de los métodos siguientes:  
   
 |Ubicación de almacenamiento|Método que se llama|  
@@ -51,7 +51,7 @@ ms.locfileid: "62889801"
   
  Los ejemplos siguientes son aplicaciones de consola que muestran el uso de estos métodos.  
   
-###  <a name="listing_store"></a> Ejemplo (almacén de paquetes SSIS)  
+###  <a name="example-ssis-package-store"></a><a name="listing_store"></a> Ejemplo (almacén de paquetes SSIS)  
  Utilice el método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A> para enumerar los paquetes almacenados en el almacén de paquetes SSIS. Las ubicaciones de almacenamiento predeterminadas que administra el almacén de paquetes SSIS son Sistema de archivos y MSDB. Puede crear carpetas lógicas adicionales dentro de estas ubicaciones.  
   
 ```vb  
@@ -157,7 +157,7 @@ namespace EnumeratePackagesSSIS_CS
   
  [Volver arriba](#top)  
   
-###  <a name="listing_sql"></a> Ejemplo (SQL Server)  
+###  <a name="example-sql-server"></a><a name="listing_sql"></a> Ejemplo (SQL Server)  
  Utilice el método <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> para enumerar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] almacenados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```vb  

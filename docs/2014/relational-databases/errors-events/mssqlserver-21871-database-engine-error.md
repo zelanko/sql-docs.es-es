@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 832ee3caa23a034f1c228d01ff8ec2ceda32de06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915127"
 ---
 # <a name="mssqlserver_21871"></a>MSSQLSERVER_21871
@@ -33,11 +33,9 @@ ms.locfileid: "62915127"
 |Texto del mensaje|El publicador %s de la base de datos %s no ha sido redirigido.|  
   
 ## <a name="explanation"></a>Explicación  
- `sp_validate_replica_hosts_as_publishers` busca en la tabla MSredirected_publishers en la base de datos de distribución una entrada para el publicador identificado y la base de datos del publicador.  
-  `sp_validate_replica_hosts_as_publishers` devuelve el error 21871 cuando no se encuentra ninguna entrada.  
+ `sp_validate_replica_hosts_as_publishers` busca en la tabla MSredirected_publishers en la base de datos de distribución una entrada para el publicador identificado y la base de datos del publicador.  `sp_validate_replica_hosts_as_publishers` devuelve el error 21871 cuando no se encuentra ninguna entrada.  
   
 ## <a name="user-action"></a>Acción del usuario  
- 
-  `sp_validate_replica_hosts_as_publishers` solo es relevante para los publicadores redirigidos. Si la base de datos del publicador es miembro de un grupo de disponibilidad, use el procedimiento almacenado `sp_redirect_publisher` para asociar el publicador y la base de datos del publicador con el nombre de escucha de grupo de disponibilidad del grupo de disponibilidad.  
+ `sp_validate_replica_hosts_as_publishers` solo es relevante para los publicadores redirigidos. Si la base de datos del publicador es miembro de un grupo de disponibilidad, use el procedimiento almacenado `sp_redirect_publisher` para asociar el publicador y la base de datos del publicador con el nombre de escucha de grupo de disponibilidad del grupo de disponibilidad.  
   
   

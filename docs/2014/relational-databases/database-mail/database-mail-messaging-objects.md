@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917720"
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos de mensajería de Correo electrónico de base de datos
   La base de datos **msdb** es la base de datos host del Correo electrónico de base de datos. Esta base de datos contiene los procedimientos almacenados y objetos de mensajería del Correo electrónico de base de datos. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el Asistente para configuración del Correo electrónico de base de datos, que permite habilitar el correo electrónico de base de datos, crear y administrar perfiles y cuentas, y configurar las opciones del Correo electrónico de base de datos.  
   
-##  <a name="ComponentsAndConcepts"></a> Objetos de la base de datos **msdb**  
+##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a> Objetos de la base de datos **msdb**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitado en la base de datos **msdb** . No obstante, el Correo electrónico de base de datos no usa la configuración de red de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Por ello, los usuarios no tienen que crear un extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] para usar el Correo electrónico de base de datos. El proceso externo de Correo electrónico de base de datos usa una conexión [!INCLUDE[vstecado](../../includes/vstecado-md.md)] estándar para comunicarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  El Correo electrónico de base de datos expone los siguientes objetos en la base de datos **msdb** si el Correo electrónico de base de datos está habilitado.  

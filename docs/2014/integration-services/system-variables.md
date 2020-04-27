@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927237"
 ---
 # <a name="system-variables"></a>Variables del sistema
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
   
  Todas las variables (del sistema y definidas por el usuario) se pueden usar en los enlaces de parámetros que usa la tarea Ejecutar SQL para asignar variables a parámetros.  
   

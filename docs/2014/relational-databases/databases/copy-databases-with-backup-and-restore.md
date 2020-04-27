@@ -19,18 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917472"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bases de datos con Copias de seguridad y restauración
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede crear una base de datos nueva restaurando una copia de seguridad de una base de datos de usuario creada utilizando [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior. Sin embargo, las copias de seguridad de las bases de datos **maestra**, **modelo** y **msdb** creadas utilizando una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueden restaurarse con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Asimismo, las copias de seguridad de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no se pueden restaurar con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza una ruta de acceso predeterminada distinta de la de versiones anteriores. Por lo tanto, para restaurar copias de seguridad de una base de datos creadas en la ubicación predeterminada de versiones anteriores es preciso utilizar la opción MOVE. Para obtener información acerca de la nueva ruta de acceso predeterminada, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obtener más información acerca de cómo mover archivos de base de datos, vea el apartado "Mover los archivos de base de datos" que figura más adelante en este tema.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza una ruta de acceso predeterminada distinta de la de versiones anteriores. Por lo tanto, para restaurar copias de seguridad de una base de datos creadas en la ubicación predeterminada de versiones anteriores es preciso utilizar la opción MOVE. Para obtener información acerca de la nueva ruta de acceso predeterminada [, vea ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md). Para obtener más información acerca de cómo mover archivos de base de datos, vea el apartado "Mover los archivos de base de datos" que figura más adelante en este tema.  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>Pasos generales para utilizar las copias de seguridad y restauración para copiar una base de datos  
  Cuando se utilizan las copias de seguridad y restauración para copiar una base de datos a otra versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los equipos de origen y de destino pueden ser de cualquier plataforma en la que se ejecute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -93,7 +92,7 @@ ms.locfileid: "62917472"
  Cuando se restaura una base de datos en otro equipo, el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que inicia la operación de restauración se convierte automáticamente en el propietario de la nueva base de datos. Una vez restaurada la base de datos, el administrador del sistema o el nuevo propietario de la base de datos pueden cambiar la propiedad de la base de datos. Para evitar restauraciones no autorizadas de una base de datos, utilice contraseñas en los medios o en el conjunto de copia de seguridad.  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>Administrar metadatos al restaurar una base de datos en otra instancia de servidor  
- Al restaurar una base de datos en otra instancia de servidor, para proporcionar una experiencia coherente a los usuarios y las aplicaciones, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos, por ejemplo los inicios de sesión y los trabajos, en la otra instancia de servidor. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Al restaurar una base de datos en otra instancia de servidor, para proporcionar una experiencia coherente a los usuarios y las aplicaciones, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos, por ejemplo los inicios de sesión y los trabajos, en la otra instancia de servidor. Para obtener más información, vea [administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  **Para ver los archivos de datos y de registro en un conjunto de copia de seguridad**  
   
@@ -119,7 +118,7 @@ ms.locfileid: "62917472"
   
  **Para cambiar el propietario de una base de datos**  
   
--   [sp_changedbowner &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
+-   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
  **Para copiar una base de datos mediante los objetos de administración de SQL Server (SMO)**  
   
@@ -134,7 +133,7 @@ ms.locfileid: "62917472"
 ## <a name="see-also"></a>Consulte también  
  [Copiar bases de datos en otros servidores](copy-databases-to-other-servers.md)   
  [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [RESTOre FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920043"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
@@ -26,20 +26,15 @@ ms.locfileid: "62920043"
   
  El contexto del autor de la llamada se resume en un objeto `SqlContext`. Para obtener más información sobre los métodos y propiedades de `SqlTriggerContext`, vea la documentación de referencia de clase `Microsoft.SqlServer.Server.SqlTriggerContext` en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
   
- 
-  `SqlContext` proporciona acceso a los componentes siguientes:  
+ `SqlContext` proporciona acceso a los componentes siguientes:  
   
--   
-  `SqlPipe`: el objeto `SqlPipe` representa la "canalización" a través de la que los resultados fluyen al cliente. Para obtener más información sobre `SqlPipe` el objeto, vea [SqlPipe (objeto](sqlpipe-object.md)).  
+-   `SqlPipe`: el objeto `SqlPipe` representa la "canalización" a través de la que los resultados fluyen al cliente. Para obtener más información sobre `SqlPipe` el objeto, vea [SqlPipe (objeto](sqlpipe-object.md)).  
   
--   
-  `SqlTriggerContext`: el objeto `SqlTriggerContext` solo se puede recuperar desde un desencadenador CLR. Proporciona información sobre la operación que hizo que se activara el desencadenador y un mapa de las columnas actualizadas. Para obtener más información sobre `SqlTriggerContext` el objeto, vea [objeto SqlTriggerContext](sqltriggercontext-object.md).  
+-   `SqlTriggerContext`: el objeto `SqlTriggerContext` solo se puede recuperar desde un desencadenador CLR. Proporciona información sobre la operación que hizo que se activara el desencadenador y un mapa de las columnas actualizadas. Para obtener más información sobre `SqlTriggerContext` el objeto, vea [objeto SqlTriggerContext](sqltriggercontext-object.md).  
   
--   
-  `IsAvailable`: la propiedad `IsAvailable` se utiliza para determinar la disponibilidad de contexto.  
+-   `IsAvailable`: la propiedad `IsAvailable` se utiliza para determinar la disponibilidad de contexto.  
   
--   
-  `WindowsIdentity`: la propiedad `WindowsIdentity` se utiliza para recuperar la identidad de Windows del autor de la llamada.  
+-   `WindowsIdentity`: la propiedad `WindowsIdentity` se utiliza para recuperar la identidad de Windows del autor de la llamada.  
   
 ## <a name="determining-context-availability"></a>Determinar la disponibilidad del contexto  
  Consulte la clase `SqlContext` para ver si el código actualmente en ejecución se ejecuta en proceso. Para ello, compruebe la propiedad `IsAvailable` del objeto `SqlContext`. La propiedad `IsAvailable` es de solo lectura y devuelve `True` si el código de llamada se está ejecutando dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si se puede tener acceso a otros miembros de `SqlContext`. Si la propiedad `IsAvailable` devuelve `False`, todos los demás miembros de `SqlContext` producen una excepción `InvalidOperationException`, si se utilizan. Si `IsAvailable` devuelve `False`, cualquier intento de abrir un objeto de conexión con "context connection=true" en la cadena de conexión genera un error.  

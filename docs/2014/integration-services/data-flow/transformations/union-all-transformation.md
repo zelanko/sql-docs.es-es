@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cfbe5ab3a255367922195594063a1734b8c66b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899878"
 ---
 # <a name="union-all-transformation"></a>Unión de todo, transformación
@@ -50,6 +50,6 @@ ms.locfileid: "62899878"
 -   [Establecer las propiedades de un componente de flujo de datos](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Combinación de datos con la transformación Unión de todo](union-all-transformation.md)  
+ [Combinar datos mediante la transformación Unión de todo](union-all-transformation.md)  
   
   

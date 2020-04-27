@@ -23,14 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873555"
 ---
 # <a name="data-compression"></a>Data Compression
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la compresión de fila y de página para las tablas e índices de almacén de filas, y admite la compresión de almacén de columnas y de archivo de almacén de columnas para las tablas e índices de almacén de columnas.  
   
  Para las tablas e índices de almacén de filas, use la característica de compresión de datos como ayuda para reducir el tamaño de la base de datos. Además de ahorrar espacio, la compresión de datos puede contribuir a mejorar el rendimiento de las cargas de trabajo que hacen un uso intensivo de las operaciones de E/S porque los datos se almacenan en menos páginas y las consultas deben leer menos páginas del disco. No obstante, se requieren recursos de CPU adicionales en el servidor de base de datos para comprimir y descomprimir los datos, mientras los datos se intercambian con la aplicación. La compresión de fila y de página se puede configurar en los objetos de base de datos siguientes:  
@@ -58,7 +57,7 @@ ms.locfileid: "62873555"
   
 -   Los detalles de la compresión de datos se pueden cambiar sin previo aviso en los Service Pack o versiones posteriores.  
   
--   La compresión no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   La compresión no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   La compresión no está disponible para las tablas del sistema.  
   
@@ -256,7 +255,7 @@ REBUILD PARTITION = ALL WITH (
  [Implementación de la compresión de fila](row-compression-implementation.md)   
  [Implementación de la compresión de página](page-compression-implementation.md)   
  [Implementación de la compresión Unicode](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [CREAR esquema de partición &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   

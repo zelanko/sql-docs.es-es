@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890761"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Paso 1: copiar el paquete de la lección 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Paso 1: Copia del paquete de la lección 5
   En esta tarea, creará una copia del paquete que ha creado en la lección 5, denominado Lesson 5.dtsx. También puede agregar al proyecto el paquete completado de la lección 5 que se incluye con el tutorial y, a continuación, copiar dicho paquete. Utilizará esta nueva copia en toda la lección 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>Para copiar el paquete de la lección 5  
@@ -48,11 +48,11 @@ ms.locfileid: "62890761"
   
 3.  En el cuadro de diálogo Agregar copia de paquete existente, en Ubicación del paquete, seleccione Sistema de archivos.  
   
-4.  Haga clic en el botón Examinar (…), vaya a Lesson 5.dtsx en el equipo y, después, haga clic en **Abrir**.  
+4.  Haga clic en el botón Examinar (...), Lección 5. DTSX en el equipo y, a continuación, haga clic en **abrir**.  
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   
-    1.  Vaya a [Integration Services ejemplos de productos](https://go.microsoft.com/fwlink/?LinkId=275027)  
+    1.  Navegue a los [ejemplos del producto Integration Services](https://go.microsoft.com/fwlink/?LinkId=275027)  
   
     2.  Haga clic en la pestaña **descargas** .  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62890761"
      Después de copiar el paquete de la lección 5, si tiene actualmente los paquetes de las lecciones anteriores en la solución, haga clic con el botón secundario en cada paquete de las lecciones 1 a 5 y, a continuación, haga clic en Excluir del proyecto. Cuando termine, debe tener solo Lesson 6.dtsx en la solución.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 2: Convertir el proyecto al modelo de implementación de proyectos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Paso 2: Convertir el proyecto al modelo de implementación del proyectos](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

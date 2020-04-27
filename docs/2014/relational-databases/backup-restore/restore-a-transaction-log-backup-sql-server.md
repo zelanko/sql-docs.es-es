@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875671"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "62875671"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Las copias de seguridad deben restaurarse en el mismo orden en el que se crearon. Para que pueda restaurar una copia de seguridad determinada del registro de transacciones, primero debe restaurar las siguientes copias de seguridad anteriores sin revertir las transacciones sin confirmar, es decir, WITH NORECOVERY:  
   
@@ -57,12 +57,12 @@ ms.locfileid: "62875671"
   
          Para obtener más información sobre las copias de seguridad del registro de transacciones, vea [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md) y [Aplicar copias de seguridad de registros de transacciones &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 > [!WARNING]  
 >  El proceso normal de una restauración consiste en seleccionar las copias de seguridad de registros en el cuadro de diálogo **Restaurar base de datos** junto con las copias de seguridad de datos y diferenciales.  
@@ -189,7 +189,7 @@ ms.locfileid: "62875671"
   
 11. O bien, especifique un nombre de archivo en espera en el cuadro de texto **Archivo en espera** . Esta opción es obligatoria si se deja la base de datos en modo de solo lectura. Puede buscar el archivo en espera o escribir su ruta de acceso en el cuadro de texto.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 > [!IMPORTANT]  
 >  Se recomienda que especifique siempre WITH NORECOVERY o WITH RECOVERY en todas las instrucciones RESTORE para evitar ambigüedades. Esto es especialmente importante cuando se escriben scripts.  
@@ -234,7 +234,7 @@ ms.locfileid: "62875671"
     > [!IMPORTANT]  
     >  Si está creando una base de datos reflejada, omita el paso de recuperación. Una base de datos reflejada debe permanecer en el estado RESTORING.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  La base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] usa el modelo de recuperación simple de forma predeterminada. En los siguientes ejemplos se requiere la modificación de la base de datos para utilizar el modelo de recuperación completa, como se indica a continuación:  
   
 ```sql  
@@ -287,7 +287,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891583"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Paso 2: ejecutar el Asistente para la instalación de paquetes
+# <a name="step-2-running-the-package-installation-wizard"></a>Paso 2: Ejecución del Asistente para la instalación de paquetes
   En esta tarea, ejecutará el Asistente para la instalación de paquetes para implementar los paquetes del proyecto Deployment Tutorial en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Solamente los paquetes se pueden instalar en la tabla sysssispackages de la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , los archivos compatibles que incluya el paquete de implementación se implementarán en el sistema de archivos.  
   
  El Asistente para la instalación de paquetes le guiará por los pasos para instalar y configurar los paquetes. Instalará los paquetes en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo de destino (el equipo en el que copió el paquete de implementación). También creará una carpeta, C:\DeploymentTutorialInstall, en la que el asistente instalará los archivos no empaquetados.  

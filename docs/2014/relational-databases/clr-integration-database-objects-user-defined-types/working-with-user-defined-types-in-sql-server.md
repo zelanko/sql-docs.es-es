@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919958"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Trabajar con tipos definidos por el usuario en SQL Server
@@ -34,6 +34,6 @@ ms.locfileid: "62919958"
  Describe cómo utilizar [!INCLUDE[tsql](../../includes/tsql-md.md)] para trabajar con datos UDT en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
- [Tipos definidos por el usuario de CLR](clr-user-defined-types.md)  
+ [Tipos CLR definidos por el usuario](clr-user-defined-types.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918343"
 ---
 # <a name="management-data-warehouse"></a>almacén de administración de datos
@@ -109,7 +109,7 @@ ms.locfileid: "62918343"
   
  Para obtener información detallada sobre el tipo de datos y el contenido de las columnas de tabla de base de datos, lea la documentación del procedimiento almacenado del recopilador de datos correspondiente de cada una de las tablas.  
   
-### <a name="best-practices"></a>Prácticas recomendadas  
+### <a name="best-practices"></a>Procedimientos recomendados  
  Al trabajar con el almacén de datos de administración, recomendamos seguir estas prácticas recomendadas:  
   
 -   No modifique los metadatos de tablas de almacén de datos de administración a menos que esté agregando un nuevo tipo de recopilador.  
@@ -126,7 +126,7 @@ ms.locfileid: "62918343"
 |Se ha actualizado la lista de tablas de la sección "Esquema de instantáneas". Se ha agregado snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory y snapshots.io_virtual_file_stats. Se ha quitado snapshots.os_process_memory y snapshots.distinct_query_stats.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Procedimientos almacenados de almacén de administración de datos &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [Procedimientos almacenados del almacén de administración de datos &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Recopilación de datos](data-collection.md)   
  [Ver un informe de conjunto de recopilación &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  

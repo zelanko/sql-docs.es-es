@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873278"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Deshabilitar compresión de una tabla o un índice
@@ -36,9 +36,9 @@ ms.locfileid: "62873278"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Si la tabla es un montón, la operación de regeneración en modo ONLINE será de un solo subproceso. Utilice el modo OFFLINE para una operación de regeneración de montón de varios subprocesos. Para obtener más información sobre la compresión de datos, vea [Compresión de datos](data-compression.md).  
   
@@ -46,12 +46,12 @@ ms.locfileid: "62873278"
   
 -   No se puede cambiar la configuración de compresión de una partición única si la tabla tiene índices no alineados.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o índice.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-compression-on-a-table"></a>Para deshabilitar la compresión en una tabla  
   
@@ -187,7 +187,7 @@ ms.locfileid: "62873278"
   
      Cuando termine, haga clic en **Cerrar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-disable-compression-on-a-table"></a>Para deshabilitar la compresión en una tabla  
   

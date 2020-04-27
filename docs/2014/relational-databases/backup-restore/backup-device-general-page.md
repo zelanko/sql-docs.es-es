@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922146"
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de copia de seguridad (página General)
@@ -29,7 +29,7 @@ ms.locfileid: "62922146"
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 ## <a name="options"></a>Opciones  
- **Nombre del dispositivo**  
+ **Nombre de dispositivo**  
  Muestra el nombre de un dispositivo lógico de copia de seguridad existente o especifica el nombre de un dispositivo lógico de copia de seguridad nuevo.  
   
  **Cinta**  
@@ -57,13 +57,13 @@ ms.locfileid: "62922146"
   
  El dispositivo físico de copia de seguridad correspondiente a un dispositivo lógico de copia de seguridad se inicializa cuando la primera copia de seguridad del conjunto de medios se escribe en el dispositivo lógico. Si el dispositivo físico de copia de seguridad es un archivo que aún no existe, se crea en ese momento.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Especifique un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Especificar un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Eliminar un dispositivo de copia de seguridad &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   

@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8eee57be7c7bb9167c24bec117fd2f88a5bb745
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62926340"
 ---
 # <a name="debugging-script"></a>Depurar script
-  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] tools for Applications (VSTA), se escriben los scripts que usan la tarea script y el componente de script.  
+  Escriba los scripts que la tarea Script y el componente Script usan, en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools para aplicaciones (VSTA).  
   
  EN VSTA se establecen y programan los puntos de interrupción. Puede administrar los puntos de interrupción en VSTA, pero también puede administrar los puntos de interrupción mediante el cuadro de diálogo **Establecer puntos de interrupción** que proporciona el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Para más información, consulte [Debugging Control Flow](debugging-control-flow.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62926340"
   
 ### <a name="to-set-a-breakpoint-in-visual-studio-for-applications"></a>Para establecer un punto de interrupción en Visual Studio para Aplicaciones  
   
--   [Depurar un script estableciendo puntos de interrupción en una tarea Script y un componente Script](../extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
+-   [Depurar un script mediante el establecimiento de puntos de interrupción en una tarea Script y un componente de script](../extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](troubleshooting-tools-for-package-development.md)  

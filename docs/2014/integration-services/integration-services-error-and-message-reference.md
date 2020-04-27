@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892663"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
@@ -43,7 +43,7 @@ ms.locfileid: "62892663"
   
 -   [Mensajes de error de componentes de flujo de datos (DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> mensajes de error  
+##  <a name="error-messages"></a><a name="msgError"></a> mensajes de error  
  Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_E_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -1236,7 +1236,7 @@ ms.locfileid: "62892663"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|El usuario solicitó la cancelación de la transformación de búsquedas.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|El procesamiento de los datos de caracteres u objetos binarios grandes (LOB) se ha detenido porque se ha alcanzado el límite de 4 GB.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|No se pudo cargar el componente de canalización administrado "%1".  Excepción: %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de error de SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: el Administrador de conexiones de Excel no se admite en la versión de 64 bits de SSIS, dado que no hay ningún proveedor OLE DB disponible.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Código de error SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED: El Administrador de conexiones con Excel no es compatible con la versión de 64 bits de SSIS debido a que no hay ningún proveedor OLE DB disponible.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|El archivo caché está dañado o no se creó mediante el administrador de conexiones de caché.  Proporcione un archivo caché válido.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|El comando SQL no se ha establecido correctamente. Compruebe la propiedad SQLCommand.|  
 |0xC0202002|-1071636478|DTS_E_COMERROR|Información del objeto de error COM disponible.  Origen: código de error "%1": 0x%2!8.8X!  Descripción: "%3".|  
@@ -2017,7 +2017,7 @@ ms.locfileid: "62892663"
 |||DTS_E_GETCATMANAGERFAILED|Error al crear el administrador de categorías del componente COM debido al error 0x%1!8.8X! "%2!s!".|  
 |||DTS_E_COMPONENTINITFAILED|Componente %1!s! no se pudo inicializar debido al error 0x%2!8.8X! "%3!s!".|  
   
-##  <a name="msgWarning"></a> Mensajes de advertencia  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> Mensajes de advertencia  
  Los nombres simbólicos de los mensajes de advertencia de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_W_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -2144,7 +2144,7 @@ ms.locfileid: "62892663"
 |0x80208351|-2145352879|DTS_W_FUZZYLOOKUP_EXACTMATCHCOLUMNSEXCEEDBYTELIMIT|La longitud acumulada de las columnas especificadas en las combinaciones de coincidencias exactas supera el límite de 900 bytes para las claves de índice.  La búsqueda aproximada crea un índice en las columnas de coincidencias exactas para aumentar el rendimiento de la búsqueda y existe la posibilidad de que este índice no se cree correctamente y que la búsqueda retroceda a un método de búsqueda de coincidencias alternativo, posiblemente más lento. Si el rendimiento supone un problema, quite algunas columnas de combinaciones de coincidencias exactas o reduzca la longitud máxima de las columnas de coincidencias exactas de longitud variable.|  
 |0x80208352|-2145352878|DTS_W_FUZZYLOOKUP_EXACTMATCHINDEXCREATIONFAILED|Error al crear un índice de columnas de coincidencias exactas. Revirtiendo al método alternativo de búsqueda aproximada.|  
 |0x80208353|-2145352877|DTS_W_FUZZYGROUPINGINTERNALPIPELINEWARNING|La siguiente advertencia de canalización interna de agrupación aproximada produjo el código de error 0x%1!8.8X!: "%2".|  
-|0x80208375|-2145352843|DTS_W_XMLSRCOUTPUTCOLUMNLENGTHSETTODEFAULT|No se especificó ninguna longitud máxima para %1 con el tipo de datos externo %2. Se utilizará el tipo de datos "%3" de la tarea Flujo de datos de SSIS con una longitud de %6!d!.|  
+|0x80208375|-2145352843|DTS_W_XMLSRCOUTPUTCOLUMNLENGTHSETTODEFAULT|No se especificó ninguna longitud máxima para %1 con el tipo de datos externo %2. Se utilizará el tipo de datos "%3" de la tarea Flujo de datos de SSIS con una longitud de %4!d!.|  
 |0x80208376|-2145352842|DTS_W_XMLSRCOUTPUTCOLUMNDATATYPEMAPPEDTOSTRING|%1 hace referencia al tipo de datos externo %2, que no puede asignarse a un tipo de datos de la tarea Flujo de datos de SSIS.  Se utilizará el tipo de datos DT_WSTR de la tarea Flujo de datos de SSIS con una longitud de %4!d! en su lugar.|  
 |0x80208385|-2145352827|DTS_W_NOREDIRECTWITHATTACHEDERROROUTPUTS|No se enviarán filas a los resultados de error. Configure las disposiciones de truncamiento o error para redirigir las filas a las salidas de error, o bien elimine los destinos o transformaciones de flujo de datos adjuntos a las salidas de error.|  
 |0x80208386|-2145352826|DTS_W_REDIRECTWITHNOATTACHEDERROROUTPUTS|Se perderán las filas enviadas a las salidas de error. Agregue nuevos destinos o transformaciones de flujo de datos para recibir filas de error, o bien reconfigure el componente para dejar de redirigir filas a las salidas de error.|  
@@ -2163,7 +2163,7 @@ ms.locfileid: "62892663"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|No se ha asignado ninguna columna de entrada a %1.|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|La tabla "%1" ha cambiado. Es posible que se hayan agregado nuevas columnas a la tabla.|  
   
-##  <a name="msgInfo"></a> Mensajes informativos  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> Mensajes informativos  
  Los nombres simbólicos de los mensajes de informativos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_I_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -2262,7 +2262,7 @@ ms.locfileid: "62892663"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 ha escrito la caché en el archivo "%2".|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La propiedad de tamaño máximo de confirmación de inserción del destino de OLE DB "%1" está establecida en 0. Este valor de la propiedad puede hacer que el paquete en ejecución deje de responder. Para obtener más información, vea el tema de Ayuda F1 del Editor de destino de OLE DB (página Administrador de conexiones).|  
   
-##  <a name="msgGeneral"></a> Mensajes generales y de eventos  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> Mensajes generales y de eventos  
  Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_MSG_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -2301,7 +2301,7 @@ ms.locfileid: "62892663"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Nombre del evento: %1<br /><br /> Mensaje: %9<br /><br /> Operador: %2<br /><br /> Nombre de origen: %3<br /><br /> Id. de origen: %4<br /><br /> Id. de ejecución: %5<br /><br /> Hora de inicio: %6<br /><br /> Hora de finalización: %7<br /><br /> Código de datos: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nombre del evento: %1<br /><br /> Mensaje: %9<br /><br /> Operador: %2<br /><br /> Nombre de origen: %3<br /><br /> Id. de origen: %4<br /><br /> Id. de ejecución: %5<br /><br /> Hora de inicio: %6<br /><br /> Hora de finalización: %7<br /><br /> Código de datos: %8|  
   
-##  <a name="msgSuccess"></a> Mensajes de aprobación  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> Mensajes de aprobación  
  Los nombres simbólicos de los mensajes de aprobación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTS_S_`.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
@@ -2310,7 +2310,7 @@ ms.locfileid: "62892663"
 |0x40005|262149|DTS_S_TRUNCATED|El valor de cadena se ha truncado. El búfer recibió una cadena demasiado larga para la columna y truncó la cadena.|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Se produjo un truncamiento al evaluar la expresión. El truncamiento se produjo durante la evaluación, que puede incluir cualquier punto de un paso intermedio.|  
   
-##  <a name="msgPipeline"></a> Mensajes de error de componentes de flujo de datos  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> Mensajes de error de componentes de flujo de datos  
  Los nombres simbólicos de mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comienzan con `DTSBC_E_`, donde "BC" hace referencia a la clase base nativa de la que se derivan la mayoría de los componentes de flujo de datos de Microsoft.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  

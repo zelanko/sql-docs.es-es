@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920669"
 ---
 # <a name="tail-log-backups-sql-server"></a>Copias del final del registro (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62920669"
   
  
   
-##  <a name="TailLogScenarios"></a>Escenarios que requieren una copia del final del registro  
+##  <a name="scenarios-that-require-a-tail-log-backup"></a><a name="TailLogScenarios"></a> Escenarios que requieren una copia del final del registro  
  Recomendamos realizar una copia del final del registro en los siguientes escenarios:  
   
 -   Si la base de datos está en línea y planea realizar una operación de restauración en la base de datos, comience con una copia del final del registro. Para evitar un error en una base de datos en línea, debe utilizar... WITH NORECOVERY de la instrucción [backup](/sql/t-sql/statements/backup-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "62920669"
 |NORECOVERY|Use NORECOVERY cada vez que desee continuar con una operación de restauración en la base de datos. NORECOVERY pone la base de datos en el estado de restauración. Esto garantiza que la base de datos no cambie después de realizar la copia del final del registro.  El registro se trunca a menos que también se especifique la opción NO_TRUNCATE o COPY_ONLY.<br /><br /> ** \* Importante \* \* ** Se recomienda evitar el uso de NO_TRUNCATE, excepto cuando la base de datos esté dañada.|  
 |CONTINUE_AFTER_ERROR|Utilice CONTINUE_AFTER_ERROR solo si va a crear una copia del final de una base de datos dañada.<br /><br /> Nota: cuando se usa la copia de seguridad del final del registro en una base de datos dañada, es posible que algunos de los metadatos que se capturan normalmente en copias de seguridad de registros no estén disponibles. Para obtener más información, vea [Copias del final del registro con metadatos de copia de seguridad incompletos](#IncompleteMetadata), más adelante en este tema.|  
   
-##  <a name="IncompleteMetadata"></a>Copias del final del registro con metadatos de copia de seguridad incompletos  
+##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>Copias del final del registro con metadatos de copia de seguridad incompletos  
  Las copias de seguridad de registros después del error capturan el final del registro aunque falten archivos en la base de datos, o la base de datos esté sin conexión o dañada. Sin embargo, esto puede provocar que se obtengan metadatos incompletos de los comandos de información de restauración y **msdb**. Sin embargo, solo los metadatos están incompletos. El registro capturado está completo y en condiciones de uso.  
   
  Si una copia del final del registro tiene metadatos incompletos, en la tabla [backupset](/sql/relational-databases/system-tables/backupset-transact-sql) se establece **has_incomplete_metadata** en **1**. Asimismo, en la salida de [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql), **HasIncompleteMetadata** se establece en **1**.  
@@ -63,13 +63,13 @@ ms.locfileid: "62920669"
   
 -   **filegroup_id**  
   
--   **automáticamente**  
+-   **type**  
   
 -   **type_desc**  
   
 -   **is_readonly**  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  Para crear una copia del final del registro, vea [Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md).  
   
  Para restaurar una copia de seguridad del registro de transacciones, vea [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md).  
@@ -77,9 +77,9 @@ ms.locfileid: "62920669"
 ## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Copia de seguridad y restauración de bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Copias de seguridad de solo copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
- [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Aplicar copias de seguridad de registros de transacción &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
+ [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   
   

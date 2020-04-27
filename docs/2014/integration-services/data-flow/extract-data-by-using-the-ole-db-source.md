@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8303cc8e30a9099a11a43cc2b4bfac341873a044
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902611"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraer datos mediante el origen de OLE DB
@@ -56,7 +56,7 @@ ms.locfileid: "62902611"
   
 8.  Opcionalmente, actualice los nombres de las columnas de salida modificando los valores en la lista **Columna de salida** .  
   
-9. Para configurar la salida de error, haga clic en **Salida de error**. Para obtener más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
+9. Para configurar la salida de error, haga clic en **Salida de error**. Para más información, vea [Configurar una salida de error en un componente de flujo de datos](../configure-an-error-output-in-a-data-flow-component.md).  
   
 10. Puede hacer clic en **Vista previa** para ver hasta 200 filas de los datos extraídos por el origen de OLE DB.  
   

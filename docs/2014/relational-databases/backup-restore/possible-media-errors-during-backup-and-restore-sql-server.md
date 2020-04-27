@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876121"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62876121"
   
   
   
-##  <a name="BckChecksums"></a> Comprobaciones de copia de seguridad  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Comprobaciones de copia de seguridad  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite tres tipos de sumas de comprobación: una suma de comprobación de páginas, una de bloques de registro y una de copia de seguridad. Al generar una suma de comprobación de copia de seguridad, BACKUP comprueba que los datos que se leen de la base de datos son coherentes con cualquier suma de comprobación o indicación de página rasgada de la base de datos.  
   
  La instrucción BACKUP calcula opcionalmente una suma de comprobación de copia de seguridad en el flujo de copia de seguridad; si hay una suma de comprobación de página o información de página rasgada en determinada página, al hacer la copia de seguridad de la página, BACKUP comprueba también el estado de página rasgada, la suma de comprobación y el Id. de la página. Al crear una suma de comprobación de copia de seguridad, una operación de copia de seguridad no agrega sumas de comprobación a las páginas. Las páginas se copian tal y como están en la base de datos y la copia de seguridad no las modifica.  
@@ -75,7 +75,7 @@ ms.locfileid: "62876121"
   
 4.  Emite un mensaje que indica que la copia de seguridad se generó correctamente, pero contiene errores de página.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para habilitar o deshabilitar sumas de comprobación de copia de seguridad**  
   
 -   [Habilitar o deshabilitar sumas de comprobación de copia de seguridad durante copia de seguridad o restauración &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

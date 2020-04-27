@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921042"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
@@ -47,14 +47,14 @@ ms.locfileid: "62921042"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="WhenUseful"></a> ¿Cuándo es útil la restauración de páginas?  
+###  <a name="when-is-a-page-restore-useful"></a><a name="WhenUseful"></a> ¿Cuándo es útil la restauración de páginas?  
  La restauración de páginas se ha diseñado para reparar páginas aisladas que se han dañado. La restauración y recuperación de una pequeña cantidad de páginas es más rápida que la restauración de un archivo, ya que reduce la cantidad de datos sin conexión durante la operación de restauración. Sin embargo, si debe restaurar una cantidad mayor de páginas de un archivo, la restauración del archivo completo suele ser más efectiva. Por ejemplo, la presencia de un gran número de páginas dañadas en un dispositivo puede indicar un error de dispositivo pendiente. Pruebe a restaurar el archivo, posiblemente en otra ubicación, y repare el dispositivo.  
   
  Además, no todos los errores de página requieren una restauración. Puede producirse un problema en los datos en caché, como por ejemplo un índice secundario, que se puede resolver recalculando los datos. Por ejemplo, si el administrador de base de datos quita un índice secundario y lo vuelve a generar, los datos dañados, aunque se corrijan, no se indican como tales en la tabla [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) .  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   La restauración de páginas se aplica a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan los modelos de recuperación optimizado para cargas masivas de registros o completa. La restauración de páginas solo se admite para grupos de archivos de lectura/escritura.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62921042"
   
          La recomendación para llevar a cabo la restauración de páginas es establecer la base de datos en el modelo de recuperación completa e intentar realizar una copia de seguridad de registros. Si la copia de seguridad de registros funciona, puede pasar a realizar la restauración de páginas. Si la copia de seguridad de registros no se realiza correctamente, perderá el trabajo realizado desde la copia de seguridad de registros anterior o tendrá que intentar ejecutar DBCC con la opción REPAIR_ALLOW_DATA_LOSS.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Escenarios de restauración de páginas:  
   
@@ -97,14 +97,14 @@ ms.locfileid: "62921042"
   
      Cuando se restauran las copias de seguridad de registros posteriores, estas se aplican solo a los archivos de base de datos que contienen al menos una página se está recuperando. Debe aplicarse una cadena ininterrumpida de copias de seguridad de registros a la última recuperación completa o diferencial para actualizar el grupo de archivos que incluye la página al archivo de registro actual. Al igual que en una restauración de archivo, el conjunto de puestas al día se avanza con un solo pase de puesta al día de registro. Para que una restauración de páginas se lleve a cabo correctamente, las páginas restauradas deben recuperarse a un estado coherente con la base de datos.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  A partir de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite las restauraciones de páginas.  
   
 #### <a name="to-restore-pages"></a>Para restaurar páginas  
@@ -163,7 +163,7 @@ ms.locfileid: "62921042"
   
 7.  Para restaurar las páginas incluidas en la cuadrícula de páginas, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Para especificar una página en una instrucción RESTORE DATABASE, necesita el identificador de archivo del archivo que contiene la página y el identificador de la página. La sintaxis necesaria es la siguiente:  
   
  `RESTORE DATABASE <database_name>`  
@@ -201,7 +201,7 @@ ms.locfileid: "62921042"
     > [!NOTE]  
     >  Esta secuencia es análoga a una secuencia de restauración de archivos. De hecho, tanto la restauración de páginas como la de archivos puede realizarse como parte de la misma secuencia.  
   
-###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  En el siguiente ejemplo se restauran cuatro páginas dañadas del archivo `B` con `NORECOVERY`. A continuación, se aplican dos copias de seguridad de registros con `NORECOVERY`y, después, la copia del final del registro, restaurada con `RECOVERY`. En este ejemplo se realiza una restauración en línea. En el ejemplo, el identificador del archivo `B` es `1`y los identificadores de las páginas dañadas son `57`, `202`, `916`y `1016`.  
   
 ```sql  

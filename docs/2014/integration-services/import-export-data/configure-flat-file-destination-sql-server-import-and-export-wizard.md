@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893036"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
@@ -35,9 +35,9 @@ ms.locfileid: "62893036"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**COMPRA LF**|La fila está delimitada por una combinación de retorno de carro y avance de línea.|  
+|**{CR}{LF}**|La fila está delimitada por una combinación de retorno de carro y avance de línea.|  
 |**COMPRA**|La fila está delimitada por un retorno de carro.|  
-|**LF**|La fila está delimitada por un avance de línea.|  
+|**{LF}**|La fila está delimitada por un avance de línea.|  
 |**Punto y coma {;}**|La fila está delimitada por un punto y coma.|  
 |**Dos puntos {:}**|La fila está delimitada por dos puntos.|  
 |**Unas{,}**|La fila está delimitada por una coma.|  
@@ -49,16 +49,16 @@ ms.locfileid: "62893036"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**COMPRA LF**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
+|**{CR}{LF}**|Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.|  
 |**COMPRA**|Las columnas se delimitan mediante un retorno de carro.|  
-|**LF**|Las columnas se delimitan mediante un avance de línea.|  
+|**{LF}**|Las columnas se delimitan mediante un avance de línea.|  
 |**Punto y coma {;}**|Las columnas se delimitan mediante un punto y coma.|  
 |**Dos puntos {:}**|Las columnas se delimitan mediante dos puntos.|  
 |**Unas{,}**|Las columnas se delimitan mediante una coma.|  
 |**Tabulación {t}**|Las columnas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las columnas se delimitan mediante una barra vertical.|  
   
- **Versión preliminar**  
+ **Vista previa**  
  En el cuadro de diálogo **vista previa** de los datos, los resultados de las opciones de formato seleccionadas para el archivo plano de destino.  
   
  **Editar transformación**  

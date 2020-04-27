@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874470"
 ---
 # <a name="implementing-assemblies"></a>Implementar ensamblados
@@ -77,7 +77,7 @@ ms.locfileid: "62874470"
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
-##  <a name="_managing"></a>Administrar versiones de ensamblado  
+##  <a name="managing-assembly-versions"></a><a name="_managing"></a>Administrar versiones de ensamblado  
  Cuando un ensamblado se carga en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se almacena y administra en los catálogos de sistema de la base de datos. Cualquier cambio realizado en la definición del ensamblado en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debe propagarse al ensamblado que se almacena en el catálogo de la base de datos.  
   
  Si desea modificar un ensamblado, debe emitir una instrucción ALTER ASSEMBLY para actualizar el ensamblado en la base de datos. De este modo se actualizará el ensamblado a la copia más reciente de los módulos [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que almacenan su implementación.  
@@ -93,8 +93,7 @@ ms.locfileid: "62874470"
   
  Solo los miembros del rol fijo de base de datos **db_owner** y **DB_DDLOWNER** pueden ejecutar Alter Assembly mediante la cláusula with unchecked Data.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] expone un mensaje al registro de eventos de aplicación Windows en el que indica que se ha modificado el ensamblado con datos no comprobados en las tablas. A continuación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica que las tablas que contienen datos que dependen del ensamblado tienen datos no comprobados. La **has_unchecked_assembly_data** columna de la vista de catálogo **Sys. Tables** contiene el valor 1 para las tablas que contienen datos no comprobados y 0 para las tablas sin datos no comprobados.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] expone un mensaje al registro de eventos de aplicación Windows en el que indica que se ha modificado el ensamblado con datos no comprobados en las tablas. A continuación, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indica que las tablas que contienen datos que dependen del ensamblado tienen datos no comprobados. La **has_unchecked_assembly_data** columna de la vista de catálogo **Sys. Tables** contiene el valor 1 para las tablas que contienen datos no comprobados y 0 para las tablas sin datos no comprobados.  
   
  Para resolver la integridad de los datos no comprobados, ejecute DBCC CHECKTABLE en cada tabla que tenga datos no comprobados. Si DBCC CHECKTABLE provoca un error, deberá eliminar las filas de la tabla que no sean válidas o modificar el código del ensamblado para solucionar los problemas y, a continuación, escribir instrucciones ALTER ASSEMBLY adicionales.  
   

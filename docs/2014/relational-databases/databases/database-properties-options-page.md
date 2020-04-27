@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917093"
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
@@ -48,20 +48,20 @@ ms.locfileid: "62917093"
  **Crear estadísticas automáticamente**  
  Especifique si la base de datos crea automáticamente estadísticas de optimización que faltan. Los valores posibles son `True` y `False`. Cuando es `True`, las estadísticas que le falten a una consulta para su optimización se generan automáticamente durante la optimización. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
- **Reducción automática**  
+ **Reducir automáticamente**  
  Especifique si los archivos de base de datos se pueden reducir periódicamente. Los valores posibles son `True` y `False`. Para más información, vea [Shrink a Database](shrink-a-database.md).  
   
  **Actualizar estadísticas automáticamente**  
  Especifique si la base de datos actualiza automáticamente las estadísticas de optimización no actualizadas. Los valores posibles son `True` y `False`. Cuando es `True`, las estadísticas desusadas que precise una consulta para su optimización se generan automáticamente durante la optimización. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
- **Actualizar estadísticas automáticamente de forma asincrónica**  
+ **Actualizar estadísticas automática y asincrónicamente**  
  Cuando `True`es, las consultas que inician una actualización automática de estadísticas no actualizadas no esperarán a que las estadísticas se actualicen antes de la compilación. Las consultas posteriores utilizan las estadísticas actualizadas si están disponibles.  
   
  Cuando `False`es, las consultas que inician una actualización automática de las estadísticas no actualizadas, esperan hasta que se puedan usar las estadísticas actualizadas en el plan de optimización de consultas.  
   
  Establecer esta opción en `True` no tiene ningún efecto a menos que **actualizar estadísticas automáticamente** también `True`se establezca en.  
   
-## <a name="containment"></a>Independencia  
+## <a name="containment"></a>Containment  
  En las bases de datos independientes, algunos valores que se suelen configurar en el nivel de servidor se pueden configurar en el nivel de base de datos.  
   
  **LCID del idioma de texto completo predeterminado**  
@@ -82,7 +82,7 @@ ms.locfileid: "62917093"
  Por ejemplo, el valor predeterminado 2049 indica que la fecha escrita como "14/3/49" se interpretará como 14 de marzo de 2049 y la fecha escrita como "14/3/50", como 14 de marzo de 1950. Para más información, consulte [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursor  
- **Cerrar cursor al confirmar habilitado**  
+ **Cierre de cursor al confirmar habilitado**  
  Especifique si los cursores se cierran tras confirmar la transacción que abre el cursor. Los valores posibles son `True` y `False`. Cuando es `True`, se cierran los cursores que estuvieran abiertos al confirmar o revertir una transacción. Cuando es `False`, estos cursores se mantienen abiertos al confirmarse una transacción. Cuando es `False`, si se revierte una transacción, se cierran todos los cursores, excepto los definidos como INSENSITIVE o STATIC. Para obtener más información, vea [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Cursor predeterminado**  
@@ -96,7 +96,7 @@ ms.locfileid: "62917093"
  Especifique una de las siguientes opciones para el acceso no transaccional a través del sistema de archivos a los datos de FILESTREAM almacenados en tablas FileTable: **OFF**, **READ_ONLY**o **FULL**. Si FILESTREAM no está habilitado en el servidor, este valor se establece en OFF y está deshabilitado. Para obtener más información, vea [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Varios  
- **ANSI NULL predeterminado**  
+ **Valor ANSI NULL predeterminado**  
  Permite valores NULL para todas las columnas o los tipos de datos definidos por el usuario que no se definan explícitamente como `NOT NULL` durante una instrucción `CREATE TABLE` o `ALTER TABLE` (el estado predeterminado). Para obtener más información, vea [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) y [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
  **Valores NULL ANSI habilitados**  
@@ -105,13 +105,13 @@ ms.locfileid: "62917093"
  **Relleno ANSI habilitado**  
  Especifique si el relleno ANSI está activado o desactivado. Los valores permitidos son `True` (on `False` ) y (OFF). Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
- **ADVERTENCIAS ANSI habilitadas**  
+ **Advertencias ANSI habilitadas**  
  Especifique el comportamiento estándar de ISO para diversas condiciones de error. Cuando `True`es, se genera un mensaje de advertencia si aparecen valores NULL en funciones de agregado (como SUM, AVG, Max, min, StDev, STDEVP, var, VarP o Count). Cuando `False`es, no se emite ninguna advertencia. Para obtener más información, vea [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
   
  **Anulación aritmética habilitada**  
  Especifique si la opción de base de datos para la anulación aritmética está habilitada o deshabilitada. Los valores posibles son `True` y `False`. Cuando es `True`, un error de desbordamiento o de división por cero detendrá la consulta o el proceso por lotes. Si el error se produce en una transacción, esta se revierte. Cuando es `False`, aparece un mensaje de advertencia, pero la consulta, el proceso por lotes o la transacción continúa como si no se hubiera producido ningún error. Para obtener más información, vea [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).  
   
- **Concatenar valores NULL produce null**  
+ **Concatenar valores NULL produce NULL**  
  Especifique el comportamiento cuando se concatenan valores NULL. Cuando el valor de la `True`propiedad `string` es, + null devuelve NULL. Cuando `False`es, el resultado `string`es. Para obtener más información, vea [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
   
  **Encadenamiento de propiedad entre bases de datos habilitado**  
@@ -122,14 +122,14 @@ ms.locfileid: "62917093"
   
  Cuando `False`es, no se mantienen las estadísticas de correlación.  
   
- **Anulación de redondeo numérico**  
+ **Anulación exacta numérica**  
  Especifique cómo controla la base de datos los errores de redondeo. Los valores posibles son `True` y `False`. Cuando es `True`, se genera un error si se produce una pérdida de precisión en una expresión. Cuando `False`es, las pérdidas de precisión no generan mensajes de error y el resultado se redondea a la precisión de la columna o variable que almacena el resultado. Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Parametrización**  
- Cuando es **SIMPLE**, las consultas se parametrizan en función del comportamiento predeterminado de la base de datos. Cuando **** se fuerza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , parametriza todas las consultas de la base de datos.  
+ Cuando es **SIMPLE**, las consultas se parametrizan en función del comportamiento predeterminado de la base de datos. Cuando **FORCED**se fuerza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , parametriza todas las consultas de la base de datos.  
   
  **Identificadores entre comillas habilitados**  
- Especifique si se pueden usar palabras clave de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores (un nombre de objeto o variable) si están delimitadas por comillas. Los valores posibles son `True` y `False`. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;&#41;de Transact-SQL ](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
+ Especifique si se pueden usar palabras clave de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores (un nombre de objeto o variable) si están delimitadas por comillas. Los valores posibles son `True` y `False`. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Desencadenadores recursivos habilitados**  
  Especifique si los desencadenadores pueden activar otros desencadenadores. Los valores posibles son `True` y `False`. Cuando se establece `True`en, se habilita la activación recursiva de desencadenadores. Cuando se establece `False`en, solo se impide la recursividad directa. Para deshabilitar la repetición indirecta, establezca la opción nested triggers del servidor en 0 con sp_configure. Para obtener más información, vea [Crear desencadenadores anidado](../triggers/create-nested-triggers.md).  
@@ -153,7 +153,7 @@ ms.locfileid: "62917093"
  Esta opción es de solo lectura a partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] de y versiones posteriores, todas las bases de datos están habilitadas para el formato de almacenamiento vardecimal. Esta opción usa [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
 ## <a name="recovery"></a>Recuperación  
- **Comprobación de página**  
+ **Comprobación de páginas**  
  Especifique la opción utilizada para detectar y notificar las transacciones de E/S incompletas debido a errores de E/S de disco. Los valores posibles son **None**, **TornPageDetection**y **Checksum**. Para obtener más información, vea [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Tiempo de recuperación de destino (segundos)**  
@@ -163,7 +163,7 @@ ms.locfileid: "62917093"
  **Base de datos de solo lectura**  
  Especifica si la base de datos es de solo lectura. Los valores posibles son `True` y `False`. Cuando es `True`, los usuarios solo pueden leer los datos de la base de datos. Los usuarios no pueden modificar los objetos de datos ni de base de datos; sin embargo, la base de datos propiamente dicha se puede eliminar con la instrucción DROP DATABASE. La base de datos no puede estar en uso cuando se especifica un nuevo valor para la opción **Base de datos de solo lectura** . La base de datos maestra representa una excepción, y solo el administrador del sistema puede utilizar master mientras está habilitada la opción.  
   
- **Estado de base de datos**  
+ **Estado de la base de datos**  
  Muestra el estado actual de la base de datos. Esta directiva no es editable Para obtener más información acerca del **Estado de base de datos**, vea [Database States](database-states.md).  
   
  **Restringir el acceso**  
@@ -173,11 +173,11 @@ ms.locfileid: "62917093"
   
      El estado normal de una base de datos de producción; permite que varios usuarios tengan acceso a la base de datos a la vez.  
   
--   **Sencilla**  
+-   **Single**  
   
      Se utiliza en acciones de mantenimiento; solo un usuario puede tener acceso a la base de datos.  
   
--   **Restricted (Restringida)**  
+-   **Restringido**  
   
      Solo los miembros de los roles db_owner, dbcreator o sysadmin pueden utilizar la base de datos.  
   

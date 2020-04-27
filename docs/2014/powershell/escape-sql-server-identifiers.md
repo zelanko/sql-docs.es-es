@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 17196f4e9a6deaadca09e77e94e2cf393f4af237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922907"
 ---
 # <a name="escape-sql-server-identifiers"></a>Identificadores de SQL Server de escape
@@ -37,8 +37,8 @@ Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)   
- [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
+ [SQL Server identificadores en PowerShell](sql-server-identifiers-in-powershell.md)   
+ [Proveedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

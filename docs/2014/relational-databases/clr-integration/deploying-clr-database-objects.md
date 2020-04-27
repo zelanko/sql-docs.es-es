@@ -16,15 +16,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920837"
 ---
 # <a name="deploying-clr-database-objects"></a>Implementar objetos de base de datos de CLR
-  La implementación es el proceso mediante el cual se distribuye una aplicación o módulo finalizados para su instalación y ejecución en otro equipo. Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, puede desarrollar objetos de base de datos de Common Language Runtime (CLR) e implementarlos en un servidor de prueba. Los objetos de base de datos administrados también pueden compilarse con los archivos de redistribución de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework en lugar de Visual Studio. Una vez compilados, los ensamblados que contienen objetos de base de datos de CLR pueden implementarse en un servidor de prueba mediante instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Visual Studio. Tenga en cuenta que Visual Studio .NET 2003 no puede utilizarse para programar o implementar la integración CLR. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye .NET Framework preinstalado y Visual Studio .NET 2003 no puede utilizar los ensamblados de .NET Framework 2.0.  
+  La implementación es el proceso mediante el cual se distribuye una aplicación o módulo finalizados para su instalación y ejecución en otro equipo. Con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, puede desarrollar objetos de base de datos de Common Language Runtime (CLR) e implementarlos en un servidor de prueba. Los objetos de base de datos administrados también pueden compilarse con los archivos de redistribución de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework en lugar de Visual Studio. Una vez compilados, los ensamblados que contienen objetos de base de datos de CLR pueden implementarse en un servidor de prueba mediante instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Visual Studio. Tenga en cuenta que Visual Studio .NET 2003 no puede utilizarse para programar o implementar la integración CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye .NET Framework preinstalado y Visual Studio .NET 2003 no puede utilizar los ensamblados de .NET Framework 2.0.  
   
  Una vez que los métodos CLR se han probado y comprobado en el servidor de prueba, pueden distribuirse a los servidores de producción a través de un script de implementación. El script de implementación puede generarse manualmente o utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (vea el procedimiento posteriormente en este tema).  
   
@@ -93,11 +92,11 @@ ms.locfileid: "62920837"
   
 4.  En el panel **elegir opciones de script** , haga clic en **siguiente**o cambie las opciones y, a continuación, haga clic en **siguiente**.  
   
-5.  En el panel **elegir tipos de objeto** , elija el tipo de objeto de base de datos que se va a implementar. Haga clic en **Next**.  
+5.  En el panel **elegir tipos de objeto** , elija el tipo de objeto de base de datos que se va a implementar. Haga clic en **Siguiente**.  
   
 6.  Para cada tipo de objeto seleccionado en el panel **elegir tipos de objeto** , se muestra un panel ** \<elegir tipo>** . En este panel, puede elegir entre todas las instancias de ese tipo de objeto de base de datos registradas en la base de datos especificada. Seleccione uno o más objetos y haga clic en **siguiente**.  
   
-7.  El panel **Opciones de salida** aparece cuando se han seleccionado todos los tipos de objetos de base de datos deseados. Seleccione **script a archivo** y especifique una ruta de acceso de archivo para el script. Seleccione **Next** (Siguiente). Revise sus selecciones y haga clic en **Finalizar**. El script de implementación se guardará en la ruta de acceso de archivo especificada.  
+7.  El panel **Opciones de salida** aparece cuando se han seleccionado todos los tipos de objetos de base de datos deseados. Seleccione **script a archivo** y especifique una ruta de acceso de archivo para el script. Selecciona **Siguiente**. Revise sus selecciones y haga clic en **Finalizar**. El script de implementación se guardará en la ruta de acceso de archivo especificada.  
   
 ## <a name="post-deployment-scripts"></a>Scripts posteriores a la implementación  
  Puede ejecutar un script posterior a la implementación.  

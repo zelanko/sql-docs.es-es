@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4213bcee1d17d27bf63da9eb286b21dea4cc5a02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921935"
 ---
 # <a name="partial-backups-sql-server"></a>Copias de seguridad parciales (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62921935"
   
  Una copia de seguridad parcial puede utilizarse como *base diferencial* para realizar copias de seguridad diferenciales parciales. Para obtener más información, vea [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 > [!NOTE]  
 >  Las copias de seguridad parciales no son compatibles con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ni con el Asistente para planes de mantenimiento.  

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891074"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>Paso 2: Habilitar y configurar las configuraciones de paquetes
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>Paso 2: Habilitación y configuración de configuraciones de paquete
   En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Utilizará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad `Directory` del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Para crear una variable nueva de nivel de paquete asignada a la propiedad Directory  
@@ -26,7 +26,7 @@ ms.locfileid: "62891074"
   
 2.  En el menú [!INCLUDE[ssIS](../includes/ssis-md.md)] , seleccione **Variables**.  
   
-3.  En la ventana **Variables** , haga clic en el icono Agregar variable .  
+3.  En la ventana **Variables** , haga clic en el icono Agregar variable.  
   
 4.  En el cuadro **Nombre** , escriba **varFolderName**.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62891074"
   
 10. En el cuadro de diálogo **Seleccionar ubicación del archivo de configuración** , escriba **SSISTutorial** en **Nombre de archivo**y haga clic en **Guardar**.  
   
-11. En la página **Seleccionar tipo de configuración** , haga clic en **Siguiente**.  
+11. En la página **Seleccionar tipo de configuración** , haga clic en **siguiente.**  
   
 12. En la página **seleccionar Propiedades para la exportación** , en el panel **objetos** , expanda **variables**, expanda **varFolderName**, expanda **propiedades**y, a continuación, seleccione **valor**.  
   
@@ -105,6 +105,6 @@ ms.locfileid: "62891074"
 3.  En la `New Sample Data` carpeta, pegue los archivos copiados.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 3: Modificar el valor de configuración de la propiedad Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Paso 3: Modificación del valor de configuración de la propiedad Directory](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

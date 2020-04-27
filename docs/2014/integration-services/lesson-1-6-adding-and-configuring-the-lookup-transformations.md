@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891553"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Paso 6: Agregar y configurar transformaciones de búsqueda
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Paso 6: Adición y configuración de transformaciones de búsqueda
   Tras configurar el origen de archivo plano para extraer datos del archivo de origen, la siguiente tarea consiste en definir las transformaciones de búsqueda necesarias para obtener los valores para las claves **CurrencyKey** y **DateKey**. Una transformación Búsqueda realiza una búsqueda combinando datos de la columna de entrada especificada en una columna de un conjunto de datos de referencia. El conjunto de datos de referencia puede ser una tabla o una vista existente, una tabla nueva o el resultado de una instrucción SQL. En este tutorial, la transformación Búsqueda utiliza un administrador de conexiones OLE DB para conectar con la base de datos que contiene los datos que constituyen el origen del conjunto de datos de referencia.  
   
 > [!NOTE]  
@@ -131,9 +131,9 @@ ms.locfileid: "62891553"
 12. En el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos)** y que la propiedad **DefaultCodePage** está establecida en **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 7: agregar y configurar el destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+ [Paso 7: Adición y configuración del destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)  
+ [Transformación búsqueda](data-flow/transformations/lookup-transformation.md)  
   
   

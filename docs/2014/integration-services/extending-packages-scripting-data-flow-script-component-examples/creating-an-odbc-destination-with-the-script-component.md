@@ -16,29 +16,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896191"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Crear un destino ODBC con el componente de script
-  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], normalmente se guardan los datos en un destino ODBC mediante [!INCLUDE[vstecado](../../includes/vstecado-md.md)] un destino y [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] el proveedor de datos para ODBC. Sin embargo, también se puede crear un destino ODBC ad hoc para utilizar en un paquete único. Para crear este destino ODBC ad hoc, use el componente de script como se muestra en el ejemplo siguiente.  
+  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], normalmente se guardan los datos en un destino ODBC mediante un destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] y el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC. Sin embargo, también se puede crear un destino ODBC ad hoc para utilizar en un paquete único. Para crear este destino ODBC ad hoc, use el componente de script como se muestra en el ejemplo siguiente.  
   
 > [!NOTE]  
 >  Si desea crear un componente que pueda reutilizar más fácilmente en varias tareas de flujo de datos y varios paquetes, puede utilizar el código de este ejemplo de componente de script como punto de inicio para el componente de flujo de datos personalizado. Para obtener más información, vea [Desarrollar un componente de flujo de datos personalizado](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo crear un componente de destino que utiliza un administrador de conexiones ODBC existente para guardar los datos del flujo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos en una tabla.  
+ En el ejemplo siguiente se muestra cómo crear un componente de destino que usa un administrador de conexiones ODBC existente para guardar los datos del flujo de datos en una tabla de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Este ejemplo es una versión modificada del destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] personalizado que se mostró en el tema [Crear un destino con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Sin embargo, en este ejemplo, el destino [!INCLUDE[vstecado](../../includes/vstecado-md.md)] personalizado se ha modificado para que funcione con un administrador de conexiones ODBC y guarde los datos a un destino de ODBC. Estas modificaciones también incluyen los cambios siguientes:  
   
 -   No puede llamar al método `AcquireConnection` del administrador de conexiones ODBC desde el código administrado, porque devuelve un objeto nativo. Por consiguiente, este ejemplo usa la cadena de conexión del administrador de conexiones para conectar directamente al origen de datos mediante el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para ODBC administrado.  
   
--   
-  `OdbcCommand` espera los parámetros posicionales. Los signos de interrogación (?) en el texto del comando indican las posiciones de los parámetros. (En cambio, `SqlCommand` espera parámetros con nombre.)  
+-   `OdbcCommand` espera los parámetros posicionales. Los signos de interrogación (?) en el texto del comando indican las posiciones de los parámetros. (En cambio, `SqlCommand` espera parámetros con nombre.)  
   
- En este ejemplo se usa la tabla **Person.Address** en la base de datos de ejemplo **AdventureWorks**. En el ejemplo se pasan las columnas primera y cuarta, las columnas **int*AddressID*** y **nvarchar(30)City**, de esta tabla a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino en el tema [Desarrollar tipos específicos de los componentes de script](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ En este ejemplo se usa la tabla **Person.Address** en la base de datos de ejemplo **AdventureWorks**. En el ejemplo se pasan las columnas primera y cuarta, las columnas **int * AddressID*** y **nvarchar (30) City** , de esta tabla a través del flujo de datos. Estos mismos datos se usan en los ejemplos de origen, transformación y destino en el tema [Desarrollar tipos específicos de los componentes de script](../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Para configurar este ejemplo de componente de script  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62896191"
   
 3.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como destino.  
   
-4.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar un origen directamente a un destino sin ninguna transformación). Para asegurarse de que este ejemplo funciona, la salida del componente de nivel superior debe incluir por lo menos las columnas **AddressID** y **City** de la tabla **Person. Address** de la base de datos de ejemplo **AdventureWorks** .  
+4.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación). Para asegurarse de que este ejemplo funciona, la salida del componente ascendente debe incluir por lo menos las columnas **AddressID** y **City** de la tabla **Person.Address** de la base de datos de ejemplo **AdventureWorks**.  
   
 5.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas **AddressID** y **City**.  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921820"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Recuperar una base de datos sin restaurar los datos (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921820"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  La cláusula FROM **=** \<*dispositivo_de_copia_de_seguridad>* no se usa en las restauraciones de solo recuperación porque no es necesario realizar una copia de seguridad.  
+>  La cláusula **=** \<from *backup_device>* no se utiliza para las restauraciones de solo recuperación porque no es necesario realizar ninguna copia de seguridad.  
   
  **Ejemplo**  
   
@@ -89,7 +89,7 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>Consulte también  
- [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [SQL Server de &#40;de restauración en línea&#41;](online-restore-sql-server.md)   
  [Restauraciones por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [Restauraciones de archivos &#40;modelo de recuperación simple&#41;](file-restores-simple-recovery-model.md)   
  [Restauraciones de archivos &#40;modelo de recuperación completa&#41;](file-restores-full-recovery-model.md)   

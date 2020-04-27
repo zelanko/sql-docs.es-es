@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892673"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "62892673"
  **Editar asignaciones**  
  Utilice el cuadro de diálogo **asignaciones de columnas** para especificar las columnas de destino que van a recibir los datos de origen. Puede copiar solo un subconjunto de columnas si selecciona \<omitir> en la columna **destino** del cuadro de diálogo **asignaciones de columnas** para las columnas que desea omitir.  
   
- **Versión preliminar**  
+ **Vista previa**  
  Obtenga una vista previa de los datos de origen en el cuadro de diálogo **vista previa** de los datos para comprobarlo antes de realizar la importación o exportación. El cuadro de diálogo **vista previa** de los datos muestra hasta 200 filas de datos.  
   
  Después de ofrecer una vista previa de los datos, puede que desee cambiar las opciones que ha seleccionado para el origen y el destino. Para realizar estas modificaciones, en la página **Seleccionar tablas y vistas de origen** , haga clic en **Atrás** para volver a las páginas anteriores en las que puede cambiar sus selecciones.  

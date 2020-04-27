@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e593a5d64b6a1b009a68c434fe9ce1a32cb2de20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921069"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad (SQL Server)
@@ -42,15 +42,15 @@ ms.locfileid: "62921069"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para obtener información sobre seguridad, vea [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql).  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, la obtención de información sobre un conjunto de copia de seguridad o un dispositivo de copia de seguridad requiere el permiso CREATE DATABASE. Para obtener más información, vea [GRANT &#40;permisos de base de datos de Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>Para ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62921069"
 > [!NOTE]  
 >  Para obtener más información, vea [Media Contents Page (Página Contenido de los medios)](backup-device-media-contents-page.md).  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-the-properties-and-contents-of-a-logical-backup-device"></a>Para ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad  
   

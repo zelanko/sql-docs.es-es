@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922166"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación completa)
@@ -32,20 +32,20 @@ ms.locfileid: "62922166"
  Al restaurar una base de datos, especialmente en el modelo de recuperación completa o el modelo de recuperación optimizado para cargas masivas de registros, debe usar una única secuencia de restauración. Una *secuencia de restauración* consta de dos o más operaciones de restauración que mueven datos en una o varias fases de restauración.  
   
 > [!IMPORTANT]  
->  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Estas bases de datos pueden contener código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado o provocar errores debido a la modificación del esquema o de la estructura de la base de datos física. Antes de usar una base de datos de un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos en un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
+>  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Estas bases de datos pueden contener código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] inesperado o provocar errores debido a la modificación del esquema o de la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
   
  **En este tema:**  
   
 -   [Restaurar una base de datos hasta el momento del error](#PointOfFailure)  
   
--   [Restaurar una base de datos a un punto dentro de una copia de seguridad de registros](#PointWithinBackup)  
+-   [Restaurar bases de datos a un punto de una copia de seguridad de registros](#PointWithinBackup)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
 > [!NOTE]  
 >  Para obtener más información sobre la compatibilidad con las copias de seguridad de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea la sección "Soporte de compatibilidad" de [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="PointOfFailure"></a> Restaurar una base de datos hasta el momento del error  
+##  <a name="restoring-a-database-to-the-point-of-failure"></a><a name="PointOfFailure"></a>Restaurar una base de datos hasta el momento del error  
  En general, la recuperación de una base de datos hasta el momento del error incluye los siguientes pasos básicos:  
   
 1.  Realizar una copia de seguridad del registro de transacciones activo (denominado el final del registro). De esta forma se crea una copia del final del registro. Si el registro de transacciones activo no está disponible, todas las transacciones de esa parte del registro se pierden.  
@@ -72,8 +72,8 @@ ms.locfileid: "62922166"
 > [!NOTE]  
 >  Cuando restaura una copia de seguridad de la base de datos en una instancia de servidor distinta, vea [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md).  
   
-###  <a name="TsqlSyntax"></a> Sintaxis RESTORE de Transact-SQL básica  
- La sintaxis [de](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] básica para la secuencia de restauración en la ilustración anterior es la siguiente:  
+###  <a name="basic-transact-sql-restore-syntax"></a><a name="TsqlSyntax"></a> Sintaxis RESTORE de Transact-SQL básica  
+ La sintaxis de [restore](/sql/t-sql/statements/restore-statements-transact-sql) [!INCLUDE[tsql](../../includes/tsql-md.md)] básica para la secuencia de restauración en la ilustración anterior es la siguiente:  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62922166"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Ejemplo: recuperar hasta el momento del error (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a>Ejemplo: recuperar hasta el momento del error (Transact-SQL)  
  En el siguiente ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se muestran las opciones fundamentales en una secuencia de restauración que restaura la base de datos hasta el momento del error. En el ejemplo se crea una copia del final del registro de la base de datos. A continuación, en el ejemplo se restaura una copia de seguridad completa de la base de datos y una copia de seguridad de registros; a continuación; se restaura la copia del final del registro. En el ejemplo, se recupera la base de datos en un último paso independiente.  
   
 > [!NOTE]  
@@ -121,7 +121,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 GO  
 ```  
   
-##  <a name="PointWithinBackup"></a> Restaurar bases de datos a un punto de una copia de seguridad de registros  
+##  <a name="restoring-a-database-to-a-point-within-a-log-backup"></a><a name="PointWithinBackup"></a>Restaurar una base de datos a un punto dentro de una copia de seguridad de registros  
  En el modelo de recuperación completa, una restauración completa de la base de datos se puede recuperar normalmente hasta un momento en el tiempo, una transacción marcada o un LSN de la copia de seguridad de registros. Sin embargo, en el modelo de recuperación optimizado para cargas masivas de registros, si la copia de seguridad de registros contiene cambios de registros de operaciones masivas, no es posible la recuperación a un momento dado.  
   
 ### <a name="sample-point-in-time-restore-scenarios"></a>Escenarios de ejemplo de restauración en un momento concreto  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  Para obtener un ejemplo de una restauración a un momento dado, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para restaurar una copia de seguridad completa de la base de datos**  
   
 -   [Restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
@@ -178,8 +178,8 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Aplicar copias de seguridad de registros de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [sp_addumpdevice &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   

@@ -15,14 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62913732"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>Actualizar un clúster de conmutación por error de SQL Server
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite la actualización de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] desde los clústeres de conmutación por error de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] y [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] por separado en todos los nodos de clúster de conmutación por error.  
   
  Los detalles de compatibilidad son los siguientes:  
@@ -33,7 +32,7 @@ ms.locfileid: "62913732"
   
 -   Instalación de los Service Pack: debe aplicar los Service Pack y las revisiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a los clústeres de conmutación por error de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] por separado en todos los nodos.  
   
--   Los escenarios siguientes no se admiten:  
+-   Los siguientes escenarios no se admiten:  
   
     -   No puede realizar la migración desde una instancia independiente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un clúster de conmutación por error.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62913732"
   
 -   Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
   
-## <a name="upgrading-a-includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>Actualizar un clúster de conmutación por error de varias subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+## <a name="upgrading-a-ssnoversion-multi-subnet-failover-cluster"></a>Actualizar un clúster de conmutación por error de varias subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  No se puede actualizar directamente un clúster de conmutación por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error que no sea [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de varias subredes a un clúster de conmutación por error de varias subredes. Para más información, vea [Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  
   
 ## <a name="see-also"></a>Consulte también  

@@ -19,22 +19,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a7764c6e8e45b56e43e592e70b1c85b8d4744b69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919321"
 ---
 # <a name="common-language-runtime-clr-integration-overview"></a>Información general sobre integración CLR (Common Language Runtime)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ahora incluye la integración del componente Common Language Runtime (CLR) del .NET Framework para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. El CLR proporciona código administrado con servicios como, por ejemplo, integración entre idiomas, seguridad de acceso del código, administración de la vigencia del objeto y compatibilidad con la depuración y la creación de perfiles. Para los usuarios y programadores de aplicaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la integración CLR significa que ahora se pueden escribir procedimientos almacenados, desencadenadores, tipos definidos por el usuario, funciones definidas por el usuario (escalares y con valores de tabla) y funciones de agregado definidas por el usuario con cualquier lenguaje .NET Framework, incluidos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye .NET Framework versión 4 preinstalado.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ahora incluye la integración del componente Common Language Runtime (CLR) del .NET Framework para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. El CLR proporciona código administrado con servicios como, por ejemplo, integración entre idiomas, seguridad de acceso del código, administración de la vigencia del objeto y compatibilidad con la depuración y la creación de perfiles. Para los usuarios y programadores de aplicaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la integración CLR significa que ahora se pueden escribir procedimientos almacenados, desencadenadores, tipos definidos por el usuario, funciones definidas por el usuario (escalares y con valores de tabla) y funciones de agregado definidas por el usuario con cualquier lenguaje .NET Framework, incluidos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye .NET Framework versión 4 preinstalado.  
   
  Entre las ventajas principales de esta integración se encuentran las siguientes:  
   
 -   **Un mejor modelo de programación.** Los lenguajes de .NET Framework son en muchos aspectos más ricos que Transact-SQL, ya que proporcionan construcciones y funciones que antes no estaban disponibles para los desarrolladores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los programadores también pueden aprovechar el potencial de la Biblioteca de .NET Framework, que proporciona un amplio conjunto de clases que se pueden utilizar de forma rápida y eficaz para solucionar problemas de programación.  
   
--   **Seguridad mejorada.** El código administrado se ejecuta en un entorno de Common Language Runtime, hospedado por el motor de base de datos. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lo aprovecha para proporcionar una alternativa más segura a los procedimientos almacenados extendidos disponibles en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   **Seguridad mejorada.** El código administrado se ejecuta en un entorno de Common Language Runtime, hospedado por el motor de base de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lo aprovecha para proporcionar una alternativa más segura a los procedimientos almacenados extendidos disponibles en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   **Capacidad de definir tipos de datos y funciones de agregado.** Los tipos y agregados definidos por el usuario son dos nuevos objetos de base de datos administrados que amplían las capacidades de almacenamiento y consulta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -47,7 +45,7 @@ ms.locfileid: "62919321"
  [Información general de la integración CLR](clr-integration-overview.md)  
  Describe los tipos de objetos que pueden generarse utilizando la integración con CLR y revisa los requisitos para generar objetos de base de datos mediante la integración con CLR.  
   
- [Novedades de la integración con CLR](clr-integration-what-s-new.md)  
+ [Novedades de la integración CLR](clr-integration-what-s-new.md)  
  Describe las nuevas características de esta versión.  
   
  [Arquitectura de integración CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md)  

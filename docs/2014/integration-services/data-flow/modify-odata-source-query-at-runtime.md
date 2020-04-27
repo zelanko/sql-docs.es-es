@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901192"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Modificar una consulta de origen OData en tiempo de ejecución
@@ -60,7 +60,7 @@ ms.locfileid: "62901192"
   
 6.  Escriba la **expresión**.  
   
-7.  Haga clic en **OK**.  
+7.  Haga clic en **Aceptar**.  
   
 > [!WARNING]  
 >  Tenga en cuenta que cuando se usa este enfoque debe asegurarse de que los valores establecidos están codificados correctamente como una dirección URL. Cuando reciba valores de datos proporcionados por el usuario (por ejemplo, al establecer valores de opción de consulta individuales de un parámetro), debe asegurarse de que los valores se validan para impedir posibles ataques de inyección de código SQL.  

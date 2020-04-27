@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922559"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Conceptos de programación en el ámbito de la integración de Common Language Runtime (CLR)
@@ -36,7 +36,7 @@ ms.locfileid: "62922559"
  [Información general sobre la integración de Common Language Runtime &#40;CLR&#41;](common-language-runtime-integration-overview.md)  
  Proporciona una breve introducción a CLR y describe cómo y por qué se ha utilizado esta tecnología en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Describe las ventajas de usar CLR para crear objetos de base de datos.  
   
- [Ensamblados &#40;Motor de base de datos&#41;](assemblies-database-engine.md)  
+ [Ensamblados &#40;motor de la base de datos&#41;](assemblies-database-engine.md)  
  Describe cómo se utilizan los ensamblados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para implementar funciones, procedimientos almacenados, desencadenadores, agregados y tipos definidos por el usuario, escritos en uno de los lenguajes de código administrado (no en [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) y que se hospedan en Common Language Runtime (CLR) de [!INCLUDE[tsql](../../../includes/tsql-md.md)] .NET Framework.  
   
  [Crear objetos de base de datos con Common Language Runtime &#40;CLR&#41; Integration](database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)  
@@ -48,10 +48,10 @@ ms.locfileid: "62922559"
  [Seguridad de la integración CLR](security/clr-integration-security.md)  
  Describe el modelo de seguridad de la integración CLR.  
   
- [Depurar objetos de bases de datos CLR](debugging-clr-database-objects.md)  
+ [Depurar objetos de base de datos CLR](debugging-clr-database-objects.md)  
  Describe las limitaciones y los requisitos para depurar los objetos de la base de datos de CLR.  
   
- [Implementar objetos de base de datos de CLR](deploying-clr-database-objects.md)  
+ [Implementar objetos de base de datos CLR](deploying-clr-database-objects.md)  
  Describe los ensamblados de implementación a servidores de producción.  
   
  [Administrar ensamblados de integración CLR](assemblies/managing-clr-integration-assemblies.md)  

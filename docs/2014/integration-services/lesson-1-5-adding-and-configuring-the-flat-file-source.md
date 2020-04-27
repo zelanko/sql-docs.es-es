@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891543"
 ---
-# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Paso 5: Agregar y configurar el origen de archivo plano
+# <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Paso 5: Adición y configuración del origen de archivo plano
   En esta tarea, agregará un origen de archivo plano al paquete y configurará dicho origen. Un origen de archivo plano es un componente de flujo de datos que utiliza metadatos definidos por un administrador de conexiones de archivo plano para especificar el formato y la estructura de los datos que deben extraerse del archivo plano mediante un proceso de transformación. El origen de archivo plano puede configurarse para extraer datos de un único archivo plano utilizando la definición de formato de archivo proporcionada por el administrador de conexiones de archivo plano.  
   
  En este tutorial, configurará el origen de archivo plano para utilizar `Sample Flat File Source Data` el administrador de conexiones que creó anteriormente.  
@@ -36,17 +36,17 @@ ms.locfileid: "62891543"
   
 6.  Haga clic en **Columnas** y compruebe que los nombres de las columnas son correctos.  
   
-7.  Haga clic en **OK**.  
+7.  Haga clic en **Aceptar**.  
   
 8.  Haga clic con el botón derecho en el origen del archivo plano y haga clic en **Propiedades**.  
   
 9. En el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos)**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 6: Agregar y configurar transformaciones de búsqueda](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+ [Paso 6: Adición y configuración de transformaciones de búsqueda](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Origen de archivo plano](data-flow/flat-file-source.md)   
- [Página general del editor del administrador de conexiones de archivos planos &#40;&#41;](general-page-of-integration-services-designers-options.md)  
+ [Editor del administrador de conexiones de archivos planos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)  
   
   

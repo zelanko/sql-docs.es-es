@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874642"
 ---
 # <a name="retrieving-udt-data"></a>Recuperar datos UDT
@@ -157,7 +157,7 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>Enlazar UDT como bytes  
- Es posible que en algunas situaciones desee recuperar los datos sin formato de la columna de UDT. Quizás el tipo no esté disponible localmente o no desee crear instancias de una instancia del UDT. Puede leer los bytes sin formato en una matriz de bytes **** mediante el método GetBytes `SqlDataReader`de un. Este método lee un flujo de bytes a partir del desplazamiento de la columna especificada en el búfer de una matriz, comenzando en el desplazamiento del búfer especificado. Otra opción es usar uno de los métodos **GetSqlBytes** o **GetSqlBinary** y leer todo el contenido en una sola operación. En cualquier caso, nunca se crean instancias del objeto UDT, de modo que no es necesario establecer una referencia al UDT en el ensamblado de cliente.  
+ Es posible que en algunas situaciones desee recuperar los datos sin formato de la columna de UDT. Quizás el tipo no esté disponible localmente o no desee crear instancias de una instancia del UDT. Puede leer los bytes sin formato en una matriz de bytes **GetBytes** mediante el método GetBytes `SqlDataReader`de un. Este método lee un flujo de bytes a partir del desplazamiento de la columna especificada en el búfer de una matriz, comenzando en el desplazamiento del búfer especificado. Otra opción es usar uno de los métodos **GetSqlBytes** o **GetSqlBinary** y leer todo el contenido en una sola operación. En cualquier caso, nunca se crean instancias del objeto UDT, de modo que no es necesario establecer una referencia al UDT en el ensamblado de cliente.  
   
 ### <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo recuperar los datos de **punto** como bytes sin formato en una matriz `SqlDataReader`de bytes mediante. El código utiliza `System.Text.StringBuilder` para convertir los bytes sin formato en una representación de cadena que se mostrará en la ventana de la consola.  
@@ -453,6 +453,6 @@ static void Main()
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Obtener acceso a tipos definidos por el usuario en ADO.NET](accessing-user-defined-types-in-ado-net.md)  
+ [Acceso a tipos definidos por el usuario en ADO.NET](accessing-user-defined-types-in-ado-net.md)  
   
   

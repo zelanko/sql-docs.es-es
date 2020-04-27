@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc4d894dc03a53892b69f33dbf153cdd15fcf340
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62914523"
 ---
 # <a name="mssqlserver_3313"></a>MSSQLSERVER_3313
@@ -40,14 +40,14 @@ ms.locfileid: "62914523"
 ## <a name="user-action"></a>Acción del usuario  
  Una condición transitoria que se dio en el sistema durante un intento determinado de iniciar la instancia del servidor o recuperar una base de datos puede producir este error. También puede deberse a un error permanente que se produce cada vez que se intenta iniciar la base de datos. Para obtener información acerca de la causa, examine el registro de eventos de Windows para ver si contiene un error anterior que indique el error concreto.  
   
- Tenga en cuenta que cuando se encuentra esta condición de error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente genera tres archivos en la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG**. El archivo SQLDump*nnnn*.txt contiene información de diagnóstico avanzada relacionada con los errores, incluidos detalles sobre la transacción y la página en las que se encontró el problema. El equipo de soporte técnico de productos suele usar esta información para analizar el motivo del error.  
+ Tenga en cuenta que cuando se encuentra esta condición de error, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente genera tres archivos en la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]LOG**de**. El archivo SQLDump*nnnn*.txt contiene información de diagnóstico avanzada relacionada con los errores, incluidos detalles sobre la transacción y la página en las que se encontró el problema. El equipo de soporte técnico de productos suele usar esta información para analizar el motivo del error.  
   
  Para obtener información sobre la causa de esta repetición del error 3313, busque en el registro de eventos de Windows un error anterior que indique el error específico. La acción del usuario adecuada depende de si la información del registro de eventos de Windows indica que el error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo causó una condición transitoria o un error permanente. Para obtener información sobre las acciones del usuario para solucionar el error 3313, consulte los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
- [Restauraciones de base de datos completas &#40;modelo de recuperación simple&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md)   
+ [Restauraciones de bases de datos completas &#40;modelo de recuperación simple&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md)   
  [MSSQLSERVER_824](mssqlserver-824-database-engine-error.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

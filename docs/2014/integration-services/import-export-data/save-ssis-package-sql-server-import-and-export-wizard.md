@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892773"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Guardar el paquete SSIS (Asistente para importación y exportación de SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "62892773"
  **Descripción**  
  Escriba una descripción para el paquete. Como práctica recomendada, describa el paquete en función de su objetivo para que los paquetes se documenten por sí mismos y su mantenimiento resulte sencillo.  
   
- **Dirigir**  
+ **Destino**  
  Vea el destino (de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un archivo) especificado previamente como archivo de destino.  
   
 ## <a name="target-dynamic-options"></a>Opciones dinámicas de destino  
@@ -61,7 +61,7 @@ ms.locfileid: "62892773"
  **Nombre de archivo**  
  Cuando haya seleccionado un destino de archivo, escriba la ruta de acceso del archivo de destino o use el botón **examinar** .  
   
- **Browse**  
+ **Examinar**  
  Cuando haya seleccionado un destino de archivo, vaya al archivo de destino mediante el cuadro de diálogo **Guardar paquete** .  
   
 ## <a name="see-also"></a>Consulte también  

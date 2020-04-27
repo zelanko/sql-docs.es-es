@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922023"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Administrar la tabla suspect_pages (SQL Server)
@@ -58,9 +58,9 @@ ms.locfileid: "62922023"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   **Errores registrados en la tabla suspect_pages**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62922023"
   
      Un administrador de la base de datos también puede insertar o actualizar registros. Por ejemplo, actualizar una fila puede resultar útil cuando el administrador de la base de datos sabe que una determinada página sospechosa está intacta realmente, pero desea preservar el registro durante un tiempo.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Cualquier persona con acceso a **msdb** puede leer los datos de la tabla **suspect_pages** . Cualquier persona con el permiso UPDATE en la tabla suspect_pages puede actualizar sus registros. Los miembros del rol fijo de base de datos **db_owner** de **msdb** o el rol fijo de servidor **sysadmin** pueden insertar, actualizar y eliminar registros.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Para administrar la tabla suspect_pages  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62922023"
   
 4.  En la ventana de consulta, edite, actualice o elimine las filas que desee.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>Para administrar la tabla suspect_pages  
   

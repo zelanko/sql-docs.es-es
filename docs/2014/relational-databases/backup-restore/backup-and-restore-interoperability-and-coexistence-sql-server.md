@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922440"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62922440"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> Restaurar archivos e iniciar la base de datos  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> Restaurar archivos e iniciar la base de datos  
  Esta sección solo es pertinente para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contienen varios grupos de archivos.  
   
 > [!NOTE]  
@@ -52,14 +52,14 @@ ms.locfileid: "62922440"
   
  En caso de iniciarse correctamente, los grupos de archivos que contengan algún archivo sin conexión seguirán sin conexión.  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> Restauración en línea e índices deshabilitados  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> Restauración en línea e índices deshabilitados  
  Esta sección solo es relevante para las bases de datos que tienen varios grupos de archivos y, para el modelo de recuperación simple, al menos un grupo de archivos de solo lectura.  
   
  En estos casos, si una base de datos está en línea, su índice se puede crear, quitar, habilitar o deshabilitar solo si todos los grupos de archivos que contienen alguna parte del índice están en línea.  
   
  Para obtener información sobre cómo restaurar grupos de archivos sin conexión, vea [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DbMandBnR"></a> Creación de reflejo de la base de datos y copias de seguridad y restauración  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> Creación de reflejo de la base de datos y copias de seguridad y restauración  
  Esta sección solo es relevante para bases de datos con el modelo completo que contienen varios grupos de archivos.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "62922440"
   
 -   No se admite la restauración de la base de datos principal.  
   
-##  <a name="PiecemealAndFTIndexes"></a> Restauración por etapas e índices de texto completo  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> Restauración por etapas e índices de texto completo  
  Esta sección solo resulta relevante para las bases de datos que contienen varios grupos de archivos y, en el caso de bases de datos de modelo simple, únicamente para los grupos de archivos de solo lectura.  
   
  Los índices de texto completo se almacenan en grupos de archivos de bases de datos y pueden verse afectados por una restauración por etapas. Si el índice de texto completo reside en el mismo grupo de archivos que alguno de los datos de la tabla asociada, la restauración por etapas funciona como cabría esperar.  
@@ -111,7 +111,7 @@ ms.locfileid: "62922440"
   
  Tan pronto como el grupo de archivos de tabla base y el grupo de archivos de índice de texto completo estén en línea, se reanudarán los rellenados de texto completo pausados.  
   
-##  <a name="FileBnRandCompression"></a> Copias de seguridad y restauración, y compresión de archivos  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> Copias de seguridad y restauración, y compresión de archivos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la compresión de datos del sistema de archivos NTFS de grupos de archivos y bases de datos de solo lectura.  
   
  Los archivos NTFS comprimidos admiten la restauración de archivos en un grupo de archivos de solo lectura. Las copias de seguridad y restauración de estos grupos de archivos funciona esencialmente de la misma manera que con cualquier grupo de archivos de solo lectura, con las siguientes excepciones:  
@@ -123,7 +123,7 @@ ms.locfileid: "62922440"
 > [!NOTE]  
 >  Los archivos de registro de bases de datos de lectura/escritura no se deben almacenar en sistemas de archivos comprimidos.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874929"
 ---
 # <a name="designing-assemblies"></a>Diseñar ensamblados
@@ -57,8 +57,7 @@ ms.locfileid: "62874929"
  Además, si se especifica UNSAFE, el código incluido en el ensamblado puede realizar operaciones que la comprobación de CLR considera sin seguridad de tipos. Estas operaciones pueden tener acceso a búferes de memoria en el espacio del proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de forma incontrolada. Los ensamblados UNSAFE también pueden trastornar potencialmente el sistema de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Common Language Runtime. Los permisos UNSAFE solo deben concederlos programadores o administradores experimentados a ensamblados de mucha confianza. Solo los miembros del rol fijo de servidor **sysadmin** pueden crear ensamblados no seguros.  
   
 ## <a name="restrictions-on-assemblies"></a>Restricciones en los ensamblados  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impone ciertas restricciones en el código administrado de los ensamblados para asegurarse de que puedan ejecutarse de manera confiable y escalable. Esto significa que, en los ensamblados con SAFE y EXTERNAL_ACCESS, no se permiten ciertas operaciones que pueden comprometer la estabilidad del servidor.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impone ciertas restricciones en el código administrado de los ensamblados para asegurarse de que puedan ejecutarse de manera confiable y escalable. Esto significa que, en los ensamblados con SAFE y EXTERNAL_ACCESS, no se permiten ciertas operaciones que pueden comprometer la estabilidad del servidor.  
   
 ### <a name="disallowed-custom-attributes"></a>Atributos personalizados no permitidos  
  Los ensamblados no se pueden anotar con los siguientes atributos personalizados:  

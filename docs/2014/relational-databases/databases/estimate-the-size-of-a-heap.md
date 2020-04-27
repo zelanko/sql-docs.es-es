@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916749"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
@@ -63,7 +63,7 @@ ms.locfileid: "62916749"
   
 5.  Calcule el tamaño total de la fila:  
   
-     ***Row_Size***  = ***Fixed_Data_Size*** + ***Variable_Data_Size*** + ***Null_Bitmap*** + 4  
+     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
   
      El valor 4 de la fórmula representa la sobrecarga del encabezado de la fila de datos.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62916749"
   
 7.  Calcule el número de páginas necesarias para almacenar todas las filas:  
   
-     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
+     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
   
      El número de páginas estimado debe redondearse hacia arriba a la página completa más cercana.  
   

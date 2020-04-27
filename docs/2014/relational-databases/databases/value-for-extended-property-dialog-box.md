@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916507"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>Valor para propiedad extendida, cuadro de diálogo
-  Utilice el cuadro **de diálogo valor para** * \<nombre de propiedad>* para escribir o ver un valor. Se trata de un cuadro de diálogo común que puede abrirse desde varias ubicaciones.  
+  Use el cuadro de diálogo **Valor para** *\<nombre de propiedad>* para especificar o ver un valor. Se trata de un cuadro de diálogo común que puede abrirse desde varias ubicaciones.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Nombre de propiedad extendida**  

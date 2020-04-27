@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918816"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar el almacén de administración de datos (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "62918816"
 > [!NOTE]  
 >  Si se configura el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se ejecute mediante una de las cuentas de servicio del sistema (sistema local, servicio de red o servicio local) y el almacén de administración de datos se crea en una instancia diferente del recopilador de datos, debe configurar los conjuntos de recopilación para que utilicen un proxy para cargar los datos en el almacén de administración de datos.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Configurar el almacén de administración de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Configurar el almacén de administración de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Asegúrese de que el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se esté ejecutando.  
   
@@ -59,8 +59,8 @@ ms.locfileid: "62918816"
   
 6.  Repita el paso 5 hasta que todas las instancias de base de datos que utilizan el recopilador de datos estén configuradas para cargar datos en el almacén de administración de datos compartido.  
   
-####  <a name="Wizard"></a>Asistente para configurar el almacén de administración de datos  
- **Página principal**  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Asistente para configurar el almacén de administración de datos  
+ **Página Asistente**  
   
  La página de bienvenida es la página de inicio del Asistente para configurar la recopilación de datos. El usuario decide si desea que se muestre.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918816"
   
  La opción **Nueva** solo está disponible al configurar un conjunto de recopilación de datos.  
   
- **Página asignar inicios de sesión y usuarios**  
+ **Página Asignar inicios de sesión y usuarios**  
   
  Utilice esta página para asignar inicios de sesión a roles de usuario de base de datos para el almacén de administración de datos.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918816"
   
  Especifique un inicio de sesión activando la casilla **Asignar** para el inicio de sesión.  
   
- **Pertenencia al rol de base de datos para:**  *\<nombre de almacenamiento de datos>*  
+ **Miembros del rol de base de datos para:** *\<nombre de almacenamiento de datos>*  
  Seleccione el rol del almacén de administración de datos al que se ha asignado el inicio de sesión haciendo clic en la casilla correspondiente a una o varias de las opciones siguientes:  
   
 -   **mdw_admin**  
@@ -105,11 +105,11 @@ ms.locfileid: "62918816"
  **Nuevo inicio de sesión**  
  Abra el cuadro de diálogo **Inicio de sesión - Nuevo** y cree un nuevo inicio de sesión para el almacén de administración de datos.  
   
- **Página finalización del asistente**  
+ **Página Finalización del asistente**  
   
  Utilice esta página para comprobar y completar la configuración de la recopilación de datos. El árbol mostrado en la ventana de vista muestra las configuraciones que se aplicarán, así como las acciones que tendrán lugar al hacer clic en **Finalizar**.  
   
- **Página progreso del Asistente para configurar la recopilación de datos**  
+ **Página Progreso del Asistente para configurar la recopilación de datos**  
   
  Utilice esta página para ver los resultados de cada paso de configuración.  
   
@@ -130,12 +130,12 @@ ms.locfileid: "62918816"
   
 -   Enviar informe como correo electrónico  
   
- **Cercanos**  
+ **Close**  
  Cierra el asistente.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_syscollector_enable_collector &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [sp_syscollector_disable_collector &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [Recopilación de datos](data-collection.md)   
  [Administrar la recopilación de datos](manage-data-collection.md)  
   

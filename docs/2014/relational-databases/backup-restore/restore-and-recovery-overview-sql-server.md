@@ -21,15 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921019"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
-  Para recuperar de un error una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un administrador de bases de datos tiene que restaurar un conjunto de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una secuencia de restauración correcta y significativa de forma lógica. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite restaurar los datos de las copias de seguridad de toda una base de datos, un archivo de datos o una página de datos, tal y como se describe a continuación:  
+  Para recuperar de un error una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un administrador de bases de datos tiene que restaurar un conjunto de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una secuencia de restauración correcta y significativa de forma lógica. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite restaurar los datos de las copias de seguridad de toda una base de datos, un archivo de datos o una página de datos, tal y como se describe a continuación:  
   
 -   La base de datos (una *restauración de la base de datos completa*)  
   
@@ -47,19 +46,19 @@ ms.locfileid: "62921019"
   
  **En este tema:**  
   
--   [Información general sobre los escenarios de restauración](#RestoreScenariosOv)  
+-   [Información general de los escenarios de restauración](#RestoreScenariosOv)  
   
 -   [Modelos de recuperación y operaciones de restauración admitidas](#RMsAndSupportedRestoreOps)  
   
--   [Restricciones de restauración en el modelo de recuperación simple](#RMsimpleScenarios)  
+-   [Restricciones de restauración con el modelo de recuperación simple](#RMsimpleScenarios)  
   
--   [Restaurar en el modelo de recuperación optimizado para cargas masivas de registro](#RMblogRestore)  
+-   [Restaurar con el modelo de recuperación optimizado para cargas masivas de registros](#RMblogRestore)  
   
--   [Asesor de recuperación de base de datos (SQL Server Management Studio)](#DRA)  
+-   [Asesor para recuperación de base de datos (SQL Server Management Studio)](#DRA)  
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="RestoreScenariosOv"></a>Información general sobre los escenarios de restauración  
+##  <a name="overview-of-restore-scenarios"></a><a name="RestoreScenariosOv"></a>Información general sobre los escenarios de restauración  
  Un *escenario de restauración* en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el proceso de restaurar datos de una o más copias de seguridad y, a continuación, recuperar la base de datos. Los escenarios de restauración admitidos dependen del modelo de recuperación de la base de datos y de la edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La siguiente tabla presenta los posibles escenarios de restauración compatibles para diferentes modelos de recuperación.  
@@ -82,7 +81,7 @@ ms.locfileid: "62921019"
   
 -   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es posible que la restauración de archivos o páginas permita que otros datos de la base de datos permanezcan en línea durante la operación de restauración.  
   
-##  <a name="RMsAndSupportedRestoreOps"></a>Modelos de recuperación y operaciones de restauración admitidas  
+##  <a name="recovery-models-and-supported-restore-operations"></a><a name="RMsAndSupportedRestoreOps"></a>Modelos de recuperación y operaciones de restauración admitidas  
  Las operaciones de restauración disponibles para una base de datos dependen de su modelo de recuperación. En la tabla siguiente se resumen todos los modelos de recuperación y las diferentes situaciones de restauración en las que funcionarían.  
   
 |Operación de restauración|Modelo de recuperación completa|Modelo de recuperación optimizado para cargas masivas de registros|Modelo de recuperación simple|  
@@ -100,7 +99,7 @@ ms.locfileid: "62921019"
 > [!IMPORTANT]  
 >  Independientemente del modelo de recuperación de una base de datos, una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a la versión que creó la copia de seguridad.  
   
-##  <a name="RMsimpleScenarios"></a>Escenarios de restauración en el modelo de recuperación simple  
+##  <a name="restore-scenarios-under-the-simple-recovery-model"></a><a name="RMsimpleScenarios"></a>Escenarios de restauración en el modelo de recuperación simple  
  El modelo de recuperación simple impone las siguientes restricciones en las operaciones de restauración:  
   
 -   La restauración de archivos y la restauración por etapas están disponibles solo para grupos de archivos secundarios de solo lectura. Para obtener más información sobre estos escenarios de restauración, vea [Restauraciones de archivos &#40;modelo de recuperación simple&#41;](file-restores-simple-recovery-model.md) y [Restauraciones por etapas &#40;SQL Server&#41;](piecemeal-restores-sql-server.md).  
@@ -114,7 +113,7 @@ ms.locfileid: "62921019"
 > [!IMPORTANT]  
 >  Independientemente del modelo de recuperación de una base de datos, una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede restaurar en una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a la versión que creó la copia de seguridad.  
   
-##  <a name="RMblogRestore"></a>Restaurar en el modelo de recuperación optimizado para cargas masivas de registro  
+##  <a name="restore-under-the-bulk-logged-recovery-model"></a><a name="RMblogRestore"></a>Restaurar en el modelo de recuperación optimizado para cargas masivas de registro  
  En esta sección se tratan las consideraciones de restauración que son exclusivas del modelo de recuperación optimizado para cargas masivas de registros, que está pensado únicamente como un complemento para el modelo de recuperación completa.  
   
 > [!NOTE]  
@@ -141,20 +140,20 @@ ms.locfileid: "62921019"
   
  Para obtener más información sobre cómo realizar una restauración con conexión, vea [Restauración con conexión &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DRA"></a>Asesor de recuperación de base de datos (SQL Server Management Studio)  
+##  <a name="database-recovery-advisor-sql-server-management-studio"></a><a name="DRA"></a>Asesor de recuperación de base de datos (SQL Server Management Studio)  
  El Asistente para recuperación de base de datos facilita la creación de planes de restauración que implementan secuencias de restauración correctas óptimas. Se ha dado respuesta a muchos problemas conocidos de restauración de base de datos y mejoras solicitados por los clientes. Entre las principales mejoras que ofrece el Asistente para recuperación de base de datos se incluyen las siguientes:  
   
--   **Algoritmo restore-plan:**  El algoritmo usado para crear planes de restauración ha mejorado significativamente, especialmente en escenarios de restauración complejos. Muchos casos extremos, incluidos los escenarios de bifurcación en restauraciones a un momento dado, se tratan de manera más eficaz que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Algoritmo del plan de restauraciones:**  el algoritmo usado para crear planes de restauraciones se ha mejorado considerablemente, especialmente en escenarios de restauraciones complejas. Muchos casos extremos, incluidos los escenarios de bifurcación en restauraciones a un momento dado, se tratan de manera más eficaz que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Restauraciones a un momento dado:**  El asesor de recuperación de base de datos simplifica considerablemente la restauración de una base de datos a un momento dado. Una escala de tiempo visual de copia de seguridad mejora significativamente la compatibilidad con restauraciones a un momento dado. Esta escala de tiempo visual permite identificar un punto posible en el tiempo como punto de recuperación de destino para restaurar una base de datos. La escala de tiempo facilita el recorrido de una ruta de recuperación bifurcada (una que abarque varias bifurcaciones de recuperación). Un plan determinado de restauración a un momento dado incluye automáticamente las copias de seguridad que son pertinentes para la restauración a un momento dado de destino (fecha y hora). Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+-   **Restauración a un momento dado:**  el Asistente para recuperación de base de datos simplifica considerablemente la restauración de una base de datos a un momento dado en el tiempo. Una escala de tiempo visual de copia de seguridad mejora significativamente la compatibilidad con restauraciones a un momento dado. Esta escala de tiempo visual permite identificar un punto posible en el tiempo como punto de recuperación de destino para restaurar una base de datos. La escala de tiempo facilita el recorrido de una ruta de recuperación bifurcada (una que abarque varias bifurcaciones de recuperación). Un plan determinado de restauración a un momento dado incluye automáticamente las copias de seguridad que son pertinentes para la restauración a un momento dado de destino (fecha y hora). Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- Para obtener más información sobre el Asistente para recuperación de base de datos, vea los siguientes blogs de Facilidad de uso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Para obtener más información sobre el Asistente para recuperación de base de datos, vea los siguientes blogs de Facilidad de uso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   [Asistente para recuperación: introducción](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [Asistente para recuperación: usar SSMS para crear o restaurar copias de seguridad divididas](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [Asistente para recuperación: usar SSMS para crear o restaurar copias de seguridad de división](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

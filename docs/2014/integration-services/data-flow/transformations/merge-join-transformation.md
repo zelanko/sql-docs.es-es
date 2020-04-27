@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0ef70f4f9d28fc23c0ac0a168447cc1b8867cd27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900171"
 ---
 # <a name="merge-join-transformation"></a>Combinación de mezcla, transformación
@@ -63,7 +63,7 @@ ms.locfileid: "62900171"
   
 ## <a name="see-also"></a>Consulte también  
  [Editor de transformación combinación de mezcla](../../merge-join-transformation-editor.md)   
- [Transformación Mezclar](merge-transformation.md)   
+ [Transformación mezclar](merge-transformation.md)   
  [Transformación Unión de todo](union-all-transformation.md)   
  [Transformaciones de Integration Services](integration-services-transformations.md)  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e5eb03cabe655b4b1dc1da6735b9b4ef68c05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107250"
 ---
 # <a name="manage-report-data-sources"></a>Administrar orígenes de datos de informe
@@ -62,7 +62,7 @@ ms.locfileid: "66107250"
 |Tarea|Herramienta|Vínculo|  
 |----------|----------|----------|  
 |Ver ejemplos de cadenas de conexión.||[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|Elegir un enfoque para obtener las credenciales para conectarse a un origen de datos.||[Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md)|  
+|Elegir un enfoque para obtener las credenciales para conectarse a un origen de datos.||[Especificación de información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md)|  
 |Agregar propiedades de conexión de origen de datos a un archivo de definición de informe (.rdl).|Diseñador de informes|[Crear un origen de datos incrustado o compartido &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Agregar y establecer un vínculo con un archivo origen de datos compartido (.rds) en el proyecto de informe.|Diseñador de informes|[Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Crear una lista predefinida de orígenes de datos que los usuarios pueden seleccionar en tiempo de ejecución. Cuando un usuario solicita un informe, el informe proporciona una lista de orígenes de datos. El usuario debe seleccionar qué origen de datos ha de utilizar antes de ejecutar el informe. Para agregar una lista de selección de orígenes de datos a un informe, ha de utilizar una expresión.<br /><br /> Esto se conoce como conexión dinámica de origen de datos.|Diseñador de informes|[Data Connections, Data Sources, and Connection Strings in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  

@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104637"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Embedded"></a>Problemas de tamaño de la definición de informe  
+##  <a name="report-definition-size-issues"></a><a name="Embedded"></a>Problemas de tamaño de la definición de informe  
  Utilice esta sección para ayudar a resolver problemas relacionados con el tamaño de la definición de informe.  
   
 ### <a name="how-do-i-reduce-the-report-definition-size"></a>¿Cómo reduzco el tamaño de la definición de informe?  
@@ -49,7 +49,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Spatial"></a>Problemas con los datos espaciales  
+##  <a name="spatial-data-issues"></a><a name="Spatial"></a>Problemas con los datos espaciales  
  Utilice esta sección como ayuda para resolver problemas relacionados con los datos espaciales.  
   
 ### <a name="on-the-design-surface-i-see-sample-spatial-data"></a>En la superficie de diseño, veo el ejemplo de datos espaciales  
@@ -102,7 +102,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Viewport"></a>Centro de la ventanilla y ver problemas  
+##  <a name="viewport-center-and-view-issues"></a><a name="Viewport"></a>Centro de la ventanilla y ver problemas  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de las ventanillas.  
   
 ### <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>No puedo establecer el centro y la vista en un elemento de mapa incrustado.  
@@ -126,15 +126,15 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Layers"></a>Problemas con las capas  
+##  <a name="layer-issues"></a><a name="Layers"></a>Problemas con las capas  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de las capas.  
   
 ### <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>No veo una o varias capas de un mapa.  
  El que se vea o no una capa de mapa en un informe depende de la disponibilidad de los datos espaciales, la relación entre estos y los datos analíticos, el tipo de datos espaciales y el tipo de capa correspondiente, las opciones de transparencia y visibilidad de la capa, y el orden de dibujo de la capa. Si no ve los datos de una capa, compruebe las opciones siguientes:  
   
--   **Tipo de capa y tipo de datos espaciales.** El tipo de capa solo muestra los datos espaciales que coinciden con el tipo de capa. Por ejemplo, si el tipo de capa es Punto pero los datos espaciales son Línea, no aparecerá ningún dato.  
+-   **El tipo de capa y el tipo de datos espaciales.** El tipo de capa solo muestra los datos espaciales que coinciden con el tipo de capa. Por ejemplo, si el tipo de capa es Punto pero los datos espaciales son Línea, no aparecerá ningún dato.  
   
--   **Coincide con los valores de campo.** Los valores de los campos que especifique para relacionar los datos analíticos y los datos espaciales deben identificar cada elemento de mapa de forma única. Los campos deben tener el mismo tipo de datos. Los valores de los campos deben ser idénticos. Para obtener más información, vea [Problemas con la leyenda, la escala de colores y la escala de distancia](#Legend).  
+-   **Valores de los campos coincidentes.** Los valores de los campos que especifique para relacionar los datos analíticos y los datos espaciales deben identificar cada elemento de mapa de forma única. Los campos deben tener el mismo tipo de datos. Los valores de los campos deben ser idénticos. Para obtener más información, vea [Problemas con la leyenda, la escala de colores y la escala de distancia](#Legend).  
   
 -   **Orden de las capas.** El orden de las capas en el panel Mapa es aquel con que se dibujan las capas en el representador de informes. Los datos espaciales de las capas que se dibujan primero podrían sobrescribirse con los de las capas que se dibujen después. Primero se dibujan las capas que aparecen en la parte superior de la lista. Al cambiar el orden de las capas en la lista, cambia el orden del dibujo de las capas.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66104637"
 ### <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>Establecí un filtro en la capa de mapa y no tiene ningún efecto.  
  Para filtrar los datos de una capa, se debe especificar el tipo de datos de la expresión de filtro. Compruebe que ha especificado el tipo de datos subyacente correcto para que la ecuación de filtro evalúe correctamente la condición especificada. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
   
-##  <a name="Legend"></a>Problemas con la leyenda, la escala de colores y la regla  
+##  <a name="legend-color-scale-and-rule-issues"></a><a name="Legend"></a>Problemas con la leyenda, la escala de colores y la regla  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de regla, leyenda y escala de colores.  
   
 ### <a name="how-do-i-control-the-values-in-the-map-legend"></a>¿Cómo controlo los valores de la leyenda del mapa?  
@@ -172,8 +172,7 @@ ms.locfileid: "66104637"
 -   Para obtener más información, vea [Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos &#40;Generador de informes y SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ### <a name="what-is-the-value-nan-on-the-color-scale"></a>¿Cuál es el valor NaN en la escala de colores?  
- 
-  `NaN` significa Not a number (no es un número). Se espera que los valores de las escalas de colores sean numéricos. Compruebe en la configuración de la distribución y el valor de texto de la leyenda las reglas asociadas a la escala de colores. Si creó los intervalos de distribución personalizados, compruebe que especificó el límite inferior en el primer intervalo y el límite superior en el último.  
+ `NaN` significa Not a number (no es un número). Se espera que los valores de las escalas de colores sean numéricos. Compruebe en la configuración de la distribución y el valor de texto de la leyenda las reglas asociadas a la escala de colores. Si creó los intervalos de distribución personalizados, compruebe que especificó el límite inferior en el primer intervalo y el límite superior en el último.  
   
 ### <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>Mi escala de colores no aparece cuando ejecuto el informe.  
  La escala de colores muestra información al usuario cuando una capa de mapa especifica reglas de colores para los polígonos, líneas o puntos de toda la capa o de los elementos de mapa incrustado. Si ningún elemento de mapa especifica una regla de colores o si las reglas de colores se especifican con una leyenda en lugar del mapa de colores, el mapa de colores no aparece en el informe representado.  
@@ -182,7 +181,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Tile"></a>Problemas con los mosaicos  
+##  <a name="tile-issues"></a><a name="Tile"></a>Problemas con los mosaicos  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones del fondo de mosaico.  
   
 ### <a name="i-cannot-see-the-bing-maps-tile-background"></a>No puedo ver el fondo de mosaicos de Bing Maps.  
@@ -205,7 +204,7 @@ ms.locfileid: "66104637"
   
   
   
-##  <a name="Tooltip"></a>Información sobre herramientas y problemas de etiqueta  
+##  <a name="tooltip-and-label-issues"></a><a name="Tooltip"></a>Información sobre herramientas y problemas de etiqueta  
  Utilice esta sección como ayuda para resolver problemas relacionados con las opciones de Información sobre herramientas o de etiquetas.  
   
 ### <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>Aparece un error de expresión sobre el ámbito del conjunto de datos al establecer una etiqueta o Información sobre herramientas en una expresión.  

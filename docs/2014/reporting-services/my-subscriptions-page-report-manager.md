@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75d662f677ee2b6bbab8e445804ca7f142b5c034
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108190"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Mis suscripciones (página del Administrador de informes)
@@ -44,7 +44,7 @@ ms.locfileid: "66108190"
  **Edición**  
  Haga clic para ver o editar la descripción.  
   
- **Report**  
+ **Informe**  
  Muestra el informe especificado en la suscripción. Haga clic en el nombre del informe para verlo.  
   
  **Descripción**  
@@ -53,7 +53,7 @@ ms.locfileid: "66108190"
  **Carpeta**  
  Muestra la carpeta que contiene el informe especificado en la suscripción. Haga clic en el nombre de la carpeta para ver su contenido.  
   
- **Activado**  
+ **Desencadenador**  
  Identifica los criterios que hacen que se ejecute la suscripción. El desencadenador **TimedSubscription** se basa en una programación que define cuándo se ejecuta la suscripción. El desencadenador **SnapshotUpdated** se basa en la actualización de una instantánea de informe.  
   
  **Última ejecución**  

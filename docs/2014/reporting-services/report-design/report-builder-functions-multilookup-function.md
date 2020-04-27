@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105210"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Función Multilookup (Generador de informes y SSRS)
@@ -47,11 +47,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Devuelve `VariantArray` o `Nothing` si no hay ninguna coincidencia.  
   
 ## <a name="remarks"></a>Observaciones  
- Use `Multilookup` para recuperar un conjunto de valores de un conjunto de datos para los pares de nombre-valor donde cada par tiene una relación 1 a 1. 
-  `MultiLookup` es equivalente de llamar `Lookup` para un conjunto de nombres o de claves. Por ejemplo, para un parámetro de varios valores que se base en identificadores de clave principal, puede usar `Multilookup` en una expresión de un cuadro de texto en una tabla para recuperar los valores asociados de un conjunto de datos que no esté enlazado al parámetro ni a la tabla.  
+ Use `Multilookup` para recuperar un conjunto de valores de un conjunto de datos para los pares de nombre-valor donde cada par tiene una relación 1 a 1. `MultiLookup` es equivalente de llamar `Lookup` para un conjunto de nombres o de claves. Por ejemplo, para un parámetro de varios valores que se base en identificadores de clave principal, puede usar `Multilookup` en una expresión de un cuadro de texto en una tabla para recuperar los valores asociados de un conjunto de datos que no esté enlazado al parámetro ni a la tabla.  
   
- 
-  `Multilookup` realiza las operaciones siguientes:  
+ `Multilookup` realiza las operaciones siguientes:  
   
 -   Evalúa la expresión de origen en el ámbito actual y genera una matriz de objetos de variantes.  
   
@@ -71,8 +69,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Las expresiones de origen, destino y resultado no pueden incluir referencias a variables de informe o de grupo.  
   
--   
-  `Multilookup` no se puede usar como una expresión para los siguientes elementos de informe:  
+-   `Multilookup` no se puede usar como una expresión para los siguientes elementos de informe:  
   
     -   Cadenas de conexión dinámicas para un origen de datos.  
   

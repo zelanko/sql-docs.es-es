@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109727"
 ---
 # <a name="contents-page-report-manager"></a>Contenido (página del Administrador de informes)
@@ -35,10 +35,10 @@ ms.locfileid: "66109727"
  **Configuración de carpeta**  
  Haga clic para abrir y administrar las propiedades de la carpeta actual.  
   
- **Cargar archivo**  
+ **Upload File (Cargar archivo)**  
  Haga clic para abrir la página Cargar archivo, que se usa para copiar un archivo del sistema de archivos en un servidor de informes. Puede cargar archivos para agregar informes y recursos, como gráficos, documentos o cualquier otro contenido colateral que desee guardar con el informe. Los archivos cargados se almacenan y se administran en una base de datos del servidor de informes. Para cargar un informe, seleccione un archivo con extensión .rdl.  
   
- **Detalles**  
+ **Vista de detalles**  
  Haga clic para mostrar la página Contenido en una lista que contiene información adicional sobre los elementos. En la vista **Detalles**puede utilizar los botones **Eliminar** y **Mover** para quitar y reubicar los elementos de una carpeta.  
   
  Mantenga el mouse sobre un elemento y haga clic en la flecha de lista desplegable para abrir el menú desplegable donde podrá obtener acceso a las propiedades del elemento seleccionado y configurarlas.  

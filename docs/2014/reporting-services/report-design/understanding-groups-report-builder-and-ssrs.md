@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ccdef0ccb338f268abd205a95421382eb554fce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104538"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Descripción de los grupos (Generador de informes y SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66104538"
   
  Para poder visualizar lo que es un grupo, consulte la ilustración siguiente que muestra la región de datos Tablix en la vista previa. En esta ilustración, los grupos de filas ordenan el conjunto de datos por tipo de producto y los grupos de columnas ordenan el conjunto de datos por región geográfica y año.  
   
- ![Áreas de región de datos Tablix](../media/rs-tablixareas.gif "Áreas de la región de datos Tablix")  
+ ![Descripción de las áreas de la región de datos Tablix](../media/rs-tablixareas.gif "Descripción de las áreas de la región de datos Tablix")  
   
  Las secciones siguientes sirven de ayuda para describir los distintos aspectos de los grupos.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66104538"
  Un grupo tiene un nombre y un conjunto de expresiones de grupo especificadas por el usuario. El conjunto de expresiones de grupo puede ser una referencia a un único campo de conjunto de datos o una combinación de varias expresiones. En tiempo de ejecución, las expresiones de grupo se combinan, si el grupo tiene varias expresiones, y se aplican a los datos de un grupo. Por ejemplo, imagine que tiene un grupo que usa un campo de fecha para organizar los datos de la región de datos. En tiempo de ejecución, los datos se organizan por fecha y, a continuación, se muestran con los totales de otros valores del conjunto de datos para cada fecha.  
   
 ## <a name="when-do-i-create-groups"></a>¿Cuándo debo crear grupos?  
- En la mayoría de los casos, el Generador de informes y el Diseñador de informes crean automáticamente un grupo al diseñar una región de datos. En una tabla, matriz o lista, se crean grupos al colocar campos en el panel Agrupación. En un gráfico, se crean grupos al colocar campos en las zonas de colocación del gráfico. En un medidor, debe usar el cuadro de diálogo de propiedades de medidor. En una tabla, matriz o lista, también es posible crear un grupo manualmente. Para obtener más información, vea [Agregar o eliminar un grupo en una región de datos &#40;generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Para obtener un ejemplo de cómo agregar grupos al crear un informe, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) o [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ En la mayoría de los casos, el Generador de informes y el Diseñador de informes crean automáticamente un grupo al diseñar una región de datos. En una tabla, matriz o lista, se crean grupos al colocar campos en el panel Agrupación. En un gráfico, se crean grupos al colocar campos en las zonas de colocación del gráfico. En un medidor, debe usar el cuadro de diálogo de propiedades de medidor. En una tabla, matriz o lista, también es posible crear un grupo manualmente. Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Para obtener un ejemplo de cómo agregar grupos al crear un informe, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) o [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>¿Cómo puedo modificar un grupo?  
  Después de crear un grupo, puede establecer propiedades específicas de las regiones de datos, como expresiones de filtro y de ordenación, saltos de página y variables de grupo que contengan datos específicos del ámbito. Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "66104538"
 ### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Grupos de una región de datos Tablix: grupos de detalles, de filas y de columnas  
  Como se explicó anteriormente en este tema, una región de datos Tablix le permite organizar los datos en grupos por filas o por columnas. Sin embargo, los grupos de filas y de columnas no son los únicos grupos disponibles en una región de datos Tablix. Esta región de datos puede tener los tipos de grupos siguientes:  
   
--   **Grupo de detalles** El grupo de detalles se compone de todos los datos de un conjunto de datos de informe después de Generador de informes o Diseñador de informes aplicar filtros de conjunto de datos y región de datos. Por lo tanto, el grupo de detalles es el único grupo que no tiene ninguna expresión de grupo.  
+-   **Grupo de detalles** : el grupo de detalles está compuesto por todos los datos de un conjunto de datos de informe después de que el Generador de informes o el Diseñador de informes apliquen filtros de conjuntos de datos y de regiones de datos. Por lo tanto, el grupo de detalles es el único grupo que no tiene ninguna expresión de grupo.  
   
      Básicamente, el grupo de detalles especifica los datos que se verían al ejecutar una consulta de conjunto de datos en un diseñador de consultas. Por ejemplo, imagine que tiene una consulta que recupera todas las columnas de una tabla de pedidos de venta. Por lo tanto, los datos de este grupo de detalles incluyen todos los valores para cada fila y para todas las columnas de la tabla. Los datos de este grupo de detalles también incluyen los valores para cualquier campo de conjunto de datos calculado que se haya creado.  
   
@@ -75,20 +75,19 @@ ms.locfileid: "66104538"
   
      De forma predeterminada, al agregar una tabla o una lista al informe, el Generador de informes o el Diseñador de informes crean automáticamente el grupo de detalles y agregan una fila para mostrar los datos detallados. De forma predeterminada, al agregar campos de conjunto de datos a las celdas de esta fila, verá expresiones simples para los campos, por ejemplo, [Sales]. Al ver la región de datos, la fila de detalles se repite una vez para cada valor del conjunto de resultados.  
   
--   Grupos **de filas y grupos de columnas** Puede organizar los datos en grupos por filas o columnas. Los grupos de filas se expanden verticalmente en una página. Los grupos de columnas se expanden horizontalmente en una página. Los grupos se pueden anidar; por ejemplo, agrupe primero por [Year], a continuación por [Quarter] y, por último, por [Month]. Los grupos también pueden ser adyacentes; por ejemplo, agrupe por [Territory] y, de forma independientemente, por [ProductCategory].  
+-   **Grupos de filas y grupos de columnas** : puede organizar los datos en grupos por filas o por columnas. Los grupos de filas se expanden verticalmente en una página. Los grupos de columnas se expanden horizontalmente en una página. Los grupos se pueden anidar; por ejemplo, agrupe primero por [Year], a continuación por [Quarter] y, por último, por [Month]. Los grupos también pueden ser adyacentes; por ejemplo, agrupe por [Territory] y, de forma independientemente, por [ProductCategory].  
   
      Al crear un grupo para una región de datos, el Generador de informes y el Diseñador de informes agregan automáticamente filas o columnas a dicha región de datos y usan estas filas o columnas para mostrar los datos del grupo.  
   
--   **Grupos de jerarquía recursiva** Un grupo de jerarquía recursiva organiza los datos de un único conjunto de datos de informe que incluye varios niveles. Por ejemplo, un grupo de jerarquía recursiva podría mostrar la jerarquía de una organización: [Empleado] que depende de [Empleado]. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona propiedades de grupo y funciones integradas para permitirle crear grupos para este tipo de datos de informe. Para obtener más información, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Grupos de jerarquía recursiva** : un grupo de jerarquía recursiva organiza los datos de un único conjunto de datos de informe que incluye varios niveles. Por ejemplo, un grupo de jerarquía recursiva podría mostrar la jerarquía de una organización: [Empleado] que depende de [Empleado]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona propiedades de grupo y funciones integradas para permitirle crear grupos para este tipo de datos de informe. Para obtener más información, vea [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  La lista siguiente resume la forma de trabajar con grupos para cada región de datos:  
   
--   **Tabla** de Defina grupos de filas anidados, grupos de filas adyacentes y grupos de filas de jerarquía recursiva (por ejemplo, para un gráfico organizativo). De forma predeterminada, una tabla incluye un grupo de detalles. Agregue los grupos arrastrando campos de conjunto de datos hasta el panel Agrupación para una tabla seleccionada.  
+-   **Tabla** : defina grupos de filas anidados, adyacentes y de jerarquía recursiva (como en el caso de un organigrama). De forma predeterminada, una tabla incluye un grupo de detalles. Agregue los grupos arrastrando campos de conjunto de datos hasta el panel Agrupación para una tabla seleccionada.  
   
--   **Matriz** de Defina grupos de filas y de columnas anidados, así como grupos de filas y de columnas adyacentes. Agregue los grupos arrastrando campos de conjunto de datos hasta el panel Agrupación para una matriz seleccionada.  
+-   **Matriz** : defina grupos de filas y de columnas anidados, así como grupos de filas y columnas adyacentes. Agregue los grupos arrastrando campos de conjunto de datos hasta el panel Agrupación para una matriz seleccionada.  
   
--   **Lista** de De forma predeterminada, admite el grupo de detalles. Un uso típico consiste en admitir un nivel de agrupación. Agregue los grupos arrastrando campos de conjunto de datos hasta el panel Agrupación para una lista seleccionada.  
+-   **Lista** : de forma predeterminada, admite el grupo de detalles. Un uso típico consiste en admitir un nivel de agrupación. Agregue los grupos arrastrando campos de conjunto de datos hasta el panel Agrupación para una lista seleccionada.  
   
  Después de agregar un grupo, los identificadores de columna y de fila de la región de datos cambian para reflejar la pertenencia al grupo. Al eliminar un grupo, puede elegir entre eliminar únicamente la definición de grupo o eliminar el grupo y todas sus filas y columnas asociadas. Para más información, vea [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66104538"
  [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Acción de obtención de detalles &#40;Generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Acción de obtención de detalles &#40;generador de informes y SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

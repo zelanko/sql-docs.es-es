@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: debf7415a6364a358bb92066d53b840bcecd5930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108340"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Administrar todas las alertas de datos de un sitio de SharePoint en el Administrador de alertas de datos
@@ -43,7 +43,7 @@ ms.locfileid: "66108340"
   
 ### <a name="to-delete-an-alert-definition"></a>Para eliminar una definición de alerta  
   
--   Haga clic con el botón derecho en la alerta de datos que quiera eliminar y haga clic en **Eliminar**.  
+-   Haga clic con el botón derecho en la alerta de datos que quiere eliminar y haga clic en **Eliminar**.  
   
     > [!NOTE]  
     >  Después de eliminar la alerta, no se envían más mensajes de alerta. Sin embargo, si consulta la base de datos de alertas puede que todavía exista la definición de la alerta. El servicio de alertas realiza limpiezas según una programación, y la definición de la alerta se eliminará definitivamente durante la limpieza siguiente. El intervalo de limpieza predeterminado es de 20 minutos. Este y otros intervalos de limpieza son configurables. Para obtener más información, vea [Alertas de datos de Reporting Services](../ssms/agent/alerts.md).  

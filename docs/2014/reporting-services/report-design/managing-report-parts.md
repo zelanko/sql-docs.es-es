@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105587"
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
@@ -53,7 +53,7 @@ ms.locfileid: "66105587"
   
 |Propiedad|Descripción|Elemento de informe<br /><br /> Criterios de búsqueda de la galería|  
 |--------------|-----------------|---------------------------------------------|  
-|Nombre|Este es uno de los criterios que un usuario puede buscar en la Galería de elementos de informe.|Sí|  
+|NOMBRE|Este es uno de los criterios que un usuario puede buscar en la Galería de elementos de informe.|Sí|  
 |Descripción|Puede ser conveniente organizar los nombres de los elementos de informe de una manera que facilite a los usuarios la búsqueda en la galería. Por ejemplo, puede buscar la descripción que empiece con "Ventas>>" para encontrar los elementos de informe que tengan que ver con los datos relacionados con las ventas y su presentación.|Sí|  
 |CreatedBy|Identificador del usuario que agregó el elemento de informe a la base de datos del servidor de informes. El formato exacto depende del método de autenticación. Por ejemplo, algunos métodos de autenticación provocan que se muestre el nombre de usuario precedido por el dominio completo en los campos CreatedBy y ModifiedBy.|Sí|  
 |CreationDate|Fecha en que originalmente se creó el elemento de informe.<br /><br /> Este es uno de los criterios que un usuario puede buscar en la Galería de elementos de informe.|Sí|  
@@ -71,17 +71,17 @@ ms.locfileid: "66105587"
 |-------------|-----------|  
 |Agregar, eliminar, modificar propiedades de elementos, administrar la seguridad y descargar elementos de informe|Administrador de contenido<br /><br /> Mis informes|  
 |Agregar, eliminar y descargar elementos de informe|Publicador|  
-|Buscar y reutilizar|Browser<br /><br /> Generador de informes|  
+|Buscar y reutilizar|Explorador<br /><br /> Generador de informes|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Servidor en el modo integrado de SharePoint  
   
-|Acciones|Role|  
+|Acciones|Rol|  
 |-------------|----------|  
 |Agregar, eliminar, modificar propiedades de elementos, administrar la seguridad y descargar elementos de informe|Control total|  
-|Agregar, eliminar, modificar propiedades de elementos y descargar elementos de informe|Diseño<br /><br /> Contribuciones|  
+|Agregar, eliminar, modificar propiedades de elementos y descargar elementos de informe|Diseño<br /><br /> Contribuir|  
 |Buscar y reutilizar|Lectura<br /><br /> Solo ver|  
   
-### <a name="security-considerations"></a>Consideraciones sobre la seguridad  
+### <a name="security-considerations"></a>Consideraciones de seguridad  
   
 -   Cuando se reutilizan definiciones de elementos de informe en un informe, se copian en la definición de informe por completo, junto con el ComponentID que las identifica. Si un elemento de informe se actualiza en el servidor, los usuarios pueden decidir descargar los elementos de informe actualizados para su informe. Las actualizaciones descargadas también son copias completas del elemento de informe, que reemplazan a la versión existente del elemento de informe que estaba en su informe.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66105587"
 -   Los elementos de informe usan las mismas directivas de permisos que el tipo de elemento "Recurso" existente. Dentro de una carpeta, no hay diferenciación entre los elementos de recurso tradicionales y los elementos de informe desde la perspectiva de la herencia de la seguridad. El elemento de informe heredará la misma directiva de permisos que las imágenes de la misma carpeta. Cuando se necesita esta distinción, la seguridad del nivel de elemento se puede configurar para los elementos de informe que se desee. O bien, los elementos de informe deberían estar en carpetas independientes que tengan configurados los permisos correctos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Elementos de informe y conjuntos de datos en el Generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Elementos de informe y conjuntos de valores en Generador de informes](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Página de propiedades generales, elementos de informe &#40;Administrador de informes&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Página de movimiento de elementos &#40;Administrador de informes&#41;](../move-items-page-report-manager.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   

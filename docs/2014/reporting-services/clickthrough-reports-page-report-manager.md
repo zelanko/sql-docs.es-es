@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109795"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página (Administrador de informes) Informes click-through
@@ -42,7 +42,7 @@ ms.locfileid: "66109795"
   
 2.  Mantenga el mouse sobre el modelo y haga clic en la flecha de lista desplegable.  
   
-3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página de propiedades **General** correspondiente al modelo.  
+3.  En el menú desplegable, haga clic en **Administrar**. Se abrirá la página de propiedades **General** del modelo.  
   
 4.  Seleccione la pestaña **Click-through** .  
   

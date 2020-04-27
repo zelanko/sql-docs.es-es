@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0baf05aa9c38882aea1423fa56c2d7eb0ea940be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106631"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (Generador de informes y SSRS)
@@ -27,12 +27,12 @@ ms.locfileid: "66106631"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="When"></a> Elegir cuándo se establecerá un filtro  
+##  <a name="choosing-when-to-set-a-filter"></a><a name="When"></a> Elegir cuándo se establecerá un filtro  
  Cuando no pueda filtrar los datos en el origen, especifique filtros para los elementos de informe. Por ejemplo, use filtros de informe cuando el origen de datos no admita parámetros de consulta, cuando tenga que ejecutar procedimientos almacenados y no pueda modificar la consulta, o cuando una instantánea de informe con parámetros muestre datos personalizados para usuarios diferentes.  
   
  Puede filtrar datos de informe antes o después de recuperarlos para un conjunto de datos de informe. Para filtrar los datos antes de su recuperación, cambie la consulta de cada conjunto de datos. Cuando se filtran los datos de la consulta, se filtran los datos en el origen de datos, lo que reduce la cantidad de datos que es necesario recuperar y procesar en un informe. Para filtrar los datos después de su recuperación, cree expresiones de filtro en el informe. Puede establecer expresiones de filtro para un conjunto de datos, una región de datos o un grupo, incluidos los grupos de detalles. También puede incluir parámetros en las expresiones de filtro; esto proporciona una manera de filtrar datos de valores o usuarios específicos, por ejemplo, puede filtrar según un valor que identifica al usuario que ve el informe.  
   
-##  <a name="Where"></a> Elegir dónde se establecerá un filtro  
+##  <a name="choosing-where-to-set-a-filter"></a><a name="Where"></a> Elegir dónde se establecerá un filtro  
  Determine el lugar donde desea establecer un filtro basándose en el efecto que desea conseguir en el informe. En tiempo de ejecución, el procesador de informes aplica los filtros en el orden siguiente: en el conjunto de datos, a continuación, en la región de datos y, por último, en los grupos, comenzando en la parte superior de cada jerarquía de grupo. En una tabla, matriz o lista, los filtros de los grupos de filas, los grupos de columnas y los grupos adyacentes se aplican de forma independiente. En un gráfico, también se aplican de forma independiente los filtros de los grupos de categorías y los grupos de series. Cuando el procesador de informes aplica el filtro, todas las ecuaciones de filtro se aplican en el orden en el que están definidas en la página **Filtro** del cuadro de diálogo **Propiedades** para cada elemento de informe; esto equivale a combinarlas con las operaciones Boolean AND.  
   
  En la lista siguiente, se compara el efecto de establecer filtros en elementos de informe diferentes:  
@@ -47,14 +47,14 @@ ms.locfileid: "66106631"
   
 -   **En los grupos de series o de categorías de una región de datos Gráfico** : establezca un filtro en un grupo de series o de categorías cuando desee incluir o excluir ciertos valores para que una expresión de grupo controle qué valores deben aparecer en el gráfico.  
   
-##  <a name="FilterEquations"></a>Descripción de una ecuación de filtro  
+##  <a name="understanding-a-filter-equation"></a><a name="FilterEquations"></a>Descripción de una ecuación de filtro  
  En tiempo de ejecución, el procesador de informes convierte el valor en el tipo de datos especificado y, a continuación, usa al operador especificado para comparar la expresión y el valor. En la lista siguiente, se describe cada una de las partes de la ecuación de filtro:  
   
--   **Expresión** de Define lo que está filtrando. Normalmente, se trata de un campo de conjunto de datos.  
+-   **Expresión** : define lo que se va a filtrar. Normalmente, se trata de un campo de conjunto de datos.  
   
--   **Tipo de datos** Especifica el tipo de datos que se usará cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución. El tipo de datos que seleccione debe ser uno de los tipos de datos admitidos por el esquema de definición de informe.  
+-   **Tipo de datos** : especifica el tipo de datos que se usará cuando el procesador de informes evalúe la ecuación de filtro en tiempo de ejecución. El tipo de datos que seleccione debe ser uno de los tipos de datos admitidos por el esquema de definición de informe.  
   
--   **Operador** de Define cómo comparar las dos partes de la ecuación de filtro.  
+-   **Operador** : define cómo comparar las dos partes de la ecuación de filtro.  
   
 -   `Value`Define la expresión que se va a usar en la comparación.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66106631"
 ### <a name="data-type"></a>Tipo de datos  
  Para que el procesador de informes pueda comparar dos valores, los tipos de datos deben ser los mismos. En la tabla siguiente, se especifica la asignación entre los tipos de datos CLR y los tipos de datos de la definición de informe. Los datos que recupere de un origen de datos pueden convertirse en un tipo de datos diferente cuando sean datos de informe.  
   
-|**Tipo de datos de esquema de definición de informe**|**Tipos CLR**|  
+|**Tipo de datos del esquema de definición de informe**|**Tipos CLR**|  
 |--------------------------------------------|-----------------------|  
 |`Boolean`|`Boolean`|  
 |`DateTime`|`DateTime`, `DateTimeOffset`|  
@@ -76,14 +76,14 @@ ms.locfileid: "66106631"
   
  En los casos en que es necesario especificar un tipo de datos, puede especificar su propia conversión en la parte Valor de la expresión.  
   
-### <a name="operator"></a>Operator  
+### <a name="operator"></a>Operador  
  En la tabla siguiente, se especifican los operadores que puede usar en una ecuación de filtro y lo que el procesador de informes usa para evaluar la ecuación de filtro.  
   
-|Operator|Acción|  
+|Operador|Acción|  
 |--------------|------------|  
-|**Equal, like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara la expresión con un valor.|  
-|**TopN, abajo**|Compara la expresión con un valor `Integer`.|  
-|**Porcentaje de BottomPercent**|Compara la expresión con un valor `Integer` o `Float`.|  
+|**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compara la expresión con un valor.|  
+|**TopN, BottomN**|Compara la expresión con un valor `Integer`.|  
+|**TopPercent, BottomPercent**|Compara la expresión con un valor `Integer` o `Float`.|  
 |**Otro**|Prueba si la expresión está entre dos valores, ambos inclusive.|  
 |**De**|Prueba si la expresión está dentro de un conjunto de valores.|  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66106631"
  Este valor también puede incluir una referencia de parámetro para permitir al usuario seleccionar de forma interactiva el valor por el que va a filtrarse.  
   
 ## <a name="see-also"></a>Consulte también  
- [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [La expresión usa en los informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

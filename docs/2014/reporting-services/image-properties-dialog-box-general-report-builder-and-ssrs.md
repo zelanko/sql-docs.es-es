@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a66c424bfe5bd4a2587140a0f5238f46833a061
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109027"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la imagen, General (Generador de informes y SSRS)
@@ -28,16 +28,16 @@ ms.locfileid: "66109027"
  Escriba el nombre del elemento. El nombre debe ser único en el informe. De forma predeterminada, se asigna un nombre general como Image1 o Image2.  
   
  **Herramienta**  
- Escriba texto o una expresión que dé como resultado una información sobre herramientas. Haga clic en el botón expresión (*FX*) para editar la expresión. La **información sobre herramientas** aparece cuando el usuario pausa el puntero sobre el elemento en un informe HTML.  
+ Escriba texto o una expresión que dé como resultado una información sobre herramientas. Haga clic en el botón Expresión (*fx*) para editar la expresión. La **información sobre herramientas** aparece cuando el usuario pausa el puntero sobre el elemento en un informe HTML.  
   
  **Seleccionar el origen de la imagen**  
  Indique dónde se encuentra almacenada la imagen para que al representar el informe, el procesador de informes sepa dónde puede obtenerla.  
   
--   **Externa** Elija esta opción si desea que la imagen continúe existiendo como archivo en un servidor de informes o en un servidor Web.  
+-   **Externo** : elija esta opción si desea que la imagen continúe existiendo como archivo en un servidor de informes o en un servidor web.  
   
--   **Incrustado** Elija esta opción si desea incrustar la imagen en el informe.  
+-   **Incrustada** : elija esta opción si desea incrustar la imagen en el informe.  
   
--   **Base de datos** Elija esta opción si desea incluir un nombre de campo de base de datos que represente las imágenes que desea incluir en el informe.  
+-   **Base de datos** : elija esta opción si desea incluir un nombre de campo de base de datos que representa las imágenes que se van a incluir en el informe seleccionado.  
   
  **Usar esta imagen**  
  Esta opción aparece al seleccionar la opción **Incrustada** o **Externo** .  

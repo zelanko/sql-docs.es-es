@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109178"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportar un informe como otro tipo de archivo (Generador de informes y SSRS)
@@ -56,13 +56,13 @@ ms.locfileid: "66109178"
   
 6.  Para ver el informe en el formato de exportación seleccionado, haga clic en **Abrir**.  
   
-     \- O bien  
+     \- o -  
   
      Para guardar de manera inmediata el informe en el formato de exportación seleccionado, haga clic en **Guardar**.  
   
      El informe se muestra o se guarda mediante la aplicación asociada al formato elegido. Si hace clic en **Guardar**, se le solicitará una ubicación para guardar el informe.  
   
-     **Nota:** Si el programa no puede abrir el informe en el formato que ha elegido porque no tiene un programa asociado a este tipo de archivo, se le pedirá que guarde el informe exportado o que busque un programa en línea para abrir el informe.  
+     **Nota** : si el programa no puede abrir el informe en el formato que ha elegido porque no tiene un programa asociado a este tipo de archivo, se le pedirá que guarde el informe exportado o que busque un programa en línea para abrir el informe.  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>Para exportar un informe como otro tipo de archivo en una biblioteca de SharePoint.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66109178"
   
 3.  Para ver el informe en el formato de exportación seleccionado, haga clic en **Abrir**.  
   
-     \- O bien  
+     \- o -  
   
      Para guardar de manera inmediata el informe en el formato de exportación seleccionado, haga clic en **Guardar**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66109178"
   
      Opcionalmente, cambie el nombre de archivo del informe exportado.  
   
-     **Nota:** Si el programa no puede abrir el informe en el formato que ha elegido porque no tiene un programa asociado a este tipo de archivo, se le pedirá que guarde el informe exportado o que busque un programa en línea para abrir el informe.  
+     **Nota** : si el programa no puede abrir el informe en el formato que ha elegido porque no tiene un programa asociado a este tipo de archivo, se le pedirá que guarde el informe exportado o que busque un programa en línea para abrir el informe.  
   
 ## <a name="see-also"></a>Consulte también  
  [Exportar informes &#40;Generador de informes y SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   

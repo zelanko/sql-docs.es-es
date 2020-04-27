@@ -13,15 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109657"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Crear un origen de datos incrustado o compartido (SSRS)
-  Un origen de datos de informe especifica la información de nombre y cadena de conexión. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe. Un origen de datos compartido se define como un elemento independiente y se puede usar en varios informes. Para obtener más información, vea [conexiones de datos y orígenes de datos incrustados y Compartidos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
+  Un origen de datos de informe especifica la información de nombre y cadena de conexión. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe. Un origen de datos compartido se define como un elemento independiente y se puede usar en varios informes. Para obtener más información, vea [conexiones de datos y orígenes de datos incrustados y Compartidos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
   
  En el Generador de informes, puede desplazarse al servidor de informes o al sitio de SharePoint y seleccionar orígenes de datos o crear orígenes de datos incrustados. No puede crear orígenes de datos compartidos en el Generador de informes.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66109657"
 1.  En la barra de herramientas del panel datos de informe, haga clic en **nuevo** y, a continuación, haga clic en **origen de datos**. Se abre el cuadro de diálogo **Propiedades del origen de datos** .  
   
     > [!NOTE]  
-    >  Si el panel Datos de informe no es visible, haga clic en **Datos de informe** en el menú **Ver** .  
+    >   Si el panel Datos de informe no está visible, haga clic en **Datos de informe** en el menú **Ver** .  
   
 2.  En el cuadro de texto **Nombre** , escriba un nombre para el origen de datos o acepte el valor predeterminado. El nombre del origen de datos se utiliza internamente en el informe. Para evitar confusiones, se recomienda que el nombre del origen de datos contenga el nombre de la base de datos especificada en la cadena de conexión.  
   

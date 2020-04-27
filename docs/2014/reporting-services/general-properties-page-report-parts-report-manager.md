@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109085"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Página de propiedades generales, Elementos de informe (Administrador de informes)
@@ -58,7 +58,7 @@ ms.locfileid: "66109085"
  **Ocultar en la vista de lista**  
  Seleccione esta opción para ocultar el elemento de informe a los usuarios que usen el modo de vista de lista en el Administrador de informes. El modo de vista de lista es el formato de vista predeterminado al examinar la jerarquía de carpetas del servidor de informes. Aunque se puede ocultar un elemento en la vista de lista, no se puede ocultar en la vista Detalles. Si desea restringir el acceso a un elemento, deberá crear una asignación de roles.  
   
- **Tipo**  
+ **Type**  
  Tipo del elemento de informe. Solo lectura.  
   
  **Aplicar**  
@@ -73,7 +73,7 @@ ms.locfileid: "66109085"
  **Descargar**  
  Extraiga una copia de la definición del elemento de informe que se va a guardar como archivo .rsc. El archivo .rsc se puede cargar en una carpeta del servidor de informes o utilizarse para reemplazar un elemento de informe existente en una carpeta del servidor de informes.  
   
- **Reemplace**  
+ **Sustituya**  
  Reemplace la definición del elemento de informe con otra diferente de un archivo .rsc.  
   
 ## <a name="see-also"></a>Consulte también  

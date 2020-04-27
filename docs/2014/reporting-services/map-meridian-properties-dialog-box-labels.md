@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e6a94ff3a40a4c2287f9870222c94ec22e611a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108268"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Cuadro de diálogo Propiedades de meridiano de mapa, Etiquetas
@@ -30,7 +30,7 @@ ms.locfileid: "66108268"
  Haga clic en el botón **Expresión** (*fx*) para modificar una expresión que establezca el valor de la opción.  
   
 ## <a name="options"></a>Opciones  
- **Interval**  
+ **Intervalo**  
  Escriba un valor entero, en grados, que especifica el intervalo entre los meridianos. La opción seleccionada de forma predeterminada es **Automático** . **Automático** indica que los datos espaciales determinan automáticamente el valor.  
   
  **Mostrar etiquetas**  
@@ -39,15 +39,15 @@ ms.locfileid: "66108268"
  **Ubicación**  
  Seleccione una ubicación para mostrar las etiquetas en relación con la parte superior, central e inferior de la ventanilla. La posición predeterminada es **Cerca**.  
   
--   **Near** Mostrar etiquetas en el borde izquierdo.  
+-   **Cerca** Muestra las etiquetas en el borde izquierdo.  
   
--   **Un trimestre** Muestra las etiquetas a medio camino entre el borde izquierdo y el centro.  
+-   **Un cuarto** Muestra las etiquetas a medio camino entre el borde izquierdo y el centro.  
   
--   **Centro** de Mostrar etiquetas en el centro.  
+-   **Centro** Muestra las etiquetas en el centro.  
   
--   **Tres trimestres** Muestra las etiquetas a medio camino entre el centro y el borde derecho.  
+-   **Tres cuartos** Muestra las etiquetas a medio camino entre el centro y el borde derecho.  
   
--   **Lejos** Mostrar etiquetas en el borde derecho.  
+-   **Lejos** Muestra las etiquetas en el borde derecho.  
   
 ## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)  

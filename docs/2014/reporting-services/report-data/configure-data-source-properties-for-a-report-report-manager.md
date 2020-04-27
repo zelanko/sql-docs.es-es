@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107421"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Configurar propiedades de origen de datos para un informe (Administrador de informes)
@@ -28,7 +28,7 @@ ms.locfileid: "66107421"
   
 1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../report-manager-ssrs-native-mode.md).  
   
-2.  En el Administrador de informes, navegue hasta la página **Contenido** . Navegue al informe para el que desee configurar un origen de datos específico y abra el informe.  
+2.  En Administrador de informes, vaya a la página **contenido** . Navegue al informe para el que desee configurar un origen de datos específico y abra el informe.  
   
 3.  Haga clic en la pestaña **propiedades** . Se abre la página de propiedades **General** .  
   
@@ -64,6 +64,6 @@ ms.locfileid: "66107421"
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Administrar orígenes de datos de informe](manage-report-data-sources.md)   
  [Crear, eliminar o modificar un origen de datos compartido &#40;Administrador de informes&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Página de propiedades orígenes de datos &#40;Administrador de informes&#41;](../data-sources-properties-page-report-manager.md)  
+ [Orígenes de datos &#40;página de propiedades del Administrador de informes&#41;](../data-sources-properties-page-report-manager.md)  
   
   

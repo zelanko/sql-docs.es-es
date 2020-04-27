@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108849"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
@@ -67,20 +67,20 @@ ms.locfileid: "66108849"
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
  En este tema se proporcionan instrucciones para establecer y modificar una reserva de direcciones URL en la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- [Acerca de las reservas de direcciones URL y el registro &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [Acerca de las reservas y el registro de direcciones URL &#40;Administrador de configuración de SSRS&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  Las direcciones URL se utilizan para tener acceso a las aplicaciones e informes. En este tema se explican las direcciones URL de las aplicaciones, las direcciones URL predeterminadas y cómo funcionan las reservas de direcciones URL y el registro en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [Sintaxis de reserva de direcciones URL &#40;SSRS Configuration Manager&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [Sintaxis de reserva de direcciones URL &#40;Administrador de configuración de SSRS&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
  Las reservas de direcciones URL predeterminadas que usa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] son válidas para la mayoría de los escenarios. Sin embargo, si desea restringir el acceso o extender la implementación para habilitar el acceso a Internet o a una extranet, es posible que tenga que personalizar la configuración para que cumpla sus requisitos. En este tema se describe la sintaxis de una reserva de direcciones URL y se proporcionan recomendaciones para crear reservas personalizadas para una implementación.  
   
- [Direcciones URL en archivos de configuración &#40;SSRS Configuration Manager&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [Direcciones URL en archivos de configuración &#40;Administrador de configuración de SSRS&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  El archivo RSReportServer.config contiene varias entradas para las reservas de direcciones URL y las direcciones URL que se usan en el Administrador de informes y en la distribución del correo electrónico del servidor de informes. En este tema se resume la configuración de las direcciones URL que permite comprender cómo se comparan.  
   
- [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;SSRS Configuration Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias &#40;Administrador de configuración de SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  Al instalar varias instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un único equipo, aumenta la probabilidad de encontrar direcciones URL duplicadas al registrar una dirección URL. Para evitar estos errores, siga las recomendaciones de este tema para crear reservas de direcciones URL específicas de una instancia.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Configurar una dirección URL &#40;SSRS Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Dirección URL del servicio Web &#40;el modo nativo de SSRS&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

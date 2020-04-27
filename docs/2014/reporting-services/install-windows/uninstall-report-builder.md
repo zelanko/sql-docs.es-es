@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108659"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Desinstalar la versión independiente del Generador de informes (Generador de informes)
@@ -30,7 +30,7 @@ ms.locfileid: "66108659"
   
 2.  En el Panel de control, haga clic en **Programas y características**.  
   
-3.  Busque Generador de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en la lista **Nombre** y haga clic en él.  
+3.  Busque Generador de informes de  en la lista Nombre y haga clic en él.  
   
 4.  Haga clic en **Desinstalar**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66108659"
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>Para desinstalar el Generador de informes desde la línea de comandos  
   
-1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
+1.  En el menú **Inicio**, haga clic en **Ejecutar**.  
   
 2.  En el cuadro de texto **abrir** , escriba`cmd.`  
   

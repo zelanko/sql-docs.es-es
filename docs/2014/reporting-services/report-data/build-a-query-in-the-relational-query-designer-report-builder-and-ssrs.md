@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107436"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS)
@@ -83,7 +83,7 @@ ms.locfileid: "66107436"
   
 ### <a name="to-view-a-query-result-set"></a>Para ver un conjunto de resultados de consulta  
   
-1.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar consulta (!)**.  
+1.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar consulta (!)** .  
   
     > [!NOTE]  
     >  El diseñador de consultas utiliza las credenciales de tiempo de diseño para ejecutar la consulta y recuperar el conjunto de resultados. Para más información, vea [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md).  
@@ -94,9 +94,9 @@ ms.locfileid: "66107436"
  [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
  [Agregar datos de orígenes de datos externos &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)   
- [Crear un conjunto de DataSet compartido o un conjunto de &#40;incrustado Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+ [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../report-builder/report-design-view-report-builder.md)   
- [Vista de diseño de conjunto de conjuntos compartidos &#40;Generador de informes&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [Vista de diseño de conjunto de datos compartidos &#40;Generador de informes&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Diseñadores de consultas de Reporting Services](../reporting-services-query-designers.md)  
   
   

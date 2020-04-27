@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107656"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Inicio de sesión de Reporting Services (cuadro de diálogo del Generador de informes)
@@ -24,7 +24,7 @@ ms.locfileid: "66107656"
   
 ## <a name="options"></a>Opciones  
  **Server**  
- Muestra el nombre del servidor de informes. Por ejemplo, `http://localhost/reportserver`. Si los servidores de informes usan un puerto distinto del predeterminado, el puerto 80, incluya el número de puerto. Por ejemplo, `http://localhost:8080/reportserver`.  
+ Muestra el nombre del servidor de informes. Por ejemplo: `http://localhost/reportserver`. Si los servidores de informes usan un puerto distinto del predeterminado, el puerto 80, incluya el número de puerto. Por ejemplo: `http://localhost:8080/reportserver`.  
   
  **Nombre de usuario**  
  Escriba el nombre de usuario con el que iniciar sesión en el servicio web.  

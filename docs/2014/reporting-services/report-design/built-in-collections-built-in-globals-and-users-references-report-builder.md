@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106437"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referencias a campos globales y de usuario integrados (Generador de informes y SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66106437"
 ### <a name="renderformat"></a>RenderFormat  
  En esta tabla se describen los miembros de `RenderFormat`.  
   
-|Miembro|Tipo|Descripción|  
+|Member|Tipo|Descripción|  
 |------------|----------|-----------------|  
 |Nombre|`String`|Nombre del representador como está registrado en el archivo de configuración de RSReportServer.<br /><br /> Está disponible durante el ciclo de procesamiento o representación de partes concretas del informe.|  
 |IsInteractive|`Boolean`|Si la solicitud de representación actual utiliza un formato de representación interactivo.|  
@@ -57,15 +57,13 @@ ms.locfileid: "66106437"
   
      `=Globals.PageNumber & " of " & Globals.TotalPages`  
   
--   Esta expresión devuelve el nombre del informe y la hora a la que se ejecutó. A la hora se le aplica formato con la cadena de formato de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para fechas cortas:  
+-   Esta expresión devuelve el nombre del informe y la hora a la que se ejecutó. A la hora se le aplica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] formato con la cadena de formato para la fecha corta:  
   
      `=Globals.ReportName & ", dated " & Format(Globals.ExecutionTime, "d")`  
   
 -   Esta expresión, ubicada en el cuadro de diálogo **Visibilidad de columna** para una columna seleccionada, muestra la columna solo cuando el informe se exporta a Excel. De lo contrario, la columna está oculta.  
   
-     
-  `EXCELOPENXML` hace referencia al formato de Excel que se incluye en Office 2007. 
-  `EXCEL` hace referencia al formato de Excel que se incluye en Office 2003.  
+     `EXCELOPENXML` hace referencia al formato de Excel que se incluye en Office 2007. `EXCEL` hace referencia al formato de Excel que se incluye en Office 2003.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
@@ -74,9 +72,9 @@ ms.locfileid: "66106437"
   
  En la siguiente tabla, se describen los miembros de la colección `User`.  
   
-|**Miembro**|**Tipo**|**Descripción**|  
+|**Member**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|Idioma del usuario que ejecuta el informe. Por ejemplo, `en-US`.|  
+|`Language`|`String`|Idioma del usuario que ejecuta el informe. Por ejemplo: `en-US`.|  
 |`UserID`|`String`|Identificador del usuario que ejecuta el informe. Si está utilizando la autenticación de Windows, este valor será la cuenta de dominio del usuario actual. El valor viene determinado por la extensión de seguridad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , que puede utilizar la autenticación de Windows o una autenticación personalizada.|  
   
  Para obtener más información sobre el uso de varios idiomas en un informe, vea "Consideraciones de diseño de soluciones para las implementaciones plurilingües o globales" en la documentación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?LinkId=120955).  

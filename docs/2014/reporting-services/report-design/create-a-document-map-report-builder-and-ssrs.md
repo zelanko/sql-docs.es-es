@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106165"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Crear un mapa del documento (Generador de informes y SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106165"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> Mapas de documento y extensiones de representación  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> Mapas de documento y extensiones de representación  
  El mapa del documento está pensado para usarlo en la extensión de representación de HTML, por ejemplo, en la vista previa y el visor de informes. Otras extensiones de representación tienen diferentes formas de articular un mapa del documento:  
   
 -   PDF representa un mapa del documento como el panel Marcadores.  
@@ -112,13 +112,13 @@ ms.locfileid: "66106165"
 4.  Pegue la dirección URL en el Administrador de informes y, a continuación, presione ENTRAR. El informe se ejecuta con el mapa del documento oculto.  
   
 > [!NOTE]  
->  Para obtener más información acerca de la descarga de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]informes de ejemplo, vea [generador de informes y diseñador de informes informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>   Para obtener más información sobre cómo descargar los informes de ejemplo, consulte [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Informes de ejemplo del Generador de informes y el Diseñador de informes](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Para obtener más información, vea el tema acerca del acceso URL en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
  
   
 ## <a name="see-also"></a>Consulte también  
- [Buscar y ver informes en Administrador de informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Buscar y ver informes en el Administrador de informes &#40;Generador de informes y SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

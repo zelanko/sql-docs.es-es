@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109145"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Expresión (cuadro de diálogo del Generador de informes)
@@ -27,7 +27,7 @@ ms.locfileid: "66109145"
  El cuadro de diálogo **Expresión** incluye una ventana de código, un árbol de categorías, elementos de categoría, un panel de descripción y un panel de ejemplo. El cuadro de diálogo **Expresión** depende del contexto; los elementos de categoría y las descripciones cambian en respuesta a la categoría de expresiones con la que se está trabajando. Para obtener más información, vea [ejemplos de expresiones &#40;generador de informes y ssrs&#41;](report-design/expression-examples-report-builder-and-ssrs.md), [expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
 ## <a name="expression-constructs"></a>Construcciones de expresiones  
- Las expresiones comienzan por un signo igual (=) y pueden incluir constantes, literales, operadores y referencias a campos integrados, colecciones integradas, funciones integradas, funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], clases de Common Language Runtime de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] y funciones personalizadas. En la lista siguiente se describen las categorías y los valores que puede agregar a una expresión.  
+ Las expresiones comienzan por un signo igual (=) y pueden incluir constantes, literales, operadores y referencias a campos integrados, colecciones integradas, funciones integradas, funciones de la biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] , clases de Common Language Runtime de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] y funciones personalizadas. En la lista siguiente se describen las categorías y los valores que puede agregar a una expresión.  
   
  **Establecer expresión para:**  _\<PropertyName>_  
  Nombre de la propiedad cuya expresión está definiendo. También puede establecer esta propiedad, por nombre, en el panel de propiedades.  
@@ -40,17 +40,17 @@ ms.locfileid: "66109145"
  **Campos integrados**  
  Proporciona una lista de los elementos de la colección global que puede utilizar en una expresión. Algunas colecciones solo se admiten una vez publicado el informe en el servidor. Para obtener más información, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).  
   
- **Los**  
+ **Parámetros**  
  Proporciona una lista de parámetros de informe.  
   
  **Campos (** _ \<conjunto de>seleccionado_ **)**  
- Muestra la lista de campos para el conjunto de datos seleccionado en la categoría Conjuntos de datos. Haga doble clic en un campo para copiarlo en el cuadro **Expresión**.  
+ Muestra la lista de campos para el conjunto de datos seleccionado en la categoría Conjuntos de datos. Haga doble clic en un campo para copiarlo en el cuadro **Expresión** .  
   
  **Conjuntos de datos**  
  Proporciona una lista de conjuntos de datos disponibles y muestra los campos miembros del conjunto de datos.  
   
  **Variables**  
- Muestra una lista de variables de informe. Para obtener más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
+ Muestra una lista de variables de informe. Para más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md).  
   
  **Operadores**  
  Muestra los operadores que puede incluir en un cálculo o manipulación de cadena. Para obtener más información, vea [Usar operadores en expresiones &#40;Generador de informes y SSRS&#41;](report-design/operators-in-expressions-report-builder-and-ssrs.md).  
@@ -83,8 +83,8 @@ ms.locfileid: "66109145"
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Aplicar formato a números y fechas &#40;Generador de informes y SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Usar referencias a la colección de parámetros &#40;generador de informes y SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Referencias a la colección Parameters &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Ejemplos de expresiones de grupo &#40;Generador de informes y SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Referencias a colecciones de campos de conjunto de los &#40;Generador de informes y SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
  [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   

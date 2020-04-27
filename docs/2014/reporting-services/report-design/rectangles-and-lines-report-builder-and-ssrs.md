@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f447d05501949df0fd0860ed7799fca2932714fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105385"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rectángulos y líneas (Generador de informes y SSRS)
@@ -23,14 +23,14 @@ ms.locfileid: "66105385"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RectanglesLinesReportParts"></a> Rectángulos y líneas como elementos de informe  
+##  <a name="rectangles-and-lines-as-report-parts"></a><a name="RectanglesLinesReportParts"></a> Rectángulos y líneas como elementos de informe  
  Puede publicar rectángulos con los elementos que contienen por separado del informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
  No puede publicar los elementos de informe contenidos en el rectángulo como elementos de informe. Cuando los usuarios agregan el rectángulo a un informe, obtienen el rectángulo y los elementos que contiene.  
   
 
   
-##  <a name="RectangleAsContainer"></a> Usar un rectángulo como contenedor  
+##  <a name="using-a-rectangle-as-a-container"></a><a name="RectangleAsContainer"></a>Usar un rectángulo como contenedor  
  Puede usar un rectángulo como contenedor de otros elementos. Cuando se mueve un rectángulo, los elementos que contiene se mueven con él. Un elemento del rectángulo muestra el nombre del rectángulo en su propiedad **Parent** . Para más información sobre el uso de un rectángulo como contenedor, vea [Agregar un rectángulo o un contenedor &#40;Generador de informes y SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md) y [Mostrar los mismos datos en una matriz y en un gráfico &#40;Generador de informes&#41;](display-the-same-data-on-a-matrix-and-a-chart-report-builder.md).  
   
 > [!NOTE]  
@@ -40,12 +40,12 @@ ms.locfileid: "66105385"
   
 
   
-##  <a name="ReportBorder"></a> Agregar un borde al informe  
+##  <a name="adding-a-report-border"></a><a name="ReportBorder"></a> Agregar un borde al informe  
  Puede agregar un borde a un informe agregando bordes a los encabezados, pies de página y cuerpo del informe, sin tener que agregar líneas o rectángulos. Para más información, vea [Agregar un borde a un informe &#40;Generador de informes y SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Temas de procedimientos  
  [Agregar un borde a un informe &#40;Generador de informes y SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
  [Agregar un rectángulo o un contenedor &#40;Generador de informes y SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  

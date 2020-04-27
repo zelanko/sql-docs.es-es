@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109236"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Escribir credenciales de origen de datos (cuadro de diálogo)
-  Utilice el cuadro de diálogo **escribir credenciales de origen** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] datos para proporcionar las credenciales para poder recuperar datos del origen de datos.  
+  Use el cuadro de diálogo **Escribir credenciales de origen de datos** para proporcionar las credenciales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesarias para recuperar datos del origen de datos.  
   
 ## <a name="options"></a>Opciones  
  **Nombre de usuario**  

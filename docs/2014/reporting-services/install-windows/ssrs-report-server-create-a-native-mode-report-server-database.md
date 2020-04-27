@@ -14,14 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108678"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Crear una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de modo nativo usa una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el almacenamiento interno. La base de datos es un componente necesario y se utiliza para almacenar los informes publicados, modelos, orígenes de datos compartidos, datos de sesión, recursos y metadatos del servidor.  
   
  Para crear una base de datos del servidor de informes o cambiar la cadena de conexión o las credenciales, utilice las opciones de la página Base de datos del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -35,7 +34,7 @@ ms.locfileid: "66108678"
   
  Si instaló [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con la configuración predeterminada para el modo nativo, la base de datos del servidor de informes se creó y configuró automáticamente cuando se instaló la instancia del servidor de informes. Puede utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver o modificar los valores que el programa de configuración estableció automáticamente.  
   
-##  <a name="rsdbrequirements"></a>Antes de empezar  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> Antes de empezar  
  La creación o configuración de una base de datos del servidor de informes son procesos que constan de varios pasos. Antes de crear la base de datos del servidor de informes, considere cómo desea especificar los elementos siguientes:  
   
  Seleccionar un servidor de base de datos  
@@ -90,7 +89,7 @@ ms.locfileid: "66108678"
   
     3.  Haga clic en **Probar conexión** para validar la conexión al servidor.  
   
-    4.  Haga clic en **Next**.  
+    4.  Haga clic en **Siguiente**.  
   
 5.  Especifique las propiedades que se usan para crear la base de datos. Para obtener más información acerca de cómo se utilizan estas propiedades, vea [Antes de empezar](#rsdbrequirements) en este tema:  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66108678"
   
     3.  El modo de servidor de informes siempre está establecido en **Nativo**.  
   
-    4.  Haga clic en **Next**.  
+    4.  Haga clic en **Siguiente**.  
   
 6.  Especifique las credenciales que usa el servidor de informes para conectarse a la base de datos del servidor de informes.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "66108678"
   
          Seleccione **Credenciales de servicio** si desea que el servidor de informes se conecte con su cuenta de servicio. Con esta opción, el servidor se conecta utilizando la seguridad integrada; las credenciales no se cifran ni almacenan.  
   
-    2.  Haga clic en **Next**.  
+    2.  Haga clic en **Siguiente**.  
   
 7.  Revise la información de la página Resumen para comprobar que la configuración es correcta y, a continuación, haga clic en **Siguiente**.  
   

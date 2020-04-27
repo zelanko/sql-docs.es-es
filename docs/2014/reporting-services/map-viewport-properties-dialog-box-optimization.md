@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108277"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Cuadro de diálogo Propiedades de ventanilla de mapa, Optimización
@@ -31,7 +31,7 @@ ms.locfileid: "66108277"
  **Rendimiento**  
  Deslice el puntero más cerca de **Rendimiento** para simplificar el mapa y mostrar menos detalle.  
   
- **Calidad**  
+ **Quality**  
  Deslice el puntero más cerca de **Calidad** para dibujar el mapa con mayor detalle.  
   
  **Resolución de mapa**  
@@ -39,6 +39,6 @@ ms.locfileid: "66108277"
   
 ## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de informes: informes de mapa &#40;Generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

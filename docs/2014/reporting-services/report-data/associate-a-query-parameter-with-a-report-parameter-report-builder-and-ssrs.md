@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 697a8bbfa77a8afcabfdf00deef93620ff607233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107469"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Asociar un parámetro de consulta a un parámetro de informe (Generador de informes y SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66107469"
 1.  En el panel Datos de informe, haga clic con el botón derecho en el conjunto de datos, haga clic en **Propiedades del conjunto de datos**y, después, haga clic en **Parámetros**.  
   
     > [!NOTE]  
-    >  Si el panel Datos de informe no es visible, haga clic en **Datos de informe** en el menú **Ver** .  
+    >   Si el panel Datos de informe no está visible, haga clic en **Datos de informe** en el menú **Ver** .  
   
 2.  En la columna **Nombre de parámetro**, busque el nombre del parámetro de consulta. Los nombres de los parámetros se rellenan automáticamente basándose en la consulta. Cada vez que cambia la consulta, la consulta se comprueba para ver si existen nuevos parámetros de consulta. Los parámetros de consulta creados manualmente no cambian cuando cambia la consulta.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66107469"
 3.  Repita el paso 2 para otros parámetros de consulta.  
   
 ## <a name="see-also"></a>Consulte también  
- [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Conjuntos de valores integrados de informe y conjuntos de recursos compartidos &#40;Generador de informes y SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Concepto de parámetros de informe &#40;Generador de informes y SSRS&#41;](../report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   
   

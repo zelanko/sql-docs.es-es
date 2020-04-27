@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ef4f2f59698f45f4d0882117abbf2ffc8ae5930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110037"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Cuadro de diálogo Alineación para texto y marcadores de posición (Generador de informes y SSRS)
@@ -27,15 +27,15 @@ ms.locfileid: "66110037"
   
 ## <a name="options"></a>Opciones  
  **Horizontal**  
- Especifique un valor o escriba una expresión que se evalúe como la posición horizontal del texto dentro de una celda o región de datos seleccionada. Haga clic en el botón **expresión** (*FX*) para editar la expresión.  
+ Especifique un valor o escriba una expresión que se evalúe como la posición horizontal del texto dentro de una celda o región de datos seleccionada. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
--   **General** Muestra el texto calculado por [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Para obtener más información sobre cómo se calcula la alineación del texto general, vea [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
+-   **General** : muestra el texto calculado por [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Para obtener más información sobre cómo se calcula la alineación del texto general, vea [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
--   **Izquierda** Muestra el texto alineado a la izquierda.  
+-   **Izquierda** : muestra el texto alineado a la izquierda.  
   
--   **Centro** de Muestra el texto como alineado en el centro.  
+-   **Centro** : muestra el texto centrado.  
   
--   **Derecha** Muestra el texto alineado a la derecha.  
+-   **Derecha** : muestra el texto alineado a la derecha.  
   
 ## <a name="see-also"></a>Consulte también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   

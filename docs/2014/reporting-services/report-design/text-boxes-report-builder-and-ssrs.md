@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104630"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
@@ -39,11 +39,11 @@ ms.locfileid: "66104630"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>Aumentar y reducir un cuadro de texto  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Aumentar y disminuir el tamaño de un cuadro de texto  
  De manera predeterminada, los cuadros de texto tienen un tamaño fijo. Puede permitir que un cuadro de texto se reduzca o se expanda verticalmente según su contenido. Para más información, vea [Permitir que un cuadro de texto aumente o se reduzca &#40;Generador de informes y SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Orientar un cuadro de texto  
- Orientar los cuadros de texto puede ayudarle a crear informes más legibles, permitir una orientación del texto específica de la configuración regional, ajustar más columnas en un informe impreso a tamaño de página fijo y crear informes con más atractivo gráfico. Un cuadro de texto se puede orientar en direcciones diferentes: horizontal, vertical o girado 270 grados. La opción vertical se suele utilizar más para los idiomas de Asia oriental que se escriben de arriba abajo. En la mayoría de los representadores, la opción vertical controla la propiedad de giro de glifo para que el texto se escriba de arriba abajo, pero los caracteres no estén en los lados. Para otros idiomas, el texto de las opciones vertical y girado 270 grados se escribe de lado.  
+ Orientar los cuadros de texto puede ayudarle a crear informes más legibles, permitir una orientación del texto específica de la configuración regional, ajustar más columnas en un informe impreso a tamaño de página fijo y crear informes con más atractivo gráfico. Un cuadro de texto se puede orientar en direcciones diferentes: horizontal, vertical o girado 270 grados. La opción vertical se suele utilizar más para los idiomas de Este de Asia que se escriben de arriba abajo. En la mayoría de los representadores, la opción vertical controla la propiedad de giro de glifo para que el texto se escriba de arriba abajo, pero los caracteres no estén en los lados. Para otros idiomas, el texto de las opciones vertical y girado 270 grados se escribe de lado.  
   
  Puede aplicar la orientación a los cuadros de texto que contienen texto literal, campos de un conjunto de datos de informe o datos calculados. El cuadro de texto puede ser independiente en el cuerpo del informe, en una tabla o matriz, o en un encabezado y pie de página del informe.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "66104630"
   
  Para empezar a trabajar rápidamente con el cambio de la orientación del texto, consulte la sección sobre cómo girar texto en el [Tutorial: dar formato al texto &#40;Generador de informes&#41;](../tutorial-format-text-report-builder.md). Para obtener más información, vea [establecer la orientación del cuadro de texto &#40;generador de informes y SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Temas de procedimientos  
- [Agregar, quitar o eliminar un cuadro de texto &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Temas de procedimientos  
+ [Agregar, mover o eliminar un cuadro de texto &#40;Generador de informes y SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
  [Dar formato al texto en un cuadro de texto &#40;Generador de informes y SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

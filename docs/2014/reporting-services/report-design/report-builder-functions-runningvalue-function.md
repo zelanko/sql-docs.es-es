@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72673641fc0f67e22d88d5ea104089b273dedce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105158"
 ---
 # <a name="runningvalue-function-report-builder-and-ssrs"></a>Función RunningValue (Generador de informes y SSRS)
@@ -38,8 +38,7 @@ RunningValue(expression, function, scope)
  (`Enum`). Nombre de la función de agregado que se aplica a la expresión; por ejemplo, `Sum`. Esta función no puede ser `RunningValue`, `RowNumber` ni `Aggregate`.  
   
  *scope*  
- (`String`) Constante de cadena que es el nombre de un conjunto de datos, grupo, región de datos o NULL (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el contexto en el que evaluar la agregación. 
-  `Nothing` especifica el contexto más externo, normalmente el conjunto de datos de informe.  
+ (`String`) Constante de cadena que es el nombre de un conjunto de datos, grupo, región de datos o NULL (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica el contexto en el que evaluar la agregación. `Nothing` especifica el contexto más externo, normalmente el conjunto de datos de informe.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  Viene determinado por la función de agregado especificada en el parámetro *function* .  
@@ -47,8 +46,7 @@ RunningValue(expression, function, scope)
 ## <a name="remarks"></a>Observaciones  
  El valor para `RunningValue` se restablece en 0 para cada nueva instancia del ámbito. Si se especifica un grupo, el valor actual se restablece cuando cambia la expresión de grupo. Si se especifica una región de datos, el valor actual se restablece en cada instancia nueva de la región de datos. Si se especifica un conjunto de datos, el valor actual no se restablece en todo el conjunto de datos.  
   
- 
-  `RunningValue` no se puede utilizar en un filtro o expresión de ordenación.  
+ `RunningValue` no se puede utilizar en un filtro o expresión de ordenación.  
   
  El conjunto de datos para los que se calcula el valor en ejecución debe tener el mismo tipo de datos. Si desea convertir datos de varios tipos de datos numéricos al mismo tipo de datos, use funciones de conversión como `CInt`, `CDbl` o `CDec`. Para obtener más información, vea [Funciones de conversión de tipos](https://go.microsoft.com/fwlink/?LinkId=96142).  
   

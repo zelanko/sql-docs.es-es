@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108119"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parámetros (página de propiedades del Administrador de informes)
@@ -52,7 +52,7 @@ ms.locfileid: "66108119"
   
  Si después especifica que se pregunte al usuario, el valor predeterminado se convierte en un valor inicial que los usuarios pueden utilizar o modificar. Si no se pide un valor de parámetro, se utiliza este valor para todos los usuarios que ejecuten el informe.  
   
- **Null**  
+ **Acepta**  
  Active esta casilla para especificar Null como valor predeterminado. Un valor Null implica que el informe se ejecuta incluso aunque el usuario no proporcione un valor de parámetro. Si no hay ninguna casilla en esta columna, el parámetro no acepta valores Null.  
   
  **Ocultar**  

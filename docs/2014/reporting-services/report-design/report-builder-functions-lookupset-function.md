@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105232"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>Función LookupSet (Generador de informes y SSRS)
@@ -49,8 +49,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="remarks"></a>Observaciones  
  Use `LookupSet` para recuperar un conjunto de valores del conjunto de datos especificado correspondiente a un par de nombre/valor donde hay una relación de uno a varios. Por ejemplo, para un identificador de cliente en una tabla, puede usar `LookupSet` para recuperar todos los números de teléfono asociados a ese cliente de un conjunto de datos que no está enlazado a la región de datos.  
   
- 
-  `LookupSet` realiza las operaciones siguientes:  
+ `LookupSet` realiza las operaciones siguientes:  
   
 -   Evalúa la expresión de origen en el ámbito actual.  
   
@@ -72,8 +71,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Las expresiones de origen, destino y resultado no pueden incluir referencias a variables de informe o de grupo.  
   
--   
-  `LookupSet` no se puede usar como una expresión para los siguientes elementos de informe:  
+-   `LookupSet` no se puede usar como una expresión para los siguientes elementos de informe:  
   
     -   Cadenas de conexión dinámicas para un origen de datos.  
   
@@ -101,7 +99,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="example"></a>Ejemplo  
  Dado que `LookupSet` devuelve una colección de objetos, no se puede mostrar la expresión de resultado directamente en un cuadro de texto. Puede concatenar el valor de cada objeto de la colección como una cadena.  
   
- Use la función [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de `Join` para crear una cadena delimitada a partir de un conjunto de objetos. Use la coma como separador para combinar los objetos en una sola línea. En algunos representadores, puede usar un salto de línea de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) como separador para enumerar cada valor en una nueva línea.  
+ Use la función `Join` de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para crear una cadena delimitada a partir de un conjunto de objetos. Use la coma como separador para combinar los objetos en una sola línea. En algunos representadores, puede usar un salto de línea de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] (`vbCrLF`) como separador para enumerar cada valor en una nueva línea.  
   
  La siguiente expresión, cuando se usa como la propiedad Value de un cuadro de texto, utiliza `Join` para crear una lista.  
   

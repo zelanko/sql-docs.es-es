@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109597"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo nativo
@@ -61,7 +61,7 @@ ms.locfileid: "66109597"
  [Controlar la distribución de informes](../../2014/reporting-services/control-report-distribution.md)  
  Describe los parámetros de configuración y las opciones de entrega que puede utilizar para controlar la distribución de informes.  
   
- [Supervisar suscripciones de Reporting Services](subscriptions/monitor-reporting-services-subscriptions.md)  
+ [Supervisión de suscripciones de Reporting Services](subscriptions/monitor-reporting-services-subscriptions.md)  
  Describe cómo puede determinar si una suscripción se ha entregado o no, así como los efectos de los cambios en informes sobre las suscripciones existentes.  
   
 ## <a name="see-also"></a>Consulte también  

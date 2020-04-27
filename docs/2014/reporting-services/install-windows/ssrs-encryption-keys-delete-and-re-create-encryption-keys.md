@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108697"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Eliminar y volver a crear claves de cifrado (Administrador de configuración de SSRS)
@@ -116,7 +116,7 @@ ms.locfileid: "66108697"
 4.  Para suscripciones que utilizan datos cifrados (como la extensión de entrega de recurso compartido de archivos y todas las extensiones de entrega de terceros que utilicen cifrado), abra cada suscripción y vuelva a escribir las credenciales. Las suscripciones que usan entrega por correo electrónico del Servidor de informes no emplean datos cifrados y, por tanto, no les afecta el cambio de clave.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Almacenar datos cifrados del servidor de informes &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Configurar y administrar claves de cifrado &#40;SSRS Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

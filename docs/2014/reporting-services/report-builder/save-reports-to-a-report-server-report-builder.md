@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107634"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Guardar informes en un servidor de informes (Generador de informes)
@@ -40,7 +40,7 @@ ms.locfileid: "66107634"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Para guardar un informe con un nombre diferente  
   
-1.  En el botón Generador de informes, haga clic en **Guardar como**. Se abre el cuadro de diálogo **Guardar como**_\<elemento\> de informe_ .  
+1.  En el botón Generador de informes , haga clic en **Guardar como**. Se abre el cuadro de diálogo **Guardar como**_\<elemento\> de informe_ .  
   
 2.  Vaya a la ubicación del servidor de informes o al recurso compartido de archivos donde desea guardar el informe.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66107634"
 4.  En **Elementos de tipo**, seleccione el tipo de elemento de informe que está guardando. El tipo para los informes es Informes (*.rdl).  
   
 ## <a name="see-also"></a>Consulte también  
- [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Buscar, ver y administrar informes &#40;Generador de informes y SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar informes &#40;Generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Guardar informes &#40;Generador de informes&#41;](saving-reports-report-builder.md)   
  [Exportar un informe como otro tipo de archivo &#40;Generador de informes y SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md)  

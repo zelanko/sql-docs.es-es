@@ -20,22 +20,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f25545a48a95082636fc3efa951e5eab42c94be7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105889"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar y ordenar datos (Generador de informes y SSRS)
   En un informe, las expresiones sirven para ayudar a controlar, organizar y ordenar los datos de informe. De forma predeterminada, cuando se crean conjuntos de datos y se diseñan informes, las propiedades de los elementos de informe están se establecen de forma automática en las expresiones basadas en los campos de conjunto de datos, los parámetros y otros elementos que aparecen en el panel Datos de informe. Puede agregar también un botón de ordenación interactivo a una tabla o a una celda de la matriz para permitir a los usuarios cambiar el criterio de ordenación de las filas para los grupos o las filas dentro de los grupos.  
   
--   **Expresiones de filtro** Una expresión de filtro prueba los datos para su inclusión o exclusión en función de una comparación especificada. Los filtros se aplican a los datos de un informe una vez recuperados de una conexión de datos. Puede agregar cualquier combinación de filtros a los siguientes elementos: una definición de conjunto de datos compartido del servidor de informes; una instancia de un conjunto de datos compartido o incrustado de un informe; una región de datos, como una tabla o un gráfico, o un grupo de regiones de datos, como un grupo de filas de una tabla o un grupo de categorías de un gráfico.  
+-   **Expresiones de filtro** : las expresiones de filtro prueban los datos para incluirlos o excluirlos en función de una comparación especificada por el usuario. Los filtros se aplican a los datos de un informe una vez recuperados de una conexión de datos. Puede agregar cualquier combinación de filtros a los siguientes elementos: una definición de conjunto de datos compartido del servidor de informes; una instancia de un conjunto de datos compartido o incrustado de un informe; una región de datos, como una tabla o un gráfico, o un grupo de regiones de datos, como un grupo de filas de una tabla o un grupo de categorías de un gráfico.  
   
--   **Expresiones de grupo** Una expresión de grupo organiza los datos en función de un campo de conjunto de datos o de otro valor. Las expresiones de grupo se crean automáticamente a medida que se diseña el informe. El procesador de informes evalúa las expresiones de grupo una vez aplicados los filtros a los datos y a medida que se combinan los datos del informe y las regiones de datos. Podrá personalizar una expresión de grupo una vez creada.  
+-   **Expresiones de grupo** : una expresión de grupo organiza los datos en base a un campo de conjunto de datos u otro valor. Las expresiones de grupo se crean automáticamente a medida que se diseña el informe. El procesador de informes evalúa las expresiones de grupo una vez aplicados los filtros a los datos y a medida que se combinan los datos del informe y las regiones de datos. Podrá personalizar una expresión de grupo una vez creada.  
   
--   **Expresiones de ordenación** Una expresión de ordenación controla el orden en el que aparecen los datos en una región de datos. Las expresiones de ordenación se crean automáticamente a medida que se diseña el informe. De forma predeterminada, la expresión de ordenación de un grupo se establece en el mismo valor que la expresión de grupo. Podrá personalizar una expresión de ordenación una vez creada.  
+-   **Expresiones de ordenación** : una expresión de ordenación controla el orden en el que aparecen los datos en una región de datos. Las expresiones de ordenación se crean automáticamente a medida que se diseña el informe. De forma predeterminada, la expresión de ordenación de un grupo se establece en el mismo valor que la expresión de grupo. Podrá personalizar una expresión de ordenación una vez creada.  
   
--   **Ordenación interactiva** Para permitir a un usuario ordenar o invertir el criterio de ordenación de una columna, puede Agregar un botón de ordenación interactiva a un encabezado de columna o a una celda de encabezado de grupo en una tabla o matriz.  
+-   **Ordenación interactiva** : para permitir a los usuarios ordenar o invertir el criterio de ordenación de una columna, puede agregar un botón de ordenación interactivo a un encabezado de columna o a una celda del encabezado de grupo en una tabla o matriz.  
   
  Para ayudar a los usuarios a personalizar las expresiones de filtro, grupo u ordenación, puede cambiar una expresión para agregar una referencia a un parámetro de informe. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66105889"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Filtering"></a>Filtrar datos en el informe  
+##  <a name="filtering-data-in-the-report"></a><a name="Filtering"></a> Filtrar los datos del informe  
  Los filtros son las partes de un informe que ayudan a controlar los datos del informe una vez recuperados de la conexión de datos. Utilice filtros cuando no pueda cambiar una consulta de conjunto de datos para filtrar datos antes de recuperarlos de un origen de datos externo.  
   
  Siempre que resulte posible, cree consultas de conjunto de datos que devuelvan solo los datos que necesite mostrar en el informe. Al reducir la cantidad de los datos que se deben recuperar y procesar, contribuirá a mejorar el rendimiento del informe. Para más información, vea [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "66105889"
   
  Para personalizar una vista para cada usuario, puede incluir una referencia al campo integrado UserID en un filtro. Para obtener más información, vea [Referencias a campos globales y de usuario integrados &#40;Generador de informes y SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).
 
-##  <a name="Grouping"></a>Agrupar datos en el informe  
+##  <a name="grouping-data-in-the-report"></a><a name="Grouping"></a> Agrupar los datos del informe  
  Los grupos organizan los datos de un informe para mostrarlos o calcular los valores agregados. Entender cómo se definen los grupos y se utilizan las características de grupo le ayudará a diseñar informes más concisos.  
   
  Las expresiones de grupo se crean automáticamente cuando se realiza una de las siguientes acciones:  
@@ -98,11 +98,11 @@ ms.locfileid: "66105889"
  Para obtener más información, vea [Referencias a las colecciones de variables de informe y de grupo &#40;Generador de informes y SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md) y [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Grupos y ámbitos de regiones de datos  
- Para proporcionar varias vistas de los datos del mismo conjunto de datos, puede especificar las mismas expresiones de grupo para cada región de datos. Por ejemplo, puede mostrar los datos por categorías en una tabla para mostrar todos los datos detallados y mostrar los agregados en un gráfico circular para ayudar a visualizar cada categoría en relación con el conjunto de datos completo. Para obtener más información, vea [vincular varias regiones de datos al mismo conjunto de datos &#40;generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Para proporcionar varias vistas de los datos del mismo conjunto de datos, puede especificar las mismas expresiones de grupo para cada región de datos. Por ejemplo, puede mostrar los datos por categorías en una tabla para mostrar todos los datos detallados y mostrar los agregados en un gráfico circular para ayudar a visualizar cada categoría en relación con el conjunto de datos completo. Para obtener más información, vea [Vincular varias regiones de datos al mismo conjunto de datos &#40;Generador de informes y SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  Al anidar una región de datos en la celda de una tabla, una matriz o una lista, el ámbito de los datos se establecerá automáticamente en las pertenencias de grupo más internas de la celda. Por ejemplo, supongamos que agrega un gráfico a una celda que se encuentra en un grupo de filas y en un grupo de columnas. Los datos disponibles para ese gráfico pertenecerán al ámbito de la instancia del grupo de filas más interior y de la instancia del grupo de columnas más interior en tiempo de ejecución. Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)subyacente.  
 
-##  <a name="Sorting"></a>Ordenar datos en el informe  
+##  <a name="sorting-data-in-the-report"></a><a name="Sorting"></a> Ordenar los datos del informe  
  Para controlar el criterio de ordenación de los datos del informe, puede ordenar los datos en una consulta de conjunto de datos o definir una expresión de ordenación para un grupo o una región de datos. También puede agregar botones de ordenación interactiva a las tablas y matrices para que los usuarios puedan cambiar el criterio de ordenación de las filas.  
   
  Los tres tipos de ordenaciones se pueden combinar en el mismo informe. De forma predeterminada, el orden en el que la consulta de conjunto de datos devuelve los datos determina el criterio de ordenación. Las expresiones de ordenación se aplican en la región de datos y el grupo de regiones de datos. Las ordenaciones interactivas se aplican después de las expresiones de ordenación.  
@@ -112,7 +112,7 @@ ms.locfileid: "66105889"
 ### <a name="sorting-data-in-a-dataset-query"></a>Ordenar datos en una consulta de conjunto de datos  
  Incluya el criterio de ordenación en la consulta de conjunto de datos para preordenar los datos antes de que estos se recuperen para un informe. La ordenación de los datos en la consulta permite que el trabajo de ordenación lo realice el origen de datos en lugar del procesador de informes.  
   
- Para un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de origen de datos, puede Agregar una cláusula order by a la consulta del conjunto de datos. Por ejemplo, la consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente ordena las columnas Sales y Region por la columna Sales en orden descendente en la tabla SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obtener más información, vea el tema que explica cómo ordenar filas con ORDER BY en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
+ Puede agregar una cláusula ORDER BY a la consulta de conjunto de datos para un tipo de origen de datos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, la consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente ordena las columnas Sales y Region por la columna Sales en orden descendente en la tabla SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Para obtener más información, vea el tema que explica cómo ordenar filas con ORDER BY en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  No todos los orígenes de datos permiten especificar el criterio de ordenación en la consulta.  
@@ -122,15 +122,15 @@ ms.locfileid: "66105889"
   
 -   **región de datos Tablix.** : establezca expresiones de ordenación en una región de datos de tabla, matriz o lista para controlar el criterio de ordenación de los datos en la región de datos, una vez aplicados los filtros de conjuntos de datos y de regiones de datos en tiempo de ejecución.  
   
--   **Región de datos Tablix grupo.** : establezca expresiones de ordenación para cada grupo, incluyendo el grupo de detalles, para controlar el criterio de ordenación de las instancias de grupo. Por ejemplo, para el grupo de detalles, puede controlar el orden de las filas de detalles. Para un grupo secundario, puede controlar el orden de las instancias de grupo para el grupo secundario dentro del grupo primario. De forma predeterminada, al crear un grupo, la expresión de ordenación se establece en la expresión de grupo y en orden ascendente.  
+-   **Grupo de región de datos Tablix** : establezca expresiones de ordenación para cada grupo, incluyendo el grupo de detalles, para controlar el criterio de ordenación de las instancias de grupo. Por ejemplo, para el grupo de detalles, puede controlar el orden de las filas de detalles. Para un grupo secundario, puede controlar el orden de las instancias de grupo para el grupo secundario dentro del grupo primario. De forma predeterminada, al crear un grupo, la expresión de ordenación se establece en la expresión de grupo y en orden ascendente.  
   
      Si solo tiene un grupo de detalles, puede definir una expresión de ordenación en la consulta, en la región de datos o en el grupo de detalles, obteniendo el mismo resultado.  
   
--   **Región de datos de gráfico.** : establezca una expresión de ordenación para los grupos de categorías y de series con el fin de controlar el criterio de ordenación para los puntos de datos. De forma predeterminada, el orden de los puntos de datos coincide con el orden de los colores de la leyenda del gráfico. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
+-   **Región de datos Gráfico** : establezca una expresión de ordenación para los grupos de categorías y de series con el fin de controlar el criterio de ordenación para los puntos de datos. De forma predeterminada, el orden de los puntos de datos coincide con el orden de los colores de la leyenda del gráfico. Para obtener más información, vea [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
--   **Elemento de informe de mapa.** : normalmente, no necesitará ordenar los datos de una región de datos de mapa porque el mapa agrupa los datos para mostrar en elementos de mapa.  
+-   **Elemento de informe de mapa** : normalmente, no necesitará ordenar los datos de una región de datos de mapa porque el mapa agrupa los datos para mostrar en elementos de mapa.  
   
--   **Región de datos del medidor.** : normalmente, no es necesario ordenar los datos para una región de datos del medidor, ya que este muestra un único valor relativo a un intervalo. Si necesita ordenar los datos de un medidor, primero debe definir un grupo y, a continuación, establecer una expresión de ordenación para el grupo.  
+-   **Región de datos Medidor** : normalmente, no es necesario ordenar los datos para una región de datos del medidor, ya que este muestra un único valor relativo a un intervalo. Si necesita ordenar los datos de un medidor, primero debe definir un grupo y, a continuación, establecer una expresión de ordenación para el grupo.  
   
 #### <a name="sorting-by-a-different-value"></a>Ordenar por un valor diferente  
  Quizás prefiera ordenar las filas de una región de datos por un valor que no sea el de campo. Por ejemplo, supongamos que el campo Tamaño contiene valores de texto que se corresponden con pequeño, mediano, grande y muy grande. De forma predeterminada, la expresión de ordenación para un grupo de filas basado en Tamaño también es [Size]. Para tener más control sobre la manera en que se ordenan los datos, puede agregar un campo a la consulta de conjunto de datos que define el criterio de ordenación que desea.  
@@ -159,19 +159,19 @@ FROM Production.Product
   
  Para obtener más información, vea [Ordenar datos en una región de datos &#40;Generador de informes y SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md) y [Función Lookup &#40;Generador de informes y SSRS&#41;](report-builder-functions-lookup-function.md).  
   
-###  <a name="Interactive"></a>Agregar ordenación interactiva para el usuario  
+###  <a name="adding-interactive-sorting-for-the-user"></a><a name="Interactive"></a> Agregar ordenación interactiva para los usuarios  
  Para permitir a los usuarios cambiar el criterio de ordenación de los datos de informe de una tabla o matriz, puede agregar botones de ordenación interactivos a encabezados de columna o encabezados de grupo. Los usuarios podrán hacer clic en el botón para alternar el criterio de ordenación. La ordenación interactiva es compatible con los formatos de representación que permiten la interacción del usuario, como HTML.  
   
  Agregue botones de ordenación interactivos a un cuadro de texto de una celda de región de datos Tablix. De forma predeterminada, cada celda de Tablix contiene un cuadro de texto. En las propiedades del cuadro de texto, debe especificar qué parte de una región de datos de tabla o de matriz desea ordenar (los valores del grupo primario, los valores del grupo secundario o las filas de detalles), la expresión por la que desea realizar la ordenación y si se debe aplicar la expresión de ordenación a otros elementos de informe que tienen una relación del mismo nivel. Por ejemplo, si una tabla y un gráfico que proporcionan vistas del mismo conjunto de datos están incluidos en un rectángulo, son regiones de datos del mismo nivel. Cuando un usuario alterna el criterio de ordenación en la tabla, también se alterna el criterio de ordenación para el gráfico. Para obtener más información, vea [Ordenación interactiva &#40;Generador de informes y SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
 
-##  <a name="HowTo"></a> Temas de procedimientos  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Temas de procedimientos  
  [Mantener visibles los encabezados al desplazarse a través de un informe &#40;Generador de informes y SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
  [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
  [Agregar una ordenación interactiva a una tabla o una matriz &#40;Generador de informes y SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Establecer un mensaje que indica que no hay datos para una región de datos &#40;Generador de informes y SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Establecer un mensaje para cuando no hay datos en una región de datos &#40;Generador de informes y SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
  [Crear un grupo de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
@@ -183,14 +183,14 @@ FROM Production.Product
   
  [Agregar un total a un grupo o a una región de datos Tablix &#40;Generador de informes y SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
-##  <a name="Section"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="Section"></a>En esta sección  
  [Ejemplos de expresión de grupo &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
  [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
  [Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo &#40;Generador de informes y SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
-##  <a name="Related"></a>Secciones relacionadas  
+##  <a name="related-sections"></a><a name="Related"></a> Secciones relacionadas  
  [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
  [Crear grupos de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
@@ -205,7 +205,7 @@ FROM Production.Product
   
 ## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Enumera &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Los minigráficos y las barras de datos &#40;Generador de informes y SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   

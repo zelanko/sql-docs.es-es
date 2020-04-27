@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109393"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Parámetros (Generador de informes)
@@ -65,7 +65,7 @@ ms.locfileid: "66109393"
   
  Seleccione esta opción para marcar este parámetro como de solo lectura en la definición del conjunto de datos compartido. Cuando el conjunto de datos compartido se agrega a un informe, el parámetro no aparece en las propiedades. Cuando el conjunto de datos compartido está almacenado en la memoria caché del servidor de informes, el valor no se puede cambiar.  
   
- **Nullable**  
+ **Admisión de valores NULL**  
  Para conjuntos de datos compartidos únicamente.  
   
  Seleccione esta opción para admitir un valor nulo.  
@@ -79,11 +79,11 @@ ms.locfileid: "66109393"
  [Generador de informes ayuda para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Cuadro de diálogo Propiedades del conjunto de propiedades, &#40;de consultas Generador de informes&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: agregar un parámetro a un informe &#40;Generador de informes&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Conjuntos de valores integrados de informe y conjuntos de recursos compartidos &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Crear un conjunto de DataSet compartido o un conjunto de &#40;incrustado Generador de informes y SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+ [Conjuntos de valores integrados de informe y conjuntos de recursos compartidos &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

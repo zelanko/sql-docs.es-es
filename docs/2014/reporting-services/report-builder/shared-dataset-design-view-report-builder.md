@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107587"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Vista de diseño de conjunto de datos compartidos (Generador de informes)
@@ -24,7 +24,7 @@ ms.locfileid: "66107587"
   
  Para obtener más información sobre cómo trabajar con datos en un informe, vea [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a>La cinta de opciones  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>La cinta de opciones  
  La cinta de opciones le ayuda a buscar rápidamente los comandos que necesita para completar una tarea. Los comandos se organizan en los siguientes grupos lógicos: Conexión, Conjunto de datos y Diseñador de consultas.  
   
 ### <a name="connection"></a>Conexión  
@@ -36,7 +36,7 @@ ms.locfileid: "66107587"
  Para obtener más información, consulte [Conexiones de datos, orígenes de datos y cadenas de conexión](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ### <a name="dataset"></a>Dataset  
- Utilice el botón **Establecer opciones** para establecer las propiedades del conjunto de datos compartido. Entre ellas, figuran:  
+ Utilice el botón **Establecer opciones** para establecer las propiedades del conjunto de datos compartido. Entre ellas se incluyen las siguientes:  
   
 -   Campos. Puede agregar un campo o modificarlo en la colección de campos.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66107587"
   
 
   
-##  <a name="DesignSurface"></a>La superficie del diseñador de consultas  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a>La superficie del diseñador de consultas  
  Un diseñador de consultas le ayuda a crear una consulta con la sintaxis que requiera el origen de datos externo.  
   
  Algunos tipos de origen de datos proporcionan un diseñador gráfico de consultas que puede utilizar para explorar los metadatos en un origen de datos externo. Puede arrastrar interactivamente los nombres del panel de metadatos hasta la superficie de diseño de la consulta o seleccionar de forma interactiva los nombres que desea utilizar.  
@@ -72,7 +72,7 @@ ms.locfileid: "66107587"
   
 
   
-##  <a name="Results"></a>Ver los resultados de la consulta  
+##  <a name="viewing-query-results"></a><a name="Results"></a>Ver los resultados de la consulta  
  En la vista de diseño del conjunto de datos compartido, se crean consultas que recuperarán datos de la conexión de datos cuando se procesen los informes.  
   
  Ejecute la consulta para ver los datos del ejemplo de la conexión de datos a fin de comprobar que la consulta devuelve el tipo de datos que espera. Las columnas del conjunto de resultados proceden de los metadatos de los esquemas de datos de la conexión de datos. Los nombres de columna se convierten en la colección de campos de conjunto de datos. Los valores de los datos que ve en el conjunto de resultados de la consulta son los datos del tiempo de diseño. Cuando se guarda el conjunto de datos como una definición de conjunto de datos compartido en el servidor de informes, solo se guarda el texto de consulta. Los datos del conjunto de resultados de la consulta no se guardan.  
@@ -90,7 +90,7 @@ ms.locfileid: "66107587"
   
 
   
-##  <a name="Save"></a>Guardar el conjunto de los recursos compartidos  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> Guardar el conjunto de datos compartido  
  Para guardar la consulta creada, en el botón **Generador de informes** , haga clic en **Guardar** o en **Guardar como**. Navegue hasta la carpeta que corresponda del servidor de informes y guarde la definición del conjunto de datos compartido. El conjunto de datos compartido no estará disponible para otros usuarios hasta que no se guarde en el servidor de informes.  
   
 

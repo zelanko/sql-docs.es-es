@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107969"
 ---
 # <a name="tutorials-report-builder"></a>Tutoriales (Generador de informes)
   Consulte los siguientes tutoriales del Generador de informes para obtener información sobre cómo crear informes básicos.  
   
  [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](prerequisites-for-tutorials-report-builder.md)  
- Para usar estos tutoriales, debe tener acceso de solo lectura a una base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y permisos de acceso a un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
+ Para usar estos tutoriales, debe tener acceso de solo lectura a una base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y permisos de acceso a un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] .  
   
  Para obtener ayuda con estos requisitos previos, póngase en contacto con el administrador del servidor de informes.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "66107969"
 ## <a name="see-also"></a>Consulte también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](report-builder/report-design-view-report-builder.md)   
  [Generador de informes en SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Tutorial: crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

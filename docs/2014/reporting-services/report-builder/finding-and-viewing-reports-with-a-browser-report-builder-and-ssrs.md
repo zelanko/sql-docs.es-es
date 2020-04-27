@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107860"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Buscar y ver informes con un explorador (Generador de informes y SSRS)
@@ -49,8 +49,7 @@ Carpetas en un explorador
 -   Una extensión de nombre de archivo indica que se trata de un recurso. La extensión del nombre del archivo identifica el tipo MIME del recurso. Por ejemplo, .jpg indica que se trata de una imagen en formato JPEG.  
   
 ## <a name="typing-the-url-address-of-a-report"></a>Escribir la dirección URL de un informe  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite el acceso con direcciones URL a determinados elementos de un servidor de informes. La dirección URL debe incluir una ruta de acceso completa al informe y comandos para representarlo. Si el informe incluye parámetros, también debe especificar cualquier valor necesario para abrir el informe. Si escribe una dirección URL para un informe que incluya espacios en la ruta de acceso, valores de parámetros o una extensión de representación, incluya en la dirección URL caracteres con codificación URL para obtener el resultado deseado. El siguiente ejemplo corresponde a una dirección URL de informe que incluye codificación para los espacios del nombre de la ruta de acceso, los parámetros y la extensión de representación:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite el acceso con direcciones URL a determinados elementos de un servidor de informes. La dirección URL debe incluir una ruta de acceso completa al informe y comandos para representarlo. Si el informe incluye parámetros, también debe especificar cualquier valor necesario para abrir el informe. Si escribe una dirección URL para un informe que incluya espacios en la ruta de acceso, valores de parámetros o una extensión de representación, incluya en la dirección URL caracteres con codificación URL para obtener el resultado deseado. El siguiente ejemplo corresponde a una dirección URL de informe que incluye codificación para los espacios del nombre de la ruta de acceso, los parámetros y la extensión de representación:  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
@@ -59,6 +58,6 @@ Carpetas en un explorador
  Para obtener más información acerca de cómo obtener acceso a un informe a través de una URL, incluida la información acerca de cómo está construida una URL, vea el artículo sobre acceso a URL en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en los Libros en pantalla de SQL Server.  
   
 ## <a name="see-also"></a>Consulte también  
- [Buscar y ver informes en Administrador de informes &#40;Generador de informes y SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Buscar y ver informes en el Administrador de informes &#40;Generador de informes y SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

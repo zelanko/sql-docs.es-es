@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105493"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Gráficos circulares (Generador de informes y SSRS)
@@ -29,15 +29,15 @@ ms.locfileid: "66105493"
   
 ## <a name="variations"></a>Variaciones  
   
--   **Gráfico circular Seccionado**. gráfico circular cuyos sectores están separados del centro del círculo. Además del gráfico circular seccionado, en el que todos los sectores están separados, también puede crear un gráfico de sectores seccionados, en el que hay un solo sector separado.  
+-   **Círculo seccionado**: gráfico circular cuyos sectores están separados del centro del círculo. Además del gráfico circular seccionado, en el que todos los sectores están separados, también puede crear un gráfico de sectores seccionados, en el que hay un solo sector separado.  
   
--   Gráficos de **anillos**. gráfico circular con un espacio abierto en el centro.  
+-   **Anillos**: gráfico circular con un espacio abierto en el centro.  
   
--   **Anillo seccionado**. gráfico de anillos donde todos los sectores están separados del centro del anillo.  
+-   **Anillo seccionado**: gráfico de anillos donde todos los sectores están separados del centro del anillo.  
   
--   **gráfico circular 3D**. gráfico circular al que se ha aplicado un estilo 3D.  
+-   **Circular 3D**: gráfico circular al que se ha aplicado un estilo 3D.  
   
--   **gráfico circular Seccionado 3D**. gráfico circular seccionado al que se ha aplicado un estilo 3D.  
+-   **Círculo seccionado 3D**: gráfico circular seccionado al que se ha aplicado un estilo 3D.  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>Consideraciones sobre los datos para la presentación en un gráfico circular  
   

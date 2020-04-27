@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109687"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Crear una suscripción controlada por datos (Tutorial de SSRS)
-  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona suscripciones controladas por datos para que pueda personalizar la distribución de un informe basándose en datos dinámicos de suscriptores. Las suscripciones controladas por datos están destinadas a los escenarios siguientes:  
   
 -   La distribución de informes a un grupo grande de destinatarios cuya pertenencia al grupo puede cambiar de una distribución a otra. Por ejemplo, la distribución de un informe mensual a todos los clientes actuales.  
@@ -34,13 +33,13 @@ ms.locfileid: "66109687"
   
  El tutorial está compuesto por tres lecciones:  
   
- [Lección 1: Crear una base de datos de suscriptor de ejemplo](lesson-1-creating-a-sample-subscriber-database.md)  
+ [Lección 1: Creación de una base de datos de suscriptor de ejemplo](lesson-1-creating-a-sample-subscriber-database.md)  
  En esta lección aprenderá a crear una base de datos local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con información de suscriptores.  
   
- [Lesson 2: Modifying the Report Data Source Properties](lesson-2-modifying-the-report-data-source-properties.md)  
+ [Lección 2: Modificación de las propiedades del origen de datos de informe](lesson-2-modifying-the-report-data-source-properties.md)  
  En esta lección aprenderá a modificar propiedades del origen de datos de informe de manera que el informe pueda ejecutarse en modo desatendido. El procesamiento desatendido requiere las credenciales almacenadas. Además, modificará el conjunto de datos de informe para que incluya un parámetro proporcionado por los datos del suscriptor.  
   
- [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lección 3: Definir una suscripción controlada por datos](lesson-3-defining-a-data-driven-subscription.md)  
  En esta lección aprenderá a definir una suscripción controlada por datos. Esta lección le guía a través de cada página del Asistente para suscripciones controladas por datos.  
   
 ## <a name="requirements"></a>Requisitos  

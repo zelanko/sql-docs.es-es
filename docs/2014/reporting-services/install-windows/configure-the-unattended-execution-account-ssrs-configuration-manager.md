@@ -19,14 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108886"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
   
 -   Envíe las solicitudes de conexión a través de la red para los informes que usen la autenticación de base de datos, o conéctese a los orígenes de datos de informe externos que no requieran ni usen autenticación. Para obtener más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../integration-services/connection-manager/data-sources.md) en los Libros en pantalla de SQL Server.  
@@ -58,9 +57,9 @@ ms.locfileid: "66108886"
   
 3.  Escriba el siguiente comando para configurar la cuenta de una instancia de servidor de informes local:  
   
-     **rsconfig-e-u\<dominio/nombre de usuario>\<-p contraseña>**  
+     **rsconfig -e -u\<dominio/nombreDeUsuario> -p\<password>**  
   
- **rsconfig-e** admite argumentos adicionales. Para más información sobre la sintaxis y para ver ejemplos de comandos, vea [rsconfig (utilidad) &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) en los Libros en pantalla de SQL Server.  
+ **rsconfig -e** admite argumentos adicionales. Para más información sobre la sintaxis y para ver ejemplos de comandos, vea [rsconfig (utilidad) &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md) en los Libros en pantalla de SQL Server.  
   
 ### <a name="how-account-information-is-stored"></a>Cómo se almacena la información de la cuenta  
  Al establecer la cuenta, la configuración siguiente se especifica en forma de valores cifrados en el archivo RSreportserver.config de una instancia local o remota del servidor de informes:  

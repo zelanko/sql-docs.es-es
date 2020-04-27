@@ -13,26 +13,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb8d81c9c47f00ed84036accf86768d084072c4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109488"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes
   Para incluir datos en un informe, debe crear conexiones de datos y conjuntos de datos. Una conexión de datos contiene información acerca de cómo tener acceso a un origen de datos externo. Un conjunto de datos contiene un comando de consulta que especifique los datos que se van a incluir mediante la conexión de datos.  
   
-1.  **Orígenes de datos en el panel datos de informe** Un origen de datos aparece en el panel datos de informe después de crear un origen de datos incrustado o de agregar un origen de datos compartido.  
+1.  **Orígenes de datos en el panel Datos de informe:** aparece un origen de datos en el panel Datos de informe después de crear un origen de datos incrustados o de agregar un origen de datos compartido.  
   
-2.  **Cuadro de diálogo conexión** Utilice el cuadro de diálogo conexión para generar una cadena de conexión o para pegar una cadena de conexión.  
+2.  **Cuadro de diálogo Conexión:** use el cuadro de diálogo Conexión para generar una cadena de conexión o para pegarla.  
   
-3.  **Información de conexión de datos** La cadena de conexión se pasa a la extensión de datos.  
+3.  **Información de la conexión de datos:** la cadena de conexión se pasa a la extensión de datos.  
   
-4.  **Credenciales** de Las credenciales se administran de forma independiente de la cadena de conexión.  
+4.  **Credenciales:** las credenciales se administran de forma independiente de la cadena de conexión.  
   
-5.  **Extensión de datos/proveedor de datos** La conexión a los datos puede realizarse a través de varios niveles de acceso a datos.  
+5.  **Extensión de datos/Proveedor de datos:** la conexión a los datos se puede realizar mediante varios niveles de acceso a datos.  
   
-6.  **Orígenes de datos externos** Recuperar datos de bases de datos relacionales, bases de datos multidimensionales, listas de SharePoint, servicios web o modelos de informe.  
+6.  **Orígenes de datos externos** Se recuperan los datos de las bases de datos relacionales, las bases de datos multidimensionales, las listas de SharePoint, los servicios web o los modelos de informe.  
   
  Para obtener más información, vea conexiones de datos [y orígenes de datos incrustados y Compartidos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) y [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
@@ -43,13 +43,13 @@ ms.locfileid: "66109488"
   
  ![rs_DataSourcesStory](media/rs-datasourcesstory.gif "rs_DataSourcesStory")  
   
-##  <a name="ConnectionString"></a>Ejemplos de cadenas de conexión  
+##  <a name="connection-string-examples"></a><a name="ConnectionString"></a>Ejemplos de cadenas de conexión  
  Una conexión de datos incluye una cadena de conexión que suele proporcionar el propietario del origen de datos externo. En la tabla siguiente, se muestran ejemplos de cadenas de conexión para diferentes tipos de orígenes de datos externos.  
   
 |**Origen de datos**|**Ejemplo**|**Descripción**|  
 |---------------------|-----------------|---------------------|  
 |Base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el servidor local|`data source="(local)";initial catalog=AdventureWorks2012`|Establezca el tipo de origen de datos en `SQL Server`.|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]base de datos de instancia|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Establezca el tipo de origen de datos en `SQL Server`.|  
+|Base de datos de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Establezca el tipo de origen de datos en `SQL Server`.|  
 |Base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Establezca el tipo de origen de datos en `SQL Server`.|  
 |Base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el servidor local|`data source=localhost;initial catalog=Adventure Works DW 2012`|Establezca el tipo de origen de datos en `SQL Server Analysis Services`.|  
 |Lista de SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Establezca el tipo de origen de datos en `SharePoint List`.|  
@@ -59,7 +59,7 @@ ms.locfileid: "66109488"
 |Origen de datos SAP Netweaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Configure el tipo de origen de datos en `SAP NetWeaver BI`.|  
 |Origen de datos de Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Configure el tipo de origen de datos en `Hyperion Essbase`.|  
 |Origen de datos de Teradata|`data source=`* \<NN>. \<Nnn>. \<Nnn>. N \<>*`;`|Configure el tipo de origen de datos en `Teradata`. La cadena de conexión es una dirección IP (protocolo de Internet) formada por cuatro campos, donde cada campo puede tener de uno a tres dígitos.|  
-|Origen de datos de Teradata|`Database=`nombre de la base de `; data source=` * \<datos>* * \<NN*N *>.\< NNN>. \<Nnn>. N \<* NN*>*`;Use X Views=False;Restrict to Default Database=True`|Establezca el tipo de origen de datos en `Teradata`, de modo similar a como se hizo en el ejemplo anterior. Usa solamente la base de datos predeterminada que se especifica en la etiqueta de la base de datos, sin detectar automáticamente las relaciones de los datos.|  
+|Origen de datos de Teradata|`Database=` *\<nombre de la base de datos>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Establezca el tipo de origen de datos en `Teradata`, de modo similar a como se hizo en el ejemplo anterior. Usa solamente la base de datos predeterminada que se especifica en la etiqueta de la base de datos, sin detectar automáticamente las relaciones de los datos.|  
 |Origen de datos XML, servicio web|`data source=http://adventure-works.com/results.aspx`|Configure el tipo de origen de datos en `XML`. La cadena de conexión es una dirección URL de un servicio web que admite el Lenguaje de definición de servicios web (WSDL).|  
 |Origen de datos XML, documento XML|`http://localhost/XML/Customers.xml`|Configure el tipo de origen de datos en `XML`. La cadena de conexión es una dirección URL que lleva al documento XML.|  
 |Origen de datos XML, documento XML incrustado|*Vacío*|Configure el tipo de origen de datos en `XML`. Los datos XML se incrustan en la definición de informe.|  
@@ -68,7 +68,7 @@ ms.locfileid: "66109488"
   
 
   
-##  <a name="Creating"></a>Crear orígenes de datos  
+##  <a name="creating-data-sources"></a><a name="Creating"></a>Crear orígenes de datos  
  Para crear un origen de datos insertados, debe tener una cadena de conexión y las credenciales necesarias para el acceso a los datos. Esta información normalmente procede del propietario del origen de datos. La conexión de datos se guarda en la definición de informe como parte del origen de datos. Las credenciales se administran independientemente de la conexión. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 > [!NOTE]  

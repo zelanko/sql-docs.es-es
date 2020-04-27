@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bc6234789e85105799a865e46b8b7ffe82286f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107749"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimir un informe (Reporting Services en el modo de SharePoint)
@@ -46,7 +46,7 @@ ms.locfileid: "66107749"
   
      Para modificar la configuración predeterminada, haga clic en el botón **Propiedades** . El tamaño de página viene determinado por el alto y el ancho del tamaño de página del informe tal y como se estableció en la definición del informe. La extensión a la que puede cambiar las dimensiones de las páginas depende de las capacidades de la impresora que use.  
   
-     Para ver el informe antes de imprimirlo, haga clic en el botón **Vista previa** . Se abre la primera página del informe en una ventana de vista previa independiente. A medida que el informe se representa en el servidor de informes, se proporcionan más páginas. Un informe en vista previa se representa en formato EMF. Puede navegar hasta la página anterior o siguiente hasta llegar a la última página y hasta que el botón **Siguiente** aparezca deshabilitado. Para modificar los márgenes de impresión de la página de vista previa, haga clic en el botón **Márgenes** . Se mostrará el cuadro de diálogo **Márgenes** . Configure los márgenes superior, inferior, derecho e izquierdo y haga clic en **Aceptar**. El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
+     Para ver el informe antes de imprimirlo, haga clic en el botón **Vista previa** . Se abre la primera página del informe en una ventana de vista previa independiente. A medida que el informe se representa en el servidor de informes, se proporcionan más páginas. Un informe en vista previa se representa en formato EMF. Puede navegar hasta la página anterior o siguiente hasta llegar a la última página y hasta que el botón **Siguiente** aparezca deshabilitado. Para modificar los márgenes de impresión de la página de vista previa, haga clic en el botón **Márgenes** . Se muestra el cuadro de diálogo **márgenes** . Configure los márgenes superior, inferior, derecho e izquierdo y haga clic en **Aceptar**. El cuadro de diálogo se cierra y la configuración se almacena para representar la vista previa y la impresión.  
   
 ## <a name="see-also"></a>Consulte también  
  [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  

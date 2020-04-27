@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108043"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propiedades Opciones de procesamiento (Administrador de informes)
@@ -61,7 +61,7 @@ ms.locfileid: "66108043"
  Este valor se aplica al procesamiento de informes en un servidor de informes. No establece un tiempo de espera para el procesamiento de datos en el servidor de bases de datos que proporciona los datos para el informe. Sin embargo, el valor especificado debe ser el suficiente para completar el procesamiento de datos y el procesamiento de informes. El contador de procesamiento del informe empieza cuando se selecciona el informe y termina cuando éste se abre.  
   
 ## <a name="see-also"></a>Consulte también  
- [Establecer las propiedades del procesamiento de informes](report-server/set-report-processing-properties.md)   
+ [Establecer propiedades de procesamiento de informes](report-server/set-report-processing-properties.md)   
  [Informes almacenados en caché &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Crear, modificar y eliminar programaciones](subscriptions/create-modify-and-delete-schedules.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  

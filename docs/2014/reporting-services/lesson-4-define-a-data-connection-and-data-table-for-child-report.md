@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1008202519f1d9bcbf48dfdc4cd4ef3a3cbbe20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108467"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Lección 4: Definir una conexión de datos y una tabla de datos para el informe secundario
@@ -46,7 +46,7 @@ ms.locfileid: "66108467"
   
 6.  Si ha seleccionado **Usar autenticación de SQL Server** en el paso 5 (b), seleccione la opción si quiere incluir la información confidencial en la cadena o establecer la información en su código de aplicación.  
   
-7.  En la página **guardar la cadena de conexión en el archivo de configuración de la aplicación** , escriba el nombre de la cadena de conexión o acepte el valor predeterminado **AdventureWorks2008ConnectionString**. Haga clic en **Next**.  
+7.  En la página **guardar la cadena de conexión en el archivo de configuración de la aplicación** , escriba el nombre de la cadena de conexión o acepte el valor predeterminado **AdventureWorks2008ConnectionString**. Haga clic en **Siguiente**.  
   
 8.  En la página **elegir un tipo de comando** , seleccione **usar instrucciones SQL**y, a continuación, haga clic en **siguiente**.  
   

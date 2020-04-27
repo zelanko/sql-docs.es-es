@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109294"
 ---
 # <a name="design-the-matrix"></a>Diseñar la matriz
@@ -29,13 +29,13 @@ ms.locfileid: "66109294"
  **Campos mostrados**  
  Muestra los campos que se han asignado a la página, al grupo o a los detalles. Haga clic en **Quitar** para eliminar el campo de la lista.  
   
- **Page**  
+ **Del**  
  Vea la lista de campos que aparecen en el nivel de página. Para cambiar el orden de los campos, seleccione uno y, después, haga clic en el botón Subir o Bajar.  
   
  **Columnas**  
  Vea la lista de campos que aparecen como columnas de una matriz. Para cambiar el orden de los campos, seleccione uno y, después, haga clic en el botón Subir o Bajar.  
   
- **Las**  
+ **Filas**  
  Vea la lista de campos que aparecen como filas de una matriz. Para cambiar el orden de los campos, seleccione uno y, después, haga clic en el botón Subir o Bajar.  
   
  **Detalles**  

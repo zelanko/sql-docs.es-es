@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105500"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Usar operadores en expresiones (Generador de informes y SSRS)
@@ -31,8 +31,7 @@ ms.locfileid: "66105500"
 |^|Eleva un número a la potencia de otro número.|  
 |*|Multiplica dos números.|  
 |/|Divide dos números y devuelve un resultado de coma flotante.|  
-|
-  \|Divide dos números y devuelve un resultado de número entero.|  
+|\|Divide dos números y devuelve un resultado de número entero.|  
 |Mod|Devuelve el resto entero de una división. Por ejemplo, 7 Mod 5 = 2 porque el resto de 7 dividido entre 5 es 2.|  
 |+|Suma dos números.|  
 |-|Devuelve la diferencia entre dos números o indica el valor negativo de un término numérico.|  

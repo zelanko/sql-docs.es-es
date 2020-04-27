@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108167"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Nuevo informe vinculado (página del Administrador de informes)
@@ -50,10 +50,10 @@ ms.locfileid: "66108167"
  **Descripción**  
  Escriba una descripción del contenido del informe. Esta descripción se mostrará en la página Contenido a los usuarios que tengan permisos de acceso al informe.  
   
- **Location**  
+ **Ubicación**  
  Especifique la ruta de acceso a la carpeta que contiene el informe. De manera predeterminada, los informes vinculados se crean como hermanos del informe base. Haga clic en **Cambiar ubicación** para colocar el informe vinculado en una carpeta diferente.  
   
- **OK (CORRECTO)**  
+ **Aceptar**  
  Haga clic en **Aceptar** para guardar los cambios y volver a la página de propiedades General del informe base.  
   
 ## <a name="see-also"></a>Consulte también  

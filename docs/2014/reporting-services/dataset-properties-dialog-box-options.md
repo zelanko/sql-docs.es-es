@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 778365e8fc7f40700b0f8c1683260f15c860a32a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109411"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Propiedades del conjunto de datos (cuadro de diálogo), Opciones
@@ -25,15 +25,15 @@ ms.locfileid: "66109411"
   
 ## <a name="options"></a>Opciones  
  **Intercalación**  
- Seleccione una configuración regional que determine la secuencia de intercalación que se va a utilizar para ordenar los datos. **Predeterminado** indica que el servidor de informes debería intentar obtener el valor del proveedor de datos cuando se ejecuta el informe. Si no se puede obtener, el valor predeterminado se deriva de la configuración regional del equipo.  
+ Seleccione una configuración regional que determine la secuencia de intercalación que se va a utilizar para ordenar los datos. **Predeterminado** indica que el servidor de informes debería intentar obtener el valor del proveedor de datos al ejecutar el informe. Si no se puede obtener, el valor predeterminado se deriva de la configuración regional del equipo.  
   
- **Distinción entre mayúsculas y minúsculas**  
+ **Distinción de mayúsculas y minúsculas**  
  Seleccione un valor que determine la distinción de mayúsculas y minúsculas. Esta opción indica si en los datos se hace esta distinción. Puede establecer la **distinción de mayúsculas y minúsculas** en **true**, **false**o **auto**. El valor predeterminado, **auto**, indica que el servidor de informes debería intentar obtener el valor del proveedor de datos cuando se ejecuta el informe. Si el proveedor de datos no admite el tipo de distinción de mayúsculas y minúsculas, el informe se ejecuta como si el valor fuera **False**. Si conoce el valor y sabe que el proveedor lo admite, elija **True**.  
   
  **Distinción de acentos**  
  Seleccione un valor que determine la distinción de acentos. La **distinción de acentos** indica si los datos distinguen acentos y se pueden establecer en **true**, **false**o **auto**. El valor predeterminado, **auto**, indica que el servidor de informes debería intentar obtener el valor del proveedor de datos al ejecutar el informe. Si el proveedor de datos no admite el tipo de distinción de acentos, el informe se ejecuta como si el valor fuera **False**. Si conoce el valor y sabe que el proveedor lo admite, elija **True**.  
   
- **Kana sensibilidad**  
+ **Distinción de tipos de kana**  
  Seleccione un valor que determine la distinción de tipos de kana. Esta opción indica si los datos distinguen Kana; se puede establecer en **true**, **false**o **auto**. El valor predeterminado, **auto**, indica que el servidor de informes debería intentar obtener el valor del proveedor de datos cuando se ejecuta el informe. Si el proveedor de datos no admite el tipo de distinción de tipos de kana, el informe se ejecuta como si el valor fuera **False**. Si conoce el valor y sabe que el proveedor lo admite, elija **True**.  
   
  **Distinción de ancho**  
@@ -47,6 +47,6 @@ ms.locfileid: "66109411"
  [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
  [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [&#40;de funciones de agregado Generador de informes y SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
+ [Función de agregado &#40;Generador de informes y SSRS&#41;](report-design/report-builder-functions-aggregate-function.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109620"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Crear suscripción controlada por datos (Administrador de informes)
@@ -75,7 +75,7 @@ ms.locfileid: "66109620"
   
  Si el origen de datos usa autenticación de Windows, seleccione **Usar como credenciales de Windows** al especificar la conexión.  
   
- Si está usando un origen de datos que no autentica las conexiones de usuario (por ejemplo, si el origen de datos es un archivo XML), seleccione No se necesitan credenciales. Esta opción requiere que haya configurado la cuenta de ejecución desatendida anteriormente. Para obtener más información, consulte [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Si está usando un origen de datos que no autentica las conexiones de usuario (por ejemplo, si el origen de datos es un archivo XML), seleccione No se necesitan credenciales. Esta opción requiere que haya configurado la cuenta de ejecución desatendida anteriormente. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="specify-a-query-page-3"></a>Especificar una consulta (página 3)  
  Use esta página para escribir la consulta que recupera los datos del suscriptor. Para obtener los mejores resultados, ejecute primero la consulta en SQL Server Management Studio, antes de usarla en la suscripción controlada por datos. A continuación, puede examinar los resultados para comprobar que contiene la información requerida. Los puntos importantes para reconocer los resultados de la consulta son:  
@@ -87,10 +87,10 @@ ms.locfileid: "66109620"
  **Consultar**  
  Especifique una consulta SQL o un comando que recupere un conjunto de resultados que contenga una fila para cada destinatario de la suscripción. En las páginas siguientes se usa el conjunto de resultados para rellenar la configuración de la extensión controlada por datos.  
   
- **Super**  
+ **Tiempo de espera**  
  Especifique un valor de tiempo de espera para la consulta. Este valor debe ser lo suficientemente grande para que se complete el procesamiento de la consulta.  
   
- **Validación**  
+ **Vali**  
  Haga clic en **Validar** para comprobar la consulta. Para poder continuar, la consulta debe generar resultados válidos. Si no hace clic en **Validar**, se validará la consulta cuando haga clic en **Siguiente**.  
   
 ## <a name="set-delivery-options-page-4"></a>Establecer las opciones de entrega (página 4)  
@@ -150,13 +150,13 @@ ms.locfileid: "66109620"
  **Por hora**  
  Defina una programación que se ejecute a intervalos de horas.  
   
- **Diariamente**  
+ **Diario**  
  Defina una programación que se ejecute los días seleccionados a una hora específica. Los días se pueden especificar de las maneras siguientes: * \< *todos los días>, cada día de la semana y cada * \<número>* día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
   
- **Semanal**  
+ **Semana**  
  Defina una programación que se ejecute en intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
   
- **Trimestral**  
+ **Mensual**  
  Defina una programación que se ejecute mensualmente. En un mes, se puede elegir un día basándose en un modelo (por ejemplo, el último domingo de cada mes) o fechas específicas del calendario (como 1 y 15 para indicar los días uno y quince de cada mes). Puede utilizar comas y guiones para especificar varios días e intervalos; por ejemplo, 1, 5, 7-12, 21.  
   
  **Una vez**  
@@ -171,8 +171,8 @@ ms.locfileid: "66109620"
 ## <a name="see-also"></a>Consulte también  
  [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [Crear una suscripción controlada por datos &#40;tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informe](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)  
   

@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107153"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar un proveedor de datos estándar de .NET Framework (SSRS)
   Para usar un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] de terceros para recuperar datos de un conjunto de datos de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , es necesario implementar y registrar el ensamblado del proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] en dos ubicaciones: en el cliente de creación de informes y en el servidor de informes. En el cliente de creación de informes, debe registrar el proveedor de datos como un tipo de origen de datos y asociarlo a un diseñador de consultas. A continuación, puede seleccionar este proveedor de datos como un tipo de origen de datos al crear un conjunto de datos de informe. El diseñador de consultas asociado se abre para ayudarle a crear consultas para este tipo de origen de datos. En el servidor de informes, debe registrar el proveedor de datos como un tipo de origen de datos. A continuación, puede procesar los informes publicados que recuperan datos de un origen de datos con este proveedor de datos.  
   
- Los proveedores de datos de terceros no proporcionan necesariamente todas las funciones disponibles con las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). Para obtener más información acerca de cómo ampliar la funcionalidad de un proveedor de datos de .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proveedor de datos, vea [implementar una extensión de procesamiento de datos](../extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Los proveedores de datos de terceros no proporcionan necesariamente todas las funciones disponibles con las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). Para obtener más información acerca de cómo ampliar la funcionalidad de un proveedor de datos de .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , vea [Implementación de una extensión de procesamiento de datos](../extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Necesita credenciales de administrador para instalar y registrar proveedores de datos.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "66107153"
  La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que puede seleccionar para el proveedor de datos.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>Comprobar la implementación y el registro  
- Puede comprobar si el proveedor de datos se implementó correctamente para el servidor de informes si abre el Administrador de informes y comprueba si el proveedor de datos está incluido en la lista de orígenes de datos disponibles. Para más información sobre el administrador de informes y los orígenes de datos, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md).  
+ Puede comprobar si el proveedor de datos se implementó correctamente para el servidor de informes si abre el Administrador de informes y comprueba si el proveedor de datos está incluido en la lista de orígenes de datos disponibles. Para más información sobre el Administrador de informes y los orígenes de datos, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>Registrar un proveedor de datos de .NET Framework en el cliente del Diseñador de informes  
  Para crear informes que usen este proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un origen de datos, debe instalar el ensamblado en el equipo cliente que ejecuta el Diseñador de informes. Debe modificar dos archivos de configuración. Modifique RSReportDesigner.config para registrar el proveedor de datos como un origen de datos y para usar el diseñador de consultas genérico. Modifique RSPreviewPolicy.config para conceder permisos de seguridad de acceso del código para el ensamblado del proveedor de datos.  
@@ -196,8 +196,7 @@ ms.locfileid: "66107153"
 ## <a name="platform-considerations"></a>Consideraciones sobre las plataformas  
  En una plataforma de 64 bits (x64), [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se ejecuta en el modo WOW de 32 bits. Si crea informes en una plataforma x64, necesita tener proveedores de datos de 32 bits instalados en el cliente de creación de informes para obtener vistas previas de los informes. Si publica el informe en el mismo sistema, necesita proveedores de datos x64 para ver el informe con el Administrador de informes.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] no se admite para las plataformas basadas en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+ [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] no se admite para las plataformas basadas en [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   
  Las extensiones de procesamiento de datos instaladas con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se deben compilar de forma nativa para cada plataforma e instalar en las ubicaciones correctas. Si registra un proveedor de datos personalizado o un proveedor de datos estándar de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , se debe compilar de forma nativa para la plataforma adecuada e instalar en las ubicaciones correctas. Si usa una plataforma de 32 bits, el proveedor de datos se debe compilar para una plataforma de 32 bits. Si usa una plataforma de 64 bits, el proveedor de datos se debe compilar para una plataforma de 64 bits. No puede usar un proveedor de datos de 32 bits incluido con interfaces de 64 bits en una plataforma de 64 bits. Compruebe el software de terceros para obtener información acerca de si el proveedor de datos funcionará en la plataforma instalada. Para más información sobre proveedores de datos y la compatibilidad con plataformas, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   

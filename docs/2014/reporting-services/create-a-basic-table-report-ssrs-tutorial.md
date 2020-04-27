@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109683"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Crear un informe de tabla básico (Tutorial de SSRS)
@@ -57,7 +57,7 @@ ms.locfileid: "66109683"
  [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 > [!NOTE]  
->  Al revisar los tutoriales, se recomienda agregar los botones **siguiente** y **anterior** a la barra de herramientas del visor de documentos. Para más información, consulte  
+>  Al revisar los tutoriales, se recomienda agregar los botones **siguiente** y **anterior** a la barra de herramientas del visor de documentos. Para obtener más información, vea:  
   
 ## <a name="see-also"></a>Consulte también  
  [Tutoriales de Reporting Services &#40;SSRS&#41;](reporting-services-tutorials-ssrs.md)  

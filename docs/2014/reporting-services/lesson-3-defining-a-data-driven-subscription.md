@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108505"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
@@ -41,7 +41,7 @@ ms.locfileid: "66108505"
   
 -   [Paso 6: programar una suscripción](#bkmk_schedule_subscription)  
   
-##  <a name="bkmk_startwizard"></a>Iniciar el Asistente para suscripciones controladas por datos  
+##  <a name="start-the-data-driven-subscription-wizard"></a><a name="bkmk_startwizard"></a>Iniciar el Asistente para suscripciones controladas por datos  
   
 1.  En el Administrador de informes, haga clic en **Inicio**y navegue hasta la carpeta que contiene el informe **Sales Orders** .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66108505"
   
 3.  Haga clic en **Nueva suscripción controlada por datos**. Si no ve este botón, no dispone de permisos para el Administrador de contenido.  
   
-##  <a name="bkmk_definesubscription"></a>Paso 1: definir una descripción  
+##  <a name="step-1---define-a-description"></a><a name="bkmk_definesubscription"></a>Paso 1: definir una descripción  
   
 1.  Escriba **Entrega de pedido de ventas** en la descripción.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66108505"
   
 3.  Seleccione **Especifique solo esta suscripción**y, a continuación, haga clic en **Siguiente**.  
   
-##  <a name="bkmk_defineconnectiontosubscriber"></a>Paso 2: definir una conexión con el origen de datos del suscriptor  
+##  <a name="step-2---define-a-connection-to-the-subscriber-data-source"></a><a name="bkmk_defineconnectiontosubscriber"></a>Paso 2: definir una conexión con el origen de datos del suscriptor  
   
 1.  Seleccione **Microsoft SQL Server** como tipo de origen de datos.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66108505"
   
 5.  Seleccione **Utilizar como credenciales de Windows para la conexión al origen de datos**y haga clic en **Siguiente**.  
   
-##  <a name="bkmk_definequery"></a>Paso 3: definir una consulta para recuperar los datos del suscriptor  
+##  <a name="step-3---define-a-query-to-retrieve-subscriber-data"></a><a name="bkmk_definequery"></a>Paso 3: definir una consulta para recuperar los datos del suscriptor  
   
 1.  En el cuadro de consultas, escriba la consulta siguiente:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66108505"
   
 3.  Haga clic en **Validar**y, a continuación, en **Siguiente**.  
   
-##  <a name="bkmk_set_deliveryoptions"></a>Paso 4: establecer las opciones de entrega  
+##  <a name="step-4---set-delivery-options"></a><a name="bkmk_set_deliveryoptions"></a>Paso 4: establecer las opciones de entrega  
   
 1.  Como **Nombre de archivo**, seleccione **Obtener el valor de la base de datos**. Seleccione el campo **Order**.  
   
@@ -109,11 +109,11 @@ ms.locfileid: "66108505"
   
 8.  Haga clic en **Siguiente**.  
   
-##  <a name="bkmk_configure_parameter"></a>Paso 5: configurar un valor de parámetro para obtener una salida de informe  
+##  <a name="step-5---configure-a-parameter-value-to-very-report-output"></a><a name="bkmk_configure_parameter"></a>Paso 5: configurar un valor de parámetro para obtener una salida de informe  
   
 1.  En **OrderNumber**, seleccione **Obtener el valor de la base de datos**. En Valor, seleccione **Order**. Haga clic en **Siguiente**.  
   
-##  <a name="bkmk_schedule_subscription"></a>Paso 6: programar una suscripción  
+##  <a name="step-6---to-schedule-a-subscription"></a><a name="bkmk_schedule_subscription"></a>Paso 6: programar una suscripción  
   
 1.  Haga clic en **Según una programación creada para esta suscripción**y, a continuación, haga clic en **Siguiente**.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66108505"
   
 4.  Haga clic en **Finalizar**  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Cuando se ejecute la suscripción, se entregarán cuatro archivos de informe al recurso compartido de archivos que ha especificado, uno por cada pedido del origen de datos *Subscribers* . Cada entrega debe ser única en cuanto a datos (los datos deben ser específicos de cada pedido), formato de representación y formato de archivo. Puede abrir cada informe desde la carpeta compartida para comprobar que todas las versiones se hayan personalizado en función de las opciones de suscripción que haya definido.  
   
  ![Lista de archivos creados por la suscripción](../../2014/tutorials/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Lista de archivos creados por la suscripción")  
@@ -138,10 +138,10 @@ ms.locfileid: "66108505"
  Con este paso finaliza el tutorial "Definir una suscripción controlada por datos". Para obtener más información sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] otros tutoriales, vea [Reporting Services tutoriales &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear una suscripción controlada por datos &#40;tutorial de SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Crear, modificar y eliminar una suscripción controlada por datos](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Usar un origen de datos externo para los datos de suscriptor &#40;suscripción controlada por datos&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Usar un origen de datos externo para obtener información de los suscriptores &#40;suscripción controlada por datos&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

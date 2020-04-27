@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105170"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>Función RowNumber (Generador de informes y SSRS)
@@ -32,8 +32,7 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>Parámetros  
  *scope*  
- (`String`). Nombre de un conjunto de datos, región de datos, grupo o valor NULL (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) que especifica el contexto en el que se evaluará el número de filas. 
-  `Nothing` especifica el contexto más externo, normalmente el conjunto de datos de informe.  
+ (`String`). Nombre de un conjunto de datos, región de datos, grupo o valor NULL (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) que especifica el contexto en el que se evaluará el número de filas. `Nothing` especifica el contexto más externo, normalmente el conjunto de datos de informe.  
   
 ## <a name="remarks"></a>Observaciones  
  `RowNumber`Devuelve un valor de ejecución del recuento de filas dentro del ámbito especificado, al igual que [RunningValue](report-builder-functions-runningvalue-function.md) devuelve el valor de ejecución de una función de agregado. Cuando especifique un ámbito, especifique cuándo se deberá restablecer el recuento de filas en 1.  

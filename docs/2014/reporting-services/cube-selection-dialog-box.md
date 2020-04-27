@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa45de225ac1de636bc9e9b14cec9d1ab4512316
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109564"
 ---
 # <a name="cube-selection-dialog-box"></a>Selección de cubo (cuadro de diálogo)
@@ -25,6 +25,6 @@ ms.locfileid: "66109564"
   
 ## <a name="see-also"></a>Consulte también  
  [Analysis Services interfaz de usuario del diseñador de consultas MDX](report-data/analysis-services-mdx-query-designer-user-interface.md)   
- [Analysis Services tipo de conexión para MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+ [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

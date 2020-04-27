@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108221"
 ---
 # <a name="move-items-page-report-manager"></a>Mover elementos (página del Administrador de informes)
@@ -37,7 +37,7 @@ ms.locfileid: "66108221"
 2.  En la barra de herramientas, haga clic en **Vista Detalles**.  
   
     > [!NOTE]  
-    >  Si únicamente aparece la **Vista en mosaico**, significa que ya se encuentra en la **Vista Detalles**.  
+    >   Si únicamente aparece la **Vista en mosaico**, significa que ya se encuentra en la **Vista Detalles**.  
   
 3.  Active la casilla situada junto a un elemento y, a continuación, haga clic en **Mover** en la barra de herramientas. Puede seleccionar más de una casilla si desea mover varios elementos a la misma nueva ubicación.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108221"
 2.  En la barra de herramientas, haga clic en **Vista en mosaico**.  
   
     > [!NOTE]  
-    >  Si únicamente aparece la **Vista Detalles**, significa que ya se encuentra en la **Vista en mosaico**.  
+    >   Si únicamente aparece la **Vista Detalles**, significa que ya se encuentra en la **Vista en mosaico**.  
   
 3.  Mantenga el mouse sobre un elemento y haga clic en la flecha de lista desplegable.  
   

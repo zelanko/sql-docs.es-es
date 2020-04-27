@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f0997cb73a156e54b22ad280fa5d6eb0ec7d73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108648"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server-and-add-in-sql-server-2014"></a>Combinaciones admitidas del servidor y el complemento de SharePoint y Reporting Services (SQL Server 2014)
@@ -48,13 +48,9 @@ ms.locfileid: "66108648"
 |6|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|SharePoint 2010|Sí|  
 |7|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]|SharePoint 2010|Sí|  
 |8|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|SharePoint 2010|Sí|  
-|9|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|Sí|  
-|10|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]R2|SharePoint 2010|Sí|  
-|11|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|Sí|  
+|9|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|Sí|  
+|10|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] R2|SharePoint 2010|Sí|  
+|11|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2|SharePoint 2007|Sí|  
   
  Para obtener más información [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sobre las características y los modos del servidor de informes, vea [Reporting Services servidor de informes](../reporting-services-report-server.md).  
   
@@ -66,11 +62,11 @@ ms.locfileid: "66108648"
   
 -   Los servidores de informes de SQL Server 2012 (o posterior) no admiten el complemento de SQL Server 2008 R2. El instalador de requisitos previos de SharePoint 2010 instala automáticamente el complemento de SQL Server 2008 R2. Debe desinstalarse antes de instalar las versiones más recientes del complemento. No se admite la actualización en contexto del complemento.  
   
--   **Actualización:** SharePoint 2010 con el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complemento instalado, no se puede actualizar en contexto a SharePoint 2013. SharePoint 2013 requiere la versión de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o posterior del complemento y el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de la actualización, vea [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
+-   **Actualización:** SharePoint 2010 con el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado no se puede actualizar en contexto a SharePoint 2013. SharePoint 2013 requiere la versión de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o posterior del complemento y el servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de la actualización, vea [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Dónde encontrar el complemento de Reporting Services para productos de SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [Características admitidas por las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [Upgrade and Migrate Reporting Services](upgrade-and-migrate-reporting-services.md)  
+ [Actualizar y migrar Reporting Services](upgrade-and-migrate-reporting-services.md)  
   
   

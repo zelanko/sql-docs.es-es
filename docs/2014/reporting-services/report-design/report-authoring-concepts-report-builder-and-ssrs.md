@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105308"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceptos de creación de informes (Generador de informes y SSRS)
@@ -30,10 +30,10 @@ ms.locfileid: "66105308"
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  Describe la diversidad de términos que se usan para describir un informe en distintos estados, incluyendo la definición inicial, el informe publicado y el informe visualizado tal cual aparece ante el usuario.  
   
- [Conexiones de datos u orígenes de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
+ [Conexiones de datos u orígenes de datos compartidos e incrustados &#40;Generador de informes y SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)  
  Describe los modos de definir conexiones a los orígenes de datos utilizados en los informes, los modelos de informe y las suscripciones controladas por datos.  
   
- [Los conjuntos de valores integrados y compartidos &#40;Generador de informes y SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  Explica las diferencias de crear, almacenar y administrar conjuntos de datos incrustados y compartidos.  
   
  [Regiones de datos y mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)  

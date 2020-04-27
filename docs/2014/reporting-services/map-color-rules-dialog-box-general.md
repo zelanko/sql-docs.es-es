@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108319"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Cuadro de diálogo de Reglas de color de mapa, General
@@ -29,7 +29,7 @@ ms.locfileid: "66108319"
  **Aplicar estilo de plantilla**  
  Seleccione esta opción para utilizar un color basado en el tema que se eligió en el asistente o establecido en las propiedades de capa de polígono, línea o punto. Un tema establece las opciones predeterminadas del color, fuente y bordes del mapa. Para esta opción, no se aplica ninguna regla para asignar los colores a cada elemento de mapa.  
   
- **Visualizar datos mediante la paleta de colores**  
+ **Visualizar datos mediante el uso de la paleta de colores**  
  Seleccione esta opción para visualizar los datos analíticos utilizando los colores de una paleta de colores concreta.  
   
  **Visualizar datos mediante el uso de rangos de colores**  

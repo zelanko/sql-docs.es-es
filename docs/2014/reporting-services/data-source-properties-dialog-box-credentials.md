@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed5b58aa9a4fe81a55e602fb61f673bf10059ee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109456"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Propiedades del origen de datos (cuadro de diálogo), Credenciales
@@ -36,7 +36,7 @@ ms.locfileid: "66109456"
  **Contraseña**  
  Escriba una contraseña con la que iniciar sesión en el origen de datos.  
   
- **Se piden credenciales**  
+ **Pedir credenciales**  
  Seleccione esta opción para solicitar las credenciales al ejecutar el informe.  
   
  **Escriba la cadena del mensaje**  
@@ -47,7 +47,7 @@ ms.locfileid: "66109456"
   
 ## <a name="see-also"></a>Consulte también  
  [Propiedades del origen de datos (cuadro de diálogo), general](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informe](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Data Connections, Data Sources, and Connection Strings in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

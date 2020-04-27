@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a68a050627d431570327822cccc60dd0aaf860b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107604"
 ---
 # <a name="security-report-builder"></a>Seguridad (Generador de informes)
@@ -24,19 +24,19 @@ ms.locfileid: "66107604"
   
  Para crear, publicar y usar informes y elementos relacionados con los informes, debe comprender la relación entre las características de seguridad y los siguientes aspectos:  
   
--   **El servidor de informes o el sitio de SharePoint donde se publican los informes** Estas características las administra el administrador del servidor de informes o el administrador del sitio de SharePoint.  
+-   **Servidor de informes o sitio de SharePoint donde publica los informes.** El administrador del servidor de informes o del sitio de SharePoint administra estas características.  
   
--   **Informes publicados y elementos relacionados con los informes** Los elementos relacionados con los informes incluyen orígenes de datos incrustados y compartidos, así como sus credenciales, conjuntos de datos compartidos, parámetros, elementos de informe y modelos de informe. El autor del informe administra las características de seguridad correspondientes a estos elementos. El autor del informe debe obtener del administrador del servidor de informes o del sitio de SharePoint los permisos necesarios para publicar y compartir los elementos.  
+-   **Informes publicados y elementos relacionados con los informes** Son elementos relacionados con los informes los orígenes de datos compartidos y sus credenciales, conjuntos de datos compartidos, parámetros, elementos de informe y modelos de informe. El autor del informe administra las características de seguridad correspondientes a estos elementos. El autor del informe debe obtener del administrador del servidor de informes o del sitio de SharePoint los permisos necesarios para publicar y compartir los elementos.  
   
--   **Orígenes de datos externos utilizados por un informe** El propietario del origen de datos externo administra estas características.  
+-   **Orígenes de datos externos utilizados en un informe.** El propietario del origen de datos externo administra estas características.  
   
 -   **Modelos de informe basados en orígenes de datos externos** El diseñador de modelos administra estas características.  
   
--   **Características de informes interactivas como los parámetros** El autor del informe administra estas características.  
+-   **Características de informe interactivas como los parámetros.** El autor del informe administra estas características.  
   
  Revise la información de este tema para saber cómo utilizar las características de seguridad para administrar y proteger mejor los informes y los elementos relacionados con los informes.  
   
-##  <a name="ReportServers"></a>Descripción de la seguridad de los servidores de informes  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Descripción de la seguridad de los servidores de informes  
  La publicación y visualización de informes son operaciones que requieren permisos. El administrador de un servidor de informes concede permisos para asegurarse de que solo los usuarios autorizados pueden publicar y ver los informes de uno de los siguientes tipos de servidores de informes:  
   
 -   Servidor de informes configurado en modo nativo  
@@ -57,7 +57,7 @@ ms.locfileid: "66107604"
   
 =
   
-##  <a name="Reports"></a>Descripción de la seguridad de los informes publicados y los elementos relacionados con los informes  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Descripción de la seguridad de los informes publicados y los elementos relacionados con los informes  
  El administrador del servidor de informes administra la seguridad de los informes y los elementos relacionados con los informes. Son elementos relacionados con los informes los orígenes de datos incrustados y compartidos como credenciales, conjuntos de datos compartidos, parámetros, elementos de informe y modelos.  
   
  En un servidor de informes o sitio de SharePoint, los informes y elementos y operaciones relacionados con los informes se pueden proteger por separado. Los permisos para obtener acceso a los elementos y a las operaciones se conceden a través de directivas de seguridad que asignan una cuenta de usuario o grupo a un nivel de permiso relativo a un elemento. Para reducir la complejidad y la sobrecarga de mantener un gran número de directivas, los elementos de un contenedor, como una carpeta, heredan los permisos del contenedor. Por ejemplo, si un usuario tiene el permiso concreto Ver informes en una carpeta, tiene dicho permiso para los elementos de la carpeta.  
@@ -72,7 +72,7 @@ ms.locfileid: "66107604"
   
 -   [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)  
   
--   [Administración de conjuntos de datos compartidos](../report-data/manage-shared-datasets.md)  
+-   [Administrar conjuntos de datos compartidos](../report-data/manage-shared-datasets.md)  
   
 ### <a name="update-notifications-for-report-parts"></a>Actualizar notificaciones de los elementos de informe  
  Los elementos de informe se publican en un servidor de informes para que otros usuarios puedan compartirlos. Por cuestiones de diseño, se especifica la ubicación en la que se deben publicar los elementos de informe.  
@@ -85,7 +85,7 @@ ms.locfileid: "66107604"
   
 =  
   
-##  <a name="Data"></a>Descripción de la seguridad de los datos de informe y los orígenes de datos externos  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Descripción de la seguridad de los datos de informe y los orígenes de datos externos  
  Para tener acceso a los datos de cada origen de datos externo de un informe, debe crear origen de datos incrustado o agregar una referencia a un origen de datos compartido o conjunto de datos compartido en el informe.  
   
  Para cada origen de datos externo, debe proporcionar credenciales suficientes para tener acceso al origen y los datos subyacentes. El propietario del origen de datos especifica el tipo de credenciales que proporciona este acceso.  
@@ -102,14 +102,14 @@ ms.locfileid: "66107604"
   
 =
   
-##  <a name="Models"></a>Descripción de los modelos y los filtros de seguridad  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Descripción de los modelos y los filtros de seguridad  
  Cuando se recuperan datos de un modelo de informe basado en datos externos, puede aplicar filtros de seguridad en el modelo. De esta manera se protegen los datos de forma que cada usuario que ejecuta un informe pueda ver solo los datos para los que tiene permiso.  
   
  Los parámetros de informe no se utilizan para la seguridad en el nivel de fila; no evitan que los usuarios o grupos de usuarios vean filas de datos específicas. Para aplicar seguridad a los datos que se muestran en un informe, es necesario utilizar filtros de seguridad o seguridad de elemento de modelo.  
   
 =
   
-##  <a name="Interactive"></a>Descripción de la seguridad para la creación de informes para características interactivas  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Descripción de la seguridad de las características interactivas en la creación de informes  
  A menudo, los informes utilizan parámetros para que un usuario pueda personalizar interactivamente la vista de un informe. A continuación se ofrecen algunas sugerencias para diseñar informes correctamente:  
   
 -   No utilice parámetros basados en parámetros de consulta y que son de tipo **Texto** , a menos que proporcione valores válidos. Una lista de valores disponibles ayuda al usuario a elegir solo valores válidos. Sin una lista de valores disponibles, no se pueden restringir los valores que puede especificar un usuario.  

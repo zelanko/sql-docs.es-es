@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 659fade9e10edc32c2444bf024fd475ea78a5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106449"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Referencias a la colección de campos de conjunto de datos (Generador de informes y SSRS)

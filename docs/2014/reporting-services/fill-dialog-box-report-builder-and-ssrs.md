@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109160"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Relleno (Generador de informes y SSRS)
@@ -36,11 +36,11 @@ ms.locfileid: "66109160"
  **Seleccionar el origen de la imagen**  
  Indique dónde se encuentra almacenada la imagen para que, a la hora de representar el informe, el procesador de informes pueda mostrarla.  
   
--   **Externa** Elija esta opción si desea que la imagen continúe existiendo como archivo en un servidor de informes o en un servidor Web.  
+-   **Externo** : elija esta opción si desea que la imagen continúe existiendo como archivo en un servidor de informes o en un servidor web.  
   
--   **Incrustado** Elija esta opción si desea incrustar la imagen en el informe.  
+-   **Incrustada** : elija esta opción si desea incrustar la imagen en el informe.  
   
--   **Base de datos** Elija esta opción si desea incluir un nombre de campo de base de datos que represente las imágenes que desea incluir en el informe.  
+-   **Base de datos** : elija esta opción si desea incluir un nombre de campo de base de datos que representa las imágenes que se van a incluir en el informe seleccionado.  
   
  **Usar esta imagen**  
  Esta opción aparece al seleccionar la opción **Incrustada** o **Externo** .  

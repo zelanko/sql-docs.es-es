@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109897"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Elegir página de ubicación del elemento (Administrador de informes)
@@ -52,7 +52,7 @@ ms.locfileid: "66109897"
 4.  En la pestaña **General** , en la página de propiedades, haga clic en **Cambiar ubicación** para abrir la página Elegir ubicación del elemento.  
   
 ## <a name="options"></a>Opciones  
- **Location**  
+ **Ubicación**  
  Especifique el nombre de la carpeta que va a contener el elemento que va a crear. Puede escribir el nombre completo o utilizar la vista de árbol para navegar hasta la carpeta que desee.  
   
  **Vista de árbol**  

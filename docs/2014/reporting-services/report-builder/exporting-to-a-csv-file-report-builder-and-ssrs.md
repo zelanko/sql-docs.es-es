@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107925"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportar a un archivo CSV (Generador de informes y SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107925"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> Representación en CSV  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a> Representación en CSV  
  Los informes CSV representados con la configuración predeterminada presentan las siguientes características:  
   
 -   La cadena delimitadora de campos predeterminada es una coma (,).  
@@ -96,7 +96,7 @@ ms.locfileid: "66107925"
   
  
   
-##  <a name="RenderingModes"></a> Modos de representador  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Modos de representador  
  La extensión de representación CSV puede funcionar en dos modos: uno está optimizado para Excel; el otro está optimizado para aplicaciones de terceros que requieren un cumplimiento estricto de CSV con la especificación para CSV de RFC 4180. Dependiendo del modo que use, las regiones de datos del mismo nivel se administran de manera diferente.  
   
 ### <a name="default-mode"></a>Modo predeterminado  
@@ -120,7 +120,7 @@ ms.locfileid: "66107925"
 #### <a name="formatting"></a>Aplicación de formato  
  Se quita el formato a los valores.  
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interactividad  
  Ningún formato CSV generado por este representador admite la interactividad. No se representan los elementos interactivos siguientes:  
   
 -   Hipervínculos  
@@ -139,14 +139,14 @@ ms.locfileid: "66107925"
   
 
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configuración de la información del dispositivo  
  Mediante la modificación de la configuración de la información del dispositivo, puede cambiar algunos valores de configuración predeterminados para este representador, incluidos el modo de representación, los caracteres que se usarán como delimitadores y los caracteres que se usarán como cadena predeterminada para el calificador de texto. Para obtener más información, consulte [CSV Device Information Settings](../csv-device-information-settings.md).  
   
   
   
 ## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Comportamientos de representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

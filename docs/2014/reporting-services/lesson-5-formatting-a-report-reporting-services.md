@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108431"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
@@ -28,7 +28,7 @@ ms.locfileid: "66108431"
   
 -   [Cambiar el estilo de texto y los anchos de columna](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a>Dar formato a la fecha  
+##  <a name="format-the-date"></a><a name="bkmk_format_date"></a>Dar formato a la fecha  
  En el campo Date, se muestra información de fecha y hora de manera predeterminada. Puede darle formato para mostrar solo la fecha.  
   
 #### <a name="to-format-a-date-field"></a>Para dar formato a un campo de fecha  
@@ -45,7 +45,7 @@ ms.locfileid: "66108431"
   
 6.  Obtenga una vista previa del informe para ver el cambio en el campo `[Date]` y, después, vuelva a cambiar a la vista de diseño.  
   
-##  <a name="bkmk_format_currency"></a>Dar formato a la moneda  
+##  <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Dar formato a la moneda  
  El campo LineTotal muestra un número general. Aplíquele el formato adecuado para mostrar el número como moneda.  
   
 #### <a name="to-format-a-currency-field"></a>Para dar formato a un campo de moneda  
@@ -56,9 +56,9 @@ ms.locfileid: "66108431"
   
 3.  Si la configuración regional es Inglés (Estados Unidos), los valores predeterminados deberían ser:  
   
-    -   **Posiciones decimales: 2**  
+    -   **Decimales: 2**  
   
-    -   **Números negativos: ($12345,00)**  
+    -   **Números negativos: ($12345.00)**  
   
     -   **Símbolo: $ Inglés (Estados Unidos)**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66108431"
   
 6.  Obtenga una vista previa del informe para ver el cambio en el campo `[LineTotal]` y, después, vuelva a cambiar a la vista de diseño.  
   
-##  <a name="bkmk_change_textstyle"></a>Cambiar el estilo de texto y los anchos de columna  
+##  <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Cambiar el estilo de texto y los anchos de columna  
  También puede cambiar el formato de la fila de encabezado para diferenciarlo de las filas de datos del informe. Por último, ajustará el ancho de las columnas.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>Para dar formato a las filas de encabezado y las columnas de tabla  
@@ -91,7 +91,7 @@ ms.locfileid: "66108431"
   
 5.  En el menú **Archivo** , haga clic en **Guardar todo** para guardar el informe.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha aplicado formato correctamente a los encabezados de columna y los valores de moneda y fecha. A continuación, agregará características de agrupación y totales al informe. Vea [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 ## <a name="see-also"></a>Consulte también  

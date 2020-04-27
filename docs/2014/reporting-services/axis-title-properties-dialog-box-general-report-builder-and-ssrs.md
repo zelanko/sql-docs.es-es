@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109973"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades del título del eje, General (Generador de informes y SSRS)
@@ -30,17 +30,17 @@ ms.locfileid: "66109973"
  **Alineación del título**  
  Seleccione una alineación o escriba una expresión que represente la alineación del título del eje en relación con la intersección de los ejes.  
   
--   **Near** Muestra el título del eje hacia la intersección de los dos ejes.  
+-   **Cercana** : muestra el título del eje hacia la intersección de los dos ejes.  
   
--   **Centro** de Muestra el título del eje en el centro del eje.  
+-   **Centro** : muestra el título del eje en el centro del eje.  
   
--   **Lejos** Muestra el título del eje alejado de la intersección de los dos ejes.  
+-   **Separada** : muestra el título del eje alejado de la intersección de los dos ejes.  
   
 ## <a name="see-also"></a>Consulte también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Especifique un intervalo de eje &#40;Generador de informes y SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Trazar datos en un eje secundario &#40;Generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Cuadro de diálogo Propiedades del eje, Opciones del eje &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  

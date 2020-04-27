@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109067"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Página de propiedades generales, conjuntos de datos compartidos (Administrador de informes)
@@ -60,7 +60,7 @@ ms.locfileid: "66109067"
  **Descargar**  
  Extraiga una copia de la definición del conjunto de datos compartido. En función de las asociaciones de archivos definidas en su equipo, el archivo se abrirá en Visual Studio o en otra aplicación. En la mayoría de los casos, el conjunto de datos compartido se abre como un archivo XML.  
   
- **Reemplace**  
+ **Sustituya**  
  Reemplace la definición del conjunto de datos compartido por otra diferente de un archivo .rsd que se encuentra en el sistema de archivos.  
   
 ## <a name="see-also"></a>Consulte también  
@@ -69,7 +69,7 @@ ms.locfileid: "66109067"
  [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
  [Opciones de actualización de caché &#40;Administrador de informes&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Página de almacenamiento en caché, conjuntos de recursos compartidos &#40;Administrador de informes&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Administrar conjuntos de datos compartidos](report-data/manage-shared-datasets.md)   
+ [Administrar conjuntos de recursos compartidos](report-data/manage-shared-datasets.md)   
  [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

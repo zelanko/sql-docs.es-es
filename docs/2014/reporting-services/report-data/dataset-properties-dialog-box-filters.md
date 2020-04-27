@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107338"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Propiedades del conjunto de datos (cuadro de diálogo), Filtros
@@ -37,16 +37,16 @@ ms.locfileid: "66107338"
  Mueve el filtro seleccionado hacia abajo en la lista.  
   
  **Expression**  
- Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón expresión (**FX**) para editar la expresión.  
+ Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón Expresión (**fx**) para editar la expresión.  
   
  **Tipo de datos**  
  Elija el tipo de datos para **Valor**. Si es posible, elija un tipo de datos que coincida con el tipo de datos de **Expresión**. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](../report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
- **Operator**  
+ **Operador**  
  Elija el operador que se va a utilizar para comparar la expresión y el valor.  
   
  **Valor**  
- Escriba la expresión o el valor que se debe usar al evaluar la expresión especificada en el cuadro **Expresión** . Haga clic en el botón expresión (**FX**) para editar la expresión.  
+ Escriba la expresión o el valor que se debe usar al evaluar la expresión especificada en el cuadro **Expresión** . Haga clic en el botón Expresión (**fx**) para editar la expresión.  
   
 ## <a name="see-also"></a>Consulte también  
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

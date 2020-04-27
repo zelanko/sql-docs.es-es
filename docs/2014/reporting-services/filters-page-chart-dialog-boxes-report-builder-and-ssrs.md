@@ -18,20 +18,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109137"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Cuadros de diálogo de Gráfico, página Filtros (Generador de informes y SSRS)
   Haga clic en **Filtros** en  
   
--   Cuadro de diálogo **propiedades del grupo de categorías** para filtrar los puntos de datos de una serie que se ha agrupado por categoría.  
+-   el cuadro de diálogo**Propiedades del grupo de categorías** para filtrar los puntos de datos de una serie que ha sido agrupada por categoría.  
   
--   Cuadro de diálogo **propiedades del gráfico** para definir las opciones de filtrado para el gráfico.  
+-   El cuadro de diálogo**Chart Properties** para definir las opciones de filtrado para el gráfico.  
   
--   Cuadro de diálogo **propiedades del grupo de series** para limitar el número de series del grupo seleccionado.  
+-   El cuadro de diálogo**Propiedades del grupo de series** para limitar el número de series del grupo seleccionado.  
   
 ## <a name="options"></a>Opciones  
  **Add (Agregar)**  
@@ -47,7 +47,7 @@ ms.locfileid: "66109137"
  Haga clic en esta opción para mover el filtro seleccionado hacia abajo en la lista.  
   
  **Expression**  
- Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón expresión (**FX**) para editar la expresión.  
+ Escriba o elija la expresión a la que desea aplicar un filtro. Haga clic en el botón Expresión (**fx**) para editar la expresión.  
   
  **Tipo de datos**  
  Elija el tipo de datos para **Valor**. Si es posible, elija un tipo de datos que coincida con el tipo de datos de **Expresión**.  
@@ -56,7 +56,7 @@ ms.locfileid: "66109137"
   
  Si la opción de tipos de datos que necesita no está en la lista desplegable, escriba una expresión que convierta el valor al tipo de datos correcto. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
- **Operator**  
+ **Operador**  
  Elija el operador que se va a utilizar para comparar la expresión y el valor.  
   
  **Valor**  

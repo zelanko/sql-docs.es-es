@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109630"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Crear y administrar orígenes de datos compartidos (Reporting Services en el modo integrado de SharePoint)
@@ -86,6 +86,6 @@ ms.locfileid: "66109630"
  Tenga cuidado al eliminar un modelo de informe. Si elimina un modelo, no podrá abrir ni modificar ningún informe basado en ese modelo en el Generador de informes. Si elimina accidentalmente un modelo utilizado por los informes existentes, deberá volver a generar el modelo, deberá volver a crear y guardar todos los informes que utilicen dicho modelo y deberá volver a especificar la seguridad de elementos de modelo que desee utilizar. No basta con volver a generar el modelo y luego adjuntarlo a un informe existente.  
   
 ## <a name="see-also"></a>Consulte también  
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

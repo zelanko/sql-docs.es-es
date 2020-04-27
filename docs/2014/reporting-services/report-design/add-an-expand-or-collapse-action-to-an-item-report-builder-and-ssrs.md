@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106753"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66106753"
 3.  En panel de grupo adecuado, haga clic en el nombre del grupo de filas o del grupo de columnas cuyas filas o columnas asociadas desea ocultar. El grupo queda seleccionado y el panel de propiedades muestra las propiedades de **Miembro de Tablix** .  
   
     > [!NOTE]  
-    >  Si el panel Propiedades no está visible, haga clic en **Ver** en la cinta de opciones y luego haga clic en **Propiedades**.  
+    >   Si el panel Propiedades no está visible, haga clic en **Ver** en la cinta de opciones y luego haga clic en **Propiedades**.  
   
 4.  En `Hidden`, elija una de las siguientes opciones para establecer la visibilidad de este elemento de informe la primera vez que ejecute un informe:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66106753"
   
 1.  En la vista de diseño del informe, haga clic con el botón secundario en el elemento de informe que desee mostrar u ocultar y, a continuación, haga clic en * \<elemento de informe>* **propiedades**. Se * \<* abrirá el cuadro de diálogo **propiedades** de>de elementos de informe para el elemento de informe.  
   
-2.  Haga clic en **visibilidad**.  
+2.  Haga clic en **Visibilidad**.  
   
 3.  En **Cuando se ejecute inicialmente el informe**, elija una de las opciones siguientes para establecer la visibilidad de este elemento de informe la primera vez que se ejecute el informe:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66106753"
   
     -   Seleccione **Ocultar** para ocultar el elemento de informe.  
   
-    -   Seleccione **Mostrar u ocultar en función de una expresión** para determinar la visibilidad mediante una expresión que se evalúa en tiempo de ejecución. Haga clic en (**fx**) para abrir el cuadro de diálogo **Expresión** con objeto de crear una expresión.  
+    -   Seleccione **Mostrar u ocultar en función de una expresión** para determinar la visibilidad mediante una expresión que se evalúa en tiempo de ejecución. Haga clic en (**FX**) para abrir el cuadro de diálogo **expresión** y crear una expresión.  
   
         > [!NOTE]  
         >  Al especificar una expresión para la visibilidad, está estableciendo la propiedad Hidden del elemento de informe. La expresión se evalúa como un valor `Boolean``True` para ocultar el elemento y `False` para mostrarlo.  
@@ -86,7 +86,7 @@ ms.locfileid: "66106753"
   
      En la siguiente imagen, la tabla está configurada para permitir a los usuarios expandirla y contraerla. La visualización de la tabla se alterna mediante el cuadro de texto de la tabla Products.  
   
-     ![Configurar una tabla de informe que se va a expandir](../media/expandcollapse-reporttable.png "Se configura una tabla de informes que debe expandirse")  
+     ![Configuración de una tabla de informes que debe expandirse](../media/expandcollapse-reporttable.png "Configuración de una tabla de informes que debe expandirse")  
   
     > [!NOTE]  
     >  El cuadro de texto que elija debe estar en el ámbito contenedor o actual de este elemento de informe (hasta el cuerpo del informe, inclusive). Por ejemplo, para alternar la visibilidad de un gráfico, seleccione un cuadro de texto que esté en el mismo ámbito contenedor que el gráfico; por ejemplo, un rectángulo o el cuerpo del informe. El cuadro de texto debe estar en la misma jerarquía contenedora o superior.  

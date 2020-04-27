@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58381a9e56ed6ace1f8ff18109d9746072f76774
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109806"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>Cuadro de diálogo Visibilidad de columna (Generador de informes)
@@ -26,7 +26,7 @@ ms.locfileid: "66109806"
  **Cuando se ejecute inicialmente el informe**  
  Seleccione una opción para indicar cómo se muestra el elemento de informe inicialmente en el informe.  
   
- **Feria**  
+ **Mostrar**  
  Elija esta opción para mostrar la columna.  
   
  **Ocultar**  
@@ -35,7 +35,7 @@ ms.locfileid: "66109806"
  **Mostrar u ocultar en función de una expresión**  
  Elija esta opción para modificar la visibilidad inicial por medio de una expresión.  
   
- Escriba una expresión que se evalúe como un valor `Boolean``True` para ocultar el elemento y `False` para mostrarlo. Haga clic en el botón expresión (*FX*) para editar la expresión.  
+ Escriba una expresión que se evalúe como un valor `Boolean``True` para ocultar el elemento y `False` para mostrarlo. Haga clic en el botón Expresión (*fx*) para editar la expresión.  
   
  **La visualización se puede activar o desactivar para este elemento de informe**  
  Elija esta opción para mostrar una imagen de alternancia que permita que el usuario muestre u oculte esta columna en un visor de informes HTML.  

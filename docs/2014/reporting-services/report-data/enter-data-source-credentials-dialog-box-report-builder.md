@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107320"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Escribir credenciales de origen de datos (cuadro de diálogo del Generador de informes)
-  Use el cuadro de diálogo **Escribir credenciales de origen de datos** para proporcionar las credenciales necesarias para poder recuperar datos del origen de datos.  
+  Utilice el cuadro de diálogo **escribir credenciales de origen de datos** para proporcionar las credenciales para poder recuperar datos del origen de datos.  
   
 ## <a name="options"></a>Opciones  
  **Nombre de usuario**  

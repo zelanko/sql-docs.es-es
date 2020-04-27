@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105598"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Mantener visibles los encabezados al desplazarse a través de un informe (Generador de informes y SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66105598"
   
  En la ilustración siguiente se muestra una matriz.  
   
- ![Matrix](../media/matrix.png "Matrix")  
+ ![Matriz](../media/matrix.png "Matrix")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -54,7 +54,7 @@ ms.locfileid: "66105598"
   
      El panel Grupos de filas muestra los miembros jerárquicos estáticos y dinámicos de la jerarquía de grupos de fila, mientras que el panel Grupos de columnas muestra una vista similar de la jerarquía de grupos de columna.  
   
-2.  En el lado derecho del panel agrupación, haga clic en la flecha hacia abajo y, a continuación, haga clic en **modo avanzado**.  
+2.  En el lado derecho del panel de agrupación, haga clic en la flecha abajo y, a continuación, haga clic en **Modo avanzado**.  
   
 3.  Haga clic en el miembro estático (fila o columna) que desea que siga siendo visible durante el desplazamiento. El panel de propiedades muestra las propiedades de **Miembro de Tablix** .  
   

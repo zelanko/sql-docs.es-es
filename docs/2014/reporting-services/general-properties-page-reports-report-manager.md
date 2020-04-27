@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109102"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página d propiedades generales, informes (Administrador de informes)
@@ -62,7 +62,7 @@ ms.locfileid: "66109102"
   
  Puede modificar la definición del informe y guardarla como un archivo nuevo en una carpeta compartida, y cargar la definición del informe en el servidor de informes como un nuevo elemento. Las modificaciones que realice en la definición de informe desde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (o desde otra aplicación) no se guardan directamente en el servidor de informes. Deberá cargar el archivo para publicar el informe modificado en el servidor de informes.  
   
- **Reemplace**  
+ **Sustituya**  
  Haga clic para reemplazar la definición de informe que se usa en el informe actual por una distinta obtenida del archivo .rdl ubicado en el sistema de archivos. Si actualiza una definición de informe, debe restablecer la configuración del origen de datos cuando la actualización haya finalizado.  
   
  **Cambiar vínculo**  

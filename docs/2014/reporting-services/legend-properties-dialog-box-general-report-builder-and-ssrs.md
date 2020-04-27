@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108556"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la leyenda, General (Generador de informes y SSRS)
@@ -30,15 +30,15 @@ ms.locfileid: "66108556"
  **Diseño**  
  Seleccione una opción para indicar el diseño de la leyenda. El diseño predeterminado de la leyenda es Tabla automática.  
   
--   **Tabla de alto** Mostrar el contenido de la leyenda en una tabla. Las entradas de leyenda se agregarán para expandir verticalmente la leyenda.  
+-   **Tabla larga** : muestra el contenido de la leyenda en una tabla. Las entradas de leyenda se agregarán para expandir verticalmente la leyenda.  
   
--   **Columna** de Mostrar el contenido de la leyenda en una sola columna.  
+-   **Columna** : muestra el contenido de la leyenda en una única columna.  
   
--   **Fila** de Muestra el contenido de la leyenda en una sola fila.  
+-   **Fila** : muestra el contenido de la leyenda en una única fila.  
   
--   **Tabla ancha** Mostrar el contenido de la leyenda en una tabla. Las entradas de leyenda se agregarán para expandir horizontalmente la leyenda.  
+-   **Tabla ancha** : muestra el contenido de la leyenda en una tabla. Las entradas de leyenda se agregarán para expandir horizontalmente la leyenda.  
   
--   **Tabla automática** Mostrar el contenido de la leyenda en una tabla. Las entradas de leyenda se agregarán para expandir horizontal o verticalmente la leyenda en función del espacio disponible en el gráfico.  
+-   **Tabla automática** : muestra el contenido de la leyenda en una tabla. Las entradas de leyenda se agregarán para expandir horizontal o verticalmente la leyenda en función del espacio disponible en el gráfico.  
   
  **Acoplar al área del gráfico**  
  Seleccione esta opción para asociar la leyenda con un área de gráfico.  

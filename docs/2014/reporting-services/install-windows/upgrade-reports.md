@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f97567188cc3c1f4e4082be1c4c1378ca97122f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108594"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
@@ -55,16 +55,14 @@ ms.locfileid: "66108594"
   
 -   [Cuadro de diálogo Convertir CRI](#bkmk_convertCRIdialog)  
   
-##  <a name="bkmk_versionsupported"></a>Versiones admitidas por la actualización  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a> Versiones admitidas por la actualización  
  Se pueden actualizar los informes que se crearon en cualquier versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Se incluyen las versiones siguientes:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 con Service Pack 1  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 con Service Pack 1  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 con Service Pack 2  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 con Service Pack 2  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
@@ -72,12 +70,12 @@ ms.locfileid: "66108594"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a>Archivos de definición de informe (. rdl) y Diseñador de informes  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a> Archivos de definición de informe (.rdl) y el Diseñador de informes  
  Un archivo de definición de informe incluye una referencia al espacio de nombres RDL que especifica la versión del esquema de definición de informe que se utiliza para validar el archivo .rdl.  
   
  Cuando se abre un archivo .rdl en el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], si el informe se ha creado para un espacio de nombres anterior, el Diseñador de informes crea automáticamente un archivo de copia de seguridad y actualiza el informe con el espacio de nombres actual. Esta es la única manera en que puede actualizar un archivo de definición de informe.  
   
- Las propiedades de implementación que establece pueden afectar al esquema en el que se guarda el archivo de definición de informe. Para obtener más información, vea [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41; (Implementación y compatibilidad de versiones en SQL Server Data Tools &#40;SSRS&#41;)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+ Las propiedades de implementación que establece pueden afectar al esquema en el que se guarda el archivo de definición de informe. Para obtener más información, vea [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
  Puede cargar un archivo .rdl creado en una versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a un servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y se actualiza automáticamente al usarse por primera vez. El servidor de informes almacena el archivo de definición de informe en el formato original. El informe se actualiza automáticamente la primera vez que se ve, pero el archivo de definición de informe almacenado permanece intacto.  
   
@@ -86,15 +84,15 @@ ms.locfileid: "66108594"
   
  Para identificar el esquema RDL actual de un informe, un servidor de informes o del Diseñador de informes, vea [Buscar la versión del esquema de definición de informe &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a>Informes publicados e instantáneas de informe  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a> Informes publicados e instantáneas de informe  
  Al usarse por primera vez, el servidor de informes intenta actualizar los informes publicados y las instantáneas de informe al nuevo esquema de definición de informe, lo que no requiere ninguna acción concreta del usuario. El intento de actualización tiene lugar cuando el usuario ve un informe o una instantánea de informe, o cuando el servidor de informes procesa una suscripción. La definición de informe no se reemplaza sino que continúa almacenada en el servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en su esquema original. Si no se puede actualizar un informe, se ejecuta en modo de compatibilidad con versiones anteriores.  
   
-##  <a name="bkmk_backcompat"></a>Modo de compatibilidad con versiones anteriores  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a> Modo de compatibilidad con versiones anteriores  
  El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] procesa los informes que se actualizan correctamente. Los informes que no se pueden actualizar se procesan en el procesador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , en el modo de compatibilidad con versiones anteriores. Ambos procesadores de informes no pueden procesar el mismo informe. Al usarse por primera vez, un informe se actualiza correctamente o se marca como compatible con las versiones anteriores.  
   
  Solo el procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] admite las nuevas características. Si un informe no se puede actualizar, aún puede ver el informe representado pero las nuevas características no están disponibles. Para aprovechar las nuevas características, un informe debe actualizarse correctamente.  
   
-##  <a name="bkmk_subreports"></a>Actualizar un informe con subinformes  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a> Actualizar un informe con subinformes  
  Cuando un informe contiene subinformes, durante la actualización se puede dar uno de cuatro estados posibles:  
   
 -   El informe principal y todos los subinformes pueden actualizarse correctamente. El procesador de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] los procesa.  
@@ -109,7 +107,7 @@ ms.locfileid: "66108594"
   
  Los informes detallados no tienen esta limitación porque se procesan como informes independientes.  
   
-##  <a name="bkmk_CRIs"></a>Actualizar un informe con elementos de informe personalizados  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a> Actualizar un informe con elementos de informe personalizados  
  Los informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podrían contener elementos de informe personalizados (CRI) proporcionados por proveedores de software de otros fabricantes que el administrador del sistema podría instalar en el equipo de creación de informes y en el servidor de informes. Los informes que contienen CRI se pueden actualizar de las maneras siguientes:  
   
 -   Un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se actualiza a servidor de informes de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] . Los informes publicados en el servidor de informes se actualizan automáticamente al usarse por primera vez.  
@@ -139,7 +137,7 @@ ms.locfileid: "66108594"
 |CRI de Dundas 2005 Chart con características no admitidas|La actualización no se realiza.<br /><br /> Los procesa el procesador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |CRI de Dundas 2005 Gauge con características no admitidas|La actualización no se realiza.<br /><br /> Los procesa el procesador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
   
-###  <a name="OpeningaReport"></a>Abrir un informe con CRI en Diseñador de informes  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Abrir un informe con CRI en el Diseñador de informes  
  Al abrir un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informe 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con CRI en diseñador de informes en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el informe se actualizará al nuevo esquema de definición de informe. Según los CRI que contenga el informe, tendrá lugar alguna de las acciones siguientes:  
   
 -   Se detectan CRI de otros proveedores. Si la versión del CRI que está instalada en el equipo de creación de informes no es compatible con el nuevo esquema de RDL, la superficie de diseño muestra un cuadro de texto con una X roja. Debe ponerse en contacto con el administrador del sistema para instalar las versiones nuevas del CRI de los otros proveedores que sean compatibles con el nuevo esquema de RDL.  
@@ -187,17 +185,17 @@ ms.locfileid: "66108594"
   
 -   Imágenes personalizadas.  
   
-###  <a name="bkmk_convertCRIdialog"></a>Cuadro de diálogo convertir CRI  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a>Cuadro de diálogo convertir CRI  
  Este informe contiene elementos de informe personalizados (CRI) con características no admitidas. Los CRI son extensiones del lenguaje RDL (Report Definition Language) que admiten objetos personalizados que muestran datos en un informe. Los CRI incluyen componentes de tiempo de diseño y de tiempo de ejecución proporcionados por otros fabricantes de software.  
   
 > [!NOTE]  
->  La decisión de admitir elementos de informe personalizados en un servidor de informes debe tomarla el administrador del sistema. Para ver los CRI en un informe, los componentes CRI se deben instalar en el cliente de creación de informes para obtener una vista previa de un informe y se deben instalar en el servidor de informes para ver un informe publicado o cargado. Para obtener más información, vea [Elementos de informe personalizados](../custom-report-items/custom-report-items.md) y la documentación del fabricante de software correspondiente.  
+>  La decisión de admitir elementos de informe personalizados en un servidor de informes debe tomarla el administrador del sistema. Para ver los CRI en un informe, los componentes CRI se deben instalar en el cliente de creación de informes para obtener una vista previa de un informe y se deben instalar en el servidor de informes para ver un informe publicado o cargado. Para obtener más información, consulte la documentación y [los elementos de informe personalizados](../custom-report-items/custom-report-items.md) del proveedor de software de terceros.  
   
  Algunos CRI se pueden convertir en elementos de informe en el nuevo formato de definición de informe. Para obtener una lista con los CRI que se pueden convertir, vea [Upgrading Reports](upgrade-reports.md). Use la lista siguiente para decidir si se deben convertir los CRI de este informe:  
   
--   **Sí** Elija **sí** para convertir todos los CRI del informe, siempre que sea posible. Las características no admitidas de los CRI no se pueden actualizar y se quitan del archivo de definición de informe. Para obtener la lista de las características no admitidas, vea [Upgrading Reports](upgrade-reports.md). Al ver el informe, es posible que observe diferencias en la manera en que se muestran los CRI en el informe.  
+-   **Sí** : elija **Sí** para convertir todos los CRI del informe, siempre que sea posible. Las características no admitidas de los CRI no se pueden actualizar y se quitan del archivo de definición de informe. Para obtener la lista de las características no admitidas, vea [Upgrading Reports](upgrade-reports.md). Al ver el informe, es posible que observe diferencias en la manera en que se muestran los CRI en el informe.  
   
--   **No** Elija **no** cuando no desee convertir el CRI en el informe. El procesador de informes no puede mostrar la versión actual de estos CRI. Si el administrador del sistema tiene pensado instalar una nueva versión de los CRI de otros fabricantes de software que es compatible con el nuevo formato de definición de informe, debería elegir **No**. Hasta que estén disponibles las nuevas versiones, los CRI se muestran en el informe como un cuadro de texto vacío con una X roja.  
+-   **No** : elija **No** si no desea convertir los CRI del informe. El procesador de informes no puede mostrar la versión actual de estos CRI. Si el administrador del sistema tiene pensado instalar una nueva versión de los CRI de otros fabricantes de software que es compatible con el nuevo formato de definición de informe, debería elegir **No**. Hasta que estén disponibles las nuevas versiones, los CRI se muestran en el informe como un cuadro de texto vacío con una X roja.  
   
  En cualquier caso, el informe se actualiza al nuevo formato de definición de informe y se guarda una copia de seguridad del informe original como * \<nombre de informe>* `-` backup. RDL. Si guarda el informe en la herramienta de creación de informes, está guardando el informe actualizado en el nuevo formato de definición de informe. Si publica el informe, éste se guarda primero en su equipo y, a continuación, se publica en el servidor de informes. En realidad, está publicando la versión actualizada del informe en el servidor de informes.  
   

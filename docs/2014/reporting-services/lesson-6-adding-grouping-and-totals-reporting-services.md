@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108411"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lección 6: Agregar grupos y totales (Reporting Services)
   Agregue grupos y totales al informe para organizar y resumir los datos.  
   
  Para obtener información sobre cómo agregar totales acumulados a informes, vea: [Agregar totales a informes de Reporting Services (SSRs)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
@@ -34,19 +34,19 @@ ms.locfileid: "66108411"
   
 -   [Para publicar el informe en el servidor de informes (opcional)](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a>Para agrupar los datos de un informe  
+##  <a name="to-group-data-in-a-report"></a><a name="bkmk_groupdata"></a>Para agrupar los datos de un informe  
   
 1.  Haga clic en la pestaña **Diseño** .  
   
-2.  Si no ve el panel **grupos de filas** , haga clic con el botón secundario en la superficie de diseño y haga clic en **Ver** y, a continuación, haga clic en **agrupación**.  
+2.  Si no ve el panel **Grupos de filas** , haga clic con el botón secundario en la superficie de diseño y haga clic en **ver** y en **Agrupar**.  
   
-3.  En el panel **Datos de informe**, arrastre el campo `Date` al panel **Grupos de filas**. Sitúelo encima de la fila denominada **(Details)**.  
+3.  En el panel **Datos de informe**, arrastre el campo `Date` hasta el panel **Grupos de filas**. Sitúelo encima de la fila denominada **(Details)**.  
   
      Observe que el identificador de fila ahora tiene un corchete para mostrar un grupo. Ahora, la tabla también tiene dos columnas Date, una de ellas en uno de los dos extremos de una línea de puntos vertical.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  En el panel **Datos de informe**, arrastre el campo `Order` al panel **Grupos de filas**. Sitúelo debajo de Date y encima de **(Details)**.  
+4.  En el panel **Datos de informe**, arrastre el campo `Order` hasta el panel **Grupos de filas**. Sitúelo debajo de Date y encima de **(Details)**.  
   
      Observe que el identificador de fila ahora tiene dos corchetes para mostrar dos grupos. La tabla ahora también tiene `Order` dos columnas.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66108411"
   
      ![Tabla agrupada por fecha y después por pedido](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Tabla agrupada por fecha y después por pedido")  
   
-##  <a name="bkmk_addtotals"></a>Para agregar totales a un informe  
+##  <a name="to-add-totals-to-a-report"></a><a name="bkmk_addtotals"></a>Para agregar totales a un informe  
   
 1.  Cambie a la vista de diseño.  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66108411"
   
      ![Vista Diseño: tabla básica con total de pedidos](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Vista Diseño: tabla básica con total de pedidos")  
   
-##  <a name="bkmk_adddailytotal"></a>Para agregar un total diario a un informe  
+##  <a name="to-add-a-daily-total-to-a-report"></a><a name="bkmk_adddailytotal"></a>Para agregar un total diario a un informe  
   
 1.  Haga clic con el botón derecho en la celda Order , seleccione **Agregar total**y, luego, haga clic en **Después**.  
   
      Esto agrega una nueva fila que contiene las sumas de la cantidad y la cantidad en dólares para cada día, y la etiqueta "**total**" en la columna orden.  
   
-2.  Escriba la palabra **Daily** delante de la palabra **total** en la misma celda, de modo que se lea el **total diario**.  
+2.  Escriba la palabra **Daily** delante de la palabra **Total** en la misma celda, de modo que se lea **Daily Total**.  
   
 3.  Seleccione la celda **Daily Total** , las dos celdas **Sum** y la celda que queda vacía entre ellas.  
   
@@ -94,11 +94,11 @@ ms.locfileid: "66108411"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a>Para agregar un total general a un informe  
+##  <a name="to-add-a-grand-total-to-a-report"></a><a name="bkmk_addgrandtotal"></a>Para agregar un total general a un informe  
   
 1.  Haga clic con el botón derecho en la celda Date, seleccione **Agregar total**y, luego, haga clic en **Después**.  
   
-     Esto agrega una nueva fila que contiene las sumas de la cantidad y la cantidad en dólares para el **** informe completo, así `Date` como la etiqueta total en la columna.  
+     Esto agrega una nueva fila que contiene las sumas de la cantidad y la cantidad en dólares para el **Total** informe completo, así `Date` como la etiqueta total en la columna.  
   
 2.  Escriba la palabra **Grand** delante de la palabra **Total** en la misma celda, de modo que se lea **Grand Total**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66108411"
   
      ![Vista previa: tabla básica con total general](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Vista previa: tabla básica con total general")  
   
-##  <a name="bkmk_publishreport"></a>Para publicar el informe en el servidor de informes (opcional)  
+##  <a name="to-publish-the-report-to-the-report-server-optional"></a><a name="bkmk_publishreport"></a>Para publicar el informe en el servidor de informes (opcional)  
   
 1.  Un paso opcional es publicar el informe completado en el servidor de informes en modo nativo de modo que pueda ver el informe en el Administrador de informes.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66108411"
   
 3.  En **TargetServerURL** , escriba el nombre del nombre del servidor de informes, por ejemplo **http://\<ServerName>/ReportServer**  
   
-4.  Haz clic en **Aceptar**.  
+4.  Haga clic en **Aceptar**  
   
 5.  En la barra de herramientas, haga clic en **Generar** y, a continuación, haga clic en **Tutorial de implementación**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66108411"
   
 7.  Busque la carpeta que contiene el informe y haga clic en el nombre del informe `Sales Orders` para verlo representado en el explorador.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  Ha completado correctamente el tutorial Crear un informe de tabla básico.  
   
 ## <a name="see-also"></a>Consulte también  

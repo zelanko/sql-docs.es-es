@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108537"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Crear una base de datos de suscriptor de ejemplo
@@ -63,7 +63,7 @@ ms.locfileid: "66108537"
  Ha creado correctamente los datos de suscripción que controlarán la distribución de informes y cambiarán los resultados del informe para cada suscriptor. A continuación, modificará las propiedades del origen de datos del informe que distribuirá a los suscriptores. Las propiedades del origen de datos se modifican con el fin de preparar el informe para la entrega de la suscripción controlada por datos. Además, modificará el diseño de informe para que incluya un parámetro usará la suscripción con los datos del suscriptor. [Lección 2: modificar las propiedades del origen de datos del informe](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear una suscripción controlada por datos &#40;tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Crear una base de datos](../relational-databases/databases/create-a-database.md)   
  [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

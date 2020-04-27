@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107298"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxis de ruta de acceso de elemento para datos de informe XML (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107298"
 |&#124; (barra vertical)|Separa los elementos de sintaxis. Solo se puede elegir uno de los elementos.|  
 |`[ ] (brackets)`|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |**{ }** (llaves)|Delimita los parámetros de los elementos de sintaxis.|  
-|[ **,** …*n*]|Indica que el elemento anterior puede repetirse *n* veces. Los elementos se separan por comas.|  
+|[**,**... *n*]|Indica que el elemento anterior se puede repetir *n* número de veces. Los elementos se separan por comas.|  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -76,19 +76,15 @@ XMLLocalName :: =
 |----------|----------------|  
 |Ruta de acceso de elemento|Define la secuencia de nodos que deben recorrerse en el documento XML para recuperar los datos de campo de un conjunto de datos con un origen de datos XML.|  
 |`ElementNode`|Nodo XML en el documento XML. Los nodos se designan mediante etiquetas y existen en una relación jerárquica con otros nodos. Por ejemplo, \<Customers> es el nodo de elemento raíz. \<Customer> es un subelemento de \<Customers>.|  
-|`XMLName`|El nombre del nodo. Por ejemplo, el nombre del nodo Customers es Customers. 
-  `XMLName` puede incluir delante un identificador de espacio de nombres para asignar un nombre único a cada nodo.|  
+|`XMLName`|El nombre del nodo. Por ejemplo, el nombre del nodo Customers es Customers. `XMLName` puede incluir delante un identificador de espacio de nombres para asignar un nombre único a cada nodo.|  
 |`Encoding`|Indica que `Value` para este elemento es XML codificado y debe descodificarse e incluirse como un subelemento de este elemento.|  
-|`FieldList`|Define el conjunto de elementos y atributos que se van a utilizar para recuperar datos.<br /><br /> Si no se especifica, se usan como campos todos los atributos y subelementos. Si se especifica la lista de campos vacíos ( **{}** ), no se usará ningún campo de este nodo.<br /><br /> 
-  `FieldList` no puede contener a la vez `Value` y `Element` o `ElementNode`.|  
+|`FieldList`|Define el conjunto de elementos y atributos que se van a utilizar para recuperar datos.<br /><br /> Si no se especifica, se usan como campos todos los atributos y subelementos. Si se especifica la lista de campos vacía**{}**(), no se usa ningún campo de este nodo.<br /><br /> `FieldList` no puede contener a la vez `Value` y `Element` o `ElementNode`.|  
 |`Field`|Especifica los datos que se recuperan como campo de conjunto de datos.|  
 |`Attribute`|Par de nombre y valor de `ElementNode`. Por ejemplo \<, en el nodo de elemento Customer ID = "1" > `ID` , es un atributo `@ID(Integer)` y devuelve "1" como un tipo entero en el campo `ID`de datos correspondiente.|  
-|`Value`|El valor del elemento. 
-  `Value` solo se puede usar en el último `ElementNode` de la ruta de acceso del elemento. Por ejemplo, dado \<que return> es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, `Return {@}` el `Chair`valor de es.|  
+|`Value`|El valor del elemento. `Value` solo se puede usar en el último `ElementNode` de la ruta de acceso del elemento. Por ejemplo, dado \<que return> es un nodo hoja, si se incluye al final de una ruta de acceso de elemento, `Return {@}` el `Chair`valor de es.|  
 |`Element`|Valor del subelemento con nombre. Por ejemplo, Customers {}/Customer {}/LastName recupera valores únicamente para el elemento LastName.|  
 |`Type`|Tipo de datos opcional que se usa para el campo creado a partir de este elemento.|  
-|`NamespacePrefix`|
-  `NamespacePrefix` se define en el elemento XML Query. Si no existe ningún elemento XML Query, se pasan por alto los espacios de nombres del elemento XML `ElementPath`. Si hay un elemento XML Query, el elemento XML `ElementPath` tiene un atributo `IgnoreNamespaces` opcional. Si IgnoreNamespaces es `true`, se omiten los espacios `ElementPath` de nombres en XML y el documento XML. Para más información, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md).|  
+|`NamespacePrefix`|`NamespacePrefix` se define en el elemento XML Query. Si no existe ningún elemento XML Query, se pasan por alto los espacios de nombres del elemento XML `ElementPath`. Si hay un elemento XML Query, el elemento XML `ElementPath` tiene un atributo `IgnoreNamespaces` opcional. Si IgnoreNamespaces es `true`, se omiten los espacios `ElementPath` de nombres en XML y el documento XML. Para más información, vea [Sintaxis de consulta XML para los datos de informe XML &#40;SSRS&#41;](report-data-ssrs.md).|  
   
 ## <a name="example---no-namespaces"></a>Ejemplo: sin espacios de nombres  
  En los ejemplos siguientes se usa el documento XML Customers.xml. En esta tabla se muestran ejemplos de sintaxis de ruta de acceso de elemento y los resultados que se obtienen al utilizar la ruta de acceso de elemento en una consulta que define un conjunto de datos, basándose en el documento XML como origen de datos.  
@@ -97,7 +93,7 @@ XMLLocalName :: =
   
 -   *Vacío*  
   
-    |Pedido de|Cantidad|id|Nombre|Apellidos|Customer.ID|xmlns|  
+    |Pedido de|Cantidad|Id.|Nombre|Apellidos|Customer.ID|xmlns|  
     |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
     |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
     |Tabla|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
@@ -106,7 +102,7 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer`  
   
-    |Nombre|Apellidos|id|  
+    |Nombre|Apellidos|Id.|  
     |---------------|--------------|--------|  
     |Bobby|Moore|11|  
     |Crystal|Hu|20|  
@@ -131,7 +127,7 @@ XMLLocalName :: =
   
 -   `Customers {}/Customer/Orders/Order{ @ID(Integer)}`  
   
-    |Order.ID|Nombre|Apellidos|id|  
+    |Order.ID|Nombre|Apellidos|Id.|  
     |--------------|---------------|--------------|--------|  
     |1|Bobby|Moore|11|  
     |2|Bobby|Moore|11|  
@@ -208,7 +204,7 @@ XMLLocalName :: =
   
 ## <a name="see-also"></a>Consulte también  
  [Tipo de conexión XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)   
- [Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
+ [Reporting Services tutoriales &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   

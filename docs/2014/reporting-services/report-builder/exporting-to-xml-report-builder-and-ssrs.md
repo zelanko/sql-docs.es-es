@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107901"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107901"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Elementos de informe  
+##  <a name="report-items"></a><a name="ReportItems"></a> Elementos de informe  
  En la tabla siguiente se describe cómo se representan los elementos de informe.  
   
 |Elemento|Comportamiento de la representación|  
@@ -53,25 +53,22 @@ ms.locfileid: "66107901"
   
 -   Se omiten `Images, lines, and custom report items`.  
   
-##  <a name="DataTypes"></a> Tipos de datos  
+##  <a name="data-types"></a><a name="DataTypes"></a>Tipos de datos  
  Al elemento o atributo del cuadro de texto se le asigna un tipo de datos XSD según los valores que muestra el cuadro de texto.  
   
 |Si todos los valores del cuadro de texto son|El tipo de datos asignado es|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|
-  `Decimal` (o `Decimal` y cualquier tipo de datos integer o byte)|**xsd:decimal**|  
-|
-  `Float` (o `Decimal` y cualquier tipo de datos integer o byte)|**xsd:float**|  
-|
-  `Double` (o `Decimal` y cualquier tipo de datos integer o byte)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd: dateTime**|  
-|`Time`|**xsd: cadena**|  
-|`Boolean`|**xsd: booleano**|  
-|`String`, `Char`|**xsd: cadena**|  
-|Otros|**xsd: cadena**|  
+|`Decimal` (o `Decimal` y cualquier tipo de datos integer o byte)|**xsd:decimal**|  
+|`Float` (o `Decimal` y cualquier tipo de datos integer o byte)|**xsd:float**|  
+|`Double` (o `Decimal` y cualquier tipo de datos integer o byte)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd:dateTime**|  
+|`Time`|**xsd:cadena**|  
+|`Boolean`|**xsd:boolean**|  
+|`String`, `Char`|**xsd:cadena**|  
+|Otros|**xsd:cadena**|  
   
-##  <a name="XMLSpecificRenderingRules"></a>Reglas de representación específicas de XML  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> Reglas de representación específicas de XML  
  En las secciones siguientes se describe cómo interpreta los elementos del informe la extensión de representación en XML.  
   
 ### <a name="report-body"></a>Cuerpo del informe  
@@ -79,11 +76,11 @@ ms.locfileid: "66107901"
   
  Las definiciones del espacio de nombres y los atributos de referencia del esquema XML también se incluyen en el elemento de informe. Las variables se indican en negrita:  
   
- \<**Informe** xmlns = "**SchemaName**" xmlns: XSi = "<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;RC% 3aSchema = true" Name = "ReportName" >  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Los valores de las variables son los siguientes:  
   
-|Nombre|Value|  
+|NOMBRE|Value|  
 |----------|-----------|  
 |Informe|Report.DataElementName|  
 |ReportURL|Dirección URL absoluta con codificación URL al informe en el servidor.|  
@@ -151,20 +148,20 @@ ms.locfileid: "66107901"
   
  Si el valor de la propiedad DataElementOutput es igual al de la salida, el encabezado de un elemento repetitivo se representa como un elemento secundario del elemento de detalle.  
   
-##  <a name="CustomFormatsXSLTransformations"></a>Formatos personalizados y transformaciones XSL  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Formatos personalizados y transformaciones XSL  
  Los archivos XML generados por la extensión de representación en XML se pueden transformar prácticamente a cualquier formato mediante las transformaciones XSL (XSLT). Esta funcionalidad se puede usar para generar datos en formatos todavía no admitidos por las extensiones de representación existentes. Se recomienda utilizar la extensión de representación en XML y XSLT antes de intentar crear una extensión de representación propia.  
   
-##  <a name="DuplicateName"></a>Nombres duplicados  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Nombres duplicados  
  Si hay nombres de elementos de datos duplicados dentro del mismo ámbito, el representador muestra un mensaje de error.  
   
-##  <a name="XSLTTransformations"></a>Transformaciones XSLT  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>Transformaciones XSLT  
  El representador de XML puede aplicar una transformación XSLT en el servidor a los datos XML originales. Cuando se aplica una XSLT, el representador genera el contenido transformado en lugar de los datos XML originales. La transformación se produce en el servidor, no en el cliente.  
   
  La transformación XSLT que se debe aplicar a la salida se define en el archivo de definición de informe con la propiedad DataTransform del informe o con el parámetro *DeviceInfo* de XSLT. Si se establece cualquiera de estos valores, la transformación se produce cada vez que se usa el representador de XML. Cuando se usan suscripciones, la transformación XSLT se debe definir en la propiedad RDL DataTransform.  
   
  Si se especifica un archivo XSLT, tanto con la propiedad de definición DataTransform como con la configuración de la información del dispositivo, primero se produce la transformación XSLT especificada en DataTransform y después la establecida mediante la configuración de la información del dispositivo.  
   
-###  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador cambiando valores de configuración de la información del dispositivo como los siguientes:  
   
 -   La transformación (XSLT) que se aplicará al XML.  
@@ -185,7 +182,7 @@ ms.locfileid: "66107901"
   
 ## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Comportamientos de representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

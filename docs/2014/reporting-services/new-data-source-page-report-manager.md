@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc4dda934496bbfa33306537b515870f0de23de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108175"
 ---
 # <a name="new-data-source-page-report-manager"></a>Nuevo origen de datos (página del Administrador de informes)
@@ -88,7 +88,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
   
  Para usar esta opción, debe haber configurado previamente la cuenta de ejecución desatendida para la implementación del servidor de informes. La cuenta de ejecución desatendida se usa para conectarse a los orígenes de datos externos cuando otros orígenes de credenciales no están disponibles. Si especifica esta opción y la cuenta no está configurada, se producirá un error en la conexión al origen de datos del informe y no se producirá el procesamiento de informes. Para obtener más información acerca de esta cuenta, vea [configurar la cuenta de ejecución desatendida &#40;SSRS Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- **OK (CORRECTO)**  
+ **Aceptar**  
  Haga clic para guardar los cambios.  
   
 ## <a name="see-also"></a>Consulte también  
@@ -98,6 +98,6 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  [Administrador de informes de &#40;de página de contenido&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Administrador de informes la ayuda F1](../../2014/reporting-services/report-manager-f1-help.md)   
- [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

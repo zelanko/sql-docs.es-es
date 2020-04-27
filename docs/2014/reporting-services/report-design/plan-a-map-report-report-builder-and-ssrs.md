@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105466"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planear un informe de mapa (Generador de informes y SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105466"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a>Especificar el propósito del mapa  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> Especificar el propósito del mapa  
  Un diseño de informe apropiado proporciona información que ayuda a los usuarios a tomar medidas para resolver los problemas. Para crear una presentación de mapa útil y fácilmente entendible, decida qué cuestiones desea que el mapa ayude a responder. Por ejemplo, en un mapa puede visualizar los tipos siguientes de datos para identificar oportunidades de mercado:  
   
 -   Ventas relativas de cada almacén.  
@@ -38,7 +38,7 @@ ms.locfileid: "66105466"
   
  
   
-##  <a name="Data"></a>Especificar los datos espaciales y analíticos  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> Especificar los datos espaciales y analíticos  
  Debe especificar qué datos espaciales y analíticos necesita.  
   
  Los datos analíticos pueden proceder de un conjunto de datos de informe, de los datos de ejemplo de un mapa de la galería de mapas o de los datos analíticos incluidos con los datos espaciales en un archivo de forma ESRI.  
@@ -77,7 +77,7 @@ ms.locfileid: "66105466"
   
  Los datos espaciales deben contener los campos siguientes:  
   
--   **Datos espaciales.** Campo de datos espaciales que tiene los conjuntos de coordenadas que definen cada punto, línea o polígono.  
+-   **Spatial data.** Campo de datos espaciales que tiene los conjuntos de coordenadas que definen cada punto, línea o polígono.  
   
 -   **Campos coincidentes.** Uno o varios campos que identifican de forma única cada campo de datos espaciales. Por ejemplo, para un punto de ubicación de un almacén, podría utilizar el nombre del almacén. Si el nombre del almacén no es único en los datos espaciales, podría incluir el nombre de la ciudad además del almacén.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66105466"
   
 
   
-##  <a name="MapType"></a>Elegir un tipo de mapa  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> Elegir un tipo de mapa  
  Al ejecutar el Asistente para mapas, agrega al informe un mapa y la primera capa de mapa. El asistente le permite agregar uno de los tipos siguientes de mapas a un informe:  
   
 -   Un mapa básico que muestra las ubicaciones sin datos analíticos asociados.  
@@ -126,7 +126,7 @@ ms.locfileid: "66105466"
   
  
   
-##  <a name="Legend"></a>Plan de leyendas  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> Planear las leyendas  
  Para ayudar a los usuarios a interpretar un mapa, puede agregar varias leyendas de mapa, una escala de colores y una escala de distancia. Al diseñar un mapa, planee donde desea que se muestren las leyendas. Puede especificar la información siguiente sobre cada leyenda:  
   
 -   **Ubicación de la leyenda.** Por ejemplo, las leyendas se pueden mostrar dentro o fuera de la ventanilla, y en 12 ubicaciones discretas en relación con la ventanilla.  
@@ -145,7 +145,7 @@ ms.locfileid: "66105466"
   
 
   
-##  <a name="Embedding"></a>Equilibrar el tamaño de la definición de informe y el tiempo de procesamiento del informe  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> Equilibrar el tamaño de la definición de informe y el tiempo de procesamiento del informe  
  Un buen diseño de informe para mapas requiere que equilibre las opciones que controlan el rendimiento del informe y el tamaño de su definición. Los elementos de un mapa que se basan en datos espaciales, o mosaicos de Bing Maps, pueden ser estáticos e incrustarse en la definición de informe, o dinámicos y crearse cada vez que se procesa el mismo. Debe evaluar las ventajas comparativas de los datos de mapas estáticos y dinámicos, y encontrar el equilibrio que resulte apropiado en sus circunstancias. Considere la información siguiente para tomar esta decisión:  
   
 -   Los elementos de mapa incrustados pueden aumentar considerablemente el tamaño de la definición de informe, pero reducen el tiempo necesario para ver el mapa en el informe. El servidor de informes podría tener límites de tamaño que haya que mantener.  
@@ -162,8 +162,8 @@ ms.locfileid: "66105466"
   
 ## <a name="see-also"></a>Consulte también  
  [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Generador de informes de &#40;de informes de mapa&#41;](../tutorial-map-report-report-builder.md)   
+ [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../tutorial-map-report-report-builder.md)   
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de informes: informes de mapa &#40;Generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

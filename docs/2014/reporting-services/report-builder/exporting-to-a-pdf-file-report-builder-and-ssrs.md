@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107919"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportar a un archivo PDF (Generador de informes y SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107919"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Incrustación de fuentes  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>Incrustación de fuentes  
  Siempre que sea posible, la extensión de representación en PDF incrustará el subconjunto de cada una de las fuentes que sea necesaria para mostrar el informe en el archivo PDF. Las fuentes que se utilicen en el informe deberán instalarse en el servidor de informes. Cuando el servidor de informes genera un informe en formato PDF, usa la información almacenada en la fuente a la que hace referencia el informe para crear asignaciones de caracteres en el archivo PDF. Si la fuente a la que se hace referencia no está instalada en el servidor de informes, es posible que el archivo PDF resultante no contenga las asignaciones correctas y, por lo tanto, no se muestre correctamente cuando se visualice.  
   
  Las fuentes se incrustan en el archivo PDF cuando se dan las siguientes condiciones:  
@@ -57,7 +57,7 @@ ms.locfileid: "66107919"
   
  Las fuentes incrustadas en el archivo PDF se incluyen en la propiedad Fonts que se guarda con el archivo, en forma de metadatos.  
   
-##  <a name="Metadata"></a> Metadatos  
+##  <a name="metadata"></a><a name="Metadata"></a>Repositorio  
  Además del diseño del informe, la extensión de representación en PDF escribe los metadatos siguientes en el diccionario de información del documento PDF.  
   
 |Propiedad de PDF|Creada a partir de|  
@@ -65,14 +65,13 @@ ms.locfileid: "66107919"
 |`Title`|El atributo `Name` del elemento RDL `Report`.|  
 |`Author`|El elemento RDL `Author`.|  
 |`Subject`|El elemento RDL `Description`.|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |`Producer`|El nombre y la versión de la extensión de representación.|  
 |`CreationDate`|La hora de ejecución del informe en el formato `datetime` de PDF.|  
   
   
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interactividad  
  Algunos elementos interactivos se admiten en PDF. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
@@ -94,7 +93,7 @@ ms.locfileid: "66107919"
   
   
   
-##  <a name="Compression"></a>Presi  
+##  <a name="compression"></a><a name="Compression"></a>Presi  
  La compresión de imágenes está basada en el tipo de archivo original de la imagen. La extensión de representación en PDF comprime los archivos PDF de forma predeterminada.  
   
  Para conservar la compresión de las imágenes incluidas en el archivo PDF siempre que sea posible, las imágenes JPEG se almacenan como JPEG y el resto de tipos de imagen se almacenan como BMP.  
@@ -104,14 +103,14 @@ ms.locfileid: "66107919"
   
   
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador cambiando los valores de configuración de la información del dispositivo. Para obtener más información, consulte [PDF Device Information Settings](../pdf-device-information-settings.md).  
   
   
   
 ## <a name="see-also"></a>Consulte también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Comportamientos de representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

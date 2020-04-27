@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109327"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página de elementos dependientes (Administrador de informes)
@@ -49,7 +49,7 @@ ms.locfileid: "66109327"
  **Edición**  
  Haga clic en el icono de propiedades para obtener acceso a las páginas de propiedades de un informe o un modelo.  
   
- **Tipo**  
+ **Type**  
  Muestra el icono del tipo de elemento.  
   
  **Fecha de modificación**  

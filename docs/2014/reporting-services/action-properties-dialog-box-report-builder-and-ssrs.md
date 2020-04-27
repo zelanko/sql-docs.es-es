@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110078"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de acción (Generador de informes y SSRS)
@@ -81,21 +81,21 @@ ms.locfileid: "66110078"
  Escriba el nombre de un parámetro definido en el informe detallado.  
   
  **Valor**  
- Escriba o seleccione el valor que debe pasarse al parámetro especificado para el informe detallado. Haga clic en el botón **expresión** (*FX*) para editar la expresión.  
+ Escriba o seleccione el valor que debe pasarse al parámetro especificado para el informe detallado. Haga clic en el botón **Expresión** (*fx*) para editar la expresión.  
   
  **Omitir**  
- Seleccione esta opción para impedir que el parámetro se ejecute. De forma predeterminada, esta casilla está desactivada. Para activar la casilla, haga clic en el botón **expresión** (*FX*) y escriba **true** o cree una expresión. La casilla se activa al hacer clic en **Aceptar** en el cuadro de diálogo **expresión** .  
+ Seleccione esta opción para impedir que el parámetro se ejecute. De forma predeterminada, esta casilla está desactivada. Para activar la casilla, haga clic en el botón **Expresión** (*fx*) y escriba **True** o cree una expresión. La casilla se activa al hacer clic en **Aceptar** en el cuadro de diálogo **expresión** .  
   
  **Ir a marcador**  
  Elija esta opción para definir un vínculo a un marcador en el informe actual. Al seleccionar **Ir a marcador**, aparece la siguiente opción adicional.  
   
  **Seleccionar marcador**  
- Escriba o seleccione el identificador de marcador al que debe saltar el informe cuando el usuario haga clic en el vínculo. Haga clic en el botón expresión (**FX**) para cambiar la expresión. El identificador de marcador puede ser un identificador estático o una expresión que se evalúa como un identificador de marcador. La expresión puede incluir un campo que contenga un identificador de marcador.  
+ Escriba o seleccione el identificador de marcador al que debe saltar el informe cuando el usuario haga clic en el vínculo. Haga clic en el botón Expresión (**fx**) para modificar la expresión. El identificador de marcador puede ser un identificador estático o una expresión que se evalúa como un identificador de marcador. La expresión puede incluir un campo que contenga un identificador de marcador.  
   
  Para crear un vínculo a un marcador, debe definir primero la propiedad Bookmark de un elemento de informe. Para definir la propiedad Bookmark, seleccione un elemento de informe y en el panel Propiedades, escriba un valor o expresión para el identificador de marcador; por ejemplo, SalesChart o 5TopSales.  
   
  **Ir a dirección URL**  
- Elija esta opción para definir un vínculo a una página web. Escriba o seleccione la dirección URL de una página web o una expresión que se evalúe como la dirección URL de una página web. Haga clic en el botón **expresión** (*FX*) para cambiar la expresión. Esta expresión puede incluir un campo que contenga una dirección URL. Al seleccionar **Ir a dirección URL**, aparece la siguiente opción adicional.  
+ Elija esta opción para definir un vínculo a una página web. Escriba o seleccione la dirección URL de una página web o una expresión que se evalúe como la dirección URL de una página web. Haga clic en el botón **Expresión** (*fx*) para modificar la expresión. Esta expresión puede incluir un campo que contenga una dirección URL. Al seleccionar **Ir a dirección URL**, aparece la siguiente opción adicional.  
   
  **Seleccionar dirección URL**  
  Escriba o especifique la dirección URL del elemento. En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, http://*\<ServerName>*/images/image1.jpg. En el caso de un elemento publicado en un servidor de informes configurado en el modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http://*\<SharePointservername>/\<site>*/Documents/images/image1.jpg).  

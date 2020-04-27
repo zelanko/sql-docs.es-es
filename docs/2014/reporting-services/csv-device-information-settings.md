@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddce07fd322948e16abb753f00b3e736026c0365
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109590"
 ---
 # <a name="csv-device-information-settings"></a>Configuración de la información del dispositivo CSV
@@ -31,7 +31,7 @@ ms.locfileid: "66109590"
 |`ExcelMode`|Especifica que la salida de destino es para Excel. El valor predeterminado es `true`.|  
 |`FieldDelimiter`|La cadena de delimitación para colocar el resultado. El valor predeterminado es una coma (,). Debería codificar como URL el valor de esta información de dispositivo al pasarla en una dirección URL. Por ejemplo, un carácter de tabulación como delimitador debería ser "%09".<br /><br /> Puede cambiar el delimitador de campo predeterminado por cualquier carácter que desee, incluido TAB; para ello, solo tiene que cambiar la configuración de la información del dispositivo en el archivo de configuración. Por ejemplo, para usar TAB, actualice el valor FieldDelimiter a \<FieldDelimiter xml:space="preserve">[TAB]\</FieldDelimiter><br /><br /> En el ejemplo, [TAB] es un carácter de tabulación real, que significa que el espacio en blanco aparece en el archivo de configuración. El atributo "xml:space" indica a los analizadores que conserven el espacio en blanco.|  
 |`FileExtension`|Extensión de archivo donde colocar el resultado. El valor predeterminado es `.CSV`. Si se especifican tanto `FileExtension` como `Extension`, `FileExtension` tendrá prioridad.|  
-|**Noheader**|Indica si la fila de encabezado se excluye de la salida. El valor predeterminado es `false`.|  
+|**NoHeader**|Indica si la fila de encabezado se excluye de la salida. El valor predeterminado es `false`.|  
 |`Qualifier`|Cadena del certificador donde colocar los resultados que contienen el delimitador de campo o de registro. Si los resultados contienen el certificador, este se repite. El valor `Qualifier` debe ser diferente de los valores `FieldDelimiter` y `RecordDelimiter`. El valor predeterminado es la comilla (").|  
 |`RecordDelimiter`|El delimitador de registros que colocar al final de cada registro. El valor predeterminado es \<cr>\<lf>.|  
 |**SuppressLineBreaks**|Indica si los saltos de línea se quitan de los datos incluidos en la salida. El valor predeterminado es `false`. Si el valor es `true`, `FieldDelimiter`, los valores `RecordDelimiter` y `Qualifier` no pueden ser un carácter de espacio en blanco.|  
@@ -40,7 +40,7 @@ ms.locfileid: "66109590"
 ## <a name="see-also"></a>Consulte también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Pasar la configuración de información de dispositivo a las extensiones de representación](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personalizar los parámetros de extensión de representación en RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personalizar los parámetros de extensión de representación en RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Referencia técnica &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

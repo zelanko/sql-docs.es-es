@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104465"
 ---
 # <a name="report-manager-f1-help"></a>Administrador de informes (Ayuda F1)
@@ -38,7 +38,7 @@ ms.locfileid: "66104465"
   
 -   [Página de propiedades Orígenes de datos](../../2014/reporting-services/data-sources-properties-page-report-manager.md)  
   
--   [Página de elementos dependientes](../../2014/reporting-services/dependent-items-page-report-manager.md)  
+-   [Página Elementos dependientes](../../2014/reporting-services/dependent-items-page-report-manager.md)  
   
 -   [Página Error](../../2014/reporting-services/error-page-report-manager.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66104465"
   
 -   [Página Historial del informe](../../2014/reporting-services/report-history-page-report-manager.md)  
   
--   [Página resultados de la búsqueda](../../2014/reporting-services/search-page-report-manager.md)  
+-   [Página Resultados de la búsqueda](../../2014/reporting-services/search-page-report-manager.md)  
   
 -   [Página de seguridad (Configuración del sitio)](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66104465"
   
 -   [Página Configuración del sitio](../../2014/reporting-services/site-settings-page-report-manager.md)  
   
--   [Página de propiedades de opciones de instantánea](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
+-   [Página de propiedades Opciones de instantánea](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
   
 -   [Página Suscripciones](../../2014/reporting-services/subscriptions-page-report-manager.md)  
   

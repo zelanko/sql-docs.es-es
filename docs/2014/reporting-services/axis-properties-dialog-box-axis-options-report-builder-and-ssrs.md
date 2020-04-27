@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109960"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades del eje, Opciones del eje (Generador de informes y SSRS)
@@ -44,13 +44,13 @@ ms.locfileid: "66109960"
   
  En el cuadro, escriba la base logarítmica que se usará cuando el eje se haya establecido para usar una escala logarítmica. De forma predeterminada, el gráfico usa una base de 10 para la escala logarítmica de un eje. Esta opción solo está disponible en el eje Y si el eje es numérico.  
   
- **Mínima**  
+ **Cantidad**  
  Escriba una expresión o un valor para el valor mínimo del eje X. Si se omite, el valor mínimo se determina mediante los datos devueltos por el conjunto de datos.  
   
- **Máximo**  
+ **Máxima**  
  Escriba una expresión o un valor para el valor máximo del eje X. Si se omite, el valor máximo se determina mediante los datos devueltos por el conjunto de datos.  
   
- **Interval**  
+ **Intervalo**  
  Escriba una expresión o un valor para el intervalo entre las etiquetas del eje. Por ejemplo, escriba 1 para mostrar cada etiqueta de categoría en el eje. Escriba 2 para mostrar una de cada dos etiquetas de categoría. Si se omite, las etiquetas se calculan automáticamente basándose en los valores del conjunto de datos.  
   
  **Tipo de intervalo**  
@@ -63,7 +63,7 @@ ms.locfileid: "66109960"
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Aplicar formato a los colores de serie de un gráfico &#40;Generador de informes y SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Especificar un intervalo de eje &#40;Generador de informes y SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Especifique un intervalo de eje &#40;Generador de informes y SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Trazar datos en un eje secundario &#40;Generador de informes y SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Los minigráficos y las barras de datos &#40;Generador de informes y SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   

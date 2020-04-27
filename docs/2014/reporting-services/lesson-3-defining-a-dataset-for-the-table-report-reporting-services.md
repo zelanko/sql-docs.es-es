@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108460"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lección 3: Definir un conjunto de datos para el informe de tabla (Reporting Services)
@@ -73,6 +73,6 @@ ms.locfileid: "66108460"
 ## <a name="see-also"></a>Consulte también  
  [Herramientas de diseño de consultas en Diseñador de informes SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Tipo de conexión SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: Escritura de instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a854de693bce88fcba0de2f1c08e4b0fe296b512
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108842"
 ---
 # <a name="files-only-installation-reporting-services"></a>Instalación de solo archivos (Reporting Services)
-  La *instalación de solo archivos* hace referencia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una instalación en la que el programa [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de instalación crea la estructura de carpetas para los archivos de programa, copia los archivos en el disco, registra el servicio del servidor de informes en el equipo local, configura la cuenta de servicio, concede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permisos de archivos a la cuenta de servicio y registra el proveedor WMI.  
+  *Instalación de solo archivos* hace referencia a una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la que el programa de instalación crea la estructura de carpetas para los archivos de programa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , copia los archivos en el disco, registra el servicio Servidor de informes en el equipo local, configura la cuenta de servicio, concede permisos de archivos a la cuenta de servicio y registra el proveedor WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Una instalación de solo archivos incluye las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] siguientes: el servicio Servidor de informes (que hospeda el servicio web del servidor de informes, la aplicación de procesamiento en segundo plano y el Administrador de informes), el Generador de informes, la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las utilidades de línea de comandos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (rsconfig.exe, rskeymgmt.exe y rs.exe). No se aplica a las características compartidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]o, que se deben especificar como elementos independientes si desea instalarlos.  
+ Una instalación de solo archivos incluye las características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] siguientes: el servicio Servidor de informes (que hospeda el servicio web del servidor de informes, la aplicación de procesamiento en segundo plano y el Administrador de informes), el Generador de informes, la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las utilidades de línea de comandos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (rsconfig.exe, rskeymgmt.exe y rs.exe). No se aplica a las características compartidas como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que se deben especificar como elementos independientes si desea instalarlos.  
   
  A diferencia de lo que ocurre en otros modos de instalación, un servidor de informes que se instale en modo de solo archivos no es operativo en cuanto el programa de instalación finaliza. Es necesario configurar más valores para poner en línea el servidor de informes por medio del [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -63,7 +63,7 @@ setup /q /ACTION=install /FEATURES=RS /InstanceName=MSSQLSERVER /RSSVCACCOUNT="N
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurar una conexión a la base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Reporting Services la instalación en modo de SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-reporting-services-sharepoint-mode.md)   
- [Instalar Reporting Services servidor de informes en modo nativo](install-reporting-services-native-mode-report-server.md)   
+ [Instalar el servidor de informes en modo nativo de Reporting Services](install-reporting-services-native-mode-report-server.md)   
  [Herramientas de Reporting Services](../tools/reporting-services-tools.md)  
   
   

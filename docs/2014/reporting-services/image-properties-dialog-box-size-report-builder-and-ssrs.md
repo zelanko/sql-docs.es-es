@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108990"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la imagen, Tamaño (Generador de informes y SSRS)
@@ -36,16 +36,16 @@ ms.locfileid: "66108990"
  **Secuencia**  
  Elija esta opción para mostrar una imagen desde la esquina superior izquierda hasta ocupar el alto y el ancho de la celda o del cuadro de texto. Los bordes de la imagen pueden reducir o aumentar su tamaño para ajustarse a la imagen. Si la imagen es más grande que la celda o el cuadro de texto, solo se mostrará una parte de la misma.  
   
- **Salido**  
+ **Left**  
  Especifique el relleno (o espacio) que hay entre el borde izquierdo de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
- **Correcta**  
+ **Right**  
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
  **Arriba**  
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
- **Inferior**  
+ **Descendente**  
  Especifique el relleno (o espacio) que hay entre el borde inferior de una celda o un cuadro de texto y el valor mostrado dentro de la celda.  
   
 ## <a name="see-also"></a>Consulte también  

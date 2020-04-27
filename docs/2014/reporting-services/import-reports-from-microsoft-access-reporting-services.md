@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 862d8b90f3c91dffda35971677db7fdc231c1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108929"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Importar informes desde Microsoft Access (Reporting Services)
@@ -26,8 +26,7 @@ ms.locfileid: "66108929"
  Cuando se usa la característica de importación, se importan todos los informes de la base de datos o del archivo de proyecto. Si el archivo de Access contiene muchos informes, es recomendable crear un proyecto de informes diferente para importarlos y, después, abrir los archivos RDL individuales en el proyecto de informes principal. Puede modificar los informes después de importarlos al Diseñador de informes.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no admite todos los objetos de informe de Access. Los elementos que no se convierten se muestran en la ventana **lista de tareas** . Para obtener más información, vea [características de informes de Access admitidas &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md).  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no admite todos los objetos de informe de Access. Los elementos que no se convierten se muestran en la ventana **lista de tareas** . Para obtener más información, vea [características de informes de Access admitidas &#40;SSRS&#41;](../../2014/reporting-services/supported-access-report-features-ssrs.md).  
   
 ### <a name="to-import-reports-from-microsoft-access"></a>Para importar informes desde Microsoft Access  
   

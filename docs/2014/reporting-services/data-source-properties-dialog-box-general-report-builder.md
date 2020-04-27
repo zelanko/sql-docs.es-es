@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109471"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Propiedades del origen de datos (cuadro de diálogo), General (Generador de informes)
@@ -51,7 +51,7 @@ ms.locfileid: "66109471"
  **Usar una conexión incrustada en mi informe**  
  Seleccione esta opción para crear un origen de datos que únicamente use este informe.  
   
- **Tipo**  
+ **Type**  
  Seleccione una extensión de procesamiento de datos. En la lista se muestran todas las extensiones registradas.  
   
  **Cadena de conexión**  
@@ -60,7 +60,7 @@ ms.locfileid: "66109471"
  **Usar una sola transacción al procesar las consultas**  
  Seleccione esta opción para indicar que los conjuntos de datos que usan este origen de datos deben ejecutarse en una sola transacción en la base de datos. Para incluir transacciones para subinformes que usan el mismo origen de datos, seleccione el subinforme y, en el panel de propiedades, establezca **MergeTransactions** en **True**.  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Haga clic para comprobar que la conexión del origen de datos funciona con las credenciales especificadas. Si no se puede realizar la conexión, debe comprobar las credenciales y la disponibilidad del servidor. Puede probar las conexiones de origen de datos para los orígenes de datos incrustados y compartidos.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109350"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Características desusadas de SQL Server Reporting Services en SQL Server 2014
@@ -27,18 +27,18 @@ ms.locfileid: "66109350"
   
  En este tema:  
   
--   [SQL Server 2014 Reporting Services características desusadas](#bkmk_2014)  
+-   [Características desusadas de SQL Server 2014 Reporting Services](#bkmk_2014)  
   
 -   [Características desusadas de SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services características desusadas](#bkmk_2012)  
+-   [Características desusadas de SQL Server 2012 Reporting Services](#bkmk_2012)  
   
 -   [Características desusadas de SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services características desusadas  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services características desusadas  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Características no admitidas en la siguiente versión de SQL Server  
- Las siguientes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] características no se admitirán en la **siguiente** versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente.  
+ Las siguientes características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no se admitirán en la **próxima** versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>Configuración de información de dispositivo de extensión de representación HTML  
  La siguiente configuración de información de dispositivo para la extensión de representación de HTML está desusada.  
@@ -99,7 +99,7 @@ ms.locfileid: "66109350"
   
  Ninguna característica de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ha quedado en desuso en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services características desusadas  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services características desusadas  
  En esta sección se describen las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] desusadas en [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]. Las características del [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] siguientes se admiten en la próxima versión de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ### <a name="sharepoint-web-parts"></a>Elementos web de SharePoint  
@@ -107,7 +107,7 @@ ms.locfileid: "66109350"
   
  Para obtener más información sobre los elementos web en desuso, vea [Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services características desusadas  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services características desusadas  
  En esta sección se describen las características de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] desusadas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>Configuración de información de dispositivo de extensión de representación HTML  
@@ -159,7 +159,7 @@ ms.locfileid: "66109350"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services características desusadas  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services características desusadas  
   
 > [!NOTE]  
 >  Dado que SQL Server 2008 R2 es una actualización de versión menor de SQL Server 2008, recomendamos también revisar el contenido en la sección de SQL Server 2008.  
@@ -173,6 +173,6 @@ ms.locfileid: "66109350"
  [Novedades &#40;Reporting Services&#41;](what-s-new-reporting-services.md)   
  [Compatibilidad con versiones anteriores](../getting-started/backward-compatibility.md)   
  [Cambios de comportamiento en SQL Server Reporting Services en SQL Server 2014](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
- [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
+ [Funcionalidad de SQL Server Reporting Services descontinuada en SQL Server 2014](discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)  
   
   

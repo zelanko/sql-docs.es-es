@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108229"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página Seguridad de elemento de modelo (Administrador de informes)
@@ -74,6 +74,6 @@ ms.locfileid: "66108229"
  Haga clic en esta opción para especificar la cuenta de usuario o grupo para la que define el acceso. Si va a utilizar la seguridad predeterminada, las cuentas de usuario y grupo son las cuentas de dominio de Windows. Especifique las cuentas con este formato: * \<>\\ de dominio<\>cuenta*.  
   
 ## <a name="see-also"></a>Consulte también  
- [Servidor de informes en Management Studio (Ayuda F1)](tools/report-server-in-management-studio-f1-help.md)  
+ [Servidor de informes en Management Studio ayuda F1](tools/report-server-in-management-studio-f1-help.md)  
   
   

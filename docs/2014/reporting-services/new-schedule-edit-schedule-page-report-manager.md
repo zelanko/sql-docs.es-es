@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108149"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nueva programación: editar página de programación (Administrador de informes)
@@ -76,15 +76,15 @@ ms.locfileid: "66108149"
  **Detalles de programación**  
  Seleccione las opciones que determinen cuándo se ejecuta un informe y con qué frecuencia. Las opciones de frecuencia están organizadas por niveles. El primer conjunto de opciones especifica una categoría de frecuencia (horaria, diaria, semanal, etc.). El segundo conjunto de opciones que aparece se basa en la selección inicial.  
   
--   La **hora** define una programación que se ejecuta a intervalos de una hora. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación.  
+-   **Hora** define una programación que se ejecuta a intervalos de horas. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación.  
   
--   **Día** define una programación que se ejecuta en los días seleccionados a una hora concreta. Los días se pueden especificar de las maneras siguientes: \<todos los *días>, cada día de* la semana y cada \< *número*> día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
+-   **Día** define una programación que se ejecuta en los días seleccionados a una hora específica. Los días se pueden especificar de las maneras siguientes: \<todos los *días>, cada día de* la semana y cada \< *número*> día. Al elegir un método se anulan los demás, aunque los demás días aparezcan seleccionados.  
   
--   **Semana** define una programación que se ejecuta a intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
+-   **Semana** define una programación que se ejecuta en intervalos semanales a una hora específica. El intervalo puede ser una semana completa (por ejemplo, cada dos semanas) o días de una semana.  
   
--   **Month** define una programación que se ejecuta mensualmente. En un mes, se puede elegir un día basándose en un modelo (por ejemplo, el último domingo de cada mes) o fechas específicas del calendario (como 1 y 15 para indicar los días uno y quince de cada mes). Puede utilizar comas y guiones para especificar varios días e intervalos; por ejemplo, 1, 5, 7-12, 21.  
+-   **Mes** define una programación que se ejecuta mensualmente. En un mes, se puede elegir un día basándose en un modelo (por ejemplo, el último domingo de cada mes) o fechas específicas del calendario (como 1 y 15 para indicar los días uno y quince de cada mes). Puede utilizar comas y guiones para especificar varios días e intervalos; por ejemplo, 1, 5, 7-12, 21.  
   
--   **Una vez** define una programación que se ejecuta solo una vez. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación. Esta programación deja de tener validez en cuanto se procesa.  
+-   **Una vez** define una programación que se ejecuta una sola vez. Use la sección **Fechas de inicio y fin** para especificar el día en el que se va a ejecutar la programación. Esta programación deja de tener validez en cuanto se procesa.  
   
  **Fechas de inicio y fin**  
  Especifique una fecha de inicio que determine cuándo entra en vigor la programación y una fecha de finalización que determine cuándo expira.  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714772"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
@@ -80,13 +80,13 @@ ms.locfileid: "62714772"
   
  En la siguiente tabla se especifican los límites de la capacidad de cálculo para una sola instancia de cada edición de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Versión|Capacidad máxima de cálculo que usa una sola instancia ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidad máxima de cálculo que usa una sola instancia (AS, RS)|  
+|Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Capacidad máxima de cálculo que usa una sola instancia ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidad máxima de cálculo que usa una sola instancia (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: licencia basada en núcleo<sup>1</sup>|Sistema operativo máximo|Sistema operativo máximo|  
 |Desarrollador|Sistema operativo máximo|Sistema operativo máximo|  
 |Evaluación|Sistema operativo máximo|Sistema operativo máximo|  
 |Inteligencia empresarial|Limitada a menos de 4 sockets o 16 núcleos|Sistema operativo máximo|  
-|Estándar|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|  
+|Standard|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|  
 |Web|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|  
 |Express|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 |Express con herramientas|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  

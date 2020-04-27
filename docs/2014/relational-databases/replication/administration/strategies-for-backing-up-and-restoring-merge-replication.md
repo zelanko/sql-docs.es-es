@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688914"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estrategias para hacer copias de seguridad y restaurar la replicación de mezcla
@@ -56,7 +56,7 @@ ms.locfileid: "62688914"
 > [!IMPORTANT]  
 >  La sincronización de una base de datos de publicaciones con una base de datos de suscripciones puede dar como resultado la restauración de las tablas publicadas hasta un momento más reciente que el de las otras tablas no publicadas restauradas de la copia de seguridad.  
   
- Si se sincroniza con un suscriptor que ejecute una versión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la suscripción no puede ser anónima, sino que debe ser una suscripción de cliente o de servidor (llamadas suscripciones locales y suscripciones globales en versiones anteriores).  
+ Si se sincroniza con un suscriptor que está ejecutando una versión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la suscripción no puede ser anónima; debe ser una suscripción de cliente o de servidor (denominada suscripciones locales y suscripciones globales en versiones anteriores).  
   
  Para sincronizar una suscripción de inserción, vea [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) y [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62688914"
  Cuando una base de datos se suscribe a datos de un publicador y, a su vez, publica esos mismos datos en otras bases de datos de suscripciones se denomina base de datos de republicaciones. Al restaurar una base de datos de republicaciones, siga las directrices descritas en las secciones "Realizar copias de seguridad y restaurar la base de datos de publicaciones" y "Realizar copias de seguridad y restaurar la base de datos de suscripciones" de este tema.  
   
 ## <a name="see-also"></a>Consulte también  
- [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Copia de seguridad y restauración de bases de datos de SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](back-up-and-restore-replicated-databases.md)  
   
   

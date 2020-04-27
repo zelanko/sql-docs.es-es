@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0682c6100a96fbfb3016dec4bead4c385190192f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470042"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML (DTA, elemento)
@@ -39,8 +39,8 @@ ms.locfileid: "62470042"
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`xmlns:xsi`|Obligatorio. Identifica el espacio de nombres de la instancia del esquema XML. Los atributos de este espacio de nombres se utilizan para hacer referencia al esquema usado para validar el archivo XML del Asistente para la optimización de motor de base de datos.<br /><br /> Valor obligatorio:[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
-|`xmlns`|Obligatorio. Identifica el espacio de nombres del Asistente para la optimización de motor de base de datos.<br /><br /> Si se modifica el archivo XML del Asistente para la optimización de motor de base de datos mediante el editor XML de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], este valor es utilizado por F1 Ayuda y la Ayuda dinámica para encontrar posibles temas de referencia en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valor requerido:<br /><br /> [Asistente para la optimización de motor de base de datos esquema XML](https://go.microsoft.com/fwlink/?LinkId=43100) System.IO|  
+|`xmlns:xsi`|Necesario. Identifica el espacio de nombres de la instancia del esquema XML. Los atributos de este espacio de nombres se utilizan para hacer referencia al esquema usado para validar el archivo XML del Asistente para la optimización de motor de base de datos.<br /><br /> Valor obligatorio:[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
+|`xmlns`|Necesario. Identifica el espacio de nombres del Asistente para la optimización de motor de base de datos.<br /><br /> Si se modifica el archivo XML del Asistente para la optimización de motor de base de datos mediante el editor XML de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], este valor es utilizado por F1 Ayuda y la Ayuda dinámica para encontrar posibles temas de referencia en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Valor requerido:<br /><br /> Espacio de nombres del[Esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?LinkId=43100)|  
   
 ## <a name="element-characteristics"></a>Características de los elementos  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62470042"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Una obligatoria por archivo XML DTA|  
+|**Casos**|Una obligatoria por archivo XML DTA|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

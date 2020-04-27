@@ -26,18 +26,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755258"
 ---
-# <a name="clr-triggers"></a>Desencadenadores CLR
+# <a name="clr-triggers"></a>Desencadenadores de CLR
   Debido a la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), es posible usar cualquier lenguaje [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para crear desencadenadores CLR. En esta sección se incluye información específica acerca de los desencadenadores implementados con la integración CLR. Para obtener una descripción completa de los desencadenadores, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Qué son los desencadenadores  
- Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento de lenguaje. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos tipos de desencadenadores: desencadenadores del lenguaje de manipulación de datos (DML) y desencadenadores del lenguaje de definición de datos (DDL). Los desencadenadores DML pueden usarse cuando las instrucciones `INSERT`, `UPDATE` o `DELETE` modifican los datos de una tabla o vista especificada. Los desencadenadores DDL activan procedimientos almacenados en respuesta a una serie de instrucciones DDL, principalmente instrucciones que comienzan por `CREATE`, `ALTER` y `DROP`. Los desencadenadores DDL pueden usarse en tareas administrativas, como la auditoría y regulación de operaciones de base de datos.  
+ Un desencadenador es un tipo especial de procedimiento almacenado que se ejecuta automáticamente cuando se produce un evento de lenguaje. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos tipos de desencadenadores: desencadenadores del lenguaje de manipulación de datos (DML) y desencadenadores del lenguaje de definición de datos (DDL). Los desencadenadores DML pueden usarse cuando las instrucciones `INSERT`, `UPDATE` o `DELETE` modifican los datos de una tabla o vista especificada. Los desencadenadores DDL activan procedimientos almacenados en respuesta a una serie de instrucciones DDL, principalmente instrucciones que comienzan por `CREATE`, `ALTER` y `DROP`. Los desencadenadores DDL pueden usarse en tareas administrativas, como la auditoría y regulación de operaciones de base de datos.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>Capacidades únicas de los desencadenadores CLR  
  Los desencadenadores escritos en [!INCLUDE[tsql](../../includes/tsql-md.md)] poseen la capacidad de determinar las columnas de la vista o de la tabla de activación que se han actualizado mediante el uso de las funciones `UPDATE(column)` y `COLUMNS_UPDATED()`.  
@@ -73,8 +72,7 @@ ms.locfileid: "62755258"
 -   En el caso de los desencadenadores DDL, la lista de valores posibles de TriggerAction es bastante más larga. Para obtener más información, vea el tema relativo a la enumeración TriggerAction en el SDK de .NET Framework.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Usar las tablas Inserted y Deleted  
- En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla **Inserted** y la tabla **Deleted** . 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede usar estas tablas temporales para probar los efectos de determinadas modificaciones en los datos y para establecer condiciones para las acciones de los desencadenadores DML; sin embargo, no es posible modificar los datos de las tablas directamente.  
+ En las instrucciones de desencadenadores DML se usan dos tablas especiales: la tabla **Inserted** y la tabla **Deleted** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea y administra automáticamente ambas tablas. Puede usar estas tablas temporales para probar los efectos de determinadas modificaciones en los datos y para establecer condiciones para las acciones de los desencadenadores DML; sin embargo, no es posible modificar los datos de las tablas directamente.  
   
  Los desencadenadores CLR pueden tener acceso a las tablas **Inserted** y **Deleted** a través del proveedor en proceso de CLR. Para ello, se obtiene un objeto `SqlCommand` del objeto SqlContext. Por ejemplo:  
   
@@ -661,7 +659,7 @@ DROP TABLE Table1;
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [Desencadenadores DML](../../relational-databases/triggers/dml-triggers.md)   
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [TRY... CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
  [Crear objetos de base de datos con Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   

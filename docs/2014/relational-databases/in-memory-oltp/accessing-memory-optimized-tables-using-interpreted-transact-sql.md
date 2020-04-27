@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468612"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado
@@ -42,7 +42,7 @@ ms.locfileid: "62468612"
 |A través de bases de datos|Consultas entre bases de datos<br /><br /> Transacciones a través de bases de datos<br /><br /> Servidores vinculados|  
   
 ## <a name="table-hints"></a>Sugerencias de tabla  
- Para obtener más información acerca de las sugerencias de tabla, vea: [Sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). Se agregó el aislamiento SNAPSHOT para admitir [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+ Para obtener más información acerca de las sugerencias de tabla, vea: [Sugerencias de tabla &#40;&#41;de Transact-SQL ](/sql/t-sql/queries/hints-transact-sql-table). Se agregó el aislamiento SNAPSHOT para admitir [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
  Las siguientes sugerencias de tabla no se admiten cuando se obtiene acceso a una tabla optimizada para memoria mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado.  
   

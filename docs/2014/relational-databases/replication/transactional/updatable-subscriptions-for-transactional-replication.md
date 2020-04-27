@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655498"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655498"
  **Para cambiar entre modos de actualización**  
   
  Para cambiar entre modos de actualización, debe habilitar la publicación y suscripción para ambos modos de actualización y, a continuación, cambiar entre ellos si es necesario. Para obtener más información, vea  
-Cambiar entre modos de [actualización para una suscripción transaccional actualizable](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Cambiar entre modos de actualización para una suscripción transaccional actualizable](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Consideraciones para el uso de suscripciones actualizables  
   
@@ -126,6 +126,6 @@ Cambiar entre modos de [actualización para una suscripción transaccional actua
  [Replicación transaccional punto a punto](peer-to-peer-transactional-replication.md)   
  [Replicación transaccional](transactional-replication.md)   
  [Publicar datos y objetos de base de datos](../publish/publish-data-and-database-objects.md)   
- [Suscribirse a publicaciones](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

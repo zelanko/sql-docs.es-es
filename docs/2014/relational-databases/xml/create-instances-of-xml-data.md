@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637613"
 ---
 # <a name="create-instances-of-xml-data"></a>Crear instancias de datos XML
@@ -67,8 +67,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  De forma predeterminada, el analizador de XML descarta los espacios en blanco insignificantes cuando convierte datos de cadena a XML si se da alguna de las condiciones siguientes:  
   
--   
-  `The xml:space` en un elemento o en sus elementos antecesores.  
+-   `The xml:space` en un elemento o en sus elementos antecesores.  
   
 -   El atributo `xml:space` activo en un elemento, o uno de sus elementos antecesores, tiene el valor predeterminado.  
   
@@ -181,8 +180,7 @@ go
  Para obtener más información sobre FOR XML, vea [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md).  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve instancias de tipo de datos `xml` al cliente como resultado de las distintas construcciones del servidor, como consultas FOR XML que utilizan la directiva TYPE, o donde se utiliza el tipo de datos `xml` para devolver XML a partir de parámetros de salida, variables y columnas SQL. En el código de la aplicación cliente, el proveedor ADO.NET solicita que la información de tipos de datos `xml` se envíe en una codificación binaria desde el servidor. No obstante, si se está utilizando FOR XML sin la directiva TYPE, los datos XML se devuelven como un tipo de cadena. En cualquier caso, el proveedor del cliente siempre podrá controlar cualquier formato de tipo XML.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve instancias de tipo de datos `xml` al cliente como resultado de las distintas construcciones del servidor, como consultas FOR XML que utilizan la directiva TYPE, o donde se utiliza el tipo de datos `xml` para devolver XML a partir de parámetros de salida, variables y columnas SQL. En el código de la aplicación cliente, el proveedor ADO.NET solicita que la información de tipos de datos `xml` se envíe en una codificación binaria desde el servidor. No obstante, si se está utilizando FOR XML sin la directiva TYPE, los datos XML se devuelven como un tipo de cadena. En cualquier caso, el proveedor del cliente siempre podrá controlar cualquier formato de tipo XML.  
   
 ## <a name="using-constant-assignments"></a>Usar asignaciones de constantes  
  Se puede utilizar una constante de cadena cuando se espera una `xml` instancia del tipo de datos. Es lo mismo que una conversión (CAST) implícita de cadena a XML. Por ejemplo:  

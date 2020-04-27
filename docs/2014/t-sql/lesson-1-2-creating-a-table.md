@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704559"
 ---
 # <a name="creating-a-table-tutorial"></a>Crear una tabla (Tutorial)
@@ -57,7 +57,7 @@ ms.locfileid: "62704559"
     GO  
     ```  
   
-### <a name="to-create-a-table"></a>Creación de una tabla  
+### <a name="to-create-a-table"></a>Para crear una tabla  
   
 -   En una ventana del Editor de consultas, escriba y ejecute el siguiente código para crear una tabla sencilla denominada `Products`. Las columnas de la tabla son `ProductID`, `ProductName`, `Price`y `ProductDescription`. La columna `ProductID` es la clave principal de la tabla. `int`, `varchar(25)`, `money`y `text` son todos los tipos de datos. Solo las columnas `Price` y `ProductionDescription` pueden no tener datos cuando se inserta o cambia una fila. Esta instrucción contiene un elemento opcional (`dbo.`) denominado esquema. El esquema es el objeto de base de datos propietario de la tabla. Si es un administrador, `dbo` es el esquema predeterminado. `dbo` hace referencia al propietario de la base de datos.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62704559"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Insertar y actualizar datos en una tabla &#40;tutorial&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+ [Insertar y actualizar datos en una tabla &#40;Tutorial&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  

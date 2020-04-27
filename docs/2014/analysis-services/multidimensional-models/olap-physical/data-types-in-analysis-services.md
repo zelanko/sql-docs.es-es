@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725389"
 ---
 # <a name="data-types-in-analysis-services"></a>Tipos de datos en Analysis Services
@@ -28,8 +28,8 @@ ms.locfileid: "62725389"
 |Binary|Flujo de datos binarios de tipo **byte** . **Byte** es un tipo de valor que representa enteros sin signo con valores comprendidos entre 0 y 255.|  
 |Boolean|Las instancias de este tipo tienen el valor `true` o `false`.|  
 |Moneda|Un valor de *moneda* comprendido entre-922.337.203.685.477,5808 y + 922.337.203.685.477,5807 con una precisión de una diezmilésima de unidad de moneda (cuatro posiciones decimales).|  
-|Date|Datos de fecha y hora, almacenados como valor double. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción de un día o de una hora del día.|  
-|DOUBLE|Número de coma flotante de comprendido entre -1,79769313486232E +308 y 1,79769313486232E +308. Un valor Double almacena información numérica con una precisión de hasta 15 dígitos decimales.|  
+|Fecha|Datos de fecha y hora, almacenados como valor double. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción de un día o de una hora del día.|  
+|Double|Número de coma flotante de comprendido entre -1,79769313486232E +308 y 1,79769313486232E +308. Un valor Double almacena información numérica con una precisión de hasta 15 dígitos decimales.|  
 |Entero|Entero de 32 bits que representa números enteros con signo con valores que comprendes desde el número 2.147.483.648 negativo hasta el número 2.147.483.647 positivo.|  
 |Single|Número de coma flotante comprendido entre - 3,4028235E +38 y 3,4028235E +38. Un valor Single almacena información numérica con una precisión de hasta siete dígitos decimales.|  
 |Smallint|Entero de 16 bits con signo. El tipo de valor *smallint* representa enteros con signo con valores comprendidos entre el 32768 negativo y el 32767 positivo.|  

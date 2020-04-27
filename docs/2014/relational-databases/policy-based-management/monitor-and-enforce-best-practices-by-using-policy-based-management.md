@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626052"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
@@ -61,8 +61,8 @@ ms.locfileid: "62626052"
 |Error del control de controlador de dispositivo del registro de eventos de Windows|[Error de control del controlador de dispositivo](device-driver-control-error.md)|  
 |Error por dispositivo no listo del registro de eventos de Windows|[Error por dispositivo no listo](device-not-ready-error.md)|  
 |Error en comprobación de solicitud de E/S del registro de eventos de Windows|[Detectar solicitud de salida de entrada con errores](detect-failed-input-and-output-requests.md)|  
-|Advertencia por retraso de E/S del registro de eventos de Windows|[Comprobación del subsistema de entrada y salida de disco para problemas de retraso de E/S](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|Error de E/S durante error de página en disco del registro de eventos de Windows|[Error de entrada y salida durante otro error de página en disco](input-and-output-error-during-hard-page-fault.md)|  
+|Advertencia por retraso de E/S del registro de eventos de Windows|[Check Disk Input and Output Subsystem for IO Delay Problems](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Error de E/S durante error de página en disco del registro de eventos de Windows|[Input and Output Error During Hard Page Fault](input-and-output-error-during-hard-page-fault.md)|  
 |Error por reintento de lectura del registro de evento de Windows|[Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Error por superación de tiempo de espera de E/S en sistema de registro de eventos de Windows|[Tiempo de espera de entrada y salida del sistema de almacenamiento](storage-system-input-output-time-out.md)|  
 |Error del sistema del registro de eventos de Windows|[Errores del sistema inesperados](unexpected-system-failures.md)|  

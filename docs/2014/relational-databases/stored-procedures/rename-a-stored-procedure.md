@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b85a6a5e79c004eb3ed2c7c40c6e3b62d526e95a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721013"
 ---
 # <a name="rename-a-stored-procedure"></a>Cambiar el nombre de un procedimiento almacenado
@@ -37,9 +37,9 @@ ms.locfileid: "62721013"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Los nombres de los procedimientos se deben ajustar a las reglas para los [identificadores](../databases/database-identifiers.md).  
   
@@ -47,16 +47,16 @@ ms.locfileid: "62721013"
   
 -   El hecho de cambiar el nombre o la definición de un procedimiento puede provocar errores en los objetos dependientes si no se actualizan para reflejar los cambios realizados en el procedimiento. Para obtener más información, vea [ver las dependencias de un procedimiento almacenado](view-the-dependencies-of-a-stored-procedure.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  CREATE PROCEDURE  
  Necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento o la pertenencia al rol fijo de base de datos **db_ddladmin**.  
   
  ALTER PROCEDURE  
  Necesita el permiso ALTER en el procedimiento o la pertenencia al rol fijo de base de datos **db_ddladmin**.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-rename-a-stored-procedure"></a>Para cambiar el nombre de un procedimiento almacenado  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62721013"
   
 2.  Expanda **Bases de datos**, expanda la base de datos a la que pertenece el procedimiento y, a continuación, expanda **Programación**.  
   
-3.  [Determinar las dependencias del procedimiento almacenado](view-the-dependencies-of-a-stored-procedure.md).  
+3.  [Cómo ver las dependencias de un procedimiento almacenado (SQL Server Management Studio)](view-the-dependencies-of-a-stored-procedure.md).  
   
 4.  Expanda **Procedimientos almacenados**, haga clic con el botón derecho en el procedimiento cuyo nombre quiere cambiar y, después, haga clic en **Cambiar nombre**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62721013"
   
 6.  Modifique el nombre del procedimiento al que se hace referencia en cualquier objeto dependiente o script.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-rename-a-stored-procedure"></a>Para cambiar el nombre de un procedimiento almacenado  
   

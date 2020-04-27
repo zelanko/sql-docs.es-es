@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745764"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Sincronizar una suscripción mediante el Administrador de sincronización de Windows (Administrador de sincronización de Windows)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]El administrador de sincronización de Windows solo se puede usar para sincronizar suscripciones a publicaciones de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando en el mismo equipo que el administrador de sincronización (también se puede usar para sincronizar archivos y páginas web sin conexión). Para utilizar el Administrador de sincronización:  
+  El Administrador de sincronización de[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows solo se puede usar para sincronizar suscripciones con publicaciones de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo que el Administrador de sincronización (también se puede usar para sincronizar archivos y páginas web sin conexión). Para utilizar el Administrador de sincronización:  
   
 1.  Habilite la sincronización de suscripciones de extracción con el Administrador de sincronización de Windows en el cuadro de diálogo **Propiedades de suscripción - \<Suscriptores>: \<baseDedatosDeSuscripción>**. Para más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
   
@@ -73,11 +73,11 @@ ms.locfileid: "62745764"
   
 2.  Vea y modifique las propiedades de las siguientes pestañas:  
   
-    -   **Identificado**  
+    -   **Identificación**  
   
-    -   Inicio de sesión del **suscriptor**, **Inicio de sesión del distribuidor**e inicio de sesión del **publicador** (solo para la replicación de mezcla)  
+    -   **Inicio de sesión del suscriptor**, **Inicio de sesión del distribuidor**e **Inicio de sesión del publicador** (solamente para la replicación de mezcla)  
   
-    -   **Información del servidor Web** (para suscripciones de mezcla en suscriptores que ejecutan SQL Server 2005 o posterior)  
+    -   **Información del servidor web** (para suscripciones de mezcla en suscriptores que ejecuten SQL Server 2005 o posterior)  
   
     -   **Otros**  
   
@@ -103,13 +103,13 @@ ms.locfileid: "62745764"
   
 3.  Opcionalmente, edite cualquiera de las columnas que se muestran en el Solucionador interactivo y, a continuación, haga clic en uno de los siguientes botones para solucionar el conflicto:  
   
-    -   **Aceptación sugerida**  
+    -   **Aceptar sugerencia**  
   
     -   **Aceptar publicador**  
   
     -   **Aceptar suscriptor**  
   
-    -   **Resolver todos automáticamente** (se resuelven todos los conflictos actuales sin más entradas)  
+    -   **Resolver todos automáticamente** (se resuelven todos los conflictos actuales sin más intervención)  
   
      A continuación, se aplica la fila seleccionada al publicador y/o suscriptor; se propaga a otros nodos de la topología durante sincronizaciones posteriores.  
   
@@ -117,5 +117,5 @@ ms.locfileid: "62745764"
 >  Las ediciones se aplican solamente si son parte de la fila que se ha seleccionado para la resolución. Por ejemplo, si realiza ediciones en **Publicador**, y, a continuación, hace clic en **Aceptar suscriptor**, se descartan las ediciones.  
   
 ## <a name="see-also"></a>Consulte también  
- [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Resolución interactiva de conflictos](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

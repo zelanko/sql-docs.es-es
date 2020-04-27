@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0af2ec4471dc24af0fdb02576adad312ed35069f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62740705"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Determina si está disponible una conversión de tipos de datos concreta en la Biblioteca ODS.  
   
@@ -53,7 +52,7 @@ desttype
  *srctype*  
  Indica el tipo de los datos que se van a convertir. Este parámetro puede ser cualquiera de los tipos de datos de la API Procedimiento almacenado extendido.  
   
- *destType*  
+ *desttype*  
  Indica el tipo de datos al que se convierten los datos de origen. Este parámetro puede ser cualquiera de los tipos de datos de la API Procedimiento almacenado extendido.  
   
 ## <a name="returns"></a>Devuelve  
@@ -66,6 +65,6 @@ desttype
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Consulte también  
- [srv_convert API de procedimiento almacenado extendido &#40;&#41;](srv-convert-extended-stored-procedure-api.md)  
+ [srv_convert &#40;API de procedimiento almacenado extendido&#41;](srv-convert-extended-stored-procedure-api.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472850"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Predecir asociaciones (Tutorial intermedio de minería de datos)
@@ -39,11 +39,11 @@ ms.locfileid: "62472850"
   
 2.  En el panel **modelo de minería de datos** , haga clic en **Seleccionar modelo**. (Puede omitir este paso y el siguiente si el modelo correcto ya está seleccionado).  
   
-3.  En el cuadro de diálogo **Seleccionar modelo de minería de datos** , expanda el nodo que representa la **Asociación**de la estructura de minería de datos y seleccione la **Asociación**del modelo. Haga clic en **OK**.  
+3.  En el cuadro de diálogo **Seleccionar modelo de minería de datos** , expanda el nodo que representa la **Asociación**de la estructura de minería de datos y seleccione la **Asociación**del modelo. Haga clic en **Aceptar**.  
   
      De momento, puede hacer caso omiso al panel de entrada.  
   
-4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **** debajo de campo `PredictAssociation`, seleccione.  
+4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **Field**debajo de campo `PredictAssociation`, seleccione.  
   
      También puede utilizar la función **PREDICT** para predecir las asociaciones. Si lo hace, asegúrese de elegir la versión de la función de **predicción** que toma una columna de tabla como argumento.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62472850"
   
 3.  En el cuadro de diálogo **modelo de minería de datos** , seleccione el modelo de **Asociación** .  
   
-4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **** debajo de campo `PredictAssociation`, seleccione.  
+4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **Field**debajo de campo `PredictAssociation`, seleccione.  
   
 5.  En el **Panel modelo de minería de datos** , seleccione la `vAssocSeqLineItems`tabla anidada y arrástrela hasta la cuadrícula hasta el cuadro **criterios o argumento** de la `PredictAssociation` función. Escriba `,3` después del nombre de la tabla anidada como en el procedimiento anterior.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62472850"
   
 3.  En el panel **columna de clave** , `Touring Tire`seleccione y, a continuación, haga clic en **Agregar**.  
   
-4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **** debajo de campo `PredictAssociation`, seleccione.  
+4.  En la cuadrícula, haga clic en la celda vacía situada debajo de **origen** y seleccione **función de predicción.** En la celda situada **Field**debajo de campo `PredictAssociation`, seleccione.  
   
 5.  En el **Panel modelo de minería de datos** , seleccione la `vAssocSeqLineItems`tabla anidada y arrástrela hasta la cuadrícula hasta el cuadro **criterios o argumento** de la `PredictAssociation` función. Escriba `,3` después del nombre de la tabla anidada como en el procedimiento anterior.  
   

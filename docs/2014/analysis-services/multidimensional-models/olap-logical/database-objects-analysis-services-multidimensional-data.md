@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725661"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Objetos de base de datos (Analysis Services - Datos multidimensionales)
@@ -61,9 +61,9 @@ ms.locfileid: "62725661"
 |[Orígenes de datos en modelos multidimensionales](../data-sources-in-multidimensional-models.md)|Describe un origen de datos en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Vistas del origen de datos en modelos multidimensionales](../data-source-views-in-multidimensional-models.md)|Describe un modelo de datos lógico basado en uno o varios orígenes de datos, en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Cubos en modelos multidimensionales](../cubes-in-multidimensional-models.md)|Describe cubos y objetos de cubo, lo que incluye medidas, grupos de medida, relaciones de uso de dimensiones, cálculos, indicadores clave de rendimiento, acciones, traducciones, particiones y perspectivas.|  
-|[Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Describe dimensiones y objetos de dimensiones, incluidos atributos, relaciones de atributo, jerarquías, niveles y miembros.|  
-|[Estructuras de minería de datos &#40;Analysis Services:&#41;de minería de datos](../../data-mining/mining-structures-analysis-services-data-mining.md)|Describe estructuras y objetos de minería de datos, incluidos modelos de minería de datos.|  
-|[Roles de seguridad &#40;Analysis Services de datos multidimensionales&#41;](security-roles-analysis-services-multidimensional-data.md)|Describe un rol, el mecanismo de seguridad utilizado para controlar el acceso a objetos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Describe dimensiones y objetos de dimensiones, incluidos atributos, relaciones de atributo, jerarquías, niveles y miembros.|  
+|[Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|Describe estructuras y objetos de minería de datos, incluidos modelos de minería de datos.|  
+|[Roles de seguridad &#40;Analysis Services - Datos multidimensionales&#41;](security-roles-analysis-services-multidimensional-data.md)|Describe un rol, el mecanismo de seguridad utilizado para controlar el acceso a objetos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Administración de ensamblados de modelos multidimensionales](../multidimensional-model-assemblies-management.md)|Describe un ensamblado, una colección de funciones definidas por el usuario utilizadas para ampliar los lenguajes MDX y DMX, en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Consulte también  

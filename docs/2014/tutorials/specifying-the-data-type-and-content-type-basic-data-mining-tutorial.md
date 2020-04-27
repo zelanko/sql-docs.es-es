@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720046"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Especificar el tipo de datos y el tipo de contenido (Tutorial básico de minería de datos)
@@ -30,29 +30,29 @@ ms.locfileid: "62720046"
   
     |Columna|Tipo de contenido|Tipo de datos|  
     |------------|------------------|---------------|  
-    |**Dirección línea1**|**Discrete**|**Negrita**|  
-    |**Dirección línea2**|**Discrete**|**Negrita**|  
-    |**Antig**|**Continuo**|**long**|  
-    |**Bike Buyer**|**Discrete**|**long**|  
-    |**Commute Distance**|**Discrete**|**Negrita**|  
-    |**CustomerKey**|**Clave**|**long**|  
-    |**DateLastPurchase**|**Continuo**|**Date**|  
-    |**Dirección de correo electrónico**|**Discrete**|**Negrita**|  
-    |**English Education**|**Discrete**|**Negrita**|  
-    |**English Occupation**|**Discrete**|**Negrita**|  
-    |**Nombre**|**Discrete**|**Negrita**|  
-    |**Mujer**|**Discrete**|**Negrita**|  
-    |**Geography Key**|**Discrete**|**Negrita**|  
-    |**Marca de propietario de la casa**|**Discrete**|**Negrita**|  
-    |**Apellidos**|**Discrete**|**Negrita**|  
-    |**Marital Status**|**Discrete**|**Negrita**|  
-    |**Número de automóviles propiedad**|**Discrete**|**long**|  
-    |**Número de hijos en casa**|**Discrete**|**long**|  
-    |**Region**|**Discrete**|**Negrita**|  
-    |**Total Children**|**Discrete**|**long**|  
-    |**Yearly Income**|**Continuo**|**Hace**|  
+    |**Dirección línea1**|**Discrete**|**Texto**|  
+    |**Dirección línea2**|**Discrete**|**Texto**|  
+    |**Antig**|**Continua**|**Tal**|  
+    |**Bike Buyer**|**Discrete**|**Tal**|  
+    |**Commute Distance**|**Discrete**|**Texto**|  
+    |**CustomerKey**|**Clave**|**Tal**|  
+    |**DateLastPurchase**|**Continua**|**Date**|  
+    |**Dirección de correo electrónico**|**Discrete**|**Texto**|  
+    |**English Education**|**Discrete**|**Texto**|  
+    |**English Occupation**|**Discrete**|**Texto**|  
+    |**Name**|**Discrete**|**Texto**|  
+    |**Sexo**|**Discrete**|**Texto**|  
+    |**Geography Key**|**Discrete**|**Texto**|  
+    |**House Owner Flag**|**Discrete**|**Texto**|  
+    |**Apellidos**|**Discrete**|**Texto**|  
+    |**Marital Status**|**Discrete**|**Texto**|  
+    |**Number Cars Owned**|**Discrete**|**Tal**|  
+    |**Number Children At Home**|**Discrete**|**Tal**|  
+    |**Región**|**Discrete**|**Texto**|  
+    |**Total Children**|**Discrete**|**Tal**|  
+    |**Yearly Income**|**Continua**|**Double**|  
   
-3.  Haga clic en **Next**.  
+3.  Haga clic en **Siguiente**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Especificar un conjunto de datos de prueba para la estructura &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
@@ -62,6 +62,6 @@ ms.locfileid: "62720046"
   
 ## <a name="see-also"></a>Consulte también  
  [Tipos de contenido &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [Tipos de datos &#40;&#41;de minería de datos](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [Tipos de datos &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

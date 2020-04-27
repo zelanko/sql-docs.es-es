@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754679"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Quitar la creación de reflejo de la base de datos (SQL Server)
@@ -25,14 +25,14 @@ ms.locfileid: "62754679"
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>Para quitar la creación de reflejo de la base de datos  
   
@@ -40,13 +40,13 @@ ms.locfileid: "62754679"
   
 2.  Expanda **Bases de datos**y seleccione la base de datos.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Se abrirá la página **creación de reflejo** del cuadro de diálogo Propiedades de la base de **datos** .  
   
 4.  En el panel **Seleccionar una página** , haga clic en **Creación de reflejos**.  
   
 5.  Para quitar la creación de reflejo, haga clic en **Quitar creación de reflejo**. Aparecerá un mensaje de confirmación. Si hace clic en **Sí**, se detendrá la sesión y la creación de reflejo se quitará de la base de datos.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Para quitar la creación de reflejo de la base de datos, use las **Propiedades de la base de datos**. Use la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
   
 #### <a name="to-remove-database-mirroring"></a>Para quitar la creación de reflejo de la base de datos  
@@ -69,16 +69,16 @@ ms.locfileid: "62754679"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a>Seguimiento: quitar la creación de reflejo de la base de datos  
+##  <a name="follow-up-removing-database-mirroring"></a><a name="FollowUp"></a>Seguimiento: quitar la creación de reflejo de la base de datos  
   
 > [!NOTE]  
 >  Para obtener más información sobre las repercusiones de quitar la creación de reflejo, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
--   **Si piensa reiniciar la creación de reflejo en la base de datos**  
+-   **Si piensa reiniciar la creación de reflejo de la base de datos**  
   
      Debe aplicar a la base de datos reflejada las copias de seguridad de registros realizadas en la base de datos principal después de quitar la creación de reflejo antes de poder reiniciar la creación de reflejo.  
   
--   **Si no intenta reiniciar la creación de reflejo**  
+-   **Si no piensa reiniciar la creación de reflejo**  
   
      Opcionalmente, puede recuperar la base de datos reflejada anterior. En la instancia de servidor que era el servidor reflejado, puede usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente:  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62754679"
     > [!IMPORTANT]  
     >  Si recupera esta base de datos, habrá dos bases de datos divergentes en línea con el mismo nombre. Por tanto, debe garantizar que los clientes solo puedan acceder a una de ellas, generalmente la base de datos principal más reciente.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Pausar o reanudar una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62754679"
 -   [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring-sql-server.md)   
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [Grupos de disponibilidad AlwaysOn (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
   

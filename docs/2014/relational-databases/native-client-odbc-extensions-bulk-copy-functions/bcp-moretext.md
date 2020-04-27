@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688841"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -65,7 +65,7 @@ pData
   
  Si usa **bcp_moretext** para enviar una columna de tipo de datos compatible en una fila, también debe utilizarla para enviar todas las demás columnas de tipos de datos compatibles de la fila. No se puede omitir ninguna columna. Los tipos de datos admitidos son SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT y SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY y SQLVARBINARY también pertenecen a esta categoría si la columna es de tipo varchar (max), nvarchar (max) o varbinary (max), respectivamente.  
   
- Al llamar a **bcp_bind** o [bcp_collen](bcp-collen.md) se establece la longitud total de todas las partes de datos que se van a copiar en la columna SQL Server. Un intento de enviar SQL Server más bytes de los especificados en la **** llamada a `bcp_collen` bcp_bind o genera un error. Este error surgiría, por ejemplo, en una aplicación que usaba `bcp_collen` para establecer la longitud de los datos disponibles para una `text` SQL Server columna en 4500 y, a continuación, se llamó **bcp_moretext** cinco veces mientras se indicaba en cada llamada que la longitud del búfer de datos era de 1000 bytes.  
+ Al llamar a **bcp_bind** o [bcp_collen](bcp-collen.md) se establece la longitud total de todas las partes de datos que se van a copiar en la columna SQL Server. Un intento de enviar SQL Server más bytes de los especificados en la **bcp_bind** llamada a `bcp_collen` bcp_bind o genera un error. Este error surgiría, por ejemplo, en una aplicación que usaba `bcp_collen` para establecer la longitud de los datos disponibles para una `text` SQL Server columna en 4500 y, a continuación, se llamó **bcp_moretext** cinco veces mientras se indicaba en cada llamada que la longitud del búfer de datos era de 1000 bytes.  
   
  Si una fila copiada contiene más de una columna de longitud variable larga, **bcp_moretext** primero envía sus datos a la columna con el número ordinal más bajo, seguida de la siguiente columna con el número ordinal más bajo, y así sucesivamente. Es importante una configuración correcta de la longitud total de datos esperados. No hay ninguna manera de indicar, fuera de la configuración de longitud, que la copia masiva ha recibido todos los datos de una columna.  
   

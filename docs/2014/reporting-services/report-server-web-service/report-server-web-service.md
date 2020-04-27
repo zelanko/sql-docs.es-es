@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b577fd9a78dbb5f12af79e190709065931ec463a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520575"
 ---
 # <a name="report-server-web-service"></a>servicio web del servidor de informes
@@ -41,7 +41,7 @@ ms.locfileid: "62520575"
 Opciones de desarrollo de servicio web disponibles en Reporting Services  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Métodos de servicio web del servidor de informes](../report-server-web-service/methods/report-server-web-service-methods.md)  
+ [Métodos del servicio web del servidor de informes](../report-server-web-service/methods/report-server-web-service-methods.md)  
  Describe las características y métodos de cada servicio web del servidor de informes.  
   
  [El rol de SOAP en Reporting Services](../report-server-web-service/the-role-of-soap-in-reporting-services.md)  
@@ -62,12 +62,11 @@ Opciones de desarrollo de servicio web disponibles en Reporting Services
 ## <a name="user-requirements-for-web-service-development"></a>Requisitos del usuario para el desarrollo de servicios web  
  Para desarrollar aplicaciones con el servicio web del servidor de informes, necesita:  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 o posteriores instalados en un equipo con una conexión a Internet a y acceso al servidor de informes.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 o posteriores instalados en un equipo con una conexión a Internet a y acceso al servidor de informes.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK de instalado en un equipo si desea desarrollar e implementar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aplicaciones de mediante el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
--   Una comprensión detallada de las características y capacidades de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   Una comprensión detallada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] las características y capacidades.  
   
 -   Conocimientos sólidos de SOAP y [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)].  
   

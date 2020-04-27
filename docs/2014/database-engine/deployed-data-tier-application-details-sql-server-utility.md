@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754112"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalles de la aplicación de capa de datos implementada (Utilidad de SQL Server)
@@ -46,11 +46,11 @@ ms.locfileid: "62754112"
   
 -   Nombre: el nombre de la aplicación de capa de datos.  
   
--   CPU de la aplicación: muestra el estado de mantenimiento de la utilización del procesador para esta aplicación de capa de datos. El estado de mantenimiento para este parámetro se determina según la directiva de utilización de CPU establecida para la aplicación de capa de datos y la opción de configuración para la directiva de evaluación de recursos volátiles. Para obtener más información, vea [reducir el ruido en las directivas de uso de CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU de la aplicación: muestra el estado de mantenimiento de la utilización del procesador para esta aplicación de capa de datos. El estado de mantenimiento para este parámetro se determina según la directiva de utilización de CPU establecida para la aplicación de capa de datos y la opción de configuración para la directiva de evaluación de recursos volátiles. Para obtener más información, vea [Reducir el ruido en las directivas de uso de la CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Para ver el historial de utilización del procesador para esta aplicación de capa de datos o para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso de CPU**.  
   
--   CPU del sistema informático: muestra el estado de mantenimiento de la utilización del procesador del sistema informático. El estado de mantenimiento para este parámetro se determina según la directiva de utilización de la CPU establecida para el sistema informático y la opción de configuración para la directiva de evaluación de recursos volátiles. Para obtener más información, vea [reducir el ruido en las directivas de uso de CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   CPU del sistema informático: muestra el estado de mantenimiento de la utilización del procesador del sistema informático. El estado de mantenimiento para este parámetro se determina según la directiva de utilización de la CPU establecida para el sistema informático y la opción de configuración para la directiva de evaluación de recursos volátiles. Para obtener más información, vea [Reducir el ruido en las directivas de uso de la CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Para ver el historial de utilización del procesador para esta aplicación de capa de datos o para ver o cambiar los límites de la directiva, haga clic en la pestaña **Uso de CPU**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62754112"
   
 -   De confianza: (True o False)  
   
--   Intercalación  
+-   Collation  
   
 -   Nivel de compatibilidad: (por ejemplo, Versión100)  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62754112"
   
 -   De confianza: (True o False)  
   
--   Intercalación  
+-   Collation  
   
 -   Nivel de compatibilidad: (por ejemplo, Versión100)  
   
@@ -166,9 +166,9 @@ ms.locfileid: "62754112"
 -   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para obtener más información, vea el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) de los Libros en pantalla de SQL Server. Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para obtener más información, vea el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) de los Libros en pantalla de SQL Server.  
   
 ## <a name="see-also"></a>Consulte también  
- [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [Instancia administrada detalles &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Utilidad de SQL Server de &#40;del panel de utilidad&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Supervisar instancias de SQL Server en la utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Supervisar instancias de SQL Server en el Utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

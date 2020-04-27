@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2562f3931f98c040bb3dc475e3863bb6396dbbf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664351"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation, clase de eventos
@@ -29,12 +29,11 @@ ms.locfileid: "62664351"
 |Columna de datos|Tipo|Descripción|Número de columna|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ClientProcessID**|`int`|Id. que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
-|**DatabaseID**|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o identificador de la base de datos predeterminada si no se ha emitido la instrucción USE *database*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|**DatabaseID**|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o identificador de la base de datos predeterminada si no se ha emitido la instrucción USE *database*para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**EventClass**|`int`|Tipo de clase de eventos capturado. Es siempre **163** para **Broker:Activation**.|27|No|  
 |**EventSequence**|`int`|Número de secuencia de este evento.|51|No|  
-|**EventSubClass**|`nvarchar`|Acción específica de la que este evento informa. Uno de los valores siguientes:<br /><br /> **Inicio**: <br />                
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha iniciado un procedimiento almacenado de activación.<br /><br /> **finalizado**: el procedimiento almacenado de activación se ha cerrado con normalidad.<br /><br /> **anulado**: el procedimiento almacenado de activación ha terminado con un error.|21|No|  
-|**Host**|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
+|**EventSubClass**|`nvarchar`|Acción específica de la que este evento informa. Uno de los siguientes valores:<br /><br /> **Inicio**: <br />                [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha iniciado un procedimiento almacenado de activación.<br /><br /> **finalizado**: el procedimiento almacenado de activación se ha cerrado con normalidad.<br /><br /> **anulado**: el procedimiento almacenado de activación ha terminado con un error.|21|No|  
+|**HostName**|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IntegerData**|`int`|Número de tareas activas en esta cola.|25|No|  
 |**IsSystem**|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|No|  
 |**LoginSid**|`image`|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
@@ -42,7 +41,7 @@ ms.locfileid: "62664351"
 |**NTUserName**|`nvarchar`|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
 |**ObjectID**|`int`|Cola asociada a este evento.|22|No|  
 |**ServerName**|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
-|**IDENTIFICADOR**|`int`|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
+|**SPID**|`int`|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
 |**StartTime**|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**TransactionID**|`bigint`|Identificador de la transacción asignado por el sistema.|4|No|  
   

@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702060"
 ---
 # <a name="performing-batch-operations-xmla"></a>Realizar operaciones por lotes (XMLA)
@@ -59,8 +59,7 @@ ms.locfileid: "62702060"
   
  Para ejecutar comandos en paralelo, agregue los comandos que se ejecutarán en paralelo a la propiedad [Parallel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/parallel-element-xmla) del `Batch` comando. Actualmente, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo puede ejecutar comandos de [proceso](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) consecutivos contiguos en paralelo. Cualquier otro comando XMLA, como [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) o [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla), incluido en la `Parallel` propiedad se ejecuta en serie.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta ejecutar todos los comandos `Process` incluidos en la propiedad `Parallel` en paralelo, pero no puede garantizar que todos los comandos `Process` incluidos puedan ejecutarse en paralelo. La instancia analiza cada uno de los comandos `Process` y, si ésta determina que el comando no se puede ejecutar en paralelo, el comando `Process` se ejecuta en serie.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta ejecutar todos los comandos `Process` incluidos en la propiedad `Parallel` en paralelo, pero no puede garantizar que todos los comandos `Process` incluidos puedan ejecutarse en paralelo. La instancia analiza cada uno de los comandos `Process` y, si ésta determina que el comando no se puede ejecutar en paralelo, el comando `Process` se ejecuta en serie.  
   
 > [!NOTE]  
 >  Para ejecutar los comandos en paralelo, el atributo `Transaction` del comando `Batch` debe establecerse en true, ya que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo admite una transacción activa por conexión y los lotes no transaccionales ejecutan cada uno de los comandos en una transacción independiente. Si incluye la propiedad `Parallel` en un lote no transaccional, se produce un error.  

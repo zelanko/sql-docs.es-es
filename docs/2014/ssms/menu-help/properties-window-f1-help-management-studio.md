@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62661762"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ventana Propiedades (Ayuda F1 de Management Studio)
@@ -52,6 +52,6 @@ ms.locfileid: "62661762"
  El panel de descripción aparece en la parte inferior de la ventana **Propiedades** . Muestra el tipo de propiedad y una breve descripción de la misma. La descripción de la propiedad puede desactivarse y activarse por medio del comando **Descripción** del menú contextual.  
   
 ## <a name="see-also"></a>Consulte también  
- [Usar la ventana Propiedades en Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
+ [Utilizar la ventana Propiedades en Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   
   

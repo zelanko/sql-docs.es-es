@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524341"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Introducción al motor de base de datos
@@ -42,7 +42,7 @@ ms.locfileid: "62524341"
   
  Para usar este tutorial, debe tener el software siguiente instalado en el sistema:  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]se puede instalar ejecutando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el programa de instalación de o descargando e instalando desde el centro de descarga de [Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] se puede instalar ejecutando el programa de instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o descargando e instalando desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 ## <a name="see-also"></a>Consulte también  
  [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

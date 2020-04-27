@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626160"
 ---
 # <a name="sql-server-replication"></a>Replicación de SQL Server
@@ -54,7 +54,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 -   [er y modificar las propiedades de un artículo](publish/view-and-modify-article-properties.md)    
 -   [Eliminar una publicación](publish/delete-a-publication.md)   
 -   [Eliminar un artículo](publish/delete-an-article.md)    
--   [Crear una publicación a partir de una Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Crear una publicación a partir de una base de datos de Oracle](publish/create-a-publication-from-an-oracle-database.md)   
 -   [Establecer el período de expiración para las suscripciones](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [Especificar opciones de esquema](publish/specify-schema-options.md)  
 -   [Replicación de cambios de esquema](publish/replicate-schema-changes.md)    
@@ -77,7 +77,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 ### <a name="transactional-replication-options"></a>Opciones de la replicación transaccional  
   
 -   [Establecer el método de propagación para cambios de datos en artículos transaccionales](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [Habilitar suscripciones de actualización para publicaciones transaccionales](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [Habilitar suscripciones actualizables para publicaciones transaccionales](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>Opciones de la replicación de mezcla  
   
@@ -89,7 +89,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 ## <a name="manage-subscriptions"></a>Administración de suscripciones  
   
 -   [Crear una suscripción de extracción](create-a-pull-subscription.md)    
--   [Ver y modificar las propiedades de una suscripción de extracción](view-and-modify-pull-subscription-properties.md)    
+-   [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción)    
 -   [Eliminar una suscripción de extracción](delete-a-pull-subscription.md)    
 -   [Create a Push Subscription](create-a-push-subscription.md) (Creación de una suscripción de inserción)   
 -   [Ver y modificar las propiedades de una suscripción de inserción](view-and-modify-push-subscription-properties.md)   
@@ -105,11 +105,10 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 -   [Inicializar una suscripción transaccional desde una copia de seguridad](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [Inicializar una suscripción manualmente](initialize-a-subscription-manually.md)    
 -   [Sincronizar una suscripción de extracción](synchronize-a-pull-subscription.md)    
--   [Sincronizar una suscripción de extracción](synchronize-a-push-subscription.md)   
+-   [Sincronizar una suscripción de inserción](synchronize-a-push-subscription.md)   
 -   [Reinicializar una suscripción](reinitialize-a-subscription.md)    
 -   [Ejecución de scripts durante la sincronización](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
--   [Implementar un controlador de lógica de negocios para un artículo de mezcla
-](implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md)  
 -   [Depurar un controlador de lógica de negocios &#40;programación de la replicación&#41;](debug-a-business-logic-handler-replication-programming.md)    
 -   [Controlar el comportamiento de desencadenadores y restricciones durante la sincronización](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
 -   [Implementar un solucionador de conflictos personalizado para un artículo de mezcla](implement-a-custom-conflict-resolver-for-a-merge-article.md)  

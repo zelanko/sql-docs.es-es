@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653710"
 ---
-# <a name="lesson-3-adding-and-processing-models"></a>Lección 3: Agregar y procesar los modelos
+# <a name="lesson-3-adding-and-processing-models"></a>Lección 3: Adición y procesamiento de modelos
   La estructura de minería de datos que creó en la lección anterior contiene un modelo de minería de datos individual que se basa en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../includes/msconame-md.md)]. Puede usar este modelo para identificar clientes para la campaña de envío de correo directo. Sin embargo, para asegurarse de que el análisis es detallado, se suelen crear modelos relacionados usando algoritmos diferentes y comparar sus resultados. De esta manera, puede obtener diferentes puntos de vista. Por consiguiente, creará dos modelos adicionales y luego los procesará e implementará.  
   
  En esta lección, creará un conjunto de modelos de minería de datos que sugerirá los clientes que tienen una mayor probabilidad de serlo entre una lista de clientes potenciales.  
@@ -40,6 +40,6 @@ ms.locfileid: "62653710"
  [Lección 4: explorar los modelos de correo directo &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Agregar modelos de minería de datos a una estructura &#40;&#41;de minería de datos Analysis Services](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+ [Agregar modelos de minería de datos a una estructura &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

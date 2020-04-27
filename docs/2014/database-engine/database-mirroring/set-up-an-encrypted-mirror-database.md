@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a74adba783f1a52bdd404e11f0f747234c47f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754380"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>Establecer una base de datos reflejada cifrada
@@ -35,7 +35,7 @@ Para habilitar el descifrado automático de la clave maestra de base de datos de
 
 ## <a name="see-also"></a>Consulte también
 
-[sp_control_dbmasterkey_password &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
+[sp_control_dbmasterkey_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-dbmasterkey-password-transact-sql)
 
 [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)
 

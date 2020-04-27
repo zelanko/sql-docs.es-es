@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524381"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Usar las tablas insertadas y eliminadas
@@ -49,8 +49,7 @@ ms.locfileid: "62524381"
 > [!NOTE]  
 >  Si las acciones del desencadenador dependen del número de filas afectadas por una modificación de datos, use pruebas (como, por ejemplo, un examen de @@ROWCOUNT) para las modificaciones de datos que afecten a varias filas (instrucciones INSERT, DELETE o UPDATE basadas en una instrucción SELECT) y tome las medidas oportunas.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no permite referencias a las columnas `text`, `ntext` o `image` en las tablas insertadas y eliminadas por los desencadenadores AFTER. Sin embargo, estos tipos de datos se incluyen únicamente por motivos de compatibilidad con versiones anteriores. El almacenamiento preferido para datos de gran tamaño es el uso de tipos de datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)`. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)` en las tablas insertadas y eliminadas. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] no permite referencias a las columnas `text`, `ntext` o `image` en las tablas insertadas y eliminadas por los desencadenadores AFTER. Sin embargo, estos tipos de datos se incluyen únicamente por motivos de compatibilidad con versiones anteriores. El almacenamiento preferido para datos de gran tamaño es el uso de tipos de datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)`. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos `varchar(max)`, `nvarchar(max)` y `varbinary(max)` en las tablas insertadas y eliminadas. Para obtener más información, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql).  
   
  **Ejemplo del uso de la tabla inserted en un desencadenador para exigir reglas de negocios**  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 290f1e5fe7efb876ab6c24004c7465cf109de0d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702232"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Bloquear y desbloquear bases de datos (XMLA)
@@ -28,8 +28,7 @@ ms.locfileid: "62702232"
 ## <a name="locking-databases"></a>Bloquear bases de datos  
  El comando `Lock` bloquea un objeto, para uso compartido o exclusivo, dentro del contexto de la transacción actualmente activa. Un bloqueo en un objeto impide que se confirmen las transacciones hasta que se quita el bloqueo. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de bloqueos, bloqueos compartidos y bloqueos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] exclusivos. Para obtener más información sobre los tipos de bloqueo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]admitidos por, vea [elemento de modo &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/mode-element-xmla).  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solamente permite bloquear las bases de datos. El comando [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) debe contener una referencia de objeto a una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no se especifica el elemento `Object` o el elemento `Object` hace referencia a un objeto que no es una base de datos, se produce un error.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solamente permite bloquear las bases de datos. El comando [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) debe contener una referencia de objeto a una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no se especifica el elemento `Object` o el elemento `Object` hace referencia a un objeto que no es una base de datos, se produce un error.  
   
 > [!IMPORTANT]  
 >  Solo los administradores de bases de datos o de servidores pueden ejecutar explícitamente un comando `Lock`.  

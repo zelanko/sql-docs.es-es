@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670702"
 ---
 # <a name="dta-utility"></a>dta, utilidad
-  La utilidad **DTA** es la versión del símbolo del sistema de Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
+  La utilidad **dta** es la versión del símbolo del sistema del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
   
  Al igual que el Asistente para la optimización de motor de base de datos, la utilidad **dta** analiza una carga de trabajo y recomienda estructuras de diseño físico para mejorar el rendimiento del servidor para esa carga de trabajo. La carga de trabajo puede ser una caché del plan, un archivo de seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , una tabla o un script [!INCLUDE[tsql](../../includes/tsql-md.md)] . Las estructuras de diseño físico incluyen índices, vistas indizadas y particiones. Después de analizar una carga de trabajo, la utilidad **dta** genera una recomendación para el diseño físico de bases de datos y puede generar el script necesario para implementar la recomendación. Las cargas de trabajo se pueden especificar desde el símbolo del sistema con el argumento **-if** o **-it** . También puede especificar un archivo de entrada XML desde el símbolo del sistema con el argumento **-ix** . En ese caso, la carga de trabajo se especifica en el archivo de entrada XML.  
   
@@ -77,8 +77,8 @@ ms.locfileid: "62670702"
  **-?**  
  Muestra información de uso.  
   
- **-Un** _time_for_tuning_in_minutes_  
- Especifica el límite de tiempo de optimización en minutos. **DTA** usa la cantidad de tiempo especificada para optimizar la carga de trabajo y generar un script con los cambios de diseño físico recomendados. De manera predeterminada, **dta** asume un tiempo de optimización de 8 horas. Al especificar 0, se permite un tiempo de optimización ilimitado. **DTA** puede acabar de optimizar toda la carga de trabajo antes de que expire el límite de tiempo. No obstante, para asegurarse de que se optimiza toda la carga de trabajo, se recomienda especificar un tiempo de optimización ilimitado (-A 0).  
+ **-A** _time_for_tuning_in_minutes_  
+ Especifica el límite de tiempo de optimización en minutos. **dta** usa el tiempo especificado para optimizar la carga de trabajo y generar un script con los cambios de diseño físico recomendados. De manera predeterminada, **dta** asume un tiempo de optimización de 8 horas. Al especificar 0, se permite un tiempo de optimización ilimitado. **dta** puede acabar de optimizar toda la carga de trabajo antes de que pase el límite de tiempo. No obstante, para asegurarse de que se optimiza toda la carga de trabajo, se recomienda especificar un tiempo de optimización ilimitado (-A 0).  
   
  **-a**  
  Optimiza la carga de trabajo y aplica la recomendación sin preguntarle.  
@@ -96,7 +96,7 @@ ms.locfileid: "62670702"
  Especifica el número máximo de columnas en los índices propuestos por **dta** . El valor máximo es 1024. De forma predeterminada, este argumento tiene asignado el valor 16 .  
   
  **-c** _max_key_columns_in_index_  
- Especifica el número máximo de columnas de clave en los índices propuestos por **dta** . El valor predeterminado es 16, que es el valor máximo permitido. **DTA** también tiene en cuenta la creación de índices con columnas incluidas. Los índices recomendados con columnas incluidas pueden superar el número de columnas especificado en este argumento.  
+ Especifica el número máximo de columnas de clave en los índices propuestos por **dta** . El valor predeterminado es 16, que es el valor máximo permitido. **dta** también tiene en cuenta la creación de índices con columnas incluidas. Los índices recomendados con columnas incluidas pueden superar el número de columnas especificado en este argumento.  
   
  **-D** _database_name_  
  Especifica el nombre de cada base de datos que se va a optimizar. La primera base de datos es la base de datos predeterminada. Puede especificar varias bases de datos separando los nombres de la base de datos con comas, por ejemplo:  
@@ -134,7 +134,7 @@ dta -d AdventureWorks2012 ...
   
  Si se especifican varios nombres de bases de datos, **dta** devuelve un error. El argumento **-d** es opcional.  
   
- Si utiliza un archivo de entrada XML, puede especificar la primera base de datos a la que se conecta **DTA** mediante `DatabaseToConnect` el elemento que se encuentra bajo `TuningOptions` el elemento. Para obtener más información, consulte [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Si utiliza un archivo de entrada XML, puede especificar la primera base de datos a la que se conecta **DTA** mediante `DatabaseToConnect` el elemento que se encuentra bajo `TuningOptions` el elemento. Para obtener más información, vea [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Si solo optimiza una base de datos, el argumento **-d** proporciona una funcionalidad similar a la del argumento **-d** de la utilidad **sqlcmd** , pero no ejecuta la instrucción USE *database_name* . Para obtener más información, consulte [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -148,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |Parámetro|Valor predeterminado|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado con la opción **-D**|  
+|*database_name*|*database_name* especificado con la opción **–D**|  
 |*owner_name*|**dbo**<br /><br /> Nota: *owner_name* debe ser **DBO**. Si se especifica otro valor, la ejecución de **dta** es errónea y devuelve un error.|  
 |*table_name*|None|  
   
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 |CL_IDX|Todos los clúster en las tablas|  
 |IDX|Todos los índices clúster y no clúster de las tablas|  
   
- **-** _partitioning_strategy_ FP  
+ **-fp** _partitioning_strategy_  
  Especifica si se deben crear particiones de las nuevas estructuras de diseño físico (índices y vistas indexadas) que **dta** propone y cómo se deben crear esas particiones. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
 |Value|Descripción|  
@@ -198,20 +198,20 @@ dta -d AdventureWorks2012 ...
  **-fx** _drop_only_mode_  
  Especifica que **dta** solo tiene en cuenta la eliminación de estructuras de diseño físicas existentes. No se tienen en cuenta las nuevas estructuras de diseño físico. Cuando se especifica esta opción, **dta** evalúa la utilidad de las estructuras de diseño físico existentes y recomienda la eliminación de las estructuras que se usan en contadas ocasiones. Este argumento no necesita valores. No puede usarse con los argumentos **-fa**, **-fp**o **-fk ALL** .  
   
- **-ID** _session_id_  
+ **-ID** _session_ID_  
  Especifica un identificador numérico para la sesión de optimización. Si no se especifica, **dta** genera un número de identificación. Puede usar este identificador para ver la información de las sesiones de optimización existentes. Si no especifica un valor para **-ID**, debe especificar un nombre de sesión con **-s**.  
   
  **-IP**  
- Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n**.  
+ Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **-n** .  
   
  **-ipf**  
- Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para todas las bases de datos. Este valor se puede cambiar mediante la opción **- n**.  
+ Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para todas las bases de datos. Este valor se puede cambiar mediante la opción **-n** .  
   
- **-si** _workload_file_  
+ **-if** _workload_file_  
  Especifica el nombre y la ruta del archivo de carga de trabajo que se desea usar como entrada para la optimización. El archivo debe estar en uno de estos formatos: .trc (archivo de seguimiento de SQL Server Profiler) o .log (archivo de Seguimiento de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Debe especificarse un archivo de carga de trabajo o una tabla de carga de trabajo.  
   
- **-** _workload_trace_table_name_  
- Especifica el nombre de una tabla que contiene el seguimiento de carga de trabajo para la optimización. El nombre se especifica en el formato: [*database_name*]**.** [*owner_name*] **.** _TABLE_NAME_.  
+ **-it** _workload_trace_table_name_  
+ Especifica el nombre de una tabla que contiene el seguimiento de carga de trabajo para la optimización. El nombre se debe especificar en el formato [*database_name*]**.**[*owner_name*]**.**_table_name_.  
   
  En la tabla siguiente se muestran los valores predeterminados para cada parámetro:  
   
@@ -222,7 +222,7 @@ dta -d AdventureWorks2012 ...
 |*table_name*|Ninguno.|  
   
 > [!NOTE]  
->  *owner_name* debe ser **DBO**. Si se especifica cualquier otro valor, la ejecución de **dta** no será correcta y se devolverá un error. Tenga en cuenta también que debe especificarse una tabla de carga de trabajo o un archivo de carga de trabajo.  
+>  *owner_name* debe ser **dbo**. Si se especifica cualquier otro valor, la ejecución de **dta** no será correcta y se devolverá un error. Tenga en cuenta también que debe especificarse una tabla de carga de trabajo o un archivo de carga de trabajo.  
   
  **-ix** _input_XML_file_name_  
  Especifica el nombre del archivo XML que contiene la información de entrada de **dta** . Debe ser un documento XML válido conforme a DTASchema.xsd. Los argumentos en conflicto especificados en el símbolo del sistema para las opciones de optimización invalidan el valor correspondiente en este archivo XML. La única excepción se produce cuando se usa una configuración especificada por el usuario en el modo de evaluación del archivo de entrada XML. Por ejemplo, si se especifica una configuración en el elemento **Configuration** del archivo de entrada XML y el elemento **EvaluateConfiguration** también se especifica como una de las opciones de optimización, las opciones de optimización especificadas en el archivo de entrada XML anulan las opciones de optimización especificadas desde el símbolo del sistema.  
@@ -250,12 +250,12 @@ dta -n number_of_events -A 0
   
  En este caso es importante especificar un tiempo de optimización ilimitado (`-A 0`). De lo contrario, el Asistente para la optimización de motor de base de datos supone que el tiempo de optimización es de 8 horas de forma predeterminada.  
   
- **-de** _output_script_file_name_  
+ **-of** _output_script_file_name_  
  Especifica que **dta** escribe la recomendación como un script [!INCLUDE[tsql](../../includes/tsql-md.md)] en el nombre de archivo y el destino especificados.  
   
  Puede usar **-F** con esta opción. Asegúrese de que el nombre de archivo es exclusivo, especialmente si también usa **-or** y **-ox**.  
   
- **-o** _output_xml_report_file_name_  
+ **-or** _output_xml_report_file_name_  
  Especifica que **dta** escribe la recomendación en un informe de salida en XML. Si se proporciona un nombre de archivo, las recomendaciones se escriben en ese destino. De lo contrario, **dta** usa el nombre de sesión para generar el nombre de archivo y lo escribe en el directorio actual.  
   
  Puede usar **-F** con esta opción. Asegúrese de que el nombre de archivo es exclusivo, especialmente si también usa **-of** y **-ox**.  
@@ -299,7 +299,7 @@ dta -n number_of_events -A 0
 ... -rl EVT_FREQ, VIW_TAB, WKLD_ANL ...  
 ```  
   
- **-S** _SERVER_NAME_[ *\instance*]  
+ **-S** _server_name_[ *\instance*]  
  Especifica el nombre del equipo y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se va a conectar. Si no se especifica ningún valor de *server_name* , **dta** se conecta con la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se conecta con una instancia con nombre o cuando se ejecuta **dta** desde un equipo remoto de la red.  
   
  **-s** _session_name_  
@@ -310,11 +310,11 @@ dta -n number_of_events -A 0
   
  Este es el formato de archivo de *table_list_file*:  
   
- *database_name*. [*schema_name*]. *TABLE_NAME* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- *database_name*. [*schema_name*]. *TABLE_NAME* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- *database_name*. [*schema_name*]. *TABLE_NAME* [*number_of_rows*]  
+ *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
  Este argumento es una alternativa a especificar una lista de tablas en el símbolo del sistema (**-Tl**). No use un archivo de lista de tabla (**-Tf**) si usa **-Tl**. Si se usan ambos argumentos, **dta** devuelve un error.  
   
@@ -340,7 +340,7 @@ dta -n number_of_events -A 0
 ## <a name="examples"></a>Ejemplos  
  **A. Optimizar una carga de trabajo que incluye índices y vistas indizadas en su recomendación**  
   
- En este ejemplo se usa una conexión segura (`-E`) para conectar con la base de datos **tpcd1G** en MyServer para analizar una carga de trabajo y crear recomendaciones. Escribe la salida en un archivo de script denominado script.sql. Si script.sql ya existe, **dta** sobrescribirá el archivo porque se ha especificado el argumento `-F` . La sesión de optimización se ejecuta durante un período de tiempo ilimitado para garantizar un completo análisis de la carga de trabajo (`-A 0`). La recomendación debe proporcionar una mejora mínima del 5% (`-m 5`). **DTA** debe incluir índices y vistas indizadas en su recomendación final (`-fa IDX_IV`).  
+ En este ejemplo se usa una conexión segura (`-E`) para conectar con la base de datos **tpcd1G** en MyServer para analizar una carga de trabajo y crear recomendaciones. Escribe la salida en un archivo de script denominado script.sql. Si script.sql ya existe, **dta** sobrescribirá el archivo porque se ha especificado el argumento `-F` . La sesión de optimización se ejecuta durante un período de tiempo ilimitado para garantizar un completo análisis de la carga de trabajo (`-A 0`). La recomendación debe proporcionar una mejora mínima del 5% (`-m 5`). **dta** debe incluir índices y vistas indexadas en su recomendación final (`-fa IDX_IV`).  
   
 ```  
 dta -S MyServer -E -D tpcd1G -if tpcd_22.sql -F -of script.sql -A 0 -m 5 -fa IDX_IV  
@@ -390,6 +390,6 @@ dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de la utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

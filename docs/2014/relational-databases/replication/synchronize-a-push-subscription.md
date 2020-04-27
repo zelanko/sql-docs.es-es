@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745885"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar una suscripción de inserción
-  En este tema se describe cómo sincronizar una suscripción [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de extracción [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en mediante, [agentes de replicación](agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
+  En este tema se describe cómo sincronizar una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
   
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  El Agente de distribución (para las instantáneas y la replicación transaccional) o el Agente de mezcla (para la replicación de mezcla) sincronizan las suscripciones. Los agentes pueden ejecutarse continuamente, a petición o según una programación. Para más información sobre la configuración de las programaciones de sincronización, vea [Especificar programaciones de sincronización](specify-synchronization-schedules.md).  
   
- Sincronice una suscripción a petición en las carpetas **Publicaciones locales** y **Suscripciones locales** en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y the **Todas las suscripciones** del Monitor de replicación. Las suscripciones a publicaciones de Oracle no se pueden sincronizar a petición desde el suscriptor. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md).  
+ Sincronice una suscripción a petición de las carpetas **Publicaciones locales** y **Suscripciones locales** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y la pestaña **Todas las suscripciones** del Monitor de replicación. Las suscripciones a publicaciones de Oracle no se pueden sincronizar a petición desde el suscriptor. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-publisher"></a>Para sincronizar una suscripción de inserción a petición en Management Studio (en el publicador)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62745885"
   
 4.  Haga clic con el botón derecho en la suscripción que desea sincronizar y, a continuación, haga clic en **Ver estado de sincronización**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>**, haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
+5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>** , haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
   
 6.  Haga clic en **Cerrar**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62745885"
   
 4.  Se muestra un mensaje acerca del establecimiento de una conexión con el distribuidor. Haga clic en **OK**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>**, haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
+5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>** , haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
   
 6.  Haga clic en **Cerrar**.  
   
@@ -68,20 +68,20 @@ ms.locfileid: "62745885"
   
 4.  Para ver el progreso de la sincronización, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Ver detalles**.  
   
-##  <a name="ReplProg"></a>Usar agentes de replicación  
+##  <a name="using-replication-agents"></a><a name="ReplProg"></a> Usar agentes de replicación  
  Se pueden sincronizar las suscripciones de inserción mediante programación y a petición invocando el archivo ejecutable de agente de replicación adecuado del símbolo del sistema. El archivo ejecutable de agente de replicación que se invoca dependerá del tipo de publicación a la que pertenece la suscripción de inserción.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>Para iniciar el Agente de distribución para sincronizar una suscripción de inserción con una publicación transaccional  
   
 1.  Desde el símbolo del sistema o en un archivo por lotes, ejecute **distrib.exe**. Especifique los argumentos de la línea de comandos siguientes:  
   
-    -   **-Publicador**  
+    -   **-Publisher**  
   
     -   **-PublisherDB**  
   
-    -   **-Distribuidor**  
+    -   **-Distributor**  
   
-    -   **-Suscriptor**  
+    -   **-Subscriber**  
   
     -   **-SubscriberDB**  
   
@@ -114,15 +114,15 @@ ms.locfileid: "62745885"
   
 1.  Desde el símbolo del sistema o en un archivo por lotes, ejecute **replmerg.exe**. Especifique los argumentos de la línea de comandos siguientes:  
   
-    -   **-Publicador**  
+    -   **-Publisher**  
   
     -   **-PublisherDB**  
   
-    -   **-Publicación**  
+    -   **-Publication**  
   
-    -   **-Distribuidor**  
+    -   **-Distributor**  
   
-    -   **-Suscriptor**  
+    -   **-Subscriber**  
   
     -   **-SubscriberDB**  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62745885"
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a>Ejemplos (agentes de replicación)  
+###  <a name="examples-replication-agents"></a><a name="TsqlExample"></a> Ejemplos (agentes de replicación)  
  El ejemplo siguiente inicia el Agente de distribución para sincronizar una suscripción de inserción.  
   
  
@@ -191,7 +191,7 @@ REM -- The following command must be supplied without line breaks.
 ```
   
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Puede sincronizar suscripciones de inserción mediante programación utilizando Replication Management Objects (RMO) y el acceso de código administrado a las funcionalidades del agente de replicación. Las clases que se usan para crear una suscripción de inserción dependen del tipo de publicación al que pertenece la suscripción.  
   
 > [!NOTE]  
@@ -245,7 +245,7 @@ REM -- The following command must be supplied without line breaks.
   
     -   Obtenga una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> de la propiedad <xref:Microsoft.SqlServer.Replication.MergeSubscription.SynchronizationAgent%2A> y llame al método <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Synchronize%2A>. Este método inicia el Agente de mezcla sincrónicamente y controla el resto con el trabajo del agente en ejecución. Durante la ejecución sincrónica, puede administrar el evento <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.Status> mientras el agente se está ejecutando.  
   
-###  <a name="PShellExample"></a> Ejemplos (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Ejemplos (RMO)  
  Este ejemplo sincroniza una suscripción de inserción con una publicación transaccional, en la que el agente se inicia forma asincrónica con el trabajo del agente.  
   
  [!code-csharp[HowTo#rmo_SyncTranPushSub_WithJob](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_synctranpushsub_withjob)]  

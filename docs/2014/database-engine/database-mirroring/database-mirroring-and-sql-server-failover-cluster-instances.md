@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755575"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Creación de reflejo de la base de datos e instancias de clúster de conmutación por error
@@ -55,7 +55,7 @@ ms.locfileid: "62755575"
   
  **Para configurar un nuevo clúster de conmutación por error de SQL Server**  
   
--   [Cree una nueva configuración de clúster de conmutación por error de SQL Server &#40;&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
+-   [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
   
  **Para configurar la creación de reflejo de la base de datos**  
   
@@ -64,8 +64,8 @@ ms.locfileid: "62755575"
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring-sql-server.md)   
+ [Modos de funcionamiento de la creación de reflejo de base de datos](database-mirroring-operating-modes.md)   
  [Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 
   
   

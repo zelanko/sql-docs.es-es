@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728561"
 ---
 # <a name="dimension-types"></a>Tipos de dimensiones
@@ -44,8 +44,8 @@ ms.locfileid: "62728561"
   
 |Tipo de dimensión|Descripción|  
 |--------------------|-----------------|  
-|Regular |Dimensión cuyo tipo no se ha establecido en un tipo de dimensión especial.|  
-|Time|Dimensión cuyos atributos representan periodos de tiempo, como años, semestres, trimestres, meses y días.|  
+|Normal|Dimensión cuyo tipo no se ha establecido en un tipo de dimensión especial.|  
+|Tiempo|Dimensión cuyos atributos representan periodos de tiempo, como años, semestres, trimestres, meses y días.|  
 |Organización|Dimensión cuyos atributos representan información organizativa, como empleados o subsidiarias.|  
 |Geography|Dimensión cuyos atributos representan información geográfica, como ciudades o códigos postales.|  
 |Lista de materiales|Dimensión cuyos atributos representan información de inventario o de fabricación, como listas de piezas para productos.|  
@@ -62,6 +62,6 @@ ms.locfileid: "62728561"
   
 ## <a name="see-also"></a>Consulte también  
  [Crear una dimensión usando una tabla existente](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensiones &#40;Analysis Services de datos multidimensionales&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

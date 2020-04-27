@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf96d8118d35fab87e50f1a4237bafcb9b586c2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666875"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Consideraciones de seguridad para la replicación de SQL Server Compact
-  La protección de la conectividad entre una instancia del Motor de base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssEW](../../../includes/ssew-md.md)] implica la correcta configuración de seguridad de Microsoft Internet Information Services (IIS) y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  La protección de la conectividad entre una [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] motor de base de datos e implica configurar correctamente la seguridad de Microsoft Internet Information Services (IIS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) y.  
   
 ## <a name="see-also"></a>Consulte también  
  [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)   
- [Procedimientos recomendados de seguridad de replicación](replication-security-best-practices.md)  
+ [Prácticas recomendadas de seguridad de replicación](replication-security-best-practices.md)  
   
   

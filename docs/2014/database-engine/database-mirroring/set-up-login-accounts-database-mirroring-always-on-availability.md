@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754310"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad de AlwaysOn (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754310"
     > [!IMPORTANT]  
     >  Para crear un entorno más seguro, considere la posibilidad de usar cuentas de dominio diferentes para cada instancia de servidor.  
   
-##  <a name="CreateLogin"></a> Crear un inicio de sesión para una cuenta diferente  
+##  <a name="create-a-login-for-a-different-account"></a><a name="CreateLogin"></a>Crear un inicio de sesión para una cuenta diferente  
  Si dos instancias del servidor se ejecutan como cuentas diferentes, el administrador del sistema debe utilizar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE LOGIN para crear un inicio de sesión para la cuenta de servicio de inicio de la instancia remota para cada instancia del servidor. Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
 > [!IMPORTANT]  
@@ -49,10 +49,10 @@ ms.locfileid: "62754310"
 > [!NOTE]  
 >  Es posible conectarse a la cuenta de servicio de red mediante la cuenta del equipo en lugar de un usuario de dominio. Si se utiliza la cuenta de equipo, debe agregarse como un usuario en la otra instancia del servidor.  
   
-##  <a name="GrantConnect"></a> Conceder el permiso de conexión  
+##  <a name="grant-connect-permission"></a><a name="GrantConnect"></a>Conceder permiso Connect  
  Una vez creado un inicio de sesión en una instancia del servidor, debe concederse al inicio de sesión permiso para conectarse al extremo de creación de reflejo de la base de datos de la instancia del servidor. El administrador del sistema concede el permiso de conexión mediante una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] GRANT. Para obtener más información, vea [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un inicio de sesión](../../relational-databases/security/authentication-access/create-a-login.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62754310"
 -   [Usar certificados para un punto de conexión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [El extremo de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Solucionar problemas de Grupos de disponibilidad AlwaysOn &#40;de configuración de SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   

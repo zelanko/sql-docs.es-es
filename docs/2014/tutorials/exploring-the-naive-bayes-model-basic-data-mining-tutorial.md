@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472889"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Explorar el modelo Bayes naive (Tutorial básico de minería de datos)
@@ -24,7 +24,7 @@ ms.locfileid: "62472889"
   
  
   
-##  <a name="DependencyNetwork"></a>Red de dependencias  
+##  <a name="dependency-network"></a><a name="DependencyNetwork"></a>Red de dependencias  
  La pestaña **red de dependencias** funciona de la misma forma que la pestaña red de [!INCLUDE[msCoName](../includes/msconame-md.md)] **dependencias** del visor de árboles. Cada nodo del visor representa un atributo y las líneas entre los nodos representan relaciones. En el visor, puede ver todos los atributos que afectan al estado del atributo de predicción, Bike Buyer.  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>Para explorar el modelo en la pestaña Red de dependencias  
@@ -42,7 +42,7 @@ ms.locfileid: "62472889"
      Conforme baja el control deslizante, solamente permanecen los atributos que afectan en mayor medida a la columna [Bike Buyer]. Ajustando el control deslizante, puede detectar que algunos de los atributos más influyentes son el número de automóviles que se posee, la distancia al lugar de trabajo y el número total de hijos.  
  
   
-##  <a name="AttributeProfiles"></a>Perfiles de atributo  
+##  <a name="attribute-profiles"></a><a name="AttributeProfiles"></a>Perfiles de atributo  
  La pestaña **perfiles de atributo** describe el modo en que los distintos Estados de los atributos de entrada afectan al resultado del atributo de predicción.  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>Para explorar el modelo en la pestaña Perfiles del atributo  
@@ -64,7 +64,7 @@ ms.locfileid: "62472889"
      La **leyenda de minería de datos** muestra una vista más detallada.  
   
   
-##  <a name="AttributeCharacteristics"></a>Características del atributo  
+##  <a name="attribute-characteristics"></a><a name="AttributeCharacteristics"></a>Características del atributo  
  Con la pestaña **características del atributo** , puede seleccionar un atributo y un valor para ver la frecuencia con que aparecen los valores de otros atributos en los casos de valor seleccionado.  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>Para explorar el modelo en la pestaña Características del atributo  
@@ -76,7 +76,7 @@ ms.locfileid: "62472889"
      En el visor, verá que los clientes que no tienen ningún hijo conviviendo con ellos, una distancia corta al trabajo y que viven en la región de Norteamérica tienen más probabilidad de comprar una bicicleta.  
   
   
-##  <a name="AttributeDiscrimination"></a>Distinción de atributos  
+##  <a name="attribute-discrimination"></a><a name="AttributeDiscrimination"></a>Distinción de atributos  
  Con la pestaña **distinción de atributo** , puede investigar la relación entre dos valores discretos de compra de bicicletas y otros valores de atributo. Dado que `TM_NaiveBayes` el modelo solo tiene dos Estados: 1 y 0, no es necesario realizar ningún cambio en el visor.  
   
  En el visor, podrá ver que las personas que no tienen un automóvil tienden a comprar bicicletas y las personas que tienen dos no suelen comprarlas.  

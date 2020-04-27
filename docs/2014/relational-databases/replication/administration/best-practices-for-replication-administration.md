@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629637"
 ---
 # <a name="best-practices-for-replication-administration"></a>Prácticas recomendadas para la administración de replicación
@@ -58,12 +58,12 @@ ms.locfileid: "62629637"
   
 -   Bases de datos de suscripciones  
   
--   base de datos **msdb** y base de datos **maestra** en el publicador, distribuidor y todos los suscriptores  
+-   Base de datos**msdb** y base de datos **master** en el publicador, distribuidor y todos los suscriptores  
   
  Las bases de datos replicadas requieren una atención especial en relación con la copia de seguridad y restauración de los datos. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Generar script de la topología de replicación  
- Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. Un script contiene los procedimientos almacenados del sistema [!INCLUDE[tsql](../../../includes/tsql-md.md)] necesarios para implementar los componentes de replicación incluidos en los scripts, tales como una publicación o suscripción. Los scripts se pueden crear en un asistente (como el Asistente para nueva publicación) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o en después de crear un componente. Puede ver, modificar y ejecutar el script mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Los scripts se pueden almacenar con los archivos de copia de seguridad para utilizarlas en el caso de que se deba volver a configurar una topología de replicación. Para más información, consulte [Scripting Replication](../scripting-replication.md).  
+ Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. Un script contiene los procedimientos almacenados del sistema [!INCLUDE[tsql](../../../includes/tsql-md.md)] necesarios para implementar los componentes de replicación incluidos en los scripts, tales como una publicación o suscripción. Los scripts se pueden crear en un asistente (como el Asistente para nueva publicación) o en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] después de crear un componente. Puede ver, modificar y ejecutar el script mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Los scripts se pueden almacenar con los archivos de copia de seguridad para utilizarlas en el caso de que se deba volver a configurar una topología de replicación. Para más información, consulte [Scripting Replication](../scripting-replication.md).  
   
  Se debe volver a crear el script de un componente si se realiza cualquier cambio en las propiedades. Si utiliza procedimientos almacenados personalizados con la replicación transaccional, debe guardar una copia de cada procedimiento con los scripts; la copia se debe actualizar si el procedimiento cambia (los procedimientos se actualizan normalmente como consecuencia de cambios de esquema o cambios en los requisitos de la aplicación. Para obtener más información sobre los procedimientos personalizados, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62629637"
   
 -   El Monitor de replicación es la herramienta más importante para la supervisión de la replicación, ya que le permite supervisar el estado general de una topología de replicación. Para más información, consulte [Monitoring Replication](../monitoring-replication.md).  
   
--   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] y Replication Management Objects (RMO) proporcionan interfaces para supervisar la replicación. Para más información, consulte [Monitoring Replication](../monitoring-replication.md).  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] y Replication Management Objects (RMO) proporcionan interfaces para supervisar la replicación. Para más información, consulte [Monitoring Replication](../monitoring-replication.md).  
   
 -   El Monitor de sistema también puede ser útil para supervisar el rendimiento de la replicación. Para más información, consulte [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md).  
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473206"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Asignar un trabajo a una categoría de trabajo
@@ -30,14 +30,14 @@ ms.locfileid: "62473206"
  Las categorías de trabajo le ayudan a organizar los trabajos para poder filtrarlos y agruparlos fácilmente. Por ejemplo, puede organizar todos los trabajos de copia de seguridad de las bases de datos en la categoría Mantenimiento de bases de datos. Puede asignar trabajos a las categorías de trabajo integradas o puede crear una categoría de trabajo definida por el usuario y, después, asignarle trabajos.  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
   
   
-##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Para asignar un trabajo a una categoría de trabajo  
   
@@ -49,12 +49,12 @@ ms.locfileid: "62473206"
   
 4.  Haga clic con el botón derecho en el trabajo que desee editar y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **propiedades del trabajo-**_job_name_ , en la lista **categoría** , seleccione la categoría de trabajo que desea asignar al trabajo.  
+5.  En el cuadro de diálogo **Propiedades del trabajo -**_nombre_trabajo_ , en la lista **Categoría** , seleccione la categoría de trabajo que quiere asignar al trabajo.  
   
-6.  Haga clic en **OK**.  
+6.  Haga clic en **Aceptar**.  
   
   
-##  <a name="TSQL"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Usar Transact-SQL  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>Para asignar un trabajo a una categoría de trabajo  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62473206"
   
   
   
-##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para asignar un trabajo a una categoría de trabajo**  
   
  Utilice la clase `JobCategory` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell.  

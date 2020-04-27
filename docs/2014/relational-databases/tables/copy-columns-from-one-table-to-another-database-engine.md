@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736358"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar columnas de una tabla a otra (motor de base de datos)
@@ -37,17 +37,17 @@ ms.locfileid: "62736358"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Cuando se copia una columna con el tipo de datos de alias desde una base de datos a otra, el tipo de datos de alias podría no estar disponible en la base de datos de destino. En ese caso, se asignará a la columna el tipo de datos de base más parecido que esté disponible en la base de datos.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definiciones de columna de una tabla a otra  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736358"
      Si va a copiar datos dentro de una tabla, puede agregar la tabla de origen como tabla de destino.  
   
     > [!NOTE]  
-    >  El **Diseñador de consultas** no puede determinar con antelación las tablas y vistas que se pueden actualizar. Por tanto, la lista de tablas del cuadro de diálogo **Elegir tabla de destino para Insertar resultados** mostrará todas las tablas y las vistas disponibles en la conexión de datos que está consultando, incluidas aquellas en las que no puede copiar filas.  
+    >  El**Diseñador de consultas** no puede determinar con antelación las tablas y las vistas que se pueden actualizar. Por tanto, la lista de tablas del cuadro de diálogo **Elegir tabla de destino para Insertar resultados** mostrará todas las tablas y las vistas disponibles en la conexión de datos que está consultando, incluidas aquellas en las que no puede copiar filas.  
   
 5.  Haga clic con el botón secundario en el cuerpo del panel Diagrama y, en el menú contextual, haga clic en **Agregar tabla a diagrama**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62736358"
   
      Al ejecutar una consulta de inserción de resultados, los resultados no se muestran en el [Panel de resultados](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En su lugar, aparece un mensaje que indica cuántas filas se han copiado.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definiciones de columna de una tabla a otra  
   

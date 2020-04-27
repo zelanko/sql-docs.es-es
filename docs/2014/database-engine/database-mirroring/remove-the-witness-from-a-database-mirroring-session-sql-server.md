@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754674"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "62754674"
   
      [Seguridad](#Security)  
   
--   **Para reemplazar quitar el testigo, use:**  
+-   **Para quitar el testigo, mediante:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -38,14 +38,14 @@ ms.locfileid: "62754674"
   
 -   **Seguimiento:**  [después de quitar el testigo](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>Para quitar el testigo  
   
@@ -53,14 +53,14 @@ ms.locfileid: "62754674"
   
 2.  Expanda **Bases de datos**y seleccione la base de datos cuyo testigo desee quitar.  
   
-3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Así se abre la página **Creación de reflejo** del cuadro de diálogo **Propiedades de la base de datos** .  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y, luego, haga clic en **Reflejado**. Se abrirá la página **creación de reflejo** del cuadro de diálogo Propiedades de la base de **datos** .  
   
 4.  Para quitar el testigo, elimine su dirección de red del servidor del campo **Testigo** .  
   
     > [!NOTE]  
     >  Si pasa del modo de alta seguridad con conmutación automática por error al modo de alto rendimiento, el campo **Testigo** se vacía de forma automática.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>Para quitar el testigo  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754674"
   
 3.  Emita la instrucción siguiente:  
   
-     [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *DATABASE_NAME* Set Witness OFF  
+     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *nombre_base_de_datos* SET WITNESS OFF  
   
      Donde *nombre_base_de_datos* es el nombre de la base de datos reflejada.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62754674"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a>Seguimiento: después de quitar el testigo  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a>Seguimiento: después de quitar el testigo  
  Al desactivar el testigo cambia el [modo de funcionamiento](database-mirroring-operating-modes.md)de acuerdo con la configuración de la seguridad de las transacciones:  
   
 -   Si la seguridad de las transacciones está configurada en FULL (el valor predeterminado), la sesión utiliza el modo sincrónico de alta seguridad sin conmutación automática por error.  
@@ -90,16 +90,16 @@ ms.locfileid: "62754674"
 > [!TIP]  
 >  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc**.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 -   [Agregar o reemplazar un testigo de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
- [Testigo de creación de reflejo de la base de datos](database-mirroring-witness.md)  
+ [Database Mirroring Witness](database-mirroring-witness.md)  
   
   

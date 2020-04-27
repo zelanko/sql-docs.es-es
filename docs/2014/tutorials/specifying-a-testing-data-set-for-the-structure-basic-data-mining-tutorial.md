@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720098"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Especificar un conjunto de datos de pruebas para la estructura (Tutorial básico de minería de datos)
@@ -29,7 +29,7 @@ ms.locfileid: "62720098"
   
 2.  **En número máximo de casos en el conjunto de datos**de `1000`prueba, escriba.  
   
-3.  Haga clic en **Next**.  
+3.  Haga clic en **Siguiente**.  
   
 ## <a name="specifying-drillthrough"></a>Especificar la obtención de detalles  
  La obtención de detalles puede habilitarse en los modelos y en las estructuras. La casilla de este cuadro de diálogo habilita la obtención de detalles en el modelo con nombre. Una vez procesado el modelo, podrá recuperar información detallada de los datos de entrenamiento usados para crear el modelo.  
@@ -52,7 +52,7 @@ ms.locfileid: "62720098"
  [Especificar el tipo de datos y el tipo de contenido &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Agregar y procesar los modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
+ [Lección 3: Adición y procesamiento de modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Habilitar la obtención de detalles para un modelo de minería de datos](../../2014/analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)   

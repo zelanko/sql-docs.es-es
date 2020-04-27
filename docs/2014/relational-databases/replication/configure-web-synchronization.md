@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721660"
 ---
 # <a name="configure-web-synchronization"></a>Configurar sincronización web
@@ -101,8 +101,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
  Si utiliza un publicador por primera vez, también debe configurar un distribuidor y un recurso compartido de instantáneas. El Agente de mezcla de cada suscriptor debe tener permisos de lectura en el recurso compartido de instantáneas. Para obtener más información sobre cómo configurar la distribución, vea [Configure Distribution (Configurar la distribución)](configure-distribution.md) y [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md).  
   
- 
-  `gen` es una palabra reservada en los archivos XML de websync. No intente publicar tablas que contengan columnas denominadas `gen`.  
+ `gen` es una palabra reservada en los archivos XML de websync. No intente publicar tablas que contengan columnas denominadas `gen`.  
   
 ## <a name="configuring-the-subscription"></a>Configurar la suscripción  
  Después de habilitar una publicación y configurar IIS, cree una suscripción de extracción y especifique que dicha suscripción debe sincronizarse mediante IIS. La sincronización web solo puede usarse para las suscripciones de extracción.  

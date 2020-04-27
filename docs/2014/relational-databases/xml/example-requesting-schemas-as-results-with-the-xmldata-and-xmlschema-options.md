@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637931"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Ejemplo: solicitar esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Ejemplo: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
   Esta consulta devuelve el esquema XML-DATA que describe la estructura del documento.  
   
 ## <a name="example"></a>Ejemplo  

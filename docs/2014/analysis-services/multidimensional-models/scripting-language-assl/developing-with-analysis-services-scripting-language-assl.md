@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfdce0d0db35d651d12670ffd3cb1c9437961cd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736523"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>Desarrollar aplicaciones con Analysis Services Scripting Language (ASSL)
@@ -32,6 +32,6 @@ ms.locfileid: "62736523"
 ## <a name="see-also"></a>Consulte también  
  [Objetos y características de objetos ASSL](assl-objects-and-object-characteristics.md)   
  [ASSL convenciones XML](assl-xml-conventions.md)   
- [Orígenes de datos y enlaces &#40;&#41;de SSAS multidimensionales](../data-sources-and-bindings-ssas-multidimensional.md)  
+ [Orígenes de datos y enlaces &#40;SSAS multidimensional&#41;](../data-sources-and-bindings-ssas-multidimensional.md)  
   
   

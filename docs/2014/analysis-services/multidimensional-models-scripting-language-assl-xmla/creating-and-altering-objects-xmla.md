@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702297"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Crear y modificar objetos (XMLA)
@@ -67,7 +67,7 @@ ms.locfileid: "62702297"
  Los objetos de sesión son objetos temporales que solo están disponibles para la sesión explícita o implícita utilizada por una aplicación cliente y que se eliminan cuando finaliza la sesión. Puede crear objetos de sesión estableciendo el `Scope` atributo del `Create` comando en *Session*.  
   
 > [!NOTE]  
->  Cuando se usa ** la configuración de sesión `ObjectDefinition` , el elemento solo puede contener elementos ASSL de [dimensión](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
+>  Cuando se usa *Session* la configuración de sesión `ObjectDefinition` , el elemento solo puede contener elementos ASSL de [dimensión](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
   
 ## <a name="altering-objects"></a>Modificar objetos  
  Al modificar objetos mediante el `Alter` método, primero debe identificar el objeto que se va a modificar proporcionando una referencia de objeto en la propiedad de [objeto](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `Alter` comando. Cada referencia de objeto contiene los identificadores de objeto necesarios para identificar de forma exclusiva el objeto para el comando `Alter`. Para obtener más información acerca de las referencias a objetos, vea [definir e identificar objetos &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
@@ -87,7 +87,7 @@ ms.locfileid: "62702297"
  Para modificar los objetos de sesión creados `Create` por el comando, `Scope` establezca el atributo `Alter` del comando en *Session*.  
   
 > [!NOTE]  
->  Cuando se usa ** la configuración de sesión `ObjectDefinition` , el elemento solo puede contener elementos ASSL de [dimensión](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
+>  Cuando se usa *Session* la configuración de sesión `ObjectDefinition` , el elemento solo puede contener elementos ASSL de [dimensión](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [cubo](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)o [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) .  
   
 ## <a name="creating-or-altering-subordinate-objects"></a>Crear o modificar objetos subordinados  
  Aunque los comandos `Create` o `Alter` crean o modifican solamente un objeto principal de nivel superior, el objeto principal que se crea o modifica puede contener definiciones para otros objetos principales y secundarios subordinados a éste dentro de la propiedad `ObjectDefinition` envolvente. Por ejemplo, si define un cubo, la base de datos primaria se especifica en `ParentObject` y, dentro de la definición del cubo en `ObjectDefinition`, puede definir grupos de medida para éste; a su vez, dentro de los grupos de medida, puede definir particiones para cada grupo de este tipo. Un objeto secundario solamente se puede definir bajo el objeto principal que lo contiene. Para obtener más información sobre los objetos principales y secundarios, vea [objetos de base de datos &#40;Analysis Services-&#41;de datos multidimensionales ](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md).  

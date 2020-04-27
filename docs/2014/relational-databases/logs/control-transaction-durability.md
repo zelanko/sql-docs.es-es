@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62743171"
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
@@ -60,13 +60,13 @@ ms.locfileid: "62743171"
   
  He aquí algunos casos en los que puede ser beneficioso usar la durabilidad diferida de transacciones:  
   
- **Puede tolerar alguna pérdida de datos.**   
+ **Puede tolerar alguna pérdida de datos.**  
  Si puede tolerar cierta pérdida de datos, por ejemplo cuando los registros individuales no son críticos siempre y cuando tenga la mayoría de los datos, puede resultar útil usar la durabilidad diferida. Si no puede tolerar la pérdida de datos, no utilice la durabilidad diferida de transacciones.  
   
- **Experimenta cuellos de botella en la escritura de registros de transacciones.**   
+ **Experimenta cuellos de botella en la escritura de registros de transacciones.**  
  Si los problemas de rendimiento se deben a la latencia en la escritura de registros de transacciones, seguramente la aplicación se beneficiará de utilizar la durabilidad diferida de transacciones.  
   
- **Las cargas de trabajo conllevan un alto índice de contención.**   
+ **Las cargas de trabajo comportan un alto índice de contención.**  
  Si el sistema tiene cargas de trabajo con un alto índice de contención, se perderá mucho tiempo esperando a que se liberen los bloqueos. La durabilidad diferida de transacciones reduce el tiempo de confirmación y, por tanto, libera los bloqueos con mayor rapidez, lo que redunda en un mayor rendimiento.  
   
  **Garantías de la durabilidad diferida de transacciones**  
@@ -98,12 +98,12 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [valor predeterminado] Con esta configuración, todas las transacciones que se confirman en la base de datos son totalmente durables, independientemente del nivel de confirmación (DELAYED_DURABILITY= [ON | OFF]). No hay necesidad de modificar y recompilar el procedimiento almacenado. De esta forma, puede asegurarse de que la durabilidad diferida nunca ponga datos en peligro.  
   
  `ALLOWED`  
- Con esta configuración, la durabilidad de cada transacción se determina en el nivel de transacción: DELAYED_DURABILITY = { *OFF* | ON }. Consulte [control de nivel de bloque atómico: procedimientos almacenados compilados](#atomic-block-level-control---natively-compiled-stored-procedures) de forma nativa y [control de nivel de confirmación: Transact-SQL](#commit-level-control---t-sql) para obtener más información.  
+ Con esta configuración, la durabilidad de cada transacción se determina en el nivel de transacción: DELAYED_DURABILITY = { *OFF* | EN}. Consulte [control de nivel de bloque atómico: procedimientos almacenados compilados](#atomic-block-level-control---natively-compiled-stored-procedures) de forma nativa y [control de nivel de confirmación: Transact-SQL](#commit-level-control---t-sql) para obtener más información.  
   
  `FORCED`  
  Con esta configuración, cada transacción que se confirma en la base de datos es durable diferida. Independientemente de que la transacción especifique que es totalmente durable (DELAYED_DURABILITY = OFF) o no haga especificación alguna, la transacción es durable diferida. Esta configuración resulta útil cuando la durabilidad diferida es adecuada para una base de datos y no desea cambiar ningún código de aplicación.  
   
-### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a> Control de nivel de bloque ATOMIC: procedimientos almacenados compilados de forma nativa  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Control de nivel de bloque atómico: procedimientos almacenados compilados de forma nativa  
  El código siguiente va en el interior del bloque ATOMIC.  
   
 ```sql  
@@ -116,7 +116,7 @@ DELAYED_DURABILITY = { OFF | ON }
  `ON`  
  La transacción es durable diferida, salvo que la opción de base de datos DELAYED_DURABLITY = DISABLED esté activa, en cuyo caso la instrucción COMMIT será síncrona y por tanto totalmente durable.  Consulte [Database level control](#database-level-control) para obtener más información.  
   
- **Código de ejemplo**  
+ **Código de ejemplo:**  
   
 ```sql  
 CREATE PROCEDURE <procedureName> ...  
@@ -157,14 +157,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 |Valor COMMIT/Valor de base de datos|DELAYED_DURABILITY = DISABLED|DELAYED_DURABILITY = ALLOWED|DELAYED_DURABILITY = FORCED|  
 |--------------------------------------|-------------------------------------|------------------------------------|-----------------------------------|  
-|
-  `DELAYED_DURABILITY = OFF` Transacciones de nivel de base de datos.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es de durabilidad diferida.|  
-|
-  `DELAYED_DURABILITY = ON` Transacciones de nivel de base de datos.|La transacción es totalmente durable.|La transacción es de durabilidad diferida.|La transacción es de durabilidad diferida.|  
-|
-  `DELAYED_DURABILITY = OFF` Transacciones entre bases de datos o distribuidas.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
-|
-  `DELAYED_DURABILITY = ON` Transacciones entre bases de datos o distribuidas.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
+|`DELAYED_DURABILITY = OFF` Transacciones de nivel de base de datos.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es de durabilidad diferida.|  
+|`DELAYED_DURABILITY = ON` Transacciones de nivel de base de datos.|La transacción es totalmente durable.|La transacción es de durabilidad diferida.|La transacción es de durabilidad diferida.|  
+|`DELAYED_DURABILITY = OFF` Transacciones entre bases de datos o distribuidas.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
+|`DELAYED_DURABILITY = ON` Transacciones entre bases de datos o distribuidas.|La transacción es totalmente durable.|La transacción es totalmente durable.|La transacción es totalmente durable.|  
   
 ## <a name="how-to-force-a-transaction-log-flush"></a>Cómo forzar un vaciado del registro de transacciones  
  Existen dos formas de forzar el vaciado en el disco del registro de transacciones.  
@@ -186,7 +182,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Grupos de disponibilidad AlwaysOn y creación de reflejo**  
  Las transacciones de durabilidad diferida no garantizan la durabilidad del primario ni de los secundarios. Tampoco garantizan ningún conocimiento sobre la transacción en el secundario. Después de COMMIT, se devuelve el control al cliente antes de que se reciba algún reconocimiento desde un elemento secundario sincrónico.  
   
- **Agrupación en clústeres de conmutación por error**  
+ **Clústeres de conmutación por error**  
  Es posible que se pierdan algunas escrituras de transacciones durables diferidas.  
   
  **Replicación de transacciones**  

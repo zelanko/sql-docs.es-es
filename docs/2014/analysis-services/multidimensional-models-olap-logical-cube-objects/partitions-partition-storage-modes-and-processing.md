@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727581"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Procesamiento y modos de almacenamiento de particiones
@@ -50,8 +50,7 @@ ms.locfileid: "62727581"
  El modo de almacenamiento ROLAP hace que las agregaciones de la partición se almacenen en vistas indizadas de la base de datos relacional que se especificó en el origen de datos de la partición. A diferencia del modo de almacenamiento MOLAP, ROLAP no hace que se almacene una copia de los datos del origen en las carpetas de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En su lugar, cuando no se pueden derivar los resultados de la caché de consultas, se utilizan las vistas indizadas del origen de datos para responder a las consultas. La respuesta a las consultas suele ser más lenta con el almacenamiento ROLAP que con los modos de almacenamiento MOLAP o HOLAP. El tiempo de procesamiento también suele ser más lento con ROLAP. No obstante, ROLAP permite a los usuarios ver los datos en tiempo real y ahorrar espacio de almacenamiento al trabajar con conjuntos de datos grandes a los que no se suele consultar con frecuencia, como datos puramente históricos.  
   
 > [!NOTE]  
->  Cuando se usa ROLAP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede devolver información incorrecta relacionada con el miembro desconocido si se combina una combinación con una cláusula GROUP BY. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina errores de integridad relacional, en lugar de devolver el valor del miembro desconocido.  
+>  Cuando se usa ROLAP, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede devolver información incorrecta relacionada con el miembro desconocido si se combina una combinación con una cláusula GROUP BY. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elimina errores de integridad relacional, en lugar de devolver el valor del miembro desconocido.  
   
  Si una partición utiliza el modo de almacenamiento ROLAP y sus datos de origen se almacenan en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intentará crear vistas indizadas para contener las agregaciones de la partición. Si [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no puede crear vistas indizadas, no creará tablas de agregaciones. Aunque [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] controla los requisitos de la sesión para crear vistas indizadas en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], para que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cree vistas indizadas de agregaciones es necesario que la partición ROLAP y las tablas de su esquema cumplan con las siguientes condiciones:  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62727581"
 -   La sesión que crea la vista indizada debe tener desactivada la siguiente opción: NUMERIC_ROUNDABORT. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
- El modo de almacenamiento HOLAP combina atributos de los modos MOLAP y ROLAP. Al igual que MOLAP, HOLAP hace que las agregaciones de la partición se almacenen en una estructura multidimensional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de. HOLAP no hace que se almacene una copia de los datos de origen. HOLAP es el equivalente de MOLAP para las consultas que solo tienen acceso a los datos de resumen de las agregaciones de una partición. Consultas que tienen acceso a datos de origen; por ejemplo, si desea profundizar en una celda atómica de un cubo para el que no hay datos de agregación, debe recuperar los datos de la base de datos relacional y no será tan rápido como si los datos de origen estuvieran almacenados en el Structur MOLAP. e:.. Con el modo de almacenamiento HOLAP, los usuarios suelen experimentar notables diferencias en cuanto a los tiempos de las consultas según si la consulta se puede resolver desde la caché o las agregaciones frente a los propios datos de origen.  
+ El modo de almacenamiento HOLAP combina atributos de los modos MOLAP y ROLAP. Al igual que MOLAP, HOLAP hace que las agregaciones de la partición se almacenen en una estructura multidimensional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de. HOLAP no hace que se almacene una copia de los datos de origen. HOLAP es el equivalente de MOLAP para las consultas que solo tienen acceso a los datos de resumen de las agregaciones de una partición. Consultas que tienen acceso a datos de origen; por ejemplo, si desea profundizar en una celda atómica de un cubo para el que no hay datos de agregación, debe recuperar los datos de la base de datos relacional y no será tan rápido como si los datos de origen estuvieran almacenados en la estructura MOLAP. Con el modo de almacenamiento HOLAP, los usuarios suelen experimentar notables diferencias en cuanto a los tiempos de las consultas según si la consulta se puede resolver desde la caché o las agregaciones frente a los propios datos de origen.  
   
  Las particiones almacenadas como HOLAP son más pequeñas que sus equivalentes MOLAP dado que no contienen datos de origen y responden más rápidamente que las particiones ROLAP a las consultas que implican datos de resumen. El modo de almacenamiento HOLAP suele ser más adecuado para particiones en cubos que requieren una respuesta de consultas rápida para resúmenes basados en una gran cantidad de datos de origen. No obstante, si los usuarios generan consultas que deben utilizar datos del nivel hoja (por ejemplo, para calcular valores medios), MOLAP suele ser una opción mejor.  
   
 ## <a name="see-also"></a>Consulte también  
  [Almacenamiento en caché automático &#40;particiones&#41;](partitions-proactive-caching.md)   
  [Sincronizar bases de datos de Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [Particiones &#40;Analysis Services de datos multidimensionales&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](partitions-analysis-services-multidimensional-data.md)  
   
   

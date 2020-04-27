@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638322"
 ---
 # <a name="stored-procedures"></a>Procedimientos almacenados
-  Un procedimiento almacenado ([procedimientos almacenados &#40;Motor de base de datos&#41;](../../stored-procedures/stored-procedures-database-engine.md)) es un objeto ejecutable almacenado en una base de datos de. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]admite  
+  Un procedimiento almacenado ([Procedimientos almacenados &#40;Motor de base de datos&#41;](../../stored-procedures/stored-procedures-database-engine.md)) es un objeto ejecutable almacenado en una base de datos de. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite lo siguiente:  
   
 -   Procedimientos almacenados  
   

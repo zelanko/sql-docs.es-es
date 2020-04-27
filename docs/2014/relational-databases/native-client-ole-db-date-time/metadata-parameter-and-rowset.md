@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655631"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Parámetros y metadatos de conjuntos de filas
@@ -37,10 +37,10 @@ ms.locfileid: "62655631"
   
 |Tipo de parámetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Borrar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Borrar|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Borrar|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21.. 27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28.. 34|0..7|Set|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62655631"
 |datetime2 o DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- Se omite el parámetro *bPrecision* .  
+ Se omite el parámetro *bPrecision*.  
   
  No se tiene en cuenta "DBPARAMFLAGS_SS_ISVARIABLESCALE" al enviar los datos al servidor. Las aplicaciones pueden exigir el uso de tipos heredados de flujo TDS mediante los nombres de tipo específico del proveedor "`datetime`" y "`smalldatetime`". Cuando se conecta [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a servidores de (o posterior)`datetime2`, se usará el formato "" y se producirá una conversión implícita de servidor, si es necesario, cuando`datetime2`el nombre de tipo sea "" o "DBTYPE_DBTIMESTAMP". *bScale* se omite si se usan los nombres de tipo`datetime`específicos del proveedor`smalldatetime`"" o "". De lo contrario, Appications debe asegurarse de que *bScale* se ha establecido correctamente. Se producirá un error en las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicaciones actualizadas [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] desde MDAC y Native Client a partir de que usan "DBTYPE_DBTIMESTAMP" si no establecen *bScale* correctamente. Cuando esté conectado a las instancias de servidor anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], un valor *bScale* que no sea 0 o 3 con "DBTYPE_DBTIMESTAMP" es un error y se devolverá E_FAIL.  
   
@@ -78,15 +78,14 @@ ms.locfileid: "62655631"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- 
-  `IColumnsRowset::GetColumnsRowset` devuelve las columnas siguientes:  
+ `IColumnsRowset::GetColumnsRowset` devuelve las columnas siguientes:  
   
 |Tipo de columna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Borrar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Borrar|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Borrar|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
@@ -117,10 +116,10 @@ ms.locfileid: "62655631"
   
 |Tipo de parámetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Borrar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Set|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Borrar|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Borrar|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Set|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Set|  
   
@@ -140,7 +139,7 @@ ms.locfileid: "62655631"
   
  Se pueden establecer las marcas restantes (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE y DBCOLUMNFLAGS_WRITEUNKNOWN).  
   
- Se proporciona una nueva marca DBCOLUMNFLAGS_SS_ISVARIABLESCALE en *dwFlags* para permitir que una aplicación determine el tipo de servidor de columnas, donde *wType* es DBTYPE_DBTIMESTAMP. *bScale* también se debe usar para identificar el tipo de servidor.  
+ Se proporciona una nueva marca DBCOLUMNFLAGS_SS_ISVARIABLESCALE en *dwFlags* para permitir que una aplicación determine el tipo de servidor de columnas, donde *wType* es DBTYPE_DBTIMESTAMP. *bScale* también tiene que usarse para identificar el tipo de servidor.  
   
 ## <a name="see-also"></a>Consulte también  
  [Metadatos &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  

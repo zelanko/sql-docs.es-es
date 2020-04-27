@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721070"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
@@ -45,7 +45,7 @@ class SQLErrorLogEvent
 |FileName|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
 |InstanceName|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
 |LogDate|Tipo de datos: `datetime`<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
-|Message|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El mensaje de evento.|  
+|Message|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
 |ProcessInfo|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -97,6 +97,6 @@ Next
   
 ## <a name="see-also"></a>Consulte también  
  [Clase SqlErrorLogFile](sqlerrorlogfile-class.md)   
- [Ver sin conexión archivos de registro](../logs/view-offline-log-files.md)  
+ [Ver archivos del registro sin conexión](../logs/view-offline-log-files.md)  
   
   

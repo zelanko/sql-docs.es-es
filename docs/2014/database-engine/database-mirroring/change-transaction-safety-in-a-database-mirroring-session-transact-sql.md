@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754928"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "62754928"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     donde *\<base de datos>* es el nombre de la base de datos reflejada.  
+     donde * \<Database>* es el nombre de la base de datos reflejada.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Para desactivar la seguridad de las transacciones  
   
@@ -46,10 +46,10 @@ ms.locfileid: "62754928"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     donde *\<base de datos>* es la base de datos reflejada.  
+     donde * \<la base de datos>* es la base de datos reflejada.  
   
 ## <a name="see-also"></a>Consulte también  
- [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)  
   
   

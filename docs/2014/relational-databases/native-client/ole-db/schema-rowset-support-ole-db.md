@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62625966"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Compatibilidad con conjuntos de filas de esquema (OLE DB)
@@ -52,7 +52,7 @@ ms.locfileid: "62625966"
 ## <a name="in-this-section"></a>En esta sección  
  [Compatibilidad con consultas distribuidas en conjuntos de filas de esquema](schema-rowsets-distributed-query-support.md)  
   
- [&#40;de conjunto de filas LINKEDSERVERS OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS Rowset &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   

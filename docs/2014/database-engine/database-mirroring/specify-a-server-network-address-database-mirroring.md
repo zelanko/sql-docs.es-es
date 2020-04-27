@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755057"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar una dirección de red de servidor (creación de reflejo de la base de datos)
@@ -29,12 +29,12 @@ ms.locfileid: "62755057"
   
   
   
-##  <a name="Syntax"></a>Sintaxis para una dirección de red de servidor  
+##  <a name="syntax-for-a-server-network-address"></a><a name="Syntax"></a>Sintaxis para una dirección de red de servidor  
  La sintaxis para una dirección de red de servidor tiene el siguiente formato:  
   
  TCP<strong>://</strong>*\<dirección del sistema>* <strong>:<strong>*\<puerto>* 
   
- , donde  
+ where  
   
 -   *la>de dirección del sistema es una cadena que identifica de forma inequívoca el sistema del equipo de destino. \<* Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
   
@@ -46,9 +46,9 @@ ms.locfileid: "62755057"
   
     -   El nombre de dominio completo siempre funciona. Éste es una cadena de dirección definida localmente que tiene diferentes formatos en los distintos lugares. Con frecuencia, aunque no siempre, el nombre de dominio completo es un nombre compuesto que incluye el nombre del equipo y una serie de segmentos de dominio separados por puntos con el siguiente formato:  
   
-         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
+         _nombre_equipo_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
   
-         donde *computer_name*es el nombre de red del equipo que ejecuta la instancia del servidor y *domain_segment*[... **.** _domain_segment_] es la información de dominio restante del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
+         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.**_segmento_dominio_] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Si no conoce el nombre de dominio completo del servidor, consulte con el administrador del sistema.  
   
@@ -104,11 +104,11 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
 ## <a name="finding-the-fully-qualified-domain-name"></a>Buscar el nombre de dominio completo  
  Para buscar el nombre de dominio completo de un sistema, en el símbolo del sistema de Windows de ese sistema, escriba:  
   
- **IPCONFIG/ALL**  
+ **IPCONFIG /ALL**  
   
  Para formar el nombre de dominio completo, concatene los valores de *<host_name>* y *<Primary_Dns_Suffix>* de la siguiente manera:  
   
- _>de host_name de<_ **.** _<Primary_Dns_Suffix>_  
+ _<host_name>_ **.** _<sufijo_DNS_primario>_  
   
  Por ejemplo, la configuración IP  
   
@@ -120,7 +120,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `MYSERVER.mydomain.Adventure-Works.com`  
   
-##  <a name="Examples"></a>Example  
+##  <a name="examples"></a><a name="Examples"></a> Ejemplos  
  En este ejemplo se muestra la dirección de red de servidor para una instancia de servidor en un equipo denominado `REMOTESYSTEM3` en otro dominio. La información del dominio es `NORTHWEST.ADVENTURE-WORKS.COM`y el puerto del extremo de creación de reflejo de la base de datos es `7025`. Dados los componentes de este ejemplo, la dirección de red de servidor es:  
   
  `TCP://REMOTESYSTEM3.NORTHWEST.ADVENTURE-WORKS.COM:7025`  
@@ -129,12 +129,12 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
  `TCP://DBSERVER1:7022`  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring-sql-server.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
   
   

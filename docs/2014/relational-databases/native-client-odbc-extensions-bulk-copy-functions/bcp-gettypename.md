@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689029"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -43,7 +43,7 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *muestras*  
+ *token*  
  Valor que indica un token de tipo BCP.  
   
  *campo*  
@@ -59,8 +59,8 @@ fIsMaxType
   
 |Nombre de tipo de BCP|MaxType|Output|  
 |-------------------|-------------|------------|  
-|`SQLDECIMAL`|Es posible usar el|**Decimal**|  
-|`SQLNUMERIC`|Es posible usar el|**alfanumérico**|  
+|`SQLDECIMAL`|Es posible usar el|**decimal**|  
+|`SQLNUMERIC`|Es posible usar el|**numeric**|  
 |`SQLINT1`|Es posible usar el|**tinyint**|  
 |`SQLINT2`|Es posible usar el|**smallint**|  
 |`SQLINT4`|Es posible usar el|**int**|  
@@ -73,7 +73,7 @@ fIsMaxType
 |`SQLCHARACTER`|No|**char**|  
 |`SQLBIGVARCHAR`|No|**varchar**|  
 |`SQLVARCHAR`|No|**varchar**|  
-|`SQLTEXT`|Es posible usar el|**negrita**|  
+|`SQLTEXT`|Es posible usar el|**text**|  
 |`SQLBIGBINARY`|No|**binary**|  
 |`SQLBINARY`|No|**Binario**|  
 |`SQLBIGVARBINARY`|No|**Varbinary**|  
@@ -85,18 +85,18 @@ fIsMaxType
 |`SQLFLTN`|Es posible usar el|**float-null**|  
 |`SQLAOPSUM`|Es posible usar el|**Sume**|  
 |`SQLAOPAVG`|Es posible usar el|**Latencia**|  
-|`SQLAOPCNT`|Es posible usar el|**Contabiliza**|  
+|`SQLAOPCNT`|Es posible usar el|**Recuento**|  
 |`SQLAOPMIN`|Es posible usar el|**Minuto**|  
 |`SQLAOPMAX`|Es posible usar el|**Máx.**|  
 |`SQLDATETIM4`|Es posible usar el|**smalldatetime**|  
 |`SQLMONEY4`|Es posible usar el|**Smallmoney**|  
-|`SQLFLT4`|Es posible usar el|**Real**|  
+|`SQLFLT4`|Es posible usar el|**Impuestos**|  
 |`SQLUNIQUEID`|Es posible usar el|**uniqueidentifier**|  
 |`SQLNCHAR`|No|**Nchar**|  
 |`SQLNVARCHAR`|No|**Nvarchar**|  
 |`SQLNTEXT`|Es posible usar el|**Ntext**|  
 |`SQLVARIANT`|Es posible usar el|**sql_variant**|  
-|`SQLINT8`|Es posible usar el|**Bigint**|  
+|`SQLINT8`|Es posible usar el|**BIGINT**|  
 |`SQLCHARACTER`|Sí|**ntext**|  
 |`SQLBIGCHAR`|Sí|**ntext**|  
 |`SQLBIGVARCHAR`|Sí|**ntext**|  

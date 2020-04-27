@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705141"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Cuadro de diálogo Evaluar directivas, página Resultados de la evaluación
@@ -42,8 +42,8 @@ ms.locfileid: "62705141"
  Vínculo a información si se produce un error.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
- [Cuadro de diálogo Evaluar directivas, página Selección de directiva](evaluate-policies-dialog-box-policy-selection-page.md)   
+ [Administrar servidores mediante la administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
+ [Cuadro de diálogo evaluar directivas, página selección de Directiva](evaluate-policies-dialog-box-policy-selection-page.md)   
  [Cuadro de diálogo Vista detallada de resultados](results-detailed-view-dialog-box.md)  
   
   

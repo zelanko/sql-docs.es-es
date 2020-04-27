@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695674"
 ---
 # <a name="job-properties-new-job-schedules-page"></a>Propiedades del trabajo: Nuevo trabajo (página Programaciones)
   Utilice esta página para ver y organizar las programaciones [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
- **Lista de programación**  
+ **Lista de programaciones**  
  Muestra las programaciones para este trabajo.  
   
  **Nuevo**  
  Crea una nueva programación. Una vez que se haya creado la programación, ésta se agregará al trabajo.  
   
- **Elegir**  
+ **Seleccionar**  
  Selecciona una de las programaciones existentes. Puesto que un trabajo y una programación deben tener el mismo propietario, esta opción solo le permitirá seleccionar programaciones de su propiedad.  
   
  **Edición**  

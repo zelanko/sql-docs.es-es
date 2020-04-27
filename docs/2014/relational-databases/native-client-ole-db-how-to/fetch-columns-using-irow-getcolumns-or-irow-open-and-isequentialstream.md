@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467588"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
@@ -35,12 +35,11 @@ ms.locfileid: "62467588"
   
 3.  Capture los datos de columna mediante `IRow::Open()` o `IRow::GetColumns()`.  
   
-    -   
-  `IRow::Open()` puede utilizarse para abrir una interfaz `ISequentialStream` en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (`IStream` o `ISequentialStream` puede usarse a para leer los datos de la columna).  
+    -   `IRow::Open()` puede utilizarse para abrir una interfaz `ISequentialStream` en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (`IStream` o `ISequentialStream` puede usarse a para leer los datos de la columna).  
   
     -   Si `IRow::GetColumns()` se usa, el elemento **pdata** de la estructura DBCOLUMNACCESS se establece de forma que apunte a un objeto de flujo.  
   
-4.  Utilice **ISequentialStream:: Read ()** varias veces para leer el número especificado de bytes en el búfer del consumidor.  
+4.  Use repetidamente **ISequentialStream::Read()** para leer el número de bytes especificado en el búfer del consumidor.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo capturar una sola fila con IRow. En este ejemplo se recupera una columna a la vez de la fila. En este ejemplo se ilustra el uso de IRow::Open() y de IRow::GetColumns(). Para leer los datos de la columna, en el ejemplo se usa ISequentialStream::Read.  

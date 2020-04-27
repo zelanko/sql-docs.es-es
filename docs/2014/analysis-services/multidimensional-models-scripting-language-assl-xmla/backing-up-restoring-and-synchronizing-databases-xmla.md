@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702277"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Restaurar, sincronizar y realizar copias de seguridad de bases de datos (XMLA)
@@ -32,14 +32,14 @@ ms.locfileid: "62702277"
   
 -   El comando [Synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) sincroniza una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos con los datos y metadatos de otra base de datos, como se describe en la sección [sincronizar bases](#synchronizing_databases)de datos.  
   
-##  <a name="backing_up_databases"></a>Realizar copias de seguridad de bases de datos  
+##  <a name="backing-up-databases"></a><a name="backing_up_databases"></a>Realizar copias de seguridad de bases de datos  
  Como ya se ha mencionado anteriormente, el comando `Backup` realiza una copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada en un archivo de copia de seguridad. El comando `Backup` tiene varias propiedades que permiten especificar la base de datos de la que se va a hacer la copia de seguridad, el archivo de copia de seguridad que se va a usar, cómo hacer una copia de seguridad de las definiciones de seguridad y las particiones remotas de las que se va a hacer la copia de seguridad.  
   
 > [!IMPORTANT]  
 >  La cuenta de servicio de Analysis Services debe tener permiso para escribir en la ubicación de copia de seguridad especificada para cada archivo. Además, el usuario debe tener uno de los roles siguientes: rol de administrador en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o ser miembro de un rol de base de datos con permisos de Control total (Administrador) en la base de datos de la que se va a hacer copia de seguridad.  
   
 ### <a name="specifying-the-database-and-backup-file"></a>Especificar la base de datos y el archivo de copia de seguridad  
- Para especificar la base de datos de la que se va a realizar [](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) la copia de seguridad `Backup` , establezca la propiedad Object del comando. La propiedad `Object` debe contener un identificador de objeto para una base de datos; de lo contrario, se produce un error.  
+ Para especificar la base de datos de la que se va a realizar [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) la copia de seguridad `Backup` , establezca la propiedad Object del comando. La propiedad `Object` debe contener un identificador de objeto para una base de datos; de lo contrario, se produce un error.  
   
  Para especificar el archivo que va a crear y usar el proceso de copia de seguridad, establezca la propiedad [File](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/file-element-xmla) del `Backup` comando. Para crear el archivo de copia de seguridad, debe establecerse una ruta UNC y un nombre de archivo para la propiedad `File`.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62702277"
   
  Para cada origen de datos remoto del que se va a realizar una copia de seguridad, puede especificar su correspondiente archivo de copia de seguridad incluyendo un elemento `Backup` [Location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) en la propiedad [locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) del comando. El `Location` elemento debe tener su `File` propiedad establecida en la ruta de acceso UNC y el nombre de archivo del archivo de copia de seguridad remoto, y su propiedad [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) establecida en el identificador del origen de datos remoto definido en la base de datos.  
   
-##  <a name="restoring_databases"></a>Restaurar bases de datos  
+##  <a name="restoring-databases"></a><a name="restoring_databases"></a>Restaurar bases de datos  
  El comando `Restore` restaura una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada a partir de un archivo de copia de seguridad. El comando `Restore` tiene varias propiedades que permiten especificar la base de datos que se va a restaurar, el archivo de copia de seguridad que se va a utilizar, cómo restaurar definiciones de seguridad, las particiones remotas que se van a almacenar y la reubicación de objetos OLAP relacionales (ROLAP).  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "62702277"
   
  Puede utilizar el elemento `Location` en un comando `Restore` para reubicar los objetos ROLAP. Para cada `Location` elemento que se usa para reubicar un origen `DataSourceType` de datos, la propiedad debe establecerse explícitamente en *local*. Asimismo, tiene que establecer la propiedad `ConnectionString` del elemento `Location` en la cadena de conexión de la nueva ubicación. Durante la restauración, el comando `Restore` reemplazará la cadena de conexión del origen de datos identificado para la propiedad `DataSourceID` del elemento `Location` por el valor de la propiedad `ConnectionString` del elemento `Location`.  
   
-##  <a name="synchronizing_databases"></a>Sincronizar bases de datos  
+##  <a name="synchronizing-databases"></a><a name="synchronizing_databases"></a>Sincronizar bases de datos  
  El comando `Synchronize` sincroniza los datos y metadatos de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] especificada con otra base de datos. El comando `Synchronize` tiene varias propiedades que permiten especificar la base de datos de origen, cómo sincronizar definiciones de seguridad, las particiones remotas que se van a sincronizar y la sincronización de los objetos ROLAP.  
   
 > [!NOTE]  

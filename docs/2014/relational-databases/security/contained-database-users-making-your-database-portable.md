@@ -14,18 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655483"
 ---
-# <a name="contained-database-users---making-your-database-portable"></a>Usuarios de bases de datos independientes: llévense sus bases de datos donde quieran
+# <a name="contained-database-users---making-your-database-portable"></a>Usuarios de base de datos independiente: hacer que la base de datos sea portátil
   Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el nivel de base de datos. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. En este tema se revisan las diferencias y ventajas de utilizar el modelo de base de datos independiente en comparación con el modelo de inicio de sesión o usuario tradicionales y las reglas de firewall de Windows o de nivel de servidor. Es posible que la lógica de escenarios específicos, de manejabilidad o de software empresarial todavía pueda necesitar el uso de reglas de inicio de sesión o usuario tradicionales y de firewall de nivel de servidor.  
   
 > [!NOTE]  
->  Como [!INCLUDE[msCoName](../../includes/msconame-md.md)] desarrolla el servicio [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y avanza hacia contrato de nivel de servicio superiores garantizados, es posible que se le pida que cambie a las normas de modelo de usuario de base de datos independiente y las de firewall de ámbito de base de datos para lograr el contrato de nivel de servicio de mayor disponibilidad y mayores tasas de inicio de sesión máximas para una base de datos determinada. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] le recomienda que considere la posibilidad de realizar dichos cambios hoy mismo.  
+>  Como [!INCLUDE[msCoName](../../includes/msconame-md.md)] desarrolla el servicio [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y avanza hacia contrato de nivel de servicio superiores garantizados, es posible que se le pida que cambie a las normas de modelo de usuario de base de datos independiente y las de firewall de ámbito de base de datos para lograr el contrato de nivel de servicio de mayor disponibilidad y mayores tasas de inicio de sesión máximas para una base de datos determinada. [!INCLUDE[msCoName](../../includes/msconame-md.md)] le recomienda que considere la posibilidad de realizar dichos cambios hoy mismo.  
   
 ## <a name="traditional-login-and-user-model"></a>Inicio de sesión tradicional y modelo de usuario  
  En el modelo tradicional de conexión, los usuarios de Windows o los miembros de los grupos de Windows se conectan a la [!INCLUDE[ssDE](../../includes/ssde-md.md)] al proporcionar las credenciales de usuario o grupo autenticadas por Windows. O bien, la conexión proporciona un nombre y contraseña, y se conecta mediante la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (que es la única opción cuando se conecta a [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). En ambos casos, la base de datos maestra debe tener un inicio de sesión que coincida con las credenciales de conexión. Después de que la [!INCLUDE[ssDE](../../includes/ssde-md.md)] confirme las credenciales de autenticación de Windows o autentica las credenciales de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la conexión normalmente intenta conectarse a una base de datos de usuario. Para conectarse a una base de datos de usuario, el inicio de sesión se debe poder asignar (es decir, asociar) a un usuario de base de datos en la base de datos de usuario. También es posible que la cadena de conexión especifique la conexión a una base de datos que es opcional en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero obligatoria en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -45,19 +44,18 @@ ms.locfileid: "62655483"
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Las reglas de Firewall de Windows se aplican a todas las conexiones y tienen el mismo efecto en los inicios de sesión (conexiones de modelo tradicional) y los usuarios de la base de datos independiente. Para obtener más información sobre el Firewall de Windows, consulte [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Firewalls  
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permite reglas de: firewall independientes para las conexiones de nivel de servidor (inicios de sesión) y las conexiones de nivel de base de datos (usuarios de base de datos independiente). Al conectarse a una base de datos de usuario, primero se comprueban las reglas de firewall de base de datos. Si no hay ninguna regla que permita acceder a la base de datos, se comprueban las reglas de firewall de nivel de servidor, lo que requiere acceso a la base de datos maestra del servidor lógico. Las reglas de firewall de nivel de base de datos combinadas con los usuarios de la base de datos independiente pueden eliminar la necesidad de acceder a la base de datos maestra del servidor durante la conexión, lo que puede mejorar la escalabilidad de la conexión.  
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] permite reglas de: firewall independientes para las conexiones de nivel de servidor (inicios de sesión) y las conexiones de nivel de base de datos (usuarios de base de datos independiente). Al conectarse a una base de datos de usuario, primero se comprueban las reglas de firewall de base de datos. Si no hay ninguna regla que permita acceder a la base de datos, se comprueban las reglas de firewall de nivel de servidor, lo que requiere acceso a la base de datos maestra del servidor lógico. Las reglas de firewall de nivel de base de datos combinadas con los usuarios de la base de datos independiente pueden eliminar la necesidad de acceder a la base de datos maestra del servidor durante la conexión, lo que puede mejorar la escalabilidad de la conexión.  
   
  Para obtener más información sobre las reglas de firewall de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , vea los temas siguientes:  
   
 -   [Firewall de Azure SQL Database](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Cómo configurar los valores del firewall (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Cómo: Configurar los valores del firewall (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
--   [sp_set_firewall_rule &#40;Azure SQL Database&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
+-   [sp_set_firewall_rule &#40;Base de datos SQL de Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   
--   [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
+-   [sp_set_database_firewall_rule &#40;Base de datos SQL de Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
 ## <a name="syntax-differences"></a>Diferencias de sintaxis  
   

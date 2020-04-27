@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727568"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Definir e identificar objetos (XMLA)
@@ -31,7 +31,7 @@ ms.locfileid: "62727568"
 ## <a name="object-identifiers"></a>Identificadores de objetos  
  Un objeto se identifica mediante el identificador único del objeto tal y como se define en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los identificadores de objetos se pueden especificar o determinar explícitamente por la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cuando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea el objeto. Puede usar el método [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) para recuperar los identificadores de objeto para `Discover` las llamadas a métodos posteriores o [ejecutadas](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
   
-## <a name="object-references"></a>Referencias del objeto  
+## <a name="object-references"></a>Referencias a objetos  
  Varios comandos XMLA, como [Delete](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/delete-element-xmla) o [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla), usan una referencia de objeto para hacer referencia a un objeto de una manera inequívoca. Una referencia a objetos contiene el identificador de objetos del objeto en el que se ejecuta un comando y los identificadores de objetos de los antecesores para ese objeto. Por ejemplo, la referencia a objetos para una partición contiene el identificador de objetos de la partición, así como los identificadores de objetos del grupo, cubo y base de datos de medida primario de esa partición.  
   
 ## <a name="object-definitions"></a>Definiciones de objetos  

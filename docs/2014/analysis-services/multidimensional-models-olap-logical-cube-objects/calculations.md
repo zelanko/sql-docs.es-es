@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702692"
 ---
 # <a name="calculations"></a>Cálculos
@@ -31,8 +31,7 @@ ms.locfileid: "62702692"
   
  Los miembros calculados se pueden definir para cualquier dimensión, incluida la dimensión de medidas. Los miembros calculados creados en la dimensión de medidas se denominan medidas calculadas.  
   
- Aunque los miembros calculados normalmente se basan en los datos que ya existen en un cubo, puede crear expresiones complejas si combina datos con operadores aritméticos, números y funciones. También puede usar funciones MDX, como LookupCube, para tener acceso a los datos de otros cubos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye bibliotecas normalizadas de funciones de Visual Studio y permite usar procedimientos almacenados para recuperar datos de otros orígenes distintos a la base de datos actual de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información acerca de los procedimientos almacenados, vea [definir procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
+ Aunque los miembros calculados normalmente se basan en los datos que ya existen en un cubo, puede crear expresiones complejas si combina datos con operadores aritméticos, números y funciones. También puede usar funciones MDX, como LookupCube, para tener acceso a los datos de otros cubos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye bibliotecas normalizadas de funciones de Visual Studio y permite usar procedimientos almacenados para recuperar datos de otros orígenes distintos a la base de datos actual de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información acerca de los procedimientos almacenados, vea [definir procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
   
  Por ejemplo, suponga que los ejecutivos de una naviera desean determinar qué tipos de carga son más rentables basándose en el beneficio por unidad de volumen. Utilizan un cubo denominado Shipments que contiene las dimensiones Cargo, Fleet y Time y las medidas Price_to_Ship, Cost_to_Ship y Volume_in_Cubic_Meters; sin embargo, el cubo no contiene ninguna medida para la rentabilidad. En el cubo, se puede crear un miembro calculado como medida que se denomine Profit_per_Cubic_Meter mediante la combinación de las medidas existentes en la siguiente expresión:  
   

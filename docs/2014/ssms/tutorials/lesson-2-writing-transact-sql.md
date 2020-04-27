@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd776a778f56831fc63fef1ea040e3f69883eff3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470032"
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Lección 2: Escribir Transact-SQL
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es un entorno de desarrollo integrado para escribir consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX y XML, y comandos de SQLCMD. El tutorial ilustra el uso del editor de consultas del motor de base de datos para escribir un script [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 > [!NOTE]  

@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736620"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Objetos y características de objetos ASSL
@@ -63,8 +63,7 @@ ms.locfileid: "62736620"
   
 -   `LastSchemaUpdate`  
   
--   
-  `LastProcessed` (donde corresponda)  
+-   `LastProcessed` (donde corresponda)  
   
 > [!NOTE]  
 >  La clasificación de un objeto como un objeto principal afecta a la manera en que una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] trata ese objeto y la manera en que se trata ese objeto en el lenguaje de definición de objeto. Sin embargo, esta clasificación no garantiza que las herramientas de administración y desarrollo de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] permitirán la creación, modificación o eliminación independiente de estos objetos.  
@@ -97,10 +96,8 @@ ms.locfileid: "62736620"
  Esta sección de referencia de ASSL describe la representación *ExpandFull* . Todos los demás niveles `ObjectExpansion` se derivan de este nivel.  
   
 ## <a name="object-processing"></a>Procesamiento de objetos  
- ASSL incluye elementos o propiedades de solo lectura (por ejemplo, `LastProcessed`) que se pueden leer desde la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], pero que se omiten cuando los scripts de comando se envían a la instancia. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] omite los valores modificados de los elementos de solo lectura sin advertencias o errores.  
+ ASSL incluye elementos o propiedades de solo lectura (por ejemplo, `LastProcessed`) que se pueden leer desde la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], pero que se omiten cuando los scripts de comando se envían a la instancia. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] omite los valores modificados de los elementos de solo lectura sin advertencias o errores.  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] también omite las propiedades que no son adecuadas o que son irrelevantes sin provocar errores de validación. Por ejemplo, el elemento X únicamente debería estar presente cuando el elemento Y tiene un valor determinado. La instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] omite el elemento X en lugar de validar ese elemento con el valor del elemento Y.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] también omite las propiedades que no son adecuadas o que son irrelevantes sin provocar errores de validación. Por ejemplo, el elemento X únicamente debería estar presente cuando el elemento Y tiene un valor determinado. La instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] omite el elemento X en lugar de validar ese elemento con el valor del elemento Y.  
   
   

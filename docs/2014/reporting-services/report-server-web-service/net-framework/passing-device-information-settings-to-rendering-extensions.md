@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518655"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Pasar la configuración de información de dispositivo a las extensiones de representación
@@ -54,8 +54,8 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
  Para más información, vea [Especificar la configuración de la información del dispositivo en una dirección URL](../../specify-device-information-settings-in-a-url.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Configuración de información de dispositivos para las extensiones de representación &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
- [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Configuración de la información de dispositivos para las extensiones de representación &#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
+ [Personalizar los parámetros de extensión de representación en RSReportServer. config](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Creación de aplicaciones con el servicio web y .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

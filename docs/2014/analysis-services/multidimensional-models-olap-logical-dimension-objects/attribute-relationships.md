@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728521"
 ---
 # <a name="attribute-relationships"></a>Relaciones de atributo
@@ -56,7 +56,7 @@ ms.locfileid: "62728521"
   
 -   Sexo  
   
--   Email  
+-   Correo electrónico  
   
 -   City  
   

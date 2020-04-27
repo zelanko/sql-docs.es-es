@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726121"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensiones de personalización de Analysis Services
@@ -41,8 +41,7 @@ ms.locfileid: "62726121"
  Al iniciar el servicio, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] carga los ensamblados necesarios y determina qué clases tienen <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> el atributo personalizado.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define los atributos personalizados como una manera de describir el código e influir en el comportamiento en tiempo de ejecución. Para obtener más información, vea el tema "[información general sobre los atributos](https://go.microsoft.com/fwlink/?LinkId=82929)" [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] en la guía del desarrollador de MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define los atributos personalizados como una manera de describir el código e influir en el comportamiento en tiempo de ejecución. Para obtener más información, vea el tema "[información general sobre los atributos](https://go.microsoft.com/fwlink/?LinkId=82929)" [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] en la guía del desarrollador de MSDN.  
   
  Para todas las clases con <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> el atributo personalizado [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , invoca sus constructores predeterminados. La llamada a todos los constructores en el inicio proporciona una ubicación común desde la que se pueden generar nuevos objetos y que es independiente de cualquier actividad del usuario.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "62726121"
  Contexto de la sesión  
  Para los objetos que se basan en extensiones de personalización, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un entorno de ejecución durante la sesión del cliente y genera dinámicamente la mayor parte de esos objetos en este entorno. Como cualquier otro ensamblado de CLR, este entorno de ejecución también tiene acceso a otras funciones y procedimientos almacenados. Cuando finaliza la sesión de usuario [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , quita los objetos creados dinámicamente y cierra el entorno de ejecución.  
   
- Eventos  
+ Events  
  Los eventos de sesión `On-Cube-OpenedCubeOpened` y `On-Cube-ClosingCubeClosing` desencadenan la creación de objetos.  
   
  La comunicación entre el cliente y el servidor se produce a través de eventos concretos. Estos eventos hacen que el cliente conozca las situaciones que conducen a que se generen los objetos del cliente. El entorno del cliente se crea dinámicamente mediante el uso de dos conjuntos de eventos: eventos de sesión y eventos de cubo.  
@@ -79,14 +78,11 @@ ms.locfileid: "62726121"
   
  **Propiedades**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, un valor de cadena de solo lectura que representa el identificador de sesión de la conexión actual.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, un valor de cadena de solo lectura que representa el identificador de sesión de la conexión actual.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, una referencia de solo lectura a la referencia cultural del cliente asociada a la sesión actual.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, una referencia de solo lectura a la referencia cultural del cliente asociada a la sesión actual.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, una referencia de solo lectura a la interfaz de identidad que representa al usuario actual.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, una referencia de solo lectura a la interfaz de identidad que representa al usuario actual.  
   
  **Eventos**  
   
@@ -97,22 +93,18 @@ ms.locfileid: "62726121"
 #### <a name="new-properties-in-the-context-class"></a>Nuevas propiedades en la clase Context  
  La clase <xref:Microsoft.AnalysisServices.AdomdServer.Context> tiene dos propiedades nuevas:  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, una referencia de solo lectura al nuevo objeto de servidor.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, una referencia de solo lectura al nuevo objeto de servidor.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, una referencia de solo lectura al nuevo objeto <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, una referencia de solo lectura al nuevo objeto <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>.  
   
 #### <a name="new-server-class"></a>Nueva clase Server  
  La clase <xref:Microsoft.AnalysisServices.AdomdServer.Server> es nueva y expone varias extensiones de personalización a través de propiedades y eventos de clase.  
   
  **Propiedades**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, un valor de cadena de solo lectura que representa el nombre del servidor.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, un valor de cadena de solo lectura que representa el nombre del servidor.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, una referencia de solo lectura a la referencia cultural global asociada al servidor.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, una referencia de solo lectura a la referencia cultural global asociada al servidor.  
   
  **Eventos**  
   
@@ -123,13 +115,13 @@ ms.locfileid: "62726121"
 #### <a name="adomdcommand-class"></a>Clase AdomdCommand  
  La clase <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> admite ahora los comandos MDX siguientes:  
   
--   [Instrucción CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [Instrucción UPDATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [Instrucción DROP MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [DROP SET, instrucción &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   

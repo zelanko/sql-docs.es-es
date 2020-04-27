@@ -14,24 +14,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c927d68c597e64a477382a909aa6eda583d47e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676604"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>Establecer el período de retención del historial (SQL Server Management Studio)
-  Especifique el período de retención del historial en la página **General** del cuadro de diálogo **Propiedades de base de datos de distribución: \<baseDeDatosDeDistribución>** . Este parámetro controla durante cuánto tiempo se almacena el historial del agente de replicación. Esta página está disponible en la página **General** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** . Para más información acerca de cómo obtener acceso a este cuadro de diálogo, [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md).  
+  Especifique el período de retención del historial en la página **General** del cuadro de diálogo **Propiedades de base de datos de distribución: \<baseDeDatosDeDistribución>**. Este parámetro controla durante cuánto tiempo se almacena el historial del agente de replicación. Esta página está disponible en la página **General** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**. Para más información acerca de cómo obtener acceso a este cuadro de diálogo, [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-specify-the-history-retention-period"></a>Para especificar el período de retención del historial  
   
-1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** , haga clic en el botón de propiedades ( **...** ) de la base de datos de distribución.  
+1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**, haga clic en el botón de propiedades (**...**) de la base de datos de distribución.  
   
 2.  Escriba un valor en el cuadro **Almacenar historial de rendimiento de replicación al menos** .  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar distribución](configure-distribution.md)  
+ [Configurar la distribución](configure-distribution.md)  
   
   

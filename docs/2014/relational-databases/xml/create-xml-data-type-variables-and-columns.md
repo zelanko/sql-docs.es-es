@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637998"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
@@ -66,8 +66,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admite restricciones NULL y NOT NULL en columnas de tipo `xml`. Por ejemplo:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admite restricciones NULL y NOT NULL en columnas de tipo `xml`. Por ejemplo:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  

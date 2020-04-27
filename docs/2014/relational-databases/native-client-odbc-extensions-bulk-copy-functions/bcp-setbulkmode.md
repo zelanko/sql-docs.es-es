@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688790"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -52,7 +52,7 @@ cbRow
  *hdbc*  
  Identificador de la conexión ODBC habilitado para la copia masiva.  
   
- *propiedad*  
+ *property*  
  Constante de tipo BYTE. Vea la tabla en la sección Comentarios para obtener una lista de las constantes.  
   
  *pField*  

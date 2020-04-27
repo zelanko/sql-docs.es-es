@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653756"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lección 2: Generar clases a partir del esquema RDL con la herramienta xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lección 2: Generación de clases a partir del esquema RDL con la herramienta xsd
   Una vez creado el proyecto de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], el siguiente paso es recuperar una copia local del esquema de definición de informe y ejecutar la herramienta de definición de esquemas XML (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Para generar clases RDL  

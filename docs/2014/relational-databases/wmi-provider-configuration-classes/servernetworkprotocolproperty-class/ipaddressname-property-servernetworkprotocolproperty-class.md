@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b841f2afe85c1cf657a4686c2a0e989ecff85715
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643080"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>Propiedad IPAddressName (clase ServerNetworkProtocolProperty)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase ServerNetworkProtocolProperty](servernetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red en la instancia [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

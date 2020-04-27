@@ -11,14 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638844"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Novedades de&#39;s en SQL Server Native Client
-  
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] instala [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. No hay ningún [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client.  
   
  No habrá más actualizaciones para el controlador ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. El sucesor para el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que se denomina Controlador ODBC 11 de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Windows, se instala con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Para obtener más información sobre el controlador ODBC 11 de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Windows, vea [Controlador ODBC de Microsoft 11 para SQL Server (Windows](https://www.microsoft.com/download/details.aspx?id=36434).  
@@ -35,7 +34,7 @@ ms.locfileid: "62638844"
   
 -   [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
   
--   [Obtener acceso a información de diagnóstico en el registro de eventos extendidos](features/accessing-diagnostic-information-in-the-extended-events-log.md)  
+-   [Obtener acceso a la información de diagnóstico en el registro de eventos extendidos](features/accessing-diagnostic-information-in-the-extended-events-log.md)  
   
  Además, ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite ahora tres características que se agregaron a ODBC estándar en el SDK de Windows 7:  
   
@@ -51,8 +50,7 @@ ms.locfileid: "62638844"
   
 -   Al llamar `ICommandWithParameters::SetParameterInfo`a, el valor que se pasa al parámetro *pwszName* debe ser un identificador válido. Para obtener más información, vea [ICommandWithParameters](../native-client-ole-db-interfaces/icommandwithparameters.md).  
   
--   
-  `SQLDescribeParam` devolverá ahora de forma coherente un valor que cumple con la especificación de ODBC. Para obtener más información, vea [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
+-   `SQLDescribeParam` devolverá ahora de forma coherente un valor que cumple con la especificación de ODBC. Para obtener más información, vea [SQLDescribeParam](../native-client-odbc-api/sqldescribeparam.md).  
   
 -   [Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   

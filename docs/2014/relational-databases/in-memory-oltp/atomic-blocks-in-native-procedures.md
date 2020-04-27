@@ -11,16 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467285"
 ---
 # <a name="atomic-blocks"></a>Bloques atomic
-  
-  `BEGIN ATOMIC` es parte del estándar ANSI SQL. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los bloques atomic solo en el nivel superior de los procedimientos almacenados compilados de forma nativa.  
+  `BEGIN ATOMIC` es parte del estándar ANSI SQL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los bloques atomic solo en el nivel superior de los procedimientos almacenados compilados de forma nativa.  
   
 -   Cada procedimiento almacenado compilado de forma nativa contiene exactamente un bloque de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este es un bloque ATOMIC.  
   
@@ -33,7 +31,7 @@ ms.locfileid: "62467285"
   
  Si no hay ninguna transacción activa en una sesión, `BEGIN ATOMIC` iniciará una nueva transacción. Si no se inicia una excepción fuera del ámbito del bloque, la transacción se confirmará al final del bloque. Si el bloque produce una excepción (es decir, la excepción no se detecta ni se controla en el bloque), la transacción se revertirá. Para las transacciones que ocupan un único bloque atomic (un solo procedimiento almacenado compilado de forma nativa), no se deben escribir instrucciones `BEGIN TRANSACTION` y `COMMIT` o `ROLLBACK` explícitas.  
   
- Los procedimientos almacenados compilados de forma nativa admiten las construcciones `TRY`, `CATCH` y `THROW` para el control de errores. `RAISERROR`no se admite.  
+ Los procedimientos almacenados compilados de forma nativa admiten las construcciones `TRY`, `CATCH` y `THROW` para el control de errores. No se admite `RAISERROR`.  
   
  En el ejemplo siguiente se muestra el comportamiento de control de errores con bloques atomic y procedimientos almacenados compilados de forma nativa:  
   
@@ -143,7 +141,7 @@ GO
 |----------------------|-----------------|  
 |`DATEFORMAT`|Se admiten todos los formatos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se especifica, `DATEFORMAT` reemplaza el formato de fecha predeterminado asociado a `LANGUAGE`.|  
 |`DATEFIRST`|Cuando se especifica, `DATEFIRST` reemplaza el valor predeterminado asociado a `LANGUAGE`.|  
-|`DELAYED_DURABILITY`|Los valores admitidos son `OFF` y `ON`.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las confirmaciones de transacción pueden ser totalmente durables, el valor predeterminado o una duradera diferida. Para obtener más información, vea [controlar la durabilidad](../logs/control-transaction-durability.md)de las transacciones.|  
+|`DELAYED_DURABILITY`|Los valores admitidos son `OFF` y `ON`.<br /><br /> Las confirmaciones de transacción de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado) o durables diferidas. Para más información, vea [Controlar la durabilidad de las transacciones](../logs/control-transaction-durability.md).|  
   
  Las opciones SET siguientes tienen el mismo valor predeterminado del sistema para todos los bloques atomic en todos los procedimientos almacenados compilados de forma nativa:  
   
@@ -164,6 +162,6 @@ GO
 |XACT_ABORT|Apagado<br /><br /> Las excepciones no detectadas hacen que se revierta el bloque atomic, pero no causan que la transacción se anule a menos que el error invalide la transacción.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
+ [procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

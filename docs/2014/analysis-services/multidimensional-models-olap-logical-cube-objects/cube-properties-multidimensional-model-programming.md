@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727651"
 ---
 # <a name="cube-properties"></a>Propiedades del cubo
@@ -58,9 +58,9 @@ ms.locfileid: "62727651"
 |`Language`|Especifica el identificador de idioma predeterminado del cubo.|  
 |`Name`|Especifica el nombre descriptivo del cubo.|  
 |`ProactiveCaching`|Define la configuración de almacenamiento en caché automático para el cubo.|  
-|`ProcessingMode`|Indica si la indización y la agregación se deben producir durante o después del procesamiento. Las opciones **** son regular `lazy`o.|  
+|`ProcessingMode`|Indica si la indización y la agregación se deben producir durante o después del procesamiento. Las opciones **regular** son regular `lazy`o.|  
 |`ProcessingPriority`|Determina la prioridad de procesamiento del cubo durante las operaciones de fondo, como indizaciones y agregaciones diferidas. El valor predeterminado es **0**.|  
-|`ScriptCacheProcessingMode`|Indica si la caché de script se debe generar durante o después del procesamiento. Las opciones **** son regular `lazy`y.|  
+|`ScriptCacheProcessingMode`|Indica si la caché de script se debe generar durante o después del procesamiento. Las opciones **regular** son regular `lazy`y.|  
 |`ScriptErrorHandlingMode`|Determina el control de errores. Las opciones `IgnoreNone` son o`IgnoreAll`|  
 |`Source`|Muestra la vista del origen de datos utilizada para el cubo.|  
 |`StorageLocation`|Especifica la ubicación de almacenamiento del sistema de archivos para el cubo. Si no se especifica ninguna ubicación, se hereda de la base de datos que contiene el objeto de cubo.|  

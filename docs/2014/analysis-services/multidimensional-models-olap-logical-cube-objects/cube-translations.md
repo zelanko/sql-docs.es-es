@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728511"
 ---
 # <a name="cube-translations"></a>Traducciones de cubo
@@ -29,8 +29,7 @@ ms.locfileid: "62728511"
   
  Un objeto <xref:Microsoft.AnalysisServices.Translation> simple está compuesto por el número del identificador de idioma y el título traducido. El número del identificador de idioma es un valor `Integer` con el identificador de idioma. El título traducido es el texto traducido.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una traducción de cubo es una representación específica del idioma del nombre de un objeto de cubo, como un título o una carpeta para mostrar. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también admite traducciones de nombres de dimensión y de miembro.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], una traducción de cubo es una representación específica del idioma del nombre de un objeto de cubo, como un título o una carpeta para mostrar. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también admite traducciones de nombres de dimensión y de miembro.  
   
  Las traducciones ofrecen compatibilidad de servidor para aplicaciones cliente que admitan varios idiomas. Con frecuencia, usuarios de distintos países ven los datos de un cubo. Resulta útil poder traducir los distintos elementos de un cubo a diferentes idiomas para que los usuarios de estos idiomas puedan ver y comprender los metadatos del cubo. Por ejemplo, un usuario corporativo en Francia puede obtener acceso a un cubo desde una estación de trabajo con una configuración regional en francés y ver los valores de las propiedades del objeto en francés. Igualmente, un usuario corporativo en Alemania puede obtener acceso al mismo cubo desde una estación de trabajo con una configuración regional en alemán y ver los valores de las propiedades del objeto en alemán.  
   
@@ -39,6 +38,6 @@ ms.locfileid: "62728511"
 ## <a name="see-also"></a>Consulte también  
  [Traducciones de dimensiones](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Traducciones &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Sugerencias de globalización y prácticas recomendadas &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702643"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>Objetos de cubo (Analysis Services - Datos multidimensionales)
@@ -33,7 +33,7 @@ ms.locfileid: "62702643"
 |||  
 |-|-|  
 |Tema||  
-|[Acciones &#40;Analysis Services de datos multidimensionales&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[Acciones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[Agregaciones y diseños de agregaciones](aggregations-and-aggregation-designs.md)||  
 |[Cálculos](calculations.md)||  
 |[Celdas de cubo &#40;Analysis Services de datos multidimensionales&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
@@ -43,7 +43,7 @@ ms.locfileid: "62702643"
 |[Relaciones de dimensión](dimension-relationships.md)||  
 |[Indicadores clave de rendimiento &#40;KPI&#41; en modelos multidimensionales](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[Medidas y grupos de medida](../multidimensional-models/measures-and-measure-groups.md)||  
-|[Particiones &#40;Analysis Services de datos multidimensionales&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[Particiones &#40;Analysis Services - Datos multidimensionales&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[perspectivas](perspectives.md)||  
   
   

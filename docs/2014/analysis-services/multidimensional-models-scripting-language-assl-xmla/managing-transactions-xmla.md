@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727249"
 ---
 # <a name="managing-transactions-xmla"></a>Administrar transacciones (XMLA)
@@ -34,8 +34,7 @@ ms.locfileid: "62727249"
  Una transacción es implícita o explícita:  
   
  **Transacción implícita**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crea una transacción *implícita* para un comando XMLA si el `BeginTransaction` comando no especifica el inicio de una transacción. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] siempre confirma una transacción implícita si el comando se ejecuta correctamente y revierte una transacción implícita si el comando produce un error.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crea una transacción *implícita* para un comando XMLA si el `BeginTransaction` comando no especifica el inicio de una transacción. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] siempre confirma una transacción implícita si el comando se ejecuta correctamente y revierte una transacción implícita si el comando produce un error.  
   
  **Transacción explícita**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]crea una transacción *explícita* si el `BeginTransaction` comando inicia una transacción. Sin embargo, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo confirma una transacción explícita si se envía un comando `CommitTransaction` y revierte una transacción explícita si se envía un comando `RollbackTransaction`.  
@@ -43,8 +42,7 @@ ms.locfileid: "62727249"
  Además, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] revierte tanto transacciones implícitas como explícitas si la sesión actual finaliza antes de que se complete la transacción activa.  
   
 ## <a name="transactions-and-reference-counts"></a>Transacciones y recuentos de referencias  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene un recuento de referencias de transacción para cada sesión. Sin embargo, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no admite las transacciones anidadas en las que solo se mantiene una transacción activa por sesión. Si la sesión actual no tiene una transacción activa, el recuento de referencias de transacción se establece en cero.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mantiene un recuento de referencias de transacción para cada sesión. Sin embargo, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no admite las transacciones anidadas en las que solo se mantiene una transacción activa por sesión. Si la sesión actual no tiene una transacción activa, el recuento de referencias de transacción se establece en cero.  
   
  En otras palabras, cada comando `BeginTransaction` incrementa en uno el recuento de referencias, mientras que cada comando `CommitTransaction` disminuye el recuento de referencias en uno. Si un comando `CommitTransaction` establece el recuento de transacciones en cero, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] confirma la transacción.  
   

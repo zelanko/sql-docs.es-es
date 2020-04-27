@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62703093"
 ---
 # <a name="creating-stored-procedures"></a>Creación de procedimientos almacenados
@@ -84,7 +84,7 @@ ms.locfileid: "62703093"
   
 1.  Expanda la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la base de datos en explorador de objetos, haga clic con el botón secundario en la carpeta **ensamblados** y haga clic en **nueva referencia de ensamblado**. Esto muestra el cuadro de diálogo **Agregar referencia** . En la pestaña **.net** del cuadro de diálogo **Agregar referencia se** enumeran los ensamblados .net (CLR) existentes, mientras que la pestaña **proyectos** enumera los proyectos.  
   
-2.  Puede hacer clic en un componente o proyecto existente y, **** a continuación, hacer clic en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agregar para agregarlo al proyecto. Para agregar una referencia a una DLL COM, haga clic en la pestaña **examinar** para buscar el archivo. La lista **proyectos y componentes seleccionados** muestra el nombre, el tipo, la versión y la ubicación de cada componente que se va a agregar al proyecto.  
+2.  Puede hacer clic en un componente o proyecto existente y, **Add** a continuación, hacer clic en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agregar para agregarlo al proyecto. Para agregar una referencia a una DLL COM, haga clic en la pestaña **examinar** para buscar el archivo. La lista **proyectos y componentes seleccionados** muestra el nombre, el tipo, la versión y la ubicación de cada componente que se va a agregar al proyecto.  
   
 3.  Cuando haya terminado de seleccionar los componentes que desea agregar, haga clic en **Aceptar** para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agregarlos al proyecto.  
   

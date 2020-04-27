@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fddf6045921fa14e09aaff918f84125eb907e9ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721747"
 ---
 # <a name="connect-to-server-oracle-login"></a>Conectar al servidor (Oracle), Inicio de sesión
-  Use la **pestaña Inicio de sesión** del cuadro de diálogo **conectar al servidor** para especificar la cuenta con la que se realizan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las conexiones del distribuidor al publicador de Oracle. Se debe usar la misma cuenta que se especificó para el esquema de usuario administrativo de replicación al configurar el publicador. Para más información, vea [Configurar un publicador de Oracle](non-sql/configure-an-oracle-publisher.md).  
+  Use la pestaña **Inicio de sesión** del cuadro de diálogo **Conectar al servidor** para especificar la cuenta desde la que se van a realizar las conexiones del distribuidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el publicador de Oracle. Se debe usar la misma cuenta que se especificó para el esquema de usuario administrativo de replicación al configurar el publicador. Para obtener más información, vea [Configurar un publicador de Oracle](non-sql/configure-an-oracle-publisher.md).  
   
 ## <a name="options"></a>Opciones  
  **Instancia del servidor**  
@@ -35,7 +35,7 @@ ms.locfileid: "62721747"
   
 -   Debe haber iniciado una sesión con la misma cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows que especificó para el esquema de usuario administrativo de replicación.  
   
- **Inicio de sesión** y **contraseña**  
+ **Inicio de sesión** y **Contraseña**  
  Si selecciona **Autenticación estándar de Oracle** para la opción **Autenticación** , especifique el nombre de inicio de sesión y la contraseña; deben coincidir con los especificados para el esquema de usuario administrativo de replicación.  
   
 ## <a name="see-also"></a>Consulte también  

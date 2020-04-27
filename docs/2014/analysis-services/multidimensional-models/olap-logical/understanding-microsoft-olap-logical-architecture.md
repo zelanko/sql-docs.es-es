@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725489"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>Arquitectura lógica (Analysis Services - Datos multidimensionales)
@@ -29,8 +29,7 @@ ms.locfileid: "62725489"
   
 -   Pueden emitirse comandos de consulta mediante los siguientes lenguajes: SQL; MDX (Expresiones multidimensionales), un lenguaje de consulta estándar para el análisis; o Extensiones de minería de datos (DMX), un lenguaje de consulta estándar orientado a la minería de datos. También se puede usar el lenguaje de script de Analysis Services (ASSL) para administrar objetos de base de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] también admite un motor de cubo local que permite a las aplicaciones en clientes desconectados examinar datos multidimensionales almacenados localmente. Para obtener más información, consulte [requisitos de la arquitectura de cliente para el desarrollo de Analysis Services](../olap-physical/client-architecture-requirements-for-analysis-services-development.md)  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] también admite un motor de cubo local que permite a las aplicaciones en clientes desconectados examinar datos multidimensionales almacenados localmente. Para obtener más información, consulte [requisitos de la arquitectura de cliente para el desarrollo de Analysis Services](../olap-physical/client-architecture-requirements-for-analysis-services-development.md)  
   
 ## <a name="in-this-section"></a>En esta sección  
  **Información general de arquitectura lógica**  
@@ -40,7 +39,7 @@ ms.locfileid: "62725489"
  [Objetos de servidor &#40;Analysis Services de datos multidimensionales&#41;](server-objects-analysis-services-multidimensional-data.md)  
   
  **Objetos de base de datos**  
- [Objetos de base de datos &#40;Analysis Services de datos multidimensionales&#41;](database-objects-analysis-services-multidimensional-data.md)  
+ [Objetos de base de datos &#40;Analysis Services - Datos multidimensionales&#41;](database-objects-analysis-services-multidimensional-data.md)  
   
  **Objetos Dimension**  
  [Objetos de dimensión &#40;Analysis Services de datos multidimensionales&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
@@ -53,6 +52,6 @@ ms.locfileid: "62725489"
   
 ## <a name="see-also"></a>Consulte también  
  [Descripción de la arquitectura OLAP de Microsoft](../olap-physical/understanding-microsoft-olap-architecture.md)   
- [Arquitectura física &#40;Analysis Services de datos multidimensionales&#41;](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
+ [Arquitectura física &#40;Analysis Services - Datos multidimensionales&#41;](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
   

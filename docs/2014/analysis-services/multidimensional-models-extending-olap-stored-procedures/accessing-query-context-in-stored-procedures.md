@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702668"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Acceder al contexto de la consulta en los procedimientos almacenados
@@ -30,7 +30,7 @@ ms.locfileid: "62702668"
 |**CurrentCube**|Cube|El cubo del contexto de consulta actual.|  
 |**CurrentDatabaseName**|String|El identificador de la base de datos actual.|  
 |**CurrentConnection**|Conexión|Una referencia al objeto de conexión en el contexto actual.|  
-|**Pasar**|Entero|Número de paso del contexto actual.|  
+|**Correcto**|Entero|Número de paso del contexto actual.|  
   
  El objeto `Context` existe cuando el modelo de objetos de expresiones multidimensionales (MDX) se usa en un procedimiento almacenado. No está disponible cuando el modelo del objeto MDX se usa en un cliente. El objeto `Context` no se pasa explícitamente al procedimiento almacenado, ni es devuelto por él. Se encuentra disponible durante la ejecución del procedimiento almacenado.  
   

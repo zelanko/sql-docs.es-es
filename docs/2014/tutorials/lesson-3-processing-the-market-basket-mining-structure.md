@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653867"
 ---
-# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lección 3: Procesar la estructura de minería de datos de la cesta de la compra
+# <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lección 3: Procesar la estructura de minería de datos Market Basket
   En esta lección, usará la instrucción [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) y los VAssocSeqLineItems y vAssocSeqOrders de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de datos de ejemplo para procesar las estructuras de minería de datos y los modelos de minería de datos creados en la [Lección 1: crear la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) y la [Lección 2: agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  
   
  Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lee los datos de origen y genera las estructuras que admiten los modelos de minería de datos. Al procesar un modelo de minería de datos, los datos definidos por la estructura de minería de datos se pasan por el algoritmo de minería de datos que haya elegido. El algoritmo busca tendencias y patrones y, a continuación, almacena esta información en el modelo de minería de datos. Por consiguiente, el modelo de minería de datos no contiene los datos de origen reales, sino la información descubierta por el algoritmo. Para obtener más información sobre el procesamiento de modelos de minería de datos, vea [requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
@@ -106,7 +106,7 @@ RELATE [<case key>] TO [<foreign key>]
     [<mining structure>]  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Market Basket  
@@ -120,7 +120,7 @@ RELATE [<case key>] TO [<foreign key>]
     ( SKIP, <skipped column> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [OrderNumber],  
@@ -128,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     En la instrucción, `Products` hace referencia a la tabla Products definida por la instrucción SHAPE. 
-  `SKIP` se usa para omitir la columna Model, que se encuentra en el origen de datos como clave, pero no la usa la estructura de minería de datos.  
+     En la instrucción, `Products` hace referencia a la tabla Products definida por la instrucción SHAPE. `SKIP` se usa para omitir la columna Model, que se encuentra en el origen de datos como clave, pero no la usa la estructura de minería de datos.  
   
 5.  Reemplace lo siguiente:  
   
@@ -144,7 +143,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [<nested table>]  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     SHAPE {  
@@ -193,6 +192,6 @@ RELATE [<case key>] TO [<foreign key>]
  En la siguiente lección creará varias predicciones basadas en los modelos de minería de datos que ha agregado a la estructura Market Basket.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Ejecutar predicciones de cesta de la compra](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [Lección 4: Ejecución de predicciones de cesta de la compra](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
   
   

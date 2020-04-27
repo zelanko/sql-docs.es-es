@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473156"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administración automatizada en una empresa
-  La automatización de la administración en varias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancias de se denomina *administración multiservidor*. Utilice la administración multiservidor para realizar lo siguiente:  
+   Automatizar la administración en varias instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se conoce como *administración multiservidor*. Utilice la administración multiservidor para realizar lo siguiente:  
   
 -   Administrar dos o más servidores.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62473156"
  Contiene información sobre cómo una administración automatizada en un entorno multiservidor se aprovecha de las características de optimización automática de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Motor de base de datos compatibilidad con versiones anteriores](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Registrar servidores](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   

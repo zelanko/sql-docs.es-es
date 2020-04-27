@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745556"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Envía un mensaje al cliente.  
   
@@ -83,10 +82,10 @@ msglen
  *msgnum*  
  Es un número de mensaje de 4 bytes.  
   
- *las*  
+ *class*  
  Especifica la gravedad del error. Una gravedad menor o igual a 10 se considera un mensaje informativo.  
   
- *State*  
+ *state*  
  Proporciona el número de estado de error para el mensaje actual. El número de estado de error proporciona información sobre el contexto del error. Los números de estado van de 0 a 255.  
   
  *rpcname*  
@@ -95,10 +94,10 @@ msglen
  *rpcnamelen*  
  No se admite actualmente.  
   
- *ropa*  
+ *linenum*  
  Es el número de línea en el lote de comandos del lenguaje donde se aplica el mensaje. Los números de línea empiezan por 1. Si *linenum* no se aplica al mensaje, se establece en 0.  
   
- *Mensaje*  
+ *message*  
  Es un puntero a una cadena de caracteres que se va a enviar al cliente.  
   
  *msglen*  
@@ -114,7 +113,7 @@ msglen
   
  Para enviar mensajes en Unicode, use **srv_wsendmsg** en lugar de **srv_sendmsg**.  
   
- Para obtener más información [, vea datos Unicode y páginas de códigos de servidor](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
+ Para más información, vea [Datos Unicode y páginas de códigos de servidor](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
 >  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  

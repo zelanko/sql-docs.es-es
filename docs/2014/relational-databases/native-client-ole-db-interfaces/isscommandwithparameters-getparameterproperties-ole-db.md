@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638087"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
@@ -36,7 +36,7 @@ SSPARAMPROPS **prgParamProperties);
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *pcParams*[out] [in]  
+ *pcParams*[out][in]  
  Un puntero a la memoria que contiene el número de estructuras SSPARAMPROPS devueltas en *prgParamProperties*.  
   
  *prgParamProperties*[out]  
@@ -60,7 +60,7 @@ SSPARAMPROPS **prgParamProperties);
   
  `};`  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |*iOrdinal*|El ordinal del parámetro que se ha pasado.|  
 |*cPropertySets*|El número de estructuras DBPROPSET de *rgPropertySets*.|  

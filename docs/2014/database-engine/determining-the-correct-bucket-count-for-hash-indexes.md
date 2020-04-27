@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754247"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinar el número correcto de depósitos para los índices hash
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Los dos indicadores clave de estado de índice de hash son:  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* indica el número de cubos vacíos en el índice de hash.  
+ *empty_bucket_percent* indica el número de cubos vacíos del índice de hash.  
   
  Si *empty_bucket_percent* es menos que el 10 por ciento, probablemente el número de cubos es demasiado bajo. Idealmente, *empty_bucket_percent* debe ser el 33 por ciento o mayor. Si el número de cubos coincide con el número de valores de clave de índice, cerca de 1/3 de los cubos está vacío, debido a la distribución de hash.  
   
  *avg_chain_length*  
- *avg_chain_length* indica la longitud media de las cadenas de filas de los cubos de hash.  
+ *avg_chain_length* indica el promedio de longitud de las cadenas de filas de los cubos de hash.  
   
  Si *avg_chain_length* es mayor que 10 y *empty_bucket_percent* es mayor del 10 por ciento, probablemente hay muchos valores de clave de índice duplicados y un índice no clúster resultaría más adecuado. Un promedio de longitud de cadena de 1 es ideal.  
   
@@ -132,7 +132,7 @@ GO
 |nombre de índice|total_bucket_count|empty_bucket_count|empty_bucket_percent|avg_chain_length|max_chain_length|  
 |----------------|--------------------------|--------------------------|----------------------------|------------------------|------------------------|  
 |IX_Status|8|4|50|65536|65536|  
-|IX_OrderSequence|32768|13|0|8|26|  
+|IX_OrderSequence|32 768|13|0|8|26|  
 |PK_SalesOrd_B14003C3F8FB3364|262 144|96319|36|1|8|  
   
  Considere los tres índices de hash en esta tabla:  
@@ -186,6 +186,6 @@ GO
 -   Al optimizar el rendimiento de las búsquedas de puntos, un número mayor de cubos de dos o incluso tres veces el número de valores de índice único sería adecuado. Un número mayor de cubos significaría una mayor uso de memoria y un incremento del tiempo necesario para una exploración completa del índice.  
   
 ## <a name="see-also"></a>Consulte también  
- [Índices de las tablas con optimización para memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
+ [Índices en tablas optimizadas para memoria](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676917"
 ---
 # <a name="sql-server-replication-add-publisher-dialog-box"></a>Replicación de SQL Server cuadro de diálogo ' agregar publicador ' 
-  El cuadro de diálogo **Agregar publicador** permite agregar uno o varios publicadores al panel izquierdo del monitor de replicación. Después de agregar un publicador, selecciónelo en el panel izquierdo para mostrar información del publicador en el panel derecho.  
+  El cuadro de diálogo **Agregar publicador** permite agregar uno o varios publicadores en el panel izquierdo del Monitor de replicación. Después de agregar un publicador, selecciónelo en el panel izquierdo para mostrar información del publicador en el panel derecho.  
   
 ## <a name="options"></a>Opciones  
  **Add (Agregar)**  
@@ -34,7 +34,7 @@ ms.locfileid: "62676917"
   
 -   **Agregar publicador de Oracle...**  
   
-     Conéctese al distribuidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle mediante el cuadro de diálogo **Conectar al servidor** .  
+     Conéctese al distribuidor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociado con el publicador de Oracle mediante el cuadro de diálogo **Conectar al servidor**.  
   
 -   **Especificar un distribuidor y agregar sus publicadores...**  
   

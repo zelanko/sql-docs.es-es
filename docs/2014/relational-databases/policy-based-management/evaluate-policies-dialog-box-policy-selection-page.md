@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705127"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Cuadro de diálogo Evaluar directivas, página Selección de directiva
@@ -35,13 +35,13 @@ ms.locfileid: "62705127"
  **Directivas: Directiva**  
  Haga clic en esta opción para abrir el cuadro de diálogo de directiva correspondiente a la directiva especificada.  
   
- **Directivas: categoría**  
+ **Directivas: Categoría**  
  Categoría de la directiva. Este cuadro es de solo lectura.  
   
- **Directivas: faceta**  
+ **Directivas: Faceta**  
  Faceta implementada por la directiva. Este cuadro es de solo lectura.  
   
- **Determinar**  
+ **Evaluate**  
  Ejecuta la directiva en modo de evaluación. De esta forma se genera un informe de compatibilidad para el conjunto de destino, pero no se vuelve a configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni se exige la compatibilidad en el futuro.  
   
 ## <a name="possible-errors"></a>Errores posibles  
@@ -61,7 +61,7 @@ ms.locfileid: "62705127"
     -   El tipo de servidor de destino es diferente del tipo de servidor en el que se evalúa la directiva. Por ejemplo, en [!INCLUDE[ssDE](../../includes/ssde-md.md)], si intenta evaluar una directiva creada para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], recibirá un conjunto de destinos vacío.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores mediante la administración basada en directivas](administer-servers-by-using-policy-based-management.md)   
  [Cuadro de diálogo Evaluar directivas, página Resultados de la evaluación](evaluate-policies-dialog-box-evaluation-results-page.md)  
   
   

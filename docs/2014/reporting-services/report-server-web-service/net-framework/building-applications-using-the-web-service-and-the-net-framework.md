@@ -21,19 +21,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520354"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Generar aplicaciones utilizando el servicio web y .NET Framework
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]Con, puede usar construcciones de programación familiares, como métodos, tipos primitivos y tipos complejos definidos por el usuario para trabajar con servicios Web. 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contiene una infraestructura y herramientas que puede utilizar para crear clientes de servicios web que pueden llamar a cualquier servicio web que cumpla los estándares del World Wide Web Consortium (W3C).  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]Con, puede usar construcciones de programación familiares, como métodos, tipos primitivos y tipos complejos definidos por el usuario para trabajar con servicios Web. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] contiene una infraestructura y herramientas que puede utilizar para crear clientes de servicios web que pueden llamar a cualquier servicio web que cumpla los estándares del World Wide Web Consortium (W3C).  
   
  Un cliente del servicio web del servidor de informes es cualquier componente o aplicación que se comunica con un servidor de informes utilizando los mensajes del Protocolo simple de acceso a objetos (SOAP).  
   
- **Para crear un cliente del servicio Web del servidor de informes mediante el .NET Framework, siga estos pasos básicos:**  
+ **Para crear un cliente del servicio web del servidor de informes mediante .NET Framework, siga estos pasos básicos:**  
   
 1.  Cree una clase de proxy para el servicio web.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62520354"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Creación del proxy del servicio web](creating-the-web-service-proxy.md)|Describe las maneras de agregar una clase de proxy al proyecto mediante [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|  
-|[Autenticación del servicio web](web-service-authentication.md)|Describe cómo se autentican las llamadas al servicio web del servidor de informes.|  
+|[Autenticación de servicio Web](web-service-authentication.md)|Describe cómo se autentican las llamadas al servicio web del servidor de informes.|  
 |[Llamar a métodos de servicio web](calling-web-service-methods.md)|Describe cómo utilizar la API SOAP para llamar a métodos de servicio Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]en.|  
 |[Establecer la propiedad Url del servicio web](setting-the-url-property-of-the-web-service.md)|Explica cómo dirigir mediante programación el proxy del servicio web a una dirección URL de un servidor nuevo después de haber creado su referencia web.|  
 |[Proporcionar argumentos de métodos de servicio web](supplying-web-service-method-arguments.md)|Describe cómo invocar un método de servicio web y proporcionar los argumentos del método.|  
@@ -60,7 +59,7 @@ ms.locfileid: "62520354"
 |[Usar métodos de servicio web seguros](using-secure-web-service-methods.md)|Describe el valor **SecureConnectionLevel** y la forma en la que afecta al uso de la API de SOAP de Reporting Services.|  
 |[Pasar la configuración de información de dispositivo a las extensiones de representación](passing-device-information-settings-to-rendering-extensions.md)|Describe la configuración de la información de dispositivos que se utiliza para representar los informes en formatos diferentes.|  
 |[Configuración de la extensión de entrega de Reporting Services](reporting-services-delivery-extension-settings.md)|Describe la configuración que se utiliza para entregar informes mediante el correo electrónico del servidor de informes.|  
-|[Uso de encabezados SOAP de Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explica el uso de encabezados SOAP en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
+|[Utilizar los encabezados SOAP de Reporting Services](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|Explica el uso de encabezados SOAP en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |[Introducción a la administración de excepciones en Reporting Services](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|Proporciona información sobre la manera en la que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] administra los errores.|  
   
 ## <a name="see-also"></a>Consulte también  

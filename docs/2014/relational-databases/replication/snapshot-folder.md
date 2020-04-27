@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676520"
 ---
 # <a name="snapshot-folder"></a>Carpeta de instantáneas
@@ -29,12 +29,11 @@ ms.locfileid: "62676520"
  Escriba la ruta de acceso de la carpeta donde desea almacenar los archivos de instantáneas.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda utilizar un recurso de red compartido como ubicación para la carpeta de instantáneas. Los agentes en otros equipos no tienen acceso a las rutas de acceso locales (las que empiezan con una letra de unidad como C:\\).  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda utilizar un recurso de red compartido como ubicación para la carpeta de instantáneas. Los agentes en otros equipos no tienen acceso a las rutas de acceso locales (las que empiezan con una letra de unidad como C:\\).  
   
 ## <a name="see-also"></a>Consulte también  
  [Ubicaciones de carpeta de instantáneas alternativas](alternate-snapshot-folder-locations.md)   
- [Configurar distribución](configure-distribution.md)   
+ [Configurar la distribución](configure-distribution.md)   
  [Configurar la publicación y la distribución](configure-publishing-and-distribution.md)   
  [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md)   
  [Inicializar una suscripción con una instantánea](initialize-a-subscription-with-a-snapshot.md)  

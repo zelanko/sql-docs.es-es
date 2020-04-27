@@ -11,37 +11,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef0f55049e5ae9c96eed10fb1f39d7f3d95a19f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62506775"
 ---
 # <a name="report-server-properties-service-tab"></a>Propiedades de Servidor de informes (pestaña Servicio)
-  Este servicio es el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del servidor de informes. Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
+  este es el servicio Servidor de informes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
   
 ## <a name="options"></a>Opciones  
  **Ruta de acceso binaria**  
  Muestra la ubicación de los archivos de programa utilizados por el servicio.  
   
- **Control de errores**  
- 1 indica "SERVICE_ERROR_NORMAL". Si el servicio no se inicia al iniciar el equipo, el programa de inicio registra el error y muestra un cuadro de mensaje emergente pero continúa con la operación de inicio. No se puede cambiar este valor.  
+ **Control de error**  
+ 1 indica "SERVICE_ERROR_NORMAL". Si el servicio no se inicia al iniciar el equipo, el programa de inicio registra el error y muestra un cuadro de mensaje emergente pero continúa con la operación de inicio. Este valor no puede modificarse.  
   
  **Código de salida**  
  Si se produce un error, el número de error aparece en este cuadro. Utilice este número para solucionar errores buscando el número en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base o informe del mismo al personal de soporte técnico.  
   
- **Nombre de host**  
+ **Host Name**  
  Muestra el nombre del equipo o clúster que ejecuta la búsqueda de texto completo.  
   
  **Nombre**  
  Indica el nombre para mostrar del servicio.  
   
- **Identificador del proceso**  
+ **Id. del proceso**  
  Muestra el Id. de proceso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Tipo de servicio SQL**  
- Tipo de servicio proporcionado a los procesos de llamada. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala varios servicios.  
+ **Tipo de servicio de SQL**  
+ Tipo de servicio proporcionado a los procesos de llamada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala varios servicios.  
   
  **Modo de inicio**  
  Para este servicio se pueden configurar las siguientes opciones:  

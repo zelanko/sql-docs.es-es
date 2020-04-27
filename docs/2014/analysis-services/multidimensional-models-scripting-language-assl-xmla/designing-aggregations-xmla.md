@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702122"
 ---
 # <a name="designing-aggregations-xmla"></a>Diseñar agregaciones (XMLA)
@@ -55,12 +55,12 @@ ms.locfileid: "62702122"
   
  El elemento `Query` contiene un valor delimitado por comas que contiene los siguientes argumentos:  
   
- *Frequency*,*DataSet*[,*DataSet*...]  
+ *Frequency*,*Dataset*[,*Dataset*...]  
   
  *Frecuencia*  
  Un factor de ponderación que corresponde al número de veces que se ha ejecutado con anterioridad la consulta. Si el `Query` elemento representa una nueva consulta, el valor de *frecuencia* representa el factor de ponderación utilizado por el proceso de diseño para evaluar la consulta. A medida que el valor de frecuencia se vuelve mayor, el valor de ponderación que se asigna a la consulta durante el proceso de diseño va aumentando.  
   
- *Authors1*  
+ *Dataset*  
  Una cadena numérica que especifica qué atributos de una dimensión se van a incluir en la consulta. Esta cadena debe tener el mismo número de caracteres que el número de atributos de la dimensión. El cero (0) indica que el atributo de la posición ordinal especificada no está incluido en la consulta de la dimensión especificada, mientras que el uno (1) indica que el atributo de la posición ordinal especificada está incluido en la consulta de la dimensión especificada.  
   
  Por ejemplo, la cadena "011" haría referencia a una consulta que implicaría una dimensión con tres atributos, de los que el segundo y el tercero estarían incluidos en la consulta.  
@@ -68,7 +68,7 @@ ms.locfileid: "62702122"
 > [!NOTE]  
 >  Algunos atributos no se tienen en cuenta en el conjunto de datos. Para obtener más información sobre los atributos excluidos, vea [elemento Query &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla).  
   
- Cada dimensión del grupo de medida que contiene el diseño de agregaciones se representa ** mediante un valor de `Query` conjunto de elementos en el elemento. El orden de los valores de *Dataset* debe coincidir con el orden de las dimensiones incluidas en el grupo de medidas.  
+ Cada dimensión del grupo de medida que contiene el diseño de agregaciones se representa *Dataset* mediante un valor de `Query` conjunto de elementos en el elemento. El orden de los valores de *Dataset* debe coincidir con el orden de las dimensiones incluidas en el grupo de medidas.  
   
 ## <a name="designing-aggregations-using-iterative-or-batch-processes"></a>Diseñar agregaciones mediante el proceso iterativo o proceso por lotes  
  Puede usar el comando `DesignAggregations` como parte de un proceso iterativo o proceso por lotes, dependiendo de la interactividad que requiere el proceso de diseño.  
@@ -104,8 +104,8 @@ ms.locfileid: "62702122"
 |Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
 |Pasos|Entero|El número de pasos que realiza el comando antes de devolver el control a la aplicación cliente.|  
-|Time|Entero largo|El número de milisegundos que tarda el comando antes de devolver el control a la aplicación cliente.|  
-|Optimización|DOUBLE|El porcentaje estimado de mejora del rendimiento que alcanza el comando antes de devolver el control a la aplicación cliente.|  
+|Tiempo|Entero largo|El número de milisegundos que tarda el comando antes de devolver el control a la aplicación cliente.|  
+|Optimization|Double|El porcentaje estimado de mejora del rendimiento que alcanza el comando antes de devolver el control a la aplicación cliente.|  
 |Storage|Entero largo|El número estimado de bytes que toma el comando antes de devolver el control a la aplicación cliente.|  
 |Agregaciones|Entero largo|El número de agregaciones definido por el comando antes de devolver el control a la aplicación cliente.|  
 |LastStep|Boolean|Indica si los datos en el conjunto de filas representan el último paso del proceso de diseño. Si la propiedad `Materialize` del comando está establecida en true, el valor de esta columna está establecido en true.|  

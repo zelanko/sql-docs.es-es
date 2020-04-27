@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735898"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Método SetDefaults (clase ServerSettings)
@@ -40,7 +40,7 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase ServerSettings](serversettings-class.md) que representa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una instancia de cliente.  
   
 #### <a name="parameters"></a>Parámetros  

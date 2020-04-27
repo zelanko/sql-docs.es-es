@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4553d98faf18c00fff6ad90a09d0ee9071a71d32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659937"
 ---
-# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lección 2: Crear y administrar los datos de una tabla jerárquica
+# <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>Lección 2: Creación y administración de los datos de una tabla jerárquica
   En la lección 1, se modificó una tabla existente para utilizar el tipo de datos `hierarchyid` y se rellenó la columna `hierarchyid` con la representación de los datos existentes. En esta lección, se iniciará con una nueva tabla e insertará los datos utilizando los métodos jerárquicos. A continuación, se consultarán y manipularán los datos utilizando los métodos jerárquicos.  
   
  En esta lección se incluyen los temas siguientes:  
@@ -38,6 +38,6 @@ ms.locfileid: "62659937"
  [Crear una tabla mediante el tipo de datos hierarchyid](lesson-2-1-creating-a-table-using-the-hierarchyid-data-type.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Lección 1: Convertir una tabla en una estructura jerárquica](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+ [Lección 1: Conversión de una tabla en una estructura jerárquica](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
   
   

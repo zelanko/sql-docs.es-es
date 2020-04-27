@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629720"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrar una topología punto a punto (programación de la replicación con Transact-SQL)
@@ -63,7 +63,7 @@ ms.locfileid: "62629720"
   
 ## <a name="see-also"></a>Consulte también  
  [Preguntas más frecuentes sobre la administración de replicación](frequently-asked-questions-for-replication-administrators.md)   
- [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Copia de seguridad y restauración de bases de datos de SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)  
   
   

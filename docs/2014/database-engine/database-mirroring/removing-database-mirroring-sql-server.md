@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 414cdedb8f2bc3dee4edc792c11b6438306818c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754544"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Quitar la creación de reflejo de la base de datos (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62754544"
 > [!NOTE]  
 >  Para continuar la creación de reflejo después de detener una sesión, debe establecerse una nueva sesión de creación de reflejo de la base de datos. Si crea una copia de seguridad de registros después de detener la creación de reflejo, debe aplicarla a la base de datos reflejada antes de reiniciar la creación de reflejo.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para quitar la creación de reflejo de la base de datos**  
   
 -   [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)  

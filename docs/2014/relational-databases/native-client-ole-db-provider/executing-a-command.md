@@ -1,5 +1,5 @@
 ---
-title: Ejecutar un comando | Microsoft Docs
+title: Ejecución de un comando | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638456"
 ---
 # <a name="executing-a-command"></a>Ejecutar un comando
-  Una vez establecida la conexión a un origen de datos, el consumidor llama al método **IDBCreateSession:: createSession** para crear una sesión. La sesión actúa como un comando, conjunto de filas o fábrica de transacciones.  
+  Una vez establecida la conexión a un origen de datos, el consumidor llama al método **IDBCreateSession::CreateSession** para crear una sesión. La sesión actúa como un comando, conjunto de filas o fábrica de transacciones.  
   
  Para trabajar directamente con índices o tablas individuales, el consumidor solicita la interfaz `IOpenRowset`. El método `IOpenRowset::OpenRowset` se abre y devuelve un conjunto de filas que incluye todas las filas de un índice o tabla base única.  
   

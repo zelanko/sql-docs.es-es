@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754714"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de creación de reflejo de la base de datos (página Estado)
   En esta página de solo lectura se muestra el estado más reciente de la creación de reflejo de las instancias del servidor principal y reflejado seleccionadas actualmente en el árbol de navegación. Si la información sobre una instancia no se encuentra disponible, algunas celdas de la cuadrícula **Estado** correspondientes a dicha instancia aparecerán atenuadas y mostrarán **Desconocido**.  
   
- **Para usar SQL Server Management Studio para supervisar la creación de reflejo de la base de datos**  
+ **Para utilizar SQL Server Management Studio a fin de supervisar la creación de reflejo de la base de datos**  
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62754714"
 |-----------------|-----------------|  
 |**Instancia del servidor**|Nombre de la instancia de servidor cuyo estado se muestra en la fila **Estado** .|  
 |**Rol actual**|Rol actual de la instancia del servidor, ya sea **Principal** o **Reflejado**.|  
-|**Estado de creación de reflejo**|El estado de creación de reflejo que proporciona la instancia del servidor y un icono que indica la gravedad del estado. Los estados posibles y sus iconos asociados son los siguientes:<br /><br /> -: Estado **desconocido**. El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.<br /><br /> Icono de ADVERTENCIA: <br />                            **Sincronización**de estado.<br />                          El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla. Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.<br /><br /> Cilindro de base de datos estándar: estado<br />                            **Sincronizado**.<br />                          El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal envía cambios al servidor reflejado, y el servidor reflejado aplica los cambios en la base de datos reflejada. En el modo de seguridad alta, son posibles las conmutaciones manual y automática por error sin pérdida de datos. En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .<br /><br /> Icono de ADVERTENCIA: estado<br />                            **Suspendido**.<br />                            La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.<br /><br /> Icono de error: estado <br />                            **Desconectado**.<br />                          La instancia del servidor no se puede conectar a su asociado.|  
+|**Estado de creación de reflejo**|El estado de creación de reflejo que proporciona la instancia del servidor y un icono que indica la gravedad del estado. Los estados posibles y sus iconos asociados son los siguientes:<br /><br /> -: Estado **desconocido**. El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.<br /><br /> Icono de ADVERTENCIA: <br />                            **Sincronización**de estado.<br />                          El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla. Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.<br /><br /> Cilindro de base de datos estándar: estado<br />                            **Sincronizada**<br />                          El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal envía cambios al servidor reflejado, y el servidor reflejado aplica los cambios en la base de datos reflejada. En el modo de seguridad alta, son posibles las conmutaciones manual y automática por error sin pérdida de datos. En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .<br /><br /> Icono de ADVERTENCIA: estado<br />                            **Suspendido**.<br />                            La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.<br /><br /> Icono de error: estado <br />                            **Desconectado**.<br />                          La instancia del servidor no se puede conectar a su asociado.|  
 |**Conexión del testigo**|El estado de la conexión del testigo, precedida de un icono de estado: **Desconocido**, **Conectado**o **Desconectado**.|  
 |**Historial**|Haga clic en este botón para mostrar el historial de creación de reflejo en la instancia del servidor. Se abrirá el cuadro de diálogo **Historial de creación de reflejo de la base de datos** , que muestra el historial del estado de creación de reflejo y las estadísticas de una base de datos reflejada en una instancia del servidor determinada.<br /><br /> El botón **Historial** se atenúa si el monitor no está conectado a la instancia del servidor.|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62754714"
  **Hora de envío de registro (estimada)**  
  Cantidad aproximada de tiempo que la instancia del servidor principal necesita para enviar el registro (actualmente en la cola de envío) a la instancia del servidor reflejado ( *tasa de envío*). Puesto que la velocidad de las transacciones entrantes puede variar de forma significativa, el registro de la hora de envío es estimativo. Sin embargo, la tasa de envío puede resultar útil para estimar de forma aproximativa el tiempo requerido para una conmutación por error manual.  
   
- **Velocidad de envío actual**  
+ **Tasa actual de envío**  
  Velocidad con la que las transacciones se envían a la instancia del servidor reflejado, expresada en kilobytes (KB) por segundo.  
   
  **Tasa actual de nuevas transacciones**  
@@ -71,13 +71,13 @@ ms.locfileid: "62754714"
  **Tiempo para restaurar registro (estimado)**  
  Número aproximado de minutos necesarios para que el registro que se encuentra actualmente en la cola de puesta al día se aplique a la base de datos reflejada.  
   
- **Velocidad de restauración actual**  
+ **Tasa actual de restauración**  
  Tasa a la que se restauran las transacciones en la base de datos reflejada (en KB por segundo).  
   
  **Sobrecarga de confirmación del servidor reflejado**  
  Número de milisegundos de retraso medio por transacción tolerado antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.  
   
- **Hora de envío y restauración de todos los registros actuales (estimado)**  
+ **Hora de envío y restauración de todos los registros actuales (estimada)**  
  Tiempo necesario para enviar y restaurar todos los registros confirmados en el servidor principal según la hora actual. El tiempo puede ser inferior a la suma de los valores de los campos **Hora de envío de registro (estimada)** y **Tiempo para restaurar registro (estimado)** , ya que el envío y la restauración pueden producirse de forma paralela. Esta estimación no predice el tiempo necesario para enviar y restaurar nuevas transacciones confirmadas en el servidor principal mientras se tratan los registros en la cola de envío.  
   
  **Dirección del testigo**  
@@ -93,12 +93,12 @@ ms.locfileid: "62754714"
 -   **Seguridad alta con conmutación automática por error (sincrónico)**  
   
 ## <a name="remarks"></a>Observaciones  
- Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Dependen del **Trabajo del Monitor de creación de reflejo de la base de datos** para actualizar la tabla de estado a intervalos regulares. Para conocer la antigüedad del estado presentado, los usuarios pueden examinar las horas en las etiquetas **Registro del servidor principal (***\<hora>***)** y **Registro del servidor reflejado (***\<hora>***)**.  
+ Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Dependen del **Trabajo del Monitor de creación de reflejo de la base de datos**para actualizar la tabla de estado a intervalos regulares. Para conocer la antigüedad del estado mostrado, un usuario puede examinar las horas en las etiquetas **registro del servidor principal (***\<hora>***)** y **registro del servidor reflejado (***\<hora>***)** .  
   
  Si este trabajo no existe o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene, el estado quedará cada vez más desusado y puede que deje de reflejar la configuración de la sesión de creación de reflejo. Por ejemplo, después de una conmutación por error, es posible que parezca que los asociados comparten el mismo rol (de servidor principal o reflejado) o que el servidor principal actual se muestre como reflejado, a la vez que el servidor reflejado actual se muestra como principal.  
   
 ## <a name="see-also"></a>Consulte también  
- [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Iniciar Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

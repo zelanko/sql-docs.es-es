@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727751"
 ---
 # <a name="debugging-stored-procedures"></a>Depurar procedimientos almacenados
@@ -45,7 +45,7 @@ ms.locfileid: "62727751"
   
     4.  En el cuadro de texto **adjuntar a** , asegúrese de que está seleccionado el tipo de programa adecuado. Para un archivo DLL de CLR, haga clic en **seleccionar**, elija **depurar estos tipos de código**, haga clic en **administrado**y, a continuación, haga clic en **Aceptar**. Para un archivo DLL COM, haga clic en **seleccionar**, elija **depurar estos tipos de código**, haga clic en **nativo**y, a continuación, haga clic en **Aceptar**.  
   
-    5.  Haga clic en **asociar**.  
+    5.  Haga clic en **Asociar**.  
   
 7.  En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], invoque el programa o el script MDX que llama al procedimiento almacenado. El depurador se interrumpirá al alcanzar una línea que contiene un punto de interrupción. Podrá evaluar variables en la ventana de inspección, ver variables locales y reproducir el código.  
   

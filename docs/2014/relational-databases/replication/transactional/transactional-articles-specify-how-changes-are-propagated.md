@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655680"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Especificar cómo se propagan los cambios para los artículos transaccionales
@@ -37,13 +37,13 @@ ms.locfileid: "62655680"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimientos almacenados predeterminados y personalizados  
  Los tres procedimientos que crea la replicación de forma predeterminada en cada artículo de la tabla son:  
   
--   **sp_MSins_\<** *nombreDeTabla* **>** , que controla las inserciones.  
+-   **sp_MSins_\<** *nombreDeTabla* **>**, que controla las inserciones.  
   
--   **sp_MSupd_\<** *nombreDeTabla* **>** , que controla las actualizaciones.  
+-   **sp_MSupd_\<** *nombreDeTabla* **>**, que controla las actualizaciones.  
   
--   **sp_MSdel_\<** *nombreDeTabla* **>** , que controla las eliminaciones.  
+-   **sp_MSdel_\<** *nombreDeTabla* **>**, que controla las eliminaciones.  
   
- El **\< ***nombreDeTabla ***>** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
+ El ** \< ***tablename*** TableName> ** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario diferente.  
   
  Cualquiera de estos procedimientos se puede sustituir por un procedimiento personalizado que se especifica al agregar un artículo a una publicación. Los procedimientos personalizados se utilizan si una aplicación requiere lógica personalizada, por ejemplo al insertar datos en una tabla de auditoría cuando se actualiza una fila en el suscriptor. Para obtener más información acerca de cómo especificar procedimientos almacenados personalizados, vea los temas de procedimientos indicados anteriormente.  
   
@@ -146,7 +146,7 @@ old-c1, old-c2, old-c3,... old-cn
 ```  
   
 > [!NOTE]  
->  Al utilizar XCALL, se espera que los valores de imagen anterior de las columnas **text** e **image** sean NULL.  
+>   Al utilizar XCALL, se espera que los valores de imagen anterior de las columnas **text** e **image** sean NULL.  
   
 ## <a name="examples"></a>Ejemplos  
  A continuación se indican los procedimientos predeterminados creados por la `Vendor Table` en la base de datos de ejemplo de [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] .  

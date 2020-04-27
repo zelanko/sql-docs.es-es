@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519145"
 ---
 # <a name="report-server-item-properties"></a>Propiedades de los elementos del servidor de informes
@@ -35,14 +35,14 @@ ms.locfileid: "62519145"
 |**CreatedBy**|Nombre del usuario que agregó originalmente el elemento para la base de datos del servidor de informes.|  
 |**CreationDate**|Fecha y hora cuando el elemento se agregó a la base de datos del servidor de informes.|  
 |**Descripción**|Descripción del elemento.|  
-|**Oculto**|Valor que indica si el elemento está visible y disponible para los usuarios.|  
+|**Plusvalía**|Valor que indica si el elemento está visible y disponible para los usuarios.|  
 |**Id**|Identificador de un elemento de la base de datos del servidor de informes.|  
 |**ModifiedBy**|Nombre del usuario que modificó el elemento de la base de datos del servidor de informes en último lugar.|  
 |**ModifiedDate**|Fecha y hora cuando el usuario modificó el elemento por última vez.|  
 |**Nombre**|Nombre de un elemento de la base de datos del servidor de informes.|  
 |**Path**|Nombre de la ruta de acceso completa del elemento. La ruta de acceso de cualquier elemento de la base de datos del servidor de informes tiene una longitud máxima de 260 caracteres.|  
 |**Tamaño**|El tamaño, en bytes, de un elemento en la base de datos del servidor de informes.|  
-|**Tipo**|Tipo de un elemento de la base de datos del servidor de informes.|  
+|**Type**|Tipo de un elemento de la base de datos del servidor de informes.|  
 |**VirtualPath**|Ruta de acceso virtual de un elemento de la base de datos del servidor de informes. El valor de la propiedad <xref:ReportService2010.CatalogItem.VirtualPath%2A> es la ruta de acceso en la que un usuario espera ver el elemento. Por ejemplo, un informe denominado informe1, que se encuentra en la carpeta personal Mis informes, tiene la ruta de acceso virtual /Mis informes. La ruta de acceso real del elemento es /Usuarios/nombredeusuario/Mis informes.|  
   
 ## <a name="folder-properties"></a>Propiedades de carpeta  
@@ -71,7 +71,7 @@ ms.locfileid: "62519145"
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|**MIME**|Tipo MIME de un recurso en la base de datos del servidor de informes.|  
+|**MimeType**|Tipo MIME de un recurso en la base de datos del servidor de informes.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](building-applications-using-the-web-service-and-the-net-framework.md)   

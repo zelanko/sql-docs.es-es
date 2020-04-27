@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755051"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de creación de reflejo de la base de datos (página Advertencias)
   Muestra una lista de solo lectura de las advertencias que se admiten en los eventos de creación de reflejo de la base de datos, así como los valores de umbral de advertencia especificados (si los hay).  
   
- **Para usar SQL Server Management Studio para supervisar la creación de reflejo de la base de datos**  
+ **Para utilizar SQL Server Management Studio a fin de supervisar la creación de reflejo de la base de datos**  
   
 -   [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62755051"
 |**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a calcular el potencial de pérdida de datos en concepto de tiempo y resulta especialmente relevante para el modo de rendimiento alto. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
 |**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|Especifica el número de milisengundos de retraso medio por transacción tolerado antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|  
   
- **Umbral en '** _<server_instance>_ **'**  
+ **Umbral en "** _< instancia de servidor_ **"**  
  En cada una de las advertencias, muestra el umbral actual especificado por el usuario (si existe) para una de las instancias del servidor. El nombre completo de la instancia del servidor se indica en el encabezado de la columna correspondiente.  
   
  Para obtener más información, vea la sección "Comentarios" más adelante en este tema.  
@@ -48,7 +48,7 @@ ms.locfileid: "62755051"
  Para obtener más información, vea la sección "Comentarios" más adelante en este tema.  
   
 ## <a name="remarks"></a>Observaciones  
- Si la información no está disponible actualmente para una instancia del servidor, la columna **Umbral en** muestra un fondo gris y un texto de marca de agua. Si el monitor no está conectado a la instancia del servidor, la cuadrícula de cada celda muestra **no conectado a** _<SYSTEM_NAME>_ o **no conectado a** _<SYSTEM_NAME_ **\\**>_<instance_name>, dependiendo _de si la instancia es la instancia predeterminada o una instancia con nombre. Si el monitor espera que se devuelva una consulta, la cuadrícula muestra **Esperando datos...** en cada celda.  
+ Si la información no está disponible actualmente para una instancia del servidor, la columna **Umbral en** muestra un fondo gris y un texto de marca de agua. Si el monitor no está conectado a la instancia de servidor, cada celda de la cuadrícula muestra **No conectado a** _<NOMBRE DE SISTEMA>_ o **No conectado a** _<NOMBRE DE SISTEMA>_ **\\** _<nombre de instancia>_ , en función de si la instancia es la predeterminada o es una instancia con nombre. Si el monitor espera que se devuelva una consulta, la cuadrícula muestra **Esperando datos...** en cada celda.  
   
  Si hay información disponible, la celda de cada advertencia muestra un valor de umbral especificado (y una unidad de medida), o bien **No habilitado**.  
   

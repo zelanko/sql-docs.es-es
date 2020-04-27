@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638767"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -70,9 +70,9 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- Mejoras en el motor de base de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] datos a partir de allow ISSCommandWithParameters:: SetParameterProperties para obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por ISSCommandWithParameters:: SetParameterProperties [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en versiones anteriores de. Para obtener más información, vea [Detección de metadatos](../native-client/features/metadata-discovery.md).  
+ Las mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permiten a ISSCommandWithParameters::SetParameterProperties obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores que devuelve ISSCommandWithParameters::SetParameterProperties en las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Detección de metadatos](../native-client/features/metadata-discovery.md).  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |*iOrdinal*|El ordinal del parámetro que se ha pasado.|  
 |*cPropertySets*|El número de estructuras DBPROPSET de *rgPropertySets*.|  

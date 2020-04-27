@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183468"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Trabajos que hacen referencia a una programación
@@ -29,13 +29,13 @@ ms.locfileid: "63183468"
  **Programación**  
  Muestra el nombre de la programación que se consulta.  
   
- **Seleccionado**  
+ **Seleccionadas**  
  Solo lectura.  
   
  **Nombre**  
  Nombre de un trabajo que utiliza esta programación.  
   
- **Enabled**  
+ **Habilitado**  
  Solo lectura. Indica si el trabajo está habilitado.  
   
  **Categoría**  

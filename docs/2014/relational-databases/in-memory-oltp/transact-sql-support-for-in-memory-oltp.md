@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156214"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Compatibilidad de Transact-SQL con OLTP en memoria
@@ -49,9 +49,9 @@ ms.locfileid: "63156214"
 -   [Vistas del sistema, procedimientos almacenados, tipos de espera para OLTP en memoria y DMV](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [&#40;de optimización en memoria de OLTP en memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Características admitidas de SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md)   
- [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
+ [procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

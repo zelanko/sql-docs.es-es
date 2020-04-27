@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182933"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Cuadro de diálogo Abrir condición, página Directivas dependientes
@@ -26,7 +26,7 @@ ms.locfileid: "63182933"
  **Nombre**  
  Muestra el nombre de cada directiva que hace referencia a esta condición actual.  
   
- **Enabled**  
+ **Habilitado**  
  Una marca de verificación indica que la directiva está habilitada actualmente. Si la directiva no está habilitada, permanece en blanco.  
   
  **Historial**  

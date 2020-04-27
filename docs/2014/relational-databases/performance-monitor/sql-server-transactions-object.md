@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182990"
 ---
 # <a name="sql-server-transactions-object"></a>Transactions (objeto de SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "63182990"
 |**Transacciones de instantáneas de actualización**|Número de transacciones activas actualmente que utilizan el nivel de aislamiento de instantáneas y que tienen datos modificados.|  
 |**Velocidad de limpieza de versión (KB/seg.)**|Velocidad (en kilobytes por segundo) a la que las versiones de filas se quitan del almacén de versiones de aislamiento de instantáneas en **tempdb**.|  
 |**Velocidad de generación de versión (KB/seg.)**|Velocidad (en kilobytes por segundo) a la que se agregan nuevas versiones de fila al almacén de versiones de aislamiento de instantáneas en **tempdb**.|  
-|**Tamaño de almacén de versión (KB)**|Cantidad de espacio (en kilobytes) en **tempdb** que se usa para almacenar las versiones de fila de nivel de aislamiento de instantáneas.|  
+|**Tamaño del almacén de versiones (KB)**|Cantidad de espacio (en kilobytes) en **tempdb** que se usa para almacenar las versiones de fila de nivel de aislamiento de instantáneas.|  
 |**Recuento de unidad de almacén de versión**|Número de unidades de asignación activa en el almacén de versiones de aislamiento de instantáneas de **tempdb**.|  
 |**Creación de unidad de almacén de versión**|Número de unidades de asignación creadas en el almacén de aislamiento de instantáneas desde que se inició la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
 |**Truncamiento de unidad de almacén de versión**|Número de unidades de asignación quitadas del almacén de aislamiento de instantáneas desde que se inició la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  

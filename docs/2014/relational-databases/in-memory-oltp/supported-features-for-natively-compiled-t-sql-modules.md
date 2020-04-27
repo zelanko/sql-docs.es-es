@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155716"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
@@ -38,7 +38,7 @@ ms.locfileid: "63155716"
   
  Para obtener información completa sobre las construcciones no admitidas y sobre cómo evitar algunas de las características no admitidas en los procedimientos almacenados compilados de forma nativa, vea [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Para obtener más información sobre las características no compatibles, vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="pncsp"></a>Programación en procedimientos almacenados compilados de forma nativa  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>Programación en procedimientos almacenados compilados de forma nativa  
  Se admite lo siguiente:  
   
 -   BEGIN ATOMIC (en el nivel externo del procedimiento almacenado), LANGUAGE, ISOLATION LEVEL, DATEFORMAT y DATEFIRST.  
@@ -63,7 +63,7 @@ ms.locfileid: "63155716"
   
      Para optimizar el rendimiento, use un solo bloque TRY/CATCH para un procedimiento almacenado compilado de forma nativa completo.  
   
-##  <a name="so"></a> Operadores admitidos  
+##  <a name="supported-operators"></a><a name="so"></a>Operadores admitidos  
  Se admiten los siguientes operadores.  
   
 -   Los [operadores de comparación &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por ejemplo \<, >,, >= y <=) se admiten en los condicionales (si, while).  
@@ -78,7 +78,7 @@ ms.locfileid: "63155716"
   
 -   Operadores ~, &, | y ^ bit a bit  
   
-##  <a name="bfncsp"></a>Funciones integradas en procedimientos almacenados compilados de forma nativa  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>Funciones integradas en procedimientos almacenados compilados de forma nativa  
  Se admiten las funciones siguientes en restricciones DEFAULT de tablas optimizadas para memoria y procedimientos almacenados compilados de forma nativa.  
   
 -   Funciones matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANES, RAND, SIN, SQRT, SQUARE y TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155716"
   
 -   Funciones del sistema: @@rowcount. Las instrucciones de los procedimientos almacenados compilados de forma nativa actualizan @@rowcount y puede usar @@rowcount en un procedimiento almacenado compilado de forma nativa para determinar el número de filas afectadas por la última instrucción ejecutada dentro de ese procedimiento almacenado compilado de forma nativa. Pero @@rowcount se restablece en 0 al principio y al final de la ejecución de un procedimiento almacenado compilado de forma nativa.  
   
-##  <a name="qsancsp"></a>Área expuesta de consulta en procedimientos almacenados compilados de forma nativa  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>Área expuesta de consulta en procedimientos almacenados compilados de forma nativa  
  Se admite lo siguiente:  
   
 -   BETWEEN  
@@ -138,8 +138,7 @@ ms.locfileid: "63155716"
   
 -   No hay compatibilidad con `WITH TIES` ni `PERCENT` en la cláusula `TOP`.  
   
--   
-  `TOP` combinada con `ORDER BY` no admite más de 8.192 elementos cuando se utiliza una constante en la cláusula `TOP`. Este límite puede reducirse en caso de que la consulta contenga combinaciones o funciones de agregado. (Por ejemplo, con una combinación (dos tablas), el límite es de 4.096 filas. Con dos combinaciones (tres tablas), el límite es de 2.730 filas).  
+-   `TOP` combinada con `ORDER BY` no admite más de 8.192 elementos cuando se utiliza una constante en la cláusula `TOP`. Este límite puede reducirse en caso de que la consulta contenga combinaciones o funciones de agregado. (Por ejemplo, con una combinación (dos tablas), el límite es de 4.096 filas. Con dos combinaciones (tres tablas), el límite es de 2.730 filas).  
   
      Puede obtener más de 8.192 resultados si almacena el número de filas en una variable:  
   
@@ -152,12 +151,12 @@ ms.locfileid: "63155716"
   
  Estas restricciones no se aplican al acceso mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas optimizadas para memoria.  
   
-##  <a name="auditing"></a> Auditoría  
+##  <a name="auditing"></a><a name="auditing"></a>Auditoría  
  Se admite la auditoría a nivel de procedimiento en los procedimientos almacenados compilados de forma nativa. La auditoría de nivel de instrucción no se admite.  
   
  Para obtener más información sobre la auditoría, vea [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../security/auditing/create-a-server-audit-and-database-audit-specification.md)  
   
-##  <a name="tqh"></a>Sugerencias de tabla, consulta y combinación  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>Sugerencias de tabla, consulta y combinación  
  Se admite lo siguiente:  
   
 -   Las sugerencias INDEX, FORCESCAN y FORCESEEK, ya sea en la sintaxis de sugerencias de tabla o en la [cláusula OPTION &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) de la consulta.  
@@ -170,10 +169,10 @@ ms.locfileid: "63155716"
   
  Para obtener más información, vea [sugerencias &#40;&#41;de Transact-SQL ](/sql/t-sql/queries/hints-transact-sql).  
   
-##  <a name="los"></a> Limitaciones de ordenación  
+##  <a name="limitations-on-sorting"></a><a name="los"></a>Limitaciones de la ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
   
- Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombreDeProcedimiento>* , línea *\<númeroDeLínea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>* .**  
+ Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombreDeProcedimiento>*, línea *\<númeroDeLínea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>*.**  
   
  Si no tiene una cláusula TOP, puede ordenar cualquier número de filas con ORDER BY.  
   

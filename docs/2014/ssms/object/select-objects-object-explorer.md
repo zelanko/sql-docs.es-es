@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182888"
 ---
 # <a name="select-objects-object-explorer"></a>Seleccionar objetos (Explorador de objetos)
-  Utilice el cuadro de diálogo **seleccionar objetos** para agregar un objeto a una lista de otro cuadro de diálogo. El título del cuadro de diálogo y las opciones disponibles dependerán de como haya se haya abierto. Solo aparecerán las opciones disponibles; por ejemplo, solo los inicios de sesión están disponibles cuando selecciona un propietario para un nuevo objeto.  
+  Use el cuadro de diálogo **Seleccionar objetos** para agregar un objeto a una lista de otro cuadro de diálogo. El título del cuadro de diálogo y las opciones disponibles dependerán de como haya se haya abierto. Solo aparecerán las opciones disponibles; por ejemplo, solo los inicios de sesión están disponibles cuando selecciona un propietario para un nuevo objeto.  
   
 ## <a name="options"></a>Opciones  
  **Seleccionar estos tipos de objeto**  
- Muestra una lista de los tipos a los que pertenecen los objetos que se van a seleccionar. Entre los tipos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se incluyen entidades de seguridad de nivel y de nivel de base de datos e elementos protegibles. Este cuadro se llena con las selecciones efectuadas en el cuadro de diálogo **Seleccionar tipos de objetos** , al que se tiene acceso mediante el botón **Tipo de objeto** .  
+ Muestra una lista de los tipos a los que pertenecen los objetos que se van a seleccionar. Los tipos incluyen entidades de seguridad y elementos protegibles de nivel de base de datos y nivel de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este cuadro se llena con las selecciones efectuadas en el cuadro de diálogo **Seleccionar tipos de objetos** , al que se tiene acceso mediante el botón **Tipo de objeto** .  
   
- **Escriba los nombres de objeto que desea seleccionar**  
+ **Escribir los nombres de objeto para seleccionar**  
  Escriba una lista, separada por puntos y comas, de los nombres de los objetos que se van a seleccionar. Los objetos que se desea seleccionar deben ser de uno de los tipos que aparecen en la lista del cuadro **Seleccionar estos tipos de objeto** . Los objetos se pueden seleccionar en una lista a la que se tiene acceso al hacer clic en el botón **Examinar** .  
   
  **Tipos de objeto**  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63180549"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Crear y consultar modelos de minería de datos con DMX: tutoriales (Analysis Services - minería de datos)
@@ -39,9 +39,9 @@ ms.locfileid: "63180549"
      Este tutorial crea un modelo de pronóstico para mostrar el uso de la instrucción CREATE MODEL (DMX). A continuación, agregará modelos relacionados y personalizará el comportamiento de cada uno de ellos cambiando los parámetros del algoritmo de serie temporal de Microsoft. Por último, creará predicciones y las actualizará con nuevos datos. La capacidad de actualizar una serie temporal al realizar predicciones se agregó en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)].  
   
 ## <a name="reference"></a>Referencia  
- [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Referencia de extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   

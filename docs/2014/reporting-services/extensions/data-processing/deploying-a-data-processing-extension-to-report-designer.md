@@ -14,20 +14,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 947ad59b8ac20862a8ef6da8ea527e2befb1be57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164329"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Cómo implementar una extensión de procesamiento de datos en el Diseñador de informes
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Procedimientos: Implementar una extensión de procesamiento de datos en el Diseñador de informes
   El Diseñador de informes utiliza las extensiones de procesamiento de datos para recuperar y procesar los datos mientras se diseñan los informes. Debería implementar el ensamblado de extensión de procesamiento de datos para el Diseñador de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del Diseñador de informes, RSReportDesigner.config.  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Para implementar un ensamblado de extensión de procesamiento de datos  
   
 1.  Copie el ensamblado desde la ubicación de almacenamiento provisional en el directorio del Diseñador de informes. La ubicación predeterminada del directorio del Diseñador de informes es C:\Archivos de programa\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportDesigner.config. El archivo RSReportDesigner.config también se encuentra en el directorio del Diseñador de informes. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de procesamiento de datos. Puede abrir el archivo de configuración con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un editor de texto simple, como el Bloc de notas.  
+2.  Una vez copiado el archivo de ensamblado, abra el archivo RSReportDesigner.config. El archivo RSReportDesigner.config también se encuentra en el directorio del Diseñador de informes. Tiene que realizar una entrada en el archivo de configuración para el archivo de ensamblado de extensión de procesamiento de datos. Puede abrir el archivo de configuración con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] o con un editor de texto sencillo, como el Bloc de notas.  
   
 3.  Busque el elemento **Data** en el archivo RSReportDesigner.config. En la ubicación siguiente se debería realizar una entrada para la extensión de procesamiento de datos creada recientemente:  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63164329"
     </CodeGroup>  
     ```  
   
- La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de procesamiento de datos. Para obtener más información sobre la seguridad de [!INCLUDE[ssRSversion2005](../../../includes/ssrsversion2005-md.md)]acceso del código en, vea [&#40;de desarrollo seguro Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
+ La pertenencia de dirección URL es solo una de las muchas condiciones de pertenencia que podría elegir para la extensión de procesamiento de datos. Para más información sobre la seguridad de acceso del código de [!INCLUDE[ssRSversion2005](../../../includes/ssrsversion2005-md.md)], vea [Desarrollo seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md).  
   
 ## <a name="generic-query-designer"></a>Diseñador de consultas genérico  
  El Diseñador de consultas proporciona un diseñador de consultas genérico que puede utilizar con extensiones de procesamiento de datos personalizadas. Este diseñador está compuesto de dos paneles: uno de consulta y otro de resultados. Puede utilizar el diseñador genérico para escribir las consultas que la interfaz gráfica no admita. A diferencia del diseñador gráfico de consultas, el diseñador genérico no comprueba la sintaxis de la consulta ni procede a reestructurarla.  

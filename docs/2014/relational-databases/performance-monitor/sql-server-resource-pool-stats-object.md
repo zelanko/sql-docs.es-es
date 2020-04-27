@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183019"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>Objeto SQL Server: Estadísticas de grupo de recursos de servidor
@@ -43,16 +43,16 @@ ms.locfileid: "63183019"
 |Memoria de destino (KB)|Cantidad de destino, en kilobytes (KB), de memoria que el grupo de recursos de servidor trata de obtener en función de la configuración del grupo de recursos de servidor y el estado del servidor.|  
 |E/S de lectura de disco/s|Número de operaciones de lectura del disco en el último segundo.|  
 |E/S de lectura de disco limitadas/s|Número de operaciones de lectura limitadas en el último segundo.|  
-|Bytes de lectura de disco/s |Número de bytes leídos del disco en el último segundo.|  
+|Bytes de lectura de disco/s|Número de bytes leídos del disco en el último segundo.|  
 |Promedio de E/S de lectura de disco (ms)|Tiempo promedio, en milisegundos, de una operación de lectura del disco.|  
 |E/S de escrituras en disco/s|Número de operaciones de escritura en el disco en el último segundo.|  
 |E/S de escritura en disco limitadas/s|Número de operaciones de escritura limitadas en el último segundo.|  
-|  Bytes de escritura en disco/s|Número de bytes escritos en el disco en el último segundo.|  
+|Bytes de escritura en disco/s|Número de bytes escritos en el disco en el último segundo.|  
 |Promedio de escrituras en disco (ms)|Tiempo promedio, en milisegundos, de una operación de escritura en el disco.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)   
- [Objeto SQL Server: Estadísticas de grupo de cargas de trabajo](sql-server-workload-group-stats-object.md)   
+ [Supervisar el uso de recursos &#40;el monitor de sistema&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, objeto de estadísticas del grupo de cargas de trabajo](sql-server-workload-group-stats-object.md)   
  [Regulador de recursos](../resource-governor/resource-governor.md)  
   
   

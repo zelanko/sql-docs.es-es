@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157831"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introducción a las tablas con optimización para memoria
@@ -28,7 +28,7 @@ ms.locfileid: "63157831"
   
  La siguiente ilustración muestra la multiversión. La ilustración muestra una tabla con tres filas y cada fila tiene versiones diferentes.  
   
- ![Múltiples versiones.](../../database-engine/media/hekaton-tables-1.gif "Control de varias versiones.")  
+ ![Multiversión.](../../database-engine/media/hekaton-tables-1.gif "Multiversión.")  
   
  La tabla tiene tres filas: r1, r2 y r3. r1 tiene tres versiones, r2 tiene dos versiones y r3 tiene cuatro. Observe que las diferentes versiones de la misma fila no ocupan necesariamente ubicaciones de memoria consecutivas. Las diferentes versiones de fila pueden estar dispersas por la estructura de datos de la tabla.  
   
@@ -48,8 +48,7 @@ ms.locfileid: "63157831"
   
 -   A través de procedimientos almacenados compilados de forma nativa.  
   
- Se puede tener acceso a las tablas con optimización para memoria de forma más eficaz desde procedimientos almacenados compilados de forma nativa ([Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)). Se puede tener acceso también a las tablas con optimización para memoria con [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretado (tradicional). 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado hace referencia al acceso a tablas optimizadas para memoria sin un procedimiento almacenado compilado de forma nativa.	 Algunos ejemplos de acceso con [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado son el acceso a una tabla optimizada para memoria desde un desencadenador DML, un lote ad hoc de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , una vista y una función con valores de tabla.  
+ Se puede tener acceso a las tablas con optimización para memoria de forma más eficaz desde procedimientos almacenados compilados de forma nativa ([Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)). Se puede tener acceso también a las tablas con optimización para memoria con [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretado (tradicional). [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado hace referencia al acceso a tablas optimizadas para memoria sin un procedimiento almacenado compilado de forma nativa. Algunos ejemplos de acceso con [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado son el acceso a una tabla optimizada para memoria desde un desencadenador DML, un lote ad hoc de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , una vista y una función con valores de tabla.  
   
  En la tabla siguiente se resume el acceso con [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado y nativo para varios objetos.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63157831"
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Tablas optimizadas para memoria|Sí|Sí|No <sup>1</sup>|  
 |[Variables de tabla con optimización para memoria](../../database-engine/memory-optimized-table-variables.md)|Sí|Sí|No|  
-|[Procedimientos almacenados compilados de forma nativa](https://msdn.microsoft.com/library/dn133184.aspx)|No puede utilizar la instrucción EXECUTE para ejecutar un procedimiento almacenado desde un procedimiento almacenado compilado de forma nativa.|Sí|No <sup>1</sup>|  
+|[procedimientos almacenados compilados de forma nativa](https://msdn.microsoft.com/library/dn133184.aspx)|No puede utilizar la instrucción EXECUTE para ejecutar un procedimiento almacenado desde un procedimiento almacenado compilado de forma nativa.|Sí|No <sup>1</sup>|  
   
  <sup>1</sup> no puede tener acceso a una tabla optimizada para memoria o a un procedimiento almacenado compilado de forma nativa desde la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conexión de contexto (la conexión de al ejecutar un módulo CLR). Sin embargo, puede crear y abrir otra conexión en la que pueda tener acceso a las tablas optimizadas para memoria y a los procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [conexiones regulares frente a contextos](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
@@ -67,7 +66,7 @@ ms.locfileid: "63157831"
  Comunicación  
  Una aplicación que realiza muchas llamadas a procedimientos almacenados cortos puede suponer un aumento del rendimiento menor en comparación con una aplicación que realiza menos llamadas e implementa más funcionalidad en cada procedimiento almacenado.  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]Remota  
+ Ejecución de [!INCLUDE[tsql](../../../includes/tsql-md.md)]  
  OLTP en memoria alcanza el máximo rendimiento cuando se usan procedimientos almacenados compilados de forma nativa en lugar de procedimientos almacenados interpretados o de ejecución de consultas. Los procedimientos almacenados que ejecutan otros procedimientos almacenados no se pueden compilar de forma nativa, pero puede resultar beneficioso el acceso a tablas optimizadas para memoria desde estos procedimientos.  
   
  Examen de intervalo y búsqueda de puntos  

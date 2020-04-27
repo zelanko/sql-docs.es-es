@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155302"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
@@ -62,7 +62,7 @@ ms.locfileid: "63155302"
 |Característica|índice clúster|Especifique un índice no clúster. Si se trata de un índice de clave principal, no se olvide de especificar `PRIMARY KEY NONCLUSTERED [HASH]`.|  
 |Característica|Página de códigos distinta de 1252|Las columnas de las tablas optimizadas para memoria con tipos de datos `char` y `varchar` deben utilizar la página de códigos 1252. Use n(var)char en lugar de (var)char, o use una intercalación con la página de códigos 1252 (por ejemplo, Latin1_General_BIN2). Para obtener más información, consulte [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).|  
 |Característica|DDL dentro de transacciones|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar en el contexto de una transacción de usuario. No inicie ninguna transacción y asegúrese de que el parámetro de sesión IMPLICIT_TRANSACTIONS está establecido en OFF antes de ejecutar la instrucción CREATE o DROP.|  
-|Característica|Desencadenadores DDL|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar si existe un desencadenador de base de datos o de servidor para la operación DDL. Quite los desencadenadores de servidor y de base de datos de CREATE/DROP TABLE y CREATE/DROP PROCEDURE.|  
+|Característica|DDL, desencadenadores|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar si existe un desencadenador de base de datos o de servidor para la operación DDL. Quite los desencadenadores de servidor y de base de datos de CREATE/DROP TABLE y CREATE/DROP PROCEDURE.|  
 |Característica|EVENT NOTIFICATION|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no se pueden crear ni quitar si existe una notificación de evento de base de datos o de servidor para la operación DDL. Quite las notificaciones de eventos de servidor y de base de datos en CREATE TABLE o DROP TABLE y CREATE PROCEDURE o DROP PROCEDURE.|  
 |Característica|FileTable|Las tablas con optimización para memoria no se pueden crear como tablas de archivos. Quite el argumento `AS FileTable` de la instrucción `CREATE TABLE`.|  
 |Operación|Actualización de columnas de clave principal|Las columnas de clave principal de las tablas optimizadas para memoria y los tipos de tablas no se pueden actualizar. Si es necesario actualizar la clave principal, elimine la fila antigua e inserte la nueva fila con la clave principal actualizada.|  
@@ -108,7 +108,7 @@ ms.locfileid: "63155302"
 |Tipo|Característica|Solución|  
 |----------|-------------|----------------|  
 |Característica|Variables de las tablas insertadas|Los tipos de tablas no pueden declararse insertadas con declaraciones de variable. Los tipos de tablas deben declararse de forma explícita mediante una instrucción `CREATE TYPE`.|  
-|Característica|Cursores|Los procedimientos almacenados compilados de forma nativa no admiten cursores.<br /><br /> -Cuando ejecute el procedimiento desde el cliente, utilice RPC en lugar de la API de cursor. Con ODBC, evite la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] de `EXECUTE`; en su lugar, especifique el nombre del procedimiento directamente.<br /><br /> -Cuando ejecute el procedimiento desde un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] o desde otro procedimiento almacenado, evite usar un cursor con el procedimiento almacenado compilado de forma nativa.<br /><br /> -Al crear un procedimiento almacenado compilado de forma nativa, en lugar de usar un cursor, use la lógica basada en `WHILE` conjunto o un bucle.|  
+|Característica|Cursores|Los procedimientos almacenados compilados de forma nativa no admiten cursores.<br /><br /> -Cuando ejecute el procedimiento desde el cliente, utilice RPC en lugar de la API de cursor. Con ODBC, evite la instrucción `EXECUTE` de [!INCLUDE[tsql](../../includes/tsql-md.md)]; en su lugar, especifique el nombre del procedimiento directamente.<br /><br /> -Cuando ejecute el procedimiento desde un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] o desde otro procedimiento almacenado, evite usar un cursor con el procedimiento almacenado compilado de forma nativa.<br /><br /> -Al crear un procedimiento almacenado compilado de forma nativa, en lugar de usar un cursor, use la lógica basada en `WHILE` conjunto o un bucle.|  
 |Característica|Valores predeterminados de parámetros no constantes|Cuando se usan los valores predeterminados de los parámetros en procedimientos almacenados compilados de forma nativa, dichos valores deben ser constantes. Quite los caracteres comodín de las declaraciones de parámetro.|  
 |Característica|EXTERNAL|Los procedimientos almacenados CLR no se pueden compilar de forma nativa. Quite la cláusula AS EXTERNAL o la opción de NATIVE_COMPILATION de la instrucción CREATE PROCEDURE.|  
 |Característica|Procedimientos almacenados numerados|Los procedimientos almacenados compilados de forma nativa no se pueden numerar. Quite el `;` *número* de la `CREATE PROCEDURE` instrucción.|  
@@ -119,13 +119,12 @@ ms.locfileid: "63155302"
 |Característica|SELECT INTO|La cláusula `INTO` no se puede usar con la instrucción `SELECT`. Vuelva a escribir la consulta `INSERT INTO`como *tabla*`SELECT`.|  
 |Característica|OUTPUT|No se admite la cláusula `OUTPUT`. Quítela de la consulta.|  
 |Característica|Lista de columnas insertadas incompleta|En las instrucciones `INSERT`, deben especificarse valores para todas las columnas de la tabla.|  
-|Función|*Funcionalidad*|Los procedimientos almacenados compilados de forma nativa no admiten la función integrada. Quite la función del procedimiento almacenado. Para obtener más información acerca de las funciones integradas admitidas, vea [procedimientos almacenados compilados](../in-memory-oltp/natively-compiled-stored-procedures.md)de forma nativa.|  
+|Función|*Función*|Los procedimientos almacenados compilados de forma nativa no admiten la función integrada. Quite la función del procedimiento almacenado. Para obtener más información acerca de las funciones integradas admitidas, vea [procedimientos almacenados compilados](../in-memory-oltp/natively-compiled-stored-procedures.md)de forma nativa.|  
 |Característica|CASE|Los procedimientos almacenados compilados de forma nativa no admiten la instrucción `CASE` en las consultas. Cree consultas diferentes para mayúsculas y minúsculas. Para obtener más información, vea [implementar una instrucción Case](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).|  
 |Característica|funciones definidas por el usuario|En los procedimientos almacenados compilados de forma nativa no se pueden usar funciones definidas por el usuario. Quite la referencia a la función de la definición de procedimiento.|  
 |Característica|agregados definidos por el usuario|En los procedimientos almacenados compilados de forma nativa no se pueden usar funciones de agregado definidas por el usuario. Quite la referencia a la función del procedimiento.|  
 |Característica|Metadatos en el modo de exploración|Los procedimientos almacenados compilados de forma nativa no admiten metadatos en el modo de exploración. Asegúrese de que la opción de sesión `NO_BROWSETABLE` está establecida en OFF.|  
-|Característica|DELETE con la cláusula FROM|Los procedimientos almacenados compilados de forma nativa no admiten la cláusula `FROM` en instrucciones `DELETE` con un origen de tabla.<br /><br /> 
-  `DELETE` con la cláusula `FROM` se admite cuando se emplea para indicar la tabla en la que hay que realizar la eliminación.|  
+|Característica|DELETE con la cláusula FROM|Los procedimientos almacenados compilados de forma nativa no admiten la cláusula `FROM` en instrucciones `DELETE` con un origen de tabla.<br /><br /> `DELETE` con la cláusula `FROM` se admite cuando se emplea para indicar la tabla en la que hay que realizar la eliminación.|  
 |Característica|UPDATE con la cláusula FROM|Los procedimientos almacenados compilados de forma nativa no admiten la cláusula `FROM` en instrucciones `UPDATE`.|  
 |Característica|Procedimientos temporales|Los procedimientos almacenados temporales no se pueden compilar de forma nativa. Cree un procedimiento almacenado compilado de forma nativa que sea permanente o un procedimiento almacenado interpretado de [!INCLUDE[tsql](../../includes/tsql-md.md)] que sea temporal.|  
 |Nivel de aislamiento|READ UNCOMMITTED|Los procedimientos almacenados compilados de forma nativa no admiten el nivel de aislamiento READ UNCOMMITTED. Use un nivel de aislamiento compatible, como SNAPSHOT.|  
@@ -145,28 +144,28 @@ ms.locfileid: "63155302"
 |Operator|OPENQUERY|No se admite este operador. Quite `OPENQUERY` del procedimiento almacenado compilado de forma nativa.|  
 |Operator|OPENDATASOURCE|No se admite este operador. Quite `OPENDATASOURCE` del procedimiento almacenado compilado de forma nativa.|  
 |Operator|OPENXML|No se admite este operador. Quite `OPENXML` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|CONTAINSTABLE|No se admite este operador. Quite `CONTAINSTABLE` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|FREETEXTTABLE|No se admite este operador. Quite `FREETEXTTABLE` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|CONTAINSTABLE|No se admite este operador. Quite `CONTAINSTABLE` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|FREETEXTTABLE|No se admite este operador. Quite `FREETEXTTABLE` del procedimiento almacenado compilado de forma nativa.|  
 |Característica|Funciones con valores de tabla|En los procedimientos almacenados compilados de forma nativa no se puede hacer referencia a funciones con valores de tabla. Una solución posible para esta restricción es agregar la lógica de las funciones con valores de tabla al cuerpo del procedimiento.|  
-|Operator|CHANGETABLE|No se admite este operador. Quite `CHANGETABLE` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|GOTO|No se admite este operador. Use otras construcciones de procedimiento, como WHILE.|  
-|Operator|EXECUTE, INSERT EXEC|No se admite el anidamiento de procedimientos almacenados compilados de forma nativa. Las operaciones necesarias se pueden especificar insertadas, como parte de la definición de los procedimientos almacenados.|  
-|Operator|OFFSET|No se admite este operador. Quite `OFFSET` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|UNION|No se admite este operador. Quite `UNION` del procedimiento almacenado compilado de forma nativa. Para combinar varios conjuntos de resultados en un solo conjunto se puede usar una variable de tabla.|  
-|Operator|INTERSECT|No se admite este operador. Quite `INTERSECT` del procedimiento almacenado compilado de forma nativa. En algunos casos se puede usar INNER JOIN para obtener el mismo resultado.|  
-|Operator|EXCEPT|No se admite este operador. Quite `EXCEPT` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|OUTER JOIN|No se admite este operador. Quite `OUTER JOIN` del procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [implementar una combinación externa](implementing-an-outer-join.md).|  
-|Operator|APPLY|No se admite este operador. Quite `APPLY` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|PIVOT|No se admite este operador. Quite `PIVOT` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|UNPIVOT|No se admite este operador. Quite `UNPIVOT` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|OR, IN|Los procedimientos almacenados compilados de forma nativa no admiten la disyunción (OR, IN) en la cláusula WHERE de las consultas. Cree consultas diferentes para todos los casos.|  
-|Operator|CONTAINS|No se admite este operador. Quite `CONTAINS` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|FREETEXT|No se admite este operador. Quite `FREETEXT` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|NOT|No se admite este operador. Quite `NOT` del procedimiento almacenado compilado de forma nativa. En algunos casos, `NOT` se puede reemplazar por una desigualdad. Por ejemplo, `NOT a=b` se puede reemplazar por `a!=b`.|  
-|Operator|TSEQUAL|No se admite este operador. Quite `TSEQUAL` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|LIKE|No se admite este operador. Quite `LIKE` del procedimiento almacenado compilado de forma nativa.|  
-|Operator|NEXT VALUE FOR|En los procedimientos almacenados compilados de forma nativa no se puede hacer referencia a secuencias. Obtenga el valor usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado y, a continuación, páselo al procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [Implementar IDENTITY en una tabla con optimización para memoria](implementing-identity-in-a-memory-optimized-table.md).|  
-|Opción SET|*desea*|En los procedimientos almacenados compilados de forma nativa no se pueden cambiar las opciones SET. Algunas opciones se pueden establecer con la instrucción BEGIN ATOMIC. Para obtener más información, vea la sección sobre bloques atomic en [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Operador|CHANGETABLE|No se admite este operador. Quite `CHANGETABLE` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|GOTO|No se admite este operador. Use otras construcciones de procedimiento, como WHILE.|  
+|Operador|EXECUTE, INSERT EXEC|No se admite el anidamiento de procedimientos almacenados compilados de forma nativa. Las operaciones necesarias se pueden especificar insertadas, como parte de la definición de los procedimientos almacenados.|  
+|Operador|OFFSET|No se admite este operador. Quite `OFFSET` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|UNION|No se admite este operador. Quite `UNION` del procedimiento almacenado compilado de forma nativa. Para combinar varios conjuntos de resultados en un solo conjunto se puede usar una variable de tabla.|  
+|Operador|INTERSECT|No se admite este operador. Quite `INTERSECT` del procedimiento almacenado compilado de forma nativa. En algunos casos se puede usar INNER JOIN para obtener el mismo resultado.|  
+|Operador|EXCEPT|No se admite este operador. Quite `EXCEPT` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|OUTER JOIN|No se admite este operador. Quite `OUTER JOIN` del procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [implementar una combinación externa](implementing-an-outer-join.md).|  
+|Operador|APPLY|No se admite este operador. Quite `APPLY` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|PIVOT|No se admite este operador. Quite `PIVOT` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|UNPIVOT|No se admite este operador. Quite `UNPIVOT` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|OR, IN|Los procedimientos almacenados compilados de forma nativa no admiten la disyunción (OR, IN) en la cláusula WHERE de las consultas. Cree consultas diferentes para todos los casos.|  
+|Operador|CONTAINS|No se admite este operador. Quite `CONTAINS` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|FREETEXT|No se admite este operador. Quite `FREETEXT` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|NOT|No se admite este operador. Quite `NOT` del procedimiento almacenado compilado de forma nativa. En algunos casos, `NOT` se puede reemplazar por una desigualdad. Por ejemplo, `NOT a=b` se puede reemplazar por `a!=b`.|  
+|Operador|TSEQUAL|No se admite este operador. Quite `TSEQUAL` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|LIKE|No se admite este operador. Quite `LIKE` del procedimiento almacenado compilado de forma nativa.|  
+|Operador|NEXT VALUE FOR|En los procedimientos almacenados compilados de forma nativa no se puede hacer referencia a secuencias. Obtenga el valor usando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado y, a continuación, páselo al procedimiento almacenado compilado de forma nativa. Para obtener más información, vea [Implementar IDENTITY en una tabla con optimización para memoria](implementing-identity-in-a-memory-optimized-table.md).|  
+|Opción SET|*Opción*|En los procedimientos almacenados compilados de forma nativa no se pueden cambiar las opciones SET. Algunas opciones se pueden establecer con la instrucción BEGIN ATOMIC. Para obtener más información, vea la sección sobre bloques atomic en [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Operando|TABLESAMPLE|No se admite este operador. Quite `TABLESAMPLE` del procedimiento almacenado compilado de forma nativa.|  
 |Opción|RECOMPILE|Los procedimientos almacenados compilados de forma nativa se compilan en el momento de su creación. Para volver a compilar un procedimiento almacenado compilado de forma nativa, quítelo y vuelva a crearlo. Quite `RECOMPILE` de la definición de procedimiento.|  
 |Opción|ENCRYPTION|Esta opción no se admite. Quite `ENCRYPTION` de la definición de procedimiento.|  
@@ -178,9 +177,9 @@ ms.locfileid: "63155302"
 |Opción|DISTINCT|Esta opción no se admite. Quite `DISTINCT` de la consulta del procedimiento almacenado compilado de forma nativa.|  
 |Opción|PERCENT|Esta opción no se admite con cláusulas `TOP`. Quite `PERCENT` de la consulta del procedimiento almacenado compilado de forma nativa.|  
 |Opción|WITH TIES|Esta opción no se admite con cláusulas `TOP`. Quite `WITH TIES` de la consulta del procedimiento almacenado compilado de forma nativa.|  
-|Aggregate, función|*Aggregate, función*|Esta la cláusula no se admite. Para obtener más información acerca de las funciones de agregado en los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Aggregate, función|*Función de agregado*|Esta la cláusula no se admite. Para obtener más información acerca de las funciones de agregado en los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Función de categoría|*Función de categoría*|Los procedimientos almacenados compilados de forma nativa no admiten funciones de categoría. Quítelas de la definición de procedimiento.|  
-|Función|*Funcionalidad*|Esta función no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
+|Función|*Función*|Esta función no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
 |.|*.*|Esta instrucción no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
 |Característica|MIN y MAX utilizados con las cadenas de caracteres y binarias|En los procedimientos almacenados compilados de forma nativa no se pueden usar las funciones de agregado `MIN` y `MAX` con valores de cadenas de caracteres y binarias.|  
 |Característica|GROUP BY sin función de agregado|En los procedimientos almacenados compilados de forma nativa, cuando una consulta tiene una cláusula `GROUP BY`, la consulta también debe usar una función de agregado en la cláusula SELECT o HAVING. Agregue una función de agregado a la consulta.|  

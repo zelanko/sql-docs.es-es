@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164416"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implementar una extensión de entrega
@@ -26,7 +26,7 @@ ms.locfileid: "63164416"
   
  Si una extensión de entrega se reemplaza o actualiza, todas las suscripciones que hacen referencia a la misma siguen siendo válidas.  
   
- Después de haber escrito y compilado la [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensión de entrega en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] una biblioteca, debe copiar la extensión en el directorio adecuado y agregar una entrada al archivo de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] configuración correspondiente para que el servidor de informes pueda encontrarla.  
+ Una vez escrita y compilada la extensión de entrega de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], debe copiar la extensión en el directorio adecuado y agregar una entrada al archivo de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] correcto de modo que el servidor de informes pueda localizarla.  
   
 ## <a name="configuration-file-extension-element"></a>Elemento de extension de archivos de configuración  
  Las extensiones de entrega que implemente para el servidor de informes tienen que escribirse como elementos `Extension` en el archivo de configuración. El archivo de configuración para el servidor de informes es RSReportServer.config.  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161720"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Poner en modo inactivo una topología de replicación (programación de la replicación con Transact-SQL)
@@ -80,7 +80,7 @@ ms.locfileid: "63161720"
     >  Si se producen conflictos durante la sincronización, es posible que los cambios requeridos por la resolución de conflictos no se propaguen a todos los nodos después de ejecutar el Agente de mezcla dos veces.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Administrar una topología punto a punto &#40;la programación de la replicación con Transact-SQL&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Medir la latencia y validar las conexiones de la replicación transaccional](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

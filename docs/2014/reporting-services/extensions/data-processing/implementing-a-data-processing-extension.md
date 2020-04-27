@@ -16,41 +16,41 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2efc74fa2ba84335fcb5e03b42125fb9c6782f43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164111"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementar una extensión de procesamiento de datos
-  Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permiten conectarse a los orígenes de datos y recuperar los datos. También actúan como puente entre un origen de datos y un conjunto de datos. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]las extensiones de procesamiento de datos se modelan después de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] un subconjunto de las interfaces del proveedor de datos.  
+  Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permiten conectarse a los orígenes de datos y recuperar los datos. También actúan como puente entre un origen de datos y un conjunto de datos. Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se modelan según un subconjunto de las interfaces del proveedor de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a las extensiones de procesamiento de datos](data-processing-extensions-overview.md)  
  Explica cómo escribir una extensión de procesamiento de datos personalizada para [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- [Prepararse para implementar una extensión de procesamiento de datos](preparing-to-implement-a-data-processing-extension.md)  
+ [Preparación de la implementación de una extensión de procesamiento de datos](preparing-to-implement-a-data-processing-extension.md)  
  Describe las interfaces disponibles al implementar una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], así como cuando tiene que implementar una interfaz determinada.  
   
- [Crear una biblioteca de extensión de procesamiento de datos](creating-a-data-processing-extension-library.md)  
+ [Creación de una biblioteca de extensión de procesamiento de datos](creating-a-data-processing-extension-library.md)  
  Describe cómo asignar un espacio de nombres para la extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y compilar la extensión de procesamiento de datos en una DLL de biblioteca.  
   
- [Implementar una clase Connection para una extensión de procesamiento de datos](implementing-a-connection-class-for-a-data-processing-extension.md)  
+ [Implementación de una clase Connection para una extensión de procesamiento de datos](implementing-a-connection-class-for-a-data-processing-extension.md)  
  Describe los atributos de una conexión y cómo implementar una clase propia **Connection** para la extensión de procesamiento de datos.  
   
- [Implementar una clase Command para una extensión de procesamiento de datos](implementing-a-command-class-for-a-data-processing-extension.md)  
+ [Implementación de una clase Command para una extensión de procesamiento de datos](implementing-a-command-class-for-a-data-processing-extension.md)  
  Describe los atributos de un comando y cómo implementar una clase propia **Command** para la extensión de procesamiento de datos.  
   
- [Implementar una clase DataReader para una extensión de procesamiento de datos](implementing-a-datareader-class-for-a-data-processing-extension.md)  
+ [Implementación de una clase DataReader para una extensión de procesamiento de datos](implementing-a-datareader-class-for-a-data-processing-extension.md)  
  Describe los atributos de un lector de datos y cómo implementar una clase propia **DataReader** para la extensión de procesamiento de datos.  
   
- [Usar un conjunto de datos externo con Reporting Services](using-an-external-dataset-with-reporting-services.md)  
+ [Uso de un conjunto de datos externo con Reporting Services](using-an-external-dataset-with-reporting-services.md)  
  Describe cómo exponer los objetos **DataSet** personalizados en el servidor de informes para su uso.  
   
- [Implementar una extensión de procesamiento de datos](deploying-a-data-processing-extension.md)  
+ [Implementación de una extensión de procesamiento de datos](deploying-a-data-processing-extension.md)  
  Describe cómo implementar la extensión de procesamiento de datos.  
   
- [Depurar el código de extensión de procesamiento de datos](debugging-data-processing-extension-code.md)  
+ [Depuración del código de extensión de procesamiento de datos](debugging-data-processing-extension-code.md)  
  Describe cómo depurar el código de las extensiones de procesamiento de datos.  
   
  [Quitar una extensión de procesamiento de datos](removing-a-data-processing-extension.md)  

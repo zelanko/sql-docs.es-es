@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d289b3d4c4177ed885a3153bb758d0052286bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164334"
 ---
 # <a name="debugging-delivery-extension-code"></a>Depurar el código de extensión de entrega
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Proporciona varias herramientas de depuración que pueden ayudarle a analizar el código de extensión de entrega y localizar errores en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] él. La herramienta más conveniente dependerá de lo que intente llevar a cabo. En este ejemplo se usa [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona varias herramientas de depuración que pueden ayudarle a analizar el código de extensión de entrega y localizar errores en él. La herramienta más conveniente dependerá de lo que intente llevar a cabo. En este ejemplo se usa [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  
   
 #### <a name="to-debug-your-delivery-extension-code"></a>Para depurar el código de extensión de entrega  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63164334"
   
 7.  Defina una nueva suscripción mediante su extensión de entrega. Probablemente utilizará el Administrador de informes o la API SOAP. De esta forma se debería invocar el depurador y ejecutar el código correspondiente a sus puntos de interrupción.  
   
-8.  Recorra el código con la tecla **F11** . Para obtener más información sobre cómo utilizar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para la depuración, vea la documentación de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+8.  Recorra el código con la tecla **F11**. Para obtener más información sobre cómo utilizar [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] para la depuración, vea la documentación de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
  [Implementar una extensión de entrega](implementing-a-delivery-extension.md)   

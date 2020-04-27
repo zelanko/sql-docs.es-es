@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162393"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>Configurar las propiedades generales de la administración basada en directivas
@@ -36,14 +36,14 @@ ms.locfileid: "63162393"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-policy-based-management"></a>Para configurar la administración basada en directivas  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63162393"
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Propiedades de Administración de directivas** .  
   
-     **Enabled**  
+     **Habilitado**  
      Especifica si la administración basada en directivas se habilita.  
   
      **HistoryRetentionInDays**  
@@ -68,9 +68,9 @@ ms.locfileid: "63162393"
   
     -   Cuando este valor es true, se registran tanto las evaluaciones de directivas correctas como las que tienen errores.  
   
-4.  Cuando termine, haga clic en **Aceptar**.  
+4.  Cuando haya terminado, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-policy-based-management"></a>Para configurar la administración basada en directivas  
   

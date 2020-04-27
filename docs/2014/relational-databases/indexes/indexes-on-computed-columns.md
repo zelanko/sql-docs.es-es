@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162453"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
@@ -36,11 +36,11 @@ ms.locfileid: "63162453"
   
 -   Requisitos de la opción SET  
   
- **Requisitos de propiedad**  
+ **Ownership Requirements**  
   
  Todas las referencias a funciones de la columna calculada deben tener el mismo propietario que la tabla.  
   
- **Requisitos de determinismo**  
+ **Determinism Requirements**  
   
 > [!IMPORTANT]  
 >  Las expresiones son deterministas si siempre devuelven el mismo resultado para un conjunto de entradas específico. La propiedad **IsDeterministic** de la función [COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql) informa de si una expresión *computed_column_expression* es determinista.  
@@ -58,13 +58,13 @@ ms.locfileid: "63162453"
  Cualquier columna calculada que contenga una expresión CLR (Common Language Runtime) debe ser determinista y se debe marcar como PERSISTED para poder indizarla. Las expresiones con el tipo definido por el usuario CLR se pueden utilizar en las definiciones de columnas calculadas. Las columnas calculadas con el tipo definido por el usuario CLR se podrán indizar siempre que el tipo sea comparable. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 > [!NOTE]  
->  Cuando haga referencia a los literales de cadena del tipo de datos de fecha en las columnas calculadas indizadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql). Las expresiones que impliquen la conversión implícita de cadenas de caracteres en tipos de datos de fecha se consideran no deterministas, a menos que el nivel de compatibilidad de la base de datos se establezca en 80 o menos. Esto se debe a que los resultados dependen de los valores [Language](/sql/t-sql/statements/set-language-transact-sql) y [DateFormat](/sql/t-sql/statements/set-dateformat-transact-sql) de la sesión del servidor. Por ejemplo, los resultados de la expresión `CONVERT (datetime, '30 listopad 1996', 113)` dependen del valor de LANGUAGE porque la cadena '`30 listopad 1996`' significa distintos meses en distintos idiomas. De forma similar, en la expresión `DATEADD(mm,3,'2000-12-01')`, el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] interpretará la cadena `'2000-12-01'` en función del valor de DATEFORMAT.  
+>  Cuando haga referencia a los literales de cadena del tipo de datos de fecha en las columnas calculadas indizadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql). Las expresiones que impliquen la conversión implícita de cadenas de caracteres en tipos de datos de fecha se consideran no deterministas, a menos que el nivel de compatibilidad de la base de datos se establezca en 80 o menos. Esto es así porque los resultados dependen de la configuración de [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) y [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) de la sesión del servidor. Por ejemplo, los resultados de la expresión `CONVERT (datetime, '30 listopad 1996', 113)` dependen del valor de LANGUAGE porque la cadena '`30 listopad 1996`' significa distintos meses en distintos idiomas. De forma similar, en la expresión `DATEADD(mm,3,'2000-12-01')`, el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] interpretará la cadena `'2000-12-01'` en función del valor de DATEFORMAT.  
 >   
 >  La conversión implícita de datos de caracteres no Unicode entre intercalaciones también se considera no determinista, a menos que el nivel de compatibilidad se establezca en 80 o menos.  
 >   
 >  Cuando el valor del nivel de compatibilidad de la base de datos es 90, no se pueden crear índices en columnas calculadas que incluyan estas expresiones. Sin embargo, se pueden mantener las columnas calculadas existentes que contengan estas expresiones procedentes de una base de datos actualizada. Si utiliza columnas calculadas indizadas que contienen conversiones implícitas de cadena a fecha, para evitar posibles daños en las vistas indizadas, asegúrese de que las opciones LANGUAGE y DATEFORMAT son coherentes en las bases de datos y las aplicaciones.  
   
- **Requisitos de precisión**  
+ **Precision Requirements**  
   
  La expresión *computed_column_expression* debe ser precisa. Una expresión *computed_column_expression* es precisa si se cumplen una o varias de las condiciones siguientes:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63162453"
   
  La propiedad **IsPrecise** de la función COLUMNPROPERTY informa de si una expresión *computed_column_expression* es precisa.  
   
- **Requisitos de tipo de datos**  
+ **Data Type Requirements**  
   
 -   Los *computed_column_expression* definidos para la columna calculada no se pueden evaluar `text`como `ntext`tipos de `image` datos, o.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "63162453"
   
      Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior.  
   
-##  <a name="BKMK_persisted"></a> Crear índices en columnas calculadas persistentes  
+##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Crear índices en columnas calculadas persistentes  
  Puede crear un índice en una columna calculada definida con una expresión determinista pero imprecisa si se marca la columna como PERSISTED en la instrucción CREATE TABLE o ALTER TABLE. Esto significa que [!INCLUDE[ssDE](../../../includes/ssde-md.md)] utiliza estos valores persistentes cuando crea un índice en la columna y cuando se hace referencia al índice en una consulta. Esta opción permite crear un índice en una columna calculada cuando [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]es determinista y precisa.  
   
 ## <a name="related-content"></a>Contenido relacionado  

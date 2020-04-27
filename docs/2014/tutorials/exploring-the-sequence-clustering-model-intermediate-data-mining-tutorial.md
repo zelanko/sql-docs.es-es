@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164055"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
@@ -32,7 +32,7 @@ ms.locfileid: "63164055"
   
 -   [Visor de árbol de contenido genérico](#bkmk_Generic)  
   
-##  <a name="bkmk_CDiagram"></a>Pestaña diagrama del clúster  
+##  <a name="cluster-diagram-tab"></a><a name="bkmk_CDiagram"></a>Pestaña diagrama del clúster  
  En la pestaña **Diagrama del clúster** se muestran gráficamente los clústeres detectados por el algoritmo en la base de datos. El diseño del diagrama, con clústeres similares agrupados juntos, representa las relaciones entre los clústeres. De forma predeterminada, el sombreado de cada nodo representa la densidad de todos los casos del clúster: cuanto más oscuro es el sombreado del nodo, más casos contiene. Puede cambiar el significado del sombreado de los nodos para que represente la compatibilidad de un atributo y un estado dentro de cada clúster.  
   
  También puede cambiar el nombre de los clústeres para identificar los clústeres de destino y trabajar con ellos fácilmente. En este tutorial, cambiará el nombre del clúster que tiene el porcentaje más alto de clientes de la región del Pacífico y el clúster que tiene en total mayor número de casos.  
@@ -87,7 +87,7 @@ ms.locfileid: "63164055"
   
  [Volver al principio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CProfiles"></a>Pestaña perfiles del clúster  
+##  <a name="cluster-profiles-tab"></a><a name="bkmk_CProfiles"></a>Pestaña perfiles del clúster  
  La pestaña **perfiles del clúster** muestra las secuencias que se encuentran en cada clúster. Los clústeres se enumeran en columnas individuales a la derecha de la columna **Estados** .  
   
  En el visor, la fila del **modelo** describe la distribución general de los elementos de un clúster y la fila **Model. samples** contiene secuencias de los elementos. Cada línea de las secuencias de color de cada celda de la fila **Model. samples** representa el comportamiento de un usuario seleccionado aleatoriamente en el clúster.  
@@ -132,7 +132,7 @@ ms.locfileid: "63164055"
   
  [Volver al principio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CChars"></a>Pestaña características del clúster  
+##  <a name="cluster-characteristics-tab"></a><a name="bkmk_CChars"></a>Pestaña características del clúster  
  La pestaña **características del clúster** resume las transiciones entre los Estados de un clúster mostrando las barras que representan visualmente la importancia del valor del atributo para el clúster seleccionado. La columna **variables** le indica lo que el modelo ha descubierto que es importante para el clúster o el rellenado seleccionado: un valor determinado o la relación entre los valores, lo que se conoce como *transición*. La columna **valores** proporciona más detalles sobre el valor o la transición, y la columna **probabilidad** representa visualmente el peso de este atributo o transición.  
   
 #### <a name="to-view-the-important-attributes-for-a-cluster"></a>Para ver los atributos importantes de un clúster  
@@ -169,7 +169,7 @@ ms.locfileid: "63164055"
   
  [Volver al principio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CDiscrim2"></a>Pestaña distinción del clúster  
+##  <a name="cluster-discrimination-tab"></a><a name="bkmk_CDiscrim2"></a>Pestaña distinción del clúster  
  La pestaña **distinción del clúster** le ayuda a comparar dos clústeres, para determinar qué atributos distinguen un clúster determinado de otro clúster. La pestaña contiene cuatro columnas: **variables**, **valores**, **clúster 1**y **clúster 2**.  Puede elegir cualquier clúster para usarlo como **clúster 1** y **clúster 2**.  
   
  La columna **variables** indica el nombre del atributo, que puede ser un nombre de columna o una combinación de nombre de columna y la palabra **Transition**. La columna **valores** muestra el valor exacto del atributo o de la transición. Las barras sombreadas de las columnas de **clúster 1** y **clúster 2** indican la intensidad del atributo en los clústeres que se van a comparar. Cuanto mayor sea la barra, mayor será la probabilidad de que incluya casos con ese atributo.  
@@ -188,7 +188,7 @@ ms.locfileid: "63164055"
   
  [Volver al principio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_StateTran"></a>Pestaña transiciones de estado  
+##  <a name="state-transitions-tab"></a><a name="bkmk_StateTran"></a>Pestaña transiciones de estado  
  En la pestaña **transiciones de estado** , puede seleccionar un clúster y examinar sus transiciones de estado. Si selecciona **población (todos)** en la lista desplegable clúster, el diagrama muestra la distribución de Estados para todo el modelo de minería de datos.  
   
  Cada nodo del gráfico representa un estado o valor posible de las secuencias que está intentando analizar. El color de fondo de los nodos representa la frecuencia del estado. Las líneas conectan algunos estados, lo que indica una transición entre estados. Puede mover el control deslizante arriba o abajo para cambiar el umbral de probabilidad de las transiciones. Algunos nodos llevan asociados unos números, que indican la probabilidad de ese estado.  
@@ -227,7 +227,7 @@ ms.locfileid: "63164055"
   
  [Volver al principio](#bkmk_CDiagram)  
   
-##  <a name="bkmk_Generic"></a>Visor de árbol de contenido genérico  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_Generic"></a>Visor de árbol de contenido genérico  
  Este visor se puede usar para todos los modelos, sin tener en cuenta el algoritmo o tipo de modelo. El **visor de árbol de contenido de MicrosoftGeneric** está disponible en la lista desplegable **visor** .  
   
  Un árbol de contenido es una representación de un modelo de minería de datos como una serie de nodos, donde cada nodo representa el conocimiento adquirido acerca de los datos de entrenamiento. El nodo puede contener un patrón, un conjunto de reglas, un clúster o la definición de un intervalo de fechas que comparten ciertos atributos. El contenido exacto del nodo varía en función del algoritmo y del atributo de predicción, pero la representación general del contenido es la misma.  

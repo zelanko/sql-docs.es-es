@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157236"
 ---
 # <a name="supported-sql-server-features"></a>Características admitidas de SQL Server
   En este tema se describen las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden usar o no con objetos optimizados para memoria.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>Características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitidas para OLTP en memoria  
+## <a name="ssnoversion-features-supported-for-in-memory-oltp"></a>Características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitidas para OLTP en memoria  
  Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admiten en una base de datos que tiene objetos optimizados para memoria, incluido el grupo de archivos optimizados para memoria.  
   
  Para obtener información acerca de los tipos de datos admitidos, vea [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
@@ -29,8 +29,7 @@ ms.locfileid: "63157236"
   
 -   Opciones y operaciones admitidas en procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
--   Capacidad de obtener acceso a tablas optimizadas para memoria mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado. 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado proporciona un área expuesta equivalente a tener acceso a tablas que no tienen optimización para memoria mediante procedimientos almacenados que no están compilados de forma nativa y [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para más información, vea [Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
+-   Capacidad de obtener acceso a tablas optimizadas para memoria mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado. [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado proporciona un área expuesta equivalente a tener acceso a tablas que no tienen optimización para memoria mediante procedimientos almacenados que no están compilados de forma nativa y [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para más información, vea [Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
   
 -   Control de simultaneidad optimista y varias versiones. Para obtener más información, consulte [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md).  
   
@@ -38,11 +37,11 @@ ms.locfileid: "63157236"
   
 -   Vistas de catálogo, vistas de administración dinámica y eventos extendidos para aportar compatibilidad. Para más información, vea [Propiedades, vistas del sistema, procedimientos almacenados, tipos de espera y DMV nuevos y actualizados para OLTP en memoria](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Objetos de administración. Para más información, vea [Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria](sql-server-management-objects-support-for-in-memory-oltp.md).  
+-   Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, vea [Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para más información, vea [Compatibilidad de SQL Server Management Studio con OLTP en memoria](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell. Para obtener más información, vea [Información general de SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para obtener más información, vea [Información general de SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Importar y exportar datos de forma masiva con la utilidad bcp. Para más información, vea [Importar y exportar datos de forma masiva con la utilidad bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -66,7 +65,7 @@ ms.locfileid: "63157236"
   
 -   Trasvase de registros: el trasvase de registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite enviar automáticamente copias de seguridad del registro de transacciones desde una base de datos principal de una instancia del servidor principal a una o varias bases de datos secundarias en instancias independientes del servidor secundario. Para más información, vea [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
--   La replicación transaccional en tablas optimizadas para memoria en suscriptores se admite con algunas restricciones. Para obtener más información, vea [Replicación para los suscriptores de tablas con optimización para memoria](../replication/replication-to-memory-optimized-table-subscribers.md).  
+-   La replicación transaccional en tablas optimizadas para memoria en suscriptores se admite con algunas restricciones. Para obtener más información, vea [replicación en suscriptores de tablas con optimización para memoria](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
 -   Regulador de recursos: el regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una característica que puede utilizar para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Resource Governor permite especificar la cantidad máxima de CPU, E/S física y memoria que pueden usar las solicitudes de aplicación entrantes. Para obtener más información, consulte [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) y [Resource Governor](../resource-governor/resource-governor.md).  
   
@@ -74,8 +73,7 @@ ms.locfileid: "63157236"
   
 -   Compatibilidad con BACPAC.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Características no admitidas para OLTP en memoria  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Características no admitidas para OLTP en memoria  
  Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admiten en una base de datos que tiene objetos optimizados para memoria (incluido el grupo de archivos de datos optimizados para memoria).  
   
 |Característica no admitida|Descripción de la característica|  
@@ -83,7 +81,7 @@ ms.locfileid: "63157236"
 |Compresión de datos en tablas optimizadas para memoria.|Puede usar la característica de compresión de datos como ayuda para comprimir los datos de una base de datos y reducir el tamaño de la base de datos. Para obtener más información, consulte [Data Compression](../data-compression/data-compression.md).|  
 |Creación de particiones de tablas optimizadas para memoria e índices HASH.|Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Para obtener más información, vea [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).|  
 |Cifrado de datos transparente (TDE) en el grupo de archivos de datos optimizado para memoria de una base de datos.|El cifrado de datos transparente (TDE) realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).<br /><br /> El TDE se puede habilitar en una base de datos que tenga objetos de OLTP en memoria. Las entradas del registro de OLTP en memoria se cifran si se ha habilitado el TDE. Los archivos de punto de comprobación de las tablas durables no se cifran, incluso aunque el TDE esté habilitado en la base de datos.|  
-|Replicación|Las configuraciones de replicación que no sean la replicación transaccional en tablas optimizadas para memoria en los suscriptores son incompatibles con tablas o vistas que hacen referencia a tablas optimizadas para memoria. La replicación mediante sync_mode = ' Database Snapshot ' no se admite si hay un grupo de archivos optimizados para memoria. Para obtener más información, vea [Replicación para los suscriptores de tablas con optimización para memoria](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Replicación|Las configuraciones de replicación que no sean la replicación transaccional en tablas optimizadas para memoria en los suscriptores son incompatibles con tablas o vistas que hacen referencia a tablas optimizadas para memoria. La replicación mediante sync_mode = ' Database Snapshot ' no se admite si hay un grupo de archivos optimizados para memoria. Para obtener más información, vea [replicación en suscriptores de tablas con optimización para memoria](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |Conjuntos de resultados activos múltiples (MARS)|Las tablas optimizadas para memoria no admiten Multiple Active Result Sets (MARS). Este error también puede indicar que se está usando un servidor vinculado. El servidor vinculado puede utilizar MARS. Las tablas optimizadas para memoria no admiten servidores vinculados. En su lugar, conéctese directamente al servidor y a la base de datos que hospedan las tablas optimizadas para memoria.|  
 |Creación de reflejo|Creación de reflejo de la base de datos es una solución para aumentar la disponibilidad de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Recompilar el registro|La recompilación del registro, ya sea a través de un adjunto o de ALTER DATABASE, no se admite para bases de datos con un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
@@ -91,7 +89,7 @@ ms.locfileid: "63157236"
 |Registro masivo|Independientemente del modelo de recuperación de la base de datos, todas las operaciones en tablas durables optimizadas para memoria siempre se registran completamente.|  
 |Registro mínimo|Las tablas optimizadas para memoria no admiten el registro mínimo. Para obtener más información sobre el registro mínimo, vea [El registro de transacciones &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) y [Requisitos previos para el registro mínimo durante la importación en bloque](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
 |seguimiento de cambios|El seguimiento de cambios se puede habilitar en una base de datos con objetos de OLTP en memoria. Sin embargo, no se hace el seguimiento de los cambios en las tablas optimizadas para memoria.|  
-|Desencadenadores DDL|En las tablas y los procedimientos almacenados compilados de forma nativa de OLTP en memoria no se admiten desencadenadores DDL de nivel de servidor ni de nivel de base de datos.|  
+|DDL, desencadenadores|En las tablas y los procedimientos almacenados compilados de forma nativa de OLTP en memoria no se admiten desencadenadores DDL de nivel de servidor ni de nivel de base de datos.|  
 |Captura de datos modificados (CDC)|CDC no se debe habilitar en una base de datos que tiene objetos de OLTP en memoria, ya que impide determinadas operaciones como DROP.|  
 |Contención de la base de datos|La contención de la base de datos no se admite en las bases de datos con procedimientos almacenados compilados de forma nativa y tablas optimizadas para memoria. Para obtener más información, vea bases de datos [independientes](../databases/contained-databases.md) .|  
 |Conexiones de contexto|No se admite el acceso a las tablas optimizadas para memoria con la conexión de contexto desde procedimientos almacenados CLR.|  

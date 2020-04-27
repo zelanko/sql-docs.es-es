@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289153"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproducir un seguimiento en Asistente para experimentación con bases de datos
@@ -163,6 +163,6 @@ Este problema se conoce en la versión RTM de SQL Server 2017. Para obtener más
   
 El problema se ha solucionado en la última actualización acumulativa 1 de SQL Server 2017. Descargue la versión más reciente de la [actualización acumulativa 1 para SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - Para crear un informe de análisis que le ayude a obtener información sobre los cambios propuestos, vea [crear informes](database-experimentation-assistant-create-report.md).

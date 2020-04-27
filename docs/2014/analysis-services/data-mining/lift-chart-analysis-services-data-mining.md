@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174685"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
@@ -31,7 +31,7 @@ ms.locfileid: "78174685"
 
  Un gráfico de beneficios es un tipo de gráfico relacionado que contiene la misma información que un gráfico de mejora respecto al modelo predictivo, pero que también muestra el aumento proyectado en los beneficios asociado al uso de cada modelo.
 
-##  <a name="bkmk_Top"></a>Descripción del gráfico de elevación
+##  <a name="understanding-the-lift-chart"></a><a name="bkmk_Top"></a>Descripción del gráfico de elevación
  Puede resultar difícil entender los gráficos de mejora respecto al modelo predictivo como concepto abstracto. Por consiguiente, para ilustrar el uso de las herramientas del gráfico de mejora respecto al modelo predictivo y la información del gráfico, en esta sección se muestra un escenario en el que se usa un gráfico de mejora respecto al modelo predictivo para calcular la respuesta a una campaña de envío de correo directo.
 
  El departamento de marketing de este escenario sabe que las campañas de correo suelen tener más o menos una tasa de respuesta del 10 por ciento. Tienen una lista de 10.000 clientes potenciales almacenada en una tabla de la base de datos. Según el índice típico de respuesta, normalmente pueden esperar que solo respondan unos 1.000 clientes potenciales. Sin embargo, el dinero presupuestado para el proyecto no es suficiente para llegar a los 10.000 clientes de la base de datos, y desean mejorar la tasa de respuesta. Para este escenario, supongamos que el presupuesto solo les permite enviar un anuncio a 5.000 clientes. El departamento de marketing tiene dos opciones:
@@ -65,7 +65,7 @@ ms.locfileid: "78174685"
 
  La **Leyenda de minería de datos** también contiene puntuaciones y estadísticas que ayudan a interpretar el gráfico. Estos resultados representan la exactitud del modelo en la línea gris, que en este escenario está situada para que incluya el 30 por ciento de los casos de prueba totales.
 
-|Serie y modelo|Score|Población de destino|Probabilidad de predicción|
+|Serie y modelo|Puntuación|Población de destino|Probabilidad de predicción|
 |-----------------------|-----------|-----------------------|-------------------------|
 |Correo destinado a todos|0.71|47,40 %|61,38 %|
 |Correo destinado a menores de 30|0.85|51,81 %|46.62 %|
@@ -95,7 +95,7 @@ ms.locfileid: "78174685"
 
  Puede hacer clic en el gráfico para mover la barra gris vertical y la **Leyenda de minería de datos** muestra el porcentaje de casos total y el porcentaje de casos que se predijeron correctamente. Por ejemplo, si coloca la barra deslizante gris en la marca del 50 por ciento, la **Leyenda de minería de datos** muestra las puntuaciones de precisión siguientes. Estas cifras se basan en el modelo TM_Decision Tree creado en el Tutorial básico de minería de datos.
 
-|Serie, Modelo|Score|Población de destino|Probabilidad de predicción|
+|Serie, Modelo|Puntuación|Población de destino|Probabilidad de predicción|
 |-------------------|-----------|-----------------------|-------------------------|
 |TM_Decision Tree|0.77|40.50 %|72.91 %|
 |Modelo ideal||50.00%||
@@ -117,6 +117,6 @@ ms.locfileid: "78174685"
  [Volver al principio](#bkmk_Top)
 
 ## <a name="see-also"></a>Consulte también
- [Pruebas y validación &#40;&#41;de minería de datos](testing-and-validation-data-mining.md)
+ [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md)
 
 

@@ -17,27 +17,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174248"
 ---
 # <a name="browsing-a-neural-network-model"></a>Examinar un modelo de red neuronal
   Cuando abre un modelo de red neuronal o de regresión lógica a través de **Examinar**, el modelo se muestra en un visor interactivo, similar al visor de modelos de red neuronal en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar correlaciones y obtener información sobre los patrones del modelo y los datos subyacentes.
 
-##  <a name="BKMK_Tabs"></a>Explorar el modelo
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorar el modelo
  Los modelos que se basan en algoritmos de red neuronal o de regresión lógica de [!INCLUDE[msCoName](../includes/msconame-md.md)] se parecen en que analizan los datos como un conjunto de conexiones entre las entradas y salidas conocidas. El visor **Examinar** ayuda a explorar esas conexiones mediante los controles siguientes:
 
 -   [Variables](#BKMK_Variables)
 
--   [Entradas](#BKMK_Inputs)
+-   [Comentarios](#BKMK_Inputs)
 
 -   [Salidas](#BKMK_Outputs)
 
  Si quiere experimentar con este visor, puede crear un modelo con el [Asistente para clasificación &#40;Complementos de minería de datos para Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) y usar las opciones **avanzadas** para cambiar el algoritmo al de Regresión logística de Microsoft en el cuadro de diálogo **Parámetros de algoritmo**.
 
-###  <a name="BKMK_Variables"></a>Variable
+###  <a name="variables"></a><a name="BKMK_Variables"></a>Variable
  El panel **Variables** muestra una lista de variables de entrada según el orden en el que surten efecto en el modelo. Para filtrar el modelo, se usan los controles de **Entrada** y de **Salida**, que afectan a las variables que se muestran, así como a su orden.
 
  Con este visor, podrá explorar los factores más importantes para determinar si un cliente pertenece con más probabilidad a la categoría Bike Buyer o a la categoría Non-buyer.
@@ -72,17 +72,17 @@ ms.locfileid: "78174248"
 
      Aparece una ventana con información sobre herramientas que incluye una puntuación de *importancia*, un par de puntuaciones de *probabilidad* y un par de valores de *mejora respecto al modelo predictivo*.
 
-    -   La **importancia** se calcula en todo el conjunto de resultados e identifica el atributo que, dadas todas las entradas, está más correlacionado con el resultado de destino. El visor ordena los valores del gráfico según las puntuaciones de importancia.
+    -   La **importancia** se calcula en la totalidad del conjunto de datos y se identifica el atributo que, teniendo en cuenta todas las entradas, tiene mayor correlación con el resultado de destino. El visor ordena los valores del gráfico según las puntuaciones de importancia.
 
-    -   La **probabilidad** se calcula para cada conjunto de pares atributo-valor, para los resultados de destino, en todo el conjunto de datos.
+    -   La **probabilidad** se calcula para cada conjunto de pares atributo-valor, para los resultados de destino, en la totalidad del conjunto de datos.
 
-    -   La **elevación** indica el grado de utilidad de este par de atributo-valor determinado para promover un resultado u otro.
+    -   La **mejora respecto al modelo predictivo** indica el grado de utilidad de un par atributo-valor determinado para promover un resultado u otro.
 
      Nota: La información sobre herramientas contiene la misma información independientemente de si coloca el mouse sobre una columna u otra.
 
  [Volver al principio](#BKMK_Tabs)
 
-###  <a name="BKMK_Inputs"></a>Comentarios
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Comentarios
  El panel **Entradas** le permite elegir un conjunto de entradas y aplicarlo como filtro para el modelo, lo cual le permite ver el efecto de esas opciones en el resultado en función de los datos de entrenamiento.
 
 ##### <a name="explore-inputs"></a>Explorar entradas
@@ -113,7 +113,7 @@ ms.locfileid: "78174248"
 
  [Volver al principio](#BKMK_Tabs)
 
-###  <a name="BKMK_Outputs"></a>Salidas
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Salidas
  En el panel **Resultados**, puede elegir el resultado que le interesa. Las redes neuronales le permiten especificar tantas columnas de resultados como desee, aunque al agregar más resultados aumenta la complejidad del modelo y su procesamiento podría requerir mucho más tiempo.
 
  Para comparar dos resultados, se deben haber designado como columnas **Predicción** o **Solo predicción**.

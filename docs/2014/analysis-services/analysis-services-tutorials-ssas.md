@@ -1,5 +1,5 @@
 ---
-title: Tutoriales de Analysis ServicesAnalysis Services (SSAS) Microsoft Docs
+title: Tutoriales de Analysis Services (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bbcb718005b1a0b3c657aef339b97bd60010b62
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81219344"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Tutoriales de Analysis Services (SSAS)
@@ -26,14 +26,14 @@ ms.locfileid: "81219344"
  [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
  En este tutorial se enseñan los conocimientos y conceptos fundamentales que están detrás del modelado multidimensional en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Cuando lo complete, tendrá una base de datos de cubo basada en los datos de Adventure Works a la que podrá acceder desde Excel, Reporting Services o cualquier otra aplicación cliente que se conecte a Analysis Services.  
   
- [Bases de datos de ejemplo AdventureWorks en GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)  
- Este vínculo le lleva a la página de descarga [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]de GitHub que tiene las bases de datos de ejemplo AdventureWorks para .  
+ [Bases de datos de ejemplo de AdventureWorks en GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)  
+ Este vínculo le lleva a la página de descarga de GitHub que tiene las bases de datos de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]ejemplo AdventureWorks para.  
   
  [Tutoriales de SQL Server 2008 R2](https://go.microsoft.com/fwlink/?linkID=220944)  
  La mayoría de los tutoriales de SQL Server 2008 R2 funcionan en un servidor de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Si no tiene experiencia con la minería de datos, use este vínculo para buscar tutoriales de minería de datos de SQL Server 2008 R2 que funcionan también con una instancia de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] de Analysis Services.  
   
 ## <a name="see-also"></a>Consulte también  
- [Wiki de TechNet: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
- [Conjunto de datos de picnic (datos de muestra)](https://go.microsoft.com/fwlink/?linkID=219108)  
+ [TechNet WIKI: ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [Conjunto de datos picnic (datos de ejemplo)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

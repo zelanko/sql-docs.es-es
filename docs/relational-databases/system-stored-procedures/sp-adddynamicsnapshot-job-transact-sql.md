@@ -16,10 +16,10 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771342"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
@@ -79,7 +79,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4** (valor predeterminado)|Diariamente|  
+|**4** (valor predeterminado)|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
@@ -113,7 +113,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**1** (valor predeterminado)|Primero|  
+|**1** (predeterminado)|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
 |**203**|Cuarto|  
@@ -133,7 +133,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Identifica el trabajo de instantánea de datos filtrados en la tabla del sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .|  
+|**id**|**int**|Identifica el trabajo de instantánea de datos filtrados en la tabla del sistema [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) .|  
 |**dynamic_snapshot_jobname**|**sysname**|Nombre del trabajo de instantáneas de datos filtrados.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica de forma única [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el trabajo del agente en el distribuidor.|  
   

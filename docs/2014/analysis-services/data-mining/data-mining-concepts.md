@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174535"
 ---
 # <a name="data-mining-concepts"></a>Conceptos de minería de datos
@@ -36,15 +36,15 @@ ms.locfileid: "78174535"
 
  Estos patrones y tendencias se pueden recopilar y definir como un *modelo de minería de datos*. Los modelos de minería de datos se pueden aplicar en escenarios como los siguientes:
 
--   **Previsión**: estimación de ventas, predicción de las cargas del servidor o del tiempo de inactividad del servidor
+-   **Pronóstico**: cálculo de las ventas y predicción de las cargas del servidor o del tiempo de inactividad del servidor.
 
--   **Riesgo y probabilidad**: elección de los mejores clientes para el envío de correo directo, determinación del punto de equilibrio probable para los escenarios de riesgo, asignación de probabilidades a diagnósticos u otros resultados
+-   **Riesgo y probabilidad**: elección de los mejores clientes para la distribución de correo directo, determinación del punto de equilibrio probable para los escenarios de riesgo, y asignación de probabilidades a diagnósticos y otros resultados.
 
--   **Recomendaciones**: determinación de los productos que es probable que se vendan juntos y generación de recomendaciones
+-   **Recomendaciones**: determinación de los productos que se pueden vender juntos y generación de recomendaciones.
 
--   **Búsqueda de secuencias**: Análisis de las selecciones de los clientes en un carro de la compra, predicción de los siguientes eventos probables
+-   **Búsqueda de secuencias**: análisis de los artículos que los clientes han introducido en el carrito de la compra y predicción de posibles eventos.
 
--   **Agrupación**: separación de clientes o eventos en el clúster de elementos relacionados, análisis y predicción de afinidades
+-   **Agrupación**: distribución de clientes o eventos en grupos de elementos relacionados, y análisis y predicción de afinidades.
 
  La generación de un modelo de minería de datos forma parte de un proceso mayor que incluye desde la formulación de preguntas acerca de los datos y la creación de un modelo para responderlas, hasta la implementación del modelo en un entorno de trabajo. Este proceso se puede definir mediante los seis pasos básicos siguientes:
 
@@ -52,13 +52,13 @@ ms.locfileid: "78174535"
 
 2.  [Preparar los datos](#PreparingData)
 
-3.  [Exploración de datos](#ExploringData)
+3.  [Explorar los datos](#ExploringData)
 
-4.  [Creación de modelos](#BuildingModels)
+4.  [Crear modelos](#BuildingModels)
 
 5.  [Explorar y validar modelos](#ValidatingModels)
 
-6.  [Implementación y actualización de modelos](#DeployingandUpdatingModels)
+6.  [Implementar y actualizar los modelos](#DeployingandUpdatingModels)
 
  En el siguiente diagrama se describen las relaciones entre cada paso del proceso y las tecnologías de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden usar para completar cada paso.
 
@@ -70,7 +70,7 @@ ms.locfileid: "78174535"
 
  Si quiere ver un ejemplo de cómo las herramientas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden aplicar en un escenario empresarial, vea [Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md).
 
-##  <a name="DefiningTheProblem"></a>Definir el problema
+##  <a name="defining-the-problem"></a><a name="DefiningTheProblem"></a> Definir el problema
  El primer paso del proceso de minería de datos, tal como se resalta en el siguiente diagrama, consiste en definir claramente el problema y considerar formas de usar los datos para proporcionar una respuesta para el mismo.
 
  ![Primer paso de minería de datos: definir el problema](../media/dmprocess-defining.gif "Primer paso de minería de datos: definir el problema")
@@ -93,7 +93,7 @@ ms.locfileid: "78174535"
 
  También debe considerar las maneras en las que los resultados del modelo se pueden incorporar en los indicadores de rendimiento clave (KPI) que se utilizan para medir el progreso comercial.
 
-##  <a name="PreparingData"></a> Preparar los datos
+##  <a name="preparing-data"></a><a name="PreparingData"></a>Preparar los datos
  El segundo paso del proceso de minería de datos, como se indica en el siguiente diagrama, consiste en consolidar y limpiar los datos identificados en el paso [Definir el problema](#DefiningTheProblem) .
 
  ![Segundo paso de minería de datos: preparar datos](../media/dmprocess-preparing.gif "Segundo paso de minería de datos: preparar datos")
@@ -110,7 +110,7 @@ ms.locfileid: "78174535"
 
  Es importante tener en cuenta que los datos que se usan para la minería de datos no necesitan almacenarse en un cubo de procesamiento analítico en línea (OLAP), ni siquiera en una base de datos relacional, aunque puede usar ambos como orígenes de datos. Puede realizar minería de datos mediante cualquier origen de datos definido como origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Por ejemplo, archivos de texto, libros de Excel o datos de otros proveedores externos. Para obtener más información, vea [orígenes de datos compatibles &#40;SSAS multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).
 
-##  <a name="ExploringData"></a>Explorar datos
+##  <a name="exploring-data"></a><a name="ExploringData"></a>Explorar datos
  El tercer paso del proceso de minería de datos, como se resalta en el siguiente diagrama, consiste en explorar los datos preparados.
 
  ![Tercer paso de minería de datos: explorar datos](../media/dmprocess-exploring.gif "Tercer paso de minería de datos: explorar datos")
@@ -125,45 +125,42 @@ ms.locfileid: "78174535"
 
  Tenga en cuenta que cuando se crea un modelo, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea automáticamente resúmenes estadísticos de los datos contenidos en él, que puede consultar para su uso en informes o análisis. Para obtener más información, vea [Consultas de minería de datos](data-mining-queries.md).
 
-##  <a name="BuildingModels"></a>Crear modelos
+##  <a name="building-models"></a><a name="BuildingModels"></a> Generar modelos
  El cuarto paso del proceso de minería de datos, como se resalta en el siguiente diagrama, consiste en generar el modelo o modelos de minería de datos. Usará los conocimientos adquiridos en el paso [Explorar los datos](#ExploringData) para definir y crear los modelos.
 
  ![Paso cuarto de minería de datos: generar modelos de minería de datos](../media/dmprocess-building.gif "Paso cuarto de minería de datos: generar modelos de minería de datos")
 
  Deberá definir qué columnas de datos desea que se usen; para ello, creará una estructura de minería de datos. La estructura de minería de datos se vincula al origen de datos, pero en realidad no contiene ningún dato hasta que se procesa. Al procesar la estructura de minería de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] genera agregados y otra información estadística que se puede usar para el análisis. Cualquier modelo de minería de datos que esté basado en la estructura puede utilizar esta información. Para obtener más información sobre cómo se relacionan las estructuras de minería de datos con los modelos de minería de datos, vea [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](logical-architecture-analysis-services-data-mining.md).
 
- Antes de procesar la estructura y el modelo, un modelo de minería de datos simplemente es un contenedor que especifica las columnas que se usan para la entrada, el atributo que está prediciendo y parámetros que indican al algoritmo cómo procesar los datos. El procesamiento de un modelo a menudo se denomina *entrenamiento*. El entrenamiento hace referencia al proceso de aplicar un algoritmo matemático concreto a los datos de la estructura para extraer patrones. Los patrones que encuentre en el proceso de entrenamiento dependerán de la selección de los datos de entrenamiento, el algoritmo que elija y cómo se haya configurado el algoritmo. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] contiene muchos algoritmos diferentes. Cada uno está preparado para un tipo diferente de tarea y crea un tipo distinto de modelo. Para obtener una lista de los algoritmos proporcionados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md).
+ Antes de procesar la estructura y el modelo, un modelo de minería de datos simplemente es un contenedor que especifica las columnas que se usan para la entrada, el atributo que está prediciendo y parámetros que indican al algoritmo cómo procesar los datos. El procesamiento de un modelo a menudo se denomina *entrenamiento*. El entrenamiento hace referencia al proceso de aplicar un algoritmo matemático concreto a los datos de la estructura para extraer patrones. Los patrones que encuentre en el proceso de entrenamiento dependerán de la selección de los datos de entrenamiento, el algoritmo que elija y cómo se haya configurado el algoritmo. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] contiene muchos algoritmos diferentes. Cada uno está preparado para un tipo diferente de tarea y crea un tipo distinto de modelo. Para obtener una lista de los algoritmos proporcionados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md).
 
  También puede utilizar los parámetros para ajustar cada algoritmo y puede aplicar filtros a los datos de entrenamiento para utilizar un subconjunto de los datos, creando resultados diferentes. Después de pasar los datos a través del modelo, el objeto de modelo de minería de datos contiene los resúmenes y modelos que se pueden consultar o utilizar para la predicción.
 
  Puede definir un modelo nuevo mediante el Asistente para minería de datos de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o con el lenguaje DMX (Extensiones de minería de datos). Para obtener más información sobre cómo usar el Asistente para minería de datos, vea [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md). Para obtener más información sobre cómo usar DMX, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).
 
- Es importante recordar que siempre que los datos cambian, debe actualizar la estructura y el modelo de minería de datos. Al actualizar una estructura de minería de datos volviéndola a procesar, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recupera los datos del origen, incluido cualquier dato nuevo si el origen se actualiza dinámicamente, y vuelve a rellenar la estructura de minería de datos. Si tiene modelos que están basados en la estructura, puede elegir actualizar estos, lo que significa que se vuelven a entrenar con los nuevos datos, o puede dejar los modelos tal cual. Para obtener más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md).
+ Es importante recordar que siempre que los datos cambian, debe actualizar la estructura y el modelo de minería de datos. Al actualizar una estructura de minería de datos volviéndola a procesar, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recupera los datos del origen, incluido cualquier dato nuevo si el origen se actualiza dinámicamente, y vuelve a rellenar la estructura de minería de datos. Si tiene modelos que están basados en la estructura, puede elegir actualizar estos, lo que significa que se vuelven a entrenar con los nuevos datos, o puede dejar los modelos tal cual. Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md).
 
-##  <a name="ValidatingModels"></a>Explorar y validar modelos
+##  <a name="exploring-and-validating-models"></a><a name="ValidatingModels"></a> Explorar y validar los modelos
  El quinto paso del proceso de minería de datos, como se resalta en el siguiente diagrama, consiste en explorar los modelos de minería de datos que ha generado y comprobar su eficacia.
 
  ![Quinto paso de minería de datos: validar modelos de minería de datos](../media/dmprocess-validating.gif "Quinto paso de minería de datos: validar modelos de minería de datos")
 
  Antes de implementar un modelo en un entorno de producción, es aconsejable probar si funciona correctamente. Además, al generar un modelo, normalmente se crean varios con configuraciones diferentes y se prueban todos para ver cuál ofrece los resultados mejores para su problema y sus datos.
 
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona herramientas que ayudan a separar los datos en conjuntos de datos de entrenamiento y pruebas, para que pueda evaluar con precisión el rendimiento de todos los modelos en los mismos datos. El conjunto de datos de entrenamiento se utiliza para generar el modelo y el conjunto de datos de prueba para comprobar la precisión del modelo mediante la creación de consultas de predicción. En [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], estas particiones se pueden hacer automáticamente mientras se genera el modelo de minería de datos. Para obtener más información, vea [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md).
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona herramientas que ayudan a separar los datos en conjuntos de datos de entrenamiento y pruebas, para que pueda evaluar con precisión el rendimiento de todos los modelos en los mismos datos. El conjunto de datos de entrenamiento se utiliza para generar el modelo y el conjunto de datos de prueba para comprobar la precisión del modelo mediante la creación de consultas de predicción. En [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], estas particiones se pueden hacer automáticamente mientras se genera el modelo de minería de datos. Para obtener más información, vea [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md).
 
  Puede explorar las tendencias y patrones que los algoritmos detectan mediante los visores del diseñador de minería de datos de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Para obtener más información, vea [Visores de modelos de minería de datos](data-mining-model-viewers.md). También puede comprobar si los modelos crean predicciones correctamente mediante herramientas del diseñador como el gráfico de mejora respecto al modelo predictivo y la matriz de clasificación. Para comprobar si el modelo es específico de sus datos o se puede usar para realizar inferencias en la población general, puede usar la técnica estadística denominada *validación cruzada* para crear automáticamente subconjuntos de los datos y probar el modelo con cada uno. Para obtener más información, vea [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md).
 
  Si ninguno de los modelos que ha creado en el paso [Generar modelos](#BuildingModels) funciona correctamente, puede que deba volver a un paso anterior del proceso y volver a definir el problema o volver a investigar los datos del conjunto de datos original.
 
-##  <a name="DeployingandUpdatingModels"></a>Implementación y actualización de modelos
+##  <a name="deploying-and-updating-models"></a><a name="DeployingandUpdatingModels"></a>Implementación y actualización de modelos
  El último paso del proceso de minería de datos, como se resalta en el siguiente diagrama, consiste en implementar los modelos que funcionan mejor en un entorno de producción.
 
  ![Sexto paso de minería de datos: implementar modelos de minería de datos](../media/dmprocess-deploying.gif "Sexto paso de minería de datos: implementar modelos de minería de datos")
 
  Una vez que los modelos de minería de datos se encuentran en el entorno de producción, puede llevar acabo diferentes tareas, dependiendo de sus necesidades. Las siguientes son algunas de las tareas que puede realizar:
 
--   Use los modelos para crear predicciones que luego podrá usar para tomar decisiones comerciales. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone a su disposición el lenguaje DMX, que podrá usar para crear consultas de predicción, y el Generador de consultas de predicción, que le ayudará a generar las consultas. Para obtener más información, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).
+-   Use los modelos para crear predicciones que luego podrá usar para tomar decisiones comerciales. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone a su disposición el lenguaje DMX, que podrá usar para crear consultas de predicción, y el Generador de consultas de predicción, que le ayudará a generar las consultas. Para más información, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).
 
 -   Crear consultas de contenido para recuperar estadísticas, reglas o fórmulas del modelo. Para obtener más información, vea [Consultas de minería de datos](data-mining-queries.md).
 
@@ -175,9 +172,9 @@ ms.locfileid: "78174535"
 
 -   Actualizar los modelos después de la revisión y análisis. Cualquier actualización requiere que vuelve a procesar los modelos. Para más información, consulte [Processing Data Mining Objects](processing-data-mining-objects.md).
 
--   Actualizar dinámicamente los modelos, cuando entren más datos en la organización, y realizar modificaciones constantes para mejorar la efectividad de la solución debería ser parte de la estrategia de implementación. Para obtener más información, vea [Administración de soluciones y objetos de minería de datos](management-of-data-mining-solutions-and-objects.md) .
+-   Actualizar dinámicamente los modelos, cuando entren más datos en la organización, y realizar modificaciones constantes para mejorar la efectividad de la solución debería ser parte de la estrategia de implementación. Para obtener más información, vea [Administración de las soluciones y los objetos de minería de datos](management-of-data-mining-solutions-and-objects.md).
 
 ## <a name="see-also"></a>Consulte también
- [](data-mining-solutions.md) [Herramientas de minería](data-mining-tools.md) de datos de soluciones de minería de datos
+ [Data Mining Solutions](data-mining-solutions.md) [Herramientas de minería](data-mining-tools.md) de datos de soluciones de minería de datos
 
 

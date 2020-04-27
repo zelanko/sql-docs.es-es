@@ -16,10 +16,10 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769177"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
@@ -107,9 +107,9 @@ sp_addmergefilter [ @publication = ] 'publication'
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergefilter**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definir un artículo](../../relational-databases/replication/publish/define-an-article.md)   
  [Definir y modificar un filtro de combinación entre artículos de mezcla](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [Filtros de combinación](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

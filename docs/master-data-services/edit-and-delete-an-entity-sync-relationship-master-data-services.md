@@ -11,10 +11,10 @@ ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728238"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Modificación y eliminación de una relación de sincronización de entidades (Master Data Services)
@@ -23,20 +23,20 @@ ms.locfileid: "73728238"
 
   La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades que proporciona una forma de compartir datos de entidad entre diferentes modelos. Puede modificar y eliminar una relación de sincronización que haya creado.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Requisitos previos para modificar una relación de sincronización de entidades  
   
--   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Debe ser administrador de modelo del modelo de destino. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo del modelo de destino. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Debe tener al menos acceso de lectura a la entidad de origen y a todos sus atributos y miembros.  
   
  Requisitos previos para eliminar una relación de sincronización de entidades  
   
--   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Debe ser administrador de modelo del modelo de destino. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo del modelo de destino. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
  Tenga en cuenta lo siguiente al modificar una relación de sincronización de entidades.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73728238"
   
 -   La sincronización no genera transacciones/historiales de entidad de destino.  
   
- **Para editar una relación de sincronización de entidades**  
+ **Para modificar una relación de sincronización de entidades**  
   
 1.  En Master Data Manager, haga clic en **Administración del sistema**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73728238"
   
 5.  Cambie el valor de **Frecuencia**. Seleccione **Sync On Demand**(Sincronizar a petición) o seleccione **Auto Sync** (Sincronización automática) y establezca una frecuencia.  
   
-6.  Haga clic en **Save**(Guardar).  
+6.  Haga clic en **Guardar**.  
   
  **Para eliminar una relación de sincronización de entidades**  
   
@@ -86,6 +86,6 @@ ms.locfileid: "73728238"
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y ejecutar una relación de sincronización de entidades &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [Master Data Services de &#40;de relación de sincronización de entidades&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [Relación de sincronización de entidades &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

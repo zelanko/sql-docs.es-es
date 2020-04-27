@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174474"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)
@@ -24,7 +24,7 @@ ms.locfileid: "78174474"
 
  
 
-##  <a name="bkmk_before"></a>Antes de empezar
+##  <a name="before-you-start"></a><a name="bkmk_before"></a>Antes de empezar
  La herramienta de configuración de PowerPivot para SharePoint 2010 examina los archivos de programa, los valores del Registro y los puertos disponibles. Para sacar el máximo partido de estas herramientas, vea lo siguiente.
 
 -   Requisitos generales para ejecutar la herramienta de configuración, [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md).
@@ -33,7 +33,7 @@ ms.locfileid: "78174474"
 
 -   El puerto 80 debe estar disponible; una de las tareas seleccionadas necesita la herramienta de configuración para crear y configurar una aplicación web.
 
-##  <a name="bkmk_using"></a>Usar la herramienta de configuración de PowerPivot
+##  <a name="using-the-powerpivot-configuration-tool"></a><a name="bkmk_using"></a>Usar la herramienta de configuración de PowerPivot
  La primera página de la herramienta proporciona un resumen de los valores de entrada que se usarán para configurar la granja de SharePoint. Además de los valores de entrada que proporcione, se usarán los valores predeterminados para configurar el sistema. Los nombres predeterminados se utilizan con las aplicaciones de servicio, las bases de datos de aplicación de servicio y las propiedades de la aplicación de servicio.
 
 > [!TIP]
@@ -49,7 +49,7 @@ ms.locfileid: "78174474"
 
  ![Interfaz de usuario de la herramienta de configuración](media/ssas-pctui.gif "Interfaz de usuario de la herramienta de configuración")
 
-##  <a name="bkmk_steps"></a>Pasos de configuración
+##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>Pasos de configuración
  El vínculo a la herramienta de configuración solo está visible cuando PowerPivot para SharePoint 2010 está instalado en el servidor local.
 
 1.  En el menú **Inicio** , elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], en **Herramientas de configuración**y, a continuación, en **Herramienta de configuración de PowerPivot**.
@@ -58,11 +58,11 @@ ms.locfileid: "78174474"
 
 3.  Expanda la ventana al tamaño máximo. Aparecerá una barra de botones en la parte inferior de la ventana con los comandos **Validar****Ejecutar**y **Salir** .
 
-4.  **Cuenta predeterminada:** En la pestaña parámetros, escriba una cuenta de usuario de dominio para el nombre de usuario de la **cuenta predeterminada**. Esta cuenta se usa para aprovisionar servicios esenciales, incluido el grupo de aplicaciones del servicio PowerPivot. No especifique ninguna cuenta integrada, como Network Service o Local System. La herramienta bloquea las configuraciones que especifican cuentas integradas.
+4.  **Cuenta predeterminada** : en la pestaña Parámetros, escriba una cuenta de usuario de dominio para **Nombre de usuario de cuenta predeterminada**. Esta cuenta se usa para aprovisionar servicios esenciales, incluido el grupo de aplicaciones del servicio PowerPivot. No especifique ninguna cuenta integrada, como Network Service o Local System. La herramienta bloquea las configuraciones que especifican cuentas integradas.
 
-     **Frase de contraseña:** escriba una frase de contraseña. En el caso de una nueva granja de SharePoint, la frase de contraseña se usa siempre que se agrega un nuevo servidor o una nueva aplicación a la granja de servidores de SharePoint. Si se trata de una granja existente, escriba la frase de contraseña que le permita agregar una aplicación de servidor a la granja.
+     **Frase de contraseña** : escriba una frase de contraseña. En el caso de una nueva granja de SharePoint, la frase de contraseña se usa siempre que se agrega un nuevo servidor o una nueva aplicación a la granja de servidores de SharePoint. Si se trata de una granja existente, escriba la frase de contraseña que le permita agregar una aplicación de servidor a la granja.
 
-5.  **Puerto:** Opcionalmente, escriba un número de puerto para conectarse a la aplicación Web de administración central o use el número generado aleatoriamente proporcionado. La herramienta de configuración comprueba que el número está disponible antes de ofrecerlo como opción.
+5.  **Puerto** : opcionalmente, escriba un número de puerto para conectarse a la aplicación web de Administración central o use el número generado aleatoriamente proporcionado. La herramienta de configuración comprueba que el número está disponible antes de ofrecerlo como opción.
 
 6.  Haga clic en **registrar SQL Server Analysis Services (PowerPivot) en el servidor local**.
 
@@ -81,7 +81,7 @@ ms.locfileid: "78174474"
 
 11. [Comprobar una instalación de PowerPivot para SharePoint](instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).
 
-##  <a name="bkmk_input"></a>Valores de entrada utilizados para configurar el servidor
+##  <a name="input-values-used-to-configure-the-server"></a><a name="bkmk_input"></a>Valores de entrada utilizados para configurar el servidor
  La herramienta de configuración de PowerPivot utilizará una combinación de los valores de entrada que escriba el usuario con los valores predeterminados que la herramienta detecte o utilice automáticamente.
 
  La lista de acciones mostrada en la herramienta de configuración depende de la configuración actual de la granja de SharePoint. Por ejemplo, si la granja de servidores de SharePoint ya está configurada, no se mostrará ninguna acción en la herramienta. Puede ejecutar la herramienta en cualquier momento para configurar, reparar o detectar errores de configuración. Si en la granja no se ejecutan servicios requeridos, como Excel Services o el Servicio de almacenamiento seguro, la herramienta detectará los servicios que faltan y proporcionará opciones para habilitarlos. Si no se requiere ninguna acción, la lista de tareas estará vacía.
@@ -96,9 +96,9 @@ ms.locfileid: "78174474"
 ||Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Si la granja no está configurada, la herramienta proporcionará opciones para crearla, incluido un extremo HTTP en Administración central. Usa de forma predeterminada un número de puerto generado aleatoriamente que no esté en uso.|
 |**Configurar una nueva granja**|Servidor de bases de datos<br /><br /> Cuenta de granja<br /><br /> Frase de contraseña<br /><br /> Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Las configuraciones usan como valor predeterminado lo que especificó en la página principal.|
 |**Configurar instancias de servicio local**|Contraseña de la cuenta de servicio de Analysis Services.|Datos proporcionados por el usuario|Debe escribir la contraseña de la cuenta de servicio de Analysis Services en la página **registrar SQL Server Analysis Services (PowerPivot) en el servidor local** .<br /><br /> La cuenta de servicio se especificó durante la instalación. Ahora debe escribir la contraseña como entrada para registrar la instancia del servicio local con SharePoint.|
-|**Crear una aplicación de servicio PowerPivot**|Nombre de aplicación de servicio PowerPivot|Valor predeterminado|El nombre predeterminado es Aplicación de servicio PowerPivot predeterminada. Podrá sustituirlo por otro valor de la herramienta.|
-||Servidor de la base de datos de aplicación de servicio PowerPivot|Valor predeterminado|El servidor de bases de datos que va a hospedar la base de datos de aplicación de servicio PowerPivot. El nombre del servidor predeterminado es el mismo servidor de bases de datos usado para la granja. Podrá sustituirlo por otro valor de la herramienta.|
-||Nombre de la base de datos de la aplicación de servicio PowerPivot|Valor predeterminado|El nombre predeterminado de la base de datos se basa en el nombre de aplicación de servicio, seguido de un GUID para garantizar un nombre único. Podrá sustituirlo por otro valor de la herramienta.|
+|**Crear una aplicación de servicio PowerPivot**|Nombre de aplicación de servicio PowerPivot|Default|El nombre predeterminado es Aplicación de servicio PowerPivot predeterminada. Podrá sustituirlo por otro valor de la herramienta.|
+||Servidor de la base de datos de aplicación de servicio PowerPivot|Default|El servidor de bases de datos que va a hospedar la base de datos de aplicación de servicio PowerPivot. El nombre del servidor predeterminado es el mismo servidor de bases de datos usado para la granja. Podrá sustituirlo por otro valor de la herramienta.|
+||Nombre de la base de datos de la aplicación de servicio PowerPivot|Default|El nombre predeterminado de la base de datos se basa en el nombre de aplicación de servicio, seguido de un GUID para garantizar un nombre único. Podrá sustituirlo por otro valor de la herramienta.|
 ||Actualizar libros antes de habilitar la actualización de datos|Datos proporcionados por el usuario|La actualización de datos genera un error y no se admite para los libros de SQL Server 2008 R2 PowerPivot. La opción **Actualizar libros para habilitar la actualización de datos** actualiza los libros a SQL Server versión 2012 de PowerPivot.|
 |**Crear aplicación web predeterminada**|Nombre de aplicación web|Valor predeterminado, si es necesario|Si no existe ninguna aplicación web, la herramienta creará una. La aplicación web se configurará para la autenticación en modo clásico y para escuchar en el **puerto 80**. El tamaño máximo de carga de archivos se establece en 2047 MB, el máximo permitido por SharePoint. Se usa el tamaño máximo de carga de archivos para permitir archivos grandes de PowerPivot.|
 ||URL|Valor predeterminado, si es necesario|La herramienta crea una dirección URL basada en el nombre del servidor, con las mismas convenciones de nomenclatura de archivos que SharePoint.|
@@ -106,25 +106,25 @@ ms.locfileid: "78174474"
 ||Cuenta y contraseña del grupo de aplicaciones web|Valor predeterminado, si es necesario|La cuenta del grupo de aplicaciones se basa en la cuenta predeterminada, pero puede sustituirla en la herramienta.|
 ||Servidor de la base de datos de aplicación web|Valor predeterminado, si es necesario|Se preselecciona la instancia predeterminada de la base de datos para almacenar la base de datos de aplicación, pero puede especificar otra instancia de SQL Server en la herramienta.|
 ||Nombre de la base de datos de aplicación web|Valor predeterminado, si es necesario|El nombre de la base de datos se basa en las convenciones de nomenclatura de archivos de SharePoint, pero puede elegir un nombre diferente.|
-|**Implementar solución de aplicación Web**|URL|Valor predeterminado, si es necesario|La dirección URL predeterminada es la de la aplicación web predeterminada.|
+|**Implementar solución de aplicación web**|URL|Valor predeterminado, si es necesario|La dirección URL predeterminada es la de la aplicación web predeterminada.|
 ||Tamaño de archivo máximo (en MB)|Valor predeterminado, si es necesario|El valor predeterminado es 2047. Las bibliotecas de documentos de SharePoint también tienen un tamaño máximo y el valor de PowerPivot no debe superar el valor de la biblioteca de documentos. Para obtener más información, vea [configurar el tamaño máximo de carga de archivos &#40;PowerPivot para SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|
-|**Crear colección de sitios**|Administrador del sitio|Valor predeterminado, si es necesario|La herramienta utiliza la cuenta predeterminada. Puede sustituirlo en la página **Crear colección de sitios** .|
+|**Crear una colección de sitios**|Administrador del sitio|Valor predeterminado, si es necesario|La herramienta utiliza la cuenta predeterminada. Puede sustituirlo en la página **Crear colección de sitios** .|
 ||Correo electrónico de contacto|Valor predeterminado, si es necesario|Si Microsoft Outlook está configurado en el servidor, la herramienta usará la dirección de correo electrónico del usuario actual. Si no, se utiliza un valor de marcador de posición.|
 ||Dirección URL del sitio|Valor predeterminado, si es necesario|La herramienta crea la dirección URL del sitio, utilizando las mismas convenciones de nomenclatura de direcciones URL que SharePoint.|
 ||Título del sitio|Valor predeterminado, si es necesario|La herramienta agrega **Sitio de PowerPivot** como título predeterminado.|
 |**Activar la característica de PowerPivot en una colección de sitios**|Dirección URL del sitio||Dirección URL de la colección de sitios para la que va a activar las características de PowerPivot.|
 ||Habilitar la característica premium para este sitio||Habilite la característica "PremiumSite" del sitio de SharePoint.|
-|**Crear Servicio de almacenamiento seguro aplicación**|Nombre de la aplicación de servicio||Escriba el nombre de la aplicación de servicio de almacenamiento seguro.|
+|**Crear una aplicación de servicio de almacenamiento seguro**|Nombre de la aplicación de servicio||Escriba el nombre de la aplicación de servicio de almacenamiento seguro.|
 ||Servidor de bases de datos||Escriba el nombre del servidor de bases de datos que se usará para la aplicación de servicio de almacenamiento seguro.|
-|**Crear Servicio de almacenamiento seguro proxy de aplicación**|Nombre de la aplicación de servicio||Escriba el nombre de la aplicación de servicio de almacenamiento seguro.|
+|**Crear un proxy de aplicación de servicio de almacenamiento seguro**|Nombre de la aplicación de servicio||Escriba el nombre de la aplicación de servicio de almacenamiento seguro.|
 ||Proxy de aplicación de servicio||Escriba el nombre del proxy de aplicación de servicio de almacenamiento seguro.  El nombre aparecerá en el grupo de conexiones predeterminado que asocia las aplicaciones con las aplicaciones web de contenido de SharePoint.|
-|**Actualizar Servicio de almacenamiento seguro clave maestra**|Proxy de aplicación de servicio||Escriba el nombre del proxy de aplicación de servicio de almacenamiento seguro|
+|**Actualizar la clave maestra del servicio de almacenamiento seguro**|Proxy de aplicación de servicio||Escriba el nombre del proxy de aplicación de servicio de almacenamiento seguro|
 ||Passphrase||La clave maestra se usa para el cifrado de datos. De forma predeterminada, la frase de contraseña que se usa para generar la clave es la misma que se usa para aprovisionar servidores nuevos en la granja. Puede reemplazar la frase de contraseña predeterminada con una frase de contraseña única.|
 |**Crear una cuenta desatendida para la actualización de la actualización**|Id. de la aplicación de destino||El identificador de la aplicación puede ser texto descriptivo.|
 ||Nombre descriptivo de la aplicación de destino|||
 ||Nombre de usuario y contraseña de la cuenta desatendida||Escriba las credenciales de una cuenta de usuario de Windows usada por la aplicación de destino y que se emplea para ejecutar la actualización de datos desatendida.|
 ||Dirección URL del sitio||Escriba la dirección URL de la colección de sitios asociada a la aplicación de destino. Para asociarla a colecciones de sitios adicionales, use Administración central de SharePoint.|
-|**Crear aplicación de servicio de Excel Services**|Nombre de la aplicación de servicio||Escriba un nombre de aplicación de servicio. Se creará una base de datos de aplicación de servicio con el mismo nombre en el servidor de base de datos de la granja de servidores de SharePoint.|
+|**Crear nueva aplicación de servicio de Excel Services**|Nombre de la aplicación de servicio||Escriba un nombre de aplicación de servicio. Se creará una base de datos de aplicación de servicio con el mismo nombre en el servidor de base de datos de la granja de servidores de SharePoint.|
 |**Agregar MSOLAP.5 como proveedor de confianza**|Nombre de la aplicación de servicio||Excel Services en SharePoint 2010 usa el proveedor OLE DB de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para conectarse a datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Este paso agregará la versión del proveedor OLE DB instalado con PowerPivot para SharePoint, como un proveedor de confianza a Excel Services.|
 ||Nombre del servidor PowerPivot|||
 |||||
@@ -133,7 +133,7 @@ ms.locfileid: "78174474"
 
  Si la herramienta crea una colección de sitios, crea una base de datos de contenido en el servidor de bases de datos, utilizando las mismas convenciones de nomenclatura de archivos que SharePoint. No se puede cambiar el nombre de la base de datos de contenido.
 
-##  <a name="bkmk_nextsteps"></a>Pasos siguientes
+##  <a name="next-steps"></a><a name="bkmk_nextsteps"></a> Pasos siguientes
  Después de completar una instalación del servidor, se deben realizar varias tareas posteriores:
 
 -   Conceda permisos de SharePoint a los individuos y a los grupos. Esta tarea es necesaria para permitir el acceso a los sitios y al contenido.
@@ -184,6 +184,6 @@ ms.locfileid: "78174474"
  La ![configuración de SharePoint](media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") [envía comentarios e información de contacto a través de Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).
 
 ## <a name="see-also"></a>Consulte también
- [](power-pivot-sharepoint/power-pivot-configuration-tools.md) [Configuración y administración de PowerPivot herramientas de configuración PowerPivot en administración central](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)
+ [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md) [Configuración y administración de PowerPivot herramientas de configuración PowerPivot en administración central](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)
 
 

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211396"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Dar de alta un servidor de destino en un servidor maestro
@@ -32,7 +32,7 @@ ms.locfileid: "68211396"
   
  **En este tema**  
   
--   **Para dar de alta un servidor de destino, utilizando:**  
+-   **Para dar de alta un servidor de destino, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68211396"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-enlist-a-target-server"></a>Para dar de alta un servidor de destino  
   
@@ -50,13 +50,13 @@ ms.locfileid: "68211396"
   
 3.  Complete el Asistente para establecer servidor de destino, que le guía a través del proceso.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-enlist-a-target-server"></a>Para dar de alta un servidor de destino  
   
 1.  Use el procedimiento almacenado `sp_msx_enlist`.  Para obtener más información, vea [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)  
   
-##  <a name="PowerShellProcedure"></a>Usar Objetos de administración de SQL Server (SMO)  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Usar Objetos de administración de SQL Server (SMO)  
   
 ## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)  

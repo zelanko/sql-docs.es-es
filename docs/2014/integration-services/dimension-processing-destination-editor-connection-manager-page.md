@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059434"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>Editor de destino de procesamiento de dimensiones (página Administrador de conexiones)
@@ -27,7 +27,7 @@ ms.locfileid: "66059434"
  Para obtener más información acerca del destino de procesamiento de dimensiones, vea [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
 ## <a name="options"></a>Opciones  
- **Connection manager**  
+ **Administrador de conexiones**  
  Seleccione un administrador de conexiones existente de la lista, o haga clic en **Nuevo** para crear un nuevo administrador de conexiones.  
   
  **Nuevo**  
@@ -43,11 +43,11 @@ ms.locfileid: "66059434"
 |-----------|-----------------|  
 |**Agregar (incremental)**|Realiza un procesamiento incremental de la dimensión.|  
 |**Completo**|Realiza un procesamiento completo de la dimensión.|  
-|**Update**|Realiza un procesamiento actualizado de la dimensión.|  
+|**Actualizar**|Realiza un procesamiento actualizado de la dimensión.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de procesamiento de dimensiones &#40;página asignaciones&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
- [Editor de destino de procesamiento de dimensiones &#40;página avanzadas&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Editor de destino de procesamiento de dimensiones &#40;página Avanzadas&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771351"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
@@ -75,7 +75,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`Es el modo de seguridad que se va a utilizar al conectarse al distribuidor. *security_mode* es de **tipo int**y su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación; **1** especifica la autenticación integrada de Windows.  
   
-`[ @login = ] 'login'`Es el nombre de inicio de sesión que se usa al conectarse al distribuidor para crear la base de datos de distribución. Esto es necesario si *security_mode* está establecido en **0**. *login* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @login = ] 'login'`Es el nombre de inicio de sesión que se usa al conectarse al distribuidor para crear la base de datos de distribución. Esto es necesario si *security_mode* está establecido en **0**. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
 `[ @password = ] 'password'`Es la contraseña utilizada para conectarse al distribuidor. Esto es necesario si *security_mode* está establecido en **0**. *password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -84,7 +84,7 @@ sp_adddistributiondb [ @database= ] 'database'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**1** (valor predeterminado)|CREAR base de datos o usar base de datos existente y, a continuación, aplicar el archivo **instdist. SQL** para crear objetos de replicación en la base de datos de distribución.|  
+|**1** (predeterminado)|CREAR base de datos o usar base de datos existente y, a continuación, aplicar el archivo **instdist. SQL** para crear objetos de replicación en la base de datos de distribución.|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -169,6 +169,6 @@ GO
  [sp_dropdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
+ [Configurar la distribución](../../relational-databases/replication/configure-distribution.md)  
   
   

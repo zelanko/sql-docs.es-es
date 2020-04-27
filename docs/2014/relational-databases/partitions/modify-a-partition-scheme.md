@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206567"
 ---
 # <a name="modify-a-partition-scheme"></a>Modificar un esquema de partición
@@ -34,14 +34,14 @@ ms.locfileid: "68206567"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Los grupos de archivos afectados por ALTER PARTITION SCHEME deben estar en línea.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los siguientes permisos pueden utilizarse para ejecutar ALTER PARTITION SCHEME:  
   
 -   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
@@ -50,7 +50,7 @@ ms.locfileid: "68206567"
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se ha creado el esquema de partición.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para modificar un esquema de partición:**  
   
  Esta acción específica no se puede realizar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar un esquema de partición, primero debe eliminar el esquema y después crear uno nuevo con las propiedades deseadas mediante el Asistente para la creación de particiones. Para obtener más información, vea [crear tablas e índices con particiones mediante SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure) en **crear tablas e índices con particiones**.  
@@ -59,7 +59,7 @@ ms.locfileid: "68206567"
   
 1.  Haga clic en el signo más para expandir la base de datos donde desea eliminar el esquema de partición.  
   
-2.  Haga clic en el signo más para expandir la carpeta **Almacenamiento**.  
+2.  Haga clic en el signo más para expandir la carpeta **Almacenamiento** .  
   
 3.  Haga clic en el signo más para expandir la carpeta **Esquemas de partición** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68206567"
   
 5.  En el cuadro de diálogo **Eliminar objeto** , asegúrese de que está seleccionado el esquema de partición correcta y después haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-modify-a-partition-scheme"></a>Para modificar un esquema de partición  
   

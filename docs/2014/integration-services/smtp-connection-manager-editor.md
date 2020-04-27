@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055559"
 ---
 # <a name="smtp-connection-manager-editor"></a>Editor del administrador de conexiones SMTP
@@ -45,7 +45,7 @@ ms.locfileid: "66055559"
 > [!NOTE]  
 >  Al usar Microsoft Exchange como servidor SMTP, es posible que deba establecer **usar autenticación de Windows** en `True`. Es posible que los servidores Exchange estén configurados para no permitir conexiones SMTP no autenticadas.  
   
- **Habilitar Capa de sockets seguros (SSL)**  
+ **Habilitar capa de sockets seguros (SSL)**  
  Seleccione esta opción para cifrar comunicación mediante Capa de sockets seguros (SSL) al enviar mensajes de correo electrónico.  
   
 ## <a name="see-also"></a>Consulte también  

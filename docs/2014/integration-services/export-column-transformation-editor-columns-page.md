@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d5e37211471285e971ba29bc3419e759b0c7af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059008"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor de transformación Exportar columna (página Columnas)
@@ -27,23 +27,23 @@ ms.locfileid: "66059008"
  Para obtener más información acerca de la transformación Exportar columna, vea [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
 ## <a name="options"></a>Opciones  
- **Extraer columna**  
+ **Columna Extraer**  
  Seleccione de la lista las columnas de entrada que contengan datos de texto o imagen. Todas las filas deben poseer definiciones para la **Columna Extraer** y la **Columna Ruta de archivo**.  
   
- **Columna ruta de archivo**  
+ **Columna Ruta de archivo**  
  Seleccione de la lista las columnas de entrada que contengan rutas de archivo y nombres de archivo. Todas las filas deben poseer definiciones para la **Columna Extraer** y la **Columna Ruta de archivo**.  
   
- **Permitir anexar**  
- Especifique si desea que la transformación anexe los datos a los archivos existentes. El valor predeterminado es `false`.  
+ **Permitir la anexión**  
+ Especifique si desea que la transformación anexe los datos a los archivos existentes. De manera predeterminada, es `false`.  
   
- **Forzar truncamiento**  
- Especifique si desea que la transformación elimine el contenido de los archivos existentes antes de escribir los datos. El valor predeterminado es `false`.  
+ **Forzar el truncamiento**  
+ Especifique si desea que la transformación elimine el contenido de los archivos existentes antes de escribir los datos. De manera predeterminada, es `false`.  
   
- **Escribir BOM**  
+ **BOM de escritura**  
  Especifique si desea escribir una marca de orden de bytes (BOM) en el archivo. Solo se escribirá una BOM si los datos poseen el tipo de datos `DT_NTEXT` o DT_WSTR y no están anexados a un archivo de datos existente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación exportar columna &#40;página salida de error&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
+ [Editor de transformación Exportar columna &#40;página Salida de error&#41;](../../2014/integration-services/export-column-transformation-editor-error-output-page.md)  
   
   

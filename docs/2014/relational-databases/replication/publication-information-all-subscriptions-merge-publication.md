@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022011"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Información de publicación, Todas las suscripciones (Publicación de combinación)
-  En la pestaña **todas las suscripciones** se muestra información sobre todas las suscripciones a la publicación de combinación seleccionada.  
+   En la pestaña **Todas las suscripciones** se muestra información sobre todas las suscripciones de la publicación de combinación seleccionada.  
   
 ## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas de una suscripción, haga clic con el botón secundario en la fila de dicha suscripción y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
@@ -35,8 +35,8 @@ ms.locfileid: "63022011"
   
  La configuración del filtro es específica de cada cuadrícula. La selección y ordenación de las columnas se aplica a todas las cuadrículas del mismo tipo, como la cuadrícula de las publicaciones para cada Publicador.  
   
- **Feria**  
- Solo para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Seleccione los estados de la suscripción que se mostrarán para el tipo de suscripción seleccionado. Por ejemplo, puede seleccionar mostrar solo aquellas suscripciones que tienen errores.  
+ **Mostrar**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Seleccione los estados de la suscripción que se mostrarán para el tipo de suscripción seleccionado. Por ejemplo, puede seleccionar mostrar solo aquellas suscripciones que tienen errores.  
   
  **Estado**  
  Estado de cada suscripción, que se determina mediante el estado del Agente de mezcla.  
@@ -69,10 +69,10 @@ ms.locfileid: "63022011"
  Muestra el nombre de cada suscripción, en el formato:*nombreDeSuscriptor: nombreDeBaseDeDatosDeSuscripción*.  
   
  **Nombre descriptivo**  
- Solo para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Descripción de cada suscripción. La descripción se especifica en el cuadro de diálogo **propiedades de suscripción** o se **@description** especifica con el parámetro de [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) o [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Los usuarios normalmente usan la descripción como un "nombre descriptivo" o alias de la suscripción.  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Descripción de cada suscripción. La descripción se escribe en el cuadro de diálogo **Propiedades de suscripción** o se especifica con el parámetro **@description** de [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) o [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Los usuarios normalmente usan la descripción como un "nombre descriptivo" o alias de la suscripción.  
   
  **Rendimiento**  
- Solo para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Clasificación de rendimiento de cada suscripción, basada en las medidas más recientes de tasa de entrega obtenidas por el Monitor de replicación. La clasificación se determina comparando el rendimiento de una suscripción individual con el rendimiento medio histórico de las suscripciones a la publicación que tienen el mismo tipo de conexión (de acceso telefónico o LAN). El Monitor de replicación muestra un valor una vez que se han producido cinco sincronizaciones con al menos 50 cambios en cada una a través del mismo tipo de conexión. Si ha habido menos de cinco sincronizaciones con al menos 50 cambios, o la sincronización más reciente tiene menos de 50 cambios, está columna está en blanco.  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Clasificación de rendimiento de cada suscripción, basada en las medidas más recientes de tasa de entrega obtenidas por el Monitor de replicación. La clasificación se determina comparando el rendimiento de una suscripción individual con el rendimiento medio histórico de las suscripciones a la publicación que tienen el mismo tipo de conexión (de acceso telefónico o LAN). El Monitor de replicación muestra un valor una vez que se han producido cinco sincronizaciones con al menos 50 cambios en cada una a través del mismo tipo de conexión. Si ha habido menos de cinco sincronizaciones con al menos 50 cambios, o la sincronización más reciente tiene menos de 50 cambios, está columna está en blanco.  
   
 > [!NOTE]  
 >  El rendimiento se basa en el tipo de conexión que se muestra en la columna **Conexión** ; por tanto, es posible que una suscripción con una tasa de entrega menor muestre una mejor clasificación de rendimiento que otra suscripción si la primera se ha sincronizado en una conexión más lenta.  
@@ -99,10 +99,10 @@ ms.locfileid: "63022011"
  Tiempo durante el que se ha estado ejecutando el Agente de mezcla en la última sincronización. El tiempo representa el tiempo transcurrido si el Agente de mezcla se está sincronizando actualmente y el tiempo total si el Agente de mezcla se ha sincronizado con anterioridad.  
   
  **Connection**  
- Solo para [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Tipo de conexión entre el suscriptor y el publicador. Los valores posibles son **LAN**, **Acceso telefónico**e **Internet**. Si la suscripción utiliza sincronización web, se muestra el valor **Internet** .  
+ Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Tipo de conexión entre el suscriptor y el publicador. Los valores posibles son **LAN**, **Acceso telefónico**e **Internet**. Si la suscripción utiliza sincronización web, se muestra el valor **Internet** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisión de la replicación](monitoring-replication.md)   
  [Sincronización web para la replicación de mezcla](web-synchronization-for-merge-replication.md)  

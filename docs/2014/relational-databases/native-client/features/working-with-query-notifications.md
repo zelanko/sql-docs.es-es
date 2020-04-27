@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206602"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  Cuando se realiza una solicitud de suscripción para un lote o procedimiento almacenado, se realiza una solicitud de suscripción independiente para cada instrucción del lote o procedimiento almacenado. Las instrucciones EXECUTE no registrarán ninguna notificación, pero enviarán la solicitud de notificación al comando ejecutado. Si se trata de un lote, el contexto se aplicará a las instrucciones ejecutadas y se aplicarán las mismas reglas descritas anteriormente.  
   
- El envío de una consulta de notificación enviada por el mismo usuario en el mismo contexto de base de datos y que tiene la misma plantilla, los mismos valores de parámetro, el mismo identificador de notificación y la misma ubicación de entrega de una suscripción activa existente, renovará el existente suscripción, restableciendo el nuevo tiempo de espera especificado. Esto significa que si se solicita una notificación para consultas idénticas, solo se enviará una notificación. Esto se aplicaría a una consulta duplicada de un lote o si se llamó varias veces a una consulta de un procedimiento almacenado.  
+ El envío de una consulta de notificación enviada por el mismo usuario en el mismo contexto de base de datos y que tiene la misma plantilla, los mismos valores de parámetro, el mismo identificador de notificación y la misma ubicación de entrega de una suscripción activa existente, renovará la suscripción existente y restablecerá el nuevo tiempo de espera especificado. Esto significa que si se solicita una notificación para consultas idénticas, solo se enviará una notificación. Esto se aplicaría a una consulta duplicada de un lote o si se llamó varias veces a una consulta de un procedimiento almacenado.  
   
 ## <a name="see-also"></a>Consulte también  
  [Características de SQL Server Native Client](sql-server-native-client-features.md)  

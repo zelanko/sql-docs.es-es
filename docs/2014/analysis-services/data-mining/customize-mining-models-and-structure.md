@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174449"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personalizar la estructura y los modelos de minería de datos
@@ -43,7 +43,7 @@ ms.locfileid: "78174449"
 ### <a name="using-feature-selection"></a>Usar la selección de características
  La mayor parte de los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza un proceso denominado *selección de características* para seleccionar solo los atributos más útiles e incorporarlos a un modelo. Reducir el número de columnas y atributos puede mejorar el rendimiento y la calidad del modelo. Los métodos de selección de características disponibles difieren dependiendo del algoritmo que se elija.
 
- [Selección de características &#40;&#41;de minería de datos ](feature-selection-data-mining.md).
+ [Selección de características &#40;minería de datos&#41;](feature-selection-data-mining.md).
 
 ### <a name="changing-usage"></a>Cambiar el uso
  Puede cambiar las columnas que están incluidas en un modelo de minería de datos y cómo se utiliza cada columna. Si no obtiene los resultados esperados, debe muestrear las columnas que utilizó como entrada y preguntarse si las columnas son una buena elección y si hay algo que pueda hacer para mejorar el tratamiento de los datos, como podría ser:
@@ -94,14 +94,14 @@ ms.locfileid: "78174449"
 
  El tema correspondiente a cada tipo de algoritmo también enumera las funciones de predicción que se pueden utilizar con modelos basados en ese algoritmo.
 
-|Nombre de propiedad|Se aplica a|
+|Nombre de propiedad|Aplicable a|
 |-------------------|----------------|
 |AUTO_DETECT_PERIODICITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
 |CLUSTER_COUNT|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)|
 |CLUSTER_SEED|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|
 |CLUSTERING_METHOD|[Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)|
 |COMPLEXITY_PENALTY|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
-|FORCE_REGRESSOR|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|
+|FORCE_REGRESSOR|[Referencia técnica del algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md)|
 |FORECAST_METHOD|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
 |HIDDEN_NODE_RATIO|[Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)|
 |HISTORIC_MODEL_COUNT|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|

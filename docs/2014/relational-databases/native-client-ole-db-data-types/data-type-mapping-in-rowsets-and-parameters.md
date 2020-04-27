@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0979892b6770b9a9c2d0d9c4e8a0d734d873c085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062204"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
@@ -33,31 +33,31 @@ ms.locfileid: "63062204"
   
 |Tipos de datos de SQL Server|Tipo de datos de OLE DB|  
 |--------------------------|----------------------|  
-|**BIGINT**|DBTYPE_I8|  
+|**bigint**|DBTYPE_I8|  
 |**binary**|DBTYPE_BYTES|  
 |**bit**|DBTYPE_BOOL|  
 |**char**|DBTYPE_STR|  
 |**datetime**|DBTYPE_DBTIMESTAMP|  
 |**datetime2**|DBTYPE_DBTIME2|  
-|**Decimal**|DBTYPE_NUMERIC|  
+|**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
-|**impresión**|DBTYPE_BYTES|  
+|**image**|DBTYPE_BYTES|  
 |**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
 |**ntext**|DBTYPE_WSTR|  
-|**alfanumérico**|DBTYPE_NUMERIC|  
+|**numeric**|DBTYPE_NUMERIC|  
 |**nvarchar**|DBTYPE_WSTR|  
-|**impuestos**|DBTYPE_R4|  
+|**real**|DBTYPE_R4|  
 |**smalldatetime**|DBTYPE_DBTIMESTAMP|  
 |**smallint**|DBTYPE_I2|  
-|**SMALLMONEY**|DBTYPE_CY|  
+|**smallmoney**|DBTYPE_CY|  
 |**sql_variant**|DBTYPE_VARIANT, DBTYPE_SQLVARIANT|  
 |**sysname**|DBTYPE_WSTR|  
-|**negrita**|DBTYPE_STR|  
+|**text**|DBTYPE_STR|  
 |**timestamp**|DBTYPE_BYTES|  
 |**tinyint**|DBTYPE_UI1|  
-|**UDT**|DBTYPE_UDT|  
+|**DEFINIDO**|DBTYPE_UDT|  
 |**uniqueidentifier**|DBTYPE_GUID|  
 |**varbinary**|DBTYPE_BYTES|  
 |**varchar**|DBTYPE_STR|  
@@ -78,7 +78,7 @@ ms.locfileid: "63062204"
  La propiedad SSPROP_ALLOWNATIVEVARIANT de la sesión también debe estar establecida en TRUE.  
   
 ## <a name="provider-specific-property-ssprop_allownativevariant"></a>Propiedad SSPROP_ALLOWNATIVEVARIANT específica del proveedor  
- Al capturar los datos, puede especificar explícitamente qué clase de tipo de datos se debería devolver para una columna o para un parámetro. **IColumnsInfo** también se puede utilizar para obtener la información de columna y usarla para realizar el enlace. Cuando se usa **IColumnsInfo** para obtener información de columna con fines de enlace, si la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión es FALSE (valor predeterminado), en las columnas **sql_variant** se devuelve DBTYPE_VARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT es FALSE, no se admite DBTYPE_SQLVARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT está establecida en TRUE, el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT. Al capturar datos **sql_variant** como DBTYPE_SQLVARIANT, la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión tiene que establecerse en TRUE.  
+ Al capturar los datos, puede especificar explícitamente qué clase de tipo de datos se debería devolver para una columna o para un parámetro. También se puede usar **IColumnsInfo** para obtener la información de columna y usarla al crear el enlace. Cuando se usa **IColumnsInfo** para obtener información de columna con fines de enlace, si la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión es FALSE (valor predeterminado), en las columnas **sql_variant** se devuelve DBTYPE_VARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT es FALSE, no se admite DBTYPE_SQLVARIANT. Si la propiedad SSPROP_ALLOWNATIVEVARIANT está establecida en TRUE, el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT. Al capturar datos **sql_variant** como DBTYPE_SQLVARIANT, la propiedad SSPROP_ALLOWNATIVEVARIANT de sesión tiene que establecerse en TRUE.  
   
  La propiedad SSPROP_ALLOWNATIVEVARIANT forma parte del conjunto de propiedades DBPROPSET_SQLSERVERSESSION específico del proveedor y es una propiedad de sesión.  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f034e8892a8f5a77c7a049da6e33336592cb5294
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175204"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Arquitectura física (Analysis Services - Minería de datos)
@@ -46,12 +46,11 @@ ms.locfileid: "78175204"
 ## <a name="server-configuration"></a>Configuración del servidor
  Una instancia del servidor puede admitir varias bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , cada una con su propia instancia del servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que responde a las solicitudes de cliente y procesa los objetos.
 
- Las instancias independientes deben estar instaladas si desea trabajar tanto con modelos de minería de datos tabulares (TDS) como con modelos multidimensionales. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la instalación en paralelo de las instancias que se ejecutan en el modo tabular, que usa el motor de almacenamiento analítico en memoria xVelocity (VertiPaq), y de las instancias que se ejecutan en una de las configuraciones convencionales OLAP, MOLAP o ROLAP. Para obtener más información, vea [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).
+ Las instancias independientes deben estar instaladas si desea trabajar tanto con modelos de minería de datos tabulares (TDS) como con modelos multidimensionales. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la instalación en paralelo de las instancias que se ejecutan en el modo tabular, que usa el motor de almacenamiento analítico en memoria xVelocity (VertiPaq), y de las instancias que se ejecutan en una de las configuraciones convencionales OLAP, MOLAP o ROLAP. Para obtener más información, vea [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).
 
  Todas las comunicaciones entre un cliente y el servidor de Analysis Services usan XMLA, que es un protocolo independiente de la plataforma y del lenguaje. Cuando se recibe una solicitud de un cliente, Analysis Services determina si está relacionada con OLAP o con la minería de datos, y la enruta apropiadamente. Para obtener más información, vea [Componentes de servidor del motor OLAP](../multidimensional-models/olap-physical/olap-engine-server-components.md).
 
 ## <a name="see-also"></a>Consulte también
- [Arquitectura lógica &#40;Analysis Services:&#41;de minería de datos](logical-architecture-analysis-services-data-mining.md)
+ [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](logical-architecture-analysis-services-data-mining.md)
 
 

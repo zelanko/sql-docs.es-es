@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212095"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Especificar un solucionador de artículos de mezcla
@@ -36,9 +36,9 @@ ms.locfileid: "68212095"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   La replicación de mezcla admite los siguientes tipos de solucionadores de artículos:  
   
@@ -56,12 +56,12 @@ ms.locfileid: "68212095"
   
     -   El servidor con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS), para una suscripción de extracción que utilice la sincronización web.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Una vez registrado el solucionador, especifique que un artículo debe utilizar el solucionador en la pestaña **Resolución** del cuadro de diálogo **Propiedades del artículo: \<artículo>**, que está disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Para especificar un solucionador  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla.  
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione una tabla.  
   
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "68212095"
   
 7.  Repita este proceso para cada artículo que necesite un solucionador.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-register-a-custom-conflict-resolver"></a>Para registrar un solucionador de conflictos personalizado  
   
 1.  Si piensa registrar su propio solucionador de conflictos personalizado, cree uno de los tipos siguientes:  
   
-    -   Solucionador basado en código administrado como un controlador de lógica de negocios. Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](../implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Solucionador basado en código administrado como un controlador de lógica de negocios. Para obtener más información, vea [implementar un controlador de lógica de negocios para un artículo de mezcla](../implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Solucionador basado en procedimientos almacenados y solucionador basado en COM. Para más información, consulte [Implementación de un solucionador de conflictos personalizado para un artículo de mezcla](../implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68212095"
   
 2.  Ejecute [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) en el distribuidor. Especifique el nombre completo del solucionador personalizado del paso 1 para **@article_resolver**.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Ejemplos (Transact-SQL)  
  En este ejemplo se crea un nuevo artículo y se especifica que se utilice el Solucionador de conflictos de cálculo de media de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para calcular la media de la columna **UnitPrice** cuando se produzcan conflictos.  
   
  [!code-sql[HowTo#sp_addmerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_addmerge_resolver)]  
@@ -145,7 +145,6 @@ ms.locfileid: "68212095"
   
 ## <a name="see-also"></a>Consulte también  
  [Detección y resolución de conflictos de replicación de mezcla avanzada](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Implementar un controlador de lógica de negocios para un artículo de mezcla
-](../implement-a-business-logic-handler-for-a-merge-article.md)  
+ [Implementar un controlador de lógica de negocios para un artículo de mezcla](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

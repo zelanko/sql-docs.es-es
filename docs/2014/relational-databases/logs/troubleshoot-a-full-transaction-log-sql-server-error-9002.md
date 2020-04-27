@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144724"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Solucionar problemas de un registro de transacciones lleno (Error 9002 de SQL Server)
@@ -99,7 +99,7 @@ ms.locfileid: "63144724"
 ## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Administrar el tamaño del archivo de registro de transacciones](manage-the-size-of-the-transaction-log-file.md)   
- [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
+ [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

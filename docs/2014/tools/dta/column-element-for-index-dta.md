@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149851"
 ---
 # <a name="column-element-for-index-dta"></a>Column (DTA, elemento de Index)
@@ -49,13 +49,13 @@ ms.locfileid: "63149851"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Puede especificar hasta 1.024 columnas para el elemento `Index`.|  
+|**Casos**|Puede especificar hasta 1.024 columnas para el elemento `Index`.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento index &#40;DTA&#41;](index-element-dta.md)|  
+|**Elemento primario**|[Index &#40;DTA, elemento&#41;](index-element-dta.md)|  
 |**Elementos secundarios**|[Elemento Name de Column &#40;DTA&#41;](name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Ejemplo  

@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2e0ed6f2976f0b0f0b93f91f70f82ba30822c87c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633883"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728461"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Windows
 
@@ -256,8 +256,8 @@ Para el controlador x86: [Chino (simplificado)](https://go.microsoft.com/fwlink/
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
-| La versión 13.1 del controlador ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrega compatibilidad para [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) y [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | Estas compatibilidades agregadas están disponibles al conectarse a Microsoft SQL Server 2016 o a una versión posterior. |
-| Hay atributos y palabras clave de agrupaciones de conexiones, que corresponden a las compatibilidades para Always Encrypted y Azure Active Directory. | Estas palabras clave y atributos se describen en [Agrupación de conexiones dependientes de controlador en el controlador ODBC para SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| La versión 13.1 del controlador ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrega compatibilidad para [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) y [Azure Active Directory](../using-azure-active-directory.md). | Estas compatibilidades agregadas están disponibles al conectarse a Microsoft SQL Server 2016 o a una versión posterior. |
+| Hay atributos y palabras clave de agrupaciones de conexiones, que corresponden a las compatibilidades para Always Encrypted y Azure Active Directory. | Estas palabras clave y atributos se describen en [Agrupación de conexiones dependientes de controlador en el controlador ODBC para SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

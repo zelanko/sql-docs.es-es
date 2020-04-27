@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021786"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Información de publicación, Agentes (Publicación de instantánea)
-  La pestaña **Agentes** muestra información de resumen del Agente de instantáneas para la publicación seleccionada.  
+   La pestaña **Agentes** muestra información de resumen del Agente de instantáneas para la publicación seleccionada.  
   
 ## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas relacionadas con el Agente de instantáneas, haga clic con el botón secundario en la fila del agente y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
@@ -47,7 +47,7 @@ ms.locfileid: "63021786"
 -   Completed  
   
  **Agent**  
- Agente de instantáneas. Éste es el único agente asociado con una publicación de instantáneas. El Agente de distribución está asociado con suscripciones a esta publicación. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Agente de instantáneas. Éste es el único agente asociado con una publicación de instantáneas. El Agente de distribución está asociado con suscripciones a esta publicación. Para obtener más información, vea [ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Última hora de inicio**  
  Hora en la que se inició el agente por última vez.  
@@ -59,8 +59,8 @@ ms.locfileid: "63021786"
  La última acción realizada durante la ejecución más reciente del agente.  
   
 ## <a name="see-also"></a>Consulte también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Supervisar la replicación](monitoring-replication.md)  
+ [Supervisión de la replicación](monitoring-replication.md)  
   
   

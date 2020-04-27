@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023446"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape, clase de eventos
@@ -30,7 +30,7 @@ ms.locfileid: "63023446"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se llena con valores que pasa la aplicación.|10|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
-|DatabaseID|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Duration|`bigint`|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |EndTime|`datetime`|En eventos Mount Request, el tiempo de espera para el montaje si se supera dicho tiempo de espera; de no ser así, es el tiempo del propio evento (en tales casos, StartTime indica el tiempo de la solicitud de montaje correspondiente).|15|Sí|  
@@ -47,10 +47,10 @@ ms.locfileid: "63023446"
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Id. de la sesión en la que se ha producido el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
-|TextData|`ntext`|*nombre del dispositivo físico* [( *nombre del dispositivo lógico* )]. El nombre de dispositivo lógico se muestra solo si se ha definido en la vista de catálogo sys.backup_devices.|1|Sí|  
+|TextData|`ntext`|*nombre de dispositivo físico* [( *nombre del dispositivo lógico* )]. El nombre de dispositivo lógico se muestra solo si se ha definido en la vista de catálogo sys.backup_devices.|1|Sí|  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
- [Copia de seguridad y restauración de bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [sp_trace_setevent &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

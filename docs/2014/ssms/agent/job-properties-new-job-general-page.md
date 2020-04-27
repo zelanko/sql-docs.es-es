@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211388"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Propiedades del trabajo y Nuevo trabajo (página General)
@@ -38,7 +38,7 @@ ms.locfileid: "68211388"
  **Descripción**  
  Cambie la descripción del trabajo.  
   
- **Enabled**  
+ **Habilitado**  
  Habilita el trabajo. Si el trabajo no está habilitado, no se ejecuta como respuesta a una programación o una alerta; sin embargo, puede iniciarlo con el procedimiento almacenado **sp_start_job** .  
   
  **Origen**  
@@ -47,10 +47,10 @@ ms.locfileid: "68211388"
  **Creado**  
  Muestra la fecha y la hora de creación del trabajo. Solo está disponible en la página **Job PropertiesGeneral** .  
   
- **Última modificación**  
+ **Modificado por última vez**  
  Muestra la fecha y la hora de la última modificación del trabajo. Solo está disponible en la página **Job PropertiesGeneral** .  
   
- **Última ejecución**  
+ **Ejecutado por última vez**  
  Muestra la fecha y la hora del inicio de la última ejecución del trabajo. Solo está disponible en la página **Job PropertiesGeneral** .  
   
  **Ver el historial de trabajos**  
@@ -58,6 +58,6 @@ ms.locfileid: "68211388"
   
 ## <a name="see-also"></a>Consulte también  
  [Implementar trabajos](implement-jobs.md)   
- [Categorías de trabajo: Administrar categorías de trabajo](job-categories-manage-job-categories.md)  
+ [Categorías de trabajos: Administrar categorías de trabajos](job-categories-manage-job-categories.md)  
   
   

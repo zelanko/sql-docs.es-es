@@ -24,12 +24,12 @@ ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9ebf9aeb394d5540b5f50bb30013ce5c45093b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad484c4e830dde52a9845c0d45293463d240d977
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635600"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138253"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,20 +58,20 @@ END
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo, `BEGIN` y `END` definen un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan juntas. Si el bloqueo `BEGIN...END` no se incluye, ambas instrucciones `ROLLBACK TRANSACTION` se ejecutarán y se devolverán ambos mensajes `PRINT`.  
   
-```  
-USE AdventureWorks2012;  
+```sql
+USE AdventureWorks2012
 GO  
-BEGIN TRANSACTION;  
+BEGIN TRANSACTION
 GO  
 IF @@TRANCOUNT = 0  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM Person.Person WHERE LastName = 'Adams';  
-    ROLLBACK TRANSACTION;  
-    PRINT N'Rolling back the transaction two times would cause an error.';  
-END;  
-ROLLBACK TRANSACTION;  
-PRINT N'Rolled back the transaction.';  
+    FROM Person.Person WHERE LastName = 'Adams'
+    ROLLBACK TRANSACTION
+    PRINT N'Rolling back the transaction two times would cause an error.'
+END
+ROLLBACK TRANSACTION
+PRINT N'Rolled back the transaction.'
 GO  
 /*  
 Rolled back the transaction.  
@@ -81,25 +81,20 @@ Rolled back the transaction.
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo, `BEGIN` y `END` definen un conjunto de instrucciones [!INCLUDE[DWsql](../../includes/dwsql-md.md)] que se ejecutan juntas. Si no se incluye el bloque `BEGIN...END`, en el ejemplo siguiente se estará en un bucle continuo.  
   
-```  
+```sql
 -- Uses AdventureWorks  
-  
+
 DECLARE @Iteration Integer = 0  
 WHILE @Iteration <10  
 BEGIN  
     SELECT FirstName, MiddleName   
-    FROM dbo.DimCustomer WHERE LastName = 'Adams';  
+    FROM dbo.DimCustomer WHERE LastName = 'Adams'
     SET @Iteration += 1  
-END;  
-  
+END
 ```  
   
 ## <a name="see-also"></a>Consulte también  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
-  
-  
-
-
+ [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)

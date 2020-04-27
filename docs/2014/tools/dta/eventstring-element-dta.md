@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211116"
 ---
 # <a name="eventstring-element-dta"></a>EventString (DTA, elemento)
@@ -47,13 +47,13 @@ ms.locfileid: "68211116"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|`string`, la longitud es ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Es necesario especificar un elemento secundario `EventString`, `File` o `Database` para el elemento primario `Workload`, aunque solo se puede utilizar un tipo. Por ejemplo, si se especifica una carga de trabajo con el elemento `EventString`, no se puede especificar una carga de trabajo con el elemento `File` en el mismo archivo de entrada XML.|  
+|**Casos**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Es necesario especificar un elemento secundario `EventString`, `File` o `Database` para el elemento primario `Workload`, aunque solo se puede utilizar un tipo. Por ejemplo, si se especifica una carga de trabajo con el elemento `EventString`, no se puede especificar una carga de trabajo con el elemento `File` en el mismo archivo de entrada XML.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   
 |Relación|Elementos|  
 |------------------|--------------|  
-|**Elemento primario**|[Elemento Workload &#40;DTA&#41;](workload-element-dta.md)|  
+|**Elemento primario**|[Workload &#40;DTA, elemento&#41;](workload-element-dta.md)|  
 |**Elementos secundarios**|Ninguno.|  
   
 ## <a name="example"></a>Ejemplo  

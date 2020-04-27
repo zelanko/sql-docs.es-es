@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207082"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Crear instrucciones SQL para cursores
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client utiliza cursores de servidor para implementar la funcionalidad de cursor definida en la especificación ODBC. Una aplicación ODBC controla el comportamiento del cursor mediante el uso de [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) para establecer distintos atributos de instrucción. Éstos son los atributos y sus valores predeterminados.  
   
-|Atributo|Valor predeterminado|  
+|Atributo|Default|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  

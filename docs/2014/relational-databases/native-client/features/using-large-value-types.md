@@ -1,5 +1,5 @@
 ---
-title: Usar tipos de valor grande | Microsoft Docs
+title: Uso de tipos de valor grande | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206988"
 ---
 # <a name="using-large-value-types"></a>Usar tipos de valor grande
@@ -43,7 +43,7 @@ ms.locfileid: "68206988"
   
  Cuando los tipos de datos **varchar(max)**, **varbinary(max)** y **nvarchar(max)** aparecen en columnas con el tamaño **max** establecido en ilimitado, se representan como ISLONG en las interfaces y en los conjuntos de filas de esquema de OLE DB básicos que devuelven tipos de datos de columna.  
   
- Se ha modificado la implementación de **IAccessor** del objeto de comando para permitir el enlace como DBTYPE_IUNKNOWN. Si el consumidor especifica DBTYPE_IUNKNOWN y establece *pObject* en NULL, el proveedor devolverá la interfaz **ISequentialStream** al consumidor para que este pueda transmitir los datos **varchar(max)**, **nvarchar(max)** o **varbinary(max)** fuera de las variables de salida.  
+ La implementación de **IAccessor** del objeto de comando se ha cambiado para permitir el enlace como DBTYPE_IUNKNOWN. Si el consumidor especifica DBTYPE_IUNKNOWN y establece *pObject* en NULL, el proveedor devolverá la interfaz **ISequentialStream** al consumidor para que este pueda transmitir los datos **varchar(max)**, **nvarchar(max)** o **varbinary(max)** fuera de las variables de salida.  
   
  Los valores de los parámetros de salida transmitidos se devuelven después de las filas de resultados. Si la aplicación intenta pasar al siguiente conjunto de resultados mediante una llamada a **IMultipleResults::GetResult** sin consumir todos los valores de parámetro de salida devueltos, se devolverá DB_E_OBJECTOPEN.  
   

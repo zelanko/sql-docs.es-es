@@ -1,5 +1,5 @@
 ---
-title: Llamar a un procedimiento almacenado (OLE DB) | Microsoft Docs
+title: Llamada a un procedimiento almacenado (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206581"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Llamar a un procedimiento almacenado (OLE DB)
@@ -82,8 +82,7 @@ ms.locfileid: "68206581"
   
 -   Secuencia de escape RPC (llamada a procedimiento remoto).  
   
--   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.   
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.   
   
 ### <a name="odbc-call-escape-sequence"></a>Secuencia de escape ODBC CALL  
  Si conoce la información de parámetros, llame al método **ICommandWithParameters::SetParameterInfo** para describir los parámetros al proveedor. De lo contrario, cuando se utiliza la sintaxis ODBC CALL para llamar a un procedimiento almacenado, el proveedor llama a una función del asistente para buscar la información de parámetros del procedimiento almacenado.  
@@ -115,12 +114,12 @@ ms.locfileid: "68206581"
 {rpc SalesByCategory}  
 ```  
   
- Para obtener una aplicación de ejemplo que muestra una secuencia de escape RPC, vea [ejecutar un procedimiento almacenado &#40;usar la sintaxis rpc&#41; y procesar códigos de retorno y parámetros de salida &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Si quiere ver una aplicación de ejemplo que muestre una secuencia de escape RPC, consulte [Ejecución de un procedimiento almacenado &#40;mediante sintaxis RPC&#41; y procesamiento de códigos de devolución y parámetros de salida &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrucción EXECUTE de Transact-SQL:  
  Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql). El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client utiliza el mecanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC de para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
- Este es un ejemplo de la instrucción EXECUTE[!INCLUDE[tsql](../../../includes/tsql-md.md)] ** de **:  
+ Este es un ejemplo de la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

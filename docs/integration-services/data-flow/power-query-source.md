@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75501926"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087425"
 ---
 # <a name="power-query-source-preview"></a>Origen de Power Query (versión preliminar)
 
@@ -70,7 +70,7 @@ En el **Editor del administrador de conexiones de Power Query**, deberá especif
 
 ![Tipos del Editor del administrador de conexiones del origen de PQ](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-Algunos de estos orígenes (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata** y **Sybase**) requieren más instalaciones de controladores ADO.NET que pueden obtenerse en el artículo de [requisitos previos de Power Query](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a). Puede usar la interfaz de configuración personalizada para instalarlos en Azure-SSIS IR. Consulte el artículo de [personalización de Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+Algunos de estos orígenes (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata** y **Sybase**) requieren más instalaciones de controladores ADO.NET que pueden obtenerse en el artículo de [requisitos previos de Power Query](/power-bi/desktop-data-source-prerequisites). Puede usar la interfaz de configuración personalizada para instalarlos en Azure-SSIS IR. Consulte el artículo de [personalización de Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 En **Ruta de acceso del origen de datos**, puede especificar propiedades específicas del origen de datos que forman una cadena de conexión sin la información de autenticación. Por ejemplo, la ruta de acceso del origen de datos **SQL** tiene el formato `<Server>;<Database>`. Puede seleccionar el botón **Editar** para asignar valores a propiedades específicas del origen de datos que forman la ruta de acceso.
 

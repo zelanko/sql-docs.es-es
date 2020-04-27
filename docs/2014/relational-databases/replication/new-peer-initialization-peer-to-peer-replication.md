@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022687"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>Inicialización de nuevos nodos del mismo nivel (replicación punto a punto)
-  Use la página **nueva inicialización del mismo nivel** para especificar cómo se inicializaron las bases de datos del mismo nivel. (Los elementos del mismo nivel se deben inicializar antes de completar este asistente). Los elementos del mismo nivel se inicializan manualmente o mediante la funcionalidad **Initialize with backup** que proporciona la replicación transaccional. (La replicación transaccional punto a punto no admite la inicialización de elementos del mismo nivel mediante una instantánea). Si se deben inicializar diferentes pares con métodos diferentes, debe agregar los elementos del mismo nivel por separado mediante la ejecución del asistente varias veces.  
+   Use la página **Inicialización de nuevos nodos del mismo nivel** para especificar cómo se han inicializado las bases de datos del mismo nivel. (Los elementos del mismo nivel se deben inicializar antes de completar este asistente). Los elementos del mismo nivel se inicializan manualmente o mediante la funcionalidad **Initialize with backup** que proporciona la replicación transaccional. (La replicación transaccional punto a punto no admite la inicialización de elementos del mismo nivel mediante una instantánea). Si se deben inicializar diferentes pares con métodos diferentes, debe agregar los elementos del mismo nivel por separado mediante la ejecución del asistente varias veces.  
   
 ## <a name="options"></a>Opciones  
- **Especificar cómo se inicializaron las nuevas bases de datos del mismo nivel**  
+ **Especificar cómo se inicializaron las nuevas bases de datos del mismo nivel.**  
  El esquema y los datos correspondientes a todos los objetos publicados deben estar presentes en cada nodo del mismo nivel. Seleccione una de las siguientes opciones:  
   
 -   Seleccione la primera opción si ha creado manualmente el esquema de los objetos publicados o si ha restaurado una copia de seguridad pero no se han efectuado cambios en la primera base de datos de publicación desde la creación de la copia de seguridad. Si ha creado el esquema manualmente, debe asegurarse de que todos los datos requeridos estén presentes en cada nodo del mismo nivel. Esta opción corresponde a un valor de **replication support only** para la propiedad de suscripción **sync_type**.  
@@ -36,16 +36,16 @@ ms.locfileid: "63022687"
   
     |Nuevo nodo|Primer nodo|Nodos adicionales|Opción|  
     |--------------|----------------|----------------------|------------|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Disabled|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Deshabilitada|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|Disabled|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Disabled|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|habilitado|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Habilitada|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|habilitado|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|habilitado|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|habilitado|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|Habilitada|  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Administrar una topología punto a punto &#40;la programación de la replicación con Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
   
   

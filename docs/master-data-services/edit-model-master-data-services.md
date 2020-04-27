@@ -13,10 +13,10 @@ ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 89fa4dea57c4936a2d6a51e08f48668215ba53a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728212"
 ---
 # <a name="edit-model-master-data-services"></a>Editar modelo (Master Data Services)
@@ -27,12 +27,12 @@ ms.locfileid: "73728212"
   
  Para obtener más información, consulte [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-a-model"></a>Para cambiar un modelo  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73728212"
   
 7.  En el campo **Log Retention Days** (Días de retención del registro), seleccione una de las opciones de retención de datos de registro. El valor predeterminado es **Configuración del sistema**, lo que indica que el valor se hereda de la configuración del sistema del [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-     Para reemplazar la configuración del sistema sin quitar los datos del registro de transacciones, seleccione **NO**. Para conservar solo los datos de registro de hoy y truncar los de todos los días anteriores, seleccione **SÍ** y establezca el campo **Días** en 0. Para conservar los datos de registro durante un número especificado de días, seleccione **Sí** y establezca el campo **Días** en el número de días.  
+     Para reemplazar la configuración del sistema sin quitar los datos del registro de transacciones, seleccione **NO**. Para conservar solo los datos de registro de hoy y truncar los datos de registro de todos los días anteriores, seleccione **sí** y establezca el campo **días** en 0. Para conservar los datos de registro durante un número especificado de días, seleccione **Sí** y establezca el campo **Días** en el número de días.  
   
 8.  Haga clic en **Guardar modelo**.  
   

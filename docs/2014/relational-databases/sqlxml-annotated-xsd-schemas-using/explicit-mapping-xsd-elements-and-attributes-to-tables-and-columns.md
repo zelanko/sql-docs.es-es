@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72dfbcbd1ff264e596eecfecb5ebf759c2cbf5e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013843"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación explícita de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
@@ -58,7 +58,7 @@ ms.locfileid: "66013843"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Especificar las anotaciones sql:relation y sql:field  
- En este ejemplo, el esquema XSD está **** compuesto de un ** \<elemento de contacto>** del tipo complejo con ** \<fname>** y ** \<LName>** elementos secundarios y el atributo ContactID.  
+ En este ejemplo, el esquema XSD está **ContactID** compuesto de un ** \<elemento de contacto>** del tipo complejo con ** \<fname>** y ** \<LName>** elementos secundarios y el atributo ContactID.  
   
  La `sql:relation` anotación asigna el ** \<** elemento de>de contacto a la tabla person. contact de la base de datos AdventureWorks. La `sql:field` anotación asigna el ** \<elemento fname>** a la columna FirstName y el ** \<elemento LName>** a la columna LastName.  
   

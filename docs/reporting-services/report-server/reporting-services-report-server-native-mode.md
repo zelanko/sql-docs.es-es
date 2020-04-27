@@ -1,6 +1,6 @@
 ---
 title: Servidor de informes de Reporting Services (modo nativo) | Microsoft Docs
-ms.date: 06/06/2019
+ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66826894"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086844"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Servidor de informes de Reporting Services (modo nativo)
   Un servidor de informes configurado para el modo nativo se ejecuta como un servidor de aplicaciones que proporciona todas las funcionalidades de procesamiento y administración exclusivamente a través de los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -50,9 +50,13 @@ ms.locfileid: "66826894"
 -   Pertenencia al grupo local de administradores en el equipo del servidor de informes. Si la instalación incluye características de servidor que se ejecutan en equipos remotos, debe tener permisos de administrador en dichos equipos si desea administrar esos servidores a través de una conexión remota.  
   
 -   Permisos de administrador de base de datos para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos.  
-  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
 -   Si va a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en un controlador de dominio, debe ser un administrador de dominio.  
-  
+
+::: moniker-end
+
 ##  <a name="managing-content"></a><a name="bkmk_managecontent"></a> Administrar contenido  
  En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la administración del contenido hace referencia a la administración de informes, modelos, carpetas, recursos y orígenes de datos compartidos. Es posible administrar todos estos elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido.  
   

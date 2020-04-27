@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892529"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCt &lt;from &gt; Model (DMX)
@@ -35,13 +35,13 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *lista de expresiones*  
  Lista delimitada por comas de expresiones o identificadores de columna (derivados del modelo) relacionados.  
   
- *model*  
+ *modelo*  
  Identificador de modelo.  
   
  *lista de condiciones*  
  Condición para restringir los valores que devuelve la lista de columnas.  
   
- *Expresiones*  
+ *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
@@ -136,6 +136,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>Consulte también  
  [SELECCIONE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

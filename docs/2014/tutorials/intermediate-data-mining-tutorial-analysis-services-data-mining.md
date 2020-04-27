@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017176"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Tutorial intermedio de minería de datos (Analysis Services - Minería de datos)
@@ -52,13 +52,13 @@ ms.locfileid: "63017176"
   
  Creará modelos para regiones individuales y, a continuación, creará un modelo general que se pueda utilizar en la predicción cruzada.  
   
- [Lección 3: generar un escenario de cesta de la compra &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  En esta lección agregará una nueva vista del origen de datos y aprenderá a trabajar con tablas anidadas y claves. A partir de estos datos, creará un modelo de minería de datos que se pueda utilizar como parte de un escenario de cesta de la compra. Analizará también los modelos de minería de datos creados con el algoritmo de asociación de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
  [Lección 4: generar un escenario de agrupación en clústeres de secuencia &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  En esta lección aprenderá a crear un modelo de minería de datos que se pueda utilizar como parte de un escenario de agrupación en clústeres de secuencia. Asimismo, aprenderá a explorar los modelos de minería de datos creados mediante el algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
- [Lección 5: generar modelos de red neuronal y de regresión logística &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lección 5: Generar modelos de red neuronal y de regresión logística &#40;Tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  En esta lección, creará varios modelos de minería de datos relacionados, utilizando los algoritmos de Red neural de Microsoft y de Regresión logística de Microsoft. También aprenderá a trabajar con vistas del origen de datos para explorar datos subyacentes de los modelos.  
   
 ## <a name="requirements"></a>Requisitos  
@@ -68,8 +68,7 @@ ms.locfileid: "63017176"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
  Con el fin de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Para instalar las bases de datos oficiales para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite la página bases de datos de [ejemplo de Microsoft SQL](https://go.microsoft.com/fwlink/?LinkId=88417) y seleccione la versión adecuada de la base de datos de ejemplo.  
   

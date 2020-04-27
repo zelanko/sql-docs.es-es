@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067681"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
@@ -68,7 +68,7 @@ ms.locfileid: "63067681"
 |SQL_CA_SS_COLUMN_UTYPE|Tipo de datos base del tipo de datos definidos por el usuario de la columna de SQL Server. Las definiciones de los valores de tipo están en sqlncli.h.|  
 |SQL_CA_SS_COLUMN_VARYLEN|Es TRUE si los datos de la columna pueden variar en longitud; de lo contrario, es FALSE.|  
 |SQL_CA_SS_COMPUTE_BYLIST|Puntero a una matriz de WORD (corto sin signo) que especifica las columnas que se usan en la frase BY de una cláusula COMPUTE. Si la cláusula COMPUTE no especifica ninguna frase BY, se devuelve un puntero NULL.<br /><br /> El primer elemento de la matriz contiene el recuento de las columnas de la lista BY. Los demás elementos son los ordinales de columna.|  
-|SQL_CA_SS_COMPUTE_ID|*computeid* de una fila que es el resultado de una cláusula COMPUTE en la instrucción SELECT de TRANSACT-SQL actual.|  
+|SQL_CA_SS_COMPUTE_ID|*computeid* de una fila que es el resultado de una cláusula COMPUTE de la instrucción SELECT de Transact-SQL actual.|  
 |SQL_CA_SS_NUM_COMPUTES|Número de cláusulas COMPUTE especificadas en la instrucción SELECT de Transact-SQL actual.|  
 |SQL_CA_SS_NUM_ORDERS|Número de columnas especificadas en la cláusula ORDER BY de una instrucción SELECT de Transact-SQL u ODBC.|  
   
@@ -99,8 +99,7 @@ ms.locfileid: "63067681"
  Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Compatibilidad de SQLColAttribute con UDT CLR grandes  
- 
-  `SQLColAttribute` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLColAttribute` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Compatibilidad de SQLColAttribute con columnas dispersas  
  SQLColAttribute consulta el nuevo campo de descriptor de fila de implementación (IRD), SQL_CA_SS_IS_COLUMN_SET, para determinar `column_set` si una columna es una columna.  

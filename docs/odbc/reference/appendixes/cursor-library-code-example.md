@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de código de biblioteca de cursores ? Microsoft Docs
+title: Ejemplo de código de la biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: cdbc751ecf6ed2427809c70707226f335a7b8d4b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284685"
 ---
 # <a name="cursor-library-code-example"></a>Ejemplo de código de la biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se eliminará en una versión futura de Windows. Evite usar esta característica en el nuevo trabajo de desarrollo y planee modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad del cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- En el ejemplo siguiente se utiliza la biblioteca de cursores para recuperar el identificador, la fecha de apertura y el estado de cada pedido de la tabla ORDERS. A continuación, muestra 20 filas de datos. Si el usuario actualiza estos datos, el código actualiza los búferes del conjunto de filas y ejecuta una instrucción de actualización posicionada. Por último, solicita al usuario la dirección para desplazarse y repite el proceso.  
+ En el ejemplo siguiente se usa la biblioteca de cursores para recuperar el identificador de cada pedido, la fecha de apertura y el estado de la tabla ORDERs. A continuación, muestra 20 filas de datos. Si el usuario actualiza estos datos, el código actualiza los búferes del conjunto de filas y ejecuta una instrucción UPDATE posicionada. Por último, pide al usuario la dirección de desplazamiento y repite el proceso.  
   
 ```  
 #define ROWS 20  

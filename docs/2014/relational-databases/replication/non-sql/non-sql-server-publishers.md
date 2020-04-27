@@ -16,15 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19db106c43007259754bace7f0e9d2938ad9cf1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022095"
 ---
 # <a name="non-sql-server-publishers"></a>publicadores que no son de SQL Server
-  La publicación de datos desde[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] orígenes que no son de le permite consolidar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datos en. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden suscribirse a datos de instantánea o transaccionales publicados de una base de datos de Oracle. Para obtener más información sobre cómo publicar desde Oracle, vea [Información general de la publicación de Oracle](oracle-publishing-overview.md).  
+  La publicación de datos desde[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] orígenes que no son de le permite consolidar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datos en. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden suscribirse a datos de instantánea o transaccionales publicados de una base de datos de Oracle. Para obtener más información sobre cómo publicar desde Oracle, vea [Información general de la publicación de Oracle](oracle-publishing-overview.md).  
   
  La replicación heterogénea en suscriptores que no son SQL Server está desusada. La publicación de Oracle está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
@@ -40,6 +39,6 @@ ms.locfileid: "63022095"
 |Migración a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Compruebe la aplicación en tiempo real con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mientras replica los cambios del sistema de origen. Cambie a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando esté satisfecho con la migración.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Replicación de bases de datos heterogéneas](heterogeneous-database-replication.md)  
+ [Replicación de base de datos heterogénea](heterogeneous-database-replication.md)  
   
   

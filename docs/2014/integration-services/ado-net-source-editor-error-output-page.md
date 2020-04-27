@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061635"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>Editor de orígenes de ADO NET (página Salida de error)
@@ -42,7 +42,7 @@ ms.locfileid: "66061635"
  **Error**  
  Permite especificar qué debe ocurrir cuando se produce un error: omitir el error, redirigir la fila o hacer que el componente no funcione.  
   
- **Temas relacionados:** [control de errores en los datos](data-flow/error-handling-in-data.md)  
+ **Temas relacionados:** [Control de errores en los datos](data-flow/error-handling-in-data.md)  
   
  **Truncamiento**  
  Permite especificar qué debe ocurrir cuando se produce un truncamiento: omitir el error, redirigir la fila o hacer que el componente no funcione.  

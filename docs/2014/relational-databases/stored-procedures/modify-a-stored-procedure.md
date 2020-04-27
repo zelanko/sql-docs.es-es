@@ -15,40 +15,40 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015886"
 ---
 # <a name="modify-a-stored-procedure"></a>Modificar un procedimiento almacenado
     
-##  <a name="Top"></a> En este tema se describe cómo modificar un procedimiento almacenado [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+##  <a name="this-topic-describes-how-to-modify-a-stored-procedure-in-sscurrent-by-using-ssmanstudiofull-or-tsql"></a><a name="Top"></a> En este tema se describe cómo modificar un procedimiento almacenado [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
 -   **Para modificar un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] no se pueden modificar para que sean procedimientos almacenados CLR y viceversa.  
   
  Si anteriormente se creó la definición de procedimiento mediante WITH ENCRYPTION o WITH RECOMPILE, estas opciones solo se habilitan si se incluyen en la instrucción ALTER PROCEDURE.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Es necesario el permiso ALTER PROCEDURE en el procedimiento.  
   
-##  <a name="Procedures"></a> Cómo modificar un procedimiento almacenado  
+##  <a name="how-to-modify-a-stored-procedure"></a><a name="Procedures"></a> Cómo modificar un procedimiento almacenado  
  Puede usar cualquiera de los siguientes medios:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para modificar un procedimiento en Management Studio**  
   
 1.  En el Explorador de objetos, conéctese a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
@@ -68,7 +68,7 @@ ms.locfileid: "63015886"
 > [!IMPORTANT]  
 >  Valide todos los datos proporcionados por el usuario. No concatene ninguna entrada de usuario antes de validarla. No ejecute nunca un comando creado a partir de una entrada de usuario no validada.  
   
-###  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar un procedimiento en el Editor de consultas**  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  

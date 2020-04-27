@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050931"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss [clase de eventos]
-  La clase de eventos SP:CacheMiss indica que el procedimiento no se encuentra en la caché. Si la clase de eventos SP: CacheMiss se produce con frecuencia, puede indicar que es necesario que haya más [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]memoria disponible para, lo que aumenta el tamaño de la memoria caché de procedimientos.  
+  La clase de eventos SP:CacheMiss indica que el procedimiento no se encuentra en la caché. Si la clase de eventos SP:CacheMiss se produce con frecuencia, esto puede indicar que es necesario asignar más memoria a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con lo que aumenta el tamaño de la caché de procedimientos.  
   
 ## <a name="spcachemiss-event-class-data-columns"></a>Columnas de datos de la clase de eventos SP:CacheMiss  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63050931"
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|`int`|Identificador del objeto asignado por el sistema.|22|Sí|  
 |ObjectName|`nvarchar`|Nombre del procedimiento almacenado. Si ObjectName incluye datos, TextData no incluirá ningún dato.|34|Sí|  
-|ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|`int`|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
 |RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |nombreDeServidor|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
@@ -54,7 +54,7 @@ ms.locfileid: "63050931"
   
 ## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SP:CacheInsert, clase de eventos](sp-cacheinsert-event-class.md)  
   
   

@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b53076a7528d0e9eaff1244c206dee4127150e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63063142"
 ---
 # <a name="xml-input-file-sample-with-inline-workload-dta"></a>Ejemplo de archivo de entrada XML con carga de trabajo insertada (DTA)
-  Copie y pegue este ejemplo de un archivo de entrada XML que especifica una carga de trabajo con el elemento **EventString** en su editor XML o editor de texto favorito. Puede utilizar el elemento **EventString** para especificar una carga de trabajo de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] en el archivo de entrada XML, en lugar de utilizar un archivo de carga de trabajo independiente. Una vez copiado el ejemplo en la herramienta de edición, sustituya los valores especificados en los elementos **Server**, **Database**, **Schema**, **Table**, **Workload**, **EventString**y **TuningOptions** por los de la sesión de optimización concreta. Para obtener más información sobre todos los atributos y elementos secundarios que se pueden usar con estos elementos, vea [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md). En el siguiente ejemplo, se utiliza únicamente un subconjunto de opciones de atributos y elementos secundarios disponibles.  
+  Copie y pegue este ejemplo de archivo de entrada XML que especifica una carga de trabajo con el elemento **EventString** en un editor XML o editor de texto. Puede utilizar el elemento **EventString** para especificar una carga de trabajo de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] en el archivo de entrada XML, en lugar de utilizar un archivo de carga de trabajo independiente. Una vez copiado el ejemplo en la herramienta de edición, sustituya los valores especificados en los elementos **Server**, **Database**, **Schema**, **Table**, **Workload**, **EventString**y **TuningOptions** por los de la sesión de optimización concreta. Para obtener más información sobre todos los atributos y elementos secundarios que se pueden usar con estos elementos, vea [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md). En el siguiente ejemplo, se utiliza únicamente un subconjunto de opciones de atributos y elementos secundarios disponibles.  
   
 ## <a name="code"></a>Código  
  [!code-xml[InputFileSamples#InlineWorkloadInputFile](../../snippets/xml/SQL14/dta_xml/inputfilesamples/xml/dta_xml_input_file_samples.xml#inlineworkloadinputfile)]  
   
 ## <a name="comments"></a>Comentarios  
- `USE database_name`las instrucciones se pueden especificar en la carga de trabajo insertada incluida en el elemento **EventString** .  
+ `USE database_name` se pueden especificar en la carga de trabajo insertada incluida en el elemento **EventString** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
+ [Inicio y uso del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   

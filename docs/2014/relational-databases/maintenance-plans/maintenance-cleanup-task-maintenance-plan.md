@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035781"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tarea Limpieza de mantenimiento (Plan de mantenimiento)
@@ -61,7 +61,7 @@ ms.locfileid: "63035781"
  **Eliminar archivos en función de la antigüedad del archivo en el tiempo de ejecución de la tarea**  
  Especifique la antigüedad mínima que deben tener los archivos que quiere eliminar; para ello, especifique un número y una unidad de tiempo en el cuadro **Eliminar archivos anteriores a** .  
   
- **Eliminar archivos con una antigüedad superior a la siguiente**  
+ **Eliminar archivos anteriores a**  
  Especifique la antigüedad mínima que deben tener los archivos que desea eliminar; para ello, especifique un número y una unidad de tiempo (Día, Semana, Mes o Año). Se eliminarán los archivos con una antigüedad mayor que el intervalo de tiempo especificado.  
   
  **Ver T-SQL**  

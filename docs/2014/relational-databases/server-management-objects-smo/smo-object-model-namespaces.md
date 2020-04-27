@@ -18,14 +18,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ceef262411bf420330cf9e650d61a916719cb0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130768"
 ---
 # <a name="smo-namespaces"></a>Espacios de nombres SMO
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los objetos de administración (SMO) tienen varios espacios de nombres. Los diferentes espacios de nombres representan áreas de funcionalidad diferentes dentro de los SMO.  
   
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados SMO se encuentran en la carpeta [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] .  

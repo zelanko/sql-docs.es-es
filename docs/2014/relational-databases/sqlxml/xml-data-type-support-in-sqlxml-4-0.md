@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012167"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Compatibilidad con tipos de datos xml en SQLXML 4.0
@@ -44,8 +44,7 @@ ms.locfileid: "66012167"
   
 -   SQLXML 4.0 se basa en la compatibilidad con el análisis XML que proporciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una columna `xml` puede asignarse como XML con tipo o XML sin tipo. En ambos casos, SQLXML 4.0 no valida el XML de entrada.  Si el XML de entrada no es válido o no tiene un formato correcto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se lo notifica a SQLXML y propaga cualquier información de error pertinente que el servidor devuelve al usuario.  
   
--   SQLXML 4.0 se basa en la compatibilidad limitada con las DTD que se proporcionan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite una DTD interna en los datos de tipo `xml`, que puede utilizarse para proporcionar valores predeterminados y reemplazar las referencias a entidades por su contenido expandido. SQLXML pasa los datos XML "tal cual" al servidor (incluida la DTD interna). Puede convertir las DTD en documentos de esquema XML (XSD) mediante herramientas de otros fabricantes y cargar los datos con esquemas XML insertados en la base de datos.  
+-   SQLXML 4.0 se basa en la compatibilidad limitada con las DTD que se proporcionan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite una DTD interna en los datos de tipo `xml`, que puede utilizarse para proporcionar valores predeterminados y reemplazar las referencias a entidades por su contenido expandido. SQLXML pasa los datos XML "tal cual" al servidor (incluida la DTD interna). Puede convertir las DTD en documentos de esquema XML (XSD) mediante herramientas de otros fabricantes y cargar los datos con esquemas XML insertados en la base de datos.  
   
 -   SQLXML 4,0 no conserva las instrucciones de procesamiento de declaraciones XML (por ejemplo,) en función del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]comportamiento de. En lugar de ello, la declaración XML se trata como una directiva del analizador XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus atributos (version, encoding y standalone) se pierden una vez que los datos se han convertido al tipo `xml`. Los datos XML se almacenan internamente como UCS-2. Las demás instrucciones de procesamiento de la instancia XML se conservan; se permiten en la columna `xml` y son compatibles con SQLXML.  
   

@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012649"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificar un eje (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012649"
     child::Customer  
     ```  
   
-     En la consulta XPath siguiente, `child` es el eje. 
-  `Customer` es la prueba de nodo.  
+     En la consulta XPath siguiente, `child` es el eje. `Customer` es la prueba de nodo.  
   
 -   `parent`  
   
@@ -52,8 +51,7 @@ ms.locfileid: "66012649"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     Esto equivale a especificar `child::Customer`. En esta consulta XPath, `child` y `parent` son los ejes. 
-  `Customer` y `Order` son las pruebas de nodo.  
+     Esto equivale a especificar `child::Customer`. En esta consulta XPath, `child` y `parent` son los ejes. `Customer` y `Order` son las pruebas de nodo.  
   
 -   `attribute`  
   

@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211186"
 ---
 # <a name="creating-views-and-stored-procedures"></a>Crear vistas y procedimientos almacenados
-  Ahora que Mary puede tener acceso a la base de datos **TestData** , puede que desee crear algunos objetos de base de datos, como una vista y un procedimiento almacenado, y, a continuación, conceder a Mary acceso a ellos. Una vista es una instrucción SELECT almacenada y un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  
+  Ahora que Mary puede tener acceso a la base de datos **TestData** , puede que desee crear algunos objetos de base de datos, como una vista o un procedimiento almacenado y concederle a Mary acceso a los mismos. Una vista es una instrucción SELECT almacenada y un procedimiento almacenado es una o varias instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] que se ejecutan como un lote.  
   
  Las vistas se consultan como las tablas y no aceptan parámetros. Los procedimientos almacenados son más complejos que las vistas. Los procedimientos almacenados pueden tener parámetros de entrada y salida y pueden contener instrucciones para controlar el flujo del código, como instrucciones IF y WHILE. Una práctica recomendable de programación es usar procedimientos almacenados para realizar todas las tareas repetitivas en la base de datos.  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6f6efdfac89014116957990ef2db21cf52e76a4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046037"
 ---
 # <a name="reporting-services-soapexception-class"></a>Clase SoapException de Reporting Services
@@ -35,7 +35,7 @@ ms.locfileid: "63046037"
 |**Mensaje**|Mensaje descriptivo y localizado que describe el error. Este texto podría aparecer en la UI de la aplicación.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Introducción a la administración de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Introducción al control de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
  [Tabla de errores de SoapException](soapexception-errors-table.md)  
   
   

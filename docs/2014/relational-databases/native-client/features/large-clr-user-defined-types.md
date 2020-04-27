@@ -1,5 +1,5 @@
 ---
-title: Tipos definidos por el usuario CLR grandes | Microsoft Docs
+title: Tipos definidos por el usuario de CLR grandes (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07147f530cf9860514ad6fb830205d14361d539f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033538"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipos definidos por el usuario de CLR grandes
@@ -29,7 +29,7 @@ ms.locfileid: "63033538"
   
  Para OLE DB, la compatibilidad con UDT grandes incluye la capacidad de transmitir en secuencias los valores del UDT a y desde el servidor mediante el enlace ISequentialStream.  
   
- Los UDT con un tamaño menor o igual que 8.000 se comportarán como lo hacían en SQL Server 2005. Por OLE DB, puede seguir transmisiones de UDT pequeños mediante el enlace ISequentialStream.  
+ Los UDT con un tamaño menor o igual que 8.000 se comportarán como lo hacían en SQL Server 2005. Para OLE DB, puede transmitir en secuencias todavía los UDT pequeños usando el enlace ISequentialStream.  
   
  A veces el código nativo tendrá que entender el contenido de los UDT CLR, pero no tendrá que crear instancias de los objetos administrados. Si éste es el caso, puede utilizar la serialización personalizada para convertir los valores de UDT en el servidor en un formato bien conocido para los clientes.  
   

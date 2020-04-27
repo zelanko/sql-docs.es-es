@@ -16,10 +16,10 @@ ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771388"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
@@ -56,9 +56,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Los agentes de replicación del distribuidor utilizan la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse al publicador.|  
-|**1** (valor predeterminado)|Los agentes de replicación del distribuidor utilizan la autenticación de Windows para conectarse al publicador.|  
+|**1** (predeterminado)|Los agentes de replicación del distribuidor utilizan la autenticación de Windows para conectarse al publicador.|  
   
-`[ @login = ] 'login'`Es el inicio de sesión. Este parámetro es necesario si *security_mode* es **0**. *login* es de **tipo sysname y su**valor predeterminado es NULL. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
+`[ @login = ] 'login'`Es el inicio de sesión. Este parámetro es necesario si *security_mode* es **0**. *login* es de tipo **sysname** y su valor predeterminado es NULL. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
   
 `[ @password = ] 'password']`Es la contraseña. *password* es de **tipo sysname y su**valor predeterminado es NULL. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
   
@@ -81,7 +81,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**0** (valor predeterminado)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]base.|  
+|**0** (valor predeterminado)|Base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|Otra base de datos distinta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 `[ @publisher_type = ] 'publisher_type'`Especifica el tipo de publicador cuando el publicador no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo es. *publisher_type* es de tipo sysname y puede tener uno de los valores siguientes.  
@@ -112,6 +112,6 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [sp_dropdistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
+ [Configurar la distribución](../../relational-databases/replication/configure-distribution.md)  
   
   

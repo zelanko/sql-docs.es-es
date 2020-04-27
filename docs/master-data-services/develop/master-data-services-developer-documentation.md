@@ -11,10 +11,10 @@ ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 415e20eb08041780b8d20fb124151cc700cacbe6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728260"
 ---
 # <a name="master-data-services-developer-documentation"></a>Guía del desarrollador (Master Data Services)
@@ -38,20 +38,18 @@ ms.locfileid: "73728260"
  [Crear clases de proxy del servicio web Master Data Manager](../../master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md)  
  Describe cómo se habilitan los metadatos que se publican desde el sitio web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] y cómo se crean las clases de proxy que se pueden usar mediante programación para tener acceso a las operaciones del servicio web.  
   
- [Operaciones de servicio Web clasificadas &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+ [Operaciones de servicio web clasificadas &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
  Lista clasificada de las operaciones de servicio web de la clase <xref:Microsoft.MasterDataServices.ServiceClient>.  
   
 ## <a name="custom-workflows"></a>Flujos de trabajo personalizados  
- 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utiliza reglas de negocio para crear soluciones básicas de flujo de trabajo. Puede actualizar y validar automáticamente los datos y enviar notificaciones por correo electrónico en función de las condiciones que especifique. Las reglas de negocio de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] están diseñadas para administrar los escenarios de flujo de trabajo más comunes. Si su flujo de trabajo requiere un procesamiento de eventos más complejos, como aprobaciones de varios niveles o árboles de decisiones complejos, puede configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que envíe datos a un ensamblado personalizado que cree. Para administrar flujos de trabajo personalizados, debe configurar e iniciar el servicio de integración de flujos de trabajo MDS de SQL Server en el equipo de la aplicación web y crear un ensamblado que implemente la interfaz <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utiliza reglas de negocio para crear soluciones básicas de flujo de trabajo. Puede actualizar y validar automáticamente los datos y enviar notificaciones por correo electrónico en función de las condiciones que especifique. Las reglas de negocio de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] están diseñadas para administrar los escenarios de flujo de trabajo más comunes. Si su flujo de trabajo requiere un procesamiento de eventos más complejos, como aprobaciones de varios niveles o árboles de decisiones complejos, puede configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que envíe datos a un ensamblado personalizado que cree. Para administrar flujos de trabajo personalizados, debe configurar e iniciar el servicio de integración de flujos de trabajo MDS de SQL Server en el equipo de la aplicación web y crear un ensamblado que implemente la interfaz <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>.  
   
 ### <a name="custom-workflow-content"></a>Contenido del flujo de trabajo personalizado  
  [Crear un flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  
  Instrucciones sobre cómo crear un ensamblado que controle el flujo de trabajo, sobre cómo configurar e iniciar el servicio de integración de flujos de trabajo MDS de SQL Server y sobre cómo crear una regla de negocio en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] que inicie un flujo de trabajo personalizado.  
   
 ## <a name="web-server-namespaces"></a>Espacios de nombres de servidor web  
- 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] instala un conjunto de ensamblados en el equipo del servidor web. Estos ensamblados contienen espacios de nombres que se pueden usar en escenarios avanzados donde se personaliza el comportamiento del equipo del servidor web. Estos espacios de nombres se describen en la siguiente tabla.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] instala un conjunto de ensamblados en el equipo del servidor web. Estos ensamblados contienen espacios de nombres que se pueden usar en escenarios avanzados donde se personaliza el comportamiento del equipo del servidor web. Estos espacios de nombres se describen en la siguiente tabla.  
   
 |Espacio de nombres|Descripción|  
 |---------------|-----------------|  

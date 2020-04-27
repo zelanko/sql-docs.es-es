@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011522"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
   Para evitar que un índice de texto completo se llene demasiado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de un mecanismo que descarta las cadenas más frecuentes que no ayudan en la búsqueda. Estas cadenas descartadas se denominan *palabras irrelevantes*. Durante la creación de índices, el motor de texto completo omite las palabras irrelevantes del índice de texto completo. Eso significa que las consultas de texto completo no buscarán las palabras irrelevantes.  
   
-##  <a name="understand"></a>Descripción de palabras irrelevantes y palabras irrelevantes  
+##  <a name="understanding-stopwords-and-stoplists"></a><a name="understand"></a>Descripción de palabras irrelevantes y palabras irrelevantes  
  Una palabra irrelevante puede ser una palabra con significado en un idioma determinado o un *token* sin significado lingüístico. Por ejemplo, en inglés, las palabras como "a", "and", "is" y "the" se omiten en el índice de texto completo porque se ha determinado que no son útiles en una búsqueda.  
   
  Aunque omite la inclusión de palabras irrelevantes, el índice de texto completo tiene en cuenta la posición de las mismas. Tomemos como ejemplo la frase en inglés "Instructions are applicable to these Adventure Works Cycles models ". La siguiente tabla muestra la posición de las palabras en la frase:  
@@ -49,11 +49,10 @@ ms.locfileid: "66011522"
  Las palabras irrelevantes se administran en bases de datos mediante objetos denominados listas de palabras irrelevantes. Una *lista de palabras irrelevantes* es una lista de palabras que, cuando se asocia a un índice de texto completo, se aplica a las consultas de texto completo en ese índice.  
   
   
-##  <a name="creating"></a>Crear una lista de palabras irrelevantes  
+##  <a name="creating-a-stoplist"></a><a name="creating"></a>Crear una lista de palabras irrelevantes  
  Puede crear una lista de palabras irrelevantes de cualquiera de las maneras siguientes:  
   
--   Usar la lista de palabras irrelevantes proporcionada por el sistema en la base de datos. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se distribuye con una lista de palabras irrelevantes del sistema que contiene las palabras irrelevantes usadas normalmente para cada idioma compatible; es decir, para cada idioma que está asociado de forma predeterminada a determinados separadores de palabras. La lista de palabras irrelevantes del sistema contiene palabras irrelevantes de uso común en todos los idiomas admitidos.  Puede copiar la lista de palabras irrelevantes del sistema y personalizar la copia agregando y quitando palabras irrelevantes.  
+-   Usar la lista de palabras irrelevantes proporcionada por el sistema en la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se distribuye con una lista de palabras irrelevantes del sistema que contiene las palabras irrelevantes usadas normalmente para cada idioma compatible; es decir, para cada idioma que está asociado de forma predeterminada a determinados separadores de palabras. La lista de palabras irrelevantes del sistema contiene palabras irrelevantes de uso común en todos los idiomas admitidos.  Puede copiar la lista de palabras irrelevantes del sistema y personalizar la copia agregando y quitando palabras irrelevantes.  
   
      La lista de palabras irrelevantes del sistema se instala en la base de datos [Resource](../databases/resource-database.md) .  
   
@@ -71,7 +70,7 @@ ms.locfileid: "66011522"
   
 2.  Expanda **Bases de datos**y luego la base de datos en la que quiere crear la lista de palabras irrelevantes de texto completo.  
   
-3.  Expanda **Almacenamiento**y luego haga clic con el botón derecho en **Lista de palabras irrelevantes de texto completo**.  
+3.  Expanda **Almacenamiento** y, a continuación, haga clic con el botón secundario en **Listas de palabras irrelevantes de texto completo**.  
   
 4.  Seleccione **Nueva lista de palabras irrelevantes de texto completo**.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66011522"
 -   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a>Usar una lista de palabras irrelevantes en consultas de texto completo  
+##  <a name="using-a-stoplist-in-full-text-queries"></a><a name="queries"></a>Usar una lista de palabras irrelevantes en consultas de texto completo  
  Para usar una lista de palabras irrelevantes en consultas, es necesario asociarla a un índice de texto completo. Puede asociar una lista de palabras irrelevantes a un índice de texto completo en el momento de crear el índice, o puede modificar el índice más adelante y agregarle una lista de palabras irrelevantes.  
   
  **Para crear un índice de texto completo y asociarle una lista de palabras irrelevantes**  
@@ -112,7 +111,7 @@ ms.locfileid: "66011522"
 -   [transform noise words (opción de configuración del servidor)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a>Ver metadatos de palabras irrelevantes y STOPLIST  
+##  <a name="viewing-stoplists-and-stoplist-metadata"></a><a name="viewing"></a>Ver metadatos de palabras irrelevantes y STOPLIST  
  **Para ver todas las palabras de una lista de palabras irrelevantes**  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
@@ -125,10 +124,10 @@ ms.locfileid: "66011522"
   
  **Para ver el resultado de la tokenización de una combinación entre un separador de palabras, un diccionario de sinónimos y una lista de palabras irrelevantes**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
+-   [Sys. dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a>Cambiar el palabras irrelevantes de una lista de palabras irrelevantes  
+##  <a name="changing-the-stopwords-in-a-stoplist"></a><a name="change"></a>Cambiar el palabras irrelevantes de una lista de palabras irrelevantes  
  **Para agregar o quitar palabras irrelevantes de una lista de palabras irrelevantes**  
   
 -   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
@@ -139,7 +138,7 @@ ms.locfileid: "66011522"
   
 2.  Expanda **Bases de datos**y, a continuación, expanda la base de datos.  
   
-3.  Expanda **Almacenamiento**y, a continuación, seleccione **Listas de palabras irrelevantes de texto completo**.  
+3.  Expanda **Almacenamiento** y, a continuación, seleccione **Listas de palabras irrelevantes de texto completo**.  
   
 4.  Haga clic con el botón derecho en la lista de palabras irrelevantes cuyas propiedades quiere cambiar y seleccione **Propiedades**.  
   
@@ -154,7 +153,7 @@ ms.locfileid: "66011522"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
-##  <a name="upgrade"></a>Actualización de palabras irrelevantes desde SQL Server 2005  
+##  <a name="upgrading-noise-words-from-sql-server-2005"></a><a name="upgrade"></a>Actualización de palabras irrelevantes desde SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Cuando una base de datos se actualiza desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], los archivos de palabras irrelevantes de esa versión dejan de usarse. Sin embargo, los archivos de palabras irrelevantes están almacenados en la carpeta FTDATA\ FTNoiseThesaurusBak y se pueden usar posteriormente al actualizar o compilar las listas de palabras irrelevantes correspondientes. Para obtener información sobre cómo actualizar los archivos de palabras irrelevantes a listas de palabras irrelevantes, vea [Actualizar la búsqueda de texto completo](upgrade-full-text-search.md).  
   
   

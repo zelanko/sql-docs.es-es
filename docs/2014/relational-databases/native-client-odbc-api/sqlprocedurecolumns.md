@@ -15,19 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046720"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns`Devuelve una fila que notifica los atributos de valor devuelto de todos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los procedimientos almacenados.  
   
- `SQLProcedureColumns`Devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *SchemaName*, *ProcName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA cuando se usan valores no válidos en estos parámetros.  
+ `SQLProcedureColumns`Devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *SchemaName*, *ProcName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
   
- 
-  `SQLProcedureColumns` se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar `SQLProcedureColumns` en un cursor actualizable (dinámico o controlado por conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, lo que indica que se ha cambiado el tipo de cursor.  
+ `SQLProcedureColumns` se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar `SQLProcedureColumns` en un cursor actualizable (dinámico o controlado por conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, lo que indica que se ha cambiado el tipo de cursor.  
   
  En la tabla siguiente se muestran las columnas devueltas por el conjunto de resultados y cómo se han extendido para administrar los tipos de datos **xml** y **udt** a través del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
@@ -73,8 +72,7 @@ ms.locfileid: "63046720"
  Para obtener más información general, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>SQLProcedureColumns admite UDT CLR grandes  
- 
-  `SQLProcedureColumns` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLProcedureColumns` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [SQLProcedureColumns función)](https://go.microsoft.com/fwlink/?LinkId=59363)   

@@ -14,10 +14,10 @@ ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728157"
 ---
 # <a name="entities-master-data-services"></a>Entidades (Master Data Services)
@@ -67,8 +67,8 @@ ms.locfileid: "73728157"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una entidad nueva.|[Cree una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
-|Cambiar el nombre de una entidad existente.|[Editar un Master Data Services de &#40;de entidad&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
+|Crear una entidad nueva.|[Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
+|Cambiar el nombre de una entidad existente.|[Edición de una entidad &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)|  
 |Eliminar una entidad existente.|[Eliminar una entidad &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)|  
 |Asignar permisos a entidades.|[Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
   

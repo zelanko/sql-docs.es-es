@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059169"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor de origen de Excel (página Administrador de conexiones)
@@ -42,11 +42,11 @@ ms.locfileid: "66059169"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Tabla o vista|Recupera los datos de una hoja de cálculo o un rango con nombre del archivo Excel.|  
-|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada:** [usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada:** [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Comando SQL|Recupera datos del archivo Excel mediante una consulta SQL. Para obtener información acerca de la sintaxis de consultas, vea [Excel Source](data-flow/excel-source.md).|  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   
- **Versión preliminar**  
+ **Vista previa**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La vista previa puede mostrar hasta 200 filas.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
@@ -63,13 +63,13 @@ ms.locfileid: "66059169"
  **Texto de comando SQL**  
  Escriba el texto de una consulta SQL, genere la consulta haciendo clic en **Generar consulta**, o bien examine el archivo que contiene el texto de la consulta haciendo clic en **Examinar**.  
   
- **Los**  
+ **Parámetros**  
  Si ha escrito una consulta con parámetros mediante ? como marcador de posición de parámetro en el texto de la consulta, utilice el cuadro de diálogo **Establecer parámetros de consulta** para asignar los parámetros de entrada de las consultas a las variables del paquete.  
   
  **Generar consulta**  
  Use el cuadro de diálogo **Generador de consultas** para crear visualmente la consulta SQL.  
   
- **Browse**  
+ **Examinar**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
  **Analizar consulta**  

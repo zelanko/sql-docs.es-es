@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042881"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lección 3: Procesar la estructura de serie temporal y los modelos
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Lección 3: Procesamiento de la estructura de serie temporal y los modelos
   En esta lección, usará la instrucción [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx) para procesar las estructuras de minería de datos de serie temporal y los modelos de minería de datos que ha creado.  
   
  Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lee los datos de origen y genera las estructuras que admiten los modelos de minería de datos. Siempre tiene que procesar un modelo y estructura de minería de datos después de crearlo. Si especifica una estructura de minería de datos con INSERT INTO, la instrucción procesa la estructura de minería de datos y todos sus modelos asociados.  
@@ -90,7 +90,7 @@ OPENQUERY (<source data definition>)
     [<mining structure>]  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Forecasting_MIXED_Structure  
@@ -102,7 +102,7 @@ OPENQUERY (<source data definition>)
     <mining structure columns>  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [ReportingDate],  
@@ -115,7 +115,7 @@ OPENQUERY (<source data definition>)
     OPENQUERY(<source data definition>)  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     OPENQUERY([Adventure Works DW 2008R2],'SELECT [ReportingDate], [ModelRegion], [Quantity], [Amount]  
@@ -146,7 +146,7 @@ OPENQUERY (<source data definition>)
  Cuando la consulta termine de ejecutarse, puede crear las predicciones mediante los modelos de minería de datos procesados. En la lección siguiente, creará varias predicciones basadas en los modelos de minería de datos que ha creado.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Crear predicciones de serie temporal con DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Lección 4: Creación de predicciones de serie temporal con DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Requisitos y consideraciones de procesamiento &#40;la minería de datos&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   

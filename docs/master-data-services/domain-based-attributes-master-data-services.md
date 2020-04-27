@@ -15,10 +15,10 @@ ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 966112716bfb484a9615c973ee397de04787862c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728271"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Atributos basados en dominios (Master Data Services)
@@ -44,8 +44,8 @@ ms.locfileid: "73728271"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un nuevo atributo basado en dominio originado en una entidad existente.|[Cree un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|Crear una entidad nueva.|[Cree una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
+|Crear un nuevo atributo basado en dominio originado en una entidad existente.|[Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|Crear una entidad nueva.|[Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   

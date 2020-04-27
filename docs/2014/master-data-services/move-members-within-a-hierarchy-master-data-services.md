@@ -16,16 +16,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054092"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>Mover miembros dentro de una jerarquía (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], mueva los miembros de una jerarquía para cambiar su ubicación o su asignación principal.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  

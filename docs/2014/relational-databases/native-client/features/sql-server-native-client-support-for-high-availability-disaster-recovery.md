@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206641"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
@@ -28,8 +28,7 @@ ms.locfileid: "68206641"
 >  El aumento del tiempo de espera de la conexión y la implementación de la lógica de reintento de conexión aumentarán la probabilidad de que una aplicación se conecte a un grupo de disponibilidad. Además, dado que una conexión puede producir un error debido a la conmutación por error de un grupo de disponibilidad, es aconsejable implementar la lógica de reintento de conexión y hacer que una conexión que no se ha podido establecer se reintente hasta que vuelva a conectarse.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover  
- Especifique siempre `MultiSubnetFailover=Yes` al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server 2012 o a una instancia de clúster de conmutación por error de SQL Server 2012. 
-  `MultiSubnetFailover` habilita una conmutación por error más rápida para todos los grupos de disponibilidad y la instancia del clúster de conmutación por error en SQL Server 2012 y reducirá significativamente el tiempo de la conmutación por error en las topologías únicas y AlwaysOn de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client seguirá reintentando la conexión TCP.  
+ Especifique siempre `MultiSubnetFailover=Yes` al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server 2012 o a una instancia de clúster de conmutación por error de SQL Server 2012. `MultiSubnetFailover` habilita una conmutación por error más rápida para todos los grupos de disponibilidad y la instancia del clúster de conmutación por error en SQL Server 2012 y reducirá significativamente el tiempo de la conmutación por error en las topologías únicas y AlwaysOn de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client seguirá reintentando la conexión TCP.  
   
  La propiedad de conexión `MultiSubnetFailover` indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a las direcciones IP de todos los grupos de disponibilidad. Cuando `MultiSubnetFailover=Yes` se especifica para una conexión, el cliente reintenta la conexión TCP con más rapidez que los intervalos de REtransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "68206641"
   
  La palabra clave `ApplicationIntent` no funciona con bases de datos de solo lectura heredadas.  
   
- Una base de datos puede permitir o denegar la lectura de las cargas de trabajo en la base de datos de destino AlwaysOn. (Esto se hace con la `ALLOW_CONNECTIONS` cláusula de las `PRIMARY_ROLE` instrucciones `SECONDARY_ROLE` [!INCLUDE[tsql](../../../includes/tsql-md.md)] y).  
+ Una base de datos puede permitir o denegar la lectura de las cargas de trabajo en la base de datos de destino AlwaysOn. (Esto se hace con la cláusula `ALLOW_CONNECTIONS` de las instrucciones `PRIMARY_ROLE` y `SECONDARY_ROLE`[!INCLUDE[tsql](../../../includes/tsql-md.md)].)  
   
  La palabra clave `ApplicationIntent` se utiliza para habilitar el enrutamiento de solo lectura.  
   
@@ -112,10 +111,8 @@ ms.locfileid: "68206641"
 |Función|Descripción|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|La lista de servidores devuelta por `SQLBrowseConnect` no incluirá los VNN. Solo verá una lista de servidores que no indica si el servidor es un servidor independiente, o un servidor principal o secundario de un clúster de clústeres de conmutación por error de Windows Server (WSFC) que contiene dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Si se conecta a un servidor y obtiene un error, puede deberse a que se ha conectado a un servidor, y el valor de `ApplicationIntent` no es compatible con la configuración del servidor.<br /><br /> Dado que `SQLBrowseConnect` no reconoce los servidores de un clúster de clústeres de conmutación por error de Windows Server (WSFC) que contiene dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], `SQLBrowseConnect` omite la palabra clave de cadena de conexión `MultiSubnetFailover`.|  
-|[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|
-  `SQLConnect` admite `ApplicationIntent` y `MultiSubnetFailover` mediante un nombre del origen de datos (DSN) o mediante propiedades de conexión.|  
-|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|
-  `SQLDriverConnect` admite `ApplicationIntent` y `MultiSubnetFailover` mediante palabras clave de cadena de conexión, propiedades de conexión o DSN.|  
+|[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect` admite `ApplicationIntent` y `MultiSubnetFailover` mediante un nombre del origen de datos (DSN) o mediante propiedades de conexión.|  
+|[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)|`SQLDriverConnect` admite `ApplicationIntent` y `MultiSubnetFailover` mediante palabras clave de cadena de conexión, propiedades de conexión o DSN.|  
   
 ## <a name="ole-db"></a>OLE DB  
  OLE DB en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no admite la palabra clave `MultiSubnetFailover`.  
@@ -137,16 +134,13 @@ ms.locfileid: "68206641"
  Una aplicación OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede utilizar uno de los métodos siguientes para especificar la intención de aplicaciones:  
   
  `IDBInitialize::Initialize`  
- 
-  `IDBInitialize::Initialize` utiliza el conjunto de propiedades previamente configurado para inicializar el origen de datos y crear el objeto de origen de datos. Especifique la intención de aplicaciones como una propiedad del proveedor o como parte de la cadena de propiedades extendidas.  
+ `IDBInitialize::Initialize` utiliza el conjunto de propiedades previamente configurado para inicializar el origen de datos y crear el objeto de origen de datos. Especifique la intención de aplicaciones como una propiedad del proveedor o como parte de la cadena de propiedades extendidas.  
   
  `IDataInitialize::GetDataSource`  
- 
-  `IDataInitialize::GetDataSource` toma una cadena de conexión de entrada que puede contener la palabra clave `Application Intent`.  
+ `IDataInitialize::GetDataSource` toma una cadena de conexión de entrada que puede contener la palabra clave `Application Intent`.  
   
  `IDBProperties::GetProperties`  
- 
-  `IDBProperties::GetProperties` recupera el valor de la propiedad que está establecida actualmente en el origen de datos.  Puede recuperar el valor de `Application Intent` a través de la propiedad DBPROP_INIT_PROVIDERSTRING y la propiedad SSPROP_INIT_APPLICATIONINTENT.  
+ `IDBProperties::GetProperties` recupera el valor de la propiedad que está establecida actualmente en el origen de datos.  Puede recuperar el valor de `Application Intent` a través de la propiedad DBPROP_INIT_PROVIDERSTRING y la propiedad SSPROP_INIT_APPLICATIONINTENT.  
   
  `IDBProperties::SetProperties`  
  Para establecer el valor de la propiedad `ApplicationIntent`, llame a `IDBProperties::SetProperties` y pásele la propiedad `SSPROP_INIT_APPLICATIONINTENT` con el valor "`ReadWrite`" o "`ReadOnly`" o la propiedad `DBPROP_INIT_PROVIDERSTRING` con el valor "`ApplicationIntent=ReadOnly`" o "`ApplicationIntent=ReadWrite`".  
@@ -156,7 +150,7 @@ ms.locfileid: "68206641"
  Cuando se establezcan conexiones implícitas, estas usarán la configuración de la intención de aplicaciones de la conexión primaria. De forma similar, cuando se creen varias sesiones con el mismo origen de datos estas heredarán la configuración de la intención de aplicaciones del origen de datos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Características de SQL Server Native Client](sql-server-native-client-features.md)   
+ [SQL Server Native Client características](sql-server-native-client-features.md)   
  [Usar palabras clave de cadena de conexión con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

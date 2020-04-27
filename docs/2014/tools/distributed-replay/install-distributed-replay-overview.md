@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149343"
 ---
 # <a name="install-distributed-replay"></a>Instalar Distributed Replay
@@ -25,8 +25,8 @@ ms.locfileid: "63149343"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Instale Distributed Replay &#40;instalación&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Tema de procedimientos para una instalación típica de Distributed Replay utilizando el Asistente para instalación.|  
-|[Instalar Distributed Replay desde el símbolo del sistema](install-distributed-replay-overview.md)|Tema de procedimientos que proporciona los parámetros de la instalación y la sintaxis de ejemplo para ejecutar una instalación desatendida.|  
-|[Instalar Distributed Replay utilizando un archivo de configuración](../../sql-server/install/install-distributed-replay-using-a-configuration-file.md)|Tema de procedimientos que proporciona los parámetros de instalación y la sintaxis de ejemplo para ejecutar Distributed Replay mediante un archivo de configuración.|  
+|[Instalación de Distributed Replay desde el símbolo del sistema](install-distributed-replay-overview.md)|Tema de procedimientos que proporciona los parámetros de la instalación y la sintaxis de ejemplo para ejecutar una instalación desatendida.|  
+|[Instalación de Distributed Replay mediante un archivo de configuración](../../sql-server/install/install-distributed-replay-using-a-configuration-file.md)|Tema de procedimientos que proporciona los parámetros de instalación y la sintaxis de ejemplo para ejecutar Distributed Replay mediante un archivo de configuración.|  
 |[Completar los pasos posteriores a la instalación](complete-the-post-installation-steps.md)|Tema de procedimientos para completar una instalación de Distributed Replay.|  
 |[Modificar las cuentas de servicios de controlador y de cliente](modify-the-controller-and-client-services-accounts.md)|Tema de procedimientos para saber cómo iniciar y detener los servicios de cliente y controlador de Distributed Replay, y modificar las cuentas de servicio.|  
 |[Reparar una instalación de Distributed Replay](../../sql-server/install/repair-a-distributed-replay-installation.md)|Tema de procedimientos para reparar una instalación de Distributed Replay con errores.|  

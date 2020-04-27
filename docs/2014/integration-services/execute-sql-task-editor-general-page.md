@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058990"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor de la tarea Ejecutar SQL (página General)
@@ -34,12 +34,12 @@ ms.locfileid: "66058990"
  Describa la tarea Ejecutar SQL. Como práctica recomendada, describa la tarea en función de su objetivo para que los paquetes se autodocumenten y su mantenimiento resulte sencillo.  
   
  **Super**  
- Especifique el número máximo de segundos que la tarea se ejecutará antes de que se agote el tiempo de espera. Un valor de 0 indica una hora infinita. El valor predeterminado es 0.  
+ Especifique el número máximo de segundos que la tarea se ejecutará antes de que se agote el tiempo de espera. Un valor de 0 indica una hora infinita. El valor predeterminado es 0.  
   
 > [!NOTE]  
 >  En los procedimientos almacenados no se excederá el tiempo de espera si imitan la funcionalidad de espera al proporcionar un tiempo para la realización de conexiones y finalización de las transacciones superior al número de segundos especificado en **TimeOut**. Sin embargo, los procedimientos almacenados que ejecutan consultas siempre están sujetos a la restricción de tiempo especificada en **TimeOut**.  
   
- **CodePage**  
+ **737**  
  Especifique la página de códigos que desea utilizar para traducir los valores Unicode a variables. El valor predeterminado es la página de códigos del equipo local.  
   
 > [!NOTE]  
@@ -48,23 +48,23 @@ ms.locfileid: "66058990"
  **TypeConversionMode**  
  Cuando establece esta propiedad en `Allowed`, la tarea Ejecutar SQL intentará convertir el parámetro de salida y los resultados de la consulta al tipo de datos de la variable a la que se asignan los resultados. Esto se aplica al tipo de conjunto de resultados de **Fila única** .  
   
- **Conjuntos**  
+ **ResultSet**  
  Especifique el tipo de resultados esperado tras la ejecución de la instrucción SQL. Elija **Fila única**, **Conjunto de resultados completo**, **XML**o **Ninguno**.  
   
  **ConnectionType**  
  Elija el tipo de administrador de conexiones que desea utilizar para conectarse al origen de datos. Entre los tipos de conexión disponibles se encuentran **OLE DB**, **ODBC**, **ADO**, **ADO.NET** y **SQLMOBILE**.  
   
- **Temas relacionados:** [Administrador](connection-manager/ole-db-connection-manager.md)de conexiones de OLE DB, administrador de [conexiones ODBC](connection-manager/odbc-connection-manager.md), administrador de conexiones [ADO](connection-manager/ado-connection-manager.md), administrador de conexiones de [ADO.net](connection-manager/ado-net-connection-manager.md), administrador de [conexiones de SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Administrador de conexiones ODBC](connection-manager/odbc-connection-manager.md), [Administrador de conexiones ADO](connection-manager/ado-connection-manager.md), [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md), [Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
- Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión nueva, seleccione \< **nueva conexión...**>.  
+ Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione \<**Nueva conexión…**>.  
   
  **SQLSourceType**  
  Seleccione el tipo de origen de la instrucción SQL que ejecuta la tarea.  
   
  Dependiendo del tipo de administrador de conexiones que utiliza la tarea Ejecutar SQL, debe utilizar marcadores de parámetros específicos en instrucciones SQL con parámetros.  
   
- **Temas relacionados:** Sección ejecutar comandos SQL con parámetros en la [tarea ejecutar SQL](control-flow/execute-sql-task.md)  
+ **Temas relacionados:** sección Ejecutar comandos SQL con parámetros en [Execute SQL Task](control-flow/execute-sql-task.md)  
   
  Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
@@ -78,12 +78,11 @@ ms.locfileid: "66058990"
  Indica que la instrucción SQL especificada es un procedimiento almacenado. Esta propiedad es de solo lectura/escritura si la tarea utiliza el administrador de conexiones ADO. Si no es el caso, la propiedad es de solo lectura y su valor es `false`.  
   
  **BypassPrepare**  
- Indique si la instrucción SQL está preparada.  
-  `true` omite la preparación; `false` prepara la instrucción SQL antes de ejecutarla. Esta opción solo estará disponible con las conexiones OLE DB que admiten la preparación.  
+ Indique si la instrucción SQL está preparada.  `true` omite la preparación; `false` prepara la instrucción SQL antes de ejecutarla. Esta opción solo estará disponible con las conexiones OLE DB que admiten la preparación.  
   
- **Temas relacionados:**  [ejecución preparada](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **Temas relacionados:**  [Ejecución preparada](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
- **Browse**  
+ **Examinar**  
  Busque un archivo que contenga una instrucción SQL en el cuadro de diálogo **Abrir** . Seleccione el archivo en el que desea copiar el contenido del archivo como una instrucción SQL en la propiedad **SQLStatement** .  
   
  **Generar consulta**  
@@ -96,15 +95,15 @@ ms.locfileid: "66058990"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = Entrada directa  
  **SQLStatement**  
- Escriba la instrucción SQL que quiere ejecutar en el cuadro de opción, o bien haga clic en el botón Examinar […] para escribir la instrucción SQL en el cuadro de diálogo **Escribir consulta SQL**; también puede hacer clic en **Generar consulta** para escribir la instrucción en el cuadro de diálogo **Generador de consultas**.  
+ Escriba la instrucción SQL que se va a ejecutar en el cuadro de opción o haga clic en el botón Examinar (...) para escribir la instrucción SQL en el cuadro de diálogo **escribir consulta SQL** o haga clic en **generar consulta** para crear la instrucción mediante el cuadro de diálogo **generador de consultas** .  
   
- **Temas relacionados:** [generador de consultas](../../2014/integration-services/query-builder.md)  
+ **Temas relacionados:** [Generador de consultas](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexión de archivos  
  **FileConnection**  
- Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos existente o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  

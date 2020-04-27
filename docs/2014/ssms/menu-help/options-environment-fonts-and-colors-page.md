@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211253"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Opciones (entorno: página Fuentes y colores)
-  El cuadro de diálogo **Opciones** permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]interfaz de usuario en. En el menú **Herramientas** , haga clic en **Opciones** , expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
+# <a name="options-environment-fonts-and-colors-page"></a>Opciones (Entorno: página Fuentes y colores)
+  El cuadro de diálogo **Opciones** permite establecer una combinación personalizada de fuentes y colores para diversos elementos de la interfaz de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Entorno** y seleccione **Fuentes y colores**.  
   
  Los cambios en la combinación de colores no surtirán efecto durante la sesión en la que los realice. Puede evaluar los cambios de color abriendo otra instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y creando las condiciones bajo las cuales espera que se apliquen los cambios.  
   
@@ -34,20 +34,20 @@ ms.locfileid: "68211253"
 |Ventana Resultados de la búsqueda|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana FindResults.|  
 |Ventana de salida|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana Resultados.|  
 |Resultados de la cuadrícula|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto del área **Resultados de la cuadrícula** de la ventana Consultar.|  
-|Plan de ejecución|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plan [!INCLUDE[ssEW](../../includes/ssew-md.md)] de ejecución de las consultas y.|  
+|Plan de ejecución|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto en el plan de ejecución de las consultas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 |Resultados del texto|Los cambios en la configuración del estilo, tamaño y color de fuente para este elemento afectan a la apariencia del texto del área **Resultados del texto** de la ventana de consulta.|  
 |Diseñadores de Business Intelligence|Los cambios en la configuración del estilo de fuente, tamaño y color de fuente para este elemento afectan a la apariencia del texto de la ventana BusinessIntelligenceDesigners.|  
   
- **Usar valores predeterminados**  
+ **Usar predeterminados**  
  El botón **Usar predeterminados** restablece el valor de los valores de fuente y color predeterminados del elemento de la lista que haya seleccionado en la lista **Mostrar valores para** .  
   
- **Fuente (los tipos en negrita indican fuentes de ancho fijo)**  
+ **Fuente (los tipos en negrita indican fuentes con ancho fijo)**  
  Enumera todas las fuentes instaladas en el sistema. Al abrir por primera vez esta lista desplegable, se selecciona la fuente actual para el elemento seleccionado en la lista **Mostrar valores para** . Las fuentes fijas (que son más fáciles de alinear en un editor) aparecen en negrita.  
   
  **Tamaño**  
  Muestra los tamaños de punto disponibles para la fuente seleccionada. El cambio en el tamaño de la fuente afecta a todas las entradas de **Mostrar los elementos** de una selección de **Mostrar valores para** .  
   
- **Mostrar elementos**  
+ **Mostrar los elementos**  
  Muestra los elementos en los que puede modificar el color de primer plano y de fondo.  
   
 > [!NOTE]  
@@ -77,7 +77,7 @@ ms.locfileid: "68211253"
  **Negrita**  
  Seleccione esta casilla para mostrar el texto de los displayitems seleccionados en negrita. El texto en negrita es más fácil de identificar en un editor.  
   
- **Muestra**  
+ **Ejemplo**  
  Muestra un ejemplo de la combinación de estilo, tamaño y color de fuente para los valores seleccionados en **Mostrar valores para** y **Mostrar los elementos**. Puede utilizar este cuadro de texto para mostrar una vista previa de los resultados a medida que experimente con opciones de formatos diferentes.  
   
 ## <a name="see-also"></a>Consulte también  

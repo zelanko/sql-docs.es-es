@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults (Controlador ODBC de Visual FoxPro) Microsoft Docs
+title: SQLMoreResults (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: dc59b1dd-c158-4b45-ab46-638be1fa49b8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 68b9c0b698156af480db322ce349986e8936d7a0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "81299505"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API ODBC: Nivel 2  
+ Conformidad con la API de ODBC: nivel 2  
   
- Determina si hay más resultados pendientes en un identificador de instrucción, *hstmt*, que contiene instrucciones SELECT, UPDATE, INSERT o DELETE y, si es así, inicializa el procesamiento de esos resultados.  
+ Determina si hay más resultados pendientes en un identificador de instrucción, *hstmt*, que contiene las instrucciones SELECT, Update, INSERT o DELETE, y si es así, inicializa el procesamiento de esos resultados.  
   
- Para obtener más información, vea [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) en la *referencia del programador ODBC*.
+ Para obtener más información, vea [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) en la *Referencia del programador de ODBC*.

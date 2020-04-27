@@ -1,5 +1,6 @@
 ---
-title: Protección de las aplicaciones del controlador JDBC | Microsoft Docs
+title: Protección de las aplicaciones del controlador JDBC
+description: En los temas de esta sección se describen algunos orígenes de problemas de seguridad comunes como son las cadenas de conexión, la validación de los datos proporcionados por el usuario y la seguridad general de las aplicaciones.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd01462987ef425af32c8537f1fc99218d59e290
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: e542328d80cabce0c0c5e923c1f150a86d9765d6
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219434"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728306"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Protección de las aplicaciones del controlador JDBC
 

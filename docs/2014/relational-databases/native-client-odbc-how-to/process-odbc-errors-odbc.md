@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206790"
 ---
 # <a name="process-odbc-errors-odbc"></a>Procesar errores de ODBC (ODBC)
   Se pueden usar dos llamadas a la función de ODBC para recuperar los mensajes de ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) y [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Para obtener la información principal relacionada con ODBC de los campos de diagnóstico **SQLState**, **pfNative** y **ErrorMessage**, llame a [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) hasta que devuelva SQL_NO_DATA. Para cada registro de diagnóstico, se puede llamar a [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) para recuperar los campos individuales. Todos los campos específicos del controlador se deben recuperar utilizando `SQLGetDiagField`.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) y [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) los procesa el administrador de controladores ODBC, no un controlador individual. El Administrador de controladores ODBC no almacena en memoria caché los campos de diagnóstico específicos del controlador hasta que no se ha realizado una conexión correcta. No se puede llamar a [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) para los campos de diagnóstico específicos del controlador antes de que la conexión no sea correcta. Esto incluye los comandos de conexión ODBC, aun cuando devuelvan SQL_SUCCESS_WITH_INFO. Los campos de diagnóstico específicos del controlador no estarán disponibles hasta la llamada a función de ODBC siguiente.  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) y [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) los procesa el Administrador de controladores ODBC, no un controlador individual. El Administrador de controladores ODBC no almacena en memoria caché los campos de diagnóstico específicos del controlador hasta que no se ha realizado una conexión correcta. No se puede llamar a [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) para los campos de diagnóstico específicos del controlador antes de que la conexión no sea correcta. Esto incluye los comandos de conexión ODBC, aun cuando devuelvan SQL_SUCCESS_WITH_INFO. Los campos de diagnóstico específicos del controlador no estarán disponibles hasta la llamada a función de ODBC siguiente.  
   
 ## <a name="example"></a>Ejemplo  
   

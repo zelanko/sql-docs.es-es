@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022594"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar un publicador de Oracle
@@ -26,20 +26,20 @@ ms.locfileid: "63022594"
   
 2.  En las tablas que publique, conceda permiso SELECT directamente en cada una de ellas (no mediante un rol) al usuario administrativo de Oracle que ha creado en el paso uno.  
   
-3.  Instale el software de cliente de Oracle y el proveedor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de OLE DB en el distribuidor y, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] continuación, detenga y reinicie la instancia. Si el distribuidor se ejecuta en una plataforma de 64 bits, debe utilizar la versión de 64 bits del proveedor OLE DB de Oracle.  
+3.  Instale el software cliente de Oracle y el proveedor OLE DB en el distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y luego detenga y reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si el distribuidor se ejecuta en una plataforma de 64 bits, debe utilizar la versión de 64 bits del proveedor OLE DB de Oracle.  
   
 4.  Configure la base de datos de Oracle como un publicador en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Para obtener una lista de objetos que se pueden replicar desde una base de datos de Oracle, vea [Consideraciones y limitaciones de diseño de los publicadores de Oracle](design-considerations-and-limitations-for-oracle-publishers.md).  
   
 > [!NOTE]  
->  Debe ser miembro del rol fijo de servidor **sysadmin** para habilitar un publicador o distribuidor y para crear una publicación de Oracle o una suscripción desde una publicación de Oracle.  
+>   Debe ser miembro del rol fijo de servidor **sysadmin** para habilitar un publicador o distribuidor y para crear una publicación de Oracle o una suscripción desde una publicación de Oracle.  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Crear el esquema de usuario administrativo de replicación dentro de la base de datos de Oracle  
- Los agentes de replicación se conectan a la base de datos de Oracle y realizan operaciones en el contexto del esquema de usuario que debe crear. A este esquema deben concederse diversos permisos, que se enumeran en la sección siguiente. Este esquema es propietario de todos los objetos creados por el proceso de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el publicador de Oracle, excepto de un sinónimo público, **MSSQLSERVERDISTRIBUTOR**. Para obtener más información sobre los objetos creados en la base de datos de Oracle, vea [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
+ Los agentes de replicación se conectan a la base de datos de Oracle y realizan operaciones en el contexto del esquema de usuario que debe crear. A este esquema deben concederse diversos permisos, que se enumeran en la sección siguiente. Este esquema es propietario de todos los objetos creados por el proceso de replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el publicador de Oracle, excepto un sinónimo público, **MSSQLSERVERDISTRIBUTOR**. Para obtener más información sobre los objetos creados en la base de datos de Oracle, vea [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
   
 > [!NOTE]  
->  Al quitar el sinónimo público **MSSQLSERVERDISTRIBUTOR** y el usuario de replicación de Oracle configurado con la opción **CASCADE** se quitan todos los objetos de replicación del publicador de Oracle.  
+>   Al quitar el sinónimo público **MSSQLSERVERDISTRIBUTOR** y el usuario de replicación de Oracle configurado con la opción **CASCADE** se quitan todos los objetos de replicación del publicador de Oracle.  
   
  Se proporciona un script de ejemplo para ayudar a la configuración del esquema de usuario de replicación de Oracle. El script está disponible en el siguiente directorio después de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instalación de: * \<unidad>*:\\\Archivos\\de programa\Microsoft SQL Server*\<InstanceName>* \MSSQL\Install\oracleadmin.SQL. También está incluido en el tema [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63022594"
   
  En Oracle Universal Installer proporcione la siguiente información:  
   
-|Information|Descripción|  
+|Información|Descripción|  
 |-----------------|-----------------|  
 |Oracle Home (Directorio de inicio de Oracle)|Es la ruta de acceso al directorio de instalación del software de Oracle. Acepte el valor predeterminado (C:\oracle\ora90 o similar) o escriba otra ruta de acceso. Para obtener más información sobre el directorio de inicio de Oracle, vea la sección "Consideraciones sobre el directorio de inicio de Oracle" más adelante en este tema.|  
 |Oracle home name (Nombre del directorio de inicio de Oracle)|Un alias para la ruta de acceso del directorio de inicio de Oracle.|  
@@ -97,11 +97,11 @@ ms.locfileid: "63022594"
   
  Después de realizar una conexión correcta al publicador de Oracle, intente iniciar la sesión en la base de datos con la cuenta y la contraseña asociados al esquema de usuario administrativo de replicación que ha creado. Debe realizar las siguientes acciones si trabaja con la misma cuenta de Windows que utiliza el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  Haga clic en **Inicio** y, a continuación, en **Ejecutar**.  
+1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
   
 2.  Escriba `cmd` y haga clic en **Aceptar**.  
   
-3.  En la ventana de símbolo del sistema, escriba:  
+3.  En el símbolo del sistema, escriba:  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -130,8 +130,8 @@ ms.locfileid: "63022594"
   
 ## <a name="see-also"></a>Consulte también  
  [Consideraciones administrativas para los publicadores de Oracle](administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
- [Glosario de términos de publicaciones de Oracle](glossary-of-terms-for-oracle-publishing.md)   
+ [Asignación de tipos de datos para publicadores de Oracle](data-type-mapping-for-oracle-publishers.md)   
+ [Glosario de términos para la publicación de Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Información general de la publicación de Oracle](oracle-publishing-overview.md)  
   
   

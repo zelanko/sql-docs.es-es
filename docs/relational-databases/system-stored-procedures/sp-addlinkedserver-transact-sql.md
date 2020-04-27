@@ -18,10 +18,10 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad01313933cb2e04bf22257bcdd0eb93a1a755e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72313748"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 ## <a name="arguments"></a>Argumentos  
 [ @server = ] * \'servidor\' * de          
-Es el nombre del servidor vinculado que se va a crear. *Server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+Es el nombre del servidor vinculado que se va a crear. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
 [ @srvproduct = ] * \'PRODUCT_NAME\' *          
 Es el nombre del producto del origen de datos OLE DB para agregarlo como servidor vinculado. *PRODUCT_NAME* es de tipo **nvarchar (** 128 **)** y su valor predeterminado es NULL. Si no es necesario especificar **SQL Server**, *provider_name*, *data_source*, *Ubicación*, *provider_string*y *Catálogo* .  
@@ -84,17 +84,17 @@ Es el identificador de programación (PROGID) único del proveedor OLE DB que co
 ## <a name="remarks"></a>Observaciones  
  En la tabla siguiente se muestran las distintas maneras de configurar un servidor vinculado para los orígenes de datos a los que se puede tener acceso a través de OLE DB. Existen varias formas de configurar un servidor vinculado para un origen de datos determinado; puede haber más de una fila por tipo de origen de datos. En esta tabla también se muestran los valores de parámetro **sp_addlinkedserver** que se van a usar para configurar el servidor vinculado.  
   
-|Origen de datos remotos de OLE DB|Proveedor OLE DB|product_name|provider_name|data_source|location|provider_string|catalog|  
+|Origen de datos remotos de OLE DB|Proveedor OLE DB|product_name|provider_name|data_source|ubicación|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor de OLE DB de Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (valor predeterminado)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor de OLE DB de Native Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (predeterminado)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor de OLE DB de Native Client||**SQLNCLI**|Nombre de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (para la instancia predeterminada)|||Nombre de la base de datos (opcional)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proveedor de OLE DB de Native Client||**SQLNCLI**|*ServerName*\\*nombreDeInstancia* (para la instancia específica)|||Nombre de la base de datos (opcional)|  
 |Oracle, versión 8 y posterior|Proveedor Oracle para OLE DB|Any|**OraOLEDB.Oracle**|Alias para base de datos Oracle||||  
 |Access/Jet|Proveedor Microsoft OLE DB para Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Ruta de acceso completa del archivo de base de datos Jet||||  
 |Origen de datos ODBC|Proveedor Microsoft OLE DB para ODBC|Any|**MSDASQL**|DSN del sistema del origen de datos ODBC||||  
-|Origen de datos ODBC|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Proveedor de OLE DB para ODBC|Any|**MSDASQL**|||Cadena de conexión ODBC||  
+|Origen de datos ODBC|Proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para ODBC|Any|**MSDASQL**|||Cadena de conexión ODBC||  
 |Sistema de archivos|Proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Servicios de Index Server|Any|**MSIDXS**|Nombre de catálogo de Servicios de Index Server||||  
-|Hojas de cálculo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Proveedor de OLE DB para Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Ruta de acceso completa del archivo Excel||Excel 5,0||  
+|Hojas de cálculo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel|Proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Ruta de acceso completa del archivo Excel||Excel 5,0||  
 |Base de datos IBM DB2|Proveedor OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para DB2|Any|**DB2OLEDB**|||Consulte [!INCLUDE[msCoName](../../includes/msconame-md.md)] la documentación del proveedor de OLE DB para DB2.|Nombre del catálogo de la base de datos DB2|  
   
  <sup>1</sup> esta forma de configurar un servidor vinculado fuerza que el nombre del servidor vinculado sea el mismo que el nombre de red de la instancia remota [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Use *data_source* para especificar el servidor.  
@@ -284,7 +284,7 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Agregar un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como servidor vinculado para su uso con consultas distribuidas en bases de datos locales y en la nube  
+### <a name="g-add-a-sssdsfull-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Agregar un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como servidor vinculado para su uso con consultas distribuidas en bases de datos locales y en la nube  
  Puede agregar una [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como un servidor vinculado y después utilizarlo con consultas distribuidas que abarcan las bases de datos locales y en la nube. Se trata de un componente para las soluciones híbridas de base de datos que abarcan redes corporativas locales y la nube de Azure.  
   
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] producto de Box contiene la característica de consulta distribuida, que permite escribir consultas para combinar datos de orígenes de datos locales y datos de orígenes remotos (incluidos los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de orígenes que no son de datos) definidos como servidores vinculados. Cada [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (excepto la base de datos maestra virtual) se puede agregar como un servidor vinculado individual y utilizar después directamente en las aplicaciones de base de datos como cualquier otra base de datos.  
@@ -329,7 +329,7 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_addlinkedsrvlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

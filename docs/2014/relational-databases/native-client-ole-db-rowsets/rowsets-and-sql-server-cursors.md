@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de filas y cursores de SQL Server | Microsoft Docs
+title: Conjuntos de filas y cursores de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207001"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de filas y cursores de servidor de SQL Server
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve conjuntos de resultados a los consumidores mediante dos métodos:  
   
 -   Conjuntos de resultados predeterminados que:  
@@ -86,12 +85,11 @@ ms.locfileid: "68207001"
   
  T = VARIANT_TRUE  
   
- 
-  \- = VARIANT_TRUE o VARIANT_FALSE  
+ \- = VARIANT_TRUE o VARIANT_FALSE  
   
  Para usar un tipo de modelo de cursor determinado, busque la columna correspondiente al modelo de cursor y busque todas las propiedades de conjunto de filas que tengan el valor 'T' en la columna. Establezca estas propiedades de conjunto de filas en VARIANT_TRUE para usar ese modelo de cursor específico. Las propiedades del conjunto de filas que contienen '-' como valor pueden establecerse en VARIANT_TRUE o VARIANT_FALSE.  
   
-|Propiedades de conjunto de filas o modelos de cursores|Valor predeterminado<br /><br /> result<br /><br /> set<br /><br /> (SL)|Fast (rápido)<br /><br /> solo <br /><br /> solo<br /><br /> (SL)|estática<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
+|Propiedades de conjunto de filas o modelos de cursores|Default<br /><br /> resultado<br /><br /> set<br /><br /> (SL)|Fast (rápido)<br /><br /> solo <br /><br /> solo<br /><br /> (SL)|Estático<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

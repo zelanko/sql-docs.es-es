@@ -13,10 +13,10 @@ ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729300"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Edición de una entidad (Master Data Services)
@@ -25,18 +25,18 @@ ms.locfileid: "73729300"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede editar una entidad.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-edit-an-entity"></a>Para editar una entidad  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
-2.  En la página **Manage Model** (Administrar modelo), seleccione un modelo de la cuadrícula y después haga clic en **Entidades**.  
+2.  En la página **administrar modelo** , seleccione un modelo de la cuadrícula y, a continuación, haga clic en **entidades**.  
   
 3.  En la página **Manage Entity** (Administrar entidad), en la cuadrícula, seleccione la fila de la entidad que desea cambiar y luego haga clic en **Editar**.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "73729300"
   
 8.  Seleccione la casilla **Crear automáticamente los valores de código** , o anule la selección, según proceda.  
   
-     Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
+     Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)  
   
 9. Seleccione la casilla **Habilitar compresión de datos** , o anule la selección, según proceda. La compresión de fila está activada de forma predeterminada.  
   
      Para obtener más información, vea [compresión de datos](../relational-databases/data-compression/data-compression.md) .  
   
-## <a name="status"></a>Status  
+## <a name="status"></a>Estado  
  La columna de estado de la cuadrícula muestra el estado de la operación en la entidad. Al hacer clic en **Guardar entidad**, aparece la imagen siguiente, que indica que la entidad se está actualizando.  
   
  ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")  

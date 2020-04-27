@@ -14,10 +14,10 @@ ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728182"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permisos de entidad (Master Data Services)
@@ -40,12 +40,12 @@ ms.locfileid: "73728182"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
-|**A**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Update**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
+|**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Actualizar**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Eliminar**|El usuario puede eliminar miembros.|  
 |**Deny**|Denegar todo acceso a la entidad.|  
   
- Los permisos de lectura, creación, actualización y eliminación se pueden combinar entre sí. Cuando se asignan permisos de Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
+ Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan permisos de Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

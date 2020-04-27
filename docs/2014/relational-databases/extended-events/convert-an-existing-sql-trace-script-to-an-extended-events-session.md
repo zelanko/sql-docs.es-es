@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015777"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.
@@ -100,7 +100,7 @@ ms.locfileid: "63015777"
 ## <a name="to-create-the-extended-events-session"></a>Para crear la sesión de eventos extendidos  
  Utilice el Editor de consultas para crear la sesión de eventos extendidos y para escribir la salida en un destino de archivo. Los siguientes pasos describen una consulta única con explicaciones que le muestran cómo se genera la consulta. Para obtener el ejemplo completo de la consulta, vea la sección "Ejemplo" de este tema.  
   
-1.  Agregue instrucciones para crear la sesión de eventos, reemplazando*ession_name* por el nombre que desea usar para la sesión de eventos extendidos.  
+1.  Agregue instrucciones para crear la sesión de eventos, reemplazando*nombre_de_sesión* por el nombre que quiere usar para la sesión de eventos extendidos.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -248,6 +248,6 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
+ [Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

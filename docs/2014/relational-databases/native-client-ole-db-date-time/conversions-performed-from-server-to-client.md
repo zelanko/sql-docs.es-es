@@ -13,27 +13,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9e922f5bf8d07e75c976dbfc07b89b8527dbbc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63023372"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversiones realizadas de servidor a cliente
   En este tema se describen las conversiones de fecha y hora realizadas entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior) y una aplicación cliente escrita con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
   
 ## <a name="conversions"></a>Conversiones  
- En la tabla siguiente se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. En el caso de los parámetros de salida, si se ha llamado a ICommandWithParameters:: SetParameterInfo y el tipo especificado en *pwszDataSourceType* no coincide con el tipo real del servidor, el servidor realizará una conversión implícita y el tipo devuelto al cliente coincidirá con el tipo especificado mediante ICommandWithParameters:: SetParameterInfo. Esto puede dar lugar a resultados de conversión inesperados cuando las reglas de conversión del servidor son diferentes de las descritas en este tema. Por ejemplo, cuando se debe proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza 1900-1-1 en lugar de 1899-12-30.  
+ En la tabla siguiente se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. Para los parámetros de salida, si se ha llamado a ICommandWithParameters::SetParameterInfo y el tipo especificado en *pwszDataSourceType* no coincide con el tipo real del servidor, el servidor realizará una conversión implícita y el tipo devuelto al cliente coincidirá con el tipo especificado mediante ICommandWithParameters::SetParameterInfo. Esto puede dar lugar a resultados de conversión inesperados cuando las reglas de conversión del servidor son diferentes de las descritas en este tema. Por ejemplo, cuando se debe proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza 1900-1-1 en lugar de 1899-12-30.  
   
 |A -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Date|1,7|Aceptar|-|-|1|1,3|1,7|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Time|5, 6, 7|-|9|Aceptar|6|3, 6|5, 6|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Fecha|1,7|Aceptar|-|-|1|1,3|1,7|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Tiempo|5, 6, 7|-|9|Aceptar|6|3, 6|5, 6|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Smalldatetime|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Datetime|5, 7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/D|N/D|N/D|N/D|N/D|N/D|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/A|N/D|N/D|N/D|N/D|N/D|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|Aceptar|2|2|1|1,3|1,7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
@@ -46,7 +46,7 @@ ms.locfileid: "63023372"
 |Símbolo|Significado|  
 |------------|-------------|  
 |Aceptar|No es necesaria la conversión.|  
-|-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor:: CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION se devuelve en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
+|-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor::CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION se devuelve en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
 |1|Los campos de hora se establecen en cero.|  
 |2|Se establece DBSTATUS_E_CANTCONVERTVALUE.|  
 |3|La zona horaria se establece en cero.|  

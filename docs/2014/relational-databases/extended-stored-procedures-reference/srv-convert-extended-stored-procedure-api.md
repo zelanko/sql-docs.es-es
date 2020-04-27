@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127277"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Cambia los datos de un tipo de datos a otro.  
   
@@ -71,13 +70,13 @@ destlen
  *srctype*  
  Especifica el tipo de datos de los datos que se van a convertir. Este parámetro puede ser cualquiera de los tipos de datos de API Procedimiento almacenado extendido.  
   
- *diez*  
+ *src*  
  Es un puntero a los datos que se van a convertir. Este parámetro puede ser cualquiera de los tipos de datos de API Procedimiento almacenado extendido.  
   
  *srclen*  
  Especifica la longitud, en bytes, de los datos que se van a convertir. Si *srclen* es 0, **srv_convert** coloca un valor NULL en la variable de destino. A menos que sea 0, los tipos de datos de longitud fija pasan por alto este parámetro, en cuyo caso se supone que los datos de origen son NULL. Para los datos del tipo de datos SRVCHAR, una longitud de -1 indica que la cadena termina en NULL.  
   
- *destType*  
+ *desttype*  
  Especifica el tipo de datos para convertir el origen. Este parámetro puede ser cualquiera de los tipos de datos de API Procedimiento almacenado extendido.  
   
  *dest*  
@@ -117,6 +116,6 @@ destlen
   
 ## <a name="see-also"></a>Consulte también  
  [srv_setutype API de procedimiento almacenado extendido &#40;&#41;](srv-setutype-extended-stored-procedure-api.md)   
- [srv_willconvert API de procedimiento almacenado extendido &#40;&#41;](srv-willconvert-extended-stored-procedure-api.md)  
+ [srv_willconvert &#40;API de procedimiento almacenado extendido&#41;](srv-willconvert-extended-stored-procedure-api.md)  
   
   

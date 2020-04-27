@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211095"
 ---
 # <a name="profiler-utility"></a>Analizador (utilidad)
-  La utilidad **Profiler** inicia la [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] herramienta. Los argumentos opcionales que se enumeran más adelante en este tema permiten controlar cómo se inicia la aplicación.  
+  La utilidad **profiler** inicia la herramienta [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . Los argumentos opcionales que se enumeran más adelante en este tema permiten controlar cómo se inicia la aplicación.  
   
 > [!NOTE]  
 >  La utilidad **profiler** no está pensada para la creación de scripts en seguimientos. Para más información, consulte [SQL Server Profiler](sql-server-profiler/sql-server-profiler.md).  
@@ -62,41 +62,41 @@ ms.locfileid: "68211095"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
   
- **/P** *contraseña*  
+ **/P** *password*  
  Especifica una contraseña especificada por el usuario para la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **/E**  
  Especifica la conexión con la autenticación de Windows con las credenciales actuales del usuario.  
   
  **/S**  *sql_server_name*  
- Especifica una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
+ Especifica una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/S** *sql_server_name*\\*instance_name*.  
   
  **/A**  *analysis_services_server_name*  
- Especifica una instancia de Analysis Services. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , use **/A** *analysis_services_server_name\instance_name*.  
+ Especifica una instancia de Analysis Services. Profiler se conectará automáticamente con el servidor especificado usando la información de autenticación que se especifica en los modificadores **/U** y **/P** o en el modificador **/E** . Para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use **/A** *analysis_services_server_name\instance_name*.  
   
- **/D** ( *base de datos* )  
+ **/D** *database*  
  Especifica el nombre de la base de datos que se utilizará con la conexión. Esta opción seleccionará la base de datos predeterminada para el usuario especificado si no se especifica ninguna base de datos.  
   
  **/B "** *trace_table_name* **"**  
  Especifica una tabla de seguimiento que se cargará cuando se inicie Profiler. Debe especificar la base de datos, el usuario o esquema, y la tabla.  
   
- **/T "** *template_name* **"**  
+ **/T"** *template_name* **"**  
  Especifica la plantilla que se cargará para configurar el seguimiento. El nombre de la plantilla debe estar entre comillas. El nombre de la plantilla debe estar en el directorio de plantillas del sistema o en el directorio de plantillas del usuario. Si existen dos plantillas con el mismo nombre en ambos directorios, la plantilla del directorio del sistema se cargará. Si no existe ninguna plantilla con el nombre especificado se cargará la plantilla estándar. Tenga en cuenta que la extensión de archivo para la plantilla (.tdf) no debe especificarse como parte de *template_name*. Por ejemplo:  
   
 ```  
 /T "standard"  
 ```  
   
- **/F "** *nombreDeArchivo* **"**  
+ **/F"** *filename* **"**  
  Especifica la ruta y el nombre de un archivo de seguimiento que se cargará cuando se inicie Profiler. Toda la ruta y el nombre de archivo debe estar entre comillas. Esta opción no se puede usar con **/O**.  
   
- **/O "** *nombreDeArchivo*  **"**  
+ **/O "** *filename*  **"**  
  Especifica la ruta y el nombre de un archivo en el que deben escribirse los resultados del seguimiento. Toda la ruta y el nombre de archivo debe estar entre comillas. Esta opción no se puede usar con **/F.**  
   
  **/L** *locale_ID*  
  No disponible.  
   
- **/M "** *mm-dd-yy HH: mm: SS* **"**  
+ **/M "** *MM-DD-YY hh:mm:ss* **"**  
  Especifica la fecha y la hora de detención del seguimiento. La hora de detención debe estar entre comillas. Especifique la hora de detención de acuerdo con los parámetros de la siguiente tabla:  
   
 |Parámetro|Definición|  
@@ -114,7 +114,7 @@ ms.locfileid: "68211095"
  **/R**  
  Habilita la sustitución incremental de los archivos de seguimiento.  
   
- **/Z**  *FILE_SIZE*  
+ **/Z**  *file_size*  
  Especifica el tamaño del archivo de seguimiento en megabytes (MB). El tamaño predeterminado es 5 MB. Si está habilitada la sustitución incremental de archivos, todos los archivos de sustitución incremental estarán limitados al valor especificado en el argumento.  
   
 ## <a name="remarks"></a>Observaciones  
@@ -125,6 +125,6 @@ profiler /S MyServer\MyInstance /T "Standard"
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de la utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](command-prompt-utility-reference-database-engine.md)  
+ [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

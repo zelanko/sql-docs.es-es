@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015427"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Índices y claves (cuadro de diálogo, Visual Database Tools)
@@ -42,7 +42,7 @@ ms.locfileid: "63015427"
  **Columnas**  
  Muestra los criterios de ordenación elegidos para las columnas de la clave o el índice y proporciona acceso al cuadro de diálogo en el que se pueden definir los criterios de ordenación. Para que se muestre el cuadro de diálogo, haga clic en **Columnas** y, después, en el botón de puntos suspensivos (...) situado a la derecha del campo de propiedad.  
   
- **Es único**  
+ **Is Unique**  
  Indica si los datos especificados en el índice o en la clave deben ser únicos. Esta propiedad no está disponible en los índices XML.  
   
  **Tipo**  
@@ -60,16 +60,16 @@ ms.locfileid: "63015427"
  **Categoría Diseñador de tablas**  
  Expandido, muestra la información de **Crear como CLUSTERED**.  
   
- **Crear como Clustered**  
+ **Crear como CLUSTERED**  
  Crear una clave o un índice clúster. Solo se permite un índice clúster en una tabla. Los datos de la tabla se almacenan en el orden del índice clúster. Para más información, consulte [Crear índices clúster](../../relational-databases/indexes/indexes.md) y [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
  **Especificación de espacio de datos**  
- Expandido, muestra información sobre **(Tipo de espacio de datos)**, **Nombre de esquema de partición o grupo de archivo**y **Lista de columnas de particiones**.  
+ Expandido, muestra información sobre **(Tipo de espacio de datos)** , **Nombre de esquema de partición o grupo de archivo**y **Lista de columnas de particiones**.  
   
  **(Tipo de espacio de datos)**  
  Indica si este índice o esta clave pertenece a un grupo de archivos o a un esquema de partición.  
   
- **Nombre del esquema de partición o grupo de archivos**  
+ **Nombre de esquema de partición o grupo de archivo**  
  Muestra el nombre del grupo de archivos o del esquema de partición en el que se almacena.  
   
  **Lista de columnas de particiones**  
@@ -88,12 +88,12 @@ ms.locfileid: "63015427"
  **Rellenar índice**  
  Indica si se proporciona a las páginas intermedias de este índice el mismo porcentaje de espacio vacío (relleno) especificado en **Factor de relleno** cuando crecen.  
   
- **Omitir claves duplicadas**  
+ **Pasar por alto claves duplicadas**  
  Especifica qué ocurre cuando se inserta durante una operación de inserción masiva una fila cuyo valor de clave es igual al valor de una clave existente. Si se elige:  
   
--   **Sí** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] emite una advertencia, omite la fila entrante infractora e intenta insertar las filas restantes.  
+-   **Sí** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mostrará una advertencia, omitirá la fila entrante incorrecta e intentará insertar las filas restantes.  
   
--   **No** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] emite un mensaje de error y revierte toda la operación de inserción masiva.  
+-   **No** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mostrará un mensaje de error y revertirá toda la operación de inserción masiva.  
   
  **Columnas incluidas**  
  Muestra una lista separada por comas de los nombres de todas las columnas que forman la clave del índice. Las columnas de subclaves solo se pueden especificar en los índices no clúster. Esta propiedad estará oculta para los índices XML.  
@@ -101,7 +101,7 @@ ms.locfileid: "63015427"
  **Está deshabilitado**  
  Indica si este índice está deshabilitado. Se trata de una propiedad de solo lectura. Esta propiedad solo se establecerá en **Sí** si el índice se ha deshabilitado fuera de Visual Database Tools.  
   
- **Clave de texto completo**  
+ **Clave Es texto completo**  
  Especifica si este índice es una clave de texto completo. Para obtener más información sobre las claves de texto completo, vea los Libros en pantalla de SQL Server. Esta propiedad estará oculta para los índices XML.  
   
  **Bloqueos de página permitidos**  

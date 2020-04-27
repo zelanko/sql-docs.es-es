@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211966"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
@@ -47,9 +47,9 @@ ms.locfileid: "68211966"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Información previa  
+###  <a name="background"></a>Información previa de <a name="Restrictions"></a>  
  Un usuario es una entidad de seguridad de la base de datos. Los inicios de sesión deben estar asignados a un usuario de base de datos para poder conectarse a una base de datos. Un inicio de sesión se puede asignar a bases de datos diferentes como usuarios diferentes pero solo se puede asignar como un usuario en cada base de datos. En una base de datos parcialmente independiente, puede crearse un usuario que no tenga un inicio de sesión. Para obtener más información sobre los usuarios de la base de datos independiente, vea [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Si el usuario invitado de una base de datos está habilitado, un inicio de sesión que no esté asignado a un usuario de la base de datos puede entrar en la base de datos como el usuario invitado.  
   
 > [!IMPORTANT]  
@@ -57,12 +57,12 @@ ms.locfileid: "68211966"
   
  Como entidad de seguridad, se pueden conceder permisos a los usuarios. El ámbito de un usuario es la base de datos. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe tener el permiso `ALTER ANY USER` para la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-a-database-user"></a>Para crear un usuario de base de datos  
   
@@ -76,17 +76,17 @@ ms.locfileid: "68211966"
   
 5.  En el cuadro **Nombre de usuario** , escriba un nombre para el nuevo usuario. Si ha elegido **Usuario de Windows** en la lista **Tipo de usuario**, también puede hacer clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccione Usuario o Grupo**.  
   
-6.  En el cuadro **Nombre de inicio de sesión** , escriba el inicio de sesión para el usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión**. El **nombre de inicio de sesión** está disponible si selecciona **usuario SQL con inicio de sesión** o usuario de **Windows** en la lista **tipo de usuario** .  
+6.  En el cuadro **Nombre de inicio de sesión** , escriba el inicio de sesión para el usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión**. Si selecciona**Usuario SQL con inicio de sesión** o **Usuario de Windows** en la lista **Tipo de usuario** , estará disponible **Nombre de inicio de sesión** .  
   
-7.  En el cuadro **Esquema predeterminado** , especifique el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar esquema**. El **esquema predeterminado** está disponible si selecciona **usuario SQL con inicio de sesión**, **usuario SQL sin inicio de sesión**o usuario de **Windows** en la lista **tipo de usuario** .  
+7.  En el cuadro **Esquema predeterminado** , especifique el esquema al que pertenecerán los objetos creados por este usuario. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar esquema**. Si selecciona**Usuario SQL con inicio de sesión** , **Usuario SQL sin inicio de sesión**, **Usuario de Windows**en la lista **Tipo de usuario** , estará disponible **Esquema predeterminado** .  
   
-8.  En el cuadro de **Nombre de certificado** , escriba el certificado que se utilizará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar certificado**. El **nombre del certificado** está disponible si selecciona **usuario asignado a un certificado** en la lista **tipo de usuario** .  
+8.  En el cuadro de **Nombre de certificado** , escriba el certificado que se utilizará para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar certificado**. Si selecciona**Usuario asignado a un certificado** en la lista **Tipo de usuario** , estará disponible **Nombre de certificado** .  
   
-9. En el cuadro **Nombre de clave asimétrica**  , escriba la clave que se va a usar para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. El **nombre de clave asimétrica** está disponible si selecciona **usuario asignado a una clave asimétrica** en la lista **tipo de usuario** .  
+9. En el cuadro **Nombre de clave asimétrica**  , escriba la clave que se va a usar para el usuario de base de datos. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar clave asimétrica**. Si selecciona**Usuario asignado a una clave asimétrica** en la lista **Tipo de usuario** , estará disponible **Nombre de clave asimétrica** .  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### <a name="additional-options"></a>Opciones adicionales  
+### <a name="additional-options"></a>Additional Options  
  En el cuadro de diálogo **Usuario de la base de datos - Nuevo** también se proporcionan opciones en cuatro páginas adicionales: **Esquemas de propiedad**, **Pertenencia**, **Elementos protegibles** y **Propiedades extendidas**.  
   
 -   La página **Esquemas de propiedad** enumera todos los esquemas posibles que pueden ser propiedad del nuevo usuario de base de datos. Para agregar o quitar esquemas en un usuario de base de datos, en **Esquemas propiedad de este usuario**, active o desactive las casillas situadas junto a los esquemas.  
@@ -107,12 +107,12 @@ ms.locfileid: "68211966"
      Muestra o especifica las propiedades extendidas del objeto. Cada propiedad extendida está formada por un par nombre/valor de metadatos asociados al objeto.  
   
      **Puntos suspensivos (...)**  
-     Haga clic en los puntos suspensivos **(...)** situados detrás de **Valor** para abrir el cuadro de diálogo **Valor para propiedad extendida**. Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](../../databases/value-for-extended-property-dialog-box.md).  
+     Haga clic en los puntos suspensivos **(...)** que aparecen después de **valor** para abrir el cuadro **de diálogo valor para propiedad extendida** . Escriba o muestre el valor de la propiedad extendida en esta ubicación mayor. Para obtener más información, vea [Valor para propiedad extendida (cuadro de diálogo)](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Eliminar**  
      Elimina la propiedad extendida que se ha seleccionado.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-database-user"></a>Para crear un usuario de base de datos  
   

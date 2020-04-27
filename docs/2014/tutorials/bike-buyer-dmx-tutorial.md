@@ -17,21 +17,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140550"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Tutorial DMX de Bike Buyer
   En este tutorial aprenderá a crear, entrenar y explorar modelos de minería de datos utilizando el lenguaje de consulta Extensiones de minería de datos (DMX). A continuación, estos modelos de minería de datos se utilizarán para crear predicciones que determinan si un cliente adquirirá una bicicleta.  
   
- Los modelos de minería de datos se crearán a partir de los datos incluidos en la base de datos de ejemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que almacena datos de la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una gran empresa multinacional de fabricación. La empresa fabrica y vende bicicletas de metal y de materiales compuestos en los mercados de Norteamérica, Europa y Asia. Su sede central de operaciones se encuentra en Bothell, Washington, con 290 empleados, y tiene distribuidos varios equipos regionales de ventas en toda su base de mercado internacional.  
+ Los modelos de minería de datos se crearán a partir de los datos incluidos en la base de datos de ejemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que almacena datos de la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una gran empresa multinacional de fabricación. La empresa fabrica y vende bicicletas de metal y de materiales compuestos en los mercados de Norteamérica, Europa y Asia. Su sede central de operaciones se encuentra en Bothell, Washington, con 290 empleados, y tiene distribuidos varios equipos regionales de ventas en toda su base de mercado internacional.  
   
 ## <a name="tutorial-scenario"></a>Escenario del tutorial  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha decidido ampliar su análisis de datos mediante la creación de una aplicación personalizada que use la funcionalidad de minería de datos. El objetivo de la aplicación personalizada es poder:  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha decidido ampliar su análisis de datos mediante la creación de una aplicación personalizada que use la funcionalidad de minería de datos. El objetivo de la aplicación personalizada es poder:  
   
 -   Tomar como datos de entrada características concretas acerca de un cliente potencial y predecir si adquirirá una bicicleta.  
   
@@ -81,19 +79,19 @@ ms.locfileid: "63140550"
 ## <a name="what-you-will-learn"></a>Aprendizaje  
  El tutorial está compuesto por las lecciones siguientes:  
   
- [Lección 1: Crear la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
+ [Lección 1: Creación de la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `CREATE` para crear estructuras de minería de datos.  
   
- [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `ALTER` para agregar modelos de minería de datos a una estructura de minería de datos.  
   
- [Lección 3: Procesar la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Lección 3: Procesamiento de la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `INSERT INTO` para procesar estructuras de minería de datos y sus modelos de minería de datos asociados.  
   
- [Lección 4: Examinar los modelos de minería de datos de Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lección 4: Examen de los modelos de minería de datos de Bike Buyer](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  En esta lección aprenderá a utilizar la instrucción `SELECT` para explorar el contenido de los modelos de minería de datos.  
   
- [Lección 5: Ejecutar consultas de predicción](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Lección 5: Ejecución de consultas de predicción](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  En esta lección aprenderá a usar la instrucción `PREDICTION JOIN` para crear predicciones basadas en modelos de minería de datos.  
   
 ## <a name="requirements"></a>Requisitos  

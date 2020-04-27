@@ -1,5 +1,5 @@
 ---
-title: Usar tipos definidos por el usuario | Microsoft Docs
+title: Uso de tipos definidos por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206609"
 ---
 # <a name="using-user-defined-types"></a>Usar tipos definidos por el usuario
@@ -42,28 +42,28 @@ ms.locfileid: "68206609"
 ### <a name="data-bindings-and-coercions"></a>Enlaces y conversiones de datos  
  En la tabla siguiente se describe el enlace y la conversión que tiene lugar al usar los tipos de datos enumerados con un UDT de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las columnas UDT se exponen a través del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client como DBTYPE_UDT. Puede obtener metadatos mediante los conjuntos de filas de esquema adecuados, de modo que pueda administrar sus propios tipos definidos como objetos.  
   
-|Tipo de datos|A datos XML<br /><br /> **UDT**|A datos XML<br /><br /> **no UDT**|Desde datos XML<br /><br /> **UDT**|Desde datos XML<br /><br /> **no UDT**|  
+|Tipo de datos|A datos XML<br /><br /> **DEFINIDO**|A datos XML<br /><br /> **non-UDT**|Desde datos XML<br /><br /> **DEFINIDO**|Desde datos XML<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Compatible<sup>6</sup>|Error<sup>1</sup>|Compatible<sup>6</sup>|Error<sup>5</sup>|  
-|DBTYPE_BYTES|Compatible<sup>6</sup>|N/A<sup>2</sup>|Compatible<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Compatible<sup>3, 6</sup>|N/A<sup>2</sup>|Compatible<sup>4, 6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Compatible<sup>3, 6</sup>|N/A<sup>2</sup>|Compatible<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Compatible<sup>3, 6</sup>|N/A<sup>2</sup>|Compatible<sup>4, 6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|No compatible|N/A<sup>2</sup>|No compatible|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible<sup>6</sup>|N/A<sup>2</sup>|Compatible<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Compatible<sup>3, 6</sup>|N/A<sup>2</sup>|N/D|N/A<sup>2</sup>|  
+|DBTYPE_BYTES|Compatible<sup>6</sup>|N/D<sup>2</sup>|Compatible<sup>6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_WSTR|Compatible<sup>3,6</sup>|N/D<sup>2</sup>|Compatible<sup>4,6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_BSTR|Compatible<sup>3,6</sup>|N/D<sup>2</sup>|Compatible<sup>4</sup>|N/D<sup>2</sup>|  
+|DBTYPE_STR|Compatible<sup>3,6</sup>|N/D<sup>2</sup>|Compatible<sup>4,6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Incompatible|N/D<sup>2</sup>|Incompatible|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible<sup>6</sup>|N/D<sup>2</sup>|Compatible<sup>4</sup>|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Compatible<sup>3,6</sup>|N/D<sup>2</sup>|N/A|N/D<sup>2</sup>|  
   
- <sup>1</sup> Si se especifica un tipo de servidor distinto de DBTYPE_UDT con **ICommandWithParameters:: SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_UDT, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED; el estado del parámetro es DBSTATUS_E_BADACCESSOR). De lo contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de UDT al tipo de datos del parámetro.  
+ <sup>1</sup>Si se especifica un tipo de servidor distinto de DBTYPE_UDT con **ICommandWithParameters::SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_UDT, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED; el estado del parámetro es DBSTATUS_E_BADACCESSOR). De lo contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de UDT al tipo de datos del parámetro.  
   
  <sup>2</sup> Más allá del ámbito de este tema.  
   
- <sup>3</sup> se produce una conversión de datos de cadena hex a datos binarios.  
+ <sup>3</sup>Las cadenas hexadecimales se convierten en datos binarios.  
   
- <sup>4</sup> se produce la conversión de datos binarios a una cadena hexadecimal.  
+ <sup>4</sup>Los datos binarios se convierten en cadenas hexadecimales.  
   
- <sup>5</sup> La validación puede producirse en el momento de la creación del descriptor de acceso o en el momento de la captura, el error se DB_E_ERRORSOCCURRED, el estado de enlace se establece en DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
+ <sup>5</sup>La validación puede tener lugar en el momento de creación del descriptor de acceso o en el momento de la captura; el error es DB_E_ERRORSOCCURRED, con el estado de enlace establecido en DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
   
- <sup>6</sup> Se puede usar BY_REF.  
+ <sup>6</sup>Puede usarse BY_REF.  
   
  DBTYPE_NULL y DBTYPE_EMPTY pueden enlazarse en parámetros de entrada, pero no en parámetros de salida ni en resultados. Cuando se enlazan para parámetros de entrada, el estado tiene que establecerse en DBSTATUS_S_ISNULL o DBSTATUS_S_DEFAULT.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68206609"
  Al convertir tipos de datos de C a SQL, SQL_C_WCHAR, SQL_C_BINARY y SQL_C_CHAR pueden convertirse en SQL_SS_UDT. Sin embargo, tenga en cuenta que los datos binarios se convierten en una cadena hexadecimal al convertir a partir de los tipos de datos de SQL SQL_C_WCHAR y SQL_C_CHAR.  
   
 ## <a name="see-also"></a>Consulte también  
- [Características de SQL Server Native Client](sql-server-native-client-features.md)   
+ [SQL Server Native Client características](sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

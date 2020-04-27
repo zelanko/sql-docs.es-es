@@ -16,17 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057386"
 ---
 # <a name="numeric-data-formats"></a>Formatos de datos numéricos
   El análisis rápido ofrece un conjunto rápido y simple de rutinas, que no distinguen la configuración regional, para analizar datos. El análisis rápido admite solo un conjunto limitado de formatos para tipos de datos enteros.  
   
 ## <a name="integer-data-types"></a>Tipos de datos enteros  
- Los tipos de datos enteros que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] son DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 y DT_UI8. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Los tipos de datos enteros que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] son DT_I1, DT_UI1, DT_I2, DT_UI2, DT_I4, DT_UI4, DT_I8 y DT_UI8. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).  
   
  El análisis rápido admite los siguientes formatos para tipos de datos enteros:  
   

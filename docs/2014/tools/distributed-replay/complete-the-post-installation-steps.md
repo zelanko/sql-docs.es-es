@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558236f7034588a544aa4fb78091c19475cc8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63025660"
 ---
 # <a name="complete-the-post-installation-steps"></a>Completar los pasos posteriores a la instalación
@@ -22,7 +22,7 @@ ms.locfileid: "63025660"
   
 ### <a name="to-complete-the-post-installation-steps"></a>Para completar los pasos posteriores a la instalación  
   
-1.  **Crear reglas de Firewall**: en los equipos del controlador y cliente, debe permitir el tráfico entrante a través del firewall para el servicio correspondiente. Especifique las reglas de firewall para los ejecutables del servicio, ubicados en las carpetas de instalación.  
+1.  **Cree reglas de firewall**: en los equipos del controlador y cliente, debe permitir el tráfico entrante a través del firewall para el servicio correspondiente. Especifique las reglas de firewall para los ejecutables del servicio, ubicados en las carpetas de instalación.  
   
     1.  Para el servicio del controlador, cree una regla para **DReplayController.exe**, ubicada en la carpeta de instalación. Por ejemplo, el comando siguiente habilita esta regla, donde `%InstallPath%` es la carpeta de instalación del servicio:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63025660"
   
          `netsh advfirewall firewall add rule name="allow dreplay client" dir=in program="%InstallPath%\DReplayClient\DReplayClient.exe" action=allow`  
   
-2.  **Conceda permisos de cliente en el servidor de destino**: después de haber completado la instalación del servicio de cliente en los equipos cliente, debe agregar manualmente las cuentas de servicio de cliente al rol sysadmin en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la instancia de destino de.  
+2.  **Conceda permisos a todos los clientes en el servidor de destino**: después de completar la instalación del servicio de cliente en los equipos cliente, debe agregar manualmente las cuentas del servicio de cliente al rol sysadmin en la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Debe disponer de permisos administrativos para instalar cualquiera de las características de Distributed Replay. Solo un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con permisos sysadmin puede agregar las cuentas del servicio de cliente al rol de servidor sysadmin del servidor de prueba. Para obtener más información sobre las consideraciones de seguridad de Distributed Replay, vea [Distributed Replay Security](distributed-replay-security.md).  

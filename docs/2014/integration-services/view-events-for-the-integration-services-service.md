@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054671"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Ver los eventos para el servicio Integration Services
@@ -58,7 +58,7 @@ ms.locfileid: "66054671"
   
 7.  Elija si desea ver los datos del evento en bytes o en palabras.  
   
-8.  Haga clic en **OK**.  
+8.  Haga clic en **Aceptar**.  
   
 9. En el menú **Archivo** , haga clic en **Salir** para salir del cuadro de diálogo **Visor de eventos** .  
   

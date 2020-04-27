@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830566"
 ---
 # <a name="script-task"></a>Tarea Script
@@ -64,7 +64,7 @@ ms.locfileid: "62830566"
  Puede establecer estas propiedades a través del Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configurar la tarea Script en el Diseñador  
- En la tabla siguiente se describe el evento `ScriptTaskLogEntry` que se puede registrar para la tarea Script. El `ScriptTaskLogEntry` evento se selecciona para el registro en la pestaña **detalles** del cuadro de diálogo **configurar registros de SSIS** . Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ En la tabla siguiente se describe el evento `ScriptTaskLogEntry` que se puede registrar para la tarea Script. El `ScriptTaskLogEntry` evento se selecciona para el registro en la pestaña **detalles** del cuadro de diálogo **configurar registros de SSIS** . Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  

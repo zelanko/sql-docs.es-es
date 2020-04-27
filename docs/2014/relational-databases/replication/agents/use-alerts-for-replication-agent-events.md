@@ -22,33 +22,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210734"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar alertas para eventos del Agente de replicación
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el agente proporcionan una manera de supervisar eventos, como eventos del agente de replicación, mediante alertas. El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supervisa el registro de aplicación de Windows en busca de eventos que se asocian con alertas. Si se produce uno de esos eventos, el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] responde automáticamente, mediante la ejecución de una tarea que haya sido definida y/o el envío de un mensaje de correo electrónico o de buscapersonas a un operador especificado. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un conjunto de alertas predefinidas para los agentes de replicación que puede configurar para ejecutar una tarea y/o notificar a un operador. Para obtener más información sobre cómo definir la ejecución de una tarea, vea la sección "Automatizar la respuesta a una alerta" en este tema.  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y el Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionan un modo de supervisar eventos, como eventos del agente de replicación, mediante alertas. El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supervisa el registro de aplicación de Windows en busca de eventos que se asocian con alertas. Si se produce uno de esos eventos, el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] responde automáticamente, mediante la ejecución de una tarea que haya sido definida y/o el envío de un mensaje de correo electrónico o de buscapersonas a un operador especificado. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un conjunto de alertas predefinidas para los agentes de replicación que puede configurar para ejecutar una tarea y/o notificar a un operador. Para obtener más información sobre cómo definir la ejecución de una tarea, vea la sección "Automatizar la respuesta a una alerta" en este tema.  
   
  Las siguientes alertas se instalan cuando un equipo se configura como distribuidor:  
   
-|Id. de mensaje|Alerta predefinida|Condición que desencadena la alerta|Especifica información adicional en msdb..sysreplicationalerts|  
+|Id. del mensaje|Alerta predefinida|Condición que desencadena la alerta|Especifica información adicional en msdb..sysreplicationalerts|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
 |14150|**Replicación: éxito de agente**|Un agente termina correctamente.|Sí|  
 |14151|**Replicación: error de agente**|Un agente termina con un error.|Sí|  
 |14152|**Replicación: reintento de agente**|El agente termina después de volver a intentar sin éxito una operación (el agente encuentra un error, por ejemplo que el servidor no está disponible, interbloqueo, error en la conexión o error de tiempo de espera).|Sí|  
 |14157|**Replicación: suscripción expirada quitada**|Se quitó la suscripción expirada.|No|  
-|20572|**Replicación: suscripción reinicializada por no pasar la validación**|El trabajo de respuesta "Reinicializar suscripciones con errores de validación de datos" reinicializa correctamente una suscripción.|No|  
+|20572|**Replicación: Suscripción reinicializada por no pasar la validación**|El trabajo de respuesta "Reinicializar suscripciones con errores de validación de datos" reinicializa correctamente una suscripción.|No|  
 |20574|**Replicación: el suscriptor no ha superado la validación de datos**|Un agente de distribución o de mezcla no puede validar los datos.|Sí|  
-|20575|**Replicación: el suscriptor ha superado la validación de datos**|Un agente de distribución o de mezcla pasa la validación de los datos.|Sí|  
+|20575|**Replicación: El suscriptor ha pasado la validación de datos**|Un agente de distribución o de mezcla pasa la validación de los datos.|Sí|  
 |20578|**Replicación: cierre personalizado del agente**|||  
 |22815|**Alerta de detección de conflictos punto a punto**|El Agente de distribución detecta un conflicto cuando intenta aplicar un cambio en un nodo punto a punto.|Sí|  
   
  Además de estas alertas, el Monitor de replicación proporciona una serie de advertencias y alertas relacionadas con el estado y el rendimiento. Para obtener más información, vea [establecer umbrales y advertencias en la infraestructura de alertas del monitor de replicación](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) . Para obtener más información, consulte [Create a User-Defined Event](../../../ssms/agent/create-a-user-defined-event.md) (Crear un evento definido por el usuario).  
   
- **Para configurar alertas de replicación predefinidas**  
+ **Para configurar las alertas de replicación predefinidas**  
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Configurar alertas de replicación predefinidas &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
@@ -90,6 +89,6 @@ deallocate hc
 ## <a name="see-also"></a>Consulte también  
  [Administración del agente de replicación](replication-agent-administration.md)   
  [Prácticas recomendadas para la administración de replicación](../administration/best-practices-for-replication-administration.md)   
- [Supervisión &#40;replicación&#41;](../monitoring-replication.md)  
+ [Supervisar (replicación)](../monitoring-replication.md)  
   
   

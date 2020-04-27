@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144601"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
@@ -45,7 +45,7 @@ ms.locfileid: "63144601"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (en este tema se muestra cómo recuperar información sobre todos los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-##  <a name="BeforeYouBegin"></a> Permisos  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Permisos  
  Para conectarse a un archivo de registro sin conexión, debe tener los siguientes permisos en los equipos local y remoto:  
   
 -   Acceso de lectura al espacio de nombres de WMI **raíz\Microsoft\SqlServer\ComputerManagement12** . De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta. Para obtener más información, vea el procedimiento sobre comprobación de permisos de WMI más adelante en esta sección.  
@@ -74,7 +74,7 @@ ms.locfileid: "63144601"
   
     3.  Escriba el nombre del equipo remoto y haga clic en **Aceptar**.  
   
-3.  Haga clic con el botón secundario en **control WMI (local)** o **control WMI (***nombreDeEquipoRemoto***)** y, a continuación, haga clic en **propiedades**.  
+3.  Haga clic con el botón derecho en **Control WMI (local)** o **Control WMI (***nombreEquipoRemoto***)** y, después, haga clic en **Propiedades**.  
   
 4.  En el cuadro de diálogo **Propiedades de Control WMIP** , haga clic en la pestaña **Seguridad** .  
   

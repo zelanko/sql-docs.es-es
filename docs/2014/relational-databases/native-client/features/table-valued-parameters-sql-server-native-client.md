@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206620"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Parámetros con valores de tabla (SQL Server Native Client)
@@ -25,7 +25,7 @@ ms.locfileid: "68206620"
   
  Para obtener información sobre los parámetros con valores de tabla y ODBC, vea [parámetros con valores de tabla &#40;odbc&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
- Para obtener información sobre los parámetros con valores de tabla y OLE DB, vea [parámetros con valores de tabla &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
+ Para obtener información acerca de los parámetros con valores de tabla y OLE DB, consulte [Parámetros con valores de tabla &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Características de SQL Server Native Client](sql-server-native-client-features.md)  

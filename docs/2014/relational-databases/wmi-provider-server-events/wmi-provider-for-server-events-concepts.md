@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211572"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Conceptos del proveedor WMI para eventos de servidor
@@ -36,7 +36,7 @@ ms.locfileid: "68211572"
  [Usar WQL con el proveedor WMI para eventos de servidor](using-wql-with-the-wmi-provider-for-server-events.md)  
  Explica la sintaxis de WQL (WMI Query Language) y cómo utilizarla al programar con el proveedor.  
   
- [Ejemplo: crear una alerta del Agente SQL Server utilizando el proveedor WMI para eventos de servidor](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [Sample: Creación de una alerta del Agente SQL Server con el proveedor WMI para eventos de servidor](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  Proporciona un ejemplo de cómo se utiliza el proveedor WMI para devolver información de los eventos de seguimiento en la que basarse para crear una alerta del Agente SQL Server.  
   
  [Ejemplo: utilizar el proveedor de eventos WMI con .NET Framework](sample-using-the-wmi-event-provider-with-the-net-framework.md)  

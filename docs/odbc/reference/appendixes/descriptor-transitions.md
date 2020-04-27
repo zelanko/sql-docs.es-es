@@ -1,5 +1,5 @@
 ---
-title: Transiciones de descriptores ( Descriptor Transitions) Microsoft Docs
+title: Transiciones de descriptor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ec5c26bdde8a0d470f2d93e753504bf1c51edcc0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307046"
 ---
 # <a name="descriptor-transitions"></a>Transiciones de descriptor
-Los descriptores ODBC tienen los tres estados siguientes.  
+Los descriptores ODBC tienen los tres Estados siguientes.  
   
 |State|Descripción|  
 |-----------|-----------------|  
-|D0|Descriptor no asignado|  
+|D0|Descriptor sin asignar|  
 |D1i|Descriptor asignado implícitamente|  
 |D1e|Descriptor asignado explícitamente|  
   
@@ -36,43 +36,43 @@ Los descriptores ODBC tienen los tres estados siguientes.
   
 |D0<br /><br /> Sin asignar|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
-|D1i[1]|--|--|  
-|D1e[2]|--|--|  
+|D1i [1]|--|--|  
+|D1e [2]|--|--|  
   
- [1] Esta fila muestra transiciones cuando *HandleType* se SQL_HANDLE_STMT.  
+ [1] esta fila muestra las transiciones cuando se SQL_HANDLE_STMT *HandleType* .  
   
- [2] Esta fila muestra transiciones cuando *HandleType* se SQL_HANDLE_DESC.  
+ [2] esta fila muestra las transiciones cuando se SQL_HANDLE_DESC *HandleType* .  
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
 |D0<br /><br /> Sin asignar|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
-|(IH)|--|--|  
+|ADMITIR|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
 |D0<br /><br /> Sin asignar|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
-|(IH) [2]|(HY017)|D0|  
+|ADMITIR dos|(HY017)|D0|  
   
- [1] Esta fila muestra transiciones cuando *HandleType* se SQL_HANDLE_STMT.  
+ [1] esta fila muestra las transiciones cuando se SQL_HANDLE_STMT *HandleType* .  
   
- [2] Esta fila muestra transiciones cuando *HandleType* se SQL_HANDLE_DESC.  
+ [2] esta fila muestra las transiciones cuando se SQL_HANDLE_DESC *HandleType* .  
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField y SQLGetDescRec  
   
 |D0<br /><br /> Sin asignar|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
-|(IH)|--|--|  
+|ADMITIR|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField y SQLSetDescRec  
   
 |D0<br /><br /> Sin asignar|D1i<br /><br /> Implícito|D1e<br /><br /> Explícito|  
 |------------------------|----------------------|----------------------|  
-|(IH) [1]|--|--|  
+|ADMITIR dimensional|--|--|  
   
- [1] Esta fila muestra transiciones cuando *DescriptorHandle* era el identificador de un ARD, APD o IPD, o (para **SQLSetDescField**) cuando *DescriptorHandle* era el identificador de un IRD y *FieldIdentifier* se SQL_DESC_ARRAY_STATUS_PTR o SQL_DESC_ROWS_PROCESSED_PTR.  
+ [1] esta fila muestra las transiciones cuando *DescriptorHandle* era el identificador de ARD, APD o IPD, o (para **SQLSetDescField**) cuando *DescriptorHandle* era el identificador de un IRD y *FieldIdentifier* se SQL_DESC_ARRAY_STATUS_PTR o SQL_DESC_ROWS_PROCESSED_PTR.  
   
 ## <a name="all-other-odbc-functions"></a>Todas las demás funciones ODBC  
   

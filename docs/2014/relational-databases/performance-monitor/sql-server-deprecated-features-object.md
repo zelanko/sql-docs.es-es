@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206961"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
@@ -30,7 +30,7 @@ ms.locfileid: "68206961"
 |Instancias del contador Características desusadas de SQL Server|Descripción|  
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
-|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplazar por `SELECT column_list FROM` * \< function_name>* `()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
+|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplazar por `SELECT column_list FROM` * \< function_name>* `()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
 |"\@" y nombres que empiezan por "\@\@" como identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por \@ o \@\@. No use como identificador \@, \@\@ ni ningún nombre que empiece por \@\@. Se produce una vez por cada compilación.|  
 |ADDING TAPE DEVICE|Se encontró la característica desusada`tape`sp_addumpdevice ' '. Utilice sp_addumpdevice '`disk`' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  
@@ -94,7 +94,7 @@ ms.locfileid: "68206961"
 |Hindi|El evento se produce una vez por cada inicio de base de datos y una vez por cada uso de la intercalación. Prevea modificar las aplicaciones que usen esta intercalación. Utilice en su lugar Indic_General_90.|  
 |Sugerencia de la tabla HOLDLOCK sin paréntesis||  
 |IDENTITYCOL|Se encontró la sintaxis INDENTITYCOL. Rescriba las instrucciones para utilizar la sintaxis de $identity. Se produce una vez por cada compilación.|  
-|Lista de selección de índice de la vista sin COUNT_BIG(\*)|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (\*).|  
+|Lista de selección de índice de la vista sin COUNT_BIG(*)|La lista de selección de una vista indizada de agregado debe contener COUNT_BIG (\*).|  
 |INDEX_OPTION|Se encontró la sintaxis de CREATE TABLE, ALTER TABLE o CREATE INDEX sin paréntesis alrededor de las opciones. Reescriba la instrucción para utilizar la sintaxis actual. Se produce una vez por cada consulta.|  
 |INDEXKEY_PROPERTY|Se encontró la sintaxis de INDEXKEY_PROPERTY. Rescriba las instrucciones para consultar sys.index_columns. Se produce una vez por cada compilación.|  
 |Sugerencias TVF indirectas|La aplicación indirecta, a través de una vista, de sugerencias de tabla a una invocación de una función con valores de tabla de múltiples instrucciones se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211749"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Acerca de la captura de datos modificados (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68211749"
 ## <a name="change-data-capture-data-flow"></a>Flujo de datos de la captura de datos modificados  
  La ilustración siguiente muestra el flujo de datos principal de la captura de datos modificados.  
   
- ![Flujo de datos de la captura de datos modificados](../../database-engine/media/cdcdataflow.gif "Flujo de datos de la captura de datos modificados")  
+ ![Flujo de datos de captura de datos modificados](../../database-engine/media/cdcdataflow.gif "Flujo de datos de la captura de datos modificados")  
   
  El origen de los datos modificados para la captura de datos modificados es el registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A medida que se aplican las inserciones, actualizaciones y eliminaciones a las tablas de origen sometidas a seguimiento, se agregan al registro las entradas que describen esos cambios. El registro actúa como entrada para el proceso de captura. Así, se lee el registro y se agrega información sobre los cambios a la tabla de cambios asociada de la tabla sometida a seguimiento. Se proporcionan funciones para enumerar los cambios que aparecen en las tablas de cambios sobre un intervalo especificado, que devuelven la información en forma de un conjunto de resultados filtrado. Un proceso de aplicación utiliza normalmente el conjunto de resultados filtrado para actualizar una representación del origen en algún entorno externo.  
   

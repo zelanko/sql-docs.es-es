@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c14661e8e3ed7fb5d050121276b2ffac0fda2de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3acd8a63dfec0fa2a76b1674a0764f6598ae44c
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634838"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728339"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Introducción a los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,7 @@ En esta sección se proporciona información sobre los requisitos del sistema re
 ## <a name="see-also"></a>Consulte también  
 [Aplicación de ejemplo &#40;controlador SQLSRV&#41;](example-application-sqlsrv-driver.md)
 
-[Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guía de programación para los controladores de Microsoft para PHP para SQL Server](programming-guide-for-php-sql-driver.md)
 
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

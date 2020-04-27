@@ -18,10 +18,10 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "74095509"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
@@ -106,8 +106,7 @@ sp_add_operator [ @name = ] 'name'
   
  Los avisos de localización son compatibles con el sistema de correo electrónico, que debe disponer de capacidad de correo electrónico a buscapersonas si desea utilizar esta funcionalidad.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_add_operator**.  

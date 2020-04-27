@@ -11,13 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206812"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Insertar filas en la columna Geography (ODBC)
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedimientos: Inserción de filas en la columna Geography (ODBC)
   En este ejemplo se insertan dos filas en una tabla con una columna Geography a partir del lenguaje WellKnownBinary (WKB) con 2 enlaces distintos (SQLCCHAR y SQLCBINARY). Después, se selecciona una fila de esa tabla y se usa ::STAsText() para mostrarla. WKB es 0x01010000000700ECFAD03A4C4001008000B5DF07C0 y la aplicación imprime en la consola: POINT(56.4595 -2.9842).  
   
  Este ejemplo no requiere ningún origen de datos ODBC, pero el ejemplo se ejecuta de forma predeterminada en la instancia local de SQL Server.  

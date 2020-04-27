@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174464"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
@@ -55,7 +55,7 @@ ms.locfileid: "78174464"
 
  Los requisitos para un modelo Bayes naive son los siguientes:
 
--   **Una columna de clave única** Cada modelo debe contener una columna numérica o de texto que identifique cada registro de forma única. No están permitidas las claves compuestas.
+-   **Una columna de una sola clave** : cada modelo debe contener una columna numérica o de texto que identifique cada registro de manera única. No están permitidas las claves compuestas.
 
 -   **Columnas de entrada** En un modelo Bayes Naive, todas las columnas deben ser columnas discretas o de datos discretos. Para obtener información sobre la discretización de columnas, vea [métodos de discretización &#40;&#41;de minería de datos ](discretization-methods-data-mining.md).
 
@@ -65,7 +65,7 @@ ms.locfileid: "78174464"
 
      Al contrario, la capacidad del algoritmo de identificar las correlaciones entre las variables es útil cuando está explorando un modelo o conjunto de datos, para identificar las relaciones entre las entradas.
 
--   **Al menos una columna de predicción** El atributo de predicción debe contener valores discretos o de datos discretos.
+-   **Al menos una columna de predicción** : el atributo de predicción debe contener valores discretos o discretizados.
 
      Los valores de la columna predecible se pueden tratar como entradas. Este ejercicio puede ser útil si explora un nuevo conjunto de datos, para encontrar relaciones entre las columnas.
 

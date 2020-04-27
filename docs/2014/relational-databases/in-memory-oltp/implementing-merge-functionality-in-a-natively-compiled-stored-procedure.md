@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015926"
 ---
 # <a name="implementing-merge-functionality"></a>Implementar la funcionalidad MERGE
   Una base de datos puede necesitar realizar una inserción o una actualización, dependiendo de si una fila determinada ya existe en la base de datos.  
   
- Es posible usar el siguiente método en `MERGE` sin hacer uso de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
+ Es posible usar el siguiente método en [!INCLUDE[tsql](../../includes/tsql-md.md)] sin hacer uso de la instrucción `MERGE`:  
   
 ```sql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  

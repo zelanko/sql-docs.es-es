@@ -1,5 +1,5 @@
 ---
-title: Usar UDT de CLR de gran tamaño (OLE DB) | Microsoft Docs
+title: Uso de UDT de CLR de gran tamaño (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206665"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Usar UDT de CLR de gran tamaño (OLE DB)
-  En este ejemplo se muestra cómo capturar filas con tipos definidos por el usuario grandes de un conjunto de resultados. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
+  En este ejemplo se muestra cómo capturar filas con tipos definidos por el usuario grandes de un conjunto de resultados. Para más información, consulte [Tipos grandes definidos por el usuario de CLR &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo contiene dos proyectos. Un proyecto crea un ensamblado (DLL) a partir de código fuente de C#. Este ensamblado contiene el tipo CLR. Se agregará una tabla a la base de datos. Una columna de la tabla será de un tipo definido en el ensamblado. De forma predeterminada, en este ejemplo se usará la base de datos maestra. El segundo proyecto es una aplicación de C nativa que lee datos de la tabla.  

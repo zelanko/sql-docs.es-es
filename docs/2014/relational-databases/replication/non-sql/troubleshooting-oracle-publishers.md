@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021906"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
   En este tema se describen varios problemas que pueden surgir al configurar y utilizar un publicador de Oracle.  
   
 ## <a name="an-error-is-raised-regarding-oracle-client-and-networking-software"></a>Aparece un error referente al cliente Oracle y al software de red  
- La cuenta con la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ejecuta en el distribuidor debe tener permisos de lectura y ejecución para el directorio (y todos los subdirectorios) en el que está instalado el software de red de cliente de Oracle. Si no se conceden estos permisos o los componentes del cliente Oracle no están instalados correctamente, recibirá el siguiente mensaje de error:  
+ La cuenta con la que se ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor debe tener permisos de lectura y ejecución para el directorio (y todos los subdirectorios) en el que está instalado el software de red del cliente de Oracle. Si no se conceden estos permisos o los componentes del cliente Oracle no están instalados correctamente, recibirá el siguiente mensaje de error:  
   
  "Error de conexión al servidor con [Proveedor Microsoft OLE DB para Oracle]. No se encontraron los componentes de cliente y de red de Oracle. Oracle Corporation proporciona estos componentes, que forman parte de la instalación del software de cliente de Oracle, versión 7.3.3 o posterior. El proveedor no funcionará hasta que se instalen estos componentes."  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63021906"
   
 -   La base de datos de Oracle está en línea y puede conectarse a ella con una herramienta como SQL*Plus.  
   
--   El inicio de sesión que utiliza la replicación para conectarse al publicador de Oracle tiene permisos suficientes. Para más información, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
+-   El inicio de sesión que utiliza la replicación para conectarse al publicador de Oracle tiene permisos suficientes. Para obtener más información, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
   
 -   Los nombres TNS definidos durante la configuración del publicador de Oracle aparecen en el archivo tnsnames.ora.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63021906"
   
 -   "La instancia del servidor de Oracle "\<*NombrePublicadorOracle*>" se ha configurado previamente para usar "\<*NombreDistribuidorSQLServer*>" como distribuidor. Para empezar a usar "\<*NewSQLServerDistributorName*>" como distribuidor, debe quitar la configuración de replicación actual de la instancia del servidor de Oracle, lo que eliminará todas las publicaciones existentes en esa instancia del servidor".  
   
--   "Ya se ha definido el servidor Oracle "\<*NombreServidorOracle*>" como publicador "\<*NombrePublicadorOracle*>" en el distribuidor "\<*NombreDistribuidorSQLServer*>.*\<NombreBaseDatosDistribución>*". Quite el publicador o quite el sinónimo público '*\<nombresinónimo>*' para volver a crearlo ".  
+-   "Ya se ha definido el servidor Oracle "\<*NombreServidorOracle*>" como publicador "\<*NombrePublicadorOracle*>" en el distribuidor "\<*NombreDistribuidorSQLServer*>. *\<NombreBaseDatosDistribución>* ". Quite el publicador o el sinónimo público " *\<NombreSinónimo>* " para volver a crearlo".  
   
  Al quitar un publicador de Oracle, los objetos de replicación de la base de datos de Oracle se limpian automáticamente. Sin embargo, en algunos casos es necesario limpiar manualmente los objetos de replicación de Oracle. Para limpiar manualmente los objetos de replicación de Oracle creados por la replicación:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021906"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Aparece el error 21642 de SQL Server referente a un inicio de sesión duplicado en el servidor vinculado  
  Al configurar inicialmente el publicador de Oracle, se crea una entrada de servidor vinculado para la conexión entre el publicador y el distribuidor. El servidor vinculado tiene el mismo nombre que el servicio TNS de Oracle. Si intenta crear un servidor vinculado con el mismo nombre, aparecerá el siguiente mensaje de error:  
   
- "Los publicadores heterogéneos requieren un servidor vinculado. Ya existe un servidor vinculado denominado '*\<nombreservidorvinculado>*'. Quítelo o elija otro nombre de publicador."  
+ "Los publicadores heterogéneos requieren un servidor vinculado. Ya existe un servidor vinculado con el nombre " *\<NombreServidorVinculado>* ". Quítelo o elija otro nombre de publicador."  
   
  Este error puede aparecer si intenta crear el servidor vinculado directamente o si quitó anteriormente la relación entre el publicador de Oracle y el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y está intentando volver a configurarla. Si recibe este error al intentar volver a configurar el publicador, quite el servidor vinculado con [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "63021906"
   
  Busque SQL\*PLUS en el distribuidor. Para una instalación de cliente Oracle 10g, el nombre de este ejecutable es sqlplus.exe. Normalmente está instalado en %ORACLE_HOME%/bin. Para comprobar que la ruta de acceso de SQL\*PLUS aparece en la ruta de acceso del sistema, observe el valor de la variable del sistema **Path**:  
   
-1.  Haga clic con el botón secundario en **Mi PC** y, a continuación, haga clic en **Propiedades**.  
+1.  Haga clic con el botón secundario en **Mi PC**y, a continuación, haga clic en **Propiedades**.  
   
 2.  Haga clic en la pestaña **Avanzadas** y, a continuación, haga clic en **Variables de entorno**.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "63021906"
   
 5.  Haga clic en **Aceptar** en todos los cuadros de diálogo abiertos para salir y guardar los cambios.  
   
- Si no encuentra sqlplus.exe en el distribuidor, instale la versión actual del software de cliente de Oracle en el distribuidor. Para más información, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
+ Si no encuentra sqlplus.exe en el distribuidor, instale la versión actual del software de cliente de Oracle en el distribuidor. Para obtener más información, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
   
 ## <a name="sql-server-error-21620-is-raised"></a>Aparece el error 21620 de SQL Server  
  Si va a conectar a una base de datos Oracle anterior a la versión 8.1, la publicación de Oracle requiere que el software de cliente Oracle instalado en el distribuidor sea de la versión 9. Si se va a conectar a una base de datos Oracle que es de la versión 8.1 o posterior, se recomienda que el software del cliente Oracle sea de la versión 10 o posterior.  
@@ -129,11 +129,11 @@ ms.locfileid: "63021906"
   
 -   "La clave del Registro CLSID que indica que el proveedor OLEDB de Oracle, OraOLEDB.Oracle, se ha registrado no está presente en el distribuidor. Compruebe que el proveedor OLEDB de Oracle se haya instalado y registrado en el distribuidor".  
   
- Si va a usar el software de cliente Oracle versión 10g, el proveedor es OraOLEDB10.dll; para la versión 9i, es OraOLEDB.dll. El proveedor está instalado en %ORACLE_HOME%\BIN (por ejemplo, C:\oracle\product\10.1.0\Client_1\bin). Si el proveedor Oracle OLEDB no está instalado en el distribuidor, instálelo desde el disco de instalación del software cliente de Oracle que proporciona Oracle. Para más información, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
+ Si va a usar el software de cliente Oracle versión 10g, el proveedor es OraOLEDB10.dll; para la versión 9i, es OraOLEDB.dll. El proveedor está instalado en %ORACLE_HOME%\BIN (por ejemplo, C:\oracle\product\10.1.0\Client_1\bin). Si el proveedor Oracle OLEDB no está instalado en el distribuidor, instálelo desde el disco de instalación del software cliente de Oracle que proporciona Oracle. Para obtener más información, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
   
  Si el proveedor Oracle OLEDB está instalado, asegúrese de que está registrado. Para registrar el archivo DLL del proveedor, ejecute el siguiente comando desde el directorio en que esté instalado el archivo DLL y, a continuación, detenga y reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  `regsvr32 OraOLEDB10.dll`o `regsvr32 OraOLEDB.dll`.  
+1.  `regsvr32 OraOLEDB10.dll` o `regsvr32 OraOLEDB.dll`.  
   
 ## <a name="sql-server-error-21626-or-error-21627-is-raised"></a>Aparece el error 21626 o 21627 de SQL Server  
  Para comprobar que el entorno de la publicación de Oracle está configurado correctamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] trata de conectarse al publicador de Oracle con las credenciales de inicio de sesión especificadas durante la configuración. Si el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se puede conectar al publicador de Oracle, se muestra el siguiente mensaje de error:  
@@ -143,8 +143,7 @@ ms.locfileid: "63021906"
  Si aparece este mensaje de error, compruebe la conexión con la base de datos de Oracle: ejecute SQL*PLUS directamente, con el mismo inicio de sesión y la misma contraseña especificados durante la configuración del publicador de Oracle. Para obtener más información, vea la sección "El distribuidor de SQL Server no puede conectarse a la instancia de base de datos de Oracle" de este tema.  
   
 ## <a name="sql-server-error-21628-is-raised"></a>Aparece el error 21628 de SQL Server  
- Para los distribuidores de 64 bits, la publicación de Oracle utiliza el proveedor Oracle OLEDB para Oracle (OraOLEDB.Oracle). 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea una entrada en el Registro para permitir que el proveedor de Oracle ejecutarse en proceso con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si hay un problema de lectura o escritura con esta entrada del Registro, aparece el siguiente mensaje de error:  
+ Para los distribuidores de 64 bits, la publicación de Oracle utiliza el proveedor Oracle OLEDB para Oracle (OraOLEDB.Oracle). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea una entrada en el Registro para permitir que el proveedor de Oracle ejecutarse en proceso con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si hay un problema de lectura o escritura con esta entrada del Registro, aparece el siguiente mensaje de error:  
   
  "No se puede actualizar el Registro del distribuidor '%s' para que el proveedor OLE DB de Oracle, OraOLEDB.Oracle, pueda ejecutarse con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Compruebe que el inicio de sesión actual esté autorizado a modificar las claves del Registro propiedad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ."  
   
@@ -152,11 +151,11 @@ ms.locfileid: "63021906"
   
  Para ver y modificar la opción del Registro:  
   
-1.  Haga clic en **Inicio** y, a continuación, en **Ejecutar**.  
+1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
   
 2.  En el cuadro de diálogo **Ejecutar** , escriba **regedit**y, a continuación, haga clic en **Aceptar**.  
   
-3.  Vaya a HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\*\<InstanceName>* \Providers.  
+3.  Navegue hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<nombreInstancia>* \Providers.  
   
      Se debe incluir en Proveedores una carpeta denominada OraOLEDB.Oracle. En esta carpeta debe encontrarse el nombre de valor DWORD **AllowInProcess**, con un valor de **1**.  
   
@@ -232,7 +231,7 @@ ms.locfileid: "63021906"
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>Se han realizado cambios que requieren volver a configurar el publicador  
  Los cambios en los procedimientos o en las tablas de metadatos de la replicación obligan a quitar y configurar de nuevo el publicador. Para volver a configurar el publicador, debe quitarlo y configurarlo de nuevo con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL o RMO. Para más información sobre la configuración del publicador, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
   
- **Para quitar un publicador de Oracle (** SQL Server Management Studio **)**  
+ **Para eliminar un publicador de Oracle (** SQL Server Management Studio **)**  
   
 1.  Conéctese al distribuidor del publicador de Oracle en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y expanda el nodo de servidor.  
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207052"
 ---
 # <a name="prepared-execution"></a>Ejecución preparada
@@ -31,8 +31,7 @@ ms.locfileid: "68207052"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]reduce la diferencia de rendimiento entre la ejecución directa y preparada a través de algoritmos mejorados para detectar y volver a usar planes de ejecución de **SQLExecDirect**. Estos algoritmos permiten disfrutar en las instrucciones que se ejecutan directamente de algunas de las ventajas de rendimiento de la ejecución preparada. Para obtener más información, vea [ejecución directa](direct-execution.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona también compatibilidad nativa con la ejecución preparada. Un plan de ejecución se compila en **SQLPrepare** y, posteriormente, se ejecuta cuando se llama a **SQLExecute** . Dado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no es necesario para crear procedimientos almacenados temporales en **SQLPrepare**, no hay ninguna sobrecarga adicional en las tablas del sistema de **tempdb**.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona también compatibilidad nativa con la ejecución preparada. Un plan de ejecución se compila en **SQLPrepare** y, posteriormente, se ejecuta cuando se llama a **SQLExecute** . Dado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no es necesario para crear procedimientos almacenados temporales en **SQLPrepare**, no hay ninguna sobrecarga adicional en las tablas del sistema de **tempdb**.  
   
  Por motivos de rendimiento, la preparación de instrucciones se difiere hasta que se llama a **SQLExecute** o se realiza una operación de metapropiedad (como [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) o [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) en ODBC). Este es el comportamiento predeterminado. Cualquier error que se produzca en la instrucción que se está preparando no se dará a conocer hasta que la instrucción se ejecute o hasta que se realice una operación de metapropiedad. Si desea desactivar este comportamiento predeterminado, establezca el atributo de instrucción específico del controlador ODBC de Native Client de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL_SOPT_SS_DEFER_PREPARE en SQL_DP_OFF.  
   

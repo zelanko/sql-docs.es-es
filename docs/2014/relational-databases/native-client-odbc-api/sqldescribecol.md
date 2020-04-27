@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067772"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-  En el caso de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones ejecutadas, el controlador ODBC de Native Client no necesita consultar el servidor para describir las columnas de un conjunto de resultados. En este caso, `SQLDescribeCol` no produce un viaje de ida y vuelta al servidor. Al [](sqlnumresultcols.md)igual que SQLColAttribute `SQLDescribeCol` , al llamar a en instrucciones preparadas pero no ejecutadas se genera un viaje de ida y vuelta.  
+  En el caso de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones ejecutadas, el controlador ODBC de Native Client no necesita consultar el servidor para describir las columnas de un conjunto de resultados. En este caso, `SQLDescribeCol` no produce un viaje de ida y vuelta al servidor. Al [SQLColAttribute](sqlnumresultcols.md)igual que SQLColAttribute `SQLDescribeCol` , al llamar a en instrucciones preparadas pero no ejecutadas se genera un viaje de ida y vuelta.  
   
  Cuando una instrucción o lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] devuelve varios conjuntos de filas de resultados, es posible que una columna, a la que se hace referencia mediante un ordinal, se cree en una tabla independiente o haga referencia a una columna completamente diferente del conjunto de resultados. `SQLDescribeCol`se debe llamar a para cada conjunto. Cuando el conjunto de resultados cambie, la aplicación debe volver a enlazar los valores de datos antes de capturar los resultados de la fila. Para obtener más información sobre cómo administrar la devolución de varios conjuntos de resultados, vea [SQLMoreResults](sqlmoreresults.md).  
   
@@ -47,8 +47,7 @@ ms.locfileid: "63067772"
  Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqldescribecol-support-for-large-clr-udts"></a>SQLDescribeCol admite tipos definidos por el usuario de CLR grandes  
- 
-  `SQLDescribeCol` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLDescribeCol` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [SQLDescribeCol función)](https://go.microsoft.com/fwlink/?LinkID=59338)   

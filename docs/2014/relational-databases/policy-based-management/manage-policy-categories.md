@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210794"
 ---
 # <a name="manage-policy-categories"></a>Administrar categorías de directiva
@@ -36,20 +36,20 @@ ms.locfileid: "68210794"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Cuando se usa [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], si la casilla **Suscripciones de base de datos de mandatos** no está activada, la categoría de directiva debe aplicarse individualmente a cada parte correspondiente del servidor, por ejemplo, a una o varias bases de datos o tablas.  
   
 -   Si especifica una categoría de directiva que no existe, se crea una categoría de directiva nueva y la suscripción se asigna para todas las bases de datos al ejecutar el procedimiento almacenado. Si luego borra la suscripción asignada para la nueva categoría, la suscripción solo se aplicará para la base de datos que especificó como *target_object*. Para obtener más información sobre cómo cambiar una configuración de suscripción asignada, vea [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Este procedimiento almacenado se ejecuta en el contexto del propietario actual del procedimiento almacenado.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Para aplicar directivas de categoría a una instancia de SQL Server  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68210794"
   
 5.  Cuando termine, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>Para aplicar directivas de categoría a una instancia de SQL Server  
   

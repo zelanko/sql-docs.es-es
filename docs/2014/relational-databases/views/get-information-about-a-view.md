@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211646"
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
@@ -46,14 +46,14 @@ ms.locfileid: "68211646"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La utilización de `sp_helptext` para devolver la definición de una vista requiere la pertenencia al rol **público** . La utilización de `sys.sql_expression_dependencies` para buscar todas las dependencias de una vista requiere el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en `sys.sql_expression_dependencies` para la base de datos. Las definiciones de objeto del sistema, como las que se devuelven en SELECT OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obtener las propiedades de la vista mediante el Explorador de objetos  
   
@@ -175,7 +175,7 @@ ms.locfileid: "68211646"
   
 4.  Seleccione **Objetos de los que depende [nombre de vista]** para mostrar los objetos a los que hace referencia la vista.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-get-the-definition-and-properties-of-a-view"></a>Para obtener la definición y propiedades de una vista  
   

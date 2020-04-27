@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63042688"
 ---
-# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Lección 2: evaluar las directivas de las prácticas recomendadas de forma programada
+# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Lección 2: Evaluación de las directivas de procedimientos recomendados de forma programada
   Puede configurar evaluaciones programadas de directivas de prácticas recomendadas en una o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para configurar las directivas de prácticas recomendadas de modo que se ejecuten de forma programada, debe importar las directivas en la instancia de destino.  
   
  Para implementar las directivas programadas en varios servidores, puede importarlas en una instancia, configurar las programaciones de cada directiva, exportar las directivas programadas en una carpeta y, a continuación, implementarlas de modo que se destinen a las instancias a través de servidores registrados.  

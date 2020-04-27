@@ -23,20 +23,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011922"
 ---
 # <a name="server-level-roles"></a>Roles de nivel de servidor
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona roles de nivel de servidor para ayudarle a administrar los permisos de un servidor. Estos roles son entidades de seguridad que agrupan otras entidades de seguridad. Los roles de nivel de servidor se aplican a todo el servidor en lo que respecta a su ámbito de permisos. (Los*roles* son como los *grupos* del sistema operativo Windows).  
   
  Los roles fijos de servidor se proporcionan por comodidad y compatibilidad con versiones anteriores. Siempre que sea posible, asigne permisos más específicos.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona nueve roles fijos de servidor. Los permisos que se conceden a los roles fijos de servidor no se pueden modificar. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], puede crear roles de servidor definidos por el usuario y agregarles permisos de nivel de servidor.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona nueve roles fijos de servidor. Los permisos que se conceden a los roles fijos de servidor no se pueden modificar. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], puede crear roles de servidor definidos por el usuario y agregarles permisos de nivel de servidor.  
   
  Puede agregar entidades de seguridad a nivel de servidor (inicios de sesión de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cuentas de Windows y grupos de Windows) a los roles de nivel de servidor. Cada miembro de un rol fijo de servidor puede agregar otros inicios de sesión a ese mismo rol. Los miembros de roles de servidor definidos por el usuario no pueden agregar otras entidades de seguridad de servidor al rol.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "63011922"
 |bulkadmin|Los miembros del rol fijo de servidor bulkadmin pueden ejecutar la instrucción BULK INSERT.|  
 |diskadmin|El rol fijo de servidor diskadmin se utiliza para administrar archivos de disco.|  
 |dbcreator|Los miembros del rol fijo de servidor dbcreator pueden crear, modificar, quitar y restaurar cualquier base de datos.|  
-|público|Cada inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertenece al rol público de servidor. Cuando a una entidad de seguridad de servidor no se le han concedido ni denegado permisos específicos para un objeto protegible, el usuario hereda los permisos concedidos al rol pública para ese elemento. Solo asigne los permisos públicos en cualquier objeto cuando desee que el objeto esté disponible para todos los usuarios. No puede cambiar la pertenencia en public.<br /><br /> Nota: public se implementa de manera diferente que otros roles. Pero se pueden conceder, denegar o revocar permisos desde public.|  
+|public|Cada inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pertenece al rol público de servidor. Cuando a una entidad de seguridad de servidor no se le han concedido ni denegado permisos específicos para un objeto protegible, el usuario hereda los permisos concedidos al rol pública para ese elemento. Solo asigne los permisos públicos en cualquier objeto cuando desee que el objeto esté disponible para todos los usuarios. No puede cambiar la pertenencia en public.<br /><br /> Nota: public se implementa de manera diferente que otros roles. Pero se pueden conceder, denegar o revocar permisos desde public.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Permisos de los roles fijos de servidor  
  Cada rol fijo de servidor cuenta con diversos permisos asignados. Para obtener un gráfico de los permisos asignados a los roles del servidor, vea [Database Engine Fixed Server and Fixed Database Roles](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
@@ -75,23 +73,23 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
   
 |Característica|Tipo|Descripción|  
 |-------------|----------|-----------------|  
-|[sp_helpsrvrole &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadatos|Devuelve una lista de roles de nivel de servidor.|  
-|[sp_helpsrvrolemember &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadatos|Devuelve información acerca de los miembros de un rol de nivel de servidor.|  
-|[sp_srvrolepermission &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadatos|Muestra los permisos de un rol de nivel de servidor.|  
+|[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadatos|Devuelve una lista de roles de nivel de servidor.|  
+|[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadatos|Devuelve información acerca de los miembros de un rol de nivel de servidor.|  
+|[sp_srvrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadatos|Muestra los permisos de un rol de nivel de servidor.|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Metadatos|Indica si un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es miembro del rol de nivel de servidor especificado.|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|Metadatos|Devuelve una fila por cada miembro de cada rol de nivel de servidor.|  
-|[sp_addsrvrolemember &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Get-Help|Agrega un inicio de sesión como miembro de un rol de nivel de servidor. En desuso. Utilice [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) en su lugar.|  
-|[sp_dropsrvrolemember &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Get-Help|Quita un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows de un rol de nivel de servidor. En desuso. Utilice [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) en su lugar.|  
-|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|Get-Help|Crea un rol de servidor definido por el usuario.|  
-|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|Get-Help|Cambia la pertenencia de un rol de servidor o cambia el nombre de un rol de servidor definido por el usuario.|  
-|[DROP SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|Get-Help|Quita un rol de servidor definido por el usuario.|  
+|[sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Comando|Agrega un inicio de sesión como miembro de un rol de nivel de servidor. En desuso. Utilice [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) en su lugar.|  
+|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Comando|Quita un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows de un rol de nivel de servidor. En desuso. Utilice [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) en su lugar.|  
+|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|Comando|Crea un rol de servidor definido por el usuario.|  
+|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|Comando|Cambia la pertenencia de un rol de servidor o cambia el nombre de un rol de servidor definido por el usuario.|  
+|[DROP SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|Comando|Quita un rol de servidor definido por el usuario.|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Función|Determina la pertenencia del rol de servidor.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Roles de nivel de base de datos](../authentication-access/database-level-roles.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
  [Funciones de seguridad &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)   
- [Protección de SQL Server](../securing-sql-server.md)   
+ [Proteger SQL Server](../securing-sql-server.md)   
  [GRANT &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
  [REVOKE &#40;permisos de entidad de seguridad de servidor de Transact-SQL&#41;](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   
  [DENY permisos de entidad de seguridad de servidor &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   

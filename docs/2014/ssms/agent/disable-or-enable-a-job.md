@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211414"
 ---
 # <a name="disable-or-enable-a-job"></a>Deshabilitar o habilitar un trabajo
@@ -37,16 +37,16 @@ ms.locfileid: "68211414"
   
      [Transact-SQL](#TSQL)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-job"></a>Para deshabilitar o habilitar un trabajo  
   
-1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
+1.  En **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
   
 2.  Expanda **Agente SQL Server**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68211414"
   
 4.  Para deshabilitar un trabajo, haga clic en **Deshabilitar**. Para habilitar un trabajo, haga clic en **Habilitar**.  
   
-##  <a name="TSQL"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Usar Transact-SQL  
   
 #### <a name="to-disable-or-enable-a-job"></a>Para deshabilitar o habilitar un trabajo  
   

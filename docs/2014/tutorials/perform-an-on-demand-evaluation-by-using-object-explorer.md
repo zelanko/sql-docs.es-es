@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210944"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Realizar una evaluación a petición usando Explorador de objetos
@@ -23,7 +23,7 @@ ms.locfileid: "68210944"
 > [!NOTE]  
 >  También puede evaluar las directivas en una instancia única a través de servidores registrados. Para obtener más información, consulte [realizar una evaluación a petición mediante el uso de servidores registrados](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Esta lección se basa en la versión de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
@@ -40,7 +40,7 @@ ms.locfileid: "68210944"
   
 3.  En el cuadro de diálogo **evaluar directivas** , junto al cuadro **origen** , haga clic en el botón de puntos suspensivos (**...**).  
   
-4.  En el cuadro de diálogo **Seleccionar origen** , puede seleccionar **archivos** o **servidor** como origen de los archivos de directivas que se van a evaluar. Si hace clic en **servidor**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccionará los archivos de directivas individuales que desea evaluar. Para ello, siga estos pasos.  
+4.  En el cuadro de diálogo **Seleccionar origen** , puede seleccionar **archivos** o **servidor** como origen de los archivos de directivas que se van a evaluar. Si hace clic en **servidor**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccionará los archivos de directivas individuales que desea evaluar. Para ello, realice los pasos siguientes:  
   
     1.  Haga clic en **archivos**.  
   

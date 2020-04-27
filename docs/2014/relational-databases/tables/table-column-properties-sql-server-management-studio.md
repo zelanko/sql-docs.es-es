@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211795"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propiedades de columnas de tablas (SQL Server Management Studio)
@@ -87,25 +87,25 @@ ms.locfileid: "68211795"
 > [!NOTE]  
 >  Para cambiar el valor que se muestra para la propiedad **Especificación de texto completo** , debe expandirla y editar la propiedad secundaria **Está indexado por texto completo** .  
   
--   **Está indizado por texto completo** Indica si esta columna tiene un índice de texto completo. Esta propiedad solo puede establecerse en **Sí** si el tipo de datos de la columna se puede buscar por texto completo y si la tabla a la que pertenece esta columna tiene especificado un índice de texto completo. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
+-   **Está indexado por texto completo** Indica si esta columna tiene un índice de texto completo. Esta propiedad solo puede establecerse en **Sí** si el tipo de datos de la columna se puede buscar por texto completo y si la tabla a la que pertenece esta columna tiene especificado un índice de texto completo. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
--   **Columna de tipo de texto completo** Muestra el nombre de la columna en la que esta columna está indizada por texto completo. Esta propiedad se debe establecer si la propiedad **Tipo de datos** de esta columna es **image** o **varbinary**. La columna citada en esta propiedad debe ser del tipo **[n]char, [n]varchar,** o **xml**, y la lista desplegable de esta propiedad solo contiene columnas que tienen uno de estos tres tipos de datos. Las filas de la columna citada por esta propiedad indican el tipo de documento de las filas correspondientes de la columna en la que se pueden realizar búsquedas de texto completo. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
+-   **Columna de tipo de texto completo** Muestra el nombre de la columna en la que esta columna tiene un índice de texto. Esta propiedad se debe establecer si la propiedad **Tipo de datos** de esta columna es **image** o **varbinary**. La columna citada en esta propiedad debe ser del tipo **[n]char, [n]varchar,** o **xml**, y la lista desplegable de esta propiedad solo contiene columnas que tienen uno de estos tres tipos de datos. Las filas de la columna citada por esta propiedad indican el tipo de documento de las filas correspondientes de la columna en la que se pueden realizar búsquedas de texto completo. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
--   **Idioma** de Indica el idioma del separador de palabras utilizado para indizar la columna. El valor almacenado en la propiedad es en realidad el identificador de configuración regional del separador de palabras. Para obtener más información sobre los separadores de palabras y los LCID, vea Separadores de palabras y lematizadores. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
+-   **Idioma** Indica el idioma del separador de palabras utilizado para indizar la columna. El valor almacenado en la propiedad es en realidad el identificador de configuración regional del separador de palabras. Para obtener más información sobre los separadores de palabras y los LCID, vea Separadores de palabras y lematizadores. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
  **Semántica estadística**  
  Seleccione si desea habilitar la indización semántica estadística para la columna seleccionada. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
   
  Si selecciona **Idioma** antes de seleccionar **Semántica estadística**y el idioma seleccionado no tiene un modelo de idioma semántico asociado, la opción **Semántica estadística** se establece en **No** y no puede modificarse. Si selecciona **Sí** para la opción de **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en la columna **Idioma** estarán limitados a aquellos para los que exista un modelo de idioma semántico.  
   
- **No es suscriptor de SQL Server**  
+ **Suscriptor que no es de SQL Server**  
  Indica si la columna se está replicando en un suscriptor que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Especificación de identidad**  
  Muestra información sobre si esta columna exige la unicidad de sus valores y cómo lo hace. El valor de esta propiedad indica si esta columna es o no una columna de identidad y si es o no igual al valor de la propiedad secundaria **Identidad**.  
   
 > [!NOTE]  
->  Para cambiar el valor que se muestra para la propiedad **Especificación de identidad** , debe expandirla y editar la propiedad secundaria **Identidad** .  
+>   Para cambiar el valor que se muestra para la propiedad **Especificación de identidad** , debe expandirla y editar la propiedad secundaria **Identidad** .  
   
 -   **Identidad** Indica si esta columna es o no una columna de identidad. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "68211795"
  **No para replicación**  
  Indica si los valores de identidad originales se conservan durante la replicación. Para obtener más información sobre la replicación, vea CREATE TABLE. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
- **Replican**  
+ **Replicado**  
  Muestra si esta columna se replica en otra ubicación.  
   
  **RowGuid**  
@@ -132,7 +132,6 @@ ms.locfileid: "68211795"
  Muestra el tamaño en bytes permitido por el tipo de datos de la columna. Por ejemplo, un tipo de datos nchar puede tener una longitud de 10 (número de caracteres) pero tendría un tamaño de 20 para los juegos de caracteres Unicode.  
   
 > [!NOTE]  
->  La longitud de un tipo de datos **(max)** varía en cada fila. **sp_help** devuelve (-1) como longitud de columnas **(Max)** . 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muestra -1 como tamaño de columna.  
+>  La longitud de un tipo de datos **(max)** varía en cada fila. **sp_help** devuelve (- 1) como longitud de columnas **(max)** . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muestra -1 como tamaño de columna.  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015308"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migrar a OLTP en memoria
@@ -22,11 +22,11 @@ ms.locfileid: "63015308"
   
 -   [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   
--   [Asesor de optimización en memoria](memory-optimization-advisor.md)  
+-   [Asesor de optimización de memoria](memory-optimization-advisor.md)  
   
 -   [Asistente de compilación nativa](native-compilation-advisor.md)  
   
--   [Construcciones de Transact-SQL no admitidas en In-Memory OLTP.](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+-   [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
 -   [Implementar columnas LOB en una tabla con optimización para memoria](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63015308"
  Para obtener más información sobre las metodologías de migración, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones sobre la migración](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="see-also"></a>Consulte también  
- [OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [&#40;de optimización en memoria de OLTP en memoria&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Estimar los requisitos de memoria para las tablas con optimización para memoria](memory-optimized-tables.md)  
   
   

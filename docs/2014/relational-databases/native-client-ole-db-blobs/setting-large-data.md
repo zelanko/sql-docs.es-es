@@ -1,5 +1,5 @@
 ---
-title: Configuración de datos de gran tamaño | Microsoft Docs
+title: Establecimiento de datos grandes | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140620"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
@@ -41,7 +41,7 @@ ms.locfileid: "63140620"
 ## <a name="how-to-set-large-data"></a>Cómo establecer datos grandes  
  Para pasar un puntero a su propio objeto de almacenamiento, el consumidor crea un descriptor de acceso que enlaza el valor de la columna BLOB y, a continuación, llama a los métodos **IRowsetChange::SetData** o **IRowsetChange::InsertRow** . Para establecer datos BLOB:  
   
-1.  Cree una estructura DBOBJECT que describa cómo se debe obtener acceso a la columna BLOB. Establezca el elemento *dwFlag* de la estructura DBOBJECT en STGM_READ y establezca el elemento *iid* en IID_ISequentialStream (la interfaz que se va a exponer).  
+1.  Cree una estructura DBOBJECT que describa cómo se debe obtener acceso a la columna BLOB. Establezca el elemento *dwFlag* de la estructura DBOBJECT en STGM_READ y establezca el elemento *IID* en IID_ISequentialStream (la interfaz que se va a exponer).  
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011083"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
@@ -30,7 +30,7 @@ ms.locfileid: "66011083"
   
  El [filtro](configure-and-manage-filters-for-search.md) asociado (IFilter) determina si la búsqueda de propiedades es posible en un tipo de documento específico. En algunos tipos de documento, el IFilter asociado extrae algunas o todas las propiedades definidas para ese tipo de documento, así como el contenido del cuerpo del documento. Puede configurar un índice de texto completo para que admita la búsqueda de propiedades solo en aquellas propiedades extraídas por un IFilter durante la indización de texto completo. Entre los IFilters que extraen muchas propiedades de documento se encuentran los IFilters para tipos de documento de Microsoft Office (como .docx, .xlsx y .pptx). Por otra parte, el IFilter XML no emite propiedades.  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> Funcionamiento de la búsqueda de texto completo con las propiedades de búsqueda  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> Funcionamiento de la búsqueda de texto completo con las propiedades de búsqueda  
   
 ### <a name="internal-property-ids"></a>Identificadores de propiedades internos  
  El Motor de búsqueda de texto completo asigna a cada propiedad registrada un identificador de propiedad interno, que identifica de manera inequívoca la propiedad en esa lista de búsqueda determinada y que es específico de esa lista de propiedades de búsqueda. Por consiguiente, si una propiedad se agrega a varias listas de propiedades de búsqueda, es probable que su identificador de propiedad interno difiera entre las diferentes listas.  
@@ -58,16 +58,16 @@ ms.locfileid: "66011083"
   
   
   
-##  <a name="impact"></a> Impacto de habilitar la búsqueda de propiedades  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> Impacto de habilitar la búsqueda de propiedades  
  Al configurar un índice de texto completo para que admita la búsqueda de una o varias propiedades, se incrementa en cierta medida el tamaño del índice en función del número de propiedades que se especifiquen en la lista de propiedades de búsqueda y del contenido de cada propiedad.  
   
  Al probar los los corpus típicos de Microsoft Word<sup>?</sup>?, Excel<sup>??</sup>y PowerPoint<sup>?</sup> documentos: se ha configurado un índice de texto completo para indizar las propiedades de búsqueda típicas. Al indizar estas propiedades, aumentó el tamaño del índice de texto completo en un 5 por ciento aproximadamente. Prevemos que este incremento de tamaño aproximado será generalizado en la mayoría de los corpus de documentos. Sin embargo, el incremento del tamaño dependerá en última instancia del volumen de los datos de propiedades de un determinado corpus de documentos respecto al volumen de la generalidad de los datos.  
   
   
   
-##  <a name="creating"></a> Crear una lista de propiedades de búsqueda y habilitar la búsqueda de propiedades  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a>Crear una lista de propiedades de búsqueda y habilitar la búsqueda de propiedades  
   
-###  <a name="creating_sub"></a> Crear una lista de propiedades de búsqueda  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a>Crear una lista de propiedades de búsqueda  
  **Para crear una lista de propiedades de búsqueda con Transact-SQL**  
   
  Use la instrucción [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql) e indique al menos un nombre en la lista.  
@@ -98,7 +98,7 @@ ms.locfileid: "66011083"
   
  
   
-###  <a name="adding"></a> Agregar propiedades a una lista de propiedades de búsqueda  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a>Agregar propiedades a una lista de propiedades de búsqueda  
  La búsqueda de propiedades necesita la creación de una *lista de propiedades de búsqueda* y la especificación de una o varias propiedades cuya búsqueda desea poder realizar. Cuando agrega una propiedad a una lista de propiedades de búsqueda, la propiedad se registra en esa lista concreta. Para agregar una propiedad a una lista de propiedades de búsqueda, necesitará los valores siguientes:  
   
 -   GUID del conjunto de propiedades  
@@ -149,7 +149,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
   
   
-###  <a name="associating"></a> Asociar una lista de propiedades de búsqueda a un índice de texto completo  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> Asociar una lista de propiedades de búsqueda a un índice de texto completo  
  Para que un índice de texto completo sea compatible con la búsqueda de las propiedades registradas en una lista de propiedades de búsqueda, debe asociar la lista de propiedades de búsqueda con el índice y volver a llenar dicho índice. Al llenar de nuevo el índice de texto completo, se crean entradas de índice específicas de la propiedad para los términos de búsqueda de cada una de las propiedades registradas.  
   
  Siempre y cuando el índice de texto completo permanezca asociado a esta lista de propiedades de búsqueda, la consulta de texto completo podrá usar la opción PROPERTY del predicado CONTAINS para buscar en propiedades que estén registradas en esa lista de propiedades de búsqueda.  
@@ -162,11 +162,11 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Para asociar una lista de propiedades de búsqueda a un índice de texto completo con Management Studio**  
   
- Especifique un valor para **Lista de propiedades de búsqueda** en la página **General** del cuadro de diálogo **Propiedades del índice de texto completo** .  
+ Especifique un valor para **Lista de propiedades de búsqueda** en la página **General** del cuadro de diálogo **Propiedades del índice de texto completo**.  
   
   
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Consultar propiedades de búsqueda con CONTAINS  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> Consultar propiedades de búsqueda con CONTAINS  
  La sintaxis básica de [CONTAINS](/sql/t-sql/queries/contains-transact-sql) para una consulta de texto completo referente a propiedades es la siguiente:  
   
 ```sql  
@@ -188,9 +188,9 @@ GO
   
   
   
-##  <a name="managing"></a> Administrar listas de propiedades de búsqueda  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a>Administrar listas de propiedades de búsqueda  
   
-###  <a name="viewing"></a> Ver y cambiar una lista de propiedades de búsqueda  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a>Ver y cambiar una lista de propiedades de búsqueda  
  **Para cambiar una lista de propiedades de búsqueda con Transact-SQL**  
   
  Use la instrucción [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) para agregar o quitar propiedades de búsqueda.  
@@ -211,7 +211,7 @@ GO
   
     1.  Para quitar una propiedad de documento, haga clic en el encabezado de fila a la izquierda de la propiedad y presione SUPR.  
   
-    2.  Para agregar una propiedad de documento, haga clic en la fila vacía en la parte inferior de la lista, a la derecha del símbolo **\*** y escriba los valores para la nueva propiedad.  
+    2.  Para agregar una propiedad de documento, haga clic en la fila vacía en la parte inferior de la lista, a la **\*** derecha de la, y escriba los valores para la nueva propiedad.  
   
          Para obtener información sobre estos valores, vea [Editor de lista de propiedades de búsqueda](../../database-engine/search-property-list-editor.md). Para obtener información sobre cómo obtener estos valores para las propiedades definidas por Microsoft, vea [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obtener información sobre propiedades definidas por un fabricante de software independiente (ISV), vea la documentación de ese fabricante.  
   
@@ -219,7 +219,7 @@ GO
   
   
   
-###  <a name="deleting"></a> Eliminar una lista de propiedades de búsqueda  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a>Eliminar una lista de propiedades de búsqueda  
  No se puede quitar una lista de propiedades de una base de datos mientras la lista está asociada a un índice de texto completo.  
   
  **Para eliminar una lista de propiedades de búsqueda con Transact-SQL**  
@@ -240,7 +240,7 @@ GO
 
   
 ## <a name="see-also"></a>Consulte también  
- [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+ [Buscar GUID de conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Configurar y administrar filtros para búsquedas](configure-and-manage-filters-for-search.md)  
   
   

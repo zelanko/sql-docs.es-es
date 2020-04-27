@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033507"
 ---
 # <a name="schedule-the-policies"></a>Programar las directivas
@@ -41,7 +41,7 @@ ms.locfileid: "63033507"
 ## <a name="summary"></a>Resumen  
  Configuró las directivas programadas para ejecutarse en una instancia única de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si desea implementarlas en varias instancias, continúe con la siguiente tarea de este tutorial.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
  [Implementar directivas programadas en varias instancias](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  
   
   

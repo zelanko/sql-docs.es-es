@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaa44fe3a5b6e7009057f351d06258b5ab809aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050891"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting, clase de eventos
@@ -28,7 +28,7 @@ ms.locfileid: "63050891"
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
+|ApplicationName|`nvarchar`|Nombre de la aplicación cliente que creó la conexión a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|10|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |DatabaseID|`int`|Id. de la base de datos en que se ejecuta el procedimiento almacenado. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta el procedimiento almacenado.|35|Sí|  
@@ -45,7 +45,7 @@ ms.locfileid: "63050891"
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |ObjectID|`int`|Identificador asignado por el sistema al procedimiento almacenado.|22|Sí|  
 |ObjectName|`nvarchar`|Nombre del procedimiento almacenado que se inicia.|34|Sí|  
-|ObjectType|`int`|Tipo de procedimiento almacenado que se inicia. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
+|ObjectType|`int`|Tipo de procedimiento almacenado que se inicia. Este valor corresponde al de la columna Type de la vista de catálogo sys.objects. Para ver los valores, vea [Columna de evento de seguimiento ObjectType](objecttype-trace-event-column.md).|28|Sí|  
 |RequestID|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
 |nombreDeServidor|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151832"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Conectarse a un informe o a una fuente de distribución de datos (SSAS)
@@ -31,13 +31,13 @@ ms.locfileid: "70151832"
   
  Haga clic en **Ver informe** para mostrar el informe.  
   
- **Browse**  
+ **Examinar**  
  Navegue a una ubicación donde haya un informe.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales al usar el cuadro de diálogo **Establecer propiedades avanzadas** .  
+ Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** .  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
 ## <a name="from-an-azure-datamarket-dataset"></a>De un conjunto de datos de Azure DataMarket  
@@ -47,7 +47,7 @@ ms.locfileid: "70151832"
  **Dirección URL de la fuente de distribución de datos**  
  Escriba la ruta de acceso completa a un documento de servicio Atom (.atomsvc, .atom) o la dirección URL de una sola fuente de distribución de datos, o bien haga clic en **Examinar** para seleccionar un documento de servicio Atom.  
   
- **Browse**  
+ **Examinar**  
  Navegue a una ubicación donde haya un informe.  
   
  Haga clic en **Ver conjuntos de datos de Azure DataMarket disponibles** para mostrar los conjuntos de datos disponibles.  
@@ -62,9 +62,9 @@ ms.locfileid: "70151832"
  Guarda la clave de cuenta (cifrada) con la conexión de datos.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales al usar el cuadro de diálogo **Establecer propiedades avanzadas** .  
+ Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** .  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
 ## <a name="from-other-feeds"></a>De otras fuentes  
@@ -76,13 +76,13 @@ ms.locfileid: "70151832"
   
  Haga clic en **Incluir todas las columnas de fuente** para especificar si se importan todas las columnas de fuente de distribución de datos.  
   
- **Browse**  
+ **Examinar**  
  Navegue hasta una ubicación donde haya una fuente de distribución de datos.  
   
  **Avanzadas**  
- Establezca las propiedades de conexión adicionales mediante el cuadro de diálogo **establecer propiedades avanzadas** .  
+ Establezca las propiedades de conexión adicionales con el cuadro de diálogo **Establecer propiedades avanzadas** .  
   
- **Probar conexión**  
+ **Probar la conexión**  
  Intente establecer una conexión con el origen de datos usando la configuración actual. Se muestra un mensaje que indica si la conexión es correcta.  
   
   

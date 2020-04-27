@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63145492"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al motor de base de datos
@@ -22,13 +22,12 @@ ms.locfileid: "63145492"
   
   
   
-##  <a name="tools"></a>Herramientas para Introducción  
+##  <a name="tools-for-getting-started"></a><a name="tools"></a>Herramientas para Introducción  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye varias herramientas. En este tema se describen las primeras herramientas que necesitará y se ofrece ayuda para seleccionar la herramienta adecuada para La tarea. Se puede obtener acceso a todas las herramientas desde el menú **Inicio** . No se instalan las mismas herramientas, como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], de forma predeterminada. Debe seleccionarlas como parte de los componentes de cliente durante la instalación. Para obtener una descripción completa de las herramientas descritas a continuación, búsquelas en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] solo contiene un subconjunto de las herramientas.  
   
 ### <a name="basic-tools"></a>Herramientas básicas  
   
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es la herramienta principal para administrar [!INCLUDE[ssDE](../includes/ssde-md.md)] y escribir código de [!INCLUDE[tsql](../includes/tsql-md.md)]. Se hospeda en el shell de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . No se incluye en [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , pero está disponible como descarga independiente en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es la herramienta principal para administrar [!INCLUDE[ssDE](../includes/ssde-md.md)] y escribir código de [!INCLUDE[tsql](../includes/tsql-md.md)]. Se hospeda en el shell de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . No se incluye en [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , pero está disponible como descarga independiente en el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se instala con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y las herramientas cliente. Permite habilitar protocolos de servidor, configurar opciones de protocolo, como los puertos TCP, configurar servicios de servidor para que se inicien automáticamente y configurar equipos cliente para que se conecten de la forma preferida. Esta herramienta configura los elementos de conectividad más avanzados, pero no habilita las características.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63145492"
   
 -   En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
   
-##  <a name="connect"></a>Conectar con Management Studio  
+##  <a name="connecting-with-management-studio"></a><a name="connect"></a>Conectar con Management Studio  
  Resulta sencillo conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde herramientas que se ejecutan en el mismo equipo si conoce el nombre de la instancia y si se conecta como miembro del grupo Administradores del equipo. Los procedimientos siguientes deben realizarse en el mismo equipo en el que se hospeda [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>Para determinar el nombre de la instancia de motor de base de datos  
@@ -73,11 +72,11 @@ ms.locfileid: "63145492"
   
 2.  Seleccione **Motor de base de datos**.  
   
-3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. En el caso de una instancia con nombre de SQL Server, el nombre del servidor es el *<computer_name>***\\*** *<instance_name>, como **ACCTG_SRVR \SQLEXPRESS**.  
+3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. Para una instancia con nombre de SQL Server, el nombre del servidor es *<nombre_equipo>***\\***<nombre_instancia>,* como **ACCTG_SRVR\SQLEXPRESS**.  
   
 4.  Haga clic en **Conectar**.  
   
-##  <a name="additional"></a>Autorizar conexiones adicionales  
+##  <a name="authorizing-additional-connections"></a><a name="additional"></a>Autorizar conexiones adicionales  
  Ahora que se ha conectado a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como administrador, una de las primeras tareas que debe realizar es autorizar a otros usuarios a conectarse. Para ello, cree un inicio de sesión y concédale autorización para obtener acceso a una base de datos como usuario. Los inicios de sesión pueden ser inicios de sesión con autenticación de Windows, que utilizan las credenciales de Windows, o bien inicios de sesión con autenticación de SQL Server, que almacenan la información de autenticación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y son independientes de las credenciales de Windows. Utilice la autenticación de Windows siempre que sea posible.  
   
 ##### <a name="create-a-windows-authentication-login"></a>Crear un inicio de sesión con autenticación de Windows  
@@ -102,6 +101,6 @@ ms.locfileid: "63145492"
 >  Esta información es básica para empezar. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo entorno de seguridad y, obviamente, la seguridad es un aspecto importante de las operaciones de base de datos.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Conectarse desde otro equipo](lesson-2-connecting-from-another-computer.md)  
+ [Lección 2: Conexión desde otro equipo](lesson-2-connecting-from-another-computer.md)  
   
   

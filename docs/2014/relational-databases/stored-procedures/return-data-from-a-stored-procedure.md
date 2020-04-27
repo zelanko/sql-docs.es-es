@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140443"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Devolver datos de un procedimiento almacenado
@@ -74,7 +74,7 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)]los procedimientos solo pueden `cursor` usar el tipo de datos para los parámetros de salida. Si se `cursor` especifica el tipo de datos para un parámetro, deben especificarse las palabras clave varying y output para ese parámetro en la definición del procedimiento. Un parámetro solo se puede especificar como OUTPUT, pero si se especifica la palabra clave VARYING en la declaración del parámetro, el tipo `cursor` de datos debe ser y también se debe especificar la palabra clave output.  
   
 > [!NOTE]  
->  El tipo de datos `cursor` no se puede enlazar a variables de aplicación a través de las API de bases de datos tales como OLE DB, ODBC, ADO y DB-Library. Debido a que los parámetros OUTPUT deben estar enlazados antes de que una aplicación pueda ejecutar un procedimiento, dichos procedimientos con parámetros `cursor` OUTPUT no pueden llamarse desde las API de bases de datos. Estos procedimientos solo pueden llamarse desde procesos por lotes, procedimientos o desencadenadores [!INCLUDE[tsql](../../../includes/tsql-md.md)] cuando la variable `cursor` OUTPUT esté asignada a una variable [!INCLUDE[tsql](../../../includes/tsql-md.md)] local de `cursor`.  
+>  El tipo de datos `cursor` no se puede enlazar a variables de aplicación a través de las API de bases de datos tales como OLE DB, ODBC, ADO y DB-Library. Debido a que los parámetros OUTPUT deben estar enlazados antes de que una aplicación pueda ejecutar un procedimiento, dichos procedimientos con parámetros `cursor` OUTPUT no pueden llamarse desde las API de bases de datos. Estos procedimientos solo pueden llamarse desde procesos por lotes, procedimientos o desencadenadores [!INCLUDE[tsql](../../../includes/tsql-md.md)] cuando la variable `cursor` OUTPUT esté asignada a una variable `cursor` local de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Reglas para parámetros de salida de cursor  
  Las siguientes reglas se aplican a los parámetros `cursor` OUTPUT cuando se ejecuta el procedimiento:  
@@ -256,7 +256,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [PRINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
- [SET @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
+ [SET @local_variable &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [Cursores](../cursors.md)   
  [DEVOLVER &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/return-transact-sql)   
  [@@ERROR &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-transact-sql)  

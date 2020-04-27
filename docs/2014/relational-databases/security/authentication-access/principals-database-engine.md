@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011910"
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
-  Las *entidades de seguridad son entidades* que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden solicitar recursos. Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de su definición: Windows, servidor o base de datos; y de si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID).  
+  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de su definición: Windows, servidor o base de datos; y de si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID).  
   
  **Entidades de seguridad a nivel de Windows**  
   
@@ -44,11 +44,11 @@ ms.locfileid: "63011910"
   
 -   Inicio de sesión local de Windows  
   
- ****-**** **Entidades** de seguridad de nivel de SQL Server  
+ **SQL Server**-**level** **Entidades** de seguridad de nivel de SQL Server  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Inicio  
+-   Inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
--   Rol del servidor  
+-   Rol de servidor  
   
  **Entidades de seguridad de nivel de bases de datos**  
   
@@ -65,28 +65,24 @@ ms.locfileid: "63011910"
  Todos los usuarios de una base de datos pertenecen al rol de base de datos public. Cuando a un usuario no se le han concedido ni denegado permisos concretos para un elemento protegible, hereda los permisos para ese elemento concedidos a public.  
   
 ## <a name="information_schema-and-sys"></a>INFORMATION_SCHEMA y sys  
- Todas las bases de datos incluyen dos entidades que aparecen como usuarios en las vistas de catálogo: INFORMATION_SCHEMA y sys. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]necesita estas dos entidades. No son entidades de seguridad y no se pueden modificar ni quitar.  
+ Todas las bases de datos incluyen dos entidades que aparecen como usuarios en las vistas de catálogo: INFORMATION_SCHEMA y sys. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]necesita estas dos entidades. No son entidades de seguridad y no se pueden modificar ni quitar.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Inicios de sesión de SQL Server basados en certificados  
  Las entidades de seguridad de servidor con nombres incluidos entre signos de número dobles (##) son exclusivamente para uso interno del sistema. Las siguientes entidades de seguridad se crean a partir de certificados cuando se instala [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y no deben eliminarse.  
   
--   \##MS_SQLResourceSigningCertificate ##  
+-   \##MS_SQLResourceSigningCertificate##  
   
--   \##MS_SQLReplicationSigningCertificate ##  
+-   \##MS_SQLReplicationSigningCertificate##  
   
--   \##MS_SQLAuthenticatorCertificate ##  
+-   \##MS_SQLAuthenticatorCertificate##  
   
--   \##MS_AgentSigningCertificate ##  
+-   \##MS_AgentSigningCertificate##  
   
--   
-  \##MS_PolicyEventProcessingLogin##  
+-   \##MS_PolicyEventProcessingLogin##  
   
--   
-  \##MS_PolicySigningCertificate##  
+-   \##MS_PolicySigningCertificate##  
   
--   
-  \##MS_PolicyTsqlExecutionLogin##  
+-   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Usuario guest  
  Cada base de datos incluye un usuario **guest**. Los permisos concedidos al usuario **guest** se aplican a todos los usuarios que tienen acceso a la base de datos, pero no disponen de una cuenta en la base de datos. No se puede quitar el usuario **Guest** , pero se puede deshabilitar si se revoca su `CONNECT` permiso. El `CONNECT` permiso se puede revocar si se ejecuta `REVOKE CONNECT FROM GUEST` en cualquier base de datos que no sea Master o tempdb.  
@@ -97,7 +93,7 @@ ms.locfileid: "63011910"
 ## <a name="related-tasks"></a>Related Tasks  
  Los temas siguientes se incluyen en esta sección de Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
--   [Temas de procedimientos de administración de inicios de sesión, usuarios y esquemas](managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Temas de procedimientos de la administración de inicios de sesión, usuarios y esquemas](managing-logins-users-and-schemas-how-to-topics.md)  
   
 -   [Roles de nivel de servidor](server-level-roles.md)  
   
@@ -106,11 +102,11 @@ ms.locfileid: "63011910"
 -   [Roles de aplicación](application-roles.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Protección de SQL Server](../securing-sql-server.md)   
+ [Proteger SQL Server](../securing-sql-server.md)   
  [Sys. database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
- [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
+ [Sys. server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
  [Sys. sql_logins &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
- [sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
+ [Sys. database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [Roles de nivel de servidor](server-level-roles.md)   
  [Roles de nivel de base de datos](database-level-roles.md)  
   

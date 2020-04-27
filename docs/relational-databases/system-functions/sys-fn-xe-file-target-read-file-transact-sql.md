@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "73982989"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -47,17 +47,17 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *camino*  
- Ruta de acceso a los archivos que se van a leer. la *ruta de acceso* puede contener caracteres comodín e incluir el nombre de un archivo. *path* es **nvarchar (260)**. No hay ningún valor predeterminado. En el contexto de Azure SQL Database, este valor es una dirección URL HTTP a un archivo en Azure Storage.
+ *path*  
+ Ruta de acceso a los archivos que se van a leer. la *ruta de acceso* puede contener caracteres comodín e incluir el nombre de un archivo. *path* es **nvarchar (260)**. No tiene ningún valor predeterminado. En el contexto de Azure SQL Database, este valor es una dirección URL HTTP a un archivo en Azure Storage.
   
  *mdpath*  
- Ruta de acceso al archivo de metadatos correspondiente al archivo o archivos especificados por el argumento *path* . *mdpath* es **nvarchar (260)**. No hay ningún valor predeterminado. A partir de SQL Server 2016, este parámetro se puede proporcionar como null.
+ Ruta de acceso al archivo de metadatos correspondiente al archivo o archivos especificados por el argumento *path* . *mdpath* es **nvarchar (260)**. No tiene ningún valor predeterminado. A partir de SQL Server 2016, este parámetro se puede proporcionar como null.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]no requiere el parámetro *mdpath* . Sin embargo, se mantiene para la compatibilidad con versiones anteriores para los archivos de registro generados en versiones anteriores de SQL Server.  
   
  *initial_file_name*  
- Primer archivo que se va a leer de *path*. *initial_file_name* es **nvarchar (260)**. No hay ningún valor predeterminado. Si se especifica **null** como argumento, se leen todos los archivos encontrados en la *ruta de acceso* .  
+ Primer archivo que se va a leer de *path*. *initial_file_name* es **nvarchar (260)**. No tiene ningún valor predeterminado. Si se especifica **null** como argumento, se leen todos los archivos encontrados en la *ruta de acceso* .  
   
 > [!NOTE]  
 >  *initial_file_name* y *initial_offset* son argumentos emparejados. Si especifica un valor para cualquiera de ellos, debe especificar un valor para el otro.  
@@ -74,7 +74,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |object_name|**nvarchar(256)**|Nombre del evento. No admite valores NULL.|  
 |event_data|**nvarchar(max)**|Contenido del evento, en formato XML. No admite valores NULL.|  
 |file_name|**nvarchar(260)**|Nombre del archivo que contiene el evento. No admite valores NULL.|  
-|file_offset|**BIGINT**|Desplazamiento del bloque en el archivo que contiene el evento. No admite valores NULL.|  
+|file_offset|**bigint**|Desplazamiento del bloque en el archivo que contiene el evento. No admite valores NULL.|  
 |timestamp_utc|**datetime2**|**Se aplica a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] y versiones posteriores, y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /><br />Fecha y hora (zona horaria UTC) del evento. No admite valores NULL.|  
 
   

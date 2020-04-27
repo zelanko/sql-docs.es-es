@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012709"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
@@ -96,7 +96,7 @@ ms.locfileid: "66012709"
 |Todos los operadores relacionales|=,! =, <, \<=, >, >=|[Especificar operadores relacionales en consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Operadores aritméticos|+, -, *, div|[Especificar operadores aritméticos en consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |Funciones de conversión explícita|`number()`, `string()`, `Boolean()`|[Especificar funciones de conversión explícitas en consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
-|Operadores booleanos|AND, OR|[Especificar operadores booleanos en consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|operadores booleanos|AND, OR|[Especificar operadores booleanos en consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |funciones booleanas|`true()`, `false()`, `not()`|[Especificar funciones booleanas en consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |variables de XPath||[Especificar variables XPath en consultas XPath &#40;SQLXML 4,0&#41;](samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md)|  
   

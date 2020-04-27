@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013449"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Instrucciones y limitaciones de la carga masiva XML (SQLXML 4.0)
@@ -171,7 +171,6 @@ ms.locfileid: "66013449"
   
 -   Si está insertando valores de fecha mediante la carga masiva XML, estos valores deben especificarse con el formato (-)CCYY-MM-DD((+-)TZ). Se trata del formato XSD estándar para la fecha.  
   
--   Algunas marcas de propiedad no son compatibles con otras. Por ejemplo, la carga masiva no admite `Ignoreduplicatekeys=true` junto con `Keepidentity=false`. Cuando `Keepidentity=false`, la carga masiva espera que el servidor genere los valores clave. Las tablas deberían tener una limitación de `IDENTITY` en la clave. El servidor no generará claves duplicadas, lo que significa que no es necesario que `Ignoreduplicatekeys` se establezca en `true`. 
-  `Ignoreduplicatekeys` debe establecerse en `true` solo cuando se cargan valores de clave principales de los datos entrantes en una tabla que tiene filas y existe la posibilidad de un conflicto de los valores de clave principales.  
+-   Algunas marcas de propiedad no son compatibles con otras. Por ejemplo, la carga masiva no admite `Ignoreduplicatekeys=true` junto con `Keepidentity=false`. Cuando `Keepidentity=false`, la carga masiva espera que el servidor genere los valores clave. Las tablas deberían tener una limitación de `IDENTITY` en la clave. El servidor no generará claves duplicadas, lo que significa que no es necesario que `Ignoreduplicatekeys` se establezca en `true`. `Ignoreduplicatekeys` debe establecerse en `true` solo cuando se cargan valores de clave principales de los datos entrantes en una tabla que tiene filas y existe la posibilidad de un conflicto de los valores de clave principales.  
   
   

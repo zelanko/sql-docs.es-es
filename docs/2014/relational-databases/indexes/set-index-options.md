@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036222"
 ---
 # <a name="set-index-options"></a>Establecer opciones de índice
@@ -47,20 +47,20 @@ ms.locfileid: "63036222"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Las siguientes opciones se aplican inmediatamente al índice mediante la cláusula SET de la instrucción ALTER INDEX: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE.  
   
 -   Las opciones siguientes se pueden establecer cuando se vuelve a generar un índice mediante ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP y DROP_EXISTING (solo CREATE INDEX).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>Para modificar las propiedades de un índice en el Diseñador de tablas  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63036222"
   
 3.  Haga clic con el botón derecho en la tabla en la que quiere modificar las propiedades de un índice y seleccione **Diseño**.  
   
-4.  En el menú **Diseñador de tablas** , haga clic en **índices o claves**.  
+4.  En el menú **Diseñador de tablas** , haga clic en **Índices o claves**.  
   
 5.  Seleccione el índice que desea modificar. Sus propiedades aparecerán en la cuadrícula principal.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63036222"
   
 7.  Haga clic en **Cerrar**.  
   
-8.  En el menú **archivo** , seleccione **Guardar**_TABLE_NAME_.  
+8.  En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
   
 #### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>Para modificar las propiedades de un índice en el Explorador de objetos  
   
@@ -96,9 +96,9 @@ ms.locfileid: "63036222"
   
 7.  Cambie los valores de una o todas las propiedades para personalizar el índice.  
   
-8.  Para agregar, quitar o cambiar la posición de una columna de índice, seleccione la página **General** del cuadro de diálogo **Propiedades del índice:** _nombre_índice_ . Para obtener más información, consulte [Index Properties F1 Help](index-properties-f1-help.md).  
+8.  Para agregar, quitar o cambiar la posición de una columna de índice, seleccione la página **General** del cuadro de diálogo **Propiedades del índice:** _nombre de índice_. Para obtener más información, consulte [Index Properties F1 Help](index-properties-f1-help.md).  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>Para ver las propiedades de todos los índices en una tabla  
   

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070885"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Ordenar y agrupar los resultados de una consulta (Visual Database Tools)
@@ -56,7 +56,7 @@ ms.locfileid: "63070885"
  [Especificar condiciones para grupos &#40;Visual Database Tools&#41;](specify-conditions-for-groups-visual-database-tools.md)  
  Proporciona los pasos necesarios para crear condiciones de búsqueda que se aplican a grupos de filas.  
   
- [Reordene las columnas de salida &#40;Visual Database Tools&#41;](reorder-output-columns-visual-database-tools.md)  
+ [Reordenar las columnas del resultado &#40;Visual Database Tools&#41;](reorder-output-columns-visual-database-tools.md)  
  Proporciona los pasos necesarios para cargar la configuración de ordenación actual.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  

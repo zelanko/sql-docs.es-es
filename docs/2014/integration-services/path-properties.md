@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056662"
 ---
 # <a name="path-properties"></a>Propiedades de la ruta de acceso
@@ -39,7 +39,7 @@ ms.locfileid: "66056662"
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|La salida asociada a la ruta de acceso.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Rutas de Integration Services](data-flow/integration-services-paths.md)   
+ [Integration Services trazados](data-flow/integration-services-paths.md)   
  [Propiedades comunes](../../2014/integration-services/common-properties.md)   
  [Propiedades personalizadas de la transformación](data-flow/transformations/transformation-custom-properties.md)   
  [Propiedades de flujo de datos que se pueden establecer utilizando expresiones](../../2014/integration-services/data-flow-properties-that-can-be-set-by-using-expressions.md)  

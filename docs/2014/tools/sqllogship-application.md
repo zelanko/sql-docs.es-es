@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035084"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
-  La aplicación **sqllogship** realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza asociadas para una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos concreta.  
+  La aplicación **sqllogship** realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
   
- ![Icono de vínculo de tema](../../2014/database-engine/media/topic-link.gif "Icono de vínculo de tema") Para obtener las convenciones de sintaxis, vea referencia de la [utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icono de vínculo a tema](../../2014/database-engine/media/topic-link.gif "Icono de vínculo de tema") Para las convenciones de sintaxis, vea [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,15 +34,15 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **-instance_name de servidor** __  
+ **-server** _instance_name_  
  Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] donde se ejecutará la operación. La instancia del servidor que se va a especificar depende de la operación de trasvase de registros indicada. Para **-backup**, *instance_name* debe ser el nombre del servidor principal en una configuración de trasvase de registros. Para **-copy** o **-restore**, *instance_name* debe ser el nombre de un servidor secundario en una configuración de trasvase de registros.  
   
- **-primary_id de copia de seguridad** __  
+ **-backup** _primary_id_  
  Realiza una operación de copia de seguridad de la base de datos principal cuyo identificador principal se especifica en *primary_id*. Para obtener este identificador, selecciónelo en la tabla del sistema [log_shipping_primary_databases](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql) o use el procedimiento almacenado [sp_help_log_shipping_primary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql) .  
   
  La operación de copia de seguridad crea la copia de seguridad del registro en el directorio de copia de seguridad. A continuación, la aplicación **sqllogship** limpia los archivos de copia de seguridad antiguos, basándose en el período de retención de archivos. Más tarde, la aplicación registra el historial de la operación de copia de seguridad en el servidor principal y en el servidor de supervisión. Por último, la aplicación ejecuta [sp_cleanup_log_shipping_history](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql), que limpia la información del historial antigua, basándose en el período de retención.  
   
- **-copiar** _secondary_id_  
+ **-copy** _secondary_id_  
  Realiza una operación de copia para copiar copias de seguridad desde el servidor secundario especificado de la base de datos o bases de datos secundarias cuyo identificador secundario se indica en *secondary_id*. Para obtener este identificador, selecciónelo en la tabla del sistema [log_shipping_secondary](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql) o use el procedimiento almacenado [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .  
   
  La operación copia los archivos de copia de seguridad desde el directorio de copia de seguridad al directorio de destino. A continuación, la aplicación **sqllogship** registra el historial de la operación de copia en el servidor secundario y en el servidor de supervisión.  
@@ -52,8 +52,8 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Los archivos de copia de seguridad del directorio de destino creados después del punto de restauración más reciente se restauran en la base de datos o bases de datos secundarias. A continuación, la aplicación **sqllogship** limpia los archivos de copia de seguridad antiguos, basándose en el período de retención de archivos. Más tarde, la aplicación registra el historial de la operación de restauración en el servidor secundario y en el servidor de supervisión. Por último, la aplicación ejecuta **sp_cleanup_log_shipping_history**, que limpia la información del historial antigua, basándose en el período de retención.  
   
- **-nivel de verboselevel** __  
- Especifica el nivel de mensajes agregados al historial de trasvase de registros. *LEVEL* es uno de los siguientes enteros:  
+ **-verboselevel** _level_  
+ Especifica el nivel de mensajes agregados al historial de trasvase de registros. *level* es uno de los siguientes enteros:  
   
 |Nivel|Descripción|  
 |-----------|-----------------|  
@@ -64,10 +64,10 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |4|Se obtienen todos los mensajes de depuración y traza.|  
   
  **-logintimeout** _timeout_value_  
- Especifica la cantidad de tiempo asignada para intentar iniciar sesión en la instancia del servidor antes de que se agote el tiempo de espera del intento. El valor predeterminado es 15 segundos. *timeout_value* es de **tipo int**_._  
+ Especifica la cantidad de tiempo asignado al intento de iniciar sesión en la instancia del servidor antes de que se agote el tiempo de espera del intento. El valor predeterminado es 15 segundos. *timeout_value* es de tipo **int** _._  
   
  **-querytimeout** _timeout_value_  
- Especifica la cantidad de tiempo asignada para iniciar la operación especificada antes de que se agote el tiempo de espera del intento. El valor predeterminado es sin tiempo de espera. *timeout_value* es de **tipo int**_._  
+ Especifica la cantidad de tiempo asignado para iniciar la operación especificada antes de que se agote el tiempo de espera. El valor predeterminado es sin tiempo de espera. *timeout_value* es de tipo **int** _._  
   
 ## <a name="remarks"></a>Observaciones  
  Se recomienda que use los trabajos de copia de seguridad, copia y restauración para realizar la copia de seguridad, copia y restauración cuando sea posible. Para iniciar estos trabajos desde una operación por lotes u otra aplicación, llame al procedimiento almacenado [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
@@ -82,19 +82,19 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |Opción|Acceso al directorio|Permisos|  
 |------------|----------------------|-----------------|  
 |**-backup**|Requiere acceso de lectura/escritura al directorio de copia de seguridad.|Requiere los mismos permisos que la instrucción BACKUP. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).|  
-|**-copiar**|Requiere acceso de lectura al directorio de copia de seguridad y acceso de escritura al directorio de copia.|Requiere los mismos permisos que el procedimiento almacenado [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  
-|**-restaurar**|Requiere acceso de lectura/escritura al directorio de copia.|Requiere los mismos permisos que la instrucción RESTORE. Para obtener más información, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
+|**-copy**|Requiere acceso de lectura al directorio de copia de seguridad y acceso de escritura al directorio de copia.|Requiere los mismos permisos que el procedimiento almacenado [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  
+|**-restore**|Requiere acceso de lectura/escritura al directorio de copia.|Requiere los mismos permisos que la instrucción RESTORE. Para obtener más información, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).|  
   
 > [!NOTE]  
 >  Para conocer las rutas de acceso de los directorios de copia de seguridad y copia, puede ejecutar el procedimiento almacenado **sp_help_log_shipping_secondary_database** o examinar la tabla **log_shipping_secondary** en **msdb**. Las rutas de acceso al directorio de copia de seguridad y al de destino se encuentran en las columnas **backup_source_directory** y **backup_destination_directory** respectivamente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [log_shipping_primary_databases &#40;&#41;de Transact-SQL](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
- [log_shipping_secondary &#40;&#41;de Transact-SQL](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   
- [sp_cleanup_log_shipping_history &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql)   
- [sp_help_log_shipping_primary_database &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql)   
- [sp_help_log_shipping_secondary_database &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)   
- [sp_start_job &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
+ [log_shipping_primary_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
+ [log_shipping_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql)   
+ [sp_help_log_shipping_primary_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-primary-database-transact-sql)   
+ [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)   
+ [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)  
   
   

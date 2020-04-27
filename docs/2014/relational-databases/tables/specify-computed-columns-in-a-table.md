@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211806"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar columnas calculadas en una tabla
@@ -36,22 +36,22 @@ ms.locfileid: "68211806"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Limitations"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Limitaciones y restricciones  
   
 -   Una columna calculada no puede utilizarse como definición de restricción DEFAULT o FOREIGN KEY ni como NOT NULL. No obstante, si el valor de columna calculada lo define una expresión determinista y se permite el tipo de datos del resultado en columnas de índice, se puede utilizar una columna calculada como columna de clave en un índice o como parte de cualquier restricción PRIMARY KEY o UNIQUE. Por ejemplo, si la tabla tiene las columnas de tipo entero a y b, la columna calculada a + b se puede indizar, pero la columna calculada a + DATEPART(dd, GETDATE()) no, porque el valor podría variar en llamadas posteriores.  
   
 -   Una columna calculada no puede ser el destino de una instrucción INSERT o UPDATE.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
-###  <a name="NewColumn"></a> Para agregar una nueva columna calculada  
+###  <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> Para agregar una nueva columna calculada  
   
 1.  En el **Explorador de objetos**, expanda la tabla para la que desea agregar la nueva columna calculada. Haga clic con el botón derecho en **Columnas** y seleccione **Nueva columna**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68211806"
   
 5.  Indique si los datos se van a conservar; para ello, elija **Sí** o **No** en el menú desplegable de la propiedad secundaria **Es persistente** .  
   
-6.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
+6.  En el menú **Archivo**, haga clic en ***Guardar**_nombre de tabla_.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Para agregar una definición de columna calculada a una columna existente  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211806"
   
 3.  Agregue una nueva columna y especifique la fórmula de columna calculada siguiendo el procedimiento anterior para agregar una nueva columna calculada.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>Para agregar una columna calculada al crear una tabla  
   

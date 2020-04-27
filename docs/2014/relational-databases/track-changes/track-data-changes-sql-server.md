@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63073996"
 ---
 # <a name="track-data-changes-sql-server"></a>Seguimiento de cambios de datos (SQL Server)
@@ -60,26 +60,26 @@ ms.locfileid: "63073996"
   
 -   El seguimiento de cambios se basa en transacciones confirmadas. El orden de los cambios se basa en la hora de confirmación de la transacción. Esto permite obtener resultados confiables cuando hay transacciones de ejecución prolongada que se solapan. Las soluciones personalizadas que utilizan valores `timestamp` deben diseñarse específicamente para administrar estos escenarios.  
   
--   Hay herramientas estándar disponibles que se pueden utilizar para configurar y administrar. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]proporciona instrucciones DDL estándar, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vistas de catálogo y permisos de seguridad.  
+-   Hay herramientas estándar disponibles que se pueden utilizar para configurar y administrar. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona instrucciones DDL estándar, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vistas de catálogo y permisos de seguridad.  
   
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>Diferencias de características entre la captura de datos modificados y el seguimiento de cambios  
  La tabla siguiente enumera las diferencias de características entre la captura de datos modificados y el seguimiento de cambios. El mecanismo de seguimiento de la captura de datos modificados implica una captura asincrónica de los cambios del registro de transacciones para que estén disponibles después de la operación DML. En el seguimiento de cambios, el mecanismo de seguimiento implica el seguimiento sincrónico de los cambios a la vez que las operaciones DML de modo que la información de los cambios esté disponible inmediatamente.  
   
 |Característica|captura de datos modificados|seguimiento de cambios|  
 |-------------|-------------------------|---------------------|  
-|**Cambios controlados**|||  
+|**Cambios sometidos a seguimiento**|||  
 |Cambios de DML|Sí|Sí|  
 |**Información sometida a seguimiento**|||  
 |Datos históricos|Sí|No|  
 |Si la columna cambió|Sí|Sí|  
 |Tipo de DML|Sí|Sí|  
   
-##  <a name="Capture"></a>Captura de datos modificados  
+##  <a name="change-data-capture"></a><a name="Capture"></a>Captura de datos modificados  
  La captura de datos modificados proporciona información de los cambios históricos para una tabla de usuario captando tanto el hecho de que se realizaran cambios de DML como los datos reales que se cambiaron. Los cambios se capturan mediante un proceso asincrónico que lee el registro de transacciones y tiene poca repercusión en el sistema.  
   
  Como se muestra en la ilustración siguiente, los cambios que se realizaron en las tablas de usuario se capturan en las tablas de cambios correspondientes. Estas tablas de cambios proporcionan una vista histórica de los cambios a lo largo del tiempo. Las funciones de [captura de datos modificados](/sql/relational-databases/system-functions/change-data-capture-functions-transact-sql)que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona permiten utilizar los datos modificados con facilidad y de forma sistemática.  
   
- ![Ilustración conceptual de captura de datos modificados](../../database-engine/media/cdcart1.gif "Ilustración conceptual de la captura de datos modificados")  
+ ![Ilustración conceptual de la captura de datos modificados](../../database-engine/media/cdcart1.gif "Ilustración conceptual de la captura de datos modificados")  
   
 ### <a name="security-model"></a>Modelo de seguridad  
  Esta sección describe el modelo de seguridad de la captura de datos modificados.  
@@ -89,10 +89,10 @@ ms.locfileid: "63073996"
   
  El uso de los procedimientos almacenados para admitir la administración de trabajos de captura de datos modificados se restringe a los miembros del rol de servidor `sysadmin` y a los miembros del rol de base de datos `database db_owner`.  
   
- **Cambiar la enumeración y las consultas de metadatos**  
+ **Enumeración de cambios y consultas de los metadatos**  
  Para obtener acceso a los datos modificados que están asociados a una instancia de captura, se debe conceder al usuario acceso exclusivo a todas las columnas capturadas de la tabla de origen asociada. Además, si se especifica un rol de acceso cuando se crea la instancia de captura, el autor de las llamadas también debe ser miembro del rol de acceso especificado. Otras funciones de captura de datos modificados generales para tener acceso a los metadatos serán accesibles para todos los usuarios de la base de datos a través del rol public, aunque el acceso a los metadatos devueltos también se conseguirá normalmente mediante un acceso exclusivo a las tablas de origen subyacentes y por pertenencia a cualquier rol de acceso definido.  
   
- **Operaciones DDL para cambiar las tablas de origen habilitadas para la captura de datos**  
+ **Operaciones DDL para las tablas de origen habilitadas para la captura de datos modificados**  
  Cuando una tabla está habilitada para la captura de datos modificados, solo un miembro del rol fijo de servidor `sysadmin` o de los roles de base de datos `database role db_owner` o `database role db_ddladmin` puede aplicarle las operaciones DDL.  Los usuarios a los que se les haya permitido explícitamente realizar operaciones DDL en la tabla recibirán el error 22914 si intentan esta operación.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Consideraciones sobre los tipos de datos para la captura de datos modificados  
@@ -133,8 +133,7 @@ ms.locfileid: "63073996"
 >  Cuando el Agente de registro del LOG se utiliza para la captura de datos modificados y la replicación transaccional, los cambios replicados se escriben primero en la base de datos de distribución. A continuación, los cambios capturados se escriben en las tablas de cambios. Ambas operaciones se confirman conjuntamente. Si hay alguna latencia al escribir en la base de datos de distribución, habrá una latencia correspondiente antes de que los cambios aparezcan en las tablas de cambios.  
   
 #### <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a>Restaurar o asociar una base de datos habilitada para la captura de datos modificados  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la lógica siguiente para determinar si la captura de datos modificados permanece habilitada una vez restaurada o asociada una base de datos:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la lógica siguiente para determinar si la captura de datos modificados permanece habilitada una vez restaurada o asociada una base de datos:  
   
 -   Si una base de datos se restaura en el mismo servidor con el mismo nombre, la captura de datos modificados sigue habilitada.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "63073996"
  Puede usar [sys.sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) para quitar la captura de datos modificados desde una base de datos restaurada o asociada.  
  
 
-  ##  <a name="Tracking"></a>Change Tracking  
+  ##  <a name="change-tracking"></a><a name="Tracking"></a>Change Tracking  
  El seguimiento de cambios captura el hecho de que las filas de una tabla cambiaran, pero no los datos que se modificaron. Esto permite a las aplicaciones determinar las filas que han cambiado con los datos de las filas más recientes obtenidos directamente de las tablas de usuario. Por consiguiente, el seguimiento de cambios está más limitado en las cuestiones históricas que puede responder en comparación con la captura de datos modificados. Sin embargo, para las aplicaciones que no requieren información histórica, hay mucha menos sobrecarga de almacenamiento debido a que los datos modificados no se están capturando. Se utiliza un mecanismo de seguimiento sincrónico para realizar el seguimiento de los cambios. Se ha diseñado de modo que suponga una sobrecarga mínima para las operaciones DML.  
   
  La ilustración siguiente muestra un escenario de sincronización que se beneficiaría del uso del seguimiento de cambios. En este escenario, una aplicación requiere la información siguiente: todas las filas de la tabla que se cambiaron desde la última vez que la tabla se sincronizó, y solo los datos de las filas actuales. Dado que para realizar el seguimiento de los cambios se utiliza un mecanismo sincrónico, una aplicación puede realizar una sincronización bidireccional y detectar de forma confiable cualquier conflicto que pudiera haberse producido.  
@@ -159,17 +158,15 @@ ms.locfileid: "63073996"
  ![Ilustración conceptual del seguimiento de cambios](../../database-engine/media/cdcart2.gif "Ilustración conceptual del seguimiento de cambios")  
   
 ### <a name="change-tracking-and-sync-services-for-adonet"></a>Seguimiento de cambios y servicios de sincronización para ADO.NET  
- 
-  [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] permite la sincronización entre bases de datos, proporcionando una API intuitiva y flexible que permite generar aplicaciones destinadas a escenarios para la colaboración y sin conexión. 
-  [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] proporciona una API para sincronizar los cambios, pero no realiza el seguimiento de los cambios que se producen en el servidor o en la base de datos del mismo nivel. Puede crear un sistema de seguimiento de cambios personalizado, pero esto introduce normalmente una complejidad significativa y una sobrecarga de rendimiento. Para realizar el seguimiento de cambios en un servidor o una base de datos del mismo nivel, se recomienda usar el seguimiento de cambios en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] porque es fácil de configurar y proporciona un seguimiento del alto rendimiento.  
+ [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] permite la sincronización entre bases de datos, proporcionando una API intuitiva y flexible que permite generar aplicaciones destinadas a escenarios para la colaboración y sin conexión. [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] proporciona una API para sincronizar los cambios, pero no realiza el seguimiento de los cambios que se producen en el servidor o en la base de datos del mismo nivel. Puede crear un sistema de seguimiento de cambios personalizado, pero esto introduce normalmente una complejidad significativa y una sobrecarga de rendimiento. Para realizar el seguimiento de cambios en un servidor o una base de datos del mismo nivel, se recomienda usar el seguimiento de cambios en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] porque es fácil de configurar y proporciona un seguimiento del alto rendimiento.  
   
  Para obtener más información sobre el seguimiento de cambios y [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)], utilice los vínculos siguientes:  
   
 -   [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)  
   
-     Se describe el seguimiento de cambios, se proporciona información general de alto nivel sobre cómo funciona el seguimiento de cambios y se describe cómo interactúa con otras características de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+     Se describe el seguimiento de cambios, se proporciona información general de alto nivel sobre cómo funciona el seguimiento de cambios y se describe cómo interactúa con otras características de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
--   [Centro para desarrolladores de Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Microsoft Sync Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
      Proporciona documentación completa para [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] y [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. En la documentación de [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], el tema sobre cómo usar el seguimiento de cambios de SQL Server contiene información detallada y ejemplos de código.  
   
@@ -178,7 +175,7 @@ ms.locfileid: "63073996"
   
 |||  
 |-|-|  
-|**Task**|**Tema.**|  
+|**Task**|**Tema**|  
 |Proporciona información general de la captura de datos modificados.|[Acerca de la captura de datos modificados &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)|  
 |Describe cómo habilitar y deshabilitar la captura de datos modificados en una base de datos o en una tabla.|[Habilitar y deshabilitar la captura de datos modificados &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |Describe cómo administrar y supervisar la captura de datos modificados.|[Administrar y supervisar la captura de datos modificados &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

@@ -16,10 +16,10 @@ ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769159"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769159"
   Agrega un nuevo trabajo de agente que se utiliza para programar la sincronización de una suscripción de inserción con una publicación de combinación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
 > [!IMPORTANT]  
->  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,7 +101,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Diariamente|  
+|**4**|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
@@ -124,8 +124,8 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**6**|Viernes|  
 |**7**|Sábado|  
 |**203**|Día|  
-|**9**|Días laborables|  
-|**7**|Días del fin de semana|  
+|**9**|Días de la semana|  
+|**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
@@ -176,7 +176,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergepushsubscription_agent**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Crear una suscripción de extracción](../../relational-databases/replication/create-a-push-subscription.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   

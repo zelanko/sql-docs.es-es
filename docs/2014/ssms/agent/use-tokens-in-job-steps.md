@@ -17,20 +17,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211310"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens en pasos de trabajo
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente le permite usar tokens en scripts de pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La utilización de tokens al escribir pasos de trabajo ofrece la misma flexibilidad que las variables al escribir programas de software. Una vez que se inserta un token en un script de pasos de trabajo, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sustituye el token en tiempo de ejecución, antes de que el subsistema de [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecute el paso de trabajo.  
   
 > [!IMPORTANT]  
 >  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, la sintaxis del token del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha cambiado. Como resultado, todos los tokens que se usan en pasos de trabajo deben adjuntar ahora una macro de escape; de lo contrario, esos pasos de trabajo producirán un error. El uso de las macros de escape y la actualización de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa tokens se describen en las secciones siguientes, "Descripción del uso de tokens", "Tokens y macros del Agente[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " y "Actualizar pasos de trabajo para usar macros". Además, también ha cambiado la sintaxis de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , que usaba corchetes para llamar a los tokens de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, "`[DATE]`"). Ahora debe delimitar los nombres de los tokens entre paréntesis y colocar un signo de dólar (`$`) al principio de la sintaxis del token. Por ejemplo:  
 >   
->  `$(ESCAPE_`*nombre de macro*`(DATE))`  
+>  `$(ESCAPE_` *nombreDeMacro* `(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>Descripción del uso de tokens  
   
@@ -39,15 +38,13 @@ ms.locfileid: "68211310"
 >   
 >  Si necesita usar estos tokens, asegúrese primero de que solo los miembros de los grupos de seguridad de Windows de confianza, como el grupo Administradores, tienen permisos de escritura en el registro de eventos del equipo donde reside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A continuación, para habilitar estos tokens, haga clic con el botón derecho en **Agente SQL Server** en el Explorador de objetos, elija **Propiedades**y, en la página **Sistema de alerta** , active la casilla **Reemplazar tokens para todas las respuestas de trabajos a alertas** .  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La sustitución del token del Agente es sencilla y eficaz: el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reemplaza el token por un valor literal de cadena exacto. Todos los tokens distinguen mayúsculas de minúsculas. Los pasos de trabajo deben tenerlo en cuenta y citar correctamente los tokens utilizados o convertir la cadena de reemplazo al tipo de datos correcto.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La sustitución del token del Agente es sencilla y eficaz: el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reemplaza el token por un valor literal de cadena exacto. Todos los tokens distinguen mayúsculas de minúsculas. Los pasos de trabajo deben tenerlo en cuenta y citar correctamente los tokens utilizados o convertir la cadena de reemplazo al tipo de datos correcto.  
   
  Por ejemplo, se puede usar la siguiente instrucción para imprimir el nombre de la base de datos en un paso de trabajo:  
   
  `PRINT N'Current database name is $(ESCAPE_SQUOTE(A-DBN))' ;`  
   
- En este ejemplo, la macro **ESCAPE_SQUOTE** se inserta con el token **A-DBN** . En tiempo de ejecución, el nombre de la base de datos apropiada sustituirá al token **A-DBN** . La macro de escape convierte cualquier comilla simple que se pueda pasar de forma inadvertida en la cadena de reemplazo del token. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente reemplazará una comilla simple con dos comillas simples en la cadena final.  
+ En este ejemplo, la macro **ESCAPE_SQUOTE** se inserta con el token **A-DBN** . En tiempo de ejecución, el nombre de la base de datos apropiada sustituirá al token **A-DBN** . La macro de escape convierte cualquier comilla simple que se pueda pasar de forma inadvertida en la cadena de reemplazo del token. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente reemplazará una comilla simple con dos comillas simples en la cadena final.  
   
  Por ejemplo, si la cadena que se pasa para reemplazar al token es `AdventureWorks2012'SELECT @@VERSION --`, el comando que ejecuta el paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será:  
   
@@ -62,37 +59,37 @@ ms.locfileid: "68211310"
   
 ### <a name="sql-server-agent-tokens"></a>Tokens del Agente SQL Server  
   
-|SWT|Descripción|  
+|Token|Descripción|  
 |-----------|-----------------|  
 |**(A-DBN)**|nombre de base de datos. Si el trabajo se ejecuta a causa de una alerta, el valor del nombre de la base de datos sustituye automáticamente a este token en el paso de trabajo.|  
 |**(A-SVR)**|Nombre de servidor. Si el trabajo se ejecuta a causa de una alerta, el valor del nombre del servidor sustituye automáticamente a este token en el paso de trabajo.|  
 |**(A-ERR)**|Número de error. Si el trabajo se ejecuta a causa de una alerta, el valor del número de error sustituye automáticamente a este token en el paso de trabajo.|  
-|**(A-GRAVEDAD)**|Gravedad del error. Si el trabajo se ejecuta a causa de una alerta, el valor de la gravedad del error sustituye automáticamente a este token en el paso de trabajo.|  
+|**(A-SEV)**|Gravedad del error. Si el trabajo se ejecuta a causa de una alerta, el valor de la gravedad del error sustituye automáticamente a este token en el paso de trabajo.|  
 |**(A-MSG)**|Texto del mensaje. Si el trabajo se ejecuta a causa de una alerta, el valor del texto del mensaje sustituye automáticamente a este token en el paso de trabajo.|  
 |**Posteriormente**|Fecha actual (en formato AAAAMMDD).|  
 |**Trim**|Nombre de instancia. Para una instancia predeterminada, este token tendrá el nombre de instancia predeterminado: MSSQLSERVER.|  
 |**JOBID**|Id. del trabajo.|  
-|**MÁQUINA**|Nombre del equipo.|  
+|**(MACH)**|Nombre del equipo.|  
 |**(MSSA)**|Nombre del servicio SQLServerAgent maestro.|  
 |**(OSCMD)**|Prefijo del programa usado para ejecutar los pasos de trabajo de **CmdExec** .|  
 |**(SQLDIR)**|Directorio en el que se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El directorio predeterminado es C:\Archivos de programa\Microsoft SQL Server\MSSQL.|  
-|**SQLLOGDIR**|Token de reemplazo para la ruta de la carpeta de registro de errores de SQL Server; por ejemplo, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Token de reemplazo para la ruta de la carpeta de registro de errores de SQL Server; por ejemplo, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
 |**(STEPCT)**|Contador del número de veces que se ha ejecutado este paso (sin incluir los reintentos). Lo puede utilizar el comando del paso para forzar la terminación de un bucle de múltiples pasos.|  
 |**(STEPID)**|Id. del paso.|  
-|**Srvr**|Nombre del equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia con nombre, incluye el nombre.|  
+|**(SRVR)**|Nombre del equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una instancia con nombre, incluye el nombre.|  
 |**TIEMPO**|Hora actual (en formato HHMMSS).|  
 |**(STRTTM)**|La hora (en formato HHMMSS) en la que el trabajo empezó a ejecutarse.|  
 |**(STRTDT)**|La fecha (en formato AAAAMMDD) en la que el trabajo empezó a ejecutarse.|  
-|**(WMI (** *propiedad* **))**|Para los trabajos que se ejecutan en respuesta a las alertas de WMI, es el valor de la propiedad especificada por *property*. Por ejemplo, `$(WMI(DatabaseName))` proporciona el valor de la propiedad **DatabaseName** del evento WMI que provocó la ejecución de la alerta.|  
+|**(WMI(** *propiedad* **))**|Para los trabajos que se ejecutan en respuesta a las alertas de WMI, es el valor de la propiedad especificada por *property*. Por ejemplo, `$(WMI(DatabaseName))` proporciona el valor de la propiedad **DatabaseName** del evento WMI que provocó la ejecución de la alerta.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>Macros de escape del Agente SQL Server  
   
 |Macros de escape|Descripción|  
 |-------------------|-----------------|  
-|**$ (ESCAPE_SQUOTE (** *token_name* **))**|Convierte las comillas simples (') en la cadena de reemplazo del token. Sustituye una comilla simple por dos comillas simples.|  
-|**$ (ESCAPE_DQUOTE (** *token_name* **))**|Convierte las comillas dobles ('') en la cadena de reemplazo del token. Sustituye una comilla doble por dos comillas dobles.|  
-|**$ (ESCAPE_RBRACKET (** *token_name* **))**|Convierte los corchetes de cierre (]) en la cadena de reemplazo del token. Sustituye un corchete de cierre por dos corchetes de cierre.|  
-|**$ (ESCAPE_NONE (** *token_name* **))**|Sustituye el token sin convertir ninguno de los caracteres de la cadena. Se incluye esta macro para la compatibilidad con versiones anteriores en entornos donde las cadenas de reemplazo de tokens se esperan únicamente de usuarios de confianza. Para obtener más información, vea "Actualizar pasos de trabajo para usar macros" más adelante en este tema.|  
+|**$(ESCAPE_SQUOTE(** *nombre_de_token* **))**|Convierte las comillas simples (') en la cadena de reemplazo del token. Sustituye una comilla simple por dos comillas simples.|  
+|**$(ESCAPE_DQUOTE(** *nombre_de_token* **))**|Convierte las comillas dobles ('') en la cadena de reemplazo del token. Sustituye una comilla doble por dos comillas dobles.|  
+|**$(ESCAPE_RBRACKET(** *nombre_de_token* **))**|Convierte los corchetes de cierre (]) en la cadena de reemplazo del token. Sustituye un corchete de cierre por dos corchetes de cierre.|  
+|**$(ESCAPE_NONE(** *nombre_de_token* **))**|Sustituye el token sin convertir ninguno de los caracteres de la cadena. Se incluye esta macro para la compatibilidad con versiones anteriores en entornos donde las cadenas de reemplazo de tokens se esperan únicamente de usuarios de confianza. Para obtener más información, vea "Actualizar pasos de trabajo para usar macros" más adelante en este tema.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Actualizar pasos de trabajo para usar macros  
  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, los pasos de trabajo que contienen tokens sin macros de escape producirán un error y devolverán un mensaje de error indicando que el paso de trabajo contiene uno o más tokens que deben actualizarse con una macro antes de poder ejecutar el trabajo.  

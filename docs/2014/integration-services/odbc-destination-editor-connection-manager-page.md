@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057205"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Editor de destino de ODBC (página Administrador de conexiones)
@@ -39,7 +39,7 @@ ms.locfileid: "66057205"
 ### <a name="connection-manager"></a>Administrador de conexiones  
  Seleccione un administrador de conexiones de ODBC existente en la lista o haga clic en Nueva para crear una nueva conexión. La conexión puede ser a cualquier base de datos compatible con ODBC.  
   
-### <a name="new"></a>Nuevo  
+### <a name="new"></a>New  
  Haga clic en **Nueva**. Se abrirá el cuadro de diálogo **Configurar el administrador de conexiones ODBC** , donde puede crear un administrador de conexiones nuevo.  
   
 ### <a name="data-access-mode"></a>Modo de acceso a datos  
@@ -57,7 +57,7 @@ ms.locfileid: "66057205"
   
 ## <a name="see-also"></a>Consulte también  
  [Propiedades personalizadas del destino ODBC](data-flow/odbc-destination-custom-properties.md)   
- [Editor de destino de ODBC &#40;página Asignaciones&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
+ [Editor de destino de ODBC &#40;página asignaciones&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
  [Editor de destinos de ODBC &#40;página Salida de error&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2be1d4e014a20d1774f92ea261a83716dbbc11bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62999365"
 ---
 # <a name="report-server-ltservergt-sql-server-configuration-manager"></a>Servidor de informes &lt;servidor&gt; (Administrador de configuración de SQL Server)

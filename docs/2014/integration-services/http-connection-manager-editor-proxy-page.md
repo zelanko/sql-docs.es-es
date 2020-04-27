@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058258"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Editor del administrador de conexiones HTTP (página Proxy)
@@ -27,16 +27,16 @@ ms.locfileid: "66058258"
  Para obtener más información acerca del administrador de conexiones HTTP, vea [HTTP Connection Manager](connection-manager/http-connection-manager.md). Para obtener más información acerca de un escenario común de uso para el Administrador de conexiones HTTP, vea [Web Service Task](control-flow/web-service-task.md).  
   
 ## <a name="options"></a>Opciones  
- **Usar proxy**  
+ **Utilizar proxy**  
  Especifique si desea que el Administrador de conexiones HTTP se conecte a través de un servidor proxy.  
   
  **Dirección URL del proxy**  
  Escriba la dirección URL para el servidor de proxy.  
   
- **Omitir proxy en local**  
+ **No usar servidor proxy en el equipo local**  
  Especifique si desea que el Administrador de conexiones HTTP no utilice el servidor proxy para direcciones locales.  
   
- **Usar credenciales**  
+ **Utilizar credenciales**  
  Especifique si desea que el Administrador de conexiones HTTP utilice credenciales de seguridad para el servidor proxy.  
   
  **Nombre de usuario**  
@@ -59,6 +59,6 @@ ms.locfileid: "66058258"
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Página de &#40;Server del editor del administrador de conexiones HTTP&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011936"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importación en bloque de datos mediante las instrucciones BULK INSERT o OPENROWSET(BULK...) (SQL Server)
@@ -44,7 +44,7 @@ ms.locfileid: "66011936"
   
 -   [Ejemplos de importación y exportación en bloque de documentos XML &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Mantener los valores de identidad al importar datos de forma masiva &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
@@ -64,14 +64,14 @@ ms.locfileid: "66011936"
   
 -   [Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET (BULK...) Funcionalidad  
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) Función  
  Se tiene acceso al proveedor de conjuntos de filas BULK de OPENROWSET al llamar a la función OPENROWSET y especificar la opción BULK. La función OPENROWSET(BULK...) permite acceder a datos remotos mediante la conexión a un origen de datos remoto como, por ejemplo, un archivo de datos, a través de un proveedor OLE DB.  
   
  Para realizar una importación masiva de datos, llame a OPENROWSET(BULK...) desde una cláusula SELECT...FROM en una instrucción INSERT. La sintaxis básica de una importación masiva de datos es:  
   
  INSERT ... SELECT * FROM OPENROWSET(BULK...)  
   
- Cuando se usa en una instrucción INSERT, OPENROWSET(BULK...) admite sugerencias de tabla. Además de las sugerencias de tabla normales, como TABLOCK, la cláusula BULK puede aceptar las sugerencias de tablas especializadas siguientes: IGNORE_CONSTRAINTS (solo pasa por alto las restricciones CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS y KEEPIDENTITY. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
+ Cuando se usa en una instrucción INSERT, OPENROWSET(BULK...) admite sugerencias de tabla. Además de las sugerencias de tabla normales, como TABLOCK, la cláusula BULK puede aceptar las sugerencias de tablas especializadas siguientes: IGNORE_CONSTRAINTS (ignora solo las restricciones CHECK), IGNORE_TRIGGERS, KEEPDEFAULTS y KEEPIDENTITY. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   
  Para obtener información sobre los usos adicionales de la opción BULK, vea [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66011936"
   
 -   [Ejemplos de importación y exportación en bloque de documentos XML &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Mantener los valores de identidad al importar datos de forma masiva &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
@@ -99,11 +99,10 @@ ms.locfileid: "66011936"
   
  Por ejemplo, imagine un usuario que ha iniciado sesión en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante autenticación de Windows. Para que el usuario pueda utilizar BULK INSERT u OPENROWSET para importar datos de un archivo de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la cuenta de usuario necesita acceso de lectura para el archivo de datos. Como el usuario dispone de acceso al archivo de datos, podrá importar datos del archivo a la tabla, aunque el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tenga permiso de acceso al archivo. El usuario no tiene que conceder permiso de acceso a archivos al proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para permitir que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecte a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el reenvío de las credenciales de un usuario de Windows autenticado. Esto se conoce como *suplantación* o *delegación*. Es importante entender cómo la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata la seguridad en la suplantación de usuarios al utilizar BULK INSERT u OPENROWSET. La suplantación de usuarios permite que el archivo de datos resida en un equipo diferente al del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o del usuario. Por ejemplo, si un usuario del **Equipo_A** tiene acceso a un archivo de datos del **Equipo_B** y la delegación de credenciales se ha establecido correctamente, el usuario puede conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se esté ejecutando en el **Equipo_C**, tener acceso al archivo de datos del **Equipo_B** y realizar una importación masiva de datos desde ese archivo a una tabla en el **Equipo_C**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para permitir que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecte a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el reenvío de las credenciales de un usuario de Windows autenticado. Esto se conoce como *suplantación* o *delegación*. Es importante entender cómo la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata la seguridad en la suplantación de usuarios al utilizar BULK INSERT u OPENROWSET. La suplantación de usuarios permite que el archivo de datos resida en un equipo diferente al del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o del usuario. Por ejemplo, si un usuario del **Equipo_A** tiene acceso a un archivo de datos del **Equipo_B**y la delegación de credenciales se ha establecido correctamente, el usuario puede conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se esté ejecutando en el **Equipo_C**, tener acceso al archivo de datos del **Equipo_B**y realizar una importación en bloque de datos desde ese archivo a una tabla en el **Equipo_C**.  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>Importación masiva desde un archivo de datos remoto  
- Para usar BULK INSERT o INSERT...SELECT \* FROM OPENROWSET(BULK...) para la importación en bloque de datos desde otro equipo, el archivo de datos debe estar compartido entre los dos equipos. Para especificar un archivo de datos compartido, use su nombre UNC (Convención de nomenclatura universal), que tiene la forma ** \\ **general, _ServerName_**\\**_nombreDeRecursoCompartido_**\\**_path_**\\**_filename_. Además, la cuenta usada para obtener acceso al archivo de datos debe tener los permisos necesarios para leer el archivo en el disco remoto.  
+ Para usar BULK INSERT o INSERT...SELECT \* FROM OPENROWSET(BULK...) para la importación en bloque de datos desde otro equipo, el archivo de datos debe estar compartido entre los dos equipos. Para especificar un archivo de datos compartido, use la convención de nomenclatura universal (UNC) para el nombre, que tiene la forma general de **\\\\** _nombreDeServidor_ **\\** _nombreDeRecursoCompartido_ **\\** _rutaDeAcceso_ **\\** _nombreDeArchivo_. Además, la cuenta usada para obtener acceso al archivo de datos debe tener los permisos necesarios para leer el archivo en el disco remoto.  
   
  Por ejemplo, la siguiente instrucción `BULK INSERT` realiza la importación masiva de datos en una tabla `SalesOrderDetail` de la base de datos `AdventureWorks` desde un archivo de datos denominado `newdata.txt`. Este archivo de datos reside en una carpeta compartida llamada `\dailyorders` en un directorio compartido de red llamado `salesforce` de un sistema llamado `computer2`.  
   
@@ -118,11 +117,11 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Cláusula SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
- [Importación y exportación masivas de datos &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [SELECT &#40;cláusula de Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
+ [Importar y exportar datos en bloque &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
- [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
+ [DESDE &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)  
   

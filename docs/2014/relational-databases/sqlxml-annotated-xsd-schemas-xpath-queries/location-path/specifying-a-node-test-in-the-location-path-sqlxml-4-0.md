@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012672"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Especificar una prueba de nodo en la ruta de acceso de ubicación (SQLXML 4.0)
@@ -44,17 +44,14 @@ ms.locfileid: "66012672"
 ## <a name="abbreviated-syntax-for-the-axes"></a>Sintaxis abreviada para los ejes  
  Se admite la sintaxis abreviada siguiente para la ruta de acceso de ubicación:  
   
--   
-  `attribute::` se puede abreviar como `@`.  
+-   `attribute::` se puede abreviar como `@`.  
   
      La ruta de acceso de ubicación `Customer[@CustomerID="ALFKI"]` es la misma que `child::Customer[attribute::CustomerID="ALFKI"]`.  
   
--   
-  `child::` se puede omitir en un paso de ubicación.  
+-   `child::` se puede omitir en un paso de ubicación.  
   
      Por tanto, `child` es el eje predeterminado. La ruta de acceso de ubicación `Customer/Order` es la misma que `child::Customer/child::Order`.  
   
--   
-  `self::node()` se puede abreviar en un punto (.) y `parent::node()` se puede abreviar en dos puntos (..).  
+-   `self::node()` se puede abreviar en un punto (.) y `parent::node()` se puede abreviar en dos puntos (..).  
   
   

@@ -23,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211019"
 ---
 # <a name="sqlservr-application"></a>sqlservr (aplicación)
-  La aplicación **sqlservr** se inicia, se detiene, se pone en pausa y continúa [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una instancia de desde un símbolo del sistema.  
+  La aplicación **sqlservr** se inicia, se detiene, se pone en pausa y continúa una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde un símbolo del sistema.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68211019"
  Indica la ruta de acceso con autorización completa para el archivo de registro de transacciones de la base de datos **maestra** . No hay espacios entre **-l** y *master_log_path*.  
   
  **-m**  
- Indica que se inicie una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en modo de usuario único. Solo un usuario puede conectar cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia en modo de usuario único. No se inicia el mecanismo CHECKPOINT, que garantiza que se escriben con regularidad transacciones completadas desde la memoria caché del disco al dispositivo de base de datos. (Normalmente, esta opción se utiliza si se existen problemas en las bases de datos del sistema y necesitan repararse.) Habilita la opción **sp_configure allow updates** . De forma predeterminada, la **opción permitir actualizaciones** está deshabilitada.  
+ Indica que se inicie una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en modo de usuario único. Solo un usuario puede conectar cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia en modo de usuario único. No se inicia el mecanismo CHECKPOINT, que garantiza que se escriben con regularidad transacciones completadas desde la memoria caché del disco al dispositivo de base de datos. (Normalmente, esta opción se utiliza si se existen problemas en las bases de datos del sistema y necesitan repararse.) Habilita la opción **sp_configure allow updates** . De forma predeterminada, la opción **allow updates** está deshabilitada.  
   
  **-n**  
  Permite iniciar una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sin el parámetro **-s** establecido, la instancia predeterminada intenta iniciarse. Debe cambiar al directorio BINN apropiado para la instancia en una ventana del símbolo del sistema antes de iniciar **sqlservr.exe**. Por ejemplo, si Instance1 usara \mssql$Instance1 para sus archivos binarios, el usuario debería estar en el directorio \mssql$Instance1\binn para poder iniciar **sqlservr.exe -s instance1**. Si inicia una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la opción **-n** , es recomendable que use también la opción **-e** ; de lo contrario los eventos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se registrarán.  
@@ -76,8 +76,7 @@ ms.locfileid: "68211019"
  Indica que se debe iniciar una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con una marca de seguimiento específica (*trace#*) vigente. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  Cuando especifique una marca de seguimiento, use **-T** para pasar el número de la marca de seguimiento. 
-  **acepta una t minúscula (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), pero **-t** establece otras marcas de seguimiento internas que necesitan los ingenieros de soporte técnico de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Cuando especifique una marca de seguimiento, use **-T** para pasar el número de la marca de seguimiento. **acepta una t minúscula (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), pero **-t** establece otras marcas de seguimiento internas que necesitan los ingenieros de soporte técnico de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Muestra el número de versión del servidor.  
@@ -85,7 +84,7 @@ ms.locfileid: "68211019"
  **-x**  
  Deshabilita el mantenimiento de estadísticas de tiempo de CPU y número de aciertos de caché. Permite el máximo rendimiento.  
   
- **-g** _memory_to_reserve_  
+ **-g** _memoria_para_reserva_  
  Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deja disponibles para las asignaciones de memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pero fuera del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La memoria fuera del bloque de memoria es el área que utiliza [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para cargar elementos como archivos `.dll` de procedimientos extendidos, proveedores OLE DB a los que hacen referencia las consultas distribuidas y objetos de automatización a los que se hace referencia en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] . El valor predeterminado es 256 MB.  
   
  El uso de esta opción puede ayudarle a optimizar la asignación de memoria, pero solo cuando la memoria física sobrepasa el límite configurado establecido por el sistema operativo en la memoria virtual disponible para las aplicaciones. El uso de esta opción puede ser apropiado para configuraciones con mucha memoria en las que los requisitos de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no sean típicos y el espacio para direcciones virtuales del proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se utilice completamente. Si se usa esta opción de manera incorrecta, una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] podría no iniciarse o tener errores en tiempo de ejecución.  
@@ -101,8 +100,7 @@ ms.locfileid: "68211019"
  Si usa un valor inferior al predeterminado, aumentará la cantidad de memoria disponible para el grupo de búferes y pilas de subprocesos; no obstante, esto podría suponer a su vez ventajas de rendimiento para cargas de trabajo que consuman mucha memoria en sistemas que no usen procedimientos almacenados extendidos, consultas distribuidas u objetos de automatización.  
   
 ## <a name="remarks"></a>Observaciones  
- En la mayoría de los casos, el programa sqlserver.exe solo se usa para solucionar problemas o realizar las tareas principales de mantenimiento. Si se inicia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema con sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se inicia como servicio, de forma que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se puede detener mediante los comandos **net** . Los usuarios pueden conectar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muestran el estado del servicio, de forma que el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indica correctamente que el servicio se ha detenido. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede conectarse al servidor, pero también indica que el servicio está detenido.  
+ En la mayoría de los casos, el programa sqlserver.exe solo se usa para solucionar problemas o realizar las tareas principales de mantenimiento. Si se inicia [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde el símbolo del sistema con sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se inicia como servicio, de forma que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se puede detener mediante los comandos **net** . Los usuarios pueden conectar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero las herramientas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muestran el estado del servicio, de forma que el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indica correctamente que el servicio se ha detenido. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede conectarse al servidor, pero también indica que el servicio está detenido.  
   
 ## <a name="compatibility-support"></a>Soporte de compatibilidad  
  El parámetro **-h**  no es compatible con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Este parámetro se usaba en versiones anteriores de instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espacio de direcciones de memoria virtual para los metadatos de Agregar memoria sin interrupción cuando AWE está habilitado. Para más información, vea [Características de SQL Server no disponibles en SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md).  

@@ -1,5 +1,5 @@
 ---
-title: Usar conjuntos de resultados activos múltiples (MARS) | Microsoft Docs
+title: Uso de conjuntos de resultados activos múltiples (MARS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5cbf5efeb5b5381636b57d50b86a5affa4a2595
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206634"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizar conjuntos de resultados activos múltiples (MARS)
@@ -49,8 +49,7 @@ ms.locfileid: "68206634"
 > [!NOTE]  
 >  De forma predeterminada, no está habilitada la funcionalidad de MARS. Para usar MARS al conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, debe habilitarlo específicamente dentro de una cadena de conexión. Para obtener más información, vea las secciones sobre el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, más adelante en este tema.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no limita el número de instrucciones activas en una conexión.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no limita el número de instrucciones activas en una conexión.  
   
  Las aplicaciones típicas que no necesitan tener más de un único lote de varias instrucciones o un único procedimiento almacenado que se ejecute al mismo tiempo podrán beneficiarse de MARS sin necesidad de entender cómo se implementa MARS. No obstante, las aplicaciones con requisitos más complejos necesitan tener estas consideraciones en cuenta.  
   
@@ -71,8 +70,7 @@ ms.locfileid: "68206634"
  Evite problemas utilizando llamadas a la API en lugar de instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] para administrar el estado de conexión (SET, USE) y las transacciones (BEGIN TRAN, COMMIT, ROLLBACK) no incluyendo estas instrucciones en lotes de varias instrucciones que también contengan puntos de rendimiento y serializando la ejecución de dichos lotes mediante el consumo o la cancelación de todos los resultados.  
   
 > [!NOTE]  
->  Un lote o un procedimiento almacenado que inicie una transacción manual o implícita cuando MARS esté habilitado debe completar la transacción antes de salir del lote. Si no lo hace, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] revierte todos los cambios realizados por la transacción cuando finaliza el lote. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administra este tipo de transacción como una transacción de ámbito de lote. Se trata de un nuevo tipo de transacción que se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] para permitir el uso de procedimientos almacenados con comportamiento correcto cuando MARS está habilitado. Para obtener más información acerca de las transacciones de ámbito de lote, vea [instrucciones de transacción &#40;&#41;de Transact-SQL ](/sql/t-sql/language-elements/transactions-transact-sql).  
+>  Un lote o un procedimiento almacenado que inicie una transacción manual o implícita cuando MARS esté habilitado debe completar la transacción antes de salir del lote. Si no lo hace, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] revierte todos los cambios realizados por la transacción cuando finaliza el lote. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administra este tipo de transacción como una transacción de ámbito de lote. Se trata de un nuevo tipo de transacción que se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] para permitir el uso de procedimientos almacenados con comportamiento correcto cuando MARS está habilitado. Para más información acerca de las transacciones de ámbito de lote, consulte [Instrucciones de transacciones &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql).  
   
  Para obtener un ejemplo del uso de MARS desde ADO, vea [usar ado con SQL Server Native Client](../applications/using-ado-with-sql-server-native-client.md).  
   
@@ -81,7 +79,7 @@ ms.locfileid: "68206634"
   
  El valor predeterminado de la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS es VARIANT_TRUE. Esto significa que el proveedor generará varias conexiones para admitir varios comandos y objetos de conjunto de filas simultáneos. Cuando MARS está habilitado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Native Client puede admitir varios objetos de comando y conjunto de filas en una única conexión, por lo que MULTIPLE_CONNECTIONS se establece en VARIANT_FALSE de forma predeterminada.  
   
- Para obtener más información sobre las mejoras realizadas en el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, consulte [propiedades de inicialización y autorización](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para más información sobre las mejoras realizadas en el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, consulte [Propiedades de inicialización y autorización](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>Ejemplo del proveedor OLE DB de SQL Server Native Client  
  En este ejemplo, se crea un objeto de origen de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el proveedor de OLE DB nativo y Mars se habilita mediante la propiedad DBPROPSET_SQLSERVERDBINIT establecida antes de que se cree el objeto de sesión.  
@@ -198,7 +196,7 @@ SQLFetch(hstmt2);
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Características de SQL Server Native Client](sql-server-native-client-features.md)   
+ [SQL Server Native Client características](sql-server-native-client-features.md)   
  [Utilizar conjuntos de resultados predeterminados de SQL Server](../../native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
   
   

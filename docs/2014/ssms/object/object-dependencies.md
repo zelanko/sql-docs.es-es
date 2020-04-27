@@ -13,17 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032419"
 ---
 # <a name="object-dependencies"></a>Dependencias del objeto
   Algunos objetos de base de datos dependen de otros objetos de base de datos. Por ejemplo, las vistas y los procedimientos almacenados dependen de la existencia de tablas que contengan los datos devueltos por la vista o procedimiento. En la página general de **Dependencias del objeto (página General)** del objeto actual se indican los objetos de la base de datos que deben estar presentes para que el objeto funcione correctamente, así como los objetos que dependen del objeto seleccionado. Un objeto que hace referencia a otro objeto en su definición y esa definición se almacena en el catálogo del sistema se denomina una *entidad de referencia*. Un objeto al que se hace referencia por otro objeto se denomina una *entidad a la que se hace referencia*.  
   
- 
-  **Dependencias del objeto (página Opciones avanzadas)** para el objeto actual contiene una lista de los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que dependen del objeto. Los objetos pueden estar almacenados en servidores diferentes.  
+ **Dependencias del objeto (página Opciones avanzadas)** para el objeto actual contiene una lista de los objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los objetos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que dependen del objeto. Los objetos pueden estar almacenados en servidores diferentes.  
   
  Use este cuadro de diálogo para saber qué dependencias existen antes de cambiar o eliminar el objeto seleccionado.  
   
@@ -31,11 +30,11 @@ ms.locfileid: "63032419"
  **Objetos que dependen del**  _\<objeto seleccionado>_  
  Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y que dependen del objeto seleccionado.  
   
- **Objetos de los que**_\<depende>objeto seleccionado _ ****      
+ **Objetos de los que**_\<depende>objeto seleccionado _ **depends**      
  Haga clic en este botón para mostrar una lista de los objetos de cuyas dependencias se realiza un seguimiento y de los que depende el objeto seleccionado.  
   
  **Dependencias**  
- Si se hace clic en los **objetos que dependen del** _ \<objeto seleccionado>_ , se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado. Si se hace clic en los **objetos de los que** _ \<depende el objeto seleccionado>_ , se muestra una vista jerárquica de los objetos de los que depende el objeto seleccionado. ****  
+ Si se hace clic en los **objetos que dependen del** _ \<objeto seleccionado>_ , se muestra una vista jerárquica de los objetos que dependen del objeto seleccionado. Si se hace clic en los **objetos de los que** _ \<depende el objeto seleccionado>_ , se muestra una vista jerárquica de los objetos de los que depende el objeto seleccionado. **depends**  
   
  **Nombre**  
  Muestra el nombre del objeto seleccionado en la vista de árbol **Dependencias** anterior.  
@@ -43,7 +42,7 @@ ms.locfileid: "63032419"
  **Tipo**  
  Muestra el tipo del objeto seleccionado en la vista de árbol **Dependencias** anterior.  
   
- **Hora de la última sincronización**  
+ **Hora de última sincronización**  
  > [!NOTE]  
 >  Esta opción solo está disponible en la página **Opciones avanzadas** .  
   

@@ -16,10 +16,10 @@ ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72174004"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
@@ -103,8 +103,8 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**ninguna**|Si la tabla ya existe en el suscriptor, no se lleva a cabo ninguna acción.|  
-|**elimínelos**|Emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.|  
+|**Ninguna**|Si la tabla ya existe en el suscriptor, no se lleva a cabo ninguna acción.|  
+|**delete**|Emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.|  
 |**Drop** (valor predeterminado)|Quita la tabla antes de volver a crearla. Necesario para admitir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores.|  
 |**truncar**|Trunca la tabla de destino.|  
   
@@ -160,7 +160,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  Si este valor es NULL, el sistema genera automáticamente una opción de esquema válida para el artículo. La tabla predeterminada de la **opción de esquema** de la sección Comentarios muestra el valor que se elige en función del tipo de artículo. Además, no todos los valores *schema_option* son válidos para cada tipo de replicación y tipo de artículo. La tabla de **Opciones de esquema válidas** que se proporciona en la sección Notas muestra las opciones que se pueden especificar para un tipo de artículo determinado.  
   
 > [!NOTE]  
->  El parámetro *schema_option* solo afecta a las opciones de replicación de la instantánea inicial. Una vez que el Agente de instantáneas ha generado el esquema inicial y se ha aplicado en el suscriptor, la replicación de los cambios de esquema de publicación en el suscriptor se realiza en función de las reglas de replicación de cambios de esquema y la configuración del parámetro *replicate_ddl* especificada en [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Para obtener más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
+>  El parámetro *schema_option* solo afecta a las opciones de replicación de la instantánea inicial. Una vez que el Agente de instantáneas ha generado el esquema inicial y se ha aplicado en el suscriptor, la replicación de los cambios de esquema de publicación en el suscriptor se realiza en función de las reglas de replicación de cambios de esquema y la configuración del parámetro *replicate_ddl* especificada en [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 `[ @subset_filterclause = ] 'subset_filterclause'`Es una cláusula WHERE que especifica el filtrado horizontal de un artículo de tabla sin la palabra en la que se incluye. *subset_filterclause* es de tipo **nvarchar (1000)** y su valor predeterminado es una cadena vacía.  
   
@@ -282,7 +282,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**ninguna**|Deshabilita la administración de intervalos de identidad.|  
+|**Ninguna**|Deshabilita la administración de intervalos de identidad.|  
 |**Manual**|Marca la columna de identidad utilizando NOT FOR REPLICATION para habilitar la administración manual de intervalos de identidad.|  
 |**Automático**|Especifica la administración automática de intervalos de identidad.|  
 |NULL (valor predeterminado)|Tiene como valor predeterminado **None**cuando el valor de *auto_identity_range* no es **true**.|  
@@ -334,7 +334,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**cuadro**|**** -  0x0C034FD1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y publicaciones compatibles con versiones posteriores con una instantánea en modo nativo.<br /><br /> **** -  0x08034FF1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y publicaciones compatibles con versiones posteriores con una instantánea en modo de carácter.|  
+|**table**|**0x0C034FD1** -  0x0C034FD1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y publicaciones compatibles con versiones posteriores con una instantánea en modo nativo.<br /><br /> **0x08034FF1** -  0x08034FF1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y publicaciones compatibles con versiones posteriores con una instantánea en modo de carácter.|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
@@ -348,17 +348,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01** y **0x2000**|  
 |**indexed view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**y **0x200000**|  
 |**proc schema only**|**0x01** y **0x2000**|  
-|**cuadro**|Todas las opciones.|  
+|**table**|Todas las opciones.|  
 |**view schema only**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**y **0x200000**|  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-addmergearticle-trans_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
   
 ## <a name="see-also"></a>Consulte también  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definir un artículo](../../relational-databases/replication/publish/define-an-article.md)   
  [Publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md)   
  [sp_changemergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   

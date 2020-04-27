@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022514"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Consideraciones y limitaciones de diseño de los publicadores de Oracle
-  La publicación de una base de datos de Oracle se diseña para que funcione casi idénticamente a la publicación de una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. No obstante, debe tener en cuenta las siguientes limitaciones y problemas:  
+  La publicación desde una base de datos de Oracle está diseñada para funcionar casi igual que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la publicación desde una base de datos. No obstante, debe tener en cuenta las siguientes limitaciones y problemas:  
   
 -   La opción de puerta de enlace de Oracle proporciona mejor rendimiento que la opción Completo. No obstante, esta opción no se puede utilizar para publicar la misma tabla en varias publicaciones transaccionales. Una tabla puede aparecer como máximo en una publicación transaccional y en cualquier número de publicaciones de instantánea. Si necesita publicar la misma tabla en varias publicaciones transaccionales, elija la opción Completo de Oracle.  
   

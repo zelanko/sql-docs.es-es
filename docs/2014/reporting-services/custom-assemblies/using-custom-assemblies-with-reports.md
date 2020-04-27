@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e79f48f4e4a2eb5fbc83c353461709658caf2509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265654"
 ---
 # <a name="using-custom-assemblies-with-reports"></a>Usar ensamblados personalizados con informes
@@ -28,7 +28,7 @@ ms.locfileid: "63265654"
  [Hacer referencia a ensamblados en un archivo RDL](referencing-assemblies-in-an-rdl-file.md)  
  Describe cómo hacer referencia a ensamblados personalizados en un archivo de lenguaje RDL (Report Definition Language).  
   
- [Implementar un ensamblado personalizado](deploying-a-custom-assembly.md)  
+ [Implementación de un ensamblado personalizado](deploying-a-custom-assembly.md)  
  Describe cómo implementar un ensamblado personalizado en el Diseñador de informes y el servidor de informes.  
   
  [Usar ensamblados personalizados con nombre seguro](using-strong-named-custom-assemblies.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "63265654"
  [Inicializar objetos de ensamblados personalizados](initializing-custom-assembly-objects.md)  
  Describe cómo inicializar los valores para los objetos de ensamblado personalizados llamados desde un informe.  
   
- [Cómo depurar ensamblados personalizados](how-to-debug-custom-assemblies.md)  
+ [Procedimientos: Depuración de ensamblados personalizados](how-to-debug-custom-assemblies.md)  
  Describe cómo depurar el código de ensamblado personalizado.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260947"
 ---
 # <a name="create-a-user-defined-event"></a>Crear un evento definido por el usuario
@@ -60,19 +60,19 @@ ms.locfileid: "63260947"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **Para crear un mensaje de error de evento definido por el usuario**  
+ **Para crear el mensaje de error de un evento definido por el usuario**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
- **Para modificar un mensaje de error de evento definido por el usuario**  
+ **Para modificar el mensaje de error de un evento definido por el usuario**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **Para eliminar un mensaje de error de evento definido por el usuario**  
+ **Para eliminar el mensaje de error de un evento definido por el usuario**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   
- **Para deshabilitar o reactivar una alerta**  
+ **Para deshabilitar o volver a activar una alerta**  
   
 -   [SQL Server Management Studio](disable-or-reactivate-an-alert.md)  
   

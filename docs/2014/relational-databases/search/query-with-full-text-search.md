@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011111"
 ---
 # <a name="query-with-full-text-search"></a>Consultar con búsqueda de texto completo
   Para definir búsquedas de texto completo, las consultas de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los predicados (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE) de texto completo. Estas funciones y predicados admiten la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] enriquecida, que es compatible con diversos formatos de términos de consulta. Para escribir consultas de texto completo, es necesario saber cuándo y cómo deben usarse estos predicados y funciones.  
   
-##  <a name="OV_ft_predicates"></a>Información general de los predicados de texto completo (Contains y FREETEXT)  
+##  <a name="overview-of-the-full-text-predicates-contains-and-freetext"></a><a name="OV_ft_predicates"></a>Información general de los predicados de texto completo (Contains y FREETEXT)  
  Los predicados de CONTAINS y FREETEXT devuelven un valor TRUE o FALSE. Se pueden utilizar exclusivamente para especificar los criterios de selección a la hora de determinar si una fila determinada coincide con la consulta de texto completo. Las filas que coinciden se devuelven en el conjunto de resultados. CONTAINS y FREETEXT se especifican en la cláusula WHERE o HAVING de una instrucción SELECT. Pueden combinarse con cualquier otro predicado [!INCLUDE[tsql](../../includes/tsql-md.md)] , como LIKE y BETWEEN.  
   
 > [!NOTE]  
@@ -81,7 +81,7 @@ GO
   
  
   
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>Información general de las funciones de texto completo (CONTAINSTABLE y FREETEXTTABLE)  
+##  <a name="overview-of-the-full-text-functions-containstable-and-freetexttable"></a><a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>Información general de las funciones de texto completo (CONTAINSTABLE y FREETEXTTABLE)  
  Las referencias a las funciones CONTAINSTABLE y FREETEXTTABLE se establecen como un nombre de tabla normal en la cláusula FROM de una instrucción SELECT. Devuelven una tabla con ninguna, una o varias filas que coinciden con la consulta de texto completo. La tabla devuelta solo contiene las filas de la tabla base que coinciden con los criterios de selección especificados en la condición de búsqueda de texto completo de la función.  
   
 > [!NOTE]  
@@ -101,7 +101,7 @@ GO
   
  CONTAINSTABLE es útil para los mismos tipos de coincidencias que CONTAINS, mientras que FREETEXTTABLE es útil para los mismos tipos de coincidencias que FREETEXT. Para obtener más información, vea [Información general de los predicados de texto completo (CONTAINS y FREETEXT)](#OV_ft_predicates), anteriormente en este tema. Cuando se ejecutan consultas que utilizan las funciones CONTAINSTABLE y FREETEXTTABLE, se deben combinar de forma explícita las filas que se devuelven con las filas de la tabla base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Normalmente, es necesario combinar el resultado de CONTAINSTABLE o FREETEXTTABLE con la tabla base. En esos casos, necesita conocer el nombre de la columna de clave única. Esta columna, que existe en todas las tablas habilitadas para texto completo, se usa para aplicar las filas únicas de la tabla (*columna de clave**única*). Para obtener más información, vea [Administrar índices de texto completo](../indexes/indexes.md).  
+ Normalmente, es necesario combinar el resultado de CONTAINSTABLE o FREETEXTTABLE con la tabla base. En esos casos, necesita conocer el nombre de la columna de clave única. Esta columna, que se produce en todas las tablas habilitadas para texto completo, se usa para aplicar las filas únicas de la tabla (la *columna de clave * * única*). Para obtener más información, vea [Administrar índices de texto completo](../indexes/indexes.md).  
   
  
   
@@ -165,7 +165,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a>Usar operadores booleanos AND, OR y NOT-in Contains y CONTAINSTABLE  
+##  <a name="using-boolean-operators---and-or-and-not---in-contains-and-containstable"></a><a name="Using_Boolean_Operators"></a>Usar operadores booleanos AND, OR y NOT-in Contains y CONTAINSTABLE  
  El predicado CONTAINS y la función CONTAINSTABLE usan las mismas condiciones de búsqueda. Ambos admiten la combinación de varios términos de búsqueda mediante operadores booleanos-AND, OR y NOT-para realizar operaciones lógicas. Por ejemplo, puede utilizar AND para buscar filas que contienen "latte" y "New York-style bagel". También puede, por ejemplo, utilizar AND NOT para buscar las filas que contienen "bagel" pero no contienen "cream cheese".  
   
 > [!NOTE]  
@@ -189,7 +189,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a>Consideraciones adicionales para las consultas de texto completo  
+##  <a name="additional-considerations-for-full-text-queries"></a><a name="Additional_Considerations"></a>Consideraciones adicionales para las consultas de texto completo  
  Al escribir consultas de texto completo hay que tener en cuenta también lo siguiente:  
   
 -   La opción LANGUAGE  
@@ -210,7 +210,7 @@ GO
   
 
   
-##  <a name="varbinary"></a>Consultar columnas varbinary (Max) y XML  
+##  <a name="querying-varbinarymax-and-xml-columns"></a><a name="varbinary"></a>Consultar columnas varbinary (Max) y XML  
  Si una columna `varbinary(max)`, `varbinary` o `xml` está indizada con texto completo, se puede consultar usando los predicados de texto completo (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE), igual que cualquier otra columna indizada de texto completo.  
   
 > [!IMPORTANT]  
@@ -236,7 +236,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
  
   
-##  <a name="supported"></a>Formatos admitidos de términos de consulta  
+##  <a name="supported-forms-of-query-terms"></a><a name="supported"></a>Formatos admitidos de términos de consulta  
  En esta sección se resume la compatibilidad que proporcionan los predicados de texto completo y las funciones de valores de conjunto de filas para cada formato de consulta.  
   
 > [!NOTE]  
@@ -244,16 +244,16 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 |Formato de los términos de la consulta|Descripción|Compatible con|  
 |----------------------|-----------------|------------------|  
-|Una o varias palabras o frases específicas (*término simple*)|En la búsqueda de texto completo, una palabra (o *token*) es una cadena cuyos límites se identifican mediante los separadores de palabras adecuados, siguiendo las normas lingüísticas del idioma especificado. Una frase válida está formada por varias palabras con o sin signos de puntuación entre ellas.<br /><br /> Por ejemplo, "croissant" es una palabra y "cafetería?? au lait "es una frase. Las palabras y frases como estas se denominan términos simples.<br /><br /> Para obtener más información, vea la sección [Buscar palabras o frases específicas (término simple)](#Simple_Term) más adelante en este tema.|[Contains](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) buscan una coincidencia exacta para la frase.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) dividen la frase en palabras independientes.|  
-|Una palabra o frase cuyas palabras empiezan por un texto determinado (*término de prefijo*)|Un término de prefijo hace referencia a una cadena que se anexa al principio de una palabra para generar una palabra derivada o una forma con inflexión.<br /><br /> Con un solo término de prefijo, cualquier palabra inicial con el término especificado formará parte del conjunto de resultados. Por ejemplo, el término "auto*" coincide con "automático", "automóvil", etc.<br /><br /> En una frase, cada palabra de la misma se considera un término de prefijo. Por ejemplo, el término en inglés "auto tran\*" coincide con "automatic transmission" y "automobile transducer", pero no con "automatic motor transmission".<br /><br /> Para obtener más información, vea la sección [Realizar búsquedas de prefijos (término de prefijo)](#Prefix_Term) más adelante en este tema.|[Contains](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|Formas con inflexión de una palabra específica (*término de generación: inflexión*)|Las formas con inflexión son los distintos tiempos y conjugaciones de un verbo o las formas singular y plural de un nombre. Por ejemplo, busque la forma con inflexión de la palabra "drive". Si hay varias filas en la tabla que incluyan las palabras "drive", "drives", "drove", "driving" y "driven", todas estarían en el conjunto de resultados porque cada una de estas palabras se puede generar a partir de la palabra "drive".<br /><br /> Para obtener más información, vea la sección [Buscar la forma con inflexión de una palabra determinada (término de generación)](#Inflectional_Generation_Term) más adelante en este tema.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) buscan términos con inflexión de todas las palabras especificadas de forma predeterminada.<br /><br /> [Contains](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) admiten un argumento inflectional opcional.|  
+|Una o varias palabras o frases específicas (*término simple*)|En la búsqueda de texto completo, una palabra (o *token*) es una cadena cuyos límites se identifican mediante los separadores de palabras adecuados, siguiendo las reglas lingüísticas del idioma especificado. Una frase válida está formada por varias palabras con o sin signos de puntuación entre ellas.<br /><br /> Por ejemplo, "croissant" es una palabra y "cafetería?? au lait "es una frase. Las palabras y frases como estas se denominan términos simples.<br /><br /> Para obtener más información, vea la sección [Buscar palabras o frases específicas (término simple)](#Simple_Term) más adelante en este tema.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) buscan una coincidencia exacta para la frase.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) dividen la frase en palabras independientes.|  
+|Una palabra o frase cuyas palabras empiezan por un texto determinado (*término de prefijo*)|Un término de prefijo hace referencia a una cadena que se anexa al principio de una palabra para generar una palabra derivada o una forma con inflexión.<br /><br /> Con un solo término de prefijo, cualquier palabra inicial con el término especificado formará parte del conjunto de resultados. Por ejemplo, el término "auto*" coincide con "automático", "automóvil", etc.<br /><br /> En una frase, cada palabra de la misma se considera un término de prefijo. Por ejemplo, el término en inglés "auto tran\*" coincide con "automatic transmission" y "automobile transducer", pero no con "automatic motor transmission".<br /><br /> Para obtener más información, vea la sección [Realizar búsquedas de prefijos (término de prefijo)](#Prefix_Term) más adelante en este tema.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|Formas con inflexión de una palabra específica (*término de generación: inflexión*)|Las formas con inflexión son los distintos tiempos y conjugaciones de un verbo o las formas singular y plural de un nombre. Por ejemplo, busque la forma con inflexión de la palabra "drive". Si hay varias filas en la tabla que incluyan las palabras "drive", "drives", "drove", "driving" y "driven", todas estarían en el conjunto de resultados porque cada una de estas palabras se puede generar a partir de la palabra "drive".<br /><br /> Para obtener más información, vea la sección [Buscar la forma con inflexión de una palabra determinada (término de generación)](#Inflectional_Generation_Term) más adelante en este tema.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) buscan términos con inflexión de todas las palabras especificadas de forma predeterminada.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) admiten un argumento INFLECTIONAL opcional.|  
 |Formas de sinónimos de una palabra específica (*término de generación: Diccionario de sinónimos*)|Un diccionario de sinónimos define los sinónimos especificados por el usuario para los términos. Por ejemplo, si una entrada, "{car, automobile, truck, van}", se agrega a un diccionario de sinónimos, puede buscar la forma sinónima de la palabra "car". Todas las filas de la tabla consultada que incluyen las palabras "automobile", "truck", "van" o "car" aparecen en el conjunto de resultados porque cada una de estas palabras pertenece al conjunto de expansión de sinónimos de la palabra "car".<br /><br /> Para obtener información sobre la estructura de archivos de sinónimos, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](configure-and-manage-thesaurus-files-for-full-text-search.md).|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) usan el Diccionario de sinónimos de forma predeterminada.<br /><br /> [Contains](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) admiten un argumento de Diccionario de sinónimos opcional.|  
-|Una palabra o frase que esté cerca de otra palabra o frase (*término de proximidad*)|Un término de proximidad indica palabras o frases relacionadas entre sí. Asimismo, puede especificar el número máximo de términos de no búsqueda que separen los términos de búsqueda primero y último. Además, puede buscar palabras o frases en cualquier orden o en el orden en el que las especifique.<br /><br /> Por ejemplo, quizá desee buscar las filas en las que la palabra "ice" esté relacionada con la palabra "hockey" o en las que la frase "ice skating" esté relacionadas con la frase "ice hockey".<br /><br /> Para obtener más información, vea [Buscar palabras cerca de otra palabra con NEAR](search-for-words-close-to-another-word-with-near.md).|[Contains](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|Una palabra o frase que esté cerca de otra palabra o frase (*término de proximidad*)|Un término de proximidad indica palabras o frases relacionadas entre sí. Asimismo, puede especificar el número máximo de términos de no búsqueda que separen los términos de búsqueda primero y último. Además, puede buscar palabras o frases en cualquier orden o en el orden en el que las especifique.<br /><br /> Por ejemplo, quizá desee buscar las filas en las que la palabra "ice" esté relacionada con la palabra "hockey" o en las que la frase "ice skating" esté relacionadas con la frase "ice hockey".<br /><br /> Para obtener más información, vea [Buscar palabras cerca de otra palabra con NEAR](search-for-words-close-to-another-word-with-near.md).|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |Palabras o frases que usan valores ponderados (*término ponderado*)|Valor de ponderación que indica el grado de importancia de cada palabra y frase dentro de un conjunto de palabras y frases. El valor 0,0 es el peso más pequeño disponible, y el valor 1,0 es el peso más grande.<br /><br /> Por ejemplo, en una consulta en la que se buscan varios términos, puede asignar a cada palabra de búsqueda un valor ponderado que indique su importancia en relación con otras palabras en la condición de búsqueda. Los resultados para este tipo de consulta devuelven las filas más relevantes primero, según la ponderación relativa que ha asignado a las palabras de búsqueda. Los conjuntos de resultados contienen documentos o filas con cualquiera de los términos especificados (o el contenido entre ellos); sin embargo, algunos resultados se consideran más importantes que otros debido a la variación en los valores ponderados asociados a los diferentes términos buscados.<br /><br /> Para obtener más información, vea la sección [Buscar palabras o frases con valores ponderados (término ponderado)](#Weighted_Term) más adelante en este tema.|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
-###  <a name="Simple_Term"></a>Buscar palabras o frases específicas (término simple)  
+###  <a name="searching-for-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a>Buscar palabras o frases específicas (término simple)  
  Puede usar [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) para buscar una frase específica en una tabla. Por ejemplo, si desea buscar en la tabla `ProductReview` de la base de datos [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] todos los comentarios acerca de un producto que contengan la frase "learning curve", puede utilizar el predicado CONTAINS del siguiente modo:  
   
 ```  
@@ -270,7 +270,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a>Realizar búsquedas de prefijos (término de prefijo)  
+###  <a name="performing-prefix-searches-prefix-term"></a><a name="Prefix_Term"></a>Realizar búsquedas de prefijos (término de prefijo)  
  Puede usar [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para buscar palabras o frases con un prefijo especificado. Se devuelven todas las entradas de la columna que contenga el texto que comience por el prefijo especificado. Por ejemplo, para buscar todas las filas que contengan el prefijo `top`-, como en `top``ple`, `top``ping`y `top`. La consulta tiene este aspecto:  
   
 ```  
@@ -289,7 +289,7 @@ GO
   
  
   
-###  <a name="Inflectional_Generation_Term"></a>Buscar formas con inflexión de una palabra específica (término de generación)  
+###  <a name="searching-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a>Buscar formas con inflexión de una palabra específica (término de generación)  
  Puede usar [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) para buscar todos los tiempos y conjugaciones de un verbo o las formas tanto singular como plural de un nombre (búsqueda con inflexión). O bien, los sinónimos de una palabra especificada (búsqueda de diccionario de sinónimos).  
   
  En el siguiente ejemplo se busca cualquier forma de "foot" ("foot", "feet", etc.) en la columna `Comments` de la tabla `ProductReview` de la base de datos `AdventureWorks` .  
@@ -309,7 +309,7 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a>Buscar palabras o frases con valores ponderados (término ponderado)  
+###  <a name="searching-for-words-or-phrases-using-weighted-values-weighted-term"></a><a name="Weighted_Term"></a>Buscar palabras o frases con valores ponderados (término ponderado)  
  Puede usar [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para buscar palabras o frases, y especificar un valor de ponderación. La ponderación, medida como número comprendido entre 0,0 y 1,0, indica la importancia de cada palabra y frase en un conjunto de palabras y frases. Una ponderación de 0,0 es la más baja y una ponderación de 1,0, la más alta.  
   
  En el ejemplo siguiente se muestra una consulta que busca las direcciones de todos los clientes, mediante valores ponderados, en las que cualquier texto que comience por la cadena "Bay" contenga "Street" o "View". Los resultados asignan un rango superior a las filas que contengan más palabras de las especificadas.  
@@ -333,13 +333,13 @@ GO
   
 
   
-##  <a name="tokens"></a>Ver el resultado de la tokenización de una combinación de separador de palabras, Diccionario de sinónimos y lista de palabras irrelevantes  
+##  <a name="viewing-the-tokenization-result-of-a-word-breaker-thesaurus-and-stoplist-combination"></a><a name="tokens"></a>Ver el resultado de la tokenización de una combinación de separador de palabras, Diccionario de sinónimos y lista de palabras irrelevantes  
  Después de aplicar una combinación determinada de separador de palabras, diccionario de sinónimos y lista de palabras irrelevantes a la entrada de una cadena de consulta, puede ver el resultado de la tokenización mediante la vista de administración dinámica **sys.dm_fts_parser**. Para obtener más información, vea [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  
   
 ## <a name="see-also"></a>Consulte también  
- [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+ [CONTIENE &#40;&#41;de Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   

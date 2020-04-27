@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460104"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB (DTA, elemento)
@@ -38,8 +38,7 @@ ms.locfileid: "63460104"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|
-  `unsignedInt`, longitud ilimitada.|  
+|**Tipo y longitud de los datos**|`unsignedInt`, longitud ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
 |**Repetición**|Opcional. Solo puede utilizarse una vez para el elemento `TuningOptions`.|  
   

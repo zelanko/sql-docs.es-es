@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013669"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
@@ -53,7 +53,7 @@ ms.locfileid: "66013669"
  **Nombre**  
  Especifica el nombre único de la relación.  
   
- **Parent**  
+ **Aérea**  
  Especifica la relación primaria (tabla). Es un atributo opcional; si no se especifica, el nombre de la tabla primaria se obtiene a partir de la información de la jerarquía secundaria del documento. Si el esquema especifica dos jerarquías de elementos primarios y secundarios que usan la misma ** \<SQL: Relationship>** pero distintos elementos primarios, no se especifica el atributo primario en ** \<SQL: Relationship>**. Esta información se obtiene de la jerarquía del esquema.  
   
  **parent-key**  

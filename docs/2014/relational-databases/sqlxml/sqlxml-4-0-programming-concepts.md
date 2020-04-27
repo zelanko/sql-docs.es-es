@@ -14,17 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012232"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>Conceptos de programación en SQLXML 4.0
   SQLXML 3.0 se proporcionó como una versión web para facilitar funcionalidad XML adicional del lado cliente y mejoras en las características existentes, como esquemas XSD anotados, carga masiva XML, compatibilidad con los servicios web (SOAP) y diagramas de actualización.  
   
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo SQLXML 4.0, que continúa entregando la misma funcionalidad que SQLXML 3.0 además de actualizaciones adicionales proporcionadas para alojar las nuevas características introducidas con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo SQLXML 4.0, que continúa entregando la misma funcionalidad que SQLXML 3.0 además de actualizaciones adicionales proporcionadas para alojar las nuevas características introducidas con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  En esta sección se proporciona información sobre SQLXML 4.0.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66012232"
  [Utilizar los diagramas de actualización para modificar datos en SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Proporciona información sobre los diagramas de actualización, que modifican los datos de una base de datos trabajando con las vistas XML proporcionadas por los esquemas XSD (o XDR) anotados.  
   
- [Realizar la carga masiva de datos XML &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Carga masiva de datos XML &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Describe cómo hacer una carga masiva de XML en SQLXML 4.0.  
   
  [Componentes de acceso a datos de SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  

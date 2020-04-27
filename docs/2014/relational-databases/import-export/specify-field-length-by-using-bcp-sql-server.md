@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011841"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
   La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos `int` ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el comando **BCP** le solicitará la longitud del campo, las longitudes de campo predeterminadas y el impacto de la longitud de campo en el `char` almacenamiento de datos en los archivos de datos que contienen datos.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Solicitud bcp para la longitud de campo  
- Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato (**-f**) o un modificador de formato de datos (**-n**, **-c**, **-w** o **-N**), el comando solicita la longitud de campo de cada campo, de la manera siguiente:  
+ Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w** o **-N**), el comando solicita la longitud de campo de cada campo, de la manera siguiente:  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011841"
   
 -   Cuando se convierten datos que no son de caracteres al formato de datos de caracteres, **bcp** recomienda una longitud de campo predeterminada lo suficientemente grande como para almacenar los datos.  
   
--   Si se almacenan tipos de archivos que no son de caracteres, el comando **bcp** no solicita una longitud de campo. Los datos se almacenan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la representación de datos nativa (formato nativo).  
+-   Si se almacenan tipos de archivos que no son de caracteres, el comando **bcp** no solicita una longitud de campo. Los datos se almacenan en la representación de datos nativa de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (formato nativo).  
   
 ## <a name="using-default-field-lengths"></a>Usar longitudes de campo predeterminadas  
  Por lo general, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda aceptar los valores predeterminados que sugiere **bcp**para la longitud de campo. Cuando se crea un archivo de datos en modo de carácter, si especifica la longitud de campo predeterminada, los datos no se truncan ni se producirán errores de desbordamiento numérico.  
@@ -124,8 +124,8 @@ ms.locfileid: "66011841"
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
  [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Especifique la longitud del prefijo en los archivos de datos mediante BCP &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [Especifique File Storage tipo mediante BCP &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
+ [Especificar la longitud de prefijo en los archivos de datos mediante bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
  [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
   

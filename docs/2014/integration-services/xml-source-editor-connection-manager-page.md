@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054297"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Editor de origen de XML (página Administrador de conexiones)
@@ -33,16 +33,16 @@ ms.locfileid: "66054297"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Ubicación del archivo XML|Recupera datos de un archivo XML.|  
-|Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Archivo XML de variable|Especifica el nombre de archivo XML en una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Datos XML de variable|Recupera datos XML de una variable.|  
   
- **Usar esquema en línea**  
+ **Utilizar esquema insertado**  
  Especifique si los datos de origen XML contienen el esquema XSD que define y valida su estructura y sus datos.  
   
- **Ubicación XSD**  
+ **Ubicación de XSD**  
  Especifique la ruta de acceso y el nombre de archivo del archivo de esquema XSD, o busque el archivo haciendo clic en **Examinar**.  
   
- **Browse**  
+ **Examinar**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo de esquema XSD.  
   
  **Generar XSD**  
@@ -51,10 +51,10 @@ ms.locfileid: "66054297"
 ## <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  
   
 ### <a name="data-access-mode--xml-file-location"></a>Modo de acceso a datos = Ubicación del archivo XML  
- **Ubicación XML**  
+ **Ubicación de XML**  
  Especifique la ruta de acceso y el nombre de archivo del archivo de datos XML, o busque el archivo haciendo clic en **Examinar**.  
   
- **Browse**  
+ **Examinar**  
  Use el cuadro de diálogo **Abrir** para buscar el archivo de datos XML.  
   
 ### <a name="data-access-mode--xml-file-from-variable"></a>Modo de acceso a datos = Datos XML de variable  

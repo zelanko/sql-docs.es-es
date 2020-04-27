@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054540"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor de la tarea Servicio web (página General)
@@ -28,15 +28,15 @@ ms.locfileid: "66054540"
   
 ## <a name="options"></a>Opciones  
  **HTTPConnection**  
- Seleccione un administrador de conexiones de la lista, o bien haga clic en \<**Nueva conexión…**> para crear uno.  
+ Seleccione un administrador de conexiones de la lista o haga \<clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- **Temas relacionados:**  [Administrador de conexiones http](connection-manager/http-connection-manager.md), [Editor del administrador de conexiones http página de &#40;Server&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Temas relacionados: **  [Administrador de conexiones HTTP](connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md).  
   
  **WSDLFile**  
- Escriba la ruta de acceso completa de un archivo WSDL local del equipo, o bien haga clic en el botón Examinar **(…)** y busque el archivo.  
+ Escriba la ruta de acceso completa de un archivo WSDL que sea local para el equipo o haga clic en el botón examinar **(...)** y busque este archivo.  
   
  Si ya ha descargado manualmente el archivo WSDL en el equipo, seleccione este archivo. Sin embargo, si el archivo WSDL todavía no se ha descargado, siga estos pasos:  
   

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489103"
 ---
-# <a name="task-5-setting-term-based-relationships"></a>Tarea 5: configurar relaciones basadas en términos
+# <a name="task-5-setting-term-based-relationships"></a>Tarea 5: Configuración de relaciones basadas en términos
   En esta tarea, se definen algunas relaciones basadas en términos para los valores del dominio **nombre de proveedor** . Una relación basada en términos permite corregir un término que forma parte de un valor en un dominio. Permiten considerar como sinónimos idénticos varios valores que son idénticos salvo por la ortografía de una parte común. Por ejemplo, **Inc.** se puede corregir en **Incorporated**. DQS emplea estas relaciones en los procesos de detección de conocimiento, limpieza o coincidencia. Vea [crear relaciones basadas en términos](https://msdn.microsoft.com/library/hh510404.aspx) para obtener más detalles.  
   
 1.  Seleccione **nombre de proveedor** en la **lista de dominios**.  
@@ -38,6 +38,6 @@ ms.locfileid: "65489103"
      ![Relaciones basadas en términos](../../2014/tutorials/media/et-settingtermbasedrelations.jpg "Relaciones basadas en términos")  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 6: establecer sinónimos](../../2014/tutorials/task-6-setting-synonyms.md)  
+ [Tarea 6: Definición de sinónimos](../../2014/tutorials/task-6-setting-synonyms.md)  
   
   

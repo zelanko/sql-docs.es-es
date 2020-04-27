@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010368"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM
@@ -141,7 +141,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
+ [Acceder a los datos FILESTREAM con OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

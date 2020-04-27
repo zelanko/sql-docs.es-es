@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011665"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres para importar o exportar datos (SQL Server)
@@ -47,14 +47,14 @@ ms.locfileid: "66011665"
 -   La utilidad **BCP** exporta `money` valores como archivos de datos con formato de caracteres con cuatro dígitos después del separador decimal y sin símbolos de agrupación de dígitos, como los separadores de comas. Por ejemplo, una columna `money` que contenga el valor 1.234.567,123456 se copiará de forma masiva en un archivo de datos como la cadena de caracteres 1234567,1235.  
   
 ## <a name="command-options-for-character-format"></a>Opciones de comando para el formato de caracteres  
- Puede importar datos con formato de caracteres en una tabla mediante **BCP**, Bulk Insert o INSERT... SELECT \* from OPENROWSET (bulk...). Para un comando **BCP** o una instrucción BULK INSERT, puede especificar el formato de datos en la línea de comandos. Para una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) , debe especificar el formato de datos en un archivo de formato.  
+ Puede importar datos con formato de caracteres en una tabla mediante **BCP**, Bulk Insert o INSERT... SELECT \* from OPENROWSET (bulk...). Para un comando **BCP** o una instrucción BULK INSERT, puede especificar el formato de datos en la línea de comandos. Para una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...), debe especificar el formato de datos en un archivo de formato.  
   
  El formato de caracteres puede usarse con las siguientes opciones de la línea de comandos:  
   
 |Get-Help|Opción|Descripción|  
 |-------------|------------|-----------------|  
-|**BCP**|**-c**|Hace que la utilidad **BCP** utilice datos de caracteres. <sup>1</sup>|  
-|BULK INSERT|DATAFILETYPE **= ' char '**|Utiliza el formato de caracteres al importar datos masivamente.|  
+|**bcp**|**-c**|Hace que la utilidad **BCP** utilice datos de caracteres. <sup>1</sup>|  
+|BULK INSERT|DATAFILETYPE **='char'**|Utiliza el formato de caracteres al importar datos masivamente.|  
   
  <sup>1</sup> para cargar datos de caracteres (**-c**) en un formato compatible con versiones anteriores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de clientes de, use el modificador **-V** . Para obtener más información, vea [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |Calificadores|Descripción|  
 |----------------|-----------------|  
 |**-c**|Especifica el formato de caracteres.|  
-|**-t**`,`|Especifica una coma (`,`) como terminador de campo.<br /><br /> Nota: El terminador de campo predeterminado es el carácter de tabulación (\t). Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Especifica una coma (`,`) como terminador de campo.<br /><br /> Nota: El terminador de campo predeterminado es el carácter de tabulación (\t). Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para iniciar sesión correctamente.|  
   
  En el siguiente ejemplo se exportan masivamente datos en formato de caracteres desde la tabla `myTestCharData` en un nuevo archivo de datos denominado `myTestCharData-c.Dat` que utiliza la coma (,) como terminador de campo. En el símbolo del sistema de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, especifique:  
@@ -108,7 +108,7 @@ bcp AdventureWorks..myTestCharData out C:\myTestCharData-c.Dat -c -t, -T
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-character-data"></a>Usar BULK INSERT para importar de forma masiva datos de caracteres  
- En el siguiente ejemplo se utiliza BULK INSERT para importar los datos del archivo de datos `myTestCharData-c.Dat` en la tabla `myTestCharData` . En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , ejecute:  
+ En el siguiente ejemplo se utiliza BULK INSERT para importar los datos del archivo de datos `myTestCharData-c.Dat` en la tabla `myTestCharData` . En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ejecute:  
   
 ```  
 USE AdventureWorks;  
@@ -125,7 +125,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para usar formatos de datos para la importación o exportación masivas**  
   
 -   [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

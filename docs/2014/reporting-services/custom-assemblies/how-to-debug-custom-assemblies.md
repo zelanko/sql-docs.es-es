@@ -1,5 +1,5 @@
 ---
-title: Cómo depurar ensamblados personalizados | Microsoft Docs
+title: 'Procedimientos: Depuración de ensamblados personalizados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265057"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Cómo depurar ensamblados personalizados
+# <a name="how-to-debug-custom-assemblies"></a>Procedimientos: Depuración de ensamblados personalizados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Proporciona varias herramientas de depuración que pueden ayudarle a analizar el código de ensamblado personalizado y encontrar errores en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] él. La mejor herramienta para utilizar dependerá de lo que intente llevar a cabo. En este ejemplo se usa [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  La manera recomendada de diseñar, desarrollar y probar los ensamblados personalizados para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es crear una solución que contenga tanto los informes de prueba como el ensamblado personalizado.  
@@ -86,6 +86,6 @@ ms.locfileid: "63265057"
 9. Recorra el código con la tecla F11. Para obtener más información acerca de cómo depurar con [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vea la documentación de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
- [Uso de ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)  
+ [Usar ensamblados personalizados con informes](using-custom-assemblies-with-reports.md)  
   
   

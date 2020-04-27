@@ -25,16 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011177"
 ---
 # <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
   La creación y el mantenimiento de un índice de texto completo implica el rellenado del índice mediante un proceso denominado *rellenado* (también se denomina *rastreo*).  
   
-##  <a name="types"></a>Tipos de rellenado  
+##  <a name="types-of-population"></a><a name="types"></a>Tipos de rellenado  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]admite los siguientes tipos de rellenado: rellenado completo, rellenado automático o manual basado en el seguimiento de cambios y rellenado incremental basado en la marca de tiempo.  
   
 ### <a name="full-population"></a>Rellenado completo  
@@ -91,8 +91,7 @@ ms.locfileid: "66011177"
   
  Para realizar un llenado incremental, es necesario que la tabla indizada tenga una columna del tipo de datos `timestamp`. Si no existe una columna de tipo `timestamp`, no puede llevarse a cabo un llenado incremental. Si se solicita un rellenado incremental en una tabla sin una columna de tipo `timestamp`, se llevará a cabo un rellenado completo. Además, si alguno de los metadatos que afectan al índice de texto completo de la tabla ha cambiado desde el último rellenado, las solicitudes de rellenado incremental se implementan como rellenados completos. Esto incluye los cambios en los metadatos ocasionados al alterar la definición de una columna, índice o índice de texto completo.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la columna `timestamp` para identificar las filas que han cambiado desde el último rellenado. El rellenado incremental actualiza entonces el índice de texto completo de las filas que se hayan agregado, eliminado o modificado desde el último rellenado o en el curso del último rellenado. Si una tabla experimenta un volumen alto de inserciones, el rellenado incremental puede ser más eficaz que el rellenado manual.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la columna `timestamp` para identificar las filas que han cambiado desde el último rellenado. El rellenado incremental actualiza entonces el índice de texto completo de las filas que se hayan agregado, eliminado o modificado desde el último rellenado o en el curso del último rellenado. Si una tabla experimenta un volumen alto de inserciones, el rellenado incremental puede ser más eficaz que el rellenado manual.  
   
  Al final de un proceso de rellenado, el motor de texto completo registra un nuevo valor de tipo `timestamp`. Este valor es el valor de `timestamp` mayor que el recopilador de SQL ha encontrado. Se usará cuando se inicie un rellenado incremental posterior.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66011177"
   
 
   
-##  <a name="examples"></a>Ejemplos de rellenar índices de texto completo  
+##  <a name="examples-of-populating-full-text-indexes"></a><a name="examples"></a>Ejemplos de rellenar índices de texto completo  
   
 > [!NOTE]  
 >  En los ejemplos de esta sección se usa la tabla `Production.Document` o `HumanResources.JobCandidate` de la base de datos de ejemplo `AdventureWorks` .  
@@ -168,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a>Crear o cambiar una programación para el rellenado incremental  
+##  <a name="creating-or-changing-a-schedule-for-incremental-population"></a><a name="create"></a>Crear o cambiar una programación para el rellenado incremental  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>Para crear o modificar una programación para el rellenado incremental en Management Studio  
   
@@ -209,7 +208,7 @@ GO
   
 
   
-##  <a name="crawl"></a>Solucionar errores en un rellenado de texto completo (rastreo)  
+##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Solucionar errores en un rellenado de texto completo (rastreo)  
  Cuando se produce un error durante un rastreo, la función de registro de rastreo de la búsqueda de texto completo crea y mantiene un registro de rastreo, que es un archivo sin formato. Cada registro de rastreo se corresponde con un determinado catálogo de texto completo. De forma predeterminada, los registros de rastreo de una instancia dada, en este caso la primera instancia, se ubican en la carpeta %Archivos de programa%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:  
   
  SQLFT\<DatabaseID>\<FullTextCatalogID>. LOG [\<n>]  

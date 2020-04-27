@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013731"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Solicitar referencias URL a los datos BLOB mediante sql:encode (SQLXML 4.0)
@@ -31,8 +31,7 @@ ms.locfileid: "66013731"
   
  Si desea obtener una referencia a los datos (un URI) que se van a devolver, que se pueden usar posteriormente para recuperar los datos BLOB en un formato binario, especifique la anotación `sql:encode`. Puede especificar `sql:encode` en un atributo o elemento de tipo simple.  
   
- Especifique la anotación `sql:encode` para indicar que se debe devolver al campo una dirección URL en lugar del valor del campo. 
-  `sql:encode` depende de la clave principal para generar un SELECT singleton en la dirección URL. La clave principal se puede especificar mediante la `sql:key-fields` anotación.  
+ Especifique la anotación `sql:encode` para indicar que se debe devolver al campo una dirección URL en lugar del valor del campo. `sql:encode` depende de la clave principal para generar un SELECT singleton en la dirección URL. La clave principal se puede especificar mediante la `sql:key-fields` anotación.  
   
  La anotación `sql:encode` puede tener asignada la dirección "url" o el valor "predeterminado". Un valor de "valor predeterminado" devuelve los datos en formato codificado de base 64.  
   

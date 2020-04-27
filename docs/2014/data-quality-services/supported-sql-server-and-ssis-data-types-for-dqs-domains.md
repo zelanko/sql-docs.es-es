@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 06e593c676c206f863bdb110be5c93e5003b4e13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484094"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS
@@ -23,24 +23,24 @@ ms.locfileid: "65484094"
 > [!NOTE]  
 >  En los archivos .xlsx y .xls, el tipo de datos de la columna de origen está determinado por el tipo de datos más frecuente de las ocho primeras filas. Si una celda no se ajusta a dicho tipo de datos, se le asignará un valor NULL. De igual modo, en los archivos .csv, el tipo de datos de la columna de origen está determinado por el tipo de datos más frecuente de las ocho primeras filas.  
   
-##  <a name="SQLServer"></a>Tipos de datos de SQL Server admitidos  
+##  <a name="supported-sql-server-data-types"></a><a name="SQLServer"></a>Tipos de datos de SQL Server admitidos  
  En la tabla siguiente se proporciona información acerca de los tipos de datos de SQL Server admitidos para cada tipo de datos de dominio DQS:  
   
 |Tipo de datos de dominio DQS|Tipo de datos de SQL Server admitido|  
 |--------------------------|------------------------------------|  
-|Date|date|  
+|Fecha|date|  
 |Decimal|Decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> real<br /><br /> SMALLMONEY|  
-|Entero|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
+|Entero|bigint<br /><br /> int<br /><br /> SMALLINT<br /><br /> TINYINT|  
 |String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
   
  El resto de los tipos de datos de SQL Server no se admiten en DQS. Para obtener información sobre todos los tipos de datos de SQL Server, vea [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
-##  <a name="SSIS"></a>Tipos de datos de SSIS admitidos  
+##  <a name="supported-ssis-data-types"></a><a name="SSIS"></a>Tipos de datos de SSIS admitidos  
  En la tabla siguiente se proporciona información acerca de los tipos de datos de SSIS admitidos para cada tipo de datos de dominio DQS:  
   
 |Tipo de datos de dominio DQS|Tipo de dato de SSIS admitido|  
 |--------------------------|------------------------------|  
-|Date|DT_DATE|  
+|Fecha|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
 |Entero|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |String|DT_STR<br /><br /> DT_WSTR|  

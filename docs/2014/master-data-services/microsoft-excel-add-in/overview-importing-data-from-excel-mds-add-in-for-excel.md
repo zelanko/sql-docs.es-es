@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479033"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Publicar datos (complemento MDS para Excel)
@@ -52,11 +52,11 @@ ms.locfileid: "65479033"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Publicar de nuevo los datos de la hoja de cálculo activa en el repositorio MDS.|[Publicar datos de Excel en MDS &#40;Complemento MDS para Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Eliminar una fila del repositorio MDS y de la hoja de cálculo al mismo tiempo.|[Eliminar una fila &#40;Complemento MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|Eliminar una fila del repositorio MDS y de la hoja de cálculo al mismo tiempo.|[Eliminar una fila &#40;complemento MDS para Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Actualización de datos &#40;Complemento MDS para Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [Actualizar datos &#40;complemento MDS para Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Complemento Master Data Services para Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

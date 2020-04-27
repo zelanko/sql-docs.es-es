@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011131"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Administrar y supervisar la búsqueda semántica
   Describe el proceso de indización semántica y las tareas relacionadas con la administración y supervisión de los índices.  
   
-##  <a name="HowToMonitorStatus"></a>Cómo: comprobar el estado de la indización semántica  
+##  <a name="how-to-check-the-status-of-semantic-indexing"></a><a name="HowToMonitorStatus"></a>Cómo: comprobar el estado de la indización semántica  
  **¿Se ha completado la primera fase de la indización semántica?**  
  Consulte la vista de administración dinámica [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) y compruebe las columnas **status** y **status_description**.  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a>Cómo: comprobar el tamaño de los índices semánticos  
+##  <a name="how-to-check-the-size-of-the-semantic-indexes"></a><a name="HowToCheckSize"></a>Cómo: comprobar el tamaño de los índices semánticos  
  **¿Cuál es el tamaño lógico de un índice semántico de frases clave o un índice semántico de similitud de documentos?**  
  Consulte la vista de administración dinámica [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
@@ -80,7 +80,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a>Cómo: forzar el rellenado de los índices semánticos  
+##  <a name="how-to-force-the-population-of-the-semantic-indexes"></a><a name="HowToForcePopulation"></a>Cómo: forzar el rellenado de los índices semánticos  
  Puede aplicar el rellenado de los índices de texto completo y de los índices semánticos usando las cláusulas START/STOP/PAUSE o RESUME POPULATION con la misma sintaxis y el mismo comportamiento descritos para los índices de texto completo. Para obtener más información, vea [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) y [Rellenar índices de texto completo](../indexes/indexes.md).  
   
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a>Cómo: deshabilitar o volver a habilitar la indización semántica  
+##  <a name="how-to-disable-or-re-enable-semantic-indexing"></a><a name="HowToDisableIndexing"></a>Cómo: deshabilitar o volver a habilitar la indización semántica  
  Puede habilitar o deshabilitar la indización de texto completo o semántica usando la cláusula ENABLE/DISABLE con la misma sintaxis y el mismo comportamiento descritos para los índices de texto completo. Para obtener más información, vea [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Cuando se deshabilita y se suspende la indización semántica, las consultas sobre datos semánticos siguen funcionando correctamente y devolviendo los datos indizados previamente. Este comportamiento no es coherente con el comportamiento de la búsqueda de texto completo.  
@@ -119,7 +119,7 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a>Fases de la indización semántica  
+##  <a name="phases-of-semantic-indexing"></a><a name="SemanticIndexing"></a>Fases de la indización semántica  
  La búsqueda semántica indiza dos tipos de datos para cada columna en la que esté habilitada:  
   
 1.  **Frases clave**  
@@ -133,7 +133,7 @@ GO
 2.  **Fase 2**. Después se rellena el índice semántico de similitud de documentos. Este índice depende de los dos índices que se rellenaron en la fase anterior.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a>Problema: los índices semánticos no se rellenan  
+##  <a name="problem-semantic-indexes-are-not-populated"></a><a name="ProblemNotPopulated"></a>Problema: los índices semánticos no se rellenan  
  **¿Se rellenan los índices de texto completo asociados?**  
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
   

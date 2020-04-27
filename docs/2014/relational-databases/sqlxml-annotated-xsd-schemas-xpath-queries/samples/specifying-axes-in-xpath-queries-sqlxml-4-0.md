@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010716"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificar ejes en consultas XPath (SQLXML 4.0)
@@ -162,7 +162,7 @@ ms.locfileid: "66010716"
  Si la consulta XPath se especifica como `Customer/Order/OrderDetail`, de cada nodo que coincida con ** \<el cliente>** la consulta navega a su ** \<orden>** elementos. Y para cada ** \<orden **de coincidencia de nodo>, la consulta agrega los nodos ** \<OrderDetail>** al resultado. Solo se devuelve ** \<OrderDetail>** en el conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar el eje primario  
- La consulta siguiente recupera todos los **** ** \<** ** \<elementos de order>** con un elemento de>de cliente primario con un valor de atributo CustomerID de 1. La consulta usa el `child` eje en el predicado para buscar el elemento primario del elemento ** \<Order>** .  
+ La consulta siguiente recupera todos los **CustomerID** ** \<** ** \<elementos de order>** con un elemento de>de cliente primario con un valor de atributo CustomerID de 1. La consulta usa el `child` eje en el predicado para buscar el elemento primario del elemento ** \<Order>** .  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -246,7 +246,7 @@ ms.locfileid: "66010716"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Especificar el eje de atributo  
- La consulta XPath siguiente selecciona todos **** los ** \<** elementos secundarios del cliente>del nodo de contexto con el valor 1 para el atributo CustomerID:  
+ La consulta XPath siguiente selecciona todos **CustomerID** los ** \<** elementos secundarios del cliente>del nodo de contexto con el valor 1 para el atributo CustomerID:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484736"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarea 2: probar y publicar la directiva de coincidencia
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarea 2: Prueba y publicación de la directiva de coincidencia
   En esta tarea, probará y publicará la Directiva de coincidencia **quitar proveedores duplicados** .  
   
 1.  En la página **resultados de búsqueda de coincidencias** , haga clic en **iniciar** para probar toda la Directiva. En su caso, solo tiene una regla en la directiva, por lo que los resultados de probar la regla y la directiva deben ser iguales.  
@@ -40,7 +40,7 @@ ms.locfileid: "65484736"
   
 5.  Haga clic en la pestaña **resultados de búsqueda de coincidencias** en la parte inferior de la página. Esta pestaña proporciona detalles como el número de registros coincidentes, el número de registros no coincidentes, el número de clústeres con registros coincidentes, el tamaño promedio de clúster, el tamaño mínimo de clúster y el tamaño máximo de clúster. Vea [crear una directiva de coincidencia](https://msdn.microsoft.com/library/hh270290.aspx) para obtener más detalles. No puede exportar los resultados de esta actividad. Simplemente está definiendo una directiva de coincidencia usando datos de ejemplo para probar reglas y la directiva con los datos de ejemplo.  
   
-     ![Pestaña Resultados de búsqueda de coincidencias](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "Pestaña Resultados de búsqueda de coincidencias")  
+     ![Pestaña resultados de búsqueda de coincidencias](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-03.jpg "Pestaña Resultados de búsqueda de coincidencias")  
   
 6.  Haga clic en **Finalizar** para terminar de crear la Directiva de coincidencia.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "65484736"
 7.  En el cuadro de diálogo SQL Server Data Quality Services, haga clic en **publicar** y en **Aceptar** en el cuadro de mensaje. Ahora, la Directiva de coincidencia que definió está publicada en la base de conocimiento **proveedores** . Puede usar la base de conocimiento para ejecutar el proceso de búsqueda de coincidencias en un archivo de entrada para identificar y quitar duplicados.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 3: crear y ejecutar un proyecto de calidad de datos para buscar coincidencias](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [Tarea 3: Creación y ejecución de un proyecto de calidad de datos para buscar coincidencias](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

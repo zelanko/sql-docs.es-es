@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489096"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tarea 6: importar valores del proyecto Limpiar lista de proveedores
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tarea 6: Importación de valores del proyecto Limpiar lista de proveedores
   En esta tarea, importará el conocimiento de calidad de datos obtenido durante el proceso de limpieza. Consulte [el tema importar valores de proyecto de limpieza en un dominio](https://msdn.microsoft.com/library/hh479581.aspx) para obtener más detalles. También exportará la base de conocimiento en un archivo DQS antes de publicar la base de conocimiento de **proveedores** actualizada.  
   
 1.  En la Página principal del **cliente DQS**, haga clic en la **flecha derecha** junto a **proveedores** en **bases de conocimiento recientes** y haga clic en **Administración de dominios**.  
@@ -65,6 +65,6 @@ ms.locfileid: "65489096"
 14. Haga clic en **Aceptar** en el cuadro de mensaje.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Lección 3: buscar datos coincidentes para quitar duplicados de lista de proveedores](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [Lección 3: Búsqueda de datos coincidentes para quitar duplicados de lista de proveedores](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010153"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilidad de FileTable con otras características de SQL Server
   Describe el funcionamiento de FileTables con otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="alwayson"></a> Grupos de disponibilidad AlwaysOn y FileTables  
+##  <a name="alwayson-availability-groups-and-filetables"></a><a name="alwayson"></a>Grupos de disponibilidad AlwaysOn y FileTables  
  Cuando la base de datos que contiene datos de FILESTREAM o FileTable pertenece a un grupo de disponibilidad AlwaysOn:  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]admite parcialmente la funcionalidad de FileTable. Después de una conmutación por error, es posible tener acceso a los datos de FileTable en la réplica principal, pero no en las réplicas secundarias legibles.  
@@ -34,26 +34,26 @@ ms.locfileid: "66010153"
   
 -   Todo acceso a los datos de FILESTREAM o FileTable a través de las API del sistema de archivos debe utilizar VNN en lugar de nombres de equipo. Para obtener más información, vea [FILESTREAM y FileTable con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-##  <a name="OtherPartitioning"></a> Particiones y FileTables  
+##  <a name="partitioning-and-filetables"></a><a name="OtherPartitioning"></a>Creación de particiones y FileTables  
  FileTables no admite la creación de particiones. Con la compatibilidad con varios grupos de archivos FILESTREAM, los problemas de ampliación se pueden administrar sin tener que recurrir a la creación de particiones en la mayoría de los escenarios (a diferencia de FILESTREAM de SQL 2008).  
   
-##  <a name="OtherRepl"></a> Replicación y FileTables  
+##  <a name="replication-and-filetables"></a><a name="OtherRepl"></a>Replicación y FileTables  
  La replicación y las características relacionadas (incluidos la replicación transaccional, la replicación de mezcla, la captura de datos modificados y el seguimiento de cambios) no se admiten con FileTables.  
   
-##  <a name="OtherIsolation"></a> Semántica de transacción y FileTables  
+##  <a name="transaction-semantics-and-filetables"></a><a name="OtherIsolation"></a>Semántica de transacción y FileTables  
  **aplicaciones para Windows**  
  Las aplicaciones Windows no entienden las transacciones de base de datos; por lo tanto, las operaciones de escritura de Windows no proporcionan las propiedades ACID de una transacción de base de datos. Por consiguiente, las reversiones y la recuperación transaccionales no son posibles con operaciones de actualización de Windows.  
   
  **Aplicaciones de Transact-SQL**  
  Para las aplicaciones de TSQL que funcionen en la columna FILESTREAM (file_stream) de una FileTable, la semántica de aislamiento es la misma que con el tipo de datos FILESTREAM de una tabla de usuario normal.  
   
-##  <a name="OtherQueryNot"></a> Notificaciones de consulta y FileTables  
+##  <a name="query-notifications-and-filetables"></a><a name="OtherQueryNot"></a>Notificaciones de consulta y FileTables  
  La consulta no puede contener ninguna referencia a la columna FILESTREAM de la FileTable en la cláusula WHERE ni en ninguna otra parte de la consulta.  
   
-##  <a name="OtherSelectInto"></a> SELECT INTO y FileTables  
+##  <a name="select-into-and-filetables"></a><a name="OtherSelectInto"></a>SELECT INTO y FileTables  
  Las instrucciones SELECT INTO de una FileTable no propagarán la semántica de la FileTable en la tabla de destino creada (al igual que las columnas FILESTREAM de una tabla regular). Todas las columnas de destino de la tabla se comportarán como columnas normales. No tendrán ninguna semántica de FileTable asociada a ellas.  
   
-##  <a name="OtherTriggers"></a> Desencadenadores y FileTables  
+##  <a name="triggers-and-filetables"></a><a name="OtherTriggers"></a>Desencadenadores y FileTables  
  **Desencadenadores DDL (lenguaje de definición de datos)**  
  No existen consideraciones especiales para los desencadenadores DDL con las FileTables. Los desencadenadores DDL normales desencadenarán operaciones CREAT o ALTER DATABASE, así como operaciones CREATE o ALTER TABLE para FileTables. Los desencadenadores pueden recuperar los datos de eventos reales que incluyan el texto de comandos DDL e información adicional, llamando a la función EVENTDATA(). No existen eventos nuevos ni cambios en el esquema Eventdata existente.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66010153"
   
 -   La terminación anómala de los identificadores Win32, como eliminar explícitamente los identificadores Win32 por parte de un administrador O un bloqueo de la base de datos, no ejecutará desencadenadores de usuario durante las operaciones de recuperación, aunque quizá la terminación anómala de la aplicación pueda haber cambiado el contenido de FILESTREAM.  
   
-##  <a name="OtherViews"></a> Vistas y FileTables  
+##  <a name="views-and-filetables"></a><a name="OtherViews"></a>Vistas y FileTables  
  **Vistas**  
  Una vista se puede crear en una FileTable como en cualquier otra tabla. Sin embargo, las siguientes consideraciones se aplican a una vista creada en una FileTable:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66010153"
  **Vistas indizadas**  
  Las vistas indizadas actualmente no pueden incluir columnas FILESTREAM ni columnas calculadas o columnas calculadas persistentes que dependan de las columnas FILESTREAM. Además, este comportamiento se mantiene sin cambios con las vistas definidas en la FileTable.  
   
-##  <a name="OtherSnapshots"></a> Aislamiento de instantánea y FileTables  
+##  <a name="snapshot-isolation-and-filetables"></a><a name="OtherSnapshots"></a> Aislamiento de instantánea y FileTables  
  El aislamiento de instantánea de lectura confirmada (RCSI) y el aislamiento de instantánea (SI) confían en la posibilidad de disponer de una instantánea de los datos disponibles para los lectores aunque se produzcan operaciones de actualización en los datos. Sin embargo, las FileTables permiten el acceso de escritura no transaccional a los datos de secuencia de archivo. Como resultado, las siguientes restricciones se aplican al uso de estas características de base de datos que contenga FileTables:  
   
 -   Una base de datos que contiene FileTables se puede modificar para habilitar RCSI/SI.  
@@ -111,10 +111,10 @@ ms.locfileid: "66010153"
   
     -   La indización de texto completo siempre se realizará correctamente, independientemente de cuáles sean las opciones de la base de datos (READ_COMMITTED_SNAPSHOT o ALLOW_SNAPSHOT_ISOLATION).  
   
-##  <a name="readsec"></a> Bases de datos secundarias legibles  
+##  <a name="readable-secondary-databases"></a><a name="readsec"></a>Bases de datos secundarias legibles  
  Las mismas consideraciones se aplican a las bases de datos secundarias legibles en cuanto a las instantáneas, como se describe en la sección anterior, [Aislamiento de instantánea y FileTables](#OtherSnapshots).  
   
-##  <a name="CDB"></a> Bases de datos independientes y FileTables  
+##  <a name="contained-databases-and-filetables"></a><a name="CDB"></a> Bases de datos independientes y FileTables  
  La característica FILESTREAM de la función de FileTable depende requiere cierta configuración fuera de la base de datos. Por consiguiente, una base de datos que utiliza FILESTREAM o FileTable no es totalmente contenida.  
   
  Puede establecer la contención de la base de datos en PARTIAL si desea utilizar algunas características de bases de datos contenidas, como usuarios contenidos. Sin embargo, en este caso, debe tener en cuenta que algunas de las opciones de base de datos no están contenidas en la base de datos y no se mueven automáticamente cuando lo hace la base de datos.  

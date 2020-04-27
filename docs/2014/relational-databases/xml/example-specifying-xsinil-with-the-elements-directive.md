@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63287276"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>Ejemplo: Especificar XSINIL con la directiva ELEMENTS
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>Ejemplo: Especificación de XSINIL con la directiva ELEMENTS
   En esta consulta se especifica la directiva `ELEMENTS` para generar XML centrado en elementos a partir del resultado de la consulta.  
   
 ## <a name="example"></a>Ejemplo  

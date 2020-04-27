@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489716"
 ---
-# <a name="lesson-4-storing-supplier-data-in-mds"></a>Lección 4: almacenar datos de proveedor en MDS
+# <a name="lesson-4-storing-supplier-data-in-mds"></a>Lección 4: Almacenamiento de datos de proveedor en MDS
   Master Data Services (MDS) es la solución de SQL Server para la administración de datos maestros. La administración de datos maestros (MDM) describe los esfuerzos realizados por una organización para detectar y definir listas no transaccionales de datos.  
   
  Los modelos son el nivel superior de la organización de Master Data Services y organizan la estructura de los datos maestros. La implementación de MDS puede tener uno o varios modelos, donde cada modelo agrupa datos similares. En general, los datos maestros se pueden clasificar en una de estas cuatro categorías: personas, lugares, cosas o conceptos. Por ejemplo, puede crear un modelo Producto que vaya a contener datos relacionados con productos o un modelo Cliente para que contenga datos relacionados con clientes. Vea [Modelos (Master Data Services)](https://msdn.microsoft.com/library/ee633746.aspx) para obtener más detalles.  
@@ -49,6 +49,6 @@ ms.locfileid: "65489716"
 8.  Crear y usar una jerarquía derivada mediante la relación de atributo basado en dominio entre las entidades **Proveedor** y **Estado** (el atributo Estado de la entidad Proveedor es de tipo entidad Estado) mediante **Master Data Manager**.  
   
 ## <a name="next-step"></a>siguiente paso  
- [TArea 1: crear el modelo Proveedores mediante Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [Tarea 1: Creación del modelo Proveedores mediante Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

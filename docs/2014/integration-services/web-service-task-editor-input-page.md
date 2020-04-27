@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054515"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor de la tarea Servicio web (página Entrada)
@@ -33,13 +33,13 @@ ms.locfileid: "66054515"
  **Método**  
  Seleccione en la lista un método web para la tarea que se va a ejecutar.  
   
- **WebMethodDocumentation**  
+ **Documentación del método web**  
  Escriba una descripción del método web, o bien haga clic en el botón Examinar **(…)** y escriba una descripción en el cuadro de diálogo **Documentación del método web**.  
   
  **Nombre**  
  Muestra los nombres de las entradas del método web.  
   
- **Tipo**  
+ **Type**  
  Muestra los tipos de datos de las entradas.  
   
 > [!NOTE]  

@@ -18,17 +18,16 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014054"
 ---
 # <a name="spatial-data-sql-server"></a>Datos espaciales (SQL Server)
   Los datos espaciales representan información sobre la ubicación física y la forma de objetos geométricos. Estos objetos pueden ser ubicaciones de punto u objetos más complejos como países, carreteras o lagos.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de datos espaciales: el tipo de datos `geometry` y el tipo de datos `geography`.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite dos tipos de datos espaciales: el tipo de datos `geometry` y el tipo de datos `geography`.  
   
 -   El tipo `geometry` representa los datos en un sistema de coordenadas euclidiano (plano).  
   
@@ -39,24 +38,24 @@ ms.locfileid: "66014054"
 > [!IMPORTANT]  
 >  Para obtener una descripción detallada y ejemplos de las características espaciales introducidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], descargue las notas del producto [New Spatial Features in SQL Server 2012 (Nuevas características espaciales de SQL Server 2012)](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
-##  <a name="reltasks"></a> Tareas relacionadas  
- [Creación, construcción y consulta de instancias de Geometry](create-construct-and-query-geometry-instances.md)  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tareas relacionadas  
+ [Crear, construir y consultar instancias de Geometry](create-construct-and-query-geometry-instances.md)  
  Describe métodos que puede usar con instancias del tipo de datos geometry.  
   
  [Creación, construcción y consulta de instancias de Geography](create-construct-and-query-geography-instances.md)  
  Describe métodos que puede usar con instancias del tipo de datos geography.  
   
- [Consulta de datos espaciales para el vecino más próximo](query-spatial-data-for-nearest-neighbor.md)  
+ [Consultar datos espaciales para el vecino más próximo](query-spatial-data-for-nearest-neighbor.md)  
  Describe el modelo de consulta común que se usa para buscar los objetos espaciales más cercanos a un objeto espacial concreto.  
   
- [Creación, modificación y eliminación de índices espaciales](create-modify-and-drop-spatial-indexes.md)  
+ [Crear, modificar y quitar índices espaciales](create-modify-and-drop-spatial-indexes.md)  
  Proporciona información acerca de cómo crear, modificar y quitar un índice espacial.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Información general de los tipos de datos espaciales](spatial-data-types-overview.md)  
  Presenta los tipos de datos espaciales.  
   
--   [Point](point.md)  
+-   [Punto](point.md)  
   
 -   [LineString](linestring.md)  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66014054"
   
 -   [MultiLineString](multilinestring.md)  
   
--   [MultiPolígono](multipolygon.md)  
+-   [MultiPolygon](multipolygon.md)  
   
 -   [GeometryCollection](geometrycollection.md)  
   

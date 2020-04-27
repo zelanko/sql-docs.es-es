@@ -14,22 +14,22 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 733827ecace64ef86b54831f63fd8c2889203919
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478964"
 ---
 # <a name="model-permissions-master-data-services"></a>Permisos de modelo (Master Data Services)
   Los permisos de modelo se aplican a todas las entidades, jerarquías derivadas, jerarquías explícitas y colecciones dentro del modelo. Los permisos asignados al modelo se pueden invalidar con respecto a cualquier objeto individual.  
   
 > [!NOTE]  
->  Si un usuario es administrador de un modelo, el modelo se muestra en todas las áreas funcionales de la interfaz de usuario. De lo contrario, el modelo solo se mostrará en el área funcional del **Explorador** . Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+>  Si un usuario es administrador de un modelo, el modelo se muestra en todas las áreas funcionales de la interfaz de usuario. De lo contrario, el modelo solo se mostrará en el área funcional del **Explorador** . Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Solo lectura**|En el **Explorador**, se muestra el modelo, pero el usuario no puede Agregar o quitar miembros, y no puede actualizar los valores de atributo, pertenencias a jerarquías o pertenencias a colecciones.|  
-|**Update**|En el **Explorador**, se muestra el modelo y el usuario puede Agregar y quitar miembros, puede actualizar valores de atributo, pertenencias a jerarquías y pertenencias a colecciones.|  
+|**Actualizar**|En el **Explorador**, se muestra el modelo y el usuario puede Agregar y quitar miembros, puede actualizar valores de atributo, pertenencias a jerarquías y pertenencias a colecciones.|  
 |**Deny**|El modelo no aparece.|  
   
  Cuando asigna permisos a un modelo, el usuario obtiene acceso a todas las versiones del modelo. No puede asignar el permiso a una versión individual.  

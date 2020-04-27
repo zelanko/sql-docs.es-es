@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054480"
 ---
 # <a name="wmi-connection-manager-editor"></a>Editor del administrador de conexiones WMI
@@ -39,7 +39,7 @@ ms.locfileid: "66054480"
  **Espacio de nombres**  
  Especifique el espacio de nombres WMI.  
   
- **Usar autenticación de Windows**  
+ **Usar la autenticación de Windows**  
  Seleccione el uso de la autenticación de Windows. Si utiliza la autenticación de Windows, no será necesario que proporcione un nombre de usuario o una contraseña para la conexión.  
   
  **Nombre de usuario**  
@@ -48,7 +48,7 @@ ms.locfileid: "66054480"
  **Contraseña**  
  Si no utiliza la autenticación de Windows, deberá proporcionar la contraseña para la conexión.  
   
- **Muestre**  
+ **Prueba**  
  Permite probar la configuración del administrador de conexiones.  
   
 ## <a name="see-also"></a>Consulte también  

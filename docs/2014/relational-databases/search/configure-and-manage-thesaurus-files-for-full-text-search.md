@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011477"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las consultas de texto completo pueden buscar sinónimos de los términos especificados por el usuario usando un diccionario de sinónimos. Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *de* define un conjunto de sinónimos para un idioma concreto. Los administradores del sistema pueden definir dos formatos de sinónimos: conjuntos de expansión y conjuntos de reemplazo. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. La comprobación de coincidencia con el diccionario de sinónimos tiene lugar para todas las consultas [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) , y para las consultas [CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) que especifican la cláusula FORMSOF THESAURUS.  
   
-##  <a name="tasks"></a>Tareas básicas para configurar un archivo de sinónimos  
+##  <a name="basic-tasks-for-setting-up-a-thesaurus-file"></a><a name="tasks"></a>Tareas básicas para configurar un archivo de sinónimos  
  Para que las consultas de búsqueda de texto completo en la instancia de servidor puedan buscar sinónimos en un idioma determinado, debe definir las asignaciones del diccionario de sinónimos de ese idioma. Cada diccionario de sinónimos se debe configurar manualmente para definir lo siguiente:  
   
 -   Configuración de signos diacríticos  
@@ -42,7 +42,7 @@ ms.locfileid: "66011477"
      Un conjunto de reemplazo contiene un patrón de texto que se reemplazará por un conjunto de sustitución. Para obtener un ejemplo, vea la sección "Estructura XML de un conjunto de reemplazo" más adelante en este tema.  
   
   
-##  <a name="initial_thesaurus_files"></a>Contenido inicial de los archivos de sinónimos  
+##  <a name="initial-content-of-the-thesaurus-files"></a><a name="initial_thesaurus_files"></a>Contenido inicial de los archivos de sinónimos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de archivos de sinónimos XML, uno para cada idioma admitido. Estos archivos están esencialmente vacíos. Contienen solo la estructura XML de nivel superior que es común a todos los diccionarios de sinónimos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un diccionario de sinónimos de ejemplo como comentario.  
   
  Los archivos de sinónimos que se publican con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contienen el siguiente código XML:  
@@ -74,7 +74,7 @@ ms.locfileid: "66011477"
 ```  
   
   
-##  <a name="location"></a>Ubicación de los archivos de sinónimos  
+##  <a name="location-of-the-thesaurus-files"></a><a name="location"></a>Ubicación de los archivos de sinónimos  
  La ubicación predeterminada de los archivos de sinónimos es la siguiente:  
   
  *<SQL_Server_data_files_path>* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
@@ -102,11 +102,11 @@ ms.locfileid: "66011477"
  El archivo de sinónimos global corresponde al idioma neutro con el LCID 0. Solo los administradores pueden cambiar este valor.  
   
   
-##  <a name="how_queries_use_tf"></a>Cómo usan los archivos de sinónimos las consultas  
+##  <a name="how-queries-use-thesaurus-files"></a><a name="how_queries_use_tf"></a>Cómo usan los archivos de sinónimos las consultas  
  Una consulta del diccionario de sinónimos utiliza un diccionario de sinónimos específico del idioma y el diccionario de sinónimos global. Primero, la consulta busca el archivo específico del idioma y lo carga para su procesamiento (a menos que ya esté cargado). La consulta se expande para incluir los sinónimos específicos del idioma especificados por las reglas de conjuntos de expansión y conjuntos de reemplazo en el archivo de diccionario de sinónimos. Estos pasos se repiten después para el diccionario de sinónimos global. Sin embargo, si un término ya forma parte de una coincidencia en el archivo de diccionario de sinónimos específico del idioma, el término es ilegible para coincidencias en el diccionario de sinónimos global.  
   
   
-##  <a name="structure"></a>Descripción de la estructura de un archivo de Diccionario de sinónimos  
+##  <a name="understanding-the-structure-of-a-thesaurus-file"></a><a name="structure"></a>Descripción de la estructura de un archivo de Diccionario de sinónimos  
  Cada archivo de sinónimos define un contenedor XML cuyo identificador es `Microsoft Search Thesaurus` y un comentario, `<!--` ... `-->`, que contiene un diccionario de sinónimos de ejemplo. El Diccionario de sinónimos se define \<en un elemento de Diccionario de sinónimos> que contiene ejemplos de los elementos secundarios que definen la configuración de los signos diacríticos, los conjuntos de expansión y los conjuntos de reemplazo, como se indica a continuación:  
   
 -   Estructura XML de la configuración de signos diacríticos  
@@ -173,7 +173,7 @@ ms.locfileid: "66011477"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a>Trabajar con archivos de sinónimos  
+##  <a name="working-with-thesaurus-files"></a><a name="working_with_thesaurus_files"></a>Trabajar con archivos de sinónimos  
  **Modificar un archivo de sinónimos**  
   
 -   [Editar un archivo de sinónimos](#editing)  
@@ -184,10 +184,10 @@ ms.locfileid: "66011477"
   
  **Para ver el resultado de la tokenización de una combinación entre un separador de palabras, un diccionario de sinónimos y una lista de palabras irrelevantes**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
+-   [Sys. dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a>Editar un archivo de Diccionario de sinónimos  
+##  <a name="editing-a-thesaurus-file"></a><a name="editing"></a>Editar un archivo de Diccionario de sinónimos  
  El diccionario de sinónimos de un idioma determinado se puede configurar modificando su archivo de diccionario de sinónimos (un archivo XML). Durante la instalación, se instalan los archivos de \<Diccionario de sinónimos vacíos que solo contienen el \<contenedor de> XML y un elemento de Diccionario de> sinónimos de ejemplo comentado como comentario. Para que las consultas de búsqueda de texto completo que buscan sinónimos funcionen correctamente, debe crear un diccionario de \<sinónimos real> elemento que defina un conjunto de sinónimos. Puede definir dos formatos de sinónimos: conjuntos de expansión y conjuntos de reemplazo.  
   
  **Restricciones de los archivos de diccionarios de sinónimos**  
@@ -235,7 +235,7 @@ ms.locfileid: "66011477"
   
   
 ## <a name="see-also"></a>Consulte también  
- [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+ [CONTIENE &#40;&#41;de Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   

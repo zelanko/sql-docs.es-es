@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489125"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarea 5: exportar los resultados de la limpieza a un archivo de Excel
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarea 5: Exportación de los resultados de la limpieza a un archivo de Excel
   En esta tarea, exportará los resultados de la actividad de limpieza a un archivo de Excel. Vea el tema sobre la [fase de exportación](https://msdn.microsoft.com/library/hh213061.aspx#Export) para obtener más detalles.  
   
 1.  En el panel derecho, seleccione **Excel** para el **tipo de destino**.  
@@ -47,6 +47,6 @@ ms.locfileid: "65489125"
     5.  Elimine la columna **validación de direcciones** de la hoja de cálculo y guarde el archivo de Excel. Esta columna adicional corresponde al dominio de compuesto Validación de direcciones.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 6: importar valores del proyecto Limpiar lista de proveedores](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
+ [Tarea 6: Importación de valores del proyecto Limpiar lista de proveedores](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  
   
   

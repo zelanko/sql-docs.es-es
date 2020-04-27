@@ -14,21 +14,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054148"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Habilitar una entidad para jerarquías explícitas y colecciones (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], habilite una entidad para las jerarquías y colecciones explícitas de modo que pueda crearlas para la entidad.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Debe existir una entidad. Para obtener más información, vea [Create an Entity &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md).  
   
@@ -52,11 +52,11 @@ ms.locfileid: "66054148"
   
 9. Haga clic en **Guardar entidad**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
--   [Cree una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+-   [Crear una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
--   [Cree una colección &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
+-   [Crear una colección &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Entidades &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   

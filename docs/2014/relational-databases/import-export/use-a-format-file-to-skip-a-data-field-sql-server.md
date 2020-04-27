@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011722"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Usar un archivo de formato para omitir un campo de datos (SQL Server)
@@ -64,7 +64,7 @@ GO
 -   Asignar el cuarto campo de datos a la tercera columna, `LastName`.  
   
 ## <a name="non-xml-format-file-for-more-data-fields"></a>Archivo de formato no XML para más campos de datos  
- El siguiente archivo de formato, `myTestSkipField.fmt`, asigna los campos de `myTestSkipField-c.dat` a las columnas de la tabla `myTestSkipField` . El archivo de formato utiliza el formato de datos de carácter. Para omitir la asignación de columnas, es necesario cambiar su valor de orden de columna a 0, como se muestra para la columna `ExtraField` del archivo de formato.  
+ El siguiente archivo de formato, `myTestSkipField.fmt`, asigna los campos de `myTestSkipField-c.dat` a las columnas de la tabla `myTestSkipField`. El archivo de formato utiliza el formato de datos de carácter. Para omitir la asignación de columnas, es necesario cambiar su valor de orden de columna a 0, como se muestra para la columna `ExtraField` del archivo de formato.  
   
  El archivo de formato `myTestSkipField.fmt` contiene la siguiente información:  
   
@@ -100,7 +100,7 @@ GO
 ## <a name="xml-format-file-for-more-data-fields"></a>Archivo de formato XML para más campos de datos  
  El archivo de formato presentado en este ejemplo se basa en otro archivo de formato, `myTestSkipField.xml`, que utiliza el formato de datos de carácter y cuyos campos corresponden exactamente en número y orden a las columnas de la tabla `myTestSkipField`. Para ver el contenido de ese archivo de formato, vea [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
- El siguiente archivo de formato, `myTestSkipField.xml`, asigna los campos de `myTestSkipField-c.dat` a las columnas de la tabla `myTestSkipField` . El archivo de formato utiliza el formato de datos de carácter.  
+ El siguiente archivo de formato, `myTestSkipField.xml`, asigna los campos de `myTestSkipField-c.dat` a las columnas de la tabla `myTestSkipField`. El archivo de formato utiliza el formato de datos de carácter.  
   
  El archivo de formato `myTestSkipField.xml` contiene la siguiente información:  
   

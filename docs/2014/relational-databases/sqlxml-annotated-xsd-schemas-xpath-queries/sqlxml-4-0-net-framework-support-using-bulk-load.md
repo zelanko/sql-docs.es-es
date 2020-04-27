@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014902"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Usar la carga masiva SQLXML en el entorno .NET
@@ -109,7 +109,7 @@ ms.locfileid: "66014902"
   
 4.  Inicie Visual Studio.  
   
-5.  Cree una aplicación de consola en C#  
+5.  Cree una aplicación de consola de C#.  
   
 6.  En el menú **proyecto** , seleccione **Agregar referencia**.  
   
@@ -148,6 +148,6 @@ ms.locfileid: "66014902"
      Esto crea la DLL del contenedor administrado (SQLXMLBULKLOADLib.dll) que puede utilizar en el proyecto de .NET Framework. En .NET Framework, puede agregar la referencia del proyecto a la DLL recién creada.  
   
 ## <a name="see-also"></a>Consulte también  
- [Realizar la carga masiva de datos XML &#40;SQLXML 4,0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Carga masiva de datos XML &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

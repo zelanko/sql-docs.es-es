@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010937"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Establecer la cuenta del servicio para el selector del demonio de filtro completo
@@ -26,7 +26,7 @@ ms.locfileid: "66010937"
  El servicio Selector del demonio de filtro de texto completo de SQL Server es un servicio que reconoce instancias y que está asociado a una instancia específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El servicio Selector de demonio de filtro de texto completo de SQL propaga la información de la cuenta de servicio a cada proceso de host de demonio de filtro.  
   
   
-##  <a name="setting"></a>Establecimiento de la cuenta de servicio  
+##  <a name="setting-the-service-account"></a><a name="setting"></a>Establecimiento de la cuenta de servicio  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>Para establecer la cuenta del servicio Selector del demonio de filtro de texto completo de SQL Server para la búsqueda de texto completo  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66010937"
 4.  Después de cerrar el cuadro de diálogo, haga clic en **Reiniciar** para reiniciar el servicio Selector de demonio de filtro de texto completo de SQL.  
   
   
-##  <a name="error"></a>Si el servicio Selector de demonio de filtro de texto completo de SQL no se inicia  
+##  <a name="if-the-sql-full-text-filter-daemon-launcher-service-does-not-start"></a><a name="error"></a>Si el servicio Selector de demonio de filtro de texto completo de SQL no se inicia  
  Si el servicio Selector del demonio de filtro de texto completo de SQL no se inicia, la causa puede ser una o más de las siguientes:  
   
 -   La contraseña asociada a la cuenta del servicio Selector del demonio de filtro de texto completo de SQL ha expirado.  

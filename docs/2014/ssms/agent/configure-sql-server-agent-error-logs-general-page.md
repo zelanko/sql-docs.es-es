@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63253882"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Configurar registros de errores del Agente SQL Server (página General)
-  Utilice esta pantalla para ver y actualizar la configuración del registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  Utilice esta pantalla para ver y actualizar la configuración del registro de errores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
  **Archivo de registro de errores**  
@@ -38,7 +38,7 @@ ms.locfileid: "63253882"
  **Advertencias**  
  Solo escribe advertencias y mensajes informativos en el archivo de registro.  
   
- **Information**  
+ **Información**  
  Solo escribe mensajes informativos en el archivo de registro.  
   
 ## <a name="see-also"></a>Consulte también  

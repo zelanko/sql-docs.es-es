@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011145"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
@@ -35,7 +35,7 @@ ms.locfileid: "66011145"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordena las coincidencias por orden de clasificación y devuelve solo hasta el número especificado de filas. Esta opción puede aumentar significativamente el rendimiento. Por ejemplo, una consulta que por lo general devolvería 100.000 filas de una tabla de 1 millón se procesará de forma más rápida si solo se solicitan las 100 primeras filas.  
   
-##  <a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
+##  <a name="examples-of-using-rank-to-limit-search-results"></a><a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
   
 ### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: buscar solo las tres primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver las tres primeras coincidencias.  
@@ -90,7 +90,7 @@ GO
 ```  
   
   
-##  <a name="how"></a> Cómo se clasifican los resultados de la consulta de búsqueda  
+##  <a name="how-search-query-results-are-ranked"></a><a name="how"></a> Cómo se clasifican los resultados de la consulta de búsqueda  
  La búsqueda de texto completo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede generar una puntuación (o valor de rango) opcional que indica la relevancia de los datos devueltos por una consulta de texto completo. Este valor de rango se calcula en cada fila y se puede utilizar como criterio de ordenación para ordenar el conjunto de resultados de una consulta determinada por relevancia. Los valores de clasificación solo indican un orden de importancia relativa de las filas en el conjunto de resultados. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta. El valor de rango no tiene importancia en las consultas.  
   
 ### <a name="statistics-for-ranking"></a>Estadísticas de clasificación  

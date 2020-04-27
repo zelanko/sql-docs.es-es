@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b631686e9daf716bb124ce5fadaf7575420a114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483142"
 ---
 # <a name="deploying-models-master-data-services"></a>Implementar modelos (Master Data Services)
@@ -29,11 +29,11 @@ ms.locfileid: "65483142"
 ## <a name="tools-for-deploying-models"></a>Herramientas para implementar modelos  
  Para trabajar con paquetes de modelos, puede usar una de tres herramientas, dependiendo de sus necesidades.  
   
--   **Herramienta mdsmodeldeploy**: para crear e implementar objetos y datos del modelo, use la herramienta mdsmodeldeploy. exe. Si seleccionó la ruta de acceso predeterminada al instalar MDS, esta herramienta se encuentra en *unidad*: \Archivos de Programa\microsoft SQL Server\120\Master Data Services\Configuration.  
+-   **Herramienta MDSModelDeploy**: para crear e implementar objetos y datos del modelo, use la herramienta MDSModelDeploy.exe. Si seleccionó la ruta de acceso predeterminada al instalar MDS, esta herramienta se encuentra en *unidad*: \Archivos de Programa\microsoft SQL Server\120\Master Data Services\Configuration.  
   
--   **Asistente**para la implementación de modelos: para crear e implementar paquetes de la estructura del modelo únicamente, use [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] el asistente en la aplicación Web. No puede usar este asistente para la implementación de datos.  
+-   **Asistente para implementación de modelos**: para crear e implementar paquetes de la estructura del modelo únicamente, use el asistente de la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . No puede usar este asistente para la implementación de datos.  
   
--   **Editor de paquetes de modelo**: para editar un paquete de modelo, use ModelPackageEditor. exe que inicia el asistente del editor de paquetes de modelo. Utilice este asistente para modificar un paquete que haya creado la herramienta MDSModelDeploy o el asistente para implementación de modelos. Si seleccionó la ruta de acceso predeterminada al instalar MDS, esta herramienta se encuentra en *unidad*: \Archivos de Programa\microsoft SQL Server\120\Master Data Services\Configuration.  
+-   **Modelo editor de paquetes**: para modificar un modelo de paquetes, use ModelPackageEditor.exe que inicia el asistente de modelo editor de paquetes. Utilice este asistente para modificar un paquete que haya creado la herramienta MDSModelDeploy o el asistente para implementación de modelos. Si seleccionó la ruta de acceso predeterminada al instalar MDS, esta herramienta se encuentra en *unidad*: \Archivos de Programa\microsoft SQL Server\120\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  Puede usar MDSDeployModel para crear un nuevo modelo, crear un clon de un modelo o actualizar un modelo existente y sus datos. Si usa la herramienta MDSModelDeploy para actualizar un modelo existente y sus datos, y el paquete no contiene una entidad, un atributo o un miembro que exista en el modelo de destino, MDSModelDeploy no eliminará dicha entidad, atributo o miembro del modelo.  
@@ -76,6 +76,6 @@ ms.locfileid: "65483142"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Opciones de implementación de modelos &#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
+-   [Opciones de la implementación de modelos &#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
   
   

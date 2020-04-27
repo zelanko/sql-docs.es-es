@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054119"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar el tamaño de un índice no clúster
@@ -181,7 +181,7 @@ ms.locfileid: "66054119"
   
 5.  Calcule el tamaño de la fila del índice:  
   
-     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (para la sobrecarga de encabezado de fila de una fila de índice) + 6 (para el puntero de identificador de página secundaria)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (para la sobrecarga de encabezado de fila de una fila de índice) + 6 (para el puntero de identificador de página secundaria)  
   
 6.  Calcule el número de filas de índice por página (8.096 bytes disponibles por página):  
   

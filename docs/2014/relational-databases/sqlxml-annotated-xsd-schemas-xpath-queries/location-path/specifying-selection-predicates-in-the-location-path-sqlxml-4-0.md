@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012580"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificar predicados de selección en la ruta de acceso de ubicación (SQLXML 4.0)
@@ -39,8 +39,7 @@ ms.locfileid: "66012580"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer`es la prueba de nodo (true `Customer` si es un ** \<nodo de elemento>**, porque ** \<el elemento>** es el tipo de `child` nodo principal del eje). 
-  `attribute::CustomerID="ALFKI"` es el predicado. En el predicado `attribute` , es el eje `CustomerID` y es la prueba de nodo (true si **CustomerID** es un atributo del nodo de contexto, porque ** \<el atributo>** es el tipo `attribute` de nodo principal del eje).  
+ En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer`es la prueba de nodo (true `Customer` si es un ** \<nodo de elemento>**, porque ** \<el elemento>** es el tipo de `child` nodo principal del eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado `attribute` , es el eje `CustomerID` y es la prueba de nodo (true si **CustomerID** es un atributo del nodo de contexto, porque ** \<el atributo>** es el tipo `attribute` de nodo principal del eje).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   
@@ -55,9 +54,7 @@ ms.locfileid: "66012580"
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- En esta expresión XPath, `child` y `attribute` son los nombres del eje. 
-  `Customer`, `Order` y `SalesOrderID` son las pruebas de nodo. 
-  `attribute::OrderID="1"` es el predicado.  
+ En esta expresión XPath, `child` y `attribute` son los nombres del eje. `Customer`, `Order` y `SalesOrderID` son las pruebas de nodo. `attribute::OrderID="1"` es el predicado.  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   
@@ -74,8 +71,7 @@ child::Customer[child::ContactName]
   
  En este ejemplo se da por supuesto que ** \<ContactName>** es un elemento secundario del elemento ** \<>del cliente** en el documento XML, que se conoce como *asignación centrada en elementos* en un esquema XSD anotado.  
   
- En esta expresión XPath, `child` es el nombre de eje. `Customer`es la prueba de nodo (true `Customer` si es un ** \<elemento>** nodo, porque ** \<el elemento>** es el tipo de `child` nodo principal del eje). 
-  `child::ContactName` es el predicado. En el predicado `child` , es el eje `ContactName` y es la prueba de nodo ( `ContactName` true si es un ** \<elemento>** nodo).  
+ En esta expresión XPath, `child` es el nombre de eje. `Customer`es la prueba de nodo (true `Customer` si es un ** \<elemento>** nodo, porque ** \<el elemento>** es el tipo de `child` nodo principal del eje). `child::ContactName` es el predicado. En el predicado `child` , es el eje `ContactName` y es la prueba de nodo ( `ContactName` true si es un ** \<elemento>** nodo).  
   
  Esta expresión devuelve solo los ** \<** elementos secundarios del elemento>Customer del nodo de contexto que tiene ** \<ContactName>** elemento Children.  
   
@@ -94,8 +90,7 @@ child::Customer[not(child::ContactName)]
   
  En este ejemplo se da por supuesto que ** \<ContactName>** es un elemento secundario del elemento ** \<>del cliente** en el documento XML y el campo ContactName no es necesario en la base de datos.  
   
- En este ejemplo, `child` es el eje. `Customer`es la prueba de nodo (TRUE `Customer` si es \<un elemento> nodo). 
-  `not(child::ContactName)` es el predicado. En el predicado `child` , es el eje `ContactName` y es la prueba de nodo ( `ContactName` true si \<es un elemento> nodo).  
+ En este ejemplo, `child` es el eje. `Customer`es la prueba de nodo (TRUE `Customer` si es \<un elemento> nodo). `not(child::ContactName)` es el predicado. En el predicado `child` , es el eje `ContactName` y es la prueba de nodo ( `ContactName` true si \<es un elemento> nodo).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   
@@ -110,8 +105,7 @@ Customer[not(ContactName)]
 child::Customer[attribute::CustomerID]  
 ```  
   
- En este ejemplo, `child` es el eje y `Customer` es la prueba de nodo ( `Customer` true si \<es un elemento> nodo). 
-  `attribute::CustomerID` es el predicado. En el predicado `attribute` , es el eje `CustomerID` y es el predicado ( `CustomerID` true si es un ** \<atributo>** nodo).  
+ En este ejemplo, `child` es el eje y `Customer` es la prueba de nodo ( `Customer` true si \<es un elemento> nodo). `attribute::CustomerID` es el predicado. En el predicado `attribute` , es el eje `CustomerID` y es el predicado ( `CustomerID` true si es un ** \<atributo>** nodo).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   
@@ -120,8 +114,7 @@ Customer[@CustomerID]
 ```  
   
 ## <a name="selection-predicate-example-6"></a>Predicado de selección: Ejemplo 6  
- 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 incluye compatibilidad para las consultas XPath que contienen un producto cruzado en el predicado, como se muestra en el ejemplo siguiente:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 incluye compatibilidad para las consultas XPath que contienen un producto cruzado en el predicado, como se muestra en el ejemplo siguiente:  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  

@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f549f1c851ff09b165dae055b8bb18f01a66fcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010339"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>Datos de objeto binario grande (Blob) (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona soluciones para almacenar archivos y documentos en la base de datos o en dispositivos de almacenamiento remoto.  
   
-##  <a name="section"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="section"></a>En esta sección  
  [Comparar opciones para almacenar blobs &#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  
  Comparar las ventanas de FILESTREAM, FileTables y almacén remoto de blobs.  
   

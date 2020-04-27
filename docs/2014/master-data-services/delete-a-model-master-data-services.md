@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483174"
 ---
 # <a name="delete-a-model-master-data-services"></a>Eliminar un modelo (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65483174"
 > [!NOTE]  
 >  Cuando haya completado este procedimiento, se eliminarán permanentemente todos los objetos y todos los datos de todas las versiones del modelo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-model"></a>Eliminar un modelo  
   
@@ -49,6 +49,6 @@ ms.locfileid: "65483174"
   
 ## <a name="see-also"></a>Consulte también  
  [Modelos &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [Cree un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [Crear un modelo &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
   

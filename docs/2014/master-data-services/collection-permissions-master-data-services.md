@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 47534b08e32f9e8fe585e4ad7fe2e36f6c6e8c8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484015"
 ---
 # <a name="collection-permissions-master-data-services"></a>Permisos de colección (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "65484015"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Solo lectura**|Se muestran todas las colecciones y miembros de la colección.<br /><br /> El usuario no puede agregar o quitar colecciones ni tampoco puede agregar o quitar miembros a la colección.|  
-|**Update**|Se muestran todas las colecciones y el usuario puede agregar y quitar colecciones.<br /><br /> El usuario también puede agregar y quitar miembros a la colección.|  
+|**Actualizar**|Se muestran todas las colecciones y el usuario puede agregar y quitar colecciones.<br /><br /> El usuario también puede agregar y quitar miembros a la colección.|  
 |**Deny**|No se muestra ninguna de las colecciones de la entidad.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [Colecciones &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [Permisos del objeto de modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+ [Permisos de objeto del modelo &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

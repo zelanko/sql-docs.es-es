@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010120"
 ---
 # <a name="filetable-schema"></a>Esquema de FileTable
@@ -24,15 +24,12 @@ ms.locfileid: "66010120"
   
 |Nombre de atributo de archivo|type|Size|Valor predeterminado|Descripción|Accesibilidad del sistema de archivos|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
-|**path_locator**|`hierarchyid`|Variable|
-  `hierarchyid` que identifica la posición de este elemento.|La posición de este nodo en el objeto FileNamespace jerárquico.<br /><br /> La clave principal de la tabla.|Se puede crear y modificar estableciendo los valores de la ruta de acceso de Windows.|  
-|**stream_id**|**[uniqueidentifier] ROWGUIDCOL**||Valor devuelto por la función `NEWID()`.|Identificador único de los datos de FILESTREAM.|No aplicable.|  
+|**path_locator**|`hierarchyid`|Variable|`hierarchyid` que identifica la posición de este elemento.|La posición de este nodo en el objeto FileNamespace jerárquico.<br /><br /> La clave principal de la tabla.|Se puede crear y modificar estableciendo los valores de la ruta de acceso de Windows.|  
+|**stream_id**|**[uniqueidentifier] rowguidcol**||Valor devuelto por la función `NEWID()`.|Identificador único de los datos de FILESTREAM.|No aplicable.|  
 |**file_stream**|`varbinary(max)`<br /><br /> `filestream`|Variable|NULL|Contiene los datos de FILESTREAM.|No aplicable.|  
-|**file_type**|`nvarchar(255)`|Variable|NULL.<br /><br /> Una operación de creación o cambio de nombre del sistema de archivos rellena el valor de la extensión de archivo a partir del nombre.|Representa el tipo de archivo.<br /><br /> Esta columna se puede usar como `TYPE COLUMN` cuando se crea un índice de texto completo.<br /><br /> **File_Type** es una columna calculada persistente.|Calculado automáticamente. No se puede establecer.|  
+|**file_type**|`nvarchar(255)`|Variable|NULL.<br /><br /> Una operación de creación o cambio de nombre del sistema de archivos rellena el valor de la extensión de archivo a partir del nombre.|Representa el tipo de archivo.<br /><br /> Esta columna se puede usar como `TYPE COLUMN` cuando se crea un índice de texto completo.<br /><br /> **file_type** es una columna calculada persistente.|Calculado automáticamente. No se puede establecer.|  
 |**Nombre**|`nvarchar(255)`|Variable|Valor de GUID.|El nombre de archivo o de directorio.|Se puede crear o modificar mediante las API de Windows.|  
-|**parent_path_locator**|`hierarchyid`|Variable|
-  `hierarchyid` que identifica el directorio que contiene este elemento.|
-  `hierarchyid` del directorio contenedor.<br /><br /> **parent_path_locator** es una columna calculada persistente.|Calculado automáticamente. No se puede establecer.|  
+|**parent_path_locator**|`hierarchyid`|Variable|`hierarchyid` que identifica el directorio que contiene este elemento.|`hierarchyid` del directorio contenedor.<br /><br /> **parent_path_locator** es una columna calculada persistente.|Calculado automáticamente. No se puede establecer.|  
 |**cached_file_size**|`bigint`|||El tamaño en bytes de los datos FILESTREAM.<br /><br /> **cached_file_size** es una columna calculada persistente.|Aunque el tamaño del archivo almacenado en memoria caché se mantenga actualizado automáticamente, puede perder la sincronización en circunstancias inusuales. Para calcular el tamaño exacto, utilice la función `DATALENGTH()`.|  
 |**creation_time**|`datetime2(4)`<br /><br /> `not null`|8 bytes|Tiempo actual.|Fecha y hora de creación del archivo.|Calculado automáticamente. También se puede establecer con las API de Windows.|  
 |**last_write_time**|`datetime2(4)`<br /><br /> `not null`|8 bytes|Tiempo actual.|Fecha y hora en que se modificó por última vez el archivo.|Calculado automáticamente. También se puede establecer con las API de Windows.|  

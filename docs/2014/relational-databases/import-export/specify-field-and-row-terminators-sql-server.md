@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011860"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
@@ -100,7 +100,7 @@ ms.locfileid: "66011860"
 |Switch|Descripción|  
 |------------|-----------------|  
 |**-c**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
-|**-t**`,`|Especifica una coma (,) como terminador de campo.|  
+|**-t** `,`|Especifica una coma (,) como terminador de campo.|  
 |**-r** \n|Especifica el terminador de fila como un carácter de nueva línea. Terminador de fila predeterminado, por lo que especificarlo es opcional.|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para iniciar sesión correctamente.|  
   
@@ -117,7 +117,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
 ## <a name="specifying-terminators-for-bulk-import"></a>Especificar terminadores para la importación masiva  
  Cuando realice una importación masiva de datos `char` o `nchar`, el comando de importación masiva debe reconocer los terminadores que se utilizan en el archivo de datos. La forma de especificar los terminadores depende del comando de importación masiva, tal como se indica a continuación:  
   
--   **BCP**  
+-   **bcp**  
   
      La especificación de terminadores para una operación de importación utiliza la misma sintaxis que para una operación de exportación. Para obtener más información, vea "Especificar terminadores para la exportación masiva" anteriormente en este tema.  
   
@@ -127,8 +127,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualifier|Descripción|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|Especifica el terminador de campo que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \t (carácter de tabulación).|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|Especifica el terminador de fila que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \n (carácter de nueva línea).|  
+    |FIELDTERMINATOR **= '*`field_terminator`*'**|Especifica el terminador de campo que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \t (carácter de tabulación).|  
+    |ROWTERMINATOR **= '*`row_terminator`*'**|Especifica el terminador de fila que se utilizará para los archivos de caracteres y de caracteres Unicode.<br /><br /> El valor predeterminado es \n (carácter de nueva línea).|  
   
      Para obtener más información, vea [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -170,8 +170,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |Opción|Atributo|  
 |------------|---------------|  
 |DATAFILETYPE **= '`char`'**|Especifica que los campos de datos se cargarán como datos de caracteres.|  
-|FIELDTERMINATOR **= '**`,`**'**|Especifica una coma (`,`) como terminador de campo.|  
-|ROWTERMINATOR **= '**`\n`**'**|Especifica el terminador de fila como un carácter de nueva línea.|  
+|FIELDTERMINATOR **='** `,` **'**|Especifica una coma (`,`) como terminador de campo.|  
+|ROWTERMINATOR **='** `\n` **'**|Especifica el terminador de fila como un carácter de nueva línea.|  
   
  En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , ejecute el siguiente código:  
   
@@ -191,8 +191,8 @@ GO
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Especifique la longitud de campo mediante el &#40;BCP SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Especifique la longitud del prefijo en los archivos de datos mediante BCP &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [Especifique File Storage tipo mediante BCP &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Especificar la longitud de campo mediante bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Especificar la longitud de prefijo en los archivos de datos mediante bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

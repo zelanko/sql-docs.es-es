@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011545"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
@@ -31,7 +31,7 @@ ms.locfileid: "66011545"
   
  El proceso para crear y mantener un índice de texto completo se denomina *rellenado* (o *rastreo*). Hay tres tipos de rellenado del índice de texto completo: completo, basado en el seguimiento de cambios y basado en una marca de tiempo incremental. Para obtener más información, vea [Rellenar índices de texto completo](populate-full-text-indexes.md).  
   
-##  <a name="tasks"></a>Tareas comunes  
+##  <a name="common-tasks"></a><a name="tasks"></a>Tareas comunes  
  **Para crear un índice de texto completo**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
@@ -46,7 +46,7 @@ ms.locfileid: "66011545"
   
  [En este tema](#top)  
   
-##  <a name="structure"></a>Estructura del índice de texto completo  
+##  <a name="full-text-index-structure"></a><a name="structure"></a>Estructura del índice de texto completo  
  Para comprender el funcionamiento del motor de texto completo, es necesario entender la estructura de un índice de texto completo. En este tema se utiliza el extracto siguiente de la tabla **Document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] como tabla de ejemplo. Este extracto muestra solo dos columnas, **DocumentID** y **Title** , y tres filas de la tabla.  
   
  En este ejemplo se presupone que se ha creado un índice de texto completo en la columna **Title** .  
@@ -78,7 +78,7 @@ ms.locfileid: "66011545"
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
 |Bracket|1|3|3|  
-|Assembly|1|2|6|  
+|Ensamblado|1|2|6|  
 |3|1|2|7|  
 |Instalación|1|3|4|  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66011545"
   
  [En este tema](#top)  
   
-##  <a name="fragments"></a>Fragmentos de índice de texto completo  
+##  <a name="full-text-index-fragments"></a><a name="fragments"></a>Fragmentos de índice de texto completo  
  El índice de texto completo lógico normalmente se divide entre varias tablas internas. Cada tabla interna se conoce como un fragmento del índice de texto completo. Algunos de estos fragmentos podrían contener datos más recientes que otros. Por ejemplo, si un usuario actualiza la fila siguiente cuyo DocId es 3 y la tabla se somete automáticamente a seguimiento de los cambios, se crea un fragmento nuevo.  
   
 |DocumentID|Título|  
@@ -124,7 +124,7 @@ ms.locfileid: "66011545"
 |Reflector|1|2|5|  
 |Reflector|1|3|2|  
 |Bracket|1|2|3|  
-|Assembly|1|2|6|  
+|Ensamblado|1|2|6|  
 |3|1|2|7|  
   
  [En este tema](#top)  

@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011818"
 ---
-# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento en archivo mediante bcp (SQL Server)
+# <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento de archivos mediante bcp (SQL Server)
   El *tipo de almacenamiento en archivo* describe cómo se almacenan los datos en el archivo de datos. La información se puede exportar a un archivo de datos como el tipo de tabla de base de datos correspondiente (formato nativo), como su representación en caracteres (formato de caracteres) o como cualquier tipo de datos que admita la conversión implícita (por ejemplo, si copia datos `smallint` como datos `int`). Los tipos de datos definidos por el usuario se exportan como sus tipos base correspondientes.  
   
-## <a name="the-bcp-prompt-for-file-storage-type"></a>Comando bcp para el tipo de almacenamiento de archivos  
- Si un comando **bcp** interactivo contiene la opción **in** u **out** sin el modificador de archivo de formato (**-f**) o un modificador de formato de datos (**-n**, **-c**, **-w**o **-N**), el comando solicita el tipo de almacenamiento de archivos de cada campo de datos, de la manera siguiente:  
+## <a name="the-bcp-prompt-for-file-storage-type"></a>Comando bcp para el tipo de almacenamiento en archivo  
+ Si un comando **bcp** interactivo contiene la opción **in** u **out** sin el modificador de archivo de formato ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**), el comando solicita el tipo de almacenamiento de archivos de cada campo de datos, de la manera siguiente:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -45,12 +45,12 @@ ms.locfileid: "66011818"
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
-    |`text`<sup>2</sup>|`T`[`ext`]|  
+    |`text` <sup>2</sup>|`T`[`ext`]|  
     |`ntext2`|`W`|  
     |`binary`|`x`|  
     |`varbinary`|`x`|  
-    |`image`<sup>2</sup>|`I`[`mage`]|  
-    |`datetime`|**d [ar]**|  
+    |`image` <sup>2</sup>|`I`[`mage`]|  
+    |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
     |`date`|`de`|  
@@ -58,13 +58,13 @@ ms.locfileid: "66011818"
     |`datetimeoffset`|`do`|  
     |`decimal`|`n`|  
     |`numeric`|`n`|  
-    |`float`|**f [Loat]**|  
+    |`float`|**f[loat]**|  
     |`real`|`r`|  
-    |`Int`|**i [NT]**|  
+    |`Int`|**i[nt]**|  
     |`bigint`|`B[igint]`|  
-    |`smallint`|**s [despelusa]**|  
-    |`tinyint`|**t [inyint]**|  
-    |`money`|**m [Oney]**|  
+    |`smallint`|**s[mallint]**|  
+    |`tinyint`|**t[inyint]**|  
+    |`money`|**m[oney]**|  
     |`smallmoney`|`M`|  
     |`bit`|`b[it]`|  
     |`uniqueidentifier`|`u`|  
@@ -86,11 +86,11 @@ ms.locfileid: "66011818"
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
-|`text`<sup>2</sup>|SQLCHAR|  
-|`ntext`<sup>2</sup>|SQLNCHAR|  
+|`text` <sup>2</sup>|SQLCHAR|  
+|`ntext` <sup>2</sup>|SQLNCHAR|  
 |`binary`|SQLBINARY|  
 |`varbinary`|SQLBINARY|  
-|`image`<sup>2</sup>|SQLBINARY|  
+|`image` <sup>2</sup>|SQLBINARY|  
 |`datetime`|SQLDATETIME|  
 |`smalldatetime`|SQLDATETIM4|  
 |`decimal`|SQLDECIMAL|  
@@ -128,8 +128,8 @@ ms.locfileid: "66011818"
 ## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Especifique la longitud de campo mediante el &#40;BCP SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Especificar la longitud de campo mediante bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
  [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Especifique la longitud del prefijo en los archivos de datos mediante BCP &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+ [Especificar la longitud de prefijo en los archivos de datos mediante bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

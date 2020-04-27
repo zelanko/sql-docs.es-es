@@ -11,20 +11,20 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481242"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>TArea 1: crear una base de conocimiento y dominios
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tarea 1: Creación de una base de conocimiento y dominios
   En esta tarea, creará la base de conocimiento **proveedores** y creará dominios que se usarán para la limpieza de datos y los datos coincidentes para quitar duplicados.  
   
 1.  Inicie **Data Quality Client**. Haga clic en **Inicio**, seleccione **todos los programas**, haga clic en **Microsoft SQL Server 2012**, en **Data Quality Services**y, a continuación, haga clic en **Data Quality Client**.  
   
 2.  En el cuadro de diálogo **conectar al servidor** , seleccione la instancia del servidor de bases de datos en la que está instalado DQS y haga clic en **conectar**.  
   
-     ![Cuadro de diálogo conectar al servidor](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "Cuadro de diálogo Conectar con el servidor")  
+     ![Cuadro de diálogo conectar al servidor](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "Cuadro de diálogo Conectar a servidor")  
   
 3.  En la Página principal de Data Quality Client, en el panel administración de la **base de conocimiento** , haga clic en **nueva base de conocimiento**.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "65481242"
     -   Zip  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 2: agregar valores de dominio manualmente](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [Tarea 2: Adición manual de valores de dominio](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

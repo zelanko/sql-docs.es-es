@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013266"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Ejemplos de carga masiva XML (SQLXML 4.0)

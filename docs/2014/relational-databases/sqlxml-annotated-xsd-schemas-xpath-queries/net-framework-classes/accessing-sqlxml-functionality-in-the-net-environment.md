@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012566"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Acceso a la funcionalidad de SQLXML en el entorno .NET
-  Este ejemplo muestra:  
+  En este ejemplo se muestra lo siguiente:  
   
 -   Cómo usar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] las clases administradas de SQLXML (Microsoft. Data. SqlXml) para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tener acceso [!INCLUDE[msCoName](../../../includes/msconame-md.md)] a Microsoft en el entorno de .NET Framework.  
   

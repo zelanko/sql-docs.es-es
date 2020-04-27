@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011539"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar y administrar separadores de palabras y lematizadores para la búsqueda
@@ -32,14 +32,14 @@ ms.locfileid: "66011539"
   
  El uso de separadores de palabras específicos del idioma permite que los términos resultantes sean más precisos para dicho idioma. Cuando hay un separador de palabras para la familia de idiomas, pero no para el subidioma específico, se utiliza el del idioma principal. Por ejemplo, el separador de palabras del francés se utiliza en el texto escrito en francés de Canadá. Si no hay ningún separador de palabras disponible para un idioma concreto, se utiliza el separador de palabras neutral. El separador de palabras neutral divide las palabras en caracteres neutrales como espacios y marcas de puntuación.  
   
-##  <a name="register"></a>Registrar separadores de palabras  
+##  <a name="registering-word-breakers"></a><a name="register"></a>Registrar separadores de palabras  
  Para usar los separadores de palabras de un idioma, se deben registrar. En el caso de los separadores de palabras registrados, recursos lingüísticos asociados: lematizadores, palabras irrelevantes (palabras irrelevantes) y archivos de Diccionario de sinónimos, también están disponibles para las operaciones de indización y consulta de texto completo. Para ver una lista de los idiomas cuyos separadores de palabras están registrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
  SELECT * FROM sys.fulltext_languages  
   
  Si agrega, quita o modifica un separador de palabras, necesita actualizar la lista de identificadores de configuración regional (LCID) de Microsoft Windows que se admiten para la indización y las consultas de texto completo. Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="default"></a>Establecer la opción de idioma de texto completo predeterminado  
+##  <a name="setting-the-default-full-text-language-option"></a><a name="default"></a>Establecer la opción de idioma de texto completo predeterminado  
  En el caso de una versión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , `default full-text language` el programa de instalación de establece la opción en el idioma del servidor si existe una coincidencia adecuada. En las versiones no traducidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción `default full-text language` es el inglés.  
   
  Al crear o modificar un índice de texto completo, puede especificar un idioma diferente para cada columna indizada de texto completo. Si no se especifica ningún idioma para una columna, el valor predeterminado es el de la opción de configuración `default full-text language`.  
@@ -47,7 +47,7 @@ ms.locfileid: "66011539"
 > [!NOTE]  
 >  Todas las columnas de una cláusula de función de consulta de texto completo deben utilizar el mismo idioma, a menos que se especifique la opción LANGUAGE en la consulta. El idioma de la columna indexada de texto completo que se consulta determina el análisis lingüístico realizado en los argumentos de los predicados de la consulta de texto completo ([CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)) y de las funciones ([CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql)).  
   
-##  <a name="lang"></a>Elegir el idioma de una columna indizada  
+##  <a name="choosing-the-language-for-an-indexed-column"></a><a name="lang"></a>Elegir el idioma de una columna indizada  
  Al crear un índice de texto completo, es recomendable que especifique un idioma para cada columna indizada. Si un idioma no se especifica para una columna, el sistema utiliza el idioma predeterminado del sistema. El idioma de una columna determina el separador de palabras y el lematizador que se utilizará para indizar esa columna. Además, las consultas de texto completo de la columna utilizarán el archivo de diccionario de sinónimos del idioma.  
   
  Hay varios aspectos que deben tenerse en cuenta al elegir el idioma de columna cuando se crea un índice de texto completo. Estas consideraciones se refieren al modo en que se acorta el texto y se indiza a continuación mediante el motor de texto completo. Para obtener más información, vea [Elegir un idioma al crear un índice de texto completo](choose-a-language-when-creating-a-full-text-index.md).  
@@ -62,19 +62,19 @@ ms.locfileid: "66011539"
     SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;  
     ```  
   
-##  <a name="info"></a>Obtener información acerca de los separadores de palabras  
+##  <a name="obtaining-information-about-word-breakers"></a><a name="info"></a>Obtener información acerca de los separadores de palabras  
  **Ver el resultado de la tokenización de una combinación entre un separador de palabras, un diccionario de sinónimos y una lista de palabras irrelevantes**  
   
--   [Sys. dm_fts_parser &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
+-   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  **Para devolver información sobre los separadores de palabras registrados**  
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
-##  <a name="tshoot"></a>Solución de problemas de errores de tiempo de espera de separación de palabras  
+##  <a name="troubleshooting-word-breaking-time-out-errors"></a><a name="tshoot"></a>Solución de problemas de errores de tiempo de espera de separación de palabras  
  Se puede producir un error de tiempo de espera en la separación de palabras en diversas situaciones. Para obtener más información sobre estas situaciones y cómo responder en cada situación, vea [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).  
   
-##  <a name="impact"></a>Descripción del impacto de los nuevos separadores de palabras  
+##  <a name="understanding-the-impact-of-new-word-breakers"></a><a name="impact"></a>Descripción del impacto de los nuevos separadores de palabras  
  Cada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente incluye nuevos separadores de palabras que tienen mejores reglas lingüísticas y son más precisos que los anteriores separadores de palabras. Los nuevos separadores de palabras podrían comportarse de manera ligeramente diferente que los separadores de palabras de los índices de texto completo que se importaron de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto es relevante si se importó un catálogo de texto completo cuando una base de datos se actualizó a la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un o varios idiomas que Usen los índices de texto completo del catálogo de texto completo podrían estar asociados ahora a nuevos separadores de palabras. Para obtener más información, vea [Actualizar la búsqueda de texto completo](upgrade-full-text-search.md).  
   
  Para obtener una lista completa de todos los separadores de palabras, vea [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
@@ -82,9 +82,9 @@ ms.locfileid: "66011539"
 ## <a name="see-also"></a>Consulte también  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)   
- [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)   
- [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sp_fulltext_service &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)   
+ [Sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)   
+ [Configurar y administrar palabras irrelevantes y palabras irrelevantes para la búsqueda de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Actualizar la búsqueda de texto completo](upgrade-full-text-search.md)  
   
   

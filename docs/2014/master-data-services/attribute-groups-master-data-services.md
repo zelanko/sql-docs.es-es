@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bacb199a87cd0d9e388b49b00cbc2e245571d2ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483703"
 ---
 # <a name="attribute-groups-master-data-services"></a>Grupos de atributos (Master Data Services)
@@ -47,7 +47,7 @@ ms.locfileid: "65483703"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un nuevo grupo de atributos y agregarle atributos.|[Cree un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
+|Crear un nuevo grupo de atributos y agregarle atributos.|[Crear un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
 |Hacer que un grupo de atributos sea visible para los usuarios.|[Hacer que un grupo de atributos sea visible para los usuarios &#40;Master Data Services&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)|  
 |Cambiar el nombre de un grupo de atributos existente.|[Cambiar el nombre de un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
 |Eliminar un grupo de atributos existente.|[Eliminar un grupo de atributos &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  

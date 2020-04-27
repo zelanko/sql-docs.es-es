@@ -13,21 +13,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: de5cc28bfd034001c7bc18da9d934277e01935a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484049"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>Cambiar el nombre de un atributo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de un atributo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-an-attribute-name"></a>Para cambiar el nombre de un atributo  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65484049"
   
 7.  Haga clic en **Editar atributo seleccionado**.  
   
-8.  En el cuadro **Nombre** , escriba el nombre actualizado del atributo. Para ver una lista de palabras que no se deben usar como nombres de atributo, consulte [Palabras reservadas &#40;Master Data Services&#41;](reserved-words-master-data-services.md).  
+8.  En el cuadro **Nombre** , escriba el nombre actualizado del atributo. Para obtener una lista de palabras que no se deben usar como nombres de atributo, consulte [palabras reservadas &#40;Master Data Services&#41;](reserved-words-master-data-services.md).  
   
 9. Haga clic en **Guardar atributo**.  
   

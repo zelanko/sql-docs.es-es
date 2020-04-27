@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484064"
 ---
-# <a name="task-11-publishing-the-knowledge-base"></a>Tarea 11: publicar la base de conocimiento
+# <a name="task-11-publishing-the-knowledge-base"></a>Tarea 11: Publicación de la base de conocimiento
   En esta tarea, publicará la base de conocimiento. Una base de conocimiento publicada se puede usar para realizar actividades de limpieza o de búsqueda de coincidencias en proyectos de calidad de datos.  
   
 1.  Haga clic en el botón **Finalizar** situado en la parte inferior de la ventana.  

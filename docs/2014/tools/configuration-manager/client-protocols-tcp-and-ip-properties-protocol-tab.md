@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63253792"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolos de cliente y Propiedades de TCP/IP (pestaña Protocolo)
@@ -31,18 +31,18 @@ ms.locfileid: "63253792"
   
  Al conectar a una instancia con nombre del [!INCLUDE[ssDE](../../includes/ssde-md.md)], el cliente intentará obtener el número de puerto desde el servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en el servidor. Si el servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, se debe proporcionar el número de puerto mediante esta configuración o como parte de la cadena de conexión.  
   
- **Enabled**  
- Los valores posibles son **Yes** y **No**.  
+ **Habilitado**  
+ Los valores posibles son **sí** y **no**.  
   
- **Keep Alive**  
+ **Mantener activo**  
  Este parámetro (en milisegundos) controla la frecuencia con la que TCP intenta comprobar que una conexión inactiva sigue intacta mediante el envío de un paquete **KEEPALIVE** . El valor predeterminado es 30000 milisegundos.  
   
- **Intervalo de mantenimiento de conexión**  
+ **Intervalo entre mensajes de mantenimiento de conexión**  
  Este parámetro (en milisegundos) determina el intervalo que separa las retransmisiones **KEEPALIVE** hasta que se recibe una respuesta. El valor predeterminado es 1000 milisegundos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [Elección de un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Nuevo alias &#40;pestaña alias&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;las propiedades de&#62; alias &#40;pestaña alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [Propiedades de &#60;Alias&#62; &#40;pestaña Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63250517"
 ---
 # <a name="scripting-replication"></a>Crear script para la replicación
-  Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. Un script  contiene los procedimientos almacenados del sistema Transact-SQL necesarios para implementar los componentes de replicación a los que se refieren los scripts, como una publicación o una suscripción. Los scripts se pueden crear en un asistente (como el Asistente para nueva publicación) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o en después de crear un componente. Puede ver, modificar y ejecutar el script mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Los scripts se pueden almacenar con los archivos de copia de seguridad para utilizarlas en el caso de que se deba volver a configurar una topología de replicación.  
+  Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. Un script  contiene los procedimientos almacenados del sistema Transact-SQL necesarios para implementar los componentes de replicación a los que se refieren los scripts, como una publicación o una suscripción. Los scripts se pueden crear en un asistente (como el Asistente para nueva publicación) o en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] después de crear un componente. Puede ver, modificar y ejecutar el script mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Los scripts se pueden almacenar con los archivos de copia de seguridad para utilizarlas en el caso de que se deba volver a configurar una topología de replicación.  
   
  Si se producen cambios en alguna propiedad, es necesario volver a generar el script de un componente. Si utiliza procedimientos almacenados personalizados con la replicación transaccional, debe guardar una copia de cada procedimiento con los scripts; la copia se debe actualizar si el procedimiento cambia (los procedimientos se actualizan normalmente como consecuencia de cambios de esquema o cambios en los requisitos de la aplicación. Para obtener más información sobre los procedimientos personalizados, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63250517"
   
 2.  En la página **Propiedades del archivo de script** especifique las opciones.  
   
-3.  Realice los pasos del asistente.  
+3.  Finalice el asistente.  
   
 #### <a name="to-script-an-object-from-management-studio"></a>Para generar script de un objeto en Management Studio  
   
@@ -82,13 +82,13 @@ ms.locfileid: "63250517"
   
 3.  Haga clic con el botón secundario en una publicación o suscripción y, a continuación, haga clic en **Generar scripts**.  
   
-4.  Especifique las opciones en el cuadro de diálogo **Generar script SQL - \<ReplicationObject>**.  
+4.  Especifique las opciones en el cuadro de diálogo **Generar script SQL - \<ReplicationObject>** .  
   
 5.  Haga clic en **Script a archivo**.  
   
 6.  Escriba un nombre de archivo en el cuadro de diálogo **Ubicación del archivo de script** y, a continuación, haga clic en **Guardar**. Se muestra un mensaje de estado.  
   
-7.  Haga clic en **Aceptar**y, a continuación, en **cerrar**.  
+7.  Haga clic en **Aceptar**y, a continuación, en **Cerrar**.  
   
 #### <a name="to-script-multiple-objects-from-management-studio"></a>Para generar script de varios objetos desde Management Studio  
   

@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054109"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Permisos consolidados (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "66054109"
   
  Los permisos consolidados solo se aplican a las entidades que estén habilitadas para jerarquías explícitas y colecciones.  
   
- **Apunte**  
+ **Notas:**  
   
 -   Los permisos de hoja solo se aplican al área funcional del **Explorador** de la interfaz de usuario.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66054109"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Solo lectura**|Se muestran los miembros consolidados, pero el usuario no los puede agregar, quitar o cambiar.|  
-|**Update**|Se muestran los miembros consolidados y el usuario los puede agregar, quitar y cambiar.|  
+|**Actualizar**|Se muestran los miembros consolidados y el usuario los puede agregar, quitar y cambiar.|  
 |**Deny**|No se muestran los miembros consolidados para la entidad.|  
   
 ## <a name="attribute-permissions"></a>Permisos de atributo  
@@ -45,7 +45,7 @@ ms.locfileid: "66054109"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Solo lectura**|Se muestra el atributo, pero el usuario no puede cambiar los valores de atributo.|  
-|**Update**|Se muestra el atributo y el usuario puede cambiar los valores de atributo.|  
+|**Actualizar**|Se muestra el atributo y el usuario puede cambiar los valores de atributo.|  
 |**Deny**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   
 ## <a name="see-also"></a>Consulte también  

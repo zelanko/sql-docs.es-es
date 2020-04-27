@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010348"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
   Explica y compara las opciones que están disponibles para almacenar archivos y documentos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-##  <a name="Expectations"></a> Almacenamiento de archivos en la base de datos - Ventajas y expectativas  
+##  <a name="storing-files-in-the-database---benefits-and-expectations"></a><a name="Expectations"></a> Almacenamiento de archivos en la base de datos - Ventajas y expectativas  
  Un porcentaje alto de los datos empresariales no se estructuran por naturaleza y se suelen almacenar como archivos y documentos en los sistemas de archivos. Las aplicaciones que tienen acceso a los archivos a través de las API de Windows generan, administran y consumen la mayor parte de los datos. Las empresas suelen mantener estos datos en el sistema de archivos, mientras que almacenan los metadatos relacionados de los archivos en una base de datos relacional.  
   
  Integrar los datos no estructurados en la base de datos relacional proporciona beneficios significativos. Entre estos beneficios, se incluyen los siguientes:  
@@ -37,29 +37,28 @@ ms.locfileid: "66010348"
   
 -   Las aplicaciones Windows requieren compatibilidad con las API del sistema de archivos para los datos de archivos y directorios.  
   
-##  <a name="Filestream"></a> FILESTREAM  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya incluye la característica FILESTREAM, que proporciona almacenamiento, administración y transmisión de datos eficaces de los datos no estructurados almacenados como archivos en el sistema de archivos. Sin embargo, una solución FILESTREAM requiere la programación personalizada y no satisface el requisito de compatibilidad completa de las aplicaciones Windows descrito anteriormente.  
+##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya incluye la característica FILESTREAM, que proporciona almacenamiento, administración y transmisión de datos eficaces de los datos no estructurados almacenados como archivos en el sistema de archivos. Sin embargo, una solución FILESTREAM requiere la programación personalizada y no satisface el requisito de compatibilidad completa de las aplicaciones Windows descrito anteriormente.  
   
-##  <a name="FileTables"></a> FileTables  
+##  <a name="filetables"></a><a name="FileTables"></a>FileTables  
  La característica FileTable se basa en las capacidades existentes de FILESTREAM para habilitar que los clientes de empresa almacenen los datos de archivos no estructurados y las jerarquías de directorio en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abordando los requisitos de acceso no transaccional y la compatibilidad de las aplicaciones Windows con datos basados en archivos.  
   
-##  <a name="CompareFileTable"></a> Comparar FILESTREAM y FileTable  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>Comparar FILESTREAM y FileTable  
   
 |Característica|Servidor de archivos y solución de base de datos|Solución de FILESTREAM|Solución de FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Un solo artículo para tareas de administración**|No|Sí|**Sí**|  
-|**Un solo conjunto de servicios**: búsquedas, informes, consultas, etc.|No|Sí|**Sí**|  
-|**Modelo de seguridad integrada**|No|Sí|**Sí**|  
+|**Un solo artículo para tareas de administración**|Sin|Sí|**Sí**|  
+|**Un solo conjunto de servicios**: búsquedas, informes, consultas, etc.|Sin|Sí|**Sí**|  
+|**Modelo de seguridad integrada**|Sin|Sí|**Sí**|  
 |**Actualizaciones en contexto de datos FILESTREAM**|Sí|No|**Sí**|  
 |**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|No|No|**Sí**|  
 |**Compatibilidad con aplicaciones Windows**|Sí|No|**Sí**|  
 |**Acceso relacional a los atributos de archivo**|No|No|**Sí**|  
   
-##  <a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)  
+##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)  
  Para obtener una comparación de estas dos características, vea este artículo del blog del equipo RBS: comparación de características  [del almacén remoto de blobs y FILESTREAM de SQL Server](https://go.microsoft.com/fwlink/?LinkId=210317).  
   
-##  <a name="more"></a> Más información  
+##  <a name="more-information"></a><a name="more"></a> Más información  
  [FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)  
  [FileTables &#40;SQL Server&#41;](filetables-sql-server.md)  
  [Almacén remoto de blobs &#40;RBS&#41; &#40;SQL Server&#41;](remote-blob-store-rbs-sql-server.md)  

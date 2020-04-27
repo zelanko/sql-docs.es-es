@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011969"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de forma masiva documentos XML (SQL Server)
     
-##  <a name="top"></a>Puede realizar una importación masiva de documentos XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una base de datos de o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exportarlos de forma masiva desde una base de datos de. Este tema proporciona ejemplos de ambos casos.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Puede realizar una importación masiva de documentos XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una base de datos de o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exportarlos de forma masiva desde una base de datos de. Este tema proporciona ejemplos de ambos casos.  
   
  Para importar datos de forma masiva de un archivo de datos a una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede utilizar lo siguiente:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66011969"
   
 -   E. [Exportar datos XML de forma masiva](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a>Un. Importar de forma masiva datos XML como un flujo de bytes binario  
+###  <a name="a-bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a> A. Importar de forma masiva datos XML como un flujo de bytes binario  
  Cuando importa datos XML de forma masiva de un archivo que contiene una declaración de codificación que quiere aplicar, especifique la opción SINGLE_BLOB en la cláusula OPENROWSET(BULK...). La opción SINGLE_BLOB garantiza que el analizador de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa los datos según el esquema de codificación especificado en la declaración XML.  
   
 #### <a name="sample-table"></a>Tabla de ejemplo  
@@ -99,9 +99,9 @@ SELECT * FROM OPENROWSET(
   
 -   Compare o resuelva los valores de intercalación de base de datos con un esquema de codificación XML distinto de Unicode.  
   
- [&#91;superior&#93;](#top)  
+ [&#91;Principio&#93;](#top)  
   
-###  <a name="existing_row"></a>B. Importar de forma masiva datos XML en una fila existente  
+###  <a name="b-bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> B. Importar de forma masiva datos XML en una fila existente  
  Este ejemplo utiliza el el proveedor de conjuntos de filas BULK `OPENROWSET` para agregar una instancia XML a una fila o filas existentes en la tabla de ejemplo `T`.  
   
 > [!NOTE]  
@@ -134,9 +134,9 @@ WHERE IntCol = 1;
 GO  
 ```  
   
- [&#91;superior&#93;](#top)  
+ [&#91;Principio&#93;](#top)  
   
-###  <a name="file_contains_dtd"></a>Unidad. Importar de forma masiva datos XML a partir de un archivo que contiene una DTD  
+###  <a name="c-bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> C. Importar de forma masiva datos XML a partir de un archivo que contiene una DTD  
   
 > [!IMPORTANT]  
 >  Se recomienda no habilitar la compatibilidad con definiciones de tipo de documento (DTD) si no es necesaria en el entorno XML. Si se activa la compatibilidad con DTD, se aumenta el área expuesta susceptible de ataques del servidor, que puede quedar expuesta a un ataque por denegación de servicio. En caso de que sea necesario habilitar la compatibilidad con DTD, este riesgo de seguridad puede reducirse procesando únicamente los documentos XML de confianza.  
@@ -180,9 +180,9 @@ INSERT T1
   
  Después de ejecutar la instrucción `INSERT` , se quitará la DTD del XML y se almacenará en la tabla `T1` .  
   
- [&#91;superior&#93;](#top)  
+ [&#91;Principio&#93;](#top)  
   
-###  <a name="field_terminator_in_format_file"></a>D. Especificar el terminador de campo explícitamente mediante el uso de un archivo de formato  
+###  <a name="d-specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> D. Especificar el terminador de campo explícitamente mediante el uso de un archivo de formato  
  El ejemplo siguiente muestra cómo importar de forma masiva el siguiente documento XML, `Xmltable.dat`.  
   
 #### <a name="sample-data-file"></a>Archivo de datos de ejemplo  
@@ -212,7 +212,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>Tabla de ejemplo  
- Al importar o exportar de forma masiva un documento XML, debe usar un [terminador de campo](specify-field-and-row-terminators-sql-server.md) que no pueda aparecer en ninguno de los documentos; por ejemplo, una serie de cuatro valores NULL (`\0`) seguidos de la `z`letra `\0\0\0\0z`:.  
+ Al realizar una importación o exportación masiva de un documento XML, hay que usar un [terminador de campo](specify-field-and-row-terminators-sql-server.md) que no pueda aparecer en ninguno de los documentos; por ejemplo, una serie de cuatro valores NULL (`\0`) seguidos de la letra `z`: `\0\0\0\0z`.  
   
  Este ejemplo muestra cómo utilizar el terminador de campo para la tabla de ejemplo `xTable` . Para crear esta vista de ejemplo, utilice la siguiente instrucción `CREATE TABLE` :  
   
@@ -243,9 +243,9 @@ WITH (FORMATFILE = 'C:\Xmltable.fmt');
 GO  
 ```  
   
- [&#91;superior&#93;](#top)  
+ [&#91;Principio&#93;](#top)  
   
-###  <a name="bulk_export_xml_data"></a>E:.. Exportar de forma masiva datos XML  
+###  <a name="e-bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> E. Exportar de forma masiva datos XML  
  En el ejemplo siguiente se utiliza `bcp` para realizar la exportación masiva de datos XML a partir de la tabla creada en el ejemplo anterior con el mismo archivo de formato XML. En el siguiente comando `bcp` , `<server_name>` y `<instance_name>` representan los marcadores de posición que deben ser reemplazados con los valores adecuados:  
   
 ```  
@@ -253,17 +253,15 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no guarda la codificación XML cuando se mantienen datos XML en la base de datos. Por lo tanto, la codificación original de los campos XML no estará disponible cuando se exporten datos XML. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la codificación UTF-16 al exportar datos XML.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no guarda la codificación XML cuando se mantienen datos XML en la base de datos. Por lo tanto, la codificación original de los campos XML no estará disponible cuando se exporten datos XML. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la codificación UTF-16 al exportar datos XML.  
   
- [&#91;superior&#93;](#top)  
+ [&#91;Principio&#93;](#top)  
   
 ## <a name="see-also"></a>Consulte también  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [Cláusula SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
+ [SELECT &#40;cláusula de Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   
- [Importación y exportación masivas de datos &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [Importar y exportar datos en bloque &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   

@@ -15,15 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66015089"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Solucionar problemas de indización de texto completo
      
-##  <a name="failure"></a> Solucionar errores de indización de texto completo  
+##  <a name="troubleshoot-full-text-indexing-failures"></a><a name="failure"></a> Solucionar errores de indización de texto completo  
  Al rellenar o mantener un índice de texto completo, es posible que el indizador de texto completo no pueda indizar una o varias filas por las razones que se explican a continuación. Estos errores de nivel de fila no impiden que se realice el llenado. El indizador omite estas filas, lo que significa que no se pueden realizar consultas del contenido de estas filas.  
   
  Pueden producirse errores de indización cuando:  
@@ -54,7 +54,7 @@ ms.locfileid: "66015089"
   
 
   
-##  <a name="state"></a> Índice de texto completo en estado incoherente después de la restauración del registro de transacciones  
+##  <a name="full-text-index-in-inconsistent-state-after-transaction-log-restored"></a><a name="state"></a> Índice de texto completo en estado incoherente después de la restauración del registro de transacciones  
  Al restaurar el registro de transacciones de una base de datos, es posible que aparezca una advertencia que indica que el índice de texto completo no es coherente. El motivo es que se ha modificado el índice de texto completo en una tabla después de realizar la copia de seguridad de la base de datos. Si esto ocurre, deberá ejecutar un rellenado completo (rastreo) en la tabla para devolver la coherencia al índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../indexes/indexes.md).  
   
 

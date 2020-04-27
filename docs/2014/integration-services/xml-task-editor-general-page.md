@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa0f92cc3275810b73d1dbe661a1f8473c7234df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054278"
 ---
 # <a name="xml-task-editor-general-page"></a>Editor de la tarea XML (página General)
@@ -32,14 +32,14 @@ ms.locfileid: "66054278"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Validación**|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD). Seleccione esta opción para mostrar las opciones dinámicas de la sección **Validar**.|  
+|**Vali**|Valida el documento XML según una definición de tipo de documento (DTD) o un esquema de definición de esquema XML (XSD). Seleccione esta opción para mostrar las opciones dinámicas de la sección **Validar**.|  
 |**XSLT**|Realiza transformaciones XSL en documentos XML. Seleccione esta opción para mostrar las opciones dinámicas de la sección **XSLT**.|  
-|**XPATH**|Realiza consultas y evaluaciones XPath. Seleccione esta opción para mostrar las opciones dinámicas de la sección **XPATH**.|  
+|**XPATHDOCUMENT**|Realiza consultas y evaluaciones XPath. Seleccione esta opción para mostrar las opciones dinámicas de la sección **XPATH**.|  
 |**Combinar**|Combina dos documentos XML. Seleccione esta opción para mostrar las opciones dinámicas de la sección **Mezclar**.|  
 |**Diferencias**|Compara dos documentos XML. Seleccione esta opción para mostrar las opciones dinámicas de la sección **Comparación**.|  
-|**Revisión**|Aplica la salida de la operación de comparación para crear un nuevo documento. Seleccione esta opción para mostrar las opciones dinámicas de la sección **Revisión**.|  
+|**Distribución**|Aplica la salida de la operación de comparación para crear un nuevo documento. Seleccione esta opción para mostrar las opciones dinámicas de la sección **Revisión**.|  
   
- **SourceType**  
+ **Tipo de origen**  
  Seleccione el tipo de origen del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
 |Value|Descripción|  
@@ -53,11 +53,11 @@ ms.locfileid: "66054278"
   
  Si **Source** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **Source** está establecido en **Variable**, seleccione una variable existente o haga clic en **\<Nueva variable...>** para crear una nueva.  
+ Si **source** está establecido en **variable**, seleccione una variable existente o haga clic en ** \<nueva variable... >** para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
 ## <a name="operationtype-dynamic-options"></a>Opciones dinámicas de OperationType  
   
@@ -71,9 +71,9 @@ ms.locfileid: "66054278"
  Especifique si desea sobrescribir el archivo o variable de destino.  
   
  **Destino**  
- Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos existente o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -114,11 +114,11 @@ ms.locfileid: "66054278"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **XPathStringSourceType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
 ### <a name="operationtype--xslt"></a>OperationType = XSLT  
  Especifique las opciones de la operación XSLT.  
@@ -132,11 +132,11 @@ ms.locfileid: "66054278"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **destinationType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -160,11 +160,11 @@ ms.locfileid: "66054278"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **XPathStringSourceType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
 ### <a name="operationtype--xpath"></a>OperationType = XPATH  
  Especifique las opciones de la operación XPath.  
@@ -178,11 +178,11 @@ ms.locfileid: "66054278"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **destinationType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -206,11 +206,11 @@ ms.locfileid: "66054278"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **XPathStringSourceType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **PutResultInOneNode**  
  Especifique si desea escribir el resultado en un único nodo.  
@@ -241,9 +241,9 @@ ms.locfileid: "66054278"
   
  Si **XPathStringSourceType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **XPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **XPathStringSourceType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
  **Temas relacionados**: [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -258,11 +258,11 @@ ms.locfileid: "66054278"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **destinationType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -286,9 +286,9 @@ ms.locfileid: "66054278"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **SecondOperandType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
  **Temas relacionados**: [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -311,7 +311,7 @@ ms.locfileid: "66054278"
 |-----------|-----------------|  
 |**IgnoreXMLDeclaration**|Especifique si desea comparar la declaración XML.|  
 |**IgnoreDTD**|Especifique si desea ignorar la definición de tipo de documento (DTD).|  
-|**Espacios de Ignorewhitespaces**|Especifique si se omitirán las diferencias en la cantidad de espacios en blanco al comparar documentos.|  
+|**IgnoreWhiteSpaces**|Especifique si se omitirán las diferencias en la cantidad de espacios en blanco al comparar documentos.|  
 |**IgnoreNameSpaces**|Especifique si desea comparar el identificador uniforme de recursos (URI) de espacio de nombres de un elemento y los nombres de atributo.<br /><br /> Nota: Si esta opción se establece como `True`, se considerarán idénticos dos elementos con el mismo nombre local, pero con distintos espacios de nombres.|  
 |**IgnoreProcessingInstructions**|Especifique si desea comparar las instrucciones de procesamiento.|  
 |**IgnoreOrderOf ChildElements**|Especifique si desea comparar el orden de los elementos secundarios.<br /><br /> Nota: Si esta opción se establece como `True`, los elementos secundarios que se diferencian solamente por su posición en una lista de elementos del mismo nivel se consideran idénticos.|  
@@ -333,11 +333,11 @@ ms.locfileid: "66054278"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **destinationType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -361,9 +361,9 @@ ms.locfileid: "66054278"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **SecondOperandType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
  **Temas relacionados**: [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -379,11 +379,11 @@ ms.locfileid: "66054278"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **destinationType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
- **Temas relacionados**: [Integration Services &#40;las variables&#41; de SSIS](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -407,9 +407,9 @@ ms.locfileid: "66054278"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **SecondOperandType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
+ Si **SecondOperandType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
   
  **Temas relacionados**: [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   

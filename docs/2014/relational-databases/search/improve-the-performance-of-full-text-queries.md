@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011266"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Mejorar el rendimiento de las consultas de texto completo
@@ -26,8 +26,7 @@ ms.locfileid: "66011266"
   
 -   Reorganice el catálogo de texto completo mediante [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql). Asegúrese de hacerlo antes de realizar pruebas de rendimiento porque la ejecución de esta instrucción produce una mezcla maestra de los índices de texto completo del catálogo.  
   
--   Limite la selección de columnas de clave de texto completo a una columna pequeña. Aunque se admite una columna de 900 bytes, recomendamos usar una columna de clave menor en un índice de texto completo. 
-  `int` y `bigint` ofrecen el mejor rendimiento.  
+-   Limite la selección de columnas de clave de texto completo a una columna pequeña. Aunque se admite una columna de 900 bytes, recomendamos usar una columna de clave menor en un índice de texto completo. `int` y `bigint` ofrecen el mejor rendimiento.  
   
 -   Al usar una clave de texto completo de un tipo entero, se evita una combinación con la tabla de asignación **docid** . Por consiguiente, este tipo de clave mejora el rendimiento de las consultas en un orden de magnitud y mejora el rendimiento del rastreo. Podrían producirse ventajas adicionales en el rendimiento si la clave de texto completo también es la del índice clúster.  
   

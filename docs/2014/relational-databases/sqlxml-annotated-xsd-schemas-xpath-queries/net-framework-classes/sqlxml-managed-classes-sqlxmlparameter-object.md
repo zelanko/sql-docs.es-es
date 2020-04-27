@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13267e732c6eb5eae388ff8e79ed1d6e0be5febc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010759"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>Objeto SqlXmlParameter (clases administradas de SQLXML)
   El objeto SqlXmlParameter admite estas propiedades:  
   
- Nombre  
+ NOMBRE  
  El nombre del parámetro. Se pueden pasar parámetros a los comandos. La llamada al método CreateParameter del objeto SqlXmlCommand crea el objeto de parámetro.  
   
  Value  

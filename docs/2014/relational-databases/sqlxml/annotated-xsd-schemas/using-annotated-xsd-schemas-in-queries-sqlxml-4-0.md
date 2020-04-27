@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c435ff3bacecb101784695fe42b8b2158625e058
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014465"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Usar esquemas XSD anotados en consultas (SQLXML 4.0)
@@ -116,8 +116,7 @@ ms.locfileid: "66014465"
   
  La plantilla también especifica dos consultas XPath. Cada uno de los `mapping-schema` ** \<elementos de>XPath-Query** identifica de forma única el esquema de asignación especificando el atributo.  
   
- Cuando se especifica un esquema insertado en la plantilla, la `sql:is-mapping-schema` anotación también se debe especificar en el ** \<elemento xsd: Schema>** . 
-  `sql:is-mapping-schema` toma un valor booleano (0=false, 1=true). Un esquema insertado con **SQL: is-mapping-schema = "1"** se trata como esquema anotado insertado y no se devuelve en el documento XML.  
+ Cuando se especifica un esquema insertado en la plantilla, la `sql:is-mapping-schema` anotación también se debe especificar en el ** \<elemento xsd: Schema>** . `sql:is-mapping-schema` toma un valor booleano (0=false, 1=true). Un esquema insertado con **SQL: is-mapping-schema = "1"** se trata como esquema anotado insertado y no se devuelve en el documento XML.  
   
  La anotación `sql:is-mapping-schema` pertenece al espacio de nombres de plantilla `urn:schemas-microsoft-com:xml-sql`.  
   

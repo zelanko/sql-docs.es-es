@@ -28,10 +28,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e4a0c3d8b7a01f43b03d3f94b48d5bba800b64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014556"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de datos de XPath (SQLXML 4.0)
@@ -69,11 +69,9 @@ ms.locfileid: "66014556"
  Las conversiones de conjunto de nodos no son siempre intuitivas. Un conjunto de nodos se convierte en un `string` tomando el valor de cadena de únicamente primer nodo del conjunto. Un conjunto de nodos se convierte en `number` convirtiéndolo en `string` y convirtiendo luego el `string` en `number`. Un conjunto de nodos se convierte en `boolean` probando su existencia.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no realiza la selección por posición en los conjuntos de nodos: por ejemplo, la consulta de XPath `Customer[3]` significa el tercer cliente; este tipo de selección por posición no se admite en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por consiguiente, las conversiones de conjunto de nodos en `string` o de conjunto de nodos en `number` descritas en la especificación de XPath no se implementan. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la semántica "cualquiera" donde la especificación de XPath especifica la semántica "primero". Por ejemplo, según la especificación XPath de W3C, la consulta `Order[OrderDetail/@UnitPrice > 10.0]` XPath selecciona los pedidos con el primer **OrderDetail** que tiene un **UnitPrice** mayor que 10,0. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta consulta XPath selecciona los pedidos con cualquier **OrderDetail** que tenga un **UnitPrice** mayor que 10,0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no realiza la selección por posición en los conjuntos de nodos: por ejemplo, la consulta de XPath `Customer[3]` significa el tercer cliente; este tipo de selección por posición no se admite en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por consiguiente, las conversiones de conjunto de nodos en `string` o de conjunto de nodos en `number` descritas en la especificación de XPath no se implementan. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la semántica "cualquiera" donde la especificación de XPath especifica la semántica "primero". Por ejemplo, según la especificación XPath de W3C, la consulta `Order[OrderDetail/@UnitPrice > 10.0]` XPath selecciona los pedidos con el primer **OrderDetail** que tiene un **UnitPrice** mayor que 10,0. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta consulta XPath selecciona los pedidos con cualquier **OrderDetail** que tenga un **UnitPrice** mayor que 10,0.  
   
- La conversión a `boolean` genera una prueba de existencia; por consiguiente, la consulta de XPath `Products[@Discontinued=true()]` es equivalente a la expresión de SQL "Products.Discontinued is not null", no a la expresión de SQL "Products.Discontinued = 1". Para hacer la consulta equivalente a la última expresión de SQL, primero convierta el conjunto de nodos a un tipo que no sea `boolean`, como `number`. Por ejemplo, `Products[number(@Discontinued) = true()]`.  
+ La conversión a `boolean` genera una prueba de existencia; por consiguiente, la consulta de XPath `Products[@Discontinued=true()]` es equivalente a la expresión de SQL "Products.Discontinued is not null", no a la expresión de SQL "Products.Discontinued = 1". Para hacer la consulta equivalente a la última expresión de SQL, primero convierta el conjunto de nodos a un tipo que no sea `boolean`, como `number`. Por ejemplo: `Products[number(@Discontinued) = true()]`.  
   
  Dado que la mayoría de los operadores están definidos para ser TRUE si son TRUE para cualquiera o uno de los nodos del conjunto de nodos, estas operaciones siempre se evalúan como FALSE si el conjunto de nodos está vacío. Así, si A está vacío, `A = B` y `A != B` son FALSE y `not(A=B)` y `not(A!=B)` son TRUE.  
   
@@ -89,13 +87,13 @@ ms.locfileid: "66014556"
   
 |Tipo de datos XDR|Tipo de datos de XPath<br /><br /> equivalente|Conversión de SQL Server utilizada|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|N/D|NingunaEmployeeID|  
+|Nonebin.base64bin.hex|N/A|NingunaEmployeeID|  
 |boolean|boolean|CONVERT (bit, IdEmpleado)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
-|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|cadena|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/D (no hay ningún tipo de datos de XPath que sea equivalente al tipo de datos fixed14.4 de XDR)|CONVERT(money, EmployeeID)|  
-|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|date|cadena|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|time<br /><br /> time.tz|cadena|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Las conversiones de fecha y hora están diseñadas para funcionar si el valor se almacena en la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` mediante el tipo de `string`datos o. Tenga en cuenta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` que el tipo de datos `timezone` no utiliza y tiene una precisión menor que `time` el tipo de datos XML. Para incluir el tipo de datos `timezone` o una precisión adicional, almacene los datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando un tipo `string`.  
   
@@ -156,7 +154,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
- Para convertir los valores de la consulta de XPath, la primera conversión convierte el tipo de datos de XDR al tipo de datos de XPath. Dado que el tipo de datos **** XSD de `fixed14.4`UnitPrice es, tal y como se describe en la tabla anterior, esta es la primera conversión que se usa:  
+ Para convertir los valores de la consulta de XPath, la primera conversión convierte el tipo de datos de XDR al tipo de datos de XPath. Dado que el tipo de datos **UnitPrice** XSD de `fixed14.4`UnitPrice es, tal y como se describe en la tabla anterior, esta es la primera conversión que se usa:  
   
 ```  
 CONVERT(money, OrderDetail.UnitPrice))   

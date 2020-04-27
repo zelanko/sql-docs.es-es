@@ -21,14 +21,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011901"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
-  De manera predeterminada, cuando se importan datos en una tabla, el comando **bcp** y la instrucción BULK INSERT aplican los valores predeterminados definidos para las columnas de la tabla. Por ejemplo, si un archivo de datos contiene un campo NULL, en su lugar, se cargará el valor predeterminado para la columna. El comando **bcp** y la instrucción BULK INSERT permiten especificar que se mantengan los valores NULL.  
+  De manera predeterminada, cuando se importan datos en una tabla, el comando **BCP** y la instrucción BULK INSERT aplican los valores predeterminados definidos para las columnas de la tabla. Por ejemplo, si un archivo de datos contiene un campo NULL, en su lugar, se cargará el valor predeterminado para la columna. El comando **BCP** y la instrucción BULK INSERT permiten especificar que se mantengan los valores NULL.  
   
  Por el contrario, una instrucción INSERT normal mantiene el valor NULL en lugar de insertar un valor predeterminado. La instrucción INSERT ... La instrucción SELECT * FROM OPENROWSET(BULK...) proporciona el mismo comportamiento básico que la instrucción INSERT regular, pero además admite una sugerencia de tabla para insertar los valores predeterminados.  
   
@@ -79,7 +79,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |Get-Help|Qualifier|Tipo de calificador|  
 |-------------|---------------|--------------------|  
-|**BCP**|`-k`|Switch|  
+|**bcp**|`-k`|Switch|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argumento|  
   
  <sup>1</sup> para Bulk Insert, si los valores predeterminados no están disponibles, se debe definir la columna de la tabla para permitir valores NULL.  
@@ -104,7 +104,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 #### <a name="using-bcp-and-keeping-null-values"></a>Usar bcp y mantener valores NULL  
  En el siguiente ejemplo se muestra cómo mantener valores NULL en un comando **bcp** . El comando **BCP** contiene los siguientes modificadores:  
   
-|Switch|Descripción|  
+|Modificador|Descripción|  
 |------------|-----------------|  
 |`-f`|Especifica que el comando utiliza un archivo de formato.|  
 |`-k`|Especifica que las columnas vacías deben conservar un valor NULL durante la operación, en vez de tener valores predeterminados para las columnas insertadas.|  
@@ -142,7 +142,7 @@ GO
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|Sugerencia de tabla|  
   
 > [!NOTE]  
->  Para obtener más información, vea [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) y [Sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
+>  para obtener más información, vea [INSERT &#40;Transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql), [Select &#40;transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)y [sugerencias de tabla &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
   
 ### <a name="examples"></a>Ejemplos  
  La siguiente instrucción INSERT... El ejemplo SELECT * FROM OPENROWSET (BULK...) realiza importaciones masivas de datos y mantiene los valores predeterminados.  
@@ -171,11 +171,11 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
--   [Mantener los valores de identidad al importar datos de forma masiva &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Preparar los datos para exportar o &#40;importar de forma masiva SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Preparar los datos para exportar o importar en bloque &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
  **Para usar un archivo de formato**  
   
@@ -201,13 +201,13 @@ GO
   
 -   [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
- **Para especificar formatos de datos para la compatibilidad cuando se usa BCP**  
+ **Para especificar formatos de datos por razones de compatibilidad cuando se usa bcp**  
   
 -   [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Especifique la longitud del prefijo en los archivos de datos mediante BCP &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Especificar la longitud de prefijo en los archivos de datos mediante bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Especifique File Storage tipo mediante BCP &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

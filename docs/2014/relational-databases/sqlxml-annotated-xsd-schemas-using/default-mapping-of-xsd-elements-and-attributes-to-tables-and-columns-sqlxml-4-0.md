@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013881"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
@@ -205,7 +205,7 @@ ctions">
   
 ## <a name="see-also"></a>Consulte también  
  [Consideraciones sobre la seguridad del esquema anotado &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
- [Datos XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)   
+ [&#40;de datos XML SQL Server&#41;](../xml/xml-data-sql-server.md)   
  [Compatibilidad con tipos de datos xml en SQLXML 4.0](../sqlxml/xml-data-type-support-in-sqlxml-4-0.md)  
   
   

@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312088"
 ---
-# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lección 4: Crear predicciones de serie temporal con DMX
+# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lección 4: Creación de predicciones de serie temporal con DMX
   En esta lección y en la lección siguiente, utilizará extensiones de minería de datos (DMX) para crear distintos tipos de predicciones en función de los modelos de serie temporal creados en la [Lección 1: crear un modelo de minería de datos de serie temporal y una estructura](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) de minería de datos y la [Lección 2: agregar modelos de minería de datos a la estructura de minería](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)de datos de serie temporal.  
   
  Con un modelo de serie temporal, tiene muchas opciones para realizar predicciones:  
@@ -81,7 +81,7 @@ WHERE [<criteria>]
     <select list>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Forecasting_MIXED].[ModelRegion],  
@@ -101,7 +101,7 @@ WHERE [<criteria>]
     [<mining model>]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Forecasting_MIXED]  
@@ -113,7 +113,7 @@ WHERE [<criteria>]
     WHERE [criteria>]   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -144,7 +144,7 @@ WHERE [<criteria>]
  En la lección siguiente, creará una consulta que proporciona los datos nuevos al modelo y comparará los resultados de esa predicción con la recién creada.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Lección 5: Extender el modelo de serie temporal](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Lección 5: Extensión del modelo de serie temporal](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [&#41;PredictTimeSeries &#40;DMX](/sql/dmx/predicttimeseries-dmx)   

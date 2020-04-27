@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273478"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Crear una estructura del modelo de minería de datos de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
@@ -32,15 +32,15 @@ ms.locfileid: "63273478"
   
 3.  En la página **seleccionar el método de definición** , compruebe que la opción **de base de datos relacional o del almacenamiento de datos existente** está seleccionada y, a continuación, haga clic en **siguiente**.  
   
-4.  En la página **crear la estructura de minería de datos** , compruebe que está seleccionada la opción **crear estructura de minería de datos con un modelo de minería de** datos. A continuación, haga clic en la lista desplegable de la opción **¿qué técnica de minería de datos desea utilizar?** y seleccione **agrupación en clústeres de secuencia de Microsoft**. Haga clic en **Next**.  
+4.  En la página **crear la estructura de minería de datos** , compruebe que está seleccionada la opción **crear estructura de minería de datos con un modelo de minería de** datos. A continuación, haga clic en la lista desplegable de la opción **¿qué técnica de minería de datos desea utilizar?** y seleccione **agrupación en clústeres de secuencia de Microsoft**. Haga clic en **Siguiente**.  
   
      Aparece la página **seleccionar vista del origen de datos** . En **vistas del origen de datos disponibles**, seleccione `Orders`.  
   
      Orders es la misma vista del origen de datos que utilizó para el escenario de la cesta de la compra. Si no ha creado esta vista del origen de datos, vea [Agregar una vista del origen de datos con tablas anidadas &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
   
-5.  Haga clic en **Next**.  
+5.  Haga clic en **Siguiente**.  
   
-6.  En la página **especificar tipos de tablas** , active la casilla de verificación de **mayúsculas y minúsculas** junto a la tabla **VAssocSeqOrders** y active la casilla **anidada** junto a la tabla **vAssocSeqLineItems** . Haga clic en **Next**.  
+6.  En la página **especificar tipos de tablas** , active la casilla de verificación de **mayúsculas y minúsculas** junto a la tabla **VAssocSeqOrders** y active la casilla **anidada** junto a la tabla **vAssocSeqLineItems** . Haga clic en **Siguiente**.  
   
     > [!NOTE]  
     >  Si se produce un error al activar las **casillas de verificación de** **mayúsculas o minúsculas** , es posible que la combinación de la vista del origen de datos no sea correcta. La tabla anidada, **vAssocSeqLineItems**, debe estar conectada a la tabla de casos, **vAssocSeqOrders,** por una combinación de varios a uno. Puede modificar la relación haciendo clic con el botón secundario en la línea de combinación e invirtiendo entonces la dirección de la unión. Para obtener más información, vea [cuadro de diálogo crear o editar relación &#40;Analysis Services-&#41;de datos multidimensionales ](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
@@ -71,12 +71,12 @@ ms.locfileid: "63273478"
   
     |Tablas y columnas|Tipo de contenido|Tipo de datos|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Texto|  
-    |OrderNumber|Clave|Texto|  
-    |Region|Discrete|Texto|  
+    |IncomeGroup|Discrete|Text|  
+    |OrderNumber|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|long|  
-    |Modelo|Discrete|Texto|  
+    |Modelo|Discrete|Text|  
   
 9. En la página **crear conjunto de pruebas** , cambie el **porcentaje de datos de prueba** a 20 y, a continuación, haga clic en **siguiente**.  
   

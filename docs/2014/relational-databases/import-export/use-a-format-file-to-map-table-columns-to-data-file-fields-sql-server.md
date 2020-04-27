@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011740"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos (SQL Server)
@@ -124,7 +124,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ### <a name="example"></a>Ejemplo  
  El siguiente ejemplo utiliza el proveedor de conjuntos de filas BULK `OPENROWSET` para importar datos del archivo de datos `myTestOrder-c.txt` a la tabla de ejemplo `myTestOrder` utilizando el archivo de formato XML `myTestOrder.xml` . La instrucción `INSERT... SELECT` especifica la lista de columnas en la lista de selección.  
   
- En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ejecute el siguiente código:  
+ En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ejecute el siguiente código:  
   
 ```  
 USE AdventureWorks2012;  

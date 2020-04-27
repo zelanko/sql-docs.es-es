@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63282031"
 ---
 # <a name="show-the-object-explorer-details-page"></a>Mostrar la página Detalles del Explorador de objetos
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede mostrar un informe por cada objeto seleccionado en el Explorador de objetos. Este informe, conocido como página Detalles del Explorador de objetos, lo crea [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y se abre en la ventana de documento.  
   
 ## <a name="showing-the-object-explorer-details-page"></a>Mostrar la página Detalles del Explorador de objetos  

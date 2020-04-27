@@ -11,21 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479442"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Características descontinuadas de Master Data Services en SQL Server 2014
   Este tema describe las características de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que ya no están disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Características no incluidas  
+## <a name="sssql14-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Características no incluidas  
  Hay características que no se incluyen en esta versión.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Características no incluidas  
+## <a name="sssql11-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Características no incluidas  
   
 ### <a name="security"></a>Seguridad  
  Para facilitar la seguridad de asignación, ya no se pueden asignar permisos de objeto del modelo a la jerarquía derivada, la jerarquía explícita y los objetos del grupo de atributos.  
@@ -55,7 +53,7 @@ ms.locfileid: "65479442"
  Además, los paquetes solamente se pueden implementar en la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la que se crearon. Esto significa que los paquetes que se hayan creado en [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] no se pueden implementar en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Debe implementar el paquete en un entorno de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] y, posteriormente, actualizar la base de datos a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="code-generation-business-rules"></a>Reglas de negocios de generación de código  
- Las reglas de negocios que generan valores automáticamente para el atributo Código se administran ahora de manera diferente. Anteriormente, para generar valores para el atributo de código, se usaba el **atributo predeterminado para una acción de valor generado** en el área funcional de **Administración del sistema** en **reglas de negocios**. Ahora, en **Administración del sistema**, debe editar la entidad para habilitar los valores de código generados automáticamente. Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
+ Las reglas de negocios que generan valores automáticamente para el atributo Código se administran ahora de manera diferente. Anteriormente, para generar valores para el atributo de código, se usaba el **atributo predeterminado para una acción de valor generado** en el área funcional de **Administración del sistema** en **reglas de negocios**. Ahora, en **Administración del sistema**, debe editar la entidad para habilitar los valores de código generados automáticamente. Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Si tiene un paquete de implementación de modelo de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] que contenga una regla de este tipo, al actualizar la base de datos a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] se excluirá la regla de negocios.  
   

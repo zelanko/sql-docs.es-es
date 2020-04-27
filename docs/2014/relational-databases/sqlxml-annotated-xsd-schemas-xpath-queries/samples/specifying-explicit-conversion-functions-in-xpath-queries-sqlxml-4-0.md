@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43e7067f00e21f57d64f2206fb1008f21d77dd4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010698"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones de conversión explícita en consultas XPath (SQLXML 4.0)
@@ -30,7 +30,7 @@ ms.locfileid: "66010698"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Usar la función de conversión explícita number()  
  La función `number()` convierte un argumento en un número.  
   
- Suponiendo que el valor de **ContactID** no es numérico, la siguiente consulta convierte **ContactID** en un número y lo compara con el valor 4. A continuación, la consulta devuelve todos los **** ** \<** elementos secundarios del elemento>empleado del nodo de contexto con el atributo ContactID que tiene un valor numérico de 4:  
+ Suponiendo que el valor de **ContactID** no es numérico, la siguiente consulta convierte **ContactID** en un número y lo compara con el valor 4. A continuación, la consulta devuelve todos los **ContactID** ** \<** elementos secundarios del elemento>empleado del nodo de contexto con el atributo ContactID que tiene un valor numérico de 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -79,7 +79,7 @@ ms.locfileid: "66010698"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. Usar la función de conversión explícita string()  
  La función `string()` convierte un argumento en una cadena.  
   
- La siguiente consulta convierte **ContactID** en una cadena y lo compara con el valor de cadena "4". La consulta devuelve todos los **** ** \<** elementos secundarios del elemento>empleado del nodo de contexto con un ContactID con un valor de cadena de "4":  
+ La siguiente consulta convierte **ContactID** en una cadena y lo compara con el valor de cadena "4". La consulta devuelve todos los **ContactID** ** \<** elementos secundarios del elemento>empleado del nodo de contexto con un ContactID con un valor de cadena de "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

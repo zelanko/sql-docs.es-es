@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d319c8ac512be55ef93a9d0e55802da2de22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478511"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Probar los permisos de un usuario (Master Data Services)
@@ -31,6 +31,6 @@ ms.locfileid: "65478511"
 4.  La próxima vez que abra la ventana explorador, se le solicitará un nombre de usuario y una contraseña.  
   
 ## <a name="see-also"></a>Consulte también  
- [Master Data Services de &#40;de seguridad&#41;](security-master-data-services.md)  
+ [Seguridad &#40;Master Data Services&#41;](security-master-data-services.md)  
   
   

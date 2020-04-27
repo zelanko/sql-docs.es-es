@@ -14,28 +14,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011565"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Usar el formato nativo Unicode para importar o exportar datos (SQL Server)
-  El formato nativo Unicode es útil cuando se debe copiar información de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una instalación de a otra. El uso del formato nativo para datos que no son caracteres permite ahorrar tiempo, además de evitar la conversión innecesaria de tipos de datos a y desde el formato de caracteres. El uso del formato de caracteres Unicode para todos los datos de caracteres evita la pérdida de caracteres extendidos durante la transferencia masiva de datos entre servidores que utilizan páginas de códigos diferentes. Los archivos de datos en formato nativo Unicode se pueden leer en cualquier método de importación masiva.  
+  El formato nativo Unicode es útil cuando se debe copiar información de una instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en otra. El uso del formato nativo para datos que no son caracteres permite ahorrar tiempo, además de evitar la conversión innecesaria de tipos de datos a y desde el formato de caracteres. El uso del formato de caracteres Unicode para todos los datos de caracteres evita la pérdida de caracteres extendidos durante la transferencia masiva de datos entre servidores que utilizan páginas de códigos diferentes. Los archivos de datos en formato nativo Unicode se pueden leer en cualquier método de importación masiva.  
   
  El formato nativo Unicode se recomienda para la transferencia masiva de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga caracteres extendidos o DBCS. Para los datos que no son caracteres, el formato nativo Unicode utiliza tipos de datos nativos (de base de datos). Para los datos de caracteres, como `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)` y `ntext`, el formato nativo Unicode utiliza el formato de datos de caracteres Unicode.  
   
  Los datos `sql_variant` que se almacenan como SQLVARIANT en un archivo de datos en formato nativo Unicode funcionan de la misma manera que en un archivo de datos en formato nativo, con la excepción de que los valores `char` y `varchar` se convierten en `nchar` y `nvarchar`, lo que duplica la cantidad de espacio necesario para las columnas afectadas. Los metadatos originales se conservan y los valores se convierten de nuevo al tipo de datos `char` y `varchar` original cuando se importan masivamente en la columna de una tabla.  
   
 ## <a name="command-options-for-unicode-native-format"></a>Opciones de comandos para el formato nativo Unicode  
- Puede importar datos con formato nativo Unicode en una tabla mediante **BCP**, Bulk Insert o INSERT... SELECT \* from OPENROWSET (bulk...). Para un comando **BCP** o una instrucción BULK INSERT, puede especificar el formato de datos en la línea de comandos. Para una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...) , debe especificar el formato de datos en un archivo de formato.  
+ Puede importar datos con formato nativo Unicode en una tabla mediante **BCP**, Bulk Insert o INSERT... SELECT \* from OPENROWSET (bulk...). Para un comando **BCP** o una instrucción BULK INSERT, puede especificar el formato de datos en la línea de comandos. Para una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...), debe especificar el formato de datos en un archivo de formato.  
   
  El formato nativo Unicode puede usarse con las siguientes opciones:  
   
 |Get-Help|Opción|Descripción|  
 |-------------|------------|-----------------|  
-|**BCP**|**-N**|Hace que la utilidad **BCP** use el formato nativo Unicode, que utiliza tipos de datos nativos (de base de datos) para todos los datos que no son caracteres y el formato`char`de `nchar`datos `varchar`de `nvarchar`caracteres `text`Unicode `ntext`para todos los datos de caracteres (,,,, y).|  
-|BULK INSERT|DATAFILETYPE **='** widenative **'**|Utilice el formato nativo Unicode al importar datos masivamente.|  
+|**bcp**|**-N**|Hace que la utilidad **BCP** use el formato nativo Unicode, que utiliza tipos de datos nativos (de base de datos) para todos los datos que no son caracteres y el formato`char`de `nchar`datos `varchar`de `nvarchar`caracteres `text`Unicode `ntext`para todos los datos de caracteres (,,,, y).|  
+|BULK INSERT|DATAFILETYPE **= '** widenative **'**|Utilice el formato nativo Unicode al importar datos masivamente.|  
   
  Para obtener más información, vea [bcp (utilidad)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) u [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66011565"
  En los siguientes ejemplos se muestra el modo de exportar masivamente datos nativos con **bcp** e importar masivamente los mismos datos mediante BULK INSERT.  
   
 ### <a name="sample-table"></a>Tabla de ejemplo  
- Los ejemplos requieren que se cree una tabla denominada **myTestUniNativeData** en la base de datos de ejemplo **AdventureWorks** , bajo el esquema **dbo** . Antes de poder ejecutar los ejemplos, debe crear esta tabla. En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , ejecute:  
+ Los ejemplos requieren que se cree una tabla denominada **myTestUniNativeData** en la base de datos de ejemplo **AdventureWorks** , bajo el esquema **dbo** . Antes de poder ejecutar los ejemplos, debe crear esta tabla. En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ejecute:  
   
 ```  
 USE AdventureWorks;  
@@ -86,7 +86,7 @@ bcp AdventureWorks..myTestUniNativeData out C:\myTestUniNativeData-N.Dat -N -T
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-native-data"></a>Usar BULK INSERT para importar masivamente datos nativos  
- En el siguiente ejemplo se utiliza BULK INSERT para importar los datos del archivo de datos `myTestUniNativeData-N.Dat` en la tabla `myTestUniNativeData` . En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , ejecute:  
+ En el siguiente ejemplo se utiliza BULK INSERT para importar los datos del archivo de datos `myTestUniNativeData-N.Dat` en la tabla `myTestUniNativeData` . En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ejecute:  
   
 ```  
 USE AdventureWorks;  
@@ -100,7 +100,7 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para usar formatos de datos para la importación o exportación masivas**  
   
 -   [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  

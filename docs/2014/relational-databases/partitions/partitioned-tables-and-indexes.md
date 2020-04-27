@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65092041"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -37,8 +37,7 @@ ms.locfileid: "65092041"
   
 -   Se puede mejorar el rendimiento de las consultas, en función de los tipos de consultas que se suelen ejecutar y de la configuración del hardware. Por ejemplo, el optimizador de consultas puede procesar consultas de combinación de igualdad entre dos o más tablas con particiones más rápidamente cuando las columnas de partición de las tablas son iguales, porque las particiones se pueden combinar.  
   
-     Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una ordenación de los datos para operaciones de E/S, los ordena primero por partición. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene acceso a una unidad cada vez y esto podría reducir el rendimiento. Para mejorar el rendimiento de la ordenación de los datos, cree franjas de los archivos de datos de las particiones en más de un disco configurando una RAID. De este modo, aunque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga ordenando los datos por partición, puede tener acceso a todas las unidades de cada partición al mismo tiempo.  
+     Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una ordenación de los datos para operaciones de E/S, los ordena primero por partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene acceso a una unidad cada vez y esto podría reducir el rendimiento. Para mejorar el rendimiento de la ordenación de los datos, cree franjas de los archivos de datos de las particiones en más de un disco configurando una RAID. De este modo, aunque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga ordenando los datos por partición, puede tener acceso a todas las unidades de cada partición al mismo tiempo.  
   
      Además, la partición permite mejorar el rendimiento habilitando la extensión de bloqueo en el nivel de partición y no en toda la tabla. Esto puede reducir la contención en la tabla por bloqueo.  
   
@@ -103,21 +102,21 @@ ms.locfileid: "65092041"
   
 |||  
 |-|-|  
-|**Tareas**|**Tema.**|  
+|**Tareas**|**Tema**|  
 |Describe cómo crear funciones de partición y esquemas de partición y cómo aplicarlos a una tabla o índice.|[Crear tablas e índices con particiones](create-partitioned-tables-and-indexes.md)|  
 |||  
   
 ## <a name="related-content"></a>Contenido relacionado  
  Puede encontrar las siguientes notas del producto en la tabla con particiones y estrategias e implementaciones de índices útiles.  
   
--   [Estrategias de tablas e índices con particiones mediante SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Estrategias de la tabla con particiones e índices con SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [Cómo implementar una ventana deslizante automática](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [Cómo implementar una ventana automática deslizante](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
 -   [Carga masiva en una tabla con particiones](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Mejoras de procesamiento de consultas en tablas e índices con particiones](https://msdn.microsoft.com/library/ms345599.aspx)  
+-   [Mejoras de procesamiento de consultas en las tablas e índices con particiones](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [Las 10 mejores prácticas recomendadas para crear un almacenamiento de datos relacionales a gran escala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [Los 10 mejores procedimientos recomendados para compilar un almacén de datos relacionales a gran escala](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011469"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
   Un catálogo de texto completo es un objeto virtual que no pertenece a ningún grupo de archivos; es un concepto lógico que hace referencia a un grupo de índices de texto completo.  
   
-##  <a name="creating"></a>Crear un catálogo de texto completo  
+##  <a name="creating-a-full-text-catalog"></a><a name="creating"></a>Crear un catálogo de texto completo  
   
 #### <a name="to-create-a-full-text-catalog"></a>Para crear un catálogo de texto completo  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66011469"
   
 3.  Seleccione **Nuevo catálogo de texto completo**.  
   
-4.  En el cuadro de diálogo **Nuevo catálogo de texto completo**, especifique la información del catálogo que va a volver a crear. Para obtener más información, vea [Búsqueda de texto completo](../../integration-services/general-page-of-integration-services-designers-options.md).  
+4.  En el cuadro de diálogo **Nuevo catálogo de texto completo** , especifique la información del catálogo que va a volver a crear. Para obtener más información, vea [Búsqueda de texto completo](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
     > [!NOTE]  
     >  Los identificadores de los catálogos de texto completo comienzan por 00005 y se incrementan en uno con cada nuevo catálogo que se crea.  
@@ -42,7 +42,7 @@ ms.locfileid: "66011469"
   
   
   
-##  <a name="props"></a>Ver las propiedades de un catálogo de texto completo  
+##  <a name="viewing-the-properties-of-a-full-text-catalog"></a><a name="props"></a>Ver las propiedades de un catálogo de texto completo  
  Las funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], como FULLTEXTCATALOGPROPERTY, se pueden usar para obtener el valor de diversas propiedades relacionadas con la indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
  En la siguiente tabla se muestran las propiedades relacionadas con los catálogos de texto completo.  
@@ -60,7 +60,7 @@ ms.locfileid: "66011469"
   
   
   
-##  <a name="rebuildone"></a>Volver a generar un catálogo de texto completo  
+##  <a name="rebuilding-a-full-text-catalog"></a><a name="rebuildone"></a>Volver a generar un catálogo de texto completo  
   
 #### <a name="to-rebuild-a-full-text-catalog"></a>Para regenerar un catálogo de texto completo  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66011469"
   
   
   
-##  <a name="rebuildall"></a>Volver a generar todos los catálogos de texto completo de una base de datos  
+##  <a name="rebuilding-all-full-text-catalogs-for-a-database"></a><a name="rebuildall"></a>Volver a generar todos los catálogos de texto completo de una base de datos  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>Para recompilar los catálogos de texto completo de una base de datos  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66011469"
   
   
   
-##  <a name="removing"></a>Quitar un catálogo de texto completo de una base de datos  
+##  <a name="removing-a-full-text-catalog-from-a-database"></a><a name="removing"></a>Quitar un catálogo de texto completo de una base de datos  
   
 #### <a name="to-remove-a-full-text-catalog-from-a-database"></a>Para quitar un catálogo de texto completo de una base de datos  
   

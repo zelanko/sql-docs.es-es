@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014206"
 ---
 # <a name="multilinestring"></a>MultiLineString
@@ -74,8 +74,7 @@ DECLARE @g4 geometry = 'MULTILINESTRING((1 1, 3 3, 5 5),(3 3, 5 5, 7 7))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid();  
 ```  
   
- 
-  `@g4` no es válida porque la segunda instancia de `LineString` se superpone a la primera instancia de `LineString` en un intervalo. Se tocan en un número infinito de puntos.  
+ `@g4` no es válida porque la segunda instancia de `LineString` se superpone a la primera instancia de `LineString` en un intervalo. Se tocan en un número infinito de puntos.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente crea una instancia sencilla de `geometry``MultiLineString` que contiene dos elementos `LineString` con un SRID de 0.  

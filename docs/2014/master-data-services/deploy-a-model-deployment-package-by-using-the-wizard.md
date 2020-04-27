@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479487"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Implementar un paquete de implementación de modelo mediante el asistente
@@ -26,14 +26,14 @@ ms.locfileid: "65479487"
 > [!IMPORTANT]  
 >  Los paquetes solamente se pueden implementar en la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la que se crearon. Esto significa que los paquetes que se hayan creado en [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] no se pueden implementar en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Administración del sistema** en el entorno de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] de destino.  
   
 -   Debe existir un paquete de implementación de modelo. Para obtener más información, consulte [Crear un paquete de implementación de modelo mediante el asistente](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md).  
   
--   Debe ser administrador en el entorno donde va a implementar el modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador en el entorno donde va a implementar el modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>Para implementar solo un paquete de implementación de objetos del modelo  
   
@@ -47,7 +47,7 @@ ms.locfileid: "65479487"
   
 5.  Busque el paquete de implementación (archivo .pkg) y haga clic en **Abrir**.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  Una vez cargado el paquete, haga clic en **Siguiente**.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65479487"
   
 9. Haga clic en **Finalizar** para salir del asistente.  
   
- **Apunte**  
+ **Notas:**  
   
 -   Si una vista de suscripciones del paquete tiene el mismo nombre que una vista de suscripciones de un modelo existente, la vista se crea como *modelname. subscriptionviewname*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "65479487"
   
      Al actualizar un modelo, si el proceso produce un error durante alguno de los tres primeros pasos, no pasa al siguiente paso; sin embargo, los cambios ya realizados no se revierten. Si el proceso sufre un error en el paso 4, los miembros que se pueden actualizar se actualizan.  
   
-## <a name="next-steps"></a>Pasos siguientes  
- Los metadatos definidos por el usuario, atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para más información, consulte:  
+## <a name="next-steps"></a>Pasos a seguir  
+ Los metadatos definidos por el usuario, atributos de archivo y los permisos de usuario y de grupo no están incluidos en los paquetes de implementación de modelos. Después de implementar un modelo, debe actualizarlos manualmente. Para obtener más información, consulte:  
   
 -   [Agregar metadatos &#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   

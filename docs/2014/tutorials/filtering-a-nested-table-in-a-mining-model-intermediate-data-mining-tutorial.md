@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267478"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrar un tabla anidada en un modelo de minería de datos (tutorial intermedio de minería de datos)
   Una vez creado y explorado el modelo, tal vez decida centrarse en un subconjunto de datos del cliente. Por ejemplo, es posible que solo desee analizar las cestas que contienen un producto específico o los datos demográficos de los clientes que no han realizado ninguna compra en un determinado período.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona la capacidad de filtrar los datos que se emplean en un modelo de minería de datos. Esta característica es útil porque no es necesario configurar una nueva vista del origen de datos para utilizar datos diferentes. En el Tutorial básico de minería de datos aprendió a filtrar datos de una tabla plana aplicando condiciones a la tabla de casos. En esta tarea, creará un filtro que se aplica a una tabla anidada.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona la capacidad de filtrar los datos que se emplean en un modelo de minería de datos. Esta característica es útil porque no es necesario configurar una nueva vista del origen de datos para utilizar datos diferentes. En el Tutorial básico de minería de datos aprendió a filtrar datos de una tabla plana aplicando condiciones a la tabla de casos. En esta tarea, creará un filtro que se aplica a una tabla anidada.  
   
 ## <a name="filters-on-nested-vs-case-tables"></a>Comparación de los filtros en tablas anidadas y en tablas de casos  
  Si la vista del origen de datos contiene una tabla de casos y una tabla anidada, como la vista del origen de datos utilizada en el modelo de asociación, puede filtrar valores de la tabla de casos, comprobar la presencia o ausencia de un valor en la tabla anidada o alguna combinación de ambos.  
@@ -32,7 +31,7 @@ ms.locfileid: "63267478"
   
 1.  En la **pestaña modelos de minería de datos** de, haga `Association` clic con el botón secundario en el modelo y seleccione **nuevo modelo de minería**de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]datos.  
   
-2.  En **nombre del modelo**, `Association Filtered`escriba. En **nombre del algoritmo**, seleccione **reglas de Asociación de Microsoft**. Haga clic en **OK**.  
+2.  En **nombre del modelo**, `Association Filtered`escriba. En **nombre del algoritmo**, seleccione **reglas de Asociación de Microsoft**. Haga clic en **Aceptar**.  
   
 3.  En la columna del modelo de asociación filtrado, haga clic en la fila IncomeGroup y cambie el valor de **omitir** a **entrada**.  
   
@@ -48,9 +47,9 @@ ms.locfileid: "63267478"
   
      El icono situado en la parte izquierda del cuadro de texto cambia para indicar que el elemento seleccionado es una columna.  
   
-4.  Haga clic **** en el cuadro de texto operador **=** y seleccione el operador de la lista.  
+4.  Haga clic **Operator** en el cuadro de texto operador **=** y seleccione el operador de la lista.  
   
-5.  Haga clic **** en el cuadro de texto valor `High` y escriba en el cuadro.  
+5.  Haga clic **Value** en el cuadro de texto valor `High` y escriba en el cuadro.  
   
 6.  Haga clic en la siguiente fila de la cuadrícula.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "63267478"
   
 11. En el cuadro de diálogo **filtro** , en la primera fila de la **columna estructura de minería de datos**, seleccione `Model`.  
   
-12. Para **operador**, seleccione **no es null**. Deje en blanco el cuadro de texto **valor** . Haga clic en **OK**.  
+12. Para **operador**, seleccione **no es null**. Deje en blanco el cuadro de texto **valor** . Haga clic en **Aceptar**.  
   
      La condición de filtro del cuadro de texto **expresión** del cuadro de diálogo **filtro del modelo** se actualiza automáticamente para incluir la nueva condición en la tabla anidada. La expresión completa es la siguiente:  
   
@@ -112,6 +111,6 @@ ms.locfileid: "63267478"
   
 ## <a name="see-also"></a>Consulte también  
  [Sintaxis y ejemplos del filtro de modelos &#40;Analysis Services:&#41;de minería de datos](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filtros para modelos de minería de datos &#40;Analysis Services-minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011754"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Especificar la longitud de prefijo en los archivos de datos mediante bcp (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011754"
 > [!IMPORTANT]  
 >  Cuando utilice el formato nativo, use prefijos de longitud en lugar de terminadores de campo. El formato de datos nativo puede entrar en conflicto con los terminadores porque en el formato de datos binario interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se almacena un archivo de datos en formato nativo.  
   
-##  <a name="PrefixLengthsExport"></a> Longitudes de prefijo para la exportación masiva  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Longitudes de prefijo para la exportación masiva  
   
 > [!NOTE]  
 >  El valor predeterminado que se proporciona en la solicitud de longitud de prefijo cuando exporta un campo indica la longitud de prefijo más eficaz para el campo.  
@@ -83,7 +83,7 @@ ms.locfileid: "66011754"
   
  <sup>1</sup> los `ntext`tipos `text`de datos `image` , y se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. En `nvarchar(max)`su `varchar(max)`lugar, `varbinary(max)` use, y.  
   
-##  <a name="PrefixLengthsImport"></a>Longitudes de prefijo para la importación masiva  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Longitudes de prefijo para la importación masiva  
  Cuando los datos se importan de manera masiva, la longitud de prefijo es el valor que se especificó cuando se creó originalmente el archivo de datos. Si el archivo de datos no se creó con un comando **bcp** , probablemente no existan los caracteres de prefijo de longitud. En tal caso, especifique 0 como longitud de prefijo.  
   
 > [!NOTE]  
@@ -92,8 +92,8 @@ ms.locfileid: "66011754"
 ## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Especifique la longitud de campo mediante el &#40;BCP SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Especificar la longitud de campo mediante bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
  [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Especifique File Storage tipo mediante BCP &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Especificar el tipo de almacenamiento en archivo mediante bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

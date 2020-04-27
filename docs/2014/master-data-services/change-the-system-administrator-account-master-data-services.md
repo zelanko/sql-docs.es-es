@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054136"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Cambiar la cuenta de administrador del sistema (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66054136"
 > [!WARNING]  
 >  Al completar este procedimiento, se elimina la cuenta de usuario del administrador del sistema anterior.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe agregar el nombre de usuario del nuevo administrador a la lista de usuarios de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Para obtener más información, vea [Agregar un usuario &#40;Master Data Services&#41;](add-a-user-master-data-services.md).  

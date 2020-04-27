@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046770"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed, clase de eventos
@@ -32,7 +32,7 @@ ms.locfileid: "63046770"
 |BinaryData|`image`|Valor binario que depende de la clase de eventos que se captura en el seguimiento.|2|Sí|  
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona su identificador de proceso.|9|Sí|  
 |CPU|`int`|Cantidad de tiempo de CPU que usa el evento. En microsegundos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En milisegundos en versiones anteriores.|18|Sí|  
-|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Duration|`bigint`|Cantidad de tiempo que emplea el evento. En microsegundos a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. En milisegundos en versiones anteriores.|13|Sí|  
 |EndTime|`datetime`|Hora a la que finalizó la llamada a procedimiento remoto.|15|Sí|  

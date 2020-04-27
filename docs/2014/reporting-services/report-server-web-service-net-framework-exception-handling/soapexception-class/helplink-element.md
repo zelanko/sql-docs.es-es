@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046031"
 ---
 # <a name="helplink-element"></a>Elemento HelpLink
   El elemento **HelpLink** de la propiedad **Detail** es una cadena URL que genera el servidor de informes. Las direcciones URL se dirigen a una página web que administra la Ayuda y soporte técnico de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] y proporcionan ayuda adicional y artículos de Knowledge Base sobre los errores concretos que se producen en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La dirección URL tiene la siguiente sintaxis:  
   
- **http://** www.Microsoft.com**/****/** Products**/** EE transform. aspx **? Valor EvtSrc**=__ **&valor EvtID**=__ **&valor ProdName**=__ **&**=_valor_ ProdVer  
+ **http://** www.Microsoft.com**/****/** Products**/** EE transform. aspx **? Valor EvtSrc**=_value_ **&valor EvtID**=_value_ **&valor ProdName**=_value_ **&**=_valor_ ProdVer  
   
  En la tabla siguiente se enumeran los argumentos de la dirección URL **HelpLink**.  
   
@@ -66,8 +66,8 @@ catch (SoapException e)
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Introducción a la administración de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Clase SoapException de Reporting Services](reporting-services-soapexception-class.md)   
- [Uso de la propiedad Detail para administrar errores concretos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Introducción al control de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services (clase SoapException)](reporting-services-soapexception-class.md)   
+ [Usar la propiedad Detail para administrar errores concretos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

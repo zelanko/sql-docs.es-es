@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071828"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Crear procedimientos almacenados compilados de forma nativa
@@ -55,8 +55,7 @@ go
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Los procedimientos almacenados compilados de forma nativa se debe enlazar al esquema de objetos al que hacen referencia. Esto significa que no se puede anular la tabla a la que hace referencia el procedimiento. Las tablas a las que se hace referencia en el procedimiento deben incluir el nombre de\*esquema y no se permiten caracteres comodín () en las consultas. 
-  `SCHEMABINDING` solo se admite para los procedimientos almacenados compilados de forma nativa en esta versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|`SCHEMABINDING`|Los procedimientos almacenados compilados de forma nativa se debe enlazar al esquema de objetos al que hacen referencia. Esto significa que no se puede anular la tabla a la que hace referencia el procedimiento. Las tablas a las que se hace referencia en el procedimiento deben incluir el nombre de\*esquema y no se permiten caracteres comodín () en las consultas. `SCHEMABINDING` solo se admite para los procedimientos almacenados compilados de forma nativa en esta versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Los procedimientos almacenados compilados de forma nativa no admiten `EXECUTE AS CALLER`, que es el contexto de ejecución predeterminado. Por tanto, se deberá especificar el contexto de ejecución. Se `EXECUTE AS OWNER`admiten `EXECUTE AS`las opciones, `EXECUTE AS SELF` el *usuario*y.|  
 |`BEGIN ATOMIC`|El cuerpo de un procedimiento almacenado compilado de forma nativa debe constar exactamente de un solo bloque atomic. Los bloques atomic garantizan la ejecución atómica del procedimiento almacenado. Si se invoca el procedimiento fuera del contexto de una transacción activa, iniciará una nueva transacción, que se confirma al final del bloque atomic. Los bloques atomic de los procedimientos almacenados compilados de forma nativa tienen dos opciones obligatorias:<br /><br /> `TRANSACTION ISOLATION LEVEL`. Vea [niveles](../../database-engine/transaction-isolation-levels.md) de aislamiento de transacción para los niveles de aislamiento admitidos.<br /><br /> `LANGUAGE`. El lenguaje del procedimiento almacenado se debe establecer en uno de los lenguajes o de alias de lenguaje disponibles.|  
   
@@ -111,6 +110,6 @@ go
  La ventaja de este método es que la aplicación no se queda sin conexión. Sin embargo, es necesario más trabajo para mantener las referencias y asegurarse de que siempre señalan a la última versión del procedimiento almacenado.  
   
 ## <a name="see-also"></a>Consulte también  
- [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
+ [procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)  
   
   

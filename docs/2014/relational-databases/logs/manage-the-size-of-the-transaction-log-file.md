@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144336"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Administrar el tamaño del archivo de registro de transacciones
   En algunos casos, puede resultar útil reducir o expandir físicamente el archivo de registro físico del registro de transacciones de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tema contiene información acerca de cómo supervisar el tamaño de un registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , reducir el registro de transacciones, agregar o ampliar un archivo de registro de transacciones, optimizar la tasa de crecimiento del registro de transacciones **tempdb** y controlar el crecimiento de un archivo de registro de transacciones.  
   
   
-##  <a name="MonitorSpaceUse"></a>Supervisar el uso del espacio del registro  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Supervisar el uso del espacio del registro  
  Puede supervisar el uso del espacio del registro mediante el comando DBCC SQLPERF (LOGSPACE). Este comando devuelve información sobre la cantidad de espacio del registro actualmente en uso e indica cuándo es necesario el truncamiento del registro de transacciones. Para obtener más información, vea [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql). Para obtener información sobre el tamaño actual de un archivo de registro, su tamaño máximo y la opción de crecimiento automático de este archivo, también puede usar las columnas **size**, **max_size** y **growth** de ese archivo de registro en **sys.database_files**. Para obtener más información, vea [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).  
   
 > [!IMPORTANT]  
 >  Se recomienda evitar la sobrecarga del disco del registro.  
   
   
-##  <a name="ShrinkSize"></a>Reducir el tamaño del archivo de registro  
+##  <a name="shrink-the-size-of-the-log-file"></a><a name="ShrinkSize"></a>Reducir el tamaño del archivo de registro  
  Para reducir el tamaño físico de un archivo de registro físico, debe reducir el archivo de registro. Esto es útil si sabe que un archivo de registro de transacciones contiene espacio no usado que no necesitará. La reducción de un archivo de registro solo se puede realizar mientras la base de datos está en línea y existe al menos un archivo de registro virtual libre. En algunos casos, no será posible reducir el registro hasta el siguiente truncamiento del registro.  
   
 > [!NOTE]  
@@ -52,13 +52,13 @@ ms.locfileid: "63144336"
   
 -   [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
   
--   [Sys. database_files &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (vea las columnas **size**, **max_size**y **Growth** del archivo o archivos de registro).  
+-   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (Vea las columnas **size**, **max_size** y **growth** de los archivos de registro).  
   
 > [!NOTE]  
 >  La reducción de los archivos de base de datos y registro se puede establecer para que se produzca automáticamente. Sin embargo, no recomendamos realizar una reducción automática, y la propiedad de base de datos `autoshrink` está establecida en FALSE de forma predeterminada. Si `autoshrink` está establecida en TRUE, el proceso de reducción automática solo reduce el tamaño de un archivo cuando más del 25% de su espacio está sin utilizar. El tamaño del archivo se reduce hasta un tamaño en el que solo el 25% del archivo corresponde al espacio sin utilizar o hasta el tamaño original del archivo (el que sea mayor). Para obtener información sobre cómo cambiar la configuración `autoshrink` de la propiedad, vea [ver o cambiar las propiedades de una base de datos](../databases/view-or-change-the-properties-of-a-database.md): Use la propiedad **reducción automática** en la página **Opciones** -o [las opciones de ALTER DATABASE Set &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options): Use la opción AUTO_SHRINK.  
   
   
-##  <a name="AddOrEnlarge"></a>Agregar o ampliar un archivo de registro  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>Agregar o ampliar un archivo de registro  
  También puede obtener espacio ampliando el archivo de registro existente (si el espacio en disco lo permite) o agregando un archivo de registro a la base de datos, normalmente en otro disco.  
   
 -   Para agregar un archivo de registro a la base de datos, utilice la cláusula ADD LOG FILE de la instrucción ALTER DATABASE. El hecho de agregar un archivo de registro permite que crezca el existente.  
@@ -66,11 +66,11 @@ ms.locfileid: "63144336"
 -   Para aumentar el tamaño del archivo de registro, use la cláusula MODIFY FILE de la instrucción ALTER DATABASE, especificando la sintaxis de SIZE y MAXSIZE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
   
-##  <a name="tempdbOptimize"></a>Optimizar el tamaño del registro de transacciones de tempdb  
+##  <a name="optimize-the-size-of-the-tempdb-transaction-log"></a><a name="tempdbOptimize"></a>Optimizar el tamaño del registro de transacciones de tempdb  
  Al reiniciar una instancia del servidor se devuelve el tamaño del registro de transacciones de la base de datos **tempdb** a su tamaño original, antes del crecimiento automático. Esto puede reducir el rendimiento del registro de transacciones de **tempdb** . Para evitar esta sobrecarga, aumente el tamaño del registro de transacciones de **tempdb** después de iniciar o reiniciar la instancia de servidor. Para obtener más información, consulte [tempdb Database](../databases/tempdb-database.md).  
   
   
-##  <a name="ControlGrowth"></a>Controlar el crecimiento de un archivo de registro de transacciones  
+##  <a name="control-the-growth-of-a-transaction-log-file"></a><a name="ControlGrowth"></a>Controlar el crecimiento de un archivo de registro de transacciones  
  Puede usar la instrucción [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql) para administrar el crecimiento de un archivo de registro de transacciones. Tenga en cuenta lo siguiente:  
   
 -   Para cambiar el tamaño del archivo actual en unidades de KB, MB, GB y TB, use la opción SIZE.  

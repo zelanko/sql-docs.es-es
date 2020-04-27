@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62989079"
 ---
 # <a name="filter-published-data"></a>Filtrar datos publicados
@@ -61,7 +61,7 @@ ms.locfileid: "62989079"
 ## <a name="static-row-filters"></a>filtros de fila estáticos  
  En la siguiente ilustración se muestra una tabla publicada que está filtrada para que solamente se incluyan las filas 2, 3 y 6 en la publicación.  
   
- ![Filtrado de filas](../media/repl-16.gif "Filtrar filas")  
+ ![Filtrado de filas](../media/repl-16.gif "Filtrado de filas")  
   
  Un filtro de fila estático utiliza una sola cláusula WHERE para seleccionar los datos apropiados que se publicarán; se especifica la parte final de la cláusula WHERE. Considere la tabla **Product** en la base de datos de ejemplo AdventureWorks, que contiene la columna **ProductLine**. Para publicar solamente las filas con datos sobre los productos relacionados con las bicicletas de montaña, especifique `ProductLine = 'M'`.  
   
@@ -79,11 +79,11 @@ ms.locfileid: "62989079"
 ## <a name="column-filters"></a>Filtros de columnas  
  En la siguiente ilustración se muestra una publicación que filtra la columna C.  
   
- ![Filtros de columnas](../media/repl-17.gif "Filtros de columnas")  
+ ![Filtrado de columnas](../media/repl-17.gif "Filtros de columnas")  
   
  También puede utilizar conjuntamente el filtrado de filas y columnas, como se ilustra a continuación.  
   
- ![Filtrar filas y columnas](../media/repl-18.gif "Filtrar filas y columnas")  
+ ![Filtrado de filas y columnas](../media/repl-18.gif "Filtrado de filas y columnas")  
   
  Tras crear una publicación, puede utilizar un filtro de columna para quitar una columna de una publicación existente, pero conservar la columna en la tabla en el publicador e incluir también una columna existente en la publicación. Para otros cambios, tales como agregar una columna nueva a una tabla y después agregarla al artículo publicado, utilice la replicación de cambios de esquema. Para más información, vea las secciones “Agregar columnas” y “Quitar columnas” del tema [Realizar cambios de esquema en bases de datos de publicaciones](make-schema-changes-on-publication-databases.md).  
   
@@ -129,8 +129,7 @@ ms.locfileid: "62989079"
   
 -   La replicación transaccional le permite replicar una vista indizada como vista o como tabla. Si replica la vista como tabla, no podrá filtrar columnas de la tabla.  
   
- Los filtros de fila no están diseñados para funcionar entre bases de datos. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de `sp_replcmds` (que filtra la ejecución debajo) al propietario de la base de datos (`dbo`). El `dbo` no tiene privilegios entre bases de datos. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la lógica de `sp_replcmds` rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por motivos de seguridad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , restringe la ejecución de esta lógica para que un `dbo` malintencionada no pueda asaltar la ruta de acceso de ejecución. Por ejemplo, un `dbo` malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a `sp_replcmds`, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el `dbo` malintencionado podría escalar sus privilegios.  
+ Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de `sp_replcmds` (que filtra la ejecución debajo) al propietario de la base de datos (`dbo`). El `dbo` no tiene privilegios entre bases de datos. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la lógica de `sp_replcmds` rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por motivos de seguridad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , restringe la ejecución de esta lógica para que un `dbo` malintencionada no pueda asaltar la ruta de acceso de ejecución. Por ejemplo, un `dbo` malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a `sp_replcmds`, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el `dbo` malintencionado podría escalar sus privilegios.  
   
 ## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)  

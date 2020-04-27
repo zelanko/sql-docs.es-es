@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035687"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Solucionar problemas de usuarios huérfanos (SQL Server)
@@ -58,7 +58,7 @@ GO;
  En los resultados se enumeran los usuarios y sus identificadores de seguridad (SID) correspondientes, que se encuentran en la base de datos actual y no están vinculados a ningún inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [sp_change_users_login &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 > [!NOTE]  
->  **** no se puede usar sp_change_users_login [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con inicios de sesión creados desde Windows.  
+>  **sp_change_users_login** no se puede usar sp_change_users_login [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con inicios de sesión creados desde Windows.  
   
 ## <a name="to-resolve-an-orphaned-user"></a>Para resolver un usuario huérfano  
  Utilice el siguiente procedimiento:  
@@ -88,7 +88,7 @@ GO;
     >  Solo los inicios de sesión con el permiso ALTER ANY LOGIN pueden cambiar la contraseña de inicio de sesión de otro usuario. Sin embargo, solo los miembros del rol **sysadmin** pueden modificar las contraseñas de los miembros del rol **sysadmin** .  
   
     > [!NOTE]  
-    >  **** no se puede usar sp_password [!INCLUDE[msCoName](../../includes/msconame-md.md)] para las cuentas de Windows. Windows autentica los usuarios que se conectan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de su cuenta de red de Windows y, por tanto, sus contraseñas solo se pueden cambiar en Windows.  
+    >  **sp_password** no se puede usar sp_password [!INCLUDE[msCoName](../../includes/msconame-md.md)] para las cuentas de Windows. Windows autentica los usuarios que se conectan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de su cuenta de red de Windows y, por tanto, sus contraseñas solo se pueden cambiar en Windows.  
   
      Para obtener más información, vea [sp_password &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   

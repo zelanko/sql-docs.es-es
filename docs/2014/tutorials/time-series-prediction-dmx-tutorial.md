@@ -11,21 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044195"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Tutorial DMX de predicción de series temporales
   En este tutorial aprenderá a crear una estructura de minería de datos de serie temporal, creará tres series temporales personalizadas y, a continuación, realizará predicciones utilizando esos modelos.  
   
- Los modelos de minería de datos se basan en los datos incluidos en la base de datos de ejemplo  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que almacena datos de la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una gran empresa multinacional de fabricación.  
+ Los modelos de minería de datos se basan en los datos incluidos en la base de datos de ejemplo  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que almacena datos de la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una gran empresa multinacional de fabricación.  
   
 ## <a name="tutorial-scenario"></a>Escenario del tutorial  
- 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha decidido utilizar la minería de datos para generar previsiones de ventas. Ya han creado algunos modelos de previsión regional; para obtener más información, vea [Lección 2: generar un escenario de previsión &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md). Sin embargo, el departamento de ventas necesita poder actualizar periódicamente el modelo de minería de datos con nuevos datos de ventas. El departamento desea también personalizar los modelos para proporcionar previsiones diferentes.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ha decidido utilizar la minería de datos para generar previsiones de ventas. Ya han creado algunos modelos de previsión regional; para obtener más información, vea [Lección 2: generar un escenario de previsión &#40;tutorial intermedio de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md). Sin embargo, el departamento de ventas necesita poder actualizar periódicamente el modelo de minería de datos con nuevos datos de ventas. El departamento desea también personalizar los modelos para proporcionar previsiones diferentes.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona varias herramientas que se pueden usar para realizar esta [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tarea:  
   
@@ -42,19 +40,19 @@ ms.locfileid: "63044195"
   
  El tutorial está compuesto por las lecciones siguientes:  
   
- [Lección 1: Crear un modelo de minería de datos de serie temporal y una estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
+ [Lección 1: Creación de un modelo de minería de datos de serie temporal y una estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción `CREATE MINING MODEL` para agregar un nuevo modelo previsión y un modelo de minería de datos relacionado.  
   
- [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
  En esta lección aprenderá a usar la instrucción ALTER MINING STRUCTURE para agregar nuevos modelos de minería de datos a la estructura de serie temporal. Aprenderá también a personalizar el algoritmo utilizado para analizar una serie temporal.  
   
- [Lección 3: Procesar la estructura de serie temporal y los modelos](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Lección 3: Procesamiento de la estructura de serie temporal y los modelos](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
  En esta lección aprenderá a entrenar los modelos utilizando la instrucción `INSERT INTO` y rellenando la estructura con datos de la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
   
- [Lección 4: Crear predicciones de serie temporal con DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Lección 4: Creación de predicciones de serie temporal con DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
  En esta lección aprenderá a crear predicciones de serie temporal.  
   
- [Lección 5: Extender el modelo de serie temporal](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Lección 5: Extensión del modelo de serie temporal](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
  En esta lección aprenderá a utilizar el parámetro `EXTEND_MODEL_CASES` para actualizar el modelo con nuevos datos al realizar las predicciones.  
   
 ## <a name="requirements"></a>Requisitos  

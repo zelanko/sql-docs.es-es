@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062153"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Propiedades de alerta-nueva alerta (página general)
@@ -29,14 +29,14 @@ ms.locfileid: "63062153"
  **Habilitar**  
  Habilita la alerta. Si la alerta no está habilitada, no se producirán acciones especificadas en la alerta.  
   
- **Tipo**  
+ **Type**  
  Seleccione el tipo de alerta:  
   
--   **SQL Server alerta de evento** responde a los mensajes del [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de eventos de Windows.  
+-   **Alerta de evento de SQL Server** responde a los mensajes del registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
--   **SQL Server alerta de condición de rendimiento** responde a una condición específica en un contador de rendimiento.  
+-   **Alerta de condición de rendimiento de SQL Server** responde a una condición específica del contador de rendimiento.  
   
--   **Alerta de evento WMI** responde a un evento de instrumental de administración de Windows (WMI).  
+-   **Alerta de evento WMI** responde a un evento Instrumental de administración de Windows (WMI).  
   
 ## <a name="sql-server-event-alert-options"></a>Opciones de Alerta de evento de SQL Server  
  **Nombre de la base de datos**  
@@ -45,17 +45,17 @@ ms.locfileid: "63062153"
  **Número de error**  
  Especifica que este evento responde a un error e indica el número de error.  
   
- **severity**  
+ **Gravedad**  
  Especifica que este evento responde a mensajes con un nivel de gravedad específico e indica dicho nivel.  
   
- **Generar una alerta cuando el mensaje contenga**  
+ **Mostrar alerta cuando el mensaje contenga**  
  Filtra los eventos mediante una cadena específica. Cuando esta opción está seleccionada, la alerta solo responde a los eventos que contengan una cadena específica.  
   
  **Texto del mensaje**  
  Especifica la cadena que se va a utilizar para filtrar eventos.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Alertas de condición de rendimiento de SQL Server  
- **Object**  
+ **Objeto**  
  Especifica el objeto de rendimiento que se supervisará.  
   
  **Contador**  
@@ -78,7 +78,7 @@ ms.locfileid: "63062153"
  Especifica la instrucción WQL que identifica el evento al que responde la alerta.  
   
 ## <a name="see-also"></a>Consulte también  
- [Alerts](alerts.md)   
+ [Alarmas](alerts.md)   
  [Usar WQL con el proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Crear una alerta con un número de error](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  

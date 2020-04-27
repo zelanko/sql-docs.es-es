@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2dbe201e2690a013902ad6891b7f93f68fe0e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127014"
 ---
 # <a name="replication-log-reader-agent"></a>Agente de registro del LOG de replicación
@@ -68,8 +68,8 @@ ms.locfileid: "63127014"
  **-?**  
  Muestra información de uso.  
   
- **-Publicador** _SERVER_NAME_[**\\**_instance_name_]  
- Es el nombre del publicador. Especifique *SERVER_NAME* para la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _SERVER_NAME_**\\**_instance_name_ para una instancia con nombre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de en ese servidor.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Es el nombre del publicador. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-PublisherDB** _publisher_database_  
  Es el nombre de la base de datos del publicador.  
@@ -80,8 +80,8 @@ ms.locfileid: "63127014"
  **-DefinitionFile** _def_path_and_file_name_  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de línea de comandos para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-** _SERVER_NAME_distribuidor [**\\**_instance_name_]  
- Es el nombre del distribuidor. Especifique *server_name* para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _SERVER_NAME_**\\**_instance_name_ para una instancia con nombre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de en ese servidor.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-DistributorLogin** _distributor_login_  
  Es el nombre de inicio de sesión del distribuidor.  
@@ -115,14 +115,14 @@ ms.locfileid: "63127014"
 |Valor HistoryVerboseLevel|Descripción|  
 |-------------------------------|-----------------|  
 |**0**||  
-|**1**|Default. Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
+|**1**|Predeterminada. Siempre actualiza un mensaje del historial anterior del mismo estado (inicio, progreso, éxito, etc.). Si no existe ningún registro anterior con el mismo estado, inserta un nuevo registro.|  
 |**2**|Inserta nuevos registros de historial a menos que el registro sea para mensajes de inactividad o mensajes de trabajos de ejecución prolongada, en cuyo caso actualiza los registros anteriores.|  
   
  **-KeepAliveMessageInterval** _keep_alive_message_interval_seconds_  
  Es el número de segundos antes de que el subproceso del historial compruebe si cualquiera de las conexiones existentes está esperando una respuesta del servidor. Este valor se puede reducir para evitar que la comprobación del agente marque al agente de registro del LOG como sospechoso al ejecutar un lote de ejecución prolongada. El valor predeterminado es 300 segundos.  
   
  **-LoginTimeOut** _login_time_out_seconds_  
- Es el número de segundos antes de que se agote el tiempo de espera del inicio de sesión. El valor predeterminado es 15 segundos.  
+ Es el número de segundos antes de que el inicio de sesión exceda el tiempo de espera. El valor predeterminado es 15 segundos.  
   
  **-LogScanThreshold** _scan_threshold_  
  Exclusivamente para uso interno.  
@@ -138,23 +138,23 @@ ms.locfileid: "63127014"
   
  Si no hay ninguna transacción replicada disponible en el origen, el agente envía un mensaje de no transacción al distribuidor. Esta opción especifica cuánto tiempo espera el agente para enviar otro mensaje que indica que no hay ninguna transacción. Los agentes siempre envían un mensaje que indica que no hay ninguna transacción cuando detectan que no hay ninguna transacción disponible en el origen después de procesar previamente las transacciones replicadas. El valor predeterminado es 60 segundos.  
   
- **-Output_path_and_file_name de salida** __  
+ **-Output** _output_path_and_file_name_  
  Es la ruta de acceso del archivo de salida del agente. Si no se proporciona un nombre de archivo, el resultado se envía a la consola. Si el nombre de archivo especificado existe, el resultado se anexa al archivo.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2** | **** 3 | **4** ]  
+ **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
  Especifica si el resultado debería ser detallado.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Solo se imprimen los mensajes de error.|  
 |**1**|Se imprimen todos los mensajes de informe de progreso de agente.|  
-|**2** (valor predeterminado)|Se imprimen todos los mensajes de error y mensajes de informe de progreso de agente.|  
+|**2** (predeterminado)|Se imprimen todos los mensajes de error y mensajes de informe de progreso de agente.|  
 |**3**|Se imprimen los primeros 100 bytes de cada comando replicado.|  
 |**4**|Se imprimen todos los comandos replicados.|  
   
  Valora 2-4 son útiles al depurar.  
   
- **-Packet_size de paquete** __  
+ **-PacketSize** _packet_size_  
  Es el tamaño del paquete, en bytes. El valor predeterminado es 4096 (bytes).  
   
  **-PollingInterval** _polling_interval_  
@@ -163,7 +163,7 @@ ms.locfileid: "63127014"
  **-ProfileName** _profile_name_  
  Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _SERVER_NAME_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -176,7 +176,7 @@ ms.locfileid: "63127014"
  Es la contraseña del publicador.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- Es el número de segundos antes de que se agote el tiempo de espera de la consulta. El valor predeterminado es 1800 segundos.  
+ Es el número de segundos antes de que la consulta exceda el tiempo de espera. El valor predeterminado es 1800 segundos.  
   
  **-ReadBatchSize** _number_of_transactions_  
  Es el número máximo de transacciones leídas del registro de transacciones de la base de datos de publicación por ciclo de procesamiento, con un valor predeterminado de 500. El agente continuará leyendo las transacciones en lotes hasta que se lean todas las transacciones del registro. Este parámetro no se admite en publicadores de Oracle.  

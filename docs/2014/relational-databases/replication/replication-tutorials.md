@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960804"
 ---
 # <a name="replication-tutorials"></a>Tutoriales de replicación
@@ -33,7 +33,7 @@ ms.locfileid: "62960804"
  [Preparar el servidor para la replicación](tutorial-preparing-the-server-for-replication.md)  
  Aprenda cómo preparar servidores para poder ejecutar una replicación con privilegios mínimos. Debe finalizar este tutorial antes de realizar otros tutoriales de replicación.  
   
- [Replicación de datos entre servidores conectados de forma continua](tutorial-replicating-data-between-continuously-connected-servers.md)  
+ [Replicar datos entre servidores conectados de forma continua](tutorial-replicating-data-between-continuously-connected-servers.md)  
  Aprenda cómo utilizar la replicación transaccional para replicar datos entre servidores conectados de forma continua.  
   
  [Replicar datos con clientes móviles](tutorial-replicating-data-with-mobile-clients.md)  

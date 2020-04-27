@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151581"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>Opciones de línea de comandos de la herramienta de administración (utilidad Distributed Replay)
   La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de administración de `DReplay.exe`Distributed Replay,, es una herramienta de línea de comandos que puede usar para comunicarse con el controlador de reproducción distribuida. Utilice la herramienta de administración para iniciar, supervisar y cancelar operaciones en el controlador.  
   
- ![Icono de vínculo de tema](../../database-engine/media/topic-link.gif "Icono de vínculo de tema") Para obtener más información sobre las convenciones de sintaxis que se usan con la sintaxis de la herramienta de administración, vea [convenciones de sintaxis de Transact-sql &#40;&#41;de Transact-SQL ](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Icono de vínculo de tema](../../database-engine/media/topic-link.gif "Icono de vínculo de tema") Para obtener más información sobre las convenciones de sintaxis que se usan con la sintaxis de la herramienta de administración, vea [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,13 +45,13 @@ Usage:
 ## <a name="remarks"></a>Observaciones  
  Puede emitir las siguientes opciones de línea de comandos con `DReplay.exe`:  
   
- **preprocesamiento**  
+ **preprocess**  
  Inicia la fase de preprocesamiento. El controlador prepara la información de seguimiento de entrada, que se capturó en el entorno de producción, para la reproducción en el servidor de destino.  
   
- **reproducción**  
+ **reproducir**  
  Inicia la fase de reproducción de eventos. El controlador envía los datos de la reproducción a los clientes especificados, inicia la reproducción distribuida y sincroniza los clientes. Opcionalmente, cada cliente que se ha seleccionado registra la actividad de reproducción y guarda los archivos de seguimiento del resultado localmente.  
   
- **estatus**  
+ **status**  
  Consulta el controlador y muestra el estado actual.  
   
  **cancel**  
@@ -59,13 +59,13 @@ Usage:
   
  Para obtener información de la sintaxis detallada que incluye los argumentos de comando y ejemplos, vea los siguientes temas:  
   
--   [Opción de preprocesamiento &#40;herramienta de administración de Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md)  
+-   [Opción de preprocesamiento &#40;herramienta de administración Distributed Replay&#41;](preprocess-option-distributed-replay-administration-tool.md)  
   
--   [Opción de reproducción &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md)  
+-   [Opción Replay &#40;herramienta de administración Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md)  
   
--   [Opción de estado &#40;herramienta de administración de Distributed Replay&#41;](status-option-distributed-replay-administration-tool.md)  
+-   [Opción Status &#40;herramienta de administración de Distributed Replay&#41;](status-option-distributed-replay-administration-tool.md)  
   
--   [Opción Cancelar &#40;herramienta de administración de Distributed Replay&#41;](cancel-option-distributed-replay-administration-tool.md)  
+-   [Opción cancel &#40;herramienta de administración de Distributed Replay&#41;](cancel-option-distributed-replay-administration-tool.md)  
   
  Las RPC se reproducen como RPC y no como eventos de lenguaje.  
   

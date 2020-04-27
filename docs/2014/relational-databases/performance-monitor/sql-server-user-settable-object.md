@@ -14,21 +14,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151091"
 ---
 # <a name="sql-server-user-settable-object"></a>User Settable (objeto de SQL Server)
-  El objeto **configurable** por el usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft permite crear instancias de contadores personalizadas. Utilice las instancias de contadores personalizadas para supervisar aspectos del servidor que los contadores existentes no supervisan, como los componentes únicos de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, para determinar el número de pedidos de clientes registrados o el inventario de productos).  
+  El objeto **User Settable** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite crear instancias de contadores personalizadas. Utilice las instancias de contadores personalizadas para supervisar aspectos del servidor que los contadores existentes no supervisan, como los componentes únicos de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, para determinar el número de pedidos de clientes registrados o el inventario de productos).  
   
  El objeto **User Settable** contiene diez instancias del contador de consultas: **User counter 1** a **User counter 10**. Estos contadores tienen asignados los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que van del **sp_user_counter1** al **sp_user_counter10**. A medida que las aplicaciones del usuario ejecutan estos procedimientos almacenados, los valores que establecen estos procedimientos almacenados se muestran en el Monitor de sistema. Un contador puede supervisar cualquier valor entero, por ejemplo, un procedimiento almacenado que cuente el número de pedidos de un producto específico que se han realizado en un día.  
   
 > [!NOTE]  
 >  El Monitor del sistema no realiza automáticamente el sondeo de los procedimientos almacenados de contadores del usuario. Es necesario ejecutarlos explícitamente en una aplicación de usuario para actualizar los valores de estos contadores. Utilice un desencadenador para actualizar automáticamente el valor del contador. Por ejemplo, para crear un contador que supervise el número de filas de una tabla, cree un desencadenador INSERT y DELETE en la tabla que ejecuta la siguiente instrucción: `SELECT COUNT(*) FROM table`. Siempre que se active el desencadenador debido a que se esté realizando una operación INSERT o DELETE en la tabla, el contador del Monitor de sistema se actualizará automáticamente.  
   
- En esta tabla se describe el objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
+ En esta tabla se describe el objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]User Settable**de**.  
   
 |Contadores de Establecidas por el usuario de SQL Server|Descripción|  
 |---------------------------------------|-----------------|  
@@ -38,11 +38,11 @@ ms.locfileid: "63151091"
   
 |Instancias del contador de consultas|Descripción|  
 |-----------------------------|-----------------|  
-|**Contador de usuario 1**|Definido mediante **sp_user_counter1**.|  
-|**Contador de usuario 2**|Definido mediante **sp_user_counter2**.|  
-|**Contador de usuarios 3**|Definido mediante **sp_user_counter3**.|  
-|...||  
-|**Contador de usuario 10**|Definido mediante **sp_user_counter10**.|  
+|**User counter 1**|Definido mediante **sp_user_counter1**.|  
+|**User counter 2**|Definido mediante **sp_user_counter2**.|  
+|**User counter 3**|Definido mediante **sp_user_counter3**.|  
+|…||  
+|**User counter 10**|Definido mediante **sp_user_counter10**.|  
   
  Para utilizar los procedimientos almacenados de contadores del usuario, ejecútelos desde su propia aplicación con un parámetro de número entero que represente el nuevo valor del contador. Por ejemplo, para establecer el valor 10 para **User counter 1** , ejecute esta instrucción Transact-SQL:  
   

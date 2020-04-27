@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066344"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparar las predicciones de los modelos de predicción (Tutorial intermedio de minería de datos)
@@ -34,7 +34,7 @@ ms.locfileid: "63066344"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a>Comparar los resultados originales con los resultados después de agregar datos  
+##  <a name="comparing-the-original-results-with-results-after-adding-data"></a><a name="bkmk_EXTEND"></a>Comparar los resultados originales con los resultados después de agregar datos  
  Echemos un vistazo a los datos de la línea de productos de M200 en la región del Pacífico para ver cómo afecta a los resultados la actualización del modelo con nuevos datos. Recuerde que la serie de datos original finalizó en junio de 2004 y que hemos obtenido datos nuevos para julio, agosto y septiembre.  
   
 -   La primera columna muestra los datos nuevos que se han agregado.  
@@ -48,15 +48,15 @@ ms.locfileid: "63066344"
 |7-25-2008|**65**|32|**65**|  
 |8-25-2008|**54**|37|**54**|  
 |9-25-2008|**61**|32|**61**|  
-|10-25-2008|No aparecen datos|36|32|  
-|11-25-2008|No aparecen datos|31|41|  
-|12-25-2008|No aparecen datos|34|32|  
+|10-25-2008|Sin datos|36|32|  
+|11-25-2008|Sin datos|31|41|  
+|12-25-2008|Sin datos|34|32|  
   
  Puede observar que los pronósticos con los datos extendidos (que se muestran aquí en negrita) repiten exactamente los puntos de datos reales. La repetición es por diseño. Mientras haya puntos de datos reales para usar, la consulta de predicción devolverá los valores reales y generará nuevos valores de predicción solo después de que se hayan usado los nuevos puntos de datos reales.  
   
  En general, el algoritmo pondera los cambios en los datos nuevos más que los datos del principio de los datos del modelo. Sin embargo, en este caso, las nuevas cifras de ventas representan un incremento de solo el 20-30 por ciento durante el período anterior, por lo que hubo tan solo un ligero repunte de las ventas previstas, tras el cual las proyecciones de ventas vuelven a descender, más en línea con la tendencia de los meses anteriores a los datos nuevos.  
   
-##  <a name="bkmk_REPLACE"></a>Comparar los resultados originales y entre predicciones  
+##  <a name="comparing-the-original-and-cross-prediction-results"></a><a name="bkmk_REPLACE"></a>Comparar los resultados originales y entre predicciones  
  Recuerde que el modelo de minería de datos original revelaba grandes diferencias entre las regiones y las líneas de productos. Por ejemplo, las ventas para el modelo M200 fueron muy marcadas, mientras que las ventas del modelo T1000 fueron bastante bajas en todas las regiones. Además, algunas series no tenían muchos datos. Las series eran desiguales, lo que significa que no tenían el mismo punto de partida.  
   
  ![Serie que predice la cantidad de M200 y T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "Serie que predice la cantidad de M200 y T1000")  

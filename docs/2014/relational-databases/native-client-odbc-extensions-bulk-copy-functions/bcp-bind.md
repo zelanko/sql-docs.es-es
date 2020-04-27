@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711c82bb627ca9ad1620cf1e11fdbc9dfa5f4351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140559"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -133,7 +133,7 @@ bcp_bind(hdbc, szName, 0,
  *eDataType*  
  Es el tipo de datos de C de la variable de programa. Los datos de la variable de programa se convierten al tipo de la columna de base de datos. Si este parámetro es 0, no se realiza ninguna conversión.  
   
- Los ** tokens de tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos enumeran el parámetro eDataType en SQLNCLI. h, no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Los *eDataType* tokens de tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos enumeran el parámetro eDataType en SQLNCLI. h, no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]incorporó la compatibilidad con los *`eDataType`* tokens de tipo de datos SQLXML y SQLUDT del.  
   
@@ -146,7 +146,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="remarks"></a>Observaciones  
  Utilice **bcp_bind** para una manera rápida y eficaz de copiar datos de una variable de programa en una tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
   
- Llame a [bcp_init](bcp-init.md) antes de llamar a esta o a cualquier otra función de copia masiva. Al **** llamar a bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se establece la tabla de destino para la copia masiva. Cuando se llama a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](bcp-sendrow.md), el parámetro **bcp_init** _szDataFile_ , que indica el archivo de datos, se establece en null; el parámetro **bcp_init**_eDirection_ se establece en DB_IN.  
+ Llame a [bcp_init](bcp-init.md) antes de llamar a esta o a cualquier otra función de copia masiva. Al **bcp_init** llamar a bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se establece la tabla de destino para la copia masiva. Cuando se llama a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](bcp-sendrow.md), el parámetro **bcp_init** _szDataFile_ , que indica el archivo de datos, se establece en null; el parámetro **bcp_init**_eDirection_ se establece en DB_IN.  
   
  Realice una llamada de **bcp_bind** independiente para cada columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la tabla en la que desea copiar. Una vez realizadas las llamadas de **bcp_bind** necesarias, llame a **bcp_sendrow** para enviar una fila de datos de las variables de programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a. No se permite volver a enlazar una columna.  
   

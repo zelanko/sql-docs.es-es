@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b9f31035b2d87ca89154497c90089fb72d0987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150598"
 ---
 # <a name="sql-server-services"></a>Servicios de SQL Server
-  Esta sección contiene los temas de la ayuda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] F1 para los cuadros [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de diálogo servicios de Configuration Manager.  
+  Esta sección contiene los temas de la Ayuda F1 para los cuadros de diálogo de Servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  Si abre el **Administrador de configuración de SQL Server** en el nodo de un clúster que no hospeda los recursos, los servicios aparecerán detenidos.  

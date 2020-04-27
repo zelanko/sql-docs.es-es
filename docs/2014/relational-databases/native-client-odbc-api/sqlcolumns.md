@@ -15,24 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067734"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-  `SQLColumns`Devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *TableName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA cuando se usan valores no válidos en estos parámetros.  
+  `SQLColumns`Devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *TableName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
   
 > [!NOTE]  
 >  Para los tipos de valores grandes, todos los parámetros de longitud se devolverán con un valor de SQL_SS_LENGTH_UNLIMITED.  
   
- 
-  `SQLColumns` se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar `SQLColumns` en un cursor actualizable (dinámico o controlado por conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, lo que indica que se ha cambiado el tipo de cursor.  
+ `SQLColumns` se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar `SQLColumns` en un cursor actualizable (dinámico o controlado por conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, lo que indica que se ha cambiado el tipo de cursor.  
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el parámetro *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
- Para ODBC 2. las aplicaciones *x* que no usan caracteres comodín en `SQLColumns` *TableName*, devuelven información sobre las tablas cuyos nombres coinciden con *TableName* y son propiedad del usuario actual. Si el usuario actual no posee ninguna tabla cuyo nombre coincida ** con el parámetro `SQLColumns` TableName, devuelve información acerca de las tablas que pertenecen a otros usuarios, donde el nombre de tabla coincide con el parámetro *TableName* . Para ODBC 2. las aplicaciones *x* que usan caracteres `SQLColumns` comodín, devuelve todas las tablas cuyos nombres coinciden con *TableName*. Para ODBC 3. ** las aplicaciones `SQLColumns` x devuelven todas las tablas cuyos nombres coinciden con *TableName* independientemente del propietario o de si se usan caracteres comodín.  
+ Para ODBC 2. las aplicaciones *x* que no usan caracteres comodín en `SQLColumns` *TableName*, devuelven información sobre las tablas cuyos nombres coinciden con *TableName* y son propiedad del usuario actual. Si el usuario actual no posee ninguna tabla cuyo nombre coincida *TableName* con el parámetro `SQLColumns` TableName, devuelve información acerca de las tablas que pertenecen a otros usuarios, donde el nombre de tabla coincide con el parámetro *TableName* . Para ODBC 2. las aplicaciones *x* que usan caracteres `SQLColumns` comodín, devuelve todas las tablas cuyos nombres coinciden con *TableName*. Para ODBC 3. *x* las aplicaciones `SQLColumns` x devuelven todas las tablas cuyos nombres coinciden con *TableName* independientemente del propietario o de si se usan caracteres comodín.  
   
  La tabla siguiente muestra las columnas devueltas por el conjunto de resultados:  
   
@@ -73,8 +72,7 @@ ms.locfileid: "63067734"
  Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>Compatibilidad de SQLColumns con UDT CLR grandes  
- 
-  `SQLColumns` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ `SQLColumns` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Compatibilidad de SQLColumns con columnas dispersas  
  Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] han agregado dos columnas específicas al conjunto de resultados para SQLColumns:  

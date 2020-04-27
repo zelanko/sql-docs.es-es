@@ -14,22 +14,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990702"
 ---
 # <a name="extended-events"></a>Eventos extendidos
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Extended Events tiene una arquitectura muy escalable y configurable que permite a los usuarios recopilar la información necesaria para solucionar o identificar un problema de rendimiento.  
+  Los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una arquitectura muy escalable y configurable que permite a los usuarios recopilar la información justa y necesaria para solucionar o identificar un problema de rendimiento.  
   
  Puede buscar más información acerca de Extended Events en Internet, en [SQL Server Extended Events](https://blogs.msdn.com/b/extended_events/).  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Ventajas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
- Extended Events es un sistema ligero de supervisión de rendimiento que usa muy pocos recursos de rendimiento. Extended Events proporciona dos interfaces de usuario gráficas (**Asistente para nueva sesión** y **nueva sesión**) para crear, modificar, mostrar y analizar los datos de la sesión.  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Ventajas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events  
+ Extended Events es un sistema ligero de supervisión de rendimiento que usa muy pocos recursos de rendimiento. Los eventos extendidos proporcionan dos interfaces de usuario gráficas (**Asistente para nueva sesión** y **Nueva sesión**) para crear, modificar, mostrar y analizar los datos de la sesión.  
   
 ## <a name="extended-events-concepts"></a>Conceptos de Extended Events  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los eventos extendidos (Extended Events) se basan en conceptos existentes, como un evento o un consumidor de eventos, usa los conceptos del seguimiento de eventos para Windows y presenta nuevos conceptos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los eventos extendidos se basan en conceptos existentes, como evento o consumidor de eventos, usa los conceptos de la traza de eventos para Windows y presenta nuevos conceptos.  
   
  En la tabla siguiente se describen los conceptos de Extended Events.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62990702"
 |[Paquetes de SQL Server Extended Events](sql-server-extended-events-packages.md)|Describe los paquetes de Extended Events que contienen objetos usados para obtener y procesar datos cuando se ejecuta una sesión de Extended Events.|  
 |[Destinos de SQL Server Extended Events](../../database-engine/sql-server-extended-events-targets.md)|Describe los consumidores de eventos que pueden recibir datos durante una sesión de eventos.|  
 |[Motor de SQL Server Extended Events](sql-server-extended-events-engine.md)|Describe el motor que implementa y administra una sesión de Extended Events.|  
-|[SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)|Describe la sesión de eventos extendidos.|  
+|[Sesiones de SQL Server Extended Events](sql-server-extended-events-sessions.md)|Describe la sesión de eventos extendidos.|  
   
 ## <a name="extended-events-architecture"></a>Arquitectura de eventos extendidos  
  Los eventos extendidos constituyen un sistema de control de eventos general para los sistemas del servidor. La infraestructura de Extended Events admite la correlación de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y bajo ciertas condiciones, la correlación de datos de las aplicaciones de base de datos y sistema operativo. En este último caso, el resultado de eventos extendidos debe dirigirse al Seguimiento de eventos para Windows (ETW) para correlacionar los datos de evento con los datos de evento de la aplicación o del sistema operativo.  
@@ -73,7 +73,7 @@ ms.locfileid: "62990702"
   
 -   La capacidad para supervisar dinámicamente los procesos activos, ejerciendo al mismo tiempo el mínimo efecto sobre dichos procesos.  
   
--   Una sesión de estado del sistema predeterminada que se ejecuta sin efectos apreciables en el rendimiento. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento. Para obtener más información, vea [Usar la sesión system_health](use-the-ssms-xe-profiler.md).  
+-   Una sesión de estado del sistema predeterminada que se ejecuta sin efectos apreciables en el rendimiento. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento. Para obtener más información, vea [usar la sesión de system_health](use-the-ssms-xe-profiler.md).  
   
 ## <a name="extended-events-tasks"></a>Tareas de Extended Events  
  Si mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecuta instrucciones de lenguaje de definición de datos (DDL) de [!INCLUDE[tsql](../../includes/tsql-md.md)] , funciones y vistas de administración dinámica, o vistas de catálogo, podrá crear soluciones sencillas o complejas de problemas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events para el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -90,10 +90,10 @@ ms.locfileid: "62990702"
 |Describe cómo obtener información acerca de los campos asociados a los eventos.|[Obtener los campos de todos los eventos](../../database-engine/get-the-fields-for-all-events.md)|  
 |Describe cómo determinar los eventos que están disponibles en los paquetes registrados.|[Ver los eventos de los paquetes registrados](../../database-engine/view-the-events-for-registered-packages.md)|  
 |Describe cómo determinar los destinos de eventos extendidos que están disponibles en los paquetes registrados.|[Ver los destinos de eventos extendidos de los paquetes registrados](../../database-engine/view-the-extended-events-targets-for-registered-packages.md)|  
-|Describe cómo ver los eventos y las acciones de los eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.|[Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
+|Describe cómo ver los eventos y las acciones de los eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.|[Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Describe cómo determinar los parámetros que puede establecer al usar el argumento ADD TARGET en CREATE EVENT SESSION o ALTER EVENT SESSION.|[Obtener los parámetros configurables del argumento ADD TARGET](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Describe cómo convertir un script de Seguimiento de SQL existente en una sesión de eventos extendidos.|[Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Describe cómo determinar las consultas que mantienen el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento en que se realizó el bloqueo.|[Determinar las consultas que retienen bloqueos](determine-which-queries-are-holding-locks.md)|  
+|Describe cómo determinar las consultas que mantienen el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento en que se realizó el bloqueo.|[Determinar las consultas que mantienen bloqueos](determine-which-queries-are-holding-locks.md)|  
 |Describe cómo identificar el origen de los bloqueas que afectan al rendimiento de la base de datos.|[Buscar los objetos que han obtenido más bloqueos](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Describe cómo usar los eventos extendidos con el seguimiento de eventos para Windows a fin de supervisar la actividad del sistema.|[Supervisar la actividad del sistema mediante eventos extendidos](monitor-system-activity-using-extended-events.md)|  
   

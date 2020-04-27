@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046011"
 ---
 # <a name="detail-property"></a>Propiedad Detail
-  La propiedad **Detail** de la clase SoapException[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ** de ** tiene la estructura XML siguiente:  
+  La propiedad **Detail** de la clase [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException** de  tiene la estructura XML siguiente:  
   
 ## <a name="elements"></a>Elementos  
  **Detail**  
@@ -42,7 +42,7 @@ ms.locfileid: "63046011"
  **LinkID**  
  Identificador asignado al vínculo.  
   
- **ProductName**  
+ **NombreDeProducto**  
  Nombre del producto. El valor predeterminado es **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
@@ -70,8 +70,8 @@ ms.locfileid: "63046011"
  Cadena XML que contiene las advertencias que se devolvieron al procesar el informe.  
   
 ## <a name="see-also"></a>Consulte también  
- [Introducción a la administración de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
- [Clase SoapException de Reporting Services](reporting-services-soapexception-class.md)   
- [Uso de la propiedad Detail para administrar errores concretos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
+ [Introducción al control de excepciones en Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services (clase SoapException)](reporting-services-soapexception-class.md)   
+ [Usar la propiedad Detail para administrar errores concretos](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

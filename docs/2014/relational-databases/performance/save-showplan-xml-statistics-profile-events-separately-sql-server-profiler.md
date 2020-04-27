@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150629"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Guardar de forma separada eventos Showplan XML Statistics Profile (SQL Server Profiler)
@@ -31,7 +31,7 @@ ms.locfileid: "63150629"
      Aparecerá el cuadro de diálogo **Propiedades de seguimiento** .  
   
     > [!NOTE]  
-    >  Si activa **Iniciar el seguimiento inmediatamente tras realizar la conexión**, no aparecerá el cuadro de diálogo **Propiedades de seguimiento**y, en su lugar, comenzará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones**y desactive la casilla **Iniciar el seguimiento inmediatamente tras realizar la conexión** .  
+    >  Si activa **Iniciar el seguimiento inmediatamente tras realizar la conexión**, no aparecerá el cuadro de diálogo **Propiedades de seguimiento**y, en su lugar, comenzará el seguimiento. Para desactivar esta configuración, en el menú **herramientas**, haga clic en **Opciones**y desactive la casilla **iniciar el seguimiento inmediatamente después de establecer la conexión** .  
   
 2.  En el cuadro de diálogo **Propiedades de seguimiento** , en el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "63150629"
   
 4.  Realice una de las siguientes acciones:  
   
-    -   Haga clic en**Guardar en el archivo**para capturar el seguimiento en un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)** .  
+    -   Haga clic en**Guardar en el archivo**para capturar el seguimiento en un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)**.  
   
-         De forma opcional, seleccione **Habilitar sustitución incremental de archivos** y **El servidor procesa los datos de seguimiento**.  
+         Opcionalmente, seleccione **Habilitar sustitución incremental de archivos** y el **servidor procesa los datos de seguimiento**.  
   
     -   Haga clic en**Guardar en la tabla** para capturar el seguimiento en una tabla de base de datos.  
   
-         Opcionalmente, haga clic en **establecer número máximo de filas**y especifique un valor.  
+         De forma opcional, haga clic en **Establecer número máximo de filas (en miles)** y especifique un valor.  
   
-5.  Opcionalmente, active la casilla **Habilitar hora de detención de seguimiento** y especifique una fecha y hora de detención.  
+5.  De forma opcional, active la casilla **Habilitar hora de detención de seguimiento** y especifique una fecha y hora de detención.  
   
 6.  Haga clic en la pestaña **Selección de eventos**.  
   

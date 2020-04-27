@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067675"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -35,7 +35,7 @@ ms.locfileid: "63067675"
   
 |Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Descripción|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Sí|No|Nombre del servidor en la red en la que reside el origen de datos. El término"(local)" se puede escribir como el servidor, en cuyo caso se puede utilizar una copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso cuando se trata de una versión que no está en red.|  
+|SERVER|Sí|Sin|Nombre del servidor en la red en la que reside el origen de datos. El término"(local)" se puede escribir como el servidor, en cuyo caso se puede utilizar una copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso cuando se trata de una versión que no está en red.|  
 |UID|No|Sí|Id. de inicio de sesión de usuario.|  
 |PWD|No|Sí (depende del usuario)|Contraseña especificada por el usuario.|  
 |APP|No|Sí|Nombre de la aplicación que llama a **SQLBrowseConnect**.|  

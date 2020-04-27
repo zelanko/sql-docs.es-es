@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6748956dcfe0b880ffe3b384e49a8ccc00ebf12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62936995"
 ---
 # <a name="job-categories-properties-and-new-job-category"></a>Propiedades de las categorías de trabajo y Nueva categoría de trabajo
@@ -32,7 +32,7 @@ ms.locfileid: "62936995"
  **Mostrar todos los trabajos**  
  Enumera todos los trabajos.  
   
- **No**  
+ **Select**  
  Para cambiar la categoría del trabajo, active o desactive la categoría en cuestión.  
   
  **Trabajo**  

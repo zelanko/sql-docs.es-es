@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149779"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -107,7 +107,7 @@ ms.locfileid: "63149779"
   
 -   SPID  
   
--   Hora de inicio  
+-   Start Time  
   
 -   EndTime  
   
@@ -134,10 +134,8 @@ ms.locfileid: "63149779"
   
 |Característica Distributed Replay|Instalaciones máximas por cada entorno de reproducción|  
 |--------------------------------|--------------------------------------------------|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|1|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|16 (equipos físicos o virtuales)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|1|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|16 (equipos físicos o virtuales)|  
 |Herramienta de administración|Sin límite|  
   
 > [!NOTE]  

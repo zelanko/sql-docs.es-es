@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126037"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
@@ -29,8 +29,7 @@ ms.locfileid: "63126037"
   
  Antes de comenzar el proceso de cambio de nombre, revise los siguientes puntos.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no admite el cambio de nombre de los servidores que participan en la replicación, excepto si se utiliza el trasvase de registros con la replicación. Se puede cambiar el nombre del servidor secundario del trasvase de registros si se pierde el servidor principal de manera permanente. Para obtener más información, vea [Trasvase de registros y replicación &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no admite el cambio de nombre de los servidores que participan en la replicación, excepto si se utiliza el trasvase de registros con la replicación. Se puede cambiar el nombre del servidor secundario del trasvase de registros si se pierde el servidor principal de manera permanente. Para obtener más información, vea [Trasvase de registros y replicación &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Cuando se cambia el nombre de un servidor virtual configurado para utilizar la creación de reflejo de la base de datos, debe desactivarse la creación de reflejo de la base de datos antes de realizar la operación de cambio de nombre y, después, volver a establecer la creación de reflejo de la base de datos con el nombre de servidor virtual nuevo. Los metadatos para la creación de reflejo de la base de datos no se actualizan automáticamente con el nuevo nombre del servidor virtual.  
   

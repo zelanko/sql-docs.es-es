@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937022"
 ---
-# <a name="job-categories-manage-job-categories"></a>Categorías de trabajo: Administrar categorías de trabajo
-  Utilice el cuadro de diálogo **categorías de trabajo** para agregar o eliminar categorías de trabajo. No se pueden eliminar las categorías de trabajo integradas.  
+# <a name="job-categories-manage-job-categories"></a>Categorías de trabajos: Administrar categorías de trabajos
+  Utilice el cuadro de diálogo **Categorías de trabajo** para agregar o eliminar categorías de trabajo. No se pueden eliminar las categorías de trabajo integradas.  
   
 ## <a name="options"></a>Opciones  
  **Nombre**  

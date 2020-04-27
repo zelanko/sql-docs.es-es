@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151444"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propiedades de TCP-IP (pestaña direcciones IP)
@@ -57,8 +57,8 @@ ms.locfileid: "63151444"
  El Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra las direcciones IP disponibles en el momento en que se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las direcciones IP disponibles pueden cambiar cuando se agregan o se quitan tarjetas de red, cuando expira una dirección IP asignada dinámicamente, cuando se vuelve a configurar la estructura de red o cuando cambia la ubicación física del equipo, por ejemplo un equipo portátil que se conecta a la red en un edificio diferente. Para cambiar una dirección IP, edite el cuadro **Dirección IP** y, a continuación, reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
- [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [Elección de un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Crear una cadena de conexión válida con TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Servicio SQL Server Browser](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [servicio SQL Server Browser](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62960851"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de seguridad del Agente de replicación
@@ -50,11 +50,11 @@ ms.locfileid: "62960851"
  Las cuentas con las que los agentes se ejecutan y realizan conexiones requieren diversos permisos. Estos permisos se describen en la siguiente tabla. Se recomienda que cada agente se ejecute con una cuenta de Windows diferente y que solo se concedan los permisos requeridos a la cuenta. Para obtener información sobre la lista de acceso a la publicación (PAL), que es importante para varios agentes, vea [Proteger el publicador](secure-the-publisher.md).  
   
 > [!NOTE]  
->  Control de cuentas de usuario (UAC) de algunos sistemas operativos Windows puede impedir el acceso administrativo al recurso compartido de instantáneas. Por lo tanto, debe conceder de forma explícita permisos del recurso compartido de instantáneas a las cuentas de Windows usadas por el Agente de instantáneas, el Agente de distribución y el Agente de mezcla. Debe hacerlo incluso si las cuentas de Windows pertenecen al grupo Administradores. Para obtener más información, vea [Proteger la carpeta de instantáneas](secure-the-snapshot-folder.md).  
+>  Control de cuentas de usuario (UAC) de algunos sistemas operativos Windows puede impedir el acceso administrativo al recurso compartido de instantáneas. Por lo tanto, debe conceder de forma explícita permisos del recurso compartido de instantáneas a las cuentas de Windows usadas por el Agente de instantáneas, el Agente de distribución y el Agente de mezcla. Debe hacerlo incluso si las cuentas de Windows pertenecen al grupo Administradores. Para obtener más información, vea [proteger la carpeta de instantáneas](secure-the-snapshot-folder.md).  
   
 |Agente|Permisos|  
 |-----------|-----------------|  
-|Agente de instantáneas|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al distribuidor. Esta cuenta debe:<br /><br /> − Ser como mínimo miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> − Tener permisos de lectura, escritura y modificación en el recurso compartido de instantáneas.<br /><br /> <br /><br /> La cuenta utilizada para conectarse al publicador debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** en la base de datos de publicaciones.|  
+|Agente de instantáneas|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al distribuidor. Esta cuenta debe:<br /><br /> -Como mínimo, ser miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> − Tener permisos de lectura, escritura y modificación en el recurso compartido de instantáneas.<br /><br /> <br /><br /> La cuenta utilizada para conectarse al publicador debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** en la base de datos de publicaciones.|  
 |Agente de registro del LOG|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al distribuidor. Esta cuenta debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> La cuenta utilizada para conectarse al publicador debe ser miembro, como mínimo, del rol fijo de base de datos **db_owner** en la base de datos de publicaciones.<br /><br /> Al seleccionar las `sync_type` opciones *solo compatibilidad con la replicación*, *inicializar con copia de seguridad*o *inicializar desde LSN*, el agente de registro `sp_addsubscription`del log se debe ejecutar después de ejecutar, de modo que los scripts de instalación se escriban en la base de datos de distribución. El agente de registro del LOG se debe ejecutar con una cuenta que sea miembro del rol fijo de servidor **sysadmin** . Cuando la `sync_type` opción se establece en *automático*, no se requiere ninguna acción especial del agente de registro del log.|  
 |Agente de distribución para una suscripción de inserción|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al distribuidor. Esta cuenta debe:<br /><br /> -Como mínimo ser miembro del rol fijo de base de datos **db_owner** en la base de datos de distribución.<br /><br /> − Ser miembro de la PAL.<br /><br /> − Tener permisos de lectura en el recurso compartido de instantáneas.<br /><br /> − Tener permisos de lectura en el directorio de instalación del proveedor OLE DB para el suscriptor si la suscripción es para un suscriptor que no sea de SQL Server.<br /><br /> − Cuando se replican datos de LOB, el agente de distribución debe tener permisos de escritura en la replicación **C:\Archivos de programa\Microsoft SQL Server\XX\COMfolder** , donde XX representa el instanceID.<br /><br /> <br /><br /> La cuenta usada para conectarse al suscriptor debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de suscripciones, o tener permisos equivalentes si la suscripción es para un suscriptor que no sea de SQL Server.<br /><br /> Nota: cuando se `-subscriptionstreams >= 2` usa en el agente de distribución, también se `View Server State` debe conceder el permiso en los suscriptores para detectar interbloqueos.|  
 |Agente de distribución para una suscripción de extracción|La cuenta de Windows con la que se ejecuta el agente se utiliza al realizar conexiones al suscriptor. Esta cuenta debe ser, como mínimo, miembro del rol fijo de base de datos **db_owner** en la base de datos de suscripciones. La cuenta utilizada para conectarse al distribuidor debe:<br /><br /> − Ser miembro de la PAL.<br /><br /> − Tener permisos de lectura en el recurso compartido de instantáneas.<br /><br /> − Cuando se replican datos de LOB, el agente de distribución debe tener permisos de escritura en la replicación **C:\Archivos de programa\Microsoft SQL Server\XX\COMfolder** , donde XX representa el instanceID.<br /><br /> <br /><br /> Nota: cuando se `-subscriptionstreams >= 2` usa en el agente de distribución, también se `View Server State` debe conceder el permiso en los suscriptores para detectar interbloqueos.|  
@@ -68,12 +68,12 @@ ms.locfileid: "62960851"
 |Agente|Nombre del trabajo|  
 |-----------|--------------|  
 |Agente de instantáneas|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-Integer>**|  
-|Agente de replicación para una partición de publicación de combinación|**Dyn_\<publicador>\<-basededatosdepublicación>\<-publication\<>-GUID>**|  
+|Agente de replicación para una partición de publicación de combinación|**Dyn_\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<GUID>**|  
 |Agente de registro del LOG|**\<> de publicador-\<basededatosdepublicación\<>-entero>**|  
 |Agente de mezcla para suscripciones de extracción|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-Subscriber\<>-basededatosdesuscripción\<>-Integer>**|  
 |Agente de mezcla para suscripciones de inserción|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-subscriber\<>-Integer>**|  
-|Agente de distribución para suscripciones de inserción|**\<\<\<Publisher>-basededatosdepublicación>-Publication>-Subscriber\<>-Integer>1 \<** <sup></sup>|  
-|Agente de distribución para suscripciones de extracción|**\<\<\<\<Publisher>-basededatosdepublicación>-Publication>-Subscriber>-basededatosdesuscripción\<>-GUID>2 \<** <sup></sup>|  
+|Agente de distribución para suscripciones de inserción|**\<\<\<Publisher>-basededatosdepublicación>-Publication>-Subscriber\<>-Integer>1 \<** <sup>1</sup>|  
+|Agente de distribución para suscripciones de extracción|**\<\<\<\<Publisher>-basededatosdepublicación>-Publication>-Subscriber>-basededatosdesuscripción\<>-GUID>2 \<** <sup>2</sup>|  
 |Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<Publisher>\<-basededatosdepublicación>\<-publication\<>-subscriber\<>-Integer>**|  
 |Agente de lectura de cola|**[\<Distribuidor>]. \<entero>**|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62960851"
   
  Al configurar la replicación se especifican las cuentas en las que se ejecutarán los agentes. No obstante, todos los pasos del trabajo se ejecutan en el contexto de seguridad de un *proxy*, por lo que la replicación lleva a cabo internamente las siguientes asignaciones para las cuentas de agente que especifique:  
   
--   La cuenta se asigna primero a una credencial utilizando la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql) statement. Las cuentas de proxy del Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizan credenciales para almacenar información acerca de las cuentas de usuario de Windows.  
+-   La cuenta se asigna primero a una credencial mediante la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] [CREATE CREDENTIAL](/sql/t-sql/statements/create-credential-transact-sql). Las cuentas de proxy del Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizan credenciales para almacenar información acerca de las cuentas de usuario de Windows.  
   
 -   Se llama al procedimiento almacenado [sp_add_proxy](/sql/relational-databases/system-stored-procedures/sp-add-proxy-transact-sql) y, a continuación, se utiliza la credencial para crear un proxy.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62960851"
 >  Esta información se facilita para ayudarle a entender las implicaciones de ejecutar agentes con el contexto de seguridad adecuado. No debería ser necesario interactuar directamente con las credenciales o los proxy que se hayan creado.  
   
 ## <a name="see-also"></a>Consulte también  
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Procedimientos recomendados de seguridad de la replicación](replication-security-best-practices.md)   
  [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)   
  [Proteger la carpeta de instantáneas](secure-the-snapshot-folder.md)  
   

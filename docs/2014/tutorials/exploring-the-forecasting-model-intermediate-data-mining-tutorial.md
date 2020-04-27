@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62992265"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de previsión (tutorial intermedio de minería de datos)
@@ -28,7 +28,7 @@ ms.locfileid: "62992265"
   
 -   [Visor de contenido genérico de Microsoft](#bkmk_Content)  
   
-##  <a name="bkmk_Charts"></a>Pestaña gráficos  
+##  <a name="charts-tab"></a><a name="bkmk_Charts"></a>Pestaña gráficos  
  La pestaña **gráficos** del visor [!INCLUDE[msCoName](../includes/msconame-md.md)] de series temporales muestra gráficamente cada una de las series, incluidos los datos históricos y las predicciones. Cada línea del gráfico de serie temporal representa una combinación única de producto, región y atributo de predicción.  
   
  La leyenda del lado derecho del visor muestra las series temporales disponibles, basándose en las selecciones en la lista desplegable. Puede activar y desactivar las casillas de la leyenda para controlar las series temporales que se muestran en el gráfico.  
@@ -87,7 +87,7 @@ ms.locfileid: "62992265"
   
  [Volver al principio](#bkmk_Charts)  
   
-##  <a name="bkmk_Model"></a>Pestaña modelo  
+##  <a name="model-tab"></a><a name="bkmk_Model"></a>Pestaña modelo  
  La pestaña **modelo** del visor [!INCLUDE[msCoName](../includes/msconame-md.md)] de series temporales del diseñador de minería de datos permite ver el modelo de previsión en forma de gráfico de árbol.  
   
  Primero, observe que, debido a que los datos describen dos medidas distintas (importe y cantidad) para las ventas de varias líneas de productos (T1000, etc.) de tres regiones diferentes (Europa, Norteamérica y el Pacífico), el modelo que creó contiene realmente 24 árboles distintos. Cada árbol representa un modelo de patrones de venta para una combinación diferente de región, producto y atributo de predicción.  
@@ -100,7 +100,7 @@ ms.locfileid: "62992265"
   
 -   Cuando un gráfico de árbol para una serie temporal tiene varias bifurcaciones, significa que la serie temporal que se detectó es demasiado compleja para representarse como una sola ecuación. En su lugar, el gráfico de árbol puede contener varias bifurcaciones, cada una de las cuales se etiqueta con las condiciones que han provocado la *división*del árbol. Cuando se divide el árbol, cada bifurcación representa un segmento de tiempo diferente, en el que la tendencia puede describirse como una sola ecuación.  
   
-     Por ejemplo, si observa el gráfico de gráficos y ve un salto repentino en el volumen de ventas a partir de la fecha de septiembre y continúa a través de un día festivo, puede cambiar a la vista de **modelo** para ver la fecha exacta en la que cambió la tendencia. Las bifurcaciones del árbol que representan "antes de septiembre" y "después de septiembre" contendrían fórmulas diferentes: una fórmula que describe matemáticamente las tendencias de ventas hasta la división y otra fórmula que describe las tendencias de ventas de septiembre a festivos de un año.  
+     Por ejemplo, si observa el gráfico de gráficos y ve un salto repentino en el volumen de ventas a partir de la fecha de septiembre y continúa a través de un día festivo, puede cambiar a la vista de **modelo** para ver la fecha exacta en la que cambió la tendencia. Las bifurcaciones del árbol que representan "antes de septiembre" y "después de septiembre" contendrían fórmulas diferentes: una fórmula que describe matemáticamente las tendencias de ventas hasta la división y otra fórmula que describe las tendencias de ventas de septiembre a las festividades de un año.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>Para explorar el árbol de decisión de un modelo de series temporales  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62992265"
   
  [Volver al principio](#bkmk_Charts)  
   
-##  <a name="bkmk_Content"></a>Opta Visor de árbol de contenido genérico  
+##  <a name="optional-generic-content-tree-viewer"></a><a name="bkmk_Content"></a>Opta Visor de árbol de contenido genérico  
  Además del visor personalizado de la serie temporal, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el visor de árbol de contenido de **MicrosoftGeneric** para su uso con todos los modelos de minería de datos. Este visor proporciona algunas ventajas:  
   
 -   **Visor de series temporales de Microsoft**: esta vista combina los resultados de los dos algoritmos. Aunque puede ver cada serie por separado, no puede determinar cómo se combinan los resultados de cada algoritmo. Asimismo, en esta vista, la información sobre herramientas y la leyenda de minería de datos muestran solo las estadísticas más importantes.  
@@ -149,7 +149,7 @@ ms.locfileid: "62992265"
   
 3.  En el panel **detalles del nodo** , vea el valor de attribute_name.  
   
-     Este valor indica qué serie, o qué combinación de producto y región, está incluida en este nodo. En el ejemplo de AdventureWorks, el primer nodo es el de la serie M200 Europe.  
+     Este valor indica qué serie, o qué combinación de producto y región, está incluida en este nodo. En el ejemplo de AdventureWorks, el primer nodo es el de la serie M200 Europa.  
   
 4.  En el panel **título de nodo** , busque el primer nodo que tenga nodos secundarios.  
   

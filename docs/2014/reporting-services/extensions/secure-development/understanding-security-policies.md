@@ -22,18 +22,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990132"
 ---
 # <a name="understanding-security-policies"></a>Descripción de las directivas de seguridad
-  Cualquier código ejecutado por un servidor de informes debe formar parte de una directiva de seguridad de acceso del código concreta. Estas directivas de seguridad constan de grupos de código que asignan evidencias a un conjunto de conjuntos de permisos con nombre. Con frecuencia, los grupos de código están asociados a un conjunto de permisos con nombre que especifica los permisos que puede tener el código de ese grupo. El motor en tiempo de ejecución usa las evidencias proporcionadas por un host de confianza o por el cargador para determinar a qué grupos de código pertenece el código y, por tanto, qué permisos se deben conceder al código. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]cumple esta arquitectura de la Directiva de seguridad, tal como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] se define en el Common Language Runtime (CLR). En las secciones siguientes se describen los distintos tipos de código de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las reglas de directivas asociadas a los mismos.  
+  Cualquier código ejecutado por un servidor de informes debe formar parte de una directiva de seguridad de acceso del código concreta. Estas directivas de seguridad constan de grupos de código que asignan evidencias a un conjunto de conjuntos de permisos con nombre. Con frecuencia, los grupos de código están asociados a un conjunto de permisos con nombre que especifica los permisos que puede tener el código de ese grupo. El motor en tiempo de ejecución usa las evidencias proporcionadas por un host de confianza o por el cargador para determinar a qué grupos de código pertenece el código y, por tanto, qué permisos se deben conceder al código. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cumple esta arquitectura de la directiva de seguridad como lo define Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En las secciones siguientes se describen los distintos tipos de código de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las reglas de directivas asociadas a los mismos.  
   
 ## <a name="report-server-assemblies"></a>Ensamblados del servidor de informes  
- Los ensamblados del servidor de informes son aquellos que contienen código que forma parte del producto [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se escribe mediante ensamblados de código administrado; todos estos ensamblados tienen nombres seguros (es decir, están firmados digitalmente). Los grupos de código para estos ensamblados se definen mediante **StrongNameMembershipCondition**, que proporciona evidencias basadas en información de clave pública para el nombre seguro del ensamblado. Al grupo de código se le permite el conjunto de permisos **FullTrust**.  
+ Los ensamblados del servidor de informes son aquellos que contienen código que forma parte del producto [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se escribe mediante ensamblados de código administrado; todos estos ensamblados tienen nombres seguros (es decir, están firmados digitalmente). Los grupos de código para estos ensamblados se definen mediante **StrongNameMembershipCondition**, que proporciona evidencias basadas en información de clave pública para el nombre seguro del ensamblado. Al grupo de código se le permite el conjunto de permisos **FullTrust**.  
   
 ## <a name="report-server-extensions-rendering-data-delivery-and-security"></a>Extensiones del servidor de informes (Representación, Datos, Entrega y Seguridad)  
  Las extensiones del servidor de informes son extensiones de seguridad, representación, entrega y datos personalizados que crean los usuarios para extender la funcionalidad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Debe conceder el permiso **FullTrust** a estas extensiones o código de ensamblado en los archivos de configuración de directivas asociados al componente [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que está extendiendo. Las extensiones incluidas como parte de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se firman con la clave pública del servidor de informes y reciben el conjunto de permisos **FullTrust**.  
@@ -61,7 +60,7 @@ ms.locfileid: "62990132"
 </CodeGroup>  
 ```  
   
- El permiso de **ejecución** permite que el código se ejecute (ejecute), pero no para usar recursos protegidos. Todas las expresiones incluidas en un informe se compilan en un ensamblado (denominado "ensamblado de expresiones") que se almacena como parte del informe compilado. Cuando se ejecuta el informe, el servidor de informes carga el ensamblado de expresiones y realiza llamadas a ese ensamblado para ejecutar expresiones. Los ensamblados de expresiones se firman con una clave concreta que se usa para definir el grupo de código para todos los ensamblados de expresiones.  
+ El permiso **Ejecución** permite la ejecución del código, pero no el uso de recursos protegidos. Todas las expresiones incluidas en un informe se compilan en un ensamblado (denominado "ensamblado de expresiones") que se almacena como parte del informe compilado. Cuando se ejecuta el informe, el servidor de informes carga el ensamblado de expresiones y realiza llamadas a ese ensamblado para ejecutar expresiones. Los ensamblados de expresiones se firman con una clave concreta que se usa para definir el grupo de código para todos los ensamblados de expresiones.  
   
  Las expresiones de informe hacen referencia a las colecciones de modelos de objetos (campos, parámetros, etc.) y realizan tareas simples como operaciones de cadenas y aritméticas. El código que realiza estas operaciones simples solo requiere el permiso **Ejecución**. De forma predeterminada, a los métodos definidos por el usuario en el elemento **Code** y cualquier ensamblado personalizado se les concede el permiso **Ejecución** en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Así, para la mayoría de las expresiones, la configuración actual no requiere la modificación de ningún archivo de directiva de seguridad. Para conceder permisos adicionales a los ensamblados de expresiones, un administrador tiene que modificar los archivos de configuración de directivas del servidor de informes y el Diseñador de informes, y cambiar el grupo de código de expresiones de informe. Dado que es un valor global, el cambio de los permisos predeterminados para los ensamblados de expresiones afecta a todos los informes. Por esta razón, resulta muy recomendable que coloque todo el código que requiere seguridad adicional en un ensamblado personalizado. Solo a este ensamblado se le concederán los permisos que necesita.  
   
@@ -78,6 +77,6 @@ ms.locfileid: "62990132"
   
 ## <a name="see-also"></a>Consulte también  
  [Seguridad de acceso del código en Reporting Services](code-access-security-in-reporting-services.md)   
- [Reporting Services de &#40;de desarrollo seguro&#41;](secure-development-reporting-services.md)  
+ [Desarrollo seguro &#40;Reporting Services&#41;](secure-development-reporting-services.md)  
   
   

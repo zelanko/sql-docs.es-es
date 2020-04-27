@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131746"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de Bike Buyer
+# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lección 2: Adición de modelos de minería de datos a la estructura de minería de datos de Bike Buyer
   En esta lección, agregará dos modelos de minería de datos a la estructura de minería de datos Bike Buyer que creó [la lección 1: creación de la estructura de minería de datos Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Estos modelos de minería de datos le permitirán explorar los datos usando un modelo y crear predicciones usando otro modelo.  
   
  Para explorar cómo se pueden clasificar los clientes potenciales por sus características, creará un modelo de minería de datos basado en el [algoritmo de clústeres de Microsoft](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). En una lección posterior, explorará cómo este algoritmo encuentra clústeres de clientes que comparten características parecidas. Por ejemplo, podría averiguar que ciertos clientes tienden a vivir cerca unos de otros, van al trabajo en bicicleta y tienen una formación parecida. Puede utilizar estos clústeres para comprender mejor cómo están relacionados distintos clientes y para utilizar la información para crear una estrategia de marketing dirigida a clientes concretos.  
@@ -112,7 +112,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Bike Buyer]  
@@ -124,7 +124,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Decision Tree  
@@ -136,7 +136,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model columns>,  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     (  
@@ -164,7 +164,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Using Microsoft_Decision_Trees  
@@ -218,7 +218,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     [Bike Buyer]  
@@ -230,7 +230,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model>   
     ```  
   
-     por:  
+     Por:  
   
     ```  
     Clustering Model  
@@ -251,7 +251,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm name>( <algorithm parameters> )  
     ```  
   
-     por:  
+     Por:  
   
     ```  
     USING Microsoft_Clustering  
@@ -274,6 +274,6 @@ ADD MINING MODEL [<mining model name>]
  En la siguiente lección procesará los modelos y la estructura de minería de datos.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Procesar la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
+ [Lección 3: Procesamiento de la estructura de minería de datos de Bike Buyer](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
   
   

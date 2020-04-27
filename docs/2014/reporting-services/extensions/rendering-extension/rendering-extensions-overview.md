@@ -14,14 +14,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985814"
 ---
 # <a name="rendering-extensions-overview"></a>Información general de las extensiones de representación
-  Una extensión de representación es un componente o módulo de un servidor de informes que transforma los datos de informes y la información de diseño en un formato específico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, Word, CSV o Text, XML, Image y PDF. Puede crear extensiones de representación adicionales para generar informes en otros formatos.  
+  Una extensión de representación es un componente o módulo de un servidor de informes que transforma los datos de informes y la información de diseño en un formato específico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, Word, CSV o Text, XML, Image y PDF. Puede crear extensiones de representación adicionales para generar informes en otros formatos.  
   
 > [!NOTE]  
 >  Para determinar qué extensiones de representación están disponibles, puede ver la lista de extensiones instaladas en el archivo RSReportServer.config.  
@@ -36,10 +36,8 @@ ms.locfileid: "62985814"
 |`PDF`|Representa un informe en Adobe Acrobat Reader. El formato se muestra como **Archivo de Acrobat (PDF)** en el cuadro desplegable Exportar de la barra de herramientas del informe.|  
 |`EXCEL`|Representa un informe en [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)].|  
 |`WORD`|Representar un informe en [!INCLUDE[ofprword](../../../includes/ofprword-md.md)].|  
-|
-  `HTML 4.0` (parte de la extensión de representación en HTML)|HTML es el formato que se usó inicialmente para representar el informe. Si el explorador admite HTML 4.0, ése es el formato que se utiliza. De lo contrario, se utiliza HTML 3.2.|  
-|
-  `MHTML` (parte de la extensión de representación en HTML)|Representa un informe en MHTML. El informe se abre en Internet Explorer. El formato se muestra como **Archivo web** en el cuadro desplegable Exportar de la barra de herramientas del informe.|  
+|`HTML 4.0` (parte de la extensión de representación en HTML)|HTML es el formato que se usó inicialmente para representar el informe. Si el explorador admite HTML 4.0, ése es el formato que se utiliza. De lo contrario, se utiliza HTML 3.2.|  
+|`MHTML` (parte de la extensión de representación en HTML)|Representa un informe en MHTML. El informe se abre en Internet Explorer. El formato se muestra como **Archivo web** en el cuadro desplegable Exportar de la barra de herramientas del informe.|  
 |`NULL`|No representa un informe en un formato concreto. Esta extensión de representación es útil para colocar los informes en la memoria caché. La representación NULL se debería utilizar junto con una ejecución o entrega programada.|  
   
  Para más información sobre los formatos recomendados y sus usos, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../report-builder/export-reports-report-builder-and-ssrs.md).  

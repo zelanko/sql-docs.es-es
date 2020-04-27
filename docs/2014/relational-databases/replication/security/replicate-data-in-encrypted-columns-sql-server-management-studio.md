@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62955848"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar datos en columnas cifradas (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "62955848"
   
 4.  Ejecute [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) para cerrar la clave.  
   
-5.  Publique la tabla que contiene la columna cifrada. Para obtener más información, vea [Crear una suscripción](../publish/create-a-publication.md).  
+5.  Publique la tabla que contiene la columna cifrada. Para obtener más información, vea [crear una publicación](../publish/create-a-publication.md).  
   
 6.  Suscríbase a la publicación. Para obtener más información, vea [Crear una suscripción de extracción](../create-a-pull-subscription.md) o [Crear una suscripción de inserción](../create-a-push-subscription.md).  
   

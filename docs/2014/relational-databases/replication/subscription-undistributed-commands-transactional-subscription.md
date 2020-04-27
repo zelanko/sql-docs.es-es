@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a1f957c417c5c63766dfbffa923edd6935d1eb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151479"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>Suscripción, Comandos sin distribuir (Suscripción transaccional, SQL Server 2005 y posteriores)
@@ -30,8 +30,8 @@ ms.locfileid: "63151479"
  Cantidad estimada de tiempo para entregar comandos al suscriptor. Si este valor es superior al tiempo necesario para generar y aplicar una instantánea en el suscriptor, considere la posibilidad de volver a reinicializar el suscriptor. Para obtener más información, vea [Reinicializar suscripciones](reinitialize-subscriptions.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Supervisar el rendimiento con el Monitor de replicación](monitor/monitor-performance-with-replication-monitor.md)   
- [Supervisar la replicación](monitoring-replication.md)  
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Supervisar el rendimiento con el monitor de replicación](monitor/monitor-performance-with-replication-monitor.md)   
+ [Supervisión de la replicación](monitoring-replication.md)  
   
   

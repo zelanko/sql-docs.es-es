@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022246"
 ---
 # <a name="non-sql-server-subscribers"></a>suscriptores que no son de SQL Server
@@ -87,8 +87,7 @@ ms.locfileid: "63022246"
   
 ### <a name="replication-feature-support"></a>Compatibilidad con la característica de replicación  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece dos tipos de suscripciones: de inserción y de extracción. Los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deben utilizar suscripciones de inserción, en las que el Agente de distribución se ejecuta en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece dos tipos de suscripciones: de inserción y de extracción. Los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deben utilizar suscripciones de inserción, en las que el Agente de distribución se ejecuta en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona dos formatos de instantánea: modo bcp nativo y modo de carácter. Los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requieren instantáneas en modo de carácter.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "63022246"
 -   Los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se pueden inicializar automáticamente desde una copia de seguridad.  
   
 ## <a name="see-also"></a>Consulte también  
- [Replicación de bases de datos heterogéneas](heterogeneous-database-replication.md)   
- [Suscribirse a publicaciones](../subscribe-to-publications.md)  
+ [Replicación de base de datos heterogénea](heterogeneous-database-replication.md)   
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

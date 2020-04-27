@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150715"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Supervisión y optimización del rendimiento
@@ -67,18 +67,18 @@ ms.locfileid: "63150715"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |[Supervisar los componentes de SQL Server](monitor-sql-server-components.md)|Proporciona los pasos necesarios para supervisar eficazmente cualquier componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Herramientas de supervisión y optimización del rendimiento](performance-monitoring-and-tuning-tools.md)|Enumera las herramientas de supervisión y optimización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Herramientas de optimización y supervisión del rendimiento](performance-monitoring-and-tuning-tools.md)|Enumera las herramientas de supervisión y optimización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Establecer una línea base del rendimiento](establish-a-performance-baseline.md)|Proporciona información acerca de cómo establecer una línea base de rendimiento.|  
 |[Aislar problemas de rendimiento](isolate-performance-problems.md)|Describe cómo aislar problemas de rendimiento de base de datos.|  
 |[Identificar los cuellos de botella](identify-bottlenecks.md)|Describe cómo supervisar y seguir el rendimiento del servidor para identificar cuellos de botella.|  
 |[Supervisión de la actividad y rendimiento del servidor](server-performance-and-activity-monitoring.md)|Describe cómo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las herramientas de supervisión de rendimiento y actividad de Windows.|  
 |[Mostrar y guardar planes de ejecución](display-and-save-execution-plans.md)|Describe cómo mostrar y guardar planes de ejecución en un archivo de formato XML.|  
-|[Supervisar el rendimiento mediante el almacén de consultas](monitoring-performance-by-using-the-query-store.md)|El almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución las conserva para su revisión.|  
+|[Supervisar el rendimiento mediante el Almacén de consultas](monitoring-performance-by-using-the-query-store.md)|El almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución las conserva para su revisión.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Administración automatizada en una empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md)   
- [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
+ [Supervisar el uso de recursos &#40;el monitor de sistema&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

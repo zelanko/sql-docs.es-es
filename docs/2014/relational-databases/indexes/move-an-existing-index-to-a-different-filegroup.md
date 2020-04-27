@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036241"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Mover un índice existente a un grupo de archivos diferente
@@ -34,26 +34,26 @@ ms.locfileid: "63036241"
   
      [Seguridad](#Security)  
   
--   **Para trasladar un índice existente a un grupo de archivos diferente, utilizando:**  
+-   **Para mover un índice existente a un grupo de archivos diferente, usando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Si una tabla base tiene un índice clúster, al mover el índice clúster a un nuevo grupo de archivos se mueve también la tabla a ese grupo de archivos.  
   
 -   No puede mover los índices creados mediante una restricción UNIQUE o PRIMARY KEY con [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para mover estos índices, use la instrucción [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) con la opción (DROP_EXISTING=ON) en [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>Para mover un índice existente a un grupo de archivos diferente usando el Diseñador de tablas  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63036241"
   
 3.  Haga clic con el botón derecho en la tabla que contiene el índice que quiere mover y seleccione **Diseño**.  
   
-4.  En el menú **Diseñador de tablas** , haga clic en **índices o claves**.  
+4.  En el menú **Diseñador de tablas** , haga clic en **Índices o claves**.  
   
 5.  Seleccione el índice que desea mover.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63036241"
   
 8.  Haga clic en **Cerrar**.  
   
-9. En el menú **archivo** , seleccione **Guardar**_TABLE_NAME_.  
+9. En el menú **Archivo** , seleccione **Guardar**_nombre_tabla_.  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>Para mover un índice existente a un grupo de archivos distinto en el Explorador de objetos  
   
@@ -99,12 +99,12 @@ ms.locfileid: "63036241"
   
 8.  Haga clic en **OK**.  
   
- La información siguiente está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice -** _nombre_índice_:  
+ La información siguiente está disponible en la página **Almacenamiento** del cuadro de diálogo **Propiedades del índice -** _nombre de índice_:  
   
- **Prima**  
+ **Grupo de archivos**  
  Almacena el índice en el grupo de archivos especificado. En la lista solo se muestran los grupos de archivos (fila) estándar. La selección de lista predeterminada es el grupo de archivos PRIMARY de la base de datos.  
   
- **Grupo de archivos FileStream**  
+ **Grupo de archivos de flujo de archivos**  
  Especifica el grupo de archivos para los datos FILESTREAM. En esta lista solo se muestran los grupos de archivos FILESTREAM. La selección de lista predeterminada es el grupo de archivos PRIMARY FILESTREAM.  
   
  **Esquema de partición**  
@@ -112,36 +112,36 @@ ms.locfileid: "63036241"
   
  La opción de esquema de partición no estará disponible si no hay ningún esquema de partición en la base de datos.  
   
- **Esquema de partición de FileStream**  
+ **Esquema de partición Filestream**  
  Especifica el esquema de partición de los datos FILESTREAM. El esquema de partición debe ser simétrico al esquema especificado en la opción **Esquema de partición** .  
   
  Si no tiene particiones, el campo está en blanco.  
   
- **Parámetro de esquema de partición**  
+ **Parámetro del esquema de partición**  
  Muestra el nombre de la columna que participa en el esquema de partición.  
   
- **Columna de tabla**  
+ **Columna de la tabla**  
  Seleccione la tabla o vista que se asignará al esquema de partición.  
   
- **Tipo de datos de columna**  
+ **Tipo de datos de la columna**  
  Muestra información de tipo de datos de la columna.  
   
 > [!NOTE]  
 >  Si la columna de tabla es una columna calculada, **Tipo de datos de la columna** mostrará "columna calculada".  
   
- **Permitir el procesamiento en línea de instrucciones DML al mover el índice**  
+ **Permitir procesamiento en línea de instrucciones DML al mover el índice**  
  Permite a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster, así como a todos los índices no clúster asociados durante las operaciones de índice.  
   
 > [!NOTE]  
 >  Esta opción no estará disponible para los índices XML ni cuando el índice sea un índice clúster deshabilitado.  
   
- **Establecer el grado máximo de paralelismo**  
+ **Establecer grado máximo de paralelismo**  
  Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** .  
   
 > [!NOTE]  
 >  Si especifica un valor superior al número de CPU disponibles, se utilizará el número real de CPU disponibles.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>Para mover un índice existente a un grupo de archivos diferente  
   

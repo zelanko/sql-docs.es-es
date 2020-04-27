@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63128663"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
@@ -85,8 +85,8 @@ ms.locfileid: "63128663"
  [SQLGetConnectAttr función)](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Detalles de implementación de la API de ODBC](odbc-api-implementation-details.md)   
  [ESTABLECER QUOTED_IDENTIFIER &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [ESTABLECER ANSI_NULLS &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [ESTABLECER ANSI_PADDING &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)  
   
   

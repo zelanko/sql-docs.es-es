@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150456"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>Propiedades de TCP-IP (pestaña protocolos)
@@ -35,8 +35,7 @@ ms.locfileid: "63150456"
  Especifique si SQL Server escuchará en todas las direcciones IP que están enlazadas a tarjetas de red en el equipo. Si se establece en **No**, configure cada dirección IP por separado con el cuadro de diálogo de propiedades de cada dirección IP. Si se establece en **Yes**, la configuración del cuadro de propiedades de **IPAll** se aplicará en todas las direcciones IP. El valor predeterminado es **Yes**.  
   
  **No Delay**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no implementa cambios en esta propiedad.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no implementa cambios en esta propiedad.  
   
 ## <a name="see-also"></a>Consulte también  
  [Elegir un protocolo de red](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

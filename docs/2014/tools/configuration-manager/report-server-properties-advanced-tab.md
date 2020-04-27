@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63048630"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Propiedades de Servidor de informes (pestaña Avanzadas)
-  Este servicio es el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si se han definido propiedades personalizadas, aparecen en esta pestaña junto con los valores correspondientes.  
+  Este es el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si se han definido propiedades personalizadas, aparecen en esta pestaña junto con los valores correspondientes.  
   
 ## <a name="options"></a>Opciones  
  **Informes de comentarios de clientes**  

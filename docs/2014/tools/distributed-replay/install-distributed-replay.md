@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149713"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>Instalar Distributed Replay desde el símbolo del sistema
@@ -39,25 +39,25 @@ ms.locfileid: "63149713"
   
 |Parámetro|Descripción|Valores admitidos|  
 |---------------|-----------------|----------------------|  
-|/CTLRSVCACCOUNT<br /><br /> **Opta**|Cuenta de servicio para el servicio Distributed Replay Controller.|Comprueba la cuenta y la contraseña|  
-|/CTLRSVCPASSWORD<br /><br /> **Opta**|Contraseña de la cuenta de servicio de Distributed Replay Controller.|Comprueba la cuenta y la contraseña|  
-|/CTLRSTARTUPTYPE<br /><br /> **Opta**|Tipo de inicio para el servicio Distributed Replay Controller.|Automático<br /><br /> Disabled<br /><br /> Manual|  
-|/CTLRUSERS<br /><br /> **Opta**|Especifica los usuarios que tienen permisos para el servicio de Distributed Replay Controller.|Conjunto de cadenas de la cuenta de usuario que usan " " (espacio) para el delimitador<br /><br /> **Importante**: al configurar el servicio de controlador de Distributed Replay, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios de cliente de Distributed Replay. La lista siguiente es una relación de las cuentas admitidas:<br /><br /> Cuenta de usuario de dominio<br /><br /> Cuenta de usuario local creada por el usuario<br /><br /> Administrador<br /><br /> Cuenta virtual y MSA (cuenta de servicio administrada)<br /><br /> Network Services, servicios locales y sistema<br /><br /> <br /><br /> No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).|  
-|/CLTSVCACCOUNT<br /><br /> **Opta**|Cuenta de servicio para el servicio de cliente de Distributed Replay.|Comprueba la cuenta y la contraseña|  
-|/CLTSVCPASSWORD<br /><br /> **Opta**|Contraseña de la cuenta de servicio de Distributed Replay Client.|Comprueba la cuenta y la contraseña|  
-|/CLTSTARTUPTYPE<br /><br /> **Opta**|Tipo de inicio para el servicio de cliente de Distributed Replay.|Automático<br /><br /> Disabled<br /><br /> Manual|  
-|/CLTCTLRNAME<br /><br /> **Opta**|Nombre del equipo con el que se comunica el cliente para el servicio de Distributed Replay Controller.||  
-|/CLTWORKINGDIR<br /><br /> **Opta**|Directorio de trabajo para el servicio de Distributed Replay Client.|Ruta de acceso válida|  
-|/CLTRESULTDIR<br /><br /> **Opta**|Directorio de resultados para el servicio de Distributed Replay Client.|Ruta de acceso válida|  
+|/CTLRSVCACCOUNT<br /><br /> **Opcional**|Cuenta de servicio para el servicio Distributed Replay Controller.|Comprueba la cuenta y la contraseña|  
+|/CTLRSVCPASSWORD<br /><br /> **Opcional**|Contraseña de la cuenta de servicio de Distributed Replay Controller.|Comprueba la cuenta y la contraseña|  
+|/CTLRSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicio para el servicio Distributed Replay Controller.|Automático<br /><br /> Deshabilitada<br /><br /> Manual|  
+|/CTLRUSERS<br /><br /> **Opcional**|Especifica los usuarios que tienen permisos para el servicio de Distributed Replay Controller.|Conjunto de cadenas de la cuenta de usuario que usan " " (espacio) para el delimitador<br /><br /> **Importante**: al configurar el servicio Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:<br /><br /> Cuenta de usuario de dominio<br /><br /> Cuenta de usuario local creada por el usuario<br /><br /> Administrador<br /><br /> Cuenta virtual y MSA (cuenta de servicio administrada)<br /><br /> Network Services, servicios locales y sistema<br /><br /> <br /><br /> No se aceptan cuentas de grupo (locales o de dominio) y otras cuentas integradas (como Todos).|  
+|/CLTSVCACCOUNT<br /><br /> **Opcional**|Cuenta de servicio para el servicio de cliente de Distributed Replay.|Comprueba la cuenta y la contraseña|  
+|/CLTSVCPASSWORD<br /><br /> **Opcional**|Contraseña de la cuenta de servicio de Distributed Replay Client.|Comprueba la cuenta y la contraseña|  
+|/CLTSTARTUPTYPE<br /><br /> **Opcional**|Tipo de inicio para el servicio de cliente de Distributed Replay.|Automático<br /><br /> Deshabilitada<br /><br /> Manual|  
+|/CLTCTLRNAME<br /><br /> **Opcional**|Nombre del equipo con el que se comunica el cliente para el servicio de Distributed Replay Controller.||  
+|/CLTWORKINGDIR<br /><br /> **Opcional**|Directorio de trabajo para el servicio de Distributed Replay Client.|Ruta de acceso válida|  
+|/CLTRESULTDIR<br /><br /> **Opcional**|Directorio de resultados para el servicio de Distributed Replay Client.|Ruta de acceso válida|  
   
 ### <a name="sample-syntax"></a>Sintaxis de ejemplo:  
- **Para instalar el componente de controlador de Distributed Replay**  
+ **Para instalar el componente Distributed Replay Controller**  
   
 ```  
 setup /q /ACTION=Install /FEATURES=DREPLAY_CTLR /IAcceptSQLServerLicenseTerms /CTLRUSERS="domain\user1" "domain\user2" /CTLRSVCACCOUNT="domain\svcuser" /CTLRSVCPASSWORD="password" /CTLRSTARTUPTYPE=Automatic  
 ```  
   
- **Para instalar el componente de cliente de Distributed Replay**  
+ **Para instalar el componente Distributed Replay Client**  
   
 ```  
 setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CLTSVCACCOUNT="domain\svcuser" /CLTSVCPASSWORD="password" /CLTSTARTUPTYPE=Automatic /CLTCTLRNAME=ControllerMachineName /CLTWORKINGDIR="C:\WorkingDir" /CLTRESULTDIR="C:\ResultDir  

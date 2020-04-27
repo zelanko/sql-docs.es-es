@@ -21,25 +21,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7289c18fac421bbdb5ccc0e00a3bea60b7a22d9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150616"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Supervisión de la actividad y rendimiento del servidor
-  El objetivo de supervisar bases de datos es evaluar el rendimiento de un servidor. Una supervisión eficaz implica tomar instantáneas periódicas del rendimiento actual para aislar procesos que causan problemas y recopilar datos de forma continua a lo largo del tiempo para realizar el seguimiento de las tendencias de rendimiento. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistema operativo Windows proporcionan utilidades que permiten ver la condición actual de la base de datos y realizar un seguimiento del rendimiento a medida que las condiciones cambian.  
+  El objetivo de supervisar bases de datos es evaluar el rendimiento de un servidor. Una supervisión eficaz implica tomar instantáneas periódicas del rendimiento actual para aislar procesos que causan problemas y recopilar datos de forma continua a lo largo del tiempo para realizar el seguimiento de las tendencias de rendimiento. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows proporcionan utilidades que permiten ver la condición actual de la base de datos y realizar un seguimiento del rendimiento a medida que las condiciones cambian.  
   
  La sección siguiente contiene temas que describen cómo utilizar las herramientas de supervisión de la actividad y el rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Windows. Incluye los temas siguientes:  
   
 ## <a name="in-this-section"></a>En esta sección  
  **Para realizar tareas de supervisión con herramientas de Windows**  
   
--   [Iniciar el monitor de sistema &#40;Windows&#41;](start-system-monitor-windows.md)  
+-   [Iniciar el Monitor de sistema &#40;Windows&#41;](start-system-monitor-windows.md)  
   
 -   [Ver el registro de aplicación de Windows &#40;Windows&#41;](view-the-windows-application-log-windows-10.md)  
   
- **Para crear SQL Server alertas de base de datos con herramientas de Windows**  
+ **Para crear alertas de bases de datos de SQL Server con herramientas de Windows**  
   
 -   [Configurar una alerta de base de datos de SQL Server &#40;Windows&#41;](set-up-a-sql-server-database-alert-windows.md)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63150616"
   
 -   [Abrir el Monitor de actividad &#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)  
   
- **Para realizar tareas de supervisión con seguimiento de SQL mediante procedimientos almacenados de Transact-SQL**  
+ **Para realizar tareas de supervisión con Seguimiento de SQL mediante procedimientos almacenados de Transact-SQL**  
   
 -   [Crear un seguimiento &#40;Transact-SQL&#41;](../sql-trace/create-a-trace-transact-sql.md)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63150616"
   
 -   [Ver un seguimiento guardado &#40;Transact-SQL&#41;](../sql-trace/view-a-saved-trace-transact-sql.md)  
   
--   [Ver información de filtro &#40;Transact-SQL&#41;](../sql-trace/view-filter-information-transact-sql.md)  
+-   [Ver la información del filtro &#40;Transact-SQL&#41;](../sql-trace/view-filter-information-transact-sql.md)  
   
 -   [Eliminar un seguimiento &#40;Transact-SQL&#41;](../sql-trace/delete-a-trace-transact-sql.md)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63150616"
   
 -   [Especificar eventos y columnas de datos para un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
--   [Crear un script Transact-SQL para ejecutar un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)  
+-   [Crear un script de Transact-SQL para ejecutar un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)  
   
 -   [Guardar los resultados de un seguimiento en un archivo &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)  
   
@@ -83,17 +83,17 @@ ms.locfileid: "63150616"
   
 -   [Filtrar eventos en un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)  
   
--   [Ver información de filtro &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)  
+-   [Ver información de un filtro &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)  
   
 -   [Modificar un filtro &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)  
   
--   [Filtre los eventos basándose en la hora de inicio del evento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)  
+-   [Filtrar eventos basándose en la hora de inicio del evento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)  
   
 -   [Filtrar eventos basándose en la hora de finalización del evento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)  
   
--   [Filtrar los identificadores de proceso de servidor &#40;SPID&#41; en un &#40;de seguimiento SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)  
+-   [Filtrar los Id. de proceso de servidor &#40;SPID&#41; en un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)  
   
--   [Organizar las columnas mostradas en un SQL Server Profiler de seguimiento &#40;&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
+-   [Organizar las columnas mostradas en un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)  
   
  **Para iniciar, pausar y detener seguimientos mediante SQL Server Profiler**  
   
@@ -105,7 +105,7 @@ ms.locfileid: "63150616"
   
 -   [Ejecutar un seguimiento después de haberlo pausado o detenido &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
- **Para abrir seguimientos y configurar cómo se muestran los seguimientos mediante SQL Server Profiler**  
+ **Para abrir seguimientos y configurar cómo se visualizan los seguimientos mediante SQL Server Profiler**  
   
 -   [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "63150616"
   
 -   [Cerrar una ventana de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/close-a-trace-window-sql-server-profiler.md)  
   
--   [Establecer los valores predeterminados de definición de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)  
+-   [Configurar los valores predeterminados de definición de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)  
   
 -   [Establecer los valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "63150616"
   
 -   [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)  
   
--   [Reproducir un solo evento a la vez &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)  
+-   [Reproducir un único evento cada vez &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)  
   
 -   [Reproducir hasta un punto de interrupción &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "63150616"
   
 -   [Reproducir un script Transact-SQL &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)  
   
- **Para crear, modificar y utilizar plantillas de seguimiento mediante SQL Server Profiler**  
+ **Para crear, modificar y utilizar plantillas de seguimientos mediante SQL Server Profiler**  
   
 -   [Crear una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)  
   
@@ -147,18 +147,18 @@ ms.locfileid: "63150616"
   
 -   [Importar una plantilla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
- **Para usar seguimientos de SQL Server Profiler para recopilar y supervisar el rendimiento del servidor**  
+ **Para utilizar seguimientos de SQL Server Profiler para recopilar y supervisar el rendimiento del servidor**  
   
--   [Buscar un valor o una columna de datos durante el seguimiento de &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
+-   [Buscar un valor o una columna de datos durante la ejecución de un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)  
   
 -   [Guardar gráficos de interbloqueo &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
   
--   [Guardar eventos SHOWPLAN XML por separado &#40;SQL Server Profiler&#41;](save-showplan-xml-events-separately-sql-server-profiler.md)  
+-   [Guardar eventos Showplan XML por separado &#40;SQL Server Profiler&#41;](save-showplan-xml-events-separately-sql-server-profiler.md)  
   
--   [Guardar eventos SHOWPLAN XML Statistics Profile por separado &#40;SQL Server Profiler&#41;](save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md)  
+-   [Guardar de forma separada eventos Showplan XML Statistics Profile &#40;SQL Server Profiler&#41;](save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md)  
   
--   [Extraer un script de un SQL Server Profiler de &#40;de seguimiento&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)  
+-   [Extraer un script de un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)  
   
--   [Correlacionar un seguimiento con los datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
+-   [Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

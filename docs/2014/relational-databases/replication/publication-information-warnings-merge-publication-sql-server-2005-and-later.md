@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f849394a4a77091f92ee66857b4d5263875fdea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021683"
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>Información de publicación, Advertencias (Publicación de combinación, SQL Server 2005 y posterior)
-  La pestaña **advertencias** está disponible para distribuidores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. La pestaña **Advertencias** permite realizar las siguientes tareas para la publicación seleccionada:  
+  La pestaña **Advertencias** está disponible para los distribuidores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. La pestaña **Advertencias** permite realizar las siguientes tareas para la publicación seleccionada:  
   
 -   Habilitar advertencias.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63021683"
  Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Para definir alertas, haga clic en **Configurar alertas** y proporcione información en el cuadro de diálogo **Configurar alertas de replicación** .  
   
 ## <a name="options"></a>Opciones  
- **Enabled**  
+ **Habilitado**  
  Seleccione esta opción si desea habilitar una advertencia y especificar un umbral asociado.  
   
  **Alerta**  
@@ -61,7 +61,7 @@ ms.locfileid: "63021683"
  **Warning (ADVERTENCIA)**  
  Descripción de la advertencia asociada al umbral.  
   
- **Mínimo**  
+ **Umbral**  
  Permite especificar un valor para el umbral.  
   
  **Configurar alertas**  
@@ -71,16 +71,16 @@ ms.locfileid: "63021683"
  Haga clic para descartar los cambios realizados en las advertencias y los umbrales.  
   
 > [!NOTE]  
->  Hacer clic en **Descartar cambios** no afecta a las alertas definidas en el cuadro de diálogo **Configurar alertas de replicación** .  
+>   Hacer clic en **Descartar cambios** no afecta a las alertas definidas en el cuadro de diálogo **Configurar alertas de replicación** .  
   
  **Guardar cambios**  
  Haga clic para guardar los cambios realizados en las advertencias y los umbrales.  
   
 ## <a name="see-also"></a>Consulte también  
- [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
+ [Iniciar el monitor de replicación](monitor/start-the-replication-monitor.md)   
  [Ver información y realizar tareas mediante el monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Supervisar el rendimiento con el Monitor de replicación](monitor/monitor-performance-with-replication-monitor.md)   
+ [Supervisar el rendimiento con el monitor de replicación](monitor/monitor-performance-with-replication-monitor.md)   
  [Supervisión de la replicación](monitoring-replication.md)   
- [Establecer umbrales y advertencias en el Monitor de replicación](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Set Thresholds and Warnings in Replication Monitor](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

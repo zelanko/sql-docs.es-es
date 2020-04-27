@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057766"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Cuadro de diálogo Crear nueva condición o Abrir condición, página General
@@ -26,16 +26,16 @@ ms.locfileid: "63057766"
  **Nombre**  
  Si la condición es nueva, escriba un nombre para ella. Si la condición ya existe, se muestra el nombre.  
   
- **Faceta**  
+ **Agrupa**  
  Faceta usada por esta condición.  
   
- **Y/o**  
+ **Y/O**  
  Al agregar varias expresiones, indica si las expresiones deben combinarse con **AND** u **OR**. Permanece en blanco cuando solo hay una expresión.  
   
  **Campo**  
  Cada faceta expone una o varias propiedades que se pueden establecer. En el cuadro de campo, seleccione una propiedad de la lista de propiedades disponibles para crear una expresión para esta condición.  
   
- **Operator**  
+ **Operador**  
  Seleccione un operador de comparación para esta expresión. Los operadores son: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. No todos los operadores están disponibles para algunas propiedades.  
   
  **Valor**  

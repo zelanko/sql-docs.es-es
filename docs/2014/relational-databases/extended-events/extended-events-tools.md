@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137051"
 ---
 # <a name="extended-events-tools"></a>Herramientas de eventos extendidos
@@ -33,7 +33,7 @@ ms.locfileid: "63137051"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Le permite crear y ejecutar los ejemplos de código que se proporcionan en los temas de eventos extendidos. Para obtener más información, vea [Explorador de objetos](../../ssms/object/object-explorer.md).  
   
- Además de las sesiones que cree, existe una sesión de estado del sistema predeterminada en el servidor. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento. Para obtener más información, vea [Usar la sesión system_health](use-the-ssms-xe-profiler.md).  
+ Además de las sesiones que cree, existe una sesión de estado del sistema predeterminada en el servidor. La sesión recopila datos del sistema que se pueden utilizar para ayudar a solucionar problemas de rendimiento. Para obtener más información, vea [usar la sesión de system_health](use-the-ssms-xe-profiler.md).  
   
 ## <a name="ddl-statements"></a>Instrucciones DDL  
  Utilice las instrucciones DDL siguientes para crear, cambiar y quitar una sesión de eventos extendidos.  
@@ -85,8 +85,8 @@ ms.locfileid: "63137051"
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../views/views.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [Tablas de eventos extendidos de SQL Server &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/system-tables-transact-sql)   
- [Usar la sesión system_health](use-the-ssms-xe-profiler.md)   
+ [SQL Server tablas de eventos extendidos &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/system-tables-transact-sql)   
+ [Usar la sesión de system_health](use-the-ssms-xe-profiler.md)   
  [Usar el proveedor de PowerShell para eventos extendidos](use-the-powershell-provider-for-extended-events.md)  
   
   

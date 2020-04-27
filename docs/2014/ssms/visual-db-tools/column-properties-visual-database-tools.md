@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990201"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propiedades de columna (Visual Database Tools)
-  Hay dos conjuntos de propiedades de columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
+  Hay dos conjuntos de propiedades para columnas: un conjunto completo que se puede ver en la pestaña **Propiedades de columna** del Diseñador de tablas (solo disponible para las bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y un subconjunto que se puede ver en la ventana Propiedades con el Explorador de servidores.  
   
 > [!NOTE]  
 >  Las propiedades de este tema se ordenan por categoría en lugar de alfabéticamente.  
@@ -47,7 +47,7 @@ ms.locfileid: "62990201"
  **Base de datos**  
  Muestra el nombre del origen de datos para la columna seleccionada. (Solo se aplica a OLE DB.)  
   
- **Categoría varios**  
+ **Categoría Varios**  
  Se expande para mostrar las propiedades restantes.  
   
  **Tipo de datos**  
@@ -62,10 +62,10 @@ ms.locfileid: "62990201"
  **Identidad**  
  Muestra si la columna seleccionada es la columna de identidad de la tabla. (Solo se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- **Length**  
+ **Longitud**  
  Muestra el número de caracteres permitidos para los tipos de datos basados en caracteres.  
   
- **Nullable**  
+ **Admisión de valores NULL**  
  Muestra si la columna permite o no valores NULL.  
   
  **Precisión**  
@@ -98,7 +98,7 @@ ms.locfileid: "62990201"
  **Valor o enlace predeterminado**  
  Muestra el valor predeterminado de esta columna cuando no se especifica ningún valor para esta columna. La lista desplegable contiene todos los valores predeterminados globales definidos en el origen de datos. Para enlazar la columna con un valor predeterminado global, realice una selección en la lista desplegable. Otra opción para crear una restricción predeterminada para la columna es escribir directamente el valor predeterminado como texto.  
   
- **Length**  
+ **Longitud**  
  Muestra el número de caracteres permitidos para los tipos de datos basados en caracteres. Esta propiedad solo está disponible para tipos de datos basados en caracteres.  
   
  **Precisión**  
@@ -113,7 +113,7 @@ ms.locfileid: "62990201"
  **Intercalación**  
  Muestra la configuración de intercalación para la columna seleccionada. Para cambiar esta configuración, haga clic en **Intercalación** y, después, haga clic en los puntos suspensivos **(...)** situados a la derecha del valor.  
   
- **Categoría especificación de columna calculada**  
+ **Categoría Especificación de columna calculada**  
  Esta opción se expande para mostrar propiedades para **Fórmula** y **Persistente**. Si la columna está calculada, también aparecerá la fórmula. Para editar la fórmula, amplíe esta categoría y edítela en la propiedad **Fórmula** .  
   
  **Fórmula**  
@@ -122,13 +122,13 @@ ms.locfileid: "62990201"
  **Persistente**  
  Le permite guardar la columna calculada con el origen de datos. Una columna calculada mantenida se puede indizar.  
   
- **Tipo de datos condensado**  
+ **Tipo de datos comprimido**  
  Muestra información sobre el tipo de datos del campo con el mismo formato que la instrucción SQL CREATE TABLE. Por ejemplo, un campo que contiene una cadena de longitud variable con una longitud máxima de 20 caracteres se representa como "varchar(20)". Para cambiar esta propiedad, escriba el valor directamente.  
   
  **Descripción**  
  Muestra la descripción de la columna. Para ver la descripción completa o para editarla, haga clic en Descripción y, después, haga clic en los puntos suspensivos **(...)** situados a la derecha de la propiedad.  
   
- **Categoría especificación de texto completo**  
+ **Categoría Especificación de texto completo**  
  Se expande para mostrar propiedades específicas para columnas de texto completo.  
   
  **Está indizado por texto completo**  
@@ -145,10 +145,10 @@ ms.locfileid: "62990201"
   
  Si selecciona **Idioma** antes de seleccionar **Semántica estadística**y el idioma seleccionado no tiene un modelo de idioma semántico asociado, la opción **Semántica estadística** se establece en **No** y no puede modificarse. Si selecciona **Sí** para la opción de **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en la columna **Idioma** estarán limitados a aquellos para los que exista un modelo de idioma semántico.  
   
- **No es suscriptor de SQL Server**  
+ **Suscriptor que no es de SQL Server**  
  Muestra si la columna tiene un suscriptor que no es de Microsoft SQL Server.  
   
- **Categoría especificación de identidad**  
+ **Categoría Especificación de identidad**  
  Esta opción se expande para mostrar las propiedades **Identidad**, **Incremento de identidad**e **Inicialización de identidad**.  
   
  **Identidad**  
@@ -160,32 +160,31 @@ ms.locfileid: "62990201"
  **Inicialización de identidad**  
  Muestra el valor asignado a la primera fila de la tabla. Si deja esta celda en blanco, se le asignará el valor 1 de forma predeterminada. Para editar esta propiedad, escriba el nuevo valor directamente.  
   
- **Determinista**  
+ **Determinístico**  
  Muestra si se puede determinar con exactitud el tipo de dato de la columna seleccionada.  
   
  **Publicado por DTS**  
  Muestra si la columna está publicada con DTS.  
   
- **Indexable**  
+ **Indizable**  
  Muestra si la columna seleccionada se puede indizar. Por ejemplo, no se pueden indizar las columnas calculadas no deterministas.  
   
  **Publicado por combinación**  
  Muestra si la columna está publicada por combinación.  
   
- **No es para replicación**  
+ **No disponible para replicación**  
  Indica si los valores de identidad originales se conservan durante la replicación. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
  **Replicado**  
  Muestra si esta columna se replica en otra ubicación.  
   
- **Es RowGuid**  
+ **RowGuid**  
  Indica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la columna como ROWGUID. Puede establecer este valor en **sí** solo para una columna con el tipo de `uniqueidentifier`datos. Para editar esta propiedad, haga clic en su valor, expanda la lista desplegable y elija otro valor.  
   
  **Tamaño**  
  Muestra el tamaño en bytes permitido por el tipo de datos de la columna. Por ejemplo, un tipo de datos `nchar` puede tener una longitud de 10 (el número de caracteres) pero tendría un tamaño de 20 para los juegos de caracteres Unicode.  
   
 > [!NOTE]  
->  La longitud de un tipo de datos `varchar(max)` varía en cada fila. sp_help devuelve (-1) como longitud de `varchar(max)` la columna. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] muestra -1 como tamaño de columna.  
+>  La longitud de un tipo de datos `varchar(max)` varía en cada fila. sp_help devuelve (-1) como longitud de `varchar(max)` la columna. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] muestra -1 como tamaño de columna.  
   
   

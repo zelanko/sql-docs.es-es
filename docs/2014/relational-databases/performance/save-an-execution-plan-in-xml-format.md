@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150861"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Guardar un plan de ejecución en formato XML
@@ -63,9 +63,9 @@ ms.locfileid: "63150861"
     SET SHOWPLAN_XML OFF;  
     ```  
   
-4.  En el panel **Resultados**, haga clic con el botón derecho en el **Plan de presentación XML de Microsoft SQL Server** que contiene el plan de consulta y, después, haga clic en **Guardar resultados como**.  
+4.  En el panel **Resultados** , haga clic con el botón derecho en el **Plan de presentación XML de Microsoft SQL Server** que contiene el plan de consulta y, después, haga clic en **Guardar resultados como**.  
   
-5.  En el cuadro de diálogo **Guardar** \<resultados**** de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)**.  
+5.  En el cuadro de diálogo **Guardar resultados de ** \<**la cuadrícula o el texto>**, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)**.  
   
 6.  En el **cuadro Nombre de archivo** , proporcione un nombre, en \<el nombre de formato **>. sqlplan**y, a continuación, haga clic en **Guardar**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63150861"
      Como alternativa, en el Explorador de Windows, haga doble clic en un archivo con la extensión **.sqlplan**. El plan se abre en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
- [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [SET STATISTICs XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [ESTABLECER SHOWPLAN_XML &#40;&#41;de Transact-SQL](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
+ [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

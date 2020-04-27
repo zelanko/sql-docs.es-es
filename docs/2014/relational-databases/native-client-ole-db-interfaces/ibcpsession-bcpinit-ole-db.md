@@ -1,5 +1,5 @@
 ---
-title: 'IBCPSession:: BCPInit (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPInit (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033600"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
@@ -69,7 +69,7 @@ inteDirection);
  Nombre del archivo de usuario en o del que se va a copiar.  
   
  *pwszErrorFile*[in]  
- Nombre del archivo de error que se va a rellenar con mensajes de progreso, mensajes de error y copias de las filas que, por cualquier razón, no se puedan copiar de un archivo de usuario en una tabla. Si el argumento *pwszErrorFile* se establece en null, no se utiliza ningún archivo de error.  
+ Nombre del archivo de error que se va a rellenar con mensajes de progreso, mensajes de error y copias de las filas que, por cualquier razón, no se puedan copiar de un archivo de usuario en una tabla. Si el argumento *pwszErrorFile* se establece en NULL, no se usa ningún archivo de error.  
   
  *eDirection*[in]  
  Dirección de la operación de copia, BCP_DIRECTION_IN o BCP_DIRECTION_OUT. BCP_DIRECTION_IN indica una copia de un archivo de usuario en una tabla de base de datos; BCP_DIRECTION_OUT indica una copia de una tabla de base de datos en un archivo de usuario.  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057125"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -70,7 +70,7 @@ ms.locfileid: "63057125"
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md).  
+    -   [Conceptos de los ejecutables del agente de replicación](concepts/replication-agent-executables-concepts.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Administración del agente de replicación](agents/replication-agent-administration.md)   
@@ -79,6 +79,6 @@ ms.locfileid: "63057125"
  [Agente de registro del LOG de replicación](agents/replication-log-reader-agent.md)   
  [Agente de mezcla de replicación](agents/replication-merge-agent.md)   
  [Agente de lectura de cola de replicación](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [Agente de instantáneas de replicación](agents/replication-snapshot-agent.md)  
   
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015678"
 ---
 # <a name="view-statistics-properties"></a>Ver propiedades de estadísticas
@@ -31,20 +31,20 @@ ms.locfileid: "63015678"
   
      [Seguridad](#Security)  
   
--   **Para ver las propiedades de las estadísticas, utilizando:**  
+-   **Para ver propiedades de estadísticas, mediante:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para ver el objeto de estadísticas, el usuario debe ser propietario de la tabla o miembro del rol fijo de servidor `sysadmin`, del rol fijo de base de datos `db_owner` o del rol fijo de base de datos `db_ddladmin`.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>Para ver las propiedades de estadísticas  
   
@@ -58,9 +58,9 @@ ms.locfileid: "63015678"
   
 5.  Haga clic con el botón derecho en el objeto Estadísticas cuyas propiedades quiere ver y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Propiedades de estadísticas -** _nombre_de_estadísticas_ , en el panel **Seleccionar una página** , seleccione **Detalles**.  
+6.  En el cuadro de diálogo **Propiedades de estadísticas -** _nombre de estadísticas_, en el panel **Seleccionar una página**, seleccione **Detalles**.  
   
-     Las propiedades siguientes se muestran en la página **Detalles** en el cuadro de diálogo **Propiedades de estadísticas -** _nombre_de_estadísticas_ .  
+     Las propiedades siguientes se muestran en la página **Detalles** del cuadro de diálogo **Propiedades de estadísticas -** _nombre de estadísticas_.  
   
      **Nombre de tabla**  
      Muestra el nombre de la tabla descrita por las estadísticas.  
@@ -68,7 +68,7 @@ ms.locfileid: "63015678"
      **Nombre de las estadísticas**  
      Muestra el nombre del objeto de base de datos donde se almacenan las estadísticas.  
   
-     **Estadísticas de INDEXstatistics_name**  
+     **Estadísticas para INDEXnombre_de_estadísticas**  
      Este cuadro de texto muestra las propiedades devueltas del objeto de estadísticas. Estas propiedades se dividen en tres secciones: encabezado de estadísticas, vector de densidad e histograma.  
   
      La siguiente información se describen las columnas devueltas en el conjunto de resultados para el encabezado de estadísticas.  
@@ -76,26 +76,26 @@ ms.locfileid: "63015678"
      **Nombre**  
      Nombre del objeto de estadísticas.  
   
-     **Actualice**  
+     **Updated**  
      Fecha y hora de la última actualización de las estadísticas.  
   
-     **Las**  
+     **Filas**  
      Número total de filas que tenía la tabla o vista indizada la última vez que se actualizaron las estadísticas. Si las estadísticas se filtran o corresponden a un índice filtrado, el número de filas puede ser inferior al número de filas de la tabla.  
   
-     **Filas muestreadas**  
+     **Rows Sampled**  
      Número total de filas muestreadas para cálculos de estadísticas. Si Rows Sampled < Rows, el histograma y los resultados de la densidad que se muestren serán estimaciones extraídas de las filas muestreadas.  
   
      **Pasos**  
      Número de pasos del histograma. Cada paso abarca un intervalo de valores de columna seguido de un valor de columna límite superior. Los pasos del histograma se definen en la primera columna de clave de las estadísticas. El número máximo de pasos es 200.  
   
-     **Formatea**  
+     **Densidad**  
      Se calcula como 1 / *valores distintos* en todos los valores de la primera columna de clave del objeto de estadísticas, excepto en los valores límite del histograma. El optimizador de consultas no usa este valor de densidad y solo se muestra por motivos de compatibilidad con versiones anteriores a SQL Server 2008.  
   
      **Promedio de longitud de clave**  
      Número promedio de bytes por cada uno de los valores de las columnas de clave del objeto de estadísticas.  
   
-     **Índice de cadena**  
-     Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de Resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **Char**, **VARCHAR**, **nchar**, **nvarchar**, **VARCHAR (Max)**, **nvarchar (Max)**, **Text**o **ntext**.  
+     **String Index**  
+     Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**o **ntext**.  
   
      **Expresión de filtro**  
      Predicado del subconjunto de filas de la tabla incluido en el objeto de estadísticas. NULL = Estadísticas no filtradas.  
@@ -133,7 +133,7 @@ ms.locfileid: "63015678"
   
 7.  Haga clic en **OK**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Para ver las propiedades de estadísticas  
   

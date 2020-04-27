@@ -24,18 +24,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033735"
 ---
 # <a name="statistics"></a>Estadísticas
   El optimizador de consultas utiliza las estadísticas para crear planes de consulta que mejoren el rendimiento de las consultas. Para la mayoría de las consultas, el optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para obtener los mejores resultados, necesita crear estadísticas adicionales o modificar el diseño de la consulta. En este tema se explican los conceptos de estadísticas y se proporcionan directrices para usar las estadística de optimización de consultas de forma eficaz.  
   
-##  <a name="DefinitionQOStatistics"></a> Componentes y conceptos  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Componentes y conceptos  
  Estadísticas  
- Las estadísticas para la optimización de consulta son objetos que contienen información estadística acerca de la distribución de valores en una o más columnas de una tabla o vista indizada. El optimizador de consultas utiliza estas estadísticas para estimar la *cardinalidad*, o el número de filas, en el resultado de la consulta. Estas *estimaciones de cardinalidad* permiten al optimizador de consultas crear un plan de consulta de alta calidad. Por ejemplo, el optimizador de consultas podría utilizar las estimaciones de cardinalidad para elegir el operador Index Seek en lugar del operador Index Scan, con un uso más intensivo de los recursos, mejorando con ello el rendimiento de la consulta.  
+ Las estadísticas para la optimización de consulta son objetos que contienen información estadística acerca de la distribución de valores en una o más columnas de una tabla o vista indizada. El optimizador de consultas utiliza estas estadísticas para estimar la *cardinalidad*, o número de filas, en el resultado de la consulta. Estas *estimaciones de cardinalidad* permiten al optimizador de consultas crear un plan de consulta de alta calidad. Por ejemplo, el optimizador de consultas podría utilizar las estimaciones de cardinalidad para elegir el operador Index Seek en lugar del operador Index Scan, con un uso más intensivo de los recursos, mejorando con ello el rendimiento de la consulta.  
   
  Cada objeto de estadísticas se crea en una lista de una o más columnas de la tabla e incluye un histograma que muestra la distribución de valores en la primera columna. Los objetos de estadísticas en varias columnas también almacenan la información estadística relativa a la correlación de valores entre las columnas. Estas estadísticas de la correlación, o *densidades*, derivan del número de filas distintas de valores de columna. Para obtener más información sobre los objetos de estadísticas, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
   
@@ -103,9 +103,9 @@ ORDER BY s.name;
   
 ||  
 |-|  
-|**Se aplica a** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]hasta.|  
+|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-##  <a name="CreateStatistics"></a>Cuándo crear las estadísticas  
+##  <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> Cuándo crear las estadísticas  
  El optimizador de consultas crea ya las estadísticas de las maneras siguientes:  
   
 1.  El optimizador de consultas crea las estadísticas para índices en tablas o vistas cuando se crea el índice. Estas estadísticas se crean en las columnas de clave del índice. Si el índice es un índice filtrado, el optimizador de consultas crea las estadísticas filtradas en el mismo subconjunto de filas especificado para el índice filtrado. Para obtener más información sobre los índices filtrados, vea [Crear índices filtrados](../indexes/create-filtered-indexes.md) y [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
@@ -191,11 +191,11 @@ GO
   
 -   Elimine las estadísticas temporales con la instrucción [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) .  
   
--   Supervise las estadísticas con las vistas de catálogo **sys.stats** y **sys.stats_columns**. **sys_stats** incluye la columna **is_temporary** , para indicar qué estadísticas son permanentes y cuáles son temporales.  
+-   Supervise las estadísticas con las vistas de catálogo **sys.stats** y **sys.stats_columns** . **sys_stats** incluye la columna **is_temporary** para indicar las estadísticas que son permanentes y las que son temporales.  
   
  Debido a que las estadísticas temporales se almacenan en `tempdb`, el reinicio del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoca que desaparezcan todas las estadísticas temporales.  
   
-##  <a name="UpdateStatistics"></a>Cuándo actualizar las estadísticas  
+##  <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a> Cuándo actualizar las estadísticas  
  El optimizador de consultas determina cuándo las estadísticas podrían estar desusadas y, a continuación, las actualiza cuando es necesario para un plan de consulta. En algunos casos puede mejorar el plan de consulta y, por consiguiente, mejorar el rendimiento de la consulta, actualizando las estadísticas con más frecuencia que la que se produce cuando está activada AUTO_UPDATE_STATISTICS. Puede actualizar las estadísticas con la instrucción UPDATE STATISTICS o con el procedimiento almacenado sp_updatestats.  
   
  La actualización de las estadísticas asegura que las consultas se compilan con estadísticas actualizadas. Sin embargo, la actualización de las estadísticas hace que las consultas se vuelvan a compilar. Recomendamos no actualizar las estadísticas con demasiada frecuencia, porque hay que elegir el punto válido entre la mejora de los planes de consulta y el tiempo empleado en volver a compilar las consultas. Las compensaciones específicas dependen de su aplicación.  
@@ -225,7 +225,7 @@ GO
   
  Otras operaciones, como regenerar, desfragmentar o reorganizar un índice, no cambian la distribución de los datos. Por consiguiente, no necesita actualizar las estadísticas después de realizar las operaciones ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE. El optimizador de consultas actualiza las estadísticas cuando regenera un índice en una tabla o vista con ALTER INDEX REBUILD o DBCC DBREINDEX, sin embargo; esta actualización de las estadísticas es un subproducto de la recreación del índice. El optimizador de consultas no actualiza las estadísticas después de las operaciones DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE.  
   
-##  <a name="DesignStatistics"></a>Consultas que usan eficazmente las estadísticas  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> Consultas que usan eficazmente las estadísticas  
  Algunas implementaciones de consulta, como las variables locales y las expresiones complejas en el predicado de consulta, pueden conducir a planes de consulta que no son óptimos. Las siguientes instrucciones de diseño de consulta para el uso eficaz de las estadísticas pueden evitarlo. Para obtener más información sobre los predicados de consulta, vea [Condición de búsqueda &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
   
  Puede mejorar los planes de consulta aplicando instrucciones de diseño de consulta que utilicen las estadísticas con eficacia para mejorar las *estimaciones de cardinalidad* en las expresiones, variables y funciones utilizadas en los predicados de consulta. Cuando el optimizador de consultas no conoce el valor de una expresión, variable o función, no conoce qué valor ha de buscar en el histograma y, por consiguiente, no puede recuperar del histograma la mejor estimación de cardinalidad. En cambio, el optimizador de consultas basa la estimación de cardinalidad en el número medio de filas por valor distinto para todas las filas buscadas en el histograma. El resultado son estimaciones de cardinalidad poco óptimas, además de dañar el rendimiento de la consulta.  
@@ -324,11 +324,11 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [CREATE STATISTICs &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
- [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
+ [UPDATE STATISTICs &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
+ [sp_updatestats &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
  [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
+ [DROP STATISTICs &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Crear índices filtrados](../indexes/create-filtered-indexes.md)  

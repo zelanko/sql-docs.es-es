@@ -18,10 +18,10 @@ ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96b6c2599920c8d251b6d421cc18dc43c82fe521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907251"
 ---
 # <a name="msmerge_articlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
@@ -35,16 +35,16 @@ ms.locfileid: "67907251"
 |**phase_id**|**int**|Fase de la sesión de sincronización, que puede ser una de las siguientes:<br /><br /> **1** = carga.<br /><br /> **2** = descargar.<br /><br /> **4** = limpieza.<br /><br /> **5** = apagado.<br /><br /> **6** = cambios de esquema.<br /><br /> **7** = BCP.|  
 |**article_name**|**sysname**|Nombre del artículo en el que se realizaron cambios.|  
 |**start_time**|**datetime**|Hora a la que el agente empezó a procesar el artículo.|  
-|**Duration**|**int**|Tiempo, en segundos, que el agente tardó en procesar un artículo.|  
+|**duration**|**int**|Tiempo, en segundos, que el agente tardó en procesar un artículo.|  
 |**inserta**|**int**|Número de inserciones aplicadas a un artículo específico durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**actualizaciones**|**int**|Número de actualizaciones aplicadas a un artículo específico durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**elimina**|**int**|Número de eliminaciones aplicadas a un artículo específico durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**los**|**int**|Número de conflictos que se han producido durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**conflicts_resolved**|**int**|Número de conflictos que se han producido durante la sincronización y se han resuelto. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
 |**rows_retried**|**int**|Número de filas con errores que se han reintentado durante la sincronización. Este valor aumenta durante el proceso de sincronización y el valor final representa el número total.|  
-|**percent_complete**|**Decimal**|Porcentaje del tiempo total de sincronización que el Agente de mezcla ha invertido en el artículo durante una sesión. Este valor es NULL hasta que finaliza la sesión.|  
+|**percent_complete**|**decimal**|Porcentaje del tiempo total de sincronización que el Agente de mezcla ha invertido en el artículo durante una sesión. Este valor es NULL hasta que finaliza la sesión.|  
 |**estimated_changes**|**int**|Estimación del número de cambios de fila que deben aplicarse al artículo.|  
-|**relative_cost**|**Decimal**|Tiempo empleado en aplicar los cambios para este artículo respecto al tiempo total de la sesión completa.|  
+|**relative_cost**|**decimal**|Tiempo empleado en aplicar los cambios para este artículo respecto al tiempo total de la sesión completa.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

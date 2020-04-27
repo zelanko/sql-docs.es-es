@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721038"
 ---
 # <a name="recompile-a-stored-procedure"></a>Volver a compilar un procedimiento almacenado
@@ -37,9 +37,9 @@ ms.locfileid: "62721038"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Cuando un procedimiento se compila por primera vez o se vuelve a compilar, el plan de consulta del procedimiento se optimiza para el estado actual de la base de datos y sus objetos. Si una base de datos experimenta cambios significativos en sus datos o su estructura, al volver a compilar un procedimiento se actualiza y optimiza el plan de consulta del procedimiento para tener en cuenta esos cambios. Esto puede mejorar el rendimiento de procesamiento del procedimiento.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62721038"
   
 -   Si algunas consultas de un procedimiento suelen usar valores atípicos o temporales, se puede mejorar el rendimiento del procedimiento con la sugerencia de consulta RECOMPILE dentro de esas consultas. Puesto que solo se volverán a compilar las consultas que usan la sugerencia de consulta en lugar del procedimiento completo, se imita el comportamiento de nueva compilación de nivel de instrucciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Además de usar los valores de parámetro actuales del procedimiento, la sugerencia de consulta RECOMPILE también emplea los valores de cualquier variable local del procedimiento almacenado al compilar la instrucción. Para obtener más información, vea [Sugerencias de consulta (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  `WITH RECOMPILE`Desea  
  Si se usa esta opción cuando se crea la definición del procedimiento, se necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se crea el procedimiento.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62721038"
  `sp_recompile`Procedimiento almacenado del sistema  
  Necesita el permiso ALTER en el procedimiento especificado.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para volver a compilar un procedimiento almacenado usando la opción WITH RECOMPILE  
   

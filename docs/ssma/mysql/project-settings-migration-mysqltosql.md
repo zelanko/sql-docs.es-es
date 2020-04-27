@@ -10,10 +10,10 @@ ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908866"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Configuración del proyecto (migración) (MySQLToSQL)
@@ -34,7 +34,7 @@ El panel Migración está disponible en los cuadros de diálogo Configuración d
 |**Tamaño de lote**|Especifica el tamaño del lote que se utiliza durante la migración de datos.<br /><br />**Modo predeterminado**: 1000<br /><br />**Modo optimista**: 1000<br /><br />**Modo completo**: 1000|  
 |**Restricciones CHECK**|Especifica si SSMA debe comprobar las restricciones cuando inserta datos en SQL Server tablas.<br /><br />**Modo predeterminado**: false<br /><br />**Modo optimista**: false<br /><br />**Modo completo**: false|  
 |**Activar desencadenadores**|Especifica si SSMA debe activar los desencadenadores de inserción cuando agrega datos a SQL Server tablas.<br /><br />**Modo predeterminado**: false<br /><br />**Modo optimista**: false<br /><br />**Modo completo**: false|  
-|**Mantener la identidad**|Especifica si SSMA conserva los valores de identidad de MySQL cuando agrega datos a SQL Server. Un valor false hace que el destino asigne los valores de identidad.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
+|**Mantener valores de identidad**|Especifica si SSMA conserva los valores de identidad de MySQL cuando agrega datos a SQL Server. Un valor false hace que el destino asigne los valores de identidad.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
 |**Mantener valores NULL**|Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifiquen en SQL Server.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
 |**Bloqueo de tabla**|Especifica si SSMA bloquea las tablas cuando agrega datos a las tablas durante la migración de datos. Obtiene un bloqueo de actualización masiva mientras dure la operación de copia masiva. Si el valor es false, se establece un bloqueo en el nivel de fila.<br /><br />**Modo predeterminado**: false<br /><br />**Modo optimista**: false<br /><br />**Modo completo**: false|  
   

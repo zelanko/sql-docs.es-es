@@ -28,19 +28,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68187138"
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
   La utilidad **BCP** copia datos de forma masiva entre una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia de y un archivo de datos en un formato especificado por el usuario. La utilidad **bcp** se puede usar para importar un número elevado de filas nuevas en tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o para exportar datos de tablas a archivos de datos. Excepto cuando se usa con la opción **queryout** , la utilidad no requiere ningún conocimiento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar datos en una tabla, debe usar un archivo de formato creado para esa tabla o comprender la estructura de la tabla y los tipos de datos que son válidos para sus columnas.  
   
- ![Icono de vínculo de tema](../../2014/database-engine/media/topic-link.gif "Icono de vínculo de tema") Para obtener las convenciones de sintaxis que se usan para la sintaxis de **BCP** , vea [convenciones de sintaxis de transact-SQL &#40;&#41;de Transact-SQL ](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Icono de vínculo de tema](../../2014/database-engine/media/topic-link.gif "Icono de vínculo de tema") Para conocer las convenciones que se emplean en la sintaxis de **bcp**, consulte [Convenciones de sintaxis Transact-SQL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 > [!NOTE]  
->  Si usa **bcp** para hacer una copia de seguridad de los datos, cree un archivo de formato para registrar el formato de datos. los archivos de datos **BCP** no incluyen ningún esquema ni información de formato, por lo que si se quita una tabla o una vista y no tiene un archivo de formato, es posible que no pueda importar los datos.  
+>  Si usa **bcp** para hacer una copia de seguridad de los datos, cree un archivo de formato para registrar el formato de datos. Los archivos de datos de**bcp** no incluyen ningún esquema ni información de formato, de modo que si se quita una tabla o vista, y no tiene un archivo de formato, es posible que no pueda importar los datos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -83,29 +83,29 @@ ms.locfileid: "68187138"
   
 ## <a name="arguments"></a>Argumentos  
  *data_file*  
- Es la ruta completa del archivo de datos. Cuando se importan datos de forma masiva a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el archivo de datos contiene los datos que se van a copiar en la tabla o vista especificada. Cuando se realiza una exportación de datos de forma masiva desde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el archivo de datos contiene los datos copiados desde la tabla o desde la vista. La ruta de acceso puede contener de 1 a 255 caracteres. El archivo de datos puede contener un máximo de 2<sup>63</sup> -1 filas.  
+ Es la ruta completa del archivo de datos. Cuando se importan datos de forma masiva a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el archivo de datos contiene los datos que se van a copiar en la tabla o vista especificada. Cuando se realiza una exportación de datos de forma masiva desde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el archivo de datos contiene los datos copiados desde la tabla o desde la vista. La ruta de acceso puede contener de 1 a 255 caracteres. El archivo de datos puede contener 2<sup>63</sup> - 1 filas, como máximo.  
   
  *database_name*  
  Es el nombre de la base de datos en la que reside la tabla o vista especificada. Si no se especifica, es la base de datos predeterminada para el usuario.  
   
  También puede especificar explícitamente el nombre de la base de datos con `d-`.  
   
- **en** _data_file_ | **out**__ data_file | **QUERYOUT**__ data_file | **formato NUL**  
+ **in** _data_file_ | **out**_data_file_ | **queryout**_data_file_ | **format nul**  
  Especifica la dirección de la copia masiva, de la siguiente manera:  
   
--   **in** copia desde un archivo en la vista o tabla de base de datos.  
+-   **in** copia desde un archivo en la vista o la tabla de la base de datos.  
   
--   **out** copia desde la tabla o vista de la base de datos a un archivo. Si se especifica un archivo ya existente, este se sobrescribe. Al extraer datos, tenga en cuenta que la utilidad **bcp** representa una cadena vacía como nula y una cadena nula como vacía.  
+-   **out** copia desde la tabla o la vista de la base de datos a un archivo. Si se especifica un archivo ya existente, este se sobrescribe. Al extraer datos, tenga en cuenta que la utilidad **bcp** representa una cadena vacía como nula y una cadena nula como vacía.  
   
--   **QUERYOUT** copia desde una consulta y debe especificarse solo cuando se copian datos de forma masiva desde una consulta.  
+-   **queryout** copia desde una consulta y debe especificarse solo cuando se copian datos de forma masiva desde una consulta.  
   
--   **Format** crea un archivo de formato basado en la opción especificada (**-n** `-c`, `-w`, o **-n**) y en los delimitadores de la vista o de la tabla. Cuando se copian datos en bloque, el comando **bcp** puede hacer referencia a un archivo de formato, lo que evita tener que especificar de nuevo la información de formato interactivamente. La opción **format** necesita la opción **-f**; la creación de un archivo de formato XML también requiere la opción **-x**. Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Hay que especificar **nul**como el valor (**format nul**).  
+-   **Format** crea un archivo de formato basado en la opción especificada (**-n** `-c`, `-w`, o **-n**) y en los delimitadores de la vista o de la tabla. Cuando se copian datos en bloque, el comando **bcp** puede hacer referencia a un archivo de formato, lo que evita tener que especificar de nuevo la información de formato interactivamente. La opción **format** necesita la opción **-f** ; la creación de un archivo de formato XML también requiere la opción **-x** . Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Hay que especificar **nul** como el valor (**format nul**).  
   
  *propietario*  
- Es el nombre del propietario de la tabla o vista. *Owner* es opcional si el usuario que realiza la operación es propietario de la tabla o vista especificada. Si *owner* no se especifica y el usuario que realiza la acción no es el propietario de la tabla o la vista especificada, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] devuelve un mensaje de error y se cancela la operación.  
+ Es el nombre del propietario de la tabla o vista. *owner* es opcional si el usuario que realiza la operación es propietario de la tabla o vista especificada. Si *owner* no se especifica y el usuario que realiza la acción no es el propietario de la tabla o la vista especificada, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] devuelve un mensaje de error y se cancela la operación.  
   
  **"** _consulta_ **"**  
- Es una consulta [!INCLUDE[tsql](../includes/tsql-md.md)] que devuelve un conjunto de resultados. Si la consulta devuelve múltiples conjuntos de resultados, solo se copiará el primero en el archivo de datos; los conjuntos de resultados siguientes se omitirán. Utilice comillas dobles para la consulta y comillas simples en los elementos que incruste en la consulta. **QUERYOUT** también se debe especificar cuando se copian datos de forma masiva desde una consulta.  
+ Es una consulta [!INCLUDE[tsql](../includes/tsql-md.md)] que devuelve un conjunto de resultados. Si la consulta devuelve múltiples conjuntos de resultados, solo se copiará el primero en el archivo de datos; los conjuntos de resultados siguientes se omitirán. Utilice comillas dobles para la consulta y comillas simples en los elementos que incruste en la consulta. **queryout** también se debe especificar cuando se copian datos desde una consulta.  
   
  La consulta puede hacer referencia a un procedimiento almacenado siempre que todas las tablas a las que se haga referencia dentro del procedimiento almacenado existan antes de ejecutar la instrucción bcp. Por ejemplo, si el procedimiento almacenado genera una tabla temporal, se produce un error en la instrucción **bcp** porque la tabla temporal solamente está disponible en tiempo de ejecución y no cuando se ejecuta la instrucción. En este caso, considere la posibilidad de insertar los resultados del procedimiento almacenado en una tabla y, después, usar **bcp** para copiar los datos de la tabla en un archivo de datos.  
   
@@ -115,8 +115,8 @@ ms.locfileid: "68187138"
  *view_name*  
  Es el nombre de la vista de destino cuando se copian datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**in**) y la vista de origen cuando se copian datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (**out**). Solamente pueden usarse como vistas de destino aquellas vistas en las que todas las columnas hacen referencia a la misma tabla. Para obtener más información sobre las restricciones para copiar datos en vistas, vea [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql).  
   
- **-un** _packet_size_  
- Especifica el número de bytes por paquete de red enviados y recibidos por el servidor. Se puede establecer una opción de configuración de servidor con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (o el procedimiento almacenado del sistema **sp_configure**). No obstante, la opción de configuración de servidor puede sustituirse individualmente mediante esta opción. *packet_size* puede ser de 4096 a 65535 bytes; el valor predeterminado es 4096.  
+ **-a** _packet_size_  
+ Especifica el número de bytes por paquete de red enviados y recibidos por el servidor. Se puede establecer una opción de configuración de servidor con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (o el procedimiento almacenado del sistema **sp_configure** ). No obstante, la opción de configuración de servidor puede sustituirse individualmente mediante esta opción. *packet_size* puede oscilar entre 4096 y 65 535; el valor predeterminado es 4096.  
   
  Un tamaño mayor de los paquetes puede mejorar el rendimiento de las operaciones de copia masiva. Si se pide un tamaño de paquete mayor, pero no puede concederse, se usa el valor predeterminado. Las estadísticas de rendimiento generadas por la utilidad **bcp** muestran el tamaño del paquete usado.  
   
@@ -126,8 +126,7 @@ ms.locfileid: "68187138"
  No use esta opción junto con la opción **-h "** ROWS_PER_BATCH ** = *`bb`*"** .  
   
  `-c`  
- Realiza la operación con un tipo de datos de caracteres. Esta opción no realiza una petición para cada campo; usa `char` como tipo de almacenamiento, sin prefijos y con **\t** (carácter de tabulación) como separador de campos y **\r\n** (carácter de nueva línea) como terminador de fila. 
-  `-c` no es compatible con `-w`.  
+ Realiza la operación con un tipo de datos de caracteres. Esta opción no realiza una petición para cada campo; usa `char` como tipo de almacenamiento, sin prefijos y con **\t** (carácter de tabulación) como separador de campos y **\r\n** (carácter de nueva línea) como terminador de fila. `-c` no es compatible con `-w`.  
   
  Para obtener más información, vea [Usar el formato de caracteres para importar o exportar datos &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
@@ -139,22 +138,21 @@ ms.locfileid: "68187138"
   
 |Valor de página de códigos|Descripción|  
 |---------------------|-----------------|  
-|ACP|
-  [!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
+|ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Página de códigos predeterminada, utilizada por el cliente. Esta es la página de códigos que se usa de forma predeterminada si no se especifica **-C** .|  
 |RAW|No se realiza ninguna conversión entre páginas de códigos. Se trata de la opción más rápida porque no se producen conversiones.|  
 |*code_page*|Número específico de una página de códigos, por ejemplo, 850.<br /><br /> **&#42;&#42; importante &#42;&#42;** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite la página de códigos 65001 (codificación UTF-8).|  
   
- `-d` *database_name*  
+ `-d`*database_name*  
  Especifica la base de datos a la que conectarse. De forma predeterminada, bcp.exe se conecta a la base de datos predeterminada del usuario. Si `-d`se especifica *database_name* y un nombre de tres partes (*database_name. Schema. Table*, que se pasa como primer parámetro a BCP. exe), se producirá un error porque no se puede especificar dos veces el nombre de la base de datos. Si *database_name* comienza con un guión (-) o una barra diagonal (/), no agregue un espacio entre `-d` y el nombre de la base de datos.  
   
  **-e** _err_file_  
- Especifica la ruta de acceso completa de un archivo de error que se usa para almacenar las filas que la utilidad **bcp** no puede transferir del archivo a la base de datos. Los mensajes de error del comando **bcp** van a la estación de trabajo del usuario. Si no se usa esta opción, no se creará el archivo de errores.  
+ Especifica la ruta de acceso completa de un archivo de error que se usa para almacenar las filas que la utilidad **BCP** no puede transferir del archivo a la base de datos. Los mensajes de error del comando **bcp** van a la estación de trabajo del usuario. Si no se usa esta opción, no se creará el archivo de errores.  
   
- Si *err_file* comienza con un guión (-) o una barra diagonal (/), no incluya un espacio entre **-e** y el valor de *err_file*.  
+ Si *err_file* comienza con un guión (-) o una barra diagonal (/), no incluya un espacio entre **-e** y el valor de *err_file* .  
   
  **-E**  
- Especifica que se usará el valor o valores de identidad del archivo de datos importado para la columna de identidad. Si no se especifica **-E**, se omiten los valores de identidad de esta columna en el archivo de datos que se importa y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asigna automáticamente valores únicos basados en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
+ Especifica que se usará el valor o valores de identidad del archivo de datos importado para la columna de identidad. Si no se especifica **-E** , se omiten los valores de identidad de esta columna en el archivo de datos que se importa y [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asigna automáticamente valores únicos basados en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
   
  Si el archivo de datos no contiene valores para la columna de identidad de la tabla o la vista, use un archivo de formato para especificar que se debe omitir la columna de identidad de la tabla o la vista al importar los datos; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] asigna automáticamente valores únicos para la columna. Para obtener más información, vea [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
@@ -163,21 +161,21 @@ ms.locfileid: "68187138"
  **-f** _format_file_  
  Especifica la ruta de acceso completa de un archivo de formato. El significado de esta opción depende del entorno en el que se utiliza, como se indica a continuación:  
   
--   Si se usa **-f** con la opción **format** , se crea el archivo *format_file* especificado para la tabla o la vista especificada. Para crear un archivo de formato XML, especifique también la opción **-x**. Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).  
+-   Si se usa **-f** con la opción **format** , se crea el archivo *format_file* especificado para la tabla o la vista especificada. Para crear un archivo de formato XML, especifique también la opción **-x** . Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md).  
   
--   Si se usa con las opciones **in** u **out**, **-f** requiere un archivo de formato existente.  
+-   Si se usa con las opciones **in** u **out** , **-f** requiere un archivo de formato existente.  
   
     > [!NOTE]  
     >  El uso de un archivo de formato con la opción **in** o **out** es opcional. En ausencia de la opción **-f** , si no se especifica **-n**, `-c`, `-w`o **-n** , el comando solicita información de formato y permite guardar las respuestas en un archivo de formato (cuyo nombre de archivo predeterminado es BCP. FMT).  
   
- Si *format_file* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-f** y el valor de *format_file*.  
+ Si *format_file* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-f** y el valor de *format_file* .  
   
  **-F** _first_row_  
  Especifica el número de la primera fila que se exportará desde una tabla o que se importará desde un archivo de datos. Este parámetro requiere un valor mayor que (>) 0 pero menor que (\<) o igual que (=) el número total de filas. En ausencia de este parámetro, el valor predeterminado es la primera fila del archivo.  
   
- *first_row* puede ser un entero positivo con un valor de hasta 2 ^ 63-1. **-F**_first_row_ se basa en 1.  
+ *first_row* puede ser un valor entero positivo hasta 2^63-1. **-F**_first_row_ es de base 1.  
   
- **-h "** _sugerencia_[ **,**... *n*] **"**  
+ **-h"** _hint_[ **,**... *n*] **"**  
  Especifica las sugerencias que deben usarse durante una importación de datos masiva en una tabla o en una vista.  
   
  Order **(**_columna_[ASC | DESC] [**,**... *n*] **)**  
@@ -203,18 +201,18 @@ ms.locfileid: "68187138"
  Una situación en la que quizá desee que las restricciones estén deshabilitadas (comportamiento predeterminado) es si los datos de entrada contienen filas que infringen las restricciones. Con las restricciones CHECK deshabilitadas, puede importar los datos y después usar instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] para quitar los datos que no son válidos.  
   
 > [!NOTE]  
->  **BCP** ahora aplica la validación de datos y las comprobaciones de datos que podrían provocar errores en los scripts si se ejecutan en datos no válidos en un archivo de datos.  
+>  **bcp** valida y comprueba ahora los datos, y ello podría dar lugar a errores en los scripts si se ejecutan con datos no válidos de un archivo.  
   
 > [!NOTE]  
->  El modificador **-m** _max_errors_ no es válido en la comprobación de restricciones.  
+>  El modificador **-m** _max_errors_ no se aplica a la comprobación de restricciones.  
   
  FIRE_TRIGGERS  
- Cuando se especifica con el argumento **in**, se ejecutarán todos los desencadenadores de inserción definidos en la tabla de destino durante la operación de copia masiva. Si no se especifica FIRE_TRIGGERS, no se ejecutará ningún desencadenador. FIRE_TRIGGERS se ignora para los argumentos **out**, **queryout** y **format**.  
+ Cuando se especifica con el argumento **in** , se ejecutarán todos los desencadenadores de inserción definidos en la tabla de destino durante la operación de copia masiva. Si no se especifica FIRE_TRIGGERS, no se ejecutará ningún desencadenador. FIRE_TRIGGERS se ignora para los argumentos **out**, **queryout**y **format** .  
   
  **-i** _input_file_  
  Especifica el nombre de un archivo de respuesta, que contiene las respuestas a las preguntas del símbolo del sistema para cada campo de datos cuando se realiza una copia masiva con el modo `-c`interactivo `-w`(no se especifica **-n**,, o **-n** ).  
   
- Si *input_file* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-i** y el valor de *input_file*.  
+ Si *input_file* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-i** y el valor de *input_file* .  
   
  **-k**  
  Especifica que las columnas vacías deben conservar un valor NULL durante la operación, en vez de tener valores predeterminados para las columnas insertadas. Para obtener más información, vea [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
@@ -225,10 +223,10 @@ ms.locfileid: "68187138"
  **-L** _last_row_  
  Especifica el número de la última fila que se exportará desde una tabla o que se importará desde un archivo de datos. Este parámetro requiere un valor mayor que (>) 0 pero menor que (\<) o igual que (=) el número de la última fila. En ausencia de este parámetro, el valor predeterminado es la última fila del archivo.  
   
- *last_row* puede ser un entero positivo con un valor de hasta 2 ^ 63-1.  
+ *last_row* puede ser un valor entero positivo hasta 2^63-1.  
   
  **-m** _max_errors_  
- Especifica el número máximo de errores de sintaxis que pueden producirse antes de que se cancele la operación de **bcp**. Un error de sintaxis implica un error de conversión de datos en el tipo de datos de destino. El total de *max_errors* excluye cualquier error que pueda detectarse solamente en el servidor, como las infracciones de restricciones.  
+ Especifica el número máximo de errores de sintaxis que pueden producirse antes de que se cancele la operación de **BCP** . Un error de sintaxis implica un error de conversión de datos en el tipo de datos de destino. El total de *max_errors* excluye cualquier error que pueda detectarse solamente en el servidor, como las infracciones de restricciones.  
   
  Una fila que no puede copiarse con la utilidad **bcp** se omite y se cuenta como un error. Si no se incluye esta opción, el valor predeterminado es 10.  
   
@@ -252,7 +250,7 @@ ms.locfileid: "68187138"
  **-o** _output_file_  
  Especifica el nombre de un archivo que recibe la salida redirigida desde el símbolo del sistema.  
   
- Si *output_file* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-o** y el valor de *output_file*.  
+ Si *output_file* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-o** y el valor de *output_file* .  
   
  **-P** _contraseña_  
  Especifica la contraseña para el identificador de inicio de sesión. Si no se usa esta opción, el comando **bcp** solicitará una contraseña. Si se usa esta opción al final del símbolo del sistema sin especificar ninguna contraseña, **bcp** usa la contraseña predeterminada (NULL).  
@@ -262,15 +260,14 @@ ms.locfileid: "68187138"
   
  Para enmascarar la contraseña, no especifique la opción **-P** junto con la opción **-U** . En su lugar, después de especificar **bcp** junto con la opción **-U** y otros modificadores (sin especificar **-P**), pulse ENTRAR y el comando le solicitará una contraseña. Este método garantiza que la contraseña se enmascare al especificarla.  
   
- Si *password* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-P** y el valor de *password*.  
+ Si *password* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-P** y el valor de *password* .  
   
  `-q`  
- Ejecuta la instrucción SET QUOTED_IDENTIFIERS ON en la conexión entre la utilidad **bcp** y una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use esta opción para especificar una base de datos, un propietario, una tabla o un nombre de vista que contenga un espacio o una comilla simple. Englobe la totalidad del nombre de tres partes de la vista o tabla entre comillas (" ").  
+ Ejecuta la instrucción SET QUOTED_IDENTIFIERS ON en la conexión entre la utilidad **BCP** y una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Use esta opción para especificar una base de datos, un propietario, una tabla o un nombre de vista que contenga un espacio o una comilla simple. Englobe la totalidad del nombre de tres partes de la vista o tabla entre comillas (" ").  
   
- Para especificar un nombre de base de datos que contenga un espacio o una comilla simple, debe usar la opción **-q**.  
+ Para especificar un nombre de base de datos que contenga un espacio o una comilla simple, debe usar la opción **-q** .  
   
- 
-  `-q` no se aplica a los valores que se pasan a `-d`.  
+ `-q` no se aplica a los valores que se pasan a `-d`.  
   
  Para obtener más información, vea Comentarios, más adelante en este tema.  
   
@@ -279,12 +276,12 @@ ms.locfileid: "68187138"
   
  Si especifica el terminador de fila en notación hexadecimal en un comando bcp.exe, el valor se truncará en 0x00. Por ejemplo, si especifica 0x410041, se usará 0x41.  
   
- Si *row_term* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-r** y el valor de *row_term*.  
+ Si *row_term* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-r** y el valor de *row_term* .  
   
  **-R**  
  Especifica que se realice la copia masiva de datos de moneda, fecha y hora en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con el formato regional definido para la configuración regional del equipo cliente. De forma predeterminada, la configuración regional se omite.  
   
- **-S** _SERVER_NAME_[ **\\** _instance_name_]  
+ **-S** _server_name_[ **\\**_instance_name_]  
  Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Si no se especifica ningún servidor, la utilidad **bcp** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta un comando **bcp** desde un equipo remoto de la red o desde una instancia local con nombre. Para establecer una conexión con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un servidor, especifique únicamente *server_name*. Para conectarse a una instancia con nombre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de, *Especifique**_\\_** SERVER_NAME instance_name*.  
   
  `-t`*field_term*  
@@ -301,10 +298,10 @@ ms.locfileid: "68187138"
  Especifica el identificador de inicio de sesión para conectar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Si la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante una conexión de confianza que usa seguridad integrada, use la opción **-T** (conexión de confianza) en lugar de la combinación *user name* y *password*.  
+>  Si la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante una conexión de confianza que usa seguridad integrada, use la opción **-T** (conexión de confianza) en lugar de la combinación *user name* y *password* .  
   
  **-v**  
- Informa del número de versión y los derechos de autor de la utilidad **bcp**.  
+ Notifica el número de versión de la utilidad **BCP** y el copyright.  
   
  **-V** (**80** | **90** | **100**| **110**)  
  Realiza la operación de copia masiva con tipos de datos de versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta opción no realiza una petición para cada campo, sino que utiliza los valores predeterminados.  
@@ -313,7 +310,7 @@ ms.locfileid: "68187138"
   
  **90** = [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]  
   
- **** =  100[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
+ **100** =  100[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
   
  **110 =[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]**  
   
@@ -322,14 +319,12 @@ ms.locfileid: "68187138"
  Para obtener más información, vea [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  `-w`  
- Realiza la operación de copia masiva con caracteres Unicode. Esta opción no realiza una petición para cada campo; usa `nchar` como tipo de almacenamiento, sin prefijos, **\t** (carácter de tabulación) como separador de campos y **\n** (carácter de nueva línea) como terminador de fila. 
-  `-w` no es compatible con `-c`.  
+ Realiza la operación de copia masiva con caracteres Unicode. Esta opción no realiza una petición para cada campo; usa `nchar` como tipo de almacenamiento, sin prefijos, **\t** (carácter de tabulación) como separador de campos y **\n** (carácter de nueva línea) como terminador de fila. `-w` no es compatible con `-c`.  
   
  Para obtener más información, vea [Usar el formato de caracteres Unicode para importar o exportar datos &#40;SQL Server&#41;](../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).  
   
  **-x**  
- Si se usa con las opciones **format** y **-f**_format_file_, se genera un archivo de formato basado en XML en lugar del archivo de formato predeterminado que no es XML. 
-  **-x** no funciona cuando se importan o exportan datos. Genera un error si se usa sin **format** ni **-f**_format_file_.  
+ Si se usa con las opciones **format** y **-f**_format_file_, genera un archivo de formato basado en XML en lugar del archivo de formato predeterminado que no es XML. **-x** no funciona cuando se importan o exportan datos. Genera un error si se usa sin **format** ni **-f**_format_file_.  
   
 ## <a name="remarks"></a>Observaciones  
  El cliente **BCP** 12,0 se instala al instalar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] las herramientas de. Si se instalan herramientas para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y para una versión anterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], según el valor de la variable de entorno PATH, es posible usar el cliente **bcp** anterior en lugar del cliente **bcp** 12.0. Esta variable de entorno define el conjunto de directorios que Windows usa para buscar archivos ejecutables. Para saber qué versión está usando, ejecute el comando **bcp /v** en el símbolo del sistema de Windows. Para obtener información acerca del establecimiento de la ruta de comandos en la variable de entorno PATH, vea la Ayuda de Windows.  
@@ -351,8 +346,7 @@ ms.locfileid: "68187138"
  Las columnas calculadas y `timestamp` se copian de forma masiva desde [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un archivo de datos de la forma habitual.  
   
 ## <a name="specifying-identifiers-that-contain-spaces-or-quotation-marks"></a>Especificar identificadores que incluyen espacios o comillas  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden incluir caracteres tales como espacios insertados y comillas. Tales identificadores deben tratarse de la siguiente manera:  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden incluir caracteres tales como espacios insertados y comillas. Tales identificadores deben tratarse de la siguiente manera:  
   
 -   Cuando especifique un identificador o nombre de archivo que incluya un espacio o comillas en el símbolo del sistema, coloque el identificador entre comillas dobles (" ").  
   
@@ -371,7 +365,7 @@ ms.locfileid: "68187138"
     -   Incluir el nombre de vista, tabla o propietario entre corchetes ([]) dentro de las comillas.  
   
 ## <a name="data-validation"></a>Validación de datos  
- **BCP** ahora aplica la validación de datos y las comprobaciones de datos que podrían provocar errores en los scripts si se ejecutan en datos no válidos en un archivo de datos. Por ejemplo, **bcp** ahora comprueba que:  
+ **bcp** valida y comprueba ahora los datos, y ello podría dar lugar a errores en los scripts si se ejecutan con datos no válidos de un archivo. Por ejemplo, **bcp** ahora comprueba que:  
   
 -   La representación nativa de los tipos de datos `float` o `real` es válida.  
   
@@ -411,7 +405,7 @@ ms.locfileid: "68187138"
 ## <a name="character-mode--c-and-native-mode--n-best-practices"></a>Prácticas recomendadas para el modo de carácter (-c) y el modo nativo (-n)  
  Esta sección contiene recomendaciones para el modo de carácter (-c) y el modo nativo (-n).  
   
--   (Administrador o usuario) Cuando sea posible, utilice el formato nativo (-n) para evitar problemas de separador. Utilice el formato nativo para exportar e importar utilizando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Exporte datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizando la opción -c o -w si los datos se van a importar a una base de datos que no es de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+-   (Administrador o usuario) Cuando sea posible, utilice el formato nativo (-n) para evitar problemas de separador. Utilice el formato nativo para exportar e importar utilizando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Exporte datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizando la opción -c o -w si los datos se van a importar a una base de datos que no es de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   (Administrador) Compruebe los datos al utilizar BCP OUT. Por ejemplo, cuando se utiliza BCP OUT, BCP IN y luego BCP OUT, compruebe que los datos se han exportado correctamente y que los valores de terminador no se utilizan como parte de algún valor de datos. Considere la posibilidad de reemplazar los terminadores predeterminados (utilizando las opciones -t y -r) por valores hexadecimales aleatorios para evitar conflictos entre los valores de terminador y los valores de datos.  
   
@@ -436,7 +430,7 @@ ms.locfileid: "68187138"
   
 -   H. Crear un archivo de formato XML  
   
--   I. Usar un archivo de formato para importar de forma masiva con **bcp**  
+-   I. Usar un archivo de formato para importar de forma masiva con **BCP**  
   
 ### <a name="a-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>A. Copiar filas de tablas en un archivo de datos (con una conexión de confianza)  
  En el siguiente ejemplo se ilustra la opción **out** de la tabla `AdventureWorks2012.Sales.Currency` . En este ejemplo se crea un archivo de datos con el nombre `Currency.dat` y se usa el formato de caracteres para copiar los datos de la tabla en ese archivo. En el ejemplo se supone que usa la autenticación de Windows y que existe una conexión de confianza con la instancia del servidor en la que se ejecuta el comando **bcp** .  
@@ -532,12 +526,12 @@ bcp AdventureWorks2012.Sales.Currency format nul -T -c -x -f Currency.xml
 ```  
   
 > [!NOTE]  
->  Para usar el modificador **-x**, debe contar con un cliente **bcp** 9.0. Para obtener información acerca de cómo usar el cliente **bcp** 9.0, consulte la sección "Comentarios".  
+>  Para usar el modificador **-x** , debe contar con un cliente **bcp** 9.0. Para obtener información sobre cómo usar el cliente **bcp** 9,0, vea "Comentarios".  
   
  Para obtener más información, vea [XML, archivos de formato &#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md).  
   
 ### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>I. Usar un archivo de formato para importar de forma masiva con bcp  
- Para usar un archivo de formato creado anteriormente al importar datos a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use el modificador **-f** con la opción **in**. Por ejemplo, el siguiente comando copia de forma masiva el contenido de un archivo de datos, `Currency.dat`, en una copia de la tabla `Sales.Currency` (`Sales.Currency2`) mediante el archivo de formato creado anteriormente (`Currency.xml`). En el ejemplo se supone que usa la autenticación de Windows y que existe una conexión de confianza con la instancia del servidor en la que se ejecuta el comando **bcp** .  
+ Para usar un archivo de formato creado anteriormente al importar datos a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use el modificador **-f** con la opción **in** . Por ejemplo, el siguiente comando copia de forma masiva el contenido de un archivo de datos, `Currency.dat`, en una copia de la tabla `Sales.Currency` (`Sales.Currency2`) mediante el archivo de formato creado anteriormente (`Currency.xml`). En el ejemplo se supone que usa la autenticación de Windows y que existe una conexión de confianza con la instancia del servidor en la que se ejecuta el comando **bcp** .  
   
  En el símbolo del sistema de Windows, escriba:  
   
@@ -549,13 +543,13 @@ bcp AdventureWorks2012.Sales.Currency2 in Currency.dat -T -f Currency.xml
 >  Los archivos de formato son útiles cuando los campos del archivo de datos son diferentes a los de las columnas de la tabla; por ejemplo, en su numeración, orden o tipos de datos. Para obtener más información, vea [Archivos de formato para importar o exportar datos &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
 ## <a name="additional-examples"></a>Otros ejemplos  
- Los siguientes temas incluyen ejemplos de uso de **bcp**:  
+ Los temas siguientes contienen ejemplos de uso de **BCP**:  
   
 -   [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)  
   
 -   [Ejemplos de importación y exportación en bloque de documentos XML &#40;SQL Server&#41;](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Mantener los valores de identidad al importar datos de forma masiva &#40;SQL Server&#41;](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](../relational-databases/import-export/keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   

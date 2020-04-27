@@ -20,10 +20,10 @@ ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900224"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67900224"
 
 |Nombre de columna|Propiedad|Descripción|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|bigint|Nivel de registro para el clúster de conmutación por error de SQL Server. Se puede activar el registro detallado para proporcionar detalles adicionales en los registros de errores para solucionar problemas. Uno de los valores siguientes:<br /><br /> 0: el registro está desactivado (valor predeterminado)<br /><br /> 1: solo errores<br /><br /> 2: errores y advertencias<br /><br /> Para obtener más información, vea [ALTER Server CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
+|VerboseLogging|bigint|Nivel de registro para el clúster de conmutación por error de SQL Server. Se puede activar el registro detallado para proporcionar detalles adicionales en los registros de errores para solucionar problemas. Uno de los siguientes valores:<br /><br /> 0: el registro está desactivado (valor predeterminado)<br /><br /> 1: solo errores<br /><br /> 2: errores y advertencias<br /><br /> Para obtener más información, vea [ALTER Server CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).|  
 |SqlDumperDumpFlags|bigint|Las marcas de volcado de SQLDumper determinan el tipo de archivos de volcado generados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es 0.|  
 |SqlDumperDumpPath|nvarchar(260)|Ubicación donde la utilidad SQLDumper genera los archivos de volcado.|  
 |SqlDumperDumpTimeOut|bigint|Valor de tiempo de espera en milisegundos para que la utilidad SQLDumper genere un volcado en caso de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor predeterminado es 0.|  

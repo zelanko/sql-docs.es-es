@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793305"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>Inicializar una suscripción transaccional desde una copia de seguridad (programación de la replicación con Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67793305"
   
     -   Si el valor es **0**, ejecute [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) en el Publicador de la base de datos de publicación. Especifique un valor de **allow_initialize_from_backup** para ** \@la propiedad** y un valor `true` de para ** \@valor**.  
   
-2.  Para una nueva publicación, ejecute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) en el Publicador de la base de datos de publicación. Especifique un valor de `true` para **allow_initialize_from_backup**. Para obtener más información, vea [Crear una suscripción](publish/create-a-publication.md).  
+2.  Para una nueva publicación, ejecute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) en el Publicador de la base de datos de publicación. Especifique un valor de `true` para **allow_initialize_from_backup**. Para obtener más información, vea [crear una publicación](publish/create-a-publication.md).  
   
     > [!WARNING]  
     >  Para evitar perder los datos del suscriptor, al utilizar **sp_addpublication** con `@allow_initialize_from_backup = N'true'`, utilice siempre `@immediate_sync = N'true'`.  
@@ -70,7 +70,7 @@ ms.locfileid: "67793305"
 7.  (Opcional) Inicio el Agente de distribución. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) o [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md)   
- [Copia de seguridad y restauración de bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
+ [Copiar bases de datos con copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md)   
+ [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

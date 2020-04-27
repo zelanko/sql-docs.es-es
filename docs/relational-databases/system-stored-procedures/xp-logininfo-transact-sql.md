@@ -18,10 +18,10 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898409"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
@@ -59,8 +59,8 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**nombre de cuenta**|**sysname**|Nombre completo de la cuenta de Windows.|  
-|**automáticamente**|**Char (8)**|Tipo de cuenta de Windows. Los valores válidos son **User** o **Group**.|  
-|**privilegia**|**Char (9)**|Privilegio de acceso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores válidos son **admin**, **User**o **null**.|  
+|**type**|**Char (8)**|Tipo de cuenta de Windows. Los valores válidos son **User** o **Group**.|  
+|**privilegia**|**char(9)**|Privilegio de acceso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores válidos son **admin**, **User**o **null**.|  
 |**mapped login name**|**sysname**|En el caso de las cuentas de usuario que tienen privilegios de usuario, nombre de inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de **sesión asignado** muestra el nombre de inicio de sesión asignado que intenta usar al iniciar sesión con esta cuenta mediante las reglas asignadas con el nombre de dominio agregado antes.|  
 |**permission path**|**sysname**|Pertenencia al grupo que permite que la cuenta tenga acceso.|  
   
@@ -71,8 +71,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  Si se especifican *account_name* y **All** , se devuelven todas las rutas de acceso de permisos para el usuario o grupo de Windows. Si *account_name* es un miembro de varios grupos, se devuelven varias filas a las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que se les ha concedido acceso a. Las filas con privilegios de **Administrador** se devuelven antes que las filas de privilegios de **usuario** y, dentro de una fila de nivel de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] privilegios, se devuelven en el orden en que se crearon los inicios de sesión correspondientes.  
   
- Si se especifican *account_name* y **miembros** , se devuelve una lista de los miembros de nivel siguiente del grupo. Si *account_name* es un grupo local, la lista puede incluir usuarios locales, usuarios del dominio y grupos. Si *account_name* es una cuenta de dominio, la lista está formada por usuarios del dominio. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe conectarse al controlador de dominio para recuperar la información de pertenencia a grupos. Si el servidor no puede contactar con el controlador de dominio, no se obtendrá ninguna información.  
+ Si se especifican *account_name* y **miembros** , se devuelve una lista de los miembros de nivel siguiente del grupo. Si *account_name* es un grupo local, la lista puede incluir usuarios locales, usuarios del dominio y grupos. Si *account_name* es una cuenta de dominio, la lista está formada por usuarios del dominio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe conectarse al controlador de dominio para recuperar la información de pertenencia a grupos. Si el servidor no puede contactar con el controlador de dominio, no se obtendrá ninguna información.  
   
  **xp_logininfo** solo devuelve información de Active Directory grupos globales, no de grupos universales.  
   

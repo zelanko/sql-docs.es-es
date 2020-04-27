@@ -18,10 +18,10 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67903019"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
@@ -48,23 +48,23 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|nombre de base de datos.|  
+|**name**|**sysname**|nombre de base de datos.|  
 |**db_size**|**nvarchar (13)**|Tamaño total de la base de datos.|  
 |**propietario**|**sysname**|Propietario de la base de datos, como **SA**.|  
 |**DBID**|**smallint**|Id. de la base de datos.|  
-|**creado**|**nvarchar(11)**|Fecha de creación de la base de datos.|  
-|**estatus**|**nvarchar (600)**|Lista de valores separados por comas de las opciones actualmente establecidas en la base de datos.<br /><br /> Las opciones con valores booleanos aparecen solamente si están habilitadas. Las opciones no booleanas se muestran con sus valores correspondientes en forma de *option_name*=*valor*.<br /><br /> Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**created**|**nvarchar(11)**|Fecha de creación de la base de datos.|  
+|**status**|**nvarchar (600)**|Lista de valores separados por comas de las opciones actualmente establecidas en la base de datos.<br /><br /> Las opciones con valores booleanos aparecen solamente si están habilitadas. Las opciones no booleanas se muestran con sus valores correspondientes en forma de *option_name*=*valor*.<br /><br /> Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Nivel de compatibilidad de la base de datos: 60, 65, 70, 80 o 90.|  
   
  Si se especifica *Name* , hay un conjunto de resultados adicional que muestra la asignación de archivos para la base de datos especificada.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**NCHAR (128)**|Nombre de archivo lógico.|  
+|**name**|**nchar(128)**|Nombre de archivo lógico.|  
 |**ID**|**smallint**|Identificador de archivo.|  
 |**extensión**|**NCHAR (260)**|Nombre del archivo en el sistema operativo (nombre de archivo físico).|  
-|**prima**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
-|**ajusta**|**nvarchar (18)**|Tamaño del archivo, en megabytes.|  
+|**grupo_de_archivos**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
+|**size**|**nvarchar (18)**|Tamaño del archivo, en megabytes.|  
 |**tamañomáximo**|**nvarchar (18)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**crezca**|**nvarchar (18)**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio nuevo.|  
 |**uso**|**VARCHAR (9)**|Uso del archivo. En el caso de un archivo de datos, el valor es **' solo datos '** y, para el archivo de registro, el valor es **' solo registro '**.|  
@@ -99,7 +99,7 @@ GO
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [Sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [Sys. grupos de archivos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [Sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

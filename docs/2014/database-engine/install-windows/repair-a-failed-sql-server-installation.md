@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046665"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>Anular una instalación de SQL Server 2014
@@ -46,7 +46,7 @@ ms.locfileid: "67046665"
   
 -   Para reparar un nodo de clúster de conmutación por error después una operación de preparación con errores, use **Eliminar nodo de un clúster de conmutación por error de SQL Server** y, a continuación, vuelva a realizar el paso de preparación. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-from-the-installation-center"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el Centro de instalación  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-from-the-installation-center"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el Centro de instalación  
   
 1.  Inicie el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (setup.exe) desde el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "67046665"
   
 8.  La página Progreso de la reparación muestra el estado de la operación de reparación. La página Operación completada indica que la operación ha finalizado.  
   
-### <a name="to-repair-a-failed-installation-of-includessnoversionincludesssnoversion-mdmd-using-command-prompt"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el símbolo del sistema  
+### <a name="to-repair-a-failed-installation-of-ssnoversion-using-command-prompt"></a>Para reparar una instalación con errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el símbolo del sistema  
   
 1.  Ejecute el comando siguiente en el símbolo del sistema:  
   

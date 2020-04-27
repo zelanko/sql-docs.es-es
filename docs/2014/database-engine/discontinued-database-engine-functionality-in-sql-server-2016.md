@@ -34,26 +34,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67463470"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidad del motor de base de datos no incluida en SQL Server 2014
   En este tema se describen las características del [!INCLUDE[ssDE](../includes/ssde-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="SQL14"></a>Características no incluidas en[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a><a name="SQL14"></a>Características no incluidas en[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  En la tabla siguiente se enumeran las características que se quitaron en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-|Category|Característica no incluida|Sustituta|  
+|Categoría|Característica no incluida|Sustituta|  
 |--------------|--------------------------|-----------------|  
 |Nivel de compatibilidad|Nivel de compatibilidad 90|Las bases de datos se deben establecer en el nivel de compatibilidad 100 como mínimo. Cuando se actualiza una base de datos con un nivel de compatibilidad inferior a 100 a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], el nivel de compatibilidad de la base de datos se establece en 100 durante la operación de actualización.|  
   
-## <a name="Denali"></a>Características no incluidas en[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-sssql11"></a><a name="Denali"></a>Características no incluidas en[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  En la tabla siguiente se enumeran las características que se quitaron en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-|Category|Característica no incluida|Sustituta|  
+|Categoría|Característica no incluida|Sustituta|  
 |--------------|--------------------------|-----------------|  
 |Copias de seguridad y restauración|La **copia de seguridad {database &#124; log} con la contraseña** y la copia de **seguridad {Database &#124; log} con MEDIAPASSWORD** no se incluyen. **RESTORE {DATABASE &#124; log} con la contraseña de [media]** sigue en desuso.|None|  
 |Copias de seguridad y restauración|**RESTORE {DATABASE &#124; LOG}... CON DBO_ONLY**|**RESTORE {DATABASE &#124; LOG}...... CON RESTRICTED_USER**|  
@@ -62,11 +62,11 @@ ms.locfileid: "67463470"
 |Protocolos de conexión|Se suspende la compatibilidad para el protocolo VIA.|Utilice TCP en su lugar.|  
 |Objetos de base de datos|Cláusula `WITH APPEND` en desencadenadores|Volver a crear todo desencadenador.|  
 |Opciones de base de datos|`sp_dboption`|`ALTER DATABASE`|  
-|Mail|SQL Mail|Usar Database Mail. Para obtener más información, vea [correo electrónico de base de datos](../relational-databases/database-mail/database-mail.md) y [usar correo electrónico de base de datos en lugar de SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Correo|SQL Mail|Usar Database Mail. Para obtener más información, vea [correo electrónico de base de datos](../relational-databases/database-mail/database-mail.md) y [usar correo electrónico de base de datos en lugar de SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Administración de la memoria|Compatibilidad para Extensiones de ventana de dirección (AWE) de 32 bits y para agregar memoria sin interrupciones de 32 bits.|Use un sistema operativo de 64 bits.|  
 |Metadatos|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Capacidad de programación|Objetos de administración distribuida de SQL Server (SQL-DMO)|Objetos de administración de SQL Server (SMO)|  
-|Sugerencias de consulta|`FASTFIRSTROW`diversas|`OPTION (FAST`*n* `)`.|  
+|Sugerencias de consulta|Sugerencia `FASTFIRSTROW`|`OPTION (FAST`*n* `)`.|  
 |Servidores remotos|Ya no se incluye la capacidad para que los usuarios creen nuevos servidores remotos con `sp_addserver`. Solamente sigue estando disponible `sp_addserver` con la opción 'local'. Los servidores remotos conservados durante la actualización o creados por la replicación se pueden utilizar.|Reemplace los servidores remotos con servidores vinculados.|  
 |Seguridad|`sp_dropalias`|Reemplace los alias por una combinación de cuentas de usuario y roles de la base de datos. Use `sp_dropalias` para quitar los alias de las bases de datos actualizadas.|  
 |Seguridad|El parámetro de versión de **PWDCOMPARE** que representa un valor de un inicio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de sesión anterior a 2000 es discontinuo.|None|  

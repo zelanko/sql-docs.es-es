@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67131794"
 ---
 # <a name="view-event-session-data"></a>Ver datos de sesiones de eventos
@@ -63,7 +63,7 @@ ms.locfileid: "67131794"
 ### <a name="watching-live-data"></a>Observar datos en directo  
  Puede observar los datos en directo a medida que se capturan.  
   
--   En Explorador de objetos, expanda los nodos **Administración**, **eventos extendidos**y **sesiones** .  
+-   En el Explorador de objetos, expanda los nodos **Administración**, **Eventos extendidos**y después **Sesiones** .  
 
 -   Haga clic con el botón secundario en el nombre de sesión y, a continuación, haga clic en **Observar datos en directo** para iniciar la presentación de los datos de seguimiento.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67131794"
   
  Puede crear, modificar o eliminar columnas combinadas:  
   
-1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **Observar datos en directo**).  
+1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión y, después, seleccionar **observar datos en directo**).  
   
 2.  En la ventana de resultados de seguimiento, haga clic con el botón secundario en el encabezado de columna y, a continuación, haga clic en **Elegir columnas**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "67131794"
   
  Para crear un filtro:  
   
-1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión y, a continuación, seleccionar **Observar datos en directo**).  
+1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión y, después, seleccionar **observar datos en directo**).  
   
 2.  En la ventana de resultados de seguimiento, seleccione los resultados que desee filtrar, y a continuación, en la barra de herramientas **Eventos extendidos** , haga clic en **Filtros**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "67131794"
 ### <a name="sort-results"></a>Ordenar los resultados  
  Para ordenar los resultados en orden ascendente o descendente:  
   
-1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas).  
+1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas).  
   
 2.  En la ventana de resultados de seguimiento, haga clic con el botón secundario en el encabezado de columna que desea ordenar y haga clic en **Orden ascendente** u **Orden descendente**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "67131794"
   
  Puede agrupar los resultados por una sola columna o por varias columnas.  
   
- Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas).  
+ Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas).  
   
  Para agrupar los resultados por una sola columna, haga clic con el botón secundario en el encabezado de columna en la ventana de resultados de seguimiento y haga clic en **Agrupar por esta columna**. Para deshacer la agrupación, seleccione una de las filas y haga clic en **Quitar todos los grupos**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "67131794"
   
 -   Sum  
   
--   min  
+-   Min  
   
 -   max  
   
@@ -159,7 +159,7 @@ ms.locfileid: "67131794"
   
  La agregación se realiza en un grupo, por lo que debe agrupar los resultados antes de realizar la agregación. Para agregar los resultados:  
   
-1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **Observar datos en directo**y, a continuación, hacer clic en el botón **Detener fuente de distribución de datos** de la barra de herramientas).  
+1.  Abra un archivo .XEL para ver los resultados de seguimiento. (También puede hacer clic con el botón secundario en el nombre de la sesión, seleccionar **observar datos en directo**y, a continuación, hacer clic en el botón **detener fuente** de distribución de datos de la barra de herramientas).  
   
 2.  En la barra de herramientas **Eventos extendidos** , haga clic en el botón **Agregación** . En el cuadro de diálogo Agregación se mostrarán las columnas disponibles para la agregación.  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131794"
   
  Para ver el gráfico de interbloqueo:  
   
--   En Explorador de objetos, expanda los nodos **Administración**, **eventos extendidos**y **sesiones** .  
+-   En el Explorador de objetos, expanda los nodos **Administración**, **Eventos extendidos**y después **Sesiones** .  
   
 -   Haga clic con el botón secundario en la sesión que contiene el evento de interbloqueo configurado que desea ver y, a continuación, seleccione **Observar datos en directo**.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131794"
   
  Para ver los gráficos del plan de consulta:  
   
-1.  En Explorador de objetos, expanda los nodos **Administración**, **eventos extendidos**y **sesiones** .  
+1.  En el Explorador de objetos, expanda los nodos **Administración**, **Eventos extendidos**y después **Sesiones** .  
   
 2.  Haga clic con el botón secundario en la sesión que contiene el gráfico del plan de consulta que desea ver (por ejemplo, query_post_compilation_showplan) y, a continuación, seleccione **Observar datos en directo**.  
   

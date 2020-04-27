@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189130"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
@@ -43,9 +43,9 @@ ms.locfileid: "68189130"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Los trabajos distribuidos que tienen pasos asociados a un proxy se ejecutan bajo el contexto de la cuenta de proxy en el servidor de destino. Para que se descarguen del servidor maestro al de destino los pasos de trabajo asociados con un proxy, asegúrese de que se cumplen las condiciones siguientes:  
   
 -   La subclave del registro del servidor maestro **\\\<HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server*instance_name*> \sql Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) está establecida en 1 (true). De forma predeterminada, esta subclave está establecida en 0 (false).  
@@ -62,14 +62,14 @@ ms.locfileid: "68189130"
   
      Para resolver este error, asegúrese de que existe una cuenta de proxy en el servidor de destino con el mismo nombre que la cuenta de proxy del servidor maestro en la que se ejecuta el paso de trabajo.  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los permisos de ejecución de este procedimiento corresponden de forma predeterminada a los miembros del rol fijo de servidor `sysadmin`.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-make-a-master-server"></a>Para establecer un servidor principal  
   
-1.  En **Explorador de objetos,** Conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
+1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
   
 2.  Haga clic con el botón derecho en **Agente SQL Server**, seleccione **Administración de multiservidor**y, a continuación, haga clic en **Hacer que sea principal**. El **Asistente para servidor principal** le guiará en el proceso de establecimiento de un servidor principal y de adición de servidores de destino.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68189130"
      **Dirección del buscapersonas**  
      Establece la dirección de correo electrónico de buscapersonas para el operador.  
   
-     **Dirección de net send**  
+     **Dirección de NET SEND**  
      Establece la dirección de **net send** del operador.  
   
 4.  En la página **Servidor de destino** , seleccione servidores de destino para el servidor maestro.  
@@ -112,10 +112,10 @@ ms.locfileid: "68189130"
   
 5.  En la página **Credenciales de inicio de sesión del servidor maestro** , especifique si desea crear un nuevo inicio de sesión para el servidor de destino, si es necesario, y asignarle derechos de acceso al servidor maestro.  
   
-     **Cree un nuevo inicio de sesión, si es necesario, y asígnele derechos para el servidor maestro.**  
+     **Cree un nuevo inicio de sesión, si es necesario, y asígnele derechos para el servidor maestro**  
      Crea un nuevo inicio de sesión en el servidor de destino si el inicio de sesión especificado ya no existe.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-make-a-master-server"></a>Para establecer un servidor principal  
   

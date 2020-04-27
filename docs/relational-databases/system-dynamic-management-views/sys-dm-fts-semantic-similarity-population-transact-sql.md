@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900872"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
@@ -41,10 +41,10 @@ ms.locfileid: "67900872"
 |**document_count**|**int**|Número de total de documentos del rellenado|  
 |**document_processed_count**|**int**|Número de documentos procesados desde el inicio de este ciclo de llenado|  
 |**completion_type**|**int**|Estado de finalización de este llenado.|  
-|**completion_type_description**|**nvarchar (120)**|Descripción del tipo de finalización.|  
+|**completion_type_description**|**nvarchar(120)**|Descripción del tipo de finalización.|  
 |**worker_count**|**int**|Número de subprocesos de trabajo asociados a la extracción de similitud|  
-|**estatus**|**int**|Estado de este llenado. Nota: algunos de los estados son transitorios. Uno de los siguientes:<br /><br /> 3 = Iniciando<br /><br /> 5 = Procesamiento normal<br /><br /> 7 = Procesamiento detenido<br /><br /> 11 = Rellenado anulado|  
-|**status_description**|**nvarchar (120)**|Descripción del estado de llenado.|  
+|**status**|**int**|Estado de este llenado. Nota: algunos de los estados son transitorios. Uno de los siguientes:<br /><br /> 3 = Iniciando<br /><br /> 5 = Procesamiento normal<br /><br /> 7 = Procesamiento detenido<br /><br /> 11 = Rellenado anulado|  
+|**status_description**|**nvarchar(120)**|Descripción del estado de llenado.|  
 |**start_time**|**datetime**|Hora en que se inició el rellenado.|  
 |**incremental_timestamp**|**timestamp**|Representa la marca de tiempo de inicio de un llenado completo. Para los otros de tipos de llenado este valor es el último punto de comprobación confirmado que representa el progreso de los llenados.|  
   

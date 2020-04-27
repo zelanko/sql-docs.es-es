@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67597526"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Crear predicciones (Tutorial básico de minería de datos)
@@ -57,7 +57,7 @@ ms.locfileid: "67597526"
   
      De esta forma se asigna la columna de predicción, [Bike Buyer], a una columna de la tabla de entrada.  
   
-3.  Haga clic en **OK**.  
+3.  Haga clic en **Aceptar**.  
   
 4.  En **Explorador de soluciones**, haga clic con el botón secundario en la vista del origen de datos **Targeted mailing** y seleccione **Diseñador de vistas**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "67597526"
     > [!WARNING]  
     >  Si no ve la columna en la lista, puede que tenga que actualizar la definición de la vista del origen de datos que se ha cargado en el diseñador. Para ello, en el menú **archivo** , seleccione **guardar todo**y, a continuación, cierre y vuelva a abrir el proyecto en el diseñador.  
   
-11. Haga clic en **OK**.  
+11. Haga clic en **Aceptar**.  
   
 ## <a name="designing-the-prediction-query"></a>Diseñar la consulta de predicción  
   
@@ -128,7 +128,7 @@ ms.locfileid: "67597526"
   
      Permite quitar cláusulas de la consulta sin tener que eliminarlas desde el diseñador. Esto puede resultar útil cuando se trabaja con consultas complejas y se desear conservar la sintaxis sin tener que copiar y pegar DMX en la ventana.  
   
--   **Grupo**  
+-   **Agrupamiento**  
   
      Inserta un paréntesis de apertura (izquierdo) al principio de la línea seleccionada o inserta un paréntesis de cierre (derecho) al final de la línea actual.  
   

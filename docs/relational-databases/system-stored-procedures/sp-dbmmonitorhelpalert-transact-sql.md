@@ -19,10 +19,10 @@ ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899189"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)

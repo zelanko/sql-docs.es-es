@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110186"
 ---
 # <a name="tuning-a-workload"></a>Optimizar una carga de trabajo
@@ -34,7 +34,7 @@ ms.locfileid: "66110186"
   
 4.  Seleccione **Archivo** para la **Carga de trabajo**y, después, haga clic en el botón **Busque un archivo de carga de trabajo** para localizar el archivo **MyScript.sql** que guardó en el paso 1.  
   
-5.  Seleccione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en la lista **Base de datos para análisis de carga de trabajo** , seleccione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en la cuadrícula **Seleccionar bases de datos y tablas para optimizar** y deje activada la opción **Guardar registro de optimización** . **Base de datos para análisis de carga de trabajo** especifica la primera base de datos a la que Asistente para la optimización de motor de base de datos se conecta al optimizar una carga de trabajo. Una vez iniciada la optimización, el Asistente para la optimización de motor de base de datos se conecta a las bases de datos especificadas en las instrucciones `USE DATABASE` que contiene la carga de trabajo.  
+5.  Seleccione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en la lista **Base de datos para análisis de carga de trabajo** , seleccione [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en la cuadrícula **Seleccionar bases de datos y tablas para optimizar** y deje activada la opción **Guardar registro de optimización** . **Base de datos para análisis de carga de trabajo** especifica la primera base de datos a la que se conecta el Asistente para la optimización de motor de base de datos al optimizar una carga de trabajo. Una vez iniciada la optimización, el Asistente para la optimización de motor de base de datos se conecta a las bases de datos especificadas en las instrucciones `USE DATABASE` que contiene la carga de trabajo.  
   
 6.  Haga clic en la pestaña **Opciones de optimización** . No establecerá ninguna opción de optimización para esta práctica, pero dedique un momento a revisar las opciones predeterminadas de optimización. Presione F1 para ver la Ayuda para esta página con pestañas. Haga clic en **Opciones avanzadas** para ver opciones de optimización adicionales. Haga clic en **Ayuda** , en el cuadro de diálogo **Opciones avanzadas de optimización** , para obtener información sobre las opciones que aparecen. Haga clic en **Cancelar** para cerrar el cuadro de diálogo **Opciones avanzadas de optimización** , y deje seleccionadas las opciones predeterminadas.  
   

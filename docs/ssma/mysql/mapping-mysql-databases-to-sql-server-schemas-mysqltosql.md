@@ -13,10 +13,10 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 215833c96fae02ae7877e00173fb5a920a47ee0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908985"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Asignación de bases de datos de MySQL a esquemas de SQL Server (MySQLToSQL)
@@ -65,7 +65,7 @@ Si personaliza la asignación entre un esquema de MySQL y un esquema de SQL Serv
   
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos y el esquema predeterminados.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
 Si desea analizar la conversión de objetos de MySQL en SQL Server o SQL Azure objetos, puede [crear un informe de conversión](assessing-mysql-databases-for-conversion-mysqltosql.md) ; de lo contrario, puede [convertir las definiciones de objetos de base de datos de MySQL](converting-mysql-databases-mysqltosql.md) en esquemas de SQL Server o SQL Azure  
   
 ## <a name="see-also"></a>Consulte también  

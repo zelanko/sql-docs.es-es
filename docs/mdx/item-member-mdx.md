@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d7afa88f9d6239c8da7cb9c406ef11f0764f8dcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905909"
 ---
 # <a name="item-member-mdx"></a>Item (Member) (MDX)
@@ -31,7 +31,7 @@ Tuple_Expression.Item( Index )
  *Tuple_Expression*  
  Expresión MDX válida que devuelve una tupla.  
   
- *Ajustar*  
+ *Índice*  
  Expresión numérica válida que especifica el miembro concreto mediante la posición en la tupla que se devolverá.  
   
 ## <a name="remarks"></a>Observaciones  

@@ -18,10 +18,10 @@ ms.assetid: d7ffa9df-bf1d-41b8-837e-b762c17c2764
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 966a77ae53576488ca14c16b4464ebce2816eb02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907346"
 ---
 # <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67907346"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|El nombre de la base de datos de distribución.|  
+|**name**|**sysname**|El nombre de la base de datos de distribución.|  
 |**min_distretention**|**int**|El período mínimo de retención, en horas, antes de que se eliminen las transacciones.|  
 |**max_distretention**|**int**|El período máximo de retención, en horas, antes de que se eliminen las transacciones.|  
 |**history_retention**|**int**|El número de horas que se mantiene el historial.|  

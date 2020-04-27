@@ -19,10 +19,10 @@ ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899174"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)

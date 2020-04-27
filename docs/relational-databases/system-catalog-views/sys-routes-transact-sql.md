@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: bfdd322107da1a08edb3933aee9d5b79b6c2b47a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904435"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "67904435"
 
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre de la ruta, único en la base de datos. No acepta valores NULL.|  
+|**name**|**sysname**|Nombre de la ruta, único en la base de datos. No acepta valores NULL.|  
 |**route_id**|**int**|Identificador de la ruta. No acepta valores NULL.|  
 |**principal_id**|**int**|Identificador de la base de datos de la entidad de seguridad propietaria de la ruta. Acepta valores NULL.|  
 |**remote_service_name**|**nvarchar(256)**|Nombre del servicio remoto. Acepta valores NULL.|  
 |**broker_instance**|**nvarchar(128)**|Identificador del agente que hospeda el servicio remoto. Acepta valores NULL.|  
 |**validez**|**datetime**|Fecha y hora de expiración de la ruta. Tenga en cuenta que este valor no usa la zona horaria local. En lugar de ello, el valor muestra la fecha de expiración de UTC. Acepta valores NULL.|  
-|**Dirección**|**nvarchar(256)**|Dirección de red a la que Service Broker envía mensajes para el servicio remoto. Acepta valores NULL. Por Instancia administrada de SQL Database, la dirección debe ser local.|  
+|**address**|**nvarchar(256)**|Dirección de red a la que Service Broker envía mensajes para el servicio remoto. Acepta valores NULL. Por Instancia administrada de SQL Database, la dirección debe ser local.|  
 |**mirror_address**|**nvarchar(256)**|Dirección de red del asociado de reflejo para el servidor especificado en la dirección. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  

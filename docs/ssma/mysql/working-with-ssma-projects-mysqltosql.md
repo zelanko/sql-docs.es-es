@@ -15,10 +15,10 @@ ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904903"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Proyectos de SSMA (MySQLToSQL)
@@ -75,11 +75,11 @@ Para migrar datos de bases de datos MySQL a SQL Server o SQL Azure, debe crear u
   
 4.  En el menú desplegable migración, seleccione la versión de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **que se** usa para la migración. Las opciones disponibles son:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -105,7 +105,7 @@ Si las bases de datos del proyecto han cambiado o no se han convertido, SSMA le 
   
 1.  Para cada base de datos que muestra el estado **falta de metadatos**, active la casilla situada junto al nombre de la base de datos. El almacenamiento de metadatos puede tardar varios minutos. Si no desea guardar los metadatos en este momento, no active las casillas de verificación.  
   
-2.  Haga clic en **Save**(Guardar).  
+2.  Haga clic en **Guardar**.  
   
 SSMA analizará los esquemas de MySQL y guardará los metadatos en el archivo de proyecto.  
   

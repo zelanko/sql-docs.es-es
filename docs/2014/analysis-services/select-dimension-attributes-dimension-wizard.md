@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624350"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Seleccionar los atributos de la dimensión (Asistente para dimensiones)
@@ -46,7 +46,7 @@ ms.locfileid: "67624350"
  Para cambiar el nombre de un atributo, haga clic en el nombre del atributo y escriba otro nombre.  
   
  **Habilitar exploración**  
- Seleccione esta opción para que el atributo esté disponible para que el usuario final pueda examinar y filtrar. **Habilitar la exploración** debe estar seleccionada para el atributo clave. Para los atributos no clave, el valor predeterminado es no tener la opción **Habilitar exploración** seleccionada, lo que hace que se muestren los atributos no clave solo como propiedades de miembro.  
+ Seleccione esta opción para que el atributo esté disponible para que el usuario final pueda examinar y filtrar. La opción**Habilitar exploración** debe estar seleccionada para el atributo clave. Para los atributos no clave, el valor predeterminado es no tener la opción **Habilitar exploración** seleccionada, lo que hace que se muestren los atributos no clave solo como propiedades de miembro.  
   
  En la mayoría de los casos, el atributo se convierte en disponible o no disponible para examinar estableciendo la propiedad `AttributeHierarchyEnabled` en `True` o `False`, respectivamente. Sin embargo, en los tres casos siguientes, el asistente usa valores diferentes.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67624350"
 |----------|--------------|  
 |Una dimensión contiene una jerarquía de elementos primarios y secundarios, y la opción **Habilitar exploración** no está seleccionada|El asistente deja la propiedad `AttributeHierarchyEnabled` establecida en `True`y establece el atributo `AttributeHierarchyVisible` en `False` para el atributo clave.|  
 |Una tabla de una dimensión contiene una clave externa a una tabla que no se encuentra en la dimensión.|El asistente selecciona la clave externa como un atributo que se va a incluir pero no seleccionará **Habilitar exploración**. Si mantiene esta configuración, la propiedad `AttributeHiearchyEnabled` del atributo se establecerá en `True`y la propiedad `AttributeHierarchyVisible` se establecerá en `False`.|  
-|Una dimensión contiene tablas de copo de nieve a las que se tiene acceso a través de columnas de clave externa que admiten valores NULL<br /><br /> y<br /><br /> la opción Habilitar exploración para el atributo que está basado en la clave de la tabla de copo de nieve no está seleccionada.|El asistente creará el nuevo atributo que tiene la propiedad `AttributeHiearchyEnabled` establecida en `True`y la propiedad `AttributeHierarchyVisible` establecida en `False`.|  
+|Una dimensión contiene tablas de copo de nieve a las que se tiene acceso a través de columnas de clave externa que admiten valores NULL<br /><br /> - y -<br /><br /> la opción Habilitar exploración para el atributo que está basado en la clave de la tabla de copo de nieve no está seleccionada.|El asistente creará el nuevo atributo que tiene la propiedad `AttributeHiearchyEnabled` establecida en `True`y la propiedad `AttributeHierarchyVisible` establecida en `False`.|  
   
  **Tipo de atributo**  
  (Opcional) Establezca el tipo para el atributo. El valor predeterminado es **Regular**. El tipo de atributo proporciona orientación a las aplicaciones cliente sobre qué información podría contener el atributo.  

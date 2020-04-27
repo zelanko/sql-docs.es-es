@@ -10,10 +10,10 @@ ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908869"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Configuración del proyecto (conversión) (MySQLToSQL)
@@ -44,7 +44,7 @@ El panel conversión está disponible en los cuadros de diálogo Configuración 
 |**Generar restricción para columnas de columnas de tipos de datos numéricos sin signo**|Agregue una comprobación de valor no negativo a las columnas de tipos de datos numéricos sin signo.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
 |**Generar restricción para columnas de tipo de datos YEAR**|Genera una restricción para las columnas de tipo de datos YEAR en el SQL Server o SQL Azure tabla, si no está presente en la tabla MySQL. En caso afirmativo, todas las columnas convertidas del tipo de datos YEAR irán acompañadas de la restricción CHECK que controla el valor.<br /><br />**Modo predeterminado**: no<br /><br />**Modo optimista**: no<br /><br />**Modo completo**: sí|  
   
-### <a name="data-types"></a>Tipo de datos  
+### <a name="data-types"></a>Tipos de datos  
   
 |||  
 |-|-|  

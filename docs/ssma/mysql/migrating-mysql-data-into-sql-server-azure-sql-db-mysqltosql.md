@@ -13,10 +13,10 @@ ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908830"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>Migración de datos de MySQL en SQL Server: Azure SQL DB (MySQLToSQL)

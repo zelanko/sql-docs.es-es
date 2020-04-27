@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110155"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo
-  Esta tarea le guía por los pasos para iniciar la utilidad **DTA** , ver su ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Usa la carga de trabajo, script. SQL, que creó para la Asistente para la optimización de motor de base de datos práctica de la interfaz gráfica de usuario (GUI) para [optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md).  
+   Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta**, ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Usa la carga de trabajo, script. SQL, que creó para la Asistente para la optimización de motor de base de datos práctica de la interfaz gráfica de usuario (GUI) para [optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md).  
   
  En este tutorial se usa la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Por motivos de seguridad, las bases de datos de ejemplo no se instalan de manera predeterminada. Para instalarlas, consulte [Instalar ejemplos de SQL Server y bases de datos de ejemplo](http://sqlserversamples.codeplex.com).  
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624408"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
@@ -71,7 +71,7 @@ ms.locfileid: "67624408"
   
 1.  [Abrir una DAC (conexión de administrador dedicada)](#open-a-dac-dedicated-administrator-connection) 
   
-2.  [Tomar medidas correctivas](#take-corrective-action) 
+2.  [Tomar una acción correctora](#take-corrective-action) 
   
 ### <a name="open-a-dac-dedicated-administrator-connection"></a>Abrir una DAC (conexión de administrador dedicada)  
  Microsoft SQL Server ofrece una conexión de administrador dedicada (DAC). La DAC permite a los administradores acceder a una instancia en ejecución del motor de base de datos de SQL Server para solucionar problemas en el servidor, aunque el servidor no responda a otras conexiones de cliente. La DAC está disponible a través de la utilidad `sqlcmd` y SQL Server Management Studio (SSMS).  
@@ -128,7 +128,7 @@ GO
  Para obtener información sobre los valores máximos para MAX_MEMORY_PERCENT, vea la sección del tema [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Instale memoria adicional  
- En última instancia, si es posible, la mejor solución es instalar memoria física adicional. Si lo hace, recuerde que seguramente también podrá aumentar el valor de MAX_MEMORY_PERCENT (vea el subtema [Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] probablemente no necesitará más memoria, lo que permitirá asignar toda o gran parte de la memoria nueva instalada al grupo de recursos de servidor.  
+ En última instancia, si es posible, la mejor solución es instalar memoria física adicional. Si lo hace, recuerde que probablemente también podrá aumentar el valor de MAX_MEMORY_PERCENT (vea el subtema [cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), ya [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es probable que necesite más memoria, lo que le permite obtener la mayoría de las memorias recién instaladas disponibles para el grupo de recursos.  
   
 > [!IMPORTANT]  
 >  Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
@@ -144,7 +144,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Administrar memoria para OLTP en memoria](../../database-engine/managing-memory-for-in-memory-oltp.md)   
  [Supervisión y solución de problemas de uso de memoria](monitor-and-troubleshoot-memory-usage.md)   
- [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Enlazar una base de datos con tablas optimizadas para memoria a un grupo de recursos](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

@@ -11,17 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046761"
 ---
-# <a name="lesson-3-adding-logging"></a>Lección 3: Agregar registro
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye características de registro que permiten solucionar problemas y supervisar la ejecución de paquetes proporcionando un seguimiento de eventos de tarea y de contenedor. La características de registro son flexibles, pueden habilitarse en el nivel de paquete o en tareas y contendores individuales del paquete. Puede seleccionar qué eventos deben registrarse y crear varios registros para un único paquete.  
+# <a name="lesson-3-adding-logging"></a>Lección 3: Adición de registro
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye características de registro que permiten supervisar y solucionar los problemas de ejecución de paquetes mediante el seguimiento de eventos de tarea y de contenedor. La características de registro son flexibles, pueden habilitarse en el nivel de paquete o en tareas y contendores individuales del paquete. Puede seleccionar qué eventos deben registrarse y crear varios registros para un único paquete.  
   
- El registro lo proporciona un proveedor de registro. Cada proveedor de registro puede escribir información de registro en distintos formatos y tipos de destino. 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona los siguientes proveedores de registro:  
+ El registro lo proporciona un proveedor de registro. Cada proveedor de registro puede escribir información de registro en distintos formatos y tipos de destino. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona los siguientes proveedores de registro:  
   
 -   Archivo de texto  
   
@@ -41,13 +40,13 @@ ms.locfileid: "67046761"
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: Copiar el paquete de la Lección 2](lesson-3-1-copying-the-lesson-2-package.md)  
+-   [Paso 1: Copia del paquete de la lección 2](lesson-3-1-copying-the-lesson-2-package.md)  
   
--   [Paso 2: Agregar y configurar el registro](lesson-3-2-adding-and-configuring-logging.md)  
+-   [Paso 2: Adición y configuración de registro](lesson-3-2-adding-and-configuring-logging.md)  
   
--   [Paso 3: Probar el paquete del tutorial de la lección 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+-   [Paso 3: Prueba del paquete del tutorial de la lección 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
- [Paso 1: Copiar el paquete de la Lección 2](lesson-3-1-copying-the-lesson-2-package.md)  
+ [Paso 1: Copia del paquete de la lección 2](lesson-3-1-copying-the-lesson-2-package.md)  
   
   

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185811"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implementar directivas programadas en varias instancias
@@ -28,7 +28,7 @@ ms.locfileid: "68185811"
   
  Realizará estas tareas en el equipo en el que completó las tareas anteriores de esta lección.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Esta tarea consta de los requisitos previos siguientes:  
   
 -   Debe haber completado las tareas anteriores de esta lección.  
@@ -92,7 +92,7 @@ ms.locfileid: "68185811"
 ## <a name="summary"></a>Resumen  
  Este tutorial le ha mostrado la forma de realizar evaluaciones tanto programadas como a petición de las directivas de prácticas recomendadas en una o varias instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="next"></a>Pasos siguientes  
+## <a name="next"></a>Siguiente  
  Este tutorial ha finalizado. Para volver al inicio, vea [Tutorial: evaluar las prácticas recomendadas mediante la administración basada en directivas](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
  Para ver una lista de [!INCLUDE[ssDE](../includes/ssde-md.md)] los tutoriales, haga clic en [motor de base de datos tutoriales](../relational-databases/database-engine-tutorials.md).  

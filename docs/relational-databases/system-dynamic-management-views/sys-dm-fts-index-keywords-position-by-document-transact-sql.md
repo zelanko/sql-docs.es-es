@@ -19,10 +19,10 @@ ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900953"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>Sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
@@ -51,10 +51,10 @@ OBJECT_ID('table_name')
   
 |Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
-|palabra clave|**varbinary (128)**|Cadena binaria que representa la palabra clave.|  
+|palabra clave|**varbinary(128)**|Cadena binaria que representa la palabra clave.|  
 |display_term|**nvarchar(4000)**|Formato legible de la palabra clave. Este formato se deriva del formato interno que se almacena en el índice de texto completo.|  
 |column_id|**int**|Identificador de la columna en que la palabra clave actual forma parte del índice de texto completo.|  
-|document_id|**BIGINT**|Identificador del documento o fila en que el término actual se indizó con texto completo. Este identificador corresponde al valor de clave de texto completo de ese documento o fila.|  
+|document_id|**bigint**|Identificador del documento o fila en que el término actual se indizó con texto completo. Este identificador corresponde al valor de clave de texto completo de ese documento o fila.|  
 |position|**int**|Posición de la palabra clave en el documento.|  
   
 ## <a name="remarks"></a>Observaciones  

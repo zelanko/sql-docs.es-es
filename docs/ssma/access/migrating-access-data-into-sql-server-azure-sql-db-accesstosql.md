@@ -19,10 +19,10 @@ ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8f0e93efee0c57c904c32ec52fbb560f973f21b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907144"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>Migración de datos de Access en SQL Server: Azure SQL DB (AccessToSQL)
@@ -55,5 +55,5 @@ Si tiene acceso a las aplicaciones de base de datos que desea seguir usando desp
   
 ## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[Configuración de las opciones de conversión y de migración](setting-conversion-and-migration-options-accesstosql.md)  
+[Configuración de las opciones de conversión y migración](setting-conversion-and-migration-options-accesstosql.md)  
   

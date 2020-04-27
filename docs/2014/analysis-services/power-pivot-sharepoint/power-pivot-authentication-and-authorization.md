@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67826336"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
@@ -24,7 +24,7 @@ ms.locfileid: "67826336"
   
  Haga clic en los siguientes vínculos para leer secciones concretas de este tema:  
   
- [Autenticación de Windows con el requisito de inicio de sesión en modo clásico](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Autenticación de Windows mediante el inicio de sesión en modo clásico](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [Operaciones de PowerPivot que requieren la autorización del usuario](#UserConnections)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67826336"
   
  [Consideraciones de seguridad de Excel Services para los libros PowerPivot](#excel)  
   
-##  <a name="bkmk_auth"></a>Autenticación de Windows con el requisito de inicio de sesión en modo clásico  
+##  <a name="windows-authentication-using-classic-mode-sign-in-requirement"></a><a name="bkmk_auth"></a>Autenticación de Windows con el requisito de inicio de sesión en modo clásico  
  PowerPivot para SharePoint admite un conjunto reducido de las opciones de autenticación disponibles en SharePoint. De las opciones de autenticación disponibles, solo se admite la autenticación de Windows para una implementación de PowerPivot para SharePoint. Además, la aplicación web a través de la que se produce el inicio de sesión debe estar configurada para el modo clásico.  
   
  Se requiere la autenticación de Windows porque el motor de datos de Analysis Services de una implementación de PowerPivot para SharePoint solo admite este tipo de autenticación. Excel Services establece conexiones con Analysis Services a través del proveedor OLE DB MSOLAP mediante una identidad de usuario de Windows que se ha autenticado a través de NTLM o del protocolo Kerberos.  
@@ -52,7 +52,7 @@ ms.locfileid: "67826336"
   
  En el caso de aplicaciones web existentes, use las siguientes instrucciones para comprobar que la aplicación web está configurada para usar la autenticación de Windows.  
   
-1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar las aplicaciones web**.  
+1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones web**.  
   
 2.  Seleccione la aplicación web.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67826336"
   
 4.  Compruebe que tiene un proveedor para cada zona, y que la zona predeterminada está establecida en Windows.  
   
-##  <a name="UserConnections"></a>Operaciones de PowerPivot que requieren la autorización del usuario  
+##  <a name="powerpivot-operations-requiring-user-authorization"></a><a name="UserConnections"></a>Operaciones de PowerPivot que requieren la autorización del usuario  
  La autorización de SharePoint se usa exclusivamente para todos los niveles de acceso al procesamiento de datos y las consultas de PowerPivot.  
   
  No se admite el modelo de autorización basada en roles de Analysis Services. No hay ninguna autorización basada en roles para los datos PowerPivot en el nivel de celda, fila o tabla. No puede proteger partes diferentes del libro para conceder o denegar el acceso a la información confidencial que contiene para usuarios concretos. Los datos PowerPivot incrustados están completamente disponibles para los usuarios que tienen permisos para ver el libro de Excel en una biblioteca de SharePoint.  
@@ -73,7 +73,7 @@ ms.locfileid: "67826336"
   
 -   Las operaciones de actualización de datos que guardan una copia actualizada del origen de datos al libro en una biblioteca de contenido. En este caso, se realiza un registro real de la operación utilizando el nombre de usuario y la contraseña que se recuperan de una aplicación de destino en el Servicio de almacenamiento seguro. Las credenciales pueden ser la cuenta de actualización de datos desatendida de PowerPivot o las credenciales que se almacenaron con la programación de actualización de datos al crearse. Para obtener más información, vea [configurar credenciales almacenadas para la actualización de datos powerpivot &#40;PowerPivot para SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) y [configurar la cuenta de actualización de datos desatendida de PowerPivot &#40;PowerPivot para SharePoint ](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)&#41;.  
   
-##  <a name="Permissions"></a>Permisos de SharePoint para el acceso a datos PowerPivot  
+##  <a name="sharepoint-permissions-for-powerpivot-data-access"></a><a name="Permissions"></a>Permisos de SharePoint para el acceso a datos PowerPivot  
  La publicación, administración y protección de un libro PowerPivot solamente se admite a través de la integración de SharePoint. Los servidores de SharePoint proporcionan subsistemas de autenticación y autorización que se aseguran de que se produce un acceso legítimo a los datos. No hay ningún escenario admitido para implementar de forma segura un libro PowerPivot fuera de una granja de servidores de SharePoint.  
   
  El acceso de usuario a los datos PowerPivot del servidor es de solo lectura mediante permisos para ver o superiores. Los permisos de contribución permiten agregar y modificar el archivo. Las modificaciones en los datos PowerPivot requieren la descarga del libro a una aplicación de escritorio de Excel que tenga instalado PowerPivot para Excel. Los permisos de contribución en el archivo determinarán si el usuario puede descargar el archivo localmente y guardar los cambios de nuevo en SharePoint.  
@@ -86,11 +86,11 @@ ms.locfileid: "67826336"
 |----------------------|------------------------|  
 |Administrador de granja o de servicio|Instalar, habilitar y configurar servicios y aplicaciones.<br /><br /> Usar el panel de administración de PowerPivot y ver informes administrativos.|  
 |Control total|Activar la integración de características de PowerPivot en el nivel de colección de sitios.<br /><br /> Crear una biblioteca de la galería de PowerPivot.<br /><br /> Crear una biblioteca de fuentes de distribución de datos.|  
-|Contribuciones|Agregar, modificar, eliminar y descargar libros PowerPivot.<br /><br /> Configurar actualización de datos.<br /><br /> Crear nuevos libros e informes basados en libros PowerPivot en un sitio de SharePoint.<br /><br /> Crear documentos de servicio de datos en una biblioteca de fuentes de distribución de datos.|  
+|Contribuir|Agregar, modificar, eliminar y descargar libros PowerPivot.<br /><br /> Configurar actualización de datos.<br /><br /> Crear nuevos libros e informes basados en libros PowerPivot en un sitio de SharePoint.<br /><br /> Crear documentos de servicio de datos en una biblioteca de fuentes de distribución de datos.|  
 |Lectura|Obtener acceso a los libros PowerPivot como un origen de datos externo, donde la dirección URL del libro se escribe explícitamente en un cuadro de diálogo de conexión (por ejemplo, en el Asistente para la conexión de datos de Excel).|  
 |Solo ver|Ver libros PowerPivot.<br /><br /> Ver el historial de la actualización de datos.<br /><br /> Conectarse con un libro local a un libro PowerPivot en un sitio de SharePoint, para cambiar sus datos de otras maneras.<br /><br /> Descargue una instantánea del libro. La instantánea es una copia estática de los datos, segmentaciones de datos, filtros, fórmulas ni conexiones de datos. El contenido de la instantánea es parecido al que se obtiene al copiar los valores de las celdas de la ventana del explorador.|  
   
-##  <a name="excel"></a>Consideraciones de seguridad de Excel Services para los libros PowerPivot  
+##  <a name="excel-services-security-considerations-for-powerpivot-workbooks"></a><a name="excel"></a>Consideraciones de seguridad de Excel Services para los libros PowerPivot  
  El procesamiento de consultas de PowerPivot en el lado servidor está unido estrechamente a los servicios de Excel. La integración de productos comienza en el nivel de documento, donde los libros PowerPivot son archivos de libro de Excel (.xlsx) que contienen o hacen referencia a datos PowerPivot. No hay ninguna extensión de archivo independiente para un libro PowerPivot.  
   
  Cuando un libro PowerPivot se abre en un sitio de SharePoint, Excel Services lee las cadenas de conexión de datos PowerPivot incrustadas y reenvía la solicitud al proveedor OLE DB de Analysis Services de SQL Server local. A continuación, el proveedor pasa la información de conexión a un servidor de PowerPivot en la granja. Para que la solicitud fluya uniformemente entre los dos servidores, Excel Services se debe configurar para usar valores que son requeridos por PowerPivot para SharePoint.  

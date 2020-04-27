@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904419"
 ---
 # <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
@@ -46,9 +46,9 @@ ms.locfileid: "67904419"
 |-------------|---------------|-----------------|  
 |time|**datetime**|Hora (UTC) en incrementos de una hora.|  
 |database_name|**nvarchar**|Nombre de la base de datos de usuario.|  
-|sku|**nvarchar**|Nombre de la SKU. Los posibles valores son los siguientes:<br /><br /> Web<br /><br /> Business<br /><br /> Básica<br /><br /> Estándar<br /><br /> Premium|  
+|sku|**nvarchar**|Nombre de la SKU. Los posibles valores son los siguientes:<br /><br /> Web<br /><br /> Negocio<br /><br /> Básica<br /><br /> Estándar<br /><br /> Premium|  
 |usage_in_seconds|**int**|Suma del tiempo de CPU utilizado durante esa hora.<br /><br /> Nota: esta columna está en desuso para V11 y no se aplica a V12. **El valor siempre se establece en 0.**|  
-|storage_in_megabytes|**Decimal**|Tamaño de almacenamiento máximo para la hora, incluidos los datos, los índices, los procedimientos almacenados y los metadatos de la base de datos.|  
+|storage_in_megabytes|**decimal**|Tamaño de almacenamiento máximo para la hora, incluidos los datos, los índices, los procedimientos almacenados y los metadatos de la base de datos.|  
   
 ## <a name="permissions"></a>Permisos  
  Esta vista está disponible para todos los roles de usuario con permisos para conectarse a la base de datos **maestra** virtual.  

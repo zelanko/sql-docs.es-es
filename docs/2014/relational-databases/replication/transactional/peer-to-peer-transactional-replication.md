@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793924"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -61,7 +61,7 @@ ms.locfileid: "67793924"
   
 -   En la izquierda, las actualizaciones se particionan entre los dos servidores. Si la base de datos contiene un catálogo de productos, podría, por ejemplo, hacer que una aplicación personalizada dirija las actualizaciones al nodo **A** para los nombres de productos que empiecen con la letra A hasta la M y que dirija las actualizaciones al nodo **B** para los nombres de productos que empiecen con la letra N hasta la Z. Más tarde, las actualizaciones se replican en el otro nodo.  
   
--   A la derecha, todas las actualizaciones se dirigen al nodo **B**. A partir de ahí, las actualizaciones se replican en **el nodo a**. Si **B** está sin conexión (por ejemplo, para mantenimiento), el servidor de aplicaciones puede dirigir toda la **actividad a.** Cuando **B** vuelve a estar en línea, las actualizaciones pueden fluir a él y el **servidor de aplicaciones**puede mover todas las actualizaciones de vuelta a **B** o seguir dirigiendo a.  
+-   A la derecha, todas las actualizaciones se dirigen al nodo **B**. Desde ahí, las actualizaciones se replican en el nodo **A**. Si **B** se encuentra en modo sin conexión (por ejemplo, por motivos de mantenimiento), el servidor de aplicaciones puede dirigir toda la actividad a **A**. Cuando **B** vuelve a estar en línea, las actualizaciones pueden pasar a él, y el servidor de aplicaciones puede mover todas las actualizaciones de vuelta al nodo **B** o seguir dirigiéndolas al nodo **A**.  
   
  La replicación punto a punto puede admitir este método, pero el ejemplo de actualización centralizada de la derecha también se utiliza frecuentemente con la replicación transaccional estándar.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "67793924"
   
  Cada ubicación tiene una base de datos y un servidor de aplicaciones, que los ingenieros de soporte utilizan para incluir y actualizar la información de las llamadas de los clientes. La topología se particiona por tiempo. Por consiguiente, las actualizaciones solo se producen en el nodo que está abierto; a continuación, las actualizaciones pasan al resto de bases de datos participantes. Esta topología proporciona las siguientes ventajas:  
   
--   Independencia sin aislamiento: cada oficina puede insertar, actualizar o eliminar datos de forma independiente, pero también puede compartir los datos porque se replican en el resto de bases de datos participantes.  
+-   Independencia sin aislamiento: cada oficina puede insertar, actualizar o eliminar datos de forma independiente, pero también puede compartirlos porque se replican en el resto de bases de datos participantes.  
   
 -   Alta disponibilidad en caso de error o para permitir el mantenimiento en una o más de las bases de datos participantes.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "67793924"
   
     -   Los nombres de objeto, esquema de objeto y nombres de publicación deberían ser idénticos.  
   
-    -   Las publicaciones deben permitir la replicación de los cambios de esquema. (Se trata de un valor de **1** para la propiedad de publicación **replicate_ddl**, que es la configuración predeterminada). Para obtener más información, vea [realizar cambios de esquema en bases de datos de publicaciones](../publish/make-schema-changes-on-publication-databases.md).  
+    -   Las publicaciones deben permitir la replicación de los cambios de esquema. (Este es un valor de **1** para la propiedad de publicación **replicate_ddl**, que es el valor predeterminado). Para obtener más información, vea [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
   
     -   No se admite el filtrado de filas y columnas.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "67793924"
 -   No puede reinicializar las suscripciones en una topología punto a punto. Si tiene que asegurarse de que un nodo tiene una copia nueva de los datos, restaure una copia de seguridad en el nodo.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
+ [Administrar una topología punto a punto &#40;la programación de la replicación con Transact-SQL&#41;](../administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Estrategias para realizar copias de seguridad y restaurar la replicación transaccional y de instantáneas](../administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)   
  [Tipos de publicaciones para la replicación transaccional](transactional-replication.md)  
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68188744"
 ---
 # <a name="view-information-about-an-operator"></a>Ver información acerca de un operador
@@ -39,11 +39,11 @@ ms.locfileid: "68188744"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -54,7 +54,7 @@ ms.locfileid: "68188744"
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](sql-server-agent-fixed-database-roles.md).  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-operator"></a>Para ver información acerca de un operador  
   
@@ -66,17 +66,17 @@ ms.locfileid: "68188744"
   
 4.  Haga clic con el botón derecho en el operador que desea ver y seleccione **Propiedades**.  
   
-     Para obtener más información sobre las opciones disponibles contenidas en el cuadro de diálogo**propiedades** de _operator_name_, vea:  
+     Para más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo _nombre_operador_**Propiedades** , consulte:  
   
     -   [Propiedades del operador y nuevo operador &#40;página general&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
     -   [Propiedades de operador: nuevo operador &#40;página notificaciones&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [Propiedades de operador &#40;página historial&#41;](operator-properties-history-page.md)  
+    -   [Propiedades del operador &#40;Página Historial&#41;](operator-properties-history-page.md)  
   
-5.  Cuando termine, haga clic en **Aceptar**.  
+5.  Cuando haya terminado, haga clic en **Aceptar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-information-about-an-operator"></a>Para ver información acerca de un operador  
   

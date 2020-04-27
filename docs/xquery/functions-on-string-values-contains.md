@@ -16,10 +16,10 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899025"
 ---
 # <a name="functions-on-string-values---contains"></a>Funciones usadas en valores de cadena: contains
@@ -48,8 +48,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
   
  La función contains() usa la intercalación de punto de código Unicode predeterminada de XQuery para la comparación de cadenas.  
   
- El valor de subcadena especificado para *$arg 2* debe ser menor o igual que 4000 caracteres. Si el valor especificado es superior a 4000 caracteres, se produce una condición de error dinámico y la función Contains () devuelve una secuencia vacía en lugar de un valor booleano de **true** o **false**. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no genera errores dinámicos en expresiones XQuery.  
+ El valor de subcadena especificado para *$arg 2* debe ser menor o igual que 4000 caracteres. Si el valor especificado es superior a 4000 caracteres, se produce una condición de error dinámico y la función Contains () devuelve una secuencia vacía en lugar de un valor booleano de **true** o **false**. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no genera errores dinámicos en expresiones XQuery.  
   
  Para obtener comparaciones sin distinción entre mayúsculas y minúsculas, se pueden usar las funciones [en mayúsculas o](../xquery/functions-on-string-values-upper-case.md) minúsculas.  
   

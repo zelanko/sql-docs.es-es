@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110176"
 ---
 # <a name="viewing-tuning-recommendations"></a>Ver recomendaciones de optimización
-  Esta tarea utiliza la sesión de optimización que creó en [optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md). Después [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de optimizar la base de datos mediante el script de script. [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL, [!INCLUDE[ssDE](../../includes/ssde-md.md)] el Asistente para la optimización de muestra los resultados en la pestaña **recomendaciones** . La siguiente tarea presenta la pestaña **recomendaciones** de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] interfaz gráfica de usuario (GUI) del Asistente para la optimización de y le guía para explorar la información que proporciona sobre los resultados de la sesión de optimización.  
+   En esta tarea, se utiliza la sesión de optimización que creó en [Optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md). Después [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de optimizar la base de datos mediante el script de script. [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL, [!INCLUDE[ssDE](../../includes/ssde-md.md)] el Asistente para la optimización de muestra los resultados en la pestaña **recomendaciones** . La siguiente tarea presenta la pestaña **recomendaciones** de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] interfaz gráfica de usuario (GUI) del Asistente para la optimización de y le guía para explorar la información que proporciona sobre los resultados de la sesión de optimización.  
   
 ### <a name="view-tuning-recommendations"></a>Ver las recomendaciones de optimización  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66110176"
   
 2.  Haga doble clic en **MySession** en el panel **Monitor de sesión** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Carga la información de sesión de la sesión de optimización anterior y muestra la **pestaña recomendaciones** . tenga en [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuenta que el Asistente para la optimización de no realizó **recomendaciones de partición** porque aceptó todos los valores predeterminados de la opción de optimización y no se ha seleccionado **ninguna partición** en la pestaña **Opciones de optimización** .  
   
-3.  En la pestaña **Recomendaciones** , utilice la barra de desplazamiento situada en la parte inferior de la página con pestañas para ver todas las columnas de **Recomendaciones de índices** . Cada fila representa un objeto de base de datos (índices o vistas indizadas) que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomienda quitar o crear. Desplácese hasta la columna situada más a la derecha y haga clic en **Definición**. [!INCLUDE[ssDE](../../includes/ssde-md.md)]El Asistente para la optimización de muestra una ventana de **vista previa de script SQL** en la que puede ver el [!INCLUDE[tsql](../../includes/tsql-md.md)] script que crea o quita el objeto de base de datos de esa fila. Haga clic en **Cerrar** para cerrar la ventana de vista previa.  
+3.  En la pestaña **Recomendaciones** , utilice la barra de desplazamiento situada en la parte inferior de la página con pestañas para ver todas las columnas de **Recomendaciones de índices** . Cada fila representa un objeto de base de datos (índices o vistas indizadas) que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomienda quitar o crear. Desplácese hasta la columna situada más a la derecha y haga clic en **Definición**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra la ventana **Vista previa de script SQL** , donde se puede ver el script [!INCLUDE[tsql](../../includes/tsql-md.md)] que creará o quitará el objeto de base de datos de esa fila. Haga clic en **Cerrar** para cerrar la ventana de vista previa.  
   
      Si le resulta difícil encontrar una **Definición** que contenga un vínculo, haga clic para desactivar la casilla **Mostrar objetos existentes** al final de la página con pestañas. Esto hará que el número de filas mostradas disminuya. Cuando desactive esta casilla, el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] solamente mostrará los objetos para los que haya generado una recomendación. Active la casilla **Mostrar objetos existentes** para ver todos los objetos de base de datos que existen actualmente en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Utilice la barra de desplazamiento situada en la parte derecha de la página con pestañas para ver todos los objetos.  
   
@@ -42,8 +42,7 @@ ms.locfileid: "66110176"
   
 6.  Si hay más de una recomendación en la pestaña **Recomendaciones** , borre algunas de las filas que enumeran objetos de base de datos en la cuadrícula **Recomendaciones de índices** .  
   
-7.  En el menú **Acciones** , haga clic en **Evaluar recomendaciones**. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea una nueva sesión de optimización en la que puede evaluar un subconjunto de las recomendaciones originales de MySession.  
+7.  En el menú **Acciones** , haga clic en **Evaluar recomendaciones**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea una nueva sesión de optimización en la que puede evaluar un subconjunto de las recomendaciones originales de MySession.  
   
 8.  Escriba `EvaluateMySession` para el nuevo **nombre de sesión**y haga clic en el botón **Iniciar análisis** de la barra de herramientas. Puede repetir los pasos 2 y 3 con esta nueva sesión de optimización para ver las recomendaciones.  
   

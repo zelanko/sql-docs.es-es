@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899368"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>Sys. dm_pdw_node_status (Transact-SQL)
@@ -29,13 +29,13 @@ ms.locfileid: "67899368"
 |pdw_node_id|**int**|Identificador numérico único asociado al nodo.<br /><br /> Clave para esta vista.|Único en todo el dispositivo, independientemente del tipo.|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|allocated_memory|**BIGINT**|Memoria total asignada en este nodo.||  
-|available_memory|**BIGINT**|Memoria total disponible en este nodo.||  
-|process_cpu_usage|**BIGINT**|Uso total de la CPU del proceso, en pasos.||  
-|total_cpu_usage|**BIGINT**|Uso total de CPU, en pasos.||  
-|thread_count|**BIGINT**|Número total de subprocesos en uso en este nodo.||  
-|handle_count|**BIGINT**|Número total de identificadores en uso en este nodo.||  
-|total_elapsed_time|**BIGINT**|Tiempo total transcurrido desde el inicio o el reinicio del sistema.|Tiempo total transcurrido desde el inicio o el reinicio del sistema. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), se producirá un error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
+|allocated_memory|**bigint**|Memoria total asignada en este nodo.||  
+|available_memory|**bigint**|Memoria total disponible en este nodo.||  
+|process_cpu_usage|**bigint**|Uso total de la CPU del proceso, en pasos.||  
+|total_cpu_usage|**bigint**|Uso total de CPU, en pasos.||  
+|thread_count|**bigint**|Número total de subprocesos en uso en este nodo.||  
+|handle_count|**bigint**|Número total de identificadores en uso en este nodo.||  
+|total_elapsed_time|**bigint**|Tiempo total transcurrido desde el inicio o el reinicio del sistema.|Tiempo total transcurrido desde el inicio o el reinicio del sistema. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), se producirá un error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
 |is_available|**bit**|Marca que indica si este nodo está disponible.||  
 |sent_time|**datetime**|Última vez que este nodo envió un paquete de red.||  
 |received_time|**datetime**|Última vez que este nodo recibió un paquete de red.||  

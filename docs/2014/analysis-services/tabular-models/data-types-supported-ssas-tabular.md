@@ -11,24 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284933"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Tipos de datos compatibles (SSAS tabular)
   En este artículo se describen los tipos de datos que se pueden usar en los modelos tabulares, así como la conversión implícita de los tipos de datos cuando los datos se calculan o se usan en una fórmula DAX (Expresiones de análisis de datos).  
   
- Este artículo contiene las siguientes secciones:  
+ Este artículo contiene las secciones siguientes:  
   
 -   [Tipos de datos usados en los modelos tabulares](#bkmk_data_types)  
   
--   [Conversión implícita y explícita de tipos de datos en fórmulas DAX](#bkmk_implicit)  
+-   [Conversiones implícitas y explícitas de tipos de datos en fórmulas de DAX](#bkmk_implicit)  
   
--   [Control de espacios en blanco, cadenas vacías y valores cero](#bkmk_hand_blanks)  
+-   [Controlar valores en blanco, cadenas vacías y valores cero](#bkmk_hand_blanks)  
   
-##  <a name="bkmk_data_types"></a>Tipos de datos usados en los modelos tabulares  
+##  <a name="data-types-used-in-tabular-models"></a><a name="bkmk_data_types"></a>Tipos de datos usados en los modelos tabulares  
  Se admiten los tipos de datos siguientes. Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen de datos contiene un tipo de datos distinto, los datos se convierten a uno de los siguientes tipos de datos. Los datos que se producen como resultado de las fórmulas también usan estos tipos de datos.  
   
  En general, estos tipos de datos se implementan para permitir cálculos precisos en columnas calculadas y, para mantener la coherencia, se aplican las mismas restricciones al resto de los datos de los modelos.  
@@ -38,13 +38,13 @@ ms.locfileid: "67284933"
 ||||  
 |-|-|-|  
 |Tipo de datos en el modelo|Tipo de datos en DAX|Descripción|  
-|Número entero|Valor entero de 64 bits (ocho bytes) <sup>1, 2</sup>|Números que no tienen posiciones decimales. Los enteros pueden ser números positivos o negativos, pero deben ser números enteros comprendidos entre -9.223.372.036.854.775.808 (-2^63) y 9.223.372.036.854.775.807 (2^63-1).|  
-|Número decimal|Número real de 64 bits (ocho bytes) <sup>1, 2</sup>|Los números reales son aquellos que pueden tener posiciones decimales. Abarcan un amplio intervalo de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Cero<br /><br /> Valores positivos desde 2,23E -308 hasta 1,79E + 308<br /><br /> Sin embargo, el número de dígitos significativos se limita a 17 dígitos decimales.|  
+|Whole Number|Valor entero de 64 bits (ocho bytes) <sup>1, 2</sup>|Números que no tienen posiciones decimales. Los enteros pueden ser números positivos o negativos, pero deben ser números enteros comprendidos entre -9.223.372.036.854.775.808 (-2^63) y 9.223.372.036.854.775.807 (2^63-1).|  
+|Decimal Number|Número real de 64 bits (ocho bytes) <sup>1, 2</sup>|Los números reales son aquellos que pueden tener posiciones decimales. Abarcan un amplio intervalo de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Cero<br /><br /> Valores positivos desde 2,23E -308 hasta 1,79E + 308<br /><br /> Sin embargo, el número de dígitos significativos se limita a 17 dígitos decimales.|  
 |Boolean|Boolean|Valor True o False.|  
-|Texto|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
-|Date|Fecha/hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
+|Text|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
+|Fecha|Fecha/hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
 |Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
-|N/D|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
+|N/A|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
   
  <sup>1</sup> las fórmulas Dax no admiten tipos de datos que son menores que los enumerados en la tabla.  
   
@@ -68,9 +68,9 @@ ms.locfileid: "67284933"
 >  No puede importar de una columna **varchar(max)** que contenga una longitud de cadena superior a 131 072 caracteres.  
   
 ### <a name="table-data-type"></a>Tipo de datos de tabla  
- Además, DAX usa un tipo de datos de *tabla* . DAX usa este tipo de datos en muchas funciones, como agregaciones y cálculos de inteligencia de tiempo. Algunas funciones requieren una referencia a una tabla y otras devuelven una tabla que se puede usar como entrada para otras funciones. En algunas funciones que requieren una tabla como entrada, puede especificar una expresión que se evalúa como una tabla; para otras funciones, se requiere una referencia a una tabla base. Para obtener información sobre los requisitos de funciones concretas, vea [Referencia de funciones DAX](/dax/dax-function-reference).  
+ Además, DAX usa un tipo de datos de *tabla* . DAX usa este tipo de datos en muchas funciones, como agregaciones y cálculos de inteligencia de tiempo. Algunas funciones requieren una referencia a una tabla y otras devuelven una tabla que se puede usar como entrada para otras funciones. En algunas funciones que requieren una tabla como entrada, puede especificar una expresión que se evalúa como una tabla; para otras funciones, se requiere una referencia a una tabla base. Para obtener información acerca de los requisitos de funciones específicas, consulte [Referencia de funciones DAX](/dax/dax-function-reference).  
   
-##  <a name="bkmk_implicit"></a>Conversión implícita y explícita de tipos de datos en fórmulas DAX  
+##  <a name="implicit-and-explicit-data-type-conversion-in-dax-formulas"></a><a name="bkmk_implicit"></a>Conversión implícita y explícita de tipos de datos en fórmulas DAX  
  Cada función DAX tiene requisitos concretos acerca de los tipos de datos que se usan como entradas y salidas. Por ejemplo, algunas funciones requieren enteros para algunos argumentos y fechas para otros; otras funciones requieren texto o tablas.  
   
  Si los datos de la columna que especifique como argumento son incompatibles con el tipo de datos requerido por la función, en muchos casos DAX devolverá un error. No obstante, siempre que sea posible DAX intentará convertir implícitamente los datos al tipo requerido. Por ejemplo:  
@@ -148,14 +148,11 @@ ms.locfileid: "67284933"
   
  Las siguientes expresiones de DAX muestran este comportamiento:  
   
- 
-  `=IF(FALSE()>"true","Expression is true", "Expression is false")`, devuelve `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")`, devuelve `"Expression is true"`  
   
- 
-  `=IF("12">12,"Expression is true", "Expression is false")`, devuelve `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")`, devuelve `"Expression is true"`  
   
- 
-  `=IF("12"=12,"Expression is true", "Expression is false")`, devuelve `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")`, devuelve `"Expression is false"`  
   
  Las conversiones se realizan implícitamente para los tipos numéricos o de fecha y hora, tal y como se describe en la siguiente tabla:  
   
@@ -167,7 +164,7 @@ ms.locfileid: "67284933"
 |real|real|real|real|real|  
 |Fecha/hora|real|real|real|Fecha/hora|  
   
-##  <a name="bkmk_hand_blanks"></a>Control de espacios en blanco, cadenas vacías y valores cero  
+##  <a name="handling-of-blanks-empty-strings-and-zero-values"></a><a name="bkmk_hand_blanks"></a>Control de espacios en blanco, cadenas vacías y valores cero  
  La forma en que DAX trata los valores cero, los valores NULL y las cadenas vacías es distinta a como lo hacen Microsoft Excel y SQL Server. En esta sección se describen las diferencias y cómo se tratan estos tipos de datos.  
   
  Lo importante es recordar que, un valor en blanco, una celda vacía o la ausencia de un valor se representan por el nuevo tipo de valor: BLANK. Depende de cada función el modo en que se tratan en las operaciones, como suma o concatenación. También se pueden generar valores en blanco con la función BLANK o comprobar los valores en blanco con la función ISBLANK. Los valores NULL de base de datos no se admiten en un modelo semántico y se convierten implícitamente a valores en blanco si en una fórmula de DAX se hace referencia a una columna que contiene un valor NULL.  
@@ -195,6 +192,6 @@ ms.locfileid: "67284933"
   
 ## <a name="see-also"></a>Consulte también  
  [Orígenes de datos &#40;SSAS tabular&#41;](../data-sources-ssas-tabular.md)   
- [Importar datos &#40;&#41;tabular de SSAS](../import-data-ssas-tabular.md)  
+ [Importar datos &#40;SSAS tabular&#41;](../import-data-ssas-tabular.md)  
   
   

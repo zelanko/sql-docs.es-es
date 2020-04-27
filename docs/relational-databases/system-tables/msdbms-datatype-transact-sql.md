@@ -18,10 +18,10 @@ ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 301aa5af9aa34031f381235341f1e7d461675432
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907511"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
@@ -33,14 +33,14 @@ ms.locfileid: "67907511"
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**int**|Identifica cada tipo de datos único.|  
 |**dbms_id**|**int**|Identifica el DBMS al que pertenece el tipo.|  
-|**automáticamente**|**sysname**|Nombre del tipo de datos (nativos).|  
+|**type**|**sysname**|Nombre del tipo de datos (nativos).|  
 |**CreateParams**|**int**|Mapa de bits que describe la combinación de longitud, precisión y escala aplicable a cada tipo de datos, que incluye:<br /><br /> **0x1** = precisión.<br /><br /> **0X2** = escala.<br /><br /> **0x4** = longitud.|  
   
 ## <a name="remarks"></a>Observaciones  
  Esta tabla contiene entradas para los tipos de datos de SQL Server, dado que una instancia de SQL Server puede suscribirse a una base de datos que no sea de SQL Server y publicarse en un suscriptor que no sea de SQL Server.  
   
 ## <a name="see-also"></a>Consulte también  
- [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicación de base de datos heterogénea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Especificar asignaciones de tipos de datos para un publicador de Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

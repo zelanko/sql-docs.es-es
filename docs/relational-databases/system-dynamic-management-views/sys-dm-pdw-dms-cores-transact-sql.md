@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 76a154639a71b22bfe3f119233f3abbcd329f7c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899526"
 ---
 # <a name="sysdm_pdw_dms_cores-transact-sql"></a>Sys. dm_pdw_dms_cores (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "67899526"
 |-----------------|---------------|-----------------|-----------|  
 |dms_core_id|**int**|Identificador numérico único asociado a este núcleo de DMS.<br /><br /> Clave para esta vista.|Establezca en el pdw_node_id del nodo en el que se está ejecutando este núcleo de DMS.|  
 |pdw_node_id|**int**|IDENTIFICADOR del nodo en el que se está ejecutando este servicio DMS.|Vea node_id en [Sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|status|**nvarchar (32)**|Estado actual del servicio DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|status|**nvarchar(32)**|Estado actual del servicio DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
   
  Para obtener información acerca de las filas máximas retenidas en esta vista, consulte la sección de metadatos en el tema [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

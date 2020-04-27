@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822376"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Realizar una evaluación a petición usando servidores registrados
@@ -24,7 +24,7 @@ ms.locfileid: "66822376"
 > [!NOTE]  
 >  Puede realizar una evaluación a petición de las directivas de prácticas recomendadas con los miembros del grupo de servidores que ejecutan [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o una versión posterior de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sin embargo, puede recibir un error de excepción si hay algunas propiedades a las que se haga referencia en una directiva que no se admita en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] o [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar esta tarea, debe haber configurado uno o más registros de servidor en los servidores registrados. Para obtener más información, vea los temas siguientes:  
   
 -   [Crear o editar un grupo de servidores &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "66822376"
   
 4.  En el cuadro de diálogo **evaluar directivas** , junto al cuadro **origen** , haga clic en el botón de puntos suspensivos (**...**).  
   
-5.  En el cuadro de diálogo **Seleccionar origen** , puede seleccionar **archivos** o **servidor** como origen de los archivos de directivas que se van a evaluar. Si hace clic en **servidor**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccionará los archivos de directivas individuales que desea evaluar. Para ello, siga estos pasos.  
+5.  En el cuadro de diálogo **Seleccionar origen** , puede seleccionar **archivos** o **servidor** como origen de los archivos de directivas que se van a evaluar. Si hace clic en **servidor**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccionará los archivos de directivas individuales que desea evaluar. Para ello, realice los pasos siguientes:  
   
     1.  Haga clic en **archivos**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66822376"
 8.  Para ver los resultados detallados de una directiva, haga clic en la Directiva en la tabla de **resultados** . En la tabla **detalles del destino** se muestran los detalles de cada instancia.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: evaluar las directivas de las prácticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lección 2: Evaluación de las directivas de procedimientos recomendados de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas mediante la administración basada en directivas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

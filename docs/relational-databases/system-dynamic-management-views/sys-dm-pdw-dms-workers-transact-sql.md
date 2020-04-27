@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e5f295637db0e138caf324e3126707b9e0ea774
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899508"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>Sys. dm_pdw_dms_workers (Transact-SQL)
@@ -26,20 +26,20 @@ ms.locfileid: "67899508"
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|Consulta de la que forma parte este trabajador de DMS.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.|Vea request_id en [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Consulta de la que forma parte este trabajador de DMS.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.|Vea request_id en [Sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Paso de consulta del que forma parte este trabajador de DMS.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.|Vea step_index en [Sys. dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Paso del plan DMS en el que se ejecuta este trabajador.<br /><br /> request_id, step_index y dms_step_index forman la clave de esta vista.||  
 |pdw_node_id|**int**|Nodo en el que se está ejecutando el trabajo.|Vea node_id en [Sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|distribution_id|**Inter**|Distribución en la que se ejecuta el trabajador, si existe.|Vea distribution_id en [Sys. pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|type|**nvarchar (32)**|Tipo de subproceso de trabajo de DMS que esta entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' ESCRITOR '|  
-|status|**nvarchar (32)**|Estado del trabajo de DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|bytes_per_sec|**BIGINT**|Rendimiento de lectura o escritura en el último segundo.|Mayor o igual que 0. ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  
-|bytes_processed|**BIGINT**|Número total de bytes procesados por este trabajador.|Mayor o igual que 0. ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  
-|rows_processed|**BIGINT**|Número de filas leídas o escritas para este trabajador.|Mayor o igual que 0. ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  
+|distribution_id|**Int**|Distribución en la que se ejecuta el trabajador, si existe.|Vea distribution_id en [Sys. pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
+|tipo|**nvarchar(32)**|Tipo de subproceso de trabajo de DMS que esta entrada representa.|' DIRECT_CONVERTER ', ' DIRECT_READER ', ' FILE_READER ', ' HASH_CONVERTER ', ' HASH_READER ', ' ROUNDROBIN_CONVERTER ', ' EXPORT_READER ', ' EXTERNAL_READER ', ' EXTERNAL_WRITER ', ' PARALLEL_COPY_READER ', ' REJECT_WRITER ', ' ESCRITOR '|  
+|status|**nvarchar(32)**|Estado del trabajo de DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|bytes_per_sec|**bigint**|Rendimiento de lectura o escritura en el último segundo.|Mayor o igual que 0. ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  
+|bytes_processed|**bigint**|Número total de bytes procesados por este trabajador.|Mayor o igual que 0. ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  
+|rows_processed|**bigint**|Número de filas leídas o escritas para este trabajador.|Mayor o igual que 0. ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  
 |start_time|**datetime**|Hora a la que se inició la ejecución de este trabajador.|Mayor o igual que la hora de inicio del paso de consulta al que pertenece este trabajador. Vea [Sys. dm_pdw_request_steps &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Hora a la que finalizó la ejecución, se produjo un error o se canceló.|NULL para los trabajos en cola o en curso. De lo contrario, mayor que start_time.|  
 |total_elapsed_time|**int**|Tiempo total invertido en la ejecución, en milisegundos.|Mayor o igual que 0.<br /><br /> Tiempo total transcurrido desde el inicio o el reinicio del sistema. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), se producirá un error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
-|cpu_time|**BIGINT**|Tiempo de CPU consumido por este trabajo, en milisegundos.|Mayor o igual que 0.|  
+|cpu_time|**bigint**|Tiempo de CPU consumido por este trabajo, en milisegundos.|Mayor o igual que 0.|  
 |query_time|**int**|Período de tiempo antes de que SQL comience a devolver filas al subproceso, en milisegundos.|Mayor o igual que 0.|  
 |buffers_available|**int**|Número de búferes sin usar.| ES NULL si la consulta se canceló o produjo un error antes de que se pudiera ejecutar el trabajo.|  
 |sql_spid|**int**|Identificador de sesión en la instancia de SQL Server que realiza el trabajo para este trabajo de DMS.||  

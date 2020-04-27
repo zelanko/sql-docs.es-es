@@ -18,10 +18,10 @@ ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a1042bb3aa7b6113121693cc66440ebbf81ce1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907541"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
@@ -34,14 +34,14 @@ ms.locfileid: "67907541"
 |**datatype_mapping_id**|**int**|Identifica cada asignación de tipo de datos única.|  
 |**map_id**|**int**|Identifica el tipo de datos de origen.|  
 |**dest_datatype_id**|**int**|Identifica el tipo de datos de destino.|  
-|**dest_precision**|**BIGINT**|Define la precisión del tipo de datos de destino, donde un valor NULL significa que no se utiliza la precisión y un valor de **-1** significa que se utiliza la precisión del tipo de datos de origen.|  
+|**dest_precision**|**bigint**|Define la precisión del tipo de datos de destino, donde un valor NULL significa que no se utiliza la precisión y un valor de **-1** significa que se utiliza la precisión del tipo de datos de origen.|  
 |**dest_scale**|**int**|Define la escala del tipo de datos de destino, donde un valor NULL significa que no se utiliza la escala, y un valor de **-1** significa que se usa la escala del tipo de datos de origen.|  
-|**dest_length**|**BIGINT**|Define la longitud del tipo de datos de destino, donde un valor NULL significa que no se utiliza la longitud, y un valor de **-1** significa que se utiliza la longitud del tipo de datos de origen.|  
+|**dest_length**|**bigint**|Define la longitud del tipo de datos de destino, donde un valor NULL significa que no se utiliza la longitud, y un valor de **-1** significa que se utiliza la longitud del tipo de datos de origen.|  
 |**dest_nullable**|**bit**|Indica si la columna de destino en la asignación admite valores NULL, donde un valor NULL significa que no se requiere esta definición.|  
 |**dest_createparams**|**int**|Es el mapa de bits que describe qué combinación de longitud, precisión y escala es aplicable a cada tipo de datos, donde se incluye:<br /><br /> **0x1** = precisión.<br /><br /> **0X2** = escala.<br /><br /> **0x4** = longitud.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicación de base de datos heterogénea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Especificar asignaciones de tipos de datos para un publicador de Oracle](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

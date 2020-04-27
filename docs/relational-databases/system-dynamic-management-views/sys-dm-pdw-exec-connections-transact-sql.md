@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899415"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>Sys. dm_pdw_exec_connections (Transact-SQL)
@@ -28,9 +28,9 @@ ms.locfileid: "67899415"
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifica la sesión asociada a esta conexión. Use `SESSION_ID()` para devolver el `session_id` de la conexión actual.|  
 |connect_time|**datetime**|Marca de tiempo en que se estableció la conexión. No admite valores NULL.|  
-|encrypt_option|**nvarchar (40)**|Indica TRUE (la conexión está cifrada) o FALSE (la conexión no es enctypred).|  
-|auth_scheme|**nvarchar (40)**|Especifica el esquema de autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows usado en esta conexión. No admite valores NULL.|  
-|client_id|**VARCHAR (48)**|Dirección IP del cliente que se conecta a este servidor. Acepta valores NULL.|  
+|encrypt_option|**nvarchar(40)**|Indica TRUE (la conexión está cifrada) o FALSE (la conexión no es enctypred).|  
+|auth_scheme|**nvarchar(40)**|Especifica el esquema de autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows usado en esta conexión. No admite valores NULL.|  
+|client_id|**varchar(48)**|Dirección IP del cliente que se conecta a este servidor. Acepta valores NULL.|  
 |sql_spid|**int**|IDENTIFICADOR de proceso de servidor de la conexión. Use `@@SPID` para devolver el `sql_spid` de la conexión actual. En la mayoría de los `session_id` casos, use en su lugar.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -43,7 +43,7 @@ ms.locfileid: "67899415"
 |dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Uno a uno|  
 |dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|Varios a uno|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Consulta típica para recopilar información sobre una conexión solo para consultas.  
   
 ```  

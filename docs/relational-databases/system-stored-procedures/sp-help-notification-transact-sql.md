@@ -18,10 +18,10 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906104"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)

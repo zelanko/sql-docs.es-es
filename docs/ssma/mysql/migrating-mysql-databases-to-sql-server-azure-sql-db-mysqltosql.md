@@ -10,10 +10,10 @@ ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 33dd7faf67e82f1259ac87a0ef8e0eb5fdf2927d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908798"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Migración de bases de datos de MySQL a SQL Server: Azure SQL DB (MySQLToSql)
@@ -38,7 +38,7 @@ Para migrar correctamente objetos y datos de bases de datos MySQL a SQL Server o
   
 7.  [Conversión de bases de datos MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Synchronization](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
+8.  [Sincronización](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. Para ello, siga uno de estos métodos:  
   

@@ -13,27 +13,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68188542"
 ---
 # <a name="options-environment-help-general-page"></a>Opciones (entorno-ayuda-página general)
-  Utilice el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si desea mostrar los temas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] internamente en o externamente en una ventana independiente. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
+  Use el cuadro de diálogo **Opciones** para elegir conjuntos de documentación y decidir si deben mostrarse temas de forma interna en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o de forma externa en otra ventana. Para tener acceso a este cuadro de diálogo, haga clic en **Opciones** en el menú **Herramientas** , expanda el elemento **Ayuda** del nodo **Entorno** y, a continuación, haga clic en **General**.  
   
 > [!NOTE]  
 >  Los cambios realizados en las opciones de esta página no tendrán efecto hasta que se reinicie el entorno.  
   
 ## <a name="settings"></a>Configuración  
- **Mostrar ayuda mediante**  
+ **Mostrar la Ayuda usando**  
  Especifica cómo se muestra la Ayuda. Seleccione **Visor de ayuda externo** en la lista desplegable para ver los temas en una ventana flotante externa. Seleccione **Visor de ayuda integrada** para mostrar los temas de Ayuda en una ventana de explorador web acoplada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- **Resultados de la búsqueda por página**  
- Especifica el número de temas que se muestran en una única página de **Resultados de la búsqueda**.  
+ **Resultados de búsqueda por página**  
+ Especifica el número de temas que se muestran en una única página de **Resultados de la búsqueda** .  
   
  **Mostrar resúmenes de temas**  
- Especifica si se muestra un abstracto en la lista **Resultados de la búsqueda** y en la pestaña **Cómo**.  
+ Especifica si se muestra un abstracto en la lista **Resultados de la búsqueda** y en la pestaña **Cómo** .  
   
  **Reutilizar ventana de temas**  
  Si esta casilla está activada, especifica que los temas de Ayuda se muestran en la misma ventana, de modo que es posible navegar de un tema a otro con los botones **Atrás** y **Adelante** . Si no está activada, esta casilla especifica que se abre una ventana nueva para cada tema.  
@@ -44,7 +44,7 @@ ms.locfileid: "68188542"
  **Idioma del tema en línea**  
  Especifica el idioma que tiene la prioridad más alta en la lista de resultados para las búsquedas que devuelven resultados en varios idiomas.  
   
- **Mostrar también temas en inglés**  
+ **Mostrar temas en inglés**  
  Especifica que se devuelven temas en inglés además del idioma seleccionado en el cuadro **Idioma del tema en línea** .  
   
   

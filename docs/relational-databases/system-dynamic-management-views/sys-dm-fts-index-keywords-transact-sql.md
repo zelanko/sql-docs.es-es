@@ -21,10 +21,10 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900948"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
@@ -55,7 +55,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**palabra clave**|**nvarchar(4000)**|Representación hexadecimal de la palabra clave almacenada en el índice de texto completo.<br /><br /> Nota: OxFF representa el carácter especial que indica el final de un archivo o conjunto de archivos.|  
+|**keyword**|**nvarchar(4000)**|Representación hexadecimal de la palabra clave almacenada en el índice de texto completo.<br /><br /> Nota: OxFF representa el carácter especial que indica el final de un archivo o conjunto de archivos.|  
 |**display_term**|**nvarchar(4000)**|Formato legible de la palabra clave. Este formato se deriva del formato hexadecimal.<br /><br /> Nota: el valor de **display_term** para OxFF es "final de archivo".|  
 |**column_id**|**int**|Identificador de la columna en que la palabra clave actual forma parte del índice de texto completo.|  
 |**document_count**|**int**|Número de documentos o filas que contienen el término actual.|  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189830"
 ---
 # <a name="alert-properties-history-page"></a>Propiedades de alerta (página Historial)
@@ -32,7 +32,7 @@ ms.locfileid: "68189830"
  **Número de repeticiones**  
  Número total de repeticiones del evento desde que se creó la alerta, o desde la última vez que se restableció el recuento.  
   
- **Restablecer recuento**  
+ **Restablecer cuenta**  
  Restablece la información de esta página.  
   
 ## <a name="see-also"></a>Consulte también  

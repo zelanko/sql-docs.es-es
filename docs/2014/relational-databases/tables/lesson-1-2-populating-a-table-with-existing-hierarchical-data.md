@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110167"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Rellenar una tabla con los datos jerárquicos existentes
-  Esta tarea crea una nueva tabla y la rellena con los datos de la tabla **EmployeeDemo** . Esta tarea consta de los pasos siguientes:  
+   Esta tarea crea una nueva tabla y la rellena con los datos de la tabla **EmployeeDemo**. Esta tarea consta de los pasos siguientes:  
   
 -   Cree una nueva tabla que contenga una columna `hierarchyid`. Esta columna podría reemplazar a las columnas **EmployeeID** y **ManagerID** existentes. Sin embargo, usted conservará esas columnas. La razón de ello es porque alguna de las aplicaciones existentes podría hacer referencia a esas columnas, y también para ayudarle a entender los datos una vez realizada la transferencia. La definición de tabla especifica que **OrgNode** es la clave principal, que requiere que la columna contenga valores únicos. El índice agrupado sobre la columna **OrgNode** almacenará la fecha en secuencia **OrgNode** .  
   

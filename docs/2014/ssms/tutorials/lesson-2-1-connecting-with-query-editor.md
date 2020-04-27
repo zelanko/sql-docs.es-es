@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68187818"
 ---
 # <a name="connecting-with-query-editor"></a>Conectar con el Editor de consultas
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite escribir o editar código sin estar conectado al servidor. Esto puede ser útil cuando el servidor no está disponible o cuando se desea preservar los escasos recursos de la red o el servidor. También puede cambiar la conexión del Editor de consultas a una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin abrir una ventana nueva del Editor de consultas o volver a escribir código.  
   
 ## <a name="coding-offline"></a>Escribir código sin conexión  

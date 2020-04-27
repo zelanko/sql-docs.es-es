@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284906"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Crear y administrar roles (SSAS tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "67284906"
 ## <a name="tasks"></a>Tareas  
  Para crear, modificar, copiar y eliminar roles, utilice el cuadro de diálogo **Administrador de roles** . Para ver el cuadro de diálogo **Administrador de roles** , en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y en **Administrador de roles**.  
   
-###  <a name="bkmk_new_role"></a>Para crear un nuevo rol  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a> Para crear un rol  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en el menú **Modelo** y en **Administrador de roles**.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "67284906"
     |----------------|-----------------|  
     |**None**|Los miembros no pueden realizar ninguna modificación en el esquema del modelo y no pueden consultar los datos.|  
     |**Lectura**|Los miembros pueden consultar los datos (según los filtros de fila), pero no pueden realizar cambios en el esquema del modelo.|  
-    |**Leer y procesar**|Los miembros pueden actualizar los datos (según los filtros de fila) y ejecutar las operaciones Procesar y Procesar todo, pero no pueden realizar cambios en el esquema del modelo.|  
+    |**Leer y actualizar**|Los miembros pueden actualizar los datos (según los filtros de fila) y ejecutar las operaciones Procesar y Procesar todo, pero no pueden realizar cambios en el esquema del modelo.|  
     |**Proceso**|Los modelos pueden ejecutar las operaciones Procesar y Procesar todo. No pueden modificar el esquema de modelo ni pueden consultar datos.|  
-    |**Grupo**|Los miembros pueden realizar modificaciones en el esquema del modelo y pueden consultar todos los datos.|  
+    |**Administrador**|Los miembros pueden realizar modificaciones en el esquema del modelo y pueden consultar todos los datos.|  
   
 5.  Para especificar una descripción para el rol, haga clic en el campo **Descripción** y escriba una descripción.  
   

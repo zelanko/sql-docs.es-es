@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 14a5a6e38d4c9fcf306436374d80dd1c1c08b27e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413041"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Funcionalidad no incluida en SQL Server Reporting Services (SSRS)
@@ -29,17 +29,17 @@ ms.locfileid: "67413041"
   
 - [Funcionalidad no incluida en SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services funcionalidad no incluida
+##  <a name="sssql14-reporting-services-discontinued-functionality"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services funcionalidad no incluida
 
  Ninguna característica de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ha dejado de incluirse en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services funcionalidad no incluida
+##  <a name="sssql11-reporting-services-discontinued-functionality"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services funcionalidad no incluida
 
  En esta sección se describen las funciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
  Ninguna característica de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ha dejado de incluirse en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services funcionalidad no incluida
+##  <a name="sql-server-2008-r2-reporting-services-discontinued-functionality"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services funcionalidad no incluida
 
  En esta sección se describe que no [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]se incluyen en.  
   

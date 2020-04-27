@@ -22,16 +22,16 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905170"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve la configuración de captura de datos del cambio para cada tabla habilitada para la captura de datos del cambio en la base de datos actual. Se pueden devolver hasta dos filas para cada tabla de origen, una fila para cada instancia de captura. La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Devuelve la configuración de captura de datos del cambio para cada tabla habilitada para la captura de datos del cambio en la base de datos actual. Se pueden devolver hasta dos filas para cada tabla de origen, una fila para cada instancia de captura. La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, vea [características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,8 +71,8 @@ sys.sp_cdc_help_change_data_capture
 |capture_instance|**sysname**|Nombre de la instancia de captura.|  
 |object_id|**int**|Id. de la tabla de cambios asociada a la tabla de origen.|  
 |source_object_id|**int**|Id. de la tabla de origen.|  
-|start_lsn|**binario (10)**|Número de flujo de registro (LSN) que representa el extremo bajo para consultar la tabla de cambio.<br /><br /> NULL = no se ha establecido el extremo bajo.|  
-|end_lsn|**binario (10)**|LSN que representa el extremo alto para consultar la tabla de cambio. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta columna siempre es NULL.|  
+|start_lsn|**binary(10)**|Número de flujo de registro (LSN) que representa el extremo bajo para consultar la tabla de cambio.<br /><br /> NULL = no se ha establecido el extremo bajo.|  
+|end_lsn|**binary(10)**|LSN que representa el extremo alto para consultar la tabla de cambio. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta columna siempre es NULL.|  
 |supports_net_changes|**bit**|Se habilita la compatibilidad del cambio de red.|  
 |has_drop_pending|**bit**|No se usa en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].|  
 |role_name|**sysname**|Nombre del rol de base de datos utilizado para controlar el acceso a los datos de cambio.<br /><br /> NULL = no se utiliza un rol.|  

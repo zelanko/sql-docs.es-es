@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900918"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *query_string*  
  Consulta que se desea analizar. *query_string* puede ser una cadena de cadenas que [contenga](../../t-sql/queries/contains-transact-sql.md) compatibilidad con la sintaxis. Por ejemplo, se pueden incluir formas con inflexión, un diccionario de sinónimos y operadores lógicos.  
   
- *LCID*  
+ *lcid*  
  Identificador de configuración regional (LCID) del separador de palabras que se va a utilizar para analizar *query_string*.  
   
  *stoplist_id*  
@@ -67,18 +67,13 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|palabra clave|**varbinary (128)**|Representación hexadecimal de una palabra clave determinada devuelta por un separador de palabras. Esta representación se utiliza para almacenar la palabra clave en el índice de texto completo. Este valor no es legible para el usuario, pero es útil para relacionar una palabra clave determinada con la salida devuelta por otras vistas de administración dinámica que devuelven el contenido de un índice de texto completo, como [Sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) y [Sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF representa el carácter especial que indica el final de un archivo o conjunto de archivos.|  
+|palabra clave|**varbinary(128)**|Representación hexadecimal de una palabra clave determinada devuelta por un separador de palabras. Esta representación se utiliza para almacenar la palabra clave en el índice de texto completo. Este valor no es legible para el usuario, pero es útil para relacionar una palabra clave determinada con la salida devuelta por otras vistas de administración dinámica que devuelven el contenido de un índice de texto completo, como [Sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) y [Sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF representa el carácter especial que indica el final de un archivo o conjunto de archivos.|  
 |group_id|**int**|Contiene un valor entero que es útil para diferenciar el grupo lógico a partir del cual se generó un término determinado. Por ejemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' genera los valores de group_id siguientes en inglés:<br /><br /> 1: servidor<br />2: BASE DE<br />3: BASE DE|  
 |phrase_id|**int**|Contiene un valor entero que resulta útil para diferenciar los casos en los que el separador de palabras emite formatos alternativos de palabras compuestas, tales como texto completo. A veces, con la presencia de palabras compuestas ('multi-million') el separador de palabras emite formatos alternativos. En ocasiones, es necesario diferenciar estos formatos alternativos (frases).<br /><br /> Por ejemplo, '`multi-million`' genera los valores de phrase_id siguientes en inglés:<br /><br /> 1 para`multi`<br />1 para`million`<br />2 para`multimillion`|  
 |occurrence|**int**|Indica el orden de cada término en el resultado del análisis. Por ejemplo, para la repetición de la frase "`SQL Server query processor`", contendría los valores de repetición siguientes para los términos de la frase, en inglés:<br /><br /> 1 para`SQL`<br />2 para`Server`<br />3 para`query`<br />4 para`processor`|  
 |special_term|**nvarchar(4000)**|Contiene información sobre las características del término que el separador de palabras emite; por ejemplo:<br /><br /> Coincidencia exacta<br /><br /> Palabra irrelevante<br /><br /> Fin de frase<br /><br /> Fin de párrafo<br /><br /> Fin de capítulo|  
 |display_term|**nvarchar(4000)**|Contiene el formato legible de la palabra clave. Al igual que con las funciones diseñadas para tener acceso al contenido del índice de texto completo, este término mostrado podría no ser idéntico al original, debido a la limitación de la desnormalización. Sin embargo, debería ser suficientemente preciso para ayudar a identificarlo con respecto a la entrada original.|  
-|expansion_type|**int**|Contiene información sobre la naturaleza de la expansión de un término determinado; a saber:<br /><br /> 0 =caso de una sola palabra<br /><br /> 2=expansión con inflexión<br /><br /> 4=expansión o sustitución de diccionario de sinónimos<br /><br /> Por ejemplo, considere un caso en que el diccionario de sinónimos define run como una expansión de `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> El término `FORMSOF (FREETEXT, run)` genera la salida siguiente:<br /><br /> 
-  `run` con expansion_type=0<br /><br /> 
-  `runs` con expansion_type=2<br /><br /> 
-  `running` con expansion_type=2<br /><br /> 
-  `ran` con expansion_type=2<br /><br /> 
-  `jog` con expansion_type=4|  
+|expansion_type|**int**|Contiene información sobre la naturaleza de la expansión de un término determinado; a saber:<br /><br /> 0 =caso de una sola palabra<br /><br /> 2=expansión con inflexión<br /><br /> 4=expansión o sustitución de diccionario de sinónimos<br /><br /> Por ejemplo, considere un caso en que el diccionario de sinónimos define run como una expansión de `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> El término `FORMSOF (FREETEXT, run)` genera la salida siguiente:<br /><br /> `run` con expansion_type=0<br /><br /> `runs` con expansion_type=2<br /><br /> `running` con expansion_type=2<br /><br /> `ran` con expansion_type=2<br /><br /> `jog` con expansion_type=4|  
 |source_term|**nvarchar(4000)**|Término o frase a partir de la cual se generó o analizó un término determinado. Por ejemplo, una consulta de '"`word breakers" AND stemmers'` genera los valores de source_term siguientes en inglés:<br /><br /> `word breakers`para el display_term`word`<br />`word breakers`para el display_term`breakers`<br />`stemmers`para el display_term`stemmers`|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -171,9 +166,9 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
  [Búsqueda de texto completo](../../relational-databases/search/full-text-search.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar archivos de sinónimos para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Consulta con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
- [Consulta con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
+ [Configurar y administrar palabras irrelevantes y palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
+ [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Elementos protegibles](../../relational-databases/security/securables.md)  
   
   

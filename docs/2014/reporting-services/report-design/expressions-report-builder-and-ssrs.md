@@ -11,15 +11,15 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 3660ecee1271d4fd2673b0dfe9107a8fb5c52e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413014"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
 
-Las expresiones se utilizan ampliamente a lo largo de un informe para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. Muchas propiedades de elementos de informe pueden establecerse en una expresión. Las expresiones le ayudan a controlar el contenido, el diseño y la interactividad de un informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], se guardan en la definición de informe y se evalúan mediante el procesador de informes al ejecutar el informe.  
+Las expresiones se utilizan ampliamente a lo largo de un informe para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. Muchas propiedades de elementos de informe pueden establecerse en una expresión. Las expresiones le ayudan a controlar el contenido, el diseño y la interactividad de un informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], se guardan en la definición de informe y son evaluadas por el procesador de informes al ejecutar el informe.  
 
 A diferencia de aplicaciones como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office Excel en que se trabaja directamente con datos en una hoja de cálculo, en un informe se trabaja con expresiones que son marcadores de posición para los datos. Para ver los datos reales de las expresiones evaluadas, debe obtener una vista previa del informe. Al ejecutar el informe, el procesador de informes evalúa cada expresión a medida que combina los datos del informe y elementos de diseño del informe, como tablas y gráficos.  
 
@@ -52,16 +52,16 @@ Para desarrollar expresiones complejas o expresiones que utilizan código person
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
 
-##  <a name="Types"></a>Descripción de las expresiones simples y complejas  
+##  <a name="understanding-simple-and-complex-expressions"></a><a name="Types"></a> Descripción de las expresiones simples y complejas  
 Las expresiones comienzan por un signo igual (=) y se escriben en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Las expresiones pueden incluir una combinación de constantes, operadores y referencias a valores integrados (campos, colecciones y funciones) y a código externo o personalizado.  
 
 Puede utilizarlas para especificar el valor de muchas propiedades de elementos de informe. Las propiedades más comunes son los valores de los cuadros de texto y el texto de los marcadores de posición. Normalmente, si un cuadro de texto contiene solo una expresión, esta es el valor de la propiedad de cuadro de texto. Si un cuadro de texto contiene varias expresiones, cada una es el valor de texto del marcador de posición en el cuadro de texto.  
 
 De forma predeterminada, las expresiones aparecen en la superficie de diseño del informe como *expresiones simples* o *expresiones complejas*.  
 
--   **Simple** Una expresión simple contiene una referencia a un único elemento de una colección integrada, por ejemplo, un campo de conjunto de elementos, un parámetro o un campo integrado. En la superficie de diseño, una expresión simple aparece entre corchetes. Por ejemplo, `[FieldName]` corresponde a la expresión `=Fields!FieldName.Value`subyacente. Las expresiones simples se crean automáticamente al crear el diseño del informe y arrastrar los elementos del panel Datos de informe a la superficie de diseño. Para obtener más información sobre los símbolos que representan diferentes colecciones integradas, vea [Descripción de los símbolos de prefijo en expresiones simples](#DisplayText).  
+-   **Simple** : las expresiones simples contienen una referencia a un solo elemento de una colección integrada, como un campo de conjunto de datos, un parámetro o un campo integrado. En la superficie de diseño, una expresión simple aparece entre corchetes. Por ejemplo, `[FieldName]` corresponde a la expresión `=Fields!FieldName.Value`subyacente. Las expresiones simples se crean automáticamente al crear el diseño del informe y arrastrar los elementos del panel Datos de informe a la superficie de diseño. Para obtener más información sobre los símbolos que representan diferentes colecciones integradas, vea [Descripción de los símbolos de prefijo en expresiones simples](#DisplayText).  
 
--   **Complejo** Una expresión compleja contiene referencias a varias referencias integradas, operadores y llamadas a funciones. Una expresión compleja aparece como <\<Expr>> cuando el valor de expresión incluye más de una referencia simple. Para ver la expresión, mantenga el mouse sobre ella y use la información sobre herramientas. Para modificar la expresión, ábrala en el cuadro de diálogo **Expresión** .  
+-   **Compleja** : las expresiones complejas contienen referencias a varias referencias, operadores y llamadas a función integradas. Una expresión compleja aparece como <\<Expr>> cuando el valor de expresión incluye más de una referencia simple. Para ver la expresión, mantenga el mouse sobre ella y use la información sobre herramientas. Para modificar la expresión, ábrala en el cuadro de diálogo **Expresión** .  
 
 La siguiente figura muestra expresiones simples y complejas típicas para cuadros de texto y el texto de los marcadores de posición.  
 
@@ -73,7 +73,7 @@ Para mostrar valores de ejemplo en lugar del texto de las expresiones, aplique e
 
 Para más información, vea [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md).  
 
-## <a name="DisplayText"></a>Descripción de los símbolos de prefijo en expresiones simples  
+## <a name="understanding-prefix-symbols-in-simple-expressions"></a><a name="DisplayText"></a>Descripción de los símbolos de prefijo en expresiones simples  
 
 Las expresiones simples usan símbolos para indicar si la referencia es a un campo, un parámetro, una colección integrada o la colección ReportItems. En la tabla siguiente, se muestran ejemplos de texto mostrado junto con el texto de la expresión correspondiente:  
 
@@ -86,7 +86,7 @@ Las expresiones simples usan símbolos para indicar si la referencia es a un cam
 
 
 
-##  <a name="References"></a>Escribir expresiones complejas  
+##  <a name="writing-complex-expressions"></a><a name="References"></a>Escribir expresiones complejas  
 Las expresiones pueden incluir referencias a funciones, operadores, constantes, campos, parámetros, elementos de colecciones integradas y referencias a código personalizado incrustado o a ensamblados personalizados.  
 
 > [!NOTE]
@@ -100,11 +100,11 @@ En la tabla siguiente se enumeran los tipos de referencias que se pueden incluir
 |[Operadores](operators-in-expressions-report-builder-and-ssrs.md)|Describe los operadores que puede utilizar para combinar referencias en una expresión. Por ejemplo, el operador `&` se utiliza para concatenar cadenas.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Colecciones integradas](built-in-collections-in-expressions-report-builder.md)|Describe las colecciones integradas que puede incluir en una expresión; por ejemplo, `Fields`, `Parameters`y `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[Funciones integradas de informe y de agregado](report-builder-functions-aggregate-functions-reference.md)|Describe funciones integradas, como `Sum` o `Previous`, a las que puede tener acceso desde una expresión.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Referencias a ensamblados y código personalizado en expresiones en Diseñador de informes &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Describe cómo puede obtener acceso a las clases integradas de CLR <xref:System.Math> y <xref:System.Convert>, a otras clases de CLR, a funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o a métodos de un ensamblado externo.<br /><br /> Describe cómo puede tener acceso a código personalizado incrustado en un informe, o que se compila e instala como un ensamblado personalizado en el cliente de informes y en el servidor de informes.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Describe cómo puede obtener acceso a las clases integradas de CLR <xref:System.Math> y <xref:System.Convert>, a otras clases de CLR, a funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] o a métodos de un ensamblado externo.<br /><br /> Describe cómo puede tener acceso a código personalizado incrustado en un informe, o que se compila e instala como un ensamblado personalizado en el cliente de informes y en el servidor de informes.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
 
 
 
-##  <a name="Valid"></a>Validar expresiones  
+##  <a name="validating-expressions"></a><a name="Valid"></a>Validar expresiones  
 Cuando cree una expresión para una propiedad de elemento de informe determinada, las referencias que puede incluir en una expresión dependen de los valores que la propiedad del elemento de informe pueda aceptar y del ámbito en el que se evalúa la propiedad. Por ejemplo:  
 
 -   De forma predeterminada, la expresión [Suma] calcula la suma de los datos que están en el ámbito en el momento en que se evalúa la expresión. Para una celda de la tabla, el ámbito depende de la fila y las pertenencias a los grupos de columnas. Para obtener más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)subyacente.  
@@ -115,9 +115,9 @@ Cuando cree una expresión para una propiedad de elemento de informe determinada
 
 Para obtener más información, vea [Referencia de expresiones &#40;Generador de informes y SSRS&#41;](expression-reference-report-builder-and-ssrs.md)subyacente.  
 
-## <a name="Section"></a> En esta sección
+## <a name="in-this-section"></a><a name="Section"></a>En esta sección
 
-[Agregue una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
+[Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
 
 [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
 

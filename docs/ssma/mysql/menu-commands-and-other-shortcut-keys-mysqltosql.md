@@ -10,10 +10,10 @@ ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908800"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandos de menú y otras teclas de acceso directo (MySQLToSQL)
@@ -87,7 +87,7 @@ Para acceder al menú herramientas, el método abreviado de teclado utilizado es
 |Muestra el cuadro de diálogo Configuración del proyecto.|ALT + T + P|  
 |Muestra el cuadro de diálogo Configuración predeterminada del proyecto.|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>Comandos del menú ayuda  
+## <a name="help-menu-commands"></a>Comandos del menú Ayuda  
 Para acceder al menú ayuda, el método abreviado de teclado utilizado es ALT + H. En la tabla siguiente se describen los métodos abreviados de teclado que se usan para tener acceso a los elementos de menú en el menú ayuda.  
   
 |PARA ELLO|Pulse|  

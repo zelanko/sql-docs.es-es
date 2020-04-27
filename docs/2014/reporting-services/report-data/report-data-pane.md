@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: fc09c100cc8391bb1fd025b4bb5ac5f3b5e4379a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413130"
 ---
 # <a name="report-data-pane-in-sql-server-reporting-services-ssrs"></a>Panel Datos de informe de SQL Server Reporting Services (SSRS)
@@ -26,16 +26,16 @@ ms.locfileid: "67413130"
  **Campos integrados**  
  Representa campos de Reporting Services que habitualmente se usan en un informe, como el nombre del informe o el número de página. Para obtener más información, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
- **Los**  
+ **Parámetros**  
  Representa la colección de parámetros de informe. Cada uno de ellos puede tener uno o varios valores. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
- **Image**  
+ **Imágenes**  
  Representa el conjunto de imágenes usadas en el informe. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](../report-design/images-report-builder-and-ssrs.md).  
   
  **Origen de datos**  
  Representa una única referencia a un origen de datos incrustado o a un origen de datos compartido. En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los orígenes de datos compartidos aparecen en el Explorador de soluciones, debajo de la carpeta Orígenes de datos compartidos. Un origen de datos especifica uno de los tipos de orígenes de datos compatibles con Reporting Services. Un origen de datos es el nodo primario para la colección de conjuntos de datos que está basada en él. Para obtener más información, vea [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) .  
   
- **Authors1**  
+ **Dataset**  
  Representa un único conjunto de datos. Un conjunto de datos es el nodo primario para la colección de campos especificados por la consulta e incluye cualquier campo calculado. Reporting Services admite el uso de diseñadores de consultas para ayudarle a especificar las consultas. Para obtener más información, vea [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md) y [herramientas de diseño de consultas en diseñador de informes SQL Server Data Tools &#40;SSRS ](query-design-tools-ssrs.md)&#41;.  
   
 ## <a name="next-steps"></a>Pasos siguientes

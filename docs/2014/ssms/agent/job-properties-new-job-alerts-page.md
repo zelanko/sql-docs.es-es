@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189278"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>Propiedades del trabajo: Nuevo trabajo (página Alertas)
@@ -36,7 +36,7 @@ ms.locfileid: "68189278"
  Quita la alerta seleccionada del trabajo y la elimina.  
   
 ## <a name="see-also"></a>Consulte también  
- [Alerts](alerts.md)   
+ [Alarmas](alerts.md)   
  [Implementar trabajos](implement-jobs.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110152"
 ---
 # <a name="viewing-tuning-reports"></a>Ver informes de optimización
@@ -46,6 +46,6 @@ ms.locfileid: "66110152"
  Ha explorado la pestaña **Informes** de la GUI del Asistente para la optimización de motor de base de datos para la sesión de optimización MySession. Puede utilizar estos mismos pasos para explorar los informes que se generaron para la sesión de optimización EvaluateMySession. Haga doble clic en **EvaluateMySession** en el panel **Monitor de sesión** para comenzar.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 3: Usar la utilidad del símbolo del sistema dta](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Lección 3: Uso de la utilidad del símbolo del sistema dta](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

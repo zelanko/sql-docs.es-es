@@ -10,13 +10,13 @@ ms.assetid: 13adf4e0-216a-4992-b13d-b7b1e1629e77
 ms.author: lle
 author: lrtoyou1223
 ms.openlocfilehash: 50b313f63ae434a96d6c0e38f3c8b600914c806d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66822993"
 ---
-# <a name="task-15-building-and-running-the-ssis-project"></a>Tarea 15: compilar y ejecutar el proyecto de SSIS
+# <a name="task-15-building-and-running-the-ssis-project"></a>Tarea 15: Compilación y ejecución del proyecto de SSIS
 
   En esta tarea, compilará y ejecutará el proyecto de SSIS. Si tiene instalada la versión de 64 bits de Excel 2010 en el equipo, debe establecer el valor de **Run64BitRuntime** en **false** para que el origen de Excel funcione.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66822993"
   
      ![Propiedades del proyecto CleanseAndCurateSuppliers](../../2014/tutorials/media/et-buildingandrunningthessisproject-01.jpg "Propiedades del proyecto CleanseAndCurateSuppliers")  
   
-4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **propiedades** .  
+4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades**.  
   
 5.  Haga clic en **compilar** en la barra de menús y haga clic en **generar CleanseAndCurateSuppliers**. Asegúrese de que no hay errores de compilación.  
   
@@ -43,6 +43,6 @@ ms.locfileid: "66822993"
 8.  Haga clic en **depurar** en la barra de menús y en **detener depuración** para detener la sesión de depuración. Si se produce un error en el paquete, debe habilitar los visores de datos y ver cómo fluyen los datos entre los componentes.  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 16: comprobar con Master Data Manager](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
+ [Tarea 16: Comprobación con Master Data Manager](../../2014/tutorials/task-16-verifying-with-master-data-manager.md)  
   
   

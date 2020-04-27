@@ -18,10 +18,10 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907295"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "67907295"
 |**runstatus**|**int**|Estado de ejecución:<br /><br /> 1 = Iniciada.<br /><br /> 2 = Correcto.<br /><br /> 3 = En curso.<br /><br /> 4 = Inactiva.<br /><br /> 5 = Reintentar.<br /><br /> 6 = Error.|  
 |**start_time**|**datetime**|Hora a la que comienza la ejecución del trabajo.|  
 |**time**|**datetime**|Hora a la que se registra el mensaje.|  
-|**Duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
-|**opiniones**|**nvarchar(255)**|El texto del mensaje.|  
+|**duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
+|**comentarios**|**nvarchar(255)**|El texto del mensaje.|  
 |**xact_seqno**|**varbinary(16)**|Número de secuencia de la última transacción procesada.|  
 |**delivery_time**|**int**|La hora en que se entrega la primera transacción.|  
 |**delivered_transactions**|**int**|Número total de transacciones entregadas en la sesión.|  

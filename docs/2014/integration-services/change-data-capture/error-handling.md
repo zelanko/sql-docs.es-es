@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835658"
 ---
 # <a name="error-handling"></a>Tratamiento de errores
@@ -34,11 +34,11 @@ ms.locfileid: "62835658"
   
  En la tabla siguiente se describen los distintos códigos de estado que la instancia CDC de Oracle puede notificar en su tabla de estado.  
   
-|Status|Código de estado de active|Código de estado de error|Descripciones|  
+|Estado|Código de estado de active|Código de estado de error|Descripciones|  
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|La instancia CDC de Oracle no se está ejecutando. El subestado ABORTED indica que la instancia CDC de Oracle estaba ACTIVE y se ha detenido inesperadamente.<br /><br /> La instancia principal del servicio CDC de Oracle establece el subestado ABORTED cuando detecta que la instancia CDC de Oracle no se está ejecutando mientras su estado es ACTIVE.|  
 |ERROR|0|1|La instancia CDC de Oracle no se está ejecutando. El estado ERROR indica que la instancia CDC estaba ACTIVE pero encontró un error no recuperable y se deshabilitó a sí misma. El estado ERROR contiene los códigos de subestado siguientes:<br /><br /> MISCONFIGURED: se detectó un error de configuración irrecuperable.<br /><br /> PASSWORD-REQUIRED: no hay ninguna contraseña establecida en el Diseñador de captura de datos modificados para Oracle de Attunity o la contraseña configurada no es válida. Esto puede deberse a un cambio en la contraseña de clave asimétrica del servicio.|  
-|RUNNING|1|0|La instancia CDC se está ejecutando y está procesando registros de cambios. El estado RUNNING contiene los códigos de subestado siguientes:<br /><br /> IDLE: todos los registros de cambios se han procesado y almacenado en las tablas de control de destino ( **_CT**). No hay ninguna transacción activa con las tablas de control.<br /><br /> PROCESSING: hay registros de cambios que se están procesando y que no se han escrito todavía en las tablas de control ( **_CT**).|  
+|RUNNING|1|0|La instancia CDC se está ejecutando y está procesando registros de cambios. El estado RUNNING contiene los códigos de subestado siguientes:<br /><br /> IDLE: todos los registros de cambios se han procesado y almacenado en las tablas de control de destino (**_CT**). No hay ninguna transacción activa con las tablas de control.<br /><br /> PROCESSING: hay registros de cambios que se están procesando y que no se han escrito todavía en las tablas de control (**_CT**).|  
 |STOPPED|0|0|La instancia CDC no se está ejecutando. El subestado STOP indica que la instancia CDC estaba ACTIVE y se detuvo correctamente.|  
 |SUSPENDED|1|1|La instancia CDC se está ejecutando pero el procesamiento está suspendido debido a un error recuperable. El estado SUSPENDED contiene los códigos de subestado siguientes:<br /><br /> DISCONNECTED: no se puede establecer la conexión con la base de datos de Oracle de origen. El procesamiento se reanudará una vez que se restaure la conexión.<br /><br /> STORAGE: el almacenamiento está lleno. El procesamiento se reanudará cuando haya disponible más almacenamiento. En algunos casos, este estado puede no aparecer porque la tabla de estado no se puede actualizar.<br /><br /> LOGGER: el registrador está conectado a Oracle pero no puede leer los registros de transacciones de Oracle debido a un problema temporal.|  
 |DATAERROR|x|x|Este código de estado solo se usa para la tabla **xdbcdc_trace** . No aparece en la tabla **xdbcdc_state** . Los registros de seguimiento que tienen este estado indican un problema con una entrada de registro de Oracle. La entrada de registro no válida se almacena en la columna **data** como un BLOB. El estado DATAERROR contiene los códigos de subestado siguientes:<br /><br /> BADRECORD: la entrada de registro adjunta no se pudo analizar.<br /><br /> CONVERT-ERROR: los datos de algunas columnas no se pudieron convertir a las columnas de destino de la tabla de captura. Este estado puede aparecer solo si la configuración especifica que los errores de conversión deben producir registros de seguimiento.|  
@@ -113,5 +113,5 @@ ms.locfileid: "62835658"
  El servicio CDC de Oracle supervisa los subprocesos de la instancia CDC. Cuando se anula un subproceso de instancia CDC, el servicio CDC lo deshabilita en la tabla MSXDBCDC.dbo.xdbcdc_databases y actualiza su estado de cdc.xdbcdc_state a ABORTED. En este caso, se emplea el cuadro de diálogo estándar de informe de errores de Windows para informar del error para su análisis.  
   
 ## <a name="see-also"></a>Consulte también  
- [Diseñador de captura de datos modificados para Oracle de Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Change Data Capture Designer para Oracle por Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [La instancia CDC de Oracle](the-oracle-cdc-instance.md)  

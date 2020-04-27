@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871282"
 ---
 # <a name="rebuild-system-databases"></a>Volver a generar bases de datos del sistema
-  Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](master-database.md), [modelo](model-database.md), [msdb](msdb-database.md) o de [recursos](resource-database.md), o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Las bases de datos del sistema deben volver a generarse para corregir problemas por daños en las bases de datos [maestra](master-database.md), [modelo](model-database.md), [msdb](msdb-database.md)o de [recursos](resource-database.md) , o para modificar la intercalación de nivel de servidor predeterminada. En este tema se ofrecen instrucciones paso a paso para volver a generar las bases de datos del sistema en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **En este tema**  
   
@@ -33,24 +33,24 @@ ms.locfileid: "62871282"
   
      [Requisitos previos](#Prerequisites)  
   
--   **Procedimientos**  
+-   **Procedimientos:**  
   
      [Volver a generar bases de datos del sistema](#RebuildProcedure)  
   
-     [Recompilar la base de datos de recursos](#Resource)  
+     [Volver a generar la base de datos de recursos](#Resource)  
   
-     [Crear una nueva base de datos msdb](#CreateMSDB)  
+     [Crear una base de datos msdb](#CreateMSDB)  
   
--   **Sigue:**  
+-   **Seguimiento:**  
   
      [Solucionar errores de recompilación](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Cuando se vuelven a generar las bases de datos maestra, modelo, msdb y tempdb del sistema, las bases de datos se quitan y se vuelven a crear en su ubicación original. Si se especifica una nueva intercalación en la instrucción para volver a generar las bases de datos del sistema, estas se crearán con esa configuración de intercalación. Se perderán las modificaciones que los usuarios hayan realizado en esas bases de datos. Por ejemplo, es posible que haya objetos definidos por los usuarios en la base de datos maestra, trabajos programados en msdb o cambios en la configuración predeterminada de la base de datos modelo.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Realice las tareas siguientes antes de volver a generar las bases de datos del sistema para asegurarse de que puede restaurar la configuración actual de las mismas.  
   
 1.  Registre todos los valores de configuración del servidor.  
@@ -86,7 +86,7 @@ ms.locfileid: "62871282"
   
 7.  Compruebe que haya copias de los archivos de plantilla de registro y datos de las bases de datos maestra, modelo y msdb en el servidor local. La ubicación predeterminada de los archivos de plantilla es C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Templates. Estos archivos se usan durante el proceso de volver a generar las bases de datos y deben estar presentes para que la instalación se realice correctamente. Si no lo están, ejecute la característica de reparación del programa de instalación o copie los archivos manualmente desde el disco de instalación. Para encontrar los archivos en el soporte físico de instalación, navegue hasta el directorio de la plataforma correcta (x86 o x64) y, a continuación, navegue hasta setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Templates.  
   
-##  <a name="RebuildProcedure"></a>Volver a generar bases de datos del sistema  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> Volver a generar bases de datos del sistema  
  Con el procedimiento siguiente se vuelven a generar las bases de datos maestra, modelo, msdb y tempdb del sistema. No se pueden especificar las bases de datos del sistema que se van a volver a generar. En el caso de las instancias en clúster, este procedimiento se debe realizar en el nodo activo y desconectar el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del grupo de aplicaciones en clúster antes de realizar el procedimiento.  
   
  Este procedimiento no vuelve a generar la base de datos de recursos. Vea la sección "Procedimiento para volver a generar la base de datos de recursos" más adelante en este mismo tema.  
@@ -104,7 +104,7 @@ ms.locfileid: "62871282"
     |/QUIET o /Q|Especifica que el programa de instalación se ejecute sin ninguna interfaz de usuario.|  
     |/ACTION=REBUILDDATABASE|Especifica que el programa de instalación vuelva a crear las bases de datos del sistema.|  
     |/INSTANCENAME =*nombreDeInstancia*|Es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la instancia predeterminada, escriba MSSQLSERVER.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor `sysadmin`. Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Por ejemplo, escriba: `NT AUTHORITY\SYSTEM`.|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|Especifica las cuentas individuales o de grupos de Windows que se agregarán al rol fijo de servidor `sysadmin`. Si especifica varias cuentas, sepárelas con un espacio en blanco. Escriba, por ejemplo, **BUILTIN\Administrators MyDomain\MyUser**. Cuando está especificando una cuenta que contiene un espacio en blanco dentro del nombre, agregue la cuenta entre comillas tipográficas. Por ejemplo, escriba `NT AUTHORITY\SYSTEM`:|  
     |[ /SAPWD=*StrongPassword* ]|Especifica la contraseña de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` cuenta. Este parámetro es obligatorio si la instancia usa el modo Autenticación mixta (autenticación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows).<br /><br /> Nota de ** \* seguridad \* \* ** La `sa` cuenta es una cuenta conocida [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a menudo se dirige a los usuarios malintencionados. Es muy importante que use una contraseña segura en el inicio de sesión de `sa`.<br /><br /> No especifique este parámetro para el modo Autenticación de Windows.|  
     |[ /SQLCOLLATION=*CollationName* ]|Especifica una nueva intercalación de nivel de servidor. Este parámetro es opcional. Cuando no se especifica, se usa la intercalación actual del servidor.<br /><br /> ** \* Importante \* \* ** Al cambiar la intercalación de nivel de servidor no se cambia la intercalación de las bases de datos de usuario existentes. Todas las bases de datos de usuario nuevas usarán la nueva intercalación de manera predeterminada.<br /><br /> Para obtener más información, vea [Configurar o cambiar la intercalación del servidor](../collations/set-or-change-the-server-collation.md).|  
   
@@ -125,11 +125,11 @@ ms.locfileid: "62871282"
   
 -   Si la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se configura como Distribuidor de replicación, debe restaurar la base de datos de distribución. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../replication/administration/back-up-and-restore-replicated-databases.md).  
   
--   Mover las bases de datos del sistema a las ubicaciones registradas anteriormente. Para más información, consulte [Mover bases de datos del sistema](system-databases.md).  
+-   Mover las bases de datos del sistema a las ubicaciones registradas anteriormente. Para obtener más información, vea [Mover bases de datos del sistema](system-databases.md).  
   
 -   Comprobar que los valores de configuración de todo el servidor coinciden con los valores registrados anteriormente.  
   
-##  <a name="Resource"></a>Recompilar la base de datos de recursos  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> Volver a generar la base de datos de recursos  
  Con el procedimiento siguiente se vuelve a generar la base de datos de recursos. Al volver a generar la base de datos de recursos, se pierden todos los Service Pack y las revisiones y, por lo tanto, se deben volver a aplicar.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>Para volver a generar la base de datos de recursos:  
@@ -146,7 +146,7 @@ ms.locfileid: "62871282"
   
 6.  En la página **Listo para reparar** , haga clic en **Reparar**. La página Operación completada indica que la operación ha finalizado.  
   
-##  <a name="CreateMSDB"></a>Crear una nueva base de datos msdb  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a>Crear una nueva base de datos msdb  
  Si la `msdb` base de datos está dañada y no tiene una copia de `msdb` seguridad de la base de datos, `msdb` puede crear una nueva mediante el script **instmsdb** .  
   
 > [!WARNING]  
@@ -156,7 +156,7 @@ ms.locfileid: "62871282"
   
 2.  Inicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde la línea de comandos usando el comando: `NET START MSSQLSERVER /T3608`  
   
-     Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Para obtener más información, vea [iniciar, detener, pausar, reanudar, reiniciar el servicio de motor de base de datos, Agente SQL Server o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  En otra ventana de la línea de comandos `msdb` , Desasocie la base de datos ejecutando el comando siguiente, reemplazando * \<ServerName>* por la instancia de: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
@@ -174,9 +174,9 @@ ms.locfileid: "62871282"
   
 9. Vuelva a crear el contenido de usuario almacenado `msdb` en la base de datos, como trabajos, alertas, etc.  
   
-10. Haga una copia de seguridad de la base de datos `msdb`.  
+10. Haga una copia de seguridad de la base de datos `msdb` .  
   
-##  <a name="Troubleshoot"></a>Solucionar errores de recompilación  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a>Solucionar errores de recompilación  
  Los errores de sintaxis y otros errores en tiempo de ejecución se muestran en la ventana del símbolo del sistema. Examine la instrucción de instalación en busca de los siguientes errores de sintaxis:  
   
 -   La barra diagonal (/) no aparece delante de los nombres de los parámetros.  

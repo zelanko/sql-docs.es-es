@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827155"
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
@@ -78,7 +78,7 @@ ms.locfileid: "62827155"
  [Flujo de datos](data-flow.md)   
  [Transformar datos con transformaciones](transformations/transform-data-with-transformations.md)   
  [Conectar componentes con rutas de acceso](../connect-components-with-paths.md)   
- [Tarea Flujo de datos](../control-flow/data-flow-task.md)   
+ [Tarea flujo de datos](../control-flow/data-flow-task.md)   
  [Flujo de datos](data-flow.md)  
   
   

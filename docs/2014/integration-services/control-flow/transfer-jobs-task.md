@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829901"
 ---
 # <a name="transfer-jobs-task"></a>Tarea Transferir trabajos
@@ -64,7 +64,7 @@ ms.locfileid: "62829901"
   
 -   [Editor de la tarea Transferir trabajos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea transferir trabajos &#40;página trabajos&#41;](../transfer-jobs-task-editor-jobs-page.md)  
+-   [Editor de la tarea Transferir trabajos &#40;página Trabajos&#41;](../transfer-jobs-task-editor-jobs-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

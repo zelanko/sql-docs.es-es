@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823702"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar informes personalizados con las propiedades de nodo del Explorador de objetos
@@ -37,7 +37,7 @@ ms.locfileid: "62823702"
 ## <a name="object-explorer-node-report-parameters-example"></a>Ejemplo de parámetros del informe de un nodo del Explorador de objetos  
  Para ejecutar el ejemplo, use el procedimiento siguiente.  
   
- **Para ver los valores de los parámetros de informe de un nodo en Explorador de objetos**  
+ **Para ver los valores de los parámetros del informe de un nodo del Explorador de objetos**  
   
 1.  Copie el siguiente código de ejemplo en un archivo de texto nuevo y asigne un nombre al archivo con la extensión .rdl.  
   

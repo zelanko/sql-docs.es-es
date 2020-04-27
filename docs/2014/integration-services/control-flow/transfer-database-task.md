@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830154"
 ---
 # <a name="transfer-database-task"></a>Tarea Transferir bases de datos
@@ -71,9 +71,9 @@ ms.locfileid: "62830154"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea transferir bases de datos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Transferir bases de datos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea transferir bases de datos &#40;página bases de datos&#41;](../transfer-database-task-editor-databases-page.md)  
+-   [Editor de la tarea Transferir bases de datos &#40;página Bases de datos&#41;](../transfer-database-task-editor-databases-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

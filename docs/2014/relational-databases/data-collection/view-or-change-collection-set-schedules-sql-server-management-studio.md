@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873493"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "62873493"
   
 6.  Haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo **Propiedades del conjunto de recopilación de datos** .  
   
-####  <a name="CollectionSet"></a> Cuadro de diálogo Propiedades del conjunto de recopilación de datos  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> Cuadro de diálogo Propiedades del conjunto de recopilación de datos  
  **Página General**  
   
  Utilice esta página para configurar la recopilación y carga de datos, las programaciones y los períodos de retención de datos en el almacén de administración de datos. Esta página también proporciona información sobre los conjuntos de recopilación, como los tipos de recopilador y las frecuencias de recopilación, así como sobre los parámetros de entrada que se utilizan para un conjunto de recopilación.  

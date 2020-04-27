@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873016"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
@@ -57,25 +57,25 @@ ms.locfileid: "62873016"
 |`datetime2`|Sí|Usa la representación de datos enteros utilizando de 6 a 9 bytes. Los primeros 4 bytes representan la fecha. Los bytes tomados por la fecha dependerán de la precisión del tiempo que se especifique.<br /><br /> El valor entero representa el número de días desde el 1/1/0001, con un límite superior del 12/31/9999. Para representar una fecha del año 2005, la compresión toma 3 bytes.<br /><br /> No hay ningún ahorro en el tiempo porque permite usar de 2 a 4 bytes para varias precisiones de tiempo. Por consiguiente, para una precisión de tiempo de un segundo, la compresión utiliza 2 bytes para el tiempo, usando el segundo byte cuando han transcurrido 255 segundos.|  
 |`datetimeoffset`|Sí|Se parece a `datetime2`, salvo que hay 2 bytes de zona horaria del formato (HH:MM).<br /><br /> Al igual que `datetime2`, la compresión puede ahorrar 2 bytes.<br /><br /> Para valores de zona horaria, el valor MM podría ser 0 en la mayoría de los casos. Por consiguiente, la compresión solo podrá ahorrar 1 byte.<br /><br /> No hay ningún cambio en el almacenamiento para la compresión de fila.|  
 |`char`|Sí|Se quitan los caracteres de relleno final. Observe que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserta el mismo carácter de relleno, independientemente de la intercalación que se utilice.|  
-|`varchar`|No|Sin efecto.|  
-|`text`|No|Sin efecto.|  
+|`varchar`|No|Ningún efecto.|  
+|`text`|No|Ningún efecto.|  
 |`nchar`|Sí|Se quitan los caracteres de relleno final. Observe que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserta el mismo carácter de relleno, independientemente de la intercalación que se utilice.|  
-|`nvarchar`|No|Sin efecto.|  
-|`ntext`|No|Sin efecto.|  
+|`nvarchar`|No|Ningún efecto.|  
+|`ntext`|No|Ningún efecto.|  
 |`binary`|Sí|Se quitan los ceros finales.|  
-|`varbinary`|No|Sin efecto.|  
-|`image`|No|Sin efecto.|  
+|`varbinary`|No|Ningún efecto.|  
+|`image`|No|Ningún efecto.|  
 |`cursor`|No|Ningún efecto.|  
 |`timestamp` / `rowversion`|Sí|Usa la representación de datos enteros con 8 bytes. Hay un contador de marca de tiempo que se mantiene para cada base de datos y su valor se inicia en 0. Se puede comprimir como cualquier otro valor entero.|  
-|`sql_variant`|No|Sin efecto.|  
-|`uniqueidentifier`|No|Sin efecto.|  
+|`sql_variant`|No|Ningún efecto.|  
+|`uniqueidentifier`|No|Ningún efecto.|  
 |`table`|No|Ningún efecto.|  
-|`xml`|No|Sin efecto.|  
+|`xml`|No|Ningún efecto.|  
 |Tipos definidos por el usuario|No|Se representa internamente como `varbinary`.|  
 |FILESTREAM|No|Se representa internamente como `varbinary`.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Comprimir datos](data-compression.md)   
+ [Compresión de datos](data-compression.md)   
  [Implementación de la compresión de página](page-compression-implementation.md)  
   
   

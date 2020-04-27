@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833825"
 ---
 # <a name="flat-file-connection-manager"></a>Administrador de conexiones de archivos planos
@@ -41,7 +41,7 @@ ms.locfileid: "62833825"
   
  De forma predeterminada, el administrador de conexiones de archivos planos comprueba siempre si hay un delimitador de filas de datos sin comillas e inicia una nueva fila cuando se encuentra un delimitador de filas. Esta opción permite al administrador de conexiones analizar correctamente los archivos con filas que son campos de columna ausentes.  
   
- En algunos casos, si se deshabilita esta característica, se puede mejorar el rendimiento del paquete. Puede deshabilitar esta característica estableciendo la propiedad del administrador de conexiones de archivos **** planos, AlwaysCheckForRowDelimiters `False`, en.  
+ En algunos casos, si se deshabilita esta característica, se puede mejorar el rendimiento del paquete. Puede deshabilitar esta característica estableciendo la propiedad del administrador de conexiones de archivos **AlwaysCheckForRowDelimiters**planos, AlwaysCheckForRowDelimiters `False`, en.  
   
  Puede configurar el administrador de conexiones de archivos planos de las maneras siguientes:  
   
@@ -71,13 +71,13 @@ ms.locfileid: "62833825"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Página general del editor del administrador de conexiones de archivos planos &#40;&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor del administrador de conexiones de archivos planos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Página &#40;columnas del editor del administrador de conexiones de archivos planos&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [Editor del administrador de conexiones de archivos planos &#40;página Columnas&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [Página opciones avanzadas del editor del administrador de conexiones de archivos planos &#40;&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [Editor del administrador de conexiones de archivos planos &#40;página Avanzadas&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [Página de vista previa del editor del administrador de conexiones de archivos planos &#40;&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [Editor del administrador de conexiones de archivos planos &#40;página Vista previa&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   

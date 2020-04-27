@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869600"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -88,10 +88,10 @@ ms.locfileid: "62869600"
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo, el estado de error de autenticación es 8. Esto indica que la contraseña no es correcta.  
   
-|Date|Source|Message|  
+|Fecha|Source|Message|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|Inicio de sesión|"Error: 18456, gravedad: 14, estado: 8."|  
-|2007-12-05 20:12:56.34|Inicio de sesión|Error de inicio de sesión del usuario '<nombreDeUsuario>' [Cliente: \<dirección IP>]|  
+|2007-12-05 20:12:56.34|Iniciar sesión|"Error: 18456, gravedad: 14, estado: 8."|  
+|2007-12-05 20:12:56.34|Iniciar sesión|Error de inicio de sesión del usuario '<nombreDeUsuario>' [Cliente: \<dirección IP>]|  
   
 > [!NOTE]  
 >  Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el modo de autenticación de Windows y posteriormente se cambia al modo de autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión **sa** está deshabilitado inicialmente. Esto produce el error de estado 7: "error de inicio de sesión del usuario ' sa '." Para habilitar el inicio de sesión de **SA** , consulte [cambiar el modo de autenticación del servidor](../../database-engine/configure-windows/change-server-authentication-mode.md).  

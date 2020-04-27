@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871542"
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
@@ -50,7 +50,7 @@ ms.locfileid: "62871542"
 > [!IMPORTANT]  
 >  Si se mueve una base de datos del sistema y posteriormente se vuelve a generar la base de datos maestra, se debe mover de nuevo la base de datos del sistema porque la operación de regeneración instala todas las bases de datos del sistema en su ubicación predeterminada.  
   
-##  <a name="Intro"></a> **En este tema**  
+##  <a name="in-this-topic"></a><a name="Intro"></a> **En este tema**  
   
 -   [Procedimiento de reubicación planeada y mantenimiento de disco programado](#Planned)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62871542"
   
 -   [Ejemplos](#Examples)  
   
-##  <a name="Planned"></a>Procedimiento de reubicación planeada y mantenimiento de disco programado  
+##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a> Procedimiento de reubicación planeada y mantenimiento de disco programado  
  Para mover un archivo de registro o datos de bases de datos del sistema como parte de una operación de reubicación planeada o de mantenimiento programado, siga estos pasos. Este procedimiento se aplica a todas las bases de datos del sistema, excepto las bases de datos maestras y Resource.  
   
 1.  Para cada archivo que se va a mover, ejecute la siguiente instrucción.  
@@ -73,11 +73,11 @@ ms.locfileid: "62871542"
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  Detenga la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o cierre el sistema para realizar el mantenimiento. Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+2.  Detenga la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o cierre el sistema para realizar el mantenimiento. Para obtener más información, vea [iniciar, detener, pausar, reanudar, reiniciar el servicio de motor de base de datos, Agente SQL Server o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  Mueva el archivo o los archivos a la nueva ubicación.  
   
-4.  Reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servidor. Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+4.  Reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servidor. Para obtener más información, vea [iniciar, detener, pausar, reanudar, reiniciar el servicio de motor de base de datos, Agente SQL Server o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 5.  Compruebe el cambio de los archivos ejecutando la consulta siguiente.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62871542"
   
 2.  Envíe un mensaje de correo electrónico para comprobar que el Correo electrónico de base de datos funciona.  
   
-##  <a name="Failure"></a>Procedimiento de recuperación de errores  
+##  <a name="failure-recovery-procedure"></a><a name="Failure"></a> Procedimiento de recuperación de errores  
  Si se debe mover un archivo a causa de un error de hardware, siga los pasos que se indican a continuación para colocar el archivo en otra ubicación. Este procedimiento se aplica a todas las bases de datos del sistema, excepto las bases de datos maestras y Resource.  
   
 > [!IMPORTANT]  
@@ -123,7 +123,7 @@ ms.locfileid: "62871542"
         NET START MSSQL$instancename /f /T3608  
         ```  
   
-     Para más información, consulte [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+     Para obtener más información, vea [iniciar, detener, pausar, reanudar, reiniciar el servicio de motor de base de datos, Agente SQL Server o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
 3.  En cada uno de los archivos que se van a mover, use los comandos **sqlcmd** o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para ejecutar la siguiente instrucción.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62871542"
     WHERE database_id = DB_ID(N'<database_name>');  
     ```  
   
-##  <a name="master"></a>Mover la base de datos maestra  
+##  <a name="moving-the-master-database"></a><a name="master"></a> Mover la base de datos maestra  
  Para mover la base de datos maestra, siga estos pasos.  
   
 1.  Desde el menú **Inicio** , seleccione **Todos los programas**, **Microsoft SQL Server 2005**, **Herramientas de configuración**y, finalmente, haga clic en **Administrador de configuración de SQL Server**.  
@@ -158,11 +158,11 @@ ms.locfileid: "62871542"
   
 3.  En el cuadro de diálogo **Propiedades de (***nombre_de_instancia***) de SQL Server** , haga clic en la pestaña **Parámetros de inicio** .  
   
-4.  En el cuadro **Parámetros existentes**, seleccione el parámetro -d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
+4.  En el cuadro **parámetros existentes** , seleccione el parámetro-d para trasladar el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
   
      En el cuadro **Especifique un parámetro de inicio** , cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
   
-5.  En el cuadro **Parámetros existentes**, seleccione el parámetro -l para mover el archivo de registro maestro. Haga clic en **Actualizar** para guardar el cambio.  
+5.  En el cuadro **parámetros existentes** , seleccione el parámetro-l para trasladar el archivo de registro maestro. Haga clic en **Actualizar** para guardar el cambio.  
   
      En el cuadro **Especifique un parámetro de inicio** , cambie el parámetro a la nueva ruta de acceso de la base de datos maestra.  
   
@@ -193,10 +193,10 @@ ms.locfileid: "62871542"
     GO  
     ```  
   
-##  <a name="Resource"></a>Mover la base de datos Resource  
+##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Mover la base de datos Resource  
  La ubicación de la base de datos Resource es \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombreDeInstancia*>\MSSQL\Binn\\. No se puede mover la base de datos.  
   
-##  <a name="Follow"></a>Seguimiento: después de mover todas las bases de datos del sistema  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Seguimiento: después de mover todas las bases de datos del sistema  
  Si ha movido todas las bases de datos del sistema a una nueva unidad o volumen o a otro servidor con una letra de unidad diferente, realice las actualizaciones siguientes.  
   
 -   Cambie la ruta de acceso del registro del Agente SQL Server. Si no actualiza esta ruta de acceso, el Agente SQL Server no se podrá iniciar.  
@@ -221,7 +221,7 @@ ms.locfileid: "62871542"
   
 4.  Detenga e inicie el servicio SQL Server para completar el cambio.  
   
-##  <a name="Examples"></a>Example  
+##  <a name="examples"></a><a name="Examples"></a> Ejemplos  
   
 ### <a name="a-moving-the-tempdb-database"></a>A. Mover la base de datos tempdb  
  En el ejemplo siguiente se mueven los archivos de datos y registro de `tempdb` a una nueva ubicación como parte de una reubicación planeada.  
@@ -264,11 +264,11 @@ ms.locfileid: "62871542"
 5.  Elimine los archivos `tempdb.mdf` y `templog.ldf` de la ubicación original.  
   
 ## <a name="see-also"></a>Consulte también  
- [Base de datos Resource](resource-database.md)   
+ [Base de datos de recursos](resource-database.md)   
  [Base de datos Tempdb](tempdb-database.md)   
  [Base de datos maestra](master-database.md)   
  [Base de datos msdb](msdb-database.md)   
- [Base de datos model](model-database.md)   
+ [Base de datos modelo](model-database.md)   
  [Traslado de bases de datos de usuario](move-user-databases.md)   
  [Traslado de archivos de base de datos](move-database-files.md)   
  [Iniciar, detener, pausar, reanudar, reiniciar el servicio de Motor de base de datos, Agente SQL Server o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   

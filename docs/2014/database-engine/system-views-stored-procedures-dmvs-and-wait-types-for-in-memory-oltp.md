@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842404"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Vistas del sistema, procedimientos almacenados, tipos de espera para OLTP en memoria y DMV
@@ -24,14 +24,14 @@ ms.locfileid: "62842404"
   
 |Vista del sistema|Descripción|Característica de OLTP en memoria|  
 |-----------------|-----------------|-----------------------------|  
-|[Sys. data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Compruebe si un grupo de archivos contiene datos optimizados en memoria.|Las columnas siguientes muestran valores adicionales: **Type** y **type_desc**.|  
+|[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Compruebe si un grupo de archivos contiene datos optimizados en memoria.|Las columnas siguientes muestran valores adicionales: **Type** y **type_desc**.|  
 |[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Compruebe si un índice se encuentra en una tabla optimizada en memoria.|Las columnas siguientes muestran valores adicionales: **Type** y **type_desc**.|  
-|[Sys. Parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Compruebe si un parámetro no admite valores NULL (para que la ejecución de un procedimiento almacenado compilado de forma nativa sea más eficaz).|**is_nullable** columna.|  
+|[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Compruebe si un parámetro no admite valores NULL (para que la ejecución de un procedimiento almacenado compilado de forma nativa sea más eficaz).|**is_nullable** columna.|  
 |[Sys. all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Compruebe si un procedimiento almacenado se compila de forma nativa.|**uses_native_compilation** columna.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Compruebe si un procedimiento almacenado se compila de forma nativa.|**uses_native_compilation** columna.|  
 |[Sys. table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Compruebe si una tabla está optimizada en memoria.|**is_memory_optimized** columna.|  
 |[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Compruebe si una tabla está optimizada para memoria y Compruebe la configuración de durabilidad de una tabla.|**durabilidad**, **durability_desc**y **is_memory_optimized** columnas.|  
-|[Sys. hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Muestre los índices hash de una tabla optimizada en memoria.|OLTP en memoria específico.|  
+|[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Muestre los índices hash de una tabla optimizada en memoria.|OLTP en memoria específico.|  
   
 ### <a name="metadata-functions"></a>Funciones de metadatos  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62842404"
  Para obtener más información, vea tipos de espera que tienen el prefijo **WAIT_XTP**y **XTPPROC** en el tema [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql) .  
   
 ## <a name="see-also"></a>Consulte también  
- [OLTP en memoria &#40;optimización en memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
+ [&#40;de optimización en memoria de OLTP en memoria&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)   
  [Compatibilidad de Transact-SQL con OLTP en memoria](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

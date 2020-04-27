@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832877"
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
@@ -62,7 +62,7 @@ ms.locfileid: "62832877"
 -   La tarea de inserción masiva no registrará las filas que produzcan errores. Si tiene que capturar esta información, use las salidas de error de componentes de flujo de datos para capturar las filas que provocan errores en un archivo de excepciones.  
   
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>Entradas del registro personalizadas disponibles en la tarea Inserción masiva  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea Inserción masiva. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea Inserción masiva. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -89,11 +89,11 @@ ms.locfileid: "62832877"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea inserción masiva &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Inserción masiva &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea inserción masiva &#40;página de conexión&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Editor de la tarea Inserción masiva &#40;página Conexión&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [Editor de la tarea inserción masiva &#40;página Opciones&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Editor de la tarea Inserción masiva &#40;página Opciones&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -115,6 +115,6 @@ ms.locfileid: "62832877"
   
 -   Artículo técnico, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=233700), en msdn.microsoft.com.  
   
--   Artículo técnico [Usar SQL Server Integration Services para cargar datos de forma masiva](https://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
+-   Artículo técnico sobre cómo [usar SQL Server Integration Services para la carga masiva de datos](https://go.microsoft.com/fwlink/?LinkId=233701), en simple-talk.com.  
   
   

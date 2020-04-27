@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844281"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Nuevo o Editar propiedades de registro de servidor (pestaña General de Reporting Services)
@@ -40,20 +40,20 @@ ms.locfileid: "62844281"
  **Autenticación básica**  
  Conéctese mediante la **Autenticación básica** si la instalación de Reporting Services está configurada para usar la Autenticación básica.  
   
- **Autenticación mediante formularios**  
+ **Autenticación de formularios**  
  Conéctese mediante la **Autenticación de formularios** si la instalación de Reporting Services está configurada para usar una extensión de autenticación personalizada.  
   
  **Nombre de usuario**  
  Escriba el nombre de inicio de sesión que se va a usar en la conexión. Esta opción solo se encuentra disponible si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
   
  **Contraseña**  
- Escriba la contraseña del nombre de usuario Esta opción solo se puede editar si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
+ Escriba la contraseña del nombre de usuario. Esta opción solo se puede editar si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
   
  **Recordar contraseña**  
  Guarda la contraseña que ha escrito. Esta opción solo se encuentra disponible si ha seleccionado **Autenticación básica** o **Autenticación de formularios**.  
   
 > [!NOTE]  
->  Si ha almacenado la contraseña y desea dejar de almacenarla, desactive esta casilla y, a continuación, haga clic en **Guardar**.  
+>   Si ha guardado la contraseña y ya no quiere conservarla, desactive esta casilla y luego haga clic en **Guardar**.  
   
  **Nombre del servidor registrado**  
  El nombre que desea que aparezca en Servidores registrados. Este nombre no tiene que coincidir con el cuadro **Nombre del servidor** .  
@@ -61,7 +61,7 @@ ms.locfileid: "62844281"
  **Descripción del servidor registrado**  
  Escriba una descripción opcional del servidor.  
   
- **Muestre**  
+ **Prueba**  
  Haga clic para probar la conexión al servidor seleccionado en **Nombre del servidor**.  
   
  **Guardar**  

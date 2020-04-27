@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c9a2244c5e6cddbc53ccd3aaec7faaaa3836a923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831750"
 ---
 # <a name="file-system-task"></a>Tarea Sistema de archivos
@@ -51,7 +51,7 @@ ms.locfileid: "62831750"
 -   **Agregue y configure una tarea Sistema de archivos** Agregue una tarea Sistema de archivos al contenedor de bucles Foreach. En la página **General** del Editor de la tarea sistema de archivos, establezca la propiedad **SourceVariable** o **DestinationVariable** en la variable que ha definido en el contenedor de bucles Foreach.  
   
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>Entradas del registro personalizadas disponibles en la tarea Sistema de archivos  
- La siguiente tabla contiene las entradas de registro personalizadas para la tarea Sistema de archivos. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas de registro personalizadas para la tarea Sistema de archivos. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -62,7 +62,7 @@ ms.locfileid: "62831750"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea los temas siguientes:  
   
--   [Editor de la tarea sistema de archivos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Sistema de archivos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -75,8 +75,7 @@ ms.locfileid: "62831750"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
 ## <a name="related-tasks"></a>Related Tasks  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye una tarea que descarga y carga archivos de datos, y administra directorios en servidores. Para más información, consulte [FTP Task](ftp-task.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye una tarea que descarga y carga archivos de datos, y administra directorios en servidores. Para más información, consulte [FTP Task](ftp-task.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](integration-services-tasks.md)   

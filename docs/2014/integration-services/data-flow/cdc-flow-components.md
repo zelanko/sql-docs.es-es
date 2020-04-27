@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828566"
 ---
 # <a name="cdc-flow-components"></a>Componentes del flujo de CDC
@@ -26,13 +26,13 @@ ms.locfileid: "62828566"
   
  Estos son los componentes de la captura de datos modificados de Attunity:  
   
- **Componente de flujo de control CDC**:  
+ **Componentes de flujo de control CDC**:  
   
  [Tarea Control CDC](../control-flow/cdc-control-task.md)  
   
  **Componentes de flujo de datos CDC**:  
   
- [origen de CDC](cdc-source.md)  
+ [Origen de CDC](cdc-source.md)  
   
  [Divisor CDC](cdc-splitter.md)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62828566"
 ### <a name="restart-ssis"></a>Reiniciar SSIS  
  Después de instalar los componentes CDC, debe reiniciar el servicio SSIS para asegurarse de que los componentes funcionarán correctamente cuando se desarrollen paquetes en SQL [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)].  
   
- Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí** cuando se le solicite.  
+ Aparecerá un mensaje después de instalar los componentes. Haga clic en **sí** cuando se le solicite.  
   
 ### <a name="uninstalling-the-microsoft-cdc-components"></a>Desinstalar los componentes CDC de Microsoft  
  Use el asistente para la desinstalación con el fin de desinstalar el origen de CDC, el divisor CDC o la tarea Control CDC. Antes de desinstalar los componentes, asegúrese de lo siguiente:  
@@ -79,7 +79,7 @@ ms.locfileid: "62828566"
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Introducción a los componentes de la captura de datos modificados  
  Un paquete CDC típico procesa los cambios para un grupo de tablas. En la ilustración siguiente se muestra el flujo de control básico de este tipo de paquete CDC. Este paquete se denomina paquete de procesamiento de la fuente de generación.  
   
- ![Flujo de control de paquete de procesamiento fuente de entrada](../media/tricklefeedprocessing.gif "Flujo de control de paquete de procesamiento fuente de entrada")  
+ ![Flujo de control de paquete de procesamiento de fuente de entrada](../media/tricklefeedprocessing.gif "Flujo de control de paquete de procesamiento de fuente de entrada")  
   
  Este flujo de control de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] contiene dos tareas Control CDC y la tarea Flujo de datos. La primera tarea, denominada **Obtener intervalo de procesamiento CDC** , establece el intervalo de LSN para los cambios que se procesan en la tarea de flujo de datos denominada **Procesar cambios**. Este intervalo se establece según lo que se hubiera procesado durante la ejecución del último paquete y se hubiera guardado en un almacén persistente.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "62828566"
   
  Los pasos que se muestran en esta ilustración son:  
   
--   **Los cambios de la tabla x** son un origen de CDC que lee los cambios realizados en la tabla x que se realizaron en el intervalo de procesamiento CDC determinado en el flujo de control principal.  
+-   **Cambios para la tabla X** es un origen de CDC que lee los cambios realizados en la tabla X durante el intervalo de procesamiento de CDC que se determinó en el flujo de control principal.  
   
--   El **divisor CDC X** se utiliza para dividir los cambios en inserciones, eliminaciones y actualizaciones. En este escenario se supone que el origen CDC está configurado para generar cambios netos de forma que se puedan procesar en paralelo tipos diferentes de cambios.  
+-   **Divisor CDC X** se utiliza para dividir los cambios en inserciones, eliminaciones y actualizaciones. En este escenario se supone que el origen CDC está configurado para generar cambios netos de forma que se puedan procesar en paralelo tipos diferentes de cambios.  
   
 -   Los cambios concretos se procesan posteriormente en un nivel inferior. En esta ilustración, los cambios se insertan en las tablas mediante varios destinos de ODBC, pero en casos reales es posible que el procesamiento sea diferente.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "62828566"
 |0-(INITIAL)|El estado que existe antes de que se ejecuten paquetes en el grupo CDC actual. Es también el estado cuando el estado CDC está vacío.<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (Carga inicial iniciada)|Es el estado que se produce cuando se inicia el paquete de carga inicial. Se produce tras la llamada de la operación **MarkInitialLoadStart** a la tarea Control CDC.<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |2- ILEND (Carga inicial terminada)|Es el estado que se produce cuando el paquete de carga inicial finaliza correctamente. Se produce tras la llamada de la operación MarkInitialLoadEnd a la tarea Control CDC.<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../control-flow/cdc-control-task.md).|  
-|3-ILUPDATE (Actualización de carga inicial)|Es el estado que existe tras la primera ejecución del paquete de actualización después de la carga inicial, mientras continua procesándose el intervalo de procesamiento inicial. Se produce tras la llamada de la operación **GetProcessingRange** a la tarea Control CDC.<br /><br /> Si se usa la columna **_ $ Reprocessing** , se establece en 1 para indicar que el paquete puede estar reprocesando filas que ya están en el destino.<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../control-flow/cdc-control-task.md).|  
+|3-ILUPDATE (Actualización de carga inicial)|Es el estado que existe tras la primera ejecución del paquete de actualización después de la carga inicial, mientras continua procesándose el intervalo de procesamiento inicial. Se produce tras la llamada de la operación **GetProcessingRange** a la tarea Control CDC.<br /><br /> Si se usa la columna **_$reprocessing** , se establece en 1 para indicar que el paquete puede estar ya volviendo a procesar filas en el destino.<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |4-TFEND (Actualización de fuente de generación terminada)|Es el estado que se espera para las ejecuciones normales de CDC. Indica que la ejecución anterior se completó correctamente y que se puede iniciar una ejecución nueva con un intervalo de procesamiento nuevo.|  
 |5-TFSTART (Actualización de fuente de generación iniciada)|Es el estado que existe en ejecuciones posteriores del paquete de actualización tras la llamada de la operación **GetProcessingRange** a la tarea Control CDC.<br /><br /> Esto indica que se ha iniciado correctamente una ejecución de CDC normal, pero que aún no ha terminado (**MarkProcessedRange**).<br /><br /> Para obtener más información acerca de las operaciones de la tarea Control CDC, vea [CDC Control Task](../control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocesamiento de actualizaciones de fuente de generación)|Es el estado en una **GetProcessingRange** que tiene lugar tras TFSTART. Esto indica que la ejecución anterior no ha finalizado correctamente.<br /><br /> Si se usa la columna __$reprocessing, se establece en 1 para indicar que el paquete puede estar ya volviendo a procesar filas en el destino.|  
@@ -217,6 +217,6 @@ ms.locfileid: "62828566"
 -   Vídeo sobre [CDC para bases de datos de Oracle con SQL Server Integration Services 2012 (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)en technet.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte también  
- [CDC Control Task](../control-flow/cdc-control-task.md)  
+ [Tarea Control CDC](../control-flow/cdc-control-task.md)  
   
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831773"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
@@ -44,9 +44,9 @@ ms.locfileid: "62831773"
   
 |Tipo de conexión|Administrador de conexiones|  
 |---------------------|------------------------|  
-|EXCEL|[Administrador de conexiones con Excel](../connection-manager/excel-connection-manager.md)|  
-|OLE DB|[OLE DB, administrador de conexiones](../connection-manager/ole-db-connection-manager.md)|  
-|ODBC|[ODBC, administrador de conexiones](../connection-manager/odbc-connection-manager.md)|  
+|EXCEL|[Administrador de conexiones de Excel](../connection-manager/excel-connection-manager.md)|  
+|OLE DB|[Administrador de conexiones OLE DB](../connection-manager/ole-db-connection-manager.md)|  
+|ODBC|[Administrador de conexiones ODBC](../connection-manager/odbc-connection-manager.md)|  
 |ADO|[Administrador de conexiones ADO](../connection-manager/ado-connection-manager.md)|  
 |ADO.NET|[Administrador de conexiones ADO.NET](../connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Administrador de conexiones con SQL Server Compact Edition](../connection-manager/sql-server-compact-edition-connection-manager.md)|  
@@ -102,7 +102,7 @@ ms.locfileid: "62831773"
 -   Si utiliza los administradores de conexiones ODBC y ADO.NET, la tarea no omite los conjuntos de resultados que se producen después del primer conjunto de resultados. Con estos administradores de conexiones, la tarea producirá un error cuando un conjunto de resultados distinto del primer conjunto de resultados contenga un error.  
   
 ### <a name="custom-log-entries"></a>Entradas del registro personalizadas  
- La siguiente tabla contiene la entrada del registro personalizada para la tarea Ejecutar SQL. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene la entrada del registro personalizada para la tarea Ejecutar SQL. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  

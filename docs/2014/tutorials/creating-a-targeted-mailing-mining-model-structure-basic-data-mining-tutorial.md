@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856162"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Crear una estructura del modelo de minería de datos de distribución de correo directo (Tutorial básico de minería de datos)
@@ -35,11 +35,11 @@ ms.locfileid: "62856162"
     > [!NOTE]  
     >  Si aparece una advertencia de que no se puede encontrar ningún algoritmo de minería de datos, puede que las propiedades del proyecto no estén configuradas correctamente. Esta advertencia se produce cuando el proyecto intenta recuperar una lista de algoritmos de minería de datos del servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y no puede encontrarlo. De forma predeterminada [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , usará **localhost** como servidor. Si está utilizando una instancia diferente o una instancia con nombre, debe cambiar las propiedades del proyecto. Para obtener más información, vea [crear un proyecto de Analysis Services &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
   
-5.  Haga clic en **Next**.  
+5.  Haga clic en **Siguiente**.  
   
 6.  En la página **seleccionar vista del origen de datos** , en el panel vistas del origen de **datos disponibles** , seleccione **destinatario de correo**directo. Puede hacer clic en **examinar** para ver las tablas de la vista del origen de datos y, a continuación, hacer clic en **cerrar** para volver al asistente.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 8.  En la página **especificar tipos de tablas** , active la casilla de la columna **caso** de vTargetMail para usarla como la tabla de casos y, a continuación, haga clic en **siguiente**. Utilizará la tabla ProspectiveBuyer posteriormente para pruebas; pásela por alto por ahora.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62856162"
   
     -   **EnglishOccupation**  
   
-    -   **Mujer**  
+    -   **Sexo**  
   
     -   **GeographyKey**  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62856162"
   
     -   **NumberChildrenAtHome**  
   
-    -   **Region**  
+    -   **Región**  
   
     -   **TotalChildren**  
   
@@ -100,13 +100,13 @@ ms.locfileid: "62856162"
   
     -   **EmailAddress**  
   
-    -   **Nombre**  
+    -   **Name**  
   
-    -   **Apellidos**  
+    -   **LastName**  
   
      Asegúrese de que estas filas solo tienen marcas en la columna izquierda. Estas columnas se agregarán a la estructura, pero no se incluirán en el modelo. Sin embargo, una vez generado el modelo, estarán disponibles para la obtención de detalles y las pruebas. Para obtener más información sobre la obtención de detalles, vea [consultas de obtención de detalles &#40;minería de datos&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
-14. Haga clic en **Next**.  
+14. Haga clic en **Siguiente**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Especificar el tipo de datos y el tipo de contenido &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  

@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843754"
 ---
 # <a name="set-source-control-options"></a>Establecer las opciones de control de código fuente
@@ -59,7 +59,7 @@ ms.locfileid: "62843754"
      **Realizar en segundo plano las actualizaciones de estado**  
      Actualiza automáticamente los iconos de señal del control de código fuente en el Explorador de soluciones cuando cambia el estado de un elemento. Si se producen retrasos al realizar operaciones que consumen muchos recursos del servidor, en especial cuando abre una solución o un proyecto desde el control de código fuente, la desactivación de esta casilla puede mejorar el rendimiento.  
   
-     **IDENTIFICADOR de inicio de sesión**  
+     **Id. de inicio de sesión**  
      Especifica el nombre de usuario que se va a utilizar para iniciar la sesión en el proveedor del control de código fuente. Si el proveedor de control de código fuente lo admite, este nombre se rellenará automáticamente en el cuadro de diálogo de **Inicio de sesión** para llegar al servidor de control de código fuente. Para activar esta opción, utilice el programa de administrador del proveedor del control de código fuente para deshabilitar los inicios de sesión automáticos y reinicie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
      **Avanzadas**  
@@ -69,12 +69,10 @@ ms.locfileid: "62843754"
   
 5.  En el cuadro **configuración del entorno de control de código fuente** , seleccione el rol en el que desea establecer las opciones de control de código fuente.  
   
-     
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] activa automáticamente las opciones de control de código fuente del rol que ha seleccionado. Si desactiva cualquiera de las opciones predeterminadas, el cuadro **configuración del entorno de control de código fuente** muestra la opción **personalizada** para indicar que ha personalizado el rol seleccionado originalmente.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] activa automáticamente las opciones de control de código fuente del rol que ha seleccionado. Si desactiva cualquiera de las opciones predeterminadas, el cuadro **configuración del entorno de control de código fuente** muestra la opción **personalizada** para indicar que ha personalizado el rol seleccionado originalmente.  
   
      **Configuración del entorno de control de código fuente**  
-     Especifica el rol que se desea utilizar. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] define los siguientes roles.  
+     Especifica el rol que se desea utilizar. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] define los siguientes roles.  
   
     |Role|Descripción|  
     |----------|-----------------|  
@@ -98,7 +96,7 @@ ms.locfileid: "62843754"
     |**Desproteger automáticamente**|Desprotege el elemento sin mostrar el cuadro de diálogo **Desproteger** . Ésta es la opción predeterminada.|  
     |**Guardar como**|Guarda como un nuevo archivo.|  
   
-     **Editar**  
+     **Edición**  
   
     |Acción|Descripción|  
     |------------|-----------------|  
@@ -110,7 +108,7 @@ ms.locfileid: "62843754"
      **Permitir que los elementos protegidos se puedan editar**  
      Especifica que los elementos que están protegidos puedan editarse en la memoria. Si activa esta casilla, aparece un botón **Editar** en el cuadro de diálogo **Desproteger** al intentar editar un elemento protegido. Después de hacer clic en este botón, podrá editar el elemento. Si intenta guardar el elemento, deberá desprotegerlo o guardarlo en una ubicación distinta.  
   
-     **Reset**  
+     **Restablecer**  
      Restablece los cuadros de diálogo de confirmación de control de código fuente a sus valores predeterminados. Por ejemplo, si ha seleccionado la casilla **no volver a mostrar este** cuadro de diálogo en un cuadro de diálogo de control de código fuente, al seleccionar la opción **restablecer** se invierte esa acción.  
   
 ## <a name="see-also"></a>Consulte también  

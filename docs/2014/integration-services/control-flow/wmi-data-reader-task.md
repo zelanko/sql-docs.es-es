@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829498"
 ---
 # <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI
@@ -72,7 +72,7 @@ Select * FROM Win32_QuickFixEngineering
 ```  
   
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>Mensajes de registro personalizados disponibles en la tarea Lector de datos WMI  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea Lector de datos WMI. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea Lector de datos WMI. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea lector de datos WMI &#40;página Opciones WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Editor de la tarea Lector de datos WMI &#40;página Opciones WMI&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

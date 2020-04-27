@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832612"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
@@ -95,7 +95,7 @@ ms.locfileid: "62832612"
  **Esquema**  
  Especifica el esquema al que pertenece la tabla seleccionada. Esta opción es de solo lectura.  
   
- **Table**  
+ **Cuadro**  
  Muestra el nombre de la tabla seleccionada. Esta opción es de solo lectura.  
   
 #### <a name="column-options"></a>Opciones de Column  
@@ -127,7 +127,7 @@ ms.locfileid: "62832612"
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
- **Euro**  
+ **Símbolos**  
  Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres `,.;:-"'`: ~ =&/@!? () <> []{}| # * ^% '.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  

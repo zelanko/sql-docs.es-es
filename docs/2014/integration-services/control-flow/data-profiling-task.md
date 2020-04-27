@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831904"
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
@@ -104,12 +104,12 @@ ms.locfileid: "62831904"
 ## <a name="features-of-the-data-profiling-task"></a>Características de la tarea de generación de perfiles de datos  
  La tarea de generación de perfiles de datos tiene estas prácticas opciones de configuración:  
   
--   **Columnas comodín** Cuando se configura una solicitud de perfil, la tarea acepta el carácter comodín **(\*)** en lugar de un nombre de columna. Esto simplifica la configuración y permite descubrir con facilidad las características de los datos poco familiares. Cuando se ejecuta la tarea, ésta genera perfiles para cada columna con un tipo de datos adecuado.  
+-   **Columnas comodín**: mientras se configura una solicitud de perfil, la tarea acepta el comodín **(\*)** en lugar de un nombre de columna. Esto simplifica la configuración y permite descubrir con facilidad las características de los datos poco familiares. Cuando se ejecuta la tarea, ésta genera perfiles para cada columna con un tipo de datos adecuado.  
   
--   **Perfil rápido** Puede seleccionar perfil rápido para configurar la tarea rápidamente. Un perfil rápido genera perfiles para una tabla o una vista mediante todos los perfiles y valores de configuración predeterminados.  
+-   **Perfil rápido** You can select Perfil rápido to configure the task quickly. Un perfil rápido genera perfiles para una tabla o una vista mediante todos los perfiles y valores de configuración predeterminados.  
   
 ## <a name="custom-logging-messages-available-on-the-data-profililng-task"></a>Mensajes de registro personalizados disponibles en la tarea de generación de perfiles de datos  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea de generación de perfiles de datos. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea de generación de perfiles de datos. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -124,7 +124,7 @@ ms.locfileid: "62831904"
   
 -   Generar herramientas personalizadas para trabajar con información sobre la calidad de los datos.  
   
- El espacio de nombres de destino se identifica en [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/)el esquema como.  
+ El espacio de nombres de destino se identifica en el esquema como [https://schemas.microsoft.com/sqlserver/2008/DataDebugger/](https://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Salida en el flujo de trabajo condicional de un paquete  
  Los componentes que generan perfiles de datos no incluyen funcionalidad integrada para implementar la lógica condicional en el flujo de trabajo del paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basándose en el resultado de la tarea de generación de perfiles de datos. Sin embargo, puede agregar fácilmente esta lógica en una tarea Script con una cantidad de programación mínima. Este código realizaría una consulta XPath en el XML generado y, a continuación, guardaría el resultado en una variable de paquete. Las restricciones de precedencia que conectan la tarea Script con las tareas subsiguientes pueden utilizar una expresión para determinar el flujo de trabajo. Por ejemplo, la tarea Script detecta que el porcentaje de valores NULL de una columna supera un cierto umbral. Cuando esta condición sea True, quizá desee interrumpir el paquete y resolver el problema antes de continuar.  
@@ -135,23 +135,23 @@ ms.locfileid: "62831904"
  [Página General](../general-page-of-integration-services-designers-options.md)  
  En la página **General** , se especifica el archivo o la variable de resultados. También es posible seleccionar **Perfil rápido** para configurar rápidamente la tarea con objeto de calcular los perfiles utilizando la configuración predeterminada. Para más información, vea [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](data-profiling-task.md).  
   
- [Página solicitudes de perfil](data-profiling-task-editor-profile-requests-page.md)  
+ [Página Solicitudes de perfil](data-profiling-task-editor-profile-requests-page.md)  
  En la página **Solicitudes de perfil** , especifique el origen de datos y seleccione y configure los perfiles de los datos que quiere calcular. Para obtener más información sobre los diversos perfiles que puede configurar, vea los temas siguientes:  
   
--   [Opciones de solicitud de Perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de distribución de longitud de columnas &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Perfil de patrón de columnas opciones de solicitud &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
   

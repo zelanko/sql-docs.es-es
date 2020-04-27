@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871142"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar el Asistente para copiar bases de datos
@@ -69,9 +69,9 @@ ms.locfileid: "62871142"
   
      [Después de actualizar una base de datos de SQL Server](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El Asistente para copiar bases de datos no está disponible en la edición Express.  
   
@@ -89,23 +89,23 @@ ms.locfileid: "62871142"
   
 -   Si usa el método de objeto de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mover el catálogo de texto completo, debe volver a rellenar el índice después del movimiento.  
   
--   El método de separar y adjuntar separa la base de datos, mueve o copia los archivos .mdf, .ndf y .ldf de la base de datos y vuelve a adjuntar la base de datos en la nueva ubicación. En el método de separar y adjuntar, para evitar la incoherencia o la pérdida de datos, las sesiones activas no pueden adjuntarse a la base de datos que se van a copiar o mover. Si existe alguna sesión activa, el Asistente para copiar bases de datos no ejecuta la operación de mover o copiar. En el método de objeto de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se permiten las sesiones activas porque la base de datos nunca está sin conexión.  
+-   El método de separar y adjuntar separa la base de datos, mueve o copia los archivos .mdf, .ndf y .ldf de la base de datos y vuelve a adjuntar la base de datos en la nueva ubicación. En el método de separar y adjuntar, para evitar la incoherencia o la pérdida de datos, las sesiones activas no pueden adjuntarse a la base de datos que se van a copiar o mover. Si existe alguna sesión activa, el Asistente para copiar bases de datos no ejecuta la operación de mover o copiar. En el método de objeto de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se permiten las sesiones activas porque la base de datos nunca está sin conexión.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Asegúrese de que el Agente SQL Server se inició en el servidor de destino.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Para asegurarse del rendimiento óptimo de una base de datos actualizada, ejecute sp_updatestats (actualizar estadísticas) en la base de datos actualizada.  
   
--   Al copiar una base de datos a otra instancia de servidor, para que los usuarios y las aplicaciones puedan utilizarla de igual manera, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos, como los inicios de sesión y los trabajos, en la otra instancia de servidor. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Al copiar una base de datos a otra instancia de servidor, para que los usuarios y las aplicaciones puedan utilizarla de igual manera, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos, como los inicios de sesión y los trabajos, en la otra instancia de servidor. Para obtener más información, vea [administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe ser miembro del rol fijo de servidor **sysadmin** tanto en el servidor de origen como en el servidor de destino.  
   
-##  <a name="Copy_Move"></a>Copiar, trasladar o actualizar bases de datos  
+##  <a name="copy-move-or-upgrade-databases"></a><a name="Copy_Move"></a>Copiar, trasladar o actualizar bases de datos  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el Explorador de objetos, expanda **Bases de datos**, haga clic con el botón secundario en una base de datos, seleccione **Tareas**y, a continuación, haga clic en **Copiar base de datos**.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "62871142"
      **Contraseña**  
      Escriba la contraseña del inicio de sesión. Esta opción solo está disponible si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse.  
   
-     **Nueva**  
+     **Siguiente**  
      Conéctese al servidor y valide el usuario. Este proceso comprueba si el usuario es miembro del rol fijo de servidor **sysadmin** en el equipo seleccionado.  
   
 3.  En la página **Seleccionar un servidor de destino** , especifique el servidor al que se va a mover o copiar la base de datos. Si establece los servidores de origen y de destino en la misma instancia de servidor, realizará una copia de una base de datos. En este caso, debe cambiar el nombre de la base de datos posteriormente en el asistente. Puede usarse el nombre de la base de datos de origen para la base de datos copiada o movida únicamente si no existe algún conflicto de nombres en el servidor de destino. Si existe algún conflicto de nombre, debe solucionarse manualmente en el servidor de destino antes de poder utilizar el nombre de la base de datos de origen.  
@@ -149,7 +149,7 @@ ms.locfileid: "62871142"
      **Contraseña**  
      Escriba la contraseña del inicio de sesión. Esta opción solo está disponible si ha seleccionado la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     **Nueva**  
+     **Siguiente**  
      Conéctese al servidor y valide el usuario. Este proceso comprueba si el usuario tiene los permisos enumerados anteriormente en los equipos seleccionados.  
   
 4.  En la página **Seleccionar el método de transferencia** , seleccione el método de transferencia.  
@@ -160,7 +160,7 @@ ms.locfileid: "62871142"
     > [!NOTE]  
     >  Este método impide que la base de datos esté disponible para los usuarios durante la transferencia.  
   
-     **Si se produce un error, vuelva a adjuntar la base de datos de origen**  
+     **Si se produce un error, volver a adjuntar la base de datos de origen**  
      Cuando se copia una base de datos, los archivos originales de la base de datos siempre se vuelven a adjuntar al servidor de origen. Utilice este cuadro para volver a adjuntar los archivos originales a la base de datos de origen si no se puede mover una base de datos.  
   
      **Usar el método de objeto de administración de SQL**  
@@ -174,7 +174,7 @@ ms.locfileid: "62871142"
      **Move**  
      Seleccione esta opción para mover la base de datos al servidor de destino.  
   
-     **Copy**  
+     **Copiar**  
      Seleccione esta opción para copiar la base de datos al servidor de destino.  
   
      **Origen**  
@@ -186,12 +186,12 @@ ms.locfileid: "62871142"
      **Actualizar**  
      Actualiza la lista de bases de datos.  
   
-     **Nueva**  
+     **Siguiente**  
      Inicia el proceso de validación y pasa a la pantalla siguiente.  
   
 6.  En la página **Configurar base de datos de destino** , cambie el nombre de la base de datos si es adecuado y especifique la ubicación y los nombres de los archivos de base de datos. Esta página aparecerá una vez para cada base de datos que se mueva o se copie.  
   
-7.  En la página **Seleccionar objetos de base de datos** , seleccione los objetos que desee incluir en la operación de mover o copiar. Esta página solo está disponible cuando el origen y el destino están en servidores diferentes. Para incluir un objeto, haga clic en el nombre del objeto en el cuadro **Objetos relacionados disponibles** y, después, haga clic en el botón **>>** para mover el objeto al cuadro **Objetos relacionados seleccionados**. Para excluir un objeto, haga clic en el nombre del objeto en el cuadro **objetos relacionados seleccionados** y ** < ** , a continuación, haga clic en el botón para desplace el objeto al cuadro **objetos relacionados disponibles** . De forma predeterminada, se transfieren todos los objetos de cada tipo seleccionado. Para elegir objetos individuales de cualquier tipo, haga clic en el botón de puntos suspensivos situado junto a cualquier tipo de objeto en el cuadro **Objetos relacionados seleccionados** . Se abrirá un cuadro de diálogo en el que podrá seleccionar objetos individuales.  
+7.  En la página **Seleccionar objetos de base de datos** , seleccione los objetos que desee incluir en la operación de mover o copiar. Esta página solo está disponible cuando el origen y el destino están en servidores diferentes. Para incluir un objeto, haga clic en el nombre del objeto en el cuadro **Objetos relacionados disponibles** y, después, haga clic en el botón **>>** para mover el objeto al cuadro **Objetos relacionados seleccionados** . Para excluir un objeto, haga clic en el nombre del objeto en el cuadro **objetos relacionados seleccionados** y ** < ** , a continuación, haga clic en el botón para desplace el objeto al cuadro **objetos relacionados disponibles** . De forma predeterminada, se transfieren todos los objetos de cada tipo seleccionado. Para elegir objetos individuales de cualquier tipo, haga clic en el botón de puntos suspensivos situado junto a cualquier tipo de objeto en el cuadro **Objetos relacionados seleccionados** . Se abrirá un cuadro de diálogo en el que podrá seleccionar objetos individuales.  
   
      **Inicios de sesión (todos los inicios de sesión en tiempo de ejecución)**  
      Incluye los inicios de sesión en la operación de mover o copiar. La opción está seleccionada de forma predeterminada.  
@@ -202,13 +202,13 @@ ms.locfileid: "62871142"
     > [!NOTE]  
     >  No se pueden elegir procedimientos almacenados extendidos y sus DLL asociadas para realizar copias automáticas.  
   
-     **Trabajos de Agente SQL Server**  
+     **trabajos del Agente SQL Server**  
      Incluye los trabajos de la base de datos **msdb** en la operación de mover o copiar.  
   
      **Mensajes de error definidos por el usuario**  
      Incluye los mensajes de error definidos por el usuario en la operación de mover o copiar.  
   
-     **Extremos**  
+     **Puntos de conexión**  
      Incluye los extremos definidos en la base de datos de origen.  
   
      **Catálogo de texto completo**  
@@ -278,8 +278,8 @@ ms.locfileid: "62871142"
      **Mensaje**  
      Proporciona los mensajes devueltos en cada paso.  
   
-##  <a name="FollowUp"></a>Seguimiento: después de actualizar una base de datos de SQL Server  
- Después de usar el Asistente para actualizar una base de datos de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos está disponible inmediatamente y se actualiza de forma automática. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Seguimiento: Después de actualizar una base de datos de SQL Server  
+ Después de usar el Asistente para actualizar una base de datos de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos está disponible inmediatamente y se actualiza de forma automática. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que cuando la opción de actualización se establece en **importar**, si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  Si el nivel de compatibilidad de una base de datos de usuario era 100 o superior antes de la actualización, permanece igual después de la misma. Si el nivel de compatibilidad era 90 en la base de datos actualizada, el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 751b3615e8c54ab5899f64a6604c5a228c859879
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62868691"
 ---
 # <a name="mssqlserver_33027"></a>MSSQLSERVER_33027
@@ -33,8 +33,7 @@ ms.locfileid: "62868691"
 |Texto del mensaje|No se pudo cargar el proveedor de servicios criptográficos '%.*ls' debido a una firma Authenticode o una ruta de archivo no válida. Revise los mensajes de otros errores anteriores.|  
   
 ## <a name="explanation"></a>Explicación  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido utilizar el proveedor de servicios criptográficos enumerado en el mensaje de error porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido cargar la DLL. O el nombre no es válido o la firma Authenticode no es válida.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido utilizar el proveedor de servicios criptográficos enumerado en el mensaje de error porque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no ha podido cargar la DLL. O el nombre no es válido o la firma Authenticode no es válida.  
   
 ## <a name="user-action"></a>Acción del usuario  
  Compruebe que el archivo está presente y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene permiso de acceso a esa ubicación. Compruebe el registro de errores para ver posibles mensajes relacionados adicionales. De lo contrario, póngase en contacto con el proveedor de servicios criptográficos para obtener más información.  

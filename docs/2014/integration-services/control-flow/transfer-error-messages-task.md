@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830131"
 ---
 # <a name="transfer-error-messages-task"></a>Tarea Transferir mensajes de error
@@ -65,7 +65,7 @@ ms.locfileid: "62830131"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea transferir mensajes de error &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Transferir mensajes de error &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor de la tarea Transferir mensajes de error &#40;página Mensajes&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   

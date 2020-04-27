@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870884"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Ver el tamaño del archivo disperso de una instantánea de base de datos (Transact-SQL)
@@ -46,9 +46,9 @@ ms.locfileid: "62870884"
 > [!NOTE]  
 >  El tamaño de los archivos dispersos aumenta en incrementos de 64 kilobytes (KB), por lo que siempre es un múltiplo de 64 KB.  
   
- Para ver el número de bytes que cada archivo disperso de una instantánea está usando actualmente en el disco, consulte la columna **size_on_disk_bytes** de la vista de administración dinámica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sys.dm_io_virtual_file_stats[ de ](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql).  
+ Para ver el número de bytes que cada archivo disperso de una instantánea está usando actualmente en el disco, consulte la columna **size_on_disk_bytes** de la vista de administración dinámica [sys.dm_io_virtual_file_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para ver el espacio en disco que usa un archivo disperso, haga clic con el botón derecho en el archivo en Microsoft Windows, haga clic en **Propiedades** y consulte el valor de **Tamaño en disco**.  
+ Para ver el espacio en disco que usa un archivo disperso, haga clic con el botón derecho en el archivo en Microsoft Windows, haga clic en **Propiedades**y consulte el valor de **Tamaño en disco** .  
   
 ## <a name="find-out-the-maximum-size-of-a-sparse-file"></a>Calcular el tamaño máximo de un archivo disperso  
  El tamaño máximo de un archivo disperso es el tamaño del archivo de la base de datos de origen correspondiente en el momento de la creación de la instantánea. Para saber cuál es este tamaño, puede usar cualquiera de las alternativas siguientes:  
@@ -63,12 +63,12 @@ ms.locfileid: "62870884"
   
      Seleccione la columna **size** de **sys.database_files** en la instantánea de base de datos o de **sys.master_files**. El valor de la columna **size** refleja el espacio máximo, en páginas SQL, que puede usar la instantánea. Este valor es equivalente al del campo **Tamaño** de Windows, con la diferencia de que se representa en términos de número de páginas SQL del archivo. El tamaño en bytes es el siguiente:  
   
-     (*número_de_páginas* * 8192)  
+     ( *número_de_páginas* * 8192)  
   
 ## <a name="see-also"></a>Consulte también  
- [Instantáneas de bases de datos &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
+ [Instantáneas de base de datos &#40;SQL Server&#41;](database-snapshots-sql-server.md)   
  [Sys. fn_virtualfilestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [Sys. database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
  [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
   

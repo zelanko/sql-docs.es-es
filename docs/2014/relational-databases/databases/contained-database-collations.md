@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62872059"
 ---
 # <a name="contained-database-collations"></a>Intercalaciones de bases de datos independientes
@@ -85,8 +85,7 @@ JOIN #T2
   
  No puede resolver el conflicto de la intercalación entre "Latin1_General_100_CI_AS_KS_WS_SC" y Chinese_Simplified_Pinyin_100_CI_AS" en la operación igual que.  
   
- Podemos corregir esto intercalando la tabla temporal explícitamente. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] facilita esto proporcionando la palabra clave `DATABASE_DEFAULT` para la cláusula `COLLATE`.  
+ Podemos corregir esto intercalando la tabla temporal explícitamente. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] facilita esto proporcionando la palabra clave `DATABASE_DEFAULT` para la cláusula `COLLATE`.  
   
 ```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  

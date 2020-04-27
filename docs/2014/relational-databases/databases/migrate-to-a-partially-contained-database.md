@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871734"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
@@ -32,7 +32,7 @@ ms.locfileid: "62871734"
   
 -   [Migrar usuarios a usuarios de base de datos independiente](#users)  
   
-##  <a name="prepare"></a> Preparar la migración de una base de datos  
+##  <a name="preparing-to-migrate-a-database"></a><a name="prepare"></a> Preparar la migración de una base de datos  
  Revise los siguientes aspectos cuando vaya a migrar una base de datos al modelo de base de datos parcialmente independiente.  
   
 -   Debe entender el modelo de base de datos parcialmente independiente. Para más información, consulte [Contained Databases](contained-databases.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "62871734"
   
 -   Supervise el XEvent **database_uncontained_usage** para ver cuándo se usan características sin contención.  
   
-##  <a name="enable"></a> Habilitar bases de datos independientes  
+##  <a name="enable-contained-databases"></a><a name="enable"></a> Habilitar bases de datos independientes  
  Las bases de datos independientes deben estar habilitadas en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]para poder crear bases de datos independientes.  
   
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Habilitar las bases de datos independientes mediante Transact-SQL  
@@ -69,7 +69,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="convert"></a> Convertir una base de datos en parcialmente independiente  
+##  <a name="converting-a-database-to-partially-contained"></a><a name="convert"></a> Convertir una base de datos en parcialmente independiente  
  Una base de datos se convierte en base de datos independiente cambiando la **CONTAINMENT** opción.  
   
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Convertir una base de datos en parcialmente independiente mediante Transact-SQL  
@@ -91,7 +91,7 @@ GO
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="users"></a> Migrar usuarios a usuarios de base de datos independiente  
+##  <a name="migrating-users-to-contained-database-users"></a><a name="users"></a> Migrar usuarios a usuarios de base de datos independiente  
  En el siguiente ejemplo, se realiza la migración de todos los usuarios basados en inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usuarios de base de datos independiente con contraseñas. En el ejemplo se excluyen los inicios de sesión que no están habilitados. El ejemplo se debe ejecutar en la base de datos independiente.  
   
 ```sql  

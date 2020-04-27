@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836120"
 ---
 # <a name="configure-dialog-box"></a>Cuadro de diálogo Configurar
@@ -32,7 +32,7 @@ ms.locfileid: "62836120"
   
 -   [Establecer las opciones de la página Referencias](#references)  
   
-##  <a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar.  
+##  <a name="open-the-configure-dialog-box"></a><a name="open_dialog"></a> Abrir el cuadro de diálogo Configurar.  
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62836120"
   
 5.  Haga clic con el botón derecho en el paquete o proyecto y, después, haga clic en **Configurar**.  
   
-##  <a name="parameter"></a> Establecer las opciones de la página Parámetros  
+##  <a name="set-the-options-on-the-parameters-page"></a><a name="parameter"></a> Establecer las opciones de la página Parámetros  
  Use la página **Parámetros** para ver los nombres de los parámetros y valores, así como para modificar los valores.  
   
  Seleccione el ámbito de los parámetros que aparecen en las pestañas **Parámetros** y **Administradores de conexiones** , en la lista desplegable **Ámbito** .  
@@ -76,7 +76,7 @@ ms.locfileid: "62836120"
  **Valor**  
  Muestra el valor asignado a la propiedad del administrador de conexiones. Haga clic en los puntos suspensivos para cambiar el valor del cuadro de diálogo **Establecer valor de parámetro** . Puede especificar un valor literal, asignar una variable de entorno que contiene el valor que desea usar o emplear el valor predeterminado del paquete.  
   
-##  <a name="references"></a> Establecer las opciones de la página Referencias  
+##  <a name="set-the-options-on-the-references-page"></a><a name="references"></a> Establecer las opciones de la página Referencias  
  Use la página **Referencias** para agregar y quitar las referencias a los entornos y a las propiedades del entorno de acceso.  
   
  Un entorno especifica los valores en tiempo de ejecución para los paquetes contenidos en los proyectos que ha implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

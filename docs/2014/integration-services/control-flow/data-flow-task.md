@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832463"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
@@ -44,9 +44,7 @@ ms.locfileid: "62832463"
  ![Flujos de datos](../media/mw-dts-09.gif "Flujos de datos")  
   
 ## <a name="log-entries"></a>Entradas del registro  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un conjunto de eventos de registro que están disponibles para todas las tareas. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] también proporciona entradas del registro personalizadas para numerosas tareas. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md). La tarea Flujo de datos incluye las siguientes entradas de registro personalizadas:  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  

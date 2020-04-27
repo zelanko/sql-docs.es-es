@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829460"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tarea Transferir objetos de SQL Server
@@ -106,7 +106,7 @@ ms.locfileid: "62829460"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [&#40;página general del editor de la tarea transferir objetos de SQL Server&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Transferir objetos de SQL Server &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor de la tarea Transferir objetos de SQL Server &#40;página Objetos&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   

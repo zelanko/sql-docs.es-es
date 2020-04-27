@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843083"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Uso de OLTP en memoria en un entorno de máquina virtual
   La virtualización del servidor puede ayudar a reducir la inversión y los costos operativos de TI y aumentar la eficacia de TI con mejores procesos de aprovisionamiento, mantenimiento, disponibilidad, copia de seguridad y recuperación. Con los avances tecnológicos recientes, es más fácil consolidar cargas de trabajo de base de datos complejas gracias a la virtualización. En este tema se tratan los procedimientos recomendados para el uso de [!INCLUDE[hek_1](../includes/hek-1-md.md)] en un entorno virtualizado.  
   
-##  <a name="bkmk_memoryPreAllocation"></a>Asignación previa de memoria  
+##  <a name="memory-pre-allocation"></a><a name="bkmk_memoryPreAllocation"></a>Asignación previa de memoria  
  Respecto a la memoria en un entorno virtualizado, son aspectos esenciales un mejor rendimiento y mayor compatibilidad. Debe ser capaz de asignar memoria rápidamente a las máquinas virtuales en función de sus requisitos (cargas pico y fuera de horas pico) y asegurarse de que la memoria no se desperdicia. La característica de memoria dinámica de Hyper-V aumenta la agilidad de cómo se asigna y administra la memoria entre las máquinas virtuales que se ejecutan en un host.  
   
  Es necesario modificar algunas prácticas recomendadas para virtualizar y administrar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cuando se virtualiza una base de datos con tablas optimizadas para memoria. Sin tablas optimizadas para memoria, dos de los procedimientos recomendados son:  
@@ -31,7 +31,7 @@ ms.locfileid: "62843083"
   
  Si sigue los procedimientos anteriores para una base de datos con tablas optimizadas para memoria, el intento de restaurar y recuperar una base de datos podría dar lugar a que esta pasara a un estado "Pendiente de recuperación", incluso si hay memoria suficiente para recuperarla. El motivo es que, al iniciarse, [!INCLUDE[hek_2](../includes/hek-2-md.md)] pone los datos en memoria de forma mucho más dinámica que la forma en que la asignación de memoria dinámica asigna la memoria necesaria a la base de datos.  
   
- **Traducción**  
+ **Resolución**  
   
  Para mitigar este problema, asigne previamente memoria suficiente a la base de datos para recuperar o reiniciar la base de datos; no especifique un valor mínimo confiando en que la memoria dinámica proporcionará memoria adicional cuando sea necesario.  
   

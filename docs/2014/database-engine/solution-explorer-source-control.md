@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843117"
 ---
 # <a name="solution-explorer-source-control"></a>Control de código fuente del Explorador de soluciones
@@ -33,8 +33,7 @@ ms.locfileid: "62843117"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)]  
   
- El control de código fuente hace referencia a un sistema en el que una pieza central de software del servidor almacena y realiza un seguimiento de las versiones de los archivos, además de controlar el acceso a esos archivos. Un sistema típico de control de código fuente incluye un proveedor de control de código fuente y dos o más clientes de control de código fuente. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede integrar con un servicio de control de código fuente. Esto significa que puede usar la herramienta como cliente del proveedor de control de código fuente. Es posible administrar fácilmente los proyectos individuales y de equipo sin salir del entorno. El proveedor de control de código fuente no se incluye con [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+ El control de código fuente hace referencia a un sistema en el que una pieza central de software del servidor almacena y realiza un seguimiento de las versiones de los archivos, además de controlar el acceso a esos archivos. Un sistema típico de control de código fuente incluye un proveedor de control de código fuente y dos o más clientes de control de código fuente. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede integrar con un servicio de control de código fuente. Esto significa que puede usar la herramienta como cliente del proveedor de control de código fuente. Es posible administrar fácilmente los proyectos individuales y de equipo sin salir del entorno. El proveedor de control de código fuente no se incluye con [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
 #### <a name="to-select-a-source-control-provider"></a>Para seleccionar un proveedor de control de código fuente  
   

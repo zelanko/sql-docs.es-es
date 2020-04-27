@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842540"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Solucionar problemas habituales de rendimiento con los índices hash con optimización para memoria
@@ -73,6 +73,6 @@ WITH (MEMORY_OPTIMIZED = ON)
  Observe que un índice de hash optimizada para memoria no se ejecuta óptimamente si hay muchas filas duplicadas para un valor de clave de índice determinado: en el ejemplo, si el número de valores únicos para la columna o_id es mucho menor que el número de filas de la tabla, no sería óptimo agregar un índice en (o_id); en su lugar, la mejor solución sería cambiar el tipo del índice PK_od de hash a no clúster. Para obtener más información, vea [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Índices de las tablas con optimización para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Índices en tablas optimizadas para memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

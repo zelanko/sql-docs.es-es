@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 805c89c24b0a16051de1d555b484a0870de0cfde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830016"
 ---
 # <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión
@@ -68,7 +68,7 @@ ms.locfileid: "62830016"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea transferir inicios de sesión &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Transferir inicios de sesión &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor de la tarea Transferir inicios de sesión &#40;página Inicios de sesión&#41;](../transfer-logins-task-editor-logins-page.md)  
   

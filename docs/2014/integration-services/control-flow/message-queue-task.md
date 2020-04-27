@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7857294534f1c3c434f43c302cee8864925d953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831482"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
-  La tarea cola de mensajes le permite usar Message Queue Server (también conocido como MSMQ) para enviar y recibir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mensajes entre paquetes, o para enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
+  La tarea Cola de mensajes le permite usar Message Queue Server (que también recibe el nombre de MSMQ) para enviar y recibir mensajes entre paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
   
  Al utilizar la tarea Cola de mensajes, puede coordinar operaciones en toda la empresa. Los mensajes se pueden colocar en cola y enviarse más tarde si el destino no está disponible o está ocupado. Por ejemplo, la tarea puede colocar en cola mensajes para el equipo portátil sin conexión de los representantes de ventas, que reciben sus mensajes cuando se conectan a la red. Puede usar la tarea Cola de mensajes para los siguientes fines:  
   
@@ -51,11 +51,9 @@ ms.locfileid: "62831482"
   
 -   El mensaje `String` especifica el mensaje como una cadena. Al recibir mensajes, puede configurar la tarea para comparar la cadena recibida con una cadena definida por el usuario y actuar según la comparación. La comparación de cadenas puede ser exacta, distinguir o no entre mayúsculas y minúsculas o usar una subcadena.  
   
--   
-  `String message to variable` especifica el mensaje de origen como una cadena que se envía a una variable de destino. Puede configurar la tarea para comparar la cadena recibida con una cadena definida por el usuario aplicando una comparación exacta, que no distinga entre mayúsculas y minúsculas o de subcadena. Este tipo de mensaje está disponible solamente cuando la tarea recibe mensajes.  
+-   `String message to variable` especifica el mensaje de origen como una cadena que se envía a una variable de destino. Puede configurar la tarea para comparar la cadena recibida con una cadena definida por el usuario aplicando una comparación exacta, que no distinga entre mayúsculas y minúsculas o de subcadena. Este tipo de mensaje está disponible solamente cuando la tarea recibe mensajes.  
   
--   
-  `Variable` especifica que el mensaje contiene una o más variables. Puede configurar la tarea para especificar los nombres de las variables que se incluyen en el mensaje. Al recibir mensajes, puede configurar la tarea para especificar el paquete desde el cual se pueden recibir mensajes y la variable que es el destino del mensaje.  
+-   `Variable` especifica que el mensaje contiene una o más variables. Puede configurar la tarea para especificar los nombres de las variables que se incluyen en el mensaje. Al recibir mensajes, puede configurar la tarea para especificar el paquete desde el cual se pueden recibir mensajes y la variable que es el destino del mensaje.  
   
 ## <a name="sending-messages"></a>enviar mensajes  
  Cuando configure la tarea Cola de mensajes para enviar mensajes, puede utilizar uno de los algoritmos de cifrado actualmente compatibles con tecnología de Message Queue Server, RC2 y RC4, para cifrar el mensaje. Ambos algoritmos de cifrado se consideran ahora criptográficamente menos seguros que algoritmos más recientes con los que aún no es compatible la tecnología de Message Queue Server. Por tanto, debe considerar con detenimiento sus necesidades criptográficas a la hora de enviar mensajes con la tarea Cola de mensajes.  
@@ -74,7 +72,7 @@ ms.locfileid: "62831482"
 -   Guardar el archivo de mensajes con un nombre de archivo diferente, si el mensaje usa el tipo `Data file message`.  
   
 ## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>Mensajes de registro personalizados disponibles en la tarea Cola de mensajes  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea Cola de mensajes. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea Cola de mensajes. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -90,11 +88,11 @@ ms.locfileid: "62831482"
 ## <a name="configuration-of-the-message-queue-task"></a>Configuración de la tarea Cola de mensajes  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación. Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea cola de mensajes &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Cola de mensajes &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor de la tarea cola de mensajes &#40;página de recepción&#41;](../message-queue-task-editor-receive-page.md)  
+-   [Editor de la tarea Cola de mensajes &#40;página Recibir&#41;](../message-queue-task-editor-receive-page.md)  
   
--   [Editor de la tarea cola de mensajes &#40;página envío&#41;](../message-queue-task-editor-send-page.md)  
+-   [Editor de la tarea Cola de mensajes &#40;página Enviar&#41;](../message-queue-task-editor-send-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873739"
 ---
 # <a name="clr-integration-code-access-security"></a>Seguridad de acceso del código de integración CLR
@@ -51,17 +51,14 @@ ms.locfileid: "62873739"
  La parte especificada por el usuario de la directiva de host de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] depende de que el propietario de los ensamblados especifique uno de los tres depósitos de permisos para cada ensamblado. Para obtener más información acerca de los permisos de seguridad que se muestran a continuación, vea el SDK de .NET Framework.  
   
 ### <a name="safe"></a>SAFE  
- Solo se permiten el cálculo interno y el acceso a datos local. 
-  `SAFE` es el conjunto de permisos más restrictivo. El código que ejecuta un ensamblado con permisos `SAFE` no puede tener acceso a recursos externos del sistema, como archivos, la red, variables de entorno o el Registro.  
+ Solo se permiten el cálculo interno y el acceso a datos local. `SAFE` es el conjunto de permisos más restrictivo. El código que ejecuta un ensamblado con permisos `SAFE` no puede tener acceso a recursos externos del sistema, como archivos, la red, variables de entorno o el Registro.  
   
  Los ensamblados `SAFE` tienen los siguientes permisos y valores:  
   
 |Permiso|Valor(es)/descripción|  
 |----------------|-----------------------------|  
-|`SecurityPermission`|
-  `Execution:` permiso para ejecutar el código administrado.|  
-|`SqlClientPermission`|
-  `Context connection = true`, `context connection = yes`: solo puede usarse la conexión de contexto (context-connection) y la cadena de conexión solo puede especificar un valor "context connection=true" o "context connection=yes".<br /><br /> **AllowBlankPassword = false:**  No se permiten contraseñas en blanco.|  
+|`SecurityPermission`|`Execution:` permiso para ejecutar el código administrado.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: solo puede usarse la conexión de contexto (context-connection) y la cadena de conexión solo puede especificar un valor "context connection=true" o "context connection=yes".<br /><br /> **AllowBlankPassword = false:**  No se permiten contraseñas en blanco.|  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS ensamblados tienen los mismos permisos `SAFE` que los ensamblados, con la capacidad adicional para tener acceso a recursos externos del sistema, como archivos, redes, variables de entorno y el registro.  
@@ -72,32 +69,18 @@ ms.locfileid: "62873739"
 |----------------|-----------------------------|  
 |`DistributedTransactionPermission`|`Unrestricted:`Se permiten las transacciones distribuidas.|  
 |`DNSPermission`|`Unrestricted:`Permiso para solicitar información de servidores de nombres de dominio.|  
-|`EnvironmentPermission`|
-  `Unrestricted:` se permite un acceso total a las variables de entorno del sistema y del usuario.|  
-|`EventLogPermission`|
-  `Administer:` se permiten las acciones siguientes: crear un origen de eventos, leer los registros existentes, eliminar orígenes o registros de eventos, responder a entradas, borrar un registro de eventos, escuchar eventos y obtener acceso a una colección de todos los registros de eventos.|  
-|`FileIOPermission`|
-  `Unrestricted:` se permite un acceso total a los archivos y carpetas.|  
-|`KeyContainerPermission`|
-  `Unrestricted:` se permite un acceso total a los contenedores de claves.|  
-|`NetworkInformationPermission`|
-  `Access:` se permite hacer ping.|  
+|`EnvironmentPermission`|`Unrestricted:` se permite un acceso total a las variables de entorno del sistema y del usuario.|  
+|`EventLogPermission`|`Administer:` se permiten las acciones siguientes: crear un origen de eventos, leer los registros existentes, eliminar orígenes o registros de eventos, responder a entradas, borrar un registro de eventos, escuchar eventos y obtener acceso a una colección de todos los registros de eventos.|  
+|`FileIOPermission`|`Unrestricted:` se permite un acceso total a los archivos y carpetas.|  
+|`KeyContainerPermission`|`Unrestricted:` se permite un acceso total a los contenedores de claves.|  
+|`NetworkInformationPermission`|`Access:` se permite hacer ping.|  
 |`RegistryPermission`|Permite derechos de lectura de `HKEY_CLASSES_ROOT`, `HKEY_LOCAL_MACHINE`, `HKEY_CURRENT_USER`, `HKEY_CURRENT_CONFIG` y `HKEY_USERS.`|  
-|`SecurityPermission`|
-  `Assertion:` posibilidad de afirmar que todos los autores de llamadas de este código tienen el permiso necesario para la operación.<br /><br /> 
-  `ControlPrincipal:` posibilidad de manipular el objeto principal.<br /><br /> 
-  `Execution:` permiso para ejecutar el código administrado.<br /><br /> 
-  `SerializationFormatter:` posibilidad de ofrecer servicios de serialización.|  
-|**SmtpPermission**|
-  `Access:` se permiten conexiones salientes al puerto 25 del host SMTP.|  
-|`SocketPermission`|
-  `Connect:` se permiten conexiones salientes (todos los puertos, todos los protocolos) en una dirección de transporte.|  
-|`SqlClientPermission`|
-  `Unrestricted:` se permite un acceso total al origen de datos.|  
-|`StorePermission`|
-  `Unrestricted:` se permite un acceso total a los almacenes de certificados X.509.|  
-|`WebPermission`|
-  `Connect:` se permiten conexiones salientes a recursos web.|  
+|`SecurityPermission`|`Assertion:` posibilidad de afirmar que todos los autores de llamadas de este código tienen el permiso necesario para la operación.<br /><br /> `ControlPrincipal:` posibilidad de manipular el objeto principal.<br /><br /> `Execution:` permiso para ejecutar el código administrado.<br /><br /> `SerializationFormatter:` posibilidad de ofrecer servicios de serialización.|  
+|**SmtpPermission**|`Access:` se permiten conexiones salientes al puerto 25 del host SMTP.|  
+|`SocketPermission`|`Connect:` se permiten conexiones salientes (todos los puertos, todos los protocolos) en una dirección de transporte.|  
+|`SqlClientPermission`|`Unrestricted:` se permite un acceso total al origen de datos.|  
+|`StorePermission`|`Unrestricted:` se permite un acceso total a los almacenes de certificados X.509.|  
+|`WebPermission`|`Connect:` se permiten conexiones salientes a recursos web.|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE permite a los ensamblados un acceso sin límites a los recursos situados tanto dentro como fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El código que se ejecuta desde un ensamblado `UNSAFE` también puede llamar a código no administrado.  
@@ -105,8 +88,7 @@ ms.locfileid: "62873739"
  A los ensamblados `UNSAFE` se les concede `FullTrust`.  
   
 > [!IMPORTANT]  
->  
-  `SAFE` es la configuración de permiso recomendada para los ensamblados que realizan tareas de administración de datos y cálculos sin tener acceso a los recursos fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS`los ensamblados se ejecutan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de forma predeterminada como la cuenta `EXTERNAL_ACCESS` de servicio. el permiso para ejecutar solo se debe proporcionar a los inicios de sesión de confianza para ejecutarse como la cuenta de servicio. Desde el punto de vista de la seguridad, los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` son idénticos. Sin embargo, los ensamblados `EXTERNAL_ACCESS` proporcionan diferentes protecciones de confiabilidad y solidez que no se incluyen en los ensamblados `UNSAFE`. La especificación `UNSAFE` permite que el código del ensamblado realice operaciones no válidas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]en. Para obtener más información sobre la creación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ensamblados CLR en, vea [administrar ensamblados de integración CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  `SAFE` es la configuración de permiso recomendada para los ensamblados que realizan tareas de administración de datos y cálculos sin tener acceso a los recursos fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. `EXTERNAL_ACCESS`los ensamblados se ejecutan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de forma predeterminada como la cuenta `EXTERNAL_ACCESS` de servicio. el permiso para ejecutar solo se debe proporcionar a los inicios de sesión de confianza para ejecutarse como la cuenta de servicio. Desde el punto de vista de la seguridad, los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` son idénticos. Sin embargo, los ensamblados `EXTERNAL_ACCESS` proporcionan diferentes protecciones de confiabilidad y solidez que no se incluyen en los ensamblados `UNSAFE`. La especificación `UNSAFE` permite que el código del ensamblado realice operaciones no válidas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]en. Para obtener más información sobre la creación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ensamblados CLR en, vea [administrar ensamblados de integración CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Obtener acceso a recursos externos  
  Si un tipo definido por el usuario (UDT), un procedimiento almacenado u otro tipo de ensamblado de construcción se registra con el conjunto de permisos `SAFE`, el código administrado que se ejecuta en la construcción no puede obtener acceso a los recursos externos. Sin embargo, si se especifica cualquiera de los conjuntos de permisos `EXTERNAL_ACCESS` o `UNSAFE` y el código administrado intenta obtener acceso a recursos externos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplica las reglas siguientes:  

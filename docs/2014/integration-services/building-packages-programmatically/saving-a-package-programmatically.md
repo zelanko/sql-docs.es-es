@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0304d4ba3388874fbd2c19001b12094f1df4d351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836714"
 ---
 # <a name="saving-a-package-programmatically"></a>Guardar un paquete mediante programación
@@ -26,7 +26,7 @@ ms.locfileid: "62836714"
  Todos los métodos utilizados en este tema para guardar paquetes requieren una referencia al ensamblado `Microsoft.SqlServer.ManagedDTS`. Después de agregar la referencia en un proyecto nuevo, importe el <xref:Microsoft.SqlServer.Dts.Runtime> espacio de nombres `using` con `Imports` una instrucción o.  
   
 ## <a name="saving-a-package-programmatically"></a>Guardar un paquete mediante programación  
- Para guardar un paquete mediante programación, llame a uno de los métodos siguientes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application> la clase:  
+ Para guardar un paquete mediante programación, llame a uno de los métodos siguientes de la clase de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application>:  
   
 |Ubicación de almacenamiento|Método que se llama|  
 |----------------------|--------------------|  

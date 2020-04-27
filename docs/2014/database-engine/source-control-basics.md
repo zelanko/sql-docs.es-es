@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843003"
 ---
 # <a name="source-control-basics"></a>Fundamentos del control de código fuente
@@ -51,7 +51,7 @@ ms.locfileid: "62843003"
   
 |||  
 |-|-|  
-|**Task**|**Tema.**|  
+|**Task**|**Tema**|  
 |Establecer opciones de control de código fuente|[Establecer las opciones de control de código fuente](../../2014/database-engine/set-source-control-options.md)|  
 |Cambiar las conexiones del control de código fuente|[Cambiar las conexiones del control de código fuente](../../2014/database-engine/change-source-control-connections.md)|  
 |Excluir archivos del control de código fuente|[Excluir archivos desde el control de código fuente](../../2014/database-engine/exclude-files-from-source-control.md)|  

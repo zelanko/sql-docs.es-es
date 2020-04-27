@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a74ab896e974410e8357a22546cb63ed7365a149
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833160"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Tarea Ejecutar DDL de Analysis Services
@@ -218,9 +218,9 @@ ms.locfileid: "62833160"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Analysis Services &#40;página general del editor de la tarea ejecutar DDL&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Ejecutar DDL de Analysis Services &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services ejecutar el editor de la tarea DDL &#40;página DDL&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Editor de la tarea Ejecutar DDL de Analysis Services &#40;página DDL&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   

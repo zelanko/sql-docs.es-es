@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869204"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869204"
 |Texto del mensaje|No se puede consultar al servidor redireccionado "%s" para el publicador original "%s" y la base de datos del publicador "%s" para determinar el nombre del servidor remoto; error %d, mensaje de error "%s".|  
   
 ## <a name="explanation"></a>Explicación  
- 
-  `sp_validate_redirected_publisher` usa un servidor vinculado temporal que crea para conectarse al publicador redirigido a fin de detectar el nombre del servidor remoto. Se devuelve el error 21879 si se produce un error en la consulta de servidor vinculado. La llamada para solicitar el nombre del servidor remoto normalmente es el primer uso del servidor vinculado temporal, por lo que si hay problemas de conectividad es probable que aparezcan primero con esta llamada. Esta llamada remota simplemente ejecuta `@@servername` de selección en el servidor remoto.  
+ `sp_validate_redirected_publisher` usa un servidor vinculado temporal que crea para conectarse al publicador redirigido a fin de detectar el nombre del servidor remoto. Se devuelve el error 21879 si se produce un error en la consulta de servidor vinculado. La llamada para solicitar el nombre del servidor remoto normalmente es el primer uso del servidor vinculado temporal, por lo que si hay problemas de conectividad es probable que aparezcan primero con esta llamada. Esta llamada remota simplemente ejecuta `@@servername` de selección en el servidor remoto.  
   
  El servidor vinculado que se usa para consultar el publicador redirigido usa el modo de seguridad, el inicio de sesión y la contraseña suministrados cuando `sp_adddistpublisher` se llamó para el publicador original.  
   

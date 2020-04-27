@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827566"
 ---
 # <a name="define-a-state-variable"></a>Definir una variable de estado
@@ -37,7 +37,7 @@ ms.locfileid: "62827566"
 |`<ir-start>`|Este es un LSN de un cambio justo antes de que comenzara la carga inicial.|  
 |`<ir-end>`|Este es un LSN de un cambio justo después de que finalizara la carga inicial.|  
 |`TS`|Esto establece la marca de tiempo para la última actualización del estado CDC.|  
-|**\<timestamp>**|Esta es una representación decimal de la propiedad System.DateTime.UtcNow de 64 bits.|  
+|**\<marca de tiempo>**|Esta es una representación decimal de la propiedad System.DateTime.UtcNow de 64 bits.|  
 |`ER`|Esto aparece si la última operación generó un error e incluye una breve descripción de la causa de este. Si este componente está presente, siempre aparecerá el último.|  
 |`<short-error-text>`|Esta es la descripción breve del error.|  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62827566"
  Si no usa la tarea Control CDC con la persistencia automática de estado, debe cargar el valor de la variable del almacenamiento persistente donde se guardó su valor la última vez que el paquete se ejecutó y escribirlo de nuevo en el almacenamiento persistente cuando procesamiento del intervalo de procesamiento actual se complete.  
   
 ## <a name="see-also"></a>Consulte también  
- [CDC Control Task](../control-flow/cdc-control-task.md)   
- [Editor de la tarea Control CDC](../cdc-control-task-editor.md)  
+ [Tarea control CDC](../control-flow/cdc-control-task.md)   
+ [Editor de la tarea Control de CDC](../cdc-control-task-editor.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827198"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, clase de eventos
@@ -33,7 +33,7 @@ ms.locfileid: "62827198"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULL|52|Sí|  
 |BinaryData|`image`|NULL|2|Sí|  
-|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
 |EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 0 = Nuevo texto SQL del lote que no está presente actualmente en la caché.<br /><br /> Los siguientes tipos de EventSubClass se generan en el seguimiento para lotes ad hoc.<br /><br /> Para lotes ad hoc con *n* consultas:<br /><br /> 1 de tipo 0|21|Sí|  
 |IntegerData2|`int`|NULL|55|Sí|  
@@ -52,10 +52,10 @@ ms.locfileid: "62827198"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Número acumulado de veces que este plan se ha vuelto a compilar.|52|Sí|  
 |BinaryData|`image`|XML binario del plan compilado.|2|Sí|  
-|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
-|EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 1 = Las consultas en un procedimiento almacenado se han compilado.<br /><br /> Los siguientes tipos de EventSubClass se generan en el seguimiento para procedimientos almacenados.<br /><br /> Para procedimientos almacenados con *n* consultas:<br /><br /> *n* número de tipo 1|21|Sí|  
+|EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 1 = Las consultas en un procedimiento almacenado se han compilado.<br /><br /> Los siguientes tipos de EventSubClass se generan en el seguimiento para procedimientos almacenados.<br /><br /> Para procedimientos almacenados con *n* consultas:<br /><br /> *n* de tipo 1|21|Sí|  
 |IntegerData2|`int`|Final de la instrucción dentro del procedimiento almacenado.<br /><br /> -1 para el final del procedimiento almacenado.|55|Sí|  
 |ObjectID|`int`|Identificador del objeto asignado por el sistema.|22|Sí|  
 |Offset|`int`|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|61|Sí|  
@@ -76,12 +76,12 @@ ms.locfileid: "62827198"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Número acumulado de veces que este plan se ha vuelto a compilar.|52|Sí|  
 |BinaryData|`image`|XML binario del plan compilado.|2|Sí|  
-|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
-|EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 2 = Las consultas en una instrucción SQL ad hoc se han compilado.<br /><br /> Los siguientes tipos de EventSubClass se generan en el seguimiento para lotes ad hoc.<br /><br /> Para lotes ad hoc con *n* consultas:<br /><br /> *n* número de tipo 2|21|Sí|  
+|EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 2 = Las consultas en una instrucción SQL ad hoc se han compilado.<br /><br /> Los siguientes tipos de EventSubClass se generan en el seguimiento para lotes ad hoc.<br /><br /> Para lotes ad hoc con *n* consultas:<br /><br /> número*n* de tipo 2|21|Sí|  
 |IntegerData2|`int`|Final de la instrucción dentro del lote.<br /><br /> -1 para el final del lote.|55|Sí|  
-|ObjectID|`int`|N/D|22|Sí|  
+|ObjectID|`int`|N/A|22|Sí|  
 |Offset|`int`|Desplazamiento inicial de la instrucción dentro del lote.<br /><br /> 0 para el comienzo del lote.|61|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |SqlHandle|`image`|Identificador SQL. Se puede utilizar para obtener el texto SQL del lote mediante la vista de administración dinámica dm_exec_sql_text.|63|Sí|  
@@ -99,7 +99,7 @@ ms.locfileid: "62827198"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Número acumulado de veces que este plan se ha vuelto a compilar.|52|Sí|  
 |BinaryData|`image`|NULL|2|Sí|  
-|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
+|DatabaseID|`int`|IDENTIFICADOR de la base de datos especificada por la instrucción USE *Database* o la base de datos predeterminada si no se ha emitido ninguna instrucción use *Database* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 3 = Se ha destruido una consulta almacenada en caché y los datos históricos de rendimiento asociados al plan están a punto de ser destruidos.<br /><br /> Los siguientes tipos de EventSubClass se generan en el seguimiento.<br /><br /> Para lotes ad hoc con *n* consultas:<br /><br /> 1 de tipo 3 cuando la consulta se vacíe de la caché.<br /><br /> Para procedimientos almacenados con *n* consultas:<br />1 de tipo 3 cuando la consulta se vacía de la caché.|21|Sí|  
@@ -155,7 +155,7 @@ ms.locfileid: "62827198"
   
 ## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SHOWPLAN XML for Query compile (clase de eventos)](showplan-xml-for-query-compile-event-class.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](../views/views.md)  
   

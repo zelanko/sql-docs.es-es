@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833710"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>administrador de conexiones de varios archivos planos
@@ -47,7 +47,7 @@ ms.locfileid: "62833710"
   
  Si el administrador de conexiones de varios archivos planos hace referencia a varios archivos, las rutas de los archivos se separan con la barra vertical (|). La propiedad `ConnectionString` del administrador de conexiones tiene el formato siguiente:  
   
- \<**>|\<*ruta de* acceso>  
+ \<*ruta de acceso*>|\<*ruta de acceso*>  
   
  También puede especificar varios archivos mediante caracteres comodín. Por ejemplo, para hacer referencia a todos los archivos de texto de la unidad C, el `ConnectionString` valor de la propiedad se puede establecer\\en C: *. txt.  
   
@@ -62,13 +62,13 @@ ms.locfileid: "62833710"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor del administrador de conexiones de varios archivos planos &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [&#40;página columnas del editor del administrador de conexiones de varios archivos planos&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página Columnas&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [Editor del administrador de conexiones de varios archivos planos &#40;página avanzadas&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página Avanzadas&#41;](../multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
--   [Editor del administrador de conexiones de varios archivos planos &#40;página de vista previa&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
+-   [Editor del administrador de conexiones de varios archivos planos &#40;página Vista previa&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
  Para obtener información sobre la configuración de un administrador de conexiones mediante programación, vea <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> y [Agregar conexiones mediante programación](../building-packages-programmatically/adding-connections-programmatically.md).  
   

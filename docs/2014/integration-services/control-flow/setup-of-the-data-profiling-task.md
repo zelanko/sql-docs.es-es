@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830229"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuración de la Tarea de generación de perfiles de datos
@@ -53,7 +53,7 @@ ms.locfileid: "62830229"
   
 |Para calcular|Que ayudan a identificar|Utilice este perfil|  
 |----------------|-------------------------|----------------------|  
-|Todas las longitudes de valores de cadena distintas existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada longitud.|**Valores de cadena que no son válidos**: por ejemplo, supongamos que tiene un perfil de una columna que se supone que utiliza dos caracteres para los códigos de estado en el Estados Unidos, pero detecta valores que tienen más de dos caracteres.|**Distribución de longitud de columnas:** Válido para una columna con uno de estos tipos de datos:<br /><br /> Tipos de datos de caracteres: `char`, `nchar`, `varchar` y `nvarchar`|  
+|Todas las longitudes de valores de cadena distintas existentes en la columna seleccionada y el porcentaje de filas de la tabla que representa cada longitud.|**Valores de cadena que no son válidos**: por ejemplo, si genera perfiles de una columna que se supone que usa dos caracteres para los códigos de estado de Estados Unidos, pero detecta valores que tienen más de dos caracteres.|**Distribución de longitud de columnas:** Válido para una columna con uno de estos tipos de datos:<br /><br /> Tipos de datos de caracteres: `char`, `nchar`, `varchar` y `nvarchar`|  
 |Un conjunto de expresiones regulares que cubren el porcentaje especificado de valores de una columna de cadenas.<br /><br /> También, para buscar expresiones regulares que se pueden utilizar en el futuro para validar los nuevos valores|**Valores de cadena que no son válidos o que no tienen el formato correcto:** Por ejemplo, un perfil de patrón de una columna de códigos postales podría generar las expresiones regulares: \d{5}-\d{4}, \d{5}y \d{9}. Si la salida contiene otras expresiones regulares, los datos contienen valores que no son válidos o cuyo formato no es correcto.|**Perfil de patrón de columnas-** Válido para una columna con uno de estos tipos de datos:<br /><br /> Tipos de datos de caracteres: `char`, `nchar`, `varchar` y `nvarchar`|  
 |El porcentaje de valores NULL existentes en la columna seleccionada.|**Una proporción inesperadamente alta de valores NULL en una columna:** Por ejemplo, si se va a generar un perfil de una columna que se supone que contiene Estados Unidos códigos postales, pero se detecta un porcentaje inaceptablemente alto de códigos postales que faltan.|**Proporción de columnas nulas:** Válido para una columna con estos tipos de datos:<br /><br /> Cualquier tipo de datos. Esto incluye los tipos `image`, `text`, `xml`, los tipos definidos por el usuario y los tipos variant.|  
 |Estadísticas, como los valores mínimo, máximo, medio y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas `datetime`.|**Valores numéricos y fechas no válidas**: por ejemplo, si se va a generar un perfil de una columna de fechas históricas, pero se detecta una fecha máxima futura.|**Perfil de estadísticas de columnas-** Válido para una columna con uno de estos tipos de datos:<br /><br /> Tipos de datos numéricos: tipos enteros (excepto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` y `numeric`<br /><br /> Tipos de datos de fecha y hora: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` y `datetimeoffset`<br />Nota: Para una columna que tiene un tipo de datos de fecha y hora, el perfil calcula solo los valores mínimo y máximo.|  
@@ -74,21 +74,21 @@ ms.locfileid: "62830229"
   
  Cada uno de los perfiles de datos disponibles tiene sus propias opciones de configuración. Para obtener más información acerca de dichas opciones, vea los temas siguientes:  
   
--   [Opciones de solicitud de Perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de claves candidatas &#40;tarea de generación de perfiles de datos&#41;](candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de distribución de longitud de columnas &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de longitud de columna &#40;tarea de generación de perfiles de datos&#41;](column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de proporción de columnas nulas &#40;tarea de generación de perfiles de datos&#41;](column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Perfil de patrón de columnas opciones de solicitud &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de patrón de columnas &#40;tarea de generación de perfiles de datos&#41;](column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de estadísticas de columnas &#40;tarea de generación de perfiles de datos&#41;](column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de distribución de valores de columna &#40;tarea de generación de perfiles de datos&#41;](column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de dependencia funcional &#40;tarea de generación de perfiles de datos&#41;](functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Opciones de solicitud de Perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Opciones de Solicitud de perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>Ejecución del paquete que contiene la tarea de generación de perfiles de datos  
  Después de configurar la tarea de generación de perfiles de datos, puede ejecutarla. A continuación, la tarea calcula los perfiles de datos y genera esta información en formato XML en un archivo o en una variable de paquete. La estructura de este XML sigue el esquema DataProfile.xsd. Puede abrir el esquema en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] u otro editor de esquemas, en un editor XML o en un editor de texto como el Bloc de notas. Este esquema de información sobre la calidad de los datos puede se útil para los siguientes fines:  

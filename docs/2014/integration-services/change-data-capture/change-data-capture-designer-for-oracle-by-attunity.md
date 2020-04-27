@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835951"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Diseñador de captura de datos modificados para Oracle de Attunity
@@ -34,7 +34,7 @@ ms.locfileid: "62835951"
   
 -   [Tipos de datos de la instancia CDC de Oracle](oracle-cdc-instance-data-types.md)  
   
--   [Tratamiento de errores](error-handling.md)  
+-   [Control de errores](error-handling.md)  
   
 -   [La instancia CDC de Oracle](the-oracle-cdc-instance.md)  
   

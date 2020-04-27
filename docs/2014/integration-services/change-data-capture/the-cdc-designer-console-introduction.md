@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62834660"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introducción a la Consola del diseñador CDC
@@ -30,14 +30,14 @@ ms.locfileid: "62834660"
   
 -   Windows 7 de 32 bits (x86) y 64 bits (x64)  
   
--   Windows Server 2008 R2  
+-   Windows Server 2008 R2  
   
 -   Windows Server 2008 de 32 bits (x86) y 64 bits (x64) con Service Pack 2  
   
 ## <a name="database-prerequisites"></a>Requisitos previos de la base de datos  
  Para trabajar con el Diseñador de captura de datos modificados para Oracle de Attunity, se trabaja con una base de datos de Oracle. El Diseñador de captura de datos modificados para Oracle de Attunity admite las siguientes versiones:  
   
- **Oracle Database**  
+ **Base de datos de Oracle**  
   
 -   Versión 2 de la base de datos 10g de Oracle: 10.2.0.1-10.2.0.5 (revisión de abril de 2010)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62834660"
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con compatibilidad para CDC de SQL Server  
   
 ## <a name="software-prerequisites"></a>Requisitos previos de software  
- Se requiere el software siguiente:  
+ Se necesita el software siguiente:  
   
 -   Cliente de Oracle 10. x  
   

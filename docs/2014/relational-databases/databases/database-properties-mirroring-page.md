@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871950"
 ---
 # <a name="database-properties-mirroring-page"></a>Propiedades de la base de datos (página Creación de reflejo)
@@ -30,7 +30,7 @@ ms.locfileid: "62871950"
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 ## <a name="options"></a>Opciones  
- **Configurar seguridad**  
+ **Configurar la seguridad**  
  Haga clic en este botón para ejecutar el **Asistente para la configuración de seguridad de la creación de reflejo de bases de datos**.  
   
  Si el asistente finaliza correctamente, la acción que realice dependerá de que la creación del reflejo haya empezado, de la forma siguiente:  
@@ -47,9 +47,9 @@ ms.locfileid: "62871950"
   
  Las direcciones de red del servidor tienen la siguiente sintaxis básica:  
   
- TCP **://** _fully_qualified_domain_name_ **:** _port_  
+ TCP **://**_fully_qualified_domain_name_**:**_port_  
   
- , donde  
+ where  
   
 -   *fully_qualified_domain_name* es el servidor en el que existe la instancia del servidor.  
   
@@ -86,7 +86,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Haga clic en **Iniciar creación de reflejo** para iniciar la sesión. El motor de base de datos intenta conectarse automáticamente al asociado de creación de reflejo para comprobar que el servidor reflejado esté configurado correctamente e iniciar la sesión de creación de reflejo. Si se puede iniciar la creación de reflejo, se crea un trabajo para supervisar la base de datos.  
   
- **Pausar** o **Reanudar**  
+ **Pausar** o **reanudar**  
  Durante una sesión de creación de reflejo de la base de datos, haga clic en **Pausar** para poner en pausa la sesión. Aparecerá un mensaje de confirmación. Si hace clic en **Sí**, se pausará la sesión y el botón cambiará a **Reanudar**. Para reanudar la sesión, haga clic en **Reanudar**.  
   
  Para obtener más información sobre las repercusiones de pausar una sesión, vea [Pausar y reanudar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
@@ -104,7 +104,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  Haga clic para conmutar por error manualmente la base de datos principal a la base de datos reflejada.  
   
 > [!NOTE]  
->  Si la sesión de creación de reflejo se ejecuta en modo de rendimiento alto, la conmutación por error no se admite. Para conmutar por error manualmente, primero debe cambiar el modo de funcionamiento a **Seguridad alta sin conmutación automática por error (sincrónico)** . Una vez finalizada la conmutación por error, puede volver a cambiar el modo a **Rendimiento alto (asincrónico)** en la nueva instancia del servidor principal.  
+>  Si la sesión de creación de reflejo se ejecuta en modo de rendimiento alto, la conmutación por error no se admite. Para conmutar por error manualmente, primero debe cambiar el modo de funcionamiento a **Seguridad alta sin conmutación automática por error (sincrónico)**. Una vez finalizada la conmutación por error, puede volver a cambiar el modo a **Rendimiento alto (asincrónico)** en la nueva instancia del servidor principal.  
   
  Aparecerá un mensaje de confirmación. Si hace clic en **Sí**, se intentará una conmutación por error. El servidor principal intenta conectarse al servidor reflejado mediante la Autenticación de Windows. Si la Autenticación de Windows no funciona, el servidor principal muestra el cuadro de diálogo **Conectar con el servidor** . Si el servidor reflejado usa la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **Autenticación de SQL Server** en el cuadro **Autenticación** . En el cuadro de texto **Inicio de sesión** , especifique la cuenta de inicio de sesión para conectar con el servidor reflejado, y en el cuadro de texto **Contraseña** , especifique la contraseña correspondiente a la cuenta.  
   
@@ -136,9 +136,9 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
 |**Esta base de datos no se ha configurado para la creación de reflejo**|No existe ninguna sesión de creación de reflejo de la base de datos y no hay actividad de la que informar en la página **Creación de reflejo** .|  
 |**En pausa**|La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.|  
 |**Sin conexión**|La instancia del servidor principal no se puede conectar a su asociado.|  
-|**Sincronizando**|El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
+|**Asistentes**|El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
 |**Conmutación por error**|En la instancia de servidor principal se ha iniciado una conmutación por error manual (intercambio de roles); el servidor actualmente está pasando al rol reflejado. En este estado, las conexiones de los usuarios a la base de datos principal finalizan rápidamente. La base de datos adopta el rol reflejado poco después.|  
-|**Sincronizada**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, es posible la conmutación por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .|  
+|**Sincronizado**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, es posible la conmutación por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .|  
   
  Para obtener más información, vea [Estados de creación de reflejo &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).  
   
@@ -173,7 +173,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
  Para obtener más información, vea [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
@@ -185,9 +185,9 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  [Seguridad de transporte para la creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Pausar y reanudar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/pausing-and-resuming-database-mirroring-sql-server.md)   
  [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
- [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)  
+ [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   
   

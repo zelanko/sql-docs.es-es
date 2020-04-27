@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829484"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarea Transferir procedimientos almacenados principales
@@ -64,7 +64,7 @@ ms.locfileid: "62829484"
   
  Para obtener información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea transferir procedimientos almacenados principales &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea Transferir procedimientos almacenados principales &#40;Página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor de la tarea Transferir procedimientos almacenados principales &#40;página Procedimientos almacenados&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62829484"
 -   [Establecer las propiedades de tareas o contenedores](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Tarea Transferir objetos de SQL Server](transfer-sql-server-objects-task.md)   
+ [Tarea transferir objetos SQL Server](transfer-sql-server-objects-task.md)   
  [Tareas de Integration Services](integration-services-tasks.md)   
  [Flujo de control](control-flow.md)  
   

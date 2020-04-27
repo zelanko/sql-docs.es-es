@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842852"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server
@@ -29,8 +29,7 @@ ms.locfileid: "62842852"
 |-----------|-----------------|  
 |[Características desusadas del motor de base de datos de SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)|Características de [!INCLUDE[ssDE](../includes/ssde-md.md)] desusadas en esta versión.|  
 |[Funcionalidad del motor de base de datos no incluida en SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)|Características de [!INCLUDE[ssDE](../includes/ssde-md.md)] no incluidas en esta versión.|  
-|[Cambios recientes en las características del Motor de base de datos de SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] que pueden requerir cambios en las aplicaciones.|  
+|[Cambios recientes en las características del Motor de base de datos de SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md)|[!INCLUDE[ssDE](../includes/ssde-md.md)] que pueden requerir cambios en las aplicaciones.|  
 |[Cambios de comportamiento en las características del Motor de base de datos en SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)|Otros cambios en las características de las bases de datos en esta versión.|  
   
   

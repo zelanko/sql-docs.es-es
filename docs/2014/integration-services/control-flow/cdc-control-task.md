@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1ddc919b4658395c6a4268f03131bc92291f1b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832888"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
@@ -69,9 +69,9 @@ ms.locfileid: "62832888"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Editor de la tarea Control CDC](../cdc-control-task-editor.md)  
+-   [Editor de la tarea Control de CDC](../cdc-control-task-editor.md)  
   
--   [Propiedades personalizadas de la tarea Control CDC](cdc-control-task-custom-properties.md)  
+-   [Propiedades personalizadas de la tarea de control CDC](cdc-control-task-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Definir una variable de estado](../data-flow/define-a-state-variable.md)  

@@ -18,10 +18,10 @@ ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0c1c9ffc6ad69515d6e7b7cd291a2a5501980b8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660731"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>Método SetNumericalValue (clase ClientNetworkProtocolProperty)
@@ -36,14 +36,14 @@ object.SetNumericalValue [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el cliente.  
   
 #### <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|*valor*|Valor de **uint32** que especifica el valor numérico de la propiedad a la que se hace referencia.|  
+|*value*|Valor de **uint32** que especifica el valor numérico de la propiedad a la que se hace referencia.|  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
@@ -51,6 +51,6 @@ object.SetNumericalValue [= value]
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

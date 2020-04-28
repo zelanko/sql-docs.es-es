@@ -18,10 +18,10 @@ ms.assetid: 0911df30-55f7-4fca-a1fb-01d2c91c1467
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 94f03fc874a9032177ec12b9dd4b86c40792656f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659433"
 ---
 # <a name="setstringvalue-method-servernetworkprotocolproperty-class"></a>Método SetStringValue (clase ServerNetworkProtocolProperty)
@@ -36,7 +36,7 @@ object.SetStringValue(StrValue)
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red en la instancia [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de.  
   
 #### <a name="parameters"></a>Parámetros  

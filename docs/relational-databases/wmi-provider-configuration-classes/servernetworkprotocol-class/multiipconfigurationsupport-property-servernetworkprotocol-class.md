@@ -18,10 +18,10 @@ ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660384"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>Propiedad MultiIpConfigurationSupport (clase ServerNetworkProtocol)
@@ -36,7 +36,7 @@ object.MultiIpConfigurationSupport [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [propiedad ProtocolName (clase ServerNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md) que representa el protocolo de red utilizado por la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]instancia de.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

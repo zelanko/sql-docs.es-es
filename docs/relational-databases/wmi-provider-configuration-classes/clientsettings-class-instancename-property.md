@@ -18,10 +18,10 @@ ms.assetid: 58dacb4a-751a-491f-9adb-88ec6afc797c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7485a5603386b6eb0c3cf70964f8a0d4378eef8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660684"
 ---
 # <a name="clientsettings-class---instancename-property"></a>Clase ClientSettings: propiedad InstanceName
@@ -36,7 +36,7 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto **ClientSettings** que representa la configuración de una instancia del cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

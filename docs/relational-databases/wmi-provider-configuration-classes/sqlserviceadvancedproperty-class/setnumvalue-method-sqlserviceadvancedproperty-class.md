@@ -18,10 +18,10 @@ ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 037ba2877b8bbcd3de1378de7e39d1f007a95c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659495"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Método SetNumValue (clase SqlServiceAdvancedProperty)
@@ -36,7 +36,7 @@ object.SetNumValue(NumValue)
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa una propiedad avanzada.  
   
 #### <a name="parameters"></a>Parámetros  

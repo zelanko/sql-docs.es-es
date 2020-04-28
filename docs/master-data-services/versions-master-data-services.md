@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727798"
 ---
 # <a name="versions-master-data-services"></a>Versiones (Master Data Services)
@@ -50,7 +50,7 @@ ms.locfileid: "73727798"
   
 1.  La versión inicial se crea automáticamente cuando crea un modelo y rellena la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] con los datos maestros de la compañía. Según los permisos, los usuarios pueden realizar cambios en esta versión según sea necesario.  
   
-2.  Cuando desee confirmar una versión de un modelo, bloquee la versión para que solo los administradores del mismo puedan actualizar los datos. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Si se configuran las notificaciones, se envía una notificación por correo electrónico a los administradores del modelo cada vez que el estado de la versión cambia. Para obtener más información, consulte [Configurar notificaciones por correo electrónico &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
+2.  Cuando desee confirmar una versión de un modelo, bloquee la versión para que solo los administradores del mismo puedan actualizar los datos. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md). Si se configuran las notificaciones, se envía una notificación por correo electrónico a los administradores del modelo cada vez que el estado de la versión cambia. Para obtener más información, consulte [Configurar notificaciones por correo electrónico &#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md).  
   
 3.  Aplique reglas de negocios a los datos de la versión bloqueada y revise cualquier problema de la validación. Si fuera necesario, puede rellenar la información que falte o revertir la transacción que provocó el problema. También puede desbloquear la versión para que los usuarios efectúen modificaciones.  
   
@@ -76,16 +76,16 @@ ms.locfileid: "73727798"
 |Bloquear una versión para que solo los administradores puedan editar sus datos.|[Bloquear una versión &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |Desbloquear una versión para que los usuarios puedan editar sus datos.|[Desbloquear una versión &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
 |Confirmar una versión después de validar todos los datos.|[Confirmar una versión &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|Crear una nueva marca para marcar una versión.|[Cree una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Cambiar el nombre de una marca de versión existente.|[Cambiar el nombre de una marca de versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Crear una nueva marca para marcar una versión.|[Crear una marca de versión &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Cambiar el nombre de una marca de versión existente.|[Cambiar el nombre de marca de una versión &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Asignar una marca existente a una versión.|[Asignar una marca a una versión &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Crear una nueva copia de una versión existente|[Copie una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Crear una nueva copia de una versión existente|[Copiar una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |Eliminar una versión existente.|[Eliminar una versión &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
-|Purga los miembros eliminados temporalmente de una versión.|[Purgar miembros de versión &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
+|Purga los miembros eliminados temporalmente de una versión.|[Purga de miembros de versión &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Invertir un Master Data Services de &#40;de transacciones&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [Invertir una transacción &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
 -   [Notificaciones &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   

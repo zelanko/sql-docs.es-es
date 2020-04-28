@@ -18,10 +18,10 @@ ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0b893415c56aae38c76836fbe0496e4d990ff83b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659956"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Método SetBoolValue (clase SqlServiceAdvancedProperty)
@@ -36,7 +36,7 @@ object.SetBoolValue [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) que representa una propiedad avanzada.  
   
 #### <a name="parameters"></a>Parámetros  

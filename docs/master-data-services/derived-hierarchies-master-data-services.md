@@ -15,10 +15,10 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728279"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Jerarquías derivadas (Master Data Services)
@@ -75,14 +75,14 @@ ms.locfileid: "73728279"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una nueva jerarquía derivada.|[Cree una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Crear una nueva jerarquía derivada.|[Crear una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Ocultar o eliminar niveles en una jerarquía derivada existente.|[Ocultar o eliminar niveles en una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
 |Cambiar el nombre de una jerarquía derivada existente.|[Cambiar el nombre de una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Eliminar una jerarquía derivada existente.|[Eliminar una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Atributos basados en dominio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos basados en dominios &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73728279"
   
 -   [Jerarquías derivadas con límites explícitos &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [Mostrar relaciones varios a varios en jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
+-   [Visualización de relaciones varios a varios en jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   
 -   [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   

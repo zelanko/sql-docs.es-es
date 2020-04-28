@@ -14,10 +14,10 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 929e363228b30889e163519786d802dd4caee049
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728498"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Crear un atributo de vínculo (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73728498"
 > [!NOTE]  
 >  Cuando los usuarios escriban un valor para un atributo de vínculo, la cadena debe comenzar por **https://** o se mostrará un error.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Debe existir una entidad para la que crear el atributo. Para obtener más información, vea [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73728498"
   
 |Columna|Descripción|  
 |------------|-----------------|  
-|Status|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
+|Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
 |Nombre|El nombre del atributo.|  
 |Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|  
 |Descripción|Descripción del atributo.|  
@@ -53,19 +53,19 @@ ms.locfileid: "73728498"
   
  Cuando se hace clic en un atributo, se muestra la siguiente información.  
   
--   **Creado por**: el nombre del usuario que creó el atributo.  
+-   **Creado por:** nombre del usuario que creó el atributo.  
   
--   El: fecha y hora **en**que se creó el atributo.  
+-   **El**: fecha y hora en que se creó el atributo.  
   
--   **Actualizado por**: el nombre del usuario que actualizó el atributo por última vez.  
+-   **Actualizado por**: nombre del último usuario que actualizó el atributo.  
   
--   El: fecha y hora **en**que se actualizó por última vez el atributo.  
+-   **El**: fecha y hora en que se actualizó el atributo por última vez.  
   
 ### <a name="to-create-a-link-attribute"></a>Crear un atributo de vínculo  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
-2.  En la página **Manage Model** (Administrar modelo), seleccione un modelo de la cuadrícula y después haga clic en **Entidades**.  
+2.  En la página **administrar modelo** , seleccione un modelo de la cuadrícula y, a continuación, haga clic en **entidades**.  
   
 3.  En la página **Manage Entity** (Administrar entidad), seleccione la fila de la entidad para la que desea crear un atributo.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73728498"
   
     -   Si el atributo es para colecciones, seleccione **Colección** en el cuadro de lista **Member Types** (Tipos de miembro).  
   
-6.  En el cuadro **Nombre** , escriba un nombre para el atributo. Para ver una lista de palabras que no se deben usar como nombres de atributo, consulte [Palabras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
+6.  En el cuadro **Nombre** , escriba un nombre para el atributo. Para obtener una lista de palabras que no se deben usar como nombres de atributo, consulte [palabras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).  
   
 7.  Opcionalmente, escriba un nombre para mostrar y una descripción para el atributo en el cuadro **Descripción** .  
   
@@ -99,6 +99,6 @@ ms.locfileid: "73728498"
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Cambiar el nombre de un atributo y el tipo de datos &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Cree un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Cree un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+ [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

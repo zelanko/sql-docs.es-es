@@ -14,10 +14,10 @@ ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cc3b79de19795ec13fd8720b68c827d9b964084e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727838"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Desbloquear una versión (Master Data Services)
@@ -26,16 +26,16 @@ ms.locfileid: "73727838"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], desbloquee una versión de un modelo para permitir cambios en los miembros del modelo y en sus atributos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   El estado de la versión debe ser **Bloqueado**. Para obtener más información, vea [Bloquear una versión &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md).  
   
--   Debe disponer del permiso para tener acceso al área funcional de Administración de versiones. Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer del permiso para tener acceso al área funcional de Administración de versiones. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 ### <a name="to-unlock-a-version"></a>Desbloquear una versión  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73727838"
   
 4.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   [Bloquear una versión &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   

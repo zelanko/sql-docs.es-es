@@ -16,10 +16,10 @@ ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2995a02e738b2c185edff26ee0d6a395df14f59f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727825"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Validar una versión con las reglas de negocios (Master Data Services)
@@ -33,12 +33,12 @@ ms.locfileid: "73727825"
 > [!NOTE]  
 >  Todos los miembros deben superar la validación antes de que se pueda confirmar una versión.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   El estado de la versión debe ser **Abrir** o **Bloqueado**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73727825"
     > [!NOTE]  
     >  Cuando ya no se muestre el indicador de progreso, la validación de la versión habrá terminado.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   [Bloquear una versión &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   

@@ -13,24 +13,21 @@ ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728090"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos de la aplicación web (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] es una aplicación web hospedada por Internet Information Services (IIS). 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona únicamente en Internet Explorer (IE) 9 o versiones posteriores. No se admiten IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] es una aplicación web hospedada por Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona únicamente en Internet Explorer (IE) 9 o versiones posteriores. No se admiten IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.  
 
-**Para obtener instrucciones sobre cómo instalar y configurar IIS**, vea [instalar y configurar IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
+**Para obtener instrucciones sobre cómo instalar y configurar IIS**, vea [Instalación y configuración de IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
   
- Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear y configurar la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . 
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] configura IIS en el equipo local, de modo que es lo mejor para las tareas iniciales de configuración web. Por ejemplo, configure un entorno de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] con una aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] única, o bien configure la primera aplicación web en una implementación escalada de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Utilice las herramientas de IIS para realizar tareas más complejas, como configurar varios servidores web en una implementación escalada.  
+ Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear y configurar la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] configura IIS en el equipo local, de modo que es lo mejor para las tareas iniciales de configuración web. Por ejemplo, configure un entorno de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] con una aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] única, o bien configure la primera aplicación web en una implementación escalada de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Utilice las herramientas de IIS para realizar tareas más complejas, como configurar varios servidores web en una implementación escalada.  
   
 > [!NOTE]  
 >  Cualquier equipo en el que instale los componentes de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] debe tener las licencias pertinentes. Para obtener más información, consulte el Contrato de licencia para el usuario final (CLUF).  
@@ -50,7 +47,7 @@ ms.locfileid: "73728090"
  
  
 > [!IMPORTANT]  
->La **compresión de contenido dinámico** está habilitada de forma predeterminada. Esto disminuye considerablemente el tamaño de la respuesta xml y reduce la E/S de red, aunque el uso de CPU aumenta.  Para obtener más información, vea **[CTP 2.0] Rendimiento mejorado** in [Novedades en Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
+>La**compresión de contenido dinámico** está habilitada de forma predeterminada. Esto disminuye considerablemente el tamaño de la respuesta xml y reduce la E/S de red, aunque el uso de CPU aumenta.  Para obtener más información, vea **[CTP 2.0] Rendimiento mejorado** in [Novedades en Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
 ||  
 |-|  
@@ -61,7 +58,7 @@ ms.locfileid: "73728090"
   
 ||  
 |-|  
-|.NET Framework 3.5 (incluye .NET 2.0 y 3.0)<br /><br /> Servicios avanzados de .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> Activación HTTP [Nota: esto es necesario]<br /><br /> Uso compartido de puertos TCP<br /><br /> Servicio WAS (Windows Process Activation Service)<br /><br /> Modelo de proceso<br /><br /> Entorno .NET<br /><br /> API de configuración<br/><br/>compresión de contenido dinámico|  
+|.NET Framework 3.5 (incluye .NET 2.0 y 3.0)<br /><br /> Servicios avanzados de .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> Activación HTTP [Nota: esto es necesario]<br /><br /> Uso compartido de puertos TCP<br /><br /> Servicio de activación de procesos de Windows<br /><br /> Modelo de proceso<br /><br /> Entorno .NET<br /><br /> API de configuración<br/><br/>compresión de contenido dinámico|  
   
  Este es un script de PowerShell de ejemplo que sirve para agregar características y roles de servidor necesarios. Las características y roles de servidor necesarios varían en función del entorno.  
   
@@ -78,12 +75,12 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
 |Tipo|Descripción|  
 |----------|-----------------|  
 |Cuenta de Windows|Debe iniciar sesión en el equipo servidor web con una cuenta de Windows que tenga permiso para configurar roles de Windows, servicios de rol y características, y para crear y administrar grupos de aplicaciones, sitios web y aplicaciones web en IIS, en el equipo local.|  
-|Cuenta de servicio|Cuando cree la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], debe especificar una identidad para el grupo de aplicaciones en el que se ejecute la aplicación. Esta cuenta puede ser diferente de la cuenta de servicio que se especificó cuando se creó la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Esta identidad debe ser una cuenta de usuario de dominio y se agrega al rol de la base de datos mds_exec en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para tener acceso a las bases de datos. Para más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Esta cuenta también se agrega a un grupo de Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], **MDS_ServiceAccounts**, que es el permiso concedido al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
+|Cuenta de servicio|Cuando cree la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], debe especificar una identidad para el grupo de aplicaciones en el que se ejecute la aplicación. Esta cuenta puede ser diferente de la cuenta de servicio que se especificó cuando se creó la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Esta identidad debe ser una cuenta de usuario de dominio y se agrega al rol de la base de datos mds_exec en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para tener acceso a las bases de datos. Para más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Esta cuenta también se agrega a un grupo de Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, que es el permiso concedido al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
   
 ## <a name="see-also"></a>Consulte también  
  [Instalar Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [Cree una aplicación Web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [Página de configuración Web &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [Página Configuración web &#40;Administrador de configuración de Master Data Services&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

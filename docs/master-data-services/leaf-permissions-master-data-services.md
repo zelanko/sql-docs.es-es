@@ -17,10 +17,10 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728078"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73728078"
   
  Para las entidades sin jerarquías explícitas habilitadas, la asignación de un permiso a **Hoja** es equivalente a asignar un permiso a la entidad.  
   
- **Apunte**  
+ **Notas:**  
   
 -   Los permisos de hoja solo se aplican al área funcional del **Explorador** de la interfaz de usuario.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "73728078"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros hoja y atributos.|  
-|**A**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Update**|El usuario puede actualizar miembros hoja y atributos.|  
+|**Crear**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Actualizar**|El usuario puede actualizar miembros hoja y atributos.|  
 |**Eliminar**|El usuario puede eliminar miembros hoja.|  
 |**Deny**|Denegar todo el acceso a los miembros hoja.|  
   
@@ -53,9 +53,9 @@ ms.locfileid: "73728078"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer atributos.|  
-|**A**|El usuario puede asignar valores al crear miembros.|  
-|**Update**|El usuario puede actualizar atributos.|  
-|**Eliminar**|Sin efecto.|  
+|**Crear**|El usuario puede asignar valores al crear miembros.|  
+|**Actualizar**|El usuario puede actualizar atributos.|  
+|**Eliminar**|Ningún efecto.|  
 |**Deny**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   
 ### <a name="example"></a>Ejemplo  
@@ -63,8 +63,8 @@ ms.locfileid: "73728078"
   
 |Nombre|Código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5}Bicicletas de montaña|  
+|Mountain-100|BK-M201|{5}Bicicletas de montaña|  
   
  En el **Explorador**, puede actualizar cualquier valor de atributo en la columna Subcategory. Si no dispone del permiso para un atributo, este no se mostrará.  
   

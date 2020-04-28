@@ -14,10 +14,10 @@ ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: dff1ab73713aed3bfb635c0399028f0c9a1a8c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727906"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Tabla de ensayo de relaciones (Master Data Services)
@@ -26,14 +26,14 @@ ms.locfileid: "73727906"
 
   Use la tabla de almacenamiento provisional de relaciones (stg.name_Relationship) en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para cambiar la ubicación de los miembros de una jerarquía explícita, en función de las relaciones que tienen los miembros entre sí.  
   
-##  <a name="TableColumns"></a>Columnas de la tabla  
+##  <a name="table-columns"></a><a name="TableColumns"></a>Columnas de la tabla  
  En la tabla siguiente se explica para qué se usa cada uno de los campos de la tabla de ensayo Relationship.  
   
 |Nombre de columna|Descripción|Value|  
 |-----------------|-----------------|-----------|  
-|**SESIÓN**|Identificador asignado automáticamente.|No especifique ningún valor en este campo. Si no se ha procesado el lote, este campo está en blanco.|  
-|**Relación**|Obligatorio<br /><br /> Tipo de relación que se está estableciendo.|Los valores posibles son:<br /><br /> **1**:P Princip<br /><br /> **2**: hermano (en el mismo nivel)|  
-|**ImportStatus_ID**|Obligatorio<br /><br /> Estado del proceso de importación.|Los valores posibles son:<br /><br /> **0**, que se especifica para indicar que el registro está listo para el almacenamiento provisional.<br /><br /> **1**, que se asigna automáticamente e indica que el proceso de almacenamiento provisional del registro se ha realizado correctamente.<br /><br /> **2**, que se asigna automáticamente e indica que se ha producido un error en el proceso de almacenamiento provisional del registro.|  
+|**Id**|Identificador asignado automáticamente.|No especifique ningún valor en este campo. Si no se ha procesado el lote, este campo está en blanco.|  
+|**RelationshipType**|Obligatorio<br /><br /> Tipo de relación que se está estableciendo.|Los valores posibles son:<br /><br /> **1**: primario<br /><br /> **2**: relacionado (del mismo nivel)|  
+|**ImportStatus_ID**|Obligatorio<br /><br /> Estado del proceso de importación.|Los valores posibles son:<br /><br /> **0**, que se especifica para indicar que el registro está listo para el almacenamiento provisional.<br /><br /> **1**, que se asigna e indica automáticamente que el proceso de almacenamiento provisional del registro ha sido correcto.<br /><br /> **2**, que se asigna automáticamente e indica que el proceso de almacenamiento provisional del registro no ha sido correcto.|  
 |**Batch_ID**|Solo lo necesita el servicio web<br /><br /> Identificador asignado automáticamente que agrupa los registros para el almacenamiento provisional.<br /><br /> Si no se ha procesado el lote, este campo está en blanco.|A todos los miembros del lote se les asigna este identificador, que se muestra en la columna [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Id. **de la interfaz de usuario de** .|  
 |**BatchTag**|Obligatorio, excepto para el servicio web<br /><br /> Nombre único para el lote, de hasta 50 caracteres.||  
 |**HierarchyName**|Obligatorio<br /><br /> Nombre de jerarquía explícita. Cada miembro consolidado solo puede pertenecer a una jerarquía.||  

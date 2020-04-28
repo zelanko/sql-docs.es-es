@@ -11,10 +11,10 @@ ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728038"
 ---
 # <a name="manage-changesets-master-data-services"></a>Administración de conjuntos de datos (Master Data Services)
@@ -23,9 +23,9 @@ ms.locfileid: "73728038"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] puede administrar todos los cambios por modelo y versión.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
   
--   Debe disponer de permiso de acceso al área funcional **Explorador** . Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer de permiso de acceso al área funcional **Explorador** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Debe tener al menos acceso de lectura a la entidad o a uno de sus atributos.  
   

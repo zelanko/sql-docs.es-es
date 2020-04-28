@@ -14,10 +14,10 @@ ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f77b7a36e51d08aa3ae82b5d42e28b0173d750cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659028"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
@@ -46,7 +46,7 @@ class SQLErrorLogEvent
 |FileName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
 |InstanceName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
 |LogDate|Tipo de datos: **DateTime**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
-|Message|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El mensaje de evento.|  
+|Message|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
 |ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -54,7 +54,7 @@ class SQLErrorLogEvent
 |||  
 |-|-|  
 |MOF|Sqlmgmproviderxpsp2up.mof|  
-|DLL|Sqlmgmprovider.dll|  
+|Archivo DLL|Sqlmgmprovider.dll|  
 |Espacio de nombres|\raíz\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Ejemplo  
@@ -98,6 +98,6 @@ Next
   
 ## <a name="see-also"></a>Consulte también  
  [Clase SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   
- [Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md)  
+ [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)  
   
   

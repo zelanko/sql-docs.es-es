@@ -18,10 +18,10 @@ ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: db0a9b0d2461e392f981ba3699a9efd3c1f3f8f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660873"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>Propiedad SqlServiceType (clase SqlService)
@@ -36,7 +36,7 @@ object.SqlServiceType [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
@@ -56,7 +56,7 @@ object.SqlServiceType [= value]
 |*7*|SQLBrowser es el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser.|  
 |*203*|NsService es el [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] servicio de notificación.|  
 |*9*|MSSQLFDLauncher es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio selector del demonio de filtro de texto completo.|  
-|*7*|SQLPBENGINE es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio del motor de polybase.|  
+|*10*|SQLPBENGINE es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio del motor de polybase.|  
 |*11*|SQLPBDMS es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio de movimiento de datos de polybase.|  
 |*12*|MSSQLLaunchpad es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio Launchpad.|  
   

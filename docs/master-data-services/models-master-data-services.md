@@ -14,10 +14,10 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727949"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
@@ -73,13 +73,13 @@ ms.locfileid: "73727949"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un modelo para organizar los datos maestros.|[Cree un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Cambiar el nombre de un modelo existente.|[Editar Master Data Services de &#40;del modelo&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Crear un modelo para organizar los datos maestros.|[Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|Cambiar el nombre de un modelo existente.|[Editar modelo &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
 |Eliminar un modelo existente.|[Eliminar un modelo &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Información general de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
@@ -87,6 +87,6 @@ ms.locfileid: "73727949"
   
 -   [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
--   [Permisos del objeto de modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [Permisos de objeto del modelo &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

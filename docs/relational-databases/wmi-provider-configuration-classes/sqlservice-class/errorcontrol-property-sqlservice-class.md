@@ -18,10 +18,10 @@ ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659659"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Propiedad ErrorControl (clase SqlService)
@@ -36,7 +36,7 @@ object.ErrorControl [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) que representa el servicio.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
@@ -54,7 +54,7 @@ object.ErrorControl [= value]
  Crítico  
  El sistema intenta reiniciarse con una configuración válida.  
   
- Desconocido  
+ Unknown  
  Se desconoce la gravedad.  
   
 ## <a name="remarks"></a>Observaciones  

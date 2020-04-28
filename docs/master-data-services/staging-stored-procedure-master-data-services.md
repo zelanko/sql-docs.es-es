@@ -11,10 +11,10 @@ ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727885"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Procedimiento almacenado de almacenamiento provisional (Master Data Services)
@@ -62,6 +62,6 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Master Data Services de &#40;de procedimiento almacenado de validación&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [Ver los errores que se producen durante el Master Data Services de &#40;de almacenamiento provisional&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
+ [Ver los errores que se producen durante el almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   
   

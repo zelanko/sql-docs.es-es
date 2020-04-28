@@ -18,10 +18,10 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728006"
 ---
 # <a name="members-master-data-services"></a>Miembros (Master Data Services)
@@ -64,16 +64,16 @@ ms.locfileid: "73728006"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear un nuevo miembro hoja.|[Cree un miembro hoja &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
-|Crear un nuevo miembro consolidado.|[Cree un miembro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|Crear un nuevo miembro hoja.|[Crear un miembro hoja &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
+|Crear un nuevo miembro consolidado.|[Crear un miembro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Eliminar un miembro o colección existente.|[Eliminar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|Reactivar un miembro o una colección eliminados.|[Reactivar un miembro o colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Actualizar los valores de atributo de un miembro.|[Cambiar el tipo de atributo &#40;Complemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Reactivar un miembro o una colección eliminados.|[Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|Actualizar los valores de atributo de un miembro.|[Cambar el tipo de atributo &#40;complemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Información general de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Introducción a Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   

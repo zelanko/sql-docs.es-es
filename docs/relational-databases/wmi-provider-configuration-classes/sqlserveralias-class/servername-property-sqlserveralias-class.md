@@ -18,10 +18,10 @@ ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 979b738b046bb53168bbbbbef4d3d64563f2add0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659687"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>Propiedad ServerName (clase SqlServerAlias)
@@ -36,7 +36,7 @@ object.ServerName [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) que representa un alias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

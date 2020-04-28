@@ -18,10 +18,10 @@ ms.assetid: ae3f26f9-141c-47cf-afe4-14f99b6b9567
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c57c6457f22cd54b85b7523a5641ab776ccfd1a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660146"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>Propiedad FriendlyName (clase SecurityCertificate)
@@ -36,7 +36,7 @@ object.FriendlyName [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) que representa un certificado de seguridad.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

@@ -18,10 +18,10 @@ ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 21cdfe10b918e474f3b2adcfe40d05e5c9eeb636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660738"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>Propiedad PropertyType (clase ClientNetworkProtocolProperty)
@@ -36,7 +36,7 @@ object.PropertyType [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el cliente.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
@@ -45,6 +45,6 @@ object.PropertyType [= value]
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0f5c4e9c6e153a548b00e4c273936eea018b316b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660713"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Método SetFlag (clase ClientNetworkProtocolProperty)
@@ -36,7 +36,7 @@ object.SetFlag(BoolValue) [=]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el cliente.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -51,6 +51,6 @@ object.SetFlag(BoolValue) [=]
 ## <a name="remarks"></a>Observaciones  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728021"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Change Sets and Approval (complemento de MDS para Excel)

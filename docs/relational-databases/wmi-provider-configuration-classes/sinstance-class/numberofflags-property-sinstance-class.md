@@ -18,10 +18,10 @@ ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 053a53cff621cedc29e8583ebca354c9c067774a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659072"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>Propiedad NumberOfFlags (clase SInstance)
@@ -36,7 +36,7 @@ object.NumberOfFlags [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Objeto de la [clase SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) que representa una instancia del servidor.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

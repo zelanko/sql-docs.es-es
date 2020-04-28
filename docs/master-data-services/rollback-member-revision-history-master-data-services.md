@@ -11,10 +11,10 @@ ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727928"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>Reversión del historial de revisiones de miembro (Master Data Services)
@@ -23,13 +23,13 @@ ms.locfileid: "73727928"
 
   Cada vez que se cambia un miembro, se registra un historial de revisiones de miembro. Se puede revertir un historial de revisiones de miembro a una versión anterior.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
   
 -   Debe tener permiso para actualizar al menos uno de los atributos del miembro seleccionado. Al revertir un historial de revisiones, todos los valores de atributo que se puedan actualizar se revertirán a los valores de la versión anterior.  
   
 -   El historial de revisiones solo está disponible cuando el tipo de registro de transacciones de la entidad es miembro.  
   
- **Para revertir un historial de revisiones de miembro**  
+ **Para revertir el historial de revisiones de miembro**  
   
 1.  En Master Data Manager, haga clic en Explorador.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "73727928"
   
 ## <a name="see-also"></a>Consulte también  
  [Historial de revisiones de miembro &#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   
- [Cambiar el tipo de registro de transacciones de entidad &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
+ [Cambio del tipo de registro de transacciones de entidad &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
   

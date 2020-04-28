@@ -11,10 +11,10 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728095"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
@@ -29,11 +29,11 @@ En este artículo se describe una solución de Master Data Service (MDS) hospeda
 
 Para implementar la solución, debe llevar a cabo las tareas que se describen en este artículo.
 
-1. [Instalar y configurar clúster de conmutación por error de Windows Server (WSFC)](#windows-server-failover-cluster-wsfc).
+1. [Instalación y configuración del Clúster de conmutación por error de Windows Server (WSFC)](#windows-server-failover-cluster-wsfc).
 
 2. [Configure un grupo de disponibilidad de Always on](#sql-server-always-on-availability-group).
 
-3. [Configure MDS para que se ejecute en un nodo de WSFC](#configure-mds-to-run-on-an-wsfc-node).
+3. [Configuración de MDS para que se ejecute en un nodo de WSFC](#configure-mds-to-run-on-an-wsfc-node).
 
 En las secciones anteriores se presentan brevemente las tecnologías, seguidas de las correspondientes instrucciones. Para obtener información detallada sobre las tecnologías, consulte los documentos que se indican en cada sección.
 
@@ -72,7 +72,7 @@ Esta configuración se usa para lograr la recuperación en caso de que el centro
 
 ![Configuración típica de un grupo de disponibilidad de Always On](media/Fig1_TypicalConfig.png)
 
-Ilustración 1. Una configuración de grupo de disponibilidad de Always On típica
+Figura 1. Una configuración de grupo de disponibilidad de Always On típica
 
 Si no tiene que considerar la posibilidad de implantar la recuperación ante desastres, no es necesario tener una réplica en un segundo centro de datos. Si necesita mejorar la alta disponibilidad, podría tener más réplicas sincrónicas en el mismo centro de datos principal,
 
@@ -82,7 +82,7 @@ por lo que es importante pensar en los escenarios y requisitos, elegir cuántas 
 
 En esta sección se tratan las siguientes tareas.
 
-1. [Instalar la característica de clúster de conmutación por error de Windows](#install-failover-cluster-feature).
+1. [Instalación de la característica del Clúster de conmutación por error de Windows](#install-failover-cluster-feature).
 
 2. [Cree un clúster de conmutación por error de Windows Server](#create-a-windows-server-failover-cluster).
 
@@ -90,7 +90,7 @@ Como se muestra en la figura 1 de la sección anterior, la solución descrita en
 
 WSFC es una característica que sirve para mejorar la alta disponibilidad de aplicaciones y servicios. Consta de un grupo de instancias independientes de Windows Server, donde se ejecuta el Servicio de clúster de conmutación por error de Microsoft. Las instancias de Windows Server (o, como se denominan a veces, "nodos") están conectadas para que se puedan comunicar entre ellas y se puedan detectar errores. WSFC ofrece funcionalidades de detección de errores y de conmutación por error. Si se produce un error en un nodo o servicio del clúster, se detectará el error y otro nodo empezará a proporcionar de forma automática o manual los servicios hospedados en el nodo erróneo. Por lo tanto, los usuarios solo experimentarán una interrupción mínima en los servicios y se mejorará la disponibilidad de estos.  
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerrequisitos
 
 El sistema operativo Windows Server debe estar instalado en todas las instancias y se debe haber revisado todas las actualizaciones.
 
@@ -107,15 +107,15 @@ Siga estos pasos para cada instancia de Windows Server para instalar la caracter
 
 3. Marque la casilla **Clúster de conmutación por error** y haga clic en **Siguiente** para finalizar la instalación. Vea la figura 2.
 
-   Si se le pide confirmación para **agregar características necesarias para los clústeres de conmutación por error**, haga clic en **Agregar características**. Vea la figura 3.
+   Si se le pide confirmación para **Agregar las características necesarias para la agrupación en clústeres de conmutación por error**, haga clic en **Agregar características**. Vea la figura 3.
 
    ![Asistente para agregar roles y características, clústeres de conmutación por error](media/Fig2_SelectFeatures.png)
 
-   Ilustración 2
+   Figura 2
 
    ![Asistente para agregar roles y características, necesario para los clústeres de conmutación por error](media/Fig3_RequiredFeaturesFailover.png)
 
-   Ilustración 3
+   Figura 3
 
 4. En la página **Confirmación**, haga clic en **Instalar** para instalar la característica de clústeres de conmutación por error.
 
@@ -131,7 +131,7 @@ Cuando haya instalado la característica WSFC en todas las instancias, podrá co
 
    ![Administrador de clústeres de conmutación por error, Validar configuración](media/Fig4_ValidateConfig.png)
 
-   Ilustración 4
+   Figura 4
 
 3. En el **Asistente para validar una** **configuración**, haga clic en **Siguiente**.
 
@@ -141,7 +141,7 @@ Cuando haya instalado la característica WSFC en todas las instancias, podrá co
 
    ![Asistente para validar una configuración, página Seleccionar servidores o un clúster](media/Fig5_AddServer.png)
 
-   Ilustración 5.
+   Figura 5
 
 5. En la página **Opciones de pruebas**, haga clic en **Ejecutar todas las pruebas** y en **Siguiente**.
 
@@ -159,7 +159,7 @@ Cuando haya instalado la característica WSFC en todas las instancias, podrá co
 
    ![Asistente para validar una configuración, página Resumen](media/Fig7_ValidationSummary.png)
 
-   Ilustración 7.
+   Figura 7
 
 8. En la página **Resumen**, compruebe que la casilla **Crear el clúster ahora con los nodos validados…** está seleccionada y, luego, haga clic en **Finalizar** para iniciar el **Asistente para crear** **clústeres**.
 
@@ -195,7 +195,7 @@ En esta sección se tratan las siguientes tareas.
 
 2. [Cree un grupo de disponibilidad](#create-an-availability-group).
 
-3. [Valide y pruebe el grupo de disponibilidad](#validation-and-test-the-availability-group).
+3. [Validación y prueba del grupo de disponibilidad](#validation-and-test-the-availability-group).
 
 Always On tiene dos características para proporcionar alta disponibilidad y recuperación ante desastres para MDS, ambas se basan en WSFC.
 
@@ -207,7 +207,7 @@ Un AG proporciona disponibilidad en el nivel de base de datos. Los grupos de dis
 
 FCI proporcionan alta disponibilidad en el nivel de instancia. El servicio de SQL Server y sus servicios relacionados se registran como recursos en WSFC. Además, la solución FCI requiere un almacenamiento en disco compartido simétrico, como los recursos compartidos de archivos SAN o SMB, que tienen que estar disponibles para todos los nodos en el clúster de WFC.
    
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Prerrequisitos
 
 - Instale SQL Server en todos los nodos. Para obtener más información, vea [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
 
@@ -298,13 +298,13 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
 
    Para cada réplica, configure las opciones **Confirmación sincrónica**, **Conmutación automática por error** y **Secundaria legible**. Vea la figura 17.
 
-**Confirmación sincrónica**: Esto garantiza que si una transacción se confirma en la réplica principal de una base de datos, la transacción también se confirma en todas las demás réplicas sincrónicas. La confirmación asincrónica no lo garantiza y podría ir a la zaga de la réplica principal.
+**Confirmación sincrónica**: Garantiza que, si se confirma una transacción en la réplica principal de una base de datos, también se confirme en las demás réplicas sincrónicas. La confirmación asincrónica no lo garantiza y podría ir a la zaga de la réplica principal.
 
 Normalmente debe habilitar la confirmación sincrónica solo si ambos nodos están en el mismo centro de datos. Si se encuentran en centros de datos diferentes, la confirmación sincrónica podría ralentizar el rendimiento de la base de datos. Si no se marca esta casilla, se usará la confirmación asincrónica.
 
-**Conmutación automática por error:** Cuando la réplica principal está inactiva, el AG conmutará por error automáticamente a su réplica secundaria cuando se seleccione la conmutación automática por error. Solo se puede habilitar en las réplicas que tienen confirmaciones sincrónicas.
+**Conmutación automática por error:** Si la réplica principal está inactiva, el grupo de disponibilidad efectuará automáticamente una conmutación por error a su réplica secundaria cuando se seleccione la conmutación automática por error. Solo se puede habilitar en las réplicas que tienen confirmaciones sincrónicas.
 
-**Secundaria legible:** De forma predeterminada, los usuarios no pueden conectarse a ninguna réplica secundaria. Con esta opción, los usuarios podrán conectarse a la réplica secundaria con acceso de solo lectura.
+**Secundaria legible:** De forma predeterminada, los usuarios no se pueden conectar a ninguna réplica secundaria. Con esta opción, los usuarios podrán conectarse a la réplica secundaria con acceso de solo lectura.
 
 8. En la página **Especificar réplicas**, haga clic en la pestaña **Agente de escucha** y haga lo siguiente. Vea la figura 18.
 
@@ -317,7 +317,7 @@ Normalmente debe habilitar la confirmación sincrónica solo si ambos nodos est�
    d. Escriba DHCP en el cuadro de texto **Modo de red** y haga clic en **Siguiente** para continuar.
 
    > [!NOTE]
-   > Si quiere, puede elegir "Dirección IP estática" como **modo de red** y escribir una dirección IP estática. También puede especificar un puerto que no sea el puerto 1433.
+   > Opcionalmente, puede elegir "IP estática" como modo de **red** y especificar una dirección IP estática. También puede especificar un puerto que no sea el puerto 1433.
 
    ![Configurar el agente de escucha](media/Fig18_AvailabilityGroupCreateListener.png)
 
@@ -391,7 +391,7 @@ En estas notas del producto, hemos aprendido a configurar y configurar la base d
 
 ## <a name="feedback"></a>Comentarios
 
-¿Le ha ayudado este documento? Envíenos sus comentarios haciendo clic en **Comentarios** en la parte superior del artículo. 
+¿Le ha resultado útil este documento? Envíenos sus comentarios haciendo clic en **Comentarios** en la parte superior del artículo. 
 
 Sus comentarios nos ayudarán a mejorar la calidad de las notas del producto que publiquemos. 
 

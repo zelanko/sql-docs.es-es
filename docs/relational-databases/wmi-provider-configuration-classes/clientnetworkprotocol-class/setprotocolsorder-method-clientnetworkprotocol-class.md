@@ -18,10 +18,10 @@ ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 88becd0d5a137d88b446e18fa0ef0798524bc0c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659462"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Método SetProtocolsOrder (clase ClientNetworkProtocol)
@@ -36,7 +36,7 @@ object.SetProtocolsOrder(ProtocolOrderList)
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [clase ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Parámetros  

@@ -14,10 +14,10 @@ ms.assetid: 4ce177b0-9884-47a2-9cea-212e845dd762
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 74a2b9a825b9e589cba9416eb932bcb824f00373
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728323"
 ---
 # <a name="delete-an-explicit-hierarchy-master-data-services"></a>Eliminar una jerarquía explícita (Master Data Services)
@@ -29,22 +29,22 @@ ms.locfileid: "73728323"
 > [!WARNING]  
 >  Cuando elimine una jerarquía explícita, se eliminarán también todos los miembros consolidados de la jerarquía. Si elimina todas las jerarquías explícitas de una entidad, también se eliminarían todas las recopilaciones de la entidad y la entidad dejaría de estar habilitada para las jerarquías explícitas y las recopilaciones.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-explicit-hierarchy"></a>Eliminar una jerarquía explícita  
   
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.  
   
-2.  En la página **Manage Model** (Administrar modelo), seleccione un modelo de la cuadrícula y después haga clic en **Entidades**.  
+2.  En la página **administrar modelo** , seleccione un modelo de la cuadrícula y, a continuación, haga clic en **entidades**.  
   
 3.  En la página **Manage Entity** (Administrar entidad), en la cuadrícula, seleccione la fila de la entidad que contiene la jerarquía explícita que quiere eliminar.  
   
-4.  Haga clic en **Jerarquías explícitas**.  
+4.  Haga clic en **jerarquías explícitas**.  
   
 5.  En la página **Manage Explicit Hierarchy** (Administrar jerarquía explícita), haga clic en la jerarquía explícita que desea eliminar.  
   

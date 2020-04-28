@@ -14,10 +14,10 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728464"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728464"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una entidad para contener los miembros y sus atributos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Debe existir un modelo. Para obtener más información, consulte [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73728464"
   
      Para obtener información, consulte [Cambio del tipo de registro de transacciones de entidad &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
-8.  Opcional. Active la casilla **Crear automáticamente valores Code** . Para obtener más información, consulte [Creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
+8.  Opcional. Active la casilla **Crear automáticamente valores Code** . Para obtener más información, consulte [creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md).  
   
 9. Opcional. Active la casilla **Habilitar compresión de datos** . La compresión de fila está activada de forma predeterminada. Para obtener más información, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73728464"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Status|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")|  
+|Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")|  
 |Nombre|El nombre de la entidad.|  
 |Descripción|La descripción de la entidad.|  
 |Tabla de ensayo|El nombre de prefijo de la tabla que se usa para almacenar datos.|  
@@ -85,13 +85,13 @@ ms.locfileid: "73728464"
 |Actualizada por|Nombre del usuario que actualizó la entidad por última vez.|  
 |Updated On|Fecha y hora en que se actualizó la entidad por última vez.|  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
--   [Cree un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
--   [Cree un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+-   [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [Cree un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [Crear un atributo de archivo &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   

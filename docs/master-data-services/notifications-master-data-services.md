@@ -16,17 +16,16 @@ ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ec76228a4f8307813a2bb098b648133e065c5cd5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727956"
 ---
 # <a name="notifications-master-data-services"></a>Notificaciones (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] se puede configurar para enviar una notificación por correo electrónico cuando se produce un error en la validación de la regla de negocios, cuando cambia el estado de una versión del modelo o cuando cambia el estado de un conjunto de cambios.  
   
 ## <a name="how-notifications-are-sent"></a>Cómo se envían las notificaciones  
@@ -37,9 +36,9 @@ ms.locfileid: "73727956"
   
 |Instancia|Descripción|  
 |--------------|-----------------|  
-|Haya un error de los datos en la validación de la regla de negocios|Se deben configurar reglas de negocios individuales para enviar correo electrónico cuando un valor de atributo produce un error en la validación de la regla de negocios. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Versión<br /><br /> Entidad<br /><br /> Código del miembro<br /><br /> Regla de negocios con error<br /><br /> Vínculo al miembro para el que el valor del atributo produce un error en la regla de negocios<br /><br /> Hora de publicación de la notificación<br /><br /> Para obtener más información, consulte [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
-|El estado de la versión del modelo cambia|Cada vez que el estado de una versión del modelo cambia, los usuarios que son administradores de modelo reciben notificaciones automáticamente. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Versión<br /><br /> Estado anterior y nuevo estado de la versión.<br /><br /> Hora de publicación de la notificación<br /><br /> Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
-|Cambios de estado del conjunto de cambios|Cada vez que cambia el estado de un conjunto de cambios para una entidad que requiere aprobación, los administradores de entidades y/o los propietarios del conjunto de cambios reciben notificaciones automáticamente. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Versión<br /><br /> Nombre del conjunto de cambios.<br /><br /> Estado anterior<br /><br /> Nuevo estado<br /><br /> Vínculo para aplicar el conjunto de cambios para ver y modificar los cambios pendientes.<br /><br /> Para obtener más información, vea [conjuntos de cambios &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
+|Haya un error de los datos en la validación de la regla de negocios|Se deben configurar reglas de negocios individuales para enviar correo electrónico cuando un valor de atributo produce un error en la validación de la regla de negocios. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Version<br /><br /> Entity<br /><br /> Código del miembro<br /><br /> Regla de negocios con error<br /><br /> Vínculo al miembro para el que el valor del atributo produce un error en la regla de negocios<br /><br /> Hora de publicación de la notificación<br /><br /> Para obtener más información, consulte [Configurar reglas de negocios para enviar notificaciones &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md).|  
+|El estado de la versión del modelo cambia|Cada vez que el estado de una versión del modelo cambia, los usuarios que son administradores de modelo reciben notificaciones automáticamente. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Version<br /><br /> Estado anterior y nuevo estado de la versión.<br /><br /> Hora de publicación de la notificación<br /><br /> Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).|  
+|Cambios de estado del conjunto de cambios|Cada vez que cambia el estado de un conjunto de cambios para una entidad que requiere aprobación, los administradores de entidades y/o los propietarios del conjunto de cambios reciben notificaciones automáticamente. La notificación contiene la información siguiente.<br /><br /> Modelo<br /><br /> Version<br /><br /> Nombre del conjunto de cambios.<br /><br /> Estado anterior<br /><br /> Nuevo estado<br /><br /> Vínculo para aplicar el conjunto de cambios para ver y modificar los cambios pendientes.<br /><br /> Para obtener más información, consulte [Conjuntos de cambios &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)|  
   
 ## <a name="system-settings"></a>Configuración del sistema  
  Hay opciones de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] que afectan a las notificaciones. Puede ajustarlas en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] o directamente en la tabla Configuración del sistema de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
@@ -57,6 +56,6 @@ ms.locfileid: "73727956"
   
 -   [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [Solución de problemas de notificaciones de correo electrónico (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
+-   [Solucionar problemas de notificaciones de correo electrónico (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)  
   
   

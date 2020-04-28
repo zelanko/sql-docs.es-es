@@ -11,10 +11,10 @@ ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1062c7269c5afc0d6aecb781e7254e87c61bd65d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727997"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>Conflictos de combinación (complemento MDS para Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "73727997"
 
   En el complemento [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para Excel, si otro usuario ha cambiado en el servidor, se producirá un error de conflicto en la publicación. Para resolver este error, puede ejecutar los conflictos de fusión mediante combinación y volver a publicar los cambios.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -51,6 +51,6 @@ ms.locfileid: "73727997"
 4.  Tras hacer clic en **Aplicar**, puede realizar cambios adicionales y volver a publicarlos. O puede hacer clic en **Cancelar** para cancelar la actualización y volver a cargar la última versión desde el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [Información general: importar datos desde Excel &#40;Complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [Información general: Importación de datos desde Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

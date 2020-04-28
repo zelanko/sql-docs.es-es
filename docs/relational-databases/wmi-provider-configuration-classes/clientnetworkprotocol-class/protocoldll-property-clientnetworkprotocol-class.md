@@ -18,10 +18,10 @@ ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b671dab32f21317c181fc1139726e6af279cb0c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660249"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>Propiedad ProtocolDLL (clase ClientNetworkProtocol)
@@ -36,7 +36,7 @@ object.ProtocolDLL [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  A [clase ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  

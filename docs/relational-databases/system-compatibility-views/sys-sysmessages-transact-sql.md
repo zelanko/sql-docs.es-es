@@ -21,10 +21,10 @@ ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53f7abe7603430950f14ecad039419f8435cba28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076554"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68076554"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**error**|**int**|Número único del error.|  
-|**gravedad**|**tinyint**|Nivel de gravedad del error.|  
+|**severity**|**tinyint**|Nivel de gravedad del error.|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**denominación**|**nvarchar(255)**|Explicación del error con marcadores de posición para los parámetros.|  
 |**msglangid**|**smallint**|Id. de grupo de mensajes del sistema.|  

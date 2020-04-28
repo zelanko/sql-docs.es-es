@@ -20,10 +20,10 @@ ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e725df2676084f74b51a8a68d74fbc32e0c32152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060394"
 ---
 # <a name="sysxml_schema_wildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68060394"
 |-----------------|---------------|-----------------|  
 |**\<columnas heredadas>**||Hereda columnas de [Sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**process_content**|**Char (1)**|Indica cómo se procesa el contenido.<br /><br /> S = Validación estricta (debe validarse)<br /><br /> L = Validación flexible (validar si es posible)<br /><br /> P = Omitir validación|  
-|**process_content_desc**|**nvarchar (60)**|Descripción de cómo se procesa el contenido.<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
+|**process_content_desc**|**nvarchar(60)**|Descripción de cómo se procesa el contenido.<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
 |**disallow_namespaces**|**bit**|0 = los espacios de nombres enumerados en [Sys. xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) son los únicos permitidos.<br /><br /> 1 = Los espacios de nombres son los únicos que no se permiten.|  
   
 ## <a name="permissions"></a>Permisos  

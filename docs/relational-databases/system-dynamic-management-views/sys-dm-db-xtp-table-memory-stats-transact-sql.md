@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097942"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
@@ -38,10 +38,10 @@ ms.locfileid: "68097942"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificador de objeto de la tabla. Es NULL para las tablas del sistema de OLTP en memoria.|  
-|memory_allocated_for_table_kb|**BIGINT**|La memoria asignada para esta tabla.|  
-|memory_used_by_table_kb|**BIGINT**|Memoria utilizada por la tabla, incluidas las versiones de fila.|  
-|memory_allocated_for_indexes_kb|**BIGINT**|La memoria asignada para los índices en esta tabla.|  
-|memory_used_by_indexes_kb|**BIGINT**|La memoria usada por los índices en esta tabla.|  
+|memory_allocated_for_table_kb|**bigint**|La memoria asignada para esta tabla.|  
+|memory_used_by_table_kb|**bigint**|Memoria utilizada por la tabla, incluidas las versiones de fila.|  
+|memory_allocated_for_indexes_kb|**bigint**|La memoria asignada para los índices en esta tabla.|  
+|memory_used_by_indexes_kb|**bigint**|La memoria usada por los índices en esta tabla.|  
   
 ## <a name="permissions"></a>Permisos  
  Se devuelven todas las filas si tiene el permiso VIEW DATABASE STATE en la base de datos actual. De lo contrario, se devuelve un conjunto de filas vacío.  

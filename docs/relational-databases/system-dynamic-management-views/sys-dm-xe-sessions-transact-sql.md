@@ -20,10 +20,10 @@ ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090220"
 ---
 # <a name="sysdm_xe_sessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "68090220"
 |name|**nvarchar(256)**|El nombre de la sesión. el nombre es único en todo el sistema local. No admite valores NULL.|  
 |pending_buffers|**int**|Número de búferes llenos pendientes de procesamiento. No admite valores NULL.|  
 |total_regular_buffers|**int**|Número total de búferes normales que están asociados a la sesión. No admite valores NULL.<br /><br /> Nota: la mayor parte del tiempo se utilizan búferes normales. Estos búferes son de tamaño suficiente para contener muchos eventos. Normalmente habrá tres búferes o más por cada sesión. El servidor determina automáticamente el número de búferes normales, según las particiones de memoria que se establecen a través de la opción MEMORY_PARTITION_MODE. El tamaño de los búferes normales es igual al valor de la opción MAX_MEMORY (que es de 4 MB de forma predeterminado) dividido por el número de búferes. Para obtener más información sobre las opciones MEMORY_PARTITION_MODE y MAX_MEMORY, vea [Create Event SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
-|regular_buffer_size|**BIGINT**|Tamaño en bytes del búfer de salida normal. No admite valores NULL.|  
+|regular_buffer_size|**bigint**|Tamaño en bytes del búfer de salida normal. No admite valores NULL.|  
 |total_large_buffers|**int**|Número total de búferes grandes. No admite valores NULL.<br /><br /> Nota: los búferes grandes se usan cuando un evento es mayor que un búfer normal. Con este fin se reservan explícitamente. Los búferes grandes se asignan cuando se inicia la sesión del evento y su tamaño se determina según la opción MAX_EVENT_SIZE. Para obtener más información acerca de la opción MAX_EVENT_SIZE, consulte [Create Event SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
-|large_buffer_size|**BIGINT**|Tamaño en bytes del búfer grande. No admite valores NULL.|  
-|total_buffer_size|**BIGINT**|Tamaño total del búfer de memoria que se utiliza para almacenar los eventos de la sesión, en bytes. No admite valores NULL.|  
+|large_buffer_size|**bigint**|Tamaño en bytes del búfer grande. No admite valores NULL.|  
+|total_buffer_size|**bigint**|Tamaño total del búfer de memoria que se utiliza para almacenar los eventos de la sesión, en bytes. No admite valores NULL.|  
 |buffer_policy_flags|**int**|Mapa de bits que indica el comportamiento de los búferes de eventos de la sesión cuando todos los búferes están llenos y se activa un nuevo evento. No admite valores NULL.|  
 |buffer_policy_desc|**nvarchar(256)**|Descripción que indica el comportamiento de los búferes de eventos de la sesión cuando todos los búferes están llenos y se activa un nuevo evento.  No admite valores NULL. buffer_policy_desc puede ser una de las siguientes:<br /><br /> Quitar evento<br /><br /> No quitar eventos<br /><br /> Quitar búfer lleno<br /><br /> Asignar nuevo búfer|  
 |flags|**int**|Mapa de bits que indica las marcas establecidas en la sesión. No admite valores NULL.|  

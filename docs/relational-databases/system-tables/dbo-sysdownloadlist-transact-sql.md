@@ -20,10 +20,10 @@ ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061195"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68061195"
 |**error_message**|**nvarchar(1024)**|Mensaje de error si el servidor de destino encuentra un error al procesar la fila en particular.|  
 |**date_posted**|**datetime**|Fecha y hora en que se envió el trabajo al servidor de destino.|  
 |**date_downloaded**|**datetime**|Fecha y hora en que se descargó el trabajo por última vez.|  
-|**estatus**|**tinyint**|Estado del trabajo:<br /><br /> **0** = sin descargar aún<br /><br /> **1** = descargado correctamente|  
+|**status**|**tinyint**|Estado del trabajo:<br /><br /> **0** = sin descargar aún<br /><br /> **1** = descargado correctamente|  
 |**deleted_object_name**|**sysname**|Nombre del objeto eliminado.|  
   
  <sup>1</sup> la columna de **object_id** puede tener un valor de **-1**, que corresponde a un valor de All si la **operation_code** columna es un valor de DELETE.  

@@ -18,10 +18,10 @@ ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 12caefe8b764090d46051912c876272c9efe86bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68092661"
 ---
 # <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68092661"
 |-----------------|---------------|-----------------|  
 |**rowguid**|**uniqueidentifier**|Identificador de fila.|  
 |**tablenick**|**int**|Alias de la tabla.|  
-|**automáticamente**|**tinyint**|Tipo de eliminación:<br /><br /> 1 = Eliminación de usuario.<br /><br /> 5 = La fila ya no pertenece a la partición filtrada.<br /><br /> 6 = Eliminación de sistema.|  
+|**type**|**tinyint**|Tipo de eliminación:<br /><br /> 1 = Eliminación de usuario.<br /><br /> 5 = La fila ya no pertenece a la partición filtrada.<br /><br /> 6 = Eliminación de sistema.|  
 |**DMX**|**varbinary (249)**|Indica la versión del registro eliminada y las actualizaciones conocidas antes de su eliminación. Permite usar reglas para la resolución coherente de un conflicto cuando un suscriptor actualiza una fila mientras otro suscriptor la elimina.|  
 |**última**|**int**|Se asigna cuando se elimina una fila. Si un suscriptor solicita la generación N, solo se envían los marcadores de exclusión con la generación >= N.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica el registro lógico al que pertenece una fila eliminada.|  

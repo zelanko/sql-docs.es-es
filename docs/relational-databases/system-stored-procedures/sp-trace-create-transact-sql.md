@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096029"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
@@ -61,7 +61,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 `[ @tracefile = ] 'trace_file'`Especifica la ubicación y el nombre de archivo en el que se escribirá el seguimiento. *trace_file* es **nvarchar (245)** y no tiene ningún valor predeterminado. *trace_file* puede ser un directorio local (como n ' C:\MSSQL\Trace\trace.TRC ') o una UNC de un recurso compartido o una ruta de acceso (\\\\n '*ServerName*\\*nombreDeRecursoCompartido*\\*Directory*\trace.TRC ').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anexará una extensión **. TRC** a todos los nombres de archivo de seguimiento. Si se especifican la opción ** TRACE_FILE_ROLLOVER y un max_file_size [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , crea un nuevo archivo de seguimiento cuando el archivo de seguimiento original crece hasta su tamaño máximo. El nuevo archivo tiene el mismo nombre que el archivo original, pero se anexa _*n* para indicar su secuencia, comenzando por **1**. Por ejemplo, si el primer archivo de seguimiento se denomina **filename. TRC**, el segundo archivo de seguimiento se denomina **filename_1. TRC**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anexará una extensión **. TRC** a todos los nombres de archivo de seguimiento. Si se especifican la opción *max_file_size* TRACE_FILE_ROLLOVER y un max_file_size [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , crea un nuevo archivo de seguimiento cuando el archivo de seguimiento original crece hasta su tamaño máximo. El nuevo archivo tiene el mismo nombre que el archivo original, pero se anexa _*n* para indicar su secuencia, comenzando por **1**. Por ejemplo, si el primer archivo de seguimiento se denomina **filename. TRC**, el segundo archivo de seguimiento se denomina **filename_1. TRC**.  
   
  Si usa la opción TRACE_FILE_ROLLOVER, no es recomendable que emplee caracteres de subrayado en el nombre de archivo de seguimiento original. Si usa caracteres de subrayado, puede producirse el siguiente comportamiento:  
   
@@ -82,8 +82,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  Si se especifican *stop_time* y *max_file_size* , y no se especifica TRACE_FILE_ROLLOVER, se alcanza el valor de la parte superior del seguimiento cuando se alcanza la hora de detención especificada o el tamaño máximo de archivo. Si se especifican *stop_time*, *max_file_size*y TRACE_FILE_ROLLOVER, el seguimiento se detiene en la hora de detención especificada, suponiendo que el seguimiento no llena la unidad.  
   
-`[ @filecount = ] 'max_rollover_files'`Especifica el número máximo de archivos de seguimiento que se van a mantener con el mismo nombre de archivo base. *MAX_ROLLOVER_FILES* es de **tipo int**y es mayor que uno. Este parámetro solo es válido si se especifica la opción TRACE_FILE_ROLLOVER. Cuando se especifica *MAX_ROLLOVER_FILES* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta mantener menos de *MAX_ROLLOVER_FILES* archivos de seguimiento eliminando el archivo de seguimiento más antiguo antes de abrir un nuevo archivo de seguimiento. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace un seguimiento de la edad de los archivos de seguimiento agregando un número al nombre del archivo base.  
+`[ @filecount = ] 'max_rollover_files'`Especifica el número máximo de archivos de seguimiento que se van a mantener con el mismo nombre de archivo base. *MAX_ROLLOVER_FILES* es de **tipo int**y es mayor que uno. Este parámetro solo es válido si se especifica la opción TRACE_FILE_ROLLOVER. Cuando se especifica *MAX_ROLLOVER_FILES* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta mantener menos de *MAX_ROLLOVER_FILES* archivos de seguimiento eliminando el archivo de seguimiento más antiguo antes de abrir un nuevo archivo de seguimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace un seguimiento de la edad de los archivos de seguimiento agregando un número al nombre del archivo base.  
   
  Por ejemplo, cuando el parámetro *trace_file* se especifica como "c:\mytrace", un archivo con el nombre "c:\ mytrace_123. TRC" es más antiguo que un archivo con el nombre "c:\ mytrace_124. TRC". Si *MAX_ROLLOVER_FILES* está establecido en 2, SQL Server elimina el archivo "c:\ mytrace_123. TRC" antes de crear el archivo de seguimiento "c:\ mytrace_125. TRC".  
   
@@ -149,9 +148,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 ## <a name="see-also"></a>Consulte también  
  [sp_trace_generateevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

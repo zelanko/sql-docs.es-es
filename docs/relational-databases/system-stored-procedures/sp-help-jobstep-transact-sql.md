@@ -18,10 +18,10 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090051"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
@@ -64,9 +64,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador único del paso.|  
 |**step_name**|**sysname**|Nombre del paso del trabajo.|  
-|**subsistema**|**nvarchar (40)**|Subsistema en el que se ejecuta el comando del paso.|  
+|**subsistema**|**nvarchar(40)**|Subsistema en el que se ejecuta el comando del paso.|  
 |**Command**|**nvarchar(max)**|Comando que se ejecuta en el paso.|  
-|**marcas**|**int**|Máscara de bits que controla el comportamiento del paso.|  
+|**flags**|**int**|Máscara de bits que controla el comportamiento del paso.|  
 |**cmdexec_success_code**|**int**|En el caso de un paso **CmdExec** , es el código de salida del proceso de un comando correcto.|  
 |**on_success_action**|**tinyint**|Acción que se realiza si el paso termina correctamente:<br /><br /> **1** = salir del trabajo que informa de los trabajos correctos.<br /><br /> **2** = salir del trabajo que informa de un error.<br /><br /> **3** = ir al paso siguiente.<br /><br /> **4** = ir al paso.|  
 |**on_success_step_id**|**int**|Si **on_success_action** es 4, indica el siguiente paso que se debe ejecutar.|  

@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054932"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
@@ -78,11 +78,11 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0**|Failed|  
-|**1**|Succeeded|  
+|**1**|Correcto|  
 |**2**|Reintento (solo pasos)|  
 |**3**|Canceled|  
 |**4**|Mensaje en curso|  
-|**5**|Desconocido|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries`El número mínimo de veces que un trabajo debe volver a ejecutarse. *minimum_retries* es de **tipo int**y su valor predeterminado es NULL.  
   
@@ -107,7 +107,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|Nombre de paso (será NULL para un historial de trabajos).|  
 |**sql_message_id**|**int**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], número de error de [!INCLUDE[tsql](../../includes/tsql-md.md)] más reciente encontrado en la ejecución del comando.|  
 |**sql_severity**|**int**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], nivel de gravedad más alto de los errores de [!INCLUDE[tsql](../../includes/tsql-md.md)] encontrado en la ejecución del comando.|  
-|**Mensaje**|**nvarchar(1024)**|Mensaje del historial del trabajo o el paso.|  
+|**message**|**nvarchar(1024)**|Mensaje del historial de trabajos o pasos.|  
 |**run_status**|**int**|Resultado del trabajo o del paso.|  
 |**run_date**|**int**|Fecha en que empezó la ejecución del trabajo o del paso.|  
 |**run_time**|**int**|Hora en que empezó la ejecución del trabajo o del paso.|  
@@ -116,7 +116,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|Operador que recibió mensajes de red relativos a este trabajo (es NULL para el historial de pasos).|  
 |**operator_paged**|**nvarchar (20)**|Operador que recibió mensajes de localizador relativos a este trabajo (es NULL para el historial de pasos).|  
 |**retries_attempted**|**int**|Número de veces que se ha vuelto a intentar el paso (siempre es 0 para un historial de trabajos).|  
-|**servidor**|**nvarchar(30**|Servidor en el que se ejecuta el paso o el trabajo. Siempre es (**local**).|  
+|**servidor**|**nvarchar(30)**|Servidor en el que se ejecuta el paso o el trabajo. Siempre es (**local**).|  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_help_jobhistory** devuelve un informe con el historial de los trabajos programados especificados. Si no se especifican parámetros, el informe contiene el historial de todos los trabajos programados.  
@@ -164,7 +164,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
+ [sp_purge_jobhistory &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

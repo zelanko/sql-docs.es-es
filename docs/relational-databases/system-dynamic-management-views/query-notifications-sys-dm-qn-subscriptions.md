@@ -19,10 +19,10 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061922"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificaciones de consulta: sys. dm_qn_subscriptions
@@ -32,17 +32,17 @@ ms.locfileid: "68061922"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Id. de una suscripción.|  
+|**id**|**int**|Id. de una suscripción.|  
 |**database_id**|**int**|Id. de la base de datos en la que se ha ejecutado la notificación. Esta base de datos almacena información relacionada con esta suscripción.|  
 |**Junction**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
 |**object_id**|**int**|Id. de la tabla interna que almacena información acerca de los parámetros de suscripción.|  
-|**creado**|**datetime**|Fecha y hora en que se creó la suscripción.|  
-|**Super**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: el tiempo de activación real puede ser mayor que el tiempo de espera especificado. Sin embargo, si se produce un cambio que invalida la suscripción después del tiempo de espera especificado, pero antes de que se desencadene la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscripción, garantiza que se produzca la activación en el momento en que se realizó el cambio.|  
-|**estatus**|**int**|Indica el estado de la suscripción. Vea la tabla bajo las notas para obtener la lista de códigos.|  
+|**created**|**datetime**|Fecha y hora en que se creó la suscripción.|  
+|**timeout**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: el tiempo de activación real puede ser mayor que el tiempo de espera especificado. Sin embargo, si se produce un cambio que invalida la suscripción después del tiempo de espera especificado, pero antes de que se desencadene la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscripción, garantiza que se produzca la activación en el momento en que se realizó el cambio.|  
+|**status**|**int**|Indica el estado de la suscripción. Vea la tabla bajo las notas para obtener la lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Por|Tipo|  
+|De|En|Por|Tipo|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Varios a uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Varios a uno|  

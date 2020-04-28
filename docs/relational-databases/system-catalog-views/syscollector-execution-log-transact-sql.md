@@ -19,10 +19,10 @@ ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 31270da81f0951702aeef0427e70c6a66db5ff0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060349"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "68060349"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|log_id|**BIGINT**|Identifica cada ejecución del conjunto de recopilación. Se usa para combinar esta vista con otros registros detallados. No admite valores NULL.|  
-|parent_log_id|**BIGINT**|Identifica el conjunto de recopilación o paquete primario. No admite valores NULL. Los identificadores están encadenados en la relación primaria-secundaria, lo que permite determinar qué paquete se inició y con qué conjunto de recopilación. Esta vista agrupa las entradas de registro por su vinculación primario-secundario y aplica sangría a los nombres de los paquetes para que la cadena de llamada esté claramente visible.|  
+|log_id|**bigint**|Identifica cada ejecución del conjunto de recopilación. Se usa para combinar esta vista con otros registros detallados. No admite valores NULL.|  
+|parent_log_id|**bigint**|Identifica el conjunto de recopilación o paquete primario. No admite valores NULL. Los identificadores están encadenados en la relación primaria-secundaria, lo que permite determinar qué paquete se inició y con qué conjunto de recopilación. Esta vista agrupa las entradas de registro por su vinculación primario-secundario y aplica sangría a los nombres de los paquetes para que la cadena de llamada esté claramente visible.|  
 |collection_set_id|**int**|Identifica el paquete o conjunto de recopilación que representa esta entrada de registro. No admite valores NULL.|  
 |collection_item_id|**int**|Identifica un elemento de recopilación. Acepta valores NULL.|  
 |start_time|**datetime**|La hora de inicio del paquete o conjunto de recopilación. No admite valores NULL.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68060349"
 |package_id|**uniqueidentifier**|Identifica el paquete o conjunto de recopilación que generó este registro. Acepta valores NULL.|  
 |package_name|**nvarchar(4000)**|Nombre del paquete que generó este registro. Acepta valores NULL.|  
 |package_execution_id|**uniqueidentifier**|Proporciona un vínculo a la tabla de registros [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Acepta valores NULL.|  
-|failure_message|**nvarchar (2048)**|En caso de error del paquete o conjunto de recopilación, el mensaje de error más reciente para ese componente. Acepta valores NULL. Para obtener información más detallada sobre el error, use el [fn_syscollector_get_execution_details &#40;función de&#41;de Transact-SQL](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
+|failure_message|**nvarchar(2048)**|En caso de error del paquete o conjunto de recopilación, el mensaje de error más reciente para ese componente. Acepta valores NULL. Para obtener información más detallada sobre el error, use el [fn_syscollector_get_execution_details &#40;función de&#41;de Transact-SQL](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere SELECT para dc_operator.  

@@ -10,10 +10,10 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074148"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandos de menú y otras teclas de método abreviado (DB2ToSQL)
@@ -87,7 +87,7 @@ Para acceder al menú herramientas, el método abreviado de teclado utilizado es
 |Muestra el cuadro de diálogo Configuración del proyecto.|ALT + T + P|  
 |Muestra el cuadro de diálogo Configuración predeterminada del proyecto.|ALT + T + J|  
   
-## <a name="help-menu-commands"></a>Comandos del menú ayuda  
+## <a name="help-menu-commands"></a>Comandos del menú Ayuda  
 Para acceder al menú ayuda, el método abreviado de teclado utilizado es ALT + H. En la tabla siguiente se describen los métodos abreviados de teclado que se usan para tener acceso a los elementos de menú en el menú ayuda.  
   
 |PARA ELLO|Pulse|  

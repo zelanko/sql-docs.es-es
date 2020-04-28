@@ -10,10 +10,10 @@ ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060088"
 ---
 # <a name="save-metadata-db2tosql"></a>Guardar metadatos (DB2ToSQL)
@@ -33,7 +33,7 @@ SSMA carga los metadatos en el proyecto según sea necesario. Los metadatos se c
 **Seleccionar todo**  
 Selecciona todas las bases de datos de la lista.  
   
-**Borrar**  
+**Claridad**  
 Desactiva la casilla para todas las bases de datos con metadatos que faltan. No puede desactivar la casilla si se han cargado los metadatos.  
   
 **Guardar**  

@@ -18,10 +18,10 @@ ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 362735d33f835c7b66e4f0994fd5c4ff6f084f15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102192"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68102192"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|Columna de identidad que proporciona un número de Id. único para la partición precalculada.|  
 |**publication_number**|**smallint**|El número de publicación, que se almacena en **sysmergepublications**.|  
-|**maxgen_whenadded**|**BIGINT**|Generación más alta que se conoce en el publicador en el momento de insertar la fila en esta tabla.|  
+|**maxgen_whenadded**|**bigint**|Generación más alta que se conoce en el publicador en el momento de insertar la fila en esta tabla.|  
 |**using_partition_groups**|**bit**|Indica si la partición pertenece a una publicación que utiliza particiones precalculadas, y puede tener uno de estos valores:<br /><br /> **0** = la publicación no utiliza particiones precalculadas.<br /><br /> **1** = la publicación utiliza particiones precalculadas<br /><br /> Para obtener más información, vea [Optimización del rendimiento de los filtros con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |**HOST_NAME_FN**|**nvarchar(128)**|Valor que se suministra al utilizar filtros de fila con parámetros para generar particiones. Para obtener más información, consulte [Filtros de fila con parámetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
   

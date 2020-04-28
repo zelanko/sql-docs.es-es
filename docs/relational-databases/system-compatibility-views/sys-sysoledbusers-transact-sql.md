@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076534"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68076534"
 |**rmtloginame**|**nvarchar (** 128 **)**|Nombre del inicio de sesión remoto al que se asigna **loginsid** para **rmtservid**vinculado.|  
 |**rmtpassword**|**nvarchar (** 128 **)**|Devuelve NULL.|  
 |**loginsid**|**varbinary (** 85 **)**|SID del inicio de sesión local que se va a asignar.|  
-|**estatus**|**smallint**|Si este valor es 1, la asignación debe utilizar las credenciales del usuario.|  
+|**status**|**smallint**|Si este valor es 1, la asignación debe utilizar las credenciales del usuario.|  
 |**changedate**|**datetime**|Fecha en que cambió por última vez la información de asignación.|  
   
 ## <a name="see-also"></a>Consulte también  

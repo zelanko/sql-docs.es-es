@@ -19,10 +19,10 @@ ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4bcbbf3d4e0e0b77156b7adceedbdc5aad97afdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060365"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "68060365"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|log_id|**BIGINT**|Identifica cada ejecución del conjunto de recopilación. Se usa para combinar esta vista con otros registros detallados. Acepta valores NULL.|  
-|parent_log_id|**BIGINT**|Identifica el conjunto de recopilación o paquete primario. No admite valores NULL. Los identificadores están encadenados en la relación primaria-secundaria, lo que permite determinar qué paquete se inició y con qué conjunto de recopilación. Esta vista agrupa las entradas de registro por su vinculación primaria-secundaria y aplica sangría a los nombres de los paquetes para que la cadena de la llamada esté claramente visible.|  
+|log_id|**bigint**|Identifica cada ejecución del conjunto de recopilación. Se usa para combinar esta vista con otros registros detallados. Acepta valores NULL.|  
+|parent_log_id|**bigint**|Identifica el conjunto de recopilación o paquete primario. No admite valores NULL. Los identificadores están encadenados en la relación primaria-secundaria, lo que permite determinar qué paquete se inició y con qué conjunto de recopilación. Esta vista agrupa las entradas de registro por su vinculación primaria-secundaria y aplica sangría a los nombres de los paquetes para que la cadena de la llamada esté claramente visible.|  
 |name|**nvarchar(4000)**|El nombre del paquete o conjunto de recopilación que representa esta entrada de registro. Acepta valores NULL.|  
 |status|**smallint**|Indica el estado actual del paquete o conjunto de recopilación. Acepta valores NULL.<br /><br /> Los valores son:<br /><br /> 0 = en ejecución<br /><br /> 1 = finalizado<br /><br /> 2 = error|  
 |runtime_execution_mode|**smallint**|Indica si la actividad del conjunto de recopilación era recopilación de datos o carga de datos. Acepta valores NULL.|  
@@ -41,7 +41,7 @@ ms.locfileid: "68060365"
 |last_iteration_time|**datetime**|Para los paquetes que se ejecutan de manera continua, la última vez que el paquete capturó una instantánea. Acepta valores NULL.|  
 |finish_time|**datetime**|La hora de finalización de la ejecución de los conjuntos de recopilación y paquetes completados. Acepta valores NULL.|  
 |duration|**int**|El tiempo, en segundos, de ejecución del paquete o conjunto de recopilación. Acepta valores NULL.|  
-|failure_message|**nvarchar (2048)**|En caso de error del paquete o conjunto de recopilación, el mensaje de error más reciente para ese componente. Acepta valores NULL. Para obtener información más detallada sobre el error, use el [fn_syscollector_get_execution_details &#40;función de&#41;de Transact-SQL](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
+|failure_message|**nvarchar(2048)**|En caso de error del paquete o conjunto de recopilación, el mensaje de error más reciente para ese componente. Acepta valores NULL. Para obtener información más detallada sobre el error, use el [fn_syscollector_get_execution_details &#40;función de&#41;de Transact-SQL](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) .|  
 |operator|**nvarchar(128)**|Identifica quién inició el paquete o conjunto de recopilación. Acepta valores NULL.|  
 |package_execution_id|**uniqueidentifier**|Proporciona un vínculo a la tabla de registros [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Acepta valores NULL.|  
 |collection_set_id|**int**|Proporciona un vínculo a la tabla de configuración de recopilaciones de datos en msdb. Acepta valores NULL.|  

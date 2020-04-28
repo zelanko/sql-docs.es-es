@@ -18,10 +18,10 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085190"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
@@ -57,7 +57,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa el identificador único de cada celda, con el contador inicial igual a 1.|  
 |**móvil**|**geography**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
-|**row_count**|**BIGINT**|Indica el número de objetos espaciales que tocan la celda o que están contenidos en ella.|  
+|**row_count**|**bigint**|Indica el número de objetos espaciales que tocan la celda o que están contenidos en ella.|  
   
 ## <a name="permissions"></a>Permisos  
  El usuario debe ser miembro del rol **Public** . Requiere el permiso READ ACCESS en el servidor y el objeto.  
@@ -71,7 +71,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  El rectángulo de selección para el tipo de **geografía** es todo el globo.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente **** se llama a `Person.Address` sp_help_spatial_geography_histogram en la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] tabla de la base de datos.  
+ En el ejemplo siguiente **sp_help_spatial_geography_histogram** se llama a `Person.Address` sp_help_spatial_geography_histogram en la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] tabla de la base de datos.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

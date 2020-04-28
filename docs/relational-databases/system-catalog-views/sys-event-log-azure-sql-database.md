@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061384"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
@@ -47,12 +47,12 @@ ms.locfileid: "68061384"
 |**event_type**|**nvarchar (64)**|Tipo del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**event_subtype**|**int**|Subtipo del evento que se está produciendo.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**event_subtype_desc**|**nvarchar (64)**|Descripción del subtipo de evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
-|**gravedad**|**int**|Gravedad del error. Los valores posibles son:<br /><br /> 0 = Información<br />1= Advertencia<br />2 = Error|  
+|**severity**|**int**|Gravedad del error. Los valores posibles son:<br /><br /> 0 = Información<br />1 = Advertencia<br />2 = Error|  
 |**event_count**|**int**|Número de veces que se ha producido este evento en la base de datos especificada dentro del intervalo de tiempo especificado (**start_time** y **end_time**).|  
 |**denominación**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**additional_data**|**XML**|*Nota: este valor siempre es NULL para Azure SQL Database V12. Vea la sección [ejemplos](#Deadlock) para obtener más sobre cómo recuperar eventos de interbloqueo para V12.*<br /><br /> En el caso de eventos de **interbloqueo** , esta columna contiene el grafo de interbloqueo. Esta columna es NULL para otros tipos de eventos. |  
   
-##  <a name="EventTypes"></a>Tipos de evento
+##  <a name="event-types"></a><a name="EventTypes"></a>Tipos de evento
 
  Los eventos registrados en cada fila de esta vista se identifican mediante una categoría (**event_category**), un tipo de evento (**event_type**) y un subtipo (**event_subtype**). En la tabla siguiente se muestra una lista de los tipos de eventos que se recopilan en esta vista:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68061384"
 > [!NOTE]  
 > Esta vista no incluye todos los posibles errores de base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que pueden producirse, solo los mostrados aquí. Es posible que en futuras versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se agreguen categorías, tipos de evento y subtipos adicionales.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**gravedad**|**denominación**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**denominación**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**Conectividad**|**connection_successful**|0|**connection_successful**|0|Conectado correctamente a la base de datos.|  
 |**Conectividad**|**connection_failed**|0|**invalid_login_name**|2|El nombre de inicio de sesión no es válido en esta versión de SQL Server.|  
@@ -79,10 +79,10 @@ ms.locfileid: "68061384"
 |**Conectividad**|**limitación**|*\<código de motivo>*|**reason_code**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> Solicitud limitada.  Código de motivo de la limitación: * \<>de código de motivo *. Para obtener más información, consulte [limitación del motor](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**Conectividad**|**throttling_long_transaction**|40549|**long_transaction**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión terminó porque tiene una transacción de larga duración. Intente reducir la transacción. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Conectividad**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado porque ha adquirido demasiados bloqueos. Intente leer o modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**Conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso del espacio de la tabla temporal. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**Conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso de espacio de la tabla temporal. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Conectividad**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al excesivo uso de espacio del registro de transacciones. Intente modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**Conectividad**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de la memoria. Intente modificar su consulta para procesar menos filas. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**motor**|**quedó**|0|**quedó**|2|Se ha producido un interbloqueo.|  
+|**Conectividad**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de la memoria. Intente modificar la consulta para procesar menos filas. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**motor**|**deadlock**|0|**deadlock**|2|Se ha producido un interbloqueo.|  
   
 ## <a name="permissions"></a>Permisos
 
@@ -99,7 +99,7 @@ ms.locfileid: "68061384"
   
  Por ejemplo, si debido a que el nombre de inicio de sesión no es válido, un usuario intenta conectarse a la base de datos Database1 siete veces entre las 11:00 y las 11:05 el 5/2/2012 (UTC) y no lo consigue, esta información está disponible en una sola fila de esta vista:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**gravedad**|**event_count**|**denominación**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**denominación**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   

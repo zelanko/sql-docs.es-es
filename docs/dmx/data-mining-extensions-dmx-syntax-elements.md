@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070852"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementos de sintaxis de Extensiones de minería de datos (DMX)
@@ -37,8 +37,7 @@ ms.locfileid: "68070852"
  Expresión que acepta cero o uno o varios valores de entrada, y que devuelve un valor escalar o una tabla.  
   
  [Comentarios &#40;DMX&#41;](../dmx/comments-dmx.md)  
- Elementos de texto que puede insertar en instrucciones o scripts DMX para explicar la finalidad de una instrucción. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no ejecuta comentarios.  
+ Elementos de texto que puede insertar en instrucciones o scripts DMX para explicar la finalidad de una instrucción. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no ejecuta comentarios.  
   
  [Palabras clave reservadas &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)  
  Son palabras reservadas para uso de DMX y que no deben emplearse como nombres de objetos de una base de datos.  

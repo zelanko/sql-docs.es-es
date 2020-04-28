@@ -20,10 +20,10 @@ ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084683"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68084683"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Id. de la alerta.|  
-|**Name**|**sysname**|Nombre de la alerta.|  
+|**id**|**int**|Id. de la alerta.|  
+|**name**|**sysname**|Nombre de la alerta.|  
 |**event_source**|**nvarchar(100**|Origen del evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**event_category_id**|**int**|Reservado para su uso en el futuro:|  
-|**event_id**|**int**|Reservado para su uso en el futuro:|  
+|**event_category_id**|**int**|Reservado para uso futuro.|  
+|**event_id**|**int**|Reservado para uso futuro.|  
 |**message_id**|**int**|IDENTIFICADOR de mensaje definido por el usuario o referencia al mensaje **sysmessages** que desencadena esta alerta.|  
-|**gravedad**|**int**|Gravedad que desencadena esta alerta.|  
+|**severity**|**int**|Gravedad que desencadena esta alerta.|  
 |**activó**|**tinyint**|Estado de la alerta:<br /><br /> **0** = deshabilitado.<br /><br /> **1** = habilitada.|  
 |**delay_between_responses**|**int**|Intervalo de espera, en segundos, entre las notificaciones de esta alerta.|  
 |**last_occurrence_date**|**int**|Última repetición (fecha) de la alerta.|  
@@ -55,7 +55,7 @@ ms.locfileid: "68084683"
 |**count_reset_time**|**int**|El recuento de la hora del día se restablecerá a **0**.|  
 |**job_id**|**uniqueidentifier**|Id. de la tarea ejecutada cuando se produce esta alerta.|  
 |**has_notification**|**int**|Número de operadores que reciben notificación por correo electrónico cuando se produce la alerta.|  
-|**marcas**|**int**|Reservado.|  
+|**flags**|**int**|Reservado.|  
 |**performance_condition**|**nvarchar(512)**|Reservado.|  
 |**category_id**|**int**|Reservado.|  
   
@@ -69,7 +69,7 @@ En la tabla siguiente se muestran los valores de la máscara de include_event_de
 |1 |0,001 |email |
 |2 |milésima |pager |
 |3 |0011 |buscapersonas y correo electrónico |
-|4 |0100 |NET SEND |
+|4 |0100 |Net send |
 |5 |0101 |Net send y correo electrónico |
 |6 |0110 |Net send y buscapersonas |
 |7 |0111 |Net send, buscapersonas y correo electrónico |

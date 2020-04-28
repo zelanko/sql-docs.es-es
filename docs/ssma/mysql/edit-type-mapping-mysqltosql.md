@@ -10,10 +10,10 @@ ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102997"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Editar asignación de tipo (MySQLToSQL)
@@ -37,7 +37,7 @@ Si el tipo de datos es de longitud variable, los campos siguientes aparecerán e
 ##### <a name="from"></a>De  
 Especifique la longitud mínima de esta asignación. Por ejemplo, para el tipo de datos **nchar** , puede especificar 10 para especificar que esta asignación es para un intervalo que empieza en **NCHAR (10).**  
   
-##### <a name="to"></a>A  
+##### <a name="to"></a>En  
 Especifique la longitud máxima de esta asignación. Por ejemplo, para el tipo de datos **nchar** , puede especificar 20 para especificar que esta asignación es para un intervalo que termina en **NCHAR (20).**  
   
 ##### <a name="target-type"></a>Tipo de destino  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055682"
 ---
 # <a name="order-mdx"></a>Order (MDX)
@@ -174,7 +174,7 @@ FROM [Adventure Works]
   
 ```  
   
- En el eje de las filas puede ver que los Sales Territory Groups se han clasificado en orden descendente por Tax Amount, como sigue: North America, Europe, Pacific, NA. Ahora vea lo que ocurre si se crea un conjunto de grupos de territorio de ventas con el conjunto de subcategorías de productos y se aplica la función **Order** de la misma manera, como se indica a continuación:  
+ En el eje de las filas puede ver que los Sales Territory Groups se han clasificado en orden descendente por Tax Amount, como sigue: North America, Europa, Pacific, NA. Ahora vea lo que ocurre si se crea un conjunto de grupos de territorio de ventas con el conjunto de subcategorías de productos y se aplica la función **Order** de la misma manera, como se indica a continuación:  
   
 ```  
   

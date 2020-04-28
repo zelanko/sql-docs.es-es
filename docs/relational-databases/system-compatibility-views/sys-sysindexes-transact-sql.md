@@ -21,10 +21,10 @@ ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053437"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
@@ -37,18 +37,18 @@ ms.locfileid: "68053437"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Id. de la tabla a la que pertenece el índice.|  
-|**estatus**|**int**|Información de estado del sistema.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**lugar**|**binario (6)**|Puntero a la primera página o página raíz.<br /><br /> Sin usar cuando **indid** = 0.<br /><br /> NULL = el índice tiene particiones cuando **indid** > 1.<br /><br /> NULL = la tabla tiene particiones cuando **indid** es 0 o 1.|  
+|**id**|**int**|Id. de la tabla a la que pertenece el índice.|  
+|**status**|**int**|Información de estado del sistema.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**first**|**binario (6)**|Puntero a la primera página o página raíz.<br /><br /> Sin usar cuando **indid** = 0.<br /><br /> NULL = el índice tiene particiones cuando **indid** > 1.<br /><br /> NULL = la tabla tiene particiones cuando **indid** es 0 o 1.|  
 |**indid**|**smallint**|Id. del índice:<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster<br /><br /> >1 = índice no clúster|  
-|**raíces**|**binario (6)**|Para **indid** >= 1, la **raíz** es el puntero a la página raíz.<br /><br /> Sin usar cuando **indid** = 0.<br /><br /> NULL = el índice tiene particiones cuando **indid** > 1.<br /><br /> NULL = la tabla tiene particiones cuando **indid** es 0 o 1.|  
+|**root**|**binario (6)**|Para **indid** >= 1, la **raíz** es el puntero a la página raíz.<br /><br /> Sin usar cuando **indid** = 0.<br /><br /> NULL = el índice tiene particiones cuando **indid** > 1.<br /><br /> NULL = la tabla tiene particiones cuando **indid** es 0 o 1.|  
 |**minlen**|**smallint**|Tamaño mínimo de una fila.|  
 |**keycnt**|**smallint**|Número de claves.|  
 |**GROUPID**|**smallint**|Id. del grupo de archivos en el que se creó el objeto.<br /><br /> NULL = el índice tiene particiones cuando **indid** > 1.<br /><br /> NULL = la tabla tiene particiones cuando **indid** es 0 o 1.|  
 |**DPAGES**|**int**|Para **indid** = 0 o **indid** = 1, **DPAGES** es el número de páginas de datos que se usan.<br /><br /> En el caso de **indid** > 1, **DPAGES** es el número de páginas de índice usadas.<br /><br /> 0 = el índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
 |**sector**|**int**|Para **indid** = 0 o **indid** = 1, **Reserved** es el número de páginas asignadas para todos los índices y datos de tabla.<br /><br /> En el caso de **indid** > 1, **Reserved** es el número de páginas asignadas para el índice.<br /><br /> 0 = el índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
 |**usa**|**int**|Para **indid** = 0 o **indid** = 1, **utilizado** es el número total de páginas utilizadas para todos los datos de índice y de tabla.<br /><br /> En el caso de **indid** > 1, **utilizado** es el recuento de páginas utilizadas para el índice.<br /><br /> 0 = el índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> No producen resultados precisos en caso de desbordamiento de fila.|  
-|**rowcnt**|**BIGINT**|Recuento de filas de nivel de datos basado en **indid** = 0 e **indid** = 1.<br /><br /> 0 = el índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.|  
+|**rowcnt**|**bigint**|Recuento de filas de nivel de datos basado en **indid** = 0 e **indid** = 1.<br /><br /> 0 = el índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.|  
 |**rowmodctr**|**int**|Cuenta el número total de filas insertadas, eliminadas o actualizadas desde la última vez que se actualizaron las estadísticas de la tabla.<br /><br /> 0 = el índice tiene particiones cuando **indid** > 1.<br /><br /> 0 = la tabla tiene particiones cuando **indid** es 0 o 1.<br /><br /> En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, **rowmodctr** no es totalmente compatible con las versiones anteriores. Para obtener más información, vea la sección Comentarios.|  
 |**reserved3**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**reserved4**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -62,10 +62,10 @@ ms.locfileid: "68053437"
 |**lockflags**|**smallint**|Se utiliza para restringir las granularidades de bloqueo que se tienen en cuenta para un índice. Por ejemplo, una tabla de búsqueda que es esencialmente de solo lectura se puede configurar de modo que solo imponga bloqueos en la tabla para minimizar el costo de bloqueo.|  
 |**pgmodctr**|**int**|Devuelve 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**mykeys**|**varbinary (816)**|Lista de los Id. de columna para las columnas que forman la clave de índice.<br /><br /> Devuelve NULL.<br /><br /> Para mostrar las columnas de clave de índice, utilice [Sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
-|**Name**|**sysname**|Nombre del índice o estadística. Devuelve NULL cuando **indid** = 0. Modifique la aplicación para que busque un nombre de montón NULL.|  
-|**statblob**|**impresión**|Objeto binario grande de estadística (BLOB).<br /><br /> Devuelve NULL.|  
+|**name**|**sysname**|Nombre del índice o estadística. Devuelve NULL cuando **indid** = 0. Modifique la aplicación para que busque un nombre de montón NULL.|  
+|**statblob**|**image**|Objeto binario grande de estadística (BLOB).<br /><br /> Devuelve NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**rows**|**int**|Recuento de filas de nivel de datos basado en **indid** = 0 e **indid** = 1, y el valor se repite para **indid** >1.|  
+|**las**|**int**|Recuento de filas de nivel de datos basado en **indid** = 0 e **indid** = 1, y el valor se repite para **indid** >1.|  
   
 ## <a name="remarks"></a>Observaciones  
  Las columnas definidas como reservadas no deben utilizarse.  

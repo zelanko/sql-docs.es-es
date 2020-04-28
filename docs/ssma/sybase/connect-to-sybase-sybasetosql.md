@@ -10,10 +10,10 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083393"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectarse a Sybase (SybaseToSQL)
@@ -38,7 +38,7 @@ Si usa un puerto no predeterminado para las conexiones con ASE, escriba el núme
 Escriba el nombre de usuario que se usa para conectarse a ASE. Se trata de una opción de modo estándar.  
   
 **Contraseña**  
-Escriba la contraseña del nombre de usuario Se trata de una opción de modo estándar.  
+Escriba la contraseña del nombre de usuario. Se trata de una opción de modo estándar.  
   
 **Cadena de conexión**  
 Escriba la cadena de conexión completa para la conexión a ASE.  
@@ -51,7 +51,7 @@ Las cadenas de conexión constan de pares de nombre y valor de parámetro. Los n
   
     |Configuración|Parámetro Sybase 12,5|Parámetro de Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nombre de servidor|Nombre del servidor|Server|  
+    |Nombre de servidor|Nombre del servidor|Server (servidor)|  
     |Port|Dirección del puerto del servidor|Port|  
     |Nombre de usuario|Id. de usuario|Id. de usuario|  
     |Contraseña|Contraseña|Contraseña|  
@@ -70,8 +70,8 @@ Las cadenas de conexión constan de pares de nombre y valor de parámetro. Los n
     |Configuración|Parámetro de Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nombre del controlador|controlador|  
-    |Nombre del servidor|Server|  
-    |User Name|UID|  
+    |Nombre del servidor|Server (servidor)|  
+    |Nombre de usuario|UID|  
     |Contraseña|Pwd|  
     |Número de puerto|Port|  
   
@@ -83,8 +83,8 @@ Las cadenas de conexión constan de pares de nombre y valor de parámetro. Los n
   
     |Configuración|Parámetro de Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Nombre del servidor|Server|  
-    |User Name|UID|  
+    |Nombre del servidor|Server (servidor)|  
+    |Nombre de usuario|UID|  
     |Contraseña|Pwd|  
     |Número de puerto|Port|  
   

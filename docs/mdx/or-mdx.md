@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055709"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -40,12 +40,12 @@ Expression1 OR Expression2
 ## <a name="remarks"></a>Observaciones  
  El operador **or** trata ambos argumentos como valores booleanos (cero, 0, como **false**; de lo contrario, **true**) antes de que el operador realice la disyunción lógica. En la tabla siguiente se muestra cómo el operador **o** realiza la disyunción lógica.  
   
-|*Expression1*|*Expression2*|Valor devuelto|  
+|*Argumento*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
-|**reales**|**reales**|**reales**|  
-|**reales**|**es**|**reales**|  
-|**es**|**reales**|**reales**|  
-|**es**|**es**|**es**|  
+|**true**|**true**|**true**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta contiene una medida calculada que devuelve la cadena "casado o hombre" si el miembro actual de la jerarquía Gender de la dimensión Customer es macho o el miembro actual de la jerarquía de estado civil de la dimensión Customer es casado; en caso contrario, devuelve la cadena "noncasado OR femenino".  

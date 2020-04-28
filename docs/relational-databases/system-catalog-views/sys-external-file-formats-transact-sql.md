@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048389"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>Sys. external_file_formats (Transact-SQL)
@@ -38,11 +38,11 @@ ms.locfileid: "68048389"
 |use_type_default|**bit**|En format_type = texto delimitado, especifica cómo controlar los valores que faltan cuando polybase está importando datos de archivos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]texto HDFS en.|0: almacena los valores que faltan como la cadena "NULL".<br /><br /> 1-almacenar los valores que faltan como valor predeterminado de la columna.|  
 |serde_method|**nvarchar(255)**|Por format_type = RCFILE, este es el método de serialización y deserialización.||  
 |row_terminator|**nvarchar(10**|Por format_type = DELIMITEDTEXT, esta es la cadena de caracteres que finaliza cada fila del archivo de Hadoop externo.|Siempre es "\n".|  
-|codificación|**nvarchar(10**|Por format_type = DELIMITEDTEXT, este es el método de codificación del archivo de Hadoop externo.|Siempre es ' UTF8 '.|  
+|encoding|**nvarchar(10**|Por format_type = DELIMITEDTEXT, este es el método de codificación del archivo de Hadoop externo.|Siempre es ' UTF8 '.|  
 |data_compression|**nvarchar(255)**|Método de compresión de datos para los datos externos.|Por format_type = DELIMITEDTEXT:<br /><br /> -' org. apache. Hadoop. IO. compress. DefaultCodec '<br />-' org. apache. Hadoop. IO. compress. GzipCodec '<br /><br /> Por format_type = RCFILE:<br /><br /> -' org. apache. Hadoop. IO. compress. DefaultCodec '<br /><br /> Por format_type = ORC:<br /><br /> -' org. apache. Hadoop. IO. compress. DefaultCodec '<br />-' org. apache. Hadoop. IO. compress. SnappyCodec '<br /><br /> Por format_type = PARQUET:<br /><br /> -' org. apache. Hadoop. IO. compress. GzipCodec '<br />-' org. apache. Hadoop. IO. compress. SnappyCodec '|  
   
 ## <a name="permissions"></a>Permisos  
- La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso.  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   

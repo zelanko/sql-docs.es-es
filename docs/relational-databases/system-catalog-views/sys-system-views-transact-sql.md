@@ -20,10 +20,10 @@ ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fce2816d8cb169c5761f47dd0f9dd0a6ed1959f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078615"
 ---
 # <a name="syssystem_views-transact-sql"></a>sys.system_views (Transact-SQL)

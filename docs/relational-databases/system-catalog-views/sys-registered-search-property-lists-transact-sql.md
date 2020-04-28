@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067850"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68067850"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|Identificador de la lista de propiedades.|  
-|**Name**|**sysname**|Nombre de la lista de propiedades.|  
+|**name**|**sysname**|Nombre de la lista de propiedades.|  
 |**create_date**|**datetime**|Feche en que se creó la lista de propiedades.|  
 |**modify_date**|**datetime**|Fecha en que se modificó la lista propiedades por última vez mediante una instrucción ALTER.|  
 |**principal_id**|**int**|Propietario de la lista de propiedades.|  

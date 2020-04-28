@@ -18,10 +18,10 @@ ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07dc611371cbff373fb60036c8c16da6656a8de1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088590"
 ---
 # <a name="sysdm_repl_articles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
@@ -35,10 +35,10 @@ ms.locfileid: "68088590"
 |**artcache_table_address**|**varbinary(8**|Dirección de memoria de la estructura de la tabla en caché de un artículo de la tabla publicada.|  
 |**artcache_schema_address**|**varbinary(8**|Dirección de memoria de la estructura del esquema del artículo en caché de un artículo de la tabla publicada.|  
 |**artcache_article_address**|**varbinary(8**|Dirección de memoria de la estructura del artículo en caché de un artículo de la tabla publicada.|  
-|**artid**|**BIGINT**|Identifica de forma única cada entrada en esta tabla.|  
-|**artfilter**|**BIGINT**|Id. del procedimiento almacenado usado para filtrar horizontalmente el artículo.|  
-|**artobjid**|**BIGINT**|Id. del objeto publicado.|  
-|**artpubid**|**BIGINT**|IDENTIFICADOR de la publicación a la que pertenece el artículo.|  
+|**artid**|**bigint**|Identifica de forma única cada entrada en esta tabla.|  
+|**artfilter**|**bigint**|Id. del procedimiento almacenado usado para filtrar horizontalmente el artículo.|  
+|**artobjid**|**bigint**|Id. del objeto publicado.|  
+|**artpubid**|**bigint**|IDENTIFICADOR de la publicación a la que pertenece el artículo.|  
 |**artstatus**|**tinyint**|Máscara de bits del estado y las opciones del artículo, que puede ser un resultado OR bit a bit lógico de uno o varios de estos valores:<br /><br /> **1** = el artículo está activo.<br /><br /> **8** = incluir el nombre de la columna en las instrucciones INSERT.<br /><br /> **16** = usar instrucciones con parámetros.<br /><br /> **24** = ambos incluyen el nombre de la columna en las instrucciones INSERT y usan instrucciones con parámetros.<br /><br /> Por ejemplo, un artículo activo que utilice instrucciones con parámetros tendrá un valor de 17 en esta columna. Un valor de 0 significa que el artículo no está activo y no tiene otras propiedades definidas.|  
 |**arttype**|**tinyint**|Tipo de artículo.<br /><br /> **1** = artículo basado en registro.<br /><br /> **3** = artículo basado en registro con filtro manual.<br /><br /> **5** = artículo basado en registro con vista manual.<br /><br /> **7** = artículo basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = ejecución de procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **128** = función (solo esquema).|  
 |**wszArtdesttable**|**nvarchar (514)**|Nombre del objeto publicado en el destino.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68088590"
 |**artgendel2cmd**|**nvarchar (510)**|Plantilla del comando DELETE usada al reconciliar un artículo durante el procesamiento simultáneo de instantáneas.|  
 |**fInReconcile**|**tinyint**|Indica si un artículo se ha reconciliado durante el procesamiento simultáneo de instantáneas.|  
 |**fPubAllowUpdate**|**tinyint**|Indica si la publicación admite suscripciones de actualización.|  
-|**intPublicationOptions**|**BIGINT**|Mapa de bits que especifica las opciones de publicación adicionales, donde los valores de la opción bit a bit son:<br /><br /> **0x1** : habilitada para la replicación punto a punto.<br /><br /> **0X2** -publicar solo cambios locales.<br /><br /> **0x4** : habilitado para suscriptores que no son de SQL Server.|  
+|**intPublicationOptions**|**bigint**|Mapa de bits que especifica las opciones de publicación adicionales, donde los valores de la opción bit a bit son:<br /><br /> **0x1** : habilitada para la replicación punto a punto.<br /><br /> **0X2** -publicar solo cambios locales.<br /><br /> **0x4** : habilitado para suscriptores que no son de SQL Server.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos de publicaciones para llamar a **dm_repl_articles**.  

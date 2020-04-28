@@ -20,10 +20,10 @@ ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102346"
 ---
 # <a name="sysnumbered_procedure_parameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68102346"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador del objeto al que pertenece el parámetro.|  
 |**procedure_number**|**smallint**|Número de este procedimiento en el objeto, 2 o mayor.|  
-|**Name**|**sysname**|Nombre del parámetro. Es único dentro de **procedure_number**.|  
+|**name**|**sysname**|Nombre del parámetro. Es único dentro de **procedure_number**.|  
 |**parameter_id**|**int**|IDENTIFICADOR del parámetro. Es único en el **procedure_number**.|  
 |**system_type_id**|**tinyint**|Id. del tipo de sistema del parámetro.|  
 |**user_type_id**|**int**|Id. del tipo, definido por el usuario, del parámetro.|  

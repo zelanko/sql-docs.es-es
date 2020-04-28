@@ -18,10 +18,10 @@ ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38f5037598e240585333d246a99c29c5fd8f40fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079162"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
@@ -33,14 +33,14 @@ ms.locfileid: "68079162"
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|El nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos de publicación.|  
-|**NombreTabla**|**sysname**|El nombre de la tabla.|  
+|**NombreTabla**|**sysname**|Nombre de la tabla.|  
 |**identity_support**|**int**|Especifica si se habilita el control automático de intervalo de identidad. 0 especifica que no se habilita el control automático de intervalo de identidad.|  
-|**next_seed**|**BIGINT**|Si se habilita el intervalo automático de identidad, indica el punto de inicio del siguiente intervalo.|  
-|**pub_range**|**BIGINT**|Tamaño del intervalo de identidad del publicador.|  
-|**variedad**|**BIGINT**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
-|**max_identity**|**BIGINT**|Límite máximo del intervalo de identidad.|  
+|**next_seed**|**bigint**|Si se habilita el intervalo automático de identidad, indica el punto de inicio del siguiente intervalo.|  
+|**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
+|**range**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
+|**max_identity**|**bigint**|Límite máximo del intervalo de identidad.|  
 |**mínimo**|**int**|Porcentaje de umbral del intervalo de identidad.|  
-|**current_max**|**BIGINT**|Máximo actual que se puede asignar, aunque no necesariamente.|  
+|**current_max**|**bigint**|Máximo actual que se puede asignar, aunque no necesariamente.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

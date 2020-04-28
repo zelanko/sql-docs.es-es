@@ -18,10 +18,10 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054978"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
@@ -69,7 +69,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|Momento en el que el trabajo dejó de ejecutarse.|  
 |**next_scheduled_run_date**|**datetime**|La próxima vez que se programe la ejecución del trabajo.|  
 |**job_history_id**|**int**|Identificador del historial de trabajos en la tabla del historial de trabajos.|  
-|**Mensaje**|**nvarchar(1024)**|Mensaje generado durante la última ejecución del trabajo.|  
+|**message**|**nvarchar(1024)**|Mensaje generado durante la última ejecución del trabajo.|  
 |**run_status**|**int**|Estado devuelto en la última ejecución del trabajo:<br /><br /> **0** = error<br /><br /> **1** = correcto<br /><br /> **3** = cancelado<br /><br /> **5** = estado desconocido|  
 |**operator_id_emailed**|**int**|Número de Id. del operador notificado a través de correo electrónico al término del trabajo.|  
 |**operator_id_netsent**|**int**|Número de ID. del operador notificado mediante **net send** al finalizar el trabajo.|  

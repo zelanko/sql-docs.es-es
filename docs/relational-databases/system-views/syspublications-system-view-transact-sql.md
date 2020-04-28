@@ -18,10 +18,10 @@ ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094769"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Vista del sistema) (Transact-SQL)
@@ -32,10 +32,10 @@ ms.locfileid: "68094769"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**denominación**|**nvarchar(255)**|Entrada descriptiva para la publicación.|  
-|**Name**|**sysname**|Nombre único asociado a la publicación.|  
+|**name**|**sysname**|Nombre único asociado a la publicación.|  
 |**pubid**|**int**|Columna de identidad que proporciona un id. único para la publicación.|  
 |**repl_freq**|**tinyint**|Frecuencia de replicación:<br /><br /> **0** = basada en transacciones (transaccional).<br /><br /> **1** = actualización programada de tabla (instantánea).|  
-|**estatus**|**tinyint**|Estado de la publicación:<br /><br /> **0** = inactivo.<br /><br /> **1** = activo.|  
+|**status**|**tinyint**|Estado de la publicación:<br /><br /> **0** = inactivo.<br /><br /> **1** = activo.|  
 |**sync_method**|**tinyint**|Método de sincronización:<br /><br /> **0** = programa nativo de copia masiva (BCP).<br /><br /> **1** = BCP de caracteres.<br /><br /> **3** = simultáneo, lo que significa que se utiliza BCP nativo, pero las tablas no se bloquean durante la instantánea.<br /><br /> **4** = Concurrent_c, lo que significa que se utiliza BCP de caracteres pero no se bloquean las tablas durante la instantánea.|  
 |**snapshot_jobid**|**binario (16)**|Identifica el trabajo del agente programado para generar la instantánea inicial.|  
 |**independent_agent**|**bit**|Especifica si hay un Agente de distribución independiente para esta publicación.<br /><br /> **0** = la publicación utiliza una agente de distribución compartida y cada par de base de datos del publicador/base de datos de suscriptor tiene un único agente compartido.<br /><br /> **1** = hay un agente de distribución independiente para esta publicación.|  
@@ -66,11 +66,11 @@ ms.locfileid: "68094769"
 |**conflict_policy**|**int**|Especifica la directiva de resolución de conflictos seguida cuando se utiliza la opción de suscriptor de actualización en cola. Puede ser uno de estos valores:<br /><br /> **1** = el publicador gana el conflicto.<br /><br /> **2** = el suscriptor gana el conflicto.<br /><br /> **3** = la suscripción se ha reinicializado.|  
 |**queue_type**|**int**|Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **1** =. MSMQ, que utiliza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **2** =. SQL, que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar transacciones.<br /><br /> Nota: el [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso de Message Queue Server ha quedado desusado y ya no se admite.|  
 |**ad_guidname**|**sysname**|Especifica si la información de publicación se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificador exclusivo global (GUID) especifica que la publicación se ha publicado en Active Directory, y el GUID es el objectGUID del objeto de publicación de Active Directory correspondiente. Si es NULL, la publicación no se publica en Active Directory.<br /><br /> Nota: ya no se admite la publicación en Active Directory.|  
-|**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los valores siguientes:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los valores siguientes:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Indica si los suscriptores pueden inicializar una suscripción a esta publicación a partir de una copia de seguridad en lugar de una instantánea inicial. **1** significa que las suscripciones se pueden inicializar a partir de una copia de seguridad y **0** significa que no pueden hacerlo. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binario (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**replicate_ddl**|**int**|Indica si se admite la replicación de esquemas para la publicación.<br /><br /> **1** = las instrucciones de DDL ejecutadas en el publicador se replican.<br /><br /> **0** = indica que las instrucciones de DDL no se replican. Para obtener más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).|  
-|**Opciones**|**int**|Mapa de bits que especifica opciones de publicación adicionales. Los valores de opciones binarias son los siguientes:<br /><br /> **0x1** : habilitada para la replicación punto a punto.<br /><br /> **0X2** -publicar solo cambios locales para la replicación punto a punto.<br /><br /> **0x4** : habilitado para suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **0x8** : habilitado para la detección de conflictos punto a punto.|  
+|**replicate_ddl**|**int**|Indica si se admite la replicación de esquemas para la publicación.<br /><br /> **1** = las instrucciones de DDL ejecutadas en el publicador se replican.<br /><br /> **0** = indica que las instrucciones de DDL no se replican. Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
+|**options**|**int**|Mapa de bits que especifica opciones de publicación adicionales. Los valores de opciones binarias son los siguientes:<br /><br /> **0x1** : habilitada para la replicación punto a punto.<br /><br /> **0X2** -publicar solo cambios locales para la replicación punto a punto.<br /><br /> **0x4** : habilitado para suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **0x8** : habilitado para la detección de conflictos punto a punto.|  
 |**originator_id**|**smallint**|Identifica cada nodo en una topología de replicación punto a punto para detectar conflictos. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Consulte también  
@@ -78,6 +78,6 @@ ms.locfileid: "68094769"
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: b2e71480-92b2-4610-a4ff-dafb121087d9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b57221daa18d23d3dd88794e851d67712704f76c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68050851"
 ---
 # <a name="clr-assembly-catalog-views-transact-sql"></a>Vistas de catálogo del ensamblado CLR (Transact-SQL)

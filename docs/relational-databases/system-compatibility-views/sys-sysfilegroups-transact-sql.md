@@ -21,10 +21,10 @@ ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053485"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68053485"
 |-----------------|---------------|-----------------|  
 |**GROUPID**|**smallint**|Número de identificación de grupo, único en cada base de datos.|  
 |**allocpolicy**|**smallint**|Reserved|  
-|**estatus**|**int**|0x8 = Solo lectura<br /><br /> 0x10 = Predeterminado|  
+|**status**|**int**|0x8 = Solo lectura<br /><br /> 0x10 = Predeterminado|  
 |**GroupName**|**sysname**|Nombre del grupo de archivos.|  
   
 ## <a name="see-also"></a>Consulte también  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090199"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68090199"
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificador único de la cola.|  
-|total_enqueues|**BIGINT**|El número total de elementos de trabajo de la recolección de elementos no utilizados puestos en esta cola desde que se inició el servidor.|  
-|total_dequeues|**BIGINT**|El número total de elementos de trabajo de la recolección de elementos no utilizados quitados de esta cola desde que se inició el servidor.|  
-|current_queue_depth|**BIGINT**|El número actual de elementos de trabajo de la recolección de elementos no utilizados presentes en esta cola. Este elemento puede implicar que el recolector de elementos no utilizados elimine varios de ellos.|  
-|maximum_queue_depth|**BIGINT**|La profundidad máxima que ha visto esta cola.|  
-|last_service_ticks|**BIGINT**|Los tics de CPU en el momento en que se dio servicio a la cola por última vez.|  
+|total_enqueues|**bigint**|El número total de elementos de trabajo de la recolección de elementos no utilizados puestos en esta cola desde que se inició el servidor.|  
+|total_dequeues|**bigint**|El número total de elementos de trabajo de la recolección de elementos no utilizados quitados de esta cola desde que se inició el servidor.|  
+|current_queue_depth|**bigint**|El número actual de elementos de trabajo de la recolección de elementos no utilizados presentes en esta cola. Este elemento puede implicar que el recolector de elementos no utilizados elimine varios de ellos.|  
+|maximum_queue_depth|**bigint**|La profundidad máxima que ha visto esta cola.|  
+|last_service_ticks|**bigint**|Los tics de CPU en el momento en que se dio servicio a la cola por última vez.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW SERVER STATE.  

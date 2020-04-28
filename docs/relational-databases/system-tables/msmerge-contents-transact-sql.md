@@ -18,10 +18,10 @@ ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089943"
 ---
 # <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
@@ -33,14 +33,14 @@ ms.locfileid: "68089943"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|El alias de la tabla publicada.|  
 |**rowguid**|**uniqueidentifier**|Identificador de la fila especificada.|  
-|**última**|**BIGINT**|La generación de la fila identificada por **tablenick** y **ROWGUID**.|  
-|**partchangegen**|**BIGINT**|Generación asociada al último cambio en los datos que podría haber determinado si la fila pertenece a una publicación filtrada.|  
+|**última**|**bigint**|La generación de la fila identificada por **tablenick** y **ROWGUID**.|  
+|**partchangegen**|**bigint**|Generación asociada al último cambio en los datos que podría haber determinado si la fila pertenece a una publicación filtrada.|  
 |**DMX**|**varbinary (501)**|Alias del suscriptor y pares de números de versión para mantener un historial de los cambios en esta fila.|  
 |**colvl**|**varbinary (7489)**|Información de versión de columna.|  
-|**marker**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**dor**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica la fila primaria de nivel superior en **MSmerge_contents** (por **ROWGUID**) para cada fila secundaria correspondiente en un registro lógico.|  
 |**logical_record_lineage**|**varbinary (501)**|Alias del suscriptor y pares de números de versión utilizados para mantener un historial de los cambios en la fila primaria de nivel superior en un registro lógico. Este valor es NULL para todas las filas secundarias en un registro lógico.|  
-|**logical_relation_change_gen**|**BIGINT**|Valor de generación asociado con el último cambio que ocasionó la realineación del registro lógico en la que se insertó o se quitó una fila existente de un registro lógico.|  
+|**logical_relation_change_gen**|**bigint**|Valor de generación asociado con el último cambio que ocasionó la realineación del registro lógico en la que se insertó o se quitó una fila existente de un registro lógico.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -18,10 +18,10 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095860"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
@@ -43,8 +43,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'object_name'`Es el nombre de la tabla y columna, o el tipo de datos del alias del que se va a desenlazar la regla. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias. Cuando se deshace el enlace de una regla de un tipo de datos de alias, también se deshace el enlace de las columnas de ese tipo de datos que tengan la misma regla. Las columnas de ese tipo de datos con reglas directamente enlazadas a ellas no se ven afectadas.  
+`[ @objname = ] 'object_name'`Es el nombre de la tabla y columna, o el tipo de datos del alias del que se va a desenlazar la regla. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias. Cuando se deshace el enlace de una regla de un tipo de datos de alias, también se deshace el enlace de las columnas de ese tipo de datos que tengan la misma regla. Las columnas de ese tipo de datos con reglas directamente enlazadas a ellas no se ven afectadas.  
   
 > [!NOTE]  
 >  *object_name* pueden contener corchetes **[]** como caracteres de identificador delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -108,7 +107,7 @@ EXEC sp_unbindrule '[t.4].c1';
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [sp_bindrule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

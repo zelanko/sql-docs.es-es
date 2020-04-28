@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090670"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
@@ -88,7 +88,7 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|Identificador de la entidad a la que se hace referencia. Cuando el valor de referenced_minor_id no es 0, referenced_id es la entidad en la que se define la columna.<br /><br /> Siempre es NULL para las referencias entre servidores.<br /><br /> NULL para las referencias entre bases de datos cuando no se puede determinar el identificador porque la base de datos está sin conexión o no se puede enlazar la entidad.<br /><br /> NULL para las referencias dentro de la base de datos si no se puede determinar el identificador. En el caso de las referencias no enlazadas a un esquema, el identificador no se puede resolver cuando la entidad a la que se hace referencia no existe en la base de datos o cuando la resolución de nombres depende del autor de la llamada.  En el último caso, is_caller_dependent se establece en 1.<br /><br /> Nunca es NULL para las referencias enlazadas a un esquema.|  
 |referenced_minor_id|**int**|Identificador de la columna cuando la entidad a la que se hace referencia es una columna; en caso contrario, es 0. Por ejemplo, referenced_minor_name es 0 en la fila que contiene la propia entidad a la que se hace referencia.<br /><br /> Para las referencias no enlazadas a esquema, se notifican las dependencias de las columnas únicamente cuando se pueden enlazar todas las entidades a las que se hace referencia. Si no se pueden enlazar todas las entidades a las que se hace referencia, no se notifican las dependencias del nivel de columna y referenced_minor_id es 0. Vea el ejemplo D.|  
 |referenced_class|**tinyint**|Clase de la entidad a la que se hace referencia.<br /><br /> 1 = Objeto o columna<br /><br /> 6 = Tipo<br /><br /> 10 = Colección de esquemas XML<br /><br /> 21 = Función de partición|  
-|referenced_class_desc|**nvarchar (60)**|Descripción de la clase de la entidad a la que se hace referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|Descripción de la clase de la entidad a la que se hace referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Indica que el enlace de esquema de la entidad a la que se hace referencia se realiza en tiempo de ejecución; por consiguiente, la resolución del identificador de la entidad depende del esquema del autor de la llamada. Esto ocurre cuando la entidad a la que se hace referencia es un procedimiento almacenado, un procedimiento almacenado extendido o una función definida por el usuario llamada en una instrucción EXECUTE.<br /><br /> 1 = La entidad a la que se hace referencia es dependiente del autor de la llamada y se resuelve en tiempo de ejecución. En este caso, referenced_id es NULL.<br /><br /> 0 = El identificador de la entidad a la que se hace referencia no es dependiente del autor de la llamada. Es siempre 0 para las referencias enlazadas a esquema y para las referencias entre bases de datos o entre servidores que especifican explícitamente un nombre de esquema. Por ejemplo, una referencia a una entidad con el formato `EXEC MyDatabase.MySchema.MyProc` no es dependiente del autor de la llamada. Sin embargo, una referencia con el formato `EXEC MyDatabase..MyProc` es dependiente del autor de la llamada.|  
 |is_ambiguous|**bit**|Indica que la referencia es ambigua y se puede resolver en tiempo de ejecución en una función definida por el usuario, un tipo definido por el usuario (UDT) o una referencia XQuery a una columna de tipo **XML**. Por ejemplo, supongamos que la instrucción `SELECT Sales.GetOrder() FROM Sales.MySales` está definida en un procedimiento almacenado. Hasta que no se ejecute el procedimiento almacenado, no se sabrá si `Sales.GetOrder()` es una función definida por el usuario en el esquema `Sales` o en la columna con nombre `Sales` de tipo UDT con un método denominado `GetOrder()`.<br /><br /> 1 = La referencia a una función definida por el usuario o el método de tipo definido por el usuario (UDT) de columna es ambiguo.<br /><br /> 0 = La referencia no es ambigua o la entidad puede enlazarse correctamente cuando se llama a la función.<br /><br /> Siempre es 0 para las referencias enlazadas a esquema.|  
 |is_selected|**bit**|1 = Se ha seleccionado el objeto o la columna.|  
@@ -123,9 +123,9 @@ sys.dm_sql_referenced_entities (
 |-----------------|------------------------|-----------------------|  
 |Tabla|Sí*|Sí|  
 |Ver|Sí|Sí|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]procedimiento almacenado * *|Sí|Sí|  
+|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
 |procedimiento almacenado CLR|No|Sí|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]función definida por el usuario|Sí|Sí|  
+|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
 |Función CLR definida por el usuario|No|Sí|  
 |Desencadenador CLR (DML y DDL)|No|No|  
 |Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
@@ -335,7 +335,7 @@ SELECT
  ```
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

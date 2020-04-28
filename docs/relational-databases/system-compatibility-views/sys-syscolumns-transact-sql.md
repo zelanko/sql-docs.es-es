@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089237"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
@@ -38,12 +38,12 @@ ms.locfileid: "68089237"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre del parámetro de columna o procedimiento.|  
-|**sesión**|**int**|Id. de objeto de la tabla a la que pertenece la columna o Id. del procedimiento almacenado al que está asociado el parámetro.|  
+|**name**|**sysname**|Nombre del parámetro de columna o procedimiento.|  
+|**id**|**int**|Id. de objeto de la tabla a la que pertenece la columna o Id. del procedimiento almacenado al que está asociado el parámetro.|  
 |**xtype**|**tinyint**|Tipo de almacenamiento físico de **Sys. Types**.|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|IDENTIFICADOR del tipo de datos extendido definido por el usuario. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
-|**longitud**|**smallint**|Longitud máxima de almacenamiento físico de **Sys**. **tipos**.|  
+|**length**|**smallint**|Longitud máxima de almacenamiento físico de **Sys**. **tipos**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colid**|**smallint**|Id. de columna o parámetro.|  
@@ -55,12 +55,12 @@ ms.locfileid: "68089237"
 |**dominio**|**int**|Id. de la regla o restricción CHECK de esta columna.|  
 |**número**|**smallint**|Número del subprocedimiento cuando el procedimiento está agrupado.<br /><br /> 0 = Entradas que no son de procedimiento|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**autoval**|**varbinary (8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**smallint**|Desplazamiento en la fila en la que aparece esta columna.|  
 |**collationid**|**int**|Id. de la intercalación de la columna. Es NULL para columnas no basadas en caracteres.|  
-|**estatus**|**tinyint**|Mapa de bits utilizado para describir una propiedad de la columna o parámetro:<br /><br /> 0x08 = La columna admite valores NULL.<br /><br /> 0x10 = el relleno ANSI estaba activo cuando se agregaron columnas **VARCHAR** o **varbinary** . Se conservan los espacios en blanco finales para **VARCHAR** y los ceros a la derecha para las columnas **varbinary** .<br /><br /> 0x40 = El parámetro es de tipo OUTPUT.<br /><br /> 0x80 = La columna es de identidad.|  
-|**automáticamente**|**tinyint**|Tipo de almacenamiento físico de **Sys**. **tipos**.|  
-|**Tipo de usuario**|**smallint**|IDENTIFICADOR del tipo de datos definido por el usuario de **Sys. Types**. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
+|**status**|**tinyint**|Mapa de bits utilizado para describir una propiedad de la columna o parámetro:<br /><br /> 0x08 = La columna admite valores NULL.<br /><br /> 0x10 = el relleno ANSI estaba activo cuando se agregaron columnas **VARCHAR** o **varbinary** . Se conservan los espacios en blanco finales para **VARCHAR** y los ceros a la derecha para las columnas **varbinary** .<br /><br /> 0x40 = El parámetro es de tipo OUTPUT.<br /><br /> 0x80 = La columna es de identidad.|  
+|**type**|**tinyint**|Tipo de almacenamiento físico de **Sys**. **tipos**.|  
+|**usertype**|**smallint**|IDENTIFICADOR del tipo de datos definido por el usuario de **Sys. Types**. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
 |**printfmt**|**VARCHAR(255**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Nivel de precisión de la columna.<br /><br /> -1 = **XML** o tipo de valor grande.|  
 |**scale**|**int**|Escala para esta columna.<br /><br /> NULL = El tipo de datos no es numérico.|  

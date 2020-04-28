@@ -20,10 +20,10 @@ ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ea2b3196e159b19a1baaa032c622a4cf9132402
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097600"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
@@ -33,9 +33,9 @@ ms.locfileid: "68097600"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|Identificador único del trabajo.|  
+|**job_id**|**uniqueidentifier**|Id. único del trabajo.|  
 |**originating_server_id**|**int**|Id. del servidor del que proviene el trabajo.|  
-|**Name**|**sysname**|Nombre del trabajo.|  
+|**name**|**sysname**|Nombre del trabajo.|  
 |**activó**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
 |**denominación**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  

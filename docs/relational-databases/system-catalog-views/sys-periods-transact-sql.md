@@ -13,10 +13,10 @@ ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eea7709c67eab0dc9fe1890135f9ae03225cdff2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068094"
 ---
 # <a name="sysperiods-transact-sql"></a>Sys. periods (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68068094"
 |-------------------|---------------|-----------------|  
 |name|**sysname**|Nombre del período|  
 |period_type|**tinyint**|Valor numérico que representa el tipo de punto:<br /><br /> 1 = período de tiempo del sistema|  
-|period_type_desc|**nvarchar (60)**|La descripción de texto del tipo de columna:<br /><br /> SYSTEM_TIME_PERIOD|  
+|period_type_desc|**nvarchar(60)**|La descripción de texto del tipo de columna:<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|Identificador de la tabla que contiene la columna de period_type|  
 |start_column_id|**int**|Identificador de la columna que define el límite del período inferior.|  
 |end_column_id|**int**|Identificador de la columna que define el límite del período superior.|  

@@ -17,10 +17,10 @@ ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fa6fde13ccf4941e61ec29c9a257aeff9ee214eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095729"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>Asignar tablas del sistema a vistas del sistema (Transact-SQL)

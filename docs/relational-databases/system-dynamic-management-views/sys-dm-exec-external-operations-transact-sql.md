@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d410afc256f0a1c12694f826bc73570cfee84172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097769"
 ---
 # <a name="sysdm_exec_external_operations-transact-sql"></a>Sys. dm_exec_external_operations (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68097769"
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar (32)**|Identificador de consulta único asociado a la consulta de polybase|Vea ID en [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|execution_id|**nvarchar(32)**|Identificador de consulta único asociado a la consulta de polybase|Vea ID en [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|Índice del paso de consulta|Vea step_index en [Sys. dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |tipo de operation_|**nvarchar(128)**|Describe una operación de Hadoop u otra operación externa|' Operación de Hadoop externa '|  
 |nombre del operation_|**nvarchar(4000)**|Indica cómo se usa el estado de trabajo en porcentaje (cuánto es la entrada consumida)|0-1: multiplicado por factor 100 (completado)|  

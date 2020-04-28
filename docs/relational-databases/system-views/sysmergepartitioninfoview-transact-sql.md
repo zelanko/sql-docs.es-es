@@ -18,10 +18,10 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094820"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "68094820"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre del artículo.|  
-|**automáticamente**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **0x0A** = tabla.<br /><br /> **0x20** = solo esquema de procedimiento.<br /><br /> **0x40** = solo esquema de vista o esquema de vista indizada.<br /><br /> **0x80** = solo esquema de función.|  
+|**name**|**sysname**|Nombre del artículo.|  
+|**type**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **0x0A** = tabla.<br /><br /> **0x20** = solo esquema de procedimiento.<br /><br /> **0x40** = solo esquema de vista o esquema de vista indizada.<br /><br /> **0x80** = solo esquema de función.|  
 |**objid**|**int**|El identificador del objeto publicado.|  
 |**sync_objid**|**int**|Id. de objeto de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68094820"
 |**pubid**|**uniqueidentifier**|Id. de la publicación a la que pertenece el artículo actual.|  
 |**deseado**|**int**|Alias asignado para la identificación del artículo.|  
 |**column_tracking**|**int**|Indica si está implementado el seguimiento de columnas en el artículo.|  
-|**estatus**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.|  
+|**status**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.|  
 |**conflict_table**|**sysname**|Nombre de la tabla local que contiene los registros en conflicto del artículo actual. Esta tabla solo tiene fines informativos y su contenido puede ser modificado o eliminado con rutinas de resolución de conflictos personalizadas, o directamente por el administrador.|  
 |**creation_script**|**nvarchar(255)**|Script de creación de este artículo.|  
 |**conflict_script**|**nvarchar(255)**|Script de conflicto de este artículo.|  
@@ -57,16 +57,16 @@ ms.locfileid: "68094820"
 |**destination_object**|**sysname**|Nombre de la tabla creada en el suscriptor.|  
 |**destination_owner**|**sysname**|Nombre del propietario del objeto de destino.|  
 |**resolver_clsid**|**nvarchar(50)**|Identificador del solucionador de conflictos personalizado. En un controlador de lógica empresarial, este valor es NULL.|  
-|**subset_filterclause**|**nvarchar (1000)**|Cláusula de filtro de este artículo.|  
+|**subset_filterclause**|**nvarchar(1000)**|Cláusula de filtro de este artículo.|  
 |**missing_col_count**|**int**|El número de columnas publicadas que faltan en el artículo.|  
-|**missing_cols**|**varbinary (128)**|El mapa de bits que describe las columnas que faltan en el artículo.|  
-|**excluded_cols**|**varbinary (128)**|El mapa de bits de las columnas excluidas del artículo.|  
+|**missing_cols**|**varbinary(128)**|El mapa de bits que describe las columnas que faltan en el artículo.|  
+|**excluded_cols**|**varbinary(128)**|El mapa de bits de las columnas excluidas del artículo.|  
 |**excluded_col_count**|**int**|El número de columnas excluidas del artículo. |  
-|**columnas**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deleted_cols**|**varbinary (128)**|El mapa de bits que describe las columnas eliminadas del artículo.|  
+|**columnas**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**deleted_cols**|**varbinary(128)**|El mapa de bits que describe las columnas eliminadas del artículo.|  
 |**resolver_info**|**nvarchar(255)**|Almacenamiento para la información adicional requerida por los solucionadores de conflictos personalizados.|  
 |**view_sel_proc**|**nvarchar (290)**|El nombre de un procedimiento almacenado que utiliza el Agente de mezcla para llenar por primera vez un artículo en una publicación filtrada dinámicamente y para enumerar las filas que han cambiado en cualquier publicación filtrada.|  
-|**gen_cur**|**BIGINT**|Genera el número para los cambios locales de la tabla base de un artículo.|  
+|**gen_cur**|**bigint**|Genera el número para los cambios locales de la tabla base de un artículo.|  
 |**vertical_partition**|**int**|Especifica si está habilitado el filtrado de columnas en un artículo de una tabla. **0** indica que no hay filtrado vertical y publica todas las columnas.|  
 |**identity_support**|**int**|Especifica si se habilita el control automático del intervalo de identidad. **1** significa que el control de intervalo de identidad está habilitado y **0** significa que no hay compatibilidad con el intervalo de identidad.|  
 |**before_image_objid**|**int**|Identificador de objeto de la tabla de seguimiento. La tabla de seguimiento contiene ciertos valores de columna de clave cuando se han habilitado optimizaciones de cambio de particiones para la publicación.|  
@@ -85,8 +85,8 @@ ms.locfileid: "68094820"
 |**before_upd_view_objid**|**int**|El Id. de la vista de la tabla antes de las actualizaciones.|  
 |**delete_tracking**|**bit**|Indica si las eliminaciones se replican.<br /><br /> **0** = las eliminaciones no se replican.<br /><br /> **1** = las eliminaciones se replican, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Cuando el valor de *delete_tracking* es **0**, las filas eliminadas en el suscriptor deben quitarse manualmente en el publicador, y las filas eliminadas en el publicador deben quitarse manualmente en el suscriptor.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
 |**compensate_for_errors**|**bit**|Indica si se llevan a cabo acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = las acciones de compensación están deshabilitadas.<br /><br /> **1** = los cambios que no se pueden aplicar en un suscriptor o publicador siempre conducen a acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
-|**pub_range**|**BIGINT**|Tamaño del intervalo de identidad del publicador.|  
-|**variedad**|**BIGINT**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
+|**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
+|**range**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
 |**mínimo**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**stream_blob_columns**|**bit**|Indica si se utiliza la optimización de transmisión para columnas de objetos binarios grandes. **1** significa que se ha intentado la optimización.|  
 |**preserve_rowguidcol**|**bit**|Indica si la replicación utiliza una columna rowguid existente. Un valor de **1** significa que se utiliza una columna ROWGUIDCOL existente. **0** significa que la replicación ha agregado la columna ROWGUIDCOL.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68094820"
 |**logical_record_level_conflict_detection**|**bit**|Indica si los conflictos se deben detectar en el nivel de registro lógico o en el nivel de fila o de columna.<br /><br /> **0** = se utiliza la detección de conflictos de nivel de fila o de columna.<br /><br /> **1** = se utiliza la detección de conflictos de registros lógicos, donde un cambio en una fila en el publicador y el cambio en una fila independiente, el mismo registro lógico en el suscriptor se trata como un conflicto.<br /><br /> Cuando este valor es 1, solo se puede utilizar la resolución de conflictos de nivel de registro lógico.|  
 |**logical_record_level_conflict_resolution**|**bit**|Indica si los conflictos se deben solucionar en el nivel de registro lógico o en el nivel de fila o de columna.<br /><br /> **0** = se utiliza la resolución de nivel de columna o fila.<br /><br /> **1** = en caso de conflicto, todo el registro lógico del ganador sobrescribe todo el registro lógico en el lado perdedor.<br /><br /> Se puede utilizar un valor de 1 tanto con la detección de nivel de registro lógico como con la detección de nivel de fila o de columna.|  
 |**partition_options**|**tinyint**|Define el modo en el que se realiza la partición de los datos en el artículo, lo que permite optimizaciones de rendimiento cuando todas las filas pertenecen solamente a una partición o solamente a una suscripción. El *partition_options* puede ser uno de los valores siguientes.<br /><br /> **0** = el filtro para el artículo es estático o no produce un subconjunto de datos único para cada partición, es decir, una partición "superpuesta".<br /><br /> **1** = las particiones se superponen y las actualizaciones DML realizadas en el suscriptor no pueden cambiar la partición a la que pertenece una fila.<br /><br /> **2** = el filtro del artículo produce particiones no superpuestas, pero varios suscriptores pueden recibir la misma partición.<br /><br /> **3** = el filtro del artículo produce particiones no superpuestas que son únicas para cada suscripción.|  
-|**Name**|**sysname**|El nombre de una partición.|  
+|**name**|**sysname**|El nombre de una partición.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Administrar particiones para una publicación de combinación con filtros con parámetros](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

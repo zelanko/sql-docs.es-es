@@ -21,10 +21,10 @@ ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: dfd88dec92d2707b72c829aa53f2798d3d64fee3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089194"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
@@ -38,11 +38,11 @@ ms.locfileid: "68089194"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|Número de restricción.|  
-|**sesión**|**int**|Id. de la tabla que posee la restricción.|  
+|**id**|**int**|Id. de la tabla que posee la restricción.|  
 |**colid**|**smallint**|Id. de la columna en la que se define la restricción.<br /><br /> 0 = Restricción de tabla|  
 |**spare1**|**tinyint**|Reserved|  
-|**estatus**|**int**|Pseudomáscara de bits que indica el estado. Entre los valores posibles figuran los siguientes:<br /><br /> 1 = Restricción PRIMARY KEY<br /><br /> 2 = Restricción UNIQUE KEY<br /><br /> 3 = Restricción FOREIGN KEY<br /><br /> 4 = Restricción CHECK<br /><br /> 5 = Restricción DEFAULT<br /><br /> 16 = Restricción de nivel de columna<br /><br /> 32 = Restricción de nivel de tabla|  
-|**operaciones**|**int**|Reserved|  
+|**status**|**int**|Pseudomáscara de bits que indica el estado. Entre los valores posibles figuran los siguientes:<br /><br /> 1 = Restricción PRIMARY KEY<br /><br /> 2 = Restricción UNIQUE KEY<br /><br /> 3 = Restricción FOREIGN KEY<br /><br /> 4 = Restricción CHECK<br /><br /> 5 = Restricción DEFAULT<br /><br /> 16 = Restricción de nivel de columna<br /><br /> 32 = Restricción de nivel de tabla|  
+|**actions**|**int**|Reserved|  
 |**error**|**int**|Reserved|  
   
 ## <a name="see-also"></a>Consulte también  

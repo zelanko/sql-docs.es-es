@@ -16,17 +16,17 @@ ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d5aa59cdb3b1c59b78a0ef99fb7d375275d370e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091224"
 ---
 # <a name="localdbformatmessage-function"></a>Función LocalDBFormatMessage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Devuelve la descripción textual localizada del error de SQL Server Express LocalDB especificado.  
   
- **Archivo de encabezado:** SQLNCLI. h  
+ **Archivo de encabezado:** sqlncli.h  
   
 ## <a name="syntax"></a>Sintaxis  
   

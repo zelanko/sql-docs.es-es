@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098552"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definición de datos de MDX: CREATE ACTION
@@ -82,7 +82,7 @@ FOR
   
 |Tipo de acción|Descripción|  
 |-----------------|-----------------|  
-|**Dirección**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `https://` o `https://`, la acción no estará disponible en el explorador a menos que **SafetyOptions** se establezca en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `https://` o `https://`, la acción no estará disponible en el explorador a menos que **SafetyOptions** se establezca en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La cadena de acción que se devuelve es un script HTML. La cadena debe guardarse en un archivo y ese archivo debe representarse mediante un explorador de Internet. En este caso, un script completo debe ejecutarse como parte del HTML generado.|  
 |**PRIVACIDAD**|La cadena de acción devuelta es una instrucción que debe ejecutarse estableciendo el método **ICommand:: setText** de un objeto de comando en la cadena y llamando al método **ICommand:: Execute**. Si el comando no ha funcionado, se muestra un error.|  
 |**AUTHORS1**|La cadena de acción devuelta es una instrucción MDX que debe ejecutarse estableciendo el método **ICommand:: setText** de un objeto Command en la cadena y llamando al método **ICommand:: Execute** . El identificador de interfaz (IID) solicitado debe ser **IDataset**. El comando tiene éxito si se ha creado un conjunto de datos. La aplicación cliente debe permitir al usuario explorar el conjunto de datos devuelto.|  

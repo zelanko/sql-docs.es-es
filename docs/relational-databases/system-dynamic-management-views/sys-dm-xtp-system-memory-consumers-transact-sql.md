@@ -19,10 +19,10 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090096"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
@@ -39,14 +39,14 @@ select * from sys.dm_xtp_system_memory_consumers
   
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|memory_consumer_id|**BIGINT**|Identificador interno del consumidor de memoria.|  
+|memory_consumer_id|**bigint**|Identificador interno del consumidor de memoria.|  
 |memory_consumer_type|**int**|Entero que representa el tipo de consumidor de memoria con uno de los valores siguientes:<br /><br /> 0: no debe mostrarse. Agrega el uso de memoria de dos o varios consumidores.<br /><br /> 1-pista: realiza un seguimiento del consumo de memoria de una traducción del sistema.<br /><br /> 2-VARHEAP: realiza el seguimiento del consumo de memoria para un montón de longitud variable.<br /><br /> 4-Grupo de páginas de e/s: realiza un seguimiento del consumo de memoria de un grupo de páginas del sistema utilizado para operaciones de e/s.|  
 |memory_consumer_type_desc|**nvarchar (16)**|Descripción del tipo de consumidor de memoria:<br /><br /> 0: no debe mostrarse.<br /><br /> 1-ALTA<br /><br /> 2: VARHEAP<br /><br /> 4: PGPOOL|  
 |memory_consumer_desc|**nvarchar (64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP <br />Montón del sistema. Uso general. Actualmente solo se usa para asignar elementos de trabajo de la recolección de elementos no utilizados.<br />O<br />Montón de lista de direcciones. Lo usan las listas de direcciones cuando el número de elementos contenidos en la lista alcanza un extremo predeterminado (normalmente alrededor de 5.000 elementos).<br /><br /> PGPOOL: para los grupos del sistema de e/s hay tres tamaños distintos: Grupo de páginas de System 4K, grupo de páginas del sistema 64 K y grupo de páginas del sistema 256 K.|  
-|lookaside_id|**BIGINT**|El identificador del proveedor de memoria de direcciones local del subproceso.|  
-|pagepool_id|**BIGINT**|El identificador del subproceso local, proveedor de memoria del grupo de páginas.|  
-|allocated_bytes|**BIGINT**|Número de bytes reservados para el consumidor.|  
-|used_bytes|**BIGINT**|Bytes utilizados por el consumidor. Solo se aplica a los consumidores de memoria varheap.|  
+|lookaside_id|**bigint**|El identificador del proveedor de memoria de direcciones local del subproceso.|  
+|pagepool_id|**bigint**|El identificador del subproceso local, proveedor de memoria del grupo de páginas.|  
+|allocated_bytes|**bigint**|Número de bytes reservados para el consumidor.|  
+|used_bytes|**bigint**|Bytes utilizados por el consumidor. Solo se aplica a los consumidores de memoria varheap.|  
 |allocation_count|**int**|Número de asignaciones.|  
 |partition_count|**int**|Exclusivamente para uso interno.|  
 |sizeclass_count|**int**|Exclusivamente para uso interno.|  

@@ -20,10 +20,10 @@ ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b51cd98cd9ef0e6adc3d17d2b1263a62604ab52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053268"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
@@ -37,12 +37,12 @@ ms.locfileid: "68053268"
 |----------------|---------------|-----------------|  
 |Pool_id|**int**|Identificador del grupo de recursos. No admite valores NULL.|  
 |Processor_group|**smallint**|Identificador del grupo de procesadores lógicos de Windows. No admite valores NULL.|  
-|Scheduler_mask|**BIGINT**|Máscara binaria que representa los programadores asociados a este grupo. No admite valores NULL.|  
+|Scheduler_mask|**bigint**|Máscara binaria que representa los programadores asociados a este grupo. No admite valores NULL.|  
   
 ## <a name="remarks"></a>Observaciones  
  Los grupos creados con la afinidad AUTO no aparecerán en esta vista porque no tienen ninguna afinidad. Para obtener más información, vea [Create Resource pool &#40;Transact-sql&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) y [ALTER Resource Pool &#40;transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) instrucciones.  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+ [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

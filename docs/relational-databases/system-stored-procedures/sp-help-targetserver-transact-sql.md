@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085084"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -51,12 +51,12 @@ sp_help_targetserver
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificación del servidor.|  
-|**server_name**|**nvarchar(30**|Nombre de servidor.|  
-|**Cód**|**nvarchar(200)**|Ubicación del servidor especificado.|  
+|**server_name**|**nvarchar(30)**|Nombre de servidor.|  
+|**ubicación**|**nvarchar(200)**|Ubicación del servidor especificado.|  
 |**time_zone_adjustment**|**int**|Ajuste de zona horaria, en horas, según la hora del meridiano de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Fecha de alta del servidor especificado.|  
 |**last_poll_date**|**datetime**|Fecha del último sondeo del servidor en busca de trabajos.|  
-|**estatus**|**int**|Estado del servidor especificado.|  
+|**status**|**int**|Estado del servidor especificado.|  
 |**unread_instructions**|**int**|Indica si el servidor tiene instrucciones no leídas. Si se han descargado todas las filas, esta columna es **0**.|  
 |**local_time**|**datetime**|Fecha y hora locales del servidor de destino, que están basadas en la hora local del servidor de destino según el último sondeo del servidor maestro.|  
 |**enlisted_by_nt_user**|**nvarchar(100**|Usuario de Microsoft Windows dado de alta en el servidor de destino.|  

@@ -19,10 +19,10 @@ ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28d98f7f95d9e9c2af967976b875f61388342583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090169"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
@@ -36,19 +36,19 @@ ms.locfileid: "68090169"
   
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|rows_examined|**BIGINT**|El número de filas que ha examinado el subsistema de recolección de elementos no utilizados desde que se inició el servidor.|  
-|rows_no_sweep_needed|**BIGINT**|Número de filas quitadas sin un recorrido de esquinas sucias.|  
-|rows_first_in_bucket|**BIGINT**|Número de filas que ha examinado la recolección de elementos no utilizados que eran la primera fila del depósito de hash.|  
-|rows_first_in_bucket_removed|**BIGINT**|El número de filas que ha examinado la recolección de elementos no utilizados que eran la primera fila del cubo de hash y que se han quitado.|  
-|rows_marked_for_unlink|**BIGINT**|El número de filas que ha examinado la recolección de elementos no utilizados que ya estaban marcadas como desvinculadas en sus índices con ref count =0.|  
-|parallel_assist_count|**BIGINT**|Número de filas procesadas por transacciones de usuario.|  
-|idle_worker_count|**BIGINT**|Número de filas no utilizadas procesadas por el trabajador inactivo.|  
-|sweep_scans_started|**BIGINT**|Número de recorridos de esquinas sucias realizados por el subsistema de recopilación de elementos no utilizados.|  
-|sweep_scans_retries|**BIGINT**|Número de recorridos de esquinas sucias realizados por el subsistema de recopilación de elementos no utilizados.|  
-|sweep_rows_touched|**BIGINT**|Filas leídas por el procesamiento de esquinas sucias.|  
-|sweep_rows_expiring|**BIGINT**|Filas que van a expirar leídas por el procesamiento de esquinas sucias.|  
-|sweep_rows_expired|**BIGINT**|Filas expiradas leídas por el procesamiento de esquinas sucias.|  
-|sweep_rows_expired_removed|**BIGINT**|Filas expiradas quitadas por el procesamiento de esquinas sucias.|  
+|rows_examined|**bigint**|El número de filas que ha examinado el subsistema de recolección de elementos no utilizados desde que se inició el servidor.|  
+|rows_no_sweep_needed|**bigint**|Número de filas quitadas sin un recorrido de esquinas sucias.|  
+|rows_first_in_bucket|**bigint**|Número de filas que ha examinado la recolección de elementos no utilizados que eran la primera fila del depósito de hash.|  
+|rows_first_in_bucket_removed|**bigint**|El número de filas que ha examinado la recolección de elementos no utilizados que eran la primera fila del cubo de hash y que se han quitado.|  
+|rows_marked_for_unlink|**bigint**|El número de filas que ha examinado la recolección de elementos no utilizados que ya estaban marcadas como desvinculadas en sus índices con ref count =0.|  
+|parallel_assist_count|**bigint**|Número de filas procesadas por transacciones de usuario.|  
+|idle_worker_count|**bigint**|Número de filas no utilizadas procesadas por el trabajador inactivo.|  
+|sweep_scans_started|**bigint**|Número de recorridos de esquinas sucias realizados por el subsistema de recopilación de elementos no utilizados.|  
+|sweep_scans_retries|**bigint**|Número de recorridos de esquinas sucias realizados por el subsistema de recopilación de elementos no utilizados.|  
+|sweep_rows_touched|**bigint**|Filas leídas por el procesamiento de esquinas sucias.|  
+|sweep_rows_expiring|**bigint**|Filas que van a expirar leídas por el procesamiento de esquinas sucias.|  
+|sweep_rows_expired|**bigint**|Filas expiradas leídas por el procesamiento de esquinas sucias.|  
+|sweep_rows_expired_removed|**bigint**|Filas expiradas quitadas por el procesamiento de esquinas sucias.|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW SERVER STATE en la instancia.  

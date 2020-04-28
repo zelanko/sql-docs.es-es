@@ -18,10 +18,10 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091901"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
@@ -39,13 +39,13 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **String@**  
+ **string**  
  Es la cadena de caracteres de la que se van a extraer los argumentos.  
   
  OUTPUT  
  Cuando se especifica, coloca el valor de *argument* en el parámetro de salida.  
   
- *Aplique*  
+ *format*  
  Es una cadena de caracteres con formato similar a la admitida por la función **sscanf** del lenguaje C. Actualmente, solo se acepta el formato %s.  
   
  *argument*  

@@ -18,10 +18,10 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085300"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
@@ -56,8 +56,8 @@ sp_help_operator
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Número de identificación del operador.|  
-|**Name**|**sysname**|Nombre del operador.|  
+|**id**|**int**|Número de identificación del operador.|  
+|**name**|**sysname**|Nombre del operador.|  
 |**activó**|**tinyint**|El operador está disponible para recibir notificaciones:<br /><br /> **1** = sí<br /><br /> **0** = no|  
 |**email_address**|**nvarchar(100**|Dirección de correo electrónico del operador.|  
 |**last_email_date**|**int**|Fecha de la última notificación al operador mediante correo electrónico.|  

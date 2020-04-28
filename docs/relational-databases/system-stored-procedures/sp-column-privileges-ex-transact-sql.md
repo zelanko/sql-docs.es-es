@@ -18,10 +18,10 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070359"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
@@ -62,7 +62,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|Nombre del propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
 |**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna del **TABLE_NAME** devuelto. Este campo siempre devuelve un valor.|  
-|**OTORGANTE**|**sysname**|Nombre de usuario de base de datos que ha concedido permisos para este **column_name** al **receptor**indicado. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna es siempre la misma que la **table_owner**. Este campo siempre devuelve un valor.<br /><br /> La **columna de** GRANTOR puede ser el propietario de la base de datos (**table_owner**) o un usuario al que el propietario de la base de datos haya concedido permisos mediante la cláusula with Grant Option en la instrucción Grant.|  
+|**GRANTOR**|**sysname**|Nombre de usuario de base de datos que ha concedido permisos para este **column_name** al **receptor**indicado. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna es siempre la misma que la **table_owner**. Este campo siempre devuelve un valor.<br /><br /> La **columna de** GRANTOR puede ser el propietario de la base de datos (**table_owner**) o un usuario al que el propietario de la base de datos haya concedido permisos mediante la cláusula with Grant Option en la instrucción Grant.|  
 |**GRANTEE**|**sysname**|Nombre de usuario de base de datos al que se han concedido permisos para este **column_name** por el **otorgante**de la lista. Este campo siempre devuelve un valor.|  
 |**PRIVILEGIA**|**VARCHAR (** 32 **)**|Uno de los permisos de columna disponibles. Los permisos de columna pueden ser uno de los valores siguientes (u otros valores compatibles con el origen de datos cuando se define la implementación):<br /><br /> SELECT = **GRANTEE** puede recuperar datos para las columnas.<br /><br /> INSERT = **GRANTEE** puede proporcionar datos para esta columna cuando se inserten nuevas filas (por parte del **receptor**) en la tabla.<br /><br /> UPDATE = **GRANTEE** puede modificar datos existentes en la columna.<br /><br /> REFERENCEs = **GRANTEE** puede hacer referencia a una columna de una tabla externa en una relación de clave principal y clave externa. Las relaciones entre clave principal y clave externa se definen con restricciones de tabla.|  
 |**IS_GRANTABLE**|**VARCHAR (** 3 **)**|Indica si se permite al **receptor** conceder permisos a otros usuarios (a menudo se hace referencia al permiso "Grant with Grant"). Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos en el que no se aplica “conceder por concesión”.|  

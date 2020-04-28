@@ -21,10 +21,10 @@ ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1b0fad344831d8073badb2618eb2c34a1cdc2161
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089179"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
@@ -37,11 +37,10 @@ ms.locfileid: "68089179"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**valor**|**int**|Valor de la variable, que el usuario puede modificar. 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo utiliza solo si se ha ejecutado RECONFIGURE.|  
+|**value**|**int**|Valor de la variable, que el usuario puede modificar. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo utiliza solo si se ha ejecutado RECONFIGURE.|  
 |**configurar**|**smallint**|Número de la variable de configuración.|  
 |**Comentario**|**nvarchar(255)**|Explicación de la opción de configuración.|  
-|**estatus**|**smallint**|Mapa de bits que indica el estado de la opción. Entre los valores posibles figuran los siguientes:<br /><br /> 0 = Estático. La configuración surte efecto cuando se reinicia el servidor.<br /><br /> 1 = Dinámico. La variable surte efecto cuando se ejecuta la instrucción RECONFIGURE.<br /><br /> 2 = Avanzado. La variable solo se muestra cuando se establece la **opción Mostrar opciones avanzadas** .<br /><br /> 3 = Dinámico y avanzado.|  
+|**status**|**smallint**|Mapa de bits que indica el estado de la opción. Entre los valores posibles figuran los siguientes:<br /><br /> 0 = Estático. La configuración surte efecto cuando se reinicia el servidor.<br /><br /> 1 = Dinámico. La variable surte efecto cuando se ejecuta la instrucción RECONFIGURE.<br /><br /> 2 = Avanzado. La variable solo se muestra cuando se establece la **opción Mostrar opciones avanzadas** .<br /><br /> 3 = Dinámico y avanzado.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

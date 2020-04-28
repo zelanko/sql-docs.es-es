@@ -10,10 +10,10 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084549"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configuración del proyecto (conversión) (DB2ToSQL)
@@ -167,7 +167,7 @@ En la tabla siguiente se muestra cómo SSMA convierte los modos de bloqueo de DB
 |RECURSO COMPARTIDO DE FILAS|ROWLOCK, HOLDLOCK|  
 |FILA EXCLUSIVA|ROWLOCK, XLOCK, HOLDLOCK|  
 |COMPARTIR ACTUALIZACIÓN = RECURSO COMPARTIDO DE FILAS|ROWLOCK, HOLDLOCK|  
-|Compartir|TABLOCK, HOLDLOCK|  
+|COMPARTIR|TABLOCK, HOLDLOCK|  
 |COMPARTIR FILA EXCLUSIVA|TABLOCK, XLOCK, HOLDLOCK|  
 |ÚNICO|TABLOCKX, HOLDLOCK|  
   
@@ -373,7 +373,7 @@ La instrucción ISNULL se utiliza en las llamadas de función Replace para emula
   
 -   SÍ  
   
--   NO  
+-   No  
   
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:  
   
@@ -386,7 +386,7 @@ La instrucción ISNULL se utiliza en las llamadas de función CONCAt para emular
   
 -   SÍ  
   
--   NO  
+-   No  
   
 Al seleccionar un modo de conversión en el cuadro **modo** , SSMA aplica la siguiente configuración:  
   

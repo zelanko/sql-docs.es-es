@@ -16,10 +16,10 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090853"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
@@ -65,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Disponible únicamente por compatibilidad con versiones anteriores. Es el nombre de usuario utilizado para conectarse al servicio FTP.|  
 |**ftp_password**||Disponible únicamente por compatibilidad con versiones anteriores. Es la contraseña del usuario que se utiliza para conectarse al servicio FTP.|  
 |**ftp_port**||Disponible únicamente por compatibilidad con versiones anteriores. Es el número de puerto del servicio FTP para el distribuidor.|  
-|**host**||Especifica el valor de HOST_NAME() cuando esta función se utiliza en la cláusula WHERE de un filtro de combinación o relación de registros lógicos.|  
+|**hostname**||Especifica el valor de HOST_NAME() cuando esta función se utiliza en la cláusula WHERE de un filtro de combinación o relación de registros lógicos.|  
 |**internet_login**||Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_password**||Contraseña para el Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_security_mode**|**1**|Para la conexión con el servidor web que hospeda la sincronización web se utiliza la autenticación de Windows.|  
@@ -81,13 +81,13 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|Se utiliza la autenticación de Windows para la conexión con el publicador.|  
 ||**2**|Los desencadenadores de sincronización utilizan una entrada **sysservers** estática para realizar la llamada a procedimiento remoto (RPC) y el publicador debe definirse en la tabla **sysservers** como un servidor remoto o vinculado.|  
 |**sync_type**|**Automático**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
-||**ninguna**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
-|**use_ftp**|**reales**|Se utiliza FTP en lugar del protocolo habitual para recuperar instantáneas.|  
-||**es**|Use el protocolo típico para recuperar instantáneas.|  
-|**use_web_sync**|**reales**|La suscripción se puede sincronizar a través de HTTP.|  
-||**es**|La suscripción no se puede sincronizar a través de HTTP.|  
-|**use_interactive_resolver**|**reales**|Durante la reconciliación se utiliza el Solucionador interactivo.|  
-||**es**|No se utiliza el Solucionador interactivo.|  
+||**Ninguna**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
+|**use_ftp**|**true**|Se utiliza FTP en lugar del protocolo habitual para recuperar instantáneas.|  
+||**false**|Use el protocolo típico para recuperar instantáneas.|  
+|**use_web_sync**|**true**|La suscripción se puede sincronizar a través de HTTP.|  
+||**false**|La suscripción no se puede sincronizar a través de HTTP.|  
+|**use_interactive_resolver**|**true**|Durante la reconciliación se utiliza el Solucionador interactivo.|  
+||**false**|No se utiliza el Solucionador interactivo.|  
 |**working_directory**||Ruta de acceso completa al directorio donde se transfieren los archivos de instantáneas por medio de FTP, cuando se especifica esa opción.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para la *propiedad*.|  
   

@@ -19,10 +19,10 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056272"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>Tablas de eventos extendidos: trace_xe_action_map
@@ -34,8 +34,8 @@ ms.locfileid: "68056272"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|El identificador de la columna de Seguimiento de SQL que se asigna.|  
-|package_name|**nvarchar (60)**|El nombre del paquete de eventos extendidos donde reside la acción asignada.|  
-|xe_action_name|**nvarchar (60)**|El nombre de la acción de eventos extendidos que se asigna a la columna de Seguimiento de SQL.|  
+|package_name|**nvarchar(60)**|El nombre del paquete de eventos extendidos donde reside la acción asignada.|  
+|xe_action_name|**nvarchar(60)**|El nombre de la acción de eventos extendidos que se asigna a la columna de Seguimiento de SQL.|  
   
 ## <a name="remarks"></a>Observaciones  
  Puede utilizar la siguiente consulta para identificar las acciones de eventos extendidos que son equivalentes a las columnas de Seguimiento de SQL:  

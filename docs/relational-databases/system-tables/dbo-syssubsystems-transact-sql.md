@@ -20,10 +20,10 @@ ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68069086"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
@@ -34,13 +34,13 @@ ms.locfileid: "68069086"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Id. del subsistema.|  
-|**subsistema**|**nvarchar (40)**|Nombre del subsistema.|  
+|**subsistema**|**nvarchar(40)**|Nombre del subsistema.|  
 |**description_id**|**int**|ID. de mensaje de la fila de la vista de catálogo **Sys. Messages** que contiene la descripción del subsistema.|  
 |**subsystem_dll**|**nvarchar(255)**|Ubicación de la DLL del subsistema.|  
 |**agent_exe**|**nvarchar(255)**|Ruta de acceso completa al archivo ejecutable que utiliza el subsistema.|  
-|**start_entry_point**|**nvarchar(30**|Función a la que se llama cuando el subsistema se inicializa.|  
-|**event_entry_point**|**nvarchar(30**|Función a la que se llama cuando se ejecuta un paso del subsistema.|  
-|**stop_entry_point**|**nvarchar(30**|Función a la que se llama cuando un subsistema deja de ejecutarse.|  
+|**start_entry_point**|**nvarchar(30)**|Función a la que se llama cuando el subsistema se inicializa.|  
+|**event_entry_point**|**nvarchar(30)**|Función a la que se llama cuando se ejecuta un paso del subsistema.|  
+|**stop_entry_point**|**nvarchar(30)**|Función a la que se llama cuando un subsistema deja de ejecutarse.|  
 |**max_worker_threads**|**int**|Número máximo de pasos simultáneos para un subsistema dado.|  
   
 ## <a name="remarks"></a>Observaciones  

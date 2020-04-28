@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053341"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "68053341"
 |**req_spid**|**int**|Identificador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de proceso interno de la sesión que solicita el bloqueo.|  
 |**req_ecid**|**int**|Id. del contexto de ejecución (ECID). Se utiliza para indicar qué subproceso de una operación en paralelo es el propietario de un bloqueo determinado.|  
 |**req_ownertype**|**smallint**|Tipo del objeto asociado al bloqueo:<br /><br /> 1 = Transacción<br /><br /> 2 = Cursor<br /><br /> 3 = Sesión<br /><br /> 4 = ExSession<br /><br /> Observe que el 3 y el 4 representan una versión especial de bloqueos de sesión, que realizan un seguimiento de los bloqueos de bases de datos y de grupos de archivos respectivamente.|  
-|**req_transactionID**|**BIGINT**|IDENTIFICADOR de transacción único utilizado en **syslockinfo** y en el evento del generador de perfiles|  
+|**req_transactionID**|**bigint**|IDENTIFICADOR de transacción único utilizado en **syslockinfo** y en el evento del generador de perfiles|  
 |**req_transactionUOW**|**uniqueidentifier**|Identifica el Id. de unidad de trabajo (UOW) de la transacción DTC. En las transacciones que no son MS DTC, UOW se establece en 0.|  
   
 ## <a name="permissions"></a>Permisos  

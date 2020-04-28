@@ -18,10 +18,10 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085071"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
@@ -50,7 +50,7 @@ sp_help_targetservergroup
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|Número de identificación del grupo de servidores.|  
-|**Name**|**sysname**|Nombre del grupo de servidores|  
+|**name**|**sysname**|Nombre del grupo de servidores|  
   
 ## <a name="permissions"></a>Permisos  
  Los permisos para ejecutar este procedimiento tienen como valor predeterminado el rol fijo de servidor **sysadmin** .  

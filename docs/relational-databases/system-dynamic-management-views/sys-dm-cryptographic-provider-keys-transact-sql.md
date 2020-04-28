@@ -19,10 +19,10 @@ ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086225"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
@@ -49,7 +49,7 @@ dm_cryptographic_provider_keys ( provider_id )
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|Número de identificación de la clave del proveedor.|  
 |**key_name**|**nvarchar(512)**|Nombre de la clave del proveedor.|  
-|**key_thumbprint**|**varbinary (32)**|Huella digital del proveedor de la clave.|  
+|**key_thumbprint**|**varbinary(32)**|Huella digital del proveedor de la clave.|  
 |**algorithm_id**|**int**|Número de identificación del algoritmo del proveedor.|  
 |**algorithm_tag**|**int**|Etiqueta del algoritmo del proveedor.|  
 |**key_type**|**NCHAR (256)**|Tipo de clave del proveedor.|  

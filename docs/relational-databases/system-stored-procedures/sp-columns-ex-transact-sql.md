@@ -18,10 +18,10 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070342"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
@@ -74,7 +74,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**NUM_PREC_RADIX**|**smallint**|Base para los tipos de datos numéricos.|  
 |**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
-|**SECCIÓN**|**VARCHAR (** 254 **)**|Este campo siempre devuelve NULL.|  
+|**COMENTARIOS**|**VARCHAR (** 254 **)**|Este campo siempre devuelve NULL.|  
 |**COLUMN_DEF**|**VARCHAR (** 254 **)**|Valor predeterminado de la columna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna **data_type** , excepto los tipos de datos de **intervalo** **DateTime** y SQL-92. Esta columna siempre devuelve un valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para los tipos de datos de **intervalo** **DateTime** y SQL-92. Para otros tipos de datos, esta columna devuelve NULL.|  

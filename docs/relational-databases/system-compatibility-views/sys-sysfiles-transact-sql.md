@@ -21,10 +21,10 @@ ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053469"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
@@ -39,12 +39,12 @@ ms.locfileid: "68053469"
 |-----------------|---------------|-----------------|  
 |**ID**|**smallint**|Número de identificación del archivo, único para cada base de datos.|  
 |**GROUPID**|**smallint**|Número de identificación del grupo de archivos.|  
-|**ajusta**|**int**|Tamaño de archivo, en páginas de 8 KB.|  
+|**size**|**int**|Tamaño de archivo, en páginas de 8 KB.|  
 |**tamañomáximo**|**int**|Tamaño máximo de archivo, en páginas de 8 KB.<br /><br /> 0 = Sin aumento de tamaño.<br /><br /> -1 = El archivo crece hasta que el disco esté lleno.<br /><br /> 268435456 = El archivo de registro aumentará de tamaño hasta un tamaño máximo de 2 TB.<br /><br /> Nota: las bases de datos que se actualizan con un tamaño de archivo de registro ilimitado informarán de-1 para el tamaño máximo del archivo de registro.|  
 |**crezca**|**int**|Tamaño de aumento de la base de datos. Puede ser el número de páginas o el porcentaje del tamaño del archivo, en función del valor de **status**.<br /><br /> 0 = Sin aumento de tamaño.|  
-|**estatus**|**int**|Bits de estado para el valor de **crecimiento** en megabytes (MB) o kilobytes (KB).<br /><br /> 0x2 = Archivo de disco.<br /><br /> 0x40 = Archivo de registro.<br /><br /> 0x100000 = Crecimiento. Este valor es un porcentaje y no el número de páginas.|  
+|**status**|**int**|Bits de estado para el valor de **crecimiento** en megabytes (MB) o kilobytes (KB).<br /><br /> 0x2 = Archivo de disco.<br /><br /> 0x40 = Archivo de registro.<br /><br /> 0x100000 = Crecimiento. Este valor es un porcentaje y no el número de páginas.|  
 |**rendimiento**|**int**|Reservado.|  
-|**Name**|**sysname**|Nombre lógico del archivo.|  
+|**name**|**sysname**|Nombre lógico del archivo.|  
 |**extensión**|**nvarchar(260)**|Nombre del dispositivo físico. Incluye la ruta de acceso completa al archivo.|  
   
 ## <a name="see-also"></a>Consulte también  

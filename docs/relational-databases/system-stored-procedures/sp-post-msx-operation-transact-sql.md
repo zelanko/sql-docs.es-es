@@ -18,10 +18,10 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056371"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
@@ -59,7 +59,7 @@ sp_post_msx_operation
   
 `[ @specific_target_server = ] 'target_server'`Nombre del servidor de destino para el que se aplica la operación especificada. Si se especifica *job_id* , pero no se especifica *target_server* , las operaciones se exponen para todos los servidores de trabajo del trabajo. *target_server* es de tipo **nvarchar (30)** y su valor predeterminado es NULL.  
   
-`[ @value = ] value`El intervalo de sondeo, en segundos. el *valor* es de **tipo int**y su valor predeterminado es NULL. Especifique este parámetro solo si la *operación* es **set-Poll**.  
+`[ @value = ] value`El intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si la *operación* es **set-Poll**.  
   
 `[ @schedule_uid = ] schedule_uid`Identificador único de la programación a la que se aplica la operación. *schedule_uid* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado.  
   

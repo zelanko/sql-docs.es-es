@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097811"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
@@ -61,7 +61,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Especifica que la columna es una columna adicional agregada con la finalidad de buscar información que realmente no aparece en el conjunto de resultados.|  
 |**column_ordinal**|**int**|Contiene la posición ordinal de la columna en el conjunto de resultados. La posición de la primera columna se especificará como 1.|  
-|**Name**|**sysname**|Contiene el nombre de la columna si se puede determinar uno. Si no, contendrá NULL.|  
+|**name**|**sysname**|Contiene el nombre de la columna si se puede determinar uno. Si no, contendrá NULL.|  
 |**is_nullable**|**bit**|Contiene los valores siguientes:<br /><br /> El valor 1 si la columna permite valores NULL.<br /><br /> El valor 0 si la columna no permite valores NULL.<br /><br /> El valor 1 si no se puede determinar que la columna admite valores NULL.|  
 |**system_type_id**|**int**|Contiene el system_type_id del tipo de datos de la columna tal y como se especifica en sys. types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna.<br /><br /> Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí.<br /><br /> Si es un tipo de datos definido por el usuario de CLR, en esta columna se devuelve NULL.|  
@@ -99,7 +99,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_state**|**int**|Contiene el mensaje de estado que la función devuelve. Si no se produjo ningún error, la columna contendrá NULL.|  
 |**error_message**|**nvarchar (4096)**|Contiene el mensaje que devuelve la función. Si no se produjo ningún error, la columna contendrá NULL.|  
 |**error_type**|**int**|Contiene un entero que representa el error que se va a devolver. Se asigna a error_type_desc. Vea la lista bajo las notas.|  
-|**error_type_desc**|**nvarchar (60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
+|**error_type_desc**|**nvarchar(60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
   
 ## <a name="remarks"></a>Observaciones  
  Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set**. Para obtener más información, vea [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  

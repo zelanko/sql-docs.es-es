@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097822"
 ---
 # <a name="sysdm_exec_distributed_request_steps-transact-sql"></a>Sys. dm_exec_distributed_request_steps (Transact-SQL)
@@ -38,15 +38,15 @@ ms.locfileid: "68097822"
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id y step_index componen la clave para esta vista. Identificador numérico único asociado a la solicitud.|Vea ID. en [Sys. dm_exec_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|La posición de este paso en la secuencia de pasos que componen la solicitud.|de 0 a (n-1) para una solicitud con n pasos.|  
-|operation_type|**nvarchar(128)**|Tipo de la operación representada por este paso.|' MoveOperation ', ' Operation ', ' RandomIDOperation ', ' RemoteOperation ', ' ReturnOperation ', ' ShuffleMoveOperation ', ' TempTablePropertiesOperation ', ' DropDiagnosticsNotifyOperation ', ' HadoopShuffleOperation ', ' HadoopBroadCastOperation ', 'HadoopRoundRobinOperation'|  
-|distribution_type|**nvarchar (32)**|Dónde se está ejecutando el paso.|' AllComputeNodes ', ' AllDistributions ', ' ComputeNode ', ' Distribution ', ' AllNodes ', ' SubsetNodes ', ' SubsetDistributions ', ' unespecifiqued '.|  
-|location_type|**nvarchar (32)**|Dónde se está ejecutando el paso.|' Compute ', ' Head ' o ' DMS '. Todos los pasos de movimiento de datos muestran ' DMS '.|  
-|status|**nvarchar (32)**|Estado de este paso|' Pending ', ' Running ', ' complete ', ' failed ', ' UndoFailed ', ' PendingCancel ', ' Canceled ', ' Undone ', ' Aborted '|  
+|operation_type|**nvarchar(128)**|Tipo de la operación representada por este paso.|' MoveOperation ', ' Operation ', ' RandomIDOperation ', ' RemoteOperation ', ' ReturnOperation ', ' ShuffleMoveOperation ', ' TempTablePropertiesOperation ', ' DropDiagnosticsNotifyOperation ', ' HadoopShuffleOperation ', ' HadoopBroadCastOperation ', ' HadoopRoundRobinOperation '|  
+|distribution_type|**nvarchar(32)**|Dónde se está ejecutando el paso.|' AllComputeNodes ', ' AllDistributions ', ' ComputeNode ', ' Distribution ', ' AllNodes ', ' SubsetNodes ', ' SubsetDistributions ', ' unespecifiqued '.|  
+|location_type|**nvarchar(32)**|Dónde se está ejecutando el paso.|' Compute ', ' Head ' o ' DMS '. Todos los pasos de movimiento de datos muestran ' DMS '.|  
+|status|**nvarchar(32)**|Estado de este paso|' Pending ', ' Running ', ' complete ', ' failed ', ' UndoFailed ', ' PendingCancel ', ' Canceled ', ' Undone ', ' Aborted '|  
 |error_id|**nvarchar (36)**|Identificador único del error asociado a este paso, si lo hubiera.|Vea el ID. de [Sys. dm_exec_compute_node_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md), NULL si no se ha producido ningún error.|  
 |start_time|**datetime**|Hora a la que se inició la ejecución del paso|Menor o igual que la hora actual y mayor o igual que end_compile_time de la consulta a la que pertenece este paso.|  
 |end_time|**datetime**|Hora a la que se completó la ejecución de este paso, se canceló o dio error.|Menor o igual que la hora actual y mayor o igual que start_time, se establece en NULL para los pasos que se encuentran actualmente en ejecución o en cola.|  
 |total_elapsed_time|**int**|Cantidad total de tiempo que se ha estado ejecutando el paso de la consulta, en milisegundos|Entre 0 y la diferencia entre end_time y start_time. 0 para los pasos en cola.|  
-|row_count|**BIGINT**|Número total de filas cambiadas o devueltas por esta solicitud|0 para los pasos que no cambiaron o devuelven datos, número de filas afectadas de otro modo. Establézcalo en-1 para los pasos de DMS.|  
+|row_count|**bigint**|Número total de filas cambiadas o devueltas por esta solicitud|0 para los pasos que no cambiaron o devuelven datos, número de filas afectadas de otro modo. Establézcalo en-1 para los pasos de DMS.|  
 |command|nvarchar(4000)|Contiene el texto completo del comando de este paso.|Cualquier cadena de solicitud válida para un paso. Se trunca si hay más de 4000 caracteres.|  
   
 ## <a name="see-also"></a>Consulte también  

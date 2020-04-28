@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096284"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
@@ -37,25 +37,25 @@ ms.locfileid: "68096284"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**BIGINT**|Id. de la partición. Es único en la base de datos. Este es el mismo valor que el **partition_id** en la vista de catálogo **Sys. partitions** , salvo Azure SQL Data Warehouse.|  
+|**partition_id**|**bigint**|Id. de la partición. Es único en la base de datos. Este es el mismo valor que el **partition_id** en la vista de catálogo **Sys. partitions** , salvo Azure SQL Data Warehouse.|  
 |**object_id**|**int**|Id. de objeto de la tabla o vista indizada de la que esta partición forma parte.|  
 |**index_id**|**int**|Id. del montón o índice del que esta partición forma parte.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster.<br /><br /> > 1 = Índice no clúster|  
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.|  
-|**in_row_data_page_count**|**BIGINT**|Número de páginas en uso para almacenar datos consecutivos en esta partición. Si la partición forma parte de un montón, el valor es el número de páginas de datos en el montón. Si la partición forma parte de un índice, el valor es el número de páginas en el nivel hoja. (Las páginas no hoja del árbol B no se incluyen en el recuento). En cualquier caso, no se incluyen las páginas IAM (IAM). Siempre es 0 para un índice de almacén de columnas optimizado de memoria xVelocity.|  
-|**in_row_used_page_count**|**BIGINT**|Número total de páginas en uso para almacenar y administrar datos consecutivos en esta partición. Este recuento incluye páginas de árbol B no hoja, páginas IAM y todas las páginas incluidas en la columna **in_row_data_page_count**. Siempre es 0 para un índice de almacén de columnas.|  
-|**in_row_reserved_page_count**|**BIGINT**|Número total de páginas reservadas para almacenar y administrar datos consecutivos en esta partición, independientemente de si las páginas están en uso o no. Siempre es 0 para un índice de almacén de columnas.|  
-|**lob_used_page_count**|**BIGINT**|Número de páginas en uso para almacenar y administrar columnas **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** no consecutivas en la partición. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs utilizados para almacenar y administrar el índice de almacén de columnas en la partición.|  
-|**lob_reserved_page_count**|**BIGINT**|Número total de páginas reservadas para almacenar y administrar columnas **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** no consecutivas en la partición, independientemente de si las páginas están en uso o no. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs reservados para almacenar y administrar un índice de almacén de columnas en la partición.|  
-|**row_overflow_used_page_count**|**BIGINT**|Número de páginas en uso para almacenar y administrar columnas **varchar**, **nvarchar**, **varbinary** y **sql_variant** de desbordamiento de fila en la partición. Las páginas IAM están incluidas.<br /><br /> Siempre es 0 para un índice de almacén de columnas.|  
-|**row_overflow_reserved_page_count**|**BIGINT**|Número total de páginas reservadas para almacenar y administrar columnas **varchar**, **nvarchar**, **varbinary** y **sql_variant** de desbordamiento de fila en la partición, independientemente de si las páginas están en uso o no. Las páginas IAM están incluidas.<br /><br /> Siempre es 0 para un índice de almacén de columnas.|  
-|**used_page_count**|**BIGINT**|Número total de páginas usadas para la partición. Se calcula como **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
-|**reserved_page_count**|**BIGINT**|Número total de páginas reservadas para la partición. Se calcula como **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
-|**row_count**|**BIGINT**|Número aproximado de filas de la partición.|  
+|**in_row_data_page_count**|**bigint**|Número de páginas en uso para almacenar datos consecutivos en esta partición. Si la partición forma parte de un montón, el valor es el número de páginas de datos en el montón. Si la partición forma parte de un índice, el valor es el número de páginas en el nivel hoja. (Las páginas no hoja del árbol B no se incluyen en el recuento). En cualquier caso, no se incluyen las páginas IAM (IAM). Siempre es 0 para un índice de almacén de columnas optimizado de memoria xVelocity.|  
+|**in_row_used_page_count**|**bigint**|Número total de páginas en uso para almacenar y administrar datos consecutivos en esta partición. Este recuento incluye páginas de árbol B no hoja, páginas IAM y todas las páginas incluidas en la columna **in_row_data_page_count**. Siempre es 0 para un índice de almacén de columnas.|  
+|**in_row_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar datos consecutivos en esta partición, independientemente de si las páginas están en uso o no. Siempre es 0 para un índice de almacén de columnas.|  
+|**lob_used_page_count**|**bigint**|Número de páginas en uso para almacenar y administrar columnas **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** no consecutivas en la partición. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs utilizados para almacenar y administrar el índice de almacén de columnas en la partición.|  
+|**lob_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar columnas **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** no consecutivas en la partición, independientemente de si las páginas están en uso o no. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs reservados para almacenar y administrar un índice de almacén de columnas en la partición.|  
+|**row_overflow_used_page_count**|**bigint**|Número de páginas en uso para almacenar y administrar columnas **varchar**, **nvarchar**, **varbinary** y **sql_variant** de desbordamiento de fila en la partición. Las páginas IAM están incluidas.<br /><br /> Siempre es 0 para un índice de almacén de columnas.|  
+|**row_overflow_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar columnas **varchar**, **nvarchar**, **varbinary** y **sql_variant** de desbordamiento de fila en la partición, independientemente de si las páginas están en uso o no. Las páginas IAM están incluidas.<br /><br /> Siempre es 0 para un índice de almacén de columnas.|  
+|**used_page_count**|**bigint**|Número total de páginas usadas para la partición. Se calcula como **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
+|**reserved_page_count**|**bigint**|Número total de páginas reservadas para la partición. Se calcula como **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
+|**row_count**|**bigint**|Número aproximado de filas de la partición.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
 |**distribution_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador numérico único asociado a la distribución.|  
   
 ## <a name="remarks"></a>Observaciones  
- **Sys. dm_db_partition_stats** muestra información sobre el espacio utilizado para almacenar y administrar datos LOB de datos consecutivos y datos de desbordamiento de fila para todas las particiones de una base de datos. Se muestra una fila por partición.  
+ **sys.dm_db_partition_stats** muestra información acerca del espacio usado para almacenar y administrar datos LOB de datos consecutivos y datos de desbordamiento de fila para todas las particiones en una base de datos. Se muestra una fila por partición.  
   
  Los recuentos en los que se basa el resultado se almacenan en caché en memoria o se almacenan en disco en varias tablas del sistema.  
   

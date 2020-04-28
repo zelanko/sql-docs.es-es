@@ -18,10 +18,10 @@ ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079079"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68079079"
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**object_name**|**sysname**|Nombre del objeto.|  
-|**object_type**|**Char (2)**|El tipo de objeto:<br /><br /> **u** = tabla.<br /><br /> **t** = desencadenador.<br /><br /> **p** = procedimiento almacenado.|  
+|**object_type**|**char(2)**|El tipo de objeto:<br /><br /> **u** = tabla.<br /><br /> **t** = desencadenador.<br /><br /> **p** = procedimiento almacenado.|  
 |**ARTICLE**|**sysname**|Nombre del artículo con el que está asociado el objeto.|  
   
 ## <a name="see-also"></a>Consulte también  

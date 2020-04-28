@@ -18,10 +18,10 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060201"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68060201"
 |**mailitem_id**|**int**|Identificador del elemento de correo que incluía los datos adjuntos.|  
 |**extensión**|**nvarchar (520)**|Nombre de archivo de los datos adjuntos. Cuando **attach_query_result** es 1 y **query_attachment_filename** es null, correo electrónico de base de datos crea un nombre de archivo arbitrario.|  
 |**filesize**|**int**|Tamaño de los datos adjuntos en bytes.|  
-|**attachment**|**varbinary(max)**|Contenido de los datos adjuntos.|  
+|**vincula**|**varbinary(max)**|Contenido de los datos adjuntos.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  
   

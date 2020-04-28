@@ -18,10 +18,10 @@ ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079964"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "68079964"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Id. del Agente de instantáneas.|  
-|**Name**|**nvarchar(100**|Nombre del Agente de instantáneas.|  
+|**id**|**int**|Id. del Agente de instantáneas.|  
+|**name**|**nvarchar(100**|Nombre del Agente de instantáneas.|  
 |**publisher_id**|**smallint**|IDENTIFICADOR del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68079964"
 |**profile_id**|**int**|El ID. de configuración de la [MSagent_profiles &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
 |**dynamic_filter_login**|**sysname**|El valor que se usa para evaluar el [SUSER_SNAME &#40;función de&#41;de Transact-SQL](../../t-sql/functions/suser-sname-transact-sql.md) en los filtros con parámetros que definen una partición. Esta columna se utiliza para una instantánea con particiones.|  
 |**dynamic_filter_hostname**|**sysname**|El valor que se usa para evaluar el [HOST_NAME &#40;función de&#41;de Transact-SQL](../../t-sql/functions/host-name-transact-sql.md) en los filtros con parámetros que definen una partición. Esta columna se utiliza para una instantánea con particiones.|  
-|**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
+|**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado al conectar al publicador.|  
 |**publisher_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  

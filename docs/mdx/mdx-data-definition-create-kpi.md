@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098401"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Definición de datos de MDX: CREATE KPI
@@ -29,7 +29,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *KPI_Name*  
+ *Nombre_KPI*  
  Cadena válida que proporciona un nombre de KPI.  
   
  *KPI_Value*  
@@ -80,15 +80,15 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |Uso de gráfico|Nombre del gráfico de KPI.|Número de estados|  
 |--------------------|-------------------------|----------------------|  
-|Status|Formas|3|  
-|Status|Semáforo|3|  
-|Status|Señales viales|3|  
-|Status|Indicador|3|  
-|Status|Medidor invertido|5|  
-|Status|Termómetro|3|  
-|Status|Cilindro|3|  
-|Status|Caras|3|  
-|Status|Flecha de varianza|3|  
+|Estado|Formas|3|  
+|Estado|Semáforo|3|  
+|Estado|Señales viales|3|  
+|Estado|Indicador|3|  
+|Estado|Medidor invertido|5|  
+|Estado|Termómetro|3|  
+|Estado|Cilindro|3|  
+|Estado|Caras|3|  
+|Estado|Flecha de varianza|3|  
 |Tendencia|Flecha estándar|3|  
 |Tendencia|Flecha de estado|3|  
 |Tendencia|Flecha de estado invertida|5|  

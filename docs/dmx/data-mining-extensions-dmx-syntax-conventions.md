@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a260598d62a3c5fc1304e8b71b8631546731ed07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070869"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Convenciones de sintaxis de Extensiones de minería de datos (DMX)
@@ -28,11 +28,10 @@ ms.locfileid: "68070869"
 |`[ ]` (corchetes)|Contienen elementos de sintaxis opcionales. No escriba los corchetes.|  
 |{} (llaves)|Contienen elementos de sintaxis obligatorios. No escriba las llaves.|  
 |, ...|Indica que el elemento anterior a la coma se puede repetir muchas veces. Los elementos se separan mediante comas.|  
-|
-  \<label> ::=|Nombre de un bloque de sintaxis. Esta convención sirve para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que se puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en la que se puede usar el bloque de sintaxis se indica con la etiqueta entre comillas angulares, como \<la etiqueta>.|  
+|\<label> ::=|Nombre de un bloque de sintaxis. Esta convención sirve para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que se puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en la que se puede usar el bloque de sintaxis se indica con la etiqueta entre comillas angulares, como \<la etiqueta>.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

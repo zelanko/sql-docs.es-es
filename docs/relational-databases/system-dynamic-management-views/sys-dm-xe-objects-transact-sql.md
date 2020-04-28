@@ -20,10 +20,10 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090272"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
@@ -43,13 +43,13 @@ ms.locfileid: "68090272"
 
  |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar (60)**|Nombre del objeto. el nombre es único dentro de un paquete para un tipo de objeto específico. No admite valores NULL.|  
-|object_type|**nvarchar (60)**|Tipo del objeto. object_type es uno de los siguientes:<br /><br /> event<br /><br /> action<br /><br /> Destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> No admite valores NULL.|  
+|name|**nvarchar(60)**|Nombre del objeto. el nombre es único dentro de un paquete para un tipo de objeto específico. No admite valores NULL.|  
+|object_type|**nvarchar(60)**|Tipo del objeto. object_type es uno de los siguientes:<br /><br /> event<br /><br /> action<br /><br /> Destino<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> No admite valores NULL.|  
 |package_guid|**uniqueidentifier**|GUID del paquete que expone esta acción. Hay una relación de varios a uno con sys.dm_xe_packages.package_id. No admite valores NULL.|  
 |description|**nvarchar(256)**|Descripción de la acción. la descripción la establece el autor del paquete. No admite valores NULL.|  
 |capabilities|**int**|Mapa de bits que describe las capacidades del objeto. Acepta valores NULL.|  
 |capabilities_desc|**nvarchar(256)**|Enumera todas las capacidades del objeto. Acepta valores NULL.<br /><br /> **Capacidades que se aplican a todos los tipos de objeto**<br /><br /> -<br />                                **Privado**. El único objeto disponible para uso interno, y al que no se puede acceder mediante la DLL CREATE/ALTER EVENT SESSION. Los destinos y los eventos de auditoría pertenecen a esta categoría, así como un pequeño número de objetos usados internamente.<br /><br /> ===============<br /><br /> **Capacidades de eventos**<br /><br /> -<br />                                **No_block**. El evento está en una ruta de acceso de código crítica que se no puede bloquear por ningún motivo. Los eventos con esta capacidad no se pueden agregar a ninguna sesión de evento que especifique NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Capacidades que se aplican a todos los tipos de objeto**<br /><br /> -<br />                                **Process_whole_buffers**. El destino consume búferes de eventos a la vez, en lugar de evento por evento.<br /><br /> -<br />                        **Singleton**. Solamente puede haber una instancia del destino en un proceso. Aunque varias sesiones de eventos pueden hacer referencia al mismo destino singleton, en realidad solo hay una instancia, y esa instancia verá cada evento distinto una sola vez. Esto es importante si se agrega el destino a varias sesiones que recopilan el mismo evento.<br /><br /> -<br />                                **Sincrónicos**. El destino se ejecuta en el subproceso que produce el evento, antes de que se devuelva el control a la línea de código de llamada.|  
-|type_name|**nvarchar (60)**|Nombre de los objetos pred_source y pred_compare. Acepta valores NULL.|  
+|type_name|**nvarchar(60)**|Nombre de los objetos pred_source y pred_compare. Acepta valores NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID del paquete que expone el tipo en el que este objeto funciona. Acepta valores NULL.|  
 |type_size|**int**|Tamaño del tipo de datos, en bytes. Solo es válido para los tipos de objetos válidos. Acepta valores NULL.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68090272"
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|Varios a uno|  
   

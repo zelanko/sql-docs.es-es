@@ -20,10 +20,10 @@ ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560ee8a4ccc03f747df2b475394af092db589e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078741"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
@@ -33,11 +33,11 @@ ms.locfileid: "68078741"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre del tipo de mensaje, único en la base de datos. No acepta valores NULL.|  
+|**name**|**sysname**|Nombre del tipo de mensaje, único en la base de datos. No acepta valores NULL.|  
 |**message_type_id**|**int**|Identificador del tipo de mensaje, único en la base de datos. No acepta valores NULL.|  
 |**principal_id**|**int**|Identificador de la entidad de seguridad de base de datos propietaria de este tipo de mensaje. Acepta valores NULL.|  
-|**valida**|**Char (2)**|Validación realizada por Broker antes de enviar mensajes de este tipo. No acepta valores NULL. Uno de los valores siguientes:<br /><br /> N = Ninguno<br /><br /> X = XML<br /><br /> E = Vacío|  
-|**validation_desc**|**nvarchar (60)**|Descripción de la validación realizada por Broker antes de enviar mensajes de este tipo. Acepta valores NULL. Uno de los valores siguientes:<br /><br /> Ninguno<br /><br /> XML<br /><br /> EMPTY|  
+|**valida**|**char(2)**|Validación realizada por Broker antes de enviar mensajes de este tipo. No acepta valores NULL. Uno de los valores siguientes:<br /><br /> N = Ninguno<br /><br /> X = XML<br /><br /> E = Vacío|  
+|**validation_desc**|**nvarchar(60)**|Descripción de la validación realizada por Broker antes de enviar mensajes de este tipo. Acepta valores NULL. Uno de los valores siguientes:<br /><br /> Ninguno<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|En una validación que usa un esquema XML, es el identificador de la colección de esquemas utilizado.<br /><br /> En caso contrario, NULL.|  
   
 ## <a name="permissions"></a>Permisos  

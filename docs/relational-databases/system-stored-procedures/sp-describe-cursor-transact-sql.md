@@ -18,10 +18,10 @@ ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053069"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
@@ -92,8 +92,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ## <a name="remarks"></a>Observaciones  
  sp_describe_cursor describe los atributos globales de un cursor de servidor, como la posibilidad de desplazarlo y actualizarlo. Utilice sp_describe_cursor_columns para obtener una descripción de los atributos del conjunto de resultados devuelto por el cursor. Utilice sp_describe_cursor_tables para obtener un informe de las tablas base a las que hace referencia el cursor. Para obtener un informe de los cursores de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)] visibles en la conexión, use sp_cursor_list.  
   
- Una instrucción DECLARE CURSOR puede solicitar un tipo de cursor no compatible con la instrucción SELECT de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de DECLARE CURSOR. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente el cursor a un tipo compatible con la instrucción SELECT. Si se especifica TYPE_WARNING en la instrucción DECLARE CURSOR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía a la aplicación un mensaje informativo que indica que se ha completado una conversión. a continuación, se puede llamar a sp_describe_cursor para determinar el tipo de cursor que se ha implementado.  
+ Una instrucción DECLARE CURSOR puede solicitar un tipo de cursor no compatible con la instrucción SELECT de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de DECLARE CURSOR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente el cursor a un tipo compatible con la instrucción SELECT. Si se especifica TYPE_WARNING en la instrucción DECLARE CURSOR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía a la aplicación un mensaje informativo que indica que se ha completado una conversión. a continuación, se puede llamar a sp_describe_cursor para determinar el tipo de cursor que se ha implementado.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  

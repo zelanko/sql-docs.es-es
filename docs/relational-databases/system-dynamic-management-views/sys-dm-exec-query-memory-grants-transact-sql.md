@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097705"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
@@ -40,29 +40,29 @@ ms.locfileid: "68097705"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|Id. (SPID) de la sesión en la que se está ejecutando esta consulta.|  
-|**id_de_solicitud**|**int**|Id. de la solicitud. Es único en el contexto de la sesión.|  
+|**request_id**|**int**|Id. de la solicitud. Es único en el contexto de la sesión.|  
 |**scheduler_id**|**int**|Id. del programador que programa esta consulta.|  
 |**dop**|**smallint**|Grado de paralelismo de esta consulta.|  
 |**request_time**|**datetime**|Fecha y hora a la que esta consulta solicitó la concesión de memoria.|  
 |**grant_time**|**datetime**|Fecha y hora a la que se concedió la memoria para esta consulta. Es NULL si aún no se ha concedido la memoria.|  
-|**requested_memory_kb**|**BIGINT**|Memoria solicitada total en kilobytes.|  
-|**granted_memory_kb**|**BIGINT**|Memoria total realmente otorgada en kilobytes. Puede ser NULL si aún no se ha concedido la memoria. En una situación típica, este valor debe ser igual a **requested_memory_kb**. En la creación de índices, el servidor puede permitir memoria adicional a petición además de la memoria concedida inicialmente.|  
-|**required_memory_kb**|**BIGINT**|Memoria mínima necesaria para ejecutar esta consulta en kilobytes. **requested_memory_kb** es igual o mayor que esta cantidad.|  
-|**used_memory_kb**|**BIGINT**|Memoria física usada en este momento en kilobytes.|  
-|**max_used_memory_kb**|**BIGINT**|Memoria física máxima usada hasta este momento en kilobytes.|  
+|**requested_memory_kb**|**bigint**|Memoria solicitada total en kilobytes.|  
+|**granted_memory_kb**|**bigint**|Memoria total realmente otorgada en kilobytes. Puede ser NULL si aún no se ha concedido la memoria. En una situación típica, este valor debe ser igual a **requested_memory_kb**. En la creación de índices, el servidor puede permitir memoria adicional a petición además de la memoria concedida inicialmente.|  
+|**required_memory_kb**|**bigint**|Memoria mínima necesaria para ejecutar esta consulta en kilobytes. **requested_memory_kb** es igual o mayor que esta cantidad.|  
+|**used_memory_kb**|**bigint**|Memoria física usada en este momento en kilobytes.|  
+|**max_used_memory_kb**|**bigint**|Memoria física máxima usada hasta este momento en kilobytes.|  
 |**query_cost**|**float**|Costo estimado de la consulta.|  
 |**timeout_sec**|**int**|Tiempo de espera en segundos antes de que esta consulta abandone la solicitud de concesión de memoria.|  
 |**resource_semaphore_id**|**smallint**|Identificador no único del semáforo de recursos al que está esperando esta consulta.<br /><br /> **Nota:** Este identificador es único en las versiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Este cambio puede afectar a la solución de problemas de ejecución de consultas. Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
 |**queue_id**|**smallint**|Id. de la cola de espera en la que esta consulta espera las concesiones de memoria. Es NULL si ya se ha concedido la memoria.|  
 |**wait_order**|**int**|Orden secuencial de las consultas en espera en el **queue_id** especificado. Este valor puede cambiar para una consulta determinada si otras consultas obtienen concesiones de memoria o agotan el tiempo de espera. Es NULL si ya se ha concedido la memoria.|  
 |**is_next_candidate**|**bit**|Candidata para la siguiente concesión de memoria.<br /><br /> 1 = Sí<br /><br /> 0 = No<br /><br /> NULL = Ya se ha concedido la memoria.|  
-|**wait_time_ms**|**BIGINT**|Tiempo de espera en milisegundos. Es NULL si ya se ha concedido la memoria.|  
+|**wait_time_ms**|**bigint**|Tiempo de espera en milisegundos. Es NULL si ya se ha concedido la memoria.|  
 |**plan_handle**|**varbinary (64)**|Identificador de este plan de consulta. Use **sys.dm_exec_query_plan** para extraer el plan XML real.|  
 |**sql_handle**|**varbinary (64)**|Identificador del texto de [!INCLUDE[tsql](../../includes/tsql-md.md)] de esta consulta. Use **sys.dm_exec_sql_text** para obtener el texto de [!INCLUDE[tsql](../../includes/tsql-md.md)] real.|  
 |**group_id**|**int**|Id. para el grupo de cargas de trabajo donde se está ejecutando la consulta.|  
 |**pool_id**|**int**|Id. del grupo de recursos de servidor al que pertenece este grupo de cargas de trabajo.|  
 |**is_small**|**tinyint**|Cuando se establece en 1, indica que esta concesión utiliza el semáforo de recursos pequeño. Cuando se establece en 0, indica que se utiliza un semáforo normal.|  
-|**ideal_memory_kb**|**BIGINT**|Tamaño, en kilobytes (KB), de la concesión de memoria para ajustar todo en la memoria física. Está basado en la estimación de la cardinalidad.|  
+|**ideal_memory_kb**|**bigint**|Tamaño, en kilobytes (KB), de la concesión de memoria para ajustar todo en la memoria física. Está basado en la estimación de la cardinalidad.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -84,7 +84,7 @@ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `V
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
     
-    <sup>1</sup> en este escenario, el tipo de espera es normalmente RESOURCE_SEMAPHORE. Para obtener más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
+    <sup>1</sup> En este caso, el tipo de espera normalmente es RESOURCE_SEMAPHORE. Para obtener más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
 -   Almacenar en caché las consultas con concesiones de memoria mediante [Sys. dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) y [sys. dm_exec_query_plan &#40;transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
@@ -117,6 +117,6 @@ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `V
 ## <a name="see-also"></a>Consulte también  
  [Sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [Sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

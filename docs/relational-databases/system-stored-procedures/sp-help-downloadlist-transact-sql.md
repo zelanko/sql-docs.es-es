@@ -18,10 +18,10 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055193"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -87,15 +87,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Número de identificación entero único de la instrucción.|  
-|**source_server**|**nvarchar(30**|Nombre de equipo del servidor del que proviene la instrucción. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la versión 7,0, es siempre el nombre de equipo del servidor maestro (MSX).|  
+|**source_server**|**nvarchar(30)**|Nombre de equipo del servidor del que proviene la instrucción. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la versión 7,0, es siempre el nombre de equipo del servidor maestro (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Código de operación de la instrucción.|  
 |**object_name**|**sysname**|Objeto afectado por la instrucción.|  
 |**object_id**|**uniqueidentifier**|Número de identificación del objeto afectado por la instrucción (**job_id** para un objeto de trabajo, o 0x00 para un objeto de servidor) o un valor de datos específico del **operation_code**.|  
-|**target_server**|**nvarchar(30**|Servidor de destino que va a descargar esta instrucción.|  
+|**target_server**|**nvarchar(30)**|Servidor de destino que va a descargar esta instrucción.|  
 |**error_message**|**nvarchar(1024)**|Mensaje de error (si existe) del servidor de destino si se encontró algún problema al procesar la instrucción.<br /><br /> Nota: cualquier mensaje de error bloquea todas las descargas posteriores por el servidor de destino.|  
 |**date_posted**|**datetime**|Fecha en que la instrucción se envió a la tabla.|  
 |**date_downloaded**|**datetime**|Fecha en que el servidor de destino descargó la instrucción.|  
-|**estatus**|**tinyint**|Estado del trabajo:<br /><br /> **0** = sin descargar aún<br /><br /> **1** = descargado correctamente.|  
+|**status**|**tinyint**|Estado del trabajo:<br /><br /> **0** = sin descargar aún<br /><br /> **1** = descargado correctamente.|  
   
 ## <a name="permissions"></a>Permisos  
  Los permisos de ejecución para este procedimiento corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin** .  

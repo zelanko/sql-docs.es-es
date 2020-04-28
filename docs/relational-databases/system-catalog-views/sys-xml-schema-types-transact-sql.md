@@ -20,10 +20,10 @@ ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a78730509cc1f9eeec83b8d9ff9cb0917e0ed99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060427"
 ---
 # <a name="sysxml_schema_types-transact-sql"></a>sys.xml_schema_types (Transact-SQL)

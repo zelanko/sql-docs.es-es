@@ -10,10 +10,10 @@ ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103245"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Conectarse a Azure SQL DB (MySQLToSQL)
@@ -39,9 +39,9 @@ Escriba el nombre de usuario que SSMA usará para conectarse a la base de datos 
   
 **Contraseña**  
   
-Escriba la contraseña del nombre de usuario  
+Escriba la contraseña del nombre de usuario.  
   
-**Toda**  
+**Encrypt**  
   
 SSMA recomienda una conexión cifrada para SQL Azure.  
   

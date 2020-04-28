@@ -10,10 +10,10 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086177"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Trabajar con proyectos de SSMA (DB2ToSQL)
@@ -59,7 +59,7 @@ Para migrar datos de bases de datos de DB2 [!INCLUDE[ssNoVersion](../../includes
   
 **Para crear un proyecto**  
   
-1.  En el menú **archivo** , haga clic en **nuevo proyecto**.  
+1.  En el menú **Archivo**, haga clic en **Nuevo proyecto**.  
   
     Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
@@ -69,11 +69,11 @@ Para migrar datos de bases de datos de DB2 [!INCLUDE[ssNoVersion](../../includes
   
 4.  En el menú desplegable migración, seleccione la versión de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **que se** usa para la migración. Las opciones disponibles son:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -95,7 +95,7 @@ Cuando se guarda un proyecto, SSMA conserva la configuración del proyecto y, op
   
         El almacenamiento de metadatos puede tardar varios minutos. Si aún no desea guardar los metadatos, no active las casillas de verificación.  
   
-    2.  Haga clic en el botón **Guardar**.  
+    2.  Haga clic en el botón **Save** (Guardar).  
   
         SSMA analizará los esquemas DB2 y guardará los metadatos en el archivo de proyecto.  
   

@@ -18,10 +18,10 @@ ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1855120dde6e6f4e9037a6f14832cd24f310d77b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079223"
 ---
 # <a name="cdcddl_history-transact-sql"></a>cdc.ddl_history (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "68079223"
 |**object_id**|**int**|Id. de la tabla de cambio asociado con una instancia de captura para la tabla de origen.|  
 |**required_column_update**|**bit**|Indica que el tipo de datos de una columna capturada se modificó en la tabla de origen. Esta modificación alteró la columna en la tabla de cambio.|  
 |**ddl_command**|**nvarchar(max)**|Instrucción DDL aplicada a la tabla de origen.|  
-|**ddl_lsn**|**binario (10)**|Número de secuencia de registro (LSN) asociado con la confirmación de la modificación de DDL.|  
+|**ddl_lsn**|**binary(10)**|Número de secuencia de registro (LSN) asociado con la confirmación de la modificación de DDL.|  
 |**ddl_time**|**datetime**|Fecha y hora en la que se realizó el cambio de DDL en la tabla de origen.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

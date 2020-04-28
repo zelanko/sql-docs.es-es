@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054897"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
@@ -53,13 +53,13 @@ sp_help_jobs_in_schedule
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|Identificador único del trabajo.|  
-|**originating_server**|**nvarchar(30**|Nombre del servidor del que proviene el trabajo.|  
-|**Name**|**sysname**|Nombre del trabajo.|  
+|**job_id**|**uniqueidentifier**|Id. único del trabajo.|  
+|**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
+|**name**|**sysname**|Nombre del trabajo.|  
 |**activó**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
 |**denominación**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
-|**Categoría**|**sysname**|Categoría del trabajo|  
+|**category**|**sysname**|Categoría del trabajo|  
 |**propietario**|**sysname**|Propietario del trabajo.|  
 |**notify_level_eventlog**|**int**|Máscara de bits que indica en qué circunstancias se debe registrar un evento de notificación en el registro de aplicación de Microsoft Windows. Puede ser uno de estos valores:<br /><br /> **0** = nunca<br /><br /> **1** = cuando un trabajo se realiza correctamente<br /><br /> **2** = cuando se produce un error en el trabajo<br /><br /> **3** = cada vez que se completa el trabajo (independientemente del resultado del trabajo)|  
 |**notify_level_email**|**int**|Máscara de bits que indica en qué circunstancias se debe enviar una notificación por correo electrónico cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
@@ -71,7 +71,7 @@ sp_help_jobs_in_schedule
 |**delete_level**|**int**|Máscara de bits que indica en qué circunstancias se debe eliminar un trabajo cuando se completa. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
 |**date_created**|**datetime**|Fecha en que se creó el trabajo.|  
 |**date_modified**|**datetime**|Fecha en que se modificó el trabajo por última vez.|  
-|**version_number**|**int**|Versión del trabajo (se actualiza automáticamente cada vez que se modifica el trabajo).|  
+|**version_number**|**int**|Versión del trabajo (se actualiza automáticamente cada vez que el trabajo se modifica).|  
 |**last_run_date**|**int**|Fecha de inicio de la última ejecución del trabajo.|  
 |**last_run_time**|**int**|Hora de inicio de la última ejecución del trabajo.|  
 |**last_run_outcome**|**int**|Resultado del trabajo la última vez que se ejecutó:<br /><br /> **0** = error<br /><br /> **1** = correcto<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
@@ -84,7 +84,7 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Número de pasos que tiene el trabajo.|  
 |**has_schedule**|**int**|Número de programaciones que tiene el trabajo.|  
 |**has_target**|**int**|Número de servidores de destino que tiene el trabajo.|  
-|**automáticamente**|**int**|Tipo de trabajo:<br /><br /> **1** = trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = el trabajo no tiene ningún servidor de destino.|  
+|**type**|**int**|Tipo de trabajo:<br /><br /> **1** = trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = el trabajo no tiene ningún servidor de destino.|  
   
 ## <a name="remarks"></a>Observaciones  
  Este procedimiento muestra información acerca de los trabajos adjuntos a la programación especificada.  

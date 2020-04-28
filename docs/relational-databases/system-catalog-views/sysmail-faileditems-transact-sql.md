@@ -18,10 +18,10 @@ ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060211"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68060211"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico.|  
 |**profile_id**|**int**|Identificador del perfil que se usa para enviar el mensaje.|  
-|**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
+|**recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
 |**Asunto**|**nvarchar (510)**|Línea de asunto del mensaje.|  
-|**principal**|**ntext**|el cuerpo del mensaje.|  
+|**body**|**ntext**|el cuerpo del mensaje.|  
 |**body_format**|**VARCHAR (20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
 |**importance**|**VARCHAR (6)**|Parámetro de **importancia** del mensaje.|  
 |**distinga**|**VARCHAR (12)**|Parámetro de **sensibilidad** del mensaje.|  

@@ -20,10 +20,10 @@ ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 039c3b0be4feab53215bae22836b7fd5be4ecfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090234"
 ---
 # <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68090234"
 |column_name|**nvarchar(256)**|El nombre del valor de configuración. No admite valores NULL.|  
 |column_id|**int**|IDENTIFICADOR de la columna. Es único en el objeto. No admite valores NULL.|  
 |column_value|**nvarchar (a.**|El valor configurado de la columna. Acepta valores NULL.|  
-|object_type|**nvarchar (60)**|Tipo del objeto. No admite valores NULL. object_type es uno de los siguientes:<br /><br /> event<br /><br /> Destino|  
+|object_type|**nvarchar(60)**|Tipo del objeto. No admite valores NULL. object_type es uno de los siguientes:<br /><br /> event<br /><br /> Destino|  
 |object_name|**nvarchar(256)**|Nombre del objeto al que pertenece esta columna. No admite valores NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene el objeto. No admite valores NULL.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68090234"
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_xe_session_object_columns. object_name,<br /><br /> dm_xe_session_object_columns.object_package_guid|Sys. dm_xe_objects. package_guid,<br /><br /> sys.dm_xe_objects.name|Varios a uno|  
 |dm_xe_session_object_columns. column_name,<br /><br /> dm_xe_session_object_columns.column_id|Sys. dm_xe_object_columns. Name,<br /><br /> sys.dm_xe_object_columns.column_id|Varios a uno|  

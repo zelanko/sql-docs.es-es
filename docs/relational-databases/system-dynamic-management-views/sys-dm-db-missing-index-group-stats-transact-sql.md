@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051553"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
@@ -38,15 +38,15 @@ ms.locfileid: "68051553"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**group_handle**|**int**|Identifica un grupo de índices que faltan. Este identificador es único en todo el servidor.<br /><br /> Las otras columnas proporcionan información sobre todas las consultas para las que se considera que falta el índice del grupo.<br /><br /> Un grupo de índices solo contiene un índice.|  
-|**unique_compiles**|**BIGINT**|Número de compilaciones y recompilaciones que se beneficiarían de este grupo de índices que faltan. Las compilaciones y recompilaciones de muchas consultas distintas puede contribuir a este valor de columna.|  
-|**user_seeks**|**BIGINT**|Número de búsquedas iniciadas por consultas de usuario para las que se podría haber utilizado el índice recomendado del grupo.|  
-|**user_scans**|**BIGINT**|Número de recorridos iniciados por consultas de usuario para los que se podría haber utilizado el índice recomendado del grupo.|  
+|**unique_compiles**|**bigint**|Número de compilaciones y recompilaciones que se beneficiarían de este grupo de índices que faltan. Las compilaciones y recompilaciones de muchas consultas distintas puede contribuir a este valor de columna.|  
+|**user_seeks**|**bigint**|Número de búsquedas iniciadas por consultas de usuario para las que se podría haber utilizado el índice recomendado del grupo.|  
+|**user_scans**|**bigint**|Número de recorridos iniciados por consultas de usuario para los que se podría haber utilizado el índice recomendado del grupo.|  
 |**last_user_seek**|**datetime**|Fecha y hora de la última búsqueda iniciada por consultas de usuario para la que se podría haber utilizado el índice recomendado del grupo.|  
 |**last_user_scan**|**datetime**|Fecha y hora del último recorrido iniciado por consultas de usuario para el que se podría haber utilizado el índice recomendado del grupo.|  
 |**avg_total_user_cost**|**float**|Costo medio de las consultas de usuario que podría reducirse mediante el índice del grupo.|  
 |**avg_user_impact**|**float**|Beneficio porcentual medio que podrían obtener las consultas de usuario si se implementara este grupo de índices que faltan. El valor significa que el costo de las consultas se reduciría este porcentaje como promedio si se implementara este grupo de índices que faltan.|  
-|**system_seeks**|**BIGINT**|Número de búsquedas iniciadas por consultas del sistema, como consultas de estadísticas automáticas, para las que se podría haber utilizado el índice recomendado del grupo. Para obtener más información, consulte [auto stats (clase de eventos](../../relational-databases/event-classes/auto-stats-event-class.md)).|  
-|**system_scans**|**BIGINT**|Número de recorridos iniciados por consultas del sistema para los que se podría haber utilizado el índice recomendado del grupo.|  
+|**system_seeks**|**bigint**|Número de búsquedas iniciadas por consultas del sistema, como consultas de estadísticas automáticas, para las que se podría haber utilizado el índice recomendado del grupo. Para obtener más información, consulte [auto stats (clase de eventos](../../relational-databases/event-classes/auto-stats-event-class.md)).|  
+|**system_scans**|**bigint**|Número de recorridos iniciados por consultas del sistema para los que se podría haber utilizado el índice recomendado del grupo.|  
 |**last_system_seek**|**datetime**|Fecha y hora de la última búsqueda en el sistema iniciada por consultas del sistema para la que se podría haber utilizado el índice recomendado del grupo.|  
 |**last_system_scan**|**datetime**|Fecha y hora del último recorrido en el sistema iniciado por consultas del sistema para el que se podría haber utilizado el índice recomendado del grupo.|  
 |**avg_total_system_cost**|**float**|Costo medio de las consultas del sistema que podría reducirse mediante el índice del grupo.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68051553"
  En los siguientes ejemplos se ilustra la forma de usar la vista de administración dinámica **sys.dm_db_missing_index_group_stats**.  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Buscar los 10 índices que faltan para los que se prevé mayor aumento de rendimiento en las consultas de usuario  
- La siguiente consulta determina qué 10 índices ausentes producirían la mejora acumulativa anticipada más alta, en orden descendente, para consultas de usuario.  
+ La siguiente consulta determina cuáles de los 10 índices que faltan producirían el mayor aumento acumulado previsto, en orden descendente, para consultas de usuario.  
   
 ```  
 SELECT TOP 10 *  

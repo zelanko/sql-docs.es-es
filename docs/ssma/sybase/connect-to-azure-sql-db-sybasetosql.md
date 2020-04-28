@@ -10,10 +10,10 @@ ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083472"
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Conectarse a Azure SQL DB (SybaseToSQL)
@@ -39,9 +39,9 @@ Escriba el nombre de usuario que SSMA usará para conectarse a la base de datos 
   
 **Contraseña**  
   
-Escriba la contraseña del nombre de usuario  
+Escriba la contraseña del nombre de usuario.  
   
-**Toda**  
+**Encrypt**  
   
 SSMA recomienda una conexión cifrada a Azure SQL DB.  
   

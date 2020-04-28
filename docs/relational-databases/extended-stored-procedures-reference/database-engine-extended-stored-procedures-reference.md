@@ -13,20 +13,19 @@ ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064203"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>Procedimientos almacenados extendidos de Motor de base de datos: referencia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
- La [!INCLUDE[msCoName](../../includes/msconame-md.md)] API de procedimiento almacenado extendido, que anteriormente formaba parte de Open Data Services, proporciona una interfaz de programación de aplicaciones (API [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) basada en servidor para extender la funcionalidad. La API está compuesta de funciones y macros de C y C++ que se utilizan para generar aplicaciones.  
+ La API Procedimiento almacenado extendido de [!INCLUDE[msCoName](../../includes/msconame-md.md)], previamente parte de Servicios abiertos de datos, proporciona una interfaz de programación de aplicaciones (API) basada en servidor para extender la funcionalidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La API está compuesta de funciones y macros de C y C++ que se utilizan para generar aplicaciones.  
   
  Con la aparición de las más recientes y eficaces tecnologías, como la integración CLR, se ha reemplazado en gran medida la necesidad de procedimientos almacenados extendidos.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "68064203"
   
 |||  
 |-|-|  
-|[Tipos de datos](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)|[srv_pfield](../../relational-databases/extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md)|  
+|[Tipo de datos](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md)|[srv_pfield](../../relational-databases/extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md)|  
 |[srv_alloc](../../relational-databases/extended-stored-procedures-reference/srv-alloc-extended-stored-procedure-api.md)||  
 |[srv_convert](../../relational-databases/extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md)|[srv_pfieldex](../../relational-databases/extended-stored-procedures-reference/srv-pfieldex-extended-stored-procedure-api.md)|  
 |[srv_describe](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)|[srv_rpcdb](../../relational-databases/extended-stored-procedures-reference/srv-rpcdb-extended-stored-procedure-api.md)|  

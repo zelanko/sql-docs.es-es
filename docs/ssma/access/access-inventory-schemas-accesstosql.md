@@ -37,10 +37,10 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068955"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventario de acceso (AccessToSQL)
@@ -55,7 +55,7 @@ Los metadatos de la base de datos se exportan a la tabla **SSMA_Access_Inventory
 |**DatabaseName**|**nvarchar(4000)**|Nombre de la base de datos de Access.|  
 |**ExportTime**|**datetime**|Fecha y hora de creación de estos metadatos mediante SSMA.|  
 |**FilePath**|**nvarchar(4000)**|Ruta de acceso completa y nombre de archivo de la base de datos de Access.|  
-|**FileSize**|**BIGINT**|Tamaño de la base de datos de Access en KB.|  
+|**FileSize**|**bigint**|Tamaño de la base de datos de Access en KB.|  
 |**FileOwner**|**nvarchar(4000)**|Cuenta de Windows que se especifica como propietario de la base de datos de Access.|  
 |**DateCreated**|**datetime**|Fecha y hora en que se creó la base de datos de Access.|  
 |**DateModified**|**datetime**|Fecha y hora en que se modificó por última vez la base de datos de Access.|  
@@ -78,7 +78,7 @@ Los metadatos de la tabla se exportan a la tabla **SSMA_Access_InventoryTables**
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene esta tabla.|  
 |**TableId**|**uniqueidentifier**|GUID que identifica de forma única la tabla. Esta columna es también la clave principal de la tabla.|  
-|**TableName**|**nvarchar(4000)**|El nombre de la tabla.|  
+|**TableName**|**nvarchar(4000)**|Nombre de la tabla.|  
 |**RowsCount**|**int**|Número de filas de la tabla.|  
 |**(**|**nvarchar(4000)**|La regla que define la entrada válida para la tabla. Si no existe ninguna regla de validación, el campo contendrá una cadena vacía.|  
 |**LinkedTable**|**nvarchar(4000)**|Otra tabla, si existe, que está vinculada a la tabla. La vinculación de tablas permite adiciones, eliminaciones y actualizaciones en la otra tabla mediante el uso de esta tabla.|  
@@ -96,7 +96,7 @@ Los metadatos de columna se exportan a la tabla **SSMA_Access_InventoryColumns**
 |**IsNullable**|**bit**|Especifica si la columna puede contener valores NULL. Si el valor es 1, la columna puede contener valores NULL. Si el valor es 0, la columna no puede contener valores NULL. Tenga en cuenta que la regla de validación también se puede usar para evitar valores NULL.|  
 |**DataType**|**nvarchar(4000)**|El tipo de datos de acceso de la columna, como **texto** o **largo**.|  
 |**Disautoincrement**|**bit**|Especifica si la columna incrementa automáticamente los valores enteros. Si el valor es 1, los enteros se incrementan automáticamente.|  
-|**Ordinal**|**smallint**|El orden de la columna de la tabla, empezando por cero.|  
+|**Números**|**smallint**|El orden de la columna de la tabla, empezando por cero.|  
 |**DefaultValue**|**nvarchar(4000)**|El valor predeterminado de la columna.|  
 |**(**|**nvarchar(4000)**|La regla que se usa para validar los datos agregados o actualizados en la columna.|  
   
@@ -177,7 +177,7 @@ Los metadatos del módulo se exportan a la tabla **SSMA_Access_InventoryModules*
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene el módulo.|  
 |**ModuleId**|**int**|Un entero que aumenta el número que identifica el módulo. Esta columna es la clave principal de la tabla.|  
-|**ModuleName**|**nvarchar(4000)**|Nombre del módulo.|  
+|**ModuleName**|**nvarchar(4000)**|El nombre del módulo.|  
   
 ## <a name="see-also"></a>Consulte también  
 [Exportación de un inventario de Access](exporting-an-access-inventory-accesstosql.md)  

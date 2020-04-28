@@ -19,10 +19,10 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067831"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
@@ -40,12 +40,12 @@ ms.locfileid: "68067831"
 |**begin_lsn**|**nvarchar (64)**|Número de flujo de registro (LSN) de la entrada de registro de inicio para la transacción.|  
 |**commit_lsn**|**nvarchar (64)**|LSN de la entrada de registro de confirmación para la transacción.|  
 |**DBID**|**smallint**|Id. de la base de datos.|  
-|**rows**|**int**|Id. del comando replicado en la transacción.|  
+|**las**|**int**|Id. del comando replicado en la transacción.|  
 |**elemento xdesid**|**nvarchar (64)**|Id. de la transacción.|  
 |**artcache_table_address**|**varbinary(8**|Dirección de memoria de la última estructura de la tabla de artículos en caché utilizada para esta transacción.|  
 |**servidor**|**nvarchar (514)**|Nombre de servidor.|  
 |**server_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, del nombre del servidor.|  
-|**base**|**nvarchar (514)**|nombre de base de datos.|  
+|**database**|**nvarchar (514)**|nombre de base de datos.|  
 |**db_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, del nombre de la base de datos.|  
 |**llegar**|**nvarchar (514)**|Nombre del servidor donde se originó la transacción.|  
 |**originator_len_in_bytes**|**smallint**|Longitud de caracteres, en bytes, del servidor donde se originó la transacción.|  

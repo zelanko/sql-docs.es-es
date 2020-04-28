@@ -20,10 +20,10 @@ ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060437"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68060437"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|Id. de la colección de esquemas XML que contiene este espacio de nombres.|  
-|**Name**|**nvarchar(4000)**|Nombre del espacio de nombres XML. **El nombre** en blanco indica que no hay espacio de nombres de destino.|  
+|**name**|**nvarchar(4000)**|Nombre del espacio de nombres XML. **El nombre** en blanco indica que no hay espacio de nombres de destino.|  
 |**xml_namespace_id**|**int**|Ordinal en base 1 que identifica de forma exclusiva el espacio de nombres XML en la base de datos.|  
   
 ## <a name="permissions"></a>Permisos  

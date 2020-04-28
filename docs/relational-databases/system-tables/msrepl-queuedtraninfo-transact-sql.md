@@ -18,10 +18,10 @@ ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079183"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "68079183"
 |**publisher_db**|**sysname**|Nombre de la base de datos de publicación.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**tranid**|**sysname**|Id. de transacción bajo el que se ha ejecutado el comando en cola.|  
-|**maxorderkey**|**BIGINT**|Solo para uso interno.|  
-|**commandcount**|**BIGINT**|Solo para uso interno.|  
+|**maxorderkey**|**bigint**|Solo para uso interno.|  
+|**commandcount**|**bigint**|Solo para uso interno.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

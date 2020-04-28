@@ -20,10 +20,10 @@ ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090285"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
@@ -42,10 +42,10 @@ ms.locfileid: "68090285"
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene el objeto. No admite valores NULL.|  
 |type_name|**nvarchar(256)**|Nombre del tipo de esta columna. No admite valores NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID del paquete que contiene el tipo de datos de la columna. No admite valores NULL.|  
-|column_type|**nvarchar (60)**|Indica cómo se utiliza esta columna. No admite valores NULL. column_type puede ser una de las siguientes:<br /><br /> readonly. La columna contiene un valor estático que no se puede cambiar.<br /><br /> datos. La columna contiene datos en tiempo de ejecución expuestos por el objeto.<br /><br /> customizable. La columna contiene un valor que puede cambiarse.<br /><br /> Nota: al cambiar este valor se puede modificar el comportamiento del objeto.|  
+|column_type|**nvarchar(60)**|Indica cómo se utiliza esta columna. No admite valores NULL. column_type puede ser una de las siguientes:<br /><br /> readonly. La columna contiene un valor estático que no se puede cambiar.<br /><br /> data. La columna contiene datos en tiempo de ejecución expuestos por el objeto.<br /><br /> customizable. La columna contiene un valor que puede cambiarse.<br /><br /> Nota: al cambiar este valor se puede modificar el comportamiento del objeto.|  
 |column_value|**nvarchar(256)**|Muestra los valores estáticos asociados con la columna de objetos. Acepta valores NULL.|  
 |capabilities|**int**|Un mapa de bits que describe las capacidades de la columna. Acepta valores NULL.|  
-|capabilities_desc|**nvarchar(256)**|Una descripción de las capacidades de esta columna de objetos. Este valor puede ser uno de los siguientes:<br /><br /> Obligatorio. Se debe establecer el valor al enlazar el objeto primario a una sesión de eventos.<br /><br /> Acepta valores NULL.|  
+|capabilities_desc|**nvarchar(256)**|Una descripción de las capacidades de esta columna de objetos. Este valor puede ser uno de los siguientes:<br /><br /> Mandatory. Se debe establecer el valor al enlazar el objeto primario a una sesión de eventos.<br /><br /> Acepta valores NULL.|  
 |description|**nvarchar (a.**|Descripción de esta columna de objetos. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -53,7 +53,7 @@ ms.locfileid: "68090285"
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|Varios a uno|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|Varios a uno|  

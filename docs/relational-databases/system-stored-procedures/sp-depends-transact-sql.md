@@ -18,10 +18,10 @@ ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053102"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -67,8 +67,8 @@ sp_depends [ @objname = ] '<object>'
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
-|**automáticamente**|**nvarchar (16)**|Tipo del elemento.|  
+|**name**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
+|**type**|**nvarchar (16)**|Tipo del elemento.|  
 |**Actualice**|**nvarchar (7)**|Indica si el elemento está actualizado.|  
 |**seleccionadas**|**nvarchar (8)**|Indica si el elemento se utiliza en una instrucción SELECT.|  
 |**artículo**|**sysname**|Columna o parámetro con el que existe la dependencia.|  
@@ -77,8 +77,8 @@ sp_depends [ @objname = ] '<object>'
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
-|**automáticamente**|**nvarchar (16)**|Tipo del elemento.|  
+|**name**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
+|**type**|**nvarchar (16)**|Tipo del elemento.|  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  

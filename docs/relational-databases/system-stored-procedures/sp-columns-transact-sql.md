@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070352"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
@@ -72,18 +72,18 @@ sp_columns [ @table_name = ] object
 |**DATA_TYPE**|**smallint**|Código entero del tipo de datos ODBC. Si se trata de un tipo de datos que no se puede asignar a un tipo ODBC, se considera NULL. El nombre del tipo de datos nativo se devuelve en la columna **TYPE_NAME** .|  
 |**TYPE_NAME**|**sysname**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
 |**PRECISIÓN**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
-|**LONGITUD**|**int**|Tamaño de la transferencia de los datos. <sup>1</sup>|  
+|**LENGTH**|**int**|Tamaño de la transferencia de los datos. <sup>1</sup>|  
 |**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**RADIX**|**smallint**|Base para tipos de datos numéricos.|  
 |**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
-|**SECCIÓN**|**VARCHAR (254)**|Este campo siempre devuelve NULL.|  
+|**COMENTARIOS**|**VARCHAR (254)**|Este campo siempre devuelve NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valor predeterminado de la columna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna **data_type** , excepto los tipos de datos de **intervalo** **DateTime** y SQL-92. Esta columna siempre devuelve un valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|Código de subtipo para los tipos de datos de **intervalo** **DateTime** y SQL-92. Para otros tipos de datos, esta columna devuelve NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longitud máxima en bytes de una columna de tipos de datos de caracteres o enteros. Para los demás tipos de datos, esta columna devuelve NULL.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal de la columna en el objeto. La primera columna del objeto es 1. Esta columna siempre devuelve un valor.|  
 |**IS_NULLABLE**|**VARCHAR (254)**|Indica si la columna admite valores NULL en el objeto. Se siguen las normas ISO para determinar la nulabilidad. Un DBMS que cumpla la norma ISO SQL no puede devolver una cadena vacía.<br /><br /> YES = La columna puede incluir valores NULL.<br /><br /> NO = La columna no puede incluir valores NULL.<br /><br /> Esta columna devuelve una cadena de longitud cero si no se conoce la nulabilidad.<br /><br /> El valor devuelto para esta columna es diferente del valor devuelto para la columna que **acepta valores NULL** .|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos utilizado por los procedimientos almacenados extendidos. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**SS_DATA_TYPE**|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado por procedimientos almacenados extendidos. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
  <sup>1</sup> para obtener más información, vea la documentación de Microsoft ODBC.  
   
@@ -103,7 +103,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se devuelve información de columna para una tabla especificada.  
   
 ```  

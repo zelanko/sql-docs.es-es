@@ -18,10 +18,10 @@ ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055170"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
@@ -49,17 +49,17 @@ sp_help_fulltext_catalog_components
 |**identificador del catálogo de texto completo**|**sysname**|Id. del catálogo de texto completo.|  
 |**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filter<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
 |**componentName**|**sysname**|Nombre del componente.|  
-|**clsid**|**uniqueidentifier**|Identificador de clase del componente.|  
+|**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
 |**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el autor de la llamada no es miembro del rol fijo de servidor **ServerAdmin** .|  
-|**Versión**|**nvarchar(30**|Versión del componente.|  
-|**manufacturer**|**sysname**|Nombre del fabricante del componente.|  
+|**version**|**nvarchar(30)**|Versión del componente.|  
+|**fabricante**|**sysname**|Nombre del fabricante del componente.|  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Búsqueda de texto completo y procedimientos almacenados de búsqueda semántica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [Sys. fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [Búsqueda de texto completo](../../relational-databases/search/full-text-search.md)  
   

@@ -20,10 +20,10 @@ ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f2f4b8ea0184d063a6423f27fdf2cf9c450a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078647"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "68078647"
 |bounding_box_xmax|**Float (53)**|Coordenada x de la esquina superior derecha del cuadro de límite; uno de los siguientes: NULL = no es aplicable para un esquema de teselación determinado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada x máxima|  
 |bounding_box_ymax|**Float (53)**|Coordenada Y de la esquina superior derecha del cuadro de límite; uno de los siguientes: NULL = no es aplicable para un esquema de teselación determinado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada y máxima|  
 |level_1_grid|**smallint**|Densidad de la cuadrícula para la cuadrícula de nivel superior. Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de los siguientes: 16 = 4 por 4 Grid (LOW) 64 = 8 por 8 cuadrícula (media) 256 = 16 por 16 Grid (HIGH) NULL = no aplicable para el tipo de índice espacial o el esquema de teselación especificados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
-|level_1_grid_desc|**nvarchar (60)**|Densidad de la cuadrícula de nivel superior; uno de los siguientes: LOW MEDIUM HIGH NULL = no aplicable para el tipo de índice espacial o esquema de teselación determinados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
+|level_1_grid_desc|**nvarchar(60)**|Densidad de la cuadrícula de nivel superior; uno de los siguientes: LOW MEDIUM HIGH NULL = no aplicable para el tipo de índice espacial o esquema de teselación determinados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |level_2_grid|**smallint**|Densidad de la cuadrícula de segundo nivel. Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de los siguientes: 16 = 4 por 4 Grid (LOW) 64 = 8 por 8 cuadrícula (media) 256 = 16 por 16 Grid (HIGH) NULL = no aplicable para el tipo de índice espacial o el esquema de teselación especificados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
-|level_2_grid_desc|**nvarchar (60)**|Densidad de la cuadrícula de segundo nivel; uno de los siguientes: LOW MEDIUM HIGH NULL = no aplicable para el tipo de índice espacial o esquema de teselación determinados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
+|level_2_grid_desc|**nvarchar(60)**|Densidad de la cuadrícula de segundo nivel; uno de los siguientes: LOW MEDIUM HIGH NULL = no aplicable para el tipo de índice espacial o esquema de teselación determinados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |level_3_grid|**smallint**|Densidad de la cuadrícula de tercer nivel.   Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de los siguientes: 16 = 4 por 4 Grid (LOW) 64 = 8 por 8 cuadrícula (media) 256 = 16 por 16 Grid (HIGH) NULL = no aplicable para el tipo de índice espacial o el esquema de teselación especificados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
-|level_3_grid_desc|**nvarchar (60)**|Densidad de la cuadrícula de tercer nivel; uno de los siguientes: LOW MEDIUM HIGH NULL = no aplicable para el tipo de índice espacial o esquema de teselación determinados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
+|level_3_grid_desc|**nvarchar(60)**|Densidad de la cuadrícula de tercer nivel; uno de los siguientes: LOW MEDIUM HIGH NULL = no aplicable para el tipo de índice espacial o esquema de teselación determinados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |level_4_grid|**smallint**|Densidad de la cuadrícula de cuarto nivel. Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de los siguientes: 16 = 4 por 4 Grid (LOW) 64 = 8 por 8 Grid (media) 256 = 16 por 16 Grid (HIGH) NULL = no aplicable para el tipo de índice espacial o el esquema de teselación especificados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
-|level_4_grid_desc|**nvarchar (60)**|Densidad de la cuadrícula de cuarto nivel; uno de los siguientes: < LOW MEDIUM HIGH NULL = no es aplicable para el esquema de teselación o tipo de índice espacial determinado.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
+|level_4_grid_desc|**nvarchar(60)**|Densidad de la cuadrícula de cuarto nivel; uno de los siguientes: < LOW MEDIUM HIGH NULL = no es aplicable para el esquema de teselación o tipo de índice espacial determinado.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |cells_per_object|**int**|Número de celdas por objeto espacial, uno de los siguientes: si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, *n* = número de celdas por objeto NULL = no aplicable para el tipo de índice espacial o esquema de teselación determinados|  
   
 ## <a name="permissions"></a>Permisos  
@@ -60,9 +60,9 @@ ms.locfileid: "68078647"
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Sys. spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [Sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   

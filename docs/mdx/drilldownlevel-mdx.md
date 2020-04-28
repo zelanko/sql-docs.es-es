@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049293"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
@@ -101,7 +101,7 @@ FROM [Adventure Works]
   
  En el último ejemplo se muestra un miembro calculado, que aparece en la parte inferior del conjunto de resultados al agregar la marca de **include_calculated_members** . Observe que la marca se especifica como cuarto parámetro.  
   
- Este ejemplo funciona porque el miembro calculado está en el mismo nivel que los miembros no calculados. El miembro calculado [West Coast] está formado por miembros de [United States] más todos los miembros que están un nivel por debajo de [United States].  
+ Este ejemplo funciona porque el miembro calculado está en el mismo nivel que los miembros no calculados. El miembro calculado [West Coast] está formado por miembros de [Estados Unidos] más todos los miembros que están un nivel por debajo de [Estados Unidos].  
   
 ```  
 WITH MEMBER   

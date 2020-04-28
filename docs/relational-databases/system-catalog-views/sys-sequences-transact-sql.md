@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060553"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "68060553"
 |**last_used_value**|**sql_variant NULL**|Devuelve el último valor generado por la función [Next Value for](../../t-sql/functions/next-value-for-transact-sql.md) . Se aplica a SQL Server 2017 y versiones posteriores.|  
   
 ## <a name="permissions"></a>Permisos  
- En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, la visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, la visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tiene algún permiso.  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md)   

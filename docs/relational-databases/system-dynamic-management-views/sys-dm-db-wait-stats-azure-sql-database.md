@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090875"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
@@ -35,11 +35,11 @@ ms.locfileid: "68090875"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Nombre del tipo de espera. Para obtener más información, vea [Tipos de esperas](#WaitTypes), más adelante en este tema.|  
-|waiting_tasks_count|**BIGINT**|Número de esperas de este tipo de espera. Este recuento se incrementa al inicio de cada espera.|  
-|wait_time_ms|**BIGINT**|Tiempo total de espera de este tipo en milisegundos. Este tiempo incluye el tiempo de signal_wait_time_ms.|  
-|max_wait_time_ms|**BIGINT**|Tiempo de espera máximo de este tipo de espera.|  
-|signal_wait_time_ms|**BIGINT**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
+|wait_type|**nvarchar(60)**|Nombre del tipo de espera. Para obtener más información, vea [Tipos de esperas](#WaitTypes), más adelante en este tema.|  
+|waiting_tasks_count|**bigint**|Número de esperas de este tipo de espera. Este recuento se incrementa al inicio de cada espera.|  
+|wait_time_ms|**bigint**|Tiempo total de espera de este tipo en milisegundos. Este tiempo incluye el tiempo de signal_wait_time_ms.|  
+|max_wait_time_ms|**bigint**|Tiempo de espera máximo de este tipo de espera.|  
+|signal_wait_time_ms|**bigint**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
   
 ## <a name="remarks"></a>Observaciones  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68090875"
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
   
-##  <a name="WaitTypes"></a>Tipos de esperas  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Tipos de esperas  
  Esperas de recursos  
  Las esperas de recursos tienen lugar cuando un trabajador solicita acceso a un recurso que no está disponible porque otro trabajador lo está utilizando o aún no está disponible. Algunos ejemplos de esperas de recursos son los bloqueos, bloqueos temporales y esperas de red y E/S de disco. Las esperas de bloqueos y bloqueos temporales son esperas en objetos de sincronización.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68090875"
 |FSAGENT|Tiene lugar cuando una operación de E/S del archivo de FILESTREAM espera un recurso del agente de FILESTREAM que está utilizando otra operación de E/S de archivo.|  
 |FSTR_CONFIG_MUTEX|Tiene lugar cuando se produce una espera hasta que se complete la configuración de otra característica de FILESTREAM.|  
 |FSTR_CONFIG_RWLOCK|Tiene lugar cuando se produce una espera para serializar el acceso a los parámetros de configuración de FILESTREAM.|  
-|FT_METADATA_MUTEX|Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_METADATA_MUTEX|Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
 |FT_RESTART_CRAWL|Tiene lugar cuando un rastreo de texto completo debe reiniciarse desde el último punto correcto conocido para recuperarse de un error transitorio. La espera permite que completen o abandonen el paso actual las tareas del trabajador que se están ejecutando en dicho rellenado.|  
 |FULLTEXT GATHERER|Tiene lugar durante la sincronización de operaciones de texto completo.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -224,8 +224,7 @@ ms.locfileid: "68090875"
 |MSQL_DQ|Tiene lugar cuando una tarea está esperando que finalice una operación de consulta distribuida. Se utiliza para detectar potenciales interbloqueos de aplicación MARS (Conjuntos de resultados activos múltiples). La espera termina cuando finaliza la llamada a la consulta distribuida.|  
 |MSQL_XACT_MGR_MUTEX|Tiene lugar cuando una tarea está esperando obtener la propiedad del administrador de transacciones de la sesión para realizar una operación de transacción en el nivel de sesión.|  
 |MSQL_XACT_MUTEX|Tiene lugar durante la sincronización del uso de transacciones. Una solicitud debe adquirir la exclusión mutua para poder utilizar la transacción.|  
-|MSQL_XP|Tiene lugar cuando una tarea está esperando que finalice un procedimiento almacenado extendido. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza este estado de espera para detectar interbloqueos potenciales de la aplicación MARS. La espera se detiene cuando finaliza la llamada al procedimiento almacenado extendido.|  
+|MSQL_XP|Tiene lugar cuando una tarea está esperando que finalice un procedimiento almacenado extendido. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza este estado de espera para detectar interbloqueos potenciales de la aplicación MARS. La espera se detiene cuando finaliza la llamada al procedimiento almacenado extendido.|  
 |MSSEARCH|Tiene lugar durante las llamadas a la búsqueda de texto completo. Esta espera termina cuando finaliza la operación de texto completo. No indica contención, sino la duración de las operaciones de texto completo.|  
 |NET_WAITFOR_PACKET|Tiene lugar cuando una conexión está esperando un paquete de red durante una lectura de red.|  
 |OLEDB|Tiene lugar cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama al proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Este estado de espera no se usa para la sincronización. Se usa para indicar la duración de las llamadas al proveedor OLE DB.|  
@@ -380,11 +379,11 @@ ms.locfileid: "68090875"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|El texto completo espera en la operación de metadatos de fragmento. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_IFTS_RWLOCK|El texto completo está esperando la sincronización interna. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_COMPROWSET_RWLOCK|El texto completo espera en la operación de metadatos de fragmento. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTS_RWLOCK|El texto completo está esperando la sincronización interna. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
 |TDPFT_IFTS_SCHEDULER_IDLE_WAIT|Tipo de espera de la suspensión del programador de texto completo. El programador está inactivo.|  
-|FT_IFTSHC_MUTEX|El texto completo está esperando una operación de control de fdhost. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_IFTSISM_MUTEX|El texto completo está esperando la operación de comunicación. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
-|FT_MASTER_MERGE|El texto completo está esperando la operación de combinación maestra. Solamente se documenta con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTSHC_MUTEX|El texto completo está esperando una operación de control de fdhost. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_IFTSISM_MUTEX|El texto completo está esperando la operación de comunicación. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
+|FT_MASTER_MERGE|El texto completo está esperando la operación de combinación maestra. Solamente se documenta con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|  
   
   

@@ -12,10 +12,10 @@ ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e944daafdbcfc0bf9fdcec3498a6d2f75342fdc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086812"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Instalación de SSMA para MySQL (MySqlToSql)
@@ -30,7 +30,7 @@ Si desea actualizar a una versión posterior de SSMA para MySQL, primero debe de
   
 |||  
 |-|-|  
-|**Tema.**|**Descripción**|  
+|**Tema**|**Descripción**|  
 |[Instalación de SSMA para MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Proporciona información e instrucciones para instalar el cliente de SSMA.|  
 |[Instalación de componentes de SSMA en SQL Server (MySQL to SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Proporciona información e instrucciones para instalar el paquete de extensión en las instancias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.|  
 |[Quitar los componentes de SSMA para MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Proporciona instrucciones para desinstalar el programa cliente.|  

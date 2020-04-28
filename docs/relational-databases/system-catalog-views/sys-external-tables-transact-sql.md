@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054316"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>Sys. external_tables (Transact-SQL)
@@ -30,18 +30,18 @@ ms.locfileid: "68054316"
 |uses_ansi_nulls|**bit**|La tabla se creó con la opción de base de datos SET ANSI_NULLS establecida en ON.||  
 |data_source_id|**int**|IDENTIFICADOR de objeto del origen de datos externo.||  
 |file_format_id|**int**|En el caso de las tablas externas a través de un origen de datos externo de HADOOP, es el identificador de objeto del formato de archivo externo.||  
-|location|**nvarchar(4000)**|En el caso de las tablas externas a través de un origen de datos externo de HADOOP, esta es la ruta de acceso de los datos externos en HDFS.||  
+|ubicación|**nvarchar(4000)**|En el caso de las tablas externas a través de un origen de datos externo de HADOOP, esta es la ruta de acceso de los datos externos en HDFS.||  
 |reject_type|**tinyint**|En el caso de las tablas externas a través de un origen de datos externo de HADOOP, esta es la forma en que se cuentan las filas rechazadas al consultar los datos externos.|VALOR: el número de filas rechazadas.<br /><br /> PORCENTAJE: el porcentaje de filas rechazadas.|  
 |reject_value|**float**|Para tablas externas a través de un origen de datos externo de HADOOP:<br /><br /> Para *reject_type =* valor, es el número de rechazos de filas que se permiten antes de que se produzca un error en la consulta.<br /><br /> En *reject_type* = Percentage, es el porcentaje de rechazos de filas que se permiten antes de que se produzca un error en la consulta.||  
 |reject_sample_value|**int**|En *reject_type* = Percentage, es el número de filas que se van a cargar, ya sea correcta o incorrectamente, antes de calcular el porcentaje de filas rechazadas.|NULL si reject_type = valor.|  
 |distribution_type|**int**|En el caso de las tablas externas en un SHARD_MAP_MANAGER origen de datos externo, se trata de la distribución de datos de las filas en las tablas base subyacentes.|0-particionado<br /><br /> 1-replicado<br /><br /> 2-Round Robin|  
-|distribution_desc|**nvarchar (120)**|En el caso de las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, este es el tipo de distribución que se muestra como una cadena.||  
+|distribution_desc|**nvarchar(120)**|En el caso de las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, este es el tipo de distribución que se muestra como una cadena.||  
 |sharding_column_id|**int**|En el caso de las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER y una distribución particionada, este es el ID. de columna de la columna que contiene los valores de clave de particionamiento.||  
 |remote_schema_name|**sysname**|En el caso de las tablas externas a través de un origen de datos externo SHARD_MAP_MANAGER, este es el esquema en el que la tabla base se encuentra en las bases de datos remotas (si es diferente del esquema en el que se define la tabla externa).||  
 |remote_object_name|**sysname**|En el caso de las tablas externas en un SHARD_MAP_MANAGER origen de datos externo, es el nombre de la tabla base en las bases de datos remotas (si es diferente del nombre de la tabla externa).||  
   
 ## <a name="permissions"></a>Permisos  
- La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso.  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   

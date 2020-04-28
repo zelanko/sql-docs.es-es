@@ -16,10 +16,10 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075751"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
@@ -46,7 +46,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |-----------|-----------------|  
 |**introducir**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción INSERT.|  
 |**Update**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción UPDATE.|  
-|**elimínelos**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción DELETE.|  
+|**delete**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción DELETE.|  
 |**custom_script**|El script se ejecuta al final del desencadenador de lenguaje de definición de datos (DDL).|  
   
 `[ @value = ] 'value'`Nombre de un procedimiento almacenado o nombre y ruta de acceso completa al archivo [!INCLUDE[tsql](../../includes/tsql-md.md)] de script que se está registrando. el *valor* es **nvarchar (1024)** y no tiene ningún valor predeterminado.  

@@ -19,10 +19,10 @@ ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091864"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
@@ -41,20 +41,20 @@ ms.locfileid: "68091864"
 |**backed_up_page_count**|**Numeric (10, 0)**|Número de páginas incluidas en la copia de seguridad. Puede ser NULL.|  
 |**file_type**|**Char (1)**|Archivo incluido en la copia de seguridad; uno de los siguientes:<br /><br /> D = Archivo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Archivo de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catálogo de texto completo.<br /><br /> Puede ser NULL.|  
 |**source_file_block_size**|**Numeric (10, 0)**|Dispositivo en el que se encontraba el archivo de datos o de registro original cuando se hizo la copia de seguridad del mismo. Puede ser NULL.|  
-|**file_size**|**Numeric (20, 0)**|Longitud en bytes del archivo del que se hace una copia de seguridad. Puede ser NULL.|  
+|**file_size**|**numeric(20,0)**|Longitud en bytes del archivo del que se hace una copia de seguridad. Puede ser NULL.|  
 |**logical_name**|**nvarchar(128)**|Nombre lógico del archivo del que se hace una copia de seguridad. Puede ser NULL.|  
 |**physical_drive**|**nvarchar(260)**|Unidad física o nombre de partición. Puede ser NULL.|  
 |**physical_name**|**nvarchar(260)**|Resto del nombre de archivo físico (del sistema operativo). Puede ser NULL.|  
-|**State**|**tinyint**|Estado del archivo, uno de los siguientes:<br /><br /> 0 = Con conexión <br /><br /> 1 = En restauración <br /><br /> 2 = En recuperación <br /><br /> 3 = Recuperación pendiente <br /><br /> 4 = Sospechoso <br /><br /> 6 = Sin conexión <br /><br /> 7 = Inactivo<br /><br /> 8 = QUITADO<br /><br /> Nota: el valor 5 se omite para que estos valores se correspondan con los valores de los Estados de la base de datos.|  
+|**state**|**tinyint**|Estado del archivo, uno de los siguientes:<br /><br /> 0 = Con conexión <br /><br /> 1 = En restauración <br /><br /> 2 = En recuperación <br /><br /> 3 = Recuperación pendiente <br /><br /> 4 = Sospechoso <br /><br /> 6 = Sin conexión <br /><br /> 7 = Inactivo<br /><br /> 8 = QUITADO<br /><br /> Nota: el valor 5 se omite para que estos valores se correspondan con los valores de los Estados de la base de datos.|  
 |**state_desc**|**nvarchar (64)**|Descripción del estado del archivo, uno de los siguientes:<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT OFFLINE DEFUNCT|  
-|**create_lsn**|**Numeric (25, 0)**|Número de secuencia de registro en el que se creó el archivo.|  
-|**drop_lsn**|**Numeric (25, 0)**|Número de flujo de registro en el que se quitó el archivo. Puede ser NULL.<br /><br /> Si el archivo no se ha quitado, este valor es NULL.|  
+|**create_lsn**|**numeric(25,0)**|Número de secuencia de registro en el que se creó el archivo.|  
+|**drop_lsn**|**numeric(25,0)**|Número de flujo de registro en el que se quitó el archivo. Puede ser NULL.<br /><br /> Si el archivo no se ha quitado, este valor es NULL.|  
 |**file_guid**|**uniqueidentifier**|Identificador único del archivo.|  
-|**read_only_lsn**|**Numeric (25, 0)**|Número de flujo de registro en el que el grupo de archivos que contiene el archivo cambió de lectura/escritura a solo lectura (el cambio más reciente). Puede ser NULL.|  
-|**read_write_lsn**|**Numeric (25, 0)**|Número de secuencia de registro en el que el grupo de archivos que contiene el archivo cambió de solo lectura a lectura/escritura (el cambio más reciente). Puede ser NULL.|  
-|**differential_base_lsn**|**Numeric (25, 0)**|LSN de base para copias de seguridad diferenciales. Una copia de seguridad diferencial solo incluye las extensiones de datos que tienen un número de secuencia de registro igual o mayor que **differential_base_lsn**.<br /><br /> Para otros tipos de copia de seguridad, el valor es NULL.|  
+|**read_only_lsn**|**numeric(25,0)**|Número de flujo de registro en el que el grupo de archivos que contiene el archivo cambió de lectura/escritura a solo lectura (el cambio más reciente). Puede ser NULL.|  
+|**read_write_lsn**|**numeric(25,0)**|Número de secuencia de registro en el que el grupo de archivos que contiene el archivo cambió de solo lectura a lectura/escritura (el cambio más reciente). Puede ser NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|LSN de base para copias de seguridad diferenciales. Una copia de seguridad diferencial solo incluye las extensiones de datos que tienen un número de secuencia de registro igual o mayor que **differential_base_lsn**.<br /><br /> Para otros tipos de copia de seguridad, el valor es NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Para una copia de seguridad diferencial, el identificador único de la copia de seguridad de datos más reciente que forma la base diferencial del archivo; si el valor es NULL, el archivo se incluyó en la copia de seguridad diferencial (pero se agregó después de que se creara la base).<br /><br /> Para otros tipos de copia de seguridad, el valor es NULL.|  
-|**backup_size**|**Numeric (20, 0)**|Tamaño en bytes de la copia de seguridad de este archivo.|  
+|**backup_size**|**numeric(20,0)**|Tamaño en bytes de la copia de seguridad de este archivo.|  
 |**filegroup_guid**|**uniqueidentifier**|Id. del grupo de archivos. Para buscar información del grupo de archivos en la tabla backupfilegroup, utilice **filegroup_guid** con **backup_set_id**.|  
 |**is_readonly**|**bit**|1 = El archivo es de solo lectura.|  
 |**is_present**|**bit**|1 = El archivo está incluido en el conjunto de copia de seguridad.|  
@@ -69,7 +69,7 @@ ms.locfileid: "68091864"
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [conjunto de &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

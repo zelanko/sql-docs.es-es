@@ -19,10 +19,10 @@ ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 87f471a91aad067dd1662f243cdbafd73d335979
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68099154"
 ---
 # <a name="sysdm_broker_forwarded_messages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68099154"
 |**from_service_name**|**nvarchar(512)**|Nombre del servicio que origina este mensaje. Acepta valores NULL.|  
 |**from_broker_instance**|**nvarchar(512)**|Identificador del agente que hospeda el servicio de donde viene este mensaje. Acepta valores NULL.|  
 |**adjacent_broker_address**|**nvarchar(512)**|Dirección de red a la que se envía este mensaje. Acepta valores NULL.|  
-|**message_sequence_number**|**BIGINT**|Número de secuencia del mensaje en el cuadro de diálogo. Acepta valores NULL.|  
+|**message_sequence_number**|**bigint**|Número de secuencia del mensaje en el cuadro de diálogo. Acepta valores NULL.|  
 |**message_fragment_number**|**int**|Si el mensaje de diálogo está fragmentado, es el número de fragmento que contiene este mensaje de transporte. Acepta valores NULL.|  
 |**hops_remaining**|**tinyint**|Número de veces que se puede retransmitir el mensaje antes de que llegue el destino final. Cada vez que se reenvía el mensaje, este número disminuye en 1. Acepta valores NULL.|  
 |**time_to_live**|**int**|Tiempo máximo en que el mensaje permanece activo. Cuando llega a 0, el mensaje se descarta. Acepta valores NULL.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68099154"
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker vistas de administración dinámica relacionadas &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

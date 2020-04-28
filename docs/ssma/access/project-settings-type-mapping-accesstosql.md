@@ -17,10 +17,10 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066659"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
@@ -45,18 +45,18 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |--------------------|------------------------|  
 |**binario\*[.. \*]**|**varbinary [\*]**|  
 |**boolean**|**bit**|  
-|**bytes**|**tinyint**|  
+|**byte**|**tinyint**|  
 |**monetaria**|**money**|  
 |**date**|**datetime**|  
-|**Decimal**|**float**|  
+|**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**tal**|**int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**Memorando**|**nvarchar(max)**|  
 |**memorando** -para Access 97|**ntext**|  
-|**sencilla**|**impuestos**|  
+|**single**|**real**|  
 |**texto [\*.. \*]**|**nvarchar [\*]**|  
 |**texto [\*.. ] \*** -para Access 97|**VARCHAR [\*]**|  
   
@@ -69,7 +69,7 @@ Haga clic para editar un tipo de datos en la lista asignación.
 **Remove**  
 Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
-**Restablecer valores predeterminados**  
+**Valores predeterminados**  
 Haga clic para restablecer todas las asignaciones de tipos de datos a los valores predeterminados de SSMA.  
   
 ## <a name="see-also"></a>Consulte también  

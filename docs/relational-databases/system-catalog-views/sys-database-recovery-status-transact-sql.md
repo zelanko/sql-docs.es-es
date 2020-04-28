@@ -20,10 +20,10 @@ ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e78b5a8640918291fc68e5b4882448b94a1b9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079524"
 ---
 # <a name="sysdatabase_recovery_status-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
@@ -44,10 +44,10 @@ ms.locfileid: "68079524"
 |**database_id**|**int**|Id. de la base de datos, único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**database_guid**|**uniqueidentifier**|Se utiliza para relacionar entre sí todos los archivos de una base de datos. Para que la base de datos se inicie de la forma esperada, todos los archivos deben tener este GUID en la página de encabezado. Solo una base de datos puede tener este GUID, aunque se pueden crear duplicados al copiar y adjuntar bases de datos. RESTORE siempre genera un nuevo GUID cuando se restaura una base de datos que todavía no existe.<br /><br /> NULL= La base de datos está sin conexión o no se va a iniciar.|  
 |**family_guid**|**uniqueidentifier**|Identificador de la familia de copias de seguridad de la base de datos para detectar estados de restauración coincidentes.<br /><br /> NULL = la base de datos está sin conexión o la base de datos no se iniciará.|  
-|**last_log_backup_lsn**|**Numeric (25, 0)**|El número de secuencia de registro inicial de la siguiente copia de seguridad de registros.<br /><br /> Si es NULL, no se puede realizar una copia de seguridad del registro de transacciones porque la base de datos está en una recuperación SIMPLE o porque no hay ninguna copia de seguridad de base de datos actual.|  
+|**last_log_backup_lsn**|**numeric(25,0)**|El número de secuencia de registro inicial de la siguiente copia de seguridad de registros.<br /><br /> Si es NULL, no se puede realizar una copia de seguridad del registro de transacciones porque la base de datos está en una recuperación SIMPLE o porque no hay ninguna copia de seguridad de base de datos actual.|  
 |**recovery_fork_guid**|**uniqueidentifier**|Identifica la bifurcación de recuperación actual en la que está activa la base de datos.<br /><br /> NULL= La base de datos está sin conexión o no se va a iniciar.|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Identificador de la bifurcación de recuperación inicial.<br /><br /> NULL= La base de datos está sin conexión o no se va a iniciar.|  
-|**fork_point_lsn**|**Numeric (25, 0)**|Si **first_recovery_fork_guid** no es igual a **recovery_fork_guid**, **fork_point_lsn** es el número de secuencia de registro del punto de bifurcación actual. En caso contrario, el valor es NULL.|  
+|**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** no es igual a **recovery_fork_guid**, **fork_point_lsn** es el número de secuencia de registro del punto de bifurcación actual. En caso contrario, el valor es NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "68079524"
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Vistas de catálogo de archivos y bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTOre HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

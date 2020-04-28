@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074811"
 ---
 # <a name="identifiers-dmx"></a>Identificadores (DMX)
@@ -28,7 +28,7 @@ ms.locfileid: "68074811"
   
  El identificador de un objeto se crea cuando se define el objeto. Así puede utilizar el identificador para hacer referencia al objeto. Los identificadores pueden tener 100 caracteres como máximo.  
   
-##  <a name="RegularIdentifiers"></a>Identificadores normales  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Identificadores normales  
  Los identificadores normales de DMX siguen las reglas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] respecto al formato de identificadores. Los identificadores normales de DMX no requieren delimitadores. A continuación se encuentra un ejemplo de una instrucción DMX que utiliza un identificador normal no delimitado:  
   
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM Clustering.CONTENT;
   
  Deberá escribir entre corchetes los identificadores que no sigan estas reglas cuando los emplee en instrucciones DMX.  
   
-##  <a name="DelimitedIdentifiers"></a>Identificadores delimitados  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Identificadores delimitados  
  Los identificadores delimitados se escriben entre corchetes ([ ]).  A continuación, figura un ejemplo de una instrucción DMX que utiliza un identificador delimitado que sigue las reglas.  
   
 ```  
@@ -79,8 +79,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Cuando utilice caracteres no considerados como identificadores aceptados.  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permite que se utilice cualquier carácter de la página de códigos actual en identificadores delimitados; no obstante, el uso indiscriminado de caracteres especiales en un nombre de objeto puede dificultar la lectura y el mantenimiento de las instrucciones DMX.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permite que se utilice cualquier carácter de la página de códigos actual en identificadores delimitados; no obstante, el uso indiscriminado de caracteres especiales en un nombre de objeto puede dificultar la lectura y el mantenimiento de las instrucciones DMX.  
   
 ### <a name="rules-for-delimited-identifiers"></a>Reglas para los identificadores delimitados  
  A continuación, figuran las reglas de formato de los identificadores delimitados:  

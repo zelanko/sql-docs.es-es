@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098524"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definición de datos de MDX: ALTER CUBE
@@ -91,7 +91,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Expresión de cadena válida que proporciona el nombre del nivel primario del nuevo miembro de dimensión, a menos que el miembro de dimensión se cree en la raíz.  
   
- *NombreDeMiembro*  
+ *MemberName*  
  Expresión de cadena válida que proporciona un nombre de miembro.  
   
  *Key_Value*  
@@ -139,7 +139,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Expresión de cadena válida que proporciona el nombre del nuevo elemento primario del miembro de dimensión que se está moviendo.  
   
- *NombreDeMiembro*  
+ *MemberName*  
  Expresión de cadena válida que proporciona un nombre de miembro.  
   
  Unsigned_*entero*  
@@ -151,7 +151,7 @@ CELL CALCULATION Calculation_Name
  La cláusula UPDATE DIMENSION MEMBER permite modificar propiedades de un miembro, además de la fórmula de miembro personalizada asociada a un miembro.  
   
 ### <a name="arguments"></a>Argumentos  
- *NombreDeMiembro*  
+ *MemberName*  
  Expresión de cadena válida que proporciona un nombre de miembro.  
   
  *MDX_Expression*  

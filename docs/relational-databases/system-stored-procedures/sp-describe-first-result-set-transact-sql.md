@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053049"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
@@ -66,7 +66,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|Indica que la columna es una columna adicional agregada para examinar el propósito de la información y que no aparece realmente en el conjunto de resultados.|  
 |**column_ordinal**|**int NOT NULL**|Contiene la posición ordinal de la columna en el conjunto de resultados. La posición de la primera columna se especificará como 1.|  
-|**Name**|**sysname NULL**|Contiene el nombre de la columna si se puede determinar uno. De lo contrario, contendrá NULL.|  
+|**name**|**sysname NULL**|Contiene el nombre de la columna si se puede determinar uno. De lo contrario, contendrá NULL.|  
 |**is_nullable**|**bit NOT NULL**|Contiene el valor 1 si la columna permite valores NULL, 0 si la columna no permite valores NULL y 1 si no se puede determinar si la columna permite valores NULL.|  
 |**system_type_id**|**int NOT NULL**|Contiene el system_type_id del tipo de datos de la columna tal y como se especifica en sys. types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar (256) NULL**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo definido por el usuario de CLR, NULL se devuelve en esta columna.|  
@@ -99,10 +99,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**ordinal_in_order_by_list**|**smallint NULL**|Posición de esta columna en la lista ORDER BY. Devuelve NULL si la columna no aparece en la lista ORDER BY o si la lista ORDER BY no se puede determinar de forma única.|  
 |**order_by_list_length**|**smallint NULL**|Longitud de la lista de ORDER BY. Devuelve NULL si no hay ninguna lista ORDER BY o si no se puede determinar la lista ORDER BY singularmente. Tenga en cuenta que este valor será el mismo para todas las filas devueltas por **sp_describe_first_result_set.**|  
 |**order_by_is_descending**|**smallint NULL**|Si ordinal_in_order_by_list no es NULL, la columna **order_by_is_descending** notifica la dirección de la cláusula ORDER BY para esta columna. De lo contrario, notifica NULL.|  
-|**tds_type_id**|**int NOT NULL**|Solo para uso interno.|  
-|**tds_length**|**int NOT NULL**|Solo para uso interno.|  
-|**tds_collation_id**|**int NULL**|Solo para uso interno.|  
-|**tds_collation_sort_id**|**tinyint NULL**|Solo para uso interno.|  
+|**tds_type_id**|**int NOT NULL**|Para uso interno.|  
+|**tds_length**|**int NOT NULL**|Para uso interno.|  
+|**tds_collation_id**|**int NULL**|Para uso interno.|  
+|**tds_collation_sort_id**|**tinyint NULL**|Para uso interno.|  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_describe_first_result_set** garantiza que, si el procedimiento devuelve los metadatos del primer conjunto de resultados de un lote hipotético a y, si ese lote (a) se ejecuta posteriormente, el lote (1) generará un error en tiempo de optimización. (2) genera un error en tiempo de ejecución, (3) no devuelve ningún conjunto de resultados o (4) devuelve un primer conjunto de resultados con los mismos metadatos descritos por **sp_describe_first_result_set**.  

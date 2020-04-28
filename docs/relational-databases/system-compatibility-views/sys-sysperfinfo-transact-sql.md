@@ -21,10 +21,10 @@ ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e6ce86e7be7d54e95c2336691b53ea12ff0d8575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076506"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "68076506"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**NCHAR (128)**|Nombre de objeto de rendimiento, como **SQLServer: LockManager** o **SQLServer: BufferManager**.|  
-|**counter_name**|**NCHAR (128)**|Nombre del contador de rendimiento dentro del objeto, como **solicitudes de páginas** o **bloqueos solicitados**.|  
-|**instance_name**|**NCHAR (128)**|Instancia con nombre del contador. Por ejemplo, hay contadores que se mantienen para cada tipo de bloqueo, como **tabla**, **Página**, **clave**, etc. El nombre de instancia permite distinguir entre contadores similares.|  
-|**cntr_value**|**BIGINT**|Valor del contador. Con frecuencia, será un nivel o un contador que se incrementa continuamente y que cuenta las veces que se produce el evento de la instancia.|  
+|**object_name**|**nchar(128)**|Nombre de objeto de rendimiento, como **SQLServer: LockManager** o **SQLServer: BufferManager**.|  
+|**counter_name**|**nchar(128)**|Nombre del contador de rendimiento dentro del objeto, como **solicitudes de páginas** o **bloqueos solicitados**.|  
+|**instance_name**|**nchar(128)**|Instancia con nombre del contador. Por ejemplo, hay contadores que se mantienen para cada tipo de bloqueo, como **tabla**, **Página**, **clave**, etc. El nombre de instancia permite distinguir entre contadores similares.|  
+|**cntr_value**|**bigint**|Valor del contador. Con frecuencia, será un nivel o un contador que se incrementa continuamente y que cuenta las veces que se produce el evento de la instancia.|  
 |**cntr_type**|**int**|Tipo de contador definido en la arquitectura de rendimiento de Windows.|  
   
 ## <a name="see-also"></a>Consulte también  

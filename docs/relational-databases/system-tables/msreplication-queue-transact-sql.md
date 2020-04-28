@@ -18,10 +18,10 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68080014"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68080014"
 |**publisher_db**|**sysname**|Nombre de la base de datos de publicación.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**tranid**|**sysname**|Id. de transacción bajo el que se ha ejecutado el comando en cola.|  
-|**Data**|**varbinary (8000)**|Secuencia de bytes empaquetados que almacena información acerca del comando en cola.|  
+|**datos**|**varbinary(8000)**|Secuencia de bytes empaquetados que almacena información acerca del comando en cola.|  
 |**datalen**|**int**|Longitud de los datos, en bytes.|  
 |**CommandType**|**int**|Tipo de comando en la cola:<br /><br /> 1 = Comando de usuario en la transacción.<br /><br /> 2 = Comando de sincronización de suscripción.|  
 |**insertdate**|**datetime**|Fecha de inserción.|  
-|**orderkey**|**BIGINT**|Columna de identidad con una progresión continua.|  
+|**orderkey**|**bigint**|Columna de identidad con una progresión continua.|  
 |**cmdstate**|**bit**|Estado del comando:<br /><br /> 0 = Completo.<br /><br /> 1 = Parcial.|  
   
 ## <a name="see-also"></a>Consulte también  

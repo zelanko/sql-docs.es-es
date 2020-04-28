@@ -18,10 +18,10 @@ ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088580"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "68088580"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8**|Dirección de memoria de la estructura del esquema en caché de la tabla de artículos publicada.|  
-|**tabid**|**BIGINT**|Id. de la tabla replicada.|  
+|**tabid**|**bigint**|Id. de la tabla replicada.|  
 |**indexid**|**smallint**|Id. de un índice clúster en la tabla publicada.|  
-|**idSch**|**BIGINT**|Id. del esquema de tabla.|  
+|**idSch**|**bigint**|Id. del esquema de tabla.|  
 |**tabschema**|**nvarchar (510)**|Nombre del esquema de tabla.|  
 |**ccTabschema**|**smallint**|Longitud en caracteres del esquema de tabla.|  
 |**tabname**|**nvarchar (510)**|Nombre de la tabla publicada.|  
 |**ccTabname**|**smallint**|Longitud en caracteres del nombre de la tabla publicada.|  
-|**rowsetid_delete**|**BIGINT**|Id. de la fila eliminada.|  
-|**rowsetid_insert**|**BIGINT**|Id. de la fila insertada.|  
+|**rowsetid_delete**|**bigint**|Id. de la fila eliminada.|  
+|**rowsetid_insert**|**bigint**|Id. de la fila insertada.|  
 |**num_pk_cols**|**int**|Número de columnas de clave principal.|  
 |**pcitee**|**binario (8000)**|Puntero a la estructura de expresión de consulta usada para evaluar la columna calculada.|  
 |**re_numtextcols**|**int**|Número de columnas de objetos binarios grandes en la tabla replicada.|  
@@ -56,14 +56,14 @@ ms.locfileid: "68088580"
 |**re_maxlen**|**smallint**|Longitud máxima de la columna publicada.|  
 |**re_prec**|**tinyint**|Precisión de la columna publicada.|  
 |**re_scale**|**tinyint**|Escala de la columna publicada.|  
-|**re_collatid**|**BIGINT**|Id. de intercalación de la columna publicada.|  
+|**re_collatid**|**bigint**|Id. de intercalación de la columna publicada.|  
 |**re_xvtype**|**smallint**|Tipo de la columna publicada.|  
 |**re_offset**|**smallint**|Desplazamiento de la columna publicada.|  
 |**re_bitpos**|**tinyint**|Posición de bit de la columna publicada, en el vector de bytes.|  
 |**re_fNullable**|**tinyint**|Especifica si la columna publicada admite valores NULL.|  
 |**re_fAnsiTrim**|**tinyint**|Especifica si se utiliza el recorte ANSI en la columna publicada.|  
 |**re_computed**|**smallint**|Especifica si la columna publicada es una columna calculada.|  
-|**se_rowsetid**|**BIGINT**|Id. del conjunto de filas.|  
+|**se_rowsetid**|**bigint**|Id. del conjunto de filas.|  
 |**se_schema_lsn_begin**|**binario (8000)**|Inicio del LSN del registro de versiones del esquema.|  
 |**se_schema_lsn_end**|**binario (8000)**|Fin del LSN del registro de versiones del esquema.|  
 |**se_numcols**|**int**|Número de columnas.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68088580"
 |**se_maxlen**|**smallint**|Longitud máxima de la columna.|  
 |**se_prec**|**tinyint**|Precisión de la columna.|  
 |**se_scale**|**tinyint**|Escala de la columna.|  
-|**se_collatid**|**BIGINT**|Id. de intercalación de la columna.|  
+|**se_collatid**|**bigint**|Id. de intercalación de la columna.|  
 |**se_xvtype**|**smallint**|Tipo de la columna.|  
 |**se_offset**|**smallint**|Desplazamiento de la columna.|  
 |**se_bitpos**|**tinyint**|Posición de bit de la columna, en el vector de bytes.|  

@@ -20,10 +20,10 @@ ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8742ebefab7a4b826eac0088a2d57f022a27715b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68073184"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68073184"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**las**|**tinyint**|Identifica la clase de la entidad a la que se hace referencia:<br /><br /> 0 = objeto o columna (solo referencias no enlazadas a esquema)<br /><br /> 0 = Objeto o columna (referencias enlazadas a esquemas)<br /><br /> 2 = Tipos (referencias enlazadas a esquemas)<br /><br /> 3 = Colecciones de esquemas XML (referencias enlazadas a esquemas)<br /><br /> 4 = Función de partición (referencias enlazadas a esquemas)|  
-|**class_desc**|**nvarchar (60)**|Descripción de la clase de la entidad a la que se hace referencia:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
+|**class**|**tinyint**|Identifica la clase de la entidad a la que se hace referencia:<br /><br /> 0 = objeto o columna (solo referencias no enlazadas a esquema)<br /><br /> 0 = Objeto o columna (referencias enlazadas a esquemas)<br /><br /> 2 = Tipos (referencias enlazadas a esquemas)<br /><br /> 3 = Colecciones de esquemas XML (referencias enlazadas a esquemas)<br /><br /> 4 = Función de partición (referencias enlazadas a esquemas)|  
+|**class_desc**|**nvarchar(60)**|Descripción de la clase de la entidad a la que se hace referencia:<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  
 |**object_id**|**int**|Id. del objeto que hace la referencia.|  
 |**column_id**|**int**|Si el Id. que hace la referencia es una columna, se obtiene el Id. de la columna que hace la referencia; en caso contrario, el valor es 0.|  
 |**referenced_major_id**|**int**|Id. de la entidad a la que se hace referencia, interpretado por el valor de clase de acuerdo con:<br /><br /> 0, 1 = Id. de objeto del objeto o la columna.<br /><br /> 2 = Id. del tipo.<br /><br /> 3 = Id. de la colección de esquemas XML.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68073184"
 |**is_select_all**|**bit**|El objeto se utiliza en la cláusula SELECT* (solo nivel de objeto).|  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Debe pertenecer al rol **public** .  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

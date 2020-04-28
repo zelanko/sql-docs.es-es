@@ -15,10 +15,10 @@ ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7bc13897797e8f782a1dbe83401fa658107eb5b8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177395"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Crear un atributo basado en dominio (Master Data Services)
@@ -32,7 +32,7 @@ ms.locfileid: "78177395"
 
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .
 
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
 
 -   Debe existir una entidad para utilizarse como origen de los valores de atributo. Por ejemplo, para crear un atributo basado en dominio en la entidad Color, primero debe crear esta. Para obtener más información, vea [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
 
@@ -43,7 +43,7 @@ ms.locfileid: "78177395"
 
 |Columna|Descripción|
 |------------|-----------------|
-|Status|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|
+|Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|
 |Nombre|El nombre del atributo.|
 |Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|
 |Descripción|Descripción del atributo.|
@@ -53,13 +53,13 @@ ms.locfileid: "78177395"
 
  Cuando se hace clic en un atributo, se muestra la siguiente información.
 
--   **Creado por**: el nombre del usuario que creó el atributo.
+-   **Creado por:** nombre del usuario que creó el atributo.
 
--   El: fecha y hora **en**que se creó el atributo.
+-   **El**: fecha y hora en que se creó el atributo.
 
--   **Actualizado por**: el nombre del usuario que actualizó el atributo por última vez.
+-   **Actualizado por**: nombre del último usuario que actualizó el atributo.
 
--   El: fecha y hora **en**que se actualizó por última vez el atributo.
+-   **El**: fecha y hora en que se actualizó el atributo por última vez.
 
 ### <a name="to-create-a-domain-based-attribute"></a>Crear un atributo basado en dominio
 
@@ -79,7 +79,7 @@ ms.locfileid: "78177395"
 
     -   Si el atributo es para colecciones, seleccione **Colección** en el cuadro de lista **Member Types** (Tipos de miembro).
 
-6.  En el cuadro **Nombre** , escriba un nombre para el atributo. Para obtener una lista de palabras que no se deben usar como nombres de atributo, consulte [palabras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)
+6.  En el cuadro **Nombre** , escriba un nombre para el atributo. Para ver una lista de palabras que no se deben usar como nombres de atributo, consulte [Palabras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md)
 
 7.  Opcionalmente, escriba un nombre para mostrar y una descripción en el cuadro **Descripción** .
 
@@ -89,7 +89,7 @@ ms.locfileid: "78177395"
 
 10. En la lista **Entidad del dominio** , elija la entidad que se va a usar para rellenar los valores de atributo. 
 
-11. **Opcional, para los atributos basados en dominio para los miembros hoja.** Seleccione un atributo primario de filtro que se use para restringir los valores permitidos en el atributo basado en dominio.
+11. **Opcional, para atributos basados en dominio de miembros hoja.** Seleccione un atributo primario de filtro que se use para restringir los valores permitidos en el atributo basado en dominio.
 
      El atributo primario de filtro debe ser otro atributo basado en dominio para un miembro hoja, dentro de la misma entidad. Debe existir una jerarquía derivada con un nivel que defina la relación primario-secundario entre las entidades de dominio de los dos atributos.
 

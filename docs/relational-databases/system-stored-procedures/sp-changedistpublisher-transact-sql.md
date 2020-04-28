@@ -16,10 +16,10 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771363"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -55,11 +55,11 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Propiedad|Valores|Descripción|  
 |--------------|------------|-----------------|  
-|**Active**|**reales**|Activa el publicador.|  
-||**es**|Desactiva el publicador.|  
+|**active**|**true**|Activa el publicador.|  
+||**false**|Desactiva el publicador.|  
 |**distribution_db**||Nombre de la base de datos de distribución.|  
 |**Inicio**||Nombre de inicio de sesión.|  
-|**contraseña**||Contraseña segura para el inicio de sesión que se ha proporcionado.|  
+|**password**||Contraseña segura para el inicio de sesión que se ha proporcionado.|  
 |**security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador. *No se puede cambiar para un publicador que no sea de* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador. *No se puede cambiar para un publicador que no sea de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
 |**working_directory**||Directorio de trabajo utilizado para almacenar archivos de datos y esquemas para la publicación.|  

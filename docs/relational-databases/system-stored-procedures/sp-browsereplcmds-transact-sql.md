@@ -16,10 +16,10 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768996"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -71,13 +71,13 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_srvname**|**sysname**|Servidor en el que se originó la transacción.|  
 |**originator_db**|**sysname**|Base de datos en la que se originó la transacción.|  
 |**article_id**|**int**|IDENTIFICADOR del artículo.|  
-|**automáticamente**|**int**|Tipo de comando.|  
+|**type**|**int**|Tipo de comando.|  
 |**partial_command**|**bit**|Indica si se trata de un comando parcial.|  
 |**hashkey**|**int**|Exclusivamente para uso interno.|  
 |**originator_publication_id**|**int**|Id. de la publicación en la que se originó la transacción.|  
 |**originator_db_version**|**int**|Versión de la base de datos en la que se originó la transacción.|  
 |**originator_lsn**|**varbinary(16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina. Se usa en la replicación transaccional punto a punto.|  
-|**Command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]Command.|  
+|**Command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |**command_id**|**int**|IDENTIFICADOR del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Los comandos largos se pueden dividir en varias filas en el conjunto de resultados.  
@@ -89,7 +89,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Solo los miembros del rol fijo de servidor **sysadmin** o los miembros de los roles fijos de base de datos **db_owner** o **replmonitor** en la base de datos de distribución pueden ejecutar **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

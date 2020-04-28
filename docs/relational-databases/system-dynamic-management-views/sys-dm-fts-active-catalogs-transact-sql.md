@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265966"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
@@ -41,12 +41,12 @@ ms.locfileid: "68265966"
 |**database_id**|**int**|Id. de la base de datos que contiene el catálogo de texto completo activo.|  
 |**catalog_id**|**int**|Id. del catálogo de texto completo activo.|  
 |**memory_address**|**varbinary(8**|Dirección de búferes de memoria asignados para la actividad de llenado relacionada con este catálogo de texto completo.|  
-|**Name**|**nvarchar(128)**|Nombre del catálogo de texto completo activo.|  
+|**name**|**nvarchar(128)**|Nombre del catálogo de texto completo activo.|  
 |**is_paused**|**bit**|Indica si el llenado del catálogo de texto completo activo se ha pausado.|  
-|**estatus**|**int**|Estado actual del catálogo de texto completo. Uno de los siguientes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Preparado<br /><br /> 2 = En pausa<br /><br /> 3 = Error temporal<br /><br /> 4 = Necesario volver a montar<br /><br /> 5 = Apagado<br /><br /> 6 = En modo inactivo para copia de seguridad<br /><br /> 7 = La copia de seguridad se realiza a través del catálogo<br /><br /> 8 = El catálogo está dañado|  
-|**status_description**|**nvarchar (120)**|Descripción del estado actual del catálogo de texto completo activo.|  
+|**status**|**int**|Estado actual del catálogo de texto completo. Uno de los siguientes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Preparado<br /><br /> 2 = En pausa<br /><br /> 3 = Error temporal<br /><br /> 4 = Necesario volver a montar<br /><br /> 5 = Apagado<br /><br /> 6 = En modo inactivo para copia de seguridad<br /><br /> 7 = La copia de seguridad se realiza a través del catálogo<br /><br /> 8 = El catálogo está dañado|  
+|**status_description**|**nvarchar(120)**|Descripción del estado actual del catálogo de texto completo activo.|  
 |**previous_status**|**int**|Estado anterior del catálogo de texto completo. Uno de los siguientes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Preparado<br /><br /> 2 = En pausa<br /><br /> 3 = Error temporal<br /><br /> 4 = Necesario volver a montar<br /><br /> 5 = Apagado<br /><br /> 6 = En modo inactivo para copia de seguridad<br /><br /> 7 = La copia de seguridad se realiza a través del catálogo<br /><br /> 8 = El catálogo está dañado|  
-|**previous_status_description**|**nvarchar (120)**|Descripción del estado anterior del catálogo de texto completo activo.|  
+|**previous_status_description**|**nvarchar(120)**|Descripción del estado anterior del catálogo de texto completo activo.|  
 |**worker_count**|**int**|Número de subprocesos que trabajan actualmente en este catálogo de texto completo.|  
 |**active_fts_index_count**|**int**|Número de índices de texto completo que se van a rellenar.|  
 |**auto_population_count**|**int**|Número de tablas con un rellenado automático en curso para este catálogo de texto completo.|  
@@ -68,7 +68,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno a uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno a uno|  

@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153400"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lección 4: Realizar una restauración desde una copia de seguridad completa de la base de datos
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lección 4: Realización de una restauración desde una copia de seguridad completa de la base de datos
   En esta lección se muestra el uso de una instrucción tsql para realizar una restauración desde una copia de seguridad completa de la base de datos creada en la lección anterior.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Realizar una restauración de una copia de seguridad de la base de datos  
@@ -40,7 +40,7 @@ ms.locfileid: "70153400"
   
     ```  
   
-5.  Compruebe la instrucción T-SQL y haga clic en **Ejecutar** .  
+5.  Compruebe la instrucción T-SQL y haga clic en **Ejecutar**.  
   
 ### <a name="return-to-tutorials-portal"></a>Volver al portal de tutoriales  
  [Tutorial: SQL Server copias de seguridad y restauración en Azure BLOB Storage Service](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154341"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurar la copia de seguridad administrada (SQL Server Management Studio)
@@ -29,7 +29,7 @@ ms.locfileid: "70154341"
   
 ## <a name="task-list"></a>Lista de tareas  
   
-## <a name="includess_smartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>Funciones de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con la interfaz de copias de seguridad administradas en SQL Server Management Studio  
+## <a name="ss_smartbackup-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>Funciones de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con la interfaz de copias de seguridad administradas en SQL Server Management Studio  
  En esta versión, solo puede configurar las opciones predeterminadas de nivel de instancia con la interfaz **Copia de seguridad de administración**. No se puede configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para una base de datos, pausar o reanudar las operaciones de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ni configurar notificaciones de correo electrónico. Para obtener información sobre cómo realizar operaciones que no se admiten actualmente a través de la interfaz de **copia de seguridad administrada** , vea [SQL Server la configuración de la retención y almacenamiento de Azure](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ## <a name="permissions"></a>Permisos  
@@ -43,12 +43,11 @@ ms.locfileid: "70154341"
   
 -   `VIEW ANY DEFINITION`  
   
--   `EXECUTE`en `smart_admin.fn_is_master_switch_on`.  
+-   `EXECUTE` en `smart_admin.fn_is_master_switch_on`.  
   
--   `SELECT`en `smart_admin.fn_backup_instance_config`.  
+-   `SELECT` en `smart_admin.fn_backup_instance_config`.  
   
- 
-  **Configurar Copia de seguridad administrada:** para configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] en SQL Server Management Studio, debe ser un administrador del sistema o tener los permisos siguientes:  
+ **Configurar Copia de seguridad administrada:** para configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] en SQL Server Management Studio, debe ser un administrador del sistema o tener los permisos siguientes:  
   
  Pertenencia en el rol de base de datos `db_backupoperator`, con permisos `ALTER ANY CREDENTIAL` y permisos `EXECUTE` en el procedimiento almacenado de `sp_delete_backuphistory`.  
   
@@ -58,8 +57,8 @@ ms.locfileid: "70154341"
   
  Permisos `EXECUTE` en `smart_admin.sp_set_instance_backup` y `smart_admin.sp_backup_master_switch`.  
   
-## <a name="configure-includess_smartbackupincludesss-smartbackup-mdmd-using-sql-server-management-studio"></a>Configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con SQL Server Management Studio  
- Desde el **Explorador de objetos**, expanda el nodo **Administración** y haga clic en **Copia de seguridad administrada**. Seleccione **configurar**. Esto abre el cuadro de diálogo **Copia de seguridad administrada**.  
+## <a name="configure-ss_smartbackup-using-sql-server-management-studio"></a>Configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con SQL Server Management Studio  
+ Desde el **Explorador de objetos**, expanda el nodo **Administración** y haga clic en **Copia de seguridad administrada**. Seleccione **Configurar**. Esto abre el cuadro de diálogo **Copia de seguridad administrada**.  
   
  Active la opción **Habilitar Copia de seguridad administrada** y especifique los valores de configuración:  
   

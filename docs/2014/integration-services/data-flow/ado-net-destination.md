@@ -16,16 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6126a352377e988c08a11211d12bb8bc77e93f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153967"
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
-  El destino ADO NET carga datos en una serie de bases de datos compatibles con [!INCLUDE[vstecado](../../includes/vstecado-md.md)] que usan una tabla o vista de base de datos. Tiene la opción de cargar estos datos en una tabla o vista existente, o bien puede crear una nueva tabla y cargar los datos en ella.  
+  El destino ADO NET carga datos en una serie de bases de datos compatibles con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que usan una tabla o vista de base de datos. Tiene la opción de cargar estos datos en una tabla o vista existente, o bien puede crear una nueva tabla y cargar los datos en ella.  
   
- Puede utilizar el destino de ADO NET para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. No se admite la conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante OLE DB. Para más información sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Instrucciones y limitaciones generales (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Puede usar el destino de ADO NET para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. No se admite la conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante OLE DB. Para más información sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Instrucciones y limitaciones generales (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Solucionar problemas del destino ADO NET  
  Puede registrar las llamadas realizadas por el destino ADO NET a proveedores de datos externos. Puede utilizar esta nueva capacidad de registro para solucionar problemas relacionados con el almacenamiento de datos en orígenes de datos externos que realiza el destino ADO NET. Para registrar las llamadas realizadas por el destino ADO NET a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -36,11 +36,10 @@ ms.locfileid: "70153967"
  Un destino ADO NET incluye asignaciones entre columnas de entrada y columnas en el origen de datos de destino. No es preciso que asigne columnas de entrada a todas las columnas de destino. Sin embargo, las propiedades de algunas columnas de destino pueden requerir la asignación de columnas de entrada. De lo contrario, se podrían producir errores. Por ejemplo, si una columna de destino no permite valores NULL, se debe asignar una columna de entrada a esa columna de destino. Además, los tipos de datos de las columnas asignadas deben ser compatibles. Por ejemplo, no es posible asignar una columna de entrada con un tipo de datos de cadena a una columna de destino con un tipo de datos numéricos si el proveedor [!INCLUDE[vstecado](../../includes/vstecado-md.md)] no admite esta asignación.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite insertar texto en las columnas cuyo tipo de datos se haya establecido como imagen. Para obtener más información [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acerca de los tipos de datos, vea [tipos de datos &#40;&#41;de Transact-SQL ](/sql/t-sql/data-types/data-types-transact-sql).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite insertar texto en las columnas cuyo tipo de datos se haya establecido como imagen. Para obtener más información sobre los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
 > [!NOTE]  
->  El destino ADO NET no permite asignar una columna de entrada cuyo tipo sea DT_DBTIME a una columna de base de datos cuyo tipo sea datetime. Para obtener más información [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sobre los tipos de datos, vea [Integration Services tipos de datos](integration-services-data-types.md).  
+>  El destino ADO NET no permite asignar una columna de entrada cuyo tipo sea DT_DBTIME a una columna de base de datos cuyo tipo sea datetime. Para obtener más información sobre los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [Tipos de datos de Integration Services](integration-services-data-types.md).  
   
  El destino ADO NET tiene una entrada normal y una salida de error.  
   
@@ -50,13 +49,13 @@ ms.locfileid: "70153967"
   
 -   [Editor de destinos de ADO NET &#40;página Administrador de conexiones&#41;](../ado-net-destination-editor-connection-manager-page.md)  
   
--   [Editor de destinos de ADO NET &#40;página asignaciones&#41;](../ado-net-destination-editor-mappings-page.md)  
+-   [Editor de destinos de ADO NET &#40;página Asignaciones&#41;](../ado-net-destination-editor-mappings-page.md)  
   
--   [Editor de destinos de ADO NET &#40;página salida de error&#41;](../ado-net-destination-editor-error-output-page.md)  
+-   [Editor de destinos de ADO NET &#40;página Salida de error&#41;](../ado-net-destination-editor-error-output-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas de ADO NET](ado-net-custom-properties.md)  
   

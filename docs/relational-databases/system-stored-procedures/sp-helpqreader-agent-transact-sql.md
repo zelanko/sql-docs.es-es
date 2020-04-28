@@ -16,10 +16,10 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771420"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
@@ -43,8 +43,8 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|IDENTIFICADOR del agente.|  
-|**Name**|**nvarchar(100**|Nombre del agente.|  
+|**id**|**int**|IDENTIFICADOR del agente.|  
+|**name**|**nvarchar(100**|Nombre del agente.|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo del agente.|  
 |**job_login**|**nvarchar(512)**|Es la cuenta de Windows con la que se ejecuta el agente de distribución, que se devuelve con el formato *dominio*\\*nombreDeUsuario*.|  
 |**job_password**|**sysname**|Por motivos de seguridad, siempre se ** \* \* \* \* \* \* \* \* \* ** devuelve un valor de.|  
@@ -59,6 +59,6 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
  Cuando el valor de *frompublisher* es **1**, solo los miembros del rol fijo de servidor **sysadmin** en el publicador o los miembros del rol fijo de base de datos **db_owner** en la base de datos de publicación pueden ejecutar **sp_helpqreader_agent**. De lo contrario, solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor o los miembros del rol fijo de base de datos **db_owner** en la base de datos de distribución pueden ejecutar **sp_helpqreader_agent**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Habilitar suscripciones de actualización para publicaciones transaccionales](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+ [Habilitar suscripciones actualizables para publicaciones transaccionales](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

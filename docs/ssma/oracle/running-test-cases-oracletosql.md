@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266548"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ejecución de casos de prueba (OracleToSQL)
@@ -33,7 +33,7 @@ Una vez finalizada la prueba, se crea el informe de casos de prueba. Haga clic e
   
 ## <a name="test-case-execution-steps"></a>Pasos de ejecución del caso de prueba  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerrequisitos  
 SSMA Tester comprueba si se cumplen todos los requisitos previos para la ejecución de pruebas antes de iniciar la prueba. Si no se cumplen algunas condiciones, aparece un mensaje de error.  
   
 ### <a name="initialization"></a>Inicialización  

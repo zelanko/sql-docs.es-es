@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262213"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
@@ -36,41 +36,41 @@ ms.locfileid: "68262213"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador de base de datos en que reside el desencadenador.|  
 |**object_id**|**int**|Número de identificación del objeto del desencadenador.|  
-|**automáticamente**|**Char (2)**|Tipo del objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
-|**Type_desc**|**nvarchar (60)**|Descripción del tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**type**|**char(2)**|Tipo del objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
+|**Type_desc**|**nvarchar(60)**|Descripción del tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**sql_handle**|**varbinary (64)**|Se puede utilizar para correlacionar con las consultas de **Sys. dm_exec_query_stats** que se ejecutaron desde dentro de este desencadenador.|  
 |**plan_handle**|**varbinary (64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con la vista de administración dinámica **Sys. dm_exec_cached_plans** .|  
 |**cached_time**|**datetime**|Momento en que el desencadenador se agregó a la caché.|  
 |**last_execution_time**|**datetime**|Última vez que se ejecutó el desencadenador vez.|  
-|**execution_count**|**BIGINT**|Número de veces que se ha ejecutado el desencadenador desde que se compiló por última vez.|  
-|**total_worker_time**|**BIGINT**|Cantidad total de tiempo de CPU, en microsegundos, consumido por las ejecuciones de este desencadenador desde que se compiló.|  
-|**last_worker_time**|**BIGINT**|Tiempo de CPU, en microsegundos, consumido la última vez que se ejecutó el desencadenador.|  
-|**min_worker_time**|**BIGINT**|Tiempo máximo de CPU, en microsegundos, que ha consumido este desencadenador durante una ejecución.|  
-|**max_worker_time**|**BIGINT**|Tiempo máximo de CPU, en microsegundos, que ha consumido este desencadenador durante una ejecución.|  
-|**total_physical_reads**|**BIGINT**|Número total de lecturas físicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
-|**last_physical_reads**|**BIGINT**|Número de lecturas físicas realizadas la última vez que se ejecutó el desencadenador.|  
-|**min_physical_reads**|**BIGINT**|Número mínimo de lecturas físicas que ha realizado este desencadenador durante una ejecución.|  
-|**max_physical_reads**|**BIGINT**|Número máximo de lecturas físicas que ha realizado este desencadenador durante una ejecución.|  
-|**total_logical_writes**|**BIGINT**|Número total de escrituras lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
-|**last_logical_writes**|**BIGINT**|El número de escrituras lógicas realizadas la última vez que se ejecutó el desencadenador.|  
-|**min_logical_writes**|**BIGINT**|Número mínimo de escrituras lógicas realizadas por este desencadenador durante una ejecución.|  
-|**max_logical_writes**|**BIGINT**|Número máximo de escrituras lógicas realizadas por este desencadenador durante una ejecución.|  
-|**total_logical_reads**|**BIGINT**|Número total de lecturas lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
-|**last_logical_reads**|**BIGINT**|Número de lecturas lógicas realizadas la última vez que se ejecutó el desencadenador.|  
-|**min_logical_reads**|**BIGINT**|Número mínimo de lecturas lógicas realizadas por este desencadenador durante una ejecución.|  
-|**max_logical_reads**|**BIGINT**|Número máximo de lecturas lógicas realizadas por este desencadenador durante una ejecución.|  
-|**total_elapsed_time**|**BIGINT**|Tiempo total transcurrido, en microsegundos, para las ejecuciones completadas de este desencadenador.|  
-|**last_elapsed_time**|**BIGINT**|Tiempo transcurrido, en microsegundos, hasta la finalización de la ejecución más reciente de este desencadenador.|  
-|**min_elapsed_time**|**BIGINT**|Tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.|  
-|**max_elapsed_time**|**BIGINT**|Tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.| 
-|**total_spills**|**BIGINT**|Número total de páginas desbordadas por la ejecución de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**last_spills**|**BIGINT**|Número de páginas desbordadas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**min_spills**|**BIGINT**|Número mínimo de páginas que este desencadenador ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**max_spills**|**BIGINT**|Número máximo de páginas que este desencadenador ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**total_page_server_reads**|**BIGINT**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
-|**last_page_server_reads**|**BIGINT**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
-|**min_page_server_reads**|**BIGINT**|Número mínimo de lecturas del servidor de páginas que ha realizado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
-|**max_page_server_reads**|**BIGINT**|Número máximo de lecturas del servidor de páginas que ha realizado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
+|**execution_count**|**bigint**|Número de veces que se ha ejecutado el desencadenador desde que se compiló por última vez.|  
+|**total_worker_time**|**bigint**|Cantidad total de tiempo de CPU, en microsegundos, consumido por las ejecuciones de este desencadenador desde que se compiló.|  
+|**last_worker_time**|**bigint**|Tiempo de CPU, en microsegundos, consumido la última vez que se ejecutó el desencadenador.|  
+|**min_worker_time**|**bigint**|Tiempo máximo de CPU, en microsegundos, que ha consumido este desencadenador durante una ejecución.|  
+|**max_worker_time**|**bigint**|Tiempo máximo de CPU, en microsegundos, que ha consumido este desencadenador durante una ejecución.|  
+|**total_physical_reads**|**bigint**|Número total de lecturas físicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
+|**last_physical_reads**|**bigint**|Número de lecturas físicas realizadas la última vez que se ejecutó el desencadenador.|  
+|**min_physical_reads**|**bigint**|Número mínimo de lecturas físicas que ha realizado este desencadenador durante una ejecución.|  
+|**max_physical_reads**|**bigint**|Número máximo de lecturas físicas que ha realizado este desencadenador durante una ejecución.|  
+|**total_logical_writes**|**bigint**|Número total de escrituras lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
+|**last_logical_writes**|**bigint**|El número de escrituras lógicas realizadas la última vez que se ejecutó el desencadenador.|  
+|**min_logical_writes**|**bigint**|Número mínimo de escrituras lógicas realizadas por este desencadenador durante una ejecución.|  
+|**max_logical_writes**|**bigint**|Número máximo de escrituras lógicas realizadas por este desencadenador durante una ejecución.|  
+|**total_logical_reads**|**bigint**|Número total de lecturas lógicas realizadas por las ejecuciones de este desencadenador desde que se compiló.|  
+|**last_logical_reads**|**bigint**|Número de lecturas lógicas realizadas la última vez que se ejecutó el desencadenador.|  
+|**min_logical_reads**|**bigint**|Número mínimo de lecturas lógicas realizadas por este desencadenador durante una ejecución.|  
+|**max_logical_reads**|**bigint**|Número máximo de lecturas lógicas realizadas por este desencadenador durante una ejecución.|  
+|**total_elapsed_time**|**bigint**|Tiempo total transcurrido, en microsegundos, para las ejecuciones completadas de este desencadenador.|  
+|**last_elapsed_time**|**bigint**|Tiempo transcurrido, en microsegundos, hasta la finalización de la ejecución más reciente de este desencadenador.|  
+|**min_elapsed_time**|**bigint**|Tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.|  
+|**max_elapsed_time**|**bigint**|Tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.| 
+|**total_spills**|**bigint**|Número total de páginas desbordadas por la ejecución de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**last_spills**|**bigint**|Número de páginas desbordadas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**min_spills**|**bigint**|Número mínimo de páginas que este desencadenador ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**max_spills**|**bigint**|Número máximo de páginas que este desencadenador ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**total_page_server_reads**|**bigint**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
+|**last_page_server_reads**|**bigint**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
+|**min_page_server_reads**|**bigint**|Número mínimo de lecturas del servidor de páginas que ha realizado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
+|**max_page_server_reads**|**bigint**|Número máximo de lecturas del servidor de páginas que ha realizado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 
   
 ## <a name="remarks"></a>Observaciones  

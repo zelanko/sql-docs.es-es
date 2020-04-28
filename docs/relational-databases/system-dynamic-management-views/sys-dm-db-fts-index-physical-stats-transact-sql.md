@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4394483cd17510c998126a70c12f4d669c9282aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264486"
 ---
 # <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68264486"
 |-|-|-|  
 |**Nombre de la columna**|**Tipo**|**Descripción**|  
 |**object_id**|int|Identificador de objeto de la tabla que contiene el índice.|  
-|**fulltext_index_page_count**|**BIGINT**|Tamaño lógico de la extracción en número de páginas de índice.|  
-|**keyphrase_index_page_count**|**BIGINT**|Tamaño lógico de la extracción en número de páginas de índice.|  
-|**similarity_index_page_count**|**BIGINT**|Tamaño lógico de la extracción en número de páginas de índice.|  
+|**fulltext_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
+|**keyphrase_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
+|**similarity_index_page_count**|**bigint**|Tamaño lógico de la extracción en número de páginas de índice.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [administrar y supervisar la búsqueda semántica](../../relational-databases/search/manage-and-monitor-semantic-search.md).  

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262911"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Asignación de esquemas de Oracle a esquemas de SQL Server (OracleToSQL)
@@ -59,7 +59,7 @@ Si personaliza la asignación entre un esquema de Oracle y un [!INCLUDE[ssNoVers
   
 1.  En la pestaña asignación de esquema, seleccione cualquier fila y haga clic en **Restablecer valores predeterminados** para revertir a la base de datos y el esquema predeterminados.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
 Si desea analizar la conversión de objetos de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, puede [crear un informe de conversión](assessing-oracle-schemas-for-conversion-oracletosql.md). De lo contrario, puede [convertir las definiciones de objetos de base de datos de Oracle](converting-oracle-schemas-oracletosql.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiciones de objeto.  
   
 ## <a name="see-also"></a>Consulte también  

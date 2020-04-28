@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 00b37550b9a5d121d395f94d4810a4a093c3125d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266002"
 ---
 # <a name="sysdm_clr_tasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68266002"
 |**task_address**|**varbinary(8**|Dirección de la tarea CLR.|  
 |**sos_task_address**|**varbinary(8**|Dirección de la tarea del lote [!INCLUDE[tsql](../../includes/tsql-md.md)] subyacente.|  
 |**appdomain_address**|**varbinary(8**|Dirección del dominio de la aplicación en la que se ejecuta esta tarea.|  
-|**State**|**nvarchar(128)**|Estado actual de la tarea.|  
+|**state**|**nvarchar(128)**|Estado actual de la tarea.|  
 |**abort_state**|**nvarchar(128)**|Estado en el que está actualmente la cancelación (si la tarea se ha cancelado). Hay varios estados implicados en la anulación de tareas.|  
-|**automáticamente**|**nvarchar(128)**|Tipo de tarea.|  
+|**type**|**nvarchar(128)**|Tipo de tarea.|  
 |**affinity_count**|**int**|Afinidad de la tarea.|  
 |**forced_yield_count**|**int**|Número de veces que se forzó a la tarea a producir.|  
   

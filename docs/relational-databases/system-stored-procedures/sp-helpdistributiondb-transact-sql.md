@@ -16,10 +16,10 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770928"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
@@ -43,13 +43,13 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre de la base de datos de distribución.|  
+|**name**|**sysname**|Nombre de la base de datos de distribución.|  
 |**min_distretention**|**int**|Período mínimo de retención, en horas, antes de que se eliminen las transacciones.|  
 |**max_distretention**|**int**|Período máximo de retención, en horas, antes de que se eliminen las transacciones.|  
 |**history retention**|**int**|Número de horas que se conserva el historial.|  
 |**history_cleanup_agent**|**sysname**|Nombre del Agente de limpieza del historial.|  
 |**distribution_cleanup_agent**|**sysname**|Nombre del Agente de limpieza de distribución.|  
-|**estatus**|**int**|Exclusivamente para uso interno.|  
+|**status**|**int**|Exclusivamente para uso interno.|  
 |**data_folder**|**nvarchar(255)**|Nombre del directorio que se utiliza para almacenar los archivos de base de datos.|  
 |**data_file**|**nvarchar(255)**|Nombre del archivo de la base de datos.|  
 |**data_file_size**|**int**|Tamaño inicial del archivo de datos en megabytes.|  

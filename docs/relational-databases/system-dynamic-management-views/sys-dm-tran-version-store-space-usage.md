@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262660"
 ---
 # <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>Sys. dm_tran_version_store_space_usage (Transact-SQL)
@@ -39,8 +39,8 @@ Puesto que el registro de versiones se almacena como binario, no existen problem
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|IDENTIFICADOR de base de datos de la base de datos.|  
-|**reserved_page_count**|**BIGINT**|Recuento total de las páginas reservadas en tempdb para los registros de almacén de versiones de la base de datos.|  
-|**reserved_space_kb**|**BIGINT**|Espacio total utilizado en kilobytes en tempdb para los registros del almacén de versiones de la base de datos.|  
+|**reserved_page_count**|**bigint**|Recuento total de las páginas reservadas en tempdb para los registros de almacén de versiones de la base de datos.|  
+|**reserved_space_kb**|**bigint**|Espacio total utilizado en kilobytes en tempdb para los registros del almacén de versiones de la base de datos.|  
   
 ## <a name="permissions"></a>Permisos  
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   

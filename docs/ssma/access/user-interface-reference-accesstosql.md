@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266961"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Referencia de la interfaz de usuario (AccessToSQL)
@@ -34,14 +34,14 @@ En esta sección se incluyen temas [!INCLUDE[ssNoVersion](../../includes/ssnover
 |[Convertir, cargar y migrar](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)|El cuadro de diálogo **convertir, cargar y migrar** forma parte del Asistente para migración y también aparece cuando se usa el comando **convertir, cargar y migrar** .|  
 |[Informe de migración de datos &#40;AccessToSQL&#41;](../../ssma/access/data-migration-report-accesstosql.md)|Aparece después de la migración de datos y los informes de aciertos y errores de cada tabla.|  
 |[Editar asignación de tipos &#40;AccessToSQL&#41;](../../ssma/access/edit-type-mapping-accesstosql.md)|Utilice el cuadro de diálogo **Editar asignación de tipos** para crear o editar la asignación de tipos de datos entre las bases de datos de origen y de destino, y los objetos de base de datos.|  
-|[Asistente Buscar bases de datos (Seleccionar archivos)](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)|Use la página seleccionar archivos del asistente buscar bases de datos para seleccionar las bases de datos de Access que se van a agregar al proyecto SSMA.|  
-|[Asistente Buscar bases de datos (Seleccionar ubicaciones)](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)|Use la página seleccionar ubicaciones del asistente buscar bases de datos para especificar las ubicaciones en las que se van a buscar archivos de bases de datos de Access en una red, en un equipo o en una carpeta que coincida con los criterios de búsqueda.|  
+|[Asistente buscar bases de datos (seleccionar archivos)](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)|Use la página seleccionar archivos del asistente buscar bases de datos para seleccionar las bases de datos de Access que se van a agregar al proyecto SSMA.|  
+|[Asistente buscar bases de datos (seleccionar ubicaciones)](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)|Use la página seleccionar ubicaciones del asistente buscar bases de datos para especificar las ubicaciones en las que se van a buscar archivos de bases de datos de Access en una red, en un equipo o en una carpeta que coincida con los criterios de búsqueda.|  
 |[Asistente Buscar bases de datos (Comprobar selección)](https://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)|Use la página comprobar selección del asistente buscar bases de datos para confirmar las bases de datos que se agregarán al proyecto SSMA.|  
 |[Configuración global &#40;editor&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-editor-accesstosql.md)|Use la página editor del cuadro de diálogo **configuración global** para configurar las opciones del editor de código.|  
 |[Configuración global &#40;cuadros de diálogo&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-dialogs-accesstosql.md)|Use la página editor del cuadro de diálogo **configuración global** para configurar las opciones predeterminadas de diálogo y ADVERTENCIA.|  
 |[Configuración global &#40;registro&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-logging-accesstosql.md)|Use la página Registro del cuadro de diálogo **configuración global** para configurar el registro.|  
 |[Configuración global &#40;Ventana de salida&#41; &#40;AccessToSQL&#41;](../../ssma/access/global-settings-output-window-accesstosql.md)|Use la página Ventana de salida del cuadro de diálogo **configuración global** para configurar la visualización del panel de resultados y el panel de la ventana de error.|  
-|[asistente para migración](migration-wizard-accesstosql.md)|Use el Asistente para migración para guiarle a través del proceso de migración.|  
+|[Asistente para la migración](migration-wizard-accesstosql.md)|Use el Asistente para migración para guiarle a través del proceso de migración.|  
 |[Nuevo proyecto (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)|Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de SSMA.|  
 |[Configuración del proyecto (conversión)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)|Use la página **conversión** del cuadro de diálogo **configuración del proyecto** para especificar cómo SSMA convierte las columnas de memorando indizadas, las claves principales, las restricciones de clave externa, las marcas de tiempo y las tablas sin índices.|  
 |[Configuración del proyecto &#40;GUI&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-gui-accesstosql.md)|Use la página GUI del cuadro de diálogo **configuración del proyecto** para especificar la cantidad de datos que aparecen en la pestaña **datos** .|  
@@ -52,6 +52,6 @@ En esta sección se incluyen temas [!INCLUDE[ssNoVersion](../../includes/ssnover
   
 ## <a name="see-also"></a>Consulte también  
 [Introducción con SQL Server Migration Assistant para el acceso &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Preparación de bases de datos de Access para migración](preparing-access-databases-for-migration-accesstosql.md)  
+[Preparar las bases de datos de Access para la migración](preparing-access-databases-for-migration-accesstosql.md)  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

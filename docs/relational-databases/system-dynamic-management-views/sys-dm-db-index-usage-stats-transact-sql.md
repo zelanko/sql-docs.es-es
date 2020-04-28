@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 491ec37d96cf6bdb2b074efb42a54406beb1fd20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264403"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
@@ -45,18 +45,18 @@ ms.locfileid: "68264403"
 |**database_id**|**smallint**|Id. de la base de datos en la que se define la tabla o vista.|  
 |**object_id**|**int**|Id. de la tabla o vista en la que se define el índice.|  
 |**index_id**|**int**|Id. del índice.|  
-|**user_seeks**|**BIGINT**|Número de consultas de búsqueda realizadas por el usuario.|  
-|**user_scans**|**BIGINT**|Número de recorridos por consultas de usuario que no usaron el predicado "Buscar".|  
-|**user_lookups**|**BIGINT**|Número de búsquedas de marcadores realizadas por consultas de usuario.|  
-|**user_updates**|**BIGINT**|Número de consultas de actualización realizadas por el usuario. Esto incluye las operaciones de inserción, eliminación y actualización que representan el número de operaciones realizadas no las filas reales afectadas. Por ejemplo, si elimina 1000 filas en una instrucción, el recuento se incrementa en 1.|  
+|**user_seeks**|**bigint**|Número de consultas de búsqueda realizadas por el usuario.|  
+|**user_scans**|**bigint**|Número de recorridos por consultas de usuario que no usaron el predicado "Buscar".|  
+|**user_lookups**|**bigint**|Número de búsquedas de marcadores realizadas por consultas de usuario.|  
+|**user_updates**|**bigint**|Número de consultas de actualización realizadas por el usuario. Esto incluye las operaciones de inserción, eliminación y actualización que representan el número de operaciones realizadas no las filas reales afectadas. Por ejemplo, si elimina 1000 filas en una instrucción, el recuento se incrementa en 1.|  
 |**last_user_seek**|**datetime**|Hora en que el usuario realizó la última búsqueda.|  
 |**last_user_scan**|**datetime**|Hora en que el usuario realizó el último recorrido.|  
 |**last_user_lookup**|**datetime**|Hora de la última búsqueda del usuario.|  
 |**last_user_update**|**datetime**|Hora en que el usuario realizó la última actualización.|  
-|**system_seeks**|**BIGINT**|Número de consultas de búsqueda realizadas por el sistema.|  
-|**system_scans**|**BIGINT**|Número de consultas de recorrido realizadas por el sistema.|  
-|**system_lookups**|**BIGINT**|Número de búsquedas realizadas por consultas del sistema.|  
-|**system_updates**|**BIGINT**|Número de consultas de actualización realizadas por el sistema.|  
+|**system_seeks**|**bigint**|Número de consultas de búsqueda realizadas por el sistema.|  
+|**system_scans**|**bigint**|Número de consultas de recorrido realizadas por el sistema.|  
+|**system_lookups**|**bigint**|Número de búsquedas realizadas por consultas del sistema.|  
+|**system_updates**|**bigint**|Número de consultas de actualización realizadas por el sistema.|  
 |**last_system_seek**|**datetime**|Hora en que el sistema realizó la última búsqueda.|  
 |**last_system_scan**|**datetime**|Hora en que el sistema realizó el último recorrido.|  
 |**last_system_lookup**|**datetime**|Hora en que el sistema realizó la última búsqueda.|  
@@ -83,8 +83,8 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
  [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [Sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   
   

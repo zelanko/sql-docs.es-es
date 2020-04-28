@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 8c9d934cc74bbafc5dca4517a063aaeb8c49e9a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266600"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Configuración del proyecto (migración) (OracleToSQL)
@@ -44,7 +44,7 @@ El panel Migración está disponible en los cuadros de diálogo Configuración d
 |**Tiempo de espera de migración de datos**|Especifica el tiempo de espera usado durante la migración de datos<br /><br />**Modo predeterminado**: 15<br /><br />**Modo optimista**: 15<br /><br />**Modo completo**: 15|  
 |**Opciones de migración de datos extendidos**|Muestra opciones de migración de datos adicionales para cada tabla en pestañas de detalles independientes.<br /><br />**Modo predeterminado**: ocultar<br /><br />**Modo optimista**: ocultar<br /><br />**Modo completo**: ocultar|  
 |**Activar desencadenadores**|Especifica si SSMA debe activar los desencadenadores de inserción cuando agrega datos a SQL Server tablas.<br /><br />**Modo predeterminado**: false<br /><br />**Modo optimista**: false<br /><br />**Modo completo**: false|  
-|**Mantener la identidad**|Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifiquen en SQL Server.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: false|  
+|**Mantener valores de identidad**|Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifiquen en SQL Server.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: false|  
 |**Mantener valores NULL**|Especifica si SSMA conserva los valores NULL en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifiquen en SQL Server.<br /><br />**Modo predeterminado**: true<br /><br />**Modo optimista**: true<br /><br />**Modo completo**: true|  
 |**Marcar operación de recorte de cadena con error**|Si el tamaño de la columna de destino es menor que la longitud de la cadena de origen, el valor se recortará y se marcará como un error.<br /><br />**Modo predeterminado**: sí<br /><br />**Modo optimista**: sí<br /><br />**Modo completo**: sí|  
 |**En error**|Detiene la migración de datos cuando se produce un error. Tiene tres opciones:<br /><br />**Detener migración:** Detiene la operación de migración de datos<br /><br />**Continuar con la siguiente tabla:** Detiene la migración de datos a la tabla actual y continúa con el siguiente.<br /><br />**Continuar con el siguiente lote:** Detiene la migración de datos al lote actual y continúa con el siguiente.<br /><br />**Modo predeterminado**: continuar con el siguiente lote<br /><br />**Modo optimista**: continuar con el siguiente lote<br /><br />**Modo completo**: continuar con el siguiente lote|  

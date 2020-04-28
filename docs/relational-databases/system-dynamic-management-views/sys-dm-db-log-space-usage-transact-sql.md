@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bfa102163012456e9b2660d26cb54dec3d58cfbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264579"
 ---
 # <a name="sysdm_db_log_space_usage-transact-sql"></a>Sys. dm_db_log_space_usage (Transact-SQL)
@@ -38,10 +38,10 @@ Devuelve información de uso de espacio para el registro de transacciones.
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Id. de la base de datos.|  
-|total_log_size_in_bytes |**BIGINT** |Tamaño del registro  |
-|used_log_space_in_bytes |**BIGINT** |Tamaño ocupado del registro  |     
-|used_log_space_in_percent |**impuestos** |Tamaño ocupado del registro como porcentaje del tamaño total del registro |
-|log_space_in_bytes_since_last_backup |**BIGINT** |La cantidad de espacio que se usa desde la última copia de seguridad de registros <br />**Se aplica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]hasta [!INCLUDE[ssSDS](../../includes/sssds-md.md)],.|
+|total_log_size_in_bytes |**bigint** |Tamaño del registro  |
+|used_log_space_in_bytes |**bigint** |Tamaño ocupado del registro  |     
+|used_log_space_in_percent |**real** |Tamaño ocupado del registro como porcentaje del tamaño total del registro |
+|log_space_in_bytes_since_last_backup |**bigint** |La cantidad de espacio que se usa desde la última copia de seguridad de registros <br />**Se aplica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]hasta [!INCLUDE[ssSDS](../../includes/sssds-md.md)],.|
     
   
 ## <a name="permissions"></a>Permisos  
@@ -67,9 +67,9 @@ FROM sys.dm_db_log_space_usage;
 [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [Sys. dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
 [Sys. dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
-[Sys. dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
-[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
-[Sys. dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
+[sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+[Sys. dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
 
 
 

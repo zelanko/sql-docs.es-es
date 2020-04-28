@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891615"
 ---
 # <a name="securing-sql-server"></a>Proteger SQL Server
@@ -127,7 +127,7 @@ GO
 |Conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutar consultas en el símbolo del sistema|[Utilidad sqlcmd](../../tools/sqlcmd-utility.md)|  
 |Control y configuración de red para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Administrador de configuración de SQL Server](../sql-server-configuration-manager.md)|  
 |Habilitar y deshabilitar características con Administración basada en directiva|[Administrar servidores mediante administración basada en directivas](../policy-based-management/administer-servers-by-using-policy-based-management.md)|  
-|Manipular claves simétricas para un servidor de informes|[rskeymgmt (utilidad) &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
+|Manipular claves simétricas para un servidor de informes|[Utilidad rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
   
 ### <a name="sql-server-security-catalog-views-and-functions"></a>Funciones y vistas de catálogo de seguridad de SQL Server  
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] expone información de seguridad en varias vistas y funciones que se optimizan en cuanto a rendimiento y utilidad. En la tabla siguiente se incluye más información acerca de las funciones y vistas de seguridad.  

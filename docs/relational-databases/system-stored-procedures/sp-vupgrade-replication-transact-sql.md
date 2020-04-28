@@ -16,10 +16,10 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771546"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
@@ -41,7 +41,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @login = ] 'login'`Es el inicio de sesión del administrador del sistema que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *login* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro no es necesario si *security_mode* está establecido en **1**, que es la autenticación de Windows.  
+`[ @login = ] 'login'`Es el inicio de sesión del administrador del sistema que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro no es necesario si *security_mode* está establecido en **1**, que es la autenticación de Windows.  
   
 > [!NOTE]  
 >  Este parámetro se omite al actualizar a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores.  
@@ -57,7 +57,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'`Es el modo de seguridad de inicio de sesión que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *security_mode* es de **bits** con un valor predeterminado de **0**. Si **** es 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se usará la autenticación. Si es **1**, se utilizará la autenticación de Windows.  
+`[ @security_mode = ] 'security_mode'`Es el modo de seguridad de inicio de sesión que se va a usar al crear nuevos objetos del sistema en la base de datos de distribución. *security_mode* es de **bits** con un valor predeterminado de **0**. Si **0**es 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se usará la autenticación. Si es **1**, se utilizará la autenticación de Windows.  
   
 > [!NOTE]  
 >  Este parámetro se omite al actualizar a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores.  

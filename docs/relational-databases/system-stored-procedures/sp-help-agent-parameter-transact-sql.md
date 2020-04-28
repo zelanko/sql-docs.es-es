@@ -16,10 +16,10 @@ ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 398e1eebbb269fa1f1507725fefff820c5174f58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771510"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
@@ -45,7 +45,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|Id. del perfil de agente.|  
 |**parameter_name**|**sysname**|Nombre del parámetro.|  
-|**valor**|**nvarchar(255)**|Valor del parámetro.|  
+|**value**|**nvarchar(255)**|Valor del parámetro.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,7 +57,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** pueden ejecutar **sp_help_agent_parameter**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [Trabajar con perfiles de agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

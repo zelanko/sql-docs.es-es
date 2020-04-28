@@ -21,10 +21,10 @@ ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941099"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68941099"
 |**srvproduct**|**sysname**|Nombre de producto del servidor remoto.|  
 |**ProviderName**|**nvarchar(128)**|Nombre de proveedor OLE DB para el acceso a este servidor.|  
 |**DataSource**|**nvarchar(4000)**|Valor de origen de datos OLE DB.|  
-|**Cód**|**nvarchar(4000)**|Valor de ubicación OLE DB.|  
+|**ubicación**|**nvarchar(4000)**|Valor de ubicación OLE DB.|  
 |**providerstring**|**nvarchar(4000)**|Valor de cadena de proveedor OLE DB.|  
 |**schemadate**|**datetime**|Fecha en que se actualizó la fila por última vez.|  
 |**topologyx**|**int**|No se usa.|  
@@ -55,14 +55,14 @@ ms.locfileid: "68941099"
 |**srvnetname**|**Char (30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = El servidor es un servidor remoto.<br /><br /> 0 = El servidor es un servidor vinculado.|  
 |**RPC**|**bit**|1 = **sp_serveroption\@RPC** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@RPC** establecido en **false** u **OFF**.|  
-|**pub**|**bit**|1 = **sp_serveroption\@pub** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@pub** establecida en **false** u **OFF**.|  
-|**modelo**|**bit**|1 = **sp_serveroption\@sub** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@sub** establecido en **false** u **OFF**.|  
+|**Pub**|**bit**|1 = **sp_serveroption\@pub** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@pub** establecida en **false** u **OFF**.|  
+|**sub**|**bit**|1 = **sp_serveroption\@sub** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@sub** establecido en **false** u **OFF**.|  
 |**dist**|**bit**|1 = **sp_serveroption\@Dist** establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@Dist** establecido en **false** u **OFF**.|  
-|**DPUB**|**bit**|1 = **sp_serveroption\@DPUB** establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@DPUB** establecido en **false** u **OFF**.|  
+|**dpub**|**bit**|1 = **sp_serveroption\@DPUB** establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@DPUB** establecido en **false** u **OFF**.|  
 |**rpcout**|**bit**|1 = **sp_serveroption\@RPC out** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@RPC out** establecido en **false** u **OFF**.|  
 |**DataAccess**|**bit**|1 = **sp_serveroption\@el acceso a datos** se establece en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@el acceso a datos** se establece en **false** u **OFF**.|  
 |**collationcompatible**|**bit**|1 = **sp_serveroption\@compatible con la intercalación** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@compatible con la intercalación** establecida en **false** u **OFF**.|  
-|**integrado**|**bit**|1 = **sp_serveroption\@sistema** está establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@sistema** está establecido en **false** u **OFF**.|  
+|**sistema**|**bit**|1 = **sp_serveroption\@sistema** está establecido en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@sistema** está establecido en **false** u **OFF**.|  
 |**useremotecollation**|**bit**|1 = **sp_serveroption\@intercalación remota** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@intercalación remota** establecida en **false** u **OFF**.|  
 |**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@validación diferida de esquema** establecida en **true** u **on**.<br /><br /> 0 = **sp_serveroption\@la validación diferida de esquemas** establecida en **false** u **OFF**.|  
 |**intercalación**|**sysname**|Intercalación de servidor establecida **por\@sp_serveroption nombre de intercalación**.|  

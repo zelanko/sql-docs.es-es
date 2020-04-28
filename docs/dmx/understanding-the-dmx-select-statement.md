@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8cc28e9394cabee4dd32e8e84ee02517de415a75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893068"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Descripción de la instrucción Select de DMX
@@ -44,7 +44,7 @@ ms.locfileid: "68893068"
   
  **Importante:** Todo lo que se incluye en la lista de expresiones o en la cláusula **Where** debe proviene del dominio de datos definido por la cláusula **from** . No puede mezclar dominios de datos.  
   
-##  <a name="Select_Types"></a>SELECCIONAR tipos  
+##  <a name="select-types"></a><a name="Select_Types"></a>SELECCIONAR tipos  
  La sintaxis de la instrucción **Select** admite muchas tareas diferentes. Use los patrones siguientes para realizar estas tareas:  
   
 -   [Predecir](#Predicting)  
@@ -55,7 +55,7 @@ ms.locfileid: "68893068"
   
 -   [Obtención de detalles](#Drillthrough)  
   
-###  <a name="Predicting"></a>Predecir  
+###  <a name="predicting"></a><a name="Predicting"></a>Predecir  
  Puede realizar predicciones basadas en un modelo de minería usando los siguientes tipos de consulta.  
   
  Puede incluir cualquiera de las instrucciones **Select** de exploración o de predicción en las cláusulas **from** y **Where** de una instrucción de **selección** de combinación de predicción.  
@@ -67,7 +67,7 @@ ms.locfileid: "68893068"
   
  [Volver a Tipos SELECT](#Select_Types)  
   
-###  <a name="Browsing"></a>Exploración  
+###  <a name="browsing"></a><a name="Browsing"></a>Exploración  
  Puede examinar el contenido de un modelo de minería de datos usando los siguientes tipos de consulta.  
   
 |Tipo de consulta|Descripción|  
@@ -79,7 +79,7 @@ ms.locfileid: "68893068"
   
  [Volver a Tipos SELECT](#Select_Types)  
   
-###  <a name="Copying"></a>Instantánea  
+###  <a name="copying"></a><a name="Copying"></a>Instantánea  
  Puede copiar un modelo de minería de datos y su estructura de minería de datos asociada a un nuevo modelo y cambiar después el nombre del modelo dentro de la instrucción.  
   
 |Tipo de consulta|Descripción|  
@@ -88,14 +88,14 @@ ms.locfileid: "68893068"
   
  [Volver a Tipos SELECT](#Select_Types)  
   
-###  <a name="Drillthrough"></a>Detalles  
+###  <a name="drillthrough"></a><a name="Drillthrough"></a>Detalles  
  Puede examinar los escenarios (o una representación de los escenarios) que se emplearon para entrenar el modelo usando los siguientes tipos de consulta.  
   
 |Tipo de consulta|Descripción|  
 |----------------|-----------------|  
 |Seleccione del * \<modelo>*. VECES|Devuelve los casos empleados para entrenar el modelo de minería de datos.<br /><br /> El dominio de este tipo de consulta es el modelo de minería de datos.<br /><br /> [Seleccione entre &#60;modelo&#62;. CASOS &#40;DMX&#41;](../dmx/select-from-model-cases-dmx.md)<br /><br /> [Crear consultas de obtención de detalles usando DMX](https://docs.microsoft.com/analysis-services/data-mining/create-drillthrough-queries-using-dmx)|  
 |Seleccione del * \<modelo>*. SAMPLE_CASES|Devuelve un caso de ejemplo, representativo de los casos empleados para entrenar el modelo de minería de datos.<br /><br /> El dominio de este tipo de consulta es el modelo de minería de datos.<br /><br /> [Seleccione entre &#60;modelo&#62;. SAMPLE_CASES &#40;DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md)|  
-|Seleccione de * \<la estructura>*. VECES|Devuelve las filas de datos detalladas de la estructura de minería de datos subyacente, aunque algunos detalles no se usaran al entrenar el modelo de minería de datos.<br /><br /> [Seleccione de &#60;estructura&#62;. VECES](../dmx/select-from-structure-cases.md)<br /><br /> [Consultas de obtención de detalles &#40;&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
+|Seleccione de * \<la estructura>*. VECES|Devuelve las filas de datos detalladas de la estructura de minería de datos subyacente, aunque algunos detalles no se usaran al entrenar el modelo de minería de datos.<br /><br /> [Seleccione de &#60;estructura&#62;. VECES](../dmx/select-from-structure-cases.md)<br /><br /> [Consultas de obtención de detalles &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining)|  
   
  [Volver a Tipos SELECT](#Select_Types)  
   

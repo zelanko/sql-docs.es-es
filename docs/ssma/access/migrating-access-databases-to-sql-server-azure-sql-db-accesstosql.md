@@ -17,10 +17,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68260243"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Migración de bases de datos de Access a SQL Server: Azure SQL DB (AccessToSQL)
@@ -60,4 +60,4 @@ También puede usar el Asistente para migración para guiarle en este proceso. P
   
 ## <a name="see-also"></a>Consulte también  
 [Introducción con SQL Server Migration Assistant para el acceso](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Preparación de bases de datos de Access para migración](preparing-access-databases-for-migration-accesstosql.md)
+[Preparar las bases de datos de Access para la migración](preparing-access-databases-for-migration-accesstosql.md)

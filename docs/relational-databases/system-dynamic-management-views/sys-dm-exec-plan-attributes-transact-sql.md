@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255599"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -46,7 +46,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|atributo|**varchar(128)**|Nombre del atributo asociado a este plan. La tabla inmediatamente inferior a esta muestra los posibles atributos, sus tipos de datos y sus descripciones.|  
+|atributo|**VARCHAR(128**|Nombre del atributo asociado a este plan. La tabla inmediatamente inferior a esta muestra los posibles atributos, sus tipos de datos y sus descripciones.|  
 |value|**sql_variant**|Valor del atributo asociado a este plan.|  
 |is_cache_key|**bit**|Indica si el atributo se utiliza como parte de la clave de búsqueda en caché para el plan.|  
 
@@ -108,7 +108,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 |ARITH_ABORT|4096|  
 |NUMERIC_ROUNDABORT|8192|  
 |DATEFIRST|16384|  
-|DATEFORMAT|32768|  
+|DATEFORMAT|32 768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indica que la opción de base de datos PARAMETERIZATION se estableció en FORCED cuando se compiló el plan.|131 072|  
 |ROWCOUNT|**Se aplica a:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262 144|  
@@ -169,7 +169,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [Sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

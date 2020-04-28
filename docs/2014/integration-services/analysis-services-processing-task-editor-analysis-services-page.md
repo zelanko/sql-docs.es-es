@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890366"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor de la tarea de procesamiento de Analysis Services (página Analysis Services)
@@ -43,13 +43,13 @@ ms.locfileid: "68890366"
  **Nuevo**  
  Cree un administrador de conexiones de Analysis Services nuevo.  
   
- **Temas relacionados:** [Analysis Services administrador de conexiones](connection-manager/analysis-services-connection-manager.md), [Agregar Analysis Services referencia de la interfaz de usuario del cuadro de diálogo Administrador de conexiones](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Temas relacionados:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Lista de objetos**  
  |Propiedad|Descripción|  
 |--------------|-----------------|  
 |**Nombre de objeto**|Enumera los nombres de los objetos especificados.|  
-|**Tipo**|Enumera los tipos de los objetos especificados.|  
+|**Type**|Enumera los tipos de los objetos especificados.|  
 |**Opciones de proceso**|Seleccione una opción de procesamiento de la lista.<br /><br /> **Temas relacionados**: [procesamiento de objetos de modelo multidimensional](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Configuración**|Enumera los valores de configuración de procesamiento para los objetos especificados.|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68890366"
  **Análisis de impacto**  
  Lleve a cabo el análisis de impacto en el objeto seleccionado.  
   
- **Temas relacionados:** [cuadro de diálogo análisis de impacto &#40;Analysis Services de datos multidimensionales&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Temas relacionados:** [Cuadro de diálogo Análisis de impacto &#40;Analysis Services - Datos multidimensionales&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **Resumen de configuración de lotes**  
  |Propiedad|Descripción|  
@@ -70,13 +70,13 @@ ms.locfileid: "68890366"
 |**Orden de procesamiento**|Especifica si los objetos se procesan de manera secuencial o en un lote; si se utiliza el procesamiento paralelo, especifica el número de objetos que se deben procesar simultáneamente.|  
 |**Modo de transacción**|Especifica el modo de transacción para el procesamiento secuencial.|  
 |**Errores de dimensión**|Especifica el comportamiento de la tarea cuando se produce un error.|  
-|**Ruta del registro de errores de clave de dimensión**|Especifica la ruta de acceso del archivo en el que se registran los errores.|  
+|**Ruta del registro de errores de claves de dimensiones**|Especifica la ruta de acceso del archivo en el que se registran los errores.|  
 |**Procesar objetos afectados**|Indica si los objetos afectados o dependientes también se deben procesar.|  
   
  **Cambiar configuración**  
  Cambie las opciones de procesamiento y el control de errores en las claves de dimensiones.  
   
- **Temas relacionados:** [cuadro de diálogo cambiar configuración &#40;Analysis Services-datos multidimensionales&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Temas relacionados:** [Cuadro de diálogo Cambiar configuración &#40;Analysis Services - Datos multidimensionales&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

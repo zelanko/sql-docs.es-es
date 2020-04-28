@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: fbe3e8c07af283f657926776e906dca4a95f7a7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259594"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Archivos de script de ejemplo de la consola (OracleToSQL)
@@ -80,7 +80,7 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     Asignación de esquema de la base de datos de origen al esquema de destino.  
   
-    **Atributo**  
+    **Atribui**  
   
     -   `source-schema:`Especifica la base de datos de origen que requiere que se convierta.  
   
@@ -94,7 +94,7 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se `convert-schema` muestra en el ejemplo 4 del comando del archivo de script de la consola de ejemplo.  
   
-    **Atributo**  
+    **Atribui**  
   
     `object-name`: Especifique el nombre de objeto o base de datos de origen que requiere la conversión. Asegúrese de que se `object-type` cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
   
@@ -106,7 +106,7 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se `synchronize-target` muestra en el ejemplo 3 del comando del archivo de script de la consola de ejemplo.  
   
-    **Atributo**  
+    **Atribui**  
   
     `object-name:`Especifique el nombre de objeto o base de datos de SQL Server que requiere que se cree. Asegúrese de que se `object-type` cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
   
@@ -118,7 +118,7 @@ Se han proporcionado los siguientes archivos de script de la consola de ejemplo 
   
     -   Si el usuario tiene que evaluar varios objetos o bases de datos, puede especificar varios `metabase-object` nodos, tal como se `migrate-data` muestra en el ejemplo 2 del comando del archivo de script de la consola de ejemplo.  
   
-    **Atributo**  
+    **Atribui**  
   
     `object-name:`Especifica el nombre de la base de datos o de las tablas de origen que requiere la migración. Asegúrese de que se `object-type` cambia el correspondiente según el tipo de objeto que se especifica en el`object-name`  
   

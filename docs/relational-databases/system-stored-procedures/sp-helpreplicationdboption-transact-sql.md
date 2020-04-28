@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771529"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
@@ -55,8 +55,8 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre de la base de datos.|  
-|**sesión**|**int**|Identificador de base de datos.|  
+|**name**|**sysname**|Nombre de la base de datos.|  
+|**id**|**int**|Identificador de base de datos.|  
 |**transpublish**|**bit**|Si la base de datos se ha habilitado para la publicación transaccional o de instantáneas; donde un valor de **1** significa que la publicación de instantáneas o transaccional está habilitada.|  
 |**mergepublish**|**bit**|Si la base de datos se ha habilitado para la publicación de mezcla; donde un valor de **1** significa que la publicación de combinación está habilitada.|  
 |**Dbowner**|**bit**|Si el usuario es miembro del rol fijo de base de datos **db_owner** ; donde un valor de **1** indica que el usuario es miembro de este rol.|  

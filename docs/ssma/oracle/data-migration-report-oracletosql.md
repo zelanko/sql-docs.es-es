@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264253"
 ---
 # <a name="data-migration-report--oracletosql"></a>Informe de migración de datos (OracleToSQL)
@@ -24,10 +24,10 @@ El cuadro de diálogo **Informe de migración de datos** aparece después de mig
 **Estado**  
 Muestra el estado de la migración de datos de origen a la base de datos de destino.  
   
-**De**  
+**From**  
 Tabla de origen.  
   
-**Para**  
+**To**  
 Tabla de destino.  
   
 **Número total de filas**  

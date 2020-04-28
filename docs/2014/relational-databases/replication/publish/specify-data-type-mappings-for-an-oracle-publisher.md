@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d3377cb5ed4afd4577462e0b436bb16d2fee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941097"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Especificar asignaciones de tipos de datos para un publicador de Oracle
@@ -32,8 +32,8 @@ ms.locfileid: "68941097"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Especifique asignaciones de tipos de datos en la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<artículo>** . Está disponible en la página **Artículos** del Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Especifique asignaciones de tipos de datos en la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<artículo>**. Está disponible en la página **Artículos** del Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Para especificar una asignación de tipos de datos  
   
@@ -41,7 +41,7 @@ ms.locfileid: "68941097"
   
 2.  Haga clic en **Establecer propiedades del artículo de tabla resaltado**.  
   
-3.  En la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , seleccione las asignaciones de la columna **Tipo de datos del suscriptor**:  
+3.  En la pestaña **Asignación de datos** del cuadro de diálogo **Propiedades del artículo: \<artículo>**, seleccione las asignaciones de la columna **Tipo de datos del suscriptor**:  
   
     -   Para algunos tipos de datos, solo hay una asignación posible, en cuyo caso la columna de la cuadrícula de propiedades es de solo lectura.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68941097"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede especificar asignaciones de tipo de datos personalizadas mediante programación con los procedimientos almacenados de la replicación. También puede establecer las asignaciones predeterminadas que se utilizan al asignar tipos de datos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entre y un sistema[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de administración de bases de datos (DBMS) que no es de. Para más información, consulte [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Para definir las asignaciones de tipo de datos personalizadas al crear un artículo que pertenece a una publicación de Oracle  
@@ -60,15 +60,15 @@ ms.locfileid: "68941097"
   
 3.  En el distribuidor, ejecute [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) para ver la asignación existente de una columna en un artículo publicado.  
   
-4.  En el distribuidor, ejecute [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Especifique el nombre del publicador de Oracle para **\@publisher**, así como **\@publication**, **\@article** y **\@column** para definir la columna publicada. Especifique el nombre del tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al que asignar para **\@type**, así como **\@length**, **\@precision** y **\@scale**, cuando corresponda.  
+4.  En el distribuidor, ejecute [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Especifique el nombre del publicador de Oracle para ** \@el publicador**, así como ** \@** ** \@la publicación**, ** \@** el artículo y la columna para definir la columna publicada. Especifique el nombre del tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de datos al que se va a asignar para ** \@el tipo**, así ** \@** como ** \@la longitud**, la precisión y ** \@la escala**, si procede.  
   
 5.  En el distribuidor, ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Esto crea la vista usada para generar la instantánea de la publicación de Oracle.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>Para especificar una asignación como la asignación predeterminada de un tipo de datos  
   
-1.  (Opcional) En cualquier base de datos del distribuidor, ejecute [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Especifique **\@source_dbms**, **\@source_type**, **\@destination_dbms**, **\@destination_version** y cualquier otro parámetro necesario para identificar el DBMS de origen. Se devuelve información acerca del tipo de datos asignado actualmente en el DBMS de destino mediante los parámetros de salida.  
+1.  (Opcional) En cualquier base de datos del distribuidor, ejecute [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Especifique ** \@source_dbms**, ** \@source_type**, ** \@destination_dbms**, ** \@destination_version**y cualquier otro parámetro necesario para identificar el DBMS de origen. Se devuelve información acerca del tipo de datos asignado actualmente en el DBMS de destino mediante los parámetros de salida.  
   
-2.  (Opcional) En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique **\@source_dbms** y cualquier otro parámetro necesario para filtrar el conjunto de resultados. Tenga en cuenta el valor de **mapping_id** para la asignación deseada en el conjunto de resultados.  
+2.  (Opcional) En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique ** \@source_dbms** y cualquier otro parámetro necesario para filtrar el conjunto de resultados. Tenga en cuenta el valor de **mapping_id** para la asignación deseada en el conjunto de resultados.  
   
 3.  En cualquier base de datos del distribuidor, ejecute [sp_setdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql).  
   
@@ -78,10 +78,10 @@ ms.locfileid: "68941097"
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>Para buscar los tipos de datos válidos para un tipo de datos de Oracle determinado  
   
-1.  En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique un valor de **ORACLE** para **\@source_dbms** y cualquier otro parámetro necesario para filtrar el conjunto de resultados.  
+1.  En cualquier base de datos del distribuidor, ejecute [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Especifique un valor de **Oracle** para ** \@source_dbms** y cualquier otro parámetro necesario para filtrar el conjunto de resultados.  
   
-###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
- En este ejemplo se cambia una columna con un tipo de datos de Oracle NUMBER, de modo que se asigna al tipo de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](38,38) de `numeric`, en lugar del tipo de datos predeterminado `float`.  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Ejemplos (Transact-SQL)  
+ En este ejemplo se cambia una columna con un tipo de datos de Oracle NUMBER, de modo que se asigna al tipo de datos `numeric`(38,38) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], en lugar del tipo de datos predeterminado `float`.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_changecolumndatatype)]  
   
@@ -94,9 +94,9 @@ ms.locfileid: "68941097"
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_helpcolumndatatype_number)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md)   
- [Replicación de bases de datos heterogéneas](../non-sql/heterogeneous-database-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Asignación de tipos de datos para publicadores de Oracle](../non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Replicación de base de datos heterogénea](../non-sql/heterogeneous-database-replication.md)   
+ [Conceptos de procedimientos almacenados del sistema de replicación](../concepts/replication-system-stored-procedures-concepts.md)   
  [Configurar un publicador de Oracle](../non-sql/configure-an-oracle-publisher.md)  
   
   

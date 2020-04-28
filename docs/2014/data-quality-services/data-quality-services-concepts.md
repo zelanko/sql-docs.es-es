@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154454"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) en administración del conocimiento, proyectos de calidad de datos y administración de calidad de datos.  
   
-##  <a name="Knowledge"></a>Conceptos de administración de conocimiento  
+##  <a name="knowledge-management-concepts"></a><a name="Knowledge"></a> Conceptos de administración del conocimiento  
  La base de conocimientos de DQS es un repositorio de metadatos que crea el administrador de datos o el profesional de TI para usarlo en la mejora de la calidad de datos mediante la limpieza y la coincidencia de datos. La administración del conocimiento de DQS incluye los procesos usados para crear y administrar la base de conocimiento, tanto de un modo asistido por el equipo como de forma interactiva.  
   
  **Detección de conocimiento**  
@@ -41,7 +41,7 @@ ms.locfileid: "70154454"
   
  Para obtener más información sobre la administración de conocimiento en DQS, vea [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="Projects"></a>Conceptos de proyectos de calidad de datos  
+##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> Conceptos de proyectos de calidad de los datos  
  El administrador de datos realiza las operaciones de calidad de los datos (limpiar y buscar coincidencias) mediante un proyecto de calidad de datos en la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
  **Data Cleansing**  
@@ -64,7 +64,7 @@ ms.locfileid: "70154454"
   
  Para más información sobre los proyectos de calidad de datos de DQS, vea [Proyectos de calidad de datos &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md).  
   
-##  <a name="Admin"></a>Conceptos de administración de calidad de datos  
+##  <a name="data-quality-administration-concepts"></a><a name="Admin"></a> Conceptos de administración de calidad de datos  
  Un administrador de DQS puede realizar una serie de tareas administrativas mediante la aplicación de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
  **Supervisión de actividades**  

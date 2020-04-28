@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769132"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
@@ -93,9 +93,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**4**|Diariamente|  
+|**4**|Diario|  
 |**203**|Semanal|  
-|**7**|Mensual|  
+|**10**|Mensual|  
 |**20**|Mensualmente, dependiendo del intervalo de frecuencia|  
 |**40**|Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |NULL (predeterminado)||  
@@ -112,8 +112,8 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**6**|Viernes|  
 |**7**|Sábado|  
 |**203**|Día|  
-|**9**|Días laborables|  
-|**7**|Días del fin de semana|  
+|**9**|Días de la semana|  
+|**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la repetición de combinación programada del intervalo de frecuencia de cada mes. *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
@@ -186,7 +186,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addmergesubscription**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Crear una suscripción de extracción](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Resolución interactiva de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

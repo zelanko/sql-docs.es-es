@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887439"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definición de datos de MDX: SUBCUBE
@@ -131,6 +131,6 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [Conceptos clave de &#40;MDX Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Instrucciones de scripting de MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP subcube, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [Instrucción SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
+ [SELECT &#40;Instrucción, MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

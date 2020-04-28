@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265864"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
@@ -42,13 +42,13 @@ ms.locfileid: "68265864"
 |file_id|**int**|Identificador del archivo que almacena la imagen permanente de la página. Acepta valores NULL.|  
 |page_id|**int**|IDENTIFICADOR de la página dentro del archivo. Acepta valores NULL.|  
 |page_level|**int**|Nivel de índice de la página. Acepta valores NULL.|  
-|allocation_unit_id|**BIGINT**|Identificador de la unidad de asignación de la página. Este valor se puede utilizar para combinar sys.allocation_units. Acepta valores NULL.|  
-|page_type|**nvarchar (60)**|Tipo de la página, como: página de datos o página de índice. Acepta valores NULL.|  
+|allocation_unit_id|**bigint**|Identificador de la unidad de asignación de la página. Este valor se puede utilizar para combinar sys.allocation_units. Acepta valores NULL.|  
+|page_type|**nvarchar(60)**|Tipo de la página, como: página de datos o página de índice. Acepta valores NULL.|  
 |row_count|**int**|Número de filas de la página. Acepta valores NULL.|  
 |free_space_in_bytes|**int**|Cantidad, en bytes, de espacio disponible en la página. Acepta valores NULL.|  
 |is_modified|**bit**|1 = La página se ha modificado después de leerse en el disco. Acepta valores NULL.|  
 |numa_node|**int**|Nodo de acceso no uniforme a memoria para el búfer. Acepta valores NULL.|  
-|read_microsec|**BIGINT**|El tiempo real (en microsegundos) necesario para leer la página en el búfer. Este número se restablece cuando se reutiliza el búfer. Acepta valores NULL.|  
+|read_microsec|**bigint**|El tiempo real (en microsegundos) necesario para leer la página en el búfer. Este número se restablece cuando se reutiliza el búfer. Acepta valores NULL.|  
 |is_in_bpool_extension|**bit**|1 = la página está en la extensión del grupo de búferes. Acepta valores NULL.|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
@@ -60,7 +60,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 ## <a name="remarks"></a>Observaciones  
  Sys. dm_os_buffer_descriptors devuelve páginas que utiliza la base de datos de recursos. Sys. dm_os_buffer_descriptors no devuelve información acerca de las páginas gratuitas o robadas o de las páginas que tenían errores cuando se leyeron.  
   
-|De|A|Por|Relación|  
+|De|En|Por|Relación|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|varios a uno|  
 |sys.dm_os_buffer_descriptors|\<UserDB>. sys. allocation_units|allocation_unit_id|varios a uno|  
@@ -113,11 +113,11 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [Base de datos Resource](../../relational-databases/databases/resource-database.md)   
- [Sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [Base de datos de recursos](../../relational-databases/databases/resource-database.md)   
+ [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

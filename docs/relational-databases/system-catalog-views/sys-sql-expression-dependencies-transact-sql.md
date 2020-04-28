@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69561126"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
@@ -51,10 +51,10 @@ ms.locfileid: "69561126"
 |referencing_id|**int**|Identificador de la entidad que hace la referencia. No admite valores NULL.|  
 |referencing_minor_id|**int**|Identificador de la columna cuando la entidad de referencia es una columna; en caso contrario, es 0. No admite valores NULL.|  
 |referencing_class|**tinyint**|Clase de la entidad que hace la referencia.<br /><br /> 1 = Objeto o columna<br /><br /> 12 = Desencadenador DDL de base de datos<br /><br /> 13 = Desencadenador DDL de servidor<br /><br /> No admite valores NULL.|  
-|referencing_class_desc|**nvarchar (60)**|Descripción de la clase de la entidad que hace la referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> No admite valores NULL.|  
+|referencing_class_desc|**nvarchar(60)**|Descripción de la clase de la entidad que hace la referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> No admite valores NULL.|  
 |is_schema_bound_reference|**bit**|1 = La entidad a la que se hace referencia está enlazada a un esquema.<br /><br /> 0 = La entidad a la que se hace referencia no está enlazada a un esquema.<br /><br /> No admite valores NULL.|  
 |referenced_class|**tinyint**|Clase de la entidad a la que se hace referencia.<br /><br /> 1 = Objeto o columna<br /><br /> 6 = Tipo<br /><br /> 10 = Colección de esquemas XML<br /><br /> 21 = Función de partición<br /><br /> No admite valores NULL.|  
-|referenced_class_desc|**nvarchar (60)**|Descripción de la clase de la entidad a la que se hace referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> No admite valores NULL.|  
+|referenced_class_desc|**nvarchar(60)**|Descripción de la clase de la entidad a la que se hace referencia.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> No admite valores NULL.|  
 |referenced_server_name|**sysname**|Nombre del servidor de la entidad a la que se hace referencia.<br /><br /> Esta columna se rellena para las dependencias entre servidores especificadas con un nombre de cuatro partes válido. Para obtener información sobre los nombres de varias partes, vea [convenciones de sintaxis de Transact-sql &#40;&#41;de Transact-SQL ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL para las entidades no enlazadas a un esquema a las que se hizo referencia sin especificar un nombre de cuatro partes.<br /><br /> NULL para las entidades enlazadas a esquema porque deben estar en la misma base de datos y, por tanto, solo se pueden definir mediante un nombre de dos partes (*Schema. Object*).|  
 |referenced_database_name|**sysname**|Nombre de la base de datos de la entidad a la que se hace referencia.<br /><br /> Esta columna se rellena para las referencias entre bases de datos o entre servidores especificadas con un nombre válido de tres o cuatro partes.<br /><br /> NULL para las referencias no enlazadas a esquema especificadas con un nombre de una o dos partes.<br /><br /> NULL para las entidades enlazadas a esquema porque deben estar en la misma base de datos y, por tanto, solo se pueden definir mediante un nombre de dos partes (*Schema. Object*).|  
 |referenced_schema_name|**sysname**|Esquema al que pertenece la entidad a la que se hace referencia.<br /><br /> NULL para las referencias no enlazadas a esquema en las que se hacía referencia a la entidad sin especificar el nombre del esquema.<br /><br /> Nunca es NULL para las referencias enlazadas a un esquema porque las entidades enlazadas a un esquema deben definirse y hacerse referencia con un nombre de dos partes.|  
@@ -76,9 +76,9 @@ ms.locfileid: "69561126"
 |Ver|Sí|Sí|  
 |Índice filtrado|Sí**|No|  
 |Estadísticas filtradas|Sí**|No|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]procedimiento almacenado * * *|Sí|Sí|  
+|Procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sí|Sí|  
 |procedimiento almacenado CLR|No|Sí|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]función definida por el usuario|Sí|Sí|  
+|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
 |Función CLR definida por el usuario|No|Sí|  
 |Desencadenador CLR (DML y DDL)|No|No|  
 |Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
@@ -172,7 +172,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263942"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68263942"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|Identificador del depósito de hash en el que se almacena en caché la entrada. El valor indica un intervalo comprendido entre 0 y el tamaño de la tabla hash para el tipo de caché.<br /><br /> En la memoria caché de planes SQL y planes de objetos, el tamaño de la tabla hash puede ser de hasta 10007 en sistemas de 32 bits y de hasta 40009 en sistemas de 64 bits. En la memoria caché de árboles enlazados, el tamaño de la tabla hash puede ser de hasta 1009 en sistemas de 32 bits y de hasta 4001 en sistemas de 64 bits. En la memoria caché de procedimientos almacenados extendidos, el tamaño de la tabla hash puede ser de hasta 127 en sistemas de 32 y de 64 bits.|  
-|refcounts|**int**|Número de objetos de caché que hacen referencia a este objeto de caché. **RefCounts** debe ser al menos 1 para que haya una entrada en la memoria caché.|  
+|refcounts|**int**|Número de objetos de caché que hacen referencia a este objeto de caché. **Refcounts** debe ser al menos 1 para que haya una entrada en la memoria caché.|  
 |usecounts|**int**|Número de veces que se ha buscado el objeto de caché. Este número no se incrementa cuando las consultas con parámetros encuentran un plan en la memoria caché. Se puede incrementar varias veces cuando se utiliza un plan de representación.|  
 |size_in_bytes|**int**|Número de bytes consumidos por el objeto de caché.|  
 |memory_object_address|**varbinary(8**|Dirección de memoria de la entrada de caché. Este valor se puede usar con [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) para obtener el análisis de la memoria del plan almacenado en caché y con [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md) para obtener el costo de almacenar en caché la entrada.|  

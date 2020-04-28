@@ -16,10 +16,10 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b8755bea5e318d1ded2631a2253134fd8721a421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771155"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
@@ -55,11 +55,11 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**distributor_latency**|**BIGINT**|Número de segundos entre la confirmación del registro del token de seguimiento en el publicador y la confirmación del registro en el distribuidor.|  
+|**distributor_latency**|**bigint**|Número de segundos entre la confirmación del registro del token de seguimiento en el publicador y la confirmación del registro en el distribuidor.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor que ha recibido el token de seguimiento.|  
 |**subscriber_db**|**sysname**|Nombre de la base de datos de suscripciones en la que se ha insertado el testigo de seguimiento.|  
-|**subscriber_latency**|**BIGINT**|Número de segundos entre la confirmación del registro del token de seguimiento en el distribuidor y la confirmación del registro en el suscriptor.|  
-|**overall_latency**|**BIGINT**|Número de segundos entre la confirmación del registro del token de seguimiento en el publicador y la confirmación del registro del token en el suscriptor.|  
+|**subscriber_latency**|**bigint**|Número de segundos entre la confirmación del registro del token de seguimiento en el distribuidor y la confirmación del registro en el suscriptor.|  
+|**overall_latency**|**bigint**|Número de segundos entre la confirmación del registro del token de seguimiento en el publicador y la confirmación del registro del token en el suscriptor.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

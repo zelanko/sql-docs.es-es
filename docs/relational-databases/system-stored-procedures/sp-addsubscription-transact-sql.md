@@ -16,10 +16,10 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769026"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -123,7 +123,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |read only (predeterminado)|La suscripción es de solo lectura. Los cambios en el suscriptor no se envían al publicador.|  
 |sync tran|Habilita la compatibilidad con las suscripciones de actualización inmediata. No es compatible con publicadores de Oracle.|  
 |queued tran|Permite la actualización en cola de la suscripción. Las modificaciones de los datos se realizan en el suscriptor, se almacenan en una cola y después se propagan al publicador. No es compatible con publicadores de Oracle.|  
-|Conmutación por error|Permite la actualización inmediata de las suscripciones con la actualización en cola como conmutación por error. Las modificaciones de los datos se pueden realizar en el suscriptor y propagarse inmediatamente al publicador. Si el publicador y el suscriptor no están conectados, el modo de actualización se puede cambiar para que las modificaciones de los datos realizadas en el suscriptor se almacenen en una cola hasta que el suscriptor y el publicador vuelvan a conectarse. No es compatible con publicadores de Oracle.|  
+|failover|Permite la actualización inmediata de las suscripciones con la actualización en cola como conmutación por error. Las modificaciones de los datos se pueden realizar en el suscriptor y propagarse inmediatamente al publicador. Si el publicador y el suscriptor no están conectados, el modo de actualización se puede cambiar para que las modificaciones de los datos realizadas en el suscriptor se almacenen en una cola hasta que el suscriptor y el publicador vuelvan a conectarse. No es compatible con publicadores de Oracle.|  
 |queued failover|Habilita la suscripción como una suscripción de actualización en cola con la capacidad de cambiar al modo de actualización inmediata. Las modificaciones de los datos se pueden realizar en el suscriptor y almacenarse en una cola hasta que se establezca una conexión entre el suscriptor y el publicador. Cuando se establece una conexión continua, el modo de actualización puede cambiar a actualización inmediata. No es compatible con publicadores de Oracle.|  
   
  Tenga en cuenta que los valores Synctran y queued Tran no se permiten si la publicación a la que se está suscribiendo permite DTS.  
@@ -144,7 +144,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |1|Una vez|  
 |2|A petición|  
-|4|Diariamente|  
+|4|Diario|  
 |8|Semanal|  
 |16|Mensual|  
 |32|Mensualmente relativa|  
@@ -316,7 +316,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Crear una suscripción de extracción](../../relational-databases/replication/create-a-push-subscription.md)   
  [Crear una suscripción para un suscriptor que no sea de SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   

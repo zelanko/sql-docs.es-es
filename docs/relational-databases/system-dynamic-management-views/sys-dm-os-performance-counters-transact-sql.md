@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265709"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "68265709"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**NCHAR (128)**|Categoría a la que pertenece este contador.|  
-|**counter_name**|**NCHAR (128)**|Nombre del contador. Para obtener más información acerca de un contador, es el nombre del tema que se va a seleccionar en la lista de contadores en [uso SQL Server objetos](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
-|**instance_name**|**NCHAR (128)**|Nombre de la instancia específica del contador. A menudo contiene el nombre de la base de datos.|  
-|**cntr_value**|**BIGINT**|Valor actual del contador.<br /><br /> **Nota:** En los contadores por segundo, este valor es acumulativo. El valor de la tarifa se debe calcular probando el valor en intervalos de tiempo distintos. La diferencia entre dos valores de ejemplo sucesivos es igual a la tarifa del intervalo de tiempo usado.|  
+|**object_name**|**nchar(128)**|Categoría a la que pertenece este contador.|  
+|**counter_name**|**nchar(128)**|Nombre del contador. Para obtener más información acerca de un contador, es el nombre del tema que se va a seleccionar en la lista de contadores en [uso SQL Server objetos](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
+|**instance_name**|**nchar(128)**|Nombre de la instancia específica del contador. A menudo contiene el nombre de la base de datos.|  
+|**cntr_value**|**bigint**|Valor actual del contador.<br /><br /> **Nota:** En los contadores por segundo, este valor es acumulativo. El valor de la tarifa se debe calcular probando el valor en intervalos de tiempo distintos. La diferencia entre dos valores de ejemplo sucesivos es igual a la tarifa del intervalo de tiempo usado.|  
 |**cntr_type**|**int**|Tipo de contador definido en la arquitectura de rendimiento de Windows. Para obtener más información sobre los tipos de contadores de rendimiento, consulte [tipos de contador de rendimiento de WMI](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) en docs o la documentación de Windows Server.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   

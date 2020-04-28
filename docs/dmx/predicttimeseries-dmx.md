@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893882"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
@@ -106,9 +106,9 @@ OR [Model Region] = 'M200 Pacific'
   
 |Model Region|t.$TIME|t.Quantity|  
 |------------------|-------------|----------------|  
-|M200 Europe|7/25/2008 12:00:00 AM|121|  
-|M200 Europe|8/25/2008 12:00:00 AM|142|  
-|M200 Europe|9/25/2008 12:00:00 AM|152|  
+|M200 Europa|7/25/2008 12:00:00 AM|121|  
+|M200 Europa|8/25/2008 12:00:00 AM|142|  
+|M200 Europa|9/25/2008 12:00:00 AM|152|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
 |M200 Pacific|9/25/2008 12:00:00 AM|42|  
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- Dado que la consulta usa ** la opción EXTEND_MODEL_CASES [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , realiza las siguientes acciones para sus predicciones:  
+ Dado que la consulta usa *EXTEND_MODEL_CASES* la opción EXTEND_MODEL_CASES [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , realiza las siguientes acciones para sus predicciones:  
   
 -   Aumenta el tamaño total de los casos de entrenamiento agregando al modelo los dos meses de datos nuevos.  
   
@@ -193,7 +193,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Devuelve las predicciones nuevas para los tres intervalos de tiempo restantes basándose en el modelo recientemente ampliado.  
   
- En la tabla siguiente se muestran los resultados de la consulta del ejemplo 2. Observe que los primeros dos valores devueltos para M200 Europe son exactamente iguales que los nuevos valores que proporcionó. Este comportamiento es así por diseño; si desea iniciar las predicciones después del fin de los datos nuevos, debe especificar un paso de inicio y finalización. Para obtener un ejemplo de cómo hacerlo, vea [Lección 5: extender el modelo de serie temporal](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ En la tabla siguiente se muestran los resultados de la consulta del ejemplo 2. Observe que los primeros dos valores devueltos para M200 Europa son exactamente iguales que los nuevos valores que proporcionó. Este comportamiento es así por diseño; si desea iniciar las predicciones después del fin de los datos nuevos, debe especificar un paso de inicio y finalización. Para obtener un ejemplo de cómo hacerlo, vea [Lección 5: extender el modelo de serie temporal](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  También, observe que no proporcionó los datos nuevos para la región del Pacífico. Por consiguiente, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] devuelve las predicciones nuevas para los cinco intervalos de tiempo.  
   
@@ -241,12 +241,12 @@ OR [Model Region] = 'M200 North America'
   
 |Model Region|t.$TIME|t.PREDICTION|t.VARIANCE|t.STDEV|  
 |------------------|-------------|------------------|----------------|-------------|  
-|M200 Europe|7/25/2008 12:00:00 AM|121|11.6050581415597|3.40661975300439|  
-|M200 Europe|8/25/2008 12:00:00 AM|142|10.678201866621|3.26775180615374|  
-|M200 Europe|9/25/2008 12:00:00 AM|152|9.86897842568614|3.14149302493037|  
-|M200 North America|7/25/2008 12:00:00 AM|163|1.20434529288162|1.20434529288162|  
-|M200 North America|8/25/2008 12:00:00 AM|178|1.65031343900634|1.65031343900634|  
-|M200 North America|9/25/2008 12:00:00 AM|156|1.68969399185442|1.68969399185442|  
+|M200 Europa|7/25/2008 12:00:00 AM|121|11.6050581415597|3.40661975300439|  
+|M200 Europa|8/25/2008 12:00:00 AM|142|10.678201866621|3.26775180615374|  
+|M200 Europa|9/25/2008 12:00:00 AM|152|9.86897842568614|3.14149302493037|  
+|M200 Norteamérica|7/25/2008 12:00:00 AM|163|1.20434529288162|1.20434529288162|  
+|M200 Norteamérica|8/25/2008 12:00:00 AM|178|1.65031343900634|1.65031343900634|  
+|M200 Norteamérica|9/25/2008 12:00:00 AM|156|1.68969399185442|1.68969399185442|  
   
 > [!NOTE]  
 >  La palabra clave FLATTENED se usó en este ejemplo para hacer que los resultados sean más fáciles de presentar en una tabla; sin embargo, si su proveedor admite conjuntos de filas jerárquicos, puede omitirla. Si omite la palabra clave FLATTENED, la consulta devuelve dos columnas: la primera contiene el valor que identifica la serie de datos `[Model Region]` y la segunda contiene la tabla anidada de estadísticas.  
@@ -254,6 +254,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>Consulte también  
  [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ejemplos de consultas de modelos de serie temporal](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [Predecir &#40;DMX&#41;](../dmx/predict-dmx.md)  
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

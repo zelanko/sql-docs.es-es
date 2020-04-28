@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77bf96ee1cea4356e26d33fab9ab519e99ae0a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265962"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68265962"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|Id. del host de demonio de filtro.|  
-|**fdhost_name**|**nvarchar (120)**|Nombre del host de demonio de filtro.|  
+|**fdhost_name**|**nvarchar(120)**|Nombre del host de demonio de filtro.|  
 |**fdhost_process_id**|**int**|Id. de proceso de Windows del host de demonio de filtro.|  
-|**fdhost_type**|**nvarchar (120)**|Tipo de documento que procesa el host de demonio de filtro, que puede ser uno de los siguientes:<br /><br /> Subproceso único<br /><br /> Varios subprocesos<br /><br /> Documento gigante|  
+|**fdhost_type**|**nvarchar(120)**|Tipo de documento que procesa el host de demonio de filtro, que puede ser uno de los siguientes:<br /><br /> Subproceso único<br /><br /> Varios subprocesos<br /><br /> Documento gigante|  
 |**max_thread**|**int**|Número máximo de subprocesos del host de demonio de filtro.|  
 |**batch_count**|**int**|Número de lotes que se procesan en el host de demonio de filtro.|  
   

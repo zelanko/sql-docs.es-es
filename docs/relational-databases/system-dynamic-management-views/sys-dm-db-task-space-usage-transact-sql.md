@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ee20a77440fd769e813f8335148c2b67a34d7bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263959"
 ---
 # <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
@@ -40,14 +40,14 @@ ms.locfileid: "68263959"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**smallint**|Identificador de sesión.|  
-|**id_de_solicitud**|**int**|Id. de solicitud en la sesión.<br /><br /> Una solicitud también se llama lote y puede contener una o más consultas. Una sesión puede tener varias solicitudes activas al mismo tiempo. Cada consulta en la solicitud puede iniciar varios subprocesos (tareas) si se utiliza un plan de ejecución paralelo.|  
+|**session_id**|**smallint**|Id. de sesión.|  
+|**request_id**|**int**|Id. de solicitud en la sesión.<br /><br /> Una solicitud también se llama lote y puede contener una o más consultas. Una sesión puede tener varias solicitudes activas al mismo tiempo. Cada consulta en la solicitud puede iniciar varios subprocesos (tareas) si se utiliza un plan de ejecución paralelo.|  
 |**exec_context_id**|**int**|Id. del contexto de ejecución de la tarea. Para obtener más información, vea [Sys. dm_os_tasks &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
 |**database_id**|**smallint**|Id. de la base de datos.|  
-|**user_objects_alloc_page_count**|**BIGINT**|Número de páginas reservadas o asignadas para objetos de usuario por esta tarea.|  
-|**user_objects_dealloc_page_count**|**BIGINT**|Número de páginas cuya reserva o asignación para objetos de usuario ha sido cancelada por esta tarea.|  
-|**internal_objects_alloc_page_count**|**BIGINT**|Número de páginas reservadas o asignadas para objetos internos por esta tarea.|  
-|**internal_objects_dealloc_page_count**|**BIGINT**|Número de páginas cuya reserva o asignación para objetos internos ha sido cancelada por esta tarea.|  
+|**user_objects_alloc_page_count**|**bigint**|Número de páginas reservadas o asignadas para objetos de usuario por esta tarea.|  
+|**user_objects_dealloc_page_count**|**bigint**|Número de páginas cuya reserva o asignación para objetos de usuario ha sido cancelada por esta tarea.|  
+|**internal_objects_alloc_page_count**|**bigint**|Número de páginas reservadas o asignadas para objetos internos por esta tarea.|  
+|**internal_objects_dealloc_page_count**|**bigint**|Número de páginas cuya reserva o asignación para objetos internos ha sido cancelada por esta tarea.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
@@ -91,7 +91,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_db_task_space_usage.request_id|dm_exec_requests.request_id|Uno a uno|  
 |dm_db_task_space_usage.session_id|dm_exec_requests.session_id|Uno a uno|  
@@ -99,11 +99,11 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [Sys. dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [Sys. dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [Sys. dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)   
- [Sys. dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
+ [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   
 

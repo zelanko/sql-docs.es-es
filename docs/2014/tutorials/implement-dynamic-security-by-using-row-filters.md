@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530881"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar seguridad dinámica utilizando filtros de filas
@@ -28,7 +28,7 @@ ms.locfileid: "69530881"
   
  Tiempo estimado para completar esta lección: **30 minutos**  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Este tema de la lección complementaria forma parte de un tutorial de modelado tabular, que debe completar en orden. Antes de realizar las tareas de esta lección complementaria, debe haber completado todas las lecciones anteriores.  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>Agregar la tabla dimSalesTerritory al proyecto de modelo tabular AW Internet Sales  
@@ -83,7 +83,7 @@ ms.locfileid: "69530881"
   
 2.  Copie la siguiente tabla, incluida la fila de encabezado y, luego, péguela en la hoja de cálculo.  
   
-    |Employee Id|Sales Territory Id|Nombre de usuario|Apellido|Login Id|  
+    |Employee Id|Sales Territory Id|Nombre|Apellido|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
     |1|2|\<nombre del usuario>|\<Apellido del usuario>|\<dominio\nombredeusuario>|  
     |1|3|\<nombre del usuario>|\<Apellido del usuario>|\<dominio\nombredeusuario>|  

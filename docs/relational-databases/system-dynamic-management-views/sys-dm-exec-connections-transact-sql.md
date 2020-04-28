@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263803"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
@@ -40,21 +40,21 @@ ms.locfileid: "68263803"
 |session_id|**int**|Identifica la sesión asociada a esta conexión. Acepta valores NULL.|  
 |most_recent_session_id|**int**|Representa el Id. de sesión de la solicitud más reciente asociada a esta conexión. (Las conexiones SOAP pueden ser reutilizadas por otra sesión). Acepta valores NULL.|  
 |connect_time|**datetime**|Marca de tiempo en que se estableció la conexión. No admite valores NULL.|  
-|net_transport|**nvarchar (40)**|Siempre devuelve una **sesión** cuando una conexión tiene habilitados los conjuntos de resultados activos múltiples (Mars).<br /><br /> **Nota:** Describe el protocolo de transporte físico utilizado por esta conexión. No admite valores NULL.|  
-|protocol_type|**nvarchar (40)**|Especifica el tipo de protocolo de la carga. Actualmente, distingue entre TDS (TSQL) y SOAP. Acepta valores NULL.|  
+|net_transport|**nvarchar(40)**|Siempre devuelve una **sesión** cuando una conexión tiene habilitados los conjuntos de resultados activos múltiples (Mars).<br /><br /> **Nota:** Describe el protocolo de transporte físico utilizado por esta conexión. No admite valores NULL.|  
+|protocol_type|**nvarchar(40)**|Especifica el tipo de protocolo de la carga. Actualmente, distingue entre TDS (TSQL) y SOAP. Acepta valores NULL.|  
 |protocol_version|**int**|Versión del protocolo de acceso a datos asociado a esta conexión. Acepta valores NULL.|  
 |endpoint_id|**int**|Identificador que describe el tipo de conexión. Este endpoint_id se puede utilizar para realizar consultas en la vista sys.endpoints. Acepta valores NULL.|  
-|encrypt_option|**nvarchar (40)**|Valor booleano que describe si se ha habilitado el cifrado para esta conexión. No admite valores NULL.|  
-|auth_scheme|**nvarchar (40)**|Especifica el esquema de autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows usado en esta conexión. No admite valores NULL.|  
+|encrypt_option|**nvarchar(40)**|Valor booleano que describe si se ha habilitado el cifrado para esta conexión. No admite valores NULL.|  
+|auth_scheme|**nvarchar(40)**|Especifica el esquema de autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows usado en esta conexión. No admite valores NULL.|  
 |node_affinity|**smallint**|Identifica el nodo de memoria con el que esta conexión tiene afinidad. No admite valores NULL.|  
 |num_reads|**int**|Número de lecturas de bytes que se han producido en esta conexión. Acepta valores NULL.|  
 |num_writes|**int**|Número de escrituras de bytes que se han producido a través de esta conexión. Acepta valores NULL.|  
 |last_read|**datetime**|Marca de tiempo de la última operación de lectura realizada en esta conexión. Acepta valores NULL.|  
 |last_write|**datetime**|Marca de tiempo de la última operación de escritura realizada en esta conexión. No acepta valores NULL.|  
 |net_packet_size|**int**|Tamaño del paquete de red utilizado para la transferencia de información y datos. Acepta valores NULL.|  
-|client_net_address|**VARCHAR (48)**|Dirección de host del cliente que se conecta a este servidor. Acepta valores NULL.<br /><br /> Antes de V12 en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta columna siempre devuelve NULL.|  
+|client_net_address|**varchar(48)**|Dirección de host del cliente que se conecta a este servidor. Acepta valores NULL.<br /><br /> Antes de V12 en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta columna siempre devuelve NULL.|  
 |client_tcp_port|**int**|Número de puerto del equipo cliente asociado a esta conexión. Acepta valores NULL.<br /><br /> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta columna siempre devuelve NULL.|  
-|local_net_address|**VARCHAR (48)**|Representa la dirección IP del servidor que es el destino de esta conexión. Solo está disponible para las conexiones que utilicen el proveedor de transporte TCP. Acepta valores NULL.<br /><br /> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta columna siempre devuelve NULL.|  
+|local_net_address|**varchar(48)**|Representa la dirección IP del servidor que es el destino de esta conexión. Solo está disponible para las conexiones que utilicen el proveedor de transporte TCP. Acepta valores NULL.<br /><br /> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta columna siempre devuelve NULL.|  
 |local_tcp_port|**int**|Representa el puerto TCP del servidor de destino de esta conexión, si se trata de una conexión que utiliza el transporte TCP. Acepta valores NULL.<br /><br /> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], esta columna siempre devuelve NULL.|  
 |connection_id|**uniqueidentifier**|Identifica cada conexión de manera única. No admite valores NULL.|  
 |parent_connection_id|**uniqueidentifier**|Identifica la conexión principal utilizada por la sesión MARS. Acepta valores NULL.|  
@@ -95,7 +95,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>Consulte también  
 
- [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530891"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Normas de nomenclatura de objetos (Analysis Services)
   En este tema se describen las convenciones de nomenclatura de los objetos, así como las palabras y los caracteres reservados que no se pueden usar en ningún nombre de objeto, código o script en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_Names"></a>Convenciones de nomenclatura  
+##  <a name="naming-conventions"></a><a name="bkmk_Names"></a>Convenciones de nomenclatura  
  Cada objeto tiene una propiedad `Name` y `ID` que debe ser única dentro del ámbito de la colección primaria. Por ejemplo, dos dimensiones pueden tener el mismo nombre siempre y cuando cada una resida en una base de datos diferente.  
   
  Aunque puede especificarla manualmente, la propiedad `ID` se suele generar automáticamente cuando se crea el objeto. Nunca debe cambiar el valor de `ID` después de haber empezado a crear un modelo. Todas las referencias a objetos de un modelo se basan en el valor de `ID`. Por tanto, si se cambia un valor de `ID` el modelo puede resultar dañado fácilmente.  
@@ -39,7 +39,7 @@ ms.locfileid: "69530891"
   
 -   No hay ningún requisito especial para el primer carácter de un identificador. El primer carácter puede ser cualquier carácter válido.  
   
-##  <a name="bkmk_reserved"></a>Palabras y caracteres reservados  
+##  <a name="reserved-words-and-characters"></a><a name="bkmk_reserved"></a>Palabras y caracteres reservados  
  Las palabras reservadas están en inglés y se aplican a los nombres de objeto, no a los títulos. Si usa accidentalmente una palabra reservada en un nombre de objeto, se producirá un error de validación. En los modelos multidimensionales y de minería de datos, las palabras reservadas que se describen a continuación no se pueden usar en ningún nombre de objeto en ningún momento.  
   
  En los modelos tabulares, donde la compatibilidad de la base de datos se establece en 1103, se han relajado las reglas de validación para ciertos objetos y no cumplen los requisitos de caracteres extendidos y las convenciones de nomenclatura de determinadas aplicaciones cliente. Las bases de datos que cumplen estos criterios están sujetas a reglas de validación menos estrictas. En este caso, es posible que un nombre de objeto incluya un carácter restringido y siga superando la validación.  
@@ -70,8 +70,8 @@ ms.locfileid: "69530891"
 |------------|------------------------|  
 |`Server`|Siga las convenciones de nomenclatura de servidores de Windows al asignar nombre a un objeto de servidor. Vea [Convenciones de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obtener más detalles.|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level`de`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension`de`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level` o `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` o `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |Todos los demás objetos|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **Excepciones: cuándo se permiten caracteres reservados**  

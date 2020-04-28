@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892395"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -42,13 +42,12 @@ ClusterDistance([<ClusterID expression>])
   
  ClusterDistance (N) = 1-(membershipWeight (N))  
   
- O bien:  
+ O:  
   
  ClusterDistance (N) = 1-ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>Funciones de predicción relacionadas  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona las funciones adicionales siguientes para consultar los modelos de agrupación en clústeres:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona las funciones adicionales siguientes para consultar los modelos de agrupación en clústeres:  
   
 -   Use la función [cluster &#40;DMX&#41;](../dmx/cluster-dmx.md) para devolver el clúster más probable.  
   
@@ -129,6 +128,6 @@ NATURAL PREDICTION JOIN
  [&#41;de &#40;DMX de clúster](../dmx/cluster-dmx.md)   
  [Referencia de funciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

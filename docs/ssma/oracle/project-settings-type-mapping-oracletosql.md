@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266583"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Configuración del proyecto (asignación de tipo) (OracleToSQL)
@@ -48,7 +48,7 @@ Haga clic en esta opción para modificar el tipo de datos seleccionado en la lis
 **Remove**  
 Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
-**Restablecer valores predeterminados**  
+**Valores predeterminados**  
 Haga clic en esta opción para restablecer la lista asignación de tipos a los valores predeterminados de SSMA.  
   
 ## <a name="default-type-mappings"></a>Asignaciones de tipos predeterminadas  
@@ -95,9 +95,9 @@ La tabla siguiente contiene la asignación de tipo de datos predeterminada para 
 |raw|varbinary(max)|  
 |real|Float [53]|  
 |pseudocolumna|UNIQUEIDENTIFIER|  
-|signtype|smallint|  
-|smallint|smallint|  
-|string|ntext|  
+|signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
+|cadena|ntext|  
 |timestamp|datetime2|  
 |marca de tiempo con zona horaria local|datetimeoffset|  
 |marca de tiempo con zona horaria|datetimeoffset|  
@@ -165,7 +165,7 @@ La tabla siguiente contiene la asignación de tipos predeterminada para las colu
 |sin formato [*.. \*]|varbinary [*]|  
 |real|Float [53]|  
 |pseudocolumna|UNIQUEIDENTIFIER|  
-|smallint|smallint|  
+|SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
 |marca de tiempo con zona horaria local|datetimeoffset|  
 |marca de tiempo con zona horaria local [*.. \*]|DateTimeOffset [*]|  
@@ -188,13 +188,13 @@ La tabla siguiente contiene la asignación de tipos predeterminada para las vari
 |binary_float|Float [53]|  
 |binary_interger|int|  
 |Blob|varbinary(max)|  
-|Boolean|bit|  
+|Booleano|bit|  
 |Char|char|  
 |char varying [*.. 8000]|VARCHAR [*]|  
 |char varying [8001.. *]|ntext|  
 |Char [*.. 8000]|Char [*]|  
 |Char [8001.. *]|ntext|  
-|Character|char|  
+|Carácter|char|  
 |variable de carácter [*.. 8000]|VARCHAR [*]|  
 |variación de caracteres [8001.. *]|ntext|  
 |carácter [*.. 8000]|Char [*]|  
@@ -234,7 +234,7 @@ La tabla siguiente contiene la asignación de tipos predeterminada para las vari
 |nchar varying [*.. 4000]|nvarchar [*]|  
 |nchar varying [4001.. *]|nvarchar(max)|  
 |NClob|nvarchar(max)|  
-|Number|Float [53]|  
+|número|Float [53]|  
 |número [*.. \*]|Numeric [*]|  
 |número [*.. \*][\*.. \*]|Numeric [*] [\*]|  
 |Numeric|Numeric [38] [0]|  
@@ -247,8 +247,8 @@ La tabla siguiente contiene la asignación de tipos predeterminada para las vari
 |sin formato [8001.. *]|varbinary(max)|  
 |Real|Float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |cadena [*.. 8000]|VARCHAR [*]|  
 |cadena [8001.. *]|ntext|  
 |timestamp|datetime2|  

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890644"
 ---
 # <a name="data-mining-model-training-destination"></a>entrenamiento del modelo de minería de datos, destino
@@ -35,19 +35,19 @@ ms.locfileid: "68890644"
   
  Este destino tiene una entrada y ninguna salida.  
   
- El destino de entrenamiento del modelo de minería [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de datos utiliza un administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] conexiones para conectarse al proyecto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a la instancia de que contiene la estructura de minería de datos y los modelos de minería de datos que entrena el destino. Para más información, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
+ El destino de Entrenamiento del modelo de minería de datos usa un administrador de conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para conectarse al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contiene la estructura y los modelos de minería de datos que entrena el destino. Para más información, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información sobre las propiedades que se pueden establecer en el cuadro de diálogo **Editor de entrenamiento de modelos de minería de datos** , haga clic en uno de los siguientes temas:  
   
--   [Editor de entrenamiento de modelos de minería de datos &#40;pestaña conexión&#41;](../data-mining-model-training-editor-connection-tab.md)  
+-   [Editor de entrenamiento de modelos de minería de datos &#40;pestaña Conexión&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [Editor de entrenamiento de modelos de minería de datos &#40;pestaña columnas&#41;](../data-mining-model-training-editor-columns-tab.md)  
+-   [Editor de entrenamiento de modelos de minería de datos &#40;pestaña Columnas&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas del destino de entrenamiento del modelo de minería de datos](data-mining-model-training-destination-custom-properties.md)  
   

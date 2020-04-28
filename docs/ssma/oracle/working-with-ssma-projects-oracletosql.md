@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266359"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Proyectos de SSMA (OracleToSQL)
@@ -62,7 +62,7 @@ Para migrar datos de bases de datos de Oracle [!INCLUDE[ssNoVersion](../../inclu
   
 **Para crear un proyecto**  
   
-1.  En el menú **archivo** , haga clic en **nuevo proyecto**.  
+1.  En el menú **Archivo**, haga clic en **Nuevo proyecto**.  
   
     Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
@@ -72,13 +72,13 @@ Para migrar datos de bases de datos de Oracle [!INCLUDE[ssNoVersion](../../inclu
   
 4.  En el menú desplegable migración, seleccione la versión de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **que se** usa para la migración. Las opciones disponibles son:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -100,7 +100,7 @@ Cuando se guarda un proyecto, SSMA conserva la configuración del proyecto y, op
   
         El almacenamiento de metadatos puede tardar varios minutos. Si aún no desea guardar los metadatos, no active las casillas de verificación.  
   
-    2.  Haga clic en el botón **Guardar**.  
+    2.  Haga clic en el botón **Save** (Guardar).  
   
         SSMA analizará los esquemas de Oracle y guardará los metadatos en el archivo de proyecto.  
   

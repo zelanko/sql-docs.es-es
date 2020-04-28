@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264563"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandos de menú y otras teclas de acceso directo (OracleToSQL)
@@ -105,7 +105,7 @@ Para obtener acceso al menú de prueba, el método abreviado de teclado utilizad
 |Mostrar las tablas de restauración desde la copia de seguridad para SQL Server cuadro de diálogo.|ALT + S + M + R|  
 |Muestre el cuadro de diálogo administrar contenido de copia de seguridad para SQL Server.|ALT + S + M + C|  
   
-## <a name="help-menu-commands"></a>Comandos del menú ayuda  
+## <a name="help-menu-commands"></a>Comandos del menú Ayuda  
 Para acceder al menú ayuda, el método abreviado de teclado utilizado es ALT + H. En la tabla siguiente se describen los métodos abreviados de teclado que se usan para tener acceso a los elementos de menú en el menú ayuda.  
   
 |PARA ELLO|Pulse|  

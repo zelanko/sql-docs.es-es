@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530842"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lección 6: Definir cálculos
@@ -41,7 +41,7 @@ ms.locfileid: "69530842"
  Para obtener más información, consulte [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)y [Cálculos en modelos multidimensionales](multidimensional-models/calculations-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que acompañan a este tutorial.  
+>  Los proyectos completos para todas las lecciones de este tutorial están disponibles en línea. Puede saltar a continuación a cualquier lección con el proyecto completado de la lección anterior como punto de partida. [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para descargar los proyectos de ejemplo que tienen que ver con este tutorial.  
   
  Esta lección contiene las siguientes tareas:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69530842"
  En esta tarea, aprenderá a definir conjuntos con nombre.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 7: definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Escenario de Analysis Services tutorial](analysis-services-tutorial-scenario.md)   

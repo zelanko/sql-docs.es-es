@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255352"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68255352"
 |Nombre|Tipo de datos|Descripción|  
 |----------|---------------|-----------------|  
 |**bloque**|**nvarchar(4000)**|Nombre del evento de estadísticas del optimizador.|  
-|**casos**|**BIGINT**|Número de repeticiones del evento de optimización para este contador.|  
-|**valor**|**float**|Valor promedio de la propiedad por repetición del evento.|  
+|**occurrence**|**bigint**|Número de repeticiones del evento de optimización para este contador.|  
+|**value**|**float**|Valor promedio de la propiedad por repetición del evento.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -76,7 +76,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 |update stmt|Número de optimizaciones que son para instrucciones UPDATE.|No aplicable|  
 |contains subquery|Número de optimizaciones de una consulta que contiene al menos una subconsulta.|No aplicable|  
 |unnest failed|Solo para uso interno|Solo para uso interno|  
-|tables|Número total de optimizaciones.|Número promedio de tablas referenciadas por consulta optimizada.|  
+|tablas|Número total de optimizaciones.|Número promedio de tablas referenciadas por consulta optimizada.|  
 |sugerencias|Número de veces que se ha especificado alguna sugerencia. Las sugerencias contadas incluyen: sugerencias de consulta JOIN, GROUP, UNION y FORCE ORDER, la opción de conjunto FORCE PLAN y las sugerencias de combinación.|No aplicable|  
 |order hint|Número de veces que se ha especificado una sugerencia de orden forzada.|No aplicable|  
 |join hint|Número de veces que una sugerencia de combinación ha forzado el algoritmo de combinación.|No aplicable|  
@@ -129,7 +129,7 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

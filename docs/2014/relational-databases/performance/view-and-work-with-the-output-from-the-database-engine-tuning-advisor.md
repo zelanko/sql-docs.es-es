@@ -27,16 +27,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811021"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
   Cuando el Asistente para la optimización de motor de base de datos optimiza bases de datos, crea resúmenes, recomendaciones, informes y registros de optimización. Puede utilizar la salida de registro de optimización para solucionar problemas de las sesiones de optimización del Asistente para la optimización de motor de base de datos. Puede usar los resúmenes, recomendaciones e informes para determinar si desea implementar las recomendaciones de optimización o continuar con la optimización hasta alcanzar las mejoras de rendimiento de consultas que necesita para su [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación. Para obtener información acerca de cómo usar el Asistente para la optimización de bases de datos para crear cargas de trabajo y optimizar una base de datos, vea [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
   
-##  <a name="View"></a>Ver la salida de optimización  
+##  <a name="view-tuning-output"></a><a name="View"></a> Ver la salida de optimización  
  Los procedimientos siguientes describen cómo ver las recomendaciones, resúmenes, informes y registros de optimización utilizando la GUI del Asistente para la optimización de motor de base de datos. Para obtener información sobre las opciones de la interfaz de usuario, vea [Descripciones de la interfaz de usuario](#UI) más adelante en este tema.  
   
  También puede usar la GUI para ver la salida de optimización generada por la utilidad de línea de comandos **dta** .  
@@ -82,7 +82,7 @@ ms.locfileid: "68811021"
   
      Si el Asistente para la optimización de motor de base de datos analiza todos los eventos en una sesión de optimización, aparecerá un mensaje que indica que el registro de optimización está vacío. Si no se activó **Guardar registro de optimización** en la pestaña **General** cuando se ejecutó la sesión de optimización, aparecerá un mensaje con esa información.  
   
-##  <a name="Implement"></a>Implementar recomendaciones de optimización  
+##  <a name="implement-tuning-recommendations"></a><a name="Implement"></a> Implementar recomendaciones de optimización  
  Se pueden implementar las recomendaciones del Asistente para la optimización de motor de base de datos manual o automáticamente como parte de la sesión de optimización. Si desea examinar los resultados de optimización antes de implementarlos, utilice la GUI del Asistente para la optimización de motor de base de datos. A continuación, puede utilizar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ejecutar manualmente los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] que el Asistente para la optimización de motor de base de datos genera como resultado del análisis de una carga de trabajo para implementar las recomendaciones. Si no necesita examinar los resultados antes de implementarlos, puede usar la opción **-a** con la utilidad de símbolo del sistema **dta** . Esto hace que la utilidad implemente automáticamente las recomendaciones de optimización después de analizar la carga de trabajo. En los siguientes procedimientos se explica cómo utilizar ambas interfaces del Asistente para la optimización de motor de base de datos con el fin de implementar las recomendaciones de optimización.  
   
 #### <a name="to-manually-implement-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Para implementar las recomendaciones de optimización manualmente mediante la GUI del Asistente para la optimización de motor de base de datos  
@@ -117,7 +117,7 @@ ms.locfileid: "68811021"
   
 3.  Presione ENTRAR.  
   
-##  <a name="Analysis"></a>Realizar análisis de exploración  
+##  <a name="perform-exploratory-analysis"></a><a name="Analysis"></a> Realizar análisis de exploración  
  La característica de configuración especificada por el usuario del Asistente para la optimización de motor de base de datos permite a los administradores de bases de datos realizar análisis de exploración. Mediante esta característica, los administradores de bases de datos especifican el diseño físico de la base de datos que deseen para el Asistente para la optimización de motor de base de datos y, así, pueden evaluar los efectos de ese diseño en el rendimiento sin necesidad de implementarlo. Tanto la utilidad de línea de comandos como la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos admiten la característica de configuración especificada por el usuario. No obstante, la utilidad de línea de comandos ofrece la mayor flexibilidad.  
   
  Si utiliza la GUI del Asistente para la optimización de motor de base de datos, podrá evaluar los efectos de la implementación de un subconjunto de recomendaciones de optimización del Asistente para la optimización de motor de base de datos, pero no podrá agregar estructuras de diseño físico hipotéticas para que el Asistente para la optimización de motor de base de datos las evalúe.  
@@ -181,7 +181,7 @@ ms.locfileid: "68811021"
   
 7.  Repita los pasos 6 y 7 hasta que cree la configuración hipotética que produce las mejoras que necesita en el rendimiento de las consultas. A continuación, podrá implementar la nueva configuración. Para obtener más información, vea [Implementar recomendaciones de optimización](#Implement) anteriormente en este tema.  
   
-##  <a name="ReviewEvaluateClone"></a>Revisar, evaluar y clonar sesiones de optimización  
+##  <a name="review-evaluate-and-clone-tuning-sessions"></a><a name="ReviewEvaluateClone"></a> Revisar, evaluar y clonar sesiones de optimización  
  El Asistente para la optimización de motor de base de datos crea una nueva sesión de optimización cada vez que se empiezan a analizar los efectos de una carga de trabajo de una o varias bases de datos. Puede utilizar el **Monitor de sesión** de la GUI del Asistente para la optimización de motor de base de datos para ver o volver a cargar todas las sesiones de optimización que se han ejecutado en una instancia determinada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando todas las sesiones de optimización existentes están disponibles para revisión, resulta fácil: clonar sesiones basándose en las existentes, modificar recomendaciones de optimización existentes y, luego, utilizar el Asistente para la optimización de motor de base de datos para evaluar la sesión modificada, o bien realizar optimizaciones en intervalos regulares para supervisar el diseño físico de las bases de datos. Por ejemplo, se puede optimizar una base de datos mensualmente.  
   
  Para poder revisar las sesiones de optimización de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se deben crear sesiones de optimización en la instancia de servidor optimizando las cargas de trabajo mediante el Asistente para la optimización de motor de base de datos. Para más información, consulte [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
@@ -239,10 +239,10 @@ ms.locfileid: "68811021"
   
 6.  Haga clic en el botón **Iniciar análisis** de la barra de herramientas para analizar los efectos de la carga de trabajo igual que cualquier otra sesión de optimización. Cuando el Asistente acabe, verá los resultados de esta sesión del mismo modo que para cualquier otra.  
   
-##  <a name="UI"></a>Descripciones de la interfaz de usuario  
+##  <a name="user-interface-descriptions"></a><a name="UI"></a> Descripciones de la interfaz de usuario  
   
 ### <a name="sessions-monitor"></a>Monitor de sesiones  
- El **monitor de sesión** muestra información sobre las sesiones que se abren en el Asistente para la optimización de motor de base de datos. Para que se muestre información sobre la sesión en la ventana de propiedades, seleccione un nombre de sesión en el **Monitor de sesión**.  
+ El**Monitor de sesión** muestra información sobre las sesiones abiertas en el Asistente para la optimización de motor de base de datos. Para que se muestre información sobre la sesión en la ventana de propiedades, seleccione un nombre de sesión en el **Monitor de sesión**.  
   
 ### <a name="recommendations-tab"></a>Pestaña Recomendaciones  
  La pestaña **Recomendaciones** aparece después de que el Asistente para la optimización de motor de base de datos haya finalizado el análisis de una carga de trabajo. Esta cuadrícula contiene las recomendaciones de cada uno de los objetos tomados en consideración. Las recomendaciones sobre particiones, si las hay, se presentan en la cuadrícula superior, y las recomendaciones sobre índices se presentan en la cuadrícula inferior. En caso de que no haya ninguna recomendación, no aparecerá ninguna cuadrícula.  
@@ -262,7 +262,7 @@ ms.locfileid: "68811021"
  **Detalles**  
  Descripción del **Destino de la recomendación**. Entre los posibles valores, se incluye un intervalo para las funciones de partición, o un valor en blanco para los esquemas de partición.  
   
- **No. de particiones**  
+ **Número de particiones**  
  Número de particiones definidas por las funciones de partición recomendadas. Cuando esta función se utiliza con un esquema y se aplica después a una tabla, los datos de la tabla se dividen en dicho número de particiones.  
   
  **Definición**  
@@ -296,7 +296,7 @@ ms.locfileid: "68811021"
  **Mostrar objetos existentes**  
  Seleccione esta opción para que todos los objetos existentes se muestren en la cuadrícula, aunque el Asistente para la optimización de motor de base de datos no haya hecho ninguna recomendación relacionada con los objetos.  
   
- **Vea informes para ver los tamaños de los objetos existentes**  
+ **Consulte los informes para ver los tamaños de los objetos existentes**  
  Seleccione esta opción para ver informes que proporcionan el tamaño de objetos existentes en la cuadrícula de recomendaciones.  
   
 ### <a name="actions-menuapply-recommendations-options"></a>Opciones del menú Acciones y de Aplicar recomendaciones  
@@ -344,22 +344,22 @@ ms.locfileid: "68811021"
  **Tiempo máximo de optimización**  
  Tiempo máximo configurado que va estar disponible para el análisis del Asistente para la optimización de motor de base de datos.  
   
- **Tiempo empleado en la optimización**  
+ **Tiempo dedicado a la optimización**  
  Tiempo realmente utilizado por el Asistente para la optimización de motor de base de datos para analizar la carga de trabajo.  
   
- **Mejora del porcentaje esperado**  
+ **Porcentaje de mejora esperada**  
  Porcentaje de mejora esperada con la carga de trabajo de destino si se han implementado todas las recomendaciones del Asistente para la optimización de motor de base de datos.  
   
  **Espacio máximo para la recomendación (MB)**  
  Espacio máximo considerado para las recomendaciones. Este valor se configura antes de que se realice el análisis, mediante el botón **Opciones avanzadas** , en la pestaña **Opciones de optimización** .  
   
- **Espacio usado actualmente (MB)**  
+ **Espacio en uso (MB)**  
  Espacio actualmente utilizado por los índices de la base de datos analizada.  
   
  **Espacio usado por la recomendación (MB)**  
  Espacio aproximado que se espera que utilicen los índices si se han implementado todas las recomendaciones del Asistente para la optimización de motor de base de datos.  
   
- **Número de eventos en la carga de trabajo**  
+ **Número de eventos de la carga de trabajo**  
  Número de eventos incluidos en la carga de trabajo.  
   
  **Número de eventos optimizados**  
@@ -383,11 +383,11 @@ ms.locfileid: "68811021"
  **Número de estadísticas que se recomienda crear**  
  Número recomendado de estadísticas que deben crearse o quitarse en la base de datos optimizada. Solo aparece si se han recomendado las estadísticas.  
   
- **Seleccionar informe**  
+ **Select Report**  
  Muestra los detalles del informe seleccionado. Las columnas de la cuadrícula varían con cada informe.  
   
 ## <a name="see-also"></a>Consulte también  
- [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md)   
+ [Inicio y uso del Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md)   
  [dta, utilidad](../../tools/dta/dta-utility.md)  
   
   

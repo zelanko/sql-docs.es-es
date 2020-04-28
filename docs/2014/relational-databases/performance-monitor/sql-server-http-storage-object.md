@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70152677"
 ---
 # <a name="sql-server-http_storage_object"></a>SQL Server, HTTP_STORAGE_OBJECT
@@ -22,19 +22,19 @@ ms.locfileid: "70152677"
   
 |Nombre del contador|Descripción|  
 |------------------|-----------------|  
-|**Bytes de lectura por segundo**|Cantidad de datos que se transfieren desde almacenamiento HTTP por segundo durante las operaciones de lectura.|  
-|**Bytes de escritura por segundo**|Cantidad de datos que se transfieren desde almacenamiento HTTP por segundo durante las operaciones de escritura.|  
-|**Total de bytes/seg.**|Cantidad de datos que se transfieren desde almacenamiento HTTP por segundo durante las operaciones de lectura o escritura.|  
-|**Lecturas por segundo**|Número de lecturas por segundo en el almacenamiento HTTP.|  
-|**Escrituras por segundo**|Número de escrituras por segundo en el almacenamiento HTTP.|  
-|**Transferencias/s**|Número de operaciones de lectura y escritura por segundo en el almacenamiento HTTP.|  
+|**Lectura de bytes/seg**|Cantidad de datos que se transfieren desde almacenamiento HTTP por segundo durante las operaciones de lectura.|  
+|**Escritura de bytes/seg**|Cantidad de datos que se transfieren desde almacenamiento HTTP por segundo durante las operaciones de escritura.|  
+|**Total de bytes/seg**|Cantidad de datos que se transfieren desde almacenamiento HTTP por segundo durante las operaciones de lectura o escritura.|  
+|**Lecturas/seg**|Número de lecturas por segundo en el almacenamiento HTTP.|  
+|**lógicas/s**|Número de escrituras por segundo en el almacenamiento HTTP.|  
+|**Transferencias/seg**|Número de operaciones de lectura y escritura por segundo en el almacenamiento HTTP.|  
 |**Promedio de bytes/lectura**|Promedio de bytes transferidos desde el almacenamiento HTTP por lectura.|  
 |**Promedio de bytes/escritura**|Promedio de bytes transferidos desde el almacenamiento HTTP por escritura.|  
 |**Promedio de bytes/transferencia**|Promedio de bytes transferidos desde el almacenamiento HTTP durante las operaciones de lectura o escritura.|  
 |**Promedio de microsegundos/lectura**|Promedio de microsegundos que invierten en realizar cada lectura desde el almacenamiento HTTP.|  
 |**Promedio de microsegundos/escritura**|Promedio de microsegundos que se invierten en realizar cada escritura en el almacenamiento HTTP.|  
 |**Promedio de microsegundos/transferencia**|Promedio de microsegundos que se invierten en realizar cada transferencia en el almacenamiento HTTP.|  
-|**E/s de Almacenamiento HTTP pendientes**|Número total de E/S pendientes para su almacenamiento HTTP.|  
+|**E/S pendiente de almacenamiento HTTP**|Número total de E/S pendientes para su almacenamiento HTTP.|  
 |**Reintento de e/s de Almacenamiento HTTP/s**|Número de solicitudes de reintento enviadas al almacenamiento HTTP por segundo.|  
   
 ## <a name="see-also"></a>Consulte también  

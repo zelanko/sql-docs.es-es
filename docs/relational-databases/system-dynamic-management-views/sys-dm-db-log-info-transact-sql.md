@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262080"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>Sys. dm_db_log_info (Transact-SQL)
@@ -52,15 +52,15 @@ sys.dm_db_log_info ( database_id )
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Id. de la base de datos.|
 |file_id|**smallint**|Identificador de archivo del registro de transacciones.|  
-|vlf_begin_offset|**BIGINT** |Ubicación de desplazamiento del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) desde el principio del archivo de registro de transacciones.|
+|vlf_begin_offset|**bigint** |Ubicación de desplazamiento del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) desde el principio del archivo de registro de transacciones.|
 |vlf_size_mb |**float** |tamaño del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) en MB, redondeado a 2 posiciones decimales.|     
-|vlf_sequence_number|**BIGINT** |número de secuencia del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) en el orden creado. Se usa para identificar de forma única VLF en el archivo de registro.|
+|vlf_sequence_number|**bigint** |número de secuencia del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) en el orden creado. Se usa para identificar de forma única VLF en el archivo de registro.|
 |vlf_active|**bit** |Indica si el [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) está en uso o no. <br />0-VLF no está en uso.<br />1-VLF está activo.|
 |vlf_status|**int** |Estado del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Los valores posibles son: <br />0-VLF está inactivo <br />1-VLF se inicializa pero no se usa <br /> 2-VLF está activo.|
 |vlf_parity|**tinyint** |Paridad del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Se usa internamente para determinar el final del registro dentro de un VLF.|
 |vlf_first_lsn|**nvarchar (48)** |[Número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de la primera entrada de registro del [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar (48)** |[Número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de la entrada de registro que creó el [archivo de registro virtual (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_encryptor_thumbprint|**varbinary (20)**| **Se aplica a:**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Muestra la huella digital del sistema de cifrado de VLF si el VLF se cifra mediante [cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md), de lo contrario, es NULL. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Se aplica a:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Muestra la huella digital del sistema de cifrado de VLF si el VLF se cifra mediante [cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md), de lo contrario, es NULL. |
 
 ## <a name="remarks"></a>Observaciones
 La `sys.dm_db_log_info` función de administración dinámica sustituye `DBCC LOGINFO` a la instrucción.    
@@ -112,6 +112,6 @@ GO
 ## <a name="see-also"></a>Consulte también  
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[Sys. dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[Sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

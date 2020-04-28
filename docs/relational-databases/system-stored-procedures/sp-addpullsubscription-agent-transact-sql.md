@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028952"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
@@ -133,8 +133,8 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
-|**2** (valor predeterminado)|A petición|  
-|**4**|Diariamente|  
+|**2** (predeterminado)|A petición|  
+|**4**|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
@@ -150,7 +150,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**1** (valor predeterminado)|Primero|  
+|**1** (predeterminado)|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
 |**203**|Cuarto|  
@@ -162,7 +162,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**1** (valor predeterminado)|Una sola vez|  
+|**1** (predeterminado)|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
 |**203**|Hour|  
@@ -246,6 +246,6 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [sp_change_subscription_properties &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

@@ -40,10 +40,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68418875"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
@@ -51,17 +51,17 @@ ms.locfileid: "68418875"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Use la opción **DatabaseMail XPs** para habilitar Correo electrónico de base de datos en este servidor. Para obtener más información, vea el tema de referencia [Database Mail XPs (opción de configuración del servidor)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Se necesita un bloqueo de base de datos para habilitar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker en cualquier base de datos. Si se desactivó Service Broker en **msdb**, para habilitar Correo electrónico de base de datos, detenga primero el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que Service Broker pueda obtener el bloqueo necesario.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para configurar Correo electrónico de base de datos, debe ser miembro del rol de servidor fijo **sysadmin** . Para enviar Correo electrónico de base de datos debe ser miembro del rol de base de datos **DatabaseMailUserRole** en la base de datos **msdb** .  
   
-##  <a name="SSMSProcedure"></a>Uso del Asistente para configuración de Correo electrónico de base de datos  
- **Para configurar Correo electrónico de base de datos mediante un asistente**  
+##  <a name="using-database-mail-configuration-wizard"></a><a name="SSMSProcedure"></a> Usar el asistente para configuración del Correo electrónico de base de datos  
+ **Para configurar Correo electrónico de base de datos con un asistente**  
   
 1.  En Explorador de objetos, expanda el nodo de la instancia para la que desea configurar Correo electrónico de base de datos.  
   
@@ -75,30 +75,30 @@ ms.locfileid: "68418875"
   
   
   
-###  <a name="Welcome"></a>Página principal  
+###  <a name="welcome-page"></a><a name="Welcome"></a>Página principal  
  En esta página se describen los pasos para configurar Correo electrónico de base de datos.  
   
  **No volver a mostrar esta página** : Active esta casilla para omitir la visualización de esta página de bienvenida en el futuro.  
   
- **Siguiente** : avanza a la página **seleccionar una tarea de configuración** .  
+ **Siguiente** : continúa con la página **Seleccionar una tarea de configuración** .  
   
  **Cancelar** : termina el asistente sin configurar correo electrónico de base de datos  
   
  
   
-###  <a name="ConfigTask"></a>Seleccionar tarea de configuración  
+###  <a name="select-configuration-task"></a><a name="ConfigTask"></a>Seleccionar tarea de configuración  
  Use la página **Seleccionar tarea de configuración** para indicar qué tarea se completará cada vez que se use el Asistente. Si cambia de opinión antes de completar el Asistente, utilice el botón **Atrás** para volver a esta página y seleccionar otra tarea.  
   
 > [!NOTE]  
 >  Si no se ha habilitado el Correo electrónico de base de datos, recibirá el mensaje **La característica Correo electrónico de base de datos no está disponible.  ¿Quiere habilitar esta característica?** Responder **Sí**es equivalente a habilitar Correo electrónico de base de datos con la [opción Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) del procedimiento almacenado del sistema **sp_configure** .  
   
- **Configure Correo electrónico de base de datos realizando las siguientes tareas:**  
+ **Instalar Correo electrónico de base de datos realizando las siguientes tareas**  
  Realiza todas las tareas necesarias para configurar el Correo electrónico de base de datos por primera vez. Esta opción incluye las otras tres.  
   
- **Administración de cuentas y perfiles de Correo electrónico de base de datos**  
+ **Administrar cuentas y perfiles de Correo electrónico de base de datos**  
  Permite crear nuevas cuentas y perfiles de Correo electrónico de base de datos, así como visualizar, cambiar o eliminar los ya existentes.  
   
- **Administrar la seguridad del perfil**  
+ **Administrar seguridad del perfil**  
  Permite configurar qué usuarios tienen acceso a los perfiles de Correo electrónico de base de datos.  
   
  **Ver o cambiar parámetros del sistema**  
@@ -106,7 +106,7 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="NewAccount"></a>Página nueva cuenta  
+###  <a name="new-account-page"></a><a name="NewAccount"></a>Página nueva cuenta  
  Use esta página para crear una nueva cuenta de Correo electrónico de base de datos. Esta cuenta contiene información para enviar correo electrónico a un servidor SMTP.  
   
  Las cuentas de Correo electrónico de base de datos contienen la información que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para enviar mensajes de correo electrónico a un servidor SMTP. Cada cuenta contiene información para un servidor de correo electrónico.  
@@ -131,13 +131,13 @@ ms.locfileid: "68418875"
  **Nombre del servidor**  
  Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Normalmente, está en un formato similar a `smtp.` *<your_company>* `.com`. Si necesita ayuda, consulte a su administrador de correo.  
   
- **Número de Puerto**  
+ **Número de puerto**  
  Escriba el número de puerto del servidor SMTP de esta cuenta. La mayor parte de los servidores SMTP utilizan el puerto 25.  
   
  **Este servidor requiere una conexión segura (SSL)**  
  Cifra comunicación mediante SSL (Capa de sockets seguros).  
   
- **Autenticación de Windows con credenciales de servicio de Motor de base de datos**  
+ **Autenticación de Windows con credenciales del servicio Motor de base de datos**  
  Se establece la conexión al servidor SMTP mediante credenciales configuradas para el servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Autenticación básica**  
@@ -157,7 +157,7 @@ ms.locfileid: "68418875"
   
  
   
-###  <a name="ExistingAccount"></a>Página Administrar cuenta existente  
+###  <a name="manage-existing-account-page"></a><a name="ExistingAccount"></a>Página Administrar cuenta existente  
  Utilice esta página para administrar una cuenta existente de Correo electrónico de base de datos.  
   
  **Nombre de cuenta**  
@@ -181,13 +181,13 @@ ms.locfileid: "68418875"
  **Nombre del servidor**  
  Muestra o actualiza el nombre del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Típicamente está en un formato similar a **smtp.<su_compañía>.com**. Si necesita ayuda, consulte a su administrador de correo.  
   
- **Número de Puerto**  
+ **Número de puerto**  
  Muestra o actualiza el número de puerto del servidor SMTP de esta cuenta. La mayor parte de los servidores SMTP utilizan el puerto 25.  
   
  **Este servidor requiere una conexión segura (SSL)**  
  Cifra comunicación mediante SSL (Capa de sockets seguros).  
   
- **Autenticación de Windows con credenciales de servicio de Motor de base de datos**  
+ **Autenticación de Windows con credenciales del servicio Motor de base de datos**  
  Se establece la conexión al servidor SMTP mediante credenciales configuradas para el servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Autenticación básica**  
@@ -207,12 +207,12 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="NewProfile"></a>Página nuevo perfil  
+###  <a name="new-profile-page"></a><a name="NewProfile"></a>Página nuevo perfil  
  Utilice esta página para crear un perfil de Correo electrónico de base de datos. Un perfil del Correo electrónico de base de datos es un conjunto de cuentas del Correo electrónico de base de datos. Los perfiles aumentan la confiabilidad en casos en los que no se puede tener acceso a un servidor de correo electrónico al proporcionar cuentas de Correo electrónico de base de datos alternativas. Se requiere al menos una cuenta de Correo electrónico de base de datos. Para obtener más información acerca de cómo establecer la prioridad de las cuentas de Correo electrónico de base de datos en el perfil, vea [Create a Database Mail Profile](create-a-database-mail-profile.md).  
   
- Utilice los botones **Subir** y **Bajar** para cambiar el orden en que se utilizan las cuentas del Correo electrónico de base de datos. Este orden se determina mediante un valor denominado número de secuencia. **Subir** : reduce el número de secuencia y **bajar** aumenta el número de secuencia. El número de secuencia determina el orden en que el Correo electrónico de base de datos utiliza las cuentas en el perfil. En el caso de un mensaje de correo electrónico nuevo, el Correo electrónico de base de datos se inicia con la cuenta con el número de secuencia más bajo. Si la cuenta genera un error, el Correo electrónico de base de datos utiliza la cuenta con el siguiente número de secuencia superior y así sucesivamente hasta que el Correo electrónico de base de datos envía el mensaje correctamente o la cuenta con el número de secuencia superior genera un error. Si la cuenta con el número de secuencia superior genera un error, el Correo electrónico de base de datos pausa los intentos de envío del correo electrónico durante la cantidad de tiempo configurada en el parámetro **AccountRetryDelay** y, a continuación, inicia nuevamente el proceso de intento de envío del correo electrónico comenzando por el número de secuencia más bajo. Use el parámetro **AccountRetryAttempts** del Correo electrónico de base de datos para configurar el número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico al usar cada cuenta del perfil especificado. Puede configurar los parámetros **AccountRetryDelay** y **AccountRetryAttempts** en la página **Configurar parámetros del sistema** del Asistente para configuración del Correo electrónico de base de datos.  
+ Utilice los botones **Subir** y **Bajar** para cambiar el orden en que se utilizan las cuentas del Correo electrónico de base de datos. Este orden se determina mediante un valor denominado número de secuencia. El botón**Subir** reduce el número de secuencia y el botón **Bajar** aumenta el número de secuencia. El número de secuencia determina el orden en que el Correo electrónico de base de datos utiliza las cuentas en el perfil. En el caso de un mensaje de correo electrónico nuevo, el Correo electrónico de base de datos se inicia con la cuenta con el número de secuencia más bajo. Si la cuenta genera un error, el Correo electrónico de base de datos utiliza la cuenta con el siguiente número de secuencia superior y así sucesivamente hasta que el Correo electrónico de base de datos envía el mensaje correctamente o la cuenta con el número de secuencia superior genera un error. Si la cuenta con el número de secuencia superior genera un error, el Correo electrónico de base de datos pausa los intentos de envío del correo electrónico durante la cantidad de tiempo configurada en el parámetro **AccountRetryDelay** y, a continuación, inicia nuevamente el proceso de intento de envío del correo electrónico comenzando por el número de secuencia más bajo. Use el parámetro **AccountRetryAttempts** del Correo electrónico de base de datos para configurar el número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico al usar cada cuenta del perfil especificado. Puede configurar los parámetros **AccountRetryDelay** y **AccountRetryAttempts** en la página **Configurar parámetros del sistema** del Asistente para configuración del Correo electrónico de base de datos.  
   
- **Nombre del perfil**  
+ **Nombre de perfil**  
  Escriba el nombre del nuevo perfil. El perfil se crea con este nombre. No utilice el nombre de un perfil existente.  
   
  **Descripción**  
@@ -235,12 +235,12 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="ExistingProfile"></a>Página administrar perfil existente  
+###  <a name="manage-existing-profile-page"></a><a name="ExistingProfile"></a>Página administrar perfil existente  
  Utilice esta página para administrar un perfil existente del Correo electrónico de base de datos. Un perfil del Correo electrónico de base de datos es un conjunto de cuentas del Correo electrónico de base de datos. Los perfiles aumentan la confiabilidad en casos en los que no se puede tener acceso a un servidor de correo electrónico al proporcionar cuentas de Correo electrónico de base de datos alternativas. Se requiere al menos una cuenta de Correo electrónico de base de datos. Para obtener más información acerca de cómo establecer la prioridad de las cuentas de Correo electrónico de base de datos en el perfil, vea [Create a Database Mail Profile](create-a-database-mail-profile.md).  
   
- Utilice los botones **Subir** y **Bajar** para cambiar el orden en que se utilizan las cuentas del Correo electrónico de base de datos. Este orden se determina mediante un valor denominado número de secuencia. **Subir** : reduce el número de secuencia y **bajar** aumenta el número de secuencia. El número de secuencia determina el orden en que el Correo electrónico de base de datos utiliza las cuentas en el perfil. En el caso de un mensaje de correo electrónico nuevo, el Correo electrónico de base de datos se inicia con la cuenta con el número de secuencia más bajo. Si la cuenta genera un error, el Correo electrónico de base de datos utiliza la cuenta con el siguiente número de secuencia superior y así sucesivamente hasta que el Correo electrónico de base de datos envía el mensaje correctamente o la cuenta con el número de secuencia superior genera un error. Si la cuenta con el número de secuencia superior genera un error, el Correo electrónico de base de datos pausa los intentos de envío del correo electrónico durante la cantidad de tiempo configurada en el parámetro **AccountRetryDelay** y, a continuación, inicia nuevamente el proceso de intento de envío del correo electrónico comenzando por el número de secuencia más bajo. Use el parámetro **AccountRetryAttempts** del Correo electrónico de base de datos para configurar el número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico al usar cada cuenta del perfil especificado. Puede configurar los parámetros **AccountRetryDelay** y **AccountRetryAttempts** en la página **Configurar parámetros del sistema** del Asistente para configuración del Correo electrónico de base de datos.  
+ Utilice los botones **Subir** y **Bajar** para cambiar el orden en que se utilizan las cuentas del Correo electrónico de base de datos. Este orden se determina mediante un valor denominado número de secuencia. El botón**Subir** reduce el número de secuencia y el botón **Bajar** aumenta el número de secuencia. El número de secuencia determina el orden en que el Correo electrónico de base de datos utiliza las cuentas en el perfil. En el caso de un mensaje de correo electrónico nuevo, el Correo electrónico de base de datos se inicia con la cuenta con el número de secuencia más bajo. Si la cuenta genera un error, el Correo electrónico de base de datos utiliza la cuenta con el siguiente número de secuencia superior y así sucesivamente hasta que el Correo electrónico de base de datos envía el mensaje correctamente o la cuenta con el número de secuencia superior genera un error. Si la cuenta con el número de secuencia superior genera un error, el Correo electrónico de base de datos pausa los intentos de envío del correo electrónico durante la cantidad de tiempo configurada en el parámetro **AccountRetryDelay** y, a continuación, inicia nuevamente el proceso de intento de envío del correo electrónico comenzando por el número de secuencia más bajo. Use el parámetro **AccountRetryAttempts** del Correo electrónico de base de datos para configurar el número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico al usar cada cuenta del perfil especificado. Puede configurar los parámetros **AccountRetryDelay** y **AccountRetryAttempts** en la página **Configurar parámetros del sistema** del Asistente para configuración del Correo electrónico de base de datos.  
   
- **Nombre del perfil**  
+ **Nombre de perfil**  
  Permite seleccionar el nombre del perfil que se va a administrar.  
   
  **Eliminar**  
@@ -264,7 +264,7 @@ ms.locfileid: "68418875"
  **Bajar**  
  Permite reducir la prioridad de conmutación por error de la cuenta seleccionada.  
   
- **Priority**  
+ **Prioridad**  
  Permite ver la prioridad de conmutación por error actual de la cuenta.  
   
  **Nombre de cuenta**  
@@ -275,7 +275,7 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="AddAccount"></a>Agregar cuenta a la página de perfil  
+###  <a name="add-account-to-profile-page"></a><a name="AddAccount"></a>Agregar cuenta a la página de perfil  
  Use esta página para elegir la cuenta que se va a agregar al perfil. Elija entre una cuenta existente en el cuadro **Nombre de cuenta** o haga clic en **Nueva cuenta**.  
   
  **Nombre de cuenta**  
@@ -292,16 +292,16 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="AccountsProfiles"></a>Página administrar cuentas y perfiles  
+###  <a name="manage-accounts-and-profiles-page"></a><a name="AccountsProfiles"></a>Página administrar cuentas y perfiles  
  Utilice esta página para elegir una tarea para administrar un perfil o una cuenta.  
   
  **Creación de una nueva cuenta**  
  Crea una nueva cuenta.  
   
- **Ver, cambiar o eliminar una cuenta existente**  
+ **Ver, cambiar o eliminar cuenta existente**  
  Administra o elimina una cuenta existente.  
   
- **Crear un nuevo perfil**  
+ **Crear nuevo perfil**  
  Crea un nuevo perfil.  
   
  **Ver, cambiar o eliminar un perfil existente. También puede administrar cuentas asociadas al perfil.**  
@@ -309,7 +309,7 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="ProfileSecurityPublic"></a>Administrar seguridad del perfil, pestaña público  
+###  <a name="manage-profile-security-public-tab"></a><a name="ProfileSecurityPublic"></a>Administrar seguridad del perfil, pestaña público  
  Utilice esta página para configurar un perfil público.  
   
  Los perfiles son públicos o privados. Un perfil privado solo es accesible para determinados usuarios o roles. Un perfil público permite a cualquier usuario o rol con acceso a la base de datos host de correo (**msdb**) enviar correo electrónico al usar dicho perfil.  
@@ -330,7 +330,7 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="ProfileSecurityPrivate"></a>Administrar seguridad del perfil, pestaña privado  
+###  <a name="manage-profile-security-private-tab"></a><a name="ProfileSecurityPrivate"></a>Administrar seguridad del perfil, pestaña privado  
  Utilice esta página para configurar un perfil privado.  
   
  Los perfiles son públicos o privados. Un perfil privado solo es accesible para determinados usuarios o roles. Un perfil público permite a cualquier usuario o rol con acceso a la base de datos host de correo (**msdb**) enviar correo electrónico al usar dicho perfil.  
@@ -343,10 +343,10 @@ ms.locfileid: "68418875"
  **Acceder**  
  Seleccione si el usuario o el rol tienen acceso al perfil especificado.  
   
- **Nombre del perfil**  
+ **Nombre de perfil**  
  Muestra el nombre del perfil.  
   
- **Perfil predeterminado**  
+ **Es el perfil predeterminado**  
  Permite seleccionar si el perfil es el predeterminado para el usuario o el rol. Cada usuario o rol solo puede tener un perfil predeterminado  
   
  **Mostrar solo perfiles privados existentes para este usuario**  
@@ -354,22 +354,22 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="SystemParameters"></a>Configurar parámetros del sistema  
+###  <a name="configure-system-parameters"></a><a name="SystemParameters"></a>Configurar parámetros del sistema  
  Utilice esta página para especificar los parámetros del sistema de Correo electrónico de base de datos. Visualice los parámetros del sistema y el valor actual de cada uno de ellos. Seleccione un parámetro para ver una descripción breve en el panel de información.  
   
- **Reintentos de cuenta**  
+ **Número de reintentos de cuenta**  
  Número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico con cada cuenta del perfil especificado.  
   
  **Intervalo entre reintentos de cuenta (segundos)**  
  Cantidad de tiempo en segundos que el proceso de correo electrónico externo espera después de intentar entregar un mensaje con todas las cuentas del perfil antes de volver a intentarlo con todas las cuentas.  
   
- **Tamaño máximo de archivo (bytes)**  
+ **Tamaño máximo del archivo (bytes)**  
  Tamaño máximo de los datos adjuntos en bytes.  
   
  **Extensiones de archivo adjunto prohibidas**  
  Lista de extensiones separadas por comas que no se puede enviar como datos adjuntos en un mensaje de correo electrónico. Haga clic en el botón Examinar (**...**) para agregar extensiones adicionales.  
   
- **Duración mínima de Correo electrónico de base de datos ejecutable (segundos)**  
+ **Vigencia mínima del ejecutable de Correo electrónico de base de datos (segundos)**  
  Cantidad de tiempo mínima en segundos que el proceso de correo electrónico externo permanece activo. El proceso permanecerá activo mientras queden mensajes en la cola del Correo electrónico de base de datos. Este parámetro especifica el tiempo que permanece activo el proceso si no hay ningún mensaje por procesar.  
   
  **Nivel de registro**  
@@ -388,38 +388,37 @@ ms.locfileid: "68418875"
   
 
   
-###  <a name="CompleteWizard"></a>Página finalización del asistente  
+###  <a name="complete-the-wizard-page"></a><a name="CompleteWizard"></a>Página finalización del asistente  
  Utilice esta página para revisar las acciones que realizará el **Asistente para configuración del Correo electrónico de base de datos** . Los cambios no se llevan a cabo hasta que finaliza el asistente.  
   
 
   
-###  <a name="TestEmail"></a>Página enviar correo electrónico de prueba  
- Use la página **Enviar correo electrónico de prueba desde** _<instance_name>_ para enviar un mensaje de correo electrónico con el perfil de correo electrónico de base de datos especificado. Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden enviar un mensaje de correo electrónico de prueba mediante esta página.  
+###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a>Página enviar correo electrónico de prueba  
+ Use la página **Enviar correo electrónico de prueba desde**_<nombreDeInstancia>_ para enviar un mensaje de correo electrónico con el perfil de Correo electrónico de base de datos especificado. Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden enviar un mensaje de correo electrónico de prueba mediante esta página.  
   
  **Perfil de Correo electrónico de base de datos**  
  Seleccione un perfil de Correo electrónico de base de datos de la lista. Este campo es obligatorio. Si no aparece ningún perfil, significa que no hay ninguno o que no tiene permiso para ninguno. Utilice el **Asistente para configuración de Correo electrónico de base de datos** para crear y configurar perfiles. Si no aparece ningún perfil, utilice el Asistente para configuración de Correo electrónico de base de datos para crear un perfil para su utilización.  
   
- **Para**  
+ **To**  
  Dirección de correo electrónico de los destinatarios de los mensajes. Se requiere al menos un destinatario.  
   
- **Asunto**  
+ **Subject**  
  Línea de asunto del mensaje de correo electrónico de prueba. Cambie el asunto predeterminado a fin de identificar más fácilmente el mensaje para solucionar el problema.  
   
- **Body**  
+ **Cuerpo**  
  Cuerpo del mensaje de prueba. Cambie el asunto predeterminado a fin de identificar más fácilmente el mensaje para solucionar el problema.  
   
  En el cuadro de diálogo **Correo electrónico de prueba de base de datos** se confirma que el Correo electrónico de base de datos intentó enviar el mensaje de correo electrónico de prueba y se indica el **mailitem_id** del mismo. Pregunte al destinatario si ha recibido el mensaje. Normalmente, los mensajes de correo electrónico se reciben en pocos minutos, pero puede que se retrasen a causa de un rendimiento lento de la red, una acumulación de mensajes en el servidor de correo o si el servidor no está disponible temporalmente. Use **mailitem_id** para solucionar el problema.  
   
  **Correo electrónico enviado**  
- 
-  **mailitem_id** del mensaje de correo electrónico de prueba.  
+ **mailitem_id** del mensaje de correo electrónico de prueba.  
   
  **Solución de problemas**  
  Haga clic para abrir los Libros en pantalla en el tema [Solucionar problemas del Correo electrónico de base de datos](https://msdn.microsoft.com/library/ms188663.aspx).  
   
 
   
-##  <a name="Template"></a>Uso de plantillas  
+##  <a name="using-templates"></a><a name="Template"></a>Uso de plantillas  
  **Para crear un script de configuración de Correo electrónico de base de datos**  
   
 1.  En el menú **Ver** , seleccione **Explorador de plantillas**.  

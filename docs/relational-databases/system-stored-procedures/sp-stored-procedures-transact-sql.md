@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702781"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -73,13 +73,11 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**PROCEDURE_QUALIFIER**|**sysname**|Nombre del calificador del procedimiento. Esta columna puede ser NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nombre del propietario del procedimiento. Esta columna siempre devuelve un valor.|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|Nombre del procedimiento. Esta columna siempre devuelve un valor.|  
-|**NUM_INPUT_PARAMS**|**int**|Reservado para su uso en el futuro:|  
-|**NUM_OUTPUT_PARAMS**|**int**|Reservado para su uso en el futuro:|  
-|**NUM_RESULT_SETS**|**int**|Reservado para su uso en el futuro:|  
-|**SECCIÓN**|**VARCHAR (254)**|Descripción del procedimiento. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
-|**PROCEDURE_TYPE**|**smallint**|Tipo de procedimiento. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 2.0. Este valor puede ser uno de los siguientes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**NUM_INPUT_PARAMS**|**int**|Reservado para uso futuro.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Reservado para uso futuro.|  
+|**NUM_RESULT_SETS**|**int**|Reservado para uso futuro.|  
+|**COMENTARIOS**|**VARCHAR (254)**|Descripción del procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
+|**PROCEDURE_TYPE**|**smallint**|Tipo de procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 2.0. Este valor puede ser uno de los siguientes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Observaciones  
  Para obtener la máxima interoperatividad, el cliente de la puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL (los caracteres de comodín % y _).  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262702"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
@@ -60,15 +60,15 @@ sys.dm_tran_active_snapshot_database_transactions
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**transaction_id**|**BIGINT**|Número de identificación único asignado para la transacción. El Id. de transacción se utiliza principalmente para identificar la transacción en las operaciones de bloqueo.|  
-|**transaction_sequence_num**|**BIGINT**|Número de secuencia de la transacción. Se trata de un número de secuencia único que se asigna a una transacción cuando se inicia. Las transacciones que no generan registros de versiones y no utilizan recorridos de instantáneas no reciben un número de secuencia de la transacción.|  
-|**commit_sequence_num**|**BIGINT**|Número de secuencia que indica cuándo finaliza (se confirma o se detiene) la transacción. Para las transacciones activas, el valor es NULL.|  
+|**transaction_id**|**bigint**|Número de identificación único asignado para la transacción. El Id. de transacción se utiliza principalmente para identificar la transacción en las operaciones de bloqueo.|  
+|**transaction_sequence_num**|**bigint**|Número de secuencia de la transacción. Se trata de un número de secuencia único que se asigna a una transacción cuando se inicia. Las transacciones que no generan registros de versiones y no utilizan recorridos de instantáneas no reciben un número de secuencia de la transacción.|  
+|**commit_sequence_num**|**bigint**|Número de secuencia que indica cuándo finaliza (se confirma o se detiene) la transacción. Para las transacciones activas, el valor es NULL.|  
 |**is_snapshot**|**int**|0 = No es una transacción de aislamiento de instantánea.<br /><br /> 1 = Es una transacción de aislamiento de instantánea.|  
 |**session_id**|**int**|Id. de la sesión que ha iniciado la transacción.|  
-|**first_snapshot_sequence_num**|**BIGINT**|Número más bajo de secuencia de la transacción de las transacciones que estaban activas cuando se obtuvo la instantánea. Cuando se ejecuta, una transacción de instantánea realiza una instantánea de todas las transacciones activas en ese momento. En las transacciones que no son de instantánea, en esta columna se muestra 0.|  
+|**first_snapshot_sequence_num**|**bigint**|Número más bajo de secuencia de la transacción de las transacciones que estaban activas cuando se obtuvo la instantánea. Cuando se ejecuta, una transacción de instantánea realiza una instantánea de todas las transacciones activas en ese momento. En las transacciones que no son de instantánea, en esta columna se muestra 0.|  
 |**max_version_chain_traversed**|**int**|Longitud máxima de la cadena de versiones que se recorre para buscar la versión coherente desde el punto de vista de las transacciones.|  
-|**average_version_chain_traversed**|**impuestos**|Promedio de versiones de fila en las cadenas de versiones que se recorren.|  
-|**elapsed_time_seconds**|**BIGINT**|Tiempo transcurrido desde que la transacción obtuvo su número de secuencia de la transacción.|  
+|**average_version_chain_traversed**|**real**|Promedio de versiones de fila en las cadenas de versiones que se recorren.|  
+|**elapsed_time_seconds**|**bigint**|Tiempo transcurrido desde que la transacción obtuvo su número de secuencia de la transacción.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
@@ -145,8 +145,7 @@ elapsed_time_seconds
   
  La siguiente información evalúa los resultados de **Sys. dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57: dado que esta transacción no se ejecuta con aislamiento de instantánea `is_snapshot` , el `first_snapshot_sequence_num` valor `0`y son. 
-  `transaction_sequence_num` muestra que se ha asignado un número de secuencia de la transacción a esta transacción, ya que una o ambas de las opciones de base de datos ALLOW_SNAPSHOT_ISOLATION o READ_COMMITTED_SNAPSHOT están establecidas en ON.  
+-   XSN-57: dado que esta transacción no se ejecuta con aislamiento de instantánea `is_snapshot` , el `first_snapshot_sequence_num` valor `0`y son. `transaction_sequence_num` muestra que se ha asignado un número de secuencia de la transacción a esta transacción, ya que una o ambas de las opciones de base de datos ALLOW_SNAPSHOT_ISOLATION o READ_COMMITTED_SNAPSHOT están establecidas en ON.  
   
 -   XSN-58: esta transacción no se ejecuta con aislamiento de instantáneas y se aplica la misma información que en XSN-57.  
   

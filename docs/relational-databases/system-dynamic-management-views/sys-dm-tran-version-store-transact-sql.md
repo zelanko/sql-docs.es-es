@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262604"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
@@ -47,16 +47,16 @@ sys.dm_tran_version_store
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**transaction_sequence_num**|**BIGINT**|Número de secuencia de la transacción que genera la versión de registro.|  
-|**version_sequence_num**|**BIGINT**|Número de secuencia del registro de versión. Este valor es único en la transacción que genera la versión.|  
+|**transaction_sequence_num**|**bigint**|Número de secuencia de la transacción que genera la versión de registro.|  
+|**version_sequence_num**|**bigint**|Número de secuencia del registro de versión. Este valor es único en la transacción que genera la versión.|  
 |**database_id**|**int**|Id. de la base de datos del registro de versiones.|  
-|**rowset_id**|**BIGINT**|Id. del conjunto de filas del registro.|  
-|**estatus**|**tinyint**|Indica si un registro de versiones se ha dividido en dos registros. Si el valor es 0, el registro está almacenado en una página. Si el valor es 1, el registro está dividido en dos registros almacenados en dos páginas diferentes.|  
+|**rowset_id**|**bigint**|Id. del conjunto de filas del registro.|  
+|**status**|**tinyint**|Indica si un registro de versiones se ha dividido en dos registros. Si el valor es 0, el registro está almacenado en una página. Si el valor es 1, el registro está dividido en dos registros almacenados en dos páginas diferentes.|  
 |**min_length_in_bytes**|**smallint**|Longitud mínima del registro en bytes.|  
 |**record_length_first_part_in_bytes**|**smallint**|Longitud de la primera parte del registro de versiones en bytes.|  
-|**record_image_first_part**|**varbinary (8000)**|Imagen binaria de la primera parte del registro de versiones.|  
+|**record_image_first_part**|**varbinary(8000)**|Imagen binaria de la primera parte del registro de versiones.|  
 |**record_length_second_part_in_bytes**|**smallint**|Longitud de la segunda parte del registro de versiones en bytes.|  
-|**record_image_second_part**|**varbinary (8000)**|Imagen binaria de la segunda parte del registro de versiones.|  
+|**record_image_second_part**|**varbinary(8000)**|Imagen binaria de la segunda parte del registro de versiones.|  
   
 ## <a name="permissions"></a>Permisos
 

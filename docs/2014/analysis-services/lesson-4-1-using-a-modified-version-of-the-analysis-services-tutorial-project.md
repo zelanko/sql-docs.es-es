@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493945"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usar una versión modificada del proyecto Tutorial de Analysis Services
@@ -24,7 +24,7 @@ ms.locfileid: "69493945"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Descargar y extraer el archivo de proyecto  
   
-1.  [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para ir a la página de descarga que proporciona los proyectos de ejemplo que acompañan a este tutorial. Los proyectos del tutorial se incluyen en la descarga de **Tutorial de Analysis Services SQL Server 2012** .  
+1.  [Haga clic aquí](https://go.microsoft.com/fwlink/?LinkID=221866) para ir a la página de descarga que proporciona los proyectos de ejemplo relacionados con este tutorial. Los proyectos del tutorial se incluyen en la descarga de **Tutorial de Analysis Services SQL Server 2012** .  
   
 2.  Haga clic en **Tutorial de Analysis Services de SQL Server 2012** para descargar el paquete que contiene los proyectos para este tutorial.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "69493945"
 #### <a name="internet-sales-diagram"></a>Diagrama Internet Sales  
  El diagrama **Internet Sales** contiene las tablas que están relacionadas con la venta directa de productos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] a los clientes a través de Internet. Las tablas del diagrama son las cuatro tablas de dimensiones y la tabla de hechos que agregó a la vista del origen de datos **Adventure Works DW 2012** en la Lección 1. Estas tablas son las siguientes:  
   
--   **Geográfico**  
+-   **Geografía**  
   
--   **Customer**  
+-   **Cliente**  
   
 -   **Date**  
   
--   **Producto**  
+-   **Manuales**  
   
 -   **InternetSales**  
   
@@ -76,15 +76,15 @@ ms.locfileid: "69493945"
   
 -   **Vendedor**  
   
--   **Ascende**  
+-   **Promoción**  
   
 -   **SalesTerritory**  
   
--   **Geográfico**  
+-   **Geografía**  
   
 -   **Date**  
   
--   **Producto**  
+-   **Manuales**  
   
 -   **Employee**  
   

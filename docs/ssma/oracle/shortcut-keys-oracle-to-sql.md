@@ -11,14 +11,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: aad656fb2958de67336c9ac4c3e937528fef6466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266472"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>Teclas de acceso directo (OracleToSQL)
-Puede usar métodos abreviados de teclado para navegar por la aplicación SSMA. Para obtener más información, vea los siguientes temas.  
+Puede usar métodos abreviados de teclado para navegar por la aplicación SSMA. Para obtener más información, vea los temas siguientes:  
   
 -   [Comandos de menú y otras teclas de método abreviado&#40;Oracle a SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
   

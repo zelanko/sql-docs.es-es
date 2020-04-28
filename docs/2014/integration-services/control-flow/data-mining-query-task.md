@@ -16,23 +16,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890406"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tarea Consulta de minería de datos ejecuta consultas de predicción basadas en modelos de minería de datos integrados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La consulta de predicción crea una predicción para datos nuevos a partir de modelos de minería de datos. Por ejemplo, una consulta de predicción puede predecir cuántos barcos de vela es probable vender durante los meses de verano, así como generar una lista de clientes que podrían estar interesados en comprar uno.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tareas que realizan otras operaciones de Business Intelligence, como ejecutar instrucciones del lenguaje de definición de datos (DDL) y procesar objetos de análisis.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona tareas que realizan otras operaciones de Business Intelligence, como ejecutar instrucciones del lenguaje de definición de datos (DDL) y procesar objetos de análisis.  
   
  Para obtener más información sobre otras tareas de Business Intelligence, haga clic en uno de los temas siguientes:  
   
 -   [Tarea Ejecutar DDL de Analysis Services](analysis-services-execute-ddl-task.md)  
   
--   [Procesamiento de Analysis Services, tarea](analysis-services-processing-task.md)  
+-   [Tarea de procesamiento de Analysis Services](analysis-services-processing-task.md)  
   
 ## <a name="prediction-queries"></a>Consultas de predicción  
  La consulta es una instrucción de Extensiones de minería de datos (DMX). El lenguaje DMX es una extensión del lenguaje SQL que permite trabajar con modelos de minería de datos. Para más información sobre cómo usar el lenguaje DMX, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
@@ -46,17 +45,17 @@ ms.locfileid: "68890406"
  Si los resultados incluyen anidamientos, se quita información de estructura jerárquica de los resultados antes de guardarlos. La eliminación de información de estructura jerárquica de los resultados convierte un conjunto de resultados anidados en una tabla. Por ejemplo, al quitar información de estructura jerárquica de un resultado anidado con una columna **Customer** y una columna anidada **Product** , se agregan filas a la columna **Customer** para crear una tabla que incluya los datos de productos de cada cliente. Así, por ejemplo, un cliente con tres productos diferentes se convierte en una tabla con tres filas; y cada fila incluirá los datos del cliente y uno de los productos. Si se omite la palabra clave FLATTENED, la tabla solo contendrá la columna **Customer** y una única fila por cliente. Para más información, vea [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>Configuración de la tarea Consulta de minería de datos  
- La tarea Consulta de minería de datos requiere dos conexiones. La primera conexión es un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de conexiones que se conecta a una instancia [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de o a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un proyecto que contiene la estructura de minería de datos y el modelo de minería de datos. La segunda conexión es un administrador de conexiones OLE DB que se conecta a la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que contiene la tabla en la que escribe la tarea. Para obtener más información, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) y [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
+ La tarea Consulta de minería de datos requiere dos conexiones. La primera conexión es un administrador de conexiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se conecta a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que contiene la estructura de minería de datos y el modelo de minería de datos. La segunda conexión es un administrador de conexiones OLE DB que se conecta a la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que contiene la tabla en la que escribe la tarea. Para obtener más información, consulte [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) y [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea consulta de minería de datos &#40;pestaña modelo de minería de datos&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [Editor de la tarea Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Editor de la tarea consulta de minería de datos &#40;pestaña consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Editor de la tarea Consulta de minería de datos &#40;pestaña Consulta&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Editor de la tarea consulta de minería de datos &#40;pestaña salida&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Editor de la tarea Consulta de minería de datos &#40;pestaña Salida&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  El Editor de la tarea Consulta de minería de datos no tiene página Expresiones. Utilice en su lugar la ventana **Propiedades** para tener acceso a las herramientas de creación y administración de expresiones de propiedades para las propiedades de la tarea Consulta de minería de datos.  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b91ac554186c37b2e074dd3faded49a01259222e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262689"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
@@ -69,9 +69,9 @@ dm_tran_transactions_snapshot
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**transaction_sequence_num**|**BIGINT**|Número de secuencia de transacción (XSN) de una transacción de instantáneas.|  
+|**transaction_sequence_num**|**bigint**|Número de secuencia de transacción (XSN) de una transacción de instantáneas.|  
 |**snapshot_id**|**int**|Id. de instantánea de cada instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciada con lectura confirmada y que utiliza las versiones de fila. Este valor se utiliza para generar una vista de la base de datos transaccionalmente coherente que admita cada consulta que se ejecute en una lectura confirmada utilizando las versiones de fila.|  
-|**snapshot_sequence_num**|**BIGINT**|Número de secuencia de una transacción que estaba activa cuando se inició la transacción de instantánea.|  
+|**snapshot_sequence_num**|**bigint**|Número de secuencia de una transacción que estaba activa cuando se inició la transacción de instantánea.|  
   
 ## <a name="permissions"></a>Permisos
 

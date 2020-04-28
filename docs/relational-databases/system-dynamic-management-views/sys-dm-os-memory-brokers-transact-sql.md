@@ -19,10 +19,10 @@ ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e131e2550ffa5078df5e284898ffe936128b7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265873"
 ---
 # <a name="sysdm_os_memory_brokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
@@ -40,14 +40,14 @@ ms.locfileid: "68265873"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|Id. del grupo de recursos de servidor si está asociado a un grupo del regulador de recursos.|  
-|**memory_broker_type**|**nvarchar (60)**|Tipo de agente de memoria. Actualmente hay tres tipos de agentes de memoria en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que se enumeran a continuación con sus descripciones.<br /><br /> **MEMORYBROKER_FOR_CACHE** : memoria asignada para su uso por parte de objetos almacenados en caché (no caché del grupo de búferes).<br /><br /> **MEMORYBROKER_FOR_STEAL** : memoria que se ha robado del grupo de búferes. Esta memoria no está disponible para ser reutilizada por otros componentes hasta que el propietario actual la libere.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : memoria reservada para un uso futuro por parte de las solicitudes que se están ejecutando actualmente.|  
-|**allocations_kb**|**BIGINT**|La cantidad de memoria, en kilobytes (KB) asignada a este tipo de agente.|  
-|**allocations_kb_per_sec**|**BIGINT**|La tasa de asignaciones de memoria en kilobytes (KB) por segundo. Este valor puede ser negativo para las cancelaciones de asignación de memoria.|  
-|**predicted_allocations_kb**|**BIGINT**|La cantidad prevista de memoria asignada por el agente. Depende del modelo de uso de la memoria.|  
-|**target_allocations_kb**|**BIGINT**|La cantidad recomendada de memoria asignada, en kilobytes (KB), depende de la configuración actual y del modelo de uso de la memoria. El agente debería aumentar o disminuir hasta este número.|  
-|**future_allocations_kb**|**BIGINT**|El número previsto de asignaciones, en kilobytes (KB), que se realizarán en los segundos siguientes.|  
-|**overall_limit_kb**|**BIGINT**|Cantidad máxima de memoria, en kilobytes (KB), que el agente puede asignar.|  
-|**last_notification**|**nvarchar (60)**|Recomendación del uso de memoria, que depende de la configuración actual y del modelo de uso. Los valores válidos son los siguientes:<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
+|**memory_broker_type**|**nvarchar(60)**|Tipo de agente de memoria. Actualmente hay tres tipos de agentes de memoria en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que se enumeran a continuación con sus descripciones.<br /><br /> **MEMORYBROKER_FOR_CACHE** : memoria asignada para su uso por parte de objetos almacenados en caché (no caché del grupo de búferes).<br /><br /> **MEMORYBROKER_FOR_STEAL** : memoria que se ha robado del grupo de búferes. Esta memoria no está disponible para ser reutilizada por otros componentes hasta que el propietario actual la libere.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : memoria reservada para un uso futuro por parte de las solicitudes que se están ejecutando actualmente.|  
+|**allocations_kb**|**bigint**|La cantidad de memoria, en kilobytes (KB) asignada a este tipo de agente.|  
+|**allocations_kb_per_sec**|**bigint**|La tasa de asignaciones de memoria en kilobytes (KB) por segundo. Este valor puede ser negativo para las cancelaciones de asignación de memoria.|  
+|**predicted_allocations_kb**|**bigint**|La cantidad prevista de memoria asignada por el agente. Depende del modelo de uso de la memoria.|  
+|**target_allocations_kb**|**bigint**|La cantidad recomendada de memoria asignada, en kilobytes (KB), depende de la configuración actual y del modelo de uso de la memoria. El agente debería aumentar o disminuir hasta este número.|  
+|**future_allocations_kb**|**bigint**|El número previsto de asignaciones, en kilobytes (KB), que se realizarán en los segundos siguientes.|  
+|**overall_limit_kb**|**bigint**|Cantidad máxima de memoria, en kilobytes (KB), que el agente puede asignar.|  
+|**last_notification**|**nvarchar(60)**|Recomendación del uso de memoria, que depende de la configuración actual y del modelo de uso. Los valores válidos son los siguientes:<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  

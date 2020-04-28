@@ -16,10 +16,10 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771006"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
@@ -46,10 +46,10 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**article_id**|**int**|Id. del artículo.|  
+|**identificador de artículo**|**int**|Id. del artículo.|  
 |**partial_command**|**bit**|Indica si se trata de un comando parcial o no.|  
 |**Command**|**varbinary (1024)**|El valor del comando.|  
-|**xactid**|**binario (10)**|Id. de la transacción.|  
+|**xactid**|**binary(10)**|Id. de la transacción.|  
 |**xact_seqno**|**varbinary(16)**|El número de secuencia de la transacción.|  
 |**publication_id**|**int**|Id. de la publicación.|  
 |**command_id**|**int**|IDENTIFICADOR del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  Los clientes que intentan ejecutar **sp_replcmds** dentro de la misma base de datos reciben el error 18752 hasta que el primer cliente se desconecte. Una vez que el primer cliente se desconecta, otro cliente puede ejecutar **sp_replcmds**y se convierte en el nuevo lector del registro.  
   
- Si sp_replcmds no puede replicar un comando de texto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque no se recuperó el puntero de texto en la misma transacción, se agrega un mensaje de advertencia número 18759 al registro de errores de y al [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de aplicación de Windows. ****  
+ Si sp_replcmds no puede replicar un comando de texto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque no se recuperó el puntero de texto en la misma transacción, se agrega un mensaje de advertencia número 18759 al registro de errores de y al [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de aplicación de Windows. **sp_replcmds**  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_replcmds**.  

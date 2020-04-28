@@ -16,10 +16,10 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771327"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
@@ -74,9 +74,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Active**|El suscriptor está sincronizado y recibe datos.|  
+|**active**|El suscriptor está sincronizado y recibe datos.|  
 |**inactiva**|Existe una entrada de suscriptor sin que haya una suscripción.|  
-|**suscrito**|El suscriptor solicita datos, pero aún no está sincronizado.|  
+|**subscribed**|El suscriptor solicita datos, pero aún no está sincronizado.|  
   
 `[ @previous_status = ] 'previous_status'`Es el estado anterior de la suscripción. *previous_status* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro permite cambiar cualquier suscripción que tenga actualmente ese estado, lo que permite a las funciones de grupo en un conjunto específico de suscripciones (por ejemplo, al establecer de nuevo todas las suscripciones activas en **suscrito**).  
   

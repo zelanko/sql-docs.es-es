@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762780"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`Es el tipo de suscriptor. el *tipo* es **tinyint**y su valor predeterminado es NULL. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica un suscriptor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servidor de origen de datos ODBC distinto de u otro.  
   
-`[ @login = ] 'login'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador de inicio de sesión de autenticación. *login* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @login = ] 'login'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador de inicio de sesión de autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
 `[ @password = ] 'password'`Es la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contraseña de autenticación. *password* es de **%** **tipo sysname y su**valor predeterminado es. **%** indica que no hay ningún cambio en la propiedad de contraseña.  
   
@@ -76,7 +76,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Diariamente|  
+|**4**|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  

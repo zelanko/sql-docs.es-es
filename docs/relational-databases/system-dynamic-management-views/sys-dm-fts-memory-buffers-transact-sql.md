@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fed15fbcfa685bde5d408e799bb605a40380ab5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265921"
 ---
 # <a name="sysdm_fts_memory_buffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68265921"
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|Id. del grupo de memoria asignado.<br /><br /> 0 = Búferes pequeños<br /><br /> 1 = Búferes grandes|  
 |**memory_address**|**varbinary(8**|Dirección del búfer de memoria asignado.|  
-|**Name**|**nvarchar(4000)**|Nombre del búfer de memoria compartida para el que se ha realizado esta asignación.|  
+|**name**|**nvarchar(4000)**|Nombre del búfer de memoria compartida para el que se ha realizado esta asignación.|  
 |**is_free**|**bit**|Estado actual del búfer de memoria.<br /><br /> 0 = Disponible<br /><br /> 1 = Ocupado|  
 |**row_count**|**int**|Número de filas que controla actualmente este búfer.|  
 |**bytes_used**|**int**|Cantidad, en bytes, de memoria en uso en este búfer.|  
@@ -56,7 +56,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_memory_buffers.pool_id|dm_fts_memory_pools.pool_id|Varios a uno|  
   

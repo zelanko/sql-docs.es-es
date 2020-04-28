@@ -16,10 +16,10 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68764352"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
@@ -83,7 +83,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**status**|**int**|Examina el estado de todos los agentes de replicación asociados a la publicación, y devuelve el estado más alto encontrado en el orden siguiente:<br /><br /> **6** = error<br /><br /> **5** = reintentando<br /><br /> **2** = detenido<br /><br /> **4** = inactivo<br /><br /> **3** = en curso<br /><br /> **1** = iniciado|  
-|**atención**|**int**|Advertencia de umbral máximo generada por una suscripción que pertenece a la publicación, que puede ser el resultado de OR lógico de uno o más de estos valores.<br /><br /> **1** = expiración: una suscripción a una publicación transaccional no se ha sincronizado en el umbral del período de retención.<br /><br /> **2** = latencia: el tiempo que se tarda en replicar los datos de un publicador transaccional en el suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de combinación no se ha sincronizado en el umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o de acceso telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red lenta o de acceso telefónico.|  
+|**advertencia**|**int**|Advertencia de umbral máximo generada por una suscripción que pertenece a la publicación, que puede ser el resultado de OR lógico de uno o más de estos valores.<br /><br /> **1** = expiración: una suscripción a una publicación transaccional no se ha sincronizado en el umbral del período de retención.<br /><br /> **2** = latencia: el tiempo que se tarda en replicar los datos de un publicador transaccional en el suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de combinación no se ha sincronizado en el umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o de acceso telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red lenta o de acceso telefónico.|  
 |**suscriptor**|**sysname**|Es el nombre del suscriptor.|  
 |**subscriber_db**|**sysname**|Es el nombre de la base de datos utilizada para la suscripción.|  
 |**publisher_db**|**sysname**|Es el nombre de la base de datos de publicación.|  

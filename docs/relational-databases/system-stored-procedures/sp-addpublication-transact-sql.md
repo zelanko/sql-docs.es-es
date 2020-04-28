@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769101"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
@@ -93,13 +93,13 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**nativos**|Genera la salida de todas las tablas mediante un programa de copia masiva en modo nativo. *No se admite para publicadores de Oracle*.|  
-|**character**|Genera la salida de todas las tablas mediante un programa de copia masiva en modo de caracteres. _Para un publicador de Oracle,_ el **carácter** _solo es válido para la replicación de instantáneas_.|  
+|**native**|Genera la salida de todas las tablas mediante un programa de copia masiva en modo nativo. *No se admite para publicadores de Oracle*.|  
+|**óptico**|Genera la salida de todas las tablas mediante un programa de copia masiva en modo de caracteres. _Para un publicador de Oracle,_ el **carácter** _solo es válido para la replicación de instantáneas_.|  
 |**simultáneas**|Produce la salida de todas las tablas mediante un programa de copia masiva en modo nativo, pero no bloquea las tablas durante la instantánea. Solo se admite para publicaciones transaccionales. *No se admite para publicadores de Oracle*.|  
 |**concurrent_c**|Produce la salida de todas las tablas mediante un programa de copia masiva en modo de carácter, pero no bloquea las tablas durante la instantánea. Solo se admite para publicaciones transaccionales.|  
-|**instantánea de base de datos**|Produce la salida de todas las tablas mediante un programa de copia masiva en modo nativo desde una instantánea de base de datos. Las instantáneas de base de datos no están disponibles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en todas las ediciones de. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|**database snapshot character**|Produce la salida de todas las tablas mediante un programa de copia masiva en modo de carácter desde una instantánea de base de datos. Las instantáneas de base de datos no están disponibles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en todas las ediciones de. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|NULL (predeterminado)|El valor predeterminado **** es nativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los publicadores. En el caso[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los publicadores que no son de, el valor predeterminado es **carácter** si el valor de *repl_freq* es **Snapshot** y **concurrent_c** en todos los demás casos.|  
+|**instantánea de base de datos**|Produce la salida de todas las tablas mediante un programa de copia masiva en modo nativo desde una instantánea de base de datos. Las instantáneas de base de datos no están disponibles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en todas las ediciones de. Para obtener una lista de las características admitidas por las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, vea [características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|**database snapshot character**|Produce la salida de todas las tablas mediante un programa de copia masiva en modo de carácter desde una instantánea de base de datos. Las instantáneas de base de datos no están disponibles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en todas las ediciones de. Para obtener una lista de las características admitidas por las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, vea [características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
+|NULL (predeterminado)|El valor predeterminado **native** es nativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los publicadores. En el caso[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los publicadores que no son de, el valor predeterminado es **carácter** si el valor de *repl_freq* es **Snapshot** y **concurrent_c** en todos los demás casos.|  
   
 `[ \@repl_freq = ] 'repl_freq'`Es el tipo de frecuencia de replicación, *repl_freq* es **nvarchar (10)** y puede tener uno de los valores siguientes.  
   
@@ -114,7 +114,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Active**|Los datos de la publicación están inmediatamente disponibles para los suscriptores.|  
+|**active**|Los datos de la publicación están inmediatamente disponibles para los suscriptores.|  
 |**inactivo** (predeterminado)|Los datos de la publicación no están disponibles para los suscriptores la primera vez que se crea la publicación (pueden suscribirse, pero las suscripciones no se procesan).|  
   
  *No se admite para publicadores de Oracle*.  
@@ -137,8 +137,8 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**reales**|Se define de forma automática cuando se habilita la actualización de suscripciones.|  
-|**es**|Se define automáticamente cuando no se ha habilitado la actualización de suscripciones o para publicadores de Oracle.|  
+|**true**|Se define de forma automática cuando se habilita la actualización de suscripciones.|  
+|**false**|Se define automáticamente cuando no se ha habilitado la actualización de suscripciones o para publicadores de Oracle.|  
 |NULL (predeterminado)|El valor predeterminado es **true** cuando la actualización de suscripciones está habilitada y en **false** cuando no está habilitada la actualización de suscripciones.|  
   
 > [!NOTE]  
@@ -193,7 +193,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**sql**|Utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones.|  
+|**Server**|Utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones.|  
 |NULL (predeterminado)|Tiene como valor predeterminado **SQL**, que especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se va a utilizar para almacenar transacciones.|  
   
 > [!NOTE]  
@@ -216,8 +216,8 @@ sp_addpublication [ @publication = ] 'publication'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**reales**|Habilita la inicialización desde una copia de seguridad.|  
-|**es**|Deshabilita la inicialización desde una copia de seguridad.|  
+|**true**|Habilita la inicialización desde una copia de seguridad.|  
+|**false**|Deshabilita la inicialización desde una copia de seguridad.|  
 |NULL (predeterminado)|El valor predeterminado **es true** para una publicación en una topología de replicación punto a punto y **false** para todas las demás publicaciones.|  
   
  Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -225,7 +225,7 @@ sp_addpublication [ @publication = ] 'publication'
 > [!WARNING]  
 >  Para evitar perder los datos del suscriptor, al utilizar **sp_addpublication** con `@allow_initialize_from_backup = N'true'`, utilice siempre `@immediate_sync = N'true'`.  
   
-`[ \@replicate_ddl = ] replicate_ddl`Indica si se admite la replicación de esquemas para la publicación. *replicate_ddl* es de **tipo int**y su valor predeterminado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **1** para los publicadores y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** para los publicadores que no son de. **1** indica que las instrucciones del lenguaje de definición de datos (DDL) ejecutadas en el publicador se replican y **0** indica que las instrucciones de DDL no se replican. *La replicación de esquema no es compatible con publicadores de Oracle.* Para obtener más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
+`[ \@replicate_ddl = ] replicate_ddl`Indica si se admite la replicación de esquemas para la publicación. *replicate_ddl* es de **tipo int**y su valor predeterminado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **1** para los publicadores y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0** para los publicadores que no son de. **1** indica que las instrucciones del lenguaje de definición de datos (DDL) ejecutadas en el publicador se replican y **0** indica que las instrucciones de DDL no se replican. *La replicación de esquema no es compatible con publicadores de Oracle.* Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
  El * \@parámetro replicate_ddl* se respeta cuando una instrucción DDL agrega una columna. El * \@parámetro replicate_ddl* se omite cuando una instrucción DDL modifica o quita una columna por los siguientes motivos.  
   

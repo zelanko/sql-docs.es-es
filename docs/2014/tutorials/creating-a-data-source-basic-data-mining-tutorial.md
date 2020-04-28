@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494024"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Crear un origen de datos (Tutorial básico de minería de datos)
@@ -50,7 +50,7 @@ ms.locfileid: "69494024"
   
      En la página **finalización del asistente** , observe que, de forma predeterminada, el origen de datos se denomina Adventure Works DW 2012.  
   
-10. Haga clic en **Finalizar**  
+10. Haga clic en **Finalizar**.  
   
      El nuevo origen de datos, Adventure Works DW 2012, aparece en la carpeta **orígenes de datos** de explorador de soluciones.  
   
@@ -61,8 +61,8 @@ ms.locfileid: "69494024"
  [Crear un proyecto de Analysis Services &#40;tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear un origen de datos &#40;SSAS multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Crear un origen de datos &#40;&#41;de SSAS multidimensional](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [Definir un origen de datos](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Establecer opciones de suplantación &#40;SSAS-&#41;multidimensional](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

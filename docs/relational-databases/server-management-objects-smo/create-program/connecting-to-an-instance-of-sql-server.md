@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148754"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Conectarse a una instancia de SQL Server
@@ -64,7 +64,7 @@ ms.locfileid: "70148754"
 -   Se debe llamar al método <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> antes de pasar la conexión a cualquier objeto de programación RMO.  
   
 ## <a name="examples"></a>Ejemplos  
-Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Conectarse a la instancia local de SQL Server mediante la autenticación de Windows en Visual Basic  
  Para conectarse a la instancia local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se requiere mucho código. En su lugar, se basa en la configuración predeterminada del método de autenticación y servidor. La primera operación que exija la recuperación de datos hará que se cree una conexión.  

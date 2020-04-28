@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4d1817910457d9d4e46dd1f923058ce98f02f51e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262631"
 ---
 # <a name="sysdm_tran_current_transaction-transact-sql"></a>sys.dm_tran_current_transaction (Transact-SQL)
@@ -46,12 +46,12 @@ sys.dm_tran_current_transaction
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**transaction_id**|**BIGINT**|Id. de transacción de la instantánea actual.|  
-|**transaction_sequence_num**|**BIGINT**|Número de secuencia de la transacción que genera la versión de registro.|  
+|**transaction_id**|**bigint**|Id. de transacción de la instantánea actual.|  
+|**transaction_sequence_num**|**bigint**|Número de secuencia de la transacción que genera la versión de registro.|  
 |**transaction_is_snapshot**|**bit**|Estado de aislamiento de instantáneas. Este valor es 1 si la transacción se ha iniciado con aislamiento de instantáneas. En caso contrario, el valor es 0.|  
-|**first_snapshot_sequence_num**|**BIGINT**|Número más bajo de secuencia de la transacción de las transacciones que estaban activas cuando se obtuvo la instantánea. Cuando se ejecuta, una transacción de instantánea realiza una instantánea de todas las transacciones activas en ese momento. En las transacciones que no son de instantánea, en esta columna se muestra 0.|  
-|**last_transaction_sequence_num**|**BIGINT**|Número de secuencia global. Este valor representa el último número de secuencia de transacción generado por el sistema.|  
-|**first_useful_sequence_num**|**BIGINT**|Número de secuencia global. Este valor representa el número de secuencia de la transacción más antiguo con versiones de fila que deben conservarse en el almacén de versiones. Las versiones de fila creadas por transacciones anteriores se pueden quitar.|  
+|**first_snapshot_sequence_num**|**bigint**|Número más bajo de secuencia de la transacción de las transacciones que estaban activas cuando se obtuvo la instantánea. Cuando se ejecuta, una transacción de instantánea realiza una instantánea de todas las transacciones activas en ese momento. En las transacciones que no son de instantánea, en esta columna se muestra 0.|  
+|**last_transaction_sequence_num**|**bigint**|Número de secuencia global. Este valor representa el último número de secuencia de transacción generado por el sistema.|  
+|**first_useful_sequence_num**|**bigint**|Número de secuencia global. Este valor representa el número de secuencia de la transacción más antiguo con versiones de fila que deben conservarse en el almacén de versiones. Las versiones de fila creadas por transacciones anteriores se pueden quitar.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos

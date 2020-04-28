@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811228"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
@@ -303,7 +303,7 @@ GO
   
 -   En las tablas optimizadas para memoria no se admiten claves externas, restricciones UNIQUE, desencadenadores, modificaciones de esquema, ROWGUIDCOL, columnas calculadas, compresión de datos, tipos de datos de alias, control de versiones ni bloqueos. Vea [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información.  
   
-##  <a name="Schema"></a> Modificar un archivo de esquema  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>Modificar un archivo de esquema  
   
 -   No se admiten índices clúster. Cambie los índices clúster a los índices no clúster.  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING debe ser ON.  
   
-##  <a name="PrimaryKey"></a>Replicación de cambios en una clave principal  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>Replicación de cambios en una clave principal  
  La clave principal de una tabla optimizada para memoria no se puede actualizar. Para replicar la actualización de una clave principal en un suscriptor, modifique el procedimiento almacenado de actualización para entregar la actualización como un par de eliminación e inserción.  
   
 ## <a name="see-also"></a>Consulte también  

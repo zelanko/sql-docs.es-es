@@ -16,10 +16,10 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768943"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
@@ -58,7 +58,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxNetworkOptimization**  
   
--   **Output**  
+-   **Salida**  
   
 -   **OutputVerboseLevel**  
   
@@ -78,7 +78,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Output**  
+-   **Salida**  
   
 -   **OutputVerboseLevel**  
   
@@ -114,7 +114,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Output**  
+-   **Salida**  
   
 -   **OutputVerboseLevel**  
   
@@ -178,7 +178,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **NumDeadlockRetries**  
   
--   **Output**  
+-   **Salida**  
   
 -   **OutputMessageFile**  
   
@@ -216,7 +216,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UseInprocLoader**  
   
--   **Validación**  
+-   **Vali**  
   
 -   **ValidateInterval**  
   
@@ -226,7 +226,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **Output**  
+-   **Salida**  
   
 -   **OutputVerboseLevel**  
   

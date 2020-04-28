@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266063"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
@@ -36,15 +36,15 @@ ms.locfileid: "68266063"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**nvarchar(128)**|El nombre de la propiedad.|  
-|**valor**|**nvarchar(128)**|Valor de la propiedad.|  
+|**name**|**nvarchar(128)**|El nombre de la propiedad.|  
+|**value**|**nvarchar(128)**|Valor de la propiedad.|  
   
 ## <a name="properties"></a>Propiedades  
  La propiedad **Directory** indica el directorio en el que se instaló el .NET Framework en el servidor. Podría haber varias instalaciones de .NET Framework en el equipo servidor y el valor de esta propiedad identificaría la instalación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estaría utilizando.  
   
  La propiedad **version** indica la versión del .NET Framework y el CLR hospedado en el servidor.  
   
- La vista administrada dinámica **Sys. dm_clr_properties** puede devolver seis valores diferentes para la propiedad **State** , que refleja el estado del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hospedado. Son las siguientes:  
+ La vista administrada dinámica **Sys. dm_clr_properties** puede devolver seis valores diferentes para la propiedad **State** , que refleja el estado del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hospedado. Son estos:  
   
 -   Mscoree is not loaded.  
   

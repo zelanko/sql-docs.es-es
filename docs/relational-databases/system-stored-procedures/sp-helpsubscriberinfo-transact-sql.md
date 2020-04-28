@@ -16,10 +16,10 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771488"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
@@ -51,12 +51,12 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
-|**automáticamente**|**tinyint**|Tipo de suscriptor:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] base de datos 1 = origen de datos ODBC **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type**|**tinyint**|Tipo de suscriptor:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] base de datos 1 = origen de datos ODBC **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**Inicio**|**sysname**|Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**contraseña**|**sysname**|Contraseña para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación.|  
-|**commit_batch_size**|**int**|No compatible.|  
-|**status_batch_size**|**int**|No compatible.|  
-|**flush_frequency**|**int**|No compatible.|  
+|**password**|**sysname**|Contraseña para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación.|  
+|**commit_batch_size**|**int**|No se admite.|  
+|**status_batch_size**|**int**|No se admite.|  
+|**flush_frequency**|**int**|No se admite.|  
 |**frequency_type**|**int**|Frecuencia de ejecución del agente de distribución:<br /><br /> **1** = una vez<br /><br /> **2** = a petición<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente relativo<br /><br /> **64** = AutoStart<br /><br /> **128** = recurrente|  
 |**frequency_interval**|**int**|Valor que se aplica a la frecuencia establecida por *frequency_type*.|  
 |**frequency_relative_interval**|**int**|Fecha de la Agente de distribución que se usa cuando *frequency_type* está establecida en **32** (relativo mensual):<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
@@ -67,10 +67,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_time_of_day**|**int**|Hora del día en que el agente de distribución deja de estar programado, con el formato HHMMSS.|  
 |**active_start_date**|**int**|Fecha en que el agente de distribución se programa por primera vez, con el formato AAAAMMDD.|  
 |**active_end_date**|**int**|Fecha en la que el agente de distribución deja de estar programado, con el formato AAAAMMDD.|  
-|**retryattempt**|**int**|No compatible.|  
-|**retrydelay**|**int**|No compatible.|  
+|**retryattempt**|**int**|No se admite.|  
+|**retrydelay**|**int**|No se admite.|  
 |**denominación**|**nvarchar(255)**|Descripción del suscriptor.|  
-|**security_mode**|**int**|Modo de seguridad implementado.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows|  
+|**security_mode**|**int**|Modo de seguridad implementado.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows|  
 |**frequency_type2**|**int**|Frecuencia de ejecución del Agente de mezcla:<br /><br /> **1** = una vez<br /><br /> **2** = a petición<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente relativo<br /><br /> **64** = AutoStart<br /><br /> **128** = recurrente|  
 |**frequency_interval2**|**int**|Valor que se aplica a la frecuencia establecida por *frequency_type*.|  
 |**frequency_relative_interval2**|**int**|Fecha de la Agente de mezcla utilizada cuando *frequency_type* está establecido en 32 (relativo mensual):<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889862"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *estructuras*  
+ *structure*  
  Nombre de la estructura de minería de datos a la que se agregará el modelo de minería de datos.  
   
  *model*  
@@ -103,8 +103,7 @@ USING <algorithm> [(<parameter list>)]
  Para definir una expresión de filtro que se aplique a la tabla anidada, adjunte una expresión de criterios de filtro después de la definición de columna de la tabla anidada.  
   
 ### <a name="modeling-flags"></a>Marcas de modelado  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite las marcas de modelado siguientes en las columnas del modelo de minería de datos:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite las marcas de modelado siguientes en las columnas del modelo de minería de datos:  
   
 > [!NOTE]  
 >  La marca de modelado NOT_NULL se aplica a la columna de estructura de minería de datos. Para obtener más información, consulte [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
@@ -182,7 +181,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
   
  La estructura de minería de datos también incluye una tabla anidada que contiene los artículos comprados por el cliente.  
   
- Dado que la estructura de minería de datos contiene una tabla anidada, es posible definir un filtro para la tabla de casos, la tabla anidada, o ambas. En este ejemplo se combinan un filtro de casos y uno de filas anidadas para restringir los casos a los clientes europeos adinerados que compraron uno de los modelos con neumáticos de carretera.  
+ Dado que la estructura de minería de datos contiene una tabla anidada, es posible definir un filtro para la tabla de casos, la tabla anidada, o ambas. En este ejemplo se combinan un filtro de casos y uno de filas anidadas para restringir los casos a los clientes Europaos adinerados que compraron uno de los modelos con neumáticos de carretera.  
   
 ```  
 ALTER MINING STRUCTURE [Market Basket with Region and Income]  
@@ -204,6 +203,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>Consulte también  
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

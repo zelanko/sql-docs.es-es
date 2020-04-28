@@ -16,10 +16,10 @@ ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770963"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
@@ -53,11 +53,11 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 `[ @parameter_name = ] 'parameter_name'`Es el nombre del parámetro. *parameter_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Para obtener una lista de parámetros ya definidos en los perfiles del sistema, vea [Replication Agent profiles](../../relational-databases/replication/agents/replication-agent-profiles.md). Para obtener una lista completa de parámetros válidos para cada agente, vea los siguientes temas:  
   
--   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Agente de instantáneas de replicación](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Agente de registro del LOG de replicación](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Agente de distribución de replicación](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
@@ -75,7 +75,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_add_agent_parameter**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [Trabajar con perfiles de agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Perfiles del agente de replicación](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   

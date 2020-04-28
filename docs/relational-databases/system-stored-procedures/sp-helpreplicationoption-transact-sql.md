@@ -16,10 +16,10 @@ ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771482"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
@@ -41,7 +41,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**transaccional**|Se devuelve un conjunto de resultados cuando se habilita la replicación transaccional.|  
+|**transactional**|Se devuelve un conjunto de resultados cuando se habilita la replicación transaccional.|  
 |**sin**|Se devuelve un conjunto de resultados cuando se habilita la replicación de mezcla.|  
 |NULL (predeterminado)|No se devuelve ningún conjunto de resultados.|  
   
@@ -49,8 +49,8 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Es el nombre de la opción de replicación y puede ser uno de los valores siguientes:<br /><br /> **transaccional**<br /><br /> **sin**|  
-|**valor**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**optname**|**sysname**|Es el nombre de la opción de replicación y puede ser uno de los valores siguientes:<br /><br /> **transactional**<br /><br /> **sin**|  
+|**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**revisión**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -63,7 +63,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
  **sp_helpreplicationoption** se usa para obtener información sobre las opciones de replicación habilitadas en un servidor determinado. Para obtener información sobre una base de datos determinada, use **sp_helpreplicationdboption**.  
   
 ## <a name="permissions"></a>Permisos  
- Los permisos de ejecución tienen como valor predeterminado el rol **Public** .  
+ De forma predeterminada, los permisos de ejecución corresponden al rol **public** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

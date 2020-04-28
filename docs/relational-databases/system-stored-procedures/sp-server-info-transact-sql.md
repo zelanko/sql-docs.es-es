@@ -18,10 +18,10 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702855"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
@@ -59,18 +59,18 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x. XX. xxxx*|  
-|**7**|OWNER_TERM|owner|  
+|**10**|OWNER_TERM|owner|  
 |**11**|TABLE_TERM|table|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
-|**14**|TABLE_LENGTH<br /><br /> Especifica el número máximo de caracteres de un nombre de tabla.|128|  
+|**13**|TABLE_LENGTH<br /><br /> Especifica el número máximo de caracteres de un nombre de tabla.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> Especifica la longitud máxima del nombre de un calificador de tabla (la primera parte de un nombre de tabla de tres partes).|128|  
-|**4,5**|COLUMN_LENGTH<br /><br /> Especifica el número máximo de caracteres de un nombre de columna.|128|  
+|**15**|COLUMN_LENGTH<br /><br /> Especifica el número máximo de caracteres de un nombre de columna.|128|  
 |**dieciséi**|IDENTIFIER_CASE<br /><br /> Especifica los nombres definidos por el usuario (nombres de tablas, nombres de columnas, nombres de procedimientos almacenados) de la base de datos (el uso de mayúsculas y minúsculas en los objetos de los catálogos del sistema).|SENSITIVE|  
-|**17**|TX_ISOLATION<br /><br /> Especifica el nivel de aislamiento de transacción inicial que da por supuesto el servidor, que corresponde a un nivel de aislamiento definido en SQL-92.|2|  
+|**18**|TX_ISOLATION<br /><br /> Especifica el nivel de aislamiento de transacción inicial que da por supuesto el servidor, que corresponde a un nivel de aislamiento definido en SQL-92.|2|  
 |**18**|COLLATION_SEQ<br /><br /> Especifica el orden del juego de caracteres para este servidor.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> Especifica si el DBMS subyacente admite puntos de retorno con nombre.|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> Especifica si la base de datos subyacente o la propia puerta de enlace admite varios conjuntos de resultados (si se pueden enviar a través de la puerta de enlace varias instrucciones que devuelvan varios conjuntos de resultados al cliente).|Y|  
-|**56**|ACCESSIBLE_TABLES<br /><br /> Especifica si en **sp_tables**, la puerta de enlace solo devuelve tablas, vistas, etc., a las que puede tener acceso el usuario actual (es decir, el usuario que tiene al menos permisos SELECT para la tabla).|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Especifica si en **sp_tables**, la puerta de enlace solo devuelve tablas, vistas, etc., a las que puede tener acceso el usuario actual (es decir, el usuario que tiene al menos permisos SELECT para la tabla).|Y|  
 |**100**|USERID_LENGTH<br /><br /> Especifica el número máximo de caracteres de un nombre de usuario.|128|  
 |**101**|QUALIFIER_TERM<br /><br /> Especifica el término del proveedor de DBMS para un calificador de tabla (la primera parte de un nombre de tres partes).|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> Especifica si el DBMS subyacente acepta transacciones con nombre.|Y|  

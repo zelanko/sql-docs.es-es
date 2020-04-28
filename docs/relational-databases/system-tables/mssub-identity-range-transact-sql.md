@@ -18,10 +18,10 @@ ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4ec1f915e7cc70cb2d8ed0f09a9b0394dc7e09aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68221965"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "68221965"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|Identificador de la tabla cuya columna de identidad se administra mediante la replicación.|  
-|**variedad**|**BIGINT**|Controla el tamaño del intervalo de valores de identidad consecutivos que podrían asignarse al suscriptor en un ajuste.|  
-|**last_seed**|**BIGINT**|Límite inferior del intervalo actual.|  
+|**range**|**bigint**|Controla el tamaño del intervalo de valores de identidad consecutivos que podrían asignarse al suscriptor en un ajuste.|  
+|**last_seed**|**bigint**|Límite inferior del intervalo actual.|  
 |**mínimo**|**int**|Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. Cuando se utiliza el porcentaje de valores especificado en *umbral* , el agente de distribución crea un nuevo intervalo de identidad.|  
   
 ## <a name="see-also"></a>Consulte también  

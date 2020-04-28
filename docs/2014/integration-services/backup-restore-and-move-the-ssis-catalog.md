@@ -11,18 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68670506"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Copia de seguridad, restauración y traslado del catálogo de SSIS
-  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]incluye la base de datos de SSISDB. En la base de datos de SSISDB, se consultan vistas para inspeccionar objetos, valores y los datos operativos que se almacenan en el catálogo de **SSISDB** , consultando las vistas de la base de datos de SSISDB. Este tema proporciona instrucciones para hacer una copia de seguridad de la base de datos y restaurarla.  
+  [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] incluye la base de datos de SSISDB. En la base de datos de SSISDB, se consultan vistas para inspeccionar objetos, valores y los datos operativos que se almacenan en el catálogo de **SSISDB** , consultando las vistas de la base de datos de SSISDB. Este tema proporciona instrucciones para hacer una copia de seguridad de la base de datos y restaurarla.  
   
  El catálogo de **SSISDB** almacena los paquetes que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para más información sobre el catálogo, vea [Catálogo de SSIS](catalog/ssis-catalog.md).  
   
-##  <a name="backup"></a>Para realizar una copia de seguridad de la base de datos de SSIS  
+##  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a>Para realizar una copia de seguridad de la base de datos de SSIS  
   
 1.  Abra [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y conéctese a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68670506"
   
     ```  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Los procedimientos almacenados de CLR requieren que se concedan permisos no seguros al inicio de sesión porque requiere acceso adicional a recursos restringidos, como la API Win32 de Microsoft. Para obtener más información sobre el permiso de código UNSAFE, vea [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] requieren permisos UNSAFE para el inicio de sesión porque este debe disponer de acceso adicional con el fin de restringir recursos como, por ejemplo la API Win32 de Microsoft. Para obtener más información sobre el permiso de código UNSAFE, vea [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -89,11 +89,11 @@ ms.locfileid: "68670506"
   
     ```  
   
-3.  Use el cuadro de diálogo **Restaurar base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para restaurar la base de datos de SSISDB a partir de una copia de seguridad. Para obtener más información, vea los siguientes temas.  
+3.  Use el cuadro de diálogo **Restaurar base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]para restaurar la base de datos de SSISDB a partir de una copia de seguridad. Para obtener más información, vea los temas siguientes:  
   
     -   [Restaurar la base de datos &#40;página General&#41;](general-page-of-integration-services-designers-options.md)  
   
-    -   [Página restaurar archivos de &#40;de base de datos&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [Restaurar base de datos &#40;página Archivos&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
     -   [Restaurar base de datos &#40;página Opciones&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   

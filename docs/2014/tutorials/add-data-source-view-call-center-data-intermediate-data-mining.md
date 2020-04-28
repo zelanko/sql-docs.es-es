@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888685"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Agregar una vista del origen de datos para datos del centro de llamadas (Tutorial intermedio de minería de datos)
@@ -64,7 +64,7 @@ ms.locfileid: "68888685"
   
 9. Dedique un minuto a revisar los datos disponibles, para entender cómo se usan en la minería de datos:  
   
-|Nombre de la columna|Contiene|  
+|Nombre de la columna|Contains|  
 |-----------------|--------------|  
 |FactCallCenterID|Una clave arbitraria que se creó cuando se importaron los datos al almacenamiento de datos.<br /><br /> Esta columna identifica los registros únicos y debe usarse como clave de caso para el modelo de minería de datos.|  
 |DateKey|La fecha de la operación en el centro de llamadas, expresada como un entero. Las claves de fecha se usan a menudo en los almacenamientos de datos, pero puede que desee obtener la fecha con formato de fecha y hora si va a agrupar los valores por fecha.<br /><br /> Observe que las fechas no son únicas, ya que el proveedor facilita un informe independiente para cada turno de cada día de trabajo.|  
@@ -73,14 +73,14 @@ ms.locfileid: "68888685"
 |LevelOneOperators|Indica el número de operadores de nivel 1 en el arancel.<br /><br /> Los empleados de centro de llamadas comienzan en el nivel 1, de modo que estos empleados tienen menos experiencia.|  
 |LevelTwoOperators|Indica el número de operadores de nivel 2 en servicio.<br /><br /> Un empleado debe registrar un número determinado de horas de servicio para calificar como operador de nivel 2.|  
 |TotalOperators|Número total de operadores presentes durante el turno.|  
-|Calls|Número de llamadas recibidas durante el turno.|  
+|Llamadas|Número de llamadas recibidas durante el turno.|  
 |AutomaticResponses|Número de llamadas procesadas por completo de forma automática (sistema de respuesta de voz interactiva o IVR).|  
-|Pedidos|Número de pedidos resultantes de las llamadas.|  
+|Orders|Número de pedidos resultantes de las llamadas.|  
 |IssuesRaised|Número de incidencias que requieren seguimiento y que se generaron a través de llamadas.|  
 |AverageTimePerIssue|Promedio de tiempo que se tarda en atender una llamada entrante.|  
 |ServiceGrade|Una métrica que indica la calidad de servicio general, medida como la *tasa de abandono* para todo el turno. Cuanto más alta es la tasa de abandono, más probabilidades hay de que los clientes no estén satisfechos y de que se pierdan posibles pedidos.|  
   
- Tenga en cuenta que los datos incluyen cuatro columnas diferentes basadas en una sola columna de fecha `WageType`: ****, DayOfWeek `Shift`, y `DateKey`. Normalmente en la minería de datos no es aconsejable usar varias columnas derivadas de los mismos datos, ya que los valores están demasiado correlacionados entre sí y pueden ocultar otros patrones.  
+ Tenga en cuenta que los datos incluyen cuatro columnas diferentes basadas en una sola columna de fecha `WageType`: **DayOfWeek**, DayOfWeek `Shift`, y `DateKey`. Normalmente en la minería de datos no es aconsejable usar varias columnas derivadas de los mismos datos, ya que los valores están demasiado correlacionados entre sí y pueden ocultar otros patrones.  
   
  Sin embargo, no usaremos `DateKey` en el modelo porque contiene demasiados valores únicos. No hay ninguna relación directa entre `Shift` y **DayOfWeek**, y `WageType` y **DayOfWeek** solo se relacionan parcialmente. Si le preocupa que los datos sean colineales, podría crear la estructura con todas las columnas disponibles y, a continuación, omitir varias columnas en cada modelo y probar el efecto.  
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7705aa50b488971b1c5aaf6e043ccf2dfd9103f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148653"
 ---
 # <a name="overview-smo"></a>Información general (SMO)
@@ -31,10 +31,9 @@ ms.locfileid: "70148653"
   
 -   Modelo de objetos de caché y creación de instancias de objetos optimizada. Los objetos solo se cargan cuando se hace referencia a ellos de forma específica. Las propiedades de objeto solo se cargan parcialmente cuando se crea el objeto. Los objetos y propiedades restantes se cargan cuando se hace referencia a ellos directamente.  
   
--   Ejecución por lotes de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Las instrucciones se ejecutan por lotes para mejorar el rendimiento de la red.  
+-   Ejecución por lotes de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Las instrucciones se ejecutan por lotes para mejorar el rendimiento de la red.  
   
--   Captura de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Permite capturar cualquier operación en un script. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa esta capacidad para crear script de una operación en lugar de ejecutarla inmediatamente.  
+-   Captura de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Permite capturar cualquier operación en un script. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa esta capacidad para crear script de una operación en lugar de ejecutarla inmediatamente.  
   
 -   Administración de servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el proveedor WMI. Los servicios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden iniciarse, detenerse y ponerse en pausa mediante programación.  
   
@@ -54,8 +53,7 @@ ms.locfileid: "70148653"
   
 -   Bases de datos de instantánea para crear copias de solo lectura de bases de datos.  
   
--   
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite una comunicación basada en mensajes. Para obtener más información, vea [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
+-   [!INCLUDE[ssSB](../../includes/sssb-md.md)] permite una comunicación basada en mensajes. Para obtener más información, vea [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
 -   Compatibilidad con sinónimos para varios nombres de objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [sinónimos &#40;Motor de base de datos&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
@@ -69,7 +67,7 @@ ms.locfileid: "70148653"
   
 -   Desencadenadores DDL para agregar funcionalidad cuando se producen eventos DDL. Para más información, consulte [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- El espacio de nombres de SMO es <xref:Microsoft.SqlServer.Management.Smo>. SMO se implementa como un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Esto significa que, para poder usar los objetos SMO, es necesario tener instalado Common Language Runtime de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0. Los ensamblados SMO se instalan de forma predeterminada en la memoria caché de ensamblados global (GAC) con la opción SDK de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los ensamblados se encuentran en C:\Archivos de Programa\microsoft SQL Server\130\SDK\Assemblies\. Para obtener más información, vea la documentación de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ El espacio de nombres de SMO es <xref:Microsoft.SqlServer.Management.Smo>. SMO se implementa como un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Esto significa que, para poder usar los objetos SMO, es necesario tener instalado Common Language Runtime de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] versión 2.0. Los ensamblados SMO se instalan de forma predeterminada en la memoria caché de ensamblados global (GAC) con la opción SDK de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los ensamblados se encuentran en C:\Archivos de Programa\microsoft SQL Server\130\SDK\Assemblies\. Para más información, consulte la documentación de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="smo-classes"></a>Clases SMO  
  Las clases SMO incluyen dos categorías: clases de instancia y clases de utilidad.  
@@ -158,7 +156,7 @@ ms.locfileid: "70148653"
   
  En SMO, se proporcionan nuevos objetos que representan las mejoras en la búsqueda de texto completo.  
   
- **Comprobación de página**  
+ **Comprobación de páginas**  
   
  El objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A> representa las opciones de comprobación de páginas de base de datos.  
   
@@ -168,8 +166,7 @@ ms.locfileid: "70148653"
   
  **Service Broker**  
   
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] y su funcionalidad se representan mediante un grupo de objetos  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] y su funcionalidad se representan mediante un grupo de objetos  
   
  **Mejoras de índice**  
   

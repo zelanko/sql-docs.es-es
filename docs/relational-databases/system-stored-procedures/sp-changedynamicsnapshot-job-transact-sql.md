@@ -16,10 +16,10 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768948"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -63,7 +63,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Diariamente|  
+|**4**|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
@@ -83,8 +83,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**6**|Viernes|  
 |**7**|Sábado|  
 |**203**|Día|  
-|**9**|Días laborables|  
-|**7**|Días del fin de semana|  
+|**9**|Días de la semana|  
+|**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  

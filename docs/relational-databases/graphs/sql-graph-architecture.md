@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811110"
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura de SQL Graph  
@@ -100,26 +100,26 @@ Columnas implícitas en una tabla de nodos
 
 |Nombre de columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |columna `graph_id` interna  |
+|graph_id_\<hex_string> |bigint |1  |columna `graph_id` interna  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |Columna de `node_id` nodo externo  |
 
 Columnas implícitas en una tabla irregular
 
 |Nombre de columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |columna `graph_id` interna  |
+|graph_id_\<hex_string> |bigint |1  |columna `graph_id` interna  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |columna `edge_id` externa  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno desde nodo`object_id`  |
-|from_id_\<hex_string>  |BIGINT |1  |Interno desde nodo`graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |Interno desde nodo`graph_id`  |
 |$from _id_\<hex_string> |NVARCHAR   |0  |externo desde nodo`node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interno a nodo`object_id`  |
-|to_id_\<hex_string>    |BIGINT |1  |Interno a nodo`graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |Interno a nodo`graph_id`  |
 |$to _id_\<hex_string>   |NVARCHAR   |0  |externo a nodo`node_id`  |
  
 ### <a name="system-functions"></a>Funciones del sistema
 Se han agregado las siguientes funciones integradas. Estos ayudarán a los usuarios a extraer información de las columnas generadas. Tenga en cuenta que estos métodos no validarán la entrada del usuario. Si el usuario especifica un no `sys.node_id` válido, el método extraerá la parte adecuada y lo devolverá. Por ejemplo, OBJECT_ID_FROM_NODE_ID tomará `$node_id` como entrada y devolverá el object_id de la tabla, este nodo pertenece a. 
  
-|Característica integrada   |Descripción  |
+|Integrada   |Descripción  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Extraiga el object_id de un`node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |Extraiga el graph_id de un`node_id`  |
@@ -173,7 +173,7 @@ Existen ciertas limitaciones en las tablas de nodos y perimetrales en esta versi
 * No se admiten las consultas entre bases de datos en objetos de grafo. 
 
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Pasos a seguir
 Para empezar a trabajar con la nueva sintaxis, consulte [base de datos de SQL Graph: ejemplo](./sql-graph-sample.md)
  
 

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493984"
 ---
 # <a name="browsing-the-deployed-cube"></a>Examinar el cubo implementado
@@ -45,6 +45,6 @@ ms.locfileid: "69493984"
      ![Internet Sales por línea de productos y región](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internet Sales por línea de productos y región")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Definir propiedades de dimensiones y de atributos avanzados](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lección 4: definir propiedades avanzadas de atributos y dimensiones](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

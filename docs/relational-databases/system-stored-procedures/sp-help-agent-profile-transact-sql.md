@@ -16,10 +16,10 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771465"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
@@ -57,7 +57,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|IDENTIFICADOR del perfil.|  
 |**profile_name**|**sysname**|Único para el tipo de agente.|  
 |**agent_type**|**int**|**1** = agente de instantáneas<br /><br /> **2** = agente de registro del log<br /><br /> **3** = agente de distribución<br /><br /> **4** = agente de mezcla<br /><br /> **9** = agente de lectura de cola|  
-|**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizado|  
+|**Type**|**int**|**0** = sistema<br /><br /> **1** = personalizado|  
 |**denominación**|**VARCHAR (3000)**|Descripción del perfil.|  
 |**def_profile**|**bit**|Especifica si este perfil es el predeterminado para este tipo de agente.|  
   
@@ -71,7 +71,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** pueden ejecutar **sp_help_agent_profile**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
+ [Trabajar con perfiles de agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_drop_agent_profile &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
  [sp_help_agent_parameter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  

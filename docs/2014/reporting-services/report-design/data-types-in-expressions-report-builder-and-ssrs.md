@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891866"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
@@ -65,7 +65,7 @@ ms.locfileid: "68891866"
   
 -   Cree un campo calculado basado en un campo de conjunto de datos de informe existente; para ello, escriba una expresión que convierta todos los datos de una columna de conjunto de resultados en una nueva columna con un tipo de datos diferente. Por ejemplo, la expresión siguiente convierte el valor entero del campo Year en un valor de cadena: `=CStr(Fields!Year.Value)`. Para obtener más información, consulte [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Compruebe si la extensión de procesamiento de datos que está usando incluye metadatos para recuperar datos que ya tienen asignado un formato. Por ejemplo, una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consulta MDX incluye una FORMATTED_VALUE propiedad extendida para los valores de cubo a los que ya se ha dado formato al procesar el cubo. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Compruebe si la extensión de procesamiento de datos que está usando incluye metadatos para recuperar datos que ya tienen asignado un formato. Por ejemplo, una consulta MDX de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye la propiedad extendida FORMATTED_VALUE para los valores de cubo a los que se dio formato al procesar el cubo. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Descripción de los tipos de datos de los parámetros  
  Los parámetros de informe deben pertenecer a uno de estos cinco tipos de datos: Boolean, DateTime, Integer, Float o Text (también conocido como String). Si la consulta de conjunto de datos incluye parámetros de consulta, automáticamente se crean parámetros de informe que se vinculan a dichos parámetros de consulta. El tipo de datos predeterminado para un parámetro de informe es String. Para cambiar el tipo de datos predeterminado de un parámetro de informe, seleccione el valor adecuado en la lista desplegable **Tipo de datos** de la página **General** del cuadro de diálogo **Propiedades de parámetro de informe** .  

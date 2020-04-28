@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493995"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lección 4: Definir propiedades de dimensiones y de atributos avanzados
@@ -32,7 +32,7 @@ ms.locfileid: "69493995"
  En esta tarea, definirá los nombres de nivel de una dimensión primaria-secundaria y especificará si deben mostrarse los datos relacionados con los miembros primarios. Para obtener más información, vea jerarquía de elementos [primarios y secundarios](multidimensional-models/parent-child-dimension.md) en jerarquías de elementos [primarios y secundarios](multidimensional-models/parent-child-dimension-attributes.md).  
   
  [Agrupar miembros de atributo automáticamente](lesson-4-3-automatically-grouping-attribute-members.md)  
- En esta tarea, debe crear automáticamente agrupaciones de miembros de atributos basadas en la distribución de miembros de la jerarquía de atributo. Para obtener más información, vea [miembros de atributo de grupo &#40;&#41;de discretización ](multidimensional-models/attribute-properties-group-attribute-members.md).  
+ En esta tarea, debe crear automáticamente agrupaciones de miembros de atributos basadas en la distribución de miembros de la jerarquía de atributo. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
  [Ocultar y deshabilitar jerarquías de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  En esta tarea, se muestra cómo y cuándo deshabilitar u ocultar jerarquías de atributo.  
@@ -41,7 +41,7 @@ ms.locfileid: "69493995"
  En esta tarea, se muestra cómo ordenar los miembros de dimensión en función de un atributo secundario para obtener el criterio de ordenación que se desee.  
   
  [Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- En esta tarea, aprenderá a definir las propiedades de miembro de los atributos y a especificar relaciones de agregación entre ellos. Para obtener más información, vea [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md) y [Propiedades de jerarquía de usuario](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ En esta tarea, aprenderá a definir las propiedades de miembro de los atributos y a especificar relaciones de agregación entre ellos. Para obtener más información, vea [definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md) y [propiedades de jerarquía de usuario](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  [Definir las propiedades de miembro desconocido y de procesamiento de valores NULL](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  En esta tarea, debe configurar las propiedades UnknownMember y UnknownMemberName para controlar las condiciones de error causadas por los miembros de dimensión con valor NULL.  

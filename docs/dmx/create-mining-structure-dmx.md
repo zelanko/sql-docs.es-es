@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892824"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *estructuras*  
+ *structure*  
  Nombre único de la estructura.  
   
  *lista de definiciones de columna*  
@@ -95,13 +95,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Para obtener una lista de los tipos de datos, tipos de contenido, distribuciones de columnas y marcadores de modelado que pueden usarse en la definición de una columna de estructura, vea los siguientes temas:  
   
--   [Tipos de datos &#40;&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Tipos de datos &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
 -   [Tipos de contenido &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distribuciones de columnas &#40;&#41;de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distribuciones de columnas &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Marcas de modelado &#40;minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Marcas de modelado &#40;Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Puede definir varios valores de marcas de modelado para una columna. Sin embargo, solo puede haber un tipo de contenido y un tipo de datos para cada columna.  
   
@@ -180,6 +180,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>Consulte también  
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

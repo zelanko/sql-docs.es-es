@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742834"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>Sys. dm_exec_function_stats (Transact-SQL)
@@ -40,37 +40,37 @@ ms.locfileid: "68742834"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|IDENTIFICADOR de base de datos en el que reside la función.|  
 |**object_id**|**int**|Número de identificación de objeto de la función.|  
-|**automáticamente**|**Char (2)**|Tipo del objeto: FN = funciones con valores escalares|  
-|**type_desc**|**nvarchar (60)**|Descripción del tipo de objeto: SQL_SCALAR_FUNCTION|  
+|**type**|**char(2)**|Tipo del objeto: FN = funciones con valores escalares|  
+|**type_desc**|**nvarchar(60)**|Descripción del tipo de objeto: SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary (64)**|Se puede utilizar para correlacionar con las consultas de **Sys. dm_exec_query_stats** que se ejecutaron desde esta función.|  
 |**plan_handle**|**varbinary (64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con la vista de administración dinámica **Sys. dm_exec_cached_plans** .<br /><br /> Siempre se 0x000 cuando una función compilada de forma nativa consulta una tabla optimizada para memoria.|  
 |**cached_time**|**datetime**|Hora a la que se agregó la función a la memoria caché.|  
 |**last_execution_time**|**datetime**|Última vez que se ejecutó la función.|  
-|**execution_count**|**BIGINT**|Número de veces que se ha ejecutado la función desde que se compiló por última vez.|  
-|**total_worker_time**|**BIGINT**|Cantidad total de tiempo de CPU, en microsegundos, consumido por las ejecuciones de esta función desde que se compiló.<br /><br /> En el caso de las funciones compiladas de forma nativa, es posible que **total_worker_time** no sea preciso si muchas ejecuciones tardan menos de 1 milisegundo.|  
-|**last_worker_time**|**BIGINT**|Tiempo de CPU, en microsegundos, consumido la última vez que se ejecutó la función. <sup>1</sup>|  
-|**min_worker_time**|**BIGINT**|Tiempo mínimo de CPU, en microsegundos, que esta función ha consumido alguna vez durante una ejecución. <sup>1</sup>|  
-|**max_worker_time**|**BIGINT**|Tiempo máximo de CPU, en microsegundos, que esta función ha consumido alguna vez durante una ejecución. <sup>1</sup>|  
-|**total_physical_reads**|**BIGINT**|Número total de lecturas físicas realizadas por las ejecuciones de esta función desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**last_physical_reads**|**BIGINT**|Número de lecturas físicas realizadas la última vez que se ejecutó la función.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**min_physical_reads**|**BIGINT**|Número mínimo de lecturas físicas que ha realizado esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**max_physical_reads**|**BIGINT**|Número máximo de lecturas físicas que ha realizado esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**total_logical_writes**|**BIGINT**|Número total de escrituras lógicas realizadas por las ejecuciones de esta función desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**last_logical_writes**|**BIGINT**|Número de páginas del grupo de búferes desfasadas la última vez que se ejecutó el plan. Si una página ya está desfasada (modificada) no se cuenta ninguna escritura.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**min_logical_writes**|**BIGINT**|Número mínimo de escrituras lógicas realizadas por esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**max_logical_writes**|**BIGINT**|Número máximo de escrituras lógicas realizadas por esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**total_logical_reads**|**BIGINT**|Número total de lecturas lógicas realizadas por las ejecuciones de esta función desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**last_logical_reads**|**BIGINT**|Número de lecturas lógicas realizadas la última vez que se ejecutó la función.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**min_logical_reads**|**BIGINT**|Número mínimo de lecturas lógicas que ha realizado esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**max_logical_reads**|**BIGINT**|Número máximo de lecturas lógicas que ha realizado esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**total_elapsed_time**|**BIGINT**|Tiempo total transcurrido, en microsegundos, para las ejecuciones completadas de esta función.|  
-|**last_elapsed_time**|**BIGINT**|Tiempo transcurrido, en microsegundos, para la ejecución completada más recientemente de esta función.|  
-|**min_elapsed_time**|**BIGINT**|Tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de esta función.|  
-|**max_elapsed_time**|**BIGINT**|Tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de esta función.|  
-|**total_page_server_reads**|**BIGINT**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de esta función desde que se compiló.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database.|  
-|**last_page_server_reads**|**BIGINT**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó la función.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database.|  
-|**min_page_server_reads**|**BIGINT**|Número mínimo de lecturas del servidor de páginas que esta función ha realizado durante una ejecución.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database.|  
-|**max_page_server_reads**|**BIGINT**|Número máximo de lecturas de servidor de páginas que esta función ha realizado alguna vez durante una ejecución.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database.|
+|**execution_count**|**bigint**|Número de veces que se ha ejecutado la función desde que se compiló por última vez.|  
+|**total_worker_time**|**bigint**|Cantidad total de tiempo de CPU, en microsegundos, consumido por las ejecuciones de esta función desde que se compiló.<br /><br /> En el caso de las funciones compiladas de forma nativa, es posible que **total_worker_time** no sea preciso si muchas ejecuciones tardan menos de 1 milisegundo.|  
+|**last_worker_time**|**bigint**|Tiempo de CPU, en microsegundos, consumido la última vez que se ejecutó la función. <sup>1</sup>|  
+|**min_worker_time**|**bigint**|Tiempo mínimo de CPU, en microsegundos, que esta función ha consumido alguna vez durante una ejecución. <sup>1</sup>|  
+|**max_worker_time**|**bigint**|Tiempo máximo de CPU, en microsegundos, que esta función ha consumido alguna vez durante una ejecución. <sup>1</sup>|  
+|**total_physical_reads**|**bigint**|Número total de lecturas físicas realizadas por las ejecuciones de esta función desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**last_physical_reads**|**bigint**|Número de lecturas físicas realizadas la última vez que se ejecutó la función.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**min_physical_reads**|**bigint**|Número mínimo de lecturas físicas que ha realizado esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**max_physical_reads**|**bigint**|Número máximo de lecturas físicas que ha realizado esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**total_logical_writes**|**bigint**|Número total de escrituras lógicas realizadas por las ejecuciones de esta función desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**last_logical_writes**|**bigint**|Número de páginas del grupo de búferes desfasadas la última vez que se ejecutó el plan. Si una página ya está desfasada (modificada) no se cuenta ninguna escritura.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**min_logical_writes**|**bigint**|Número mínimo de escrituras lógicas realizadas por esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**max_logical_writes**|**bigint**|Número máximo de escrituras lógicas realizadas por esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**total_logical_reads**|**bigint**|Número total de lecturas lógicas realizadas por las ejecuciones de esta función desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**last_logical_reads**|**bigint**|Número de lecturas lógicas realizadas la última vez que se ejecutó la función.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**min_logical_reads**|**bigint**|Número mínimo de lecturas lógicas que ha realizado esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**max_logical_reads**|**bigint**|Número máximo de lecturas lógicas que ha realizado esta función durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**total_elapsed_time**|**bigint**|Tiempo total transcurrido, en microsegundos, para las ejecuciones completadas de esta función.|  
+|**last_elapsed_time**|**bigint**|Tiempo transcurrido, en microsegundos, para la ejecución completada más recientemente de esta función.|  
+|**min_elapsed_time**|**bigint**|Tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de esta función.|  
+|**max_elapsed_time**|**bigint**|Tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de esta función.|  
+|**total_page_server_reads**|**bigint**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de esta función desde que se compiló.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database.|  
+|**last_page_server_reads**|**bigint**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó la función.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database.|  
+|**min_page_server_reads**|**bigint**|Número mínimo de lecturas del servidor de páginas que esta función ha realizado durante una ejecución.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database.|  
+|**max_page_server_reads**|**bigint**|Número máximo de lecturas de servidor de páginas que esta función ha realizado alguna vez durante una ejecución.<br /><br /> **Se aplica a:** Hiperescala Azure SQL Database.|
   
 ## <a name="permissions"></a>Permisos  
 

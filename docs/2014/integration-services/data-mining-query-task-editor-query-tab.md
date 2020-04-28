@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890721"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Consulta)
@@ -40,12 +40,12 @@ ms.locfileid: "68890721"
  **Consulta de minería de datos**  
  Escriba una consulta de minería de datos.  
   
- **Temas relacionados:**  [extensiones de minería de datos &#40;referencia de DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Temas relacionados:**  [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
- **Crear nueva consulta**  
+ **Generar nueva consulta**  
  Cree la consulta de minería de datos con una herramienta gráfica.  
   
- **Temas relacionados:** [consulta de minería de datos](control-flow/data-mining-query.md)  
+ **Temas relacionados:** [Data Mining Query](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Opciones de la pestaña Asignación de parámetros  
  **Nombre del parámetro**  

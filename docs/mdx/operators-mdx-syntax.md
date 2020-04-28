@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892112"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
@@ -86,19 +86,19 @@ ms.locfileid: "68892112"
   
  También hay reglas que determinan la precisión, escala y longitud del resultado basándose en la precisión, escala y longitud de las expresiones sencillas.  
   
-## <a name="converting-data-types"></a>Convertir tipos de datos  
+## <a name="converting-data-types"></a>Conversión de tipos de datos  
  MDX convierte implícitamente un objeto a un tipo distinto cuando el objeto se usa en una expresión que requiere un tipo diferente. En la siguiente tabla se definen las reglas de conversión de cada objeto.  
   
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
 |Nivel|Set|\<Level>. Members|  
-|Hierarchy|Miembro|\<> de jerarquía. DefaultMember|  
-|Miembro|Tuple|(\<> miembro)|  
-|Tuple|Miembro|\<tupla>. Item (0)|  
+|Hierarchy|Member|\<> de jerarquía. DefaultMember|  
+|Member|Tuple|(\<> miembro)|  
+|Tuple|Member|\<tupla>. Item (0)|  
 |Tuple|Escalar|\<> de tupla. valor|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementos de la sintaxis de MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

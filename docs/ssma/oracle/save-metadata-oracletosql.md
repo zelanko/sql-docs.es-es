@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266507"
 ---
 # <a name="save-metadata--oracletosql"></a>Guardar metadatos (OracleToSQL)
@@ -34,7 +34,7 @@ SSMA carga los metadatos en el proyecto según sea necesario. Los metadatos se c
 **Seleccionar todo**  
 Selecciona todas las bases de datos de la lista.  
   
-**Borrar**  
+**Claridad**  
 Desactiva la casilla para todas las bases de datos con metadatos que faltan. No puede desactivar la casilla si se han cargado los metadatos.  
   
 **Guardar**  

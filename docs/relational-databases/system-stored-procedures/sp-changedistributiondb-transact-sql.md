@@ -16,10 +16,10 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768960"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)

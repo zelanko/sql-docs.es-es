@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892960"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Descripción de los requisitos de un modelo de serie temporal (tutorial intermedio de minería de datos)
@@ -24,8 +24,7 @@ ms.locfileid: "68892960"
   
  Para este tutorial, los datos de ventas se recopilan diariamente en la base de datos transaccional de ventas, pero para la minería de datos, los datos se han agregado previamente por mes mediante una vista.  
   
- Además, es conveniente para el análisis que los datos tengan tan pocos huecos como sea posible. Si piensa analizar varias series de datos, todas ellas deben empezar y terminar preferiblemente en la misma fecha. Si faltan datos que no corresponden al comienzo o al final de una serie, puede usar el parámetro MISSING_VALUE_SUBSTITUTION para rellenar la serie. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] también proporciona varias opciones para reemplazar los datos que faltan por valores, como medias o constantes.  
+ Además, es conveniente para el análisis que los datos tengan tan pocos huecos como sea posible. Si piensa analizar varias series de datos, todas ellas deben empezar y terminar preferiblemente en la misma fecha. Si faltan datos que no corresponden al comienzo o al final de una serie, puede usar el parámetro MISSING_VALUE_SUBSTITUTION para rellenar la serie. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] también proporciona varias opciones para reemplazar los datos que faltan por valores, como medias o constantes.  
   
 > [!WARNING]  
 >  Las herramientas de gráfico dinámico y tabla dinámica que se incluyeron en versiones anteriores del diseñador de vistas de origen de datos ya no se proporcionan. Se recomienda identificar los huecos en los datos de serie temporal de antemano, mediante herramientas tales como el generador de perfiles de datos incluido en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

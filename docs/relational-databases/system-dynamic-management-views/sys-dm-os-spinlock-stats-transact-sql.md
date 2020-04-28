@@ -23,10 +23,10 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265688"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>Sys. dm_os_spinlock_stats (Transact-SQL)
@@ -39,10 +39,10 @@ Devuelve información sobre todas las esperas de Spinlock organizadas por tipo.
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Nombre del tipo de Spinlock.|  
-|colisiones|**BIGINT**|El número de veces que un subproceso intenta adquirir el Spinlock y se bloquea porque otro subproceso contiene el Spinlock actualmente.|  
-|pone marcha|**BIGINT**|El número de veces que un subproceso ejecuta un bucle mientras intenta adquirir Spinlock.|  
-|spins_per_collision|**impuestos**|Proporción de giros por colisión.|  
-|sleep_time|**BIGINT**|Cantidad de tiempo en milisegundos que los subprocesos invirtieron en el caso de una interrupción.|  
+|colisiones|**bigint**|El número de veces que un subproceso intenta adquirir el Spinlock y se bloquea porque otro subproceso contiene el Spinlock actualmente.|  
+|pone marcha|**bigint**|El número de veces que un subproceso ejecuta un bucle mientras intenta adquirir Spinlock.|  
+|spins_per_collision|**real**|Proporción de giros por colisión.|  
+|sleep_time|**bigint**|Cantidad de tiempo en milisegundos que los subprocesos invirtieron en el caso de una interrupción.|  
 |retroceso|**int**|El número de veces que un subproceso que "gira" no puede adquirir el Spinlock y produce el programador.|  
 
 
@@ -67,7 +67,7 @@ GO
 >  Estas estadísticas no permanecen si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Todos los datos se acumulan desde la última vez que se restablecieron las estadísticas o desde que se inició [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="spinlocks"></a>Bloqueos por subproceso  
- Un Spinlock es un objeto de sincronización ligero que se usa para serializar el acceso a las estructuras de datos que normalmente se conservan durante un breve período de tiempo. Cuando un subproceso intenta tener acceso a un recurso protegido por un Spinlock que está siendo mantenido por otro subproceso, el subproceso ejecutará un bucle o "gira" e intentará tener acceso al recurso de nuevo, en lugar de producir inmediatamente el programador como con un bloqueo temporal u otro recurso. currir. El subproceso continuará girando hasta que el recurso esté disponible o el bucle se complete, momento en el cual el subproceso producirá el programador y volverá a la cola ejecutable. Esta práctica ayuda a reducir el cambio excesivo de contexto de subprocesos, pero cuando la contención de un Spinlock es alta, se puede observar un uso significativo de la CPU.
+ Un Spinlock es un objeto de sincronización ligero que se usa para serializar el acceso a las estructuras de datos que normalmente se conservan durante un breve período de tiempo. Cuando un subproceso intenta tener acceso a un recurso protegido por un Spinlock que está siendo mantenido por otro subproceso, el subproceso ejecutará un bucle, o "gira" e intentará tener acceso al recurso de nuevo, en lugar de producir inmediatamente el programador como con un bloqueo temporal u otra espera de recurso. El subproceso continuará girando hasta que el recurso esté disponible o el bucle se complete, momento en el cual el subproceso producirá el programador y volverá a la cola ejecutable. Esta práctica ayuda a reducir el cambio excesivo de contexto de subprocesos, pero cuando la contención de un Spinlock es alta, se puede observar un uso significativo de la CPU.
    
  La siguiente tabla contiene breves descripciones de algunos de los tipos de Spinlock más comunes.  
   
@@ -177,7 +177,7 @@ GO
 |HTTP|Exclusivamente para uso interno.|
 |HTTP_CONNCACHE|Exclusivamente para uso interno.|
 |HTTP_ENDPOINT|Exclusivamente para uso interno.|
-|IDENTIDAD|Exclusivamente para uso interno.|
+|IDENTITY|Exclusivamente para uso interno.|
 |INDEX_CREATE|Exclusivamente para uso interno.|
 |IO_DISPENSER_PAUSE|Exclusivamente para uso interno.|
 |IO_RG_VOLUME_HASHTABLE|Exclusivamente para uso interno.|

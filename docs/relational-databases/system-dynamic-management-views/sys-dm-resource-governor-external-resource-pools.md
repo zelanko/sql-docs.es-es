@@ -21,10 +21,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68468521"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>Sys. dm_resource_governor_external_resource_pools (Transact-SQL)
@@ -43,11 +43,11 @@ Devuelve información sobre el estado actual del grupo de recursos externos, la 
 | max_processes|**int**|Número máximo de procesos externos simultáneos. El valor predeterminado, 0, especifica que no hay límite. No admite valores NULL.|
 | max_memory_percent|**int**|La configuración actual del porcentaje de memoria total del servidor que pueden utilizar las solicitudes en este grupo de recursos de servidor. No admite valores NULL. |
 | statistics_start_time|**datetime**|La hora en que se restablecieron las estadísticas para este grupo. No admite valores NULL. 
-| peak_memory_kb|**BIGINT**|Cantidad máxima de memoria utilizada, en kilobytes, para el grupo de recursos. No admite valores NULL. |
+| peak_memory_kb|**bigint**|Cantidad máxima de memoria utilizada, en kilobytes, para el grupo de recursos. No admite valores NULL. |
 | write_io_count|**int**|El total de operaciones de E/S de escritura emitidas desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
 | read_io_count|**int**|El total de operaciones de E/S de lectura emitidas desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
-| total_cpu_kernel_ms|**BIGINT**|Tiempo de kernel de usuario de CPU acumulado, en milisegundos, desde que se restablecieron las estadísticas de regulador de recursos. No admite valores NULL. |
-| total_cpu_user_ms|**BIGINT**|Tiempo de usuario acumulado de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
+| total_cpu_kernel_ms|**bigint**|Tiempo de kernel de usuario de CPU acumulado, en milisegundos, desde que se restablecieron las estadísticas de regulador de recursos. No admite valores NULL. |
+| total_cpu_user_ms|**bigint**|Tiempo de usuario acumulado de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. No admite valores NULL. |
 | active_processes_count|**int**|Número de procesos externos que se ejecutan en el momento de la solicitud No admite valores NULL. |
 
  
@@ -56,6 +56,6 @@ Devuelve información sobre el estado actual del grupo de recursos externos, la 
 Requiere el permiso `VIEW SERVER STATE`.
 
 ## <a name="see-also"></a>Consulte también  
- [Sys. dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+ [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

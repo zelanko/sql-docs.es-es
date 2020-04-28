@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 138a44184276e1eecc524747ad801df7a8991482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262678"
 ---
 # <a name="sysdm_tran_active_transactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68262678"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|transaction_id|**BIGINT**|Identificador de la transacción en el nivel de instancia, no en el de base de datos. Es solo exclusiva en todas las bases de datos dentro de una instancia, pero no es exclusiva en todas las instancias del servidor.|  
-|name|**nvarchar (32)**|Nombre de transacción. Se sobrescribe si la transacción está marcada y el nombre marcado reemplaza el nombre de transacción.|  
+|transaction_id|**bigint**|Identificador de la transacción en el nivel de instancia, no en el de base de datos. Es solo exclusiva en todas las bases de datos dentro de una instancia, pero no es exclusiva en todas las instancias del servidor.|  
+|name|**nvarchar(32)**|Nombre de transacción. Se sobrescribe si la transacción está marcada y el nombre marcado reemplaza el nombre de transacción.|  
 |transaction_begin_time|**datetime**|Hora en que se ha iniciado la transacción.|  
 |transaction_type|**int**|Tipo de transacción.<br /><br /> 1 = Transacciones de lectura/escritura<br /><br /> 2 = Transacción de solo lectura<br /><br /> 3 = Transacción de sistema<br /><br /> 4 = Transacción distribuida|  
 |transaction_uow|**uniqueidentifier**|Identificador de la unidad de trabajo (UOW) de la transacción para transacciones distribuidas. MS DTC usa el identificador UOW para trabajar con la transacción distribuida.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68262678"
 |dtc_state|**int**|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión inicial hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> 1 = ACTIVE<br /><br /> 2 = PREPARED<br /><br /> 3 = COMMITTED<br /><br /> 4 = ABORTED<br /><br /> 5 = RECOVERED|  
 |dtc_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |dtc_isolation_level|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|filestream_transaction_id|**varbinary (128)**|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión inicial hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|filestream_transaction_id|**varbinary(128)**|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión inicial hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos

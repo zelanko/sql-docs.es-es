@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 57909c1bb4009ae85b7e1b38b8b3cf3fa0e70ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892770"
 ---
 # <a name="general-prediction-functions-dmx"></a>Funciones de predicción generales (DMX)
@@ -27,7 +27,7 @@ ms.locfileid: "68892770"
 |-|-|  
 |[&#41;BottomCount &#40;DMX](../dmx/bottomcount-dmx.md)|[&#41;RangeMin &#40;DMX](../dmx/rangemin-dmx.md)|  
 |[&#41;BottomPercent &#40;DMX](../dmx/bottompercent-dmx.md)|[&#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[Predecir &#40;DMX&#41;](../dmx/predict-dmx.md)|[&#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[&#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
 |[&#41;de RangeMax &#40;DMX](../dmx/rangemax-dmx.md)|[&#40;DMX&#41;](../dmx/topsum-dmx.md)|  
 |[&#41;RangeMid &#40;DMX](../dmx/rangemid-dmx.md)||  
   
@@ -35,13 +35,13 @@ ms.locfileid: "68892770"
   
 -   [Existe &#40;DMX&#41;](../dmx/exists-dmx.md)  
   
--   [&#41;IsDescendant &#40;DMX](../dmx/isdescendant-dmx.md)  
+-   [IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)  
   
 -   [&#41;IsTestCase &#40;DMX](../dmx/istestcase-dmx.md)  
   
 -   [&#41;IsTrainingCase &#40;DMX](../dmx/istrainingcase-dmx.md)  
   
--   [Predecir &#40;DMX&#41;](../dmx/predict-dmx.md)  
+-   [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
 -   [&#41;de RangeMax &#40;DMX](../dmx/rangemax-dmx.md)  
   
@@ -61,10 +61,10 @@ ms.locfileid: "68892770"
 |Tipo de consulta|Funciones admitidas|Observaciones|  
 |----------------|-------------------------|-------------|  
 |[Seleccione DISTINCt \<FROM Model>](../dmx/select-distinct-from-model-dmx.md)|[&#41;RangeMin &#40;DMX](../dmx/rangemin-dmx.md)<br /><br /> [&#41;RangeMid &#40;DMX](../dmx/rangemid-dmx.md)<br /><br /> [&#41;de RangeMax &#40;DMX](../dmx/rangemax-dmx.md)|Estas funciones se pueden utilizar para proporcionar valores máximos, valores mínimos y valores medios para cualquier columna que contenga datos numéricos, con independencia de si la columna es continua o de datos discretos.|  
-|[Seleccione del \<modelo>. CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [Seleccione del \<modelo>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[&#41;IsDescendant &#40;DMX](../dmx/isdescendant-dmx.md)|Esta función recupera los nodos secundarios para el nodo especificado del modelo y se puede utilizar, por ejemplo, para recorrer en iteración los nodos del contenido del modelo de minería de datos. La organización de los nodos en el contenido del modelo de minería de datos depende del tipo de modelo. Para obtener información sobre la estructura de cada tipo de modelo de minería de datos, vea [contenido del modelo de minería de datos &#40;Analysis Services-&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Si ha guardado el contenido del modelo de minería de datos como una dimensión, también puede utilizar otras funciones de MDX (Expresiones multidimensionales) que permiten consultar una jerarquía de atributos.|  
-|[Seleccione del \<modelo>. VECES](../dmx/select-from-model-cases-dmx.md)|[&#41;IsInNode &#40;DMX](../dmx/isinnode-dmx.md)<br /><br /> [Clase ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [&#41;IsTrainingCase &#40;DMX](../dmx/istrainingcase-dmx.md)<br /><br /> [&#41;IsTestCase &#40;DMX](../dmx/istestcase-dmx.md)|La función lag solo se admite para los modelos de serie temporal.<br /><br /> La función IsTestCase se admite en los modelos basados en una estructura que se creó mediante la opción de exclusión, para crear un conjunto de datos de prueba. Si el modelo no se basa en una estructura con el conjunto de datos de pruebas con exclusión, todos los casos se consideran casos de entrenamiento.|  
-|[Seleccione del \<modelo>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[&#41;IsInNode &#40;DMX](../dmx/isinnode-dmx.md)|En este contexto, la función IsInNode devuelve un caso que pertenece a un conjunto de casos de ejemplo ideales.|  
-|Seleccione del \<modelo>. PMML|No aplicable. En su lugar, utilice las funciones de consultas XML.|Las representaciones PMML solo son compatibles con los tipos de modelo siguientes:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]Árboles de decisión<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)]Clústeres|  
+|[Seleccione del \<modelo>. CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [Seleccione del \<modelo>. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Esta función recupera los nodos secundarios para el nodo especificado del modelo y se puede utilizar, por ejemplo, para recorrer en iteración los nodos del contenido del modelo de minería de datos. La organización de los nodos en el contenido del modelo de minería de datos depende del tipo de modelo. Para obtener información sobre la estructura de cada tipo de modelo de minería de datos, vea [contenido del modelo de minería de datos &#40;Analysis Services-&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Si ha guardado el contenido del modelo de minería de datos como una dimensión, también puede utilizar otras funciones de MDX (Expresiones multidimensionales) que permiten consultar una jerarquía de atributos.|  
+|[Seleccione del \<modelo>. VECES](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Clase ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [&#41;IsTrainingCase &#40;DMX](../dmx/istrainingcase-dmx.md)<br /><br /> [&#41;IsTestCase &#40;DMX](../dmx/istestcase-dmx.md)|La función lag solo se admite para los modelos de serie temporal.<br /><br /> La función IsTestCase se admite en los modelos basados en una estructura que se creó mediante la opción de exclusión, para crear un conjunto de datos de prueba. Si el modelo no se basa en una estructura con el conjunto de datos de pruebas con exclusión, todos los casos se consideran casos de entrenamiento.|  
+|[Seleccione del \<modelo>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|En este contexto, la función IsInNode devuelve un caso que pertenece a un conjunto de casos de ejemplo ideales.|  
+|Seleccione del \<modelo>. PMML|No aplicable. En su lugar, utilice las funciones de consultas XML.|Las representaciones PMML solo son compatibles con los tipos de modelo siguientes:<br /><br /> Árboles de decisión de [!INCLUDE[msCoName](../includes/msconame-md.md)]<br /><br /> Agrupación en clústeres de [!INCLUDE[msCoName](../includes/msconame-md.md)]|  
 |[SELECCIONAR del \<modelo> combinación de predicción](../dmx/select-from-model-prediction-join-dmx.md)|Funciones de predicción específicas del algoritmo que se emplea para generar el modelo.|Para obtener una lista de las funciones de predicción para cada tipo de modelo, vea [consultas de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
 |[SELECCIONAR del \<modelo>](../dmx/select-from-model-dmx.md)|Funciones de predicción específicas del algoritmo que se emplea para generar el modelo.|Para obtener una lista de las funciones de predicción para cada tipo de modelo, vea [consultas de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
   

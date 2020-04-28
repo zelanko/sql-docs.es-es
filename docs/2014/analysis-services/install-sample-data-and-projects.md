@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530820"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services
@@ -29,7 +29,7 @@ ms.locfileid: "69530820"
   
      Analysis Services solo está disponible en estas ediciones: Evaluation, Enterprise, Business Intelligence, Standard.  
   
-     Tenga en cuenta que las ediciones de SQL Server Express no incluyen Analysis Services. [Descargue la edición de evaluación](https://go.microsoft.com/fwlink/?LinkId=392824) si desea probar el software de forma gratuita.  
+     Tenga en cuenta que las ediciones de SQL Server Express no incluyen Analysis Services. [Descargue la edición de evaluación](https://go.microsoft.com/fwlink/?LinkId=392824) si quiere probar el software de forma gratuita.  
   
      De forma predeterminada, Analysis Services se instala como una instancia multidimensional, lo que puede invalidar si elige el modo de servidor tabular en la página de configuración del servidor del Asistente para la instalación. Si desea ejecutar ambos modos de servidor, vuelva a ejecutar el programa de instalación de SQL Server en el mismo equipo para instalar una segunda instancia de Analysis Services en el otro modo.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69530820"
 ## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>Paso 2: descargar SQL Server Data Tools-Business Intelligence para Visual Studio 2012  
  En esta versión, SQL Server Data Tools se descarga e instala de forma independiente de otras características de SQL Server. Los diseñadores y las plantillas de proyecto que se emplean para crear modelos e informes de BI están disponibles ahora como una descarga web gratuita.  
   
--   [Descargue la versión de Business Intelligence de SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). El archivo se guarda en la carpeta Descargas. Ejecute el programa de instalación para instalar la herramienta.  
+-   [Descargue la versión Business Intelligence de SQL Server Data Tools](https://go.microsoft.com/fwlink/p/?LinkID=322038). El archivo se guarda en la carpeta Descargas. Ejecute el programa de instalación para instalar la herramienta.  
   
      Reinicie el equipo para completar la instalación.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "69530820"
 ## <a name="see-also"></a>Consulte también  
  [Instale SQL Server 2014 desde el Asistente para la instalación &#40;el programa de instalación&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configurar el Firewall de Windows para permitir el acceso a Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configure the Windows Firewall to Allow SQL Server Access (Configurar el Firewall de Windows para permitir el acceso a SQL Server)](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

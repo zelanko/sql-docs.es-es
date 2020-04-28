@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891220"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
@@ -83,8 +83,7 @@ ms.locfileid: "68891220"
   
 -   Cuando el nombre de un objeto contiene caracteres no incluidos en la lista de identificadores calificados.  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permite que los identificadores delimitados utilicen cualquier carácter de la página de códigos actual. No obstante, el uso indiscriminado de caracteres especiales en los nombres de objeto puede hacer que las instrucciones y scripts MDX resulten difíciles de leer y de mantener.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permite que los identificadores delimitados utilicen cualquier carácter de la página de códigos actual. No obstante, el uso indiscriminado de caracteres especiales en los nombres de objeto puede hacer que las instrucciones y scripts MDX resulten difíciles de leer y de mantener.  
   
 ### <a name="formatting-rules-for-delimited-identifiers"></a>Reglas de formato para los identificadores delimitados  
  La parte de cuerpo de un identificador delimitado puede contener cualquier combinación de caracteres de la página de códigos actual, incluidos los propios caracteres delimitadores. Si el cuerpo del identificador delimitado contiene caracteres delimitadores, será necesario un tratamiento especial:  
@@ -126,6 +125,6 @@ ms.locfileid: "68891220"
 ## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Elementos de la sintaxis de MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

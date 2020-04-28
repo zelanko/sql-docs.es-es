@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771444"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
@@ -70,11 +70,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**immediate_sync**|**bit**|Indica si los archivos de sincronización se crean, o se vuelven a crear, cada vez que se ejecuta el Agente de instantáneas.|  
 |**Inicio de sesión del publicador**|**sysname**|Id. de inicio de sesión utilizado en el publicador para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**contraseña del publicador**|**nvarchar (524)**|Contraseña (cifrada) utilizada en el publicador para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher security_mode**|**int**|Modo de seguridad aplicado en el publicador:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows<br /><br /> **2** = los desencadenadores de sincronización utilizan una entrada **sysservers** estática para realizar la llamada a procedimiento remoto (RPC) y el *publicador* debe estar definido en la tabla **sysservers** como un servidor remoto o un servidor vinculado.|  
+|**publisher security_mode**|**int**|Modo de seguridad aplicado en el publicador:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows<br /><br /> **2** = los desencadenadores de sincronización utilizan una entrada **sysservers** estática para realizar la llamada a procedimiento remoto (RPC) y el *publicador* debe estar definido en la tabla **sysservers** como un servidor remoto o un servidor vinculado.|  
 |**distribuidor**|**sysname**|Nombre del distribuidor.|  
 |**distributor_login**|**sysname**|Id. de inicio de sesión utilizado en el distribuidor para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**|**nvarchar (524)**|Contraseña (cifrada) utilizada en el distribuidor para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|Modo de seguridad implementado en el distribuidor:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
+|**distributor_security_mode**|**int**|Modo de seguridad implementado en el distribuidor:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
 |**ftp_address**|**sysname**|Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_port**|**int**|Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_login**|**sysname**|Se conserva únicamente por compatibilidad con versiones anteriores.|  

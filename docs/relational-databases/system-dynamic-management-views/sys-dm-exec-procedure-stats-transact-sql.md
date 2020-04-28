@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742902"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
@@ -43,42 +43,42 @@ ms.locfileid: "68742902"
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|Identificador de base de datos en el que el procedimiento almacenado reside.|  
 |**object_id**|**int**|Número de identificación de objeto del procedimiento almacenado.|  
-|**automáticamente**|**Char (2)**|Tipo del objeto:<br /><br /> P = Procedimiento almacenado de SQL<br /><br /> PC = Procedimiento almacenado de ensamblado (CLR)<br /><br /> X = Procedimiento almacenado extendido|  
-|**type_desc**|**nvarchar (60)**|Descripción del tipo de objeto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**type**|**char(2)**|Tipo del objeto:<br /><br /> P = Procedimiento almacenado de SQL<br /><br /> PC = Procedimiento almacenado de ensamblado (CLR)<br /><br /> X = Procedimiento almacenado extendido|  
+|**type_desc**|**nvarchar(60)**|Descripción del tipo de objeto:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |**sql_handle**|**varbinary (64)**|Se puede utilizar para correlacionar con las consultas de **Sys. dm_exec_query_stats** que se ejecutaron desde dentro de este procedimiento almacenado.|  
 |**plan_handle**|**varbinary (64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con la vista de administración dinámica **Sys. dm_exec_cached_plans** .<br /><br /> Será siempre 0x000 cuando un procedimiento almacenado nativo consulte una tabla optimizada para memoria.|  
 |**cached_time**|**datetime**|Momento en el que el procedimiento almacenado se agregó a la caché.|  
 |**last_execution_time**|**datetime**|Hora en que se ejecutó el procedimiento almacenado por última vez.|  
-|**execution_count**|**BIGINT**|Número de veces que se ha ejecutado el procedimiento almacenado desde que se compiló por última vez.|  
-|**total_worker_time**|**BIGINT**|Cantidad total de tiempo de CPU, en microsegundos, consumido por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> Para los procedimientos almacenados compilados de forma nativa, **total_worker_time** puede no ser exacto si varias ejecuciones tardan menos de 1 milisegundo.|  
-|**last_worker_time**|**BIGINT**|Tiempo de CPU, en microsegundos, consumido la última vez que se ejecutó el procedimiento almacenado. <sup>1</sup>|  
-|**min_worker_time**|**BIGINT**|Tiempo mínimo de CPU, en microsegundos, que ha consumido este procedimiento almacenado durante una ejecución. <sup>1</sup>|  
-|**max_worker_time**|**BIGINT**|Tiempo máximo de CPU, en microsegundos, que ha consumido este procedimiento almacenado durante una ejecución. <sup>1</sup>|  
-|**total_physical_reads**|**BIGINT**|Número total de lecturas físicas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**last_physical_reads**|**BIGINT**|Número de lecturas físicas realizadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**min_physical_reads**|**BIGINT**|Número mínimo de lecturas físicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**max_physical_reads**|**BIGINT**|Número máximo de lecturas físicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**total_logical_writes**|**BIGINT**|Número total de escrituras lógicas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**last_logical_writes**|**BIGINT**|Número de páginas del grupo de búferes sucias la última vez que se ejecutó el plan. Si una página ya está desfasada (modificada) no se cuenta ninguna escritura.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**min_logical_writes**|**BIGINT**|Número mínimo de escrituras lógicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**max_logical_writes**|**BIGINT**|Número máximo de escrituras lógicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**total_logical_reads**|**BIGINT**|Número total de lecturas lógicas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**last_logical_reads**|**BIGINT**|El número de lecturas lógicas realizadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**min_logical_reads**|**BIGINT**|Número mínimo de lecturas lógicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**max_logical_reads**|**BIGINT**|Número máximo de lecturas lógicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
-|**total_elapsed_time**|**BIGINT**|Tiempo total transcurrido, en microsegundos, para las ejecuciones completadas de este procedimiento almacenado.|  
-|**last_elapsed_time**|**BIGINT**|Tiempo transcurrido, en microsegundos, para la ejecución completada más recientemente de este procedimiento almacenado.|  
-|**min_elapsed_time**|**BIGINT**|Tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de este procedimiento almacenado.|  
-|**max_elapsed_time**|**BIGINT**|Tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de este procedimiento almacenado.|  
-|**total_spills**|**BIGINT**|Número total de páginas desbordadas por la ejecución de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**last_spills**|**BIGINT**|Número de páginas desbordadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**min_spills**|**BIGINT**|El número mínimo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**max_spills**|**BIGINT**|Número máximo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**execution_count**|**bigint**|Número de veces que se ha ejecutado el procedimiento almacenado desde que se compiló por última vez.|  
+|**total_worker_time**|**bigint**|Cantidad total de tiempo de CPU, en microsegundos, consumido por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> Para los procedimientos almacenados compilados de forma nativa, **total_worker_time** puede no ser exacto si varias ejecuciones tardan menos de 1 milisegundo.|  
+|**last_worker_time**|**bigint**|Tiempo de CPU, en microsegundos, consumido la última vez que se ejecutó el procedimiento almacenado. <sup>1</sup>|  
+|**min_worker_time**|**bigint**|Tiempo mínimo de CPU, en microsegundos, que ha consumido este procedimiento almacenado durante una ejecución. <sup>1</sup>|  
+|**max_worker_time**|**bigint**|Tiempo máximo de CPU, en microsegundos, que ha consumido este procedimiento almacenado durante una ejecución. <sup>1</sup>|  
+|**total_physical_reads**|**bigint**|Número total de lecturas físicas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**last_physical_reads**|**bigint**|Número de lecturas físicas realizadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**min_physical_reads**|**bigint**|Número mínimo de lecturas físicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**max_physical_reads**|**bigint**|Número máximo de lecturas físicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**total_logical_writes**|**bigint**|Número total de escrituras lógicas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**last_logical_writes**|**bigint**|Número de páginas del grupo de búferes sucias la última vez que se ejecutó el plan. Si una página ya está desfasada (modificada) no se cuenta ninguna escritura.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**min_logical_writes**|**bigint**|Número mínimo de escrituras lógicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**max_logical_writes**|**bigint**|Número máximo de escrituras lógicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**total_logical_reads**|**bigint**|Número total de lecturas lógicas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**last_logical_reads**|**bigint**|El número de lecturas lógicas realizadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**min_logical_reads**|**bigint**|Número mínimo de lecturas lógicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**max_logical_reads**|**bigint**|Número máximo de lecturas lógicas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> Será siempre 0 al consultar una tabla optimizada para memoria.|  
+|**total_elapsed_time**|**bigint**|Tiempo total transcurrido, en microsegundos, para las ejecuciones completadas de este procedimiento almacenado.|  
+|**last_elapsed_time**|**bigint**|Tiempo transcurrido, en microsegundos, para la ejecución completada más recientemente de este procedimiento almacenado.|  
+|**min_elapsed_time**|**bigint**|Tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de este procedimiento almacenado.|  
+|**max_elapsed_time**|**bigint**|Tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de este procedimiento almacenado.|  
+|**total_spills**|**bigint**|Número total de páginas desbordadas por la ejecución de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**last_spills**|**bigint**|Número de páginas desbordadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**min_spills**|**bigint**|El número mínimo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**max_spills**|**bigint**|Número máximo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
 |**pdw_node_id**|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br />**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
-|**total_page_server_reads**|**BIGINT**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
-|**last_page_server_reads**|**BIGINT**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
-|**min_page_server_reads**|**BIGINT**|Número mínimo de lecturas del servidor de páginas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
-|**max_page_server_reads**|**BIGINT**|Número máximo de lecturas del servidor de páginas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
+|**total_page_server_reads**|**bigint**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
+|**last_page_server_reads**|**bigint**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
+|**min_page_server_reads**|**bigint**|Número mínimo de lecturas del servidor de páginas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
+|**max_page_server_reads**|**bigint**|Número máximo de lecturas del servidor de páginas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
   
  <sup>1</sup> para los procedimientos almacenados compilados de forma nativa cuando la recopilación de estadísticas está habilitada, el tiempo de trabajo se recopila en milisegundos. Si la consulta se ejecuta en menos de un milisegundo, el valor será 0.  
   

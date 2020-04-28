@@ -16,10 +16,10 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771401"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -61,15 +61,15 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||Se proporciona para mantener la compatibilidad con versiones anteriores. Use **dest_table**.|  
 |**dest_table**||Nueva tabla de destino.|  
 |**destination_owner**||Nombre del propietario del objeto de destino.|  
-|**filtro**||Nuevo procedimiento almacenado para filtrar la tabla (filtrado horizontal). El valor predeterminado es NULL. No se puede cambiar para las publicaciones de replicación punto a punto.|  
-|**fire_triggers_on_snapshot**|**reales**|Los desencadenadores de usuario replicados se ejecutan cuando se aplica la instantánea inicial.<br /><br /> Nota: en el caso de los desencadenadores que se van a replicar, el valor de la máscara de *schema_option* debe incluir el valor **0x100**.|  
-||**es**|Los desencadenadores de usuario replicados no se ejecutan cuando se aplica la instantánea inicial.|  
+|**filter**||Nuevo procedimiento almacenado para filtrar la tabla (filtrado horizontal). El valor predeterminado es NULL. No se puede cambiar para las publicaciones de replicación punto a punto.|  
+|**fire_triggers_on_snapshot**|**true**|Los desencadenadores de usuario replicados se ejecutan cuando se aplica la instantánea inicial.<br /><br /> Nota: en el caso de los desencadenadores que se van a replicar, el valor de la máscara de *schema_option* debe incluir el valor **0x100**.|  
+||**false**|Los desencadenadores de usuario replicados no se ejecutan cuando se aplica la instantánea inicial.|  
 |**identity_range**||Controla el tamaño de los intervalos de identidad asignados en el suscriptor. No se admite para la replicación punto a punto.|  
 |**ins_cmd**||Instrucción INSERT que se ejecuta; de lo contrario, se crea a partir del registro.|  
 |**pre_creation_cmd**||Comando de creación previa que puede quitar, eliminar o truncar la tabla de destino antes de que se aplique la sincronización.|  
-||**ninguna**|No usa ningún comando.|  
+||**Ninguna**|No usa ningún comando.|  
 ||**omisiones**|Quita la tabla de destino.|  
-||**elimínelos**|Elimina la tabla de destino.|  
+||**delete**|Elimina la tabla de destino.|  
 ||**truncar**|Trunca la tabla de destino.|  
 |**pub_identity_range**||Controla el tamaño de los intervalos de identidad asignados en el suscriptor. No se admite para la replicación punto a punto.|  
 |**schema_option**||Especifica el mapa de bits de la opción de generación del esquema para el artículo especificado. *schema_option* es **binario (8)**. Para obtener más información, vea la sección Comentarios más adelante en este tema.|  
@@ -118,18 +118,18 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000000**|Replica el atributo SPARSE para las columnas. Para obtener más información sobre este atributo, vea [usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0x40000000000**|Habilite el scripting del agente de instantáneas para crear una tabla optimizada en memoria en el suscriptor.|  
 ||**0x80000000000**|Convierte el índice clúster en un índice no clúster para los artículos con optimización para memoria.|  
-|**estatus**||Especifica el nuevo estado de la propiedad.|  
+|**status**||Especifica el nuevo estado de la propiedad.|  
 ||**dts horizontal partitions**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**include column names**|Los nombres de columnas se incluyen en la instrucción INSERT replicada.|  
 ||**no column names**|Los nombres de columnas no se incluyen en la instrucción INSERT replicada.|  
 ||**no dts horizontal partitions**|La partición horizontal del artículo no se define mediante una suscripción transformable.|  
-||**ninguna**|Borra todas las opciones de estado de la tabla [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) y marca el artículo como inactivo.|  
-||**los**|Los cambios se propagan al suscriptor mediante comandos con parámetros. Es el valor predeterminado para los artículos nuevos.|  
+||**Ninguna**|Borra todas las opciones de estado de la tabla [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) y marca el artículo como inactivo.|  
+||**parameters**|Los cambios se propagan al suscriptor mediante comandos con parámetros. Es el valor predeterminado para los artículos nuevos.|  
 ||**literales de cadena**|Los cambios se propagan al suscriptor mediante valores literales de cadena.|  
 |**sync_object**||Nombre de la tabla o vista utilizada para generar un archivo de salida de sincronización. El valor predeterminado es NULL. No es compatible con publicadores de Oracle.|  
 |**Taba**||Identifica el espacio de tablas utilizado por la tabla de registro de un artículo publicado desde una base de datos Oracle. Para más información, vea [Manage Oracle Databases](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md) (Administrar bases de datos de Oracle).|  
 |**mínimo**||Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. No se admite para la replicación punto a punto.|  
-|**automáticamente**||No es compatible con publicadores de Oracle.|  
+|**type**||No es compatible con publicadores de Oracle.|  
 ||**logbased**|Artículo basado en registro.|  
 ||**logbased manualboth**|Artículo basado en registro con filtro manual y vista manual. Esta opción requiere que también se establezcan las propiedades *sync_object* y *Filter* . No es compatible con publicadores de Oracle.|  
 ||**logbased manualfilter**|Artículo basado en registro con filtro manual. Esta opción requiere que también se establezcan las propiedades *sync_object* y *Filter* . No es compatible con publicadores de Oracle.|  
@@ -194,11 +194,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **filtro**  
+-   **filter**  
   
 -   **ins_cmd**  
   
--   **estatus**  
+-   **status**  
   
 -   **upd_cmd**  
   
@@ -238,7 +238,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y modificar las propiedades del artículo](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Cambiar las propiedades de la publicación y del artículo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

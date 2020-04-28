@@ -16,10 +16,10 @@ ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771000"
 ---
 # <a name="sp_replcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
@@ -45,8 +45,8 @@ sp_replcounters
 |**Replicated transactions**|**int**|Número de transacciones del registro en espera de su entrega a la base de datos de distribución.|  
 |**Replication rate trans/sec**|**float**|Numero promedio de transacciones por segundo entregadas en la base de datos de distribución.|  
 |**Latencia de replicación**|**float**|Tiempo promedio, en segundos, que las transacciones permanecieron en el registro antes de ser distribuidas.|  
-|**Replbeginlsn**|**binario (10)**|Número de flujo de registro (LSN) del punto de truncamiento actual del registro.|  
-|**Replnextlsn**|**binario (10)**|Número de secuencia del siguiente registro de confirmación que está en espera de su entrega a la base de datos de distribución.|  
+|**Replbeginlsn**|**binary(10)**|Número de flujo de registro (LSN) del punto de truncamiento actual del registro.|  
+|**Replnextlsn**|**binary(10)**|Número de secuencia del siguiente registro de confirmación que está en espera de su entrega a la base de datos de distribución.|  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_replcounters** se utiliza en la replicación transaccional.  
@@ -55,7 +55,7 @@ sp_replcounters
  Requiere la pertenencia al rol fijo de base de datos **db_owner** o el rol fijo de servidor **sysadmin** .  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_replflush &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

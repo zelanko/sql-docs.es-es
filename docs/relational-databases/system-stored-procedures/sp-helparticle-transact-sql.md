@@ -16,10 +16,10 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771102"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -58,14 +58,14 @@ sp_helparticle [ @publication = ] 'publication'
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**article_id**|**int**|IDENTIFICADOR del artículo.|  
+|**identificador de artículo**|**int**|IDENTIFICADOR del artículo.|  
 |**article name**|**sysname**|Nombre del artículo.|  
 |**base object**|**nvarchar (257)**|Nombre de la tabla subyacente representada por el artículo o el procedimiento almacenado.|  
 |**Objeto de destino**|**sysname**|Nombre de la tabla de destino (suscripción).|  
 |**synchronization object**|**nvarchar (257)**|Nombre de la vista que define el artículo publicado.|  
-|**automáticamente**|**smallint**|Tipo de artículo:<br /><br /> **1** = basado en el registro.<br /><br /> **3** = basado en registro con filtro manual.<br /><br /> **5** = basado en registro con vista manual.<br /><br /> **7** = basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = ejecución de procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **96** = función de agregado (solo esquema).<br /><br /> **128** = función (solo esquema).<br /><br /> **257** = vista indizada basada en registro.<br /><br /> **259** = vista indizada basada en registro con filtro manual.<br /><br /> **261** = vista indizada basada en registro con vista manual.<br /><br /> **263** = vista indizada basada en registro con filtro manual y vista manual.<br /><br /> **320** = vista indizada (solo esquema).<br /><br />|  
-|**estatus**|**tinyint**|Puede ser el resultado [& (and bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) de una o más de estas propiedades de artículo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = el artículo está activo.<br /><br /> **0x08** = incluir el nombre de la columna en las instrucciones INSERT.<br /><br /> **0x16** = usar instrucciones con parámetros.<br /><br /> debajo **= usar** instrucciones con parámetros e incluir el nombre de la columna en las instrucciones INSERT.|  
-|**filtro**|**nvarchar (257)**|Procedimiento almacenado utilizado para filtrar la tabla horizontalmente. Este procedimiento almacenado debe haber sido creado mediante la cláusula FOR REPLICATION.|  
+|**type**|**smallint**|Tipo de artículo:<br /><br /> **1** = basado en el registro.<br /><br /> **3** = basado en registro con filtro manual.<br /><br /> **5** = basado en registro con vista manual.<br /><br /> **7** = basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = ejecución de procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **96** = función de agregado (solo esquema).<br /><br /> **128** = función (solo esquema).<br /><br /> **257** = vista indizada basada en registro.<br /><br /> **259** = vista indizada basada en registro con filtro manual.<br /><br /> **261** = vista indizada basada en registro con vista manual.<br /><br /> **263** = vista indizada basada en registro con filtro manual y vista manual.<br /><br /> **320** = vista indizada (solo esquema).<br /><br />|  
+|**status**|**tinyint**|Puede ser el resultado [& (and bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) de una o más de estas propiedades de artículo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = el artículo está activo.<br /><br /> **0x08** = incluir el nombre de la columna en las instrucciones INSERT.<br /><br /> **0x16** = usar instrucciones con parámetros.<br /><br /> debajo **= usar** instrucciones con parámetros e incluir el nombre de la columna en las instrucciones INSERT.|  
+|**filter**|**nvarchar (257)**|Procedimiento almacenado utilizado para filtrar la tabla horizontalmente. Este procedimiento almacenado debe haber sido creado mediante la cláusula FOR REPLICATION.|  
 |**denominación**|**nvarchar(255)**|Entrada descriptiva del artículo.|  
 |**insert_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar inserciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar actualizaciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -84,8 +84,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**unqua_filter**|**sysname**|Nombre del filtro, sin el nombre del propietario.|  
 |**auto_identity_range**|**int**|Marca que establece si se activó el control automático del intervalo de identidad en la publicación en el momento en que se creó. **1** significa que el intervalo de identidad automático está habilitado; **0** significa que está deshabilitado.|  
 |**publisher_identity_range**|**int**|Tamaño del intervalo del intervalo de identidad en el publicador si el artículo tiene el valor *identityrangemanagementoption* establecido en **auto** o **auto_identity_range** establecido en **true**.|  
-|**identity_range**|**BIGINT**|Tamaño del intervalo del intervalo de identidad en el suscriptor si el artículo tiene el valor *identityrangemanagementoption* establecido en **auto** o **auto_identity_range** establecido en **true**.|  
-|**mínimo**|**BIGINT**|Valor de porcentaje que indica cuándo asigna el Agente de distribución un nuevo intervalo de identidad.|  
+|**identity_range**|**bigint**|Tamaño del intervalo del intervalo de identidad en el suscriptor si el artículo tiene el valor *identityrangemanagementoption* establecido en **auto** o **auto_identity_range** establecido en **true**.|  
+|**mínimo**|**bigint**|Valor de porcentaje que indica cuándo asigna el Agente de distribución un nuevo intervalo de identidad.|  
 |**identityrangemanagementoption**|**int**|Indica la administración de intervalos de identidad controlada del artículo.|  
 |**fire_triggers_on_snapshot**|**bit**|Indica si se ejecutan desencadenadores de usuario replicados al aplicar la instantánea inicial.<br /><br /> **1** = se ejecutan desencadenadores de usuario.<br /><br /> **0** = no se ejecutan los desencadenadores de usuario.|  
   

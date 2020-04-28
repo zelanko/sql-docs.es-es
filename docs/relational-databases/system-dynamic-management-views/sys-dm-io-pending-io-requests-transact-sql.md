@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d199797d9835f7acaea413490a0182af057e4c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265839"
 ---
 # <a name="sysdm_io_pending_io_requests-transact-sql"></a>sys.dm_io_pending_io_requests (Transact-SQL)
@@ -38,14 +38,14 @@ ms.locfileid: "68265839"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**io_completion_request_address**|**varbinary(8**|Dirección de memoria de la solicitud de E/S. No admite valores NULL.|  
-|**io_type**|**nvarchar (60)**|Tipo de solicitud de E/S pendiente. No admite valores NULL.|  
-|**io_pending_ms_ticks**|**BIGINT**|Exclusivamente para uso interno. No admite valores NULL.| 
+|**io_type**|**nvarchar(60)**|Tipo de solicitud de E/S pendiente. No admite valores NULL.|  
+|**io_pending_ms_ticks**|**bigint**|Exclusivamente para uso interno. No admite valores NULL.| 
 |**io_pending**|**int**|Indica si la solicitud de E/S sigue pendiente o Windows ya la ha completado. Una solicitud de E/S puede seguir pendiente incluso cuando Windows la ha completado; esto se debe a que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aún no ha efectuado un cambio de contexto en el que se procesaría esta solicitud de E/S ni la ha quitado de esta lista. No admite valores NULL.|  
 |**io_completion_routine_address**|**varbinary(8**|Función interna utilizada para llamar cuando se ha completado la solicitud de E/S. Acepta valores NULL.|  
 |**io_user_data_address**|**varbinary(8**|Exclusivamente para uso interno. Acepta valores NULL.|  
 |**scheduler_address**|**varbinary(8**|Programador en el que se ha emitido esta solicitud de E/S. La solicitud de E/S aparecerá en la lista de solicitudes de E/S pendientes del programador. Para obtener más información, vea [Sys. dm_os_schedulers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). No admite valores NULL.|  
 |**io_handle**|**varbinary(8**|Identificador del archivo que se utiliza en la solicitud de E/S. Acepta valores NULL.|  
-|**io_offset**|**BIGINT**|Desplazamiento de la solicitud de E/S. No admite valores NULL.|  
+|**io_offset**|**bigint**|Desplazamiento de la solicitud de E/S. No admite valores NULL.|  
 |**io_handle_path**|**nvarchar(256)**| Ruta de acceso del archivo que se usa en la solicitud de e/s. Acepta valores NULL.|
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   

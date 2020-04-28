@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889213"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Agregar o quitar tablas (Analysis Services-datos multidimensionales)
@@ -53,6 +53,6 @@ ms.locfileid: "68889213"
   
 ## <a name="see-also"></a>Consulte también  
  [Analysis Services diseñadores y cuadros de diálogo &#40;datos multidimensionales&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services de datos multidimensionales&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

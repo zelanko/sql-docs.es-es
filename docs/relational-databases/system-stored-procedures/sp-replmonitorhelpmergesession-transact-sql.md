@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771238"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
@@ -56,7 +56,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**1** (valor predeterminado)|Sesiones del agente con un reintento o un resultado correcto.|  
+|**1** (predeterminado)|Sesiones del agente con un reintento o un resultado correcto.|  
 |**0**|Sesiones del agente con un resultado erróneo.|  
   
 `[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
@@ -78,7 +78,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**DownloadedCommands**|**int**|Número de comandos descargados durante la sesión del agente.|  
 |**ErrorMessages**|**int**|Número de mensajes de error generados durante la sesión del agente.|  
 |**ErrorID**|**int**|Id. del error producido.|  
-|**PercentageDone**|**Decimal**|Porcentaje estimado de los cambios totales que ya se han entregado en una sesión activa.|  
+|**PercentageDone**|**decimal**|Porcentaje estimado de los cambios totales que ya se han entregado en una sesión activa.|  
 |**TimeRemaining**|**int**|Número estimado de segundos que restan en una sesión activa.|  
 |**CurrentPhase**|**int**|Es la fase actual de una sesión activa y puede ser una de las siguientes.<br /><br /> **1** = carga<br /><br /> **2** = descargar|  
 |**LastMessage**|**nvarchar (500)**|Es el último mensaje registrado por el Agente de mezcla durante la sesión.|  

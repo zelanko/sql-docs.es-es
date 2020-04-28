@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890570"
 ---
 # <a name="dimension-processing-destination"></a>procesamiento de dimensiones, destino
-  El destino de procesamiento de dimensiones carga y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procesa una dimensión. Para más información sobre las dimensiones, vea [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
+  El destino de Procesamiento de dimensiones carga y procesa una dimensión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información sobre las dimensiones, vea [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
   
  El destino de Procesamiento de dimensiones incluye las siguientes características:  
   
@@ -48,13 +48,13 @@ ms.locfileid: "68890570"
   
 -   [Editor de destino de procesamiento de dimensiones &#40;página Administrador de conexiones&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino de procesamiento de dimensiones &#40;página asignaciones&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Editor de destino de procesamiento de dimensiones &#40;página Asignaciones&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Editor de destino de procesamiento de dimensiones &#40;página avanzadas&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Editor de destino de procesamiento de dimensiones &#40;página Avanzadas&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
  Para más información sobre cómo establecer las propiedades, vea [Establecer las propiedades de un componente de flujo de datos](set-the-properties-of-a-data-flow-component.md).  
   

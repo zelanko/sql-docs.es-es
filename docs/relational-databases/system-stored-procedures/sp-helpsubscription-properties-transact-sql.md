@@ -16,10 +16,10 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771563"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
@@ -64,11 +64,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = transaccional<br /><br /> **1** = instantánea<br /><br /> **2** = fusionar mediante combinación|  
 |**publisher_login**|**sysname**|Id. de inicio de sesión utilizado en el publicador para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Contraseña utilizada en el publicador para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (cifrada).|  
-|**publisher_security_mode**|**int**|Modo de seguridad utilizado en el publicador.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
+|**publisher_security_mode**|**int**|Modo de seguridad utilizado en el publicador.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
 |**distribuidor**|**sysname**|Nombre del distribuidor.|  
 |**distributor_login**|**sysname**|Inicio de sesión del distribuidor.|  
 |**distributor_password**|**nvarchar (524)**|Contraseña del distribuidor (cifrada).|  
-|**distributor_security_mode**|**int**|Modo de seguridad utilizado en el distribuidor:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
+|**distributor_security_mode**|**int**|Modo de seguridad utilizado en el distribuidor:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
 |**ftp_address**|**sysname**|Se conserva únicamente por compatibilidad con versiones anteriores. Dirección de red del servicio de protocolo de transferencia de archivos (FTP) para el distribuidor.|  
 |**ftp_port**|**int**|Se conserva únicamente por compatibilidad con versiones anteriores. Número de puerto del servicio FTP para el distribuidor.|  
 |**ftp_login**|**sysname**|Se conserva únicamente por compatibilidad con versiones anteriores. Nombre de usuario que se utiliza para conectar con el servicio FTP.|  
@@ -88,7 +88,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**nvarchar (524)**|Contraseña para el Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_security_mode**|**int**|El modo de autenticación utilizado al conectarse al servidor Web que hospeda la sincronización Web, donde un valor de **1** significa autenticación de Windows y un valor de **0** significa autenticación básica.|  
 |**internet_timeout**|**int**|Período de tiempo, en segundos, antes de que expire la solicitud de sincronización Web.|  
-|**host**|**nvarchar(128)**|Especifica el valor de HOST_NAME() cuando se utiliza esta función en el filtro de fila con parámetros de la cláusula WHERE.|  
+|**hostname**|**nvarchar(128)**|Especifica el valor de HOST_NAME() cuando se utiliza esta función en el filtro de fila con parámetros de la cláusula WHERE.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

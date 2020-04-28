@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811007"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
@@ -36,7 +36,7 @@ ms.locfileid: "68811007"
   
 -   [Memoria para el crecimiento](#bkmk_MemoryForGrowth)  
   
-##  <a name="bkmk_ExampleTable"></a> tabla optimizada para memoria de ejemplo  
+##  <a name="example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a>Tabla optimizada para memoria de ejemplo  
  Considere el esquema de tabla optimizada para memoria siguiente:  
   
 ```sql  
@@ -61,16 +61,16 @@ GO
   
  Con este esquema determinaremos la memoria mínima necesaria para esta tabla optimizada para memoria.  
   
-##  <a name="bkmk_MemoryForTable"></a> Memoria para la tabla  
+##  <a name="memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a>Memoria para la tabla  
  Una fila de una tabla optimizada para memoria consta de tres partes:  
   
--   **Marcas de tiempo**   
+-   **Marcas**   
     Encabezado de fila/marcas de tiempo = 24 bytes.  
   
 -   **Punteros de índice**   
     Para cada índice hash de la tabla, cada fila tiene un puntero de direcciones de 8 bytes a la siguiente fila del índice.  Puesto que hay 4 índices, cada fila asignará 32 bytes para los punteros de índice (un puntero de 8 bytes para cada índice).  
   
--   **Datos**   
+-   **Data**   
     El tamaño de la parte de datos de la fila se determina sumando el tamaño del tipo de cada columna de datos.  En nuestra tabla tenemos cinco enteros de 4 bytes, tres columnas de caracteres de 50 bytes y una columna de caracteres de 30 bytes.  Por tanto, la parte de datos de cada fila es 4 + 4 + 4 + 4 + 4 + 50 + 50 + 30 + 50 o 200 bytes.  
   
  A continuación se muestra un cálculo de tamaño para 5.000.000 filas (5 millones de filas) en una tabla optimizada para memoria: La memoria total utilizada por las filas de datos se calcula de la forma siguiente:  
@@ -79,7 +79,7 @@ GO
   
  Según se desprende de los cálculos anteriores, el tamaño de cada fila de la tabla optimizada para memoria es 24 + 32 + 200, o 256 bytes.  Como tenemos 5 millones de filas, la tabla usará 5 000 000 * 256 bytes, o 1 280 000 000 bytes, aproximadamente 1,28 GB.  
   
-##  <a name="bkmk_IndexMeemory"></a> Memoria para índices  
+##  <a name="memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a>Memoria para índices  
  **Memoria para cada índice hash**  
   
  Cada índice hash es una matriz hash de punteros de direcciones de 8 bytes.  El tamaño de la matriz se determina mejor con el número de valores de índice único para ese índice; por ejemplo, el número de valores únicos Col2 es un buen punto de partida para el tamaño de matriz de t1c2_index. Una matriz hash que es demasiado grande desperdicia memoria.  Una matriz hash que es demasiado pequeña reduce el rendimiento, ya que habrá demasiadas colisiones de valores de índice que aplican el algoritmo hash al mismo índice.  
@@ -150,7 +150,7 @@ SELECT * FROM t_hk
    WHERE c2 > 5  
 ```  
   
-##  <a name="bkmk_MemoryForRowVersions"></a> Memoria para versiones de fila  
+##  <a name="memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a>Memoria para las versiones de fila  
  Para evitar bloqueos, OLTP en memoria emplea simultaneidad optimista al actualizar o eliminar filas. Esto significa que cuando se actualiza una fila, se crea una versión adicional de la fila. El sistema conserva las versiones anteriores disponibles hasta que finaliza la ejecución de todas las transacciones que podrían usar la versión. Cuando se elimina una fila, el sistema actúa de forma similar a una actualización, manteniendo la versión disponible hasta que ya no necesita. Las lecturas y las inserciones no crean versiones adicionales de la fila.  
   
  Puesto que en cualquier momento puede haber varias filas adicionales en memoria que esperan que el ciclo de recopilación de elementos no utilizados libere su memoria, debe tener la memoria adecuada para admitir estas filas adicionales.  
@@ -165,12 +165,12 @@ SELECT * FROM t_hk
   
  `memoryForRowVersions = rowVersions * rowSize`  
   
-##  <a name="bkmk_TableVariables"></a> Memoria para variables de tabla  
+##  <a name="memory-for-table-variables"></a><a name="bkmk_TableVariables"></a>Memoria para variables de tabla  
  La memoria usada para una variable de tabla solo se libera cuando la variable de tabla sale del ámbito. Las filas eliminadas, incluidas las filas eliminadas como parte de una actualización, de una variable de tabla no están sujetas a recolección de elementos no utilizados. No se libera memoria hasta que la variable de tabla no sale del ámbito.  
   
  Las variables de tabla definidas en un lote de SQL de gran tamaño, en comparación con un ámbito de procedimiento, que se usan en muchas transacciones, pueden consumir mucha memoria. Como no se eliminan mediante el recolector de elementos no utilizados, las filas eliminadas de una variable de tabla pueden usar mucha memoria y disminuir el rendimiento porque las operaciones de lectura deben examinar más allá de las filas eliminadas.  
   
-##  <a name="bkmk_MemoryForGrowth"></a> Memoria para el crecimiento  
+##  <a name="memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a>Memoria para el crecimiento  
  Los cálculos anteriores estiman sus necesidades de memoria para la tabla tal y como es actualmente. Además de esta memoria, debe calcular el crecimiento de la tabla y proporcionar la memoria adecuada para permitir ese crecimiento.  Por ejemplo, si prevé un crecimiento del 10 %, necesita multiplicar los resultados anteriores por 1,1 para obtener la memoria total necesaria para la tabla.  
   
 ## <a name="see-also"></a>Consulte también  

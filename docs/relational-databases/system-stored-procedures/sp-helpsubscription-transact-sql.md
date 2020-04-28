@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771571"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
@@ -69,7 +69,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**ARTICLE**|**sysname**|Nombre del artículo.|  
 |**base de datos de destino**|**sysname**|Nombre de la base de datos de destino a la que se envían los datos duplicados.|  
-|**estado de la suscripción**|**tinyint**|Estado de la suscripción:<br /><br /> **0** = inactivo<br /><br /> **1** = suscrito<br /><br /> **2** = activo|  
+|**Estado de la suscripción**|**tinyint**|Estado de la suscripción:<br /><br /> **0** = inactivo<br /><br /> **1** = suscrito<br /><br /> **2** = activo|  
 |**synchronization type**|**tinyint**|Tipo de sincronización de suscripción:<br /><br /> **1** = automática<br /><br /> **2** = ninguno|  
 |**tipo de suscripción**|**int**|Tipo de suscripción:<br /><br /> **0** = inserciones<br /><br /> **1** = extracción<br /><br /> **2** = anónimo|  
 |**full subscription**|**bit**|Indica si la suscripción es a todos los artículos de la publicación:<br /><br /> **0** = no<br /><br /> **1** = sí|  
@@ -101,7 +101,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
  **sp_helpsubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
 ## <a name="permissions"></a>Permisos  
- Los permisos de ejecución tienen como valor predeterminado el rol **Public** . Los usuarios solo reciben información de las suscripciones que hayan creado. Se devuelve información sobre todas las suscripciones a los miembros del rol fijo de servidor **sysadmin** en el publicador o los miembros del rol fijo de base de datos **db_owner** en la base de datos de publicación.  
+ De forma predeterminada, los permisos de ejecución corresponden al rol **public** . Los usuarios solo reciben información de las suscripciones que hayan creado. Se devuelve información sobre todas las suscripciones a los miembros del rol fijo de servidor **sysadmin** en el publicador o los miembros del rol fijo de base de datos **db_owner** en la base de datos de publicación.  
   
 ## <a name="see-also"></a>Consulte también  
  [sp_addsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

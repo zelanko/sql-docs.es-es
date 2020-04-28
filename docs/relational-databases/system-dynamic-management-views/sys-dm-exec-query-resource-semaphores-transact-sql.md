@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 026c13a461d6b4efe7244a08a9f3cdbe117deee9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255282"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
@@ -42,16 +42,16 @@ ms.locfileid: "68255282"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**resource_semaphore_id**|**smallint**|Id. no único del semáforo de recursos. 0 para el semáforo de recursos normal y 1 para el semáforo de recursos de consultas pequeñas.|  
-|**target_memory_kb**|**BIGINT**|Concede el destino de uso en kilobytes.|  
-|**max_target_memory_kb**|**BIGINT**|Máximo destino potencial en kilobytes. Es NULL para el semáforo de recursos de consultas pequeñas.|  
-|**total_memory_kb**|**BIGINT**|Memoria mantenida por el semáforo de recursos en kilobytes. Si el sistema está bajo presión de memoria o si se concede memoria mínima forzada con frecuencia, este valor puede ser mayor que los valores de **target_memory_kb** o **max_target_memory_kb** . La memoria total es una suma de la memoria disponible y concedida.|  
-|**available_memory_kb**|**BIGINT**|Memoria disponible para una nueva concesión en kilobytes.|  
-|**granted_memory_kb**|**BIGINT**|Memoria concedida total en kilobytes.|  
-|**used_memory_kb**|**BIGINT**|Parte físicamente usada de la memoria concedida en kilobytes.|  
+|**target_memory_kb**|**bigint**|Concede el destino de uso en kilobytes.|  
+|**max_target_memory_kb**|**bigint**|Máximo destino potencial en kilobytes. Es NULL para el semáforo de recursos de consultas pequeñas.|  
+|**total_memory_kb**|**bigint**|Memoria mantenida por el semáforo de recursos en kilobytes. Si el sistema está bajo presión de memoria o si se concede memoria mínima forzada con frecuencia, este valor puede ser mayor que los valores de **target_memory_kb** o **max_target_memory_kb** . La memoria total es una suma de la memoria disponible y concedida.|  
+|**available_memory_kb**|**bigint**|Memoria disponible para una nueva concesión en kilobytes.|  
+|**granted_memory_kb**|**bigint**|Memoria concedida total en kilobytes.|  
+|**used_memory_kb**|**bigint**|Parte físicamente usada de la memoria concedida en kilobytes.|  
 |**grantee_count**|**int**|Número de consultas activas que tienen sus concesiones satisfechas.|  
 |**waiter_count**|**int**|Número de consultas que esperan que sus concesiones se satisfagan.|  
-|**timeout_error_count**|**BIGINT**|Número total de errores de tiempo de espera desde el inicio del servidor. Es NULL para el semáforo de recursos de consultas pequeñas.|  
-|**forced_grant_count**|**BIGINT**|Número total concesiones de memoria mínima forzada desde el inicio del servidor. Es NULL para el semáforo de recursos de consultas pequeñas.|  
+|**timeout_error_count**|**bigint**|Número total de errores de tiempo de espera desde el inicio del servidor. Es NULL para el semáforo de recursos de consultas pequeñas.|  
+|**forced_grant_count**|**bigint**|Número total concesiones de memoria mínima forzada desde el inicio del servidor. Es NULL para el semáforo de recursos de consultas pequeñas.|  
 |**pool_id**|**int**|Id. del grupo de recursos de servidor al que pertenece este semáforo de recursos.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
@@ -69,7 +69,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
   
   
 

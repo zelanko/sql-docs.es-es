@@ -16,10 +16,10 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769052"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
@@ -64,7 +64,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Diariamente|  
+|**4**|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
@@ -77,7 +77,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**1** (valor predeterminado)|Primero|  
+|**1** (predeterminado)|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
 |**203**|Cuarto|  

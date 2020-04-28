@@ -21,10 +21,10 @@ ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68841598"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
@@ -99,17 +99,17 @@ Determina el nivel de detalle de la salida de la función. ' LIMITED ' devolver�
 |ml_map_page_id |int |ID. de página de la página de mapa de bits de registro mínima correspondiente |
 |ml_status |bit |Bit que indica si la página tiene un registro mínimo |
 |ml_status_desc |nvarchar (64) |Descripción del bit de estado de registro mínimo |
-|prev_page_file_id |smallint |ID. de archivo de página anterior |
+|prev_page_file_id |SMALLINT |ID. de archivo de página anterior |
 |prev_page_page_id |int |ID. de página de página anterior |
-|next_page_file_id |smallint |IDENTIFICADOR de archivo de página siguiente |
+|next_page_file_id |SMALLINT |IDENTIFICADOR de archivo de página siguiente |
 |next_page_page_id |int |IDENTIFICADOR de página de la página siguiente |
-|fixed_length |smallint |Longitud de filas de tamaño fijo |
-|slot_count |smallint |Número total de ranuras (usadas y sin usar) <br> En el caso de una página de datos, este número es equivalente al número de filas. |
-|ghost_rec_count |smallint |Número de registros marcados como fantasma en la página <br> Un registro fantasma es aquel que se ha marcado para su eliminación, pero que aún no se ha quitado. |
-|free_bytes |smallint |Número de bytes libres en la página |
+|fixed_length |SMALLINT |Longitud de filas de tamaño fijo |
+|slot_count |SMALLINT |Número total de ranuras (usadas y sin usar) <br> En el caso de una página de datos, este número es equivalente al número de filas. |
+|ghost_rec_count |SMALLINT |Número de registros marcados como fantasma en la página <br> Un registro fantasma es aquel que se ha marcado para su eliminación, pero que aún no se ha quitado. |
+|free_bytes |SMALLINT |Número de bytes libres en la página |
 |free_data_offset |int |Desplazamiento de espacio disponible al final del área de datos |
-|reserved_bytes |smallint |Número de bytes libres reservados por todas las transacciones (si es montón) <br> Número de filas fantasma (si es hoja del índice) |
-|reserved_bytes_by_xdes_id |smallint |Espacio aportado por m_xdesID a m_reservedCnt <br> Solo con fines de depuración |
+|reserved_bytes |SMALLINT |Número de bytes libres reservados por todas las transacciones (si es montón) <br> Número de filas fantasma (si es hoja del índice) |
+|reserved_bytes_by_xdes_id |SMALLINT |Espacio aportado por m_xdesID a m_reservedCnt <br> Solo con fines de depuración |
 |xdes_id |nvarchar (64) |Última transacción aportada por m_reserved <br> Solo con fines de depuración |
 ||||
 
@@ -150,7 +150,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ## <a name="see-also"></a>Consulte también  
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

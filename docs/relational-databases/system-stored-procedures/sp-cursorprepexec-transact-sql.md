@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652434"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652434"
 
   Compila un plan para la instrucción de cursor enviada o lote. Después, crea y rellena el cursor. sp_cursorprepexec combina las funciones de sp_cursorprepare y sp_cursorexecute. Este procedimiento se invoca especificando el identificador 5 en un paquete de flujo TDS.  
   
- ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -59,7 +59,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Las reglas para especificar el valor de stmt son las mismas que para sp_cursoropen, con la excepción de que el tipo de datos de la cadena *stmt* debe ser **ntext**.  
   
- *Opciones*  
+ *options*  
  Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. * las opciones requieren el siguiente valor de entrada **int** .  
   
 |Value|Descripción|  
@@ -105,7 +105,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Al igual ** que con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, puede asignar un valor diferente al que se solicitó.  
+ Al igual *scrollpt*que con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, puede asignar un valor diferente al que se solicitó.  
   
  *empleado*  
  Es un parámetro opcional que indica el número de filas del búfer de captura que se van a usar con AUTO_FETCH. El valor predeterminado es 20 filas. *RowCount* se comporta de forma diferente cuando se asigna como valor de entrada frente a un valor devuelto.  

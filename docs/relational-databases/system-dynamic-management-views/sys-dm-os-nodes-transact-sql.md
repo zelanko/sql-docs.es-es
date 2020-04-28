@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265734"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
@@ -48,15 +48,15 @@ En la tabla siguiente se proporciona información acerca de estos nodos.
 |memory_clerk_address|**varbinary(8**|Dirección de distribuidor de memoria asociada con este nodo. Relación uno a uno con [Sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md). memory_clerk_address.|  
 |io_completion_worker_address|**varbinary(8**|La dirección del trabajador asignada a la realización de E/S para este nodo. Relación uno a uno con [Sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). worker_address.|  
 |memory_node_id|**smallint**|Identificador del nodo de memoria al que pertenece este nodo. Relación de varios a uno con [Sys. dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md). memory_node_id.|  
-|cpu_affinity_mask|**BIGINT**|Mapa de bits que identifica las CPU con las que este nodo está asociado.|  
+|cpu_affinity_mask|**bigint**|Mapa de bits que identifica las CPU con las que este nodo está asociado.|  
 |online_scheduler_count|**smallint**|Número de programadores en línea administrados por este nodo.|  
 |idle_scheduler_count|**smallint**|Número de programadores en línea que no tienen ningún trabajador activo.|  
 |active_worker_count|**int**|Número de trabajadores que están activos en todos los programadores administrados por este nodo.|  
 |avg_load_balance|**int**|Promedio de tareas por programador en este nodo.|  
-|timer_task_affinity_mask|**BIGINT**|Mapa de bits que identifica los programadores que pueden tener asignadas tareas de temporizador.|  
-|permanent_task_affinity_mask|**BIGINT**|Mapa de bits que identifica los programadores que pueden tener asignadas tareas permanentes.|  
+|timer_task_affinity_mask|**bigint**|Mapa de bits que identifica los programadores que pueden tener asignadas tareas de temporizador.|  
+|permanent_task_affinity_mask|**bigint**|Mapa de bits que identifica los programadores que pueden tener asignadas tareas permanentes.|  
 |resource_monitor_state|**bit**|Cada nodo tiene asignado un monitor de recursos. El monitor de recursos puede estar en ejecución o inactivo. El valor 1 indica en ejecución y 0 inactividad.|  
-|online_scheduler_mask|**BIGINT**|Identifica la máscara de afinidad de proceso para este nodo.|  
+|online_scheduler_mask|**bigint**|Identifica la máscara de afinidad de proceso para este nodo.|  
 |processor_group|**smallint**|Identifica el grupo de procesadores para este nodo.|  
 |cpu_count |**int** |Número de CPU disponibles para este nodo. |
 |pdw_node_id|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  

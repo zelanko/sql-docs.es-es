@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797781"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Solucionar problemas de la Utilidad de SQL Server
@@ -165,5 +165,5 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
     5.  Si la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ya se ha inscrito con el UCP antes de agregar al usuario a este grupo, reinicie el servicio del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  
- [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
+ [Utilidad de SQL Server características y tareas](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas de estado de recursos de SQL Server &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

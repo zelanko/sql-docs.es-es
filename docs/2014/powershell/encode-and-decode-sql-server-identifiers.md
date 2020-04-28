@@ -11,25 +11,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797767"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar y descodificar identificadores de SQL Server
   Los identificadores delimitados de SQL Server a veces contienen caracteres no admitidos en las rutas de acceso de Windows PowerShell. Estos caracteres se pueden especificar codificando sus valores hexadecimales.  
   
-1.  **Antes de empezar:**  [limitaciones y restricciones](#LimitationsRestrictions)  
+1.  **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions)  
   
-2.  **Para procesar los caracteres especiales:**  [codificar un identificador](#EncodeIdent), [descodificar un identificador](#DecodeIdent)  
+2.  **Para procesar los caracteres especiales:**  [Codificar un identificador](#EncodeIdent), [Descodificar un identificador](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
- Los caracteres que no se permiten en los nombres de ruta de Windows PowerShell se pueden representar, o codificar, como el carácter "%" seguido del valor hexadecimal del modelo de bits que representa el carácter, como en " **%** xx". La codificación siempre se puede usar para controlar los caracteres que no se admiten en las rutas de Windows PowerShell.  
+ Los caracteres que no se admiten en los nombres de ruta de acceso de Windows PowerShell se pueden representar, o codificar, como el carácter "%" seguido del valor hexadecimal del patrón de bits que representa el**%** carácter, como en "XX". La codificación siempre se puede usar para controlar los caracteres que no se admiten en las rutas de Windows PowerShell.  
   
  El cmdlet **Encode-SqlName** toma como entrada un identificador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Genera una cadena con todos los caracteres que no son admitidos por el lenguaje de Windows PowerShell codificados con "%xx". El cmdlet **Decode-SqlName** toma como entrada un identificador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] codificado y devuelve el identificador original.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Los cmdlets de `Encode-Sqlname` y de `Decode-Sqlname` solo codifican o descodifican caracteres que se permiten en los identificadores delimitados de SQL Server, pero no solo se admiten en las rutas de PowerShell. Estos son los caracteres codificados por **Encode-SqlName** y descodificados por **Decode-SqlName**:  
   
 |||||||||||||  
@@ -37,7 +37,7 @@ ms.locfileid: "72797767"
 |**Carácter**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**Codificación hexadecimal**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
-##  <a name="EncodeIdent"></a> Codificar un identificador  
+##  <a name="encoding-an-identifier"></a><a name="EncodeIdent"></a> Codificar un identificador  
  **Para codificar un identificador de SQL Server en una ruta de acceso de PowerShell**  
   
 -   Use uno de los dos métodos para codificar un identificador de SQL Server:  
@@ -59,7 +59,7 @@ Set-Location Table%3ATest
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
-##  <a name="DecodeIdent"></a> Descodificar un identificador  
+##  <a name="decoding-an-identifier"></a><a name="DecodeIdent"></a> Descodificar un identificador  
  **Descodificar un identificador de SQL Server de una ruta de PowerShell**  
   
  Use el cmdlet `Decode-Sqlname` para reemplazar las codificaciones hexadecimales con caracteres representados por la codificación.  
@@ -72,6 +72,6 @@ Decode-SqlName "Table%3ATest"
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)   
- [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
+ [SQL Server identificadores en PowerShell](sql-server-identifiers-in-powershell.md)   
+ [Proveedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

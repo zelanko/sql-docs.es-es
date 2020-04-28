@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797757"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Especificar instancias del proveedor de PowerShell de SQL Server
   Las rutas de acceso especificadas para el proveedor de PowerShell de SQL Server deben identificar la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] y el equipo en que se está ejecutando. La sintaxis para especificar el equipo y la instancia debe cumplir las reglas de los identificadores de SQL Server y las rutas de acceso de Windows PowerShell.  
   
-1.  **Antes de empezar:**  [limitaciones y restricciones](#LimitationsRestrictions)  
+1.  **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions)  
   
-2.  **Para especificar una instancia:**  [ejemplos](#Examples)  
+2.  **Para especificar una instancia:**  [Ejemplos](#Examples)  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
  El primer nodo situado a continuación de SQLSERVER:\SQL en una ruta de acceso de proveedor de SQL Server es el nombre del equipo en el que se ejecuta la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)], por ejemplo:  
@@ -41,14 +41,14 @@ SQLSERVER:\SQL\MyComputer\MyInstance
   
  Cada equipo puede tener una instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)]. No especifique un nombre para la instancia predeterminada al instalarla. Si especifica solamente un nombre de equipo en una cadena de conexión, se conectará a la instancia predeterminada en ese equipo. Todas las demás instancias en el equipo deben ser instancias con nombre. Durante la instalación se especifica el nombre de instancia y las cadenas de conexión deben especificar tanto el nombre de equipo como el nombre de instancia.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede usar un punto (.) para especificar el equipo local en los scripts de PowerShell. No se admite el punto porque PowerShell lo interpreta como comando.  
   
  Windows PowerShell suele tratar como comandos los caracteres que van entre paréntesis de (local). Debe codificarlos o convertirlos para poderlos usar en una ruta de acceso, o agregar la ruta de acceso entre comillas dobles. Para obtener más información, vea Codificar y descodificar identificadores de SQL Server.  
   
  El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiere que siempre se especifique un nombre de instancia. Para las instancias predeterminadas, debe especificar el nombre de instancia DEFAULT.  
   
-##  <a name="Examples"></a>Example Nombres de equipo y de instancia  
+##  <a name="examples-computer-and-instance-names"></a><a name="Examples"></a>Example Nombres de equipo y de instancia  
  En este ejemplo se usan el host local y DEFAULT para especificar la instancia predeterminada en el equipo local:  
   
 ```powershell
@@ -76,6 +76,6 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)   
- [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
+ [SQL Server identificadores en PowerShell](sql-server-identifiers-in-powershell.md)   
+ [Proveedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

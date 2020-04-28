@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783124"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Ver o cambiar las propiedades del servidor (SQL Server)
@@ -43,9 +43,9 @@ ms.locfileid: "72783124"
   
 -   **Seguimiento:**  [después de cambiar propiedades del servidor](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Cuando utilice sp_configure, deberá ejecutar RECONFIGURE o RECONFIGURE WITH OVERRIDE después de establecer una opción de configuración. La instrucción RECONFIGURE WITH OVERRIDE se suele reservar para opciones de configuración que deberían utilizarse con extrema precaución. No obstante, RECONFIGURE WITH OVERRIDE funciona con todas las opciones de configuración y puede utilizarlo en lugar de RECONFIGURE.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "72783124"
   
 -   Algunas páginas de propiedades presentan información obtenida mediante Instrumental de administración de Windows (WMI). Para mostrar dichas páginas, WMI debe estar instalado en el equipo en el que se ejecuta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para obtener más información, vea [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
  De forma predeterminada `sp_configure` , los permisos de ejecución en sin parámetros o con solo el primer parámetro se conceden a todos los usuarios. Para ejecutar `sp_configure` con ambos parámetros para cambiar una opción de configuración o ejecutar la instrucción RECONFIGURE, se debe conceder al usuario el permiso de nivel de servidor Alter Settings. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>Para ver o cambiar las propiedades del servidor  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72783124"
   
 2.  En el cuadro de diálogo **Propiedades del servidor** , haga clic en una página para ver o cambiar la información de servidor acerca de dicha página. Algunas propiedades son de solo lectura.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para ver las propiedades del servidor mediante la función integrada SERVERPROPERTY  
   
@@ -139,7 +139,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="PowerShellProcedure"></a> Usar el Administrador de configuración de SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a> Usar el Administrador de configuración de SQL Server  
  Algunas propiedades del servidor se pueden ver o cambiar mediante el Administrador de configuración de SQL Server. Por ejemplo, puede ver la versión y la edición de la instancia de SQL Server, o cambiar la ubicación donde se almacenan los archivos de registro de errores. Estas propiedades también se pueden ver si se consultan las [Funciones y vistas de administración dinámica relacionadas con servidores](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql).  
   
 #### <a name="to-view-or-change-server-properties"></a>Para ver o cambiar las propiedades del servidor  
@@ -148,11 +148,11 @@ GO
   
 2.  En **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel de detalles, haga clic con el botón derecho en **(\<***nombredeinstancia>***)** de SQL Server y, luego, haga clic en **Propiedades**.  
+3.  En el panel de detalles, haga clic con el botón secundario en **SQL Server (\<***nombreDeInstancia***>)** y, a continuación, haga clic en **propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de (\<***nombredeinstancia***>) de SQL Server**, cambie las propiedades del servidor en las pestañas **Servicio** o **Avanzadas** y, después, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **propiedades de SQL Server (\<***nombreDeInstancia***>)** , cambie las propiedades del servidor en las pestañas **servicio** o **avanzadas** y, a continuación, haga clic en **Aceptar**.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de cambiar propiedades del servidor  
+##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> Seguimiento: después de cambiar propiedades del servidor  
  Para algunas propiedades, puede que sea necesario reiniciar el servidor para que el cambio surta efecto.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797968"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Especificar la dirección URL del extremo al agregar o modificar una réplica de disponibilidad (SQL Server)
-  Para hospedar una réplica de disponibilidad de un grupo de disponibilidad, una instancia de servidor debe poseer un extremo de creación de reflejo de la base de datos. La instancia de servidor utiliza este extremo para escuchar los mensajes de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] procedentes de las réplicas de disponibilidad hospedadas por otras instancias del servidor. Para definir una réplica de disponibilidad para un grupo de disponibilidad, debe especificar la dirección URL del extremo de la instancia del servidor que hospedará la réplica. La *dirección URL del punto de conexión* identifica el protocolo de transporte del TCP del punto de conexión de creación de reflejo de la base de datos, la dirección del sistema de la instancia del servidor y el número de puerto asociado con el punto de conexión.  
+  Para hospedar una réplica de disponibilidad de un grupo de disponibilidad, una instancia de servidor debe poseer un extremo de creación de reflejo de la base de datos. La instancia de servidor utiliza este extremo para escuchar los mensajes de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] procedentes de las réplicas de disponibilidad hospedadas por otras instancias del servidor. Para definir una réplica de disponibilidad para un grupo de disponibilidad, debe especificar la dirección URL del extremo de la instancia del servidor que hospedará la réplica. La *dirección URL del extremo* identifica el protocolo de transporte del punto de conexión de creación de reflejo de la base de datos: TCP, la dirección del sistema de la instancia del servidor y el número de puerto asociado con el extremo.  
   
 > [!NOTE]  
 >  El término “dirección URL del extremo” es sinónimo del término “dirección de red del servidor” que usa la interfaz de usuario y la documentación de creación de reflejo de la base de datos.  
   
--   [Sintaxis para una dirección URL de extremo](#SyntaxOfURL)  
+-   [Sintaxis de una dirección URL del extremo](#SyntaxOfURL)  
   
 -   [Buscar el nombre de dominio completo de un sistema](#Finding_FQDN)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "72797968"
   
 -   [Contenido relacionado](#RelatedContent)  
   
-##  <a name="SyntaxOfURL"></a>Sintaxis para una dirección URL de extremo  
+##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a>Sintaxis para una dirección URL de extremo  
  La sintaxis de una dirección URL del extremo tiene el siguiente formato:  
   
  TCP<strong>://</strong>*\<dirección del sistema>* <strong>:</strong>*\<puerto>*  
@@ -53,9 +53,9 @@ ms.locfileid: "72797968"
   
     -   El nombre de dominio completo siempre funciona. Esta es una cadena de dirección definida localmente que adopta diferentes formatos en distintos lugares. Con frecuencia, aunque no siempre, el nombre de dominio completo es un nombre compuesto que incluye el nombre del equipo y una serie de segmentos de dominio separados por puntos con el siguiente formato:  
   
-         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
+         _nombre_equipo_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
   
-         donde *computer_name*es el nombre de red del equipo que ejecuta la instancia del servidor y *domain_segment*[... **.** _domain_segment_] es la información de dominio restante del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
+         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.**_segmento_dominio_] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Para obtener más información, vea [Buscar el nombre de dominio completo](#Finding_FQDN), más adelante en este tema.  
   
@@ -97,14 +97,14 @@ ms.locfileid: "72797968"
   
  `TCP://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022`  
   
-##  <a name="Finding_FQDN"></a>Buscar el nombre de dominio completo de un sistema  
+##  <a name="finding-the-fully-qualified-domain-name-of-a-system"></a><a name="Finding_FQDN"></a>Buscar el nombre de dominio completo de un sistema  
  Para buscar el nombre de dominio completo de un sistema, en el símbolo del sistema de Windows de ese sistema, escriba:  
   
- **IPCONFIG/ALL**  
+ **IPCONFIG /ALL**  
   
  Para formar el nombre de dominio completo, concatene los valores de *<host_name>* y *<Primary_Dns_Suffix>* de la siguiente manera:  
   
- _>de host_name de<_ **.** _<Primary_Dns_Suffix>_  
+ _<host_name>_ **.** _<sufijo_DNS_primario>_  
   
  Por ejemplo, la configuración IP  
   
@@ -119,8 +119,8 @@ ms.locfileid: "72797968"
 > [!NOTE]  
 >  Si necesita más información acerca de un nombre de dominio completo, póngase en contacto con el administrador del sistema.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
- **Para configurar un extremo de creación de reflejo de la base de datos**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
+ **Para configurar un extremo de creación del reflejo de la base de datos**  
   
 -   [Cree un extremo de creación de reflejo de la base de datos para Grupos de disponibilidad AlwaysOn &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
@@ -146,7 +146,7 @@ ms.locfileid: "72797968"
   
 -   [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

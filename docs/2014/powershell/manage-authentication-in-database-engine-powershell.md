@@ -11,26 +11,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a04e581758748d55b9defcab3beaa6a86f0eecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797801"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Administrar la autenticación en PowerShell del motor de base de datos
   De forma predeterminada, los componentes PowerShell de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usan la autenticación de Windows para conectarse a una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Puede usar la autenticación de SQL Server definiendo una unidad virtual de PowerShell o especificando los parámetros de `-Username` y de `-Password` para `Invoke-Sqlcmd`.  
   
-1.  **Antes de empezar:**  [permisos](#Permissions)  
+1.  **Antes de empezar:**  [Permisos](#Permissions)  
   
-2.  **Para establecer la autenticación con:**  [una unidad virtual](#SQLAuthVirtDrv), [Invoke-SQLCMD](#SQLAuthInvSqlCmd)  
+2.  **Para establecer la autenticación con:**  [Una unidad virtual](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> Permisos  
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Todas las acciones que se pueden realizar en una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)] se controlan mediante los permisos concedidos a las credenciales de autenticación usadas para conectarse a la instancia. De forma predeterminada, el proveedor y los cmdlets de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa la cuenta de Windows de ejecución para establecer una conexión de autenticación de Windows con [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  Para establecer una conexión de autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe proporcionar un identificador de inicio de sesión y contraseña de autenticación de SQL Server. Al usar el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proveedor, debe asociar las [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] credenciales de inicio de sesión a una unidad virtual y, a continuación,`cd`usar el comando de cambio de directorio () para conectarse a esa unidad. En Windows PowerShell, las credenciales de seguridad solo se pueden asociar con unidades virtuales.  
   
-##  <a name="SQLAuthVirtDrv"></a>SQL Server la autenticación mediante una unidad virtual  
- **Para crear una unidad virtual asociada a un inicio de sesión de autenticación de SQL Server**  
+##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a> Autenticación de SQL Server mediante una unidad virtual  
+ **Para crear una unidad virtual asociada con el inicio de sesión de autenticación de SQL Server**  
   
 1.  Crear una función que:  
   
@@ -67,8 +67,8 @@ sqldrive SQLAuth
 cd SQLAuth  
 ```  
   
-##  <a name="SQLAuthInvSqlCmd"></a>Autenticación SQL Server mediante Invoke-SQLCMD  
- **Para usar Invoke-SQLCMD con la autenticación de SQL Server**  
+##  <a name="sql-server-authentication-using-invoke-sqlcmd"></a><a name="SQLAuthInvSqlCmd"></a> Autenticación de SQL Server mediante Invoke-Sqlcmd  
+ **Para usar Invoke-Sqlcmd con la autenticación de SQL Server**  
   
 1.  Use el parámetro de `-Username` para especificar un identificador de inicio de sesión y el parámetro de `-Password` para especificar la contraseña asociada.  
   
@@ -84,5 +84,5 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server PowerShell](sql-server-powershell.md)   
- [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
+ [Proveedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
  [cmdlet Invoke-Sqlcmd](../database-engine/invoke-sqlcmd-cmdlet.md)  

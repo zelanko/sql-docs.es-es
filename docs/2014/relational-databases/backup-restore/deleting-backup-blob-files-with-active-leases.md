@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 663bab775aff9a04a4a9d93f2bcbd0e193b18f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783054"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
@@ -29,16 +29,16 @@ ms.locfileid: "72783054"
 ## <a name="managing-orphaned-blobs"></a>Administrar blobs huérfanos  
  En los pasos siguientes se describe cómo realizar la limpieza después de una actividad de copia de seguridad o restauración con errores. Todos los pasos se pueden realizar mediante scripts de PowerShell. En la sección siguiente se proporciona un ejemplo de código:  
   
-1.  **Identificar los blobs que tienen concesiones:** Si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso y usarlo para limpiar los BLOBs.   También puede usar las propiedades LeaseStats y LeastState para identificar los blobs que tienen concesiones. Una vez identificados los blobs, se recomienda que revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
+1.  **Identificar blobs que tienen concesiones** : si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso y usarlo para limpiar los blobs.   También puede usar las propiedades LeaseStats y LeastState para identificar los blobs que tienen concesiones. Una vez identificados los blobs, se recomienda que revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
   
-2.  **Interrumpir la concesión:** Una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
+2.  **Interrumpir la concesión** : una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
   
     > [!TIP]  
     >  SQL Server emite un identificador de concesión para establecer acceso exclusivo durante la operación de restauración. El identificador de concesión de restauración es BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-3.  **Eliminando el BLOB:** Para eliminar un BLOB que tiene una concesión activa, debe interrumpir primero la concesión.  
+3.  **Eliminar el blob** : para eliminar un blob que tiene una concesión activa, debe interrumpir primero la concesión.  
   
-###  <a name="Code_Example"></a>Ejemplo de script de PowerShell  
+###  <a name="powershell-script-example"></a><a name="Code_Example"></a>Ejemplo de script de PowerShell  
  ** \* Importante \* \* ** Si está ejecutando PowerShell 2,0, puede que tenga problemas al cargar el ensamblado Microsoft WindowsAzure. Storage. dll. Recomendamos que se actualice a Powershell 3.0 para resolver el problema. También puede usar la siguiente solución alternativa para PowerShell 2.0:  
   
 -   Cree o modifique el archivo powershell.exe.config para cargar los ensamblados de .NET 2.0 y .NET 4.0 en tiempo de ejecución con lo siguiente:  
@@ -73,15 +73,15 @@ ms.locfileid: "72783054"
   
 2.  Si no hay ningún blob que tenga concesiones bloqueadas debe aparecer un mensaje similar al siguiente:  
   
-     **No hay blobs con el estado de concesión bloqueada**  
+     **No hay ningún blob con el estado de concesión bloqueada**  
   
      Si hay blobs con concesiones bloqueadas, debe ver los mensajes siguientes:  
   
      **Interrumpir concesiones**  
   
-     **La concesión de \<la dirección URL del BLOB> es una concesión de restauración: solo verá este mensaje si tiene un BLOB con una concesión de restauración que todavía está activa.**  
+     **La concesión de \<dirección URL del blob es una concesión de restauración: solo verá este mensaje si tiene un blob con una concesión de restauración que todavía esté activa.**  
   
-     **La concesión de \<la dirección URL del BLOB> no es una concesión de restauración interrumpida de concesión en \<la dirección URL del> Bob.**  
+     **La concesión en \<dirección URL del blob no es una concesión de restauración. Interrumpiendo la concesión en \<dirección URL del blob.**  
   
 ```powershell
 param(  
@@ -150,4 +150,4 @@ if($lockedBlobs.Count -gt 0)
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  

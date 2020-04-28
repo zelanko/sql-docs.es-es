@@ -11,20 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637728"
 ---
 # <a name="udt-utilities"></a>Utilidades UDT
   El ejemplo sobre funciones de la utilidad UDT contiene una serie de funciones de utilidades. Entre ellas se incluyen funciones para exponer metadatos de ensamblado en Transact-SQL, ejemplos de funciones con valores de tabla (TVF) de transmisión para devolver los tipos de datos de un ensamblado en forma de tabla, así como funciones para devolver los campos, los métodos y las propiedades en un tipo de datos definido por el usuario. Algunas de las tecnologías que se muestran son las funciones con valores de tabla de transmisión de datos, las API de reflexión de .NET Framework y la invocación de funciones con valores de tabla de Transact-SQL.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que está disponible en el [sitio web](https://go.microsoft.com/fwlink/?linkid=62796)de Codeplex.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "73637728"
   
 -   La base de datos de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está utilizando.  
   
--   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly**  para completar la instalación.  
+-   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   
@@ -1319,7 +1318,7 @@ Public NotInheritable Class UdtServices
 End Class  
 ```  
   
- Este es el script ([!INCLUDE[tsql](../../includes/tsql-md.md)]) de instalación de `Install.sql`, que implementa el ensamblado y crea las funciones en la base de datos.  
+ Este es el script ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) de instalación de`Install.sql`, que implementa el ensamblado y crea las funciones en la base de datos.  
   
 ```  
 USE AdventureWorks2012;  

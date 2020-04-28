@@ -26,29 +26,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811603"
 ---
 # <a name="user-hierarchies"></a>Jerarquías de usuario
   Las jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se utilizan en para organizar los miembros de una dimensión en estructuras jerárquicas y proporcionar rutas de navegación en un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  
   
-|Year|Trimestre|Month|  
+|Año|Trimestre|Mes|  
 |----------|-------------|-----------|  
-|1999|Trimestre 1|Ene|  
+|1999|Trimestre 1|Jan|  
 |1999|Trimestre 1|Feb|  
 |1999|Trimestre 1|Mar|  
-|1999|Trimestre 2|Abr|  
+|1999|Trimestre 2|Apr|  
 |1999|Trimestre 2|May|  
 |1999|Trimestre 2|Jun|  
 |1999|Trimestre 3|Jul|  
-|1999|Trimestre 3|Ago|  
+|1999|Trimestre 3|Aug|  
 |1999|Trimestre 3|Sep|  
 |1999|Quarter 4|Oct|  
 |1999|Quarter 4|Nov|  
-|1999|Quarter 4|Dic|  
+|1999|Quarter 4|Dec|  
   
  Los atributos Year, Quarter y Month se utilizan para construir una jerarquía definida por el usuario llamada Calendar en la dimensión de tiempo. La relación entre los niveles y los miembros de la dimensión Calendar (una dimensión regular) se muestra en el siguiente diagrama.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72811603"
  Puede que a los usuarios finales les resulte muy difícil distinguir entre las jerarquías desequilibradas y las irregulares. No obstante, puede utilizar diversas técnicas y propiedades en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para admitir estos dos tipos de jerarquías. Para obtener más información, vea [jerarquías desiguales](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)y [atributos en jerarquías de elementos primarios y secundarios](../multidimensional-models/parent-child-dimension-attributes.md).  
   
 ### <a name="ragged-hierarchies"></a>Jerarquías desiguales  
- En una jerarquía desigual, el miembro primario lógico de al menos un miembro no se encuentra en el nivel que está inmediatamente por encima del miembro. Esto puede hacer que las ramas de la jerarquía desciendan hasta niveles diferentes. Por ejemplo, en una dimensión Geography definida con los niveles Continent, CountryRegion y City, por este orden, el miembro Europe aparece en el nivel superior de la jerarquía, el miembro France aparece en el nivel medio y el miembro Paris aparece en el nivel inferior. France es más específico que Europe y Paris es más específico que France. En esta jerarquía regular, se realizan los siguientes cambios:  
+ En una jerarquía desigual, el miembro primario lógico de al menos un miembro no se encuentra en el nivel que está inmediatamente por encima del miembro. Esto puede hacer que las ramas de la jerarquía desciendan hasta niveles diferentes. Por ejemplo, en una dimensión Geography definida con los niveles Continent, CountryRegion y City, por este orden, el miembro Europa aparece en el nivel superior de la jerarquía, el miembro France aparece en el nivel medio y el miembro Paris aparece en el nivel inferior. France es más específico que Europa y Paris es más específico que France. En esta jerarquía regular, se realizan los siguientes cambios:  
   
 -   El miembro Vatican City se agrega al nivel CountryRegion.  
   

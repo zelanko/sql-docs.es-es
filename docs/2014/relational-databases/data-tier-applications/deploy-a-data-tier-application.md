@@ -23,26 +23,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783066"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
   Puede implementar una aplicación de capa de datos (DAC) desde un paquete DAC en una instancia existente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante un asistente o un script de PowerShell. El proceso de implementación registra una instancia de DAC almacenando la definición de la DAC en la base de datos del sistema **msdb** (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea una base de datos y, después, rellena la base de datos con todos los objetos de base de datos definidos en la DAC.  
   
--   **Antes de empezar:**  [utilidad de SQL Server](#SQLUtility), [Opciones y configuración de base de datos](#DBOptSettings), [limitaciones y restricciones](#LimitationsRestrictions), [requisitos previos](#Prerequisites), [seguridad](#Security), [permisos](#Permissions)  
+-   **Antes de empezar:**  [Utilidad de SQL Server](#SQLUtility), [Opciones y configuración de bases de datos](#DBOptSettings), [Limitaciones y restricciones](#LimitationsRestrictions), [Requisitos previos](#Prerequisites), [Seguridad](#Security), [Permisos](#Permissions)  
   
--   **Para implementar una DAC, use:**  [Asistente para implementar aplicación de capa de datos](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
+-   **Para implementar una DAC con:**  [Asistente Implementar aplicación de capa de datos](#UsingDeployDACWizard), [PowerShell](#DeployDACPowerShell)  
   
-##  <a name="BeforeBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Antes de comenzar  
  El mismo paquete DAC se puede implementar varias veces en una instancia única de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , sin embargo las implementaciones se deben ejecutar de una en una. El nombre de instancia de DAC que se especificó para cada implementación debe ser único en la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-###  <a name="SQLUtility"></a>Utilidad de SQL Server  
+###  <a name="sql-server-utility"></a><a name="SQLUtility"></a>Utilidad de SQL Server  
  Si implementa una DAC en una instancia administrada del Motor de base de datos, la DAC implementada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Explorador de la utilidad** y se notificará en la página de detalles **Aplicaciones de capa de datos implementadas**.  
   
-###  <a name="DBOptSettings"></a>Opciones de base de datos y configuración  
+###  <a name="database-options-and-settings"></a><a name="DBOptSettings"></a>Opciones de base de datos y configuración  
  De forma predeterminada, la base de datos que se cree durante la implementación incorporará toda la configuración predeterminada de la instrucción CREATE DATABASE, excepto en lo siguiente:  
   
 -   La intercalación y nivel de compatibilidad de las bases de datos se establecen según los valores definidos en el paquete DAC. Un paquete DAC compilado a partir de un proyecto de base de datos en las Herramientas de Desarrollo de SQL Server usa los valores establecidos en el proyecto de base de datos. Un paquete que se haya extraído de una base de datos existente usará los valores de la base de datos original.  
@@ -51,24 +51,24 @@ ms.locfileid: "72783066"
   
  Algunas opciones de base de datos, como TRUSTWORTHY, DB_CHAINING y HONOR_BROKER_PRIORITY, no se pueden ajustar en el proceso de implementación. Las propiedades físicas, como el número de grupos de archivos o el número y tamaño de los archivos no se pueden modificar en el proceso de implementación. Una vez se haya completado la implementación, podrá usar la instrucción ALTER DATABASE, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell para personalizar la base de datos.  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Una DAC puede implementarse en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. Si crea una DAC usando una versión posterior, la DAC puede contener objetos no admitidos por [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No puede implementar dicha DAC en instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos paquetes contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un paquete desde un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como por ejemplo procedimientos almacenados u otro código definido por el usuario. Para obtener más información acerca de cómo realizar estas comprobaciones, vea [Validate a DAC Package](validate-a-dac-package.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para mejorar la seguridad, los inicios de sesión de la autenticación de SQL Server están almacenados en un paquete DAC sin ninguna contraseña. Cuando el paquete se implementa o actualiza, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Una DAC solo la pueden implementar miembros de los roles fijos de servidor **sysadmin** o **serveradmin** , o los inicios de sesión que pertenezcan al rol fijo de servidor **dbcreator** y dispongan de permisos ALTER ANY LOGIN. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede implementar una DAC. Al implementar una DAC con inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , se requiere la pertenencia a los roles loginmanager o serveradmin. La implementación de una DAC sin inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] necesita la pertenencia a los roles dbmanager o serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a>Usar el Asistente para implementar aplicación de capa de datos  
+##  <a name="using-the-deploy-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a>Usar el Asistente para implementar aplicación de capa de datos  
  **Para implementar una DAC mediante un asistente**  
   
 1.  En el **Explorador de objetos**, expanda el nodo de la instancia en la que desee implementar la DAC.  
   
-2.  Haga clic con el botón derecho en el nodo **Bases de datos** y seleccione **Implementar aplicación de capa de datos...**  
+2.  Haga clic con el botón secundario en el nodo **bases** de **datos y seleccione implementar aplicación de capa de datos..** .  
   
 3.  Complete los cuadros de diálogo del asistente:  
   
@@ -84,16 +84,16 @@ ms.locfileid: "72783066"
   
     -   [Página Implementar](#Deploy)  
   
-##  <a name="Introduction"></a> Página Introducción  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para implementar una aplicación de capa de datos.  
   
  **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
   
- **Siguiente >** : avanza a la página **seleccionar paquete DAC** .  
+ **Siguiente >:** avanza a la página **Seleccionar paquete DAC**.  
   
- **Cancelar** : termina el asistente sin implementar una DAC.  
+ **Cancelar:** termina el asistente sin implementar una DAC.  
   
-##  <a name="Select_dac_package"></a>Página seleccionar paquete DAC  
+##  <a name="select-dac-package-page"></a><a name="Select_dac_package"></a>Página seleccionar paquete DAC  
  Use esta página para especificar el paquete DAC que contiene la aplicación de capa de datos que se va a implementar. La página pasa por tres estados.  
   
 ### <a name="select-the-dac-package"></a>Seleccionar el paquete DAC  
@@ -109,25 +109,25 @@ ms.locfileid: "72783066"
   
  Anterior: vuelve a la página **Introducción** . ** \< **  
   
- **Siguiente >** : muestra una barra de progreso cuando el asistente confirma que el archivo seleccionado es un paquete DAC válido.  
+ **Siguiente>:** muestra una barra de progreso cuando el asistente confirma que el archivo seleccionado es un paquete DAC válido.  
   
- **Cancelar** : termina el asistente sin implementar la DAC.  
+ **Cancelar:** termina el asistente sin implementar la DAC.  
   
 ### <a name="validating-the-dac-package"></a>Validar el paquete DAC  
  Muestra una barra de progreso cuando el asistente confirma que el archivo seleccionado es un paquete DAC válido. Si se valida el paquete DAC, el asistente pasa a la versión final de la página **Seleccionar paquete** , donde podrá comprobar los resultados de la validación. Si el archivo no es un paquete DAC válido, el asistente se queda en **Seleccionar paquete DAC**. Seleccione otro paquete DAC válido o cancele el asistente y genere un nuevo paquete DAC.  
   
- **Validando el contenido de la DAC** : la barra de progreso que notifica el estado actual del proceso de validación.  
+ **Validando el contenido de DAC:** barra de progreso que notifica el estado actual del proceso de validación.  
   
  Anterior: vuelve al estado inicial de la página **seleccionar paquete** . ** \< **  
   
- **Siguiente >** : avanza a la versión final de la página **seleccionar paquete** .  
+ **Siguiente>:** avanza a la versión final de la página **Seleccionar paquete**.  
   
- **Cancelar** : termina el asistente sin implementar la DAC.  
+ **Cancelar:** termina el asistente sin implementar la DAC.  
   
-##  <a name="Review_policy"></a>Página revisar Directiva  
+##  <a name="review-policy-page"></a><a name="Review_policy"></a>Página revisar Directiva  
  Use esta página para revisar los resultados de la evaluación de la directiva de selección de servidores de DAC, en caso de que la DAC tenga una directiva. La directiva de selección de servidores de DAC es opcional y está asignada a la DAC cuando se crea en Visual Studio. La directiva se sirve de las facetas de la directiva de selección de servidores para especificar las condiciones que debe cumplir una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para hospedar la DAC.  
   
- **Resultados de la evaluación de las condiciones** de la Directiva: un informe de solo lectura que muestra si las condiciones de la Directiva de implementación de DAC se han realizado correctamente. Los resultados de la evaluación de cada condición se notifican en una línea independiente.  
+ **Resultados de evaluación de condiciones de directivas:** informe de solo lectura que muestra si se han cumplido correctamente las condiciones de la directiva de implementación de DAC. Los resultados de la evaluación de cada condición se notifican en una línea independiente.  
   
  Las siguientes directivas de selección de servidor siempre se evalúan como falsas al implementar una DAC en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]: la versión del sistema operativo, el lenguaje, las canalizaciones con nombre habilitadas, las plataforma y tcp habilitado.  
   
@@ -135,11 +135,11 @@ ms.locfileid: "72783066"
   
  Anterior: vuelve a la página **seleccionar paquete** . ** \< **  
   
- **Siguiente >** : avanza a la página **actualizar la actualización** .  
+ **Siguiente>:** avanza a la página **Actualizar la configuración**.  
   
- **Cancelar** : termina el asistente sin implementar la DAC.  
+ **Cancelar:** termina el asistente sin implementar la DAC.  
   
-##  <a name="Update_configuration"></a>Página Actualizar configuración  
+##  <a name="update-configuration-page"></a><a name="Update_configuration"></a>Página Actualizar configuración  
  Use esta página para especificar los nombres de la instancia de DAC implementada y la base de datos que ha creado la implementación, así como para establecer las opciones de base de datos.  
   
  **Nombre de la base de datos:** especifica el nombre de la base de datos que se creará en la implementación. El valor predeterminado es el nombre de la base de datos de origen de donde se extrajo la DAC. El nombre debe ser único en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y cumplir las reglas de los identificadores de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -160,31 +160,31 @@ ms.locfileid: "72783066"
   
  Anterior: vuelve a la página **seleccionar paquete DAC** . ** \< **  
   
- **Siguiente >** : avanza a la página **Resumen** .  
+ **Siguiente >**: avanza a la página **Resumen**.  
   
- **Cancelar** : termina el asistente sin implementar la DAC.  
+ **Cancelar:** termina el asistente sin implementar la DAC.  
   
-##  <a name="Summary"></a> Página Resumen  
+##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Use esta página para comprobar las acciones que el asistente realizará al implementar la DAC.  
   
  **La siguiente configuración se utilizará en la implementación de su DAC.** - Compruebe la información que se muestra para asegurarse de que las acciones emprenda serán las correctas. La ventana muestra el paquete DAC y el nombre que seleccionó para la instancia de DAC implementada. La ventana también muestra los valores de configuración que se utilizarán al crear la base de datos asociada con la DAC.  
   
  Anterior: vuelve a la página **Actualizar configuración** para cambiar las selecciones. ** \< **  
   
- **Siguiente >** : implementa la DAC y muestra los resultados en la página **implementar DAC** .  
+ **Siguiente >**: implementa la DAC y muestra los resultados en la página **Implementar DAC**.  
   
- **Cancelar** : termina el asistente sin implementar la DAC.  
+ **Cancelar:** termina el asistente sin implementar la DAC.  
   
-##  <a name="Deploy"></a>Página implementar  
+##  <a name="deploy-page"></a><a name="Deploy"></a>Página implementar  
  Esta página notifica si la operación de implementación se realizó correctamente o no.  
   
  **Implementación de DAC:** notifica si cada acción realizada para implementar la DAC se realizó o no correctamente. Revise la información para determinar si cada acción se realizó o no correctamente. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Seleccione el vínculo para ver un informe del error para esa acción.  
   
  **Guardar informe:** seleccione este botón para guardar el informe de implementación en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es la carpeta SQL Server Management Studio\DAC Packages de la carpeta Documentos de su cuenta de Windows.  
   
- **Finalizar** : finaliza el asistente.  
+ **Finalizar** : termina el asistente.  
   
-##  <a name="DeployDACPowerShell"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="DeployDACPowerShell"></a> Usar PowerShell  
  **Para implementar la DAC mediante el método Install() en un script de PowerShell**  
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia en la que desea implementar la DAC.  

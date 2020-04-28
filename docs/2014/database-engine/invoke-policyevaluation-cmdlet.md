@@ -17,21 +17,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17da45f3e66ed0adc68a40a776bfb8fe1126f330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797848"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>cmdlet Invoke-PolicyEvaluation
-  **Invoke-PolicyEvaluation** es un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet que indica si un conjunto de destino de objetos SQL Server cumple las condiciones especificadas en una o más directivas de administración basada en directivas.  
+  **Invoke-PolicyEvaluation** es un cmdlet de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que notifica si un conjunto de destino de objetos de SQL Server cumple las condiciones especificadas en una o más directivas de administración basada en directivas.  
   
 ## <a name="using-invoke-policyevaluation"></a>Uso de Invoke-PolicyEvaluation  
- **Invoke-PolicyEvaluation** evalúa una o varias directivas con respecto a un conjunto de objetos SQL Server denominado conjunto de destinos. Los objetos del conjunto de destino provienen de un servidor de destino. Cada directiva define condiciones, que son los estados permitidos de los objetos de destino. Por ejemplo, la directiva **Trustworthy Database** indica que la propiedad de base de datos TRUSTWORTHY se debe establecer como OFF.  
+ **Invoke-PolicyEvaluation** evalúa una o mas directivas comparándolas con un conjunto de objetos de SQL Server que se conoce como el conjunto de destino. Los objetos del conjunto de destino provienen de un servidor de destino. Cada directiva define condiciones, que son los estados permitidos de los objetos de destino. Por ejemplo, la directiva **Trustworthy Database** indica que la propiedad de base de datos TRUSTWORTHY se debe establecer como OFF.  
   
  El parámetro **-AdHocPolicyEvaluationMode** especifica las acciones realizadas:  
   
- Comprobar  
+ de Azure Functions  
  Informa del estado de cumplimiento de los objetos de destino mediante las credenciales del inicio de sesión actual. No configure ningún objeto. Esta es la configuración predeterminada.  
   
  CheckSqlScriptAsProxy  
@@ -54,8 +54,7 @@ sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"
 Get-Item "Database Status" | Invoke-PolicyEvaluation -TargetServerName "MYCOMPUTER"  
 ```  
   
- En este ejemplo se muestra el uso de Where-Object para filtrar varias directivas de un almacén de directivas en función de su propiedad **PolicyCategory** . 
-  **Invoke-PolicyEvaluation** usa los objetos de la salida canalizada de **Where-Object**.  
+ En este ejemplo se muestra el uso de Where-Object para filtrar varias directivas de un almacén de directivas en función de su propiedad **PolicyCategory** . **Invoke-PolicyEvaluation** usa los objetos de la salida canalizada de **Where-Object**.  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  
@@ -87,7 +86,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetServerName** especifica la instancia de SQL Server que contiene los objetos de destino. Puede especificar la información en una cadena con el formato definido para la propiedad ConnectionString de la clase <xref:System.Data.SqlClient.SqlConnection> . Puede usar la clase <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para generar una cadena de conexión con el formato correcto. También puede crear un objeto <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> y pasarlo a **-TargetServer**. Si proporciona una cadena que solo contiene el nombre del servidor, **Invoke-PolicyEvaluation** usa autenticación de Windows para conectar con el servidor.  
   
--   **-TargetObjects** toma un objeto o una matriz de objetos que representan el SQL Server objetos del conjunto de destino. Por ejemplo, podría crear una matriz de objetos de la clase <xref:Microsoft.SqlServer.Management.Smo.Database> para pasarlos a **-TargetObjects**.  
+-   **-TargetObjects** toma un objeto o una matriz de objetos que representa a los objetos de SQL Server del conjunto de destino. Por ejemplo, podría crear una matriz de objetos de la clase <xref:Microsoft.SqlServer.Management.Smo.Database> para pasarlos a **-TargetObjects**.  
   
 -   **-TargetExpressions** toma una cadena que contiene una expresión de consulta que especifica los objetos del conjunto de destino. La expresión de consulta tiene el formato de los nodos separados por el carácter '/'. Cada nodo tiene el formato ObjectType[Filter]. El tipo de objeto es uno de los objetos de una jerarquía de objetos de objetos de administración de SQL Server (SMO). Filter es una expresión que filtra los objetos de ese nodo. Para más información, consulte [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
@@ -130,7 +129,7 @@ Invoke-PolicyEvaluation -Policy "Surface Area Configuration for Reporting Servic
 ```  
   
 ## <a name="formatting-output"></a>Dar formato a los resultados  
- De forma predeterminada, la salida de **Invoke-PolicyEvaluation** se muestra en la ventana del símbolo del sistema como informe conciso en formato legible. Puede usar el parámetro **-OutputXML** para especificar que el cmdlet genere un informe detallado como archivo XML. **Invoke-PolicyEvaluation** usa el esquema del formato de intercambio de lenguaje de modelado de sistemas (SML-IF) para que el archivo pueda ser leído por SML-if Readers.  
+ De forma predeterminada, la salida de **Invoke-PolicyEvaluation** se muestra en la ventana del símbolo del sistema como informe conciso en formato legible. Puede usar el parámetro **-OutputXML** para especificar que el cmdlet genere un informe detallado como archivo XML. **Invoke-PolicyEvaluation** usa el esquema SML-IF (Systems Modeling Language Interchange Format) para que los lectores SML-IF puedan leer el archivo.  
   
 ```powershell
 sl "SQLSERVER:\SQLPolicy\MyComputer\DEFAULT\Policies"  

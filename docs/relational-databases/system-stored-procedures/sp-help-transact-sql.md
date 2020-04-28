@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909090"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
@@ -63,11 +63,11 @@ sp_help [ [ @objname = ] 'name' ]
     |Nombre de la columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|Nombre del tipo de datos.|  
-    |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nombre del tipo.|  
-    |**Length**|**smallint**|Longitud física del tipo de datos (en bytes).|  
+    |**Storage_type**|**nvarchar (** 128 **)**|Nombre del tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+    |**Longitud**|**smallint**|Longitud física del tipo de datos (en bytes).|  
     |**Prec**|**int**|Precisión (número total de dígitos).|  
     |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
-    |**Nullable**|**VARCHAR (** 35 **)**|Indica si se permiten valores NULL: Yes o No.|  
+    |**Admisión de valores NULL**|**VARCHAR (** 35 **)**|Indica si se permiten valores NULL: Yes o No.|  
     |**Default_name**|**nvarchar (** 128 **)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
     |**Rule_name**|**nvarchar (** 128 **)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
     |**Intercalación**|**sysname**|Intercalación del tipo de datos. NULL para tipos de datos que no sean de caracteres.|  
@@ -78,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nombre**|**nvarchar (** 128 **)**|Nombre de la tabla|  
     |**Propietario**|**nvarchar (** 128 **)**|Propietario de la tabla.|  
-    |**Tipo**|**nvarchar (** 31 **)**|Tipo de tabla|  
+    |**Type**|**nvarchar (** 31 **)**|Tipo de tabla.|  
     |**Created_datetime**|**datetime**|Tabla de fechas de creación|  
   
      Dependiendo del objeto de base de datos especificado, **sp_help** devuelve conjuntos de resultados adicionales.  
@@ -90,12 +90,12 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|Nombre de la columna.|  
-        |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos de la columna.|  
+        |**Type**|**nvarchar (** 128 **)**|Tipo de datos de la columna.|  
         |**Calculada**|**VARCHAR (** 35 **)**|Indica si los valores de la columna son calculados: Yes o No.|  
-        |**Length**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de la columna es un tipo de valor grande (**VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** o **XML**), el valor se mostrará como-1.|  
+        |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de la columna es un tipo de valor grande (**VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** o **XML**), el valor se mostrará como-1.|  
         |**Prec**|**Char (** 5 **)**|Precisión de la columna.|  
         |**Escala**|**Char (** 5 **)**|Escala de columnas.|  
-        |**Nullable**|**VARCHAR (** 35 **)**|Indica si se permiten valores NULL en la columna: Yes o No.|  
+        |**Admisión de valores NULL**|**VARCHAR (** 35 **)**|Indica si se permiten valores NULL en la columna: Yes o No.|  
         |**TrimTrailingBlanks**|**VARCHAR (** 35 **)**|Recorta los espacios en blanco finales. Devuelve Yes o No.|  
         |**FixedLenNullInSource**|**VARCHAR (** 35 **)**|Se conserva únicamente por compatibilidad con versiones anteriores.|  
         |**Intercalación**|**sysname**|Intercalación de la columna. NULL para los tipos de datos que no son de caracteres.|  
@@ -105,8 +105,8 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Identidad**|**nvarchar (** 128 **)**|Nombre de la columna cuyo tipo de datos se declara como identidad.|  
-        |**Propagación**|**alfanumérico**|Valor inicial de la columna de identidad.|  
-        |**Importación**|**alfanumérico**|Incremento que se va a utilizar en los valores de esta columna.|  
+        |**Propagación**|**numeric**|Valor inicial de la columna de identidad.|  
+        |**Importación**|**numeric**|Incremento que se va a utilizar en los valores de esta columna.|  
         |**No para replicación**|**int**|La propiedad IDENTITY no se aplica cuando un inicio de sesión de replicación, como **sqlrepl**, inserta datos en la tabla:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Conjunto de resultados adicional devuelto en las columnas:  
@@ -152,8 +152,8 @@ sp_help [ [ @objname = ] 'name' ]
         |Nombre de la columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Nombre del parámetro del procedimiento almacenado.|  
-        |**Tipo**|**nvarchar (** 128 **)**|Tipo de datos del parámetro del procedimiento almacenado.|  
-        |**Length**|**smallint**|Longitud máxima de almacenamiento físico en bytes.|  
+        |**Type**|**nvarchar (** 128 **)**|Tipo de datos del parámetro del procedimiento almacenado.|  
+        |**Longitud**|**smallint**|Longitud máxima de almacenamiento físico en bytes.|  
         |**Prec**|**int**|Precisión o número total de dígitos.|  
         |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
         |**Param_order**|**smallint**|Orden del parámetro.|  
@@ -195,7 +195,7 @@ GO
  [sp_helpindex &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [sp_helptrigger &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Sys. sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797625"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Reglas de mantenimiento de PowerPivot - Configurar
@@ -28,7 +28,7 @@ ms.locfileid: "72797625"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- **Nota:** La configuración de las reglas de mantenimiento se configura de forma independiente para la instancia de SQL Server Analysis Services y la aplicación de servicio PowerPivot. Siga las instrucciones de este tema para configurar reglas de estado para cada servicio. En una implementación de SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] solo usa la aplicación de servicio. Por tanto, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala distintos conjuntos de reglas de mantenimiento para las diferentes versiones de SharePoint. Vea la columna "versión" en el tema [referencia de reglas de estado &#40;PowerPivot para SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), o bien puede ejecutar el siguiente comando de Windows PowerShell para ver las reglas instaladas.  
+ **Nota** : la configuración de reglas de mantenimiento se establece de forma independiente para la instancia de SQL Server Analysis Services y la aplicación de servicio PowerPivot. Siga las instrucciones de este tema para configurar reglas de estado para cada servicio. En una implementación de SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] solo usa la aplicación de servicio. Por tanto, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala distintos conjuntos de reglas de mantenimiento para las diferentes versiones de SharePoint. Vea la columna "versión" en el tema [referencia de reglas de estado &#40;PowerPivot para SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), o bien puede ejecutar el siguiente comando de Windows PowerShell para ver las reglas instaladas.  
   
 ```powershell
 Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
@@ -42,10 +42,10 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [Configurar las reglas de estado que se utilizan para evaluar la estabilidad de la aplicación (Aplicación de servicio PowerPivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Debe ser administrador de la aplicación de servicio para cambiar las propiedades de configuración de la instancia de Analysis Services y de la aplicación de servicio PowerPivot.  
   
-##  <a name="bkmk_view"></a>Ver las reglas de estado de PowerPivot  
+##  <a name="view-powerpivot-health-rules"></a><a name="bkmk_view"></a>Ver las reglas de estado de PowerPivot  
   
 1.  En Administración central de SharePoint, haga clic en **Supervisión**y, en la sección **Analizador de mantenimiento** , haga clic en **Revisar las definiciones de la regla**.  
   
@@ -57,7 +57,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  Para ello, haga clic en la regla para abrir su definición y, a continuación, haga clic en **Ejecutar ahora** en la cinta. Haga clic en **Cerrar** para volver a la página **Revisar problemas y soluciones** para ver el informe. Si la regla detectó un problema, en la página se notificará una advertencia o error. En algunos casos, pueden pasar varios minutos hasta que aparezca el error o la advertencia.  
   
-##  <a name="bkmk_HR_SSAS"></a>Configurar las reglas de estado que se usan para evaluar la estabilidad del servidor (SQL Server Analysis Services)  
+##  <a name="configure-health-rules-used-to-evaluate-server-stability-sql-server-analysis-services"></a><a name="bkmk_HR_SSAS"></a>Configurar las reglas de estado que se usan para evaluar la estabilidad del servidor (SQL Server Analysis Services)  
  La instancia de Analysis Services incluye reglas de estado que detectan problemas en el nivel de sistema (CPU, memoria y espacio en disco que se usan para el almacenamiento en caché). Utilice las instrucciones siguientes para modificar los umbrales que desencadenan reglas específicas de estado.  
   
 1.  En Administración central de SharePoint, en la sección **Configuración del sistema** , haga clic en **Administrar servicios en el servidor**.  
@@ -98,9 +98,9 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
      Intervalo de recopilación de datos (en horas)  
      Puede especificar el período de recopilación de datos utilizado para calcular los números que se usan para desencadenar reglas de estado. Aunque el sistema se supervise constantemente, los umbrales usados para desencadenar advertencias de la regla de estado se calculan con los datos que se generaron en un intervalo predefinido. El intervalo predeterminado es de cuatro horas. El servidor recupera los datos del sistema y de uso durante las cuatro horas anteriores para evaluar el número de conexiones de usuario, el uso de espacio en disco y la tasa de utilización de la CPU y la memoria.  
   
-##  <a name="bkmk_evaluate_application_stability"></a>Configurar las reglas de estado que se usan para evaluar la estabilidad de la aplicación (aplicación de servicio PowerPivot)  
+##  <a name="configure-health-rules-used-to-evaluate-application-stability-powerpivot-service-application"></a><a name="bkmk_evaluate_application_stability"></a>Configurar las reglas de estado que se usan para evaluar la estabilidad de la aplicación (aplicación de servicio PowerPivot)  
   
-1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  En la página Aplicación de servicio, haga clic en **Aplicación de servicio PowerPivot**.  
   

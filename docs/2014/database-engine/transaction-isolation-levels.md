@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637787"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Niveles de aislamiento de transacciones en tablas con optimización para memoria
@@ -50,7 +50,7 @@ ms.locfileid: "73637787"
  En el caso de las tablas basadas en disco, la mayor parte de las garantías del nivel de aislamiento se implementan utilizando el bloqueo, lo que evita conflictos durante el mismo. En las tablas optimizadas para memoria, las garantías se aplican a través de un mecanismo de detección de conflictos, que evita la necesidad de usar bloqueos. La excepción es el aislamiento SNAPSHOT en tablas basadas en disco. Esto se implementa de forma similar al aislamiento SNAPSHOT en las tablas optimizadas para memoria usando un mecanismo de detección de conflictos.  
   
  SNAPSHOT  
- Este nivel de aislamiento especifica que los datos leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción. La transacción únicamente puede reconocer las modificaciones de datos confirmadas antes del comienzo de la misma. Las modificaciones de datos realizadas por otras transacciones después del inicio de la transacción actual no son visibles para las instrucciones que se ejecutan en la transacción actual. Las instrucciones de una transacción obtienen una instantánea de los datos confirmados tal como se encontraban al comienzo de la transacción.  
+ Este nivel de aislamiento especifica que los datos leídos por cualquier instrucción de una transacción serán la versión coherente, desde el punto de vista transaccional, de los datos existentes al comienzo de la transacción. La transacción únicamente puede reconocer las modificaciones de datos confirmadas antes del comienzo de la misma. Las instrucciones que se ejecuten en la transacción actual no verán las modificaciones de datos efectuadas por otras transacciones después del inicio de la transacción actual. Las instrucciones de una transacción obtienen una instantánea de los datos confirmados tal como se encontraban al comienzo de la transacción.  
   
  Las operaciones de escritura (actualizaciones, inserciones y eliminaciones) siempre se aíslan completamente de otras transacciones. Por tanto, las operaciones de escritura en una transacción SNAPSHOT pueden entrar en conflicto con las operaciones de escritura realizadas por otras transacciones. Cuando la transacción actual intenta actualizar o eliminar una fila que ha sido actualizada o eliminada por otra transacción que se confirmó una vez iniciada la transacción actual, la transacción finaliza con el mensaje de error siguiente.  
   

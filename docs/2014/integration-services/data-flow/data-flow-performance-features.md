@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637822"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
@@ -90,7 +90,7 @@ ms.locfileid: "73637822"
 ## <a name="configuring-individual-data-flow-components"></a>Configurar cada uno de los componentes de flujo de datos  
  Hay algunas directrices generales que permiten configurar cada uno de los componentes de flujo de datos con objeto de mejorar el rendimiento. También hay instrucciones específicas relativas a cada tipo de componente de flujo de datos: origen, transformación y destino.  
   
-### <a name="general-guidelines"></a>Directrices generales  
+### <a name="general-guidelines"></a>Instrucciones generales  
  Hay dos directrices generales que no dependen del componente de flujo de datos y que debería seguir para mejorar el rendimiento: optimizar las consultas y evitar las cadenas innecesarias.  
   
 #### <a name="optimize-queries"></a>Optimizar las consultas  
@@ -155,13 +155,13 @@ ms.locfileid: "73637822"
  Es posible que guardar datos en los destinos lleve más tiempo del esperado. Para identificar si esto se debe a que el destino no es capaz de procesar los datos con suficiente rapidez, puede sustituir el destino por una transformación Recuento de filas temporalmente. Si el rendimiento mejora de forma significativa, es probable que el destino que carga los datos sea la causa de la tardanza.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>Revisar la información de la pestaña Progreso  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona información sobre el flujo de control y sobre el flujo de datos al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En la pestaña **Progreso** se muestran las tareas y los contenedores en orden de ejecución; incluye las horas de inicio y finalización, las advertencias y los mensajes de error de cada tarea y contenedor, incluido el paquete en sí. También se muestran los componentes de flujo de datos en el orden de ejecución, y se incluye información sobre su progreso, mostrado como porcentaje finalizado, y el número de filas procesadas.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona información sobre el flujo de control y sobre el flujo de datos al ejecutar un paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. En la pestaña **progreso** se muestran las tareas y los contenedores en orden de ejecución, y se incluyen las horas de inicio y finalización, las advertencias y los mensajes de error de cada tarea y contenedor, incluido el propio paquete. También se muestran los componentes de flujo de datos en el orden de ejecución, y se incluye información sobre su progreso, mostrado como porcentaje finalizado, y el número de filas procesadas.  
   
- Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** . La deshabilitación de los informes de progreso puede ayudar a mejorar el rendimiento al ejecutar un paquete complejo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+  Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** . La deshabilitación de los informes de progreso puede ayudar a mejorar el rendimiento al ejecutar un paquete complejo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Ordenación de datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
@@ -197,7 +197,7 @@ ms.locfileid: "73637822"
 -   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
 ## <a name="see-also"></a>Consulte también  
- [Herramientas para solucionar problemas con el desarrollo de paquetes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
- [Herramientas para solucionar problemas de la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
+ [Herramientas de solución de problemas para el desarrollo de paquetes](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

@@ -11,21 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798040"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Supervisión de copia de seguridad administrada de SQL Server en Azure
-  
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tiene medidas integradas para identificar los problemas y los errores durante los procesos de copia de seguridad y remediarlos con la acción correctiva, si es posible.  Aunque hay ciertas situaciones en las que se requiere la intervención del usuario. Este tema describe las herramientas que puede utilizar para determinar el estado de mantenimiento total de las copias de seguridad e identificar los errores que deban solucionarse.  
   
-## <a name="overview-of-includess_smartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>Introducción a la depuración integrada de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
- El [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] revisa periódicamente las copias de seguridad programadas e intenta volver a programar las que no se hayan podido realizar. Sondea periódicamente la cuenta de almacenamiento para identificar las interrupciones en las cadenas de registros que afectan a la capacidad de recuperación de la base de datos y programa las nuevas copias de seguridad en consecuencia. También tiene en cuenta las directivas de limitación de Azure y tiene mecanismos para administrar varias copias de seguridad de bases de datos. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa eventos extendidos para realizar el seguimiento de todas las actividades. Los canales de eventos extendidos que usa el agente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] son el de administración, operativo, analítico y depuración. Los eventos que entran en la categoría de administración suelen relacionarse con errores y requerir la intervención del usuario y se habilitan de forma predeterminada. Los eventos analíticos se activan de forma predeterminada pero por lo general no están relacionados con errores que requieran la intervención del usuario. Los eventos operativos suelen ser informativos. Por ejemplo, los eventos operativos incluyen la programación de una copia de seguridad, la finalización correcta de una copia de seguridad, etc. La depuración es la más detallada y se usa internamente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para determinar los problemas y corregirlos si es necesario.  
+## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>Introducción a la depuración integrada de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+ El [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] revisa periódicamente las copias de seguridad programadas e intenta volver a programar las que no se hayan podido realizar. Sondea periódicamente la cuenta de almacenamiento para identificar las interrupciones en las cadenas de registros que afectan a la capacidad de recuperación de la base de datos y programa las nuevas copias de seguridad en consecuencia. También tiene en cuenta las directivas de limitación de Azure y tiene mecanismos para administrar varias copias de seguridad de bases de datos. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa eventos extendidos para realizar el seguimiento de todas las actividades. Los canales de eventos extendidos que usa el agente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] son el de administración, operativo, analítico y depuración. Los eventos que entran en la categoría de administración suelen relacionarse con errores y requerir la intervención del usuario y se habilitan de forma predeterminada. Los eventos analíticos se activan de forma predeterminada pero por lo general no están relacionados con errores que requieran la intervención del usuario. Los eventos operativos suelen ser informativos. Por ejemplo, los eventos operativos incluyen la programación de una copia de seguridad, la finalización correcta de una copia de seguridad, etc. La depuración es la más detallada y se usa internamente [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para determinar los problemas y corregirlos si es necesario.  
   
-### <a name="configure-monitoring-parameters-for-includess_smartbackupincludesss-smartbackup-mdmd"></a>Configurar parámetros de supervisión para [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
+### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>Configurar parámetros de supervisión para [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]  
  El procedimiento almacenado del sistema **smart_admin. sp_set_parameter** le permite especificar la configuración de supervisión. En las secciones siguientes se recorre el proceso para habilitar Eventos extendidos y para habilitar la notificación por correo electrónico de los errores y las advertencias.  
   
  La función **smart_admin. fn_get_parameter** se puede utilizar para obtener la configuración actual de un parámetro concreto o de todos los parámetros configurados. Si los parámetros no se han configurado nunca, la función no devuelve ningún valor.  
@@ -114,8 +112,7 @@ GO
 Estos recuentos agregados se pueden utilizar para supervisar el estado del sistema. Por ejemplo, si el number_ of_retention_loops columna es 0 en 30 minutos, es posible que la administración de la retención tarde mucho tiempo o incluso no funcione correctamente. Las columnas de errores que no son cero pueden indicar que hay problemas y los registros de Eventos extendidos se deben comprobar para detectarlos. También puede llamar a **smart_admin. sp_get_backup_diagnostics** procedimiento almacenado para buscar los detalles del error.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Usar la notificación del agente para evaluar el estado de la copia de seguridad y los estados  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] incluye un mecanismo de notificación que se fundamenta en las directivas de administración basada en directivas de SQL Server.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] incluye un mecanismo de notificación que se fundamenta en las directivas de administración basada en directivas de SQL Server.  
   
  **Requisitos previos**  
   
@@ -251,10 +248,8 @@ smart_backup_files;
   
 -   **Error de copia-F:** De forma similar a la copia en curso, se trata de bases de datos de grupos de disponibilidad t específicas. Si se produce un error en el proceso de copia, se marca el estado como F.  
   
--   **Dañado-C:** Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no puede comprobar el archivo de copia de seguridad en el almacenamiento mediante la realización de un comando restore HEADER_ONLY incluso después de varios intentos, marca este archivo como dañado. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] programará una copia de seguridad para asegurarse de que el archivo dañado no produce una interrupción de la cadena de copia de seguridad.  
+-   **Dañado-C:** Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no puede comprobar el archivo de copia de seguridad en el almacenamiento mediante la realización de un comando restore HEADER_ONLY incluso después de varios intentos, marca este archivo como dañado. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] programará una copia de seguridad para asegurarse de que el archivo dañado no produce una interrupción de la cadena de copia de seguridad.  
   
--   **Eliminado-D:** No se encuentra el archivo correspondiente en Azure Storage. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] programará una copia de seguridad si el archivo eliminado produce una interrupción en la cadena de copia de seguridad.  
+-   **Eliminado-D:** No se encuentra el archivo correspondiente en Azure Storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] programará una copia de seguridad si el archivo eliminado produce una interrupción en la cadena de copia de seguridad.  
   
 -   **Desconocido-U:** Este estado indica que [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] aún no se ha podido comprobar la existencia de archivos y sus propiedades en Azure Storage. La próxima vez que se ejecute el proceso, que es aproximadamente cada 15 minutos, se actualizará este estado.  

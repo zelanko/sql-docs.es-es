@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798166"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
@@ -39,10 +39,10 @@ ms.locfileid: "72798166"
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Para establecer el flujo con éxito o con errores de los pasos de un trabajo  
   
@@ -70,7 +70,7 @@ ms.locfileid: "72798166"
   
 9. Si la lista **Ejecutar como usuario** está disponible, seleccione la cuenta de proxy con las credenciales que utilizará el trabajo.  
   
-##  <a name="TSQL"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Usar Transact-SQL  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Para establecer el flujo con éxito o con errores de los pasos de un trabajo  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72798166"
   
  Para obtener más información, vea [sp_add_jobstep &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usar Objetos de administración de SQL Server  
 
 ### <a name="to-set-job-step-success-or-failure-flow"></a>Para establecer el flujo con éxito o con errores de los pasos de un trabajo
   

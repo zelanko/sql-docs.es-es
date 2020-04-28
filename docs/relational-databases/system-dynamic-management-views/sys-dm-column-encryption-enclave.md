@@ -10,10 +10,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d10bef0df04501c177086b6c89b3f67dec3bab10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73599248"
 ---
 # <a name="sysdm_column_encryption_enclave-transact-sql"></a>sys.dm_column_encryption_enclave (Transact-SQL)
@@ -27,8 +27,8 @@ Si el enclave está configurado y se ha inicializado correctamente después del 
 |-----------------|---------------|-----------------|  
 |current_enclave_session_count|**int**|Número actual de sesiones de cliente que usan enclave.|  
 |current_column_encryption_key_count|**int**|Recuento de claves de cifrado de columna que el enclave contiene actualmente.|  
-|current_memory_size_kb|**BIGINT**|Tamaño de memoria de enclave en KB|  
-|total_evicted_session_count|**BIGINT**|Número total de sesiones de enclave expulsadas desde el último reinicio del servidor.|   
+|current_memory_size_kb|**bigint**|Tamaño de memoria de enclave en KB|  
+|total_evicted_session_count|**bigint**|Número total de sesiones de enclave expulsadas desde el último reinicio del servidor.|   
   
 ## <a name="permissions"></a>Permisos  
 Requiere el permiso `VIEW SERVER STATE`.   

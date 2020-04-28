@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637636"
 ---
 # <a name="result-set-sample"></a>Ejemplo de conjunto de resultados
@@ -25,11 +25,10 @@ ms.locfileid: "73637636"
   
  La API para esta clase es similar a un lector de datos, salvo que puede desplazarse hacia delante o hacia atrás por todo el conjunto de resultados, y se pueden emitir otros comandos para la conexión mientras el conjunto de resultados está abierto. Esta implementación se ha simplificado mucho para que el ejemplo se entienda mejor. Una implementación más eficaz capturaría varias filas para evitar el tiempo de devolución de la base de datos por fila capturada. Utilizar esta clase puede suponer el uso de un volumen de memoria mucho menor que el necesario para llenar un conjunto de datos con todos los resultados de una consulta, lo que es muy importante para la programación del servidor. En este ejemplo también se muestra el uso del atributo "Allow partially trusted callers" para indicar que el ensamblado Conjunto de resultados es una biblioteca a la que se puede llamar de forma segura desde otros ensamblados. Este enfoque es algo más complejo pero mucho más seguro que registrar el ensamblado de llamada utilizando el permiso UNSAFE. Es más seguro porque al registrar el ensamblado de llamada como seguro se limitan los recursos afectados fuera del servidor y se evitan daños en la integridad del mismo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -58,7 +57,7 @@ ms.locfileid: "73637636"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly**  para completar la instalación.  
+-   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   

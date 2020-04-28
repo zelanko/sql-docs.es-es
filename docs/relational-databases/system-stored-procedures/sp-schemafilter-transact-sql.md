@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633014"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
@@ -47,9 +47,9 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**agréguela**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
+|**add**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
 |**omisiones**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  
-|**Ayuda**|Devuelve la lista de esquemas no aptos para su publicación.|  
+|**help**|Devuelve la lista de esquemas no aptos para su publicación.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

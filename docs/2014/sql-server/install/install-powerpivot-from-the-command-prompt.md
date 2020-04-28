@@ -11,23 +11,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798330"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Instalar PowerPivot desde el símbolo del sistema
   Puede ejecutar el programa de instalación desde la línea de comandos para instalar SQL Server PowerPivot para SharePoint. Debe incluir el parámetro `/ROLE` en el comando y excluir el parámetro `/FEATURES`.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Debe estar instalada la versión Enterprise de SharePoint Server 2010 con Service Pack 1 (SP1).  
   
  Debe utilizar las cuentas de dominio para aprovisionar a Analysis Services.  
   
  El equipo debe estar unido al mismo dominio que la granja de servidores de SharePoint.  
   
-##  <a name="Commands"></a>Opciones de instalación basadas en/ROLE  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>Opciones de instalación basadas en/ROLE  
  En las implementaciones de PowerPivot para SharePoint, se utiliza el parámetro `/ROLE` en lugar de `/FEATURES`. Los valores válidos son:  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>Modificar la sintaxis de los comandos  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>Modificar la sintaxis de los comandos  
  Utilice los siguientes pasos para modificar la sintaxis del comando del ejemplo.  
   
 1.  Copie el siguiente comando en el Bloc de notas:  
@@ -64,8 +64,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
      El parámetro `/q` ejecuta el programa de instalación en modo silencio, que suprime la interfaz de usuario.  
   
-     
-  `/IAcceptSQLServerLicenseTerms` es necesario cuando se especifican los parámetros `/q` o `/qs` para instalaciones desatendidas.  
+     `/IAcceptSQLServerLicenseTerms` es necesario cuando se especifican los parámetros `/q` o `/qs` para instalaciones desatendidas.  
   
      El parámetro `/action` indica al programa de instalación que realice una instalación.  
   
@@ -105,4 +104,4 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar cuentas de servicio PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
- [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

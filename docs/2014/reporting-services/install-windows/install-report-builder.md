@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637830"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Instalar la versión independiente del Generador de informes (Generador de informes)
@@ -113,7 +113,7 @@ ms.locfileid: "73637830"
   
 4.  Opcionalmente, vaya a la ubicación en la que se va a guardar, compruebe que la opción **Guardar como** está **Windows Installer paquete**y, a continuación, haga clic en **Guardar**.  
   
-5.  En el menú **Inicio** , haga clic en **Ejecutar**.  
+5.  En el menú **Inicio**, haga clic en **Ejecutar**.  
   
 6.  En el cuadro de texto Abrir, escriba `cmd.`  
   

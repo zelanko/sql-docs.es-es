@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c6d71f1158ef73b84e5b04dcc9a1970bfd7dce35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783100"
 ---
 # <a name="run-windows-powershell-from-sql-server-management-studio"></a>Ejecutar Windows PowerShell desde SQL Server Management Studio
   Puede iniciar sesiones de Windows PowerShell desde el **Explorador de objetos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]inicia Windows PowerShell, carga el `sqlps` módulo y establece el contexto de la ruta de acceso en el nodo asociado en el árbol de **Explorador de objetos** .  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
- Al especificar la ejecución de PowerShell para un objeto en el **Explorador de objetos**, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] inicia una sesión de Windows PowerShell en la que los complementos PowerShell de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se han cargado y registrado. La ruta de acceso para la sesión se preestablece en la ubicación del objeto en el que hizo clic con el botón secundario en el Explorador de objetos. Por ejemplo, si hace clic con el botón derecho en el objeto de base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] en el Explorador de objetos y selecciona **Iniciar PowerShell**, la ruta de acceso de Windows PowerShell se establece en lo siguiente:  
+ Cuando se especifica la ejecución de PowerShell para un **Object Explorer**objeto en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] explorador de objetos, inicia una sesión de Windows PowerShell [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la que los complementos de PowerShell se han cargado y registrado. La ruta de acceso para la sesión se preestablece en la ubicación del objeto en el que hizo clic con el botón secundario en el Explorador de objetos. Por ejemplo, si hace clic con el botón derecho en el objeto de base de datos [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] en el Explorador de objetos y selecciona **Iniciar PowerShell**, la ruta de acceso de Windows PowerShell se establece en lo siguiente:  
   
 ```
 SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>  
@@ -29,7 +29,7 @@ SQLSERVER:\SQL\MyComputer\MyInstance\Databases\AdventureWorks2012>
   
 ## <a name="to-run-powershell-from-sql-server-management-studio"></a>Para ejecutar PowerShell desde SQL Server Management Studio 
   
-1.  Abra el **Explorador de objetos**.  
+1.  Abra **Explorador de objetos**.  
   
 2.  Navegue al nodo del objeto en el que trabajará.  
   

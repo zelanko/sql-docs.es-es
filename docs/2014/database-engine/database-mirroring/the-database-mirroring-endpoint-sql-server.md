@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797904"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>El extremo de creación de reflejo de la base de datos (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "72797904"
 >  La característica de creación de reflejo de la base de datos se quitará en una versión futura de Microsoft SQL Server. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente utilizan la creación de reflejo de la base de datos para utilizar [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en su lugar.  
   
   
-##  <a name="ServerNetworkAddress"></a> Dirección de red de servidor  
+##  <a name="server-network-address"></a><a name="ServerNetworkAddress"></a> Dirección de red de servidor  
  La dirección de red de una instancia de servidor (su *dirección de red de servidor* o *dirección URL de punto de conexión*) contiene el número de puerto de su punto de conexión, así como el nombre de sistema y de dominio del equipo host. El número de puerto identifica de forma exclusiva una instancia de servidor específica.  
   
  En la siguiente ilustración se muestra cómo dos instancias de servidor en el mismo servidor se identifican de forma exclusiva. Las direcciones de red de las dos instancias de servidor contienen el mismo nombre de sistema, `MYSYSTEM`, y el mismo nombre de dominio, `Adventure-Works.MyDomain.com`. Para habilitar el sistema de forma que enrute conexiones a una instancia de servidor, una dirección de red de servidor incluye el número de puerto asociado al extremo para la creación de reflejo de una instancia de servidor en particular.  
@@ -53,7 +53,7 @@ ms.locfileid: "72797904"
 >  No reconfigure un extremo de creación de reflejo de la base de datos en uso. Las instancias de servidor usan los extremos de todas las demás instancias para conocer el estado de los otros sistemas. Si reconfigura el extremo, podría reiniciarse, lo que podría parecer un error en las otras instancias de servidor. Esto es especialmente importante en el modo de conmutación automática por error, en el que volver a configurar el extremo en un asociado podría dar lugar a una conmutación por error.  
   
   
-##  <a name="EndpointAuthenticationTypes"></a> Determinar el tipo de autenticación para un extremo de creación de reflejo de la base de datos  
+##  <a name="determining-the-authentication-type-for-a-database-mirroring-endpoint"></a><a name="EndpointAuthenticationTypes"></a> Determinar el tipo de autenticación para un extremo de creación de reflejo de la base de datos  
  Es importante saber que las cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de las instancias del servidor determinan el tipo de autenticación que se puede usar para los extremos de creación de reflejo de la base de datos, del modo siguiente:  
   
 -   Si cada instancia de servidor se ejecuta en una cuenta de servicio de dominio, puede utilizar la autenticación de Windows para los extremos de creación de reflejo de la base de datos. Si las instancias del servidor se ejecutan como la misma cuenta de usuario de dominio, automáticamente existen los inicios de sesión de usuario correctos en ambas bases de datos **maestras** . Esto simplifica la configuración de seguridad de las base de datos de disponibilidad y es recomendable su aplicación.  
@@ -70,7 +70,7 @@ ms.locfileid: "72797904"
      No hay ningún método automatizado para configurar la seguridad de creación de reflejo de la base de datos mediante certificados. Tendrá que usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT o el cmdlet de PowerShell `New-SqlHadrEndpoint`. Para obtener más información, vea [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Para obtener información acerca de cómo habilitar la autenticación de certificados en una instancia de servidor, vea [usar certificados para un extremo de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
 
 ### <a name="to-configure-a-database-mirroring-endpoint"></a>Para configurar un extremo de creación del reflejo de la base de datos
   
@@ -97,4 +97,4 @@ ms.locfileid: "72797904"
  [Seguridad de transporte para la creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Sys. dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [Sys. dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  

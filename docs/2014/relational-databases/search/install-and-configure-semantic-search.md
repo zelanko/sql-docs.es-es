@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637916"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar y configurar la búsqueda semántica
@@ -25,7 +25,7 @@ ms.locfileid: "73637916"
   
 ## <a name="installing-semantic-search"></a>Instalar la búsqueda semántica  
   
-###  <a name="HowToCheckInstalled"></a>Cómo: comprobar si la búsqueda semántica está instalada  
+###  <a name="how-to-check-whether-semantic-search-is-installed"></a><a name="HowToCheckInstalled"></a>Cómo: comprobar si la búsqueda semántica está instalada  
  Consulte la propiedad **IsFullTextInstalled** de la función de metadatos [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql).  
   
  Un valor devuelto de 1 indica que la búsqueda de texto completo y la búsqueda semántica están instaladas; un valor devuelto de 0 indica que no lo están.  
@@ -35,7 +35,7 @@ SELECT SERVERPROPERTY('IsFullTextInstalled');
 GO  
 ```  
   
-###  <a name="BasicsSemanticSearch"></a>Cómo: instalar la búsqueda semántica  
+###  <a name="how-to-install-semantic-search"></a><a name="BasicsSemanticSearch"></a>Cómo: instalar la búsqueda semántica  
  Para instalar la búsqueda semántica, seleccione **Extracciones de texto completo y semánticas de búsqueda** en la página de **Características que se van a instalar** durante la instalación.  
   
  La búsqueda semántica estadística depende de la búsqueda de texto completo. Estas dos características opcionales de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se instalan conjuntamente.  
@@ -43,7 +43,7 @@ GO
 ## <a name="installing-or-removing-the-semantic-language-statistics-database"></a>Instalar o quitar la base de datos de estadísticas de lenguaje semántico  
  La búsqueda semántica tiene una dependencia externa adicional que se denomina base de datos de estadísticas semánticas de lenguaje. Esta base de datos contiene modelos estadísticos de idioma que requiere la búsqueda semántica. Una sola base de datos de estadísticas semánticas de lenguaje contiene los modelos de idioma de todos los idiomas compatibles con la indización semántica.  
   
-###  <a name="HowToCheckDatabase"></a>Cómo: comprobar si la base de datos de Estadísticas de lenguaje semántico está instalada  
+###  <a name="how-to-check-whether-the-semantic-language-statistics-database-is-installed"></a><a name="HowToCheckDatabase"></a>Cómo: comprobar si la base de datos de Estadísticas de lenguaje semántico está instalada  
  Consulte la vista de catálogo [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql).  
   
  Si la base de datos de estadísticas semánticas de lenguaje está instalada y registrada para la instancia, los resultados de la consulta contienen una sola fila de información acerca de la base de datos.  
@@ -53,7 +53,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-###  <a name="HowToInstallModel"></a>Cómo: instalar, adjuntar y registrar la base de datos de Estadísticas de lenguaje semántico  
+###  <a name="how-to-install-attach-and-register-the-semantic-language-statistics-database"></a><a name="HowToInstallModel"></a>Cómo: instalar, adjuntar y registrar la base de datos de Estadísticas de lenguaje semántico  
  La base de datos de estadísticas de lenguaje semántico no se instala con el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para configurar la base de datos de estadísticas semánticas de lenguaje como requisito previo para la indización semántica, haga las siguientes tareas:  
   
  **1. Instale la base de datos de estadísticas de lenguaje semántico.**  
@@ -63,7 +63,7 @@ GO
   
     -   Descargar el paquete del instalador de [Microsoft?? ¿¿SQL Server?? 2014 Estadísticas de lenguaje semántico](https://go.microsoft.com/fwlink/?LinkID=296743) página del centro [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de descarga.  
   
-2.  Ejecute el paquete de Windows Installer **SemanticLanguageDatabase.msi** para extraer la base de datos y el archivo de registro.  
+2.  Ejecute el paquete de Windows Installer **SemanticLanguageDatabase. msi** para extraer la base de datos y el archivo de registro.  
   
      También puede cambiar el directorio de destino. De forma predeterminada, el instalador extrae los archivos en una carpeta denominada **Base de datos de lenguaje semántico de Microsoft** en la carpeta Archivos de programa de 32 o de 64 bits. El archivo contiene MSI un archivo de base de datos y un archivo de registro comprimidos.  
   
@@ -97,7 +97,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a>Cómo: anular el registro, desasociar y quitar la base de datos de Estadísticas de lenguaje semántico  
+###  <a name="how-to-unregister-detach-and-remove-the-semantic-language-statistics-database"></a><a name="HowToUnregister"></a>Cómo: anular el registro, desasociar y quitar la base de datos de Estadísticas de lenguaje semántico  
  **Anular el registro de la base de datos de estadísticas semánticas de lenguaje.**  
  Llame al procedimiento almacenado [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql). No tiene que proporcionar el nombre de la base de datos ya que una instancia solo puede tener una base de datos de estadísticas semánticas de lenguaje.  
   
@@ -120,7 +120,7 @@ GO
  **Quite la base de datos de estadísticas semánticas de lenguaje.**  
  Después de cancelar el registro y de separar la base de datos, puede eliminar el archivo de base de datos. No existe ningún programa de desinstalación ni hay ninguna entrada en la opción **Programas y características** en el Panel de control.  
   
-###  <a name="reqinstall"></a>Requisitos y restricciones para instalar y quitar la base de datos de Estadísticas de lenguaje semántico  
+###  <a name="requirements-and-restrictions-for-installing-and-removing-the-semantic-language-statistics-database"></a><a name="reqinstall"></a>Requisitos y restricciones para instalar y quitar la base de datos de Estadísticas de lenguaje semántico  
   
 -   Solo puede adjuntar y registrar una base de datos de estadísticas de lenguaje semántico en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -134,7 +134,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>Instalar compatibilidad opcional para nuevos tipos de documento  
   
-###  <a name="office"></a>Cómo: instalar los filtros más recientes para Microsoft Office y otros tipos de documentos de Microsoft  
+###  <a name="how-to-install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a>Cómo: instalar los filtros más recientes para Microsoft Office y otros tipos de documentos de Microsoft  
  Esta versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala los separadores de palabras y analizadores lingüísticos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] más recientes, pero no instala los últimos filtros para los documentos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office ni otros tipos de documento de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Estos filtros son necesarios para indizar documentos creados con versiones recientes de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office y otras aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Para descargar los filtros más recientes, vea [Paquetes de filtros de Microsoft Office 2010](https://www.microsoft.com/download/details.aspx?id=17062).  
   
   

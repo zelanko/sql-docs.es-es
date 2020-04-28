@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00cf7a7fab52640cc3fc19a3d9da051d281be7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783012"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>Agregar una réplica secundaria a un grupo de disponibilidad (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "72783012"
   
      [Seguridad](#Security)  
   
--   **Para agregar una réplica, utilizando:**  
+-   **Para agregar una réplica, mediante:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,18 +42,18 @@ ms.locfileid: "72783012"
 ## <a name="before-you-begin"></a>Antes de empezar  
  Se recomienda encarecidamente leer esta sección antes de intentar crear el primer grupo de disponibilidad.  
   
-##  <a name="PrerequisitesRestrictions"></a> Requisitos previos y restricciones  
+##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a>Requisitos previos y restricciones  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
- Para obtener más información, consulte [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Para más información, vea [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="Security"></a> Seguridad  
+##  <a name="security"></a><a name="Security"></a> Seguridad  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para agregar una réplica**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
@@ -72,7 +72,7 @@ ms.locfileid: "72783012"
   
          Para agregar réplicas adicionales, repita los pasos anteriores. Cuando haya terminado de especificar las réplicas, haga clic en **Aceptar** para completar la operación.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para agregar una réplica**  
   
 1.  Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal.  
@@ -90,7 +90,7 @@ ms.locfileid: "72783012"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para agregar una réplica**  
   
 1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica principal.  
@@ -121,7 +121,7 @@ ms.locfileid: "72783012"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>Seguimiento: después de agregar una réplica secundaria  
+##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a> Seguimiento: después de agregar una réplica secundaria  
  Para agregar una réplica para un grupo de disponibilidad existente, debe realizar los pasos siguientes:  
   
 1.  Conéctese a la instancia del servidor que va a hospedar la nueva réplica secundaria.  
@@ -132,7 +132,7 @@ ms.locfileid: "72783012"
   
 4.  Una cada una de las bases de datos secundarias al grupo de disponibilidad. Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para administrar una réplica de disponibilidad**  
   
 -   [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  

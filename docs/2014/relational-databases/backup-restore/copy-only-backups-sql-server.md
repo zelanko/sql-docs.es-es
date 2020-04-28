@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798011"
 ---
 # <a name="copy-only-backups-sql-server"></a>Copias de seguridad de solo copia (SQL Server)
@@ -43,11 +43,11 @@ ms.locfileid: "72798011"
 ## <a name="to-create-a-copy-only-backup"></a>Para crear una copia de seguridad de solo copia  
  Para crear una copia de seguridad de solo copia, utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
   
-###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 1.  En la página **General** del cuadro de diálogo **Copia de seguridad de base de datos**, seleccione la opción **Copia de seguridad de solo copia**.  
   
-###  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  La sintaxis de [!INCLUDE[tsql](../../../includes/tsql-md.md)] necesaria es la siguiente:  
   
 -   Para una copia de seguridad completa de solo copia:  
@@ -61,11 +61,11 @@ ms.locfileid: "72798011"
   
      *Database_name* del registro de *\<* copia*>* de seguridad para backup_device... CON COPY_ONLY...  
   
-###  <a name="PowerShellProcedure"></a> Usar PowerShell  
+###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
   
 Utilice el cmdlet `Backup-SqlDatabase` con el parámetro `-CopyOnly`.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
 
 ### <a name="to-create-a-full-or-log-backup"></a>Para crear una copia de seguridad completa o de registros
   
@@ -84,5 +84,5 @@ Utilice el cmdlet `Backup-SqlDatabase` con el parámetro `-CopyOnly`.
 ## <a name="see-also"></a>Consulte también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md)   
+ [Copiar bases de datos con copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

@@ -19,10 +19,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c4a4cfe5c86d39766bcd322b879172b00b33eb68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593702"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
@@ -65,7 +65,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Identificador de la fila del conjunto de resultados.|  
 |**database_id**|**int**|Identificador de base de datos.|  
 |**column_encryption_key_id**|**int**|Identificador de la clave de cifrado de la columna. Nota: este identificador denota una fila en la vista de catálogo [Sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Reservado para su uso en el futuro: Actualmente, siempre contiene 1.|  
+|**column_encryption_key_version**|**int**|Reservado para uso futuro. Actualmente, siempre contiene 1.|  
 |**column_encryption_key_metadata_version**|**Binary(8**|Marca de tiempo que representa la hora de creación de la clave de cifrado de columna.|  
 |**column_encryption_key_encrypted_value**|**varbinary (4000)**|Valor cifrado de la clave de cifrado de columna.|  
 |**column_master_key_store_provider_name**|**sysname**|Nombre del proveedor del almacén de claves que contiene la clave maestra de columna, que se usó para generar el valor cifrado de la clave de cifrado de columna.|  
@@ -84,7 +84,7 @@ sp_describe_parameter_encryption
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versión del algoritmo de normalización de tipos.|  
   
 ## <a name="remarks"></a>Observaciones  
- Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador de cliente, compatible Always Encrypted, llama automáticamente a **sp_describe_parameter_encryption** para recuperar los metadatos de cifrado de las consultas con parámetros, emitidos por la aplicación. Posteriormente, el controlador usa los metadatos de cifrado para cifrar los valores de los parámetros que corresponden a las columnas de base de datos protegidas con Always Encrypted y sustituye los valores de parámetro de texto simple enviados por la aplicación, con el cifrado valores de parámetro, antes de enviar la consulta al motor de base de datos.  
+ Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador de cliente, compatible Always Encrypted, llama automáticamente a **sp_describe_parameter_encryption** para recuperar los metadatos de cifrado de las consultas con parámetros, emitidos por la aplicación. Posteriormente, el controlador utiliza los metadatos de cifrado para cifrar los valores de los parámetros que corresponden a las columnas de base de datos protegidas con Always Encrypted y sustituye los valores de parámetro de texto simple, enviados por la aplicación, con los valores de parámetro cifrados, antes de enviar la consulta al motor de base de datos.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la **definición de clave de cifrado ver cualquier columna** y ver los permisos de **definición de clave maestra de columna** en la base de datos.  
@@ -143,7 +143,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |column_encryption_key_ordinal|database_id|column_encryption_key_id|column_encryption_key_version|column_encryption_key_metadata_version|column_encryption_key_encrypted_value|  
 |--------------------------------------|------------------|---------------------------------|--------------------------------------|------------------------------------------------|-----------------------------------------------|  
-|1|5|1|1|0x99EDA60083A50000|0x016E000001630075007200720065006E00740075007300650072002F006D0079002F006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500CA0D0CEC74ECADD1804CF99137B4BD06BBAB15D7EA 74E0C249A779C7768A5B659E0125D24FF827F5EA8CA517A8E197ECA1353BA814C2B0B2E6C8AB36E3AE6A1E972D69C3C573A963ADAB6686CF5D24F95FE43140C4F9AF48FBA7DF2D053F3B4A1F5693A1F905440F8015BDB43AF8A04BE4E045B89876A0097E5FBC4E6A3B9C3C0D278C540E46C53938B8C957B689C4DC095821C465C73117CBA95B758232 F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE2439 2D801ECAA684DE344FECE05812D12CD72254A014D42D0EABDA41C89FC4F545E88B4B8781E5FAF40D7199D4842D2BFE904D209728ED4F527CBC169E2904F6E711FF81A8F4C25382A2E778DD2A58552ED031AFFDA9D9D891D98AD82155F93C58202FC24A77F415D4F8EF22419D62E188AC609330CCBD97CEE1AEF8A18B01958833604707FDF03B2B3864 87CC679D7E352D0B69F9FB002E51BCD814D077E82A09C14E9892C1F8E0C559CFD5FA841CEF647DAB03C8191DC46B772E94D579D8C80FE93C3827C9F0AE04D5325BC73111E07EEEDBE67F1E2A73580085|  
+|1|5|1|1|0x99EDA60083A50000|0x016E000001630075007200720065006E00740075007300650072002F006D0079002F006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500CA0D0CEC74ECADD1804CF99137B4BD06BBAB15D7EA74E0C249A779C7768A5B659E0125D24FF827F5EA8CA517A8E197ECA1353BA814C2B0B2E6C8AB36E3AE6A1E972D69C3C573A963ADAB6686CF5D24F95FE43140C4F9AF48FBA7DF2D053F3B4A1F5693A1F905440F8015BDB43AF8A04BE4E045B89876A0097E5FBC4E6A3B9C3C0D278C540E46C53938B8C957B689C4DC095821C465C73117CBA95B758232F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE24392D801ECAA684DE344FECE05812D12CD72254A014D42D0EABDA41C89FC4F545E88B4B8781E5FAF40D7199D4842D2BFE904D209728ED4F527CBC169E2904F6E711FF81A8F4C25382A2E778DD2A58552ED031AFFDA9D9D891D98 AD82155F93C58202FC24A77F415D4F8EF22419D62E188AC609330CCBD97CEE1AEF8A18B01958833604707FDF03B2B386487CC679D7E352D0B69F9FB002E51BCD814D077E82A09C14E9892C1F8E0C559CFD5FA841CEF647DAB03C8191DC46B772E94D579D8C80FE93C3827C9F0AE04D5325BC73111E07EEEDBE67F1E2A73580085|  
   
  (Los resultados continúan).  
   
@@ -164,7 +164,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |1|1|  
   
 ## <a name="see-also"></a>Consulte también  
- [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Desarrollo de aplicaciones con Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

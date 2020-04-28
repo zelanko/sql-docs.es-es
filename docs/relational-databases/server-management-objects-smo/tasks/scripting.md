@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909040"
 ---
 # <a name="scripting"></a>Scripting
@@ -28,7 +28,7 @@ ms.locfileid: "72909040"
   
  La generación avanzada de script utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios es un proceso de tres fases:  
   
-1.  Detección  
+1.  de esquema JSON  
   
 2.  Generación de lista  
   
@@ -38,13 +38,12 @@ ms.locfileid: "72909040"
   
  En la fase de generación de lista, el árbol se pasa y se devuelve la lista resultante. Esta lista de objetos aparece en orden de scripting y se puede manipular.  
   
- La fase de generación de la lista utiliza el método <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.WalkDependencies%2A> para devolver <xref:Microsoft.SqlServer.Management.Smo.DependencyTree>. 
-  <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> se puede modificar en esta fase.  
+ La fase de generación de la lista utiliza el método <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.WalkDependencies%2A> para devolver <xref:Microsoft.SqlServer.Management.Smo.DependencyTree>. <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> se puede modificar en esta fase.  
   
  En la tercera y última fase, se genera un script con la lista especificada y las opciones de scripting. El resultado se devuelve como un objeto de sistema <xref:System.Collections.Specialized.StringCollection>. En esta fase los nombres de objeto dependientes se extraen a continuación de la colección Elementos del objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> y de propiedades como <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> y <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Este ejemplo de código requiere una instrucción **Imports** para el espacio de nombres System. Collections. Specialized. Inserte esto con las otras instrucciones Imports, antes de cualquier declaración en la aplicación.  
   

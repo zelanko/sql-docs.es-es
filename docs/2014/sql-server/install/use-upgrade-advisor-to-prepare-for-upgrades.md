@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632734"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar el Asesor de actualizaciones para preparar las actualizaciones
@@ -56,14 +56,13 @@ ms.locfileid: "73632734"
 >  Los informes pueden contener un elemento "otros problemas de actualización". Este elemento vincula a una lista de problemas que no detecta el Asesor de actualizaciones, pero que pueden existir en el servidor o en las aplicaciones. Debe leer la lista de problemas no detectables y determinar si debe realizar cambios en el servidor o en las aplicaciones para solventarlos.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>Cómo instalar y ejecutar el Asesor de actualizaciones  
- La ubicación en la que se instala el Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de lo que se vaya a analizar. El Asesor de actualizaciones admite el análisis remoto de todos los componentes admitidos excepto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si no está analizando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede instalar el Asesor de actualizaciones en cualquier equipo que pueda conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que cumpla los requisitos previos del Asesor de actualizaciones. Para obtener más información, vea [actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Si está examinando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe instalar el Asesor de actualizaciones en el servidor de informes.  
+ La ubicación en la que se instala el Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de lo que se vaya a analizar. El Asesor de actualizaciones admite el análisis remoto de todos los componentes admitidos excepto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si no está analizando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede instalar el Asesor de actualizaciones en cualquier equipo que pueda conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que cumpla los requisitos previos del Asesor de actualizaciones. Para obtener información detallada, vea [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Si está examinando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe instalar el Asesor de actualizaciones en el servidor de informes.  
   
  El Asesor de actualizaciones está disponible en un Feature Pack.  
   
  Los requisitos previos para instalar y ejecutar el asesor de actualizaciones son los siguientes:  
   
--   
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 y [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
+-   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 y [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
 -   Windows Installer a partir de la versión 4.5. Puede instalar Windows Installer desde el [sitio web de Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   

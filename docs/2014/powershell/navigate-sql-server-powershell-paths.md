@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797812"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar por las rutas de acceso de SQL Server PowerShell
@@ -29,10 +29,10 @@ ms.locfileid: "72797812"
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtiene el nodo actual.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Cambia el nodo actual.|  
-|**Get-ChildItem**|**gci**|**dir**|**ls**|Enumera los objetos almacenados en el nodo actual.|  
+|**Get-ChildItem**|**gci**|**dir**|**LS**|Enumera los objetos almacenados en el nodo actual.|  
 |**Get-Item**|**gi**|||Devuelve las propiedades del elemento actual.|  
-|**Rename-Item**|**rni**|**rn**|**ren**|Cambia el nombre de un objeto.|  
-|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Quita un objeto.|  
+|**Rename-Item**|**rni**|**RN**|**ren**|Cambia el nombre de un objeto.|  
+|**Remove-item**|**r**|**del, rd**|**rm, rmdir**|Quita un objeto.|  
   
 > [!IMPORTANT]  
 >  Algunos identificadores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (nombres de objeto) contienen caracteres que Windows PowerShell no admite en los nombres de ruta de acceso. Para obtener más información sobre cómo usar nombres que contengan estos caracteres, vea [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
@@ -43,8 +43,8 @@ ms.locfileid: "72797812"
 |Ubicación de la ruta de acceso|Resultados de Get-ChildItem|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Devuelve el nombre del equipo local. Si ha usado SMO o WMI para conectarse a las instancias de [!INCLUDE[ssDE](../includes/ssde-md.md)] en otros equipos, esos equipos también se enumeran.|  
-|SQLSERVER:\SQL\\*nombreDeEquipo*|Lista de instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo.|  
-|SQLSERVER:\SQL\\*nombreDeEquipo*\\*nombreDeInstancia*|Lista de tipos de objeto de nivel superior en la instancia, como Extremos, Certificados y Bases de datos.|  
+|SQLServer: \ SQL\\*NombreDeEquipo*|Lista de instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo.|  
+|SQLServer: \ SQL\\*NombreDeEquipo*\\*nombreDeInstancia*|Lista de tipos de objeto de nivel superior en la instancia, como Extremos, Certificados y Bases de datos.|  
 |Nodo de clase de objeto, como Databases|Lista de objetos de ese tipo, como la lista de bases de datos: master, model, AdventureWorks2008R2.|  
 |Nodo de nombre de objeto, como AdventureWorks2012|Lista de los tipos de objeto contenidos en el objeto. Por ejemplo, una base de datos mostraría tipos de objeto como tablas y vistas.|  
   
@@ -131,7 +131,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
- [Trabajar con rutas acceso de SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
- [Convertir URN en rutas de acceso del proveedor de SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [Proveedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
+ [Trabajar con rutas de acceso SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
+ [Convertir urn en rutas de acceso del proveedor de SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

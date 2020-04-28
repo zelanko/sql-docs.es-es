@@ -1,5 +1,5 @@
 ---
-title: Desconectarse de un origen de datos o un controlador ? Microsoft Docs
+title: Desconectando de un origen de datos o un controlador | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 154a571bce3a337d539216ce89c32420ab981bd8
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300465"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>Desconectarse de datos de un origen o el controlador
-Cuando una aplicación ha terminado de usar un origen de datos, llama a **SQLDisconnect**. **SQLDisconnect** libera las instrucciones asignadas en la conexión y desconecta el controlador del origen de datos. Devuelve un error si una transacción está en proceso.  
+Cuando una aplicación ha terminado de usar un origen de datos, llama a **SQLDisconnect**. **SQLDisconnect** libera todas las instrucciones que se asignan en la conexión y desconecta el controlador del origen de datos. Devuelve un error si una transacción está en curso.  
   
- Después de desconectarse, la aplicación puede llamar a **SQLFreeHandle** para liberar la conexión. Después de liberar la conexión, es un error de programación de aplicaciones para usar el identificador de la conexión en una llamada a una función ODBC; hacerlo tiene consecuencias indefinidas, pero probablemente fatales. Cuando **SQLFreeHandle** se llama, el controlador libera la estructura utilizada para almacenar información sobre la conexión.  
+ Después de desconectarse, la aplicación puede llamar a **SQLFreeHandle** para liberar la conexión. Después de liberar la conexión, se trata de un error de programación de la aplicación para utilizar el identificador de la conexión en una llamada a una función ODBC. Si lo hace, tendrá consecuencias indefinidas pero probablemente graves. Cuando se llama a **SQLFreeHandle** , el controlador libera la estructura utilizada para almacenar información sobre la conexión.  
   
- La aplicación también puede reutilizar la conexión, ya sea para conectarse a un origen de datos diferente o volver a conectarse al mismo origen de datos. La decisión de permanecer conectado, en lugar de desconectar y volver a conectar más tarde, requiere que el escritor de la aplicación considere los costos relativos de cada opción; tanto la conexión a un origen de datos como el permanecer conectado pueden ser relativamente costosos dependiendo del medio de conexión. Al realizar una compensación correcta, la aplicación también debe hacer suposiciones sobre la probabilidad y el momento de otras operaciones en el mismo origen de datos.
+ La aplicación también puede volver a usar la conexión, ya sea para conectarse a un origen de datos diferente o volver a conectarse al mismo origen de datos. La decisión de seguir conectado, en lugar de desconectarse y volver a conectarse más tarde, requiere que el escritor de la aplicación tenga en cuenta los costos relativos de cada opción. la conexión a un origen de datos y la conexión restante puede ser relativamente costosa según el medio de conexión. Al realizar un equilibrio correcto, la aplicación también debe realizar suposiciones sobre la probabilidad y el tiempo de operaciones posteriores en el mismo origen de datos.

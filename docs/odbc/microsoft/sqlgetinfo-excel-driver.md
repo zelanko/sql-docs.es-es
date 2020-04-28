@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (controlador de Excel) Microsoft Docs
+title: SQLGetInfo (controlador de Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0a96b135bbd8d44b82e645fac59ddea795666f3f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298585"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (controlador de Excel)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador de Excel. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de Excel. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** admite el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica cómo el controlador trata directamente los archivos en un origen de datos:  
+ **SQLGetInfo** admite el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica cómo el controlador trata directamente los archivos de un origen de datos:  
   
 -   SQL_FILE_NOT_SUPPORTED: el controlador no es un controlador de un solo nivel.  
   
@@ -32,11 +32,11 @@ ms.locfileid: "81298585"
   
 -   SQL_FILE_QUALIFIER: un controlador de un solo nivel trata los archivos de un origen de datos como un calificador.  
   
- El controlador ODBC devuelve SQL_FILE_TABLE para Elcontrolador de Microsoft Excel porque cada archivo es una tabla.  
+ El controlador ODBC devuelve SQL_FILE_TABLE para Microsoft Exceldriver porque cada archivo es una tabla.  
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|Isam|Versión|Formato de los números de versión|  
+|ISAM|Version|Formato de los números de versión|  
 |----------|-------------|-------------------------------|  
 |Microsoft Excel|3.0|03.00.0000|  
 ||4.0|04.00.0000|  
@@ -71,7 +71,7 @@ ms.locfileid: "81298585"
 ## <a name="sql_catalog_term"></a>SQL_CATALOG_TERM  
  "Directorio" (Excel 3.0/4.0)  
   
- "Libro de trabajo" (Excel 5.0/7.0/97)  
+ "Libro" (Excel 5.0/7.0/97)  
   
 ## <a name="sql_catalog_usage"></a>SQL_CATALOG_USAGE  
  SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  

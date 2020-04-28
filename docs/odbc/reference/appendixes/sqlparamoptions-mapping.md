@@ -1,5 +1,5 @@
 ---
-title: Asignación de SQLParamOptions ( SQLParamOptions Mapping) Microsoft Docs
+title: Asignación de SQLParamOptions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3b083800b660b8ccd26da747e4caf745531188e5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300565"
 ---
 # <a name="sqlparamoptions-mapping"></a>Asignación de SQLParamOptions
-Cuando una aplicación llama a **SQLParamOptions** a través de un controlador ODBC *3.x,* la llamada  
+Cuando una aplicación llama a **SQLParamOptions** a través de un controlador ODBC *3. x* , la llamada a  
   
 ```  
 SQLParamOptions(hstmt, crow, piRow);  
 ```  
   
- se asignará a dos llamadas de **SQLSetStmtAttr** de la siguiente manera:  
+ se asignará a dos llamadas de **SQLSetStmtAttr** como se indica a continuación:  
   
 ```  
 SQLSetStmtAttr(hstmt, SQL_ATTR_PARAMSET_SIZE, crow, 0);  

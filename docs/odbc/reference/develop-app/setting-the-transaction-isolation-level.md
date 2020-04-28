@@ -1,5 +1,5 @@
 ---
-title: Configuración del nivel de aislamiento de la transacción ( Transaction Isolation Level) Microsoft Docs
+title: Establecer el nivel de aislamiento de transacción | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 80401b276355a47469355cb6921d768d168398ae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299815"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Establecer el nivel de aislamiento de la transacción
-Para establecer el nivel de aislamiento de transacción, una aplicación utiliza el atributo de conexión SQL_ATTR_TXN_ISOLATION. Si el origen de datos no admite el nivel de aislamiento solicitado, el controlador o el origen de datos pueden establecer un nivel superior. Para determinar qué niveles de aislamiento de transacción admite un origen de datos y cuál es el nivel de aislamiento predeterminado, una aplicación llama a **SQLGetInfo** con las opciones SQL_TXN_ISOLATION_OPTION y SQL_DEFAULT_TXN_ISOLATION, respectivamente.  
+Para establecer el nivel de aislamiento de transacción, una aplicación utiliza el atributo de conexión SQL_ATTR_TXN_ISOLATION. Si el origen de datos no admite el nivel de aislamiento solicitado, el controlador o el origen de datos puede establecer un nivel superior. Para determinar qué niveles de aislamiento de transacción admite un origen de datos y cuál es el nivel de aislamiento predeterminado, una aplicación llama a **SQLGetInfo** con las opciones SQL_TXN_ISOLATION_OPTION y SQL_DEFAULT_TXN_ISOLATION, respectivamente.  
   
- Los niveles más altos de aislamiento de transacciones ofrecen la mayor protección para la integridad de los datos de la base de datos. Se garantiza que las transacciones serializables no se verán afectadas por otras transacciones y, por lo tanto, se garantiza que se mantenga la integridad de la base de datos.  
+ Los niveles más altos de aislamiento de transacción ofrecen la máxima protección para la integridad de los datos de la base de datos. Se garantiza que las transacciones serializables no se ven afectadas por otras transacciones y, por tanto, se garantiza que se mantiene la integridad de la base de datos.  
   
- Sin embargo, un mayor nivel de aislamiento de transacción puede provocar un rendimiento más lento porque aumenta las posibilidades de que la aplicación tenga que esperar a que se liberen los bloqueos de los datos. Una aplicación puede especificar un nivel inferior de aislamiento para aumentar el rendimiento en los siguientes casos:  
+ Sin embargo, un mayor nivel de aislamiento de transacción puede provocar un rendimiento más lento, ya que aumenta las posibilidades de que la aplicación tenga que esperar a que se liberen los bloqueos en los datos. Una aplicación puede especificar un nivel de aislamiento inferior para aumentar el rendimiento en los casos siguientes:  
   
--   Cuando se puede garantizar que no existen otras transacciones que puedan interferir con las transacciones de una aplicación. Esta situación se produce solo en circunstancias limitadas, como cuando una persona de una pequeña empresa mantiene archivos dBASE que contienen datos de personal en un equipo y no comparten estos archivos.  
+-   Cuando se pueda garantizar que no existan otras transacciones que puedan interferir con las transacciones de una aplicación. Esta situación solo se produce en circunstancias limitadas, por ejemplo, cuando una persona de una empresa pequeña mantiene archivos dBASE que contienen datos personales en un equipo y no los comparten.  
   
--   Cuando la velocidad es más crítica que la precisión y es probable que los errores sean pequeños. Por ejemplo, supongamos que una empresa realiza muchas ventas pequeñas y que las ventas grandes son raras. Una transacción que estima el valor total de todas las ventas abiertas podría usar de forma segura el nivel de aislamiento Leer no confirmado. Aunque la transacción incluiría pedidos que se están abrir o cerrar y que posteriormente se revierten, generalmente se cancelarían entre sí y la transacción sería mucho más rápida porque no se bloquea cada vez que encuentra un pedido de este tipo.  
+-   Cuando la velocidad es más crítica que la precisión y es probable que los errores sean pequeños. Por ejemplo, supongamos que una empresa realiza muchas ventas pequeñas y que las grandes ventas son poco frecuentes. Una transacción que calcula el valor total de todas las ventas abiertas puede usar de forma segura el nivel de aislamiento READ UNCOMMITTED. Aunque la transacción incluiría pedidos que se están abriendo o cerrando y que se revierten posteriormente, normalmente se cancelarían entre sí y la transacción sería mucho más rápida porque no se bloqueó cada vez que encuentra un pedido.  
   
- Para obtener más información, vea [Simultaneidad optimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).
+ Para obtener más información, consulte [simultaneidad optimista](../../../odbc/reference/develop-app/optimistic-concurrency.md).

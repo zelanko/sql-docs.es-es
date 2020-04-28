@@ -1,5 +1,5 @@
 ---
-title: SELECT - Comando SQL ? Microsoft Docs
+title: Comando SELECT-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300945"
 ---
 # <a name="select---sql-command"></a>Seleccione - comando SQL
-Recupera datos de una o varias tablas.  
+Recupera datos de una o más tablas.  
   
- El controlador ODBC de Visual FoxPro admite la sintaxis de lenguaje nativo de Visual FoxPro para este comando. Para obtener información específica del controlador, consulte **Comentarios del controlador**.  
+ El controlador ODBC de Visual FoxPro admite la sintaxis nativa del lenguaje Visual FoxPro para este comando. Para obtener información específica del controlador, consulte los **comentarios del controlador**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,25 +45,25 @@ FROM [DatabaseName!]Table [Local_Alias]
 ## <a name="arguments"></a>Argumentos  
   
 > [!NOTE]  
->  Una *subconsulta,* a la que se hace referencia en los argumentos siguientes, es selectdentro de SELECT y debe incluirse entre paréntesis. Puede tener hasta dos subconsultas en el mismo nivel (no anidado) en la cláusula WHERE. (Véase esa sección de los argumentos.) Las subconsultas pueden contener varias condiciones de combinación.  
+>  Una *subconsulta*, a la que se hace referencia en los argumentos siguientes, es una selección dentro de una SELECT y debe incluirse entre paréntesis. Puede tener hasta dos subconsultas en el mismo nivel (no anidadas) en la cláusula WHERE. (Vea la sección de los argumentos). Las subconsultas pueden contener varias condiciones de combinación.  
   
- [TODAS &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
- La cláusula SELECT especifica los campos, constantes y expresiones que se muestran en los resultados de la consulta.  
+ [TODOS LOS &#124; DISTINTOS]   [*Alias*.] *Select_Item* [como *Column_Name*] [, [*alias*.] *Select_Item* [como *Column_Name*]...]  
+ La cláusula SELECT especifica los campos, las constantes y las expresiones que se muestran en los resultados de la consulta.  
   
- De forma predeterminada, ALL muestra todas las filas de los resultados de la consulta.  
+ De forma predeterminada, todas las filas se muestran en los resultados de la consulta.  
   
- DISTINCT excluye los duplicados de las filas de los resultados de la consulta.  
+ DISTINCt excluye los duplicados de las filas de los resultados de la consulta.  
   
 > [!NOTE]  
->  Puede usar DISTINCT solo una vez por cláusula SELECT.  
+>  Puede usar DISTINCt solo una vez por cada cláusula SELECT.  
   
- *Alias*. califica los nombres de elementocoincidentes. Cada elemento que especifique con *Select_Item* genera una columna de los resultados de la consulta. Si dos o más elementos tienen el mismo nombre, incluya el alias de tabla y un punto antes del nombre del elemento para evitar que se dupliquen las columnas.  
+ *Alias*. califica nombres de elementos coincidentes. Cada elemento que se especifica con *Select_Item* genera una columna de los resultados de la consulta. Si dos o más elementos tienen el mismo nombre, incluya el alias de la tabla y un punto delante del nombre del elemento para evitar que se dupliquen las columnas.  
   
- *Select_Item* especifica un elemento que se incluirá en los resultados de la consulta. Un elemento puede ser uno de los siguientes:  
+ *Select_Item* especifica un elemento que se va a incluir en los resultados de la consulta. Un elemento puede ser uno de los siguientes:  
   
--   El nombre de un campo de una tabla de la cláusula FROM.  
+-   Nombre de un campo de una tabla en la cláusula FROM.  
   
--   Constante que especifica que el mismo valor constante debe aparecer en cada fila de los resultados de la consulta.  
+-   Constante que especifica que el mismo valor constante va a aparecer en cada fila de los resultados de la consulta.  
   
 -   Expresión que puede ser el nombre de una función definida por el usuario.  
   
@@ -71,104 +71,104 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  Aunque el uso de funciones definidas por el usuario en la cláusula SELECT tiene ventajas obvias, también debe tener en cuenta las siguientes restricciones:  
   
--   La velocidad de las operaciones realizadas con SELECT podría estar limitada por la velocidad a la que se ejecutan dichas funciones definidas por el usuario. Las manipulaciones de gran volumen que implican funciones definidas por el usuario podrían lograrse mejor mediante el uso de la API y las funciones definidas por el usuario escritas en C o en lenguaje ensamblador.  
+-   La velocidad de las operaciones realizadas con SELECT puede estar limitada por la velocidad a la que se ejecutan dichas funciones definidas por el usuario. Las manipulaciones de gran volumen que implican funciones definidas por el usuario se pueden lograr mejor mediante el uso de funciones de API y definidas por el usuario escritas en C o en lenguaje ensamblador.  
   
--   La única manera confiable de pasar valores a funciones definidas por el usuario invocadas desde SELECT es mediante la lista de argumentos que se pasa a la función cuando se invoca.  
+-   La única manera confiable de pasar valores a las funciones definidas por el usuario invocadas desde SELECT es mediante la lista de argumentos que se pasa a la función cuando se invoca.  
   
--   Incluso si experimentas y descubres una manipulación supuestamente prohibida que funciona correctamente en una determinada versión de FoxPro, no hay garantía de que siga funcionando en versiones posteriores.  
+-   Incluso si experimenta y detecta una manipulación supuestamente prohibida que funciona correctamente en una determinada versión de FoxPro, no hay ninguna garantía de que seguirá funcionando en versiones posteriores.  
   
- Aparte de estas restricciones, las funciones definidas por el usuario son aceptables en la cláusula SELECT. Sin embargo, recuerde que el uso de SELECT podría ralentizar el rendimiento.  
+ Además de estas restricciones, las funciones definidas por el usuario son aceptables en la cláusula SELECT. Sin embargo, recuerde que el uso de SELECT puede ralentizar el rendimiento.  
   
- Las siguientes funciones de campo están disponibles para su uso con un elemento de selección que es un campo o una expresión que implica un campo:  
+ Las siguientes funciones de campo están disponibles para su uso con un elemento SELECT que sea un campo o una expresión que contenga un campo:  
   
--   AVG(*Select_Item*)-Promedio de una columna de datos numéricos.  
+-   AVG (*Select_Item*): calcula el promedio de una columna de datos numéricos.  
   
--   COUNT(*Select_Item*)-Cuenta el número de elementos seleccionados en una columna. COUNT(*) cuenta el número de filas en la salida de la consulta.  
+-   COUNT (*Select_Item*): cuenta el número de elementos seleccionados en una columna. COUNT (*) cuenta el número de filas del resultado de la consulta.  
   
--   MIN(*Select_Item*)-Determina el valor más pequeño de *Select_Item* en una columna.  
+-   MIN (*Select_Item*): determina el valor más pequeño de *Select_Item* en una columna.  
   
--   MAX(*Select_Item*)-Determina el valor más grande de *Select_Item* en una columna.  
+-   MAX (*Select_Item*): determina el valor mayor de *Select_Item* en una columna.  
   
--   SUM(*Select_Item*)-Totaliza una columna de datos numéricos.  
+-   SUM (*Select_Item*): suma una columna de datos numéricos.  
   
  No se pueden anidar funciones de campo.  
   
  COMO *Column_Name*  
- Especifica el encabezado de una columna en la salida de la consulta. Esto es útil cuando *Select_Item* es una expresión o contiene una función de campo y desea asignar un nombre significativo a la columna. *Column_Name* puede ser una expresión, pero no puede contener caracteres (por ejemplo, espacios) que no están permitidos en los nombres de campo de tabla.  
+ Especifica el encabezado de una columna en el resultado de la consulta. Esto resulta útil cuando *Select_Item* es una expresión o contiene una función de campo y se desea asignar un nombre descriptivo a la columna. *Column_Name* puede ser una expresión, pero no puede contener caracteres (por ejemplo, espacios) que no se permiten en los nombres de campos de tabla.  
   
- DESDE [*DatabaseName*!] *Tabla* [*Local_Alias*] [, [*DatabaseName*!] *Cuadro* [*Local_Alias*] ...]  
- Enumera las tablas que contienen los datos que recupera la consulta. Si no hay ninguna tabla abierta, Visual FoxPro muestra el cuadro de diálogo **Abrir** para que pueda especificar la ubicación del archivo. Una vez abierta, la tabla permanece abierta una vez completada la consulta.  
+ DESDE [*nombreDeBaseDeDatos*!] *Tabla* [*Local_Alias*] [, [*nombreDeBaseDeDatos*!] *Tabla* [*Local_Alias*]...]  
+ Muestra las tablas que contienen los datos que recupera la consulta. Si no hay ninguna tabla abierta, Visual FoxPro muestra el cuadro de diálogo **abrir** para que pueda especificar la ubicación del archivo. Una vez abierta, la tabla permanece abierta después de completarse la consulta.  
   
  *DatabaseName*! especifica el nombre de una base de datos distinta de la especificada con el origen de datos. Debe incluir el nombre de la base de datos que contiene la tabla si la base de datos no se especifica con el origen de datos. Incluya el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de la tabla.  
   
- *Local_Alias* especifica un nombre temporal para la tabla denominada en *Tabla*. Si especifica un alias local, debe utilizar el alias local en lugar del nombre de la tabla en toda la instrucción SELECT. El alias local no afecta al entorno de Visual FoxPro.  
+ *Local_Alias* especifica un nombre temporal para la tabla denominada en la *tabla*. Si especifica un alias local, debe utilizar el alias local en lugar del nombre de tabla en la instrucción SELECT. El alias local no afecta al entorno de Visual FoxPro.  
   
- WHERE *JoinCondition* [AND *JoinCondition* ...]    [Y &#124; O *FilterCondition* [Y &#124; O *FilterCondition* ...]]  
- Indica a Visual FoxPro que incluya solo determinados registros en los resultados de la consulta. WHERE es necesario para recuperar datos de varias tablas.  
+ WHERE *JoinCondition* [and *JoinCondition* ...]    [AND &#124; o *FilterCondition* [y &#124; o *FilterCondition* ...]]  
+ Indica a Visual FoxPro que solo incluya determinados registros en los resultados de la consulta. DONDE es necesario para recuperar los datos de varias tablas.  
   
- *JoinCondition* especifica los campos que vinculan las tablas de la cláusula FROM. Si incluye más de una tabla en una consulta, debe especificar una condición de combinación para cada tabla después de la primera.  
+ *JoinCondition* especifica campos que vinculan las tablas en la cláusula FROM. Si incluye más de una tabla en una consulta, debe especificar una condición de combinación para cada tabla después de la primera.  
   
 > [!IMPORTANT]  
->  Tenga en cuenta la siguiente información al crear condiciones de combinación:  
+>  Cuando cree condiciones de combinación, tenga en cuenta la siguiente información:  
   
--   Si incluye dos tablas en una consulta y no especifica una condición de combinación, cada registro de la primera tabla se une a cada registro de la segunda tabla siempre que se cumplan las condiciones de filtro. Esta consulta puede producir resultados largos.  
+-   Si incluye dos tablas en una consulta y no especifica una condición de combinación, cada registro de la primera tabla se combina con cada registro de la segunda tabla, siempre y cuando se cumplan las condiciones del filtro. Este tipo de consulta puede generar resultados largos.  
   
--   Tenga cuidado al unir tablas con campos vacíos porque Visual FoxPro coincide con campos vacíos. Por ejemplo, si se une al CLIENTE. ZIP e INVOICE. ZIP y si CUSTOMER contiene 100 códigos postales vacíos e INVOICE contiene 400 códigos postales vacíos, la salida de la consulta contiene 40.000 registros adicionales resultantes de los campos vacíos. Utilice la función **EMPTY( )** para eliminar los registros vacíos de la salida de la consulta.  
+-   Tenga cuidado al combinar tablas con campos vacíos porque Visual FoxPro coincide con campos vacíos. Por ejemplo, si se une a en CUSTOMER. ZIP y factura. ZIP y si el cliente contiene 100 códigos postales vacíos y la factura contiene 400 códigos postales vacíos, el resultado de la consulta contiene 40.000 registros adicionales resultantes de los campos vacíos. Utilice la función **Empty ()** para eliminar los registros vacíos del resultado de la consulta.  
   
--   Debe utilizar el operador AND para conectar varias condiciones de unión. Cada condición de combinación tiene el siguiente formulario:  
+-   Debe utilizar el operador AND para conectar varias condiciones de combinación. Cada condición de combinación tiene el formato siguiente:  
   
-     *FieldName1 Comparación FieldName2*  
+     *FieldName1 Comparison FieldName2*  
   
-     *FieldName1* es el nombre de un campo de una tabla, *FieldName2* es el nombre de un campo de otra tabla y *Comparison* es uno de los operadores descritos en la tabla siguiente.  
+     *FieldName1* es el nombre de un campo de una tabla, *FieldName2* es el nombre de un campo de otra tabla y la *comparación* es uno de los operadores descritos en la tabla siguiente.  
   
 |Operator|De comparación|  
 |--------------|----------------|  
 |=|Igual|  
 |==|Exactamente igual|  
 |LIKE|SQL LIKE|  
-|<>, !o, #|No igual|  
+|<>,! =, #|No igual|  
 |>|Más de|  
-|>=|Más o igual que|  
+|>=|Mayor o igual que|  
 |<|Menor que|  
 |<=|Menor o igual que|  
   
- Cuando se utiliza el operador de la clase - con cadenas, actúa de forma diferente, dependiendo de la configuración de SET ANSI. Cuando SET ANSI se establece en OFF, Visual FoxPro trata las comparaciones de cadenas de una manera familiar para los usuarios de Xbase. Cuando SET ANSI se establece en ON, Visual FoxPro sigue los estándares ANSI para las comparaciones de cadenas. Consulte [SET ANSI](../../odbc/microsoft/set-ansi-command.md) y [SET EXACT](../../odbc/microsoft/set-exact-command.md) para obtener más información sobre cómo Visual FoxPro realiza comparaciones de cadenas.  
+ Cuando se usa el operador = con cadenas, actúa de forma diferente, dependiendo de la configuración de SET ANSI. Cuando SET ANSI está establecido en OFF, Visual FoxPro trata las comparaciones de cadenas de una manera familiar para los usuarios de xBase. Cuando SET ANSI está establecido en ON, Visual FoxPro sigue los estándares ANSI para las comparaciones de cadenas. Vea [set ANSI](../../odbc/microsoft/set-ansi-command.md) y [set Exact](../../odbc/microsoft/set-exact-command.md) para obtener más información sobre cómo Visual FoxPro realiza comparaciones de cadenas.  
   
- *FilterCondition* especifica los criterios que los registros deben cumplir para incluirse en los resultados de la consulta. Puede incluir tantas condiciones de filtro en una consulta como desee, conectándolas con el operador AND u OR. También puede utilizar el operador NOT para invertir el valor de una expresión lógica, o puede utilizar **EMPTY( )** para comprobar si hay un campo vacío. *FilterCondition* puede tomar cualquiera de los formularios en los siguientes ejemplos:  
+ *FilterCondition* especifica los criterios que los registros deben cumplir para que se incluyan en los resultados de la consulta. Puede incluir tantas condiciones de filtro en una consulta como desee, conectarlas con el operador AND u OR. También puede usar el operador NOT para invertir el valor de una expresión lógica, o puede usar **Empty ()** para comprobar si hay un campo vacío. *FilterCondition* puede tomar cualquiera de los formatos de los ejemplos siguientes:  
   
  **Ejemplo 1** *FieldName1 Comparison FieldName2*  
   
  `customer.cust_id = orders.cust_id`  
   
- **Ejemplo 2** Expresión de *comparación FieldName*  
+ **Ejemplo 2** *expresión de comparación de FieldName*  
   
  `payments.amount >= 1000`  
   
- **Ejemplo 3** *FieldName Comparison* ALL (*Subconsulta*)  
+ **Ejemplo 3** de *comparación de FieldName* (*subconsulta*)  
   
  `company < ALL ;`  
   
  `(SELECT company FROM customer WHERE country = "USA")`  
   
- Cuando la condición de filtro incluye ALL, el campo debe cumplir la condición de comparación para todos los valores generados por la subconsulta antes de que su registro se incluya en los resultados de la consulta.  
+ Cuando la condición de filtro incluye ALL, el campo debe cumplir la condición de comparación de todos los valores generados por la subconsulta antes de que su registro esté incluido en los resultados de la consulta.  
   
- **Ejemplo 4** *FieldName Comparison* ANY &#124; SOME (*Subquery*)  
+ **Ejemplo 4** de la *comparación de FIELDNAME* cualquier &#124; alguna (*subconsulta*)  
   
  `company < ANY ;`  
   
  `(SELECT company FROM customer WHERE country = "USA")`  
   
- Cuando la condición de filtro incluye ANY o SOME, el campo debe cumplir la condición de comparación para al menos uno de los valores generados por la subconsulta.  
+ Cuando la condición de filtro incluye alguna o alguna, el campo debe cumplir la condición de comparación para al menos uno de los valores generados por la subconsulta.  
   
- En el ejemplo siguiente se comprueba si los valores del campo están dentro de un intervalo de valores especificado:  
+ En el ejemplo siguiente se comprueba si los valores del campo están dentro de un intervalo especificado de valores:  
   
- **Ejemplo 5** *NombreDeCampo* [NO] ENTRE *Start_Range* Y *End_Range*  
+ **Ejemplo 5** *FieldName* [Not] between *Start_Range* y *End_Range*  
   
  `customer.postalcode BETWEEN 90000 AND 99999`  
   
- En el ejemplo siguiente se comprueba si al menos una fila cumple los criterios de la subconsulta. Cuando la condición de filtro incluye EXISTS, la condición de filtro se evalúa como True (. T.) a menos que la subconsulta se evalúe como el conjunto vacío.  
+ En el ejemplo siguiente se comprueba si al menos una fila cumple los criterios de la subconsulta. Cuando la condición de filtro incluye EXISTs, la condición de filtro se evalúa como true (. T.) a menos que la subconsulta se evalúe como el conjunto vacío.  
   
- **Ejemplo 6** [NOT] EXISTE (*Subconsulta*)  
+ **Ejemplo 6** [Not] exists (*subconsulta*)  
   
  `EXISTS ;`  
   
@@ -176,60 +176,60 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `orders.postalcode)`  
   
- **Ejemplo 7** *FieldName* [NOT] IN *Value_Set*  
+ **Ejemplo 7** *FieldName* [no] en *Value_Set*  
   
  `customer.postalcode NOT IN ("98052","98072","98034")`  
   
- Cuando la condición de filtro incluye IN, el campo debe contener uno de los valores antes de que su registro se incluya en los resultados de la consulta.  
+ Cuando la condición de filtro incluye en, el campo debe contener uno de los valores antes de que su registro esté incluido en los resultados de la consulta.  
   
- **Ejemplo 8** *FieldName* [NOT] IN (*Subconsulta*)  
+ **Ejemplo 8** *FieldName* [no] in (*subconsulta*)  
   
  `customer.cust_id IN ;`  
   
  `(SELECT orders.cust_id FROM orders WHERE orders.city="Seattle")`  
   
- Aquí el campo debe contener uno de los valores devueltos por la subconsulta antes de que su registro se incluya en los resultados de la consulta.  
+ Aquí el campo debe contener uno de los valores devueltos por la subconsulta antes de que su registro esté incluido en los resultados de la consulta.  
   
- **Ejemplo 9** *FieldName* [NOT] LIKE *cExpression*  
+ **Ejemplo 9** *FieldName* [Not] like *cExpression*  
   
  `customer.country NOT LIKE "USA"`  
   
- Esta condición de filtro busca cada campo que coincida con *cExpression*. Puede utilizar el signo de porcentaje (%) y caracteres comodín de subrayado ( _ ) como parte de *cExpression*. El carácter de subrayado representa un único carácter desconocido en la cadena.  
+ Esta condición de filtro busca cada campo que coincida con *cExpression*. Puede usar el signo de porcentaje (%) y caracteres comodín de subrayado (_) como parte de *cExpression*. El carácter de subrayado representa un único carácter desconocido en la cadena.  
   
- GRUPO POR *GroupColumn* [, *GroupColumn* ...]  
- Agrupa las filas de la consulta en función de los valores de una o varias columnas. *GroupColumn* puede ser uno de los siguientes:  
+ AGRUPAr por *GroupColumn* [, *GroupColumn* ...]  
+ Agrupa las filas de la consulta en función de los valores de una o más columnas. *GroupColumn* puede ser uno de los siguientes:  
   
--   El nombre de un campo de tabla normal.  
+-   Nombre de un campo de tabla normal.  
   
--   Un campo que incluye una función de campo SQL.  
+-   Campo que incluye una función de campo SQL.  
   
--   Expresión numérica que indica la ubicación de la columna en la tabla de resultados. (El número de columna más a la izquierda es 1.)  
+-   Expresión numérica que indica la ubicación de la columna en la tabla de resultados. (El número de la columna situada más a la izquierda es 1).  
   
- HAVING *FilterCondition*  
- Especifica una condición de filtro que los grupos deben cumplir para incluirse en los resultados de la consulta. HAVING debe utilizarse con GROUP BY y puede incluir tantas condiciones de filtro como desee, conectadas por el operador AND u OR. También puede utilizar NOT para invertir el valor de una expresión lógica.  
+ TENER *FilterCondition*  
+ Especifica una condición de filtro que los grupos deben cumplir para que se incluyan en los resultados de la consulta. HAVING debe usarse con GROUP BY y puede incluir tantas condiciones de filtro como desee, conectadas mediante el operador AND u OR. También puede usar NOT para invertir el valor de una expresión lógica.  
   
  *FilterCondition* no puede contener una subconsulta.  
   
- Una cláusula HAVING sin una cláusula GROUP BY se comporta como una cláusula WHERE. Puede utilizar alias locales y funciones de campo en la cláusula HAVING. Utilice una cláusula WHERE para un rendimiento más rápido si la cláusula HAVING no contiene funciones de campo.  
+ Una cláusula HAVING sin una cláusula GROUP BY se comporta como una cláusula WHERE. Puede usar los alias locales y las funciones de campo en la cláusula HAVING. Use una cláusula WHERE para obtener un rendimiento más rápido si la cláusula HAVING no contiene funciones de campo.  
   
  [UNION [ALL] *SELECTCommand*]  
- Combina los resultados finales de un SELECT con los resultados finales de otro SELECT. De forma predeterminada, UNION comprueba los resultados combinados y elimina las filas duplicadas. Utilice paréntesis para combinar varias cláusulas UNION.  
+ Combina los resultados finales de una selección con los resultados finales de otra SELECT. De forma predeterminada, UNION comprueba los resultados combinados y elimina las filas duplicadas. Use paréntesis para combinar varias cláusulas UNION.  
   
  ALL impide que UNION elimine filas duplicadas de los resultados combinados.  
   
  Las cláusulas UNION siguen estas reglas:  
   
--   No puede utilizar UNION para combinar subconsultas.  
+-   No se puede utilizar UNION para combinar subconsultas.  
   
--   Ambos comandos SELECT deben tener el mismo número de columnas en la salida de la consulta.  
+-   Ambos comandos SELECT deben tener el mismo número de columnas en el resultado de la consulta.  
   
--   Cada columna de los resultados de la consulta de un SELECT debe tener el mismo tipo de datos y ancho que la columna correspondiente en la otra SELECT.  
+-   Cada columna de los resultados de la consulta de una selección debe tener el mismo tipo de datos y el mismo ancho que la columna correspondiente de la otra SELECT.  
   
--   Solo el SELECT final puede tener una cláusula ORDER BY, que debe hacer referencia a las columnas de salida por número. Si se incluye una cláusula ORDER BY, afecta al resultado completo.  
+-   Solo la selección final puede tener una cláusula ORDER BY, que debe hacer referencia a las columnas de salida por número. Si se incluye una cláusula ORDER BY, afectará al resultado completo.  
   
  También puede utilizar la cláusula UNION para simular una combinación externa.  
   
- Al unir dos tablas en una consulta, solo se incluyen en la salida los registros con valores coincidentes en los campos de combinación. Si un registro de la tabla primaria no tiene un registro correspondiente en la tabla secundaria, el registro de la tabla primaria no se incluye en la salida. Una combinación externa le permite incluir todos los registros de la tabla primaria en la salida, junto con los registros coincidentes de la tabla secundaria. Para crear una combinación externa en Visual FoxPro, debe utilizar un comando SELECT anidado, como en el ejemplo siguiente:  
+ Al combinar dos tablas en una consulta, solo se incluyen en la salida los registros con valores coincidentes en los campos de combinación. Si un registro de la tabla primaria no tiene un registro correspondiente en la tabla secundaria, el registro de la tabla primaria no se incluye en la salida. Una combinación externa permite incluir todos los registros de la tabla primaria en la salida, junto con los registros coincidentes en la tabla secundaria. Para crear una combinación externa en Visual FoxPro, debe usar un comando SELECT anidado, como en el ejemplo siguiente:  
   
 ```  
 SELECT customer.company, orders.order_id, orders.emp_id ;  
@@ -245,43 +245,43 @@ WHERE customer.cust_id NOT IN ;
 > [!NOTE]  
 >  Asegúrese de incluir el espacio que precede inmediatamente a cada punto y coma. De lo contrario, recibirá un error.  
   
- La sección del comando antes de la cláusula UNION selecciona registros de ambas tablas que tienen valores coincidentes. Las empresas cliente que no tienen facturas asociadas no se incluyen. La sección del comando después de la cláusula UNION selecciona registros en la tabla de clientes que no tienen registros coincidentes en la tabla de pedidos.  
+ La sección del comando antes de la cláusula UNION selecciona los registros de las dos tablas que tienen valores coincidentes. No se incluyen las empresas del cliente que no tienen facturas asociadas. La sección del comando después de la cláusula UNION selecciona los registros de la tabla Customer que no tienen registros coincidentes en la tabla Orders.  
   
- Con respecto a la segunda sección del comando, tenga en cuenta lo siguiente:  
+ En cuanto a la segunda sección del comando, tenga en cuenta lo siguiente:  
   
--   La instrucción SELECT entre paréntesis se procesa primero. Este extracto crea una selección de todos los números de cliente en la tabla de pedidos.  
+-   La instrucción SELECT dentro de los paréntesis se procesa en primer lugar. Esta instrucción crea una selección de todos los números de cliente en la tabla Orders.  
   
--   La cláusula WHERE busca todos los números de cliente en la tabla de clientes que no están en la tabla de pedidos. Dado que la primera sección del comando proporcionaba a todas las empresas que tenían un número de cliente en la tabla de pedidos, todas las empresas de la tabla de clientes ahora se incluyen en los resultados de la consulta.  
+-   La cláusula WHERE encuentra todos los números de cliente de la tabla Customer que no están en la tabla Orders. Dado que la primera sección del comando proporcionó todas las compañías que tenían un número de cliente en la tabla Orders, todas las compañías de la tabla Customer se incluyen ahora en los resultados de la consulta.  
   
--   Dado que las estructuras de tablas incluidas en union deben ser idénticas, hay dos marcadores de posición en la segunda instrucción SELECT para representar *orders.order_id* y *orders.emp_id* de la primera instrucción SELECT.  
+-   Dado que las estructuras de las tablas incluidas en una Unión deben ser idénticas, hay dos marcadores de posición en la segunda instrucción SELECT para representar los *pedidos. order_id* y *orders. emp_id* de la primera instrucción SELECT.  
   
     > [!NOTE]  
-    >  Los marcadores de posición deben ser del mismo tipo que los campos que representan. Si el campo es un tipo de fecha, el marcador de posición debe ser . Si el campo es un campo de carácter, el marcador de posición debe ser la cadena vacía ("").  
+    >  Los marcadores de posición deben ser del mismo tipo que los campos que representan. Si el campo es un tipo de fecha, el marcador de posición debe ser {//}. Si el campo es un campo de caracteres, el marcador de posición debe ser una cadena vacía ("").  
   
- ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
+ ORDER BY *Order_Item* [ASC &#124; Desc] [, *Order_Item* [ASC &#124; Desc]...]  
  Ordena los resultados de la consulta en función de los datos de una o varias columnas. Cada *Order_Item* debe corresponder a una columna de los resultados de la consulta y puede ser una de las siguientes:  
   
--   Un campo de una tabla FROM que también es un elemento select en la cláusula SELECT principal (no en una subconsulta).  
+-   Campo de una tabla FROM que también es un elemento Select de la cláusula SELECT principal (no en una subconsulta).  
   
--   Expresión numérica que indica la ubicación de la columna en la tabla de resultados. (La columna más a la izquierda es el número 1.)  
+-   Expresión numérica que indica la ubicación de la columna en la tabla de resultados. (La columna situada más a la izquierda es el número 1).  
   
- ASC especifica un orden ascendente para los resultados de la consulta, según el elemento de pedido o los elementos, y es el valor predeterminado para ORDER BY.  
+ ASC especifica un orden ascendente para los resultados de la consulta, de acuerdo con el elemento o los elementos del pedido, y es el valor predeterminado para ORDER BY.  
   
  DESC especifica un orden descendente para los resultados de la consulta.  
   
- Los resultados de la consulta aparecen desordenados si no especifica un pedido con ORDER BY.  
+ Los resultados de la consulta aparecen sin ordenar si no se especifica un pedido con ORDER BY.  
   
 ## <a name="remarks"></a>Observaciones  
- SELECT es un comando SQL integrado en Visual FoxPro como cualquier otro comando de Visual FoxPro. Cuando se usa SELECT para plantear una consulta, Visual FoxPro interpreta la consulta y recupera los datos especificados de las tablas. Puede crear una consulta SELECT desde la ventana Símbolo del sistema o un programa de Visual FoxPro (como con cualquier otro comando de Visual FoxPro).  
+ SELECT es un comando SQL integrado en Visual FoxPro como cualquier otro comando de Visual FoxPro. Cuando se usa SELECT para plantear una consulta, Visual FoxPro interpreta la consulta y recupera los datos especificados de las tablas. Puede crear una consulta SELECT desde la ventana del símbolo del sistema o desde un programa de Visual FoxPro (como con cualquier otro comando de Visual FoxPro).  
   
 > [!NOTE]  
 >  SELECT no respeta la condición de filtro actual especificada con SET FILTER.  
   
-## <a name="driver-remarks"></a>Observaciones del conductor  
- Cuando la aplicación envía la instrucción SQL ODBC SELECT al origen de datos, el controlador ODBC de Visual FoxPro convierte el comando en el comando SELECT de Visual FoxPro sin traducción, a menos que el comando contenga una secuencia de escape ODBC. Los elementos incluidos en una secuencia de escape ODBC se convierten a la sintaxis de Visual FoxPro. Para obtener más información sobre el uso de secuencias de escape ODBC, vea [Funciones](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) de hora y fecha y en la *referencia del programador ODBC*de Microsoft , vea [Secuencias](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)de escape en ODBC .  
+## <a name="driver-remarks"></a>Notas del controlador  
+ Cuando la aplicación envía la instrucción SQL de ODBC SELECT al origen de datos, el controlador ODBC de Visual FoxPro convierte el comando en el comando SELECT de Visual FoxPro sin traducción a menos que el comando contenga una secuencia de escape ODBC. Los elementos incluidos en una secuencia de escape de ODBC se convierten a la sintaxis de Visual FoxPro. Para obtener más información sobre el uso de secuencias de escape de ODBC, vea [funciones de fecha y hora](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) y en la *Referencia del programador de Microsoft ODBC*, vea [secuencias de escape en ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [CREAR TABLA - SQL](../../odbc/microsoft/create-table-sql-command.md)   
- [INSERTAR - SQL](../../odbc/microsoft/insert-sql-command.md)   
+ [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
+ [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ESTABLECER ANSI](../../odbc/microsoft/set-ansi-command.md)   
- [ESTABLECER EXACT](../../odbc/microsoft/set-exact-command.md)
+ [ESTABLECER EXACTO](../../odbc/microsoft/set-exact-command.md)

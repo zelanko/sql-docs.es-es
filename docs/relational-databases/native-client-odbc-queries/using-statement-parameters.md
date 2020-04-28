@@ -1,5 +1,5 @@
 ---
-title: Uso de parámetros de instrucción ? Microsoft Docs
+title: Usar parámetros de instrucción | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297907"
 ---
 # <a name="using-statement-parameters"></a>Usar parámetros de instrucciones
@@ -35,9 +35,9 @@ ms.locfileid: "81297907"
   
 -   Mejorando la interacción del usuario para construir criterios de consulta.  
   
--   Gestione los datos de **texto,** **ntext**e **imagen** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los tipos de datos C específicos.  
+-   Administrar datos de tipo **Text**, **ntext**e **Image** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipos de datos de C específicos.  
   
- Por ejemplo, una tabla **Parts** tiene columnas denominadas **PartID**, **Description**y **Price**. Para agregar una parte sin parámetros se requiere la construcción de una instrucción SQL como:  
+ Por ejemplo, una tabla **Parts** tiene columnas **denominadas**el nombre del campo, la **Descripción**y el **precio**. Para agregar una parte sin parámetros se requiere la construcción de una instrucción SQL como:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -58,6 +58,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [Enlazar parámetros](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejecución de consultas &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Ejecutar consultas &#40;&#41;ODBC](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

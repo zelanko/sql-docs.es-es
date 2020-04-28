@@ -1,5 +1,5 @@
 ---
-title: SQLPrepare (Controlador ODBC de Visual FoxPro) Microsoft Docs
+title: SQLPrepare (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,26 +13,26 @@ ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 14c9358d04e539eb2c77a00e195e8216cd0f5496
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301561"
 ---
 # <a name="sqlprepare-visual-foxpro-odbc-driver"></a>SQLPrepare (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API ODBC: nivel principal  
+ Conformidad con la API de ODBC: nivel básico  
   
- Prepara una instrucción SQL planeando cómo optimizar y ejecutar la instrucción. [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)compila la instrucción SQL para su ejecución.  
+ Prepara una instrucción SQL planeando cómo optimizar y ejecutar la instrucción. La instrucción SQL se compila para su ejecución mediante [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
   
- Si los nombres de tabla, vista o campo contienen espacios, incluya los nombres en las marcas de comillas atrás ('). Por ejemplo, si la base de datos contiene una tabla denominada Mi tabla y el campo Mi campo, incluya cada elemento del identificador de la siguiente manera:  
+ Si los nombres de tabla, vista o campo contienen espacios, incluya los nombres entre comillas dobles ('). Por ejemplo, si la base de datos contiene una tabla denominada My Table y el campo Field, incluya cada elemento del identificador de la manera siguiente:  
   
 ```  
 SELECT * FROM `My Table`.`My Field`  
 ```  
   
- Para obtener más información, vea [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md) en la *referencia del programador ODBC*.
+ Para obtener más información, consulte [SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md) en la *Referencia del programador de ODBC*.

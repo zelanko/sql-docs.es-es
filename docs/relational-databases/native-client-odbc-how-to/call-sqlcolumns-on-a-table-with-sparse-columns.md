@@ -1,5 +1,5 @@
 ---
-title: Llame a SQLColumns en una tabla con columnas dispersas . Microsoft Docs
+title: Llamar a SQLColumns en una tabla con columnas dispersas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298326"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Llamar a SQLColumns sobre una tabla con columnas dispersas
@@ -35,7 +35,7 @@ ms.locfileid: "81298326"
   
  Compile con /EHsc /D, "UNICODE", y odbc32.lib.  
   
- La segunda [!INCLUDE[tsql](../../includes/tsql-md.md)]lista de códigos ( ) elimina la tabla creada por este ejemplo.  
+ La segunda lista [!INCLUDE[tsql](../../includes/tsql-md.md)]de código () elimina la tabla creada por este ejemplo.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

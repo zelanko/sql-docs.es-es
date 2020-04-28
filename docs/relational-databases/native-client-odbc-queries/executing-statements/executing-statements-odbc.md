@@ -1,5 +1,5 @@
 ---
-title: Ejecución de instrucciones (ODBC) Microsoft Docs
+title: Ejecutar instrucciones (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3489c26073da15fb41af6d1560cb48fe38897386
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297966"
 ---
 # <a name="executing-statements-odbc"></a>Ejecutar instrucciones (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client ofrece una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] variedad de formas de ejecutar instrucciones SQL en una base de datos:  
+  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client ofrece varias maneras de ejecutar instrucciones SQL en una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos:  
   
 -   Ejecución directa  
   
 -   Ejecución preparada  
   
- La ejecución directa implica la [!INCLUDE[tsql](../../../includes/tsql-md.md)] creación de una cadena de caracteres que contiene una instrucción y enviarla para su ejecución mediante la función **SQLExecDirect.** La ejecución preparada implica la creación de una cadena de caracteres que contiene una instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] y su posterior ejecución en dos fases. La primera etapa utiliza la función [FUNción SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) para [!INCLUDE[ssDE](../../../includes/ssde-md.md)]analizar y compilar el plan de ejecución de la instrucción en el archivo . La segunda etapa utiliza la función **SQLExecute** para ejecutar el plan de ejecución preparado anteriormente. De esta forma, se guarda la sobrecarga de análisis y compilación en cada ejecución. Las aplicaciones suelen usar la ejecución preparada para ejecutar repetidamente una misma instrucción SQL parametrizada.  
+ La ejecución directa implica la creación de una cadena [!INCLUDE[tsql](../../../includes/tsql-md.md)] de caracteres que contiene una instrucción y su envío para su ejecución mediante la función **SQLExecDirect** . La ejecución preparada implica la creación de una cadena de caracteres que contiene una instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] y su posterior ejecución en dos fases. En la primera fase se usa la función de [función SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) para analizar y compilar el plan de [!INCLUDE[ssDE](../../../includes/ssde-md.md)]ejecución de la instrucción en. En la segunda fase se usa la función **SQLExecute** para ejecutar el plan de ejecución previamente preparado. De esta forma, se guarda la sobrecarga de análisis y compilación en cada ejecución. Las aplicaciones suelen usar la ejecución preparada para ejecutar repetidamente una misma instrucción SQL parametrizada.  
   
  Tanto en la ejecución directa como en la ejecución preparada puede ejecutarse una única instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] o un lote de instrucciones de SQL, o puede llamarse a un procedimiento almacenado.  
   
@@ -49,6 +49,6 @@ ms.locfileid: "81297966"
 -   [Efectos de las opciones ISO](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Ejecución de consultas &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [Ejecutar consultas &#40;&#41;ODBC](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

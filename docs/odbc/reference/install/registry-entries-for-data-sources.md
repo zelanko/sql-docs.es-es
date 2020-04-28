@@ -1,5 +1,5 @@
 ---
-title: Entradas del Registro para Orígenes de Datos ( Data Sources) Microsoft Docs
+title: Entradas del registro para orígenes de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c73ea704b091bc37afb1ac42b520304022d929c3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296275"
 ---
 # <a name="registry-entries-for-data-sources"></a>Entradas del registro para los orígenes de datos
 > [!NOTE]  
->  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. Solo debe instalar ODBC explícitamente en versiones anteriores de Windows.  
+>  A partir de Windows XP y Windows Server 2003, ODBC se incluye en el sistema operativo Windows. Solo debe instalar explícitamente ODBC en versiones anteriores de Windows.  
   
- El archivo DLL del instalador mantiene información en el registro sobre cada origen de datos. En Microsoft Windows NT/Windows 2000 y Microsoft Windows 95/98, esta información se almacena en subclaves en una de las dos claves siguientes del registro:  
+ La DLL del instalador mantiene información en el registro sobre cada origen de datos. En Microsoft Windows NT/Windows 2000 y Microsoft Windows 95/98, esta información se almacena en subclaves en una de las dos claves siguientes en el registro:  
 
  ```console
  HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbc.ini  
@@ -37,7 +37,7 @@ ms.locfileid: "81296275"
  HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
  ```
 
- La clave que se utiliza depende de si el origen de datos es un origen de datos del *sistema,* que está disponible para todos los usuarios, o un origen de datos de *usuario,* que solo está disponible para el usuario actual. Los orígenes de datos del sistema se almacenan en el árbol de HKEY_LOCAL_MACHINE y los orígenes de datos de usuario se almacenan en el árbol de HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
+ La clave que se usa depende de si el origen de datos es un origen de datos *del sistema,* que está disponible para todos los usuarios o un *origen de datos de usuario,* que solo está disponible para el usuario actual. Los orígenes de datos del sistema se almacenan en el árbol de HKEY_LOCAL_MACHINE y los orígenes de datos de usuario se almacenan en el árbol de HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
   
  Esta sección contiene los temas siguientes.  
   

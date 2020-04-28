@@ -1,5 +1,5 @@
 ---
-title: Valores devueltos de SQLGetInfo para Excel ? Microsoft Docs
+title: SQLGetInfo devuelve valores para Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5e285e8978ae357201458ca9289616df7d404811
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298545"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>SQLGetInfo devuelve valores para Excel
-En la tabla siguiente se enumeran los #defines de lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines de lenguaje C enumerados a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, vea la *referencia del programador ODBC*.  
+En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines del lenguaje C indicado a **SQLGetInfo** en el argumento *fInfoType* . Para obtener más información sobre los valores devueltos por **SQLGetInfo**, vea la *Referencia del programador de ODBC*.  
   
 > [!NOTE]  
->  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa un OR bit a bit.  
+>  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa una operación OR bit a bit.  
   
 |InfoType|Valor devuelto|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Todo listo|  
+|SQL_AGGREGATE_FUNCTIONS|Todo establecido|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -81,22 +81,22 @@ En la tabla siguiente se enumeran los #defines de lenguaje C para el argumento *
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|El DSN de Odbc.ini, o "" si la palabra clave DRIVER se utiliza en Odbc.ini|  
+|SQL_DATA_SOURCE_NAME|El DSN de ODBC. ini o "" si se usa la palabra clave DRIVER en ODBC. ini|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|Directorio de base de datos actual|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"Excel"|  
+|SQL_DBMS_NAME|CÁLCULO|  
 |SQL_DBMS_VER|Varios valores|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Manejado por el Administrador de conductores.|  
-|SQL_DRIVER_HENV|Manejado por el Administrador de conductores.|  
-|SQL_DRIVER_HLIB|Manejado por el Administrador de conductores.|  
-|SQL_DRIVER_HSTMT|Manejado por el Administrador de conductores.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HENV|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HLIB|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HSTMT|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn"*(*nnnn* especifica la fecha de compilación)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ En la tabla siguiente se enumeran los #defines de lenguaje C para el argumento *
 |SQL_GETDATA_EXTENSIONS|Varios valores|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (cotización posterior)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (comilla inversa)|  
 |SQL_KEYWORDS|Varios valores|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -122,7 +122,7 @@ En la tabla siguiente se enumeran los #defines de lenguaje C para el argumento *
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Cuando se usa el controlador de Microsoft Excel, una instrucción CREATE TABLE puede permitir 256 columnas, pero el límite de 255 columnas sigue siendo válido y se producirá un error en una inserción en la columna 256.|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Al usar el controlador de Microsoft Excel, una instrucción CREATE TABLE podría permitir 256 columnas, pero el límite de 255 columnas sigue siendo válido y se producirá un error en la columna de inserción en la columna 256.|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
@@ -141,9 +141,9 @@ En la tabla siguiente se enumeran los #defines de lenguaje C para el argumento *
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Varios valores|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCIA|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMIDAD|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Desde el Administrador de controladores|  
+|SQL_ODBC_VER|Desde el administrador de controladores|  
 |SQL_OJ_CAPABILITIES|Varios valores|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ En la tabla siguiente se enumeran los #defines de lenguaje C para el argumento *
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Varios valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"Excel"|  
-|SQL_SPECIAL_CHARACTERS|""";><,.!'\`\@#$%^&\*\_-+=\\ []&#124;"|  
+|SQL_SERVER_NAME|CÁLCULO|  
+|SQL_SPECIAL_CHARACTERS|"\`\@#$%^&~\*\_} {" ';:?/><,.! '-+=\\ [] &#124; "|  
 |SQL_STRING_FUNCTIONS|Varios valores|  
 |SQL_SUBQUERIES|Varios valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|CUADRO|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Varios valores|  

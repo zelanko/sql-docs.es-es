@@ -1,5 +1,5 @@
 ---
-title: Recuperar información del conjunto de resultados (ODBC) Microsoft Docs
+title: Recuperar información del conjunto de resultados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1c65841db0fdfd386891cfbd03bdee483ce25f6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300395"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>Procesar resultados: recuperar información del conjunto de resultados
@@ -35,11 +35,11 @@ ms.locfileid: "81300395"
   
      Or  
   
-    -   Llame a [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) para obtener información de descriptor específica sobre la columna de resultados.  
+    -   Llame a [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md) para obtener información específica del descriptor sobre la columna de resultados.  
   
 ## <a name="see-also"></a>Consulte también  
-[Resultados del proceso &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
+[Procesar los resultados &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
-[Determinar las características de un conjunto de resultados &#40;&#41;ODBC](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+[Determinar las características de un conjunto de resultados &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Subclave de traductores ODBC (ODBC Translators Subkey) Microsoft Docs
+title: Subclave de traductores ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 6b170f1f-e263-4aac-9d49-8d0ca0470ca2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 617416adfcddfbf041c48acbf83cb9589e34ae27
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81296225"
 ---
 # <a name="odbc-translators-subkey"></a>Subclave de traductores de ODBC
-Los valores de la subclave TRADUCTORes ODBC enumeran los traductores instalados. El formato de estos valores se muestra en la tabla siguiente.  
+Los valores de la subclave traductores ODBC enumeran los traductores instalados. El formato de estos valores se muestra en la tabla siguiente.  
   
 |Nombre|Tipo de datos|data|  
 |----------|---------------|----------|  
-|*traductor-desc*|REG_SZ|**Instalado**|  
+|*Traductor: DESC*|REG_SZ|**Instalado**|  
   
- El nombre *translator-desc* lo define el desarrollador del traductor.  
+ El desarrollador de traductor define el nombre *de Translator-DESC* .  
   
- Por ejemplo, supongamos que un usuario ha instalado Microsoft® Code Page Translator y un traductor personalizado de ASCII a EBCDIC. Los valores de la subclave Traductores ODBC pueden ser los siguientes:  
+ Por ejemplo, supongamos que un usuario ha instalado Microsoft® traductor de páginas de códigos y un traductor de ASCII a EBCDIC personalizado. Los valores de la subclave traductores ODBC pueden ser los siguientes:  
   
 ```  
 MS Code Page Translator: REG_SZ : Installed  

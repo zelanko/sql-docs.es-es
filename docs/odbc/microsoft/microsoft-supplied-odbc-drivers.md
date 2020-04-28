@@ -1,5 +1,5 @@
 ---
-title: Controladores ODBC suministrados por Microsoft ( Microsoft-Supplied ODBC Drivers) Microsoft Docs
+title: Controladores ODBC proporcionados por Microsoft | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: dadbc638219803562ef376a44abb37e9f85802cc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298205"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Controladores ODBC proporcionados por Microsoft
-*Los controladores* son bibliotecas que implementan las funciones en la API ODBC. Cada controlador es específico de un sistema de administración de bases de datos (DBMS) determinado. En la mayoría de los casos, los controladores exponen las capacidades del DBMS subyacente; no son necesarios para implementar capacidades no admitidas por el DBMS. Los controladores realizan tareas específicas y se pueden clasificar en dos categorías: basadas en archivos y basadas en DBMS. Para obtener más información acerca de los controladores y la arquitectura de [controladores,](../../odbc/reference/drivers.md)consulte Controladores .  
+Los *Controladores* son bibliotecas que implementan las funciones de la API de ODBC. Cada controlador es específico de un sistema de administración de bases de datos (DBMS) determinado. En la mayoría de los casos, los controladores exponen las capacidades del DBMS subyacente; no son necesarios para implementar funciones no admitidas por el DBMS. Los controladores realizan tareas específicas y se pueden clasificar en dos categorías: basadas en archivos y basados en DBMS. Para obtener más información acerca de los controladores y la arquitectura de controladores, consulte [Controladores](../../odbc/reference/drivers.md).  
   
  Esta sección contiene los temas siguientes.  
   

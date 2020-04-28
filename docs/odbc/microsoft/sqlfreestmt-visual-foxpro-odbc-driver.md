@@ -1,5 +1,5 @@
 ---
-title: SQLFreeStmt (Controlador ODBC de Visual FoxPro) Microsoft Docs
+title: SQLFreeStmt (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: a5320226-a6fc-4999-9b3b-2fdee6bdf7eb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31276137735c6934ae6940c038e3cdaada3241b0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298645"
 ---
 # <a name="sqlfreestmt-visual-foxpro-odbc-driver"></a>SQLFreeStmt (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte: Completo  
+ Compatibilidad: completa  
   
- Conformidad de la API ODBC: nivel principal  
+ Conformidad con la API de ODBC: nivel básico  
   
- Detiene el procesamiento asociado a un *hstmt*específico, cierra los cursores abiertos asociados con *hstmt*, descarta los resultados pendientes y, opcionalmente, libera todos los recursos asociados con el identificador de instrucción.  
+ Detiene el procesamiento asociado a un *hstmt*específico, cierra cualquier cursor abierto asociado a *hstmt*, descarta los resultados pendientes y, de forma opcional, libera todos los recursos asociados al identificador de instrucción.  
   
- Para obtener más información, vea [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) en la *referencia del programador ODBC*.
+ Para obtener más información, vea [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) en la *Referencia del programador de ODBC*.

@@ -1,5 +1,5 @@
 ---
-title: Estructura de intervalo C ? Microsoft Docs
+title: Estructura de intervalo de C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292157"
 ---
 # <a name="c-interval-structure"></a>Estructura de intervalo de C
-Cada uno de los tipos de datos de intervalo C enumerados en la sección Tipos de [datos de C](../../../odbc/reference/appendixes/c-data-types.md) utiliza la misma estructura para contener los datos de intervalo. Cuando **SQLFetch**, **SQLFetchScroll**o **SQLGetData** se llama, el controlador devuelve datos en la estructura SQL_INTERVAL_STRUCT, usa el valor especificado por la aplicación para los tipos de datos de C (en la llamada a **SQLBindCol**, **SQLGetData**o **SQLBindParameter**) para interpretar el contenido de SQL_INTERVAL_STRUCT y rellena el campo *interval_type* de la estructura con el valor de *enumeración* correspondiente al tipo C. Tenga en cuenta que los controladores no leen el campo *interval_type* para determinar el tipo del intervalo; recuperan el valor del campo descriptor de SQL_DESC_CONCISE_TYPE. Cuando se utiliza la estructura para los datos de parámetro, el controlador utiliza el valor especificado por la aplicación en el campo SQL_DESC_CONCISE_TYPE del APD para interpretar el contenido de SQL_INTERVAL_STRUCT, incluso si la aplicación establece el valor del campo *interval_type* en un valor diferente.  
+Cada uno de los tipos de datos de intervalo de C que se enumeran en la sección [tipos de datos de c](../../../odbc/reference/appendixes/c-data-types.md) utiliza la misma estructura para contener los datos de intervalo. Cuando se llama a **SQLFetch**, **SQLFetchScroll**o **SQLGetData** , el controlador devuelve datos en la estructura de SQL_INTERVAL_STRUCT, utiliza el valor especificado por la aplicación para los tipos de datos de C (en la llamada a **SQLBindCol**, **SQLGetData**o **SQLBindParameter**) para interpretar el contenido de SQL_INTERVAL_STRUCT y rellena el campo de *Interval_type* de la estructura con el valor de *enumeración* correspondiente al tipo C. Tenga en cuenta que los controladores no leen el campo *interval_type* para determinar el tipo de intervalo; recuperan el valor del campo descriptor de SQL_DESC_CONCISE_TYPE. Cuando la estructura se usa para los datos de parámetros, el controlador usa el valor especificado por la aplicación en el campo SQL_DESC_CONCISE_TYPE de APD para interpretar el contenido de SQL_INTERVAL_STRUCT, incluso si la aplicación establece el valor del campo *interval_type* en un valor diferente.  
   
  Esta estructura se define de la siguiente manera:  
   
@@ -69,4 +69,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- El *interval_type* campo de la SQL_INTERVAL_STRUCT indica a la aplicación qué estructura se mantiene en el sindicato y también qué miembros de la estructura son relevantes. El campo *interval_sign* tiene el valor SQL_FALSE si el campo de interlineado de intervalo no está firmado; si es SQL_TRUE, el campo inicial es negativo. El valor del propio campo inicial siempre es sin signo, independientemente del valor de *interval_sign*. El campo *interval_sign* actúa como un bit de signo.
+ En el campo *interval_type* del SQL_INTERVAL_STRUCT se indica a la aplicación qué estructura se mantiene en la Unión y también qué miembros de la estructura son pertinentes. El campo *interval_sign* tiene el valor SQL_FALSE si el campo inicial del intervalo es sin signo. Si se SQL_TRUE, el campo inicial es negativo. El valor del propio campo inicial siempre es sin signo, independientemente del valor de *interval_sign*. El campo *interval_sign* actúa como un bit de signo.

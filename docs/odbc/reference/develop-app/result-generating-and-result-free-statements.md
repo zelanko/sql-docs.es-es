@@ -1,5 +1,5 @@
 ---
-title: Declaraciones de generación de resultados y sin resultados Microsoft Docs
+title: Instrucciones de generación de resultados y sin resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: fc94aabd7982fba5879519573980db03b1857ef6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300095"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Instrucciones generan resultados y libre de resultado
-Las instrucciones SQL se pueden dividir libremente en las siguientes cinco categorías:  
+Las instrucciones SQL se pueden dividir de forma flexible en las cinco categorías siguientes:  
   
--   **Declaraciones de generación de conjuntos de resultados** Se trata de instrucciones SQL que generan un conjunto de resultados. Por ejemplo, una instrucción **SELECT.**  
+-   **Conjunto de resultados: generar instrucciones** Se trata de instrucciones SQL que generan un conjunto de resultados. Por ejemplo, una instrucción **Select** .  
   
--   **Declaraciones de generación de recuento de filas** Se trata de instrucciones SQL que generan un recuento de filas afectadas. Por ejemplo, una instrucción **UPDATE** o **DELETE.**  
+-   **Recuento de filas-generar instrucciones** Se trata de instrucciones SQL que generan un recuento de filas afectadas. Por ejemplo, una instrucción **Update** o **Delete** .  
   
--   Declaraciones de lenguaje de definición de **datos (DDL)** Se trata de instrucciones SQL que modifican la estructura de la base de datos. Por ejemplo, **CREATE TABLE** o **DROP INDEX**.  
+-   **Instrucciones del lenguaje de definición de datos (DDL)** Se trata de instrucciones SQL que modifican la estructura de la base de datos. Por ejemplo, **CREATE TABLE** o **Drop index**.  
   
--   **Declaraciones de cambio de contexto** Se trata de instrucciones SQL que cambian el contexto de una base de datos. Por ejemplo, las instrucciones **USE** y **SET** en SQL Server.  
+-   **Instrucciones de cambio de contexto** Se trata de instrucciones SQL que cambian el contexto de una base de datos. Por ejemplo, las instrucciones **use** y **set** en SQL Server.  
   
--   **Declaraciones Administrativas** Se trata de instrucciones SQL que se usan con fines administrativos en una base de datos. Por ejemplo, **GRANT** y **REVOKE**.  
+-   **Instrucciones administrativas** Se trata de instrucciones SQL que se usan para fines administrativos en una base de datos. Por ejemplo, **Grant** y **REVOKE**.  
   
- Las instrucciones SQL de las dos primeras categorías se conocen colectivamente como *instrucciones generadoras de resultados.* Las instrucciones SQL de las tres últimas categorías se conocen colectivamente como *instrucciones sin resultados.* ODBC define la semántica de lotes que incluyen solo instrucciones de generación de resultados. Estas semánticas varían ampliamente y, por lo tanto, son específicas del origen de datos. Por ejemplo, el controlador de SQL ServerSQL Server no admite quitar un objeto y, a continuación, hacer referencia o volver a crear el mismo objeto en el mismo lote. Por lo tanto, el término *lote* tal como se usa en este manual se refiere únicamente a lotes de instrucciones generadoras de resultados.
+ Las instrucciones SQL de las dos primeras categorías se conocen colectivamente como *instrucciones de generación de resultados*. Las instrucciones SQL en las tres últimas categorías se conocen colectivamente como *instrucciones sin resultados*. ODBC define la semántica de los lotes que solo incluyen instrucciones que generan resultados. Estas semánticas varían considerablemente y, por lo tanto, son específicas del origen de datos. Por ejemplo, el controlador SQL Server no permite quitar un objeto y, a continuación, hacer referencia al mismo objeto o volver a crearlo en el mismo lote. Por lo tanto, el término *batch* tal como se usa en este manual solo se refiere a los lotes de instrucciones de generación de resultados.

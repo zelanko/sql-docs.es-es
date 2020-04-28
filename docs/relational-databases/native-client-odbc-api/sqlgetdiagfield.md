@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagField ? Microsoft Docs
+title: SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b0d704d76caa3f2a70744a3f2cb4358251f26e55
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299735"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -30,7 +30,7 @@ ms.locfileid: "81299735"
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Indica el número de línea de un procedimiento almacenado que genera un error. El valor de SQL_DIAG_SS_LINE solamente es significativo si SQL_DIAG_SS_PROCNAME devuelve un valor. El valor se devuelve como un entero sin signo de 16 bits.|  
 |SQL_DIAG_SS_MSGSTATE|El estado de un mensaje de error. Para obtener información sobre el estado del mensaje de error, vea [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). El valor se devuelve como un entero con signo de 32 bits.|  
-|SQL_DIAG_SS_PROCNAME|Nombre del procedimiento almacenado que genera un error, si procede. El valor se devuelve como una cadena de caracteres. La longitud de la cadena (en caracteres) depende de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede determinar llamando a [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) solicitando el valor de SQL_MAX_PROCEDURE_NAME_LEN.|  
+|SQL_DIAG_SS_PROCNAME|Nombre del procedimiento almacenado que genera un error, si procede. El valor se devuelve como una cadena de caracteres. La longitud de la cadena (en caracteres) depende de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se puede determinar mediante una llamada a [SQLGetInfo](../../relational-databases/native-client-odbc-api/sqlgetinfo.md) que solicita el valor de SQL_MAX_PROCEDURE_NAME_LEN.|  
 |SQL_DIAG_SS_SEVERITY|El nivel de gravedad del mensaje de error asociado. El valor se devuelve como un entero con signo de 32 bits.|  
 |SQL_DIAG_SS_SRVNAME|El nombre del servidor donde se ha producido el error. El valor se devuelve como una cadena de caracteres. La longitud de la cadena (en caracteres) se define en la macro SQL_MAX_SQLSERVERNAME de sqlncli.h.|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "81299735"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|Instrucción DROP TRIGGER|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|Instrucción BACKUP o DUMP DATABASE|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|Instrucción DUMP TABLE|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Instrucción BACKUP o DUMP TRANSACTION. También se ha devuelto para una instrucción CHECKPOINT si el **registro de trunc.** opción de base de datos está activada.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|Instrucción BACKUP o DUMP TRANSACTION. También se devuelve para una instrucción CHECKPOINT si el archivo **trunc. log on chkpt.** la opción de base de datos está activada.|  
 |SQL_DIAG_DFC_SS_GOTO|Instrucción GOTO de control de flujo|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|Instrucción INSERT BULK|  
 |SQL_DIAG_DFC_SS_KILL|Instrucción KILL|  
@@ -97,12 +97,12 @@ ms.locfileid: "81299735"
 |SQL_DIAG_DFC_SS_WRITETEXT|Instrucción WRITETEXT|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField y parámetros con valores de tabla  
- SQLGetDiagField se puede usar para recuperar dos campos de diagnóstico: SQL_DIAG_SS_TABLE_COLUMN_NUMBER y SQL_DIAG_SS_TABLE_ROW_NUMBER. Estos campos ayudan a determinar qué valor produjo el error o la advertencia asociados al registro de diagnóstico.  
+ SQLGetDiagField se puede utilizar para recuperar dos campos de diagnóstico: SQL_DIAG_SS_TABLE_COLUMN_NUMBER y SQL_DIAG_SS_TABLE_ROW_NUMBER. Estos campos ayudan a determinar qué valor produjo el error o la advertencia asociados al registro de diagnóstico.  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [Parámetros con valores ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)de tabla &#40;&#41;ODBC .  
+ Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [SQLGetDiagField (Función)](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField función)](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

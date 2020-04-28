@@ -1,5 +1,5 @@
 ---
-title: Sintaxis literal numérica ? Microsoft Docs
+title: Sintaxis de literales numéricos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,39 @@ ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299865"
 ---
 # <a name="numeric-literal-syntax"></a>Sintaxis de los literales numéricos
-La sintaxis siguiente se utiliza para literales numéricos en ODBC:  
+La siguiente sintaxis se utiliza para los literales numéricos en ODBC:  
   
- *literal numérico* ::- *literal numérico-firmado &#124; unsigned-numeric-literal*  
+ *Numeric-literal* :: = *signed-numeric-literal &#124; unsigned-Numeric-literal*  
   
- *literal-numérico firmado* :: [*signo*] *unsigned-numeric-literal*  
+ *signed-Numeric-literal* :: = [*signo*] *unsigned-literal-literal*  
   
- *unsigned-numeric-literal* ::- *literal exacto-numérico &#124; literal aproximado-numérico*  
+ *unsigned-Numeric-literal* :: = *Exact-numeric-literal &#124; aproximada-Numeric-literal*  
   
- *exact-numeric-literal* ::- *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
+ *Exact-Numeric-literal* :: = *unsigned-Integer* [*period*[*unsigned-Integer*]] *&#124;period sin signo-entero*  
   
- *signo* :: *- signo más &#124; menos-signo*  
+ *Sign* :: = *plus-Sign &#124; signo menos*  
   
- *aproximado-numérico-literal* :: ' *mantissa E exponente*  
+ *aproximado-Numeric-literal* :: = *mantisa E exponente*  
   
- *mantissa* ::- *literal exacto-numérico*  
+ *mantisa* :: = *Exact-Numeric-literal*  
   
- *exponente* :: - *entero firmado*  
+ *exponente* :: = *signed-Integer*  
   
- *signed-integer* ::- [*sign*] *unsigned-integer*  
+ *signed-Integer* :: = [*Sign*] *unsigned-Integer*  
   
- *unsigned-integer* ::- *digit...*  
+ *unsigned-Integer* :: = *digit...*  
   
- *signo de además* ::*+*  
+ *signo más* :: =*+*  
   
- *signo menos* :: -  
+ signo *menos* :: =-  
   
- *dígito* :: 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *período* ::.
+ *period* :: =.

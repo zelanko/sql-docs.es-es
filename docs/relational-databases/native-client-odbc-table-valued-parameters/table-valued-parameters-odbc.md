@@ -1,5 +1,5 @@
 ---
-title: Parámetros con valores de tabla (ODBC) Microsoft Docs
+title: Parámetros con valores de tabla (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c303a1b3b8a9a42792feb6802e9f09fabc1e3ca3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297762"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parámetros con valores de tabla (ODBC)
@@ -26,13 +26,13 @@ ms.locfileid: "81297762"
 
   La compatibilidad con ODBC para parámetros con valores de tabla permite a una aplicación cliente enviar datos parametrizados al servidor más eficazmente, enviando varias filas al servidor con una llamada.  
   
- Para obtener información acerca de los parámetros con valores de tabla en el servidor, vea [Usar parámetros con valores ](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)de tabla &#40;Motor de base de datosDatabase Engine&#41;.  
+ Para obtener información sobre los parámetros con valores de tabla en el servidor, vea [usar parámetros con valores de tabla &#40;Motor de base de datos&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  En ODBC, hay dos formas de enviar parámetros con valores de tabla al servidor:  
   
 -   Todos los datos de parámetros con valores de tabla pueden estar en memoria en el momento en que se llama a SQLExecDirect o SQLExecute. Estos datos se almacenan en matrices si hay varias filas en el valor de tabla.  
   
--   Una aplicación puede especificar datos en ejecución para un parámetro con valores de tabla cuando sqlExecDirect o SQLExecute se llama. En este caso, las filas de datos para el valor de tabla se pueden proporcionar en lotes o de uno en uno para reducir los requerimientos de memoria.  
+-   Una aplicación puede especificar datos en ejecución para un parámetro con valores de tabla cuando se llama a SQLExecDirect o SQLExecute. En este caso, las filas de datos para el valor de tabla se pueden proporcionar en lotes o de uno en uno para reducir los requerimientos de memoria.  
   
  La primera opción habilita los procedimientos almacenados para encapsular más lógica de negocios. Por ejemplo, un procedimiento almacenado único podría encapsular una transacción de entrada de pedido entera cuando los elementos del pedido se pasan como un parámetro con valores de tabla. Esta opción es muy eficaz, porque se requiere solo un único ciclo de ida y vuelta al servidor. Alternativamente, podría utilizar diferentes procedimientos para administrar por separado el encabezado y los elementos del pedido, lo que requeriría más código y un contrato más complejo entre el cliente y servidor.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "81297762"
  Describe cómo una aplicación puede obtener metadatos para una llamada a procedimiento preparada.  
   
  [Metadatos de parámetros con valores de tabla adicionales](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- Describe cómo usar SQLProcedureColumns, SQLTables y SQLColumns para recuperar metadatos para un parámetro con valores de tabla.  
+ Describe cómo usar SQLProcedureColumns, SQLTables y SQLColumns para recuperar los metadatos de un parámetro con valores de tabla.  
   
  [Conversión de datos de parámetros con valores de tabla y otros errores y advertencias](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Describe cómo procesar los errores en valores de columna de parámetro con valores de tabla.  
@@ -81,7 +81,7 @@ ms.locfileid: "81297762"
  Describe cómo realizar tareas comunes.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL ServerSQL Server Native Client &#40;&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Parámetros con valores de tabla &#40;SQL ServerSQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Parámetros con valores de tabla &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

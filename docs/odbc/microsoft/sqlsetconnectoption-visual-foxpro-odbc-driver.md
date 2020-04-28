@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectOption (Controlador ODBC de Visual FoxPro) Microsoft Docs
+title: SQLSetConnectOption (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,31 +13,31 @@ ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2af208663f1e91250faad0ca9538b76bcec43b06
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301506"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
->  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte: Parcial  
+ Compatibilidad: parcial  
   
- Conformidad de la API ODBC: Nivel 1  
+ Conformidad con la API de ODBC: nivel 1  
   
- Establece opciones que rigen los aspectos de las conexiones. Esta función se admite parcialmente: el controlador admite todos los valores para el argumento *fOption,* pero no admite algunos de los valores *vParam* para el argumento *fOption* SQL_TXN_ISOLATION.  
+ Establece opciones que rigen aspectos de las conexiones. Esta función es parcialmente compatible: el controlador admite todos los valores del argumento *fOption* , pero no admite algunos de los valores de *vParam* para el argumento *fOption* SQL_TXN_ISOLATION.  
   
- En la tabla siguiente se describen solo los argumentos con un comportamiento específico de la implementación del controlador ODBC de Visual FoxPro de **SQLSetConnectOption**.  
+ En la tabla siguiente se describen solo los argumentos con el comportamiento específico de la implementación del controlador ODBC de Visual FoxPro de **SQLSetConnectOption**.  
   
 |*fOption*|Observaciones|  
 |---------------|-------------|  
-|SQL_AUTOCOMMIT|Si elige SQL_AUTOCOMMIT_OFF, la aplicación debe confirmar o revertir explícitamente transacciones con [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); el controlador ODBC de Visual FoxPro no confirma automáticamente una instrucción transactable al finalizar. El controlador inicia una transacción si la instrucción es transaccionable.|  
-|SQL_CURRENT_QUALIFIER|Puede ser un nombre de base de [datos](../../odbc/microsoft/visual-foxpro-terminology.md) completo o una ruta de acceso completa a un directorio que contenga cero o más [tablas libres.](../../odbc/microsoft/visual-foxpro-terminology.md)|  
-|SQL_LOGINTIMEOUT|Devuelve el error "Driver not capable".|  
-|SQL_CURSORS|Devuelve el error "Driver not capable".|  
-|SQL_PACKET_SIZE|Devuelve el error "Driver not capable".|  
-|SQL_TXN_ISOLATION|El controlador sólo permite SQL_TXN_READ_COMMITTED.<br /><br /> No se admiten las siguientes *vParam*s:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
+|SQL_AUTOCOMMIT|Si elige SQL_AUTOCOMMIT_OFF, la aplicación debe confirmar o revertir explícitamente las transacciones con [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); el controlador ODBC de Visual FoxPro no confirma automáticamente una instrucción transactable al finalizar. El controlador inicia una transacción si la instrucción es transactable.|  
+|SQL_CURRENT_QUALIFIER|Puede ser un nombre de [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) completo o una ruta de acceso completa a un directorio que contenga cero o más [tablas libres](../../odbc/microsoft/visual-foxpro-terminology.md).|  
+|SQL_LOGINTIMEOUT|Devuelve el error "controlador no compatible".|  
+|SQL_CURSORS|Devuelve el error "controlador no compatible".|  
+|SQL_PACKET_SIZE|Devuelve el error "controlador no compatible".|  
+|SQL_TXN_ISOLATION|El controlador solo permite SQL_TXN_READ_COMMITTED.<br /><br /> No se admiten los siguientes *vParam*s:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
- Para obtener más información, vea [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) en la *referencia del programador ODBC*.
+ Para obtener más información, vea [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) en la *Referencia del programador de ODBC*.

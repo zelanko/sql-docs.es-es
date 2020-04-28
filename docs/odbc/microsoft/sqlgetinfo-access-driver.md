@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (controlador de acceso) Microsoft Docs
+title: SQLGetInfo (controlador de Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9a9208ce32faa221d543baf62e2169e4523ae437
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298595"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (controlador de Access)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador de acceso. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de acceso. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** admite el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica cómo el controlador trata directamente los archivos en un origen de datos:  
+ **SQLGetInfo** admite el tipo de información SQL_FILE_USAGE. El valor devuelto es un entero de 16 bits que indica cómo el controlador trata directamente los archivos de un origen de datos:  
   
 -   SQL_FILE_NOT_SUPPORTED: el controlador no es un controlador de un solo nivel.  
   
@@ -35,9 +35,9 @@ ms.locfileid: "81298595"
  El controlador ODBC devuelve SQL_FILE_QUALIFIER porque cada archivo es una base de datos completa.  
   
 ## <a name="sql_bookmark_persistence"></a>SQL_BOOKMARK_PERSISTENCE  
- SQL_BP_SCROLL &#124; SQL_BP_UPDATE[1]  
+ SQL_BP_SCROLL &#124; SQL_BP_UPDATE [1]  
   
- [1] Los marcadores persisten después de una confirmación, pero no persisten después de una reversión.  
+ [1] los marcadores se conservan después de una confirmación, pero no se conservan después de una reversión.  
   
 ## <a name="sql_convert_binary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &#124; SQL_CVT_FLOAT &#124; SQL_CVT_INTEGER &#124; SQL_CVT_NUMERIC &#124; SQL_CVT_REAL &#124; SQL_CVT_SMALLINT &#124; SQL_CVT_VARCHAR &#124; SQL_CVT_WVARCHAR  
@@ -92,7 +92,7 @@ ms.locfileid: "81298595"
   
 ## <a name="sql_dbms_ver"></a>SQL_DBMS_VER  
   
-|Isam|Versión|Formato de los números de versión|  
+|ISAM|Version|Formato de los números de versión|  
 |----------|-------------|-------------------------------|  
 |Microsoft Access|2.0|02.00.0000|  
 ||3.0|03.00.0000|  
@@ -100,7 +100,7 @@ ms.locfileid: "81298595"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  No se admiten las versiones 1.0 y 1.1. Además, no hay diferencia en el formato de datos en las versiones 3.0, 7.0 y 97 de Microsoft Access.  
+>  No se admiten las versiones 1,0 y 1,1. Además, no hay ninguna diferencia en el formato de datos de las versiones 3,0, 7,0 y 97 de Microsoft Access.  
   
 ## <a name="sql_ddl_index"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  
@@ -111,9 +111,9 @@ ms.locfileid: "81298595"
  SQL_GD_ANY_ORDER &#124; SQL_GD_ANY_COLUMN &#124; SQL_GD_BLOCK &#124; SQL_GD_BOUND  
   
 ## <a name="sql_keywords"></a>SQL_KEYWORDS  
- Alfanuméricos  
+ ALFABÉTICO  
   
- AUTOINCREMENTO  
+ INCREMENTO automático  
   
  BINARY  
   
@@ -121,19 +121,19 @@ ms.locfileid: "81298595"
   
  BYTE  
   
- Contador  
+ BLOQUE  
   
  Moneda  
   
  DATABASE  
   
- Databasename  
+ DATABASENAME  
   
  DATETIME  
   
- Impedir  
+ NO permitir  
   
- Distinctrow  
+ DISTINCTROW  
   
  DOUBLEFLOAT  
   
@@ -157,9 +157,9 @@ ms.locfileid: "81298595"
   
  INTEGER4  
   
- Lógica  
+ OPERADOR  
   
- LOGICAL1  
+ .  
   
  LONG  
   
@@ -169,7 +169,7 @@ ms.locfileid: "81298595"
   
  LONGTEXT  
   
- memorándum  
+ Memorando  
   
  MONEY  
   
@@ -177,7 +177,7 @@ ms.locfileid: "81298595"
   
  NUMBER  
   
- Oleobject  
+ OLEOBJECT  
   
  OWNERACCESS  
   
@@ -189,7 +189,7 @@ ms.locfileid: "81298595"
   
  SHORT  
   
- soltero  
+ SENCILLA  
   
  SINGLEFLOAT  
   
@@ -205,7 +205,7 @@ ms.locfileid: "81298595"
   
  TOP  
   
- Transformar  
+ TRANSFORMACIÓN  
   
  UNSIGNEDBYTE  
   
@@ -215,7 +215,7 @@ ms.locfileid: "81298595"
   
  VARP  
   
- YESNO  
+ SÍNO  
   
 ## <a name="sql_numeric_functions"></a>SQL_NUMERIC_FUNCTIONS  
  SQL_FN_NUM_ABS &#124; SQL_FN_NUM_ATAN &#124; SQL_FN_NUM_CEILING &#124; SQL_FN_NUM_COS &#124; SQL_FN_NUM_EXP &#124; SQL_FN_NUM_FLOOR &#124; SQL_FN_NUM_LOG &#124; SQL_FN_NUM_MOD &#124; SQL_FN_NUM_POWER &#124; SQL_FN_NUM_RAND &#124; SQL_FN_NUM_SIGN &#124; SQL_FN_NUM_SIN &#124; SQL_FN_NUM_SQRT &#124; SQL_FN_NUM_TAN  

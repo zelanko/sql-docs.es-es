@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108612"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68108612"
   
  sp_createstats es útil para aplicaciones como las pruebas comparativas cuando los tiempos de ejecución de la consulta resultan críticos y no se puede esperar a que el optimizador de consultas genere estadísticas de columna única. En la mayoría de los casos, no es necesario utilizar sp_createstats; el optimizador de consultas genera estadísticas de columna única según sea necesario para mejorar los planes de consulta cuando la opción de **AUTO_CREATE_STATISTICS** está activada.  
   
- Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md). Para obtener más información sobre cómo generar estadísticas de columna única, vea la opción **AUTO_CREATE_STATISTICS** en [Opciones de ALTER database Set &#40;&#41;de Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para obtener más información sobre las estadísticas, vea [estadísticas](../../relational-databases/statistics/statistics.md). Para obtener más información sobre cómo generar estadísticas de columna única, vea la opción **AUTO_CREATE_STATISTICS** en [Opciones de ALTER database Set &#40;&#41;de Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -89,12 +89,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Utilizar las estadísticas para mejorar el rendimiento de las consultas](../../relational-databases/statistics/statistics.md)   
+ [¡](../../relational-databases/statistics/statistics.md)   
  [CREATE STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [DROP STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [UPDATE STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

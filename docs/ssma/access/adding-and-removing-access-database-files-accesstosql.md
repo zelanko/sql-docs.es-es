@@ -29,10 +29,10 @@ ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104212"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Agregar y quitar archivos de base de datos de Access (AccessToSQL)
@@ -76,7 +76,7 @@ Si desea agregar varias bases de datos de Access de distintas carpetas a un proy
     > [!IMPORTANT]  
     > El cuadro **de texto todo o parte del nombre de archivo** no admite caracteres comodín.  
   
-5.  Haga clic en **examinar**.  
+5.  Haz clic en **Examen**.  
   
     Aparece la página digitalizar. Esto muestra las bases de datos que se han encontrado y el progreso de la búsqueda. Para detener la búsqueda, haga clic en **detener**.  
   
@@ -132,5 +132,5 @@ El siguiente paso del proceso de migración consiste en [conectarse a SQL Server
   
 ## <a name="see-also"></a>Consulte también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[crear y administrar proyectos](creating-and-managing-projects-accesstosql.md)  
+[Creación y administración de proyectos](creating-and-managing-projects-accesstosql.md)  
   

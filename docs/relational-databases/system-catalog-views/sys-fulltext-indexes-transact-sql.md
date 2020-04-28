@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133801"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
@@ -40,10 +40,10 @@ ms.locfileid: "68133801"
 |**fulltext_catalog_id**|**int**|Identificador del catálogo de texto completo en el que reside el índice de texto completo.|  
 |**is_enabled**|**bit**|1 = El índice de texto completo está habilitado actualmente.|  
 |**change_tracking_state**|**Char (1)**|Estado del seguimiento de cambios.<br /><br /> M = Manual<br /><br /> A = Automático<br /><br /> O = Desactivado|  
-|**change_tracking_state_desc**|**nvarchar (60)**|Descripción del estado del seguimiento de cambios.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> Apagado|  
+|**change_tracking_state_desc**|**nvarchar(60)**|Descripción del estado del seguimiento de cambios.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> Apagado|  
 |**has_crawl_completed**|**bit**|Último rastreo (rellenado) completado por el índice de texto completo.|  
 |**crawl_type**|**Char (1)**|Tipo de rastreo último o actual.<br /><br /> F = Rastreo completo<br /><br /> I = Rastreo basado en la marca de tiempo incremental<br /><br /> U = Actualización de rastreo, basado en notificaciones<br /><br /> P = Rastreo completo detenido|  
-|**crawl_type_desc**|**nvarchar (60)**|Descripción del tipo de rastreo último o actual.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
+|**crawl_type_desc**|**nvarchar(60)**|Descripción del tipo de rastreo último o actual.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|Inicio del rastreo último o actual.<br /><br /> NULL = Ninguno|  
 |**crawl_end_date**|**datetime**|Fin del rastreo último o actual.<br /><br /> NULL = Ninguno|  
 |**incremental_timestamp**|**Binary(8**|Valor de marca de tiempo que deberá utilizarse para el siguiente rastreo incremental.<br /><br /> NULL = Ninguno|  
@@ -70,7 +70,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. fulltext_index_fragments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
- [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
+ [Sys. fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [Sys. fulltext_index_catalog_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

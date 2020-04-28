@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124401"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
@@ -84,10 +84,8 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |KEY_SEQ|**smallint**|Número de secuencia de la columna en una clave principal con varias columnas. Este campo siempre devuelve un valor.|  
 |UPDATE_RULE|**smallint**|Acción aplicada a la clave externa si la operación de SQL es una actualización.  Valores posibles:<br /> 0=CASCADE cambia a clave externa.<br /> 1=NO ACTION cambia si la clave externa está presente.<br />   2 = establecer null <br /> 3 = establecer predeterminado |  
 |DELETE_RULE|**smallint**|Acción aplicada a la clave externa si la operación de SQL es una eliminación. Valores posibles:<br /> 0=CASCADE cambia a clave externa.<br /> 1=NO ACTION cambia si la clave externa está presente.<br />   2 = establecer null <br /> 3 = establecer predeterminado |  
-|FK_NAME|**sysname**|Identificador de la clave externa. Es NULL si no es aplicable al origen de datos. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción FOREIGN KEY.|  
-|PK_NAME|**sysname**|Identificador de la clave principal. Es NULL si no es aplicable al origen de datos. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción PRIMARY KEY.|  
+|FK_NAME|**sysname**|Identificador de la clave externa. Es NULL si no es aplicable al origen de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción FOREIGN KEY.|  
+|PK_NAME|**sysname**|Identificador de la clave principal. Es NULL si no es aplicable al origen de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción PRIMARY KEY.|  
   
  Los resultados devueltos se ordenan por FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME y KEY_SEQ.  
   
@@ -115,7 +113,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
     ,@pktable_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el siguiente ejemplo se recupera una lista de claves externas de la tabla `DimDate` en la base de datos `AdventureWorksPDW2012`. No se devuelven [!INCLUDE[ssDW](../../includes/ssdw-md.md)] filas porque no admite claves externas.  
   
 ```sql  

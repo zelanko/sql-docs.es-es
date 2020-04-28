@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123822"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
@@ -57,8 +57,8 @@ sp_grant_proxy_to_subsystem
 |**7**|Replication Merge Agent|  
 |**203**|Agente de lectura de cola de replicación|  
 |**9**|Consulta de Analysis Services|  
-|**7**|Comando de Analysis Services|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]ejecución de paquetes|  
+|**10**|Comando de Analysis Services|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] ejecución de paquetes|  
 |**12**|Script de PowerShell|  
 | &nbsp; | &nbsp; |
   
@@ -68,8 +68,8 @@ sp_grant_proxy_to_subsystem
 |-----------|-----------------|  
 |**ActiveScripting**|Script ActiveX|  
 |**CmdExec**|Sistema operativo (**CmdExec**)|  
-|**Archivos**|Agente de instantáneas de replicación|  
-|**Lector del registro**|Agente de registro del LOG de replicación|  
+|**Instantánea**|Agente de instantáneas de replicación|  
+|**LogReader**|Agente de registro del LOG de replicación|  
 |**Distribución**|Agente de distribución de replicación|  
 |**Combinar**|Replication Merge Agent|  
 |**QueueReader**|Agente de lectura de cola de replicación|  

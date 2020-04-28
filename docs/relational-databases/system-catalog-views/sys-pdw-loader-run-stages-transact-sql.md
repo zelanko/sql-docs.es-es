@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d10a3bcbf02e88e054c12060299e9462af3004d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127451"
 ---
 # <a name="syspdw_loader_run_stages-transact-sql"></a>Sys. pdw_loader_run_stages (Transact-SQL)
@@ -28,14 +28,14 @@ ms.locfileid: "68127451"
 |-|-|-|-|  
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |run_id|**int**|Identificador único de una ejecución del cargador.||  
-|fase|**nvarchar(30**|La fase actual de la ejecución.|' CREATE_STAGING ', ' DMS_LOAD ', ' LOAD_INSERT ', ' LOAD_CLEANUP '|  
-|request_id|**nvarchar (32)**|IDENTIFICADOR de la solicitud que se está ejecutando en esta fase.||  
+|fase|**nvarchar(30)**|La fase actual de la ejecución.|' CREATE_STAGING ', ' DMS_LOAD ', ' LOAD_INSERT ', ' LOAD_CLEANUP '|  
+|request_id|**nvarchar(32)**|IDENTIFICADOR de la solicitud que se está ejecutando en esta fase.||  
 |status|**nvarchar (16)**|Estado de esta fase.||  
 |start_time|**datetime**|Hora a la que se inició la fase.||  
 |end_time|**datetime**|Hora a la que finalizó la fase, si existe.|NULL si no se ha iniciado o está en curso.|  
 |total_elapsed_time|**int**|Tiempo total que esta fase tardó en ejecutarse (o hasta ahora).|Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), se producirá un error de materialización debido al desbordamiento.<br /><br /> El valor máximo en milisegundos es equivalente a 24,8 días.|  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

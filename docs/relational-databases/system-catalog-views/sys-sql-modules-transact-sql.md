@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108989"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68108989"
 |**is_recompiled**|**bit**|El procedimiento se ha creado con la opción WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Módulo declarado para generar una salida NULL en cualquier entrada NULL.|  
 |**execute_as_principal_id**|**Int**|Id. de la entidad de seguridad de base de datos EXECUTE AS.<br /><br /> NULL de manera predeterminada o si EXECUTE AS CALLER.<br /><br /> IDENTIFICADOR de la entidad de seguridad especificada si EXECUTe AS SELF \<o EXECUTE as principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
-|**uses_native_compilation**|**bit**|**Se aplica a** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]hasta.<br /><br /> 0 = no está compilado de forma nativa<br /><br /> 1 = está compilado de forma nativa<br /><br /> El valor predeterminado es 0.|  
+|**uses_native_compilation**|**bit**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = no está compilado de forma nativa<br /><br /> 1 = está compilado de forma nativa<br /><br /> El valor predeterminado es 0.|  
 |**is_inlineable**|**bit**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] y versiones posteriores.<br/><br />Indica si el módulo es insertable o no. La inlineity se basa en las condiciones especificadas [aquí](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = no insertable<br /><br /> 1 = es inlineable. <br /><br /> En el caso de las UDF escalares, el valor será 1 si la UDF es insertable y 0 en caso contrario. Siempre contiene un valor de 1 para TVF en línea y 0 para todos los demás tipos de módulos.<br />|  
 |**inline_type**|**bit**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] y versiones posteriores.<br /><br />Indica si la inserción está activada para el módulo actualmente. <br /><br />0 = la inclusión está desactivada<br /><br /> 1 = la inserción está activada.<br /><br /> En el caso de las UDF escalares, el valor será 1 si la inserción está activada (explícita o implícitamente). El valor siempre será 1 para TVF en línea y 0 para otros tipos de módulo.<br />|  
 

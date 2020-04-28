@@ -18,10 +18,10 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107877"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
@@ -44,10 +44,10 @@ sp_OAGetProperty objecttoken , propertyname
  *objecttoken*  
  Es el token de objeto de un objeto OLE creado previamente mediante **sp_OACreate**.  
   
- *PropertyName*  
+ *propertyname*  
  Es el nombre de la propiedad del objeto OLE que se devolverá.  
   
- ** **resultados** de PropertyValue  
+ *propertyvalue* **resultados** de PropertyValue  
  Es el valor devuelto de la propiedad. Si se especifica, debe ser una variable local del tipo de datos adecuado.  
   
  Si la propiedad devuelve un objeto OLE, *PropertyValue* debe ser una variable local de tipo de datos **int**. Un token de objeto se almacena en la variable local y este token de objeto se puede utilizar con otros procedimientos almacenados de automatización OLE.  

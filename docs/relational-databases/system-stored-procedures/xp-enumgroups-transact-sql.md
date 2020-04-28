@@ -18,10 +18,10 @@ ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116770"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
@@ -49,7 +49,7 @@ xp_enumgroups [ 'domain_name' ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**agrupamiento**|**sysname**|Nombre del grupo de Windows|  
+|**group**|**sysname**|Nombre del grupo de Windows|  
 |**Comentario**|**sysname**|Descripción del grupo de Windows proporcionado por Windows|  
   
 ## <a name="remarks"></a>Observaciones  

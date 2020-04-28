@@ -20,10 +20,10 @@ ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116732"
 ---
 # <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "68116732"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**< columnas heredadas>**||Hereda columnas de [Sys. endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
-|**casilla**|int|Número de puerto en el que escucha el extremo. No admite valores NULL.|  
+|**port**|int|Número de puerto en el que escucha el extremo. No admite valores NULL.|  
 |**is_dynamic_port**|bit|1 = El número de puerto se asignó dinámicamente.<br /><br /> No admite valores NULL.|  
 |**ip_address**|**nvarchar (45)**|Dirección IP de escucha según se especifica en la cláusula LISTENER_IP. Acepta valores NULL.|  
   
 ## <a name="remarks"></a>Observaciones  
- Ejecute la siguiente consulta para reunir información sobre los extremos y las conexiones. Los extremos sin conexiones actuales o sin conexiones TCP aparecerán con valores NULL. Agregue la **** cláusula `WHERE des.session_id = @@SPID` Where para devolver información sobre la conexión actual.  
+ Ejecute la siguiente consulta para reunir información sobre los extremos y las conexiones. Los extremos sin conexiones actuales o sin conexiones TCP aparecerán con valores NULL. Agregue la **WHERE** cláusula `WHERE des.session_id = @@SPID` Where para devolver información sobre la conexión actual.  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   
@@ -60,6 +60,6 @@ LEFT JOIN sys.dm_exec_connections AS dec
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Vistas de catálogo de extremos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)  
+ [Endpoints Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md) [Vistas de catálogo de extremos &#40;Transact-SQL&#41;]  
   
   

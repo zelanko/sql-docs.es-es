@@ -16,10 +16,10 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124577"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
@@ -49,8 +49,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 |**article_name**|**sysname**|Nombre del artículo al que se aplica el cambio de esquema o de la **publicación** para los cambios de esquema que se aplican a toda la publicación.|  
 |**schemaversion**|**int**|Número del cambio de esquema pendiente.|  
 |**schematype**|**sysname**|Valor de texto que representa el tipo de cambio de esquema.|  
-|**schematext**|**nvarchar(max)**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] que describe el cambio de esquema.|  
+|**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] que describe el cambio de esquema.|  
 |**schemastatus**|**nvarchar(10**|Indica si hay un cambio de esquema pendiente para el artículo, que puede tener los valores siguientes:<br /><br /> **activo** = cambio de esquema pendiente<br /><br /> **inactivo** = el cambio de esquema está inactivo<br /><br /> **omitir** = el cambio de esquema no se replica|  
 |**schemaguid**|**uniqueidentifier**|Identifica el cambio de esquema.|  
   

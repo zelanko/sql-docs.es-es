@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132949"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68132949"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Id. local del servidor vinculado.|  
-|**Name**|**sysname**|Cuando **server_id** = 0, el valor devuelto es el nombre del servidor.<br /><br /> Cuando **server_id** > 0, el valor devuelto es el nombre local del servidor vinculado.|  
-|**Manuales**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**name**|**sysname**|Cuando **server_id** = 0, el valor devuelto es el nombre del servidor.<br /><br /> Cuando **server_id** > 0, el valor devuelto es el nombre local del servidor vinculado.|  
+|**product**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**presta**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propiedad de conexión del origen de datos OLE DB.|  
-|**Cód**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
+|**ubicación**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
 |**provider_string**|**nvarchar(4000)**|Propiedad de conexión de la cadena del proveedor OLE DB.<br /><br /> Es NULL a menos que el autor de la llamada tenga permiso ALTER ANY LINKED SERVER.|  
 |**Catálogo**|**sysname**|Propiedad de conexión del catálogo OLE DB. Es NULL si no hay ninguna.|  
 |**connect_timeout**|**int**|Tiempo de espera de conexión, en segundos. Es 0 si no hay ninguno.|  
@@ -69,13 +69,13 @@ ms.locfileid: "68132949"
   
  Si se elimina la asignación de inicio de sesión predeterminada, solo los usuarios que se hayan agregado de forma explícita como un inicio de sesión vinculado o remoto podrán ver los servidores vinculados o remotos para los que tienen un inicio de sesión.  Los siguientes permisos son necesarios para ver todos los servidores vinculados y remotos después de la asignación de inicio de sesión predeterminada:  
   
-- `ALTER ANY LINKED SERVER`de`ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` o `ALTER ANY LOGIN ON SERVER`  
 - Pertenencia a los roles fijos de servidor **setupadmin** o **sysadmin**  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Servidores vinculados vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [sp_addremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

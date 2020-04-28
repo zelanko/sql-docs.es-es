@@ -19,10 +19,10 @@ ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119351"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68119351"
 |**media_set_id**|**int**|Número exclusivo de identificación del conjunto de medios. Clave principal de identidad.|  
 |**media_uuid**|**uniqueidentifier**|UUID del conjunto de medios. Todos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los conjuntos de medios tienen un UUID.<br /><br /> En el caso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las versiones anteriores de, sin embargo, si un conjunto de medios solo contiene una familia de medios, la columna de **MEDIA_UUID** puede ser null (**media_family_count** es 1).|  
 |**media_family_count**|**tinyint**|Número de familias de medios en el conjunto de medios. Puede ser NULL.|  
-|**Name**|**nvarchar(128)**|Nombre del conjunto de medios. Puede ser NULL.<br /><br /> Para obtener más información, consulte MEDIANAme y MEDIADESCRIPTION en [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**name**|**nvarchar(128)**|Nombre del conjunto de medios. Puede ser NULL.<br /><br /> Para obtener más información, consulte MEDIANAme y MEDIADESCRIPTION en [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**denominación**|**nvarchar(255)**|Texto de descripción del conjunto de medios. Puede ser NULL.<br /><br /> Para obtener más información, consulte MEDIANAme y MEDIADESCRIPTION en [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**software_name**|**nvarchar(128)**|Nombre del software de copia de seguridad que escribió la etiqueta del medio. Puede ser NULL.|  
 |**software_vendor_id**|**int**|Número de identificación del proveedor de software que escribió la etiqueta del medio de copia de seguridad. Puede ser NULL.<br /><br /> El valor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es hexadecimal 0x1200.|  
@@ -56,7 +56,7 @@ ms.locfileid: "68119351"
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [conjunto de &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

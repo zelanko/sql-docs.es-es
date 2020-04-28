@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: e1d2e60ce41cd3c57af209123471696cf02a03ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133791"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68133791"
 |**database_id**|**int**|Id. de la base de datos, único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Fecha en que la base de datos se registró para el procesamiento semántico.|  
 |**registered_by**|**int**|Identificador de la entidad de seguridad de servidor que registró la base de datos para el procesamiento semántico.|  
-|**Versión**|**nvarchar(128)**|La última información de versión específica de la base de datos de estadísticas semánticas de lenguaje.|  
+|**version**|**nvarchar(128)**|La última información de versión específica de la base de datos de estadísticas semánticas de lenguaje.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md).  

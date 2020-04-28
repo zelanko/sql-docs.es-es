@@ -19,10 +19,10 @@ ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130551"
 ---
 # <a name="suspect_pages-transact-sql"></a>suspect_pages (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68130551"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Id. de la base de datos a la que se aplica esta página.|  
 |**file_id**|**int**|Id. del archivo en la base de datos.|  
-|**page_id**|**BIGINT**|Id. de la página sospechosa. Cada página incluye un valor de 32 bits de Id. de página que identifica su ubicación en la base de datos. El **page_id** es el desplazamiento en el archivo de datos de la página de 8 KB. Los Id. de página son únicos en un archivo.|  
+|**page_id**|**bigint**|Id. de la página sospechosa. Cada página incluye un valor de 32 bits de Id. de página que identifica su ubicación en la base de datos. El **page_id** es el desplazamiento en el archivo de datos de la página de 8 KB. Los Id. de página son únicos en un archivo.|  
 |**event_type**|**int**|Tipo de error; puede ser uno de los siguientes:<br /><br /> 1 = Un error 823 que produce una página sospechosa (como un error de disco) o un error 824 distinto de una suma de comprobación incorrecta o una página rasgada (como un Id. de página no válido).<br /><br /> 2 = Suma de comprobación incorrecta.<br /><br /> 3 = Página rasgada.<br /><br /> 4 = Restaurada (la página se restauró después de marcarse como incorrecta).<br /><br /> 5 = Reparada (DBCC ha reparado la página).<br /><br /> 7 = Desasignada por DBCC.|  
 |**error_count**|**int**|Número de veces que ha ocurrido el error.|  
 |**last_update_date**|**datetime**|Marca de fecha y hora de la última actualización.|  

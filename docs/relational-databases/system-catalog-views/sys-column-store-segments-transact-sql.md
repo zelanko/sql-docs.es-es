@@ -20,10 +20,10 @@ ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140000"
 ---
 # <a name="syscolumn_store_segments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
@@ -33,22 +33,22 @@ Devuelve una fila por cada segmento de columna de un índice de almacén de colu
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**BIGINT**|Indica el identificador de partición. Es único en una base de datos.|  
-|**hobt_id**|**BIGINT**|Identificador del montón o el índice de árbol b (hobt) para la tabla que contiene este índice de almacén de columnas.|  
+|**partition_id**|**bigint**|Indica el identificador de partición. Es único en una base de datos.|  
+|**hobt_id**|**bigint**|Identificador del montón o el índice de árbol b (hobt) para la tabla que contiene este índice de almacén de columnas.|  
 |**column_id**|**int**|Identificador de la columna de almacén de columnas.|  
 |**segment_id**|**int**|IDENTIFICADOR de filas. Por compatibilidad con versiones anteriores, el nombre de columna sigue siendo llamado segment_id aunque se trata del identificador de filas. Puede identificar de forma única un segmento mediante \<hobt_id, partition_id, column_id> <segment_id>.|  
-|**Versión**|**int**|Versión del formato de segmento de columna.|  
+|**version**|**int**|Versión del formato de segmento de columna.|  
 |**encoding_type**|**int**|Tipo de codificación que se usa para ese segmento:<br /><br /> 1 = VALUE_BASED-no cadena/binaria sin diccionario (muy similar a 4 con algunas variaciones internas)<br /><br /> 2 = VALUE_HASH_BASED una columna no cadena/binaria con valores comunes en el Diccionario<br /><br /> 3 = STRING_HASH_BASED-cadena/columna binaria con valores comunes en el Diccionario<br /><br /> 4 = STORE_BY_VALUE_BASED-no cadena/binaria sin Diccionario<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED-cadena/binario sin Diccionario<br /><br /> Todas las codificaciones aprovechan el empaquetado de bits y la codificación de longitud de ejecución cuando sea posible.|  
 |**row_count**|**int**|Número de filas del grupo de filas.|  
 |**has_nulls**|**int**|1 si el segmento de la columna tiene valores NULL.|  
-|**base_id**|**BIGINT**|Identificador del valor base si se está utilizando el tipo de codificación 1.  Si no se usa el tipo de codificación 1, base_id se establece en-1.|  
+|**base_id**|**bigint**|Identificador del valor base si se está utilizando el tipo de codificación 1.  Si no se usa el tipo de codificación 1, base_id se establece en-1.|  
 |**magnitude**|**float**|Magnitud si se usa el tipo de codificación 1.  Si no se usa el tipo de codificación 1, Magnitude se establece en-1.|  
 |**primary_dictionary_id**|**int**|Un valor de 0 representa el Diccionario global. Un valor de-1 indica que no hay ningún diccionario global creado para esta columna.|  
 |**secondary_dictionary_id**|**int**|Un valor distinto de cero apunta al diccionario local para esta columna en el segmento actual (es decir, filas). Un valor de-1 indica que no hay ningún diccionario local para este segmento.|  
-|**min_data_id**|**BIGINT**|Identificador de datos mínimo en el segmento de columna.|  
-|**max_data_id**|**BIGINT**|Identificador de datos máximo en el segmento de columna.|  
-|**null_value**|**BIGINT**|Valor usado para representar valores NULL.|  
-|**on_disk_size**|**BIGINT**|Tamaño del segmento en bytes.|  
+|**min_data_id**|**bigint**|Identificador de datos mínimo en el segmento de columna.|  
+|**max_data_id**|**bigint**|Identificador de datos máximo en el segmento de columna.|  
+|**null_value**|**bigint**|Valor usado para representar valores NULL.|  
+|**on_disk_size**|**bigint**|Tamaño del segmento en bytes.|  
   
 ## <a name="remarks"></a>Observaciones  
  La consulta siguiente devuelve información acerca de los segmentos de un índice de almacén de columnas.  
@@ -79,7 +79,7 @@ GO
  [Sys. all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [Sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)    
- [Sys. column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
+ [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   
   
 

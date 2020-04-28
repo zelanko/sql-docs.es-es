@@ -19,10 +19,10 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103302"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68103302"
 |**handle_id**|**int**|Muestra el identificador único de este controlador asignado por el controlador. No admite valores NULL.|  
 |**creation_client_thread_id**|**varbinary(8**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. Acepta valores NULL.|  
 |**creation_client_process_id**|**varbinary(8**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. Acepta valores NULL.|  
-|**filestream_transaction_id**|**varbinary (128)**|Muestra el identificador de la transacción asociado con el controlador determinado. Este es el valor devuelto por la función **get_filestream_transaction_context** . Utilice este campo para unirse a la vista **Sys. dm_filestream_file_io_requests** . Acepta valores NULL.|  
-|**access_type**|**nvarchar (60)**|No admite valores NULL.|  
+|**filestream_transaction_id**|**varbinary(128)**|Muestra el identificador de la transacción asociado con el controlador determinado. Este es el valor devuelto por la función **get_filestream_transaction_context** . Utilice este campo para unirse a la vista **Sys. dm_filestream_file_io_requests** . Acepta valores NULL.|  
+|**access_type**|**nvarchar(60)**|No admite valores NULL.|  
 |**logical_path**|**nvarchar(256)**|Muestra el nombre de ruta de acceso lógico del archivo que abrió este controlador. Es el mismo que devuelve el **. Método PathName** de FileStream de tipo **varbinary**(**Max**). Acepta valores NULL.|  
 |**physical_path**|**nvarchar(256)**|Muestra el nombre de ruta de acceso NTFS real del archivo. Es el mismo directorio devuelto por **. Método PhysicalPathName** de FileStream de tipo **varbinary**(**Max**). Lo habilita la marca de seguimiento 5556. Acepta valores NULL.|  
   

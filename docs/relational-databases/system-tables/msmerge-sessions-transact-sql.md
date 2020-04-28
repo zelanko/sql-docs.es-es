@@ -18,10 +18,10 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106351"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
@@ -35,13 +35,13 @@ ms.locfileid: "68106351"
 |**agent_id**|**int**|El Id. del Agente de mezcla.|  
 |**start_time**|**datetime**|Hora a la que comenzó la ejecución del trabajo.|  
 |**end_time**|**datetime**|Hora a la que terminó la ejecución del trabajo.|  
-|**Duration**|**int**|La duración acumulada, en segundos, de esta sesión de trabajo.|  
+|**duration**|**int**|La duración acumulada, en segundos, de esta sesión de trabajo.|  
 |**delivery_time**|**int**|Número de segundos que se ha tardado en aplicar un lote de cambios.|  
 |**upload_time**|**int**|Número de segundos que se ha tardado en cargar los cambios en el publicador.|  
 |**download_time**|**int**|Número de segundos que se ha tardado en descargar los cambios en el suscriptor.|  
 |**delivery_rate**|**float**|Promedio de comandos realizados por segundo.|  
 |**time_remaining**|**int**|Número estimado de segundos que quedan en una sesión activa.|  
-|**percent_complete**|**Decimal**|Porcentaje estimado de los cambios totales que ya se han realizado en una sesión activa.|  
+|**percent_complete**|**decimal**|Porcentaje estimado de los cambios totales que ya se han realizado en una sesión activa.|  
 |**upload_inserts**|**int**|Número de inserciones aplicadas en el publicador.|  
 |**upload_updates**|**int**|Número de actualizaciones aplicadas en el publicador.|  
 |**upload_deletes**|**int**|Número de eliminaciones aplicadas en el publicador.|  

@@ -18,10 +18,10 @@ ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139722"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
@@ -37,11 +37,11 @@ ms.locfileid: "68139722"
 |**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = transaccional.<br /><br /> **2** = fusionar mediante combinación.|  
 |**publisher_login**|**sysname**|Identificador de inicio de sesión utilizado en el publicador para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Contraseña (cifrada) utilizada en el publicador para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**int**|Modo de seguridad aplicado en el publicador:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server la autenticación.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.<br /><br /> **2** = los desencadenadores de sincronización utilizan una entrada **sysservers** estática para realizar una llamada a procedimiento remoto (RPC) y el *publicador* debe definirse en la tabla **sysservers** como un servidor remoto o un servidor vinculado.|  
+|**publisher_security_mode**|**int**|Modo de seguridad aplicado en el publicador:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server la autenticación.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.<br /><br /> **2** = los desencadenadores de sincronización utilizan una entrada **sysservers** estática para realizar una llamada a procedimiento remoto (RPC) y el *publicador* debe definirse en la tabla **sysservers** como un servidor remoto o un servidor vinculado.|  
 |**distribuidor**|**sysname**|Nombre del distribuidor.|  
 |**distributor_login**|**sysname**|Id. de inicio de sesión utilizado en el distribuidor para la autenticación de SQL Server.|  
 |**distributor_password**|**nvarchar (524)**|Contraseña (cifrada) utilizada en el distribuidor para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|Modo de seguridad aplicado en el distribuidor:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1** = autenticación de Windows.|  
+|**distributor_security_mode**|**int**|Modo de seguridad aplicado en el distribuidor:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1** = autenticación de Windows.|  
 |**ftp_address**|**sysname**|Dirección de red del servicio FTP (Protocolo de transferencia de archivos) del distribuidor.|  
 |**ftp_port**|**int**|El número de puerto del servicio FTP para el distribuidor.|  
 |**ftp_login**|**sysname**|El nombre de usuario utilizado para conectarse al servicio FTP.|  
@@ -62,13 +62,13 @@ ms.locfileid: "68139722"
 |**internet_password**|**nvarchar (524)**|Contraseña del inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de.|  
 |**internet_security_mode**|**int**|El modo de autenticación utilizado al conectarse al servidor Web que hospeda la sincronización Web, donde un valor de **1** significa autenticación de Windows y un valor de **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**internet_timeout**|**int**|Tiempo que transcurre, en segundos, hasta que expira una solicitud de sincronización web.|  
-|**host**|**sysname**|Especifica el valor de **host_name** cuando esta función se utiliza en la cláusula **Where** de un filtro de combinación o una relación de registros lógicos.|  
+|**hostname**|**sysname**|Especifica el valor de **host_name** cuando esta función se utiliza en la cláusula **Where** de un filtro de combinación o una relación de registros lógicos.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

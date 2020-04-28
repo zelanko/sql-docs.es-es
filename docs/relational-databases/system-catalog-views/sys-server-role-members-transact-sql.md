@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133029"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68133029"
 ## <a name="permissions"></a>Permisos  
  Los inicios de sesión pueden ver su propia pertenencia al rol de servidor y pueden ver los principal_id de los miembros de los roles fijos de servidor. Para ver toda la pertenencia al rol de servidor, es necesario el permiso **View definition on Server role** o la pertenencia al rol fijo de servidor **securityadmin** .  
   
- Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve los nombres y los identificadores de los roles y sus miembros.  

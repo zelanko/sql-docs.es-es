@@ -16,10 +16,10 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124117"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
@@ -40,11 +40,11 @@ sp_get_distributor
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Instalado**|**int**|**0** = no; **1** = sí|  
-|**distribution server**|**sysname**|Nombre del servidor distribuidor|  
-|**distribution db installed**|**int**|**0** = no; **1** = sí|  
+|**instalación**|**int**|**0** = no; **1** = sí|  
+|**servidor de distribución**|**sysname**|Nombre del servidor distribuidor|  
+|**base de de distribución instalada**|**int**|**0** = no; **1** = sí|  
 |**is distribution publisher**|**int**|**0** = no; **1** = sí|  
-|**has remote distribution publisher**|**int**|**0** = no; **1** = sí|  
+|**tiene publicador de distribución remoto**|**int**|**0** = no; **1** = sí|  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_get_distributor** utiliza principalmente en la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] replicación de instantáneas, transaccional y de mezcla.  
@@ -54,7 +54,7 @@ sp_get_distributor
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [Distributor and Publisher Information Script](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)  (Script de información del distribuidor y del publicador)  
+ [Script de información del distribuidor y del publicador](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

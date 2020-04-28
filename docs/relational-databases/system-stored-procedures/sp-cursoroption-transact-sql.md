@@ -18,10 +18,10 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108455"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
@@ -42,7 +42,7 @@ sp_cursoroption cursor, code, value
  *cursor*  
  Es un valor de *identificador* generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y devuelto por el Sp_cursoropen procedimiento almacenado. el *cursor* requiere un valor de entrada **int** para la ejecución.  
   
- *codifica*  
+ *code*  
  Se usa para estipular varios factores de los valores devueltos del cursor. el *código* requiere uno de los siguientes valores de entrada **int** :  
   
 |Value|Nombre|Descripción|  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|Opción de control de simultaneidad. Vea "Valores del código de retorno", posteriormente en este tema, para obtener información adicional.|  
 |0x0006|ROWCOUNT|El número de filas que están actualmente en el conjunto de resultados.<br /><br /> Nota: el recuento de filas puede haber cambiado desde el valor devuelto por sp_cursoropen si se utiliza el rellenado asincrónico. Se devuelve el valor-1 si se desconoce el número de filas.|  
   
- *valor*  
+ *value*  
  Designa el valor devuelto por el *código*. *Value* es un parámetro necesario que llama a para un valor de entrada de *código* 0x0001, 0x0002 o 0x0003.  
   
 > [!NOTE]  

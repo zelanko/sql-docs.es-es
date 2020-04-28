@@ -18,10 +18,10 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107913"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
@@ -46,16 +46,16 @@ sp_OAGetErrorInfo [ objecttoken ]
  *objecttoken*  
  Es el token de objeto de un objeto OLE creado previamente mediante **sp_OACreate** o es NULL. Si se especifica *objecttoken* , se devuelve información de error para ese objeto. Si se especifica NULL, se devuelve la información de error de todo el lote.  
   
- __ **salida** de origen  
+ _source_ **salida** de origen  
  Es el origen de la información de error. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- __ **salida** de Descripción  
+ _description_ **salida** de Descripción  
  Es la descripción del error. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- __ **salida** de HelpFile  
+ _helpfile_ **salida** de HelpFile  
  Es el archivo de ayuda del objeto OLE. Si se especifica, debe ser una variable de tipo **Char**, **nchar**, **VARCHAR**o **nvarchar** local. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- __ **salida** de helpID  
+ _helpid_ **salida** de helpID  
  Es el identificador de contexto del archivo de ayuda. Si se especifica, debe ser una variable local **int** .  
   
 > [!NOTE]  

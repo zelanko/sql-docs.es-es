@@ -18,10 +18,10 @@ ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139919"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
@@ -81,12 +81,10 @@ sp_indexes [ @table_server = ] 'table_server'
 |TYPE|**smallint**|Tipo de índice:<br /><br /> 0 = Estadísticas de una tabla<br /><br /> 1 = Clúster<br /><br /> 2 = Hash<br /><br /> 3 = otro|  
 |ORDINAL_POSITION|**int**|Posición ordinal de la columna en el índice. La primera columna del índice es 1. Esta columna siempre devuelve un valor.|  
 |COLUMN_NAME|**sysname**|Es el nombre correspondiente de la columna para cada columna de TABLE_NAME devuelta.|  
-|ASC_OR_DESC|**varchar**|Es el orden utilizado en la intercalación:<br /><br /> A = Ascendente<br /><br /> D = Descendente<br /><br /> NULL = No aplicable<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve A.|  
+|ASC_OR_DESC|**varchar**|Es el orden utilizado en la intercalación:<br /><br /> A = Ascendente<br /><br /> D = Descendente<br /><br /> NULL = No aplicable<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve A.|  
 |CARDINALITY|**int**|Es el número de filas de la tabla o valores únicos del índice.|  
 |PAGES|**int**|Número de páginas para el almacenamiento del índice o la tabla.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
+|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  

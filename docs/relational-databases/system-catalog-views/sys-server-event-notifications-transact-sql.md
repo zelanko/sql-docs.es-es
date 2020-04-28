@@ -20,10 +20,10 @@ ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e3eaa1bdfa45e0c3e0b0412b8852e134c43c3eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124989"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
@@ -33,10 +33,10 @@ ms.locfileid: "68124989"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre de notificación de eventos de servidor. Este nombre es único en todas las notificaciones de eventos de nivel de servidor.|  
+|**name**|**sysname**|Nombre de notificación de eventos de servidor. Este nombre es único en todas las notificaciones de eventos de nivel de servidor.|  
 |**object_id**|**int**|Número de identificación del objeto. Es único en la base de datos **maestra** .|  
 |**parent_class**|**tinyint**|Clase del elemento primario. Siempre es 100 = Servidor.|  
-|**parent_class_desc**|**nvarchar (60)**|Descripción de la clase de elemento primario. Siempre es SERVER.|  
+|**parent_class_desc**|**nvarchar(60)**|Descripción de la clase de elemento primario. Siempre es SERVER.|  
 |**parent_id**|**int**|Siempre es 0.|  
 |**create_date**|**datetime**|Fecha de creación.|  
 |**modify_date**|**datetime**|Es la fecha en que el objeto ha sido modificado por última vez mediante la instrucción ALTER.|  

@@ -18,10 +18,10 @@ ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108481"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Al igual ** que con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollopt, puede invalidar los valores de *ccopt* solicitados.  
+ Al igual *scrollopt*que con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollopt, puede invalidar los valores de *ccopt* solicitados.  
   
  *empleado*  
  Número de filas del búfer de captura que se usan con AUTO_FETCH. El valor predeterminado es 20 filas. *RowCount* se comporta de forma diferente cuando se asigna como valor de entrada frente a un valor devuelto.  

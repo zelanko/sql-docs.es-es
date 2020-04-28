@@ -18,10 +18,10 @@ ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127431"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68127431"
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|El Id. de la base de datos del publicador.|  
 |**xact_seqno**|**varbinary(16)**|El número de secuencia de la transacción.|  
-|**automáticamente**|**int**|Tipo de comando.|  
+|**type**|**int**|Tipo de comando.|  
 |**article_id**|**int**|Id. del artículo.|  
 |**originator_id**|**int**|Id. del originador.|  
 |**command_id**|**int**|Id. del comando.|  

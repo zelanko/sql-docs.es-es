@@ -18,10 +18,10 @@ ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140569"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
@@ -44,8 +44,8 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
- **cuadro**  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
+ **table**  
  Nombre de una tabla con indización de texto completo y semántica habilitada.  
   
  Este nombre puede ser un nombre de una a cuatro partes, pero no se permite un nombre de servidor remoto.  
@@ -72,7 +72,7 @@ SEMANTICKEYPHRASETABLE
 |**column_id**|**int**|IDENTIFICADOR de la columna de la que se ha extraído la frase clave actual y se ha indexado.<br /><br /> Vea las funciones COL_NAME y COLUMNPROPERTY para obtener información detallada sobre cómo recuperar el nombre de columna desde column_id y viceversa.|  
 |**document_key**|**\***<br /><br /> Esta clave coincide con el tipo de la clave única de la tabla de origen.|Valor de clave único del documento o fila de los que se indizó la palabra clave actual.|  
 |**frase clave**|**NVARCHAR**|La frase clave encontrada en la columna identificada por column_id y asociada al documento especificado por document_key.|  
-|**carácter**|**IMPUESTOS**|Valor relativo de esta frase clave en su relación con todas las demás frases clave del mismo documento de la columna indizada.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  
+|**carácter**|**real**|Valor relativo de esta frase clave en su relación con todas las demás frases clave del mismo documento de la columna indizada.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [Buscar frases clave en documentos con la búsqueda semántica](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  
@@ -91,7 +91,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Ejemplos  
   
-###  <a name="HowToTopPhrases"></a>Ejemplo 1: buscar las frases clave principales de un documento específico  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>Ejemplo 1: buscar las frases clave principales de un documento específico  
  En el ejemplo siguiente se recuperan las 10 frases clave principales del documento especificado por la variable @DocumentId en la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks. La variable @DocumentId representa un valor de la columna de clave del índice de texto completo. La función **SEMANTICKEYPHRASETABLE** recupera estos resultados eficazmente mediante una búsqueda de índice en vez de un recorrido de tabla. En este ejemplo se supone que la columna está configurada para texto completo y para indización semántica.  
   
 ```sql  
@@ -106,7 +106,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>Ejemplo 2: buscar los documentos principales que contienen una frase clave específica  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>Ejemplo 2: buscar los documentos principales que contienen una frase clave específica  
  En el ejemplo siguiente se recuperan los 25 primeros documentos que contengan la palabra clave "Bracket" de la columna Document de la tabla Production.Document de la base de datos de ejemplo AdventureWorks. En este ejemplo se supone que la columna está configurada para texto completo y para indización semántica.  
   
 ```sql  

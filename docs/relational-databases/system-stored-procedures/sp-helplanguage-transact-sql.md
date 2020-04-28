@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122510"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
@@ -54,12 +54,12 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**DateFormat**|**nchar(3)**|Formato de la fecha.|  
 |**DATEFIRST**|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
 |**actualización**|**int**|Versión de la última actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
-|**Name**|**sysname**|Nombre del idioma.|  
+|**name**|**sysname**|Nombre del idioma.|  
 |**alias**|**sysname**|Nombre alternativo del idioma.|  
-|**partir**|**nvarchar (372)**|Nombres de los meses.|  
+|**months**|**nvarchar (372)**|Nombres de los meses.|  
 |**shortmonths**|**nvarchar (132)**|Abreviaturas de los nombres de los meses.|  
-|**durante**|**nvarchar (217)**|Nombres de los días.|  
-|**LCID**|**int**|Id. de configuración regional de Windows para el idioma.|  
+|**días**|**nvarchar (217)**|Nombres de los días.|  
+|**lcid**|**int**|Id. de configuración regional de Windows para el idioma.|  
 |**msglangid**|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Permisos  
@@ -84,7 +84,7 @@ sp_helplanguage;
 ## <a name="see-also"></a>Consulte también  
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [ESTABLECER lenguaje &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

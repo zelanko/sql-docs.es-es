@@ -20,10 +20,10 @@ ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 254be7cdd5e26422a27262b963d48908777d616b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133019"
 ---
 # <a name="sysserver_sql_modules-transact-sql"></a>sys.server_sql_modules (Transact-SQL)

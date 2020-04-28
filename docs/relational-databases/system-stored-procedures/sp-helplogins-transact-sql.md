@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122449"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @LoginNamePattern = ] 'login'`Es un nombre de inicio de sesión. *login* es de **tipo sysname y su**valor predeterminado es NULL. el *Inicio de sesión* debe existir si se especifica. Si no se especifica *login* , se devuelve información acerca de todos los inicios de sesión.  
+`[ @LoginNamePattern = ] 'login'`Es un nombre de inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. el *Inicio de sesión* debe existir si se especifica. Si no se especifica *login* , se devuelve información acerca de todos los inicios de sesión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -50,7 +50,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
-|**SID**|**varbinary(85)**|Identificador de seguridad (SID) del inicio de sesión.|  
+|**Junction**|**varbinary(85)**|Identificador de seguridad (SID) del inicio de sesión.|  
 |**DefDBName**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia de.|  
 |**DefLangName**|**sysname**|Idioma predeterminado usado por **LoginName**.|  
 |**Auser**|**Char (5)**|Sí = **LoginName** tiene un nombre de usuario asociado en una base de datos.<br /><br /> No = **LoginName** no tiene un nombre de usuario asociado.|  

@@ -19,10 +19,10 @@ ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122922"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -36,11 +36,11 @@ ms.locfileid: "68122922"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Conjunto de copia de seguridad que contiene este grupo de archivos.|  
-|**Name**|**sysname**|Nombre del grupo de archivos.|  
+|**name**|**sysname**|Nombre del grupo de archivos.|  
 |**filegroup_id**|**int**|Id. del grupo de archivos; único en la base de datos. Corresponde a **data_space_id** en **Sys. grupos**de archivos.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificador único global para el grupo de archivos. Puede ser NULL.|  
-|**automáticamente**|**Char (2)**|Tipo de contenido, uno de los siguientes:<br /><br /> FG = Grupo de archivos "Rows"<br /><br /> SL = Grupo de archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**type_desc**|**nvarchar (60)**|Descripción del tipo de función, una de:<br /><br /> ROWS_FILEGROUP <br /><br /> SQL_LOG_FILEGROUP |  
+|**type**|**char(2)**|Tipo de contenido, uno de los siguientes:<br /><br /> FG = Grupo de archivos "Rows"<br /><br /> SL = Grupo de archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type_desc**|**nvarchar(60)**|Descripción del tipo de función, una de:<br /><br /> ROWS_FILEGROUP <br /><br /> SQL_LOG_FILEGROUP |  
 |**is_default**|**bit**|Grupo de archivos predeterminado, que se utiliza cuando no se ha especificado ningún otro en CREATE TABLE o CREATE INDEX.|  
 |**is_readonly**|**bit**|1 = El grupo de archivos es de solo lectura.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Puede ser NULL.|  
@@ -59,7 +59,7 @@ ms.locfileid: "68122922"
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [conjunto de &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [Tablas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

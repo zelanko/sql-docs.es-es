@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108573"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -86,10 +86,10 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  Solo es válido para su uso con los valores de actualización, eliminación, actualización o bloqueo de *optype* .  
   
- *cuadro*  
+ *table*  
  Nombre de tabla que identifica la tabla a la que se aplica *optype* cuando la definición del cursor implica la combinación o los nombres de columna ambiguos devueltos por el parámetro de *valor* . Si no se designa ninguna tabla específica, el valor predeterminado es la primera tabla de la cláusula FROM. *TABLE* es un parámetro opcional que requiere un valor de entrada de cadena. La cadena se puede especificar como cualquier tipo de datos UNICODE o carácter. la *tabla* puede ser un nombre de tabla de varias partes.  
   
- *valor*  
+ *value*  
  Se usa para insertar o actualizar valores. El parámetro de cadena *Value* solo se usa con los valores Update e Insert *optype* . La cadena se puede especificar como cualquier tipo de datos UNICODE o carácter.  
   
 > [!NOTE]  

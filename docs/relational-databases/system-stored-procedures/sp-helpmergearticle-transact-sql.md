@@ -16,10 +16,10 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122341"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
@@ -46,28 +46,28 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Identificador del artículo.|  
-|**Name**|**sysname**|Nombre del artículo.|  
+|**id**|**int**|Identificador del artículo.|  
+|**name**|**sysname**|Nombre del artículo.|  
 |**source_owner**|**sysname**|Nombre del propietario del objeto de origen.|  
 |**source_object**|**sysname**|Nombre del objeto de origen desde el que se agrega el artículo.|  
 |**sync_object_owner**|**sysname**|Nombre del propietario de la vista que define el artículo publicado.|  
 |**sync_object**|**sysname**|Nombre del objeto personalizado que se utiliza para establecer los datos iniciales de la partición|  
 |**denominación**|**nvarchar(255)**|Descripción del artículo.|  
-|**estatus**|**tinyint**|Estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = inactivo<br /><br /> **2** = activo<br /><br /> **5** = operación pendiente del lenguaje de definición de datos (DDL)<br /><br /> **6** = operación DDL con una instantánea recién generada<br /><br /> Nota: cuando se reinicializa un artículo, los valores **5** y **6** cambian a **2**.|  
+|**status**|**tinyint**|Estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = inactivo<br /><br /> **2** = activo<br /><br /> **5** = operación pendiente del lenguaje de definición de datos (DDL)<br /><br /> **6** = operación DDL con una instantánea recién generada<br /><br /> Nota: cuando se reinicializa un artículo, los valores **5** y **6** cambian a **2**.|  
 |**creation_script**|**nvarchar(255)**|Ruta de acceso y nombre de un script opcional del esquema del artículo que se utiliza para crear el artículo en la base de datos de suscripciones.|  
 |**conflict_table**|**nvarchar (270)**|Nombre de la tabla que almacena los conflictos de inserción o actualización.|  
 |**article_resolver**|**nvarchar(255)**|Solucionador personalizado para el artículo.|  
-|**subset_filterclause**|**nvarchar (1000)**|Cláusula WHERE que especifica el filtrado horizontal.|  
+|**subset_filterclause**|**nvarchar(1000)**|Cláusula WHERE que especifica el filtrado horizontal.|  
 |**pre_creation_command**|**tinyint**|Método anterior a la creación, que puede ser uno de los siguientes:<br /><br /> **0** = ninguno<br /><br /> **1** = quitar<br /><br /> **2** = eliminar<br /><br /> **3** = truncar|  
 |**schema_option**|**Binary(8**|Mapa de bits de la opción de generación de esquema para el artículo. Para obtener información sobre esta opción de mapa de bits, vea [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) o [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
-|**automáticamente**|**smallint**|Tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla<br /><br /> **32** = procedimiento almacenado<br /><br /> **64** = vista o vista indizada<br /><br /> **128** = función definida por el usuario<br /><br /> **160** = solo esquema de sinónimo|  
+|**type**|**smallint**|Tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla<br /><br /> **32** = procedimiento almacenado<br /><br /> **64** = vista o vista indizada<br /><br /> **128** = función definida por el usuario<br /><br /> **160** = solo esquema de sinónimo|  
 |**column_tracking**|**int**|Configuración para el seguimiento por columnas; donde **1** significa que el seguimiento en el nivel de columna está activado y **0** significa que el seguimiento por columna está desactivado.|  
 |**resolver_info**|**nvarchar(255)**|Nombre del solucionador del artículo.|  
 |**vertical_partition**|**bit**|Si el artículo tiene particiones verticales; donde **1** significa que el artículo tiene particiones verticales y **0** significa que no lo es.|  
 |**destination_owner**|**sysname**|Propietario del objeto de destino. Aplicable únicamente a procedimientos almacenados de mezcla, vistas y artículos de esquema de funciones definidas por el usuario (UDF).|  
 |**identity_support**|**int**|Si está habilitado el control automático de intervalos de identidad; donde **1** está habilitado y **0** está deshabilitado.|  
-|**pub_identity_range**|**BIGINT**|Tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**identity_range**|**BIGINT**|Tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**pub_identity_range**|**bigint**|Tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**identity_range**|**bigint**|Tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**mínimo**|**int**|Valor de porcentaje utilizado para los suscriptores que [!INCLUDE[ssEW](../../includes/ssew-md.md)] ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o versiones anteriores de. **Threshold** controla cuándo el agente de mezcla asigna un nuevo intervalo de identidad. Si se utiliza el porcentaje de valores especificado en el umbral, el Agente de mezcla crea un nuevo intervalo de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Es si se comprueba una firma digital antes de utilizar un solucionador en la replicación de mezcla; donde **0** significa que no se comprueba la firma y **1** significa que se comprueba la firma para ver si proviene de una fuente de confianza.|  
 |**destination_object**|**sysname**|Nombre del objeto de destino. Aplicable únicamente a procedimientos almacenados de mezcla, vistas y artículos de esquema UDF.|  

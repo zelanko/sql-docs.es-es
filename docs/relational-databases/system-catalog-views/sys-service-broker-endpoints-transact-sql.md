@@ -20,10 +20,10 @@ ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 33d94bf5a709c2581c6ee99a1e019f4eebcabe0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132957"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
@@ -37,10 +37,10 @@ ms.locfileid: "68132957"
 |**is_message_forwarding_enabled**|**bit**|El extremo admite el reenvío de mensajes. Inicialmente se establece en **0** (deshabilitado). No acepta valores NULL.|  
 |**message_forwarding_size**|**int**|Número máximo de megabytes de espacio de **tempdb** que se pueden usar para los mensajes que se reenvían. Inicialmente se establece en **10**. No acepta valores NULL.|  
 |**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** : NTLM<br /><br /> **2** -Kerberos<br /><br /> **3** -negociación<br /><br /> **4** : certificado<br /><br /> **5** : NTLM, certificado<br /><br /> **6** -Kerberos, certificado<br /><br /> **7** -Negotiate, certificado<br /><br /> **8** -certificado, NTLM<br /><br /> **9** -certificado, Kerberos<br /><br /> **10** -certificado, Negotiate<br /><br /> No acepta valores NULL.|  
-|**connection_auth_desc**|**nvarchar (60)**|Descripción del tipo de autenticación de conexión requerido para conexiones a este extremo. Es una de las opciones siguientes:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICADO<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> Acepta valores NULL.|  
+|**connection_auth_desc**|**nvarchar(60)**|Descripción del tipo de autenticación de conexión requerido para conexiones a este extremo. Es una de las opciones siguientes:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICADO<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> Acepta valores NULL.|  
 |**certificate_id**|**int**|Identificador del certificado utilizado para la autenticación, si lo hay.<br /><br /> 0 = Se está utilizando la Autenticación de Windows.|  
 |**encryption_algorithm**|**tinyint**|Algoritmo de cifrado. A continuación se muestran los posibles valores con sus descripciones y sus correspondientes opciones de DDL.<br /><br /> **0** : ninguno. Opción de DDL correspondiente: deshabilitada.<br /><br /> **1** : RC4. Opción de DDL correspondiente: {required &#124; obligatorio Algorithm RC4}.<br /><br /> **2** : AES. Opción de DDL correspondiente: algoritmo obligatorio AES.<br /><br /> **3** : ninguno, RC4. Opción de DDL correspondiente: {compatible &#124; algoritmo RC4}.<br /><br /> **4** : ninguno, AES. Opción de DDL correspondiente: algoritmo admitido AES.<br /><br /> **5** : RC4, AES. Opción de DDL correspondiente: algoritmo obligatorio RC4 AES.<br /><br /> **6** : AES, RC4. Opción DDL correspondiente: algoritmo obligatorio AES RC4.<br /><br /> **7** : ninguno, RC4, AES. Opción de DDL correspondiente: algoritmo RC4 compatible AES.<br /><br /> **8** : ninguno, AES, RC4. Opción de DDL correspondiente: algoritmo admitido AES RC4.<br /><br /> No acepta valores NULL.|  
-|**encryption_algorithm_desc**|**nvarchar (60)**|Descripción del algoritmo de cifrado. A continuación se enumeran los valores posibles y sus correspondientes opciones de DDL:<br /><br /> NINGUNO: deshabilitado<br /><br /> RC4: {obligatorio &#124; algoritmo RC4}<br /><br /> AES: algoritmo obligatorio AES<br /><br /> NINGUNO, RC4: {compatible &#124; algoritmo RC4}<br /><br /> NINGUNO, AES: algoritmo compatible AES<br /><br /> RC4, AES: se requiere el algoritmo RC4 AES<br /><br /> AES, RC4: se requiere el algoritmo AES RC4<br /><br /> NINGUNO, RC4, AES: se admite el algoritmo RC4 AES<br /><br /> NINGUNO, AES, RC4: algoritmo compatible AES RC4<br /><br /> Acepta valores NULL.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo de cifrado. A continuación se enumeran los valores posibles y sus correspondientes opciones de DDL:<br /><br /> NINGUNO: deshabilitado<br /><br /> RC4: {obligatorio &#124; algoritmo RC4}<br /><br /> AES: algoritmo obligatorio AES<br /><br /> NINGUNO, RC4: {compatible &#124; algoritmo RC4}<br /><br /> NINGUNO, AES: algoritmo compatible AES<br /><br /> RC4, AES: se requiere el algoritmo RC4 AES<br /><br /> AES, RC4: se requiere el algoritmo AES RC4<br /><br /> NINGUNO, RC4, AES: se admite el algoritmo RC4 AES<br /><br /> NINGUNO, AES, RC4: algoritmo compatible AES RC4<br /><br /> Acepta valores NULL.|  
   
 ## <a name="remarks"></a>Observaciones  
   

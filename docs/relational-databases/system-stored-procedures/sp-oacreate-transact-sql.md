@@ -18,10 +18,10 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107930"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -42,20 +42,19 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *Programa*  
  Es el identificador de programa (ProgID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **'**_OLEComponent_'**.** _Objeto_**'**  
   
- 
-  *OLEComponent* es el nombre del componente de servidor de OLE Automation y *Object* es el nombre del objeto OLE. El objeto OLE especificado debe ser válido y debe ser compatible con la interfaz **IDispatch** .  
+ *OLEComponent* es el nombre del componente de servidor de OLE Automation y *Object* es el nombre del objeto OLE. El objeto OLE especificado debe ser válido y debe ser compatible con la interfaz **IDispatch** .  
   
  Por ejemplo, SQLDMO. SQLServer es el ProgID del objeto **SQLServer** de SQL-DMO. SQL-DMO tiene un nombre de componente de SQLDMO, el objeto **SQLServer** es válido y (como todos los objetos SQL-DMO) el objeto **SQLServer** admite **IDispatch**.  
   
- *clsid*  
+ *CLSID*  
  Es el identificador de clase (CLSID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**} '**. El objeto OLE especificado debe ser válido y debe ser compatible con la interfaz **IDispatch** .  
   
  Por ejemplo, {00026BA1-0000-0000-C000-000000000046} es el CLSID del objeto **SQLServer** de SQL-DMO.  
   
- __ **salida** de objecttoken  
+ _objecttoken_ **salida** de objecttoken  
  Es el token del objeto devuelto y debe ser una variable local del tipo de datos **int**. Este token de objeto identifica el objeto OLE creado y se utiliza en llamadas a otros procedimientos almacenados de automatización OLE.  
   
- *context*  
+ *contextoo*  
  Especifica el contexto de ejecución en que se ejecuta el objeto OLE recién creado. Si se especifica, este valor debe ser uno de los siguientes:  
   
  **1** = solo servidor OLE en proceso (. dll).  

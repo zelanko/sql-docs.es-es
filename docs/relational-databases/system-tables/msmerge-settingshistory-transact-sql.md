@@ -18,10 +18,10 @@ ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106319"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68106319"
 |**pubid**|**uniqueidentifier**|Número de identificación único de una determinada publicación.|  
 |**artid**|**uniqueidentifier**|El número de identificación único del artículo indicado.|  
 |**eventType**|**tinyint**|Especifica el tipo de evento que se va a registrar, que puede ser uno de los siguientes:<br /><br /> **1** : configuración de la propiedad nivel de publicación inicial.<br /><br /> **2** -cambio en una propiedad de publicación.<br /><br /> **101** : configuración inicial de la propiedad del artículo.<br /><br /> **102** : cambiar en una propiedad de artículo.|  
-|**PropertyName**|**sysname**|Nombre de la propiedad establecida o cambiada.|  
+|**propertyname**|**sysname**|Nombre de la propiedad establecida o cambiada.|  
 |**previousvalue**|**sysname**|Valor de la propiedad anterior si se ha cambiado la propiedad.|  
 |**nuevovalor**|**sysname**|Valor cambiado o creado en la propiedad.|  
 |**eventtext**|**nvarchar (2000)**|Cadena de caracteres que describe el evento.|  

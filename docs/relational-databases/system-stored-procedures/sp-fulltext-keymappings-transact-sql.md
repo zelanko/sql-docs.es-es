@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124244"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  *DocID*  
  Identificador de documento interno (DocId) que corresponde al valor de clave. Un valor de *docid* no válido no devuelve ningún resultado.  
   
- *clave*  
+ *key*  
  Valor de clave de texto completo de la tabla especificada. Un valor de *key* no válido no devuelve ningún resultado. Para obtener información sobre los valores de clave de texto completo, vea [Administrar índices de texto completo](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
   
 > [!IMPORTANT]  
@@ -61,7 +61,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|DocId|**BIGINT**|Una columna de identificador de documento interno (DocId) que se corresponde con el valor de clave.|  
+|DocId|**bigint**|Una columna de identificador de documento interno (DocId) que se corresponde con el valor de clave.|  
 |Clave|*|Valor de clave de texto completo de la tabla especificada.<br /><br /> Si no hay ninguna clave de texto completo en la tabla de asignación, se devuelve un conjunto de filas vacío.|  
   
  <sup>*</sup>El tipo de datos para Key es el mismo que el tipo de datos de la columna de clave de texto completo de la tabla base.  

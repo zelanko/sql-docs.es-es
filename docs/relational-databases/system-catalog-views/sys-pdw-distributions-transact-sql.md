@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 7deddb57cdc02410fe161728f45190492ac18a16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127550"
 ---
 # <a name="syspdw_distributions-transact-sql"></a>Sys. pdw_distributions (Transact-SQL)
@@ -28,10 +28,10 @@ ms.locfileid: "68127550"
 |-----------------|---------------|-----------------|-----------|  
 |distribution_id|**int**|Identificador numérico único asociado a la distribución.<br /><br /> Clave para esta vista.|1 al número de nodos de proceso en el dispositivo multiplicado por el número de distribuciones por nodo de proceso.|  
 |pdw_node_id|**int**|IDENTIFICADOR del nodo en el que se encuentra esta distribución.|Vea pdw_node_id en [Sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|name|**nvarchar (32)**|Identificador de cadena asociado a la distribución, que se utiliza como sufijo en las tablas distribuidas.|Cadena formada por "A-Z", "a-z", "0-9", "_", "-".|  
+|name|**nvarchar(32)**|Identificador de cadena asociado a la distribución, que se utiliza como sufijo en las tablas distribuidas.|Cadena formada por "A-Z", "a-z", "0-9", "_", "-".|  
 |position|**int**|Posición de la distribución dentro de un nodo respectiva a otras distribuciones en ese nodo.|1 al número de distribuciones por nodo.|  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

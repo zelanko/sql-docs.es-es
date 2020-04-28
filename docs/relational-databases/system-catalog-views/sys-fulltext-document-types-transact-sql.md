@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e60f977c220d14680499ca12a4884e912587b7b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133849"
 ---
 # <a name="sysfulltext_document_types-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68133849"
 |-----------------|---------------|-----------------|  
 |**document_type**|**sysname**|Extensión de archivo del tipo de documento admitido.<br /><br /> Este valor se puede utilizar para identificar el filtro que se utilizará durante la indización de texto completo de las columnas de tipo **varbinary (Max)** o **Image**.|  
 |**class_id**|**uniqueidentifier**|GUID de la clase de IFilter que admite la extensión de archivo.|  
-|**camino**|**nvarchar(260)**|Ruta de acceso al archivo DLL de IFilter. La ruta de acceso solo es visible para los miembros del rol fijo de servidor **serveradmin** .|  
-|**Versión**|**sysname**|Versión del archivo DLL de IFilter.|  
-|**manufacturer**|**sysname**|Nombre del fabricante de IFilter.<br /><br /> Nota: solo se admiten en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]los documentos con el fabricante como.|  
+|**path**|**nvarchar(260)**|Ruta de acceso al archivo DLL de IFilter. La ruta de acceso solo es visible para los miembros del rol fijo de servidor **serveradmin** .|  
+|**version**|**sysname**|Versión del archivo DLL de IFilter.|  
+|**fabricante**|**sysname**|Nombre del fabricante de IFilter.<br /><br /> Nota: solo se admiten en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]los documentos con el fabricante como.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

@@ -18,10 +18,10 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130451"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
@@ -39,12 +39,12 @@ ms.locfileid: "68130451"
 |**plan_name**|**sysname**|Nombre del plan de mantenimiento de bases de datos.|  
 |**database_name**|**sysname**|Nombre de la base de datos asociada al plan de mantenimiento de bases de datos.|  
 |**server_name**|**sysname**|Nombre del sistema.|  
-|**proceso**|**nvarchar(128)**|Actividad llevada a cabo por el plan de mantenimiento de bases de datos (por ejemplo, el registro de transacciones de copia de seguridad).|  
-|**succeeded**|**bit**|**0** = correcto **1** = error|  
+|**activity**|**nvarchar(128)**|Actividad llevada a cabo por el plan de mantenimiento de bases de datos (por ejemplo, el registro de transacciones de copia de seguridad).|  
+|**completa**|**bit**|**0** = correcto **1** = error|  
 |**end_time**|**datetime**|Hora en que finalizó la acción.|  
-|**Duration**|**int**|Tiempo necesario para finalizar la acción del plan de mantenimiento de bases de datos.|  
+|**duration**|**int**|Tiempo necesario para finalizar la acción del plan de mantenimiento de bases de datos.|  
 |**start_time**|**datetime**|Hora en que comenzó la acción.|  
 |**error_number**|**int**|Número de error generado.|  
-|**Mensaje**|**nvarchar(512)**|Mensaje generado por **SQLMAINT**.|  
+|**message**|**nvarchar(512)**|Mensaje generado por **SQLMAINT**.|  
   
   

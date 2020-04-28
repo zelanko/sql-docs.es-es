@@ -18,10 +18,10 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124377"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
@@ -76,14 +76,10 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**FKTABLE_NAME**|**sysname**|Nombre de la tabla (con una clave externa). Este campo siempre devuelve un valor.|  
 |**FKCOLUMN_NAME**|**sysname**|Nombre de las columnas de clave externa por cada columna de TABLE_NAME devuelta. Este campo siempre devuelve un valor.|  
 |**KEY_SEQ**|**smallint**|Número de secuencia de la columna en una clave principal con varias columnas. Este campo siempre devuelve un valor.|  
-|**UPDATE_RULE**|**smallint**|Acción aplicada a la clave externa si la operación de SQL es una actualización. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve 0, 1 o 2 para estas columnas:<br /><br /> 0=CASCADE cambia a clave externa.<br /><br /> 1=NO ACTION cambia si la clave externa está presente.<br /><br /> 2=SET_NULL; establece la clave externa como NULL.|  
-|**DELETE_RULE**|**smallint**|Acción aplicada a la clave externa si la operación de SQL es una eliminación. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve 0, 1 o 2 para estas columnas:<br /><br /> 0=CASCADE cambia a clave externa.<br /><br /> 1=NO ACTION cambia si la clave externa está presente.<br /><br /> 2=SET_NULL; establece la clave externa como NULL.|  
-|**FK_NAME**|**sysname**|Identificador de la clave externa. Es NULL si no es aplicable al origen de datos. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción FOREIGN KEY.|  
-|**PK_NAME**|**sysname**|Identificador de la clave principal. Es NULL si no es aplicable al origen de datos. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción PRIMARY KEY.|  
+|**UPDATE_RULE**|**smallint**|Acción aplicada a la clave externa si la operación de SQL es una actualización. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve 0, 1 o 2 para estas columnas:<br /><br /> 0=CASCADE cambia a clave externa.<br /><br /> 1=NO ACTION cambia si la clave externa está presente.<br /><br /> 2=SET_NULL; establece la clave externa como NULL.|  
+|**DELETE_RULE**|**smallint**|Acción aplicada a la clave externa si la operación de SQL es una eliminación. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve 0, 1 o 2 para estas columnas:<br /><br /> 0=CASCADE cambia a clave externa.<br /><br /> 1=NO ACTION cambia si la clave externa está presente.<br /><br /> 2=SET_NULL; establece la clave externa como NULL.|  
+|**FK_NAME**|**sysname**|Identificador de la clave externa. Es NULL si no es aplicable al origen de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción FOREIGN KEY.|  
+|**PK_NAME**|**sysname**|Identificador de la clave principal. Es NULL si no es aplicable al origen de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el nombre de la restricción PRIMARY KEY.|  
 |**DEFERRABILITY**|**smallint**|Indica si se puede diferir la comprobación de restricciones.|  
   
  En el conjunto de resultados, las columnas FK_NAME y PK_NAME siempre devuelven NULL.  

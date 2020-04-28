@@ -20,16 +20,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133069"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>Sys. server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Devuelve los datos de uso de CPU, e/s y almacenamiento de una Instancia administrada de Azure SQL. Los datos se recopilan y agregan en intervalos de cinco minutos. Hay una fila por cada 15 segundos de informes. Los datos devueltos incluyen el uso de CPU, el tamaño de almacenamiento, el uso de e/s y la SKU de instancia administrada. Los datos históricos se conservan durante 14 días aproximadamente.
+Devuelve los datos de uso de CPU, e/s y almacenamiento de una Instancia administrada de Azure SQL. Los datos se recopilan y se agregan en intervalos de cinco minutos. Hay una fila por cada 15 segundos de informes. Los datos devueltos incluyen el uso de CPU, el tamaño de almacenamiento, el uso de e/s y la SKU de instancia administrada. Los datos históricos se conservan durante 14 días aproximadamente.
 
 La vista **Sys. server_resource_stats** tiene definiciones diferentes en función de la versión de la instancia administrada de Azure SQL con la que está asociada la base de datos. Tenga en cuenta estas diferencias y cualquier modificación que requiera la aplicación al actualizar a una nueva versión de servidor.
  
@@ -40,7 +40,7 @@ La vista **Sys. server_resource_stats** tiene definiciones diferentes en funció
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Hora UTC que indica el inicio del intervalo de informes de quince segundos|  
 |end_time|**datetime**|Hora UTC que indica el final del intervalo de informes de quince segundos|
-|resource_type|Nvarchar (128)|Tipo del recurso para el que se proporcionan las métricas|
+|resource_type|Nvarchar(128)|Tipo del recurso para el que se proporcionan las métricas|
 |resource_name|nvarchar(128)|Nombre del recurso.|
 |sku|nvarchar(128)|Instancia administrada nivel de servicio de la instancia. Los posibles valores son los siguientes: <br><ul><li>Uso general</li></ul><ul><li>Crítico para la empresa</li></ul>|
 |hardware_generation|nvarchar(128)|Identificador de generación de hardware: como gen 4 o gen 5|

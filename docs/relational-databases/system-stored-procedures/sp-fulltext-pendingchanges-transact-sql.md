@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124218"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_pendingchanges table_id
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Clave**|*|Valor de clave de texto completo de la tabla especificada.|  
-|**DocId**|**BIGINT**|Una columna de identificador de documento interno (DocId) que se corresponde con el valor de clave.|  
+|**DocId**|**bigint**|Una columna de identificador de documento interno (DocId) que se corresponde con el valor de clave.|  
 |**Estado**|**int**|0 = La fila se eliminará del índice de texto completo.<br /><br /> 1 = La fila contendrá un índice de texto completo.<br /><br /> 2 = La fila está actualizada.<br /><br /> -1 = La fila se encuentra en un estado transicional (de lote, pero no confirmado) o un estado de error.|  
 |**DocState**|**tinyint**|Es un volcado de la columna de estado de la asignación del identificador de documento interno (DocId).|  
   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f91339990e5d12d1b2b674ea9fd124fc4161424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125351"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68125351"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador del objeto al que pertenece el parámetro.|  
-|**Name**|**sysname**|Nombre del parámetro. Es único en el objeto.<br /><br /> Si el objeto es una función escalar, el nombre del parámetro es una cadena vacía en la fila que representa el valor devuelto.|  
+|**name**|**sysname**|Nombre del parámetro. Es único en el objeto.<br /><br /> Si el objeto es una función escalar, el nombre del parámetro es una cadena vacía en la fila que representa el valor devuelto.|  
 |**parameter_id**|**int**|IDENTIFICADOR del parámetro. Es único en el objeto.<br /><br /> Si el objeto es una función escalar, **parameter_id** = 0 representa el valor devuelto.|  
 |**system_type_id**|**tinyint**|ID. del tipo de sistema del parámetro.|  
 |**user_type_id**|**int**|Id. de tipo del parámetro, definido por el usuario.<br /><br /> Para devolver el nombre del tipo, únase a la vista de catálogo [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) en esta columna.|  
@@ -45,8 +45,7 @@ ms.locfileid: "68125351"
 |**scale**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**is_output**|**bit**|1 = El parámetro es OUTPUT o RETURN; de lo contrario, es 0.|  
 |**is_cursor_ref**|**bit**|1 = El parámetro es un parámetro de referencia a un cursor.|  
-|**has_default_value**|**bit**|1 = el parámetro tiene un valor predeterminado.<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo mantiene valores predeterminados para objetos de CLR en esta vista de catálogo; por lo tanto, esta columna tiene valor 0 para objetos [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para ver el valor predeterminado de un parámetro en un [!INCLUDE[tsql](../../includes/tsql-md.md)] objeto, consulte la columna de **definición** de la vista de catálogo [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) o utilice la función del sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
+|**has_default_value**|**bit**|1 = el parámetro tiene un valor predeterminado.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo mantiene valores predeterminados para objetos de CLR en esta vista de catálogo; por lo tanto, esta columna tiene valor 0 para objetos [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para ver el valor predeterminado de un parámetro en un [!INCLUDE[tsql](../../includes/tsql-md.md)] objeto, consulte la columna de **definición** de la vista de catálogo [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) o utilice la función del sistema [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) .|  
 |**is_xml_document**|**bit**|1 = El contenido es un documento XML completo.<br /><br /> 0 = el contenido es un fragmento de documento o el tipo de datos de la columna no es **XML**.|  
 |**default_value**|**sql_variant**|Si **has_default_value** es 1, el valor de esta columna es el valor predeterminado del parámetro; de lo contrario, es NULL.|  
 |**xml_collection_id**|**int**|Distinto de cero si el tipo de datos del parámetro es **XML** y se escribe el XML. El valor es el identificador de la colección que contiene el espacio de nombres del esquema XML de validación del parámetro.<br /><br /> 0 = No es una colección de esquemas XML.|  

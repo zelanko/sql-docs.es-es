@@ -22,10 +22,10 @@ ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127932"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Vistas de catálogo de mensajes (para errores): sys.messages
@@ -37,12 +37,12 @@ ms.locfileid: "68127932"
 |-----------------|---------------|-----------------|  
 |**message_id**|**int**|Id. del mensaje. Es único en todo el servidor. Los Id. de mensaje inferiores a 50000 son mensajes del sistema.|  
 |**language_id**|**smallint**|IDENTIFICADOR de idioma para el que se utiliza el texto en el **texto** , tal como se define en **syslanguages**. Es único para un **message_id**especificado.|  
-|**gravedad**|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25. Es lo mismo para todos los idiomas de los mensajes dentro de un **message_id**.|  
+|**severity**|**tinyint**|Nivel de gravedad del mensaje, entre 1 y 25. Es lo mismo para todos los idiomas de los mensajes dentro de un **message_id**.|  
 |**is_event_logged**|**bit**|1 = Cuando hay un error, el mensaje se registra en el registro de eventos. Es lo mismo para todos los idiomas de los mensajes dentro de un **message_id**.|  
-|**negrita**|**nvarchar (2048)**|Texto del mensaje que se utiliza cuando el **language_id** correspondiente está activo.|  
+|**text**|**nvarchar(2048)**|Texto del mensaje que se utiliza cuando el **language_id** correspondiente está activo.|  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Debe pertenecer al rol **public** .  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   

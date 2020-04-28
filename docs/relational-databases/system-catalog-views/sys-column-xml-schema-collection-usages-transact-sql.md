@@ -20,10 +20,10 @@ ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 99d1135fcf2229ca08e42a2afc45ad98f923ac95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139980"
 ---
 # <a name="syscolumn_xml_schema_collection_usages-transact-sql"></a>sys.column_xml_schema_collection_usages (Transact-SQL)

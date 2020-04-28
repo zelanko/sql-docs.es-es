@@ -16,10 +16,10 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124867"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68124867"
   Cambia las propiedades seleccionadas de una suscripción de inserción de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
 > [!IMPORTANT]  
->  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -67,9 +67,9 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_login**||Nombre de inicio de sesión del suscriptor.|  
 |**subscriber_password**||Contraseña segura para el inicio de sesión del suscriptor que se ha proporcionado.|  
 |**sync_type**|**Automático**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
-||**ninguna**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
-|**use_interactive_resolver**|**reales**|Permite que los conflictos se resuelvan de forma interactiva para todos los artículos que lo permitan.|  
-||**es**|Los conflictos se resuelven de forma automática mediante un solucionador predeterminado o personalizado.|  
+||**Ninguna**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
+|**use_interactive_resolver**|**true**|Permite que los conflictos se resuelvan de forma interactiva para todos los artículos que lo permitan.|  
+||**false**|Los conflictos se resuelven de forma automática mediante un solucionador predeterminado o personalizado.|  
 |NULL (predeterminado)|NULL (predeterminado)||  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

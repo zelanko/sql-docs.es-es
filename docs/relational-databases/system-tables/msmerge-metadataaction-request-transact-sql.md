@@ -18,10 +18,10 @@ ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09f3fa61a1f79e98b8cd3330a03361b1b6a5c507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106367"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "68106367"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|El alias de la tabla publicada.|  
 |**rowguid**|**uniqueidentifier**|Identificador de la fila especificada.|  
-|**actuar**|**tinyint**|Identifica la acción de compensación necesaria.|  
-|**última**|**BIGINT**|El valor de la generación para la que se necesita la acción de compensación.|  
+|**action**|**tinyint**|Identifica la acción de compensación necesaria.|  
+|**última**|**bigint**|El valor de la generación para la que se necesita la acción de compensación.|  
 |**cambio**|**int**|Solo para uso interno.|  
   
 ## <a name="see-also"></a>Consulte también  

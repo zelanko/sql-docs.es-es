@@ -18,10 +18,10 @@ ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104399"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ** ** @server = '** servidor **'**  
- Es el nombre del servidor remoto tal como se ha especificado en la sintaxis de llamada a procedimiento almacenado remoto codificada por el usuario. Ya debe existir exactamente una fila en **Sys.** servers para usar este *servidor*. *Server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+ *server* ** @server = '** servidor **'**  
+ Es el nombre del servidor remoto tal como se ha especificado en la sintaxis de llamada a procedimiento almacenado remoto codificada por el usuario. Ya debe existir exactamente una fila en **Sys.** servers para usar este *servidor*. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
- ** ** @netname = '** network_name **'**  
+ *network_name* ** @netname = '** network_name **'**  
  Es el nombre de red del equipo en el que se realizan las llamadas a procedimiento almacenado remoto. *network_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
  Este nombre debe coincidir con el nombre del equipo con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows y puede incluir caracteres que no estén admitidos en los identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -89,7 +89,7 @@ EXEC Win_1.master.dbo.sp_who;
   
 ## <a name="see-also"></a>Consulte también  
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

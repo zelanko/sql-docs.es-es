@@ -18,10 +18,10 @@ ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139788"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68139788"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Id. de la fila.|  
+|**id**|**int**|Id. de la fila.|  
 |**publicador**|**sysname**|El nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos de publicación.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
@@ -39,7 +39,7 @@ ms.locfileid: "68139788"
 |**queue_id**|**sysname**|IDENTIFICADOR de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cola de mensajes en el publicador. *queue_id* está establecido en **SQL** para la actualización en cola basada en SQL.|  
 |**update_mode**|**tinyint**|El tipo de actualización:<br /><br /> **0** = solo lectura.<br /><br /> **1** = actualización inmediata.<br /><br /> **2** = actualización en cola mediante Message Queue Server.<br /><br /> **3** = actualización inmediata con actualización en cola como conmutación por error mediante Message Queue Server.<br /><br /> **4** = actualización en cola mediante la cola de SQL Server.<br /><br /> **5** = actualización inmediata con conmutación por error de actualización en cola mediante SQL Server cola.|  
 |**failover_mode**|**bit**|Si se selecciona un tipo de actualización por conmutación por error, se elige este tipo de conmutación por error:<br /><br /> **0** = se utiliza la actualización inmediata. No se habilita la conmutación por error.<br /><br /> **1** = se está utilizando la actualización en cola. Se habilita la conmutación por error. La cola que se utiliza para la conmutación por error se especifica en el valor *update_mode* .|  
-|**spid**|**int**|Id. del proceso de sistema para la conexión que utiliza el Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
+|**identificador**|**int**|Id. del proceso de sistema para la conexión que utiliza el Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
 |**login_time**|**datetime**|La fecha y la hora de la conexión del Agente de distribución actualmente en ejecución o recientemente ejecutado.|  
 |**allow_subscription_copy**|**bit**|Especifica si se permite o no la capacidad de copiar de la base de datos de suscripciones.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

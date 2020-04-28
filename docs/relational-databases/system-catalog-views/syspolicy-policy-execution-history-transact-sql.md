@@ -18,10 +18,10 @@ ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121113"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68121113"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|history_id|**BIGINT**|Identificador de este registro. Cada registro indica una directiva y el momento en que se inició.|  
+|history_id|**bigint**|Identificador de este registro. Cada registro indica una directiva y el momento en que se inició.|  
 |policy_id|**int**|Identificador de la directiva.|  
 |start_date|**datetime**|Fecha y hora en que intentó ejecutarse esta directiva.|  
 |end_date|**datetime**|Momento en que terminó de ejecutarse esta directiva.|  
-|result|**bit**|Corrección o error de la directiva. 0 = error, 1 = correcto.|  
+|resultado|**bit**|Corrección o error de la directiva. 0 = error, 1 = correcto.|  
 |exception_message|**nvarchar(max)**|Mensaje generado por la excepción, si se produjo alguna.|  
 |excepción|**nvarchar(max)**|Descripción de la excepción, si se produjo alguna.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68121113"
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Administrar servidores mediante la administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

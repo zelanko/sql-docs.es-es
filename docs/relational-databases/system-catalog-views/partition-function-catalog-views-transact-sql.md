@@ -16,10 +16,10 @@ ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 210a636943fca647539a840dbc394f4c91e6f28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127590"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>Vistas de catálogo de la función de partición (Transact-SQL)

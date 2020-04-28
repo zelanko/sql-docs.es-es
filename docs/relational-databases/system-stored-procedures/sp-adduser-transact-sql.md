@@ -18,10 +18,10 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117903"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
@@ -79,21 +79,21 @@ GO
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-adding-a-database-user"></a>A. Agregar un usuario de base de datos  
- En el siguiente ejemplo se agrega el usuario de base de datos `Vidur` al rol `Recruiting` existente en la base de datos actual, utilizando el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `Vidur` existente.  
+ En el siguiente ejemplo se agrega el usuario de base de datos `Vidur` al rol `Recruiting` existente en la base de datos actual, utilizando el inicio de sesión `Vidur` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente.  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Agregar un usuario de base de datos con el mismo Id. de inicio de sesión  
- En el siguiente ejemplo se agrega el usuario `Arvind` a la base de datos para el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `Arvind` . Este usuario pertenece al rol **público** predeterminado.  
+ En el siguiente ejemplo se agrega el usuario `Arvind` a la base de datos para el inicio de sesión `Arvind` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este usuario pertenece al rol **público** predeterminado.  
   
 ```  
 EXEC sp_adduser 'Arvind';  
 ```  
   
 ### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C. Agregar un usuario de base de datos con un nombre diferente de su inicio de sesión de nivel de servidor  
- En el siguiente ejemplo se agrega el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `BjornR` a la base de datos actual que tiene un nombre de usuario `Bjorn`, y agrega un usuario de base de datos `Bjorn` al rol de base de datos `Production`.  
+ En el siguiente ejemplo se agrega el inicio de sesión `BjornR` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la base de datos actual que tiene un nombre de usuario `Bjorn`, y agrega un usuario de base de datos `Bjorn` al rol de base de datos `Production`.  
   
 ```  
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
@@ -101,7 +101,7 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
   
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [sp_dropuser &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   

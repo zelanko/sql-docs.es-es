@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124832"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68124832"
 
   Quita un servidor de la lista de servidores remotos y vinculados conocidos de la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>Argumentos  
  *servidor*  
- Es el servidor que se va a quitar. *Server* es de **tipo sysname**y no tiene ningún valor predeterminado. el *servidor* debe existir.  
+ Es el servidor que se va a quitar. *server* es de tipo **sysname**y no tiene ningún valor predeterminado. el *servidor* debe existir.  
   
  *droplogins*  
  Indica que también se deben quitar los inicios de sesión de servidores remotos y vinculados relacionados para el *servidor* si se especifica **droplogins** . **`@droplogins`** es de tipo **Char (10)** y su valor predeterminado es NULL.  

@@ -16,10 +16,10 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137659"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
@@ -55,7 +55,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**divide**|**int**|Identifica la partición del suscriptor.|  
+|**partition**|**int**|Identifica la partición del suscriptor.|  
 |**host_name**|**sysname**|Valor utilizado al crear la partición para una suscripción filtrada por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) en el suscriptor.|  
 |**suser_sname**|**sysname**|Valor utilizado al crear la partición para una suscripción filtrada por el valor de la función [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) en el suscriptor.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Ubicación de la instantánea de datos filtrados para la partición del suscriptor.|  

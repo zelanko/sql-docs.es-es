@@ -16,10 +16,10 @@ ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137709"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
@@ -40,7 +40,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **%** **tipo sysname y su**valor predeterminado es. Si ** la publicación **%** es, se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **%** **tipo sysname y su**valor predeterminado es. Si *publication* la publicación **%** es, se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
   
 `[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher*es de **%** **tipo sysname y su**valor predeterminado es.  
   
@@ -52,13 +52,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**subscription_name**|**nvarchar (1000)**|Nombre de la suscripción.|  
+|**subscription_name**|**nvarchar(1000)**|Nombre de la suscripción.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**subscription_db**|**sysname**|Nombre de la base de datos de suscripciones.|  
-|**estatus**|**int**|Estado de la suscripción:<br /><br /> **0** = suscripción inactiva<br /><br /> **1** = suscripción activa<br /><br /> **2** = suscripción eliminada<br /><br /> **3** = suscripción desasociada<br /><br /> **4** = suscripción adjunta<br /><br /> **5** = la suscripción se ha marcado para reinicializarla con carga<br /><br /> **6** = error al adjuntar la suscripción<br /><br /> **7** = suscripción restaurada desde la copia de seguridad|  
+|**status**|**int**|Estado de la suscripción:<br /><br /> **0** = suscripción inactiva<br /><br /> **1** = suscripción activa<br /><br /> **2** = suscripción eliminada<br /><br /> **3** = suscripción desasociada<br /><br /> **4** = suscripción adjunta<br /><br /> **5** = la suscripción se ha marcado para reinicializarla con carga<br /><br /> **6** = error al adjuntar la suscripción<br /><br /> **7** = suscripción restaurada desde la copia de seguridad|  
 |**subscriber_type**|**int**|Tipo de suscriptor:<br /><br /> **1** = global<br /><br /> **2** = local<br /><br /> **3** = anónimo|  
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserciones<br /><br /> **1** = extracción<br /><br /> **2** = anónimo|  
 |**Prior**|**Float (8)**|Prioridad de la suscripción. El valor debe ser menor que **100,00**.|  
@@ -69,11 +69,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_updated**|**nvarchar (26)**|Hora a la que el Agente de mezcla sincronizó correctamente la suscripción por última vez.|  
 |**publisher_login**|**sysname**|Nombre de inicio de sesión del publicador.|  
 |**publisher_password**|**sysname**|Contraseña del publicador.|  
-|**publisher_security_mode**|**int**|Especifica el modo de seguridad del publicador:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
+|**publisher_security_mode**|**int**|Especifica el modo de seguridad del publicador:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
 |**distribuidor**|**sysname**|Nombre del distribuidor.|  
 |**distributor_login**|**sysname**|Nombre de inicio de sesión del distribuidor.|  
 |**distributor_password**|**sysname**|Contraseña del distribuidor.|  
-|**distributor_security_mode**|**int**|Especifica el modo de seguridad del distribuidor:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
+|**distributor_security_mode**|**int**|Especifica el modo de seguridad del distribuidor:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
 |**ftp_address**|**sysname**|Disponible únicamente por compatibilidad con versiones anteriores. Es la dirección de red del servicio de protocolo de transferencia de archivos (FTP) para el distribuidor.|  
 |**ftp_port**|**int**|Disponible únicamente por compatibilidad con versiones anteriores. Es el número de puerto del servicio FTP para el distribuidor.|  
 |**ftp_login**|**sysname**|Disponible únicamente por compatibilidad con versiones anteriores. Es el nombre de usuario utilizado para conectarse al servicio FTP.|  
@@ -94,7 +94,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**nvarchar (524)**|Contraseña para el Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_security_mode**|**int**|Modo de autenticación utilizado al conectarse al servidor web que hospeda la sincronización web. Un valor de **1** significa autenticación de Windows y un valor de **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**internet_timeout**|**int**|Período de tiempo, en segundos, antes de que expire la solicitud de sincronización Web.|  
-|**host**|**nvarchar(128)**|Especifica un valor sobrecargado para [host_name](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se utiliza en la cláusula WHERE de un filtro de fila con parámetros.|  
+|**hostname**|**nvarchar(128)**|Especifica un valor sobrecargado para [host_name](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se utiliza en la cláusula WHERE de un filtro de fila con parámetros.|  
 |**job_login**|**nvarchar(512)**|Es la cuenta de Windows con la que se ejecuta el agente de mezcla, que se devuelve con el formato *dominio*\\*nombreDeUsuario*.|  
 |**job_password**|**sysname**|Por motivos de seguridad, siempre se devuelve**\*\*\*\*\*\*\*\*\*** un valor de "".|  
   

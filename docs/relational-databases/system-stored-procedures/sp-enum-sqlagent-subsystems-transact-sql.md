@@ -18,10 +18,10 @@ ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124672"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
@@ -48,13 +48,13 @@ sp_enum_sqlagent_subsystems
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**subsistema**|**nvarchar (40)**|Nombre del subsistema.|  
+|**subsistema**|**nvarchar(40)**|Nombre del subsistema.|  
 |**denominación**|**nvarchar(512)**|Descripción del subsistema.|  
 |**subsystem_dll**|**nvarchar (510)**|Módulo DLL que contiene el subsistema.|  
 |**agent_exe**|**nvarchar (510)**|Módulo ejecutable utilizado por el subsistema.|  
-|**start_entry_point**|**nvarchar(30**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
-|**event_entry_point**|**nvarchar(30**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
-|**stop_entry_point**|**nvarchar(30**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**start_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**event_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
+|**stop_entry_point**|**nvarchar(30)**|Procedimiento al que el Agente SQL Server llama durante la ejecución de pasos de trabajo.|  
 |**max_worker_threads**|**int**|Número máximo de subprocesos que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] iniciará para este subsistema.|  
 |**subsystem_id**|**int**|Identificador del subsistema.|  
   
@@ -68,6 +68,6 @@ sp_enum_sqlagent_subsystems
   
 ## <a name="see-also"></a>Consulte también  
  [Implementar la seguridad de Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_add_jobstep &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
+ [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
   

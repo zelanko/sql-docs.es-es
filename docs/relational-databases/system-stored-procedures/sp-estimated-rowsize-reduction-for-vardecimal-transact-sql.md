@@ -22,10 +22,10 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90de7b95febdf2f1a25a5e584b2ca77bb67f93d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124508"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
@@ -34,8 +34,7 @@ ms.locfileid: "68124508"
   Calcula la reducción del tamaño medio de las filas si se habilita el formato de almacenamiento vardecimal en una tabla. Utilice este número para calcular la reducción general del tamaño de la tabla. Puesto que el muestreo estadístico se usa para calcular la reducción media del tamaño de fila, se debe considerar como una mera aproximación. Es posible que, en contadas ocasiones, el tamaño de fila aumente después de habilitar el formato de almacenamiento vardecimal.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use el tipo de compresión ROW y PAGE. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). Para ver los efectos de compresión en el tamaño de las tablas y los índices, vea [sp_estimate_data_compression_savings &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, use el tipo de compresión ROW y PAGE. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). Para ver los efectos de compresión en el tamaño de las tablas y los índices, vea [sp_estimate_data_compression_savings &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,6 +82,6 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [sp_db_vardecimal_storage_format &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
- [sp_tableoption &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
+ [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8a5358b75da914919cb4db567dc7eae6ad8617f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68118109"
 ---
 # <a name="sysassembly_types-transact-sql"></a>sys.assembly_types (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68118109"
 |**assembly_class**|**sysname**|Nombre de la clase en el ensamblado que define este tipo.|  
 |**is_binary_ordered**|**bit**|La ordenación de bytes de este tipo es equivalente a la ordenación mediante operadores de comparación en el tipo.|  
 |**is_fixed_length**|**bit**|La longitud del tipo es siempre igual que max_length.|  
-|**prog_id**|**nvarchar (40)**|Id. de programa del tipo según se expone para COM.|  
+|**prog_id**|**nvarchar(40)**|Id. de programa del tipo según se expone para COM.|  
 |**assembly_qualified_name**|**nvarchar(4000)**|Nombre de tipo calificado de ensamblado. El nombre tiene un formato adecuado para pasar a Type.GetType().|  
   
 ## <a name="permissions"></a>Permisos  

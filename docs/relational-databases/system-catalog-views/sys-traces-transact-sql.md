@@ -20,10 +20,10 @@ ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126677"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
@@ -34,15 +34,14 @@ ms.locfileid: "68126677"
  Para obtener una lista completa de los eventos de seguimiento admitidos, vea [SQL Server referencia](../../relational-databases/event-classes/sql-server-event-class-reference.md)de la clase de eventos.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use vistas de catálogo de eventos extendidos en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use vistas de catálogo de eventos extendidos en su lugar.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Id. de seguimiento.|  
-|**estatus**|**int**|Estado de la seguimiento:<br /><br /> 0 = detenida<br /><br /> 1 = en ejecución|  
-|**camino**|**nvarchar(260)**|Ruta de acceso al archivo de seguimiento. Este valor es NULL se trata de una seguimiento de conjunto de filas.|  
-|**max_size**|**BIGINT**|Tamaño máximo permitido del archivo de seguimiento, en megabytes (MB). Este valor es NULL se trata de una seguimiento de conjunto de filas.|  
+|**id**|**int**|Id. de seguimiento.|  
+|**status**|**int**|Estado de la seguimiento:<br /><br /> 0 = detenida<br /><br /> 1 = en ejecución|  
+|**path**|**nvarchar(260)**|Ruta de acceso al archivo de seguimiento. Este valor es NULL se trata de una seguimiento de conjunto de filas.|  
+|**max_size**|**bigint**|Tamaño máximo permitido del archivo de seguimiento, en megabytes (MB). Este valor es NULL se trata de una seguimiento de conjunto de filas.|  
 |**stop_time**|**datetime**|Hora a la que se detiene la seguimiento en ejecución.|  
 |**max_files**|**int**|Número máximo de archivos de sustitución incremental. Este valor es NULL si no se establece el número máximo.|  
 |**is_rowset**|**bit**|1 = Seguimiento de conjunto de filas.|  
@@ -51,11 +50,11 @@ ms.locfileid: "68126677"
 |**is_default**|**bit**|1 = Seguimiento predeterminado.|  
 |**buffer_count**|**int**|Número de búferes en memoria utilizados por la seguimiento.|  
 |**buffer_size**|**int**|Tamaño de cada búfer (KB).|  
-|**file_position**|**BIGINT**|Última posición del archivo de seguimiento. Este valor es NULL se trata de una seguimiento de conjunto de filas.|  
+|**file_position**|**bigint**|Última posición del archivo de seguimiento. Este valor es NULL se trata de una seguimiento de conjunto de filas.|  
 |**reader_spid**|**int**|Identificador de sesión del lector de seguimiento del conjunto de filas. Este valor es NULL cuando se trata de un seguimiento de archivo.|  
 |**start_time**|**datetime**|Hora de inicio de la seguimiento.|  
 |**last_event_time**|**datetime**|Hora en que se desencadenó el último evento.|  
-|**event_count**|**BIGINT**|Número total de eventos que se han producido.|  
+|**event_count**|**bigint**|Número total de eventos que se han producido.|  
 |**dropped_event_count**|**int**|Número total de eventos que se han quitado.|  
   
 ## <a name="permissions"></a>Permisos  

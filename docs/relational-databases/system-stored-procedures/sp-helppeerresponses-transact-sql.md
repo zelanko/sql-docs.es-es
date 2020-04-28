@@ -16,10 +16,10 @@ ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a3ce46249670f9c290a07418b78c7c3296d7855b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137625"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
@@ -43,7 +43,7 @@ sp_helppeerresponses [ @request_id = ] request_id
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id_de_solicitud**|**int**|Id. de la solicitud de estado.|  
+|**request_id**|**int**|Id. de la solicitud de estado.|  
 |**personas**|**sysname**|Nombre del elemento del mismo nivel que generó la respuesta.|  
 |**peer_db**|**sysname**|Nombre de la base de datos del mismo nivel que generó la respuesta.|  
 |**received_date**|**datetime**|Fecha y hora cuando el solicitante recibió la respuesta del elemento del mismo nivel que la envió.|  

@@ -21,10 +21,10 @@ ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133230"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68133230"
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |event_id|**int**|Id. del evento. Este Id. es único dentro de un objeto de sesión de eventos. No admite valores NULL.|  
 |name|**sysname**|Nombre del evento. No admite valores NULL.|  
-|Paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. No admite valores NULL.|  
-|destina|**sysname**|Nombre del módulo que contiene el evento. No admite valores NULL.|  
+|paquete|**sysname**|Nombre del paquete de eventos que contiene el evento. No admite valores NULL.|  
+|module|**sysname**|Nombre del módulo que contiene el evento. No admite valores NULL.|  
 |predicate|**nvarchar (3000)**|La expresión de predicado aplicada al evento. Acepta valores NULL.|  
 |predicate_xml|**nvarchar (3000)**|La expresión de predicado XML aplicada al evento. Acepta valores NULL.|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68133230"
   
 ||||  
 |-|-|-|  
-|De|A|Relación|  
+|De|En|Relación|  
 |sys.server_event_session_events.event_session_id|Sys. server_event_sessions. event_session_id|Varios a uno|  
   
 ## <a name="see-also"></a>Consulte también  

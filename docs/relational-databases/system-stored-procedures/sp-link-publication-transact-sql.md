@@ -16,10 +16,10 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139895"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68139895"
   Establece la información de configuración y de seguridad que utilizan los desencadenadores de sincronización de las suscripciones de actualización inmediata al conectar con el publicador. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
 > [!IMPORTANT]
->  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
 >  En determinadas condiciones, este procedimiento almacenado puede producir un error si el suscriptor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ejecuta el Service Pack 1 o posterior y el publicador ejecuta una versión anterior. Si el procedimiento almacenado genera un error en este escenario, actualice el publicador al Service Pack 1 de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior.  
@@ -63,7 +63,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Utiliza el contexto de seguridad (autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticación de Windows) del usuario que realiza el cambio en el suscriptor.<br /><br /> Nota: esta cuenta también debe existir en el publicador con privilegios suficientes. Al usar la autenticación de Windows, se debe admitir la delegación de cuentas de seguridad.|  
 |**2**|Utiliza un inicio de sesión de servidor vinculado definido por el usuario existente creado mediante **sp_link_publication**.|  
   
-`[ @login = ] 'login'`Es el inicio de sesión. *login* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
+`[ @login = ] 'login'`Es el inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
   
 `[ @password = ] 'password'`Es la contraseña. *password* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
   

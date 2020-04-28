@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: fa06005679e31381f723b30b9f68e5ce0d89ae1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127686"
 ---
 # <a name="syspdw_diag_sessions-transact-sql"></a>Sys. pdw_diag_sessions (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68127686"
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|**Name**|**nvarchar(255)**|Nombre de la sesión de diagnóstico.<br /><br /> Clave para esta vista.||  
+|**name**|**nvarchar(255)**|Nombre de la sesión de diagnóstico.<br /><br /> Clave para esta vista.||  
 |**xml_data**|**nvarchar(4000)**|Carga XML que describe la sesión.||  
 |**is_active**|**bit**|Marca que indica si la marca está activa.||  
 |**host_address**|**nvarchar(255)**|Dirección de la máquina que hospeda la definición de sesión (nodo de control).||  
@@ -33,6 +33,6 @@ ms.locfileid: "68127686"
 |**database_id**|**int**|IDENTIFICADOR de la base de datos que constituye el ámbito de la sesión de diagnóstico.|  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

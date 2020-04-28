@@ -19,10 +19,10 @@ ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1fcd6f158908893ce5eb86c24a3bb3882867bc2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104380"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
@@ -42,7 +42,7 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server = ] 'server'`Es el nombre del servidor para el que se va a establecer la opción. *Server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @server = ] 'server'`Es el nombre del servidor para el que se va a establecer la opción. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
 `[ @optname = ] 'option_name'`Es la opción que se va a establecer para el servidor especificado. *option_name* es de tipo **VARCHAR (** 35 **)** y no tiene ningún valor predeterminado. *option_name* puede ser cualquiera de los valores siguientes.  
   
@@ -54,12 +54,12 @@ sp_serveroption [@server = ] 'server'
 |**acceso a datos**|Habilita y deshabilita un servidor vinculado para el acceso a consultas distribuidas. Solo se puede usar para las entradas **Sys. Server** agregadas a través de **sp_addlinkedserver**.|  
 |**dist**|Distribuidor.|  
 |**lazy schema validation**|Determina si se comprobará el esquema de las tablas remotas.<br /><br /> Si **es true**, se omite la comprobación del esquema de las tablas remotas al principio de la consulta.|  
-|**pub**|Editor.|  
+|**Pub**|Editor.|  
 |**tiempo de espera de consulta**|Valor de tiempo de espera para las consultas que se realizan en un servidor vinculado.<br /><br /> Si es **0**, use el valor predeterminado de **sp_configure** .|  
 |**RPC**|Habilita RPC desde el servidor dado.|  
 |**salida de RPC**|Habilita RPC al servidor dado.|  
-|**modelo**|Suscriptor.|  
-|**integrado**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sub**|Suscriptor.|  
+|**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usar intercalación remota**|Determina si se utilizará la intercalación de una columna remota o de un servidor local.<br /><br /> Si **es true**, la intercalación de columnas remotas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza para los orígenes de datos y la intercalación especificada en **el nombre de intercalación** se utiliza para los orígenes de datos que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Si **es false**, las consultas distribuidas siempre utilizarán la intercalación predeterminada del servidor local, mientras que el **nombre de intercalación** y la intercalación de columnas remotas se omiten. El valor predeterminado es **false**. (El valor **false** es compatible con la semántica de intercalación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa en 7,0).|  
 |**remote proc transaction promotion**|Use esta opción para proteger las acciones de un procedimiento entre servidores a través de una transacción del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC). Cuando esta opción es TRUE (u ON) al llamar a un procedimiento almacenado remoto se inicia una transacción distribuida y se da de alta la transacción en MS DTC. La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que efectúa la llamada al procedimiento almacenado remoto es el originador de la transacción y controla su realización. Posteriormente, cuando se ejecuta para la conexión una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION, la instancia que controla la transacción solicita a MS DTC que administre la realización de la transacción distribuida entre los servidores participantes.<br /><br /> Una vez iniciada una transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)], se pueden realizar llamadas a procedimientos almacenados remotos en otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se hayan definido como servidores vinculados. Todos los servidores vinculados se dan de alta en la transacción distribuida de [!INCLUDE[tsql](../../includes/tsql-md.md)] y MS DTC se asegura de que la transacción se complete en cada uno de ellos.<br /><br /> Si esta opción está establecida en FALSE (u OFF), una transacción local no se promoverá a una transacción distribuida mientras se llame a una llamada a procedimiento remoto en un servidor vinculado.<br /><br /> Si antes de realizar una llamada a procedimiento entre servidores, la transacción ya es una transacción distribuida, esta opción no tiene efecto alguno. La llamada a procedimiento en un servidor vinculado se ejecutará en la misma transacción distribuida.<br /><br /> Si antes de realizar una llamada a procedimiento entre servidores, no existe ninguna transacción activa en la conexión, esta opción no tiene efecto alguno. A continuación, el procedimiento se ejecuta en el servidor vinculado sin transacciones activas.<br /><br /> El valor predeterminado para esta opción es TRUE (u ON).|  
   
@@ -87,7 +87,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de consultas distribuidas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropdistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpserver &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

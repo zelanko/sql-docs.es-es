@@ -20,10 +20,10 @@ ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c98acb87e180dce32a00e77ba6c1af9fbd48b6fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68140009"
 ---
 # <a name="syscolumn_store_row_groups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
@@ -37,12 +37,12 @@ ms.locfileid: "68140009"
 |**index_id**|**int**|Identificador del índice de la tabla que contiene este índice de almacén de columnas.|  
 |**partition_number**|**int**|Identificador de la partición de la tabla que contiene el grupo de filas row_group_id. Puede utilizar partition_number para unir esta DMV a sys.partitions.|  
 |**row_group_id**|**int**|El número de grupo de filas asociado con este grupo de filas. Es único en la partición.<br /><br /> -1 = final de una tabla en memoria.|  
-|**delta_store_hobt_id**|**BIGINT**|El hobt_id para el grupo de filas abierto en el almacén Delta.<br /><br /> Es NULL si el grupo de filas no está en el almacén Delta.<br /><br /> NULL para la cola de una tabla en memoria.|  
-|**State**|**tinyint**|Número de identificación asociado con el state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = MARCADORES DE EXCLUSIÓN|  
-|**state_description**|**nvarchar (60)**|Descripción del estado persistente del grupo de filas:<br /><br /> INVISIBLE: segmento comprimido oculto en el proceso de compilación a partir de los datos de un almacén Delta. Las acciones de lectura utilizarán el almacén delta hasta que se complete el segmento comprimido invisible. Después, se hará visible el nuevo segmento y se quitará el almacén delta de origen.<br /><br /> ABRIR: un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas abierto está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.<br /><br /> CLOSED: Grupo de filas que se ha rellenado, pero que aún no se ha comprimido mediante el proceso de la tupla.<br /><br /> COMPRIMIDO: Grupo de filas que se ha rellenado y comprimido.|  
-|**total_rows**|**BIGINT**|Total de filas almacenadas físicamente en el grupo de filas. Es posible que se hayan eliminado algunas, pero estas se siguen almacenando. El número máximo de filas en un grupo de filas es 1.048.576 (hexadecimal FFFFF).|  
-|**deleted_rows**|**BIGINT**|Total de filas del grupo de filas marcadas como eliminadas. Esto es siempre 0 para los grupos de filas DELTA.|  
-|**size_in_bytes**|**BIGINT**|Tamaño en bytes de todos los datos de este grupo de filas (sin incluir metadatos o diccionarios compartidos), tanto para los grupos de filas DELTA como COLUMNSTORE.|  
+|**delta_store_hobt_id**|**bigint**|El hobt_id para el grupo de filas abierto en el almacén Delta.<br /><br /> Es NULL si el grupo de filas no está en el almacén Delta.<br /><br /> NULL para la cola de una tabla en memoria.|  
+|**state**|**tinyint**|Número de identificación asociado con el state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = MARCADORES DE EXCLUSIÓN|  
+|**state_description**|**nvarchar(60)**|Descripción del estado persistente del grupo de filas:<br /><br /> INVISIBLE: segmento comprimido oculto en el proceso de compilación a partir de los datos de un almacén Delta. Las acciones de lectura utilizarán el almacén delta hasta que se complete el segmento comprimido invisible. Después, se hará visible el nuevo segmento y se quitará el almacén delta de origen.<br /><br /> ABRIR: un grupo de filas de lectura/escritura que acepta nuevos registros. Un grupo de filas abierto está todavía en formato de almacén de filas y no se ha comprimido al formato de almacén de columnas.<br /><br /> CLOSED: Grupo de filas que se ha rellenado, pero que aún no se ha comprimido mediante el proceso de la tupla.<br /><br /> COMPRIMIDO: Grupo de filas que se ha rellenado y comprimido.|  
+|**total_rows**|**bigint**|Total de filas almacenadas físicamente en el grupo de filas. Es posible que se hayan eliminado algunas, pero estas se siguen almacenando. El número máximo de filas en un grupo de filas es 1.048.576 (hexadecimal FFFFF).|  
+|**deleted_rows**|**bigint**|Total de filas del grupo de filas marcadas como eliminadas. Esto es siempre 0 para los grupos de filas DELTA.|  
+|**size_in_bytes**|**bigint**|Tamaño en bytes de todos los datos de este grupo de filas (sin incluir metadatos o diccionarios compartidos), tanto para los grupos de filas DELTA como COLUMNSTORE.|  
   
 ## <a name="remarks"></a>Observaciones  
  Devuelve una fila para cada grupo de filas del almacén de columnas de cada tabla que tenga un índice clúster o no clúster de almacén de columnas.  
@@ -85,7 +85,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [Sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)     
  [Sys. column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   
- [Sys. column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
+ [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
   
   
 

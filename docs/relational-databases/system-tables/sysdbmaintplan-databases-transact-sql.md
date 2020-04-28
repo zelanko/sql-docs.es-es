@@ -18,17 +18,16 @@ ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6bd1622e898d6554d5eb9fbc66fae729f5a8e973
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130477"
 ---
 # <a name="sysdbmaintplan_databases-transact-sql"></a>sysdbmaintplan_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Esta tabla se incluye para conservar la información existente de las instancias actualizadas de una versión anterior [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores no cambian el contenido de esta tabla. Esta tabla se almacena en la base de datos **msdb** .  
+  Esta tabla se incluye para conservar la información existente de las instancias actualizadas de una versión anterior [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores no cambian el contenido de esta tabla. Esta tabla se almacena en la base de datos **msdb** .  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   

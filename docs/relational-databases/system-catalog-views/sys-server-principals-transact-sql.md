@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133086"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
@@ -34,11 +34,11 @@ ms.locfileid: "68133086"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre de la entidad de seguridad. Es exclusivo en el servidor.|  
+|**name**|**sysname**|Nombre de la entidad de seguridad. Es exclusivo en el servidor.|  
 |**principal_id**|**int**|Número de Id. de la entidad de seguridad. Es exclusivo en el servidor.|  
 |**Junction**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad. Si se trata de una entidad de seguridad de Windows, coincide con el SID de Windows.|  
-|**automáticamente**|**Char (1)**|Tipo de entidad de seguridad:<br /><br /> S = Inicio de sesión de SQL<br /><br /> U = Inicio de sesión de Windows<br /><br /> G = Grupo de Windows<br /><br /> R = Rol del servidor<br /><br /> C = Inicio de sesión asignado a un certificado<br /><br /> K = Inicio de sesión asignado a una clave asimétrica|  
-|**type_desc**|**nvarchar (60)**|Descripción de los tipos de entidad de seguridad:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**Char (1)**|Tipo de entidad de seguridad:<br /><br /> S = Inicio de sesión de SQL<br /><br /> U = Inicio de sesión de Windows<br /><br /> G = Grupo de Windows<br /><br /> R = Rol del servidor<br /><br /> C = Inicio de sesión asignado a un certificado<br /><br /> K = Inicio de sesión asignado a una clave asimétrica|  
+|**type_desc**|**nvarchar(60)**|Descripción de los tipos de entidad de seguridad:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Inicio de sesión deshabilitado|  
 |**create_date**|**datetime**|Hora en que se creó la entidad de seguridad.|  
 |**modify_date**|**datetime**|Hora en que se modificó por última vez la definición de la entidad de seguridad.|  

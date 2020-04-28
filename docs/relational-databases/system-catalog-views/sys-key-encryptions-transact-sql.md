@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61ad8e163eddb4875aad362c3090875bd450bc3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104593"
 ---
 # <a name="syskey_encryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68104593"
 |Nombres de columna|Tipos de datos|Descripción|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|Id. de la clave cifrada.|  
-|**thumbprint**|**varbinary (32)**|Hash SHA-1 del certificado o GUID de la clave simétrica con el que se cifra la clave.|  
+|**huella**|**varbinary(32)**|Hash SHA-1 del certificado o GUID de la clave simétrica con el que se cifra la clave.|  
 |**crypt_type**|**Char (4)**|Tipo de cifrado:<br /><br /> ESKS = Cifrado mediante clave simétrica<br /><br /> ESKP, ESP2 o ESP3 = cifrado por contraseña<br /><br /> EPUC = Cifrado mediante certificado<br /><br /> EPUA = Cifrado mediante clave asimétrica<br /><br /> ESKM = Cifrado mediante clave maestra|  
-|**crypt_type_desc**|**nvarchar (60)**|Descripción del tipo de cifrado:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(A partir [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]de, incluye un número de versión para su uso con CSS).<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Nota: Windows DPAPI se usa para proteger la clave maestra de servicio.|  
+|**crypt_type_desc**|**nvarchar(60)**|Descripción del tipo de cifrado:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(A partir [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]de, incluye un número de versión para su uso con CSS).<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Nota: Windows DPAPI se usa para proteger la clave maestra de servicio.|  
 |**crypt_property**|**varbinary(max)**|Bits firmados o cifrados.|  
   
 ## <a name="permissions"></a>Permisos  

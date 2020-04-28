@@ -16,10 +16,10 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122439"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
@@ -43,9 +43,9 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|IDENTIFICADOR del agente.|  
-|**Name**|**nvarchar(100**|Nombre del agente.|  
-|**publisher_security_mode**|**smallint**|Modo de seguridad utilizado por el agente al conectarse al publicador, que puede ser uno de los siguientes:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows.|  
+|**id**|**int**|IDENTIFICADOR del agente.|  
+|**name**|**nvarchar(100**|Nombre del agente.|  
+|**publisher_security_mode**|**smallint**|Modo de seguridad utilizado por el agente al conectarse al publicador, que puede ser uno de los siguientes:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado para conectarse al publicador.|  
 |**publisher_password**|**nvarchar (524)**|Por motivos de seguridad, siempre se ** \* \* \* \* \* \* \* \* \* ** devuelve un valor de.|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo del agente.|  

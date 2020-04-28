@@ -18,10 +18,10 @@ ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124681"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
@@ -57,8 +57,8 @@ sp_enum_login_for_proxy
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Número de identificación del proxy.|  
 |**proxy_name**|**sysname**|Nombre del proxy.|  
-|**Name**|**sysname**|Nombre de la entidad de seguridad para la asociación.|  
-|**marcas**|**int**|Tipo de la entidad de seguridad.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión<br /><br /> **1** = rol fijo del sistema<br /><br /> **2** = rol de base de datos en **msdb**|  
+|**name**|**sysname**|Nombre de la entidad de seguridad para la asociación.|  
+|**flags**|**int**|Tipo de la entidad de seguridad.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión<br /><br /> **1** = rol fijo del sistema<br /><br /> **2** = rol de base de datos en **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Observaciones  

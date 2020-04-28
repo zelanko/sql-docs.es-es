@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138327"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configuración del proyecto (asignación de tipo) (MySQLToSQL)
@@ -50,7 +50,7 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
   
 |||  
 |-|-|  
-|**Tipo de datos MySQL**|**Tipo de datos de SQL Server**|  
+|**Tipo de datos MySQL**|**SQL Server tipo de datos**|  
 |bigint|bigint|  
 |BIGINT [*.. 255]|bigint|  
 |binary|binario [1]|  
@@ -140,8 +140,8 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |real|Float [53]|  
 |real [*.. 255] [\*.. 30|Numeric [*] [\*]|  
 |serial|bigint|  
-|smallint|smallint|  
-|smallint [*.. 255]|smallint|  
+|SMALLINT|SMALLINT|  
+|smallint [*.. 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |texto [0.. 1]|nvarchar [1]|  
 |texto [2.. 4000]|nvarchar [*]|  
@@ -149,8 +149,8 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |time|time|  
 |timestamp|datetime|  
 |tinyblob|varbinary [255]|  
-|tinyint|smallint|  
-|tinyint [*.. 255]|smallint|  
+|TINYINT|SMALLINT|  
+|tinyint [*.. 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
 |BIGINT sin signo|bigint|  
 |BIGINT sin signo [*.. 255]|bigint|  
@@ -182,17 +182,17 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |real sin signo [*.. 255 [[\*.. 30|Numeric [*] [\*]|  
 |smallint sin signo|int|  
 |smallint sin signo [*.. 255]|int|  
-|tinyint sin signo|tinyint|  
-|unsigned tinyint [*.. 255]|tinyint|  
+|tinyint sin signo|TINYINT|  
+|unsigned tinyint [*.. 255]|TINYINT|  
 |varbinary [0.. 1]|varbinary [1]|  
 |varbinary [2.. 8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
 |VARCHAR [0.. 1]|nvarchar [1]|  
 |VARCHAR [2.. 4000]|nvarchar [*]|  
 |VARCHAR [4001.. *]|nvarchar(max)|  
-|year|smallint|  
-|año [2.. 2]|smallint|  
-|año [4... 4]|smallint|  
+|year|SMALLINT|  
+|año [2.. 2]|SMALLINT|  
+|año [4... 4]|SMALLINT|  
   
 ##### <a name="add"></a>Sumar  
 Haga clic para agregar un tipo de datos a la lista de asignaciones.  

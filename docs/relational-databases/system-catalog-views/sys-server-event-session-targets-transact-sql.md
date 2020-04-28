@@ -21,10 +21,10 @@ ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133191"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68133191"
 |event_session_id|**int**|Identificador de la sesión de eventos. No admite valores NULL.|  
 |target_id|**int**|Id. del destino. El Id. es único dentro del objeto de sesión de evento. No admite valores NULL.|  
 |name|**sysname**|Nombre del destino del evento. No admite valores NULL.|  
-|Paquete|**sysname**|Nombre del paquete de eventos que contiene el destino de evento. No admite valores NULL.|  
-|destina|**sysname**|Nombre del módulo que contiene el destino de evento. No admite valores NULL.|  
+|paquete|**sysname**|Nombre del paquete de eventos que contiene el destino de evento. No admite valores NULL.|  
+|module|**sysname**|Nombre del módulo que contiene el destino de evento. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
@@ -48,7 +48,7 @@ ms.locfileid: "68133191"
   
 ||||  
 |-|-|-|  
-|De|A|Relación|  
+|De|En|Relación|  
 |sys.server_event_session_targets.event_session_id|Sys. server_event_sessions. event_session_id|Varios a uno|  
   
 ## <a name="see-also"></a>Consulte también  

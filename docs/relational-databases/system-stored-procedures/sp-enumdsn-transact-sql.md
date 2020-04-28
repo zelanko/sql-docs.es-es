@@ -16,10 +16,10 @@ ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d84d366483cd5a887eb299b0f8d9208998e835c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124588"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
@@ -45,7 +45,7 @@ sp_enumdsn
 |-----------------|---------------|-----------------|  
 |**Nombre del origen de datos**|**sysname**|Nombre del origen de datos.|  
 |**Descripción**|**VARCHAR(255**|Descripción del origen de datos.|  
-|**Tipo**|**int**|Tipo del origen de datos.<br /><br /> **1** = DSN ODBC<br /><br /> **3** = OLE DB origen de datos|  
+|**Type**|**int**|Tipo del origen de datos.<br /><br /> **1** = DSN ODBC<br /><br /> **3** = OLE DB origen de datos|  
 |**Nombre del proveedor**|**VARCHAR(255**|Nombre del proveedor OLE DB. El valor es NULL para DSN de ODBC.|  
   
 ## <a name="remarks"></a>Observaciones  

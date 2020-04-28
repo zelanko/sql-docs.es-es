@@ -14,10 +14,10 @@ ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729042"
 ---
 # <a name="master-data-services-database"></a>Base de datos de Master Data Services
@@ -38,17 +38,17 @@ ms.locfileid: "73729042"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [&#40;Master Data Services la tabla de ensayo de miembros hoja&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [&#40;Master Data Services la tabla de almacenamiento provisional de miembros consolidados&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [&#40;Master Data Services de la tabla de ensayo de relaciones&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
+-   [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
 -   [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear una base de datos de Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [&#40;de seguridad de objetos de base de datos Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)   
- [Inicios de sesión, usuarios y roles de base de datos &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
+ [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

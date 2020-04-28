@@ -14,10 +14,10 @@ ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728941"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Requerir valores de atributo (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "73728941"
 > [!NOTE]  
 >  Los miembros que sean valores de atributos basados en dominio y que falten no se muestran en las jerarquías derivadas que se basen en esas relaciones.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-require-attribute-values"></a>Requerir los valores de atributo  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728941"
   
 2.  En la barra de menús, seleccione **Administrar** y haga clic en **Reglas de negocios**.  
   
-3.  En la página **Reglas de negocios** , en la lista desplegable **Modelo** , seleccione un modelo.  
+3.  En la página **reglas de negocios** , en la lista desplegable **modelo** , seleccione un modelo.  
   
 4.  En la lista desplegable **Entidad** , seleccione una entidad.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73728941"
   
 15. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El valor de la columna **Business Rule State** (Estado de la regla de negocio) es **Activo**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   

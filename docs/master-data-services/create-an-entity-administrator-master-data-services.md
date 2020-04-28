@@ -11,10 +11,10 @@ ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: bca3fbbfe08969f27c26ab0ca6a66e76468acdc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729533"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>Creación de un administrador de entidades (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73729533"
 > [!TIP]  
 >  Para simplificar la administración, cree un grupo local o de Windows, y configúrelo como administrador de entidades. Puede agregar usuarios al grupo y quitarlos a continuación sin tener acceso a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ## <a name="to-create-an-entity-administrator"></a>Para crear un administrador de entidades  
   

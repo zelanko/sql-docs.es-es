@@ -14,10 +14,10 @@ ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728524"
 ---
 # <a name="create-a-collection-master-data-services"></a>Crear una colección (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73728524"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una colección cuando desee crear listas planas de miembros hoja y consolidados. Las colecciones no tienen que incluir todos los miembros de la entidad.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -53,13 +53,13 @@ ms.locfileid: "73728524"
   
 9. Haga clic en **OK**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   [Agregar miembros a una colección &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [Eliminar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
- [Cree una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
+ [Crear una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
   

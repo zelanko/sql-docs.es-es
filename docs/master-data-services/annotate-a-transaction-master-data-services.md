@@ -13,10 +13,10 @@ ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 17474c603e437dd0cb2dcfbedf5e444ba50ba3ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728791"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Anotar una transacción (Master Data Services)
@@ -28,11 +28,11 @@ ms.locfileid: "73728791"
 > [!NOTE]  
 >  Las anotaciones no se pueden eliminar.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
   
 -   Para agregar transacciones que creó, debe contar con el permiso para obtener acceso al área funcional de **Explorador** y tener como mínimo el permiso **Actualizar** para el objeto del modelo al que desea agregar anotaciones.  
   
--   Para agregar anotaciones a las transacciones para todos los usuarios, debe tener permiso de acceso al área funcional **Administración de versiones** y ser administrador de modelos. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Para agregar anotaciones a las transacciones para todos los usuarios, debe tener permiso de acceso al área funcional **Administración de versiones** y ser administrador de modelos. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-annotate-a-transaction-in-explorer"></a>Para agregar anotaciones a una transacción en el Explorador  
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664090"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message, clase de eventos
@@ -47,12 +47,12 @@ ms.locfileid: "62664090"
 |**ObjectName**|**nvarchar**|Nombre de servicio del otro lado de la conversación y cadena de conexión que la base de datos remota ha utilizado para conectarse a esta base de datos.|34|No|  
 |**RoleName**|**nvarchar**|Rol del extremo que recibe este mensaje. Uno de los valores siguientes.<br /><br /> **iniciador**:<br />                  El extremo receptor es el iniciador de la conversación.<br /><br /> **destino**:<br />                  El extremo receptor es el destino de la conversación.|38|No|  
 |**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
-|**severity**|**int**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha quitado el mensaje debido a un error, gravedad de este error.|29|No|  
+|**Gravedad**|**int**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha quitado el mensaje debido a un error, gravedad de este error.|29|No|  
 |**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**State**|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
 |**TextData**|**ntext**|Descripción del daño detectado.|1|Sí|  
-|**ID. de transacción**|**BIGINT**|Identificador de la transacción asignado por el sistema.|4|No|  
+|**ID. de transacción**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
  La columna **TextData** de este evento contiene texto que describe el problema con el mensaje.  
   

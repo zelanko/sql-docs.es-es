@@ -11,10 +11,10 @@ ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728678"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Extensión de reglas de negocios (Master Data Services)
@@ -70,12 +70,12 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema.  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   Debe ser administrador de modelo. Para obtener más información, consulte [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
 -   Los scripts definidos por el usuario se agregan a la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   

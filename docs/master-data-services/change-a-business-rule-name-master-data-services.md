@@ -13,10 +13,10 @@ ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728671"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Cambiar el nombre de una regla de negocios (Master Data Services)
@@ -25,12 +25,12 @@ ms.locfileid: "73728671"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cambie el nombre de una regla de negocios cuando el nombre asignado no satisfaga sus necesidades empresariales.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Una regla de negocios debe existir. Para obtener más información, consulte [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73728671"
   
 2.  En la barra de menús, seleccione **Administrar** y haga clic en **Reglas de negocios**.  
   
-3.  En la página **Reglas de negocios** , en la lista desplegable **Modelo** , seleccione un modelo.  
+3.  En la página **reglas de negocios** , en la lista desplegable **modelo** , seleccione un modelo.  
   
 4.  En la lista desplegable **Entidad** , seleccione una entidad.  
   

@@ -13,10 +13,10 @@ ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b35c47704915ec9e85f0c4f2ac083bfb7a6017ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729506"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>Cuadro de diálogo Crear aplicación web (Administrador de configuración de Master Data Services)
@@ -44,7 +44,7 @@ ms.locfileid: "73729506"
   
 ## <a name="see-also"></a>Consulte también  
  [Página de configuración Web &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
-Master Data Services requisitos de la aplicación Web [de instalación y configuración](../master-data-services/master-data-services-installation-and-configuration.md) [&#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
- [Cree una aplicación Web de Master Data Manager &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+[Instalación y configuración de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md) [Requisitos de la aplicación web &#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
+ [Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

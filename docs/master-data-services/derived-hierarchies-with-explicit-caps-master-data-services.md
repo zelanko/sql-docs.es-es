@@ -15,10 +15,10 @@ ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2c2d28ad9490e4bb9d9a8e30f1ba8356d4a6c7f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729334"
 ---
 # <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>Jerarquías derivadas con límites explícitos (Master Data Services)
@@ -52,8 +52,8 @@ ms.locfileid: "73729334"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una jerarquía derivada.|[Cree una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|Crear una jerarquía explícita.|[Cree una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|Crear una jerarquía derivada.|[Crear una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Crear una jerarquía explícita.|[Crear una jerarquía explícita &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |Eliminar una jerarquía derivada existente.|[Eliminar una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   

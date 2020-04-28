@@ -11,10 +11,10 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 3622c5bf25b049fbf7bcd2ad19d43bd31230459c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729098"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Área funcional de Administración de integraciones (Master Data Manager)
@@ -26,7 +26,7 @@ ms.locfileid: "73729098"
 ## <a name="import-data"></a>Importar datos  
  [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
- [Ver los errores que se producen durante el Master Data Services de &#40;de almacenamiento provisional&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
+ [Ver los errores que se producen durante el almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)  
   
  [Solucionar problemas del proceso de almacenamiento provisional (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729020"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hospedar una base de datos de MDS en una instancia administrada
@@ -78,7 +78,7 @@ Para prepararse, debe crear y configurar una instancia administrada de Azure SQL
      - WCF Services
      - Activación HTTP (obligatorio)
      - Uso compartido de puertos TCP
-     - Servicio WAS (Windows Process Activation Service)
+     - Servicio de activación de procesos de Windows
      - Modelo de proceso
      - Entorno .NET
      - API de configuración
@@ -170,7 +170,7 @@ Esta acción instala:
 
    ![MDS-SQLServer2019-config-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
 
-1. Seleccione **aplicar**. Verá el mensaje **configuración completa** . Seleccione **Aceptar** en el cuadro de mensaje para iniciar la aplicación Web. La dirección del sitio `http://server name/web application/`web es.
+1. Seleccione **Aplicar**. Verá el mensaje **configuración completa** . Seleccione **Aceptar** en el cuadro de mensaje para iniciar la aplicación Web. La dirección del sitio `http://server name/web application/`web es.
 
 ## <a name="configure-authentication"></a>Configurar la autenticación
 
@@ -198,9 +198,9 @@ MDS también admite la autenticación Active Directory contraseña y la autentic
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>Actualización [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] y SQL Database versión
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>Actualización [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] y SQL Database versión
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>Actualización[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>Actualización[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 Instale la **actualización acumulativa SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]se actualizará automáticamente.
 
@@ -233,5 +233,5 @@ Para corregir este problema, debe actualizar la versión de la base de datos:
 
 - [Base de datos de Master Data Services](../master-data-services/master-data-services-database.md)
 - [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)
-- [Página configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [Novedades de Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [Página Configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [Novedades en Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)

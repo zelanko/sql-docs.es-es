@@ -15,10 +15,10 @@ ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5771fb5db586726d19d965ca18aa27f3dab16bd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729594"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Crear un paquete de implementación de modelo mediante el asistente
@@ -27,12 +27,12 @@ ms.locfileid: "73729594"
 
   Use el Asistente para la implementación de modelos de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para crear un paquete de los objetos del modelo solamente. Si necesita incluir datos en un paquete, consulte [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , debe tener permiso de acceso al área funcional **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Debe existir un modelo para que se pueda crear un paquete del mismo. Para obtener más información, consulte [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73729594"
   
 8.  Haga clic en **Cerrar** para cerrar el asistente.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   [Implementar un paquete de implementación de modelo mediante el asistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

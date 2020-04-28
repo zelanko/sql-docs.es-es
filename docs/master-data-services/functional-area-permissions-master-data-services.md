@@ -15,10 +15,10 @@ ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729204"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permisos del área funcional (Master Data Services)
@@ -27,21 +27,21 @@ ms.locfileid: "73729204"
 
   Puede asignar permisos a cada una de las áreas funcionales de la interfaz de usuario de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Las siguientes son las áreas funcionales:  
   
--   **Explorador**  
+-   **Internet**  
   
 -   **Administración de versiones**  
   
 -   **Administración de integraciones**  
   
--   **Administración del sistema**  
+-   **System Administration (Administración del sistema)**  
   
 -   **Permisos de usuario y de grupo**  
   
--   **Superusuario**  
+-   **Superusuario.**  
   
  Cuando se asignan permisos a un área funcional, está haciendo que el área de la IU sea visible al usuario o grupo.  
   
- Dentro del área funcional del **Explorador** , los permisos adicionales asignados a los objetos de modelo y a los miembros de la jerarquía determinan a qué datos puede tener acceso un usuario. Dentro de todas las demás áreas funcionales, un usuario debe ser administrador de modelo para ver un modelo y actuar en él. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+ Dentro del área funcional del **Explorador** , los permisos adicionales asignados a los objetos de modelo y a los miembros de la jerarquía determinan a qué datos puede tener acceso un usuario. Dentro de todas las demás áreas funcionales, un usuario debe ser administrador de modelo para ver un modelo y actuar en él. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 > [!IMPORTANT]  
 >  Un usuario con permisos de superusuario tiene permiso efectivo de administrador en todos los modelos y tiene todos los demás permisos funcionales.  

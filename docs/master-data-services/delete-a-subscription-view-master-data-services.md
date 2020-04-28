@@ -14,10 +14,10 @@ ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729389"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Eliminar una vista de suscripciones (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73729389"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una vista de suscripción cuando ya no se necesite. Al eliminar una vista de suscripción en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , la vista se quita de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . También puede editar una vista de suscripción.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
--   Debe disponer del permiso para tener acceso al área funcional de **Administración de integraciones** . Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer del permiso para tener acceso al área funcional de **Administración de integraciones** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-subscription-view"></a>Para eliminar una vista de suscripción  
   

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729345"
 ---
 # <a name="deprecated-master-data-services-features"></a>Características en desuso de Master Data Services
@@ -49,13 +49,13 @@ ms.locfileid: "73729345"
   
 ## <a name="attribute-entity-transaction-log-type"></a>Tipo de registro de transacciones de entidad Attribute  
 El tipo de registro de transacciones de entidad "Attribute" está en desuso, migre al tipo de registro de transacciones de entidad "Member". Para obtener información sobre los tipos de registro de transacciones de entidad, consulte el tema siguiente:
-* [Cambiar el tipo de registro de transacciones de entidad (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
+* [Cambio del tipo de registro de transacciones de entidad (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [Historial de revisiones de miembro](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Recursos externos  
  Entrada de blog, [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(En desuso: jerarquías explícitas y colecciones), en msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
- [Características de Master Data Services no incluidas](../master-data-services/discontinued-master-data-services-features.md)  
+ [Características descontinuadas de Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

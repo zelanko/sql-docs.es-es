@@ -11,17 +11,16 @@ ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729322"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utiliza reglas de negocio para crear soluciones básicas de flujo de trabajo, como actualizar y validar datos automáticamente, y enviar notificaciones por correo electrónico en función de las condiciones que especifique. Cuando requiera un procesamiento más complejo que el que proporcionan las acciones de flujo de trabajo integradas, puede usar un flujo de trabajo personalizado. Un flujo de trabajo personalizado es un ensamblado de .NET creado por usted. Cuando se llama a su ensamblado de flujo de trabajo, el código puede realizar cualquier acción que requiera la situación. Por ejemplo, si su flujo de trabajo requiere un procesamiento de eventos más complejos, como aprobaciones de varios niveles o árboles de decisiones complejos, puede configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que inicie un flujo de trabajo personalizado que analice los datos y determine dónde enviarlos para su aprobación.  
   
 ## <a name="how-custom-workflows-are-processed"></a>Cómo se procesan los flujos de trabajo personalizados  
@@ -29,8 +28,7 @@ ms.locfileid: "73729322"
   
 1.  Para validar una entidad que inicia un flujo de trabajo se usa [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].  
   
-2.  
-  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] envía los miembros que satisfacen las condiciones de la regla de negocio a una cola de Service Broker en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+2.  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] envía los miembros que satisfacen las condiciones de la regla de negocio a una cola de Service Broker en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 3.  A intervalos regulares, el servicio de integración de flujos de trabajo MDS de SQL Server llama a un procedimiento almacenado en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
@@ -92,9 +90,7 @@ ms.locfileid: "73729322"
     </setting>  
     ```  
   
-     El texto interno de la etiqueta \<value> tiene el formato \<Etiqueta del flujo de trabajo>=\<nombre del tipo de flujo de trabajo calificado del ensamblado>. 
-  \<Etiqueta del flujo de trabajo> es el nombre que se usa para identificar el ensamblado controlador del flujo de trabajo al crear una regla de negocio en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. 
-  \<nombre del tipo de flujo de trabajo calificado del ensamblado> es el nombre de la clase de flujo de trabajo calificado para el espacio de nombres, seguido de una coma y del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias etiquetas \<setting> si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
+     El texto interno de la etiqueta \<value> tiene el formato \<Etiqueta del flujo de trabajo>=\<nombre del tipo de flujo de trabajo calificado del ensamblado>. \<Etiqueta del flujo de trabajo> es el nombre que se usa para identificar el ensamblado controlador del flujo de trabajo al crear una regla de negocio en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<nombre del tipo de flujo de trabajo calificado del ensamblado> es el nombre de la clase de flujo de trabajo calificado para el espacio de nombres, seguido de una coma y del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias etiquetas \<setting> si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
   
 > [!NOTE]  
 >  En función de la configuración del servidor, puede que aparezca un error "Acceso denegado" al intentar guardar el archivo Microsoft.MasterDataServices.Workflow.exe.config. En tal caso, deshabilite temporalmente Control de cuentas de usuario (UAC) en el servidor. Para ello, abra el Panel de control y haga clic en **Sistema y seguridad**. En **Centro de actividades**, haga clic en **Cambiar configuración de Control de cuentas de usuario**. En el cuadro de diálogo **Configuración del Control de cuentas de usuario**, desplace la barra hasta abajo para no recibir nunca ninguna notificación. Reinicie su equipo y repita el procedimiento anterior para editar el archivo de configuración. Después de guardar el archivo, restaure la configuración de UAC al nivel predeterminado.  
@@ -157,6 +153,6 @@ ms.locfileid: "73729322"
   
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
- [Descripción XML de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
+ [Descripción del código XML de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
   

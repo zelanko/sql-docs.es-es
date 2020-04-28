@@ -13,10 +13,10 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 870341b6ae6a3ffbda345aa7a0abc4a2fe253ac5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728932"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Invertir una transacción (Master Data Services)
@@ -25,11 +25,11 @@ ms.locfileid: "73728932"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los administradores pueden invertir una transacción cuando sea necesario deshacer una acción. Los ejemplos de transacciones son cambios del valor de atributo, movimientos de la jerarquía o eliminaciones de miembro. Este tema se aplica solo a las transacciones de las entidades con el tipo de registro de transacciones "Attribute". Vaya a la página del explorador de entidades para ver el historial de transacciones de las entidades con el tipo de registro de transacciones "Member".  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-reverse-a-transaction"></a>Para invertir una transacción  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73728932"
   
 ## <a name="see-also"></a>Consulte también  
  [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
- [Reactivar un miembro o colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [Reversión del historial de revisiones de miembro](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

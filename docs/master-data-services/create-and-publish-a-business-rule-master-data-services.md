@@ -14,10 +14,10 @@ ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729444"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Crear y publicar una regla de negocios (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73729444"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una regla de negocios para asegurarse de la exactitud de los datos maestros. Después de crear una regla, debe publicarla antes de poder aplicarla a los datos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>Crear y publicar una regla de negocios  
   
@@ -104,14 +104,14 @@ ms.locfileid: "73729444"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|Status|Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la regla de negocio se está actualizando.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Si aparecen errores al crear o editar una regla de negocio, se muestra la imagen siguiente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|Estado|Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la regla de negocio se está actualizando.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> Si aparecen errores al crear o editar una regla de negocio, se muestra la imagen siguiente.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |Nombre|El nombre de la regla de negocio.|  
 |Descripción|La descripción de la regla de negocio.|  
 |Business Rule State|Uno de los siguientes estados de la regla de negocio: Regla no definida, Activa, Excluida, Cambios pendientes, Exclusión pendiente y Eliminación pendiente.|  
 |Excluido|Especifica si la regla de negocios está excluida.|  
-|Notificación|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  
+|Notification|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   

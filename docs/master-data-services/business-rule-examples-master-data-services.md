@@ -11,10 +11,10 @@ ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728698"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Ejemplos de reglas de negocios (Master Data Services)
@@ -27,7 +27,7 @@ Para obtener instrucciones sobre cómo implementar los modelos de ejemplo, vea [
   
   
 ## <a name="business-rule-examples"></a>Ejemplos de reglas de negocios  
-Modelo de ejemplo |Entidad  |Nombre de la regla de negocio| Descripción  
+Modelo de ejemplo |Entity  |Nombre de la regla de negocio| Descripción  
 ---------|---------|---------|-----------|  
 Customer    | Customer   | Person pmt terms| Especifica las condiciones de pago predeterminadas para los clientes.          
 En la siguiente regla de negocio, si el valor del atributo CustomerType cumple la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. De lo contrario, no se realiza ninguna acción.  
@@ -42,7 +42,7 @@ Else
   
 **--------------------------------------------------**  
   
-Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|---------------  
 Customer     | Customer    | Org pmt terms | Especifica las condiciones de pago predeterminadas para las organizaciones.         
 En la siguiente regla de negocio, si el valor del atributo CustomerType cumple la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. De lo contrario, no se realiza ninguna acción.  
@@ -58,7 +58,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio| Descripción    
+Modelo de ejemplo  |Entity  |Nombre de la regla de negocio| Descripción    
 ---------|---------|---------|-----------  
 Producto     |  Producto       | DaysToManufacture |Especifica el intervalo de días de fabricación para la fabricación interna.          
 En la siguiente regla de negocio, si el valor del atributo InHouseManufacture cumple la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. De lo contrario, no se realiza ninguna acción.  
@@ -74,9 +74,9 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|-------------  
-Producto     |Producto         |Required fields| Especifica los atributos necesarios para los miembros de la entidad de producto.           
+Producto     |Producto         |Campos obligatorios| Especifica los atributos necesarios para los miembros de la entidad de producto.           
 En la siguiente regla de negocio, en todas las condiciones se realiza la `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Los valores de atributo no pueden ser NULL ni estar en blanco.  
 ```  
 If  
@@ -99,7 +99,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|-----------  
 Producto     | Producto        |  Std Cost| Requiere que el costo estándar sea mayor que 0.        
 En la siguiente regla de negocio, en todas las condiciones se aplica la `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
@@ -115,7 +115,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|------------  
 Producto     | Producto        | FG MSRP Cost|Especifica que, si el producto es un producto terminado, el MSRP (precio minorista sugerido por el fabricante) y los costos del distribuidor deben ser mayores que 0.           
   
@@ -133,10 +133,10 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|------------  
-Producto     | Producto        |  Nombre predeterminado| Especifica el nombre predeterminado del producto según los valores de los atributos Color y Class. Cuando el valor del atributo Color no es YLO y el atributo Class no es NA, el nombre predeterminado es Yellow NA.         
-En la siguiente regla de negocio, si los atributos Color y Class no cumplen la condición de regla `is equal` , la `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the Name attribute.  
+Producto     | Producto        |  Default Name| Especifica el nombre predeterminado del producto según los valores de los atributos Color y Class. Cuando el valor del atributo Color no es YLO y el atributo Class no es NA, el nombre predeterminado es Yellow NA.         
+En la siguiente regla de negocio, si los atributos Color y Class no cumplen la condición de regla `is equal` , la `defaults to` [](../master-data-services/business-rule-actions-master-data-services.md) se aplica al atributo Name.  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  
@@ -149,7 +149,7 @@ Else
 **--------------------------------------------------**  
   
   
-**Para ver los ejemplos de reglas de negocios en los modelos de ejemplo**  
+**Para ver ejemplos de reglas de negocios en los modelos de ejemplo**  
 1. Vaya al sitio web de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] que ha configurado después de instalar MDS y haga clic en el cuadro **Administración del sistema** .   
 Para obtener instrucciones sobre cómo configurar el sitio web, vea [Instalación y configuración de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Haga clic en el modelo de ejemplo que contiene la regla de negocio, como se muestra en las tablas anteriores, y, después, haga clic en **Entidades**.  

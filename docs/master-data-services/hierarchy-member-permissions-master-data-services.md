@@ -14,10 +14,10 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729236"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Permisos de miembros de la jerarquía (Master Data Services)
@@ -40,8 +40,8 @@ ms.locfileid: "73729236"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|Los miembros se muestran.<br /><br /> <br /><br /> Nota: Si solo asigna el permiso **Lectura** a **Raíz**, los miembros de **Raíz** son de solo lectura; en cambio, en las jerarquías explícitas y en las colecciones, el usuario puede mover miembros a **Raíz** y agregar miembros nuevos a **Raíz**.|  
-|**A**|La creación de permisos no está disponible para los permisos de los miembros de jerarquías.|  
-|**Update**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
+|**Crear**|La creación de permisos no está disponible para los permisos de los miembros de jerarquías.|  
+|**Actualizar**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
 |**Eliminar**|Se muestran los miembros, y el usuario puede eliminarlos.|  
 |**Deny**|Los miembros no se muestran.|  
   
@@ -70,6 +70,6 @@ ms.locfileid: "73729236"
  [Cómo se determinan los permisos &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Jerarquías &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
- [Aplicar inmediatamente los permisos de miembro &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   

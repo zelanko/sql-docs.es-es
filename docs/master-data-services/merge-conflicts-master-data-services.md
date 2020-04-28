@@ -11,10 +11,10 @@ ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729031"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Conflictos de combinación (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73729031"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], si intenta publicar los datos que ha cambiado otro usuario, se producirá un error de combinación en la publicación. Para resolver este error, puede ejecutar los conflictos de fusión mediante combinación y volver a publicar los cambios.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  

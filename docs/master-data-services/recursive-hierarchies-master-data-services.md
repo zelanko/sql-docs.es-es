@@ -14,10 +14,10 @@ ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ac3df398e486f143b871c736e6f2fee643092b7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728964"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Jerarquías recursivas (Master Data Services)
@@ -57,13 +57,13 @@ ms.locfileid: "73728964"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Crear una jerarquía derivada.|[Cree una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|Crear una jerarquía derivada.|[Crear una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
 |Cambiar el nombre de una jerarquía derivada existente.|[Cambiar el nombre de una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
 |Eliminar una jerarquía derivada existente.|[Eliminar una jerarquía derivada &#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   [Atributos basados en dominio &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Atributos basados en dominios &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   

@@ -12,10 +12,10 @@ ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: dc4ee9fd4eead46df29538a85013949402b1920e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728731"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Generar automáticamente valores de atributo que no sean Code (Master Data Services)
@@ -24,12 +24,12 @@ ms.locfileid: "73728731"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], genere de forma automática los valores de atributo de una entidad si quiere que se asigne automáticamente un entero como valor cada vez que se apliquen reglas de negocio.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Debe existir un atributo numérico. Para obtener más información, consulte [Crear un atributo numérico &#40;Master Data Services&#41;](../master-data-services/create-a-numeric-attribute-master-data-services.md).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73728731"
   
 17. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El estado de la regla cambia a **Activo**.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 -   [Validar miembros específicos con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
@@ -78,6 +78,6 @@ ms.locfileid: "73728731"
 ## <a name="see-also"></a>Consulte también  
  [Creación automática de código &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [Master Data Services de &#40;de validación&#41;](../master-data-services/validation-master-data-services.md)  
+ [Validación &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
   

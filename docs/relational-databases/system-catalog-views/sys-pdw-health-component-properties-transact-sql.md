@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016551"
 ---
 # <a name="syspdw_health_component_properties-transact-sql"></a>Sys. pdw_health_component_properties (Transact-SQL)
@@ -27,10 +27,10 @@ ms.locfileid: "68016551"
 |property_id|**int**|Identificador único de la propiedad de un componente.<br /><br /> property_id y component_id forman la clave de esta vista.|NOT NULL|  
 |component_id|**int**|IDENTIFICADOR del componente. Vea [Sys. pdw_health_components &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> property_id y component_id forman la clave de esta vista.|NOT NULL|  
 |property_name|**nvarchar(255)**|Nombre de la propiedad.|NOT NULL|  
-|physical_name|**nvarchar (32)**|Nombre de propiedad definido por el fabricante.|NOT NULL|  
+|physical_name|**nvarchar(32)**|Nombre de propiedad definido por el fabricante.|NOT NULL|  
 |is_key|**bit**|Determina si la instancia del dispositivo es única o no única.|NOT NULL<br /><br /> 0: la instancia del dispositivo es única.<br /><br /> 1: la instancia del dispositivo no es única.|  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

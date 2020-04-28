@@ -17,10 +17,10 @@ ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043043"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
@@ -65,7 +65,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *<row_filter_option>* :: = {ALL | ALL with Mask | All with Merge}  
  Una opción que rige el contenido de las columnas de metadatos y las filas devueltas en el conjunto de resultados. Puede ser una de las siguientes opciones:  
   
- todas  
+ all  
  Devuelve el LSN del último cambio de la fila y la operación necesaria para aplicar la fila en las columnas de metadatos _ _ $ \_ \_start_lsn y $Operation. La columna \_ \_$Update _mask siempre es NULL.  
   
  all with mask  
@@ -80,9 +80,9 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|__$start_lsn|**binario (10)**|Número de secuencia de registro (LSN) asociado con la transacción de confirmación para el cambio.<br /><br /> Todos los cambios confirmados en la misma transacción comparten el mismo LSN de confirmación. Por ejemplo, si una operación de actualización en la tabla de origen modifica dos columnas en dos filas, la tabla de cambios contendrá cuatro filas, cada una con el mismo _ _ $ start_lsnvalue.|  
+|__$start_lsn|**binary(10)**|Número de secuencia de registro (LSN) asociado con la transacción de confirmación para el cambio.<br /><br /> Todos los cambios confirmados en la misma transacción comparten el mismo LSN de confirmación. Por ejemplo, si una operación de actualización en la tabla de origen modifica dos columnas en dos filas, la tabla de cambios contendrá cuatro filas, cada una con el mismo _ _ $ start_lsnvalue.|  
 |__$operation|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) necesaria para aplicar la fila de datos modificados al origen de datos de destino.<br /><br /> Si el valor del parámetro row_filter_option es todos o todos con máscara, el valor de esta columna puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 4 = actualizar<br /><br /> Si el valor del parámetro row_filter_option es todos con combinación, el valor de esta columna puede ser uno de los siguientes:<br /><br /> 1 = eliminar|  
-|__$update_mask|**varbinary (128)**|Máscara de bits con un bit que corresponde a cada columna capturada identificada para la instancia de captura. Este valor tiene todos los bits definidos establecidos en 1 si __$operation = 1 o 2. Cuando \_ \_$Operation = 3 o 4, solo los bits que corresponden a las columnas que han cambiado se establecen en 1.|  
+|__$update_mask|**varbinary(128)**|Máscara de bits con un bit que corresponde a cada columna capturada identificada para la instancia de captura. Este valor tiene todos los bits definidos establecidos en 1 si __$operation = 1 o 2. Cuando \_ \_$Operation = 3 o 4, solo los bits que corresponden a las columnas que han cambiado se establecen en 1.|  
 |*\<columnas de la tabla de origen capturadas>*|Varía|Las columnas restantes devueltas por la función son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
   
 ## <a name="permissions"></a>Permisos  

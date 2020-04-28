@@ -10,10 +10,10 @@ ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029169"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Editar asignación de tipo (SybaseToSQL)
@@ -33,10 +33,10 @@ Seleccione el tipo de datos de origen que se [!INCLUDE[ssNoVersion](../../includ
   
 Si el tipo de datos es de longitud variable, los campos siguientes aparecerán en **tipo de origen**:  
   
-**De**  
+**From**  
 Especifique la longitud mínima de esta asignación. Por ejemplo, para el tipo de datos **nchar** , puede especificar 10 para especificar que esta asignación es para un intervalo que empieza en **NCHAR (10)**.  
   
-**Para**  
+**To**  
 Especifique la longitud máxima de esta asignación. Por ejemplo, para el tipo de datos **nchar** , puede especificar 20 para especificar que esta asignación es para un intervalo que termina en **NCHAR (20)**.  
   
 **Tipo de destino**  

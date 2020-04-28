@@ -21,10 +21,10 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041010"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
@@ -65,7 +65,7 @@ Database 'Hekaton_DB213' does not exist. Make sure that the name is entered corr
 ```  
   
 **La base de datos es una base de datos del sistema**  
- Las tablas de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no se pueden crear en bases de datos del sistema.  Por tanto, no es válido crear un enlace de memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] para tales bases de datos.  Se devuelve el error siguiente:  
+ Las tablas de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no se pueden crear en bases de datos del sistema.  Por tanto, no es válido crear un enlace de memoria de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] para tales bases de datos.  Se devuelve el siguiente error:  
 *Database_name% s hace referencia a una base de datos del sistema.  Los grupos de recursos solo se pueden enlazar a una base de datos de usuario.*  
   
 ```  
@@ -152,7 +152,7 @@ END
 -   Requiere el permiso CONTROL SERVER.  
   
 ## <a name="see-also"></a>Consulte también  
- [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Enlazar una base de datos con tablas optimizadas para memoria a un grupo de recursos](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

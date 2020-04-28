@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026840"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
@@ -48,13 +48,13 @@ Para obtener más información, vea [índices de hash para tablas optimizadas pa
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Identificador del objeto de la tabla primaria.|  
-|xtp_object_id|**BIGINT**|IDENTIFICADOR de la tabla optimizada para memoria.|  
+|xtp_object_id|**bigint**|IDENTIFICADOR de la tabla optimizada para memoria.|  
 |index_id|**int**|El identificador de índice.|  
-|total_bucket_count|**BIGINT**|El número total de cubos de hash del índice.|  
-|empty_bucket_count|**BIGINT**|El número de cubos de hash vacíos del índice.|  
-|avg_chain_length|**BIGINT**|La longitud promedio de las cadenas de filas sobre todos los cubos de hash del índice.|  
-|max_chain_length|**BIGINT**|La longitud máxima de las cadenas de filas de los cubos de hash.|  
-|xtp_object_id|**BIGINT**|IDENTIFICADOR de objeto de OLTP en memoria que corresponde a la tabla optimizada para memoria.|  
+|total_bucket_count|**bigint**|El número total de cubos de hash del índice.|  
+|empty_bucket_count|**bigint**|El número de cubos de hash vacíos del índice.|  
+|avg_chain_length|**bigint**|La longitud promedio de las cadenas de filas sobre todos los cubos de hash del índice.|  
+|max_chain_length|**bigint**|La longitud máxima de las cadenas de filas de los cubos de hash.|  
+|xtp_object_id|**bigint**|IDENTIFICADOR de objeto de OLTP en memoria que corresponde a la tabla optimizada para memoria.|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  
@@ -112,7 +112,7 @@ Ciertas características usan tablas internas que aprovechan los índices de has
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Tenga en cuenta que el BUCKET_COUNT del índice en las tablas internas no se puede cambiar, por lo que la salida de esta consulta debe considerarse solo informativa. no se requiere ninguna acción.  
+Tenga en cuenta que el BUCKET_COUNT del índice en las tablas internas no se puede cambiar, por lo que la salida de esta consulta debe considerarse solo informativa. No se requiere ninguna acción.  
 
 No se espera que esta consulta devuelva ninguna fila a menos que esté usando una característica que aprovecha los índices de hash en las tablas internas. La siguiente tabla optimizada para memoria contiene un índice de almacén de columnas. Después de crear esta tabla, verá los índices de hash en las tablas internas.
 

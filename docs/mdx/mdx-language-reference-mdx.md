@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b1a542ffba5f24ec1ed3cfbad0b6a084b81b74d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003497"
 ---
 # <a name="mdx-language-reference-mdx"></a>Referencia del lenguaje MDX (MDX)
@@ -31,6 +31,6 @@ ms.locfileid: "68003497"
 |[Palabras reservadas de MDX](../mdx/mdx-reserved-words.md)|Proporciona una lista de palabras reservadas para uso del lenguaje MDX.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Expresiones multidimensionales &#40;referencia de&#41; MDX](../mdx/multidimensional-expressions-mdx-reference.md)  
+ [Referencia de expresiones multidimensionales &#40;MDX&#41;](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

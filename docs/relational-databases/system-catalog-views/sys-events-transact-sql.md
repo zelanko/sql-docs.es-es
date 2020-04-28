@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15fac5b2449e90fe7d6500bca383a71bc73954f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68025792"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68025792"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID del desencadenador o de la notificación de eventos. Este valor, junto con el **tipo**, identifica de forma única la fila.|  
-|**automáticamente**|**int**|Evento que provoca la activación del desencadenador.|  
-|**type_desc**|**nvarchar (60)**|Descripción del evento que provoca la activación del desencadenador.|  
+|**type**|**int**|Evento que provoca la activación del desencadenador.|  
+|**type_desc**|**nvarchar(60)**|Descripción del evento que provoca la activación del desencadenador.|  
 |**is_trigger_event**|**bit**|1 = Evento de desencadenador.<br /><br /> 0 = Evento de notificación.|  
 |**event_group_type**|**int**|Grupo de eventos donde se crea el desencadenador o la notificación de eventos o NULL si no se crea en un grupo de eventos.|  
-|**event_group_type_desc**|**nvarchar (60)**|Descripción del grupo de eventos donde se crea el desencadenador o la notificación de eventos o NULL si no se crea en un grupo de eventos.|  
+|**event_group_type_desc**|**nvarchar(60)**|Descripción del grupo de eventos donde se crea el desencadenador o la notificación de eventos o NULL si no se crea en un grupo de eventos.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de objetos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

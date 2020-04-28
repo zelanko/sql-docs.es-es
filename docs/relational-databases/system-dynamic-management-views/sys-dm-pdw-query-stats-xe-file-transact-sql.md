@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e1224db9ce74d214320231419301b1fbc1b84cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044512"
 ---
 # <a name="sysdm_pdw_query_stats_xe_file-transact-sql"></a>Sys. dm_pdw_query_stats_xe_file (Transact-SQL)
@@ -26,8 +26,8 @@ ms.locfileid: "68044512"
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|event|**nvarchar (60)**|Clave para esta vista.||  
-|datos|**lenguaje**|||  
+|event|**nvarchar(60)**|Clave para esta vista.||  
+|datos|**xml**|||  
 |pdw_node_id|**int**|Nodo en el que se está ejecutando esta instancia de XEvent.||  
   
 ## <a name="see-also"></a>Consulte también  

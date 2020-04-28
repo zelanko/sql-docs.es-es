@@ -12,10 +12,10 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006543"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Asistente buscar bases de datos (seleccionar archivos) (AccessToSQL)
@@ -47,7 +47,7 @@ Tamaño de la base de datos, en bytes.
 **Creado**  
 Fecha y hora en que se creó la base de datos.  
   
-**Modified**  
+**Modificado**  
 Fecha y hora en que se actualizó por última vez la base de datos.  
   
 ## <a name="see-also"></a>Consulte también  

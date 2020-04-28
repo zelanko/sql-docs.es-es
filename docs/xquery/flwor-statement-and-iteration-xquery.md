@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038904"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR (instrucción e iteración de XQuery)
@@ -39,11 +39,9 @@ ms.locfileid: "68038904"
   
 -   Una o varias cláusulas FOR que enlazan una o varias variables de iteración a secuencias de entrada.  
   
-     Las secuencias de entrada pueden ser otras expresiones XQuery como expresiones XPath. Se trata de secuencias de nodos o de valores atómicos. Las secuencias de valores atómicos se pueden construir con literales o funciones constructoras. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite los nodos XML construidos como secuencias de entrada.  
+     Las secuencias de entrada pueden ser otras expresiones XQuery como expresiones XPath. Se trata de secuencias de nodos o de valores atómicos. Las secuencias de valores atómicos se pueden construir con literales o funciones constructoras. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite los nodos XML construidos como secuencias de entrada.  
   
--   Una cláusula opcional `let`. Esta cláusula asigna un valor a la variable para una iteración concreta. La expresión asignada puede ser una expresión XQuery, como una expresión XPath, y puede devolver una secuencia de nodos o una secuencia de valores atómicos. Las secuencias de valores atómicos se pueden construir con literales o con funciones constructoras. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite los nodos XML construidos como secuencias de entrada.  
+-   Una cláusula opcional `let`. Esta cláusula asigna un valor a la variable para una iteración concreta. La expresión asignada puede ser una expresión XQuery, como una expresión XPath, y puede devolver una secuencia de nodos o una secuencia de valores atómicos. Las secuencias de valores atómicos se pueden construir con literales o con funciones constructoras. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite los nodos XML construidos como secuencias de entrada.  
   
 -   Una variable de iteración. Esta variable puede tener una aserción de tipo opcional mediante la palabra clave `as`.  
   
@@ -96,8 +94,7 @@ where ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   
-  `$Step` es la variable de iteración.  
+-   `$Step` es la variable de iteración.  
   
 -   La [expresión](../xquery/path-expressions-xquery.md)de ruta `//AWMI:root/AWMI:Location[1]/AWMI:step`de acceso,, genera la secuencia de entrada. Esta secuencia es la secuencia de los elementos `step` secundarios del nodo de elemento <> del `Location` primer nodo de elemento de> <.  
   
@@ -142,8 +139,7 @@ SELECT @x.query('
 -- result test 12 111  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite las secuencias heterogéneas. En concreto, no se admiten las secuencias que contienen una mezcla de valores atómicos y nodos.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite las secuencias heterogéneas. En concreto, no se admiten las secuencias que contienen una mezcla de valores atómicos y nodos.  
   
  La iteración se utiliza con frecuencia junto con la sintaxis de [construcción de XML](../xquery/xml-construction-xquery.md) en la transformación de formatos XML, tal como se muestra en la consulta siguiente.  
   
@@ -303,8 +299,7 @@ SELECT @x.query('
   
 -   La expresión asociada a `$Loc` genera una secuencia de <`Location`> elementos. Para cada <`Location` elemento>, `$FirstStep` genera una secuencia de un elemento `Step` <>, un singleton.  
   
--   
-  `$Loc` se especifica en la expresión asociada con la variable `$FirstStep`.  
+-   `$Loc` se especifica en la expresión asociada con la variable `$FirstStep`.  
   
  El resultado es el siguiente:  
   
@@ -535,8 +530,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   La ordenación de secuencias vacías no se puede controlar.  
   
--   
-  `order by` no admite las palabras clave empty least, empty greatest ni collation.  
+-   `order by` no admite las palabras clave empty least, empty greatest ni collation.  
   
 ## <a name="see-also"></a>Consulte también  
  [Expresiones XQuery](../xquery/xquery-expressions.md)  

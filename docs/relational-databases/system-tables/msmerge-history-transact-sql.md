@@ -18,10 +18,10 @@ ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017689"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68017689"
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|El Id. del trabajo del Agente de mezcla.|  
 |**agent_id**|**int**|El Id. del Agente de mezcla.|  
-|**opiniones**|**nvarchar(255)**|El texto del mensaje.|  
+|**comentarios**|**nvarchar(255)**|El texto del mensaje.|  
 |**error_id**|**int**|IDENTIFICADOR de un error en la tabla del sistema [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) .|  
 |**timestamp**|**timestamp**|La columna de marca de tiempo de esta tabla.|  
 |**updatable_row**|**bit**|Se establece en **1** si se puede sobrescribir la fila de historial.|  

@@ -16,10 +16,10 @@ ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b73a3de04b90a91cb66d060c6559088a7d0e8855
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018349"
 ---
 # <a name="scalar-types-catalog-views-transact-sql"></a>Vistas de catálogo de tipos escalares (Transact-SQL)

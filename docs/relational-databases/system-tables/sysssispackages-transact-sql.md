@@ -18,10 +18,10 @@ ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029642"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
@@ -32,13 +32,13 @@ ms.locfileid: "68029642"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Identificador único del paquete.|  
-|**sesión**|**uniqueidentifier**|Identificador único global (GUID) del paquete.|  
+|**name**|**sysname**|Identificador único del paquete.|  
+|**id**|**uniqueidentifier**|Identificador único global (GUID) del paquete.|  
 |**denominación**|**nvarchar**|Descripción opcional del paquete.|  
 |**CreateDate**|**datetime**|Fecha de creación del paquete.|  
 |**folderId**|**uniqueidentifier**|GUID de la carpeta lógica en la que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el paquete.|  
 |**ownersid**|**varbinary**|Identificador de seguridad único del usuario que creó el paquete.|  
-|**packagedata**|**impresión**|El paquete.|  
+|**packagedata**|**image**|El paquete.|  
 |**packageformat**|**int**|Formato con el que se guarda el paquete:<br /><br /> Un valor de 2 indica que el paquete se guarda en el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] formato.<br /><br /> Un valor de 3 indica que el paquete se guarda en formato de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]o posterior.|  
 |**packagetype**|**int**|Cliente que creó el paquete. Los valores posibles son los siguientes:<br /><br /> 0 (valor predeterminado)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para importación y exportación)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replicación)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador)<br /><br /> 6 (Asistente o Diseñador de planes de mantenimiento).<br /><br /> <br /><br /> Tenga en cuenta que los valores de esta columna se <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> corresponden con la enumeración.|  
 |**vermajor**|**int**|Última versión importante del paquete.|  

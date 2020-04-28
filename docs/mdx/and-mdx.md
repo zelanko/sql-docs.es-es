@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017087"
 ---
 # <a name="and-mdx"></a>AND (MDX)
@@ -28,7 +28,7 @@ Expression1 AND Expression2
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Expression1*  
+ *Argumento*  
  Una expresión MDX (Expresiones multidimensionales) válida que devuelve un valor numérico.  
   
  *Expression2*  
@@ -40,12 +40,12 @@ Expression1 AND Expression2
 ## <a name="remarks"></a>Observaciones  
  El operador **and** trata ambas expresiones como valores booleanos (cero, 0, como **false**; de lo contrario, **true**) antes de que el operador realice la conjunción lógica. En la tabla siguiente se muestra cómo el operador **and** realiza la conjunción lógica.  
   
-|*Expression1*|*Expression2*|Valor devuelto|  
+|*Argumento*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
-|**reales**|**reales**|**reales**|  
-|**reales**|**es**|**es**|  
-|**es**|**reales**|**es**|  
-|**es**|**es**|**es**|  
+|**true**|**true**|**true**|  
+|**true**|**false**|**false**|  
+|**false**|**true**|**false**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>Ejemplo  
   

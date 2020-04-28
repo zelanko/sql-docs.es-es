@@ -20,10 +20,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039281"
 ---
 # <a name="sysxml_schema_components-transact-sql"></a>sys.xml_schema_components (Transact-SQL)
@@ -37,12 +37,12 @@ ms.locfileid: "68039281"
 |**xml_collection_id**|**int**|Id. de la colección de esquemas XML que contiene el espacio de nombres de este componente.|  
 |**xml_namespace_id**|**int**|Id. del espacio de nombres XML en la colección.|  
 |**is_qualified**|**bit**|1 = Este componente tiene un espacio de nombres calificado explícito.<br /><br /> 0 = Es un componente de ámbito local. En este caso, el par, **namespace_id** **collection_id**, hace referencia al **targetNamespace**"sin espacio de nombres".<br /><br /> Para componentes comodín, este valor será 1.|  
-|**Name**|**nvarchar**<br /><br /> **(4000)**|Nombre único del componente del esquema XML. Es NULL si el componente no tiene nombre.|  
+|**name**|**nvarchar**<br /><br /> **(4000)**|Nombre único del componente del esquema XML. Es NULL si el componente no tiene nombre.|  
 |**symbol_space**|**Char (1)**|Espacio en el que este nombre de símbolo es único, basándose en el **tipo**:<br /><br /> N = Ninguno<br /><br /> T = Tipo<br /><br /> E = Elemento<br /><br /> M = Grupo de modelos<br /><br /> A = Atributo<br /><br /> G = Grupo de atributos|  
 |**symbol_space_desc**|**nvarchar**<br /><br /> **(60)**|Descripción del espacio en el que este nombre de símbolo es único, en función del **tipo**:<br /><br /> Ninguno<br /><br /> TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP|  
 |**tipo**|**Char (1)**|Tipo del componente del esquema XML.<br /><br /> N = Cualquier tipo (componente intrínseco especial)<br /><br /> Z = Cualquier tipo simple (componente intrínseco especial)<br /><br /> P = Tipo primitivo (tipos intrínsecos)<br /><br /> S = Tipo simple<br /><br /> L = Tipo de lista<br /><br /> U = Tipo de unión<br /><br /> C = Tipo simple complejo (derivado de simple)<br /><br /> K = Tipo complejo<br /><br /> E = Elemento<br /><br /> M = Grupo de modelos<br /><br /> W = Comodín de elementos<br /><br /> A = Atributo<br /><br /> G = Grupo de atributos<br /><br /> V = Comodín de atributos|  
 |**kind_desc**|**nvarchar**<br /><br /> **(60)**|Descripción del tipo de componente del esquema XML.<br /><br /> ANY_TYPE<br /><br /> ANY_SIMPLE_TYPE<br /><br /> PRIMITIVE_TYPE<br /><br /> SIMPLE_TYPE<br /><br /> LIST_TYPE<br /><br /> UNION_TYPE<br /><br /> COMPLEX_SIMPLE_TYPE<br /><br /> COMPLEX_TYPE<br /><br /> ELEMENT<br /><br /> MODEL_GROUP<br /><br /> ELEMENT_WILDCARD<br /><br /> ATTRIBUTE<br /><br /> ATTRIBUTE_GROUP<br /><br /> ATTRIBUTE_WILDCARD|  
-|**derivation**|**Char (1)**|Método de derivación para tipos derivados:<br /><br /> N = Ninguno (no derivado)<br /><br /> X = Extensión<br /><br /> R = Restricción<br /><br /> S = Sustitución|  
+|**deriva**|**Char (1)**|Método de derivación para tipos derivados:<br /><br /> N = Ninguno (no derivado)<br /><br /> X = Extensión<br /><br /> R = Restricción<br /><br /> S = Sustitución|  
 |**derivation_desc**|**nvarchar**<br /><br /> **(60)**|Descripción del método de derivación para tipos derivados:<br /><br /> Ninguno<br /><br /> EXTENSION<br /><br /> RESTRICTION<br /><br /> SUBSTITUTION|  
 |**base_xml_component_id**|**int**|Id. del componente del que se deriva este componente. Es NULL si no hay ninguno.|  
 |**scoping_xml_component_id**|**int**|Id. único del componente de alcance. Es NULL si no hay ninguno (espacio global).|  

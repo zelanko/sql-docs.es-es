@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032825"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -75,19 +75,18 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|Código del tipo de datos entero de un tipo de datos de ODBC. Si no se puede asignar este tipo de datos a un tipo de ISO, el valor es NULL. El nombre del tipo de datos nativo se devuelve en la columna **TYPE_NAME** .|  
 |**TYPE_NAME**|**sysname**|Representación de cadena del tipo de datos. Es el nombre del tipo de datos como lo presenta el DBMS subyacente.|  
 |**PRECISIÓN**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
-|**LONGITUD**|**int**|Tamaño de transferencia de los datos.|  
+|**LENGTH**|**int**|Tamaño de transferencia de los datos.|  
 |**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**RADIX**|**smallint**|Es la base de tipos numéricos.|  
 |**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad:<br /><br /> 1 = El tipo de datos se puede crear para permitir valores NULL.<br /><br /> 0 = No se permiten valores NULL.|  
-|**SECCIÓN**|**VARCHAR (** 254 **)**|Descripción de la columna de procedimiento. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
+|**COMENTARIOS**|**VARCHAR (** 254 **)**|Descripción de la columna de procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valor predeterminado de la columna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo **Type** del descriptor. Esta columna es igual que la columna **data_type** , excepto los tipos de datos **DateTime** e **Interval** ISO. Esta columna siempre devuelve un valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|El subcódigo **datetime** ISO **interval** si el valor de **SQL_DATA_TYPE** es **SQL_DATETIME** o **SQL_INTERVAL**. En el caso de tipos de datos distintos de **DateTime** e **Interval**de ISO, este campo es NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longitud máxima en bytes de una columna de tipo de datos de **caracteres** o **binarios** . Para todos los demás tipos de datos, esta columna devuelve NULL.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal de la columna en la tabla. La primera columna de la tabla es 1. Esta columna siempre devuelve un valor.|  
 |**IS_NULLABLE**|**VARCHAR (254)**|Nulabilidad de la columna de la tabla. Se siguen las normas ISO para determinar la nulabilidad. Un DBMS que cumpla la norma ISO no puede devolver una cadena vacía.<br /><br /> Muestra YES si la columna puede incluir valores NULL y muestra NO si la columna no puede contener valores NULL.<br /><br /> Esta columna devuelve una cadena de longitud cero si no se conoce la nulabilidad.<br /><br /> El valor devuelto para esta columna es diferente del valor devuelto para la columna NULLABLE.|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos utilizado por los procedimientos almacenados extendidos. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**SS_DATA_TYPE**|**tinyint**|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado por procedimientos almacenados extendidos. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_sproc_columns** es equivalente a **SQLProcedureColumns** en ODBC. Los resultados devueltos se ordenan por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name**y el orden en que aparecen los parámetros en la definición del procedimiento.  

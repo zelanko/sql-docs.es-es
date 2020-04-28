@@ -18,10 +18,10 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d8f2af3894377cc0922274ca26c231c003f3bd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044504"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
@@ -53,7 +53,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |-|-|-|  
 |Nombre de la columna|Tipo de datos|Descripción|  
 |**profile_id**|**int**|Id. del perfil.|  
-|**Name**|**sysname**|Nombre del perfil.|  
+|**name**|**sysname**|Nombre del perfil.|  
 |**denominación**|**nvarchar(256)**|La descripción del perfil.|  
   
 ## <a name="remarks"></a>Observaciones  

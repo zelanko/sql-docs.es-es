@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017012"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
@@ -40,8 +40,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  La función **AVG** calcula el promedio de los valores no vacíos de las celdas del conjunto especificado calculando primero la suma de los valores de las celdas del conjunto especificado y, a continuación, dividiendo la suma calculada por el recuento de celdas no vacías del conjunto especificado.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] omite los valores NULL al calcular el promedio de un conjunto de números.  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] omite los valores NULL al calcular el promedio de un conjunto de números.  
   
  Si no se especifica una expresión numérica específica (normalmente una medida), la función **AVG** calcula el promedio de cada medida en el contexto de la consulta actual. Si se proporciona una medida específica, la función **AVG** evalúa primero la medida en el conjunto y, a continuación, la función calcula el promedio basándose en la medida especificada.  
   

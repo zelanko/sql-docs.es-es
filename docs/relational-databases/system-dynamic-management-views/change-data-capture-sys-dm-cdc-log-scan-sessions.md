@@ -20,10 +20,10 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017993"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Captura de datos modificados: sys. dm_cdc_log_scan_sessions
@@ -36,18 +36,18 @@ ms.locfileid: "68017993"
 |**session_id**|**int**|Id. de la sesión.<br /><br /> 0 = los datos devueltos en esta fila son un agregado de todas las sesiones desde que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.|  
 |**start_time**|**datetime**|Hora que la sesión comenzó.<br /><br /> Cuando **session_id** = 0, comienza la recopilación de datos agregados de hora.|  
 |**end_time**|**datetime**|Hora a la que finalizó la sesión<br /><br /> NULL = la sesión está activa.<br /><br /> Cuando **session_id** = 0, la hora en que finalizó la última sesión.|  
-|**Duration**|**BIGINT**|Duración, en segundos, de la sesión<br /><br /> 0 = la sesión no contiene transacciones de captura de datos de cambio.<br /><br /> Cuando **session_id** = 0, la suma de la duración (en segundos) de todas las sesiones con las transacciones de captura de datos modificados.|  
+|**duration**|**bigint**|Duración, en segundos, de la sesión<br /><br /> 0 = la sesión no contiene transacciones de captura de datos de cambio.<br /><br /> Cuando **session_id** = 0, la suma de la duración (en segundos) de todas las sesiones con las transacciones de captura de datos modificados.|  
 |**scan_phase**|**nvarchar(200)**|La fase actual de la sesión. Estos son los valores posibles y sus descripciones:<br /><br /> 1: lectura de la configuración<br />2: primer examen, compilar tabla hash<br />3: segundo examen<br />4: segundo examen<br />5: segundo examen<br />6: control de versiones de esquema<br />7: último examen<br />8: listo<br /><br /> Cuando **session_id** = 0, este valor siempre es "Aggregate".|  
 |**error_count**|**int**|Número máximo de errores detectados<br /><br /> Cuando **session_id** = 0, número total de errores en todas las sesiones.|  
 |**start_lsn**|**nvarchar (23)**|Iniciar LSN para la sesión.<br /><br /> Cuando **session_id** = 0, el LSN de inicio de la última sesión.|  
 |**current_lsn**|**nvarchar (23)**|LSN actual del que se realiza un recorrido.<br /><br /> Cuando **session_id** = 0, el LSN actual es 0.|  
 |**end_lsn**|**nvarchar (23)**|LSN final de la sesión.<br /><br /> NULL = la sesión está activa.<br /><br /> Cuando **session_id** = 0, el LSN final de la última sesión.|  
-|**tran_count**|**BIGINT**|Número de transacciones de captura de datos de cambio procesados. Este contador se rellena en la fase 2.<br /><br /> Cuando **session_id** = 0, el número de transacciones procesadas en todas las sesiones.|  
+|**tran_count**|**bigint**|Número de transacciones de captura de datos de cambio procesados. Este contador se rellena en la fase 2.<br /><br /> Cuando **session_id** = 0, el número de transacciones procesadas en todas las sesiones.|  
 |**last_commit_lsn**|**nvarchar (23)**|LSN de la última entrada del registro de confirmación procesada.<br /><br /> Cuando **session_id** = 0, último LSN de registro de confirmación para cualquier sesión.|  
 |**last_commit_time**|**datetime**|Hora de procesamiento de la última entrada del registro de confirmación.<br /><br /> Cuando **session_id** = 0, hora de la última entrada de registro de confirmación para cualquier sesión.|  
-|**log_record_count**|**BIGINT**|Número de entradas de registro de las que se ha realizado un recorrido.<br /><br /> Cuando **session_id** = 0, número de registros examinados para todas las sesiones.|  
+|**log_record_count**|**bigint**|Número de entradas de registro de las que se ha realizado un recorrido.<br /><br /> Cuando **session_id** = 0, número de registros examinados para todas las sesiones.|  
 |**schema_change_count**|**int**|Número de operaciones de lenguaje de definición de datos (DDL) detectadas. Este contador se rellena en la fase 6.<br /><br /> Cuando **session_id** = 0, número de operaciones DDL procesadas en todas las sesiones.|  
-|**command_count**|**BIGINT**|Número de comandos procesados.<br /><br /> Cuando **session_id** = 0, número de comandos procesados en todas las sesiones.|  
+|**command_count**|**bigint**|Número de comandos procesados.<br /><br /> Cuando **session_id** = 0, número de comandos procesados en todas las sesiones.|  
 |**first_begin_cdc_lsn**|**nvarchar (23)**|Primer LSN que contenía las transacciones de captura de los datos de cambio.<br /><br /> Cuando **session_id** = 0, el primer LSN que contenía las transacciones de captura de datos modificados.|  
 |**last_commit_cdc_lsn**|**nvarchar (23)**|LSN de la última entrada de registro de confirmación que contenía las transacciones de captura de los datos de cambio.<br /><br /> Cuando **session_id** = 0, último LSN de registro de confirmación para cualquier sesión que contenía las transacciones de captura de datos modificados|  
 |**last_commit_cdc_time**|**datetime**|Hora de procesamiento de la última entrada de registro de confirmación que contenía las transacciones de captura de los datos de cambio.<br /><br /> Cuando **session_id** = 0, hora de la última entrada de registro de confirmación para cualquier sesión que contenía las transacciones de captura de datos modificados.|  

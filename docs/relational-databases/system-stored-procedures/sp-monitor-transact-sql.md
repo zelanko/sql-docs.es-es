@@ -18,10 +18,10 @@ ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022318"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
@@ -57,7 +57,7 @@ sp_monitor
 |**total_read**|Número de lecturas que ha realizado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_write**|Número de escrituras que ha realizado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir.|  
-|**conexiones**|Número de inicios de sesión o intentos de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**connections**|Número de inicios de sesión o intentos de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="remarks"></a>Observaciones  
  A través de una serie de funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza el seguimiento del trabajo que ha realizado. Al ejecutar **sp_monitor** se muestran los valores actuales devueltos por estas funciones y se muestra cuánto han cambiado desde la última vez que se ejecutó el procedimiento.  
@@ -94,11 +94,11 @@ EXEC sp_monitor
   
 |||||  
 |-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**conexiones**|  
+|**total_read**|**total_write**|**total_errors**|**connections**|  
 |141 (0)|54920 (127)|0 (0)|4 (0)|  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

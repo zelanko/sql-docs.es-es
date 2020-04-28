@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67999988"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -48,7 +48,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
- *Posición*  
+ *Distancia*  
  Expresión numérica válida que especifica la distancia desde el miembro especificado.  
   
  *Desc_Flag*  
@@ -61,7 +61,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Si se especifica una expresión de conjunto, la función **Descendants** se resuelve individualmente para cada miembro del conjunto y se vuelve a crear el conjunto. En otras palabras, la sintaxis que se usa para la función **Descendants** es funcionalmente equivalente a la función [Generate](../mdx/generate-mdx.md) de MDX.  
   
- Si no se especifica ningún nivel o distancia, el valor predeterminado para el nivel utilizado por la función se determina mediante una [](../mdx/level-mdx.md) llamada a la función \<level (<miembro>>. Nivel) para el miembro especificado (si se especifica un miembro) o mediante una llamada a la función **LEVEL** para cada miembro del conjunto especificado (si se especifica un conjunto). Si no se especifican una expresión de nivel, una distancia o marcas, la función tiene el mismo efecto que el uso de la sintaxis siguiente:  
+ Si no se especifica ningún nivel o distancia, el valor predeterminado para el nivel utilizado por la función se determina mediante una [Level](../mdx/level-mdx.md) llamada a la función \<level (<miembro>>. Nivel) para el miembro especificado (si se especifica un miembro) o mediante una llamada a la función **LEVEL** para cada miembro del conjunto especificado (si se especifica un conjunto). Si no se especifican una expresión de nivel, una distancia o marcas, la función tiene el mismo efecto que el uso de la sintaxis siguiente:  
   
  `Descendants`  
   
@@ -103,7 +103,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
 |LEAVES|Devuelve los miembros descendientes hoja entre el miembro especificado y el nivel especificado, o a la distancia especificada.|  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve el miembro especificado (United States) y los miembros entre el miembro especificado (United States) y los miembros del nivel anterior al nivel especificado (City). El ejemplo devuelve el propio miembro especificado (United States) y los miembros del nivel State-Province (el nivel anterior al nivel City). Este ejemplo incluye argumentos comentados para permitir probar de manera sencilla otros argumentos para esta función.  
+ El ejemplo siguiente devuelve el miembro especificado (Estados Unidos) y los miembros entre el miembro especificado (Estados Unidos) y los miembros del nivel anterior al nivel especificado (City). El ejemplo devuelve el propio miembro especificado (Estados Unidos) y los miembros del nivel State-Province (el nivel anterior al nivel City). Este ejemplo incluye argumentos comentados para permitir probar de manera sencilla otros argumentos para esta función.  
   
 ```  
 SELECT Descendants  

@@ -10,10 +10,10 @@ ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006575"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Editar la asignación de tipos (AccessToSQL)
@@ -33,10 +33,10 @@ Seleccione el tipo de datos de origen que se [!INCLUDE[ssNoVersion](../../includ
   
 Si el tipo de datos es de longitud variable, los campos siguientes aparecerán en **tipo de origen**:  
   
-**De**  
+**From**  
 Especifique la longitud mínima de esta asignación. Por ejemplo, para el tipo de datos de **texto** , puede especificar 10 para especificar que esta asignación es para un intervalo que comienza en el **texto (10)**.  
   
-**Para**  
+**To**  
 Especifique la longitud máxima de esta asignación. Por ejemplo, para el tipo de datos de **texto** , puede especificar 20 para especificar que esta asignación es para un intervalo que termina en el **texto (20)**.  
   
 **Tipo de destino**  

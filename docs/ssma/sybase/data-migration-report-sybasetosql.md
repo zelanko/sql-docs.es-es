@@ -10,10 +10,10 @@ ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029404"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Informe de migración de datos (SybaseToSQL)
@@ -23,10 +23,10 @@ El cuadro de diálogo **Informe de migración de datos** aparece después de mig
 **Estado**  
 Muestra el estado de la migración de datos de origen a la base de datos de destino.  
   
-**De**  
+**From**  
 Tabla de origen.  
   
-**Para**  
+**To**  
 Tabla de destino.  
   
 **Número total de filas**  

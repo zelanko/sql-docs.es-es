@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033909"
 ---
 # <a name="mdx-operator-reference-mdx"></a>Referencia de operadores de MDX (MDX)
@@ -24,7 +24,7 @@ ms.locfileid: "68033909"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[--&#40;comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|Indica texto de comentario proporcionado por el usuario.|  
+|[-- &#40;Comentario&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|Indica texto de comentario proporcionado por el usuario.|  
 |[-&#40;excepto&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|Realiza una operación de conjunto que devuelve la diferencia entre dos conjuntos y quita los miembros duplicados.|  
 |[-&#40;negativo&#41; &#40;&#41;MDX](../mdx/negative-mdx.md)|Realiza una operación unaria que devuelve el valor negativo de una expresión numérica.|  
 |[-&#40;restar&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|Realiza una operación aritmética que resta un número de otro.|  
@@ -32,8 +32,8 @@ ms.locfileid: "68033909"
 |[&#42; &#40;multiplicar&#41; &#40;MDX&#41;](../mdx/multiply-mdx.md)|Realiza una operación aritmética que multiplica dos números.|  
 |[&#40;dividir&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|Realiza una operación aritmética que divide un número por otro número.|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|Lleva a cabo una operación aritmética que eleva un número a otro número.|  
-|[Comentario &#40;&#41;MDX](../mdx/comment-mdx.md)|Indica texto de comentario proporcionado por el usuario.|  
-|[&#40;comentario&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|Indica texto proporcionado por el usuario.|  
+|[Comentario &#40;MDX&#41;](../mdx/comment-mdx.md)|Indica texto de comentario proporcionado por el usuario.|  
+|[&#40;Comentario&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|Indica texto proporcionado por el usuario.|  
 |[: &#40;intervalo&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|Realiza una operación de conjunto que devuelve un conjunto en su orden natural, con los dos miembros especificados como extremos y todos los miembros entre ellos incluidos como miembros del conjunto.|  
 |[+ &#40;agregar&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|Realiza una operación aritmética que suma dos números.|  
 |[+ &#40;positivo&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|Realiza una operación unaria que devuelve el valor positivo de una expresión numérica.|  

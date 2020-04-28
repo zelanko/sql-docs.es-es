@@ -15,10 +15,10 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004524"
 ---
 # <a name="general-xquery-use-cases"></a>Casos de uso generales de XQuery
@@ -345,7 +345,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
  [Búsqueda de cadenas en XQuery](../xquery/string-search-in-xquery.md)   
  [Controlar espacios de nombres en XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Agregar espacios de nombres a consultas con WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [&#40;de datos XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

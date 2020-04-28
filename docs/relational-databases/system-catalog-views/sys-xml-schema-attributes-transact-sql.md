@@ -20,16 +20,16 @@ ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d9c4ebe7b997ae9ba72249bd431b37ff0fee2f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037411"
 ---
 # <a name="sysxml_schema_attributes-transact-sql"></a>sys.xml_schema_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila por componente de esquema XML que es un atributo **** , symbol_space **de.**  
+  Devuelve una fila por componente de esquema XML que es un atributo **symbol_space** , symbol_space **de.**  
 
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

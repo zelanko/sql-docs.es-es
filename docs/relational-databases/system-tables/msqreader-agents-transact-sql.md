@@ -18,10 +18,10 @@ ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032574"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "68032574"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|El identificador del Agente de lectura de cola.|  
-|**Name**|**nvarchar(100**|El nombre del Agente de lectura de cola.|  
+|**id**|**int**|El identificador del Agente de lectura de cola.|  
+|**name**|**nvarchar(100**|El nombre del Agente de lectura de cola.|  
 |**job_id**|**binario (16)**|El número de ID. de trabajo único de la tabla **sysjobs** .|  
 |**profile_id**|**int**|El ID. de Perfil de la tabla **MSagent_profiles** .|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  

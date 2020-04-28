@@ -18,10 +18,10 @@ ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 84f9e2ce3026792b768d353e05b9e2299cf7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029762"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68029762"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**filtername**|**sysname**|Nombre del filtro utilizado para crear el artículo.|  
+|**FilterName**|**sysname**|Nombre del filtro utilizado para crear el artículo.|  
 |**join_filterid**|**int**|Id. del objeto que representa el filtro de combinación.|  
 |**pubid**|**uniqueidentifier**|Id. de la publicación.|  
 |**artid**|**uniqueidentifier**|Id. del artículo.|  
@@ -40,7 +40,7 @@ ms.locfileid: "68029762"
 |**join_nickname**|**int**|Alias de la tabla que se va a combinar para determinar si la fila le pertenece.|  
 |**join_unique_key**|**int**|Indica una combinación en una clave única de **join_tablename**:<br /><br /> 0 = No es una clave única.<br /><br /> 1 = Es una clave única.|  
 |**expand_proc**|**sysname**|Nombre del procedimiento almacenado que utiliza el Agente de mezcla para identificar filas que se deben enviar o quitar de un suscriptor.|  
-|**join_filterclause**|**nvarchar (1000)**|Cláusula de filtro utilizada en la combinación.|  
+|**join_filterclause**|**nvarchar(1000)**|Cláusula de filtro utilizada en la combinación.|  
 |**filter_type**|**tinyint**|Especifica el tipo de filtro, que puede ser uno de los siguientes:<br /><br /> 1 = Filtro de combinación.<br /><br /> 2 = Vínculo de registro lógico.<br /><br /> 3 = Filtro de combinación y vínculo de registro lógico.|  
   
 ## <a name="see-also"></a>Consulte también  

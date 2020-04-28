@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002565"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
@@ -52,8 +52,7 @@ sp_recompile [ @objname = ] 'object'
  Las consultas que utilizan los procedimientos almacenados o desencadenadores y funciones definidas por el usuario solo se optimizan cuando se compilan. A medida que se crean índices o se realizan otros cambios que afectan a las estadísticas de la base de datos, los procedimientos almacenados, desencadenadores y funciones definidas por el usuario compilados pueden perder eficacia. Al volver a compilar los procedimientos almacenados y desencadenadores que actúan sobre una tabla, puede volver a optimizar las consultas.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a compilar automáticamente los procedimientos almacenados, desencadenadores y funciones definidas por el usuario cuando esto supone una mejora.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a compilar automáticamente los procedimientos almacenados, desencadenadores y funciones definidas por el usuario cuando esto supone una mejora.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER en el objeto especificado.  

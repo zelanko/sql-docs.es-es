@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e6370f4cbfcbc38478e562c3b74ff24ffde962f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026835"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
@@ -37,23 +37,23 @@ ms.locfileid: "68026835"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|object_id|**BIGINT**|Id. del objeto al que pertenece este índice.|  
-|xtp_object_id|**BIGINT**|IDENTIFICADOR interno correspondiente a la versión actual del objeto.<br /><br /> Nota: se aplica [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]a.|  
-|index_id|**BIGINT**|Id. del índice. El index_id es exclusivo solo dentro del objeto.|  
-|scans_started|**BIGINT**|Número de recorridos de índice OLTP en memoria realizados. Cada selección, inserción, actualización o eliminación requiere un recorrido de índice.|  
-|scans_retried|**BIGINT**|Número de recorridos de índice que tuvieron que reintentarse.|  
-|rows_returned|**BIGINT**|Número de filas devueltas acumulado desde que se creó la tabla o desde el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|rows_touched|**BIGINT**|Número acumulado de filas a las que se tuvo acceso desde que se creó la tabla o desde el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|rows_expiring|**BIGINT**|Exclusivamente para uso interno.|  
-|rows_expired|**BIGINT**|Exclusivamente para uso interno.|  
-|rows_expired_removed|**BIGINT**|Exclusivamente para uso interno.|  
-|phantom_scans_started|**BIGINT**|Exclusivamente para uso interno.|  
-|phatom_scans_retries|**BIGINT**|Exclusivamente para uso interno.|  
-|phantom_rows_touched|**BIGINT**|Exclusivamente para uso interno.|  
-|phantom_expiring_rows_encountered|**BIGINT**|Exclusivamente para uso interno.|  
-|phantom_expired_rows_encountered|**BIGINT**|Exclusivamente para uso interno.|  
-|phantom_expired_removed_rows_encountered|**BIGINT**|Exclusivamente para uso interno.|  
-|phantom_expired_rows_removed|**BIGINT**|Exclusivamente para uso interno.|  
+|object_id|**bigint**|Id. del objeto al que pertenece este índice.|  
+|xtp_object_id|**bigint**|IDENTIFICADOR interno correspondiente a la versión actual del objeto.<br /><br /> Nota: se aplica [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]a.|  
+|index_id|**bigint**|Id. del índice. El index_id es exclusivo solo dentro del objeto.|  
+|scans_started|**bigint**|Número de recorridos de índice OLTP en memoria realizados. Cada selección, inserción, actualización o eliminación requiere un recorrido de índice.|  
+|scans_retried|**bigint**|Número de recorridos de índice que tuvieron que reintentarse.|  
+|rows_returned|**bigint**|Número de filas devueltas acumulado desde que se creó la tabla o desde el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|rows_touched|**bigint**|Número acumulado de filas a las que se tuvo acceso desde que se creó la tabla o desde el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|rows_expiring|**bigint**|Exclusivamente para uso interno.|  
+|rows_expired|**bigint**|Exclusivamente para uso interno.|  
+|rows_expired_removed|**bigint**|Exclusivamente para uso interno.|  
+|phantom_scans_started|**bigint**|Exclusivamente para uso interno.|  
+|phatom_scans_retries|**bigint**|Exclusivamente para uso interno.|  
+|phantom_rows_touched|**bigint**|Exclusivamente para uso interno.|  
+|phantom_expiring_rows_encountered|**bigint**|Exclusivamente para uso interno.|  
+|phantom_expired_rows_encountered|**bigint**|Exclusivamente para uso interno.|  
+|phantom_expired_removed_rows_encountered|**bigint**|Exclusivamente para uso interno.|  
+|phantom_expired_rows_removed|**bigint**|Exclusivamente para uso interno.|  
 |object_address|**varbinary(8**|Exclusivamente para uso interno.|  
   
 ## <a name="permissions"></a>Permisos  

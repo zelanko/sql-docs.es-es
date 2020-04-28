@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032639"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
@@ -121,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. Crear un conjunto de recopilación utilizando valores predeterminados  
- En el ejemplo siguiente se crea un conjunto de recopilación especificando solamente los parámetros necesarios. 
-  `@collection_mode` no se obligatorio, pero el modo de recopilación predeterminado (almacenamiento en caché) exige especificar un id. o un nombre de programación.  
+ En el ejemplo siguiente se crea un conjunto de recopilación especificando solamente los parámetros necesarios. `@collection_mode` no se obligatorio, pero el modo de recopilación predeterminado (almacenamiento en caché) exige especificar un id. o un nombre de programación.  
   
 ```  
 USE msdb;  
@@ -160,6 +159,6 @@ EXEC dbo.sp_syscollector_create_collection_set
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
  [Crear un conjunto de recopilación personalizado que use el tipo de recopilador de consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [syscollector_collection_sets &#40;&#41;de Transact-SQL](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

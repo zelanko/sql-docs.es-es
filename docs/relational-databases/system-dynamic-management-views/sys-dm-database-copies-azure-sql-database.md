@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005084"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL Database)
@@ -39,8 +39,7 @@ Para devolver información sobre los vínculos de replicación geográfica, use 
 |**database_id**|**int**|El identificador de la base de datos actual en la vista `sys.databases`.|  
 |**start_date**|**datetimeoffset**|La hora UTC en un centro de datos regional de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a la que se inició la copia de la base de datos.|  
 |**modify_date**|**datetimeoffset**|La hora UTC en un centro de datos regional de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] a la que se ha completado la copia de la base de datos. La nueva base de datos es transaccionalmente coherente con la base de datos principal en este momento. La información de finalización se actualiza cada 1 minuto.<br /><br />Hora UTC que refleja la última actualización del campo percent_complete.|  
-|**percent_complete**|**impuestos**|Porcentaje de bytes que se han copiado. Los valores pueden oscilar entre 0 y 100. 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] puede recuperarse automáticamente de algunos errores, como la conmutación por error, y reiniciar la copia de la base de datos. En este caso, percent_complete se reiniciaría desde 0.|  
+|**percent_complete**|**real**|Porcentaje de bytes que se han copiado. Los valores pueden oscilar entre 0 y 100. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] puede recuperarse automáticamente de algunos errores, como la conmutación por error, y reiniciar la copia de la base de datos. En este caso, percent_complete se reiniciaría desde 0.|  
 |**error_code**|**int**|Cuando es mayor que 0, el código que indica el error que ha aparecido mientras se realizaba la copia. El valor es igual a 0 si no se ha producido ningún error.|  
 |**error_desc**|**nvarchar (4096)**|Descripción del error que se produjo durante la copia.|  
 |**error_severity**|**int**|Devuelve 16 si se produjo un error en la copia de la base de datos.|  

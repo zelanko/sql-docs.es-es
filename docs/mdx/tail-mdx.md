@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d48a374d7d84c1137f082eb12dec638557b14e5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036664"
 ---
 # <a name="tail-mdx"></a>Tail (MDX)
@@ -31,7 +31,7 @@ Tail(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Contabiliza*  
+ *Recuento*  
  Expresión numérica válida que especifica el número de tuplas que serán devueltas.  
   
 ## <a name="remarks"></a>Observaciones  

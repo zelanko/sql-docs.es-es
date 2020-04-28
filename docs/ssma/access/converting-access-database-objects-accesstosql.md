@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006631"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir objetos de base de datos de Access (AccessToSQL)
@@ -59,11 +59,11 @@ En la tabla siguiente se muestra qué objetos de acceso se convierten [!INCLUDE[
 |columna|columna|  
 |índice|índice|  
 |clave externa|clave externa|  
-|query|ver<br /><br />La mayoría de las consultas SELECT se convierten en vistas. Otras consultas, como las consultas de actualización, no se migran.<br /><br />No se convierten las consultas SELECT que toman parámetros y las consultas entre tabulaciones.|  
-|report|no convertido|  
+|Query|ver<br /><br />La mayoría de las consultas SELECT se convierten en vistas. Otras consultas, como las consultas de actualización, no se migran.<br /><br />No se convierten las consultas SELECT que toman parámetros y las consultas entre tabulaciones.|  
+|informe|no convertido|  
 |form|no convertido|  
 |macro|no convertido|  
-|destina|no convertido|  
+|module|no convertido|  
 |valor predeterminado|valor predeterminado|  
 |permitir propiedad de columna de longitud cero|restricción check|  
 |regla de validación de columna|restricción check|  

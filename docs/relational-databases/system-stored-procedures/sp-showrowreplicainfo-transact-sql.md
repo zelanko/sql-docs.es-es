@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032894"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
@@ -55,7 +55,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**server_name**|**sysname**|Nombre del servidor que hospeda la base de datos que realizó la entrada de versión de fila.|  
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
 |**db_nickname**|**binario (6)**|Alias de la base de datos que realizó esta entrada.|  
-|**Versión**|**int**|Versión de la entrada.|  
+|**version**|**int**|Versión de la entrada.|  
 |**current_state**|**nvarchar (9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> los datos de la fila **y** representan el estado actual de la fila.<br /><br /> los datos de la fila **n** no representan el estado actual de la fila.<br /><br /> n/a>: no aplicable. ** \<**<br /><br /> >desconocido: no se puede determinar el estado actual. ** \<**|  
 |**rowversion_table**|**NCHAR (17)**|Indica si las versiones de fila se almacenan en la tabla [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) o en la tabla [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
@@ -67,7 +67,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**server_name**|**sysname**|Nombre del servidor que hospeda la base de datos que realizó la entrada de versión de columna.|  
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
 |**db_nickname**|**binario (6)**|Alias de la base de datos que realizó esta entrada.|  
-|**Versión**|**int**|Versión de la entrada.|  
+|**version**|**int**|Versión de la entrada.|  
 |**colname**|**sysname**|Nombre de la columna del artículo que representa la entrada de la versión de columna.|  
 |**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de columna. Este campo suele estar vacío.|  
   

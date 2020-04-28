@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d027a76a82de3fd82b6c0c81c54ace08167039b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036610"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
@@ -50,7 +50,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  Vea [diario de base de datos: funciones de conjunto MDX: la función ToggleDrillState ()](https://go.microsoft.com/fwlink/?LinkId=517759) para escenarios y ejemplos que implican esta función.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente aumenta el detalle del miembro Australia del primer conjunto y reduce el detalle del miembro United States del primer conjunto.  
+ El ejemplo siguiente aumenta el detalle del miembro Australia del primer conjunto y reduce el detalle del miembro Estados Unidos del primer conjunto.  
   
 ```  
 SELECT ToggleDrillState  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b673f87ffd04a1cf89b063cc129c769c258791ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038233"
 ---
 # <a name="mdx-data-definition---drop-kpi"></a>Definición de datos de MDX: DROP KPI
@@ -31,7 +31,7 @@ DROP KPI CURRENTCUBE | Cube_Name.KPI_Name
  *Cube_Name*  
  Cadena válida que especifica el nombre del cubo.  
   
- *KPI_Name*  
+ *Nombre_KPI*  
  Expresión de cadena válida que especifica el nombre del KPI que se va a quitar.  
   
 ## <a name="see-also"></a>Consulte también  

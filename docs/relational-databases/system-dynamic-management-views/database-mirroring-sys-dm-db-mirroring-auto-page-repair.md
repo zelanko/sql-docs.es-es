@@ -21,10 +21,10 @@ ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017909"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Creación de reflejo de la base de datos: sys. dm_db_mirroring_auto_page_repair
@@ -36,7 +36,7 @@ ms.locfileid: "68017909"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador la base de datos a la que corresponde esta fila.|  
 |**file_id**|**int**|Identificador del archivo en el que se encuentra la página.|  
-|**page_id**|**BIGINT**|Identificador de la página en el archivo.|  
+|**page_id**|**bigint**|Identificador de la página en el archivo.|  
 |**error_type**|**int**|Tipo del error. Los valores pueden ser:<br /><br /> **-** 1 = todos los errores de hardware 823<br /><br /> 1 = Errores 824 distintos de una suma de comprobación errónea o una página rasgada (por ejemplo, un identificador de página incorrecto)<br /><br /> 2 = Suma de comprobación incorrecta<br /><br /> 3 = Página rasgada|  
 |**page_status**|**int**|El estado del intento de reparación de la página:<br /><br /> 2 = En cola para la solicitud del socio.<br /><br /> 3 = Solicitud enviada al socio.<br /><br /> 4 = En cola para la reparación de página automática (respuesta recibida del socio).<br /><br /> 5 = La reparación de página automática tuvo éxito y la página debería ser utilizable.<br /><br /> 6 = Irreparable. Esto indica que se produjo un error durante el intento de reparación de la página, por ejemplo, porque la página también está dañada en el socio, el socio está desconectado o existe un problema de red. Este estado no es definitivo; si se vuelve a producir un daño en la página, se solicitará de nuevo la página del socio.|  
 |**modification_time**|**datetime**|Hora del último cambio en el estado de la página.|  
@@ -47,7 +47,7 @@ ms.locfileid: "68017909"
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
 ## <a name="see-also"></a>Consulte también  
- [Reparación de página automática &#40;grupos de disponibilidad/creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [Reparación de página automática &#40;grupos de disponibilidad: creación de reflejo de la base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [suspect_pages &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  

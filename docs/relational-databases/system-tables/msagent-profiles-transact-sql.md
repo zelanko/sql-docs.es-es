@@ -18,10 +18,10 @@ ms.assetid: 4ab1b2ae-b6d9-42b7-9b31-98547dbb7f99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5147ef1f482850b55a5d01a476b1981dfa012e5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021053"
 ---
 # <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68021053"
 |**profile_id**|**int**|Id. de perfil.|  
 |**profile_name**|**sysname**|Nombre de perfil único para el tipo de agente.|  
 |**agent_type**|**int**|El tipo de agente:<br /><br /> **1** = agente de instantáneas<br /><br /> **2** = agente de registro del log<br /><br /> **3** = agente de distribución<br /><br /> **4** = agente de mezcla<br /><br /> **9** = agente de lectura de cola|  
-|**automáticamente**|**int**|Tipo de perfil:<br /><br /> **0** = sistema**1** = personalizado|  
+|**type**|**int**|Tipo de perfil:<br /><br /> **0** = sistema**1** = personalizado|  
 |**denominación**|**nvarchar (3000)**|La descripción del perfil.|  
 |**def_profile**|**bit**|Especifica si este perfil es el predeterminado para este tipo de agente.|  
   

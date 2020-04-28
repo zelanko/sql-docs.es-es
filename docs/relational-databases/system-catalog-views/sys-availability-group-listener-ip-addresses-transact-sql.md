@@ -22,10 +22,10 @@ ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997589"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
@@ -45,8 +45,8 @@ ms.locfileid: "67997589"
 |**network_subnet_ip**|**nvarchar (48)**|Dirección IP de subred de red que especifica la subred a la que pertenece la dirección IP.|  
 |**network_subnet_prefix_length**|**int**|Longitud de prefijo de subred de red de la subred a la que pertenece la dirección IP.|  
 |**network_subnet_ipv4_mask**|**nvarchar (45)**|Máscara de subred de red de la subred a la que pertenece la dirección IP. **network_subnet_ipv4_mask** para especificar el <DHCP network_subnet_option opciones de> en una cláusula with DHCP de la instrucción [Create Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) o [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .<br /><br /> NULL = subred IPv6|  
-|**State**|**tinyint**|Estado ONLINE/OFFLINE de recursos IP del clúster de WSFC; puede ser:<br /><br /> 1 = En línea. El recurso de IP está en línea.<br /><br /> 0 = Sin conexión. El recurso de IP está sin conexión.<br /><br /> 2 = Pendiente en línea. El recurso de IP está sin conexión pero se está poniendo en línea.<br /><br /> 3 = error. El recurso de IP se estaba poniendo en línea pero sufrió un error.|  
-|**state_desc**|**nvarchar (60)**|Descripción del **Estado**, uno de los siguientes:<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
+|**state**|**tinyint**|Estado ONLINE/OFFLINE de recursos IP del clúster de WSFC; puede ser:<br /><br /> 1 = En línea. El recurso de IP está en línea.<br /><br /> 0 = Sin conexión. El recurso de IP está sin conexión.<br /><br /> 2 = Pendiente en línea. El recurso de IP está sin conexión pero se está poniendo en línea.<br /><br /> 3 = error. El recurso de IP se estaba poniendo en línea pero sufrió un error.|  
+|**state_desc**|**nvarchar(60)**|Descripción del **Estado**, uno de los siguientes:<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
 ## <a name="security"></a>Seguridad  
   

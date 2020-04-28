@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005045"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>Sys. dm_db_column_store_row_group_operational_stats (Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68005045"
 |**scan_count**|**int**|Número de recorridos a través de filas desde el último reinicio de SQL.|  
 |**delete_buffer_scan_count**|**int**|Número de veces que se usó el búfer de eliminación para determinar las filas eliminadas en este filas. Esto incluye el acceso a la tabla hash en memoria y el árbol b subyacente.|  
 |**index_scan_count**|**int**|Número de veces que se examinó la partición de índice de almacén de columnas. Es el mismo para todos los filas de la partición.|  
-|**rowgroup_lock_count**|**BIGINT**|Recuento acumulado de solicitudes de bloqueo para este filas desde el último reinicio de SQL.|  
-|**rowgroup_lock_wait_count**|**BIGINT**|Número acumulado de veces que el motor de base de datos ha esperado en este bloqueo de filas desde el último reinicio de SQL.|  
-|**rowgroup_lock_wait_in_ms**|**BIGINT**|Número acumulado de milisegundos que el motor de base de datos ha esperado en este bloqueo de filas desde el último reinicio de SQL.|  
+|**rowgroup_lock_count**|**bigint**|Recuento acumulado de solicitudes de bloqueo para este filas desde el último reinicio de SQL.|  
+|**rowgroup_lock_wait_count**|**bigint**|Número acumulado de veces que el motor de base de datos ha esperado en este bloqueo de filas desde el último reinicio de SQL.|  
+|**rowgroup_lock_wait_in_ms**|**bigint**|Número acumulado de milisegundos que el motor de base de datos ha esperado en este bloqueo de filas desde el último reinicio de SQL.|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita los siguientes permisos:  

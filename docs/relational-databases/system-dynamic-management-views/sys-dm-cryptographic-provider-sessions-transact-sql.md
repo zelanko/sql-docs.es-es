@@ -19,10 +19,10 @@ ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff099e48540b7255e2453bfb9b90c9515196449c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005097"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
@@ -51,8 +51,8 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Número de identificación del proveedor de servicios criptográficos.|  
 |**session_handle**|**varbytes (8)**|Controlador de la sesión criptográfico.|  
-|**identidad**|**nvarchar(128)**|Identidad utilizada para autenticar con el proveedor criptográfico.|  
-|**spid**|**short**|Id. de la sesión SPID de la conexión. Para más información, vea [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
+|**identity**|**nvarchar(128)**|Identidad utilizada para autenticar con el proveedor criptográfico.|  
+|**identificador**|**short**|Id. de la sesión SPID de la conexión. Para más información, vea [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
 ## <a name="remarks"></a>Observaciones  
  La vista **Sys. dm_cryptographic_provider_sessions** es visible para el público de la conexión actual. Para ver todas las conexiones criptográficas, debe tener el permiso **control** Server.  
@@ -60,7 +60,7 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [CREAR proveedor de servicios CRIPTOGRÁFICOs &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006554"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportación de un inventario de acceso (AccessToSQL)
@@ -82,7 +82,7 @@ Para obtener más información sobre la creación de proyectos, vea [crear y adm
     > [!IMPORTANT]  
     > El cuadro **de texto todo o parte del nombre de archivo** no admite caracteres comodín.  
   
-5.  Haga clic en **examinar**.  
+5.  Haz clic en **Examen**.  
   
     Aparece la página digitalizar. Esto muestra las bases de datos que se han encontrado y el progreso de la búsqueda. Para detener la búsqueda, haga clic en **detener**.  
   
@@ -227,5 +227,5 @@ WHERE ColumnName LIKE '%salary%';
 Si no conoce el nombre de la columna, puede escribir una consulta para que devuelva todas las columnas. Para ello, quite la cláusula WHERE de la consulta anterior.  
   
 ## <a name="see-also"></a>Consulte también  
-[Preparación de bases de datos de Access para migración](preparing-access-databases-for-migration-accesstosql.md)  
+[Preparar las bases de datos de Access para la migración](preparing-access-databases-for-migration-accesstosql.md)  
   

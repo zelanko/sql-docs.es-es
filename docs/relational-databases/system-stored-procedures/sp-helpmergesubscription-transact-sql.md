@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002643"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
@@ -73,7 +73,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**subscriber_db**|**sysname**|Nombre de la base de datos de suscripciones.|  
-|**estatus**|**int**|Estado de la suscripción:<br /><br /> **0** = todos los trabajos están a la espera de iniciarse<br /><br /> **1** = uno o más trabajos se están iniciando<br /><br /> **2** = todos los trabajos se han ejecutado correctamente<br /><br /> **3** = al menos un trabajo se está ejecutando<br /><br /> **4** = todos los trabajos están programados e inactivos<br /><br /> **5** = al menos un trabajo está intentando ejecutarse después de un error anterior<br /><br /> **6** = al menos un trabajo no se pudo ejecutar correctamente|  
+|**status**|**int**|Estado de la suscripción:<br /><br /> **0** = todos los trabajos están a la espera de iniciarse<br /><br /> **1** = uno o más trabajos se están iniciando<br /><br /> **2** = todos los trabajos se han ejecutado correctamente<br /><br /> **3** = al menos un trabajo se está ejecutando<br /><br /> **4** = todos los trabajos están programados e inactivos<br /><br /> **5** = al menos un trabajo está intentando ejecutarse después de un error anterior<br /><br /> **6** = al menos un trabajo no se pudo ejecutar correctamente|  
 |**subscriber_type**|**int**|Tipo de suscriptor.|  
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserciones<br /><br /> **1** = extracción<br /><br /> **2** = ambos|  
 |**Prior**|**Float (8)**|Número que indica la prioridad de la suscripción.|  
@@ -84,7 +84,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_enabled**|**bit**|Especifica si se ha establecido que la ejecución de la descarga de un agente de replicación se lleve a cabo en el suscriptor. Si es NULL, la ejecución se lleva a cabo en el publicador.|  
 |**offload_server**|**sysname**|Nombre del servidor donde se está ejecutando el agente.|  
 |**use_interactive_resolver**|**int**|Devuelve si se utiliza o no el solucionador interactivo durante la reconciliación. Si es **0**, no se utiliza el solucionador interactivo.|  
-|**host**|**sysname**|Valor proporcionado cuando una suscripción se filtra por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) .|  
+|**hostname**|**sysname**|Valor proporcionado cuando una suscripción se filtra por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) .|  
 |**subscriber_security_mode**|**smallint**|Es el modo de seguridad en el suscriptor, donde **1** significa autenticación de Windows y **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**subscriber_login**|**sysname**|Es el nombre de inicio de sesión del suscriptor.|  
 |**subscriber_password**|**sysname**|La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara con una cadena "**\*\*\*\*\***".|  

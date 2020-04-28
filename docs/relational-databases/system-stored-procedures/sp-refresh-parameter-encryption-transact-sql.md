@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002463"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
@@ -48,8 +48,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`Es el nombre del procedimiento almacenado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor. *MODULE_NAME* no puede ser un procedimiento almacenado de Common Language Runtime (CLR) o una función CLR. *MODULE_NAME* no se pueden enlazar a un esquema. *MODULE_NAME* es `nvarchar`y no tiene ningún valor predeterminado. *MODULE_NAME* puede ser un identificador de varias partes, pero solo puede hacer referencia a objetos de la base de datos actual.
 
-`[ @namespace = ] ' < class > '`Es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL `<class>` , es necesario. 
-  `<class>` es `nvarchar(20)`. Las entradas `DATABASE_DDL_TRIGGER` válidas `SERVER_DDL_TRIGGER`son y.    
+`[ @namespace = ] ' < class > '`Es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL `<class>` , es necesario. `<class>` es `nvarchar(20)`. Las entradas `DATABASE_DDL_TRIGGER` válidas `SERVER_DDL_TRIGGER`son y.    
 
 ## <a name="return-code-values"></a>Valores de código de retorno  
 
@@ -156,6 +155,6 @@ GO
 
 ## <a name="see-also"></a>Consulte también 
 
-[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Asistente para Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[Asistente de Always Encrypted](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

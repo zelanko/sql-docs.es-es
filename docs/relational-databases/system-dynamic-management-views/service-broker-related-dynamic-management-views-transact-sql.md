@@ -16,10 +16,10 @@ ms.assetid: 3253bf60-5ea6-4525-8744-c21070c4df0e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c47c229c925da14acfd58857d79b46a49deb6de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68023717"
 ---
 # <a name="service-broker-related-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica relacionadas con Service Broker (Transact-SQL)

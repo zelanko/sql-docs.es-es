@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037321"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Procedimientos almacenados del sistema (Transact-SQL)
@@ -55,8 +55,8 @@ ms.locfileid: "68037321"
 |[Procedimientos almacenados de almacén de administración de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)|Se utiliza para configurar el almacén de administración de datos.|  
 |[Procedimientos almacenados de automatización OLE](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)|Permiten habilitar el uso de objetos de Automation estándar en un lote estándar de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[Procedimientos almacenados de administración basada en directivas](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)|Se usan para la administración basada en directivas.|  
-|[Procedimientos almacenados de polybase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Agregar o quitar un equipo de un grupo de escalado horizontal de polybase.|  
-|[Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Se utiliza para optimizar el rendimiento.|  
+|[Procedimientos almacenados de PolyBase](https://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)|Agregar o quitar un equipo de un grupo de escalado horizontal de polybase.|  
+|[Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)|Se utiliza para optimizar el rendimiento.|  
 |[Procedimientos almacenados de replicación](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Se utilizan para administrar la replicación.|  
 |[Procedimientos almacenados de seguridad](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)|Se utilizan para administrar la seguridad.|  
 |[Procedimientos almacenados de copia de seguridad de instantánea](https://msdn.microsoft.com/library/c278db87-5770-4037-a1e6-b9853a943339)|Se usa para eliminar la copia de seguridad de FILE_SNAPSHOT junto con todas sus instantáneas o para eliminar una instantánea de archivo de copia de seguridad individual.|  
@@ -75,8 +75,7 @@ ms.locfileid: "68037321"
   
  Los procedimientos almacenados sp_createorphan y sp_droporphans se utilizan para el procesamiento de imágenes **ntext**, **Text**e **Image** de ODBC.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el procedimiento almacenado sp_reset_connection para permitir las llamadas a procedimientos almacenados remotos en una transacción. Este procedimiento almacenado también hace que se activen los eventos Audit Login y Audit Logout cuando se reutiliza una conexión de un grupo de conexiones.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el procedimiento almacenado sp_reset_connection para permitir las llamadas a procedimientos almacenados remotos en una transacción. Este procedimiento almacenado también hace que se activen los eventos Audit Login y Audit Logout cuando se reutiliza una conexión de un grupo de conexiones.  
   
  Los procedimientos almacenados del sistema de las siguientes tablas solo se utilizan en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a través de las API cliente y no están destinados al uso general. Están sujetos a cambios y su compatibilidad no está garantizada.  
   
@@ -174,7 +173,7 @@ ms.locfileid: "68037321"
   
 ## <a name="see-also"></a>Consulte también  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [Procedimientos almacenados &#40;motor de base de datos&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
+ [Procedimientos almacenados &#40;Motor de base de datos&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Ejecutar procedimientos almacenados &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   
  [Ejecutar procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

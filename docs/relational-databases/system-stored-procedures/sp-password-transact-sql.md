@@ -18,10 +18,10 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008923"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
@@ -49,9 +49,9 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'`Es la nueva contraseña. *new_password* es de **tipo sysname**y no tiene ningún valor predeterminado. se debe especificar *OLD_PASSWORD* si no se utilizan parámetros con nombre.  
   
 > [!IMPORTANT]  
->  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Contraseñas seguras](../../relational-databases/security/strong-passwords.md).  
+>  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
-`[ @loginame = ] 'login'`Es el nombre del inicio de sesión afectado por el cambio de contraseña. *login* es de **tipo sysname y su**valor predeterminado es NULL. *login* ya debe existir y solo pueden especificarlo los miembros de los roles fijos de servidor **sysadmin** o **securityadmin** .  
+`[ @loginame = ] 'login'`Es el nombre del inicio de sesión afectado por el cambio de contraseña. *login* es de tipo **sysname** y su valor predeterminado es NULL. *login* ya debe existir y solo pueden especificarlo los miembros de los roles fijos de servidor **sysadmin** o **securityadmin** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

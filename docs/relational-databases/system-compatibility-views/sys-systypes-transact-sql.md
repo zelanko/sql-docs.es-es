@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018081"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
@@ -38,11 +38,11 @@ ms.locfileid: "68018081"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre del tipo de datos.|  
+|**name**|**sysname**|Nombre del tipo de datos.|  
 |**xtype**|**tinyint**|Tipo de almacenamiento físico.|  
-|**estatus**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Tipo extendido de usuario. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
-|**longitud**|**smallint**|Longitud física del tipo de datos.|  
+|**length**|**smallint**|Longitud física del tipo de datos.|  
 |**xprec**|**tinyint**|Precisión interna que usa el servidor. No debe utilizarse en consultas.|  
 |**xscale**|**tinyint**|Escala interna que usa el servidor. No debe utilizarse en consultas.|  
 |**tdefault**|**int**|Id. del procedimiento almacenado que contiene comprobaciones de integridad para este tipo de datos.|  
@@ -50,10 +50,10 @@ ms.locfileid: "68018081"
 |**UID**|**smallint**|Id. de esquema del propietario del tipo.<br /><br /> Para bases de datos actualizadas a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el identificador de esquema es igual que el identificador de usuario del propietario.<br /><br /> ** \* Importante \* \* ** Si usa cualquiera de las siguientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones DDL, debe usar la vista de catálogo [Sys. Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) en lugar de **Sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
 |**sector**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Si se basa en caracteres, **collationid** es el identificador de la intercalación de la base de datos actual; de lo contrario, es NULL.|  
-|**Tipo de usuario**|**smallint**|Identificador de tipo de usuario. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
+|**usertype**|**smallint**|Identificador de tipo de usuario. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
 |**variable**|**bit**|Tipo de datos de longitud variable.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|Indica la nulabilidad predeterminada para este tipo de datos. Este valor predeterminado es invalidado por si la nulabilidad se especifica mediante [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
-|**automáticamente**|**tinyint**|Tipo de datos de almacenamiento físico.|  
+|**type**|**tinyint**|Tipo de datos de almacenamiento físico.|  
 |**printfmt**|**VARCHAR(255**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Nivel de precisión de este tipo de datos.<br /><br /> -1 = **XML** o tipos de valor grande.|  
 |**scale**|**tinyint**|Escala del tipo de datos, basada en la precisión.<br /><br /> NULL = El tipo de datos no es numérico.|  

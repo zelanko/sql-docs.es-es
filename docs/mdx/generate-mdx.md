@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005907"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,7 +41,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Expresión de cadena válida que suele ser el nombre del miembro actual (CurrentMember.Name) de cada tupla del conjunto especificado.  
   
- *Delimiter*  
+ *Delimitador*  
  Delimitador válido expresado como expresión de cadena.  
   
 ## <a name="remarks"></a>Observaciones  

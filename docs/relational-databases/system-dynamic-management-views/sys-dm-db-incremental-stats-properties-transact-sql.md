@@ -19,10 +19,10 @@ ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004929"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
@@ -40,10 +40,10 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="arguments"></a>Argumentos  
  *object_id*  
- Es el identificador del objeto en la base de datos actual para el que se solicitaron las propiedades de una de sus estadísticas incrementales. *object_id* es de **tipo int**.  
+ Es el identificador del objeto en la base de datos actual para el que se solicitaron las propiedades de una de sus estadísticas incrementales. *object_id* es **int**.  
   
  *stats_id*  
- Es el identificador de estadísticas para el *object_id*especificado. El identificador de estadísticas se puede obtener desde la vista de administración dinámica [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* es de **tipo int**.  
+ Es el identificador de estadísticas para el *object_id*especificado. El identificador de estadísticas se puede obtener desde la vista de administración dinámica [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) . *stats_id* es **int**.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -54,17 +54,15 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
 |partition_number|**int**|El número de la partición que contiene la parte de la tabla.|  
 |last_updated|**datetime2**|Fecha y hora de la última actualización del objeto de estadísticas. Para más información, vea la sección [Comentarios](#Remarks) en esta página.|  
 |rows|**bigint**|El número total de filas que tenía la tabla la última vez que se actualizaron las estadísticas. Si las estadísticas se filtran o corresponden a un índice filtrado, el número de filas puede ser inferior al número de filas de la tabla.|  
-|rows_sampled|**BIGINT**|Número total de filas muestreadas para cálculos de estadísticas.|  
+|rows_sampled|**bigint**|Número total de filas muestreadas para cálculos de estadísticas.|  
 |steps|**int**|Número de pasos del histograma. Para obtener más información, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
-|unfiltered_rows|**BIGINT**|Número total de filas de la tabla antes de aplicar la expresión de filtro (para estadísticas filtradas). Si las estadísticas no están filtradas, unfiltered_rows es igual al valor devuelto en la columna rows.|  
-|modification_counter|**BIGINT**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Esta columna no contiene información sobre tablas optimizadas para memoria.|  
+|unfiltered_rows|**bigint**|Número total de filas de la tabla antes de aplicar la expresión de filtro (para estadísticas filtradas). Si las estadísticas no están filtradas, unfiltered_rows es igual al valor devuelto en la columna rows.|  
+|modification_counter|**bigint**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Esta columna no contiene información sobre tablas optimizadas para memoria.|  
   
-## Comentarios para <a name="Remarks"></a>  
- 
-  `sys.dm_db_incremental_stats_properties` devuelve un conjunto de filas vacío si se da alguna de las condiciones siguientes:  
+## <a name="remarks"></a>Comentarios para <a name="Remarks"></a>  
+ `sys.dm_db_incremental_stats_properties` devuelve un conjunto de filas vacío si se da alguna de las condiciones siguientes:  
   
--   
-  `object_id` o `stats_id` es NULL.   
+-   `object_id` o `stats_id` es NULL.   
 -   El objeto especificado no se encuentra o no corresponde a una tabla con estadísticas incrementales.  
 -   El identificador de estadísticas especificado no se corresponde con las estadísticas existentes para el identificador de objeto especificado.  
 -   El usuario actual no tiene permisos para ver el objeto de estadísticas.
@@ -89,8 +87,8 @@ Para sugerencias adicionales de uso, consulte  [sys.dm_db_stats_properties](../.
   
 ## <a name="see-also"></a>Consulte también  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+ [Sys. stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Funciones y vistas de administración dinámica relacionadas con objetos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [Sys. dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [Sys. dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 
+ [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 

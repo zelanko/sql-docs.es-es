@@ -18,10 +18,10 @@ ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001802"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68001802"
 |**mark_name**|**nvarchar(128)**|Nombre proporcionado por el usuario para la transacción marcada.|  
 |**denominación**|**nvarchar(255)**|Descripción proporcionada por el usuario para la transacción marcada. Puede ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nombre de usuario de la base de datos que llevó a cabo la transacción marcada. Puede ser NULL.|  
-|**lsn**|**Numeric (25, 0)**|Número de secuencia de registro de la transacción donde tuvo lugar la marca.|  
+|**LSN**|**numeric(25,0)**|Número de secuencia de registro de la transacción donde tuvo lugar la marca.|  
 |**mark_time**|**datetime**|Hora de la confirmación de la transacción marcada (hora local).|  
   
 ## <a name="see-also"></a>Consulte también  

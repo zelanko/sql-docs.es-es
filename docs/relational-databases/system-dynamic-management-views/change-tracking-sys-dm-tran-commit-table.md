@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bd5b497f1d96f813570282f785fe0cbfe73265d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017929"
 ---
 # <a name="change-tracking---sysdm_tran_commit_table"></a>Change Tracking-sys. dm_tran_commit_table
@@ -37,10 +37,10 @@ ms.locfileid: "68017929"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|commit_ts|**BIGINT**|Número que se incrementa regularmente y que actúa como marca de tiempo específico de la base de datos para cada transacción confirmada.|  
-|xdes_id|**BIGINT**|Identificador interno específico de la base de datos para la transacción.|  
-|commit_lbn|**BIGINT**|Número del bloque de registros que contiene la entrada de registro de confirmación para la transacción.|  
-|commit_csn|**BIGINT**|Número de secuencia de la confirmación específico de la instancia para la transacción.|  
+|commit_ts|**bigint**|Número que se incrementa regularmente y que actúa como marca de tiempo específico de la base de datos para cada transacción confirmada.|  
+|xdes_id|**bigint**|Identificador interno específico de la base de datos para la transacción.|  
+|commit_lbn|**bigint**|Número del bloque de registros que contiene la entrada de registro de confirmación para la transacción.|  
+|commit_csn|**bigint**|Número de secuencia de la confirmación específico de la instancia para la transacción.|  
 |commit_time|**smalldatetime**|Hora en que se confirmó la transacción.|  
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   

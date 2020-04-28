@@ -18,10 +18,10 @@ ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029779"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
@@ -33,19 +33,19 @@ ms.locfileid: "68029779"
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|Nombre del servidor predeterminado.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador predeterminado.|  
-|**Name**|**sysname**|Nombre de la publicación.|  
+|**name**|**sysname**|Nombre de la publicación.|  
 |**denominación**|**nvarchar(255)**|Descripción breve de la publicación.|  
 |**políticas**|**int**|El período de retención para todo el conjunto de publicaciones, donde la unidad se indica mediante el valor de la columna **retention_period_unit** .|  
 |**publication_type**|**tinyint**|Indica si la publicación se filtra:<br /><br /> **0** = no filtrado.<br /><br /> **1** = filtrado.|  
 |**pubid**|**uniqueidentifier**|Número de identificación único para esta publicación. Se genera cuando se agrega la publicación.|  
-|**designmasterid**|**uniqueidentifier**|Reservado para su uso en el futuro:|  
+|**designmasterid**|**uniqueidentifier**|Reservado para uso futuro.|  
 |**parentId**|**uniqueidentifier**|Indica la publicación primaria a partir de la cual se creó la publicación del mismo nivel o subconjunto actual (utilizado en las topologías jerárquicas de publicación).|  
 |**sync_mode**|**tinyint**|Modo de sincronización de esta publicación:<br /><br /> **0** = nativo.<br /><br /> **1** = carácter.|  
 |**allow_push**|**int**|Indica si la publicación admite suscripciones de inserción.<br /><br /> **0** = no se permiten suscripciones de extracción.<br /><br /> **1** = se permiten suscripciones de extracción.|  
 |**allow_pull**|**int**|Indica si la publicación admite suscripciones extracción.<br /><br /> **0** = no se permiten suscripciones de extracción.<br /><br /> **1** = se permiten suscripciones de extracción.|  
 |**allow_anonymous**|**int**|Indica si la publicación admite suscripciones anónimas.<br /><br /> **0** = no se permiten suscripciones anónimas.<br /><br /> **1** = se permiten suscripciones anónimas.|  
 |**centralized_conflicts**|**int**|Indica si los registros de conflictos se almacenan en el publicador:<br /><br /> **0** = los registros de conflictos no se almacenan en el publicador.<br /><br /> **1** = los registros de conflictos se almacenan en el publicador.|  
-|**estatus**|**tinyint**|Reservado para su uso en el futuro:|  
+|**status**|**tinyint**|Reservado para uso futuro.|  
 |**snapshot_ready**|**tinyint**|Indica el estado de la instantánea de la publicación:<br /><br /> **0** = la instantánea no está lista para su uso.<br /><br /> **1** = la instantánea está lista para su uso.<br /><br /> **2** = se debe crear una nueva instantánea para esta publicación.|  
 |**enabled_for_internet**|**bit**|Indica si los archivos de sincronización de la publicación se exponen en Internet a través de FTP u otros servicios.<br /><br /> **0** = se puede tener acceso a los archivos de sincronización desde Internet.<br /><br /> **1** = no se puede tener acceso a los archivos de sincronización desde Internet.|  
 |**dynamic_filters**|**bit**|Indica si la publicación se filtra utilizando un filtro de fila con parámetros.<br /><br /> **0** = la publicación no está filtrada por filas.<br /><br /> **1** = la publicación está filtrada por filas.|  
@@ -65,14 +65,14 @@ ms.locfileid: "68029779"
 |**allow_synctoalternate**|**bit**|Especifica si se permite un asociado de sincronización alternativo para sincronizar con este publicador. **0** significa que no se permite un asociado de sincronización.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Enumera las funciones que se están utilizando para recuperar información del suscriptor y validar los criterios de filtrado de filas con parámetros del suscriptor.|  
 |**ad_guidname**|**sysname**|Especifica si la información de publicación se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un GUID válido especifica que la publicación se publica en el Active Directory y el GUID es el **objectGUID**del objeto de publicación Active Directory correspondiente. Si es NULL, la publicación no se publica en Active Directory.|  
-|**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos. Puede ser uno de los siguientes valores:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos. Puede ser uno de los siguientes valores:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**max_concurrent_merge**|**int**|Número máximo de procesos de mezcla simultáneos permitido. Un valor de **0** para esta propiedad significa que no hay ningún límite en el número de procesos de mezcla simultáneos que se ejecutan en un momento dado. Esta propiedad establece un límite en el número de procesos de mezcla simultáneos que se pueden ejecutar con una publicación de combinación en un momento determinado. Si hay más procesos de instantánea programados al mismo tiempo que los que permite ejecutar el valor, los trabajos sobrantes se colocarán en una cola y esperarán hasta que finalice el proceso de mezcla que se está ejecutando actualmente.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Número máximo de sesiones de instantánea de datos filtrados simultáneas que se pueden ejecutar con la publicación de combinación. Si es **0**, no hay ningún límite en el número máximo de sesiones de instantáneas de datos filtrados simultáneas que se pueden ejecutar simultáneamente en la publicación en un momento dado. Esta propiedad establece un límite en el número de procesos de instantánea simultáneos que se pueden ejecutar con una publicación de combinación en un momento determinado. Si hay más procesos de instantánea programados al mismo tiempo que los que permite ejecutar el valor, los trabajos sobrantes se colocarán en una cola y esperarán hasta que finalice el proceso de mezcla que se está ejecutando actualmente.|  
 |**use_partition_groups**|**smallint**|Especifica si la publicación utiliza particiones precalculadas.|  
 |**dynamic_filters_function_list**|**nvarchar (500)**|Lista de funciones separadas por punto y coma que se utiliza en los filtros de fila con parámetros de la publicación.|  
 |**partition_id_eval_proc**|**sysname**|Especifica el nombre del procedimiento ejecutado por el Agente de mezcla de un suscriptor para determinar su Id. de partición asignada.|  
 |**publication_number**|**smallint**|Especifica la columna de identidad que proporciona una asignación de 2 bytes a **pubid**. **pubid** es un identificador único global para una publicación, mientras que el número de publicación solo es único en una base de datos especificada.|  
-|**replicate_ddl**|**int**|Indica si se admite la replicación de esquemas para la publicación.<br /><br /> **0** = las instrucciones de DDL no se replican.<br /><br /> **1** = las instrucciones de DDL ejecutadas en el publicador se replican.<br /><br /> Para obtener más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).|  
+|**replicate_ddl**|**int**|Indica si se admite la replicación de esquemas para la publicación.<br /><br /> **0** = las instrucciones de DDL no se replican.<br /><br /> **1** = las instrucciones de DDL ejecutadas en el publicador se replican.<br /><br /> Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
 |**allow_subscriber_initiated_snapshot**|**bit**|Indica que los suscriptores pueden iniciar el proceso que genera la instantánea para una publicación utilizando filtros con parámetros. **1** indica que los suscriptores pueden iniciar el proceso de instantánea.|  
 |**dynamic_snapshot_queue_timeout**|**int**|Especifica cuántos minutos debe esperar en la cola un suscriptor para que empiece el proceso de generación de instantáneas al utilizar filtros con parámetros.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Especifica cuántos minutos debe esperar un suscriptor para que empiece el proceso de generación de instantáneas al utilizar filtros con parámetros.|  
@@ -91,6 +91,6 @@ ms.locfileid: "68029779"
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   

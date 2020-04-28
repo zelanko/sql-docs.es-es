@@ -18,10 +18,10 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997435"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -50,13 +50,13 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**compatible con la intercalación**|Afecta a la ejecución de consultas distribuidas sobre servidores vinculados. Si esta opción se establece en TRUE,|  
 |**acceso a datos**|Habilita y deshabilita un servidor vinculado para el acceso a consultas distribuidas.|  
 |**dist**|Distribuidor.|  
-|**DPUB**|Publicador remoto de este distribuidor.|  
+|**dpub**|Publicador remoto de este distribuidor.|  
 |**lazy schema validation**|Omite la comprobación del esquema de las tablas remotas al comienzo de la consulta.|  
-|**pub**|Editor.|  
+|**Pub**|Editor.|  
 |**RPC**|Habilita RPC desde el servidor especificado.|  
 |**salida de RPC**|Habilita RPC en el servidor especificado.|  
-|**modelo**|Suscriptor.|  
-|**integrado**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sub**|Suscriptor.|  
+|**sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**usar intercalación remota**|Usa la intercalación de una columna remota en lugar de la del servidor local.|  
   
 `[ @show_topology = ] 'show_topology'`Es la relación del servidor especificado con otros servidores. *show_topology* es de tipo **VARCHAR (** 1 **)** y su valor predeterminado es NULL. Si *show_topology* no es igual a **t** o es null, **sp_helpserver** devuelve las columnas enumeradas en la sección conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve información de **TopX** y **Topy** .  
@@ -68,10 +68,10 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre de servidor.|  
+|**name**|**sysname**|Nombre de servidor.|  
 |**network_name**|**sysname**|El nombre de red del servidor.|  
-|**estatus**|**VARCHAR (** 70 **)**|Estado del servidor.|  
-|**sesión**|**Char (** 4 **)**|Número de identificación del servidor.|  
+|**status**|**VARCHAR (** 70 **)**|Estado del servidor.|  
+|**id**|**Char (** 4 **)**|Número de identificación del servidor.|  
 |**collation_name**|**sysname**|Intercalación del servidor.|  
 |**connect_timeout**|**int**|Valor del tiempo de espera para conectar a un servidor vinculado.|  
 |**query_timeout**|**int**|Valor del tiempo de espera para consultas sobre un servidor vinculado.|  
@@ -113,7 +113,7 @@ EXEC sp_helpserver 'SEATTLE2';
  [sp_helpdistributor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpremotelogin &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
- [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

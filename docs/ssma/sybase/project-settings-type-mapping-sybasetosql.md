@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028662"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Configuración del proyecto (asignación de tipo) (SybaseToSQL)
@@ -43,15 +43,15 @@ Haga clic en esta opción para modificar el tipo de datos seleccionado en la lis
 **Remove**  
 Haga clic en esta opción para quitar la asignación de tipos de datos seleccionada de la lista de asignaciones.  
   
-**Restablecer valores predeterminados**  
+**Valores predeterminados**  
 Haga clic en esta opción para restablecer la lista asignación de tipos a los valores predeterminados de SSMA.  
   
-## <a name="default-type-mapping"></a>Asignación de tipos predeterminada  
+## <a name="default-type-mapping"></a>Asignación de tipos predeterminados  
 La tabla siguiente contiene la asignación de tipos predeterminada entre ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los tipos de datos.  
   
 |Tipo de datos ASE|Tipo de datos de SQL Server|  
 |-----------------|------------------------|  
-|**BIGINT**|**BIGINT**|  
+|**bigint**|**bigint**|  
 |**binary**|**binary**|  
 |**binario\*[.. 8000]**|**binario\*[]**|  
 |**binario [8001.\*.]**|**varbinary(max)**|  
@@ -62,7 +62,7 @@ La tabla siguiente contiene la asignación de tipos predeterminada entre ASE [!I
 |**char varying [8001..\*.]**|**ntext**|  
 |**Char [\*.. 8000]**|**Char [\*]**|  
 |**Char [8001..\*;]**|**ntext**|  
-|**character**|**char**|  
+|**óptico**|**char**|  
 |**variar caracteres**|**varchar**|  
 |**variación de caracteres\*[.. 8000]**|**VARCHAR [\*]**|  
 |**variación de caracteres [8001.\*.]**|**ntext**|  
@@ -70,17 +70,17 @@ La tabla siguiente contiene la asignación de tipos predeterminada entre ASE [!I
 |**carácter [8001..\*]**|**ntext**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
-|**Dec**|**Decimal**|  
+|**Dec**|**decimal**|  
 |**Dec [\*.. \*]**|**decimal [\*]**|  
 |**Dec [\*.. \*][\*.. \*]**|**decimal [\*] [\*]**|  
-|**Decimal**|**Decimal**|  
+|**decimal**|**decimal**|  
 |**decimal [\*.. \*]**|**decimal [\*]**|  
 |**decimal [\*.. \*][\*.. \*]**|**decimal [\*] [\*]**|  
-|**double precision**|**Float [53]**|  
+|**precisión doble**|**Float [53]**|  
 |**float**|**Float [53]**|  
 |**Float [\*.. 4,5**|**Float [24]**|  
 |**Float [16..\*]**|**Float [53]**|  
-|**impresión**|**impresión**|  
+|**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
 |**longsysname**|**nvarchar [255]**|  
@@ -106,19 +106,19 @@ La tabla siguiente contiene la asignación de tipos predeterminada entre ASE [!I
 |**nchar varying [4001..\*.]**|**nvarchar(max)**|  
 |**nchar [\*.. 4000]**|**nchar [\*]**|  
 |**nchar [4001..\*.]**|**nvarchar(max)**|  
-|**alfanumérico**|**alfanumérico**|  
+|**numeric**|**numeric**|  
 |**Numeric [\*.. \*]**|**Numeric [\*]**|  
 |**Numeric [\*.. \*][\*.. \*]**|**Numeric [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*.. 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*.]**|**nvarchar(max)**|  
-|**impuestos**|**Float [24]**|  
+|**real**|**Float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
-|**SMALLMONEY**|**SMALLMONEY**|  
+|**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
 |**sysname [\*.. \*]**|**nvarchar [255]**|  
-|**negrita**|**negrita**|  
+|**text**|**text**|  
 |**time**|**hora [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
@@ -133,7 +133,7 @@ La tabla siguiente contiene la asignación de tipos predeterminada entre ASE [!I
 |**univarchar [\*.. 4000]**|**nvarchar [\*]**|  
 |**univarchar [4001..\*.]**|**nvarchar(max)**|  
 |**BIGINT sin signo**|**Numeric [20] [0]**|  
-|**unsigned int**|**BIGINT**|  
+|**unsigned int**|**bigint**|  
 |**smallint sin signo**|**int**|  
 |**tinyint sin signo**|**tinyint**|  
 |**varbinary**|**varbinary**|  

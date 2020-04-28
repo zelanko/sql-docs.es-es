@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017168"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
@@ -46,7 +46,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Max|Devuelve el valor máximo del conjunto.|  
 |Min|Devuelve el valor mínimo del conjunto.|  
 |Funciones de agregación de suma parcial|Devuelve el cálculo de comportamiento de suma parcial del conjunto después de proyectar la forma al eje de tiempo.|  
-|Recuento distinto|Agrega todos los datos de hechos que contribuyen al subcubo cuando el eje segmentador incluye un conjunto.<br /><br /> Devuelve el recuento distintivo de cada miembro del conjunto. El resultado depende de la seguridad de las celdas que se agregan y no de la seguridad de las celdas necesarias para el cálculo. La seguridad de celda del conjunto genera un error; la seguridad de celda por debajo de la granularidad del conjunto especificado se omite. Los cálculos en el conjunto generan un error. Los cálculos por debajo de la granularidad del conjunto se omiten. El recuento distintivo en un conjunto que incluye un miembro y uno o más de sus elementos secundarios devuelve el recuento distintivo de todos los hechos que contribuyen al miembro secundario.|  
+|Distinct Count|Agrega todos los datos de hechos que contribuyen al subcubo cuando el eje segmentador incluye un conjunto.<br /><br /> Devuelve el recuento distintivo de cada miembro del conjunto. El resultado depende de la seguridad de las celdas que se agregan y no de la seguridad de las celdas necesarias para el cálculo. La seguridad de celda del conjunto genera un error; la seguridad de celda por debajo de la granularidad del conjunto especificado se omite. Los cálculos en el conjunto generan un error. Los cálculos por debajo de la granularidad del conjunto se omiten. El recuento distintivo en un conjunto que incluye un miembro y uno o más de sus elementos secundarios devuelve el recuento distintivo de todos los hechos que contribuyen al miembro secundario.|  
 |Atributos que no pueden agregarse.|Devuelve la suma de los valores.|  
 |Funciones de agregación combinada|No es compatible y genera un error.|  
 |Operadores unarios|No se respetan; los valores se agregan mediante la suma.|  

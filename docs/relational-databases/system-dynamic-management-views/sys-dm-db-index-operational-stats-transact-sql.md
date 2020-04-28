@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004895"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -53,16 +53,16 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="arguments"></a>Argumentos    
  *database_id* | NULL | 0 | PREDETERMINADA    
- Identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
+ Identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar null para *object_id*, *index_id*y *partition_number*.    
     
  Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md).    
     
  *object_id* | NULL | 0 | PREDETERMINADA    
- Identificador de objeto de la tabla o vista donde está activado el índice. *object_id* es de **tipo int**.    
+ Identificador de objeto de la tabla o vista donde está activado el índice. *object_id* es **int**.    
     
- Las entradas válidas son el número de identificador de una tabla o vista, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
+ Las entradas válidas son el número de identificador de una tabla o vista, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información en memoria caché de todas las tablas y vistas de la base de datos especificada. Si especifica NULL para *object_id*, también debe especificar null para *index_id* y *partition_number*.    
     
@@ -72,7 +72,7 @@ sys.dm_db_index_operational_stats (
  Especifique NULL para devolver información en memoria caché de todos los índices de una tabla o vista base. Si especifica NULL para *index_id*, también debe especificar null para *partition_number*.    
     
  *partition_number* | NULL | 0 | PREDETERMINADA    
- Número de partición en el objeto. *partition_number* es de **tipo int**. Las entradas válidas son las *partion_number* de un índice o montón, null, 0 o default. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
+ Número de partición en el objeto. *partition_number* es de **tipo int**. Las entradas válidas son las *partion_number* de un índice o montón, null, 0 o default. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.    
     
  Especifique NULL para devolver información en memoria caché de todas las particiones del índice o montón.    
     
@@ -86,47 +86,47 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|Identificador de la tabla o vista.|    
 |**index_id**|**int**|Identificador del índice o montón.<br /><br /> 0 = Montón| 
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.| 
-|**hobt_id**|**BIGINT**|**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> IDENTIFICADOR del conjunto de filas de montículo o árbol B de datos que realiza el seguimiento de los datos internos de un índice de almacén de columnas.<br /><br /> NULL: este no es un conjunto de filas de almacén de columnas interno.<br /><br /> Para obtener más información, vea [Sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
-|**leaf_insert_count**|**BIGINT**|Recuento acumulado de inserciones en el nivel hoja.|    
-|**leaf_delete_count**|**BIGINT**|Recuento acumulado de eliminaciones en el nivel hoja. leaf_delete_count solo se incrementa para los registros eliminados que no están marcados como fantasma en primer lugar. En el caso de los registros eliminados que se borran primero, **leaf_ghost_count** se incrementa en su lugar.|    
-|**leaf_update_count**|**BIGINT**|Recuento acumulado de actualizaciones en el nivel hoja.|    
-|**leaf_ghost_count**|**BIGINT**|Recuento acumulado de filas en el nivel hoja marcadas como eliminadas, pero que aún no se han quitado. Este recuento no incluye los registros que se eliminan inmediatamente sin marcarse como fantasma. Estas filas se quitan mediante un subproceso de limpieza a intervalos establecidos. En este valor no se incluyen las filas retenidas a causa de una transacción de aislamiento de instantánea pendiente.|    
-|**nonleaf_insert_count**|**BIGINT**|Recuento acumulado de inserciones por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
-|**nonleaf_delete_count**|**BIGINT**|Recuento acumulado de eliminaciones por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
-|**nonleaf_update_count**|**BIGINT**|Recuento acumulado de actualizaciones por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
-|**leaf_allocation_count**|**BIGINT**|Recuento acumulado de asignaciones de página en el nivel hoja en el índice o el montón.<br /><br /> En un índice, una asignación de página corresponde a una división de página.|    
-|**nonleaf_allocation_count**|**BIGINT**|Recuento acumulado de asignaciones de página ocasionadas por divisiones de página por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
-|**leaf_page_merge_count**|**BIGINT**|Recuento acumulado de combinaciones de página en el nivel hoja. Siempre es 0 para el índice de almacén de columnas.|    
-|**nonleaf_page_merge_count**|**BIGINT**|Recuento acumulado de combinaciones de página por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
-|**range_scan_count**|**BIGINT**|Recuento acumulado de recorridos de tabla e intervalo iniciados en el índice o el montón.|    
-|**singleton_lookup_count**|**BIGINT**|Recuento acumulado de recuperaciones de filas únicas del índice o montón.|    
-|**forwarded_fetch_count**|**BIGINT**|Recuento de filas que se capturan mediante un registro de reenvío.<br /><br /> 0 = Índices|    
-|**lob_fetch_in_pages**|**BIGINT**|Recuento acumulado de páginas de objetos grandes (LOB) recuperadas desde la unidad de asignación LOB_DATA. Estas páginas contienen datos que se almacenan en columnas de tipo **Text**, **ntext**, **Image**, **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** y **XML**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
-|**lob_fetch_in_bytes**|**BIGINT**|Recuento acumulado de bytes de datos de LOB recuperados.|    
-|**lob_orphan_create_count**|**BIGINT**|Recuento acumulado de valores de LOB huérfanos creados para operaciones masivas.<br /><br /> 0 = Índice no clúster|    
-|**lob_orphan_insert_count**|**BIGINT**|Recuento acumulado de valores de LOB huérfanos insertados durante operaciones masivas.<br /><br /> 0 = Índice no clúster|    
-|**row_overflow_fetch_in_pages**|**BIGINT**|Recuento acumulado de páginas de datos de desbordamiento de fila recuperadas desde la unidad de asignación ROW_OVERFLOW_DATA.<br /><br /> Estas páginas contienen datos almacenados en columnas de tipo **VARCHAR (n)**, **nvarchar (n)**, **varbinary (n)** y **sql_variant** que se han insertado de no fila.|    
-|**row_overflow_fetch_in_bytes**|**BIGINT**|Recuento acumulado de bytes de datos de desbordamiento de fila recuperados.|    
-|**column_value_push_off_row_count**|**BIGINT**|Recuento acumulado de valores de columna de datos de LOB y datos de desbordamiento de fila que se han insertado de manera no consecutiva para que una fila insertada o actualizada entre en una página.|    
-|**column_value_pull_in_row_count**|**BIGINT**|Recuento acumulado de valores de columna de datos de LOB y datos de desbordamiento de fila que se han extraído de manera consecutiva. Esto ocurre cuando una operación de actualización libera espacio en un registro y proporciona una oportunidad para trasladar uno o más valores de manera no consecutiva de las unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA a la unidad de asignación IN_ROW_DATA.|    
-|**row_lock_count**|**BIGINT**|Número acumulado de bloqueos de fila solicitados.|    
-|**row_lock_wait_count**|**BIGINT**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo de fila.|    
-|**row_lock_wait_in_ms**|**BIGINT**|Número total de milisegundos que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo de fila.|    
-|**page_lock_count**|**BIGINT**|Número acumulado de bloqueos de página solicitados.|    
-|**page_lock_wait_count**|**BIGINT**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo de página.|    
-|**page_lock_wait_in_ms**|**BIGINT**|Número total de milisegundos que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo de página.|    
-|**index_lock_promotion_attempt_count**|**BIGINT**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha intentado concentrar bloqueos.|    
-|**index_lock_promotion_count**|**BIGINT**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha concentrado bloqueos.|    
-|**page_latch_wait_count**|**BIGINT**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado a causa de la contención de bloqueos temporales.|    
-|**page_latch_wait_in_ms**|**BIGINT**|Número acumulado de milisegundos que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado a causa de la contención de bloqueos temporales.|    
-|**page_io_latch_wait_count**|**BIGINT**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo temporal de E/S de páginas.|    
-|**page_io_latch_wait_in_ms**|**BIGINT**|Número acumulado de milisegundos que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo temporal de E/S de páginas.|    
-|**tree_page_latch_wait_count**|**BIGINT**|Subconjunto de **page_latch_wait_count** que incluye solamente las páginas de nivel superior del árbol B. Siempre es 0 para un índice de montón o de almacén de columnas.|    
-|**tree_page_latch_wait_in_ms**|**BIGINT**|Subconjunto de **page_latch_wait_in_ms** que incluye solamente las páginas de nivel superior del árbol B. Siempre es 0 para un índice de montón o de almacén de columnas.|    
-|**tree_page_io_latch_wait_count**|**BIGINT**|Subconjunto de **page_io_latch_wait_count** que incluye solamente las páginas de nivel superior del árbol B. Siempre es 0 para un índice de montón o de almacén de columnas.|    
-|**tree_page_io_latch_wait_in_ms**|**BIGINT**|Subconjunto de **page_io_latch_wait_in_ms** que incluye solamente las páginas de nivel superior del árbol B. Siempre es 0 para un índice de montón o de almacén de columnas.|    
-|**page_compression_attempt_count**|**BIGINT**|Número de páginas que se evaluaron para la compresión en el nivel de página para particiones específicas de una tabla, un índice o una vista indizada. Incluye páginas que no se comprimieron porque no se consiguieron ahorros de espacio significativos. Siempre es 0 para el índice de almacén de columnas.|    
-|**page_compression_success_count**|**BIGINT**|Número de páginas de datos que se comprimieron utilizando la compresión de páginas para particiones específicas de una tabla, un índice o una vista indizada. Siempre es 0 para el índice de almacén de columnas.|    
+|**hobt_id**|**bigint**|**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> IDENTIFICADOR del conjunto de filas de montículo o árbol B de datos que realiza el seguimiento de los datos internos de un índice de almacén de columnas.<br /><br /> NULL: este no es un conjunto de filas de almacén de columnas interno.<br /><br /> Para obtener más información, vea [Sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**leaf_insert_count**|**bigint**|Recuento acumulado de inserciones en el nivel hoja.|    
+|**leaf_delete_count**|**bigint**|Recuento acumulado de eliminaciones en el nivel hoja. leaf_delete_count solo se incrementa para los registros eliminados que no están marcados como fantasma en primer lugar. En el caso de los registros eliminados que se borran primero, **leaf_ghost_count** se incrementa en su lugar.|    
+|**leaf_update_count**|**bigint**|Recuento acumulado de actualizaciones en el nivel hoja.|    
+|**leaf_ghost_count**|**bigint**|Recuento acumulado de filas en el nivel hoja marcadas como eliminadas, pero que aún no se han quitado. Este recuento no incluye los registros que se eliminan inmediatamente sin marcarse como fantasma. Estas filas se quitan mediante un subproceso de limpieza a intervalos establecidos. En este valor no se incluyen las filas retenidas a causa de una transacción de aislamiento de instantánea pendiente.|    
+|**nonleaf_insert_count**|**bigint**|Recuento acumulado de inserciones por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
+|**nonleaf_delete_count**|**bigint**|Recuento acumulado de eliminaciones por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
+|**nonleaf_update_count**|**bigint**|Recuento acumulado de actualizaciones por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
+|**leaf_allocation_count**|**bigint**|Recuento acumulado de asignaciones de página en el nivel hoja en el índice o el montón.<br /><br /> En un índice, una asignación de página corresponde a una división de página.|    
+|**nonleaf_allocation_count**|**bigint**|Recuento acumulado de asignaciones de página ocasionadas por divisiones de página por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
+|**leaf_page_merge_count**|**bigint**|Recuento acumulado de combinaciones de página en el nivel hoja. Siempre es 0 para el índice de almacén de columnas.|    
+|**nonleaf_page_merge_count**|**bigint**|Recuento acumulado de combinaciones de página por encima del nivel hoja.<br /><br /> 0 = Montón o almacén de columnas|    
+|**range_scan_count**|**bigint**|Recuento acumulado de recorridos de tabla e intervalo iniciados en el índice o el montón.|    
+|**singleton_lookup_count**|**bigint**|Recuento acumulado de recuperaciones de filas únicas del índice o montón.|    
+|**forwarded_fetch_count**|**bigint**|Recuento de filas que se capturan mediante un registro de reenvío.<br /><br /> 0 = Índices|    
+|**lob_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de objetos grandes (LOB) recuperadas desde la unidad de asignación LOB_DATA. Estas páginas contienen datos que se almacenan en columnas de tipo **Text**, **ntext**, **Image**, **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)** y **XML**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_bytes**|**bigint**|Recuento acumulado de bytes de datos de LOB recuperados.|    
+|**lob_orphan_create_count**|**bigint**|Recuento acumulado de valores de LOB huérfanos creados para operaciones masivas.<br /><br /> 0 = Índice no clúster|    
+|**lob_orphan_insert_count**|**bigint**|Recuento acumulado de valores de LOB huérfanos insertados durante operaciones masivas.<br /><br /> 0 = Índice no clúster|    
+|**row_overflow_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de datos de desbordamiento de fila recuperadas desde la unidad de asignación ROW_OVERFLOW_DATA.<br /><br /> Estas páginas contienen datos almacenados en columnas de tipo **VARCHAR (n)**, **nvarchar (n)**, **varbinary (n)** y **sql_variant** que se han insertado de no fila.|    
+|**row_overflow_fetch_in_bytes**|**bigint**|Recuento acumulado de bytes de datos de desbordamiento de fila recuperados.|    
+|**column_value_push_off_row_count**|**bigint**|Recuento acumulado de valores de columna de datos de LOB y datos de desbordamiento de fila que se han insertado de manera no consecutiva para que una fila insertada o actualizada entre en una página.|    
+|**column_value_pull_in_row_count**|**bigint**|Recuento acumulado de valores de columna de datos de LOB y datos de desbordamiento de fila que se han extraído de manera consecutiva. Esto ocurre cuando una operación de actualización libera espacio en un registro y proporciona una oportunidad para trasladar uno o más valores de manera no consecutiva de las unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA a la unidad de asignación IN_ROW_DATA.|    
+|**row_lock_count**|**bigint**|Número acumulado de bloqueos de fila solicitados.|    
+|**row_lock_wait_count**|**bigint**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo de fila.|    
+|**row_lock_wait_in_ms**|**bigint**|Número total de milisegundos que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo de fila.|    
+|**page_lock_count**|**bigint**|Número acumulado de bloqueos de página solicitados.|    
+|**page_lock_wait_count**|**bigint**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo de página.|    
+|**page_lock_wait_in_ms**|**bigint**|Número total de milisegundos que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo de página.|    
+|**index_lock_promotion_attempt_count**|**bigint**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha intentado concentrar bloqueos.|    
+|**index_lock_promotion_count**|**bigint**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha concentrado bloqueos.|    
+|**page_latch_wait_count**|**bigint**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado a causa de la contención de bloqueos temporales.|    
+|**page_latch_wait_in_ms**|**bigint**|Número acumulado de milisegundos que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado a causa de la contención de bloqueos temporales.|    
+|**page_io_latch_wait_count**|**bigint**|Número acumulado de veces que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo temporal de E/S de páginas.|    
+|**page_io_latch_wait_in_ms**|**bigint**|Número acumulado de milisegundos que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha esperado en un bloqueo temporal de E/S de páginas.|    
+|**tree_page_latch_wait_count**|**bigint**|Subconjunto de **page_latch_wait_count** que incluye solamente las páginas de nivel superior del árbol B. Siempre es 0 para un índice de montón o de almacén de columnas.|    
+|**tree_page_latch_wait_in_ms**|**bigint**|Subconjunto de **page_latch_wait_in_ms** que incluye solamente las páginas de nivel superior del árbol B. Siempre es 0 para un índice de montón o de almacén de columnas.|    
+|**tree_page_io_latch_wait_count**|**bigint**|Subconjunto de **page_io_latch_wait_count** que incluye solamente las páginas de nivel superior del árbol B. Siempre es 0 para un índice de montón o de almacén de columnas.|    
+|**tree_page_io_latch_wait_in_ms**|**bigint**|Subconjunto de **page_io_latch_wait_in_ms** que incluye solamente las páginas de nivel superior del árbol B. Siempre es 0 para un índice de montón o de almacén de columnas.|    
+|**page_compression_attempt_count**|**bigint**|Número de páginas que se evaluaron para la compresión en el nivel de página para particiones específicas de una tabla, un índice o una vista indizada. Incluye páginas que no se comprimieron porque no se consiguieron ahorros de espacio significativos. Siempre es 0 para el índice de almacén de columnas.|    
+|**page_compression_success_count**|**bigint**|Número de páginas de datos que se comprimieron utilizando la compresión de páginas para particiones específicas de una tabla, un índice o una vista indizada. Siempre es 0 para el índice de almacén de columnas.|    
     
 ## <a name="remarks"></a>Observaciones    
  Este objeto de administración dinámica no acepta parámetros correlacionado de CROSS APPLY y OUTER APPLY.    
@@ -135,7 +135,7 @@ sys.dm_db_index_operational_stats (
     
  Use las columnas siguientes para identificar áreas de contención.    
     
- **Para analizar un patrón de acceso común a la partición de tabla o de índice**, use estas columnas:    
+ **Para analizar un patrón de acceso común a la partición del índice o la tabla**, utilice estas columnas:    
     
 -   **leaf_insert_count**    
     
@@ -172,7 +172,7 @@ sys.dm_db_index_operational_stats (
 ## <a name="column-remarks"></a>Comentarios de columna    
  Los valores en **lob_orphan_create_count** y **lob_orphan_insert_count** siempre deben ser iguales.    
     
- El valor en las columnas **lob_fetch_in_pages** y **lob_fetch_in_bytes** puede ser mayor que cero para índices no clúster que contengan una o varias columnas de LOB como columnas incluidas. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md). De forma similar, el valor en las columnas **row_overflow_fetch_in_pages** y **row_overflow_fetch_in_bytes** puede ser mayor que cero para índices no clúster si el índice contiene columnas que se pueden insertar de manera no consecutiva.    
+ El valor en las columnas **lob_fetch_in_pages** y **lob_fetch_in_bytes** puede ser mayor que cero para índices no clúster que contengan una o varias columnas de LOB como columnas incluidas. Para obtener más información, vea [crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md). De forma similar, el valor en las columnas **row_overflow_fetch_in_pages** y **row_overflow_fetch_in_bytes** puede ser mayor que cero para índices no clúster si el índice contiene columnas que se pueden insertar de manera no consecutiva.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>Restablecer los contadores en la memoria caché de metadatos    
  Los datos devueltos por **sys.dm_db_index_operational_stats** existen solamente mientras está disponible el objeto de memoria caché de metadatos que representa el montón o el índice. Estos datos nunca son permanentes ni transaccionalmente coherentes. Esto significa que no se pueden utilizar estos contadores para determinar si se ha utilizado un índice o cuándo se usó por última vez. Para obtener información sobre esto, vea [Sys. dm_db_index_usage_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    

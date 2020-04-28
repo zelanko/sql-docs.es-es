@@ -10,10 +10,10 @@ ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029010"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Instalación de componentes de SSMA en SQL Server (SybaseToSQL)
@@ -36,7 +36,7 @@ Puede instalar el paquete de extensión en cualquier momento antes de migrar los
   
 2.  Haga doble clic en SSMA para el paquete de extensiones de Sybase. *n*. Instale. exe.  
   
-3.  En la página de bienvenida, haga clic en **siguiente**.  
+3.  En la página de bienvenida, haga clic en **Siguiente**.  
   
 4.  En la página contrato de licencia para el usuario final, lea el contrato de licencia. Si está de acuerdo, active la casilla acepto **los términos del contrato de licencia** y, a continuación, haga clic en **siguiente**.  
   

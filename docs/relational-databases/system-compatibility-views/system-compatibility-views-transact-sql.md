@@ -24,10 +24,10 @@ ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 466dc68da1c5cef56a7debe3953ba38956bb2993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018035"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Vistas de compatibilidad del sistema (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68018035"
 |Nombre de la columna|Vista de compatibilidad|Vista de SQL Server 2005|  
 |-----------------|------------------------|--------------------------|  
 |**xusertype**|**syscolumns**|**sys.columns**|  
-|**Tipo de usuario**|**syscolumns**|**sys.columns**|  
+|**usertype**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
 |**UID**|**sysobjects**|**sys.objects**|  

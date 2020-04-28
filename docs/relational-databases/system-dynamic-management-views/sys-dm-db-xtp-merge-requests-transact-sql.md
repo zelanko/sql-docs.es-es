@@ -10,10 +10,10 @@ ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f522fde05ce951575d3e02b3cdc4d3336056bd4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026806"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
@@ -30,7 +30,7 @@ Realiza el seguimiento de las solicitudes de combinación de bases de datos. Es 
 
 | Nombre de la columna | Tipo de datos | Descripción |
 | :-- | :-- | :-- |
-| request_state | tinyint | Estado de la solicitud de combinación:<br/>0 = solicitada<br/>1 = pendiente<br/>2 = instalado<br/>3 = abandonada |
+| request_state | TINYINT | Estado de la solicitud de combinación:<br/>0 = solicitada<br/>1 = pendiente<br/>2 = instalado<br/>3 = abandonada |
 | request_state_desc | nvarchar(60) | Significados para el estado actual de la solicitud:<br/><br/>Solicitado: existe una solicitud Merge.<br/>Pending: la combinación se está procesando.<br/>Instalado: la combinación se ha completado.<br/>Abandonado: no se pudo completar la fusión mediante combinación, quizás debido a la falta de almacenamiento. |
 | destination_file_id | GUID | Identificador único del archivo de destino para la combinación de los archivos de origen. |
 | lower_bound_tsn | bigint | Marca de tiempo mínima del archivo de combinación de destino. Marca de tiempo de transacción mínima de todos los archivos de origen que se van a combinar. |

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042903"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
@@ -49,7 +49,7 @@ CHANGETABLE (
  *Tabla* de cambios, *last_sync_version*  
  Devuelve información de seguimiento de todos los cambios en una tabla que se han producido desde la versión especificada por *last_sync_version*.  
   
- *cuadro*  
+ *table*  
  Es la tabla definida por el usuario de la que obtener cambios a los que se ha realizado el seguimiento. El seguimiento de cambios debe estar habilitado en la tabla. Puede utilizarse un nombre de tabla de uno, dos, tres o cuatro partes. El nombre de tabla puede ser un sinónimo de la tabla.  
   
  *last_sync_version*  
@@ -68,7 +68,7 @@ CHANGETABLE (
  *Tabla*de versiones, {<primary_key_values>}  
  Devuelve la última información de seguimiento de cambios para una fila especificada. Los valores de clave principal deben identificar la fila. <primary_key_values> identifica las columnas de clave principal y especifica los valores. Los nombres de columna de clave principal se pueden especificar en cualquier orden.  
   
- *Table*  
+ *Cuadro*  
  Es la tabla definida por el usuario de la que obtener la información de seguimiento de cambios. El seguimiento de cambios debe estar habilitado en la tabla. Puede utilizarse un nombre de tabla de uno, dos, tres o cuatro partes. El nombre de tabla puede ser un sinónimo de la tabla.  
   
  *column_name*  
@@ -87,7 +87,7 @@ CHANGETABLE (
  Es un alias de columna opcional o lista de alias de columna para las columnas devueltas por CHANGETABLE. Esto permite personalizar los nombres de columna en caso de que haya nombres duplicados en los resultados.  
   
 ## <a name="return-types"></a>Tipos de valor devuelto  
- **cuadro**  
+ **table**  
   
 ## <a name="return-values"></a>Valores devueltos  
   
@@ -96,11 +96,11 @@ CHANGETABLE (
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|SYS_CHANGE_VERSION|**BIGINT**|Valor de versión asociado al último cambio de la fila|  
-|SYS_CHANGE_CREATION_VERSION|**BIGINT**|Valores de versión asociados a la última operación de inserción.|  
+|SYS_CHANGE_VERSION|**bigint**|Valor de versión asociado al último cambio de la fila|  
+|SYS_CHANGE_CREATION_VERSION|**bigint**|Valores de versión asociados a la última operación de inserción.|  
 |SYS_CHANGE_OPERATION|**NCHAR (1)**|Especifica el tipo de cambio:<br /><br /> **U** = actualización<br /><br /> **I** = insertar<br /><br /> **D** = eliminar|  
 |SYS_CHANGE_COLUMNS|**varbinary (4100)**|Enumera las columnas que han cambiado desde last_sync_version (la básica). Tenga en cuenta que las columnas calculadas nunca aparecen como cambiadas.<br /><br /> El valor es NULL si se cumple una cualquiera de las siguientes condiciones:<br /><br /> El seguimiento de cambios de columna no está habilitado.<br /><br /> Se trata de una operación de eliminación o de inserción.<br /><br /> Se actualizaron en una única operación todas las columnas de clave no principal. No debería interpretarse directamente este valor binario. En su lugar, para interpretarlo, utilice [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
-|SYS_CHANGE_CONTEXT|**varbinary (128)**|Cambiar la información de contexto que se puede especificar opcionalmente mediante la cláusula [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) como parte de una instrucción INSERT, Update o DELETE.|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|Cambiar la información de contexto que se puede especificar opcionalmente mediante la cláusula [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) como parte de una instrucción INSERT, Update o DELETE.|  
 |\<valor de la columna de clave principal>|Igual que las columnas de tabla de usuario|Los valores de clave principal de la tabla con seguimiento. Estos valores identifican de manera única cada fila en la tabla de usuario.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
@@ -108,8 +108,8 @@ CHANGETABLE (
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|SYS_CHANGE_VERSION|**BIGINT**|Valor de versión de cambios actual asociado a la fila.<br /><br /> El valor es NULL si no se ha realizado ningún cambio durante un periodo más largo que el periodo de retención del seguimiento de cambios, o no se ha cambiado la fila desde que se habilitó el seguimiento de cambios.|  
-|SYS_CHANGE_CONTEXT|**varbinary (128)**|Cambie la información de contexto que se puede especificar opcionalmente usando la cláusula WITH como parte de una instrucción INSERT, UPDATE o DELETE.|  
+|SYS_CHANGE_VERSION|**bigint**|Valor de versión de cambios actual asociado a la fila.<br /><br /> El valor es NULL si no se ha realizado ningún cambio durante un periodo más largo que el periodo de retención del seguimiento de cambios, o no se ha cambiado la fila desde que se habilitó el seguimiento de cambios.|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|Cambie la información de contexto que se puede especificar opcionalmente usando la cláusula WITH como parte de una instrucción INSERT, UPDATE o DELETE.|  
 |\<valor de la columna de clave principal>|Igual que las columnas de tabla de usuario|Los valores de clave principal de la tabla con seguimiento. Estos valores identifican de manera única cada fila en la tabla de usuario.|  
   
 ## <a name="remarks"></a>Observaciones  
@@ -213,7 +213,7 @@ WHERE
  [Funciones de Change Tracking &#40;&#41;de Transact-SQL](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;&#41;de Transact-SQL](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;&#41;de Transact-SQL](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

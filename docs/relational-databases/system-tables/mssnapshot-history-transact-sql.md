@@ -18,10 +18,10 @@ ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a84b8c8caae460975a871a22d7cdac6d741d4d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997279"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "67997279"
 |**runstatus**|**int**|Estado de ejecución:<br /><br /> **1** = Inicio.<br /><br /> **2** = correcto.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = Reintentar.<br /><br /> **6** = error.|  
 |**start_time**|**datetime**|Hora a la que comienza la ejecución del trabajo.|  
 |**time**|**datetime**|Hora a la que se registra el mensaje.|  
-|**Duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
-|**opiniones**|**nvarchar(255)**|El texto del mensaje.|  
+|**duration**|**int**|Duración, en segundos, de la sesión del mensaje.|  
+|**comentarios**|**nvarchar(255)**|El texto del mensaje.|  
 |**delivered_transactions**|**int**|Número total de transacciones entregadas en la sesión.|  
 |**delivered_commands**|**int**|Número de comandos entregados por segundo.|  
 |**delivery_rate**|**Float (53)**|Promedio de comandos entregados por segundo.|  

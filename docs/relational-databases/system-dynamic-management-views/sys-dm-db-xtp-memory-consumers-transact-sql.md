@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026819"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
@@ -36,22 +36,22 @@ ms.locfileid: "68026819"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|memory_consumer_id|**BIGINT**|Identificador (interno) del consumidor de memoria.|  
+|memory_consumer_id|**bigint**|Identificador (interno) del consumidor de memoria.|  
 |memory_consumer_type|**int**|Tipo de consumidor de memoria:<br /><br /> 0=Aggregation. (Agrega el uso de memoria de dos o varios consumidores. No se debe mostrar).<br /><br /> 2=VARHEAP (Hace un seguimiento del consumo de memoria para un montón de longitud variable).<br /><br /> 3=HASH (Hace un seguimiento del consumo de memoria para un índice).<br /><br /> 5=DB page pool (Hace un seguimiento del consumo de memoria para un grupo de páginas de base de datos para las operaciones en tiempo de ejecución. Por ejemplo, variables de tabla y algunos recorridos serializables. Solo hay un consumidor de memoria de este tipo en cada base de datos).|  
 |memory_consumer_type_desc|**nvarchar (64)**|Tipo de consumidor de memoria: VARHEAP, HASH o PGPOOL.<br /><br /> 0: (no se debe mostrar).<br /><br /> 2: VARHEAP<br /><br /> 3 - HASH<br /><br /> 5: PGPOOL|  
 |memory_consumer_desc|**nvarchar (64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP <br />Montón de base de datos. Se usa para asignar datos de usuario para una base de datos (filas).<br />Montón del sistema de base de datos. Se usa para asignar datos de base de datos que se incluirán en volcados de memoria y no incluir datos de usuario.<br />Montón de índice de intervalo. Montón privado que el índice de intervalo usa para asignar páginas BW.<br /><br /> HASH: no Description, ya que el object_id indica la tabla y el index_id el propio índice de hash.<br /><br /> PGPOOL: para la base de datos, solo hay un grupo de páginas de 64 KB de base de datos.|  
-|object_id|**BIGINT**|Identificador del objeto al que se atribuye la memoria asignada. Un valor negativo para los objetos del sistema.|  
-|xtp_object_id|**BIGINT**|IDENTIFICADOR de objeto de la tabla optimizada para memoria.|  
+|object_id|**bigint**|Identificador del objeto al que se atribuye la memoria asignada. Un valor negativo para los objetos del sistema.|  
+|xtp_object_id|**bigint**|IDENTIFICADOR de objeto de la tabla optimizada para memoria.|  
 |index_id|**int**|El identificador de índice del consumidor (si existe). NULL para las tablas base.|  
-|allocated_bytes|**BIGINT**|Número de bytes reservados para el consumidor.|  
-|used_bytes|**BIGINT**|Bytes utilizados por el consumidor. Solo se aplica a varheap.|  
+|allocated_bytes|**bigint**|Número de bytes reservados para el consumidor.|  
+|used_bytes|**bigint**|Bytes utilizados por el consumidor. Solo se aplica a varheap.|  
 |allocation_count|**int**|Número de asignaciones.|  
 |partition_count|**int**|Exclusivamente para uso interno.|  
 |sizeclass_count|**int**|Exclusivamente para uso interno.|  
 |min_sizeclass|**int**|Exclusivamente para uso interno.|  
 |max_sizeclass|**int**|Exclusivamente para uso interno.|  
 |memory_consumer_address|**varbinary**|Dirección interna del consumidor. Solo para uso interno.|  
-|xtp_object_id|**BIGINT**|IDENTIFICADOR de objeto de OLTP en memoria que corresponde a la tabla optimizada para memoria.|  
+|xtp_object_id|**bigint**|IDENTIFICADOR de objeto de OLTP en memoria que corresponde a la tabla optimizada para memoria.|  
   
 ## <a name="remarks"></a>Observaciones  
  En la salida, los asignadores en los niveles de base de datos hacen referencia a las tablas de usuario, los índices y las tablas del sistema. VARHEAP con object_id = NULL hace referencia en la memoria asignada a tablas con columnas de longitud variable.  

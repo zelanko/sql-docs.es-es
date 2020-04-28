@@ -13,10 +13,10 @@ ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028894"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Asignación de tipos de datos de Sybase ASE y de SQL Server (SybaseToSQL)
@@ -87,7 +87,7 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
   
         No se pueden quitar las asignaciones heredadas. Sin embargo, las asignaciones heredadas se reemplazan por asignaciones personalizadas en un objeto o categoría de objeto específicos.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
 El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) o [convertir los objetos de base de datos de Sybase ase en SQL Server o SQL Azure sintaxis](converting-sybase-ase-database-objects-sybasetosql.md). Si crea un informe de evaluación, los objetos de Sybase ASE se convierten automáticamente durante la evaluación.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016797"
 ---
 # <a name="children-mdx"></a>Children (MDX)
@@ -35,7 +35,7 @@ Member_Expression.Children
  La función **Children** devuelve un conjunto ordenado de forma natural que contiene los elementos secundarios de un miembro especificado. Si el miembro especificado no tiene elementos secundarios, esta función devuelve un conjunto vacío.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente devuelve los elementos secundarios del miembro United States de la jerarquía Geography de la dimensión Geography.  
+ El ejemplo siguiente devuelve los elementos secundarios del miembro Estados Unidos de la jerarquía Geography de la dimensión Geography.  
   
 ```  
 SELECT [Geography].[Geography].[Country].&[United States].Children ON 0  

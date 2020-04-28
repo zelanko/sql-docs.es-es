@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f5a0707c599b70ec3c006b00eacb5f8c1a8a87b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018345"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Vistas de catálogo de esquemas: sys. Schemas
@@ -37,7 +37,7 @@ ms.locfileid: "68018345"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre del esquema. Es único en la base de datos.|  
+|**name**|**sysname**|Nombre del esquema. Es único en la base de datos.|  
 |**schema_id**|**int**|Id. del esquema. Es único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad propietaria del esquema.|  
   
@@ -47,10 +47,10 @@ Los esquemas de base de datos actúan como espacios de nombres o contenedores pa
 Cada esquema tiene un propietario. El propietario es una [entidad](../../relational-databases/security/authentication-access/principals-database-engine.md)de seguridad.
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Debe pertenecer al rol **public** .  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Consulte también  
-[Entidades de seguridad](../../relational-databases/security/authentication-access/principals-database-engine.md)
+[Principals](../../relational-databases/security/authentication-access/principals-database-engine.md)
 
 [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
 

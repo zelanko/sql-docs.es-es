@@ -17,10 +17,10 @@ ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043051"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
@@ -60,7 +60,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  Puede ser una de las siguientes opciones:  
   
- todas  
+ all  
  Devuelve todos los cambios dentro del intervalo LSN especificado. Para los cambios debidos a una operación de actualización, esta opción devuelve solo la fila que contiene los nuevos valores una vez aplicada la actualización.  
   
  all update old  
@@ -70,10 +70,10 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**_ _ $ start_lsn**|**binario (10)**|LSN de confirmación asociado con el cambio que conserva el orden de confirmación del cambio. Los cambios confirmados en la misma transacción comparten el mismo valor LSN de confirmación.|  
-|**_ _ $ seqval**|**binario (10)**|Valor de secuencia utilizado para ordenar los cambios en una fila dentro de una transacción.|  
+|**__$start_lsn**|**binary(10)**|LSN de confirmación asociado con el cambio que conserva el orden de confirmación del cambio. Los cambios confirmados en la misma transacción comparten el mismo valor LSN de confirmación.|  
+|**__$seqval**|**binary(10)**|Valor de secuencia utilizado para ordenar los cambios en una fila dentro de una transacción.|  
 |**_ _ $ Operation**|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) necesaria para aplicar la fila de datos modificados al origen de datos de destino. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualización (los valores de columna capturados son los de antes de la operación de actualización). Este valor solamente se aplica cuando se especifica la opción de filtro de filas 'all update old'.<br /><br /> 4 = actualización (los valores de columna capturados son los de después de la operación de actualización)|  
-|**_ _ $ update_mask**|**varbinary (128)**|Máscara de bits con un bit que corresponde a cada columna capturada identificada para la instancia de captura. Este valor tiene todos los bits definidos establecidos en 1 cuando **_ _ $ Operation** = 1 o 2. Cuando **_ _ $ Operation** = 3 o 4, solo los bits que corresponden a las columnas que han cambiado se establecen en 1.|  
+|**__$update_mask**|**varbinary(128)**|Máscara de bits con un bit que corresponde a cada columna capturada identificada para la instancia de captura. Este valor tiene todos los bits definidos establecidos en 1 cuando **_ _ $ Operation** = 1 o 2. Cuando **_ _ $ Operation** = 3 o 4, solo los bits que corresponden a las columnas que han cambiado se establecen en 1.|  
 |**\<columnas de la tabla de origen capturadas>**|Varía|Las columnas restantes devueltas por la función son las columnas capturadas identificadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
   
 ## <a name="permissions"></a>Permisos  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026851"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
@@ -45,12 +45,12 @@ ms.locfileid: "68026851"
   
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|cycle_id|**BIGINT**|Identificador único del ciclo de recolección de elementos no utilizados.|  
-|ticks_at_cycle_start|**BIGINT**|Tics en el momento en el que se inició el ciclo.|  
-|ticks_at_cycle_end|**BIGINT**|Tics en el momento en el que finalizó el ciclo.|  
-|base_generation|**BIGINT**|El valor de generación base actual de la base de datos. Representa la marca de tiempo de la transacción activa más antigua usada para identificar transacciones para la recolección de elementos no utilizados. El identificador de la transacción activa más antigua se actualiza en incrementos de 16. Por ejemplo, si tiene identificadores de transacción como 124, 125, 126... 139, el valor será 124. Cuando agregue otra transacción, por ejemplo 140, el valor será 140.|  
-|xacts_copied_to_local|**BIGINT**|El número de transacciones copiadas de la canalización de transacciones en la matriz de generación de la base de datos.|  
-|xacts_in_gen_0- xacts_in_gen_15|**BIGINT**|Número de transacciones de cada generación.|  
+|cycle_id|**bigint**|Identificador único del ciclo de recolección de elementos no utilizados.|  
+|ticks_at_cycle_start|**bigint**|Tics en el momento en el que se inició el ciclo.|  
+|ticks_at_cycle_end|**bigint**|Tics en el momento en el que finalizó el ciclo.|  
+|base_generation|**bigint**|El valor de generación base actual de la base de datos. Representa la marca de tiempo de la transacción activa más antigua usada para identificar transacciones para la recolección de elementos no utilizados. El identificador de la transacción activa más antigua se actualiza en incrementos de 16. Por ejemplo, si tiene identificadores de transacción como 124, 125, 126... 139, el valor será 124. Cuando agregue otra transacción, por ejemplo 140, el valor será 140.|  
+|xacts_copied_to_local|**bigint**|El número de transacciones copiadas de la canalización de transacciones en la matriz de generación de la base de datos.|  
+|xacts_in_gen_0- xacts_in_gen_15|**bigint**|Número de transacciones de cada generación.|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  

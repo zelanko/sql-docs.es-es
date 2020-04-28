@@ -10,10 +10,10 @@ ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006570"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Ejecutar la consola SSMA (AccessToSQL)
@@ -26,7 +26,7 @@ Los comandos del proyecto controlan la creación de proyectos, la apertura, el g
   
 Create-New-Project: crea un nuevo proyecto de SSMA.  
   
-**Manuscrit**  
+**Script**  
   
 -   `project-folder`indica la carpeta del proyecto que se va a crear.  
   
@@ -34,7 +34,7 @@ Create-New-Project: crea un nuevo proyecto de SSMA.
   
 -   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. booleano  
   
--   `project-type`es un atributo opcional.  Las siguientes opciones están disponibles para el tipo de proyecto:  
+-   `project-type` es un atributo opcional.  Las siguientes opciones están disponibles para el tipo de proyecto:  
   
     -   SQL Server-2005  
   
@@ -50,7 +50,7 @@ Create-New-Project: crea un nuevo proyecto de SSMA.
   
     El valor predeterminado es "SQL-Server-2008".  
   
-**Ejemplo**:  
+**Ejemplo:**  
   
 ```xml  
 <create-new-project  
@@ -73,7 +73,7 @@ El atributo ' Project-type ' es **SQL-Server-2008** de forma predeterminada.
   
 Abrir proyecto: abre un proyecto existente.  
   
-**Manuscrit**  
+**Script**  
   
 -   `project-folder`indica la carpeta del proyecto que se va a crear. El comando genera un error si la carpeta especificada no existe.  {string}  
   
@@ -96,7 +96,7 @@ Abrir proyecto: abre un proyecto existente.
   
 guardar-proyecto: guarda el proyecto de migración.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -107,7 +107,7 @@ guardar-proyecto: guarda el proyecto de migración.
   
 Close-Project: cierra el proyecto de migración.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -137,7 +137,7 @@ Connect-Source-Database
   
 -   Si no se puede establecer la conexión con el origen, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 La definición del servidor se recupera del atributo name definido para cada conexión en la sección Server del archivo de conexión del servidor o del archivo de script.  
   
@@ -150,7 +150,7 @@ La definición del servidor se recupera del atributo name definido para cada con
   
 Load-Access-Database: se usa para cargar archivos de base de datos de Access  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -178,7 +178,7 @@ forzar carga-origen/destino-base de datos
   
 -   Si no se puede establecer la conexión con el origen o el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
@@ -208,7 +208,7 @@ reconnect-Source-Database
   
 -   Si no se puede establecer la conexión con el origen, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -223,7 +223,7 @@ Connect-Target-Database
   
 -   Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 La definición del servidor se recupera del atributo name definido para cada conexión en la sección Server del archivo de conexión del servidor o del archivo de script.  
   
@@ -240,7 +240,7 @@ reconnect-Target-Database
   
 -   Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -261,7 +261,7 @@ generar informe de evaluación
   
 -   No se puede conectar con el servidor de base de datos de origen durante la ejecución del comando, lo que da lugar a la finalización de la aplicación de consola.  
   
-**Manuscrit**  
+**Script**  
   
 -   `assessment-report-folder:`Especifica la carpeta donde se puede almacenar el informe de evaluación. (atributo opcional)  
   
@@ -334,7 +334,7 @@ Convert-Schema
   
 -   Si no se realiza la conexión a la base de datos de origen o de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de origen o de destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
   
-**Manuscrit**  
+**Script**  
   
 -   `conversion-report-folder:`Especifica la carpeta donde se puede almacenar el informe de evaluación. (atributo opcional)  
   
@@ -397,7 +397,7 @@ migrar datos
   
 1.  Migra los datos de origen al destino.  
   
-**Manuscrit**  
+**Script**  
   
 -   `object-name:`Especifica los objetos de origen que se han tenido en cuenta para migrar datos (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
@@ -453,7 +453,7 @@ or
   
 Link-Tables: este comando vincula la tabla de origen (de acceso) con la tabla de destino.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -479,7 +479,7 @@ or
   
 unlink-Tables: este comando desvincula la tabla de origen (acceso) de la tabla de destino.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplos de sintaxis:**  
   
@@ -509,7 +509,7 @@ El comando de preparación de la migración inicia la asignación de esquemas en
   
 Map-Schema: asignación de esquema de la base de datos de origen al esquema de destino.  
   
-**Manuscrit**  
+**Script**  
   
 -   `source-schema`especifica el esquema de origen que se va a migrar.  
   
@@ -538,7 +538,7 @@ sincronizar-destino
   
 3.  Si no se realiza la conexión a la base de datos de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de base de datos de destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `object-name:`Especifica los objetos de destino que se tienen en cuenta para la sincronización con la base de datos de destino (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
@@ -601,7 +601,7 @@ actualizar desde la base de datos
   
 -   Si este comando se ejecuta en la base de datos de destino, se genera un error.  
   
-**Manuscrit**  
+**Script**  
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
@@ -664,7 +664,7 @@ guardar como script
   
 Se usa para guardar los scripts de los objetos en un archivo mencionado cuando metabase = Target, es una alternativa al comando de sincronización, en el que obtenemos los scripts y ejecutamos lo mismo en la base de datos de destino.  
   
-**Manuscrit**  
+**Script**  
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   

@@ -10,10 +10,10 @@ ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4b64cd0aa3d6a6b03e396bfd0ecbc2ce25519897
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028773"
 ---
 # <a name="new-project-sybasetosql"></a>Nuevo proyecto (SybaseToSQL)
@@ -23,21 +23,21 @@ Utilice el cuadro de diálogo **nuevo proyecto** para crear un nuevo proyecto de
 **Nombre**  
 Escriba el nombre del proyecto. SSMA anexará la extensión de archivo.  
   
-**Location**  
+**Ubicación**  
 Escriba o busque la carpeta o la ubicación de red en la que desea guardar el proyecto.  
   
 **Migrar a**  
 Seleccione una de las siguientes versiones de la base de datos de destino en la lista siguiente:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
 -   SQL Azure  
   

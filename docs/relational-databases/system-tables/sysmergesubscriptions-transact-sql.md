@@ -18,10 +18,10 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029774"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68029774"
 |subscriber_server|**sysname**|Identificador del servidor. Se utiliza para asignar el campo srvid al valor específico del servidor cuando se migra una copia de la base de datos de suscripciones a un servidor diferente.|  
 |db_name|**sysname**|Nombre de la base de datos de suscripción.|  
 |pubid|**uniqueidentifier**|Identificador de la publicación a partir de la que se creó la suscripción actual.|  
-|datasource_type|**int**|Tipo del origen de datos:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = OLE DB jet.|  
+|datasource_type|**int**|Tipo del origen de datos:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = OLE DB jet.|  
 |subid|**uniqueidentifier**|Número de identificación único para la suscripción.|  
 |replnickname|**binary**|Alias comprimido de la réplica.|  
 |replicastate|**uniqueidentifier**|Identificador único que se utiliza para determinar si la sincronización anterior se realizó correctamente comparando el valor del publicador con el valor del suscriptor.|  
@@ -43,10 +43,10 @@ ms.locfileid: "68029774"
 |subscription_type|**int**|El tipo de suscripción:<br /><br /> **0** = extracción.<br /><br /> **1** = extracción.<br /><br /> **2** = anónimo.|  
 |sync_type|**tinyint**|Tipo de sincronización:<br /><br /> **1** = automático.<br /><br /> **2** = sin sincronización.|  
 |description|**nvarchar(255)**|Descripción breve de la suscripción.|  
-|priority|**impuestos**|Especifica la prioridad de la suscripción y permite la implementación de una resolución de conflictos basada en prioridades. Es igual a **0,00** para todas las suscripciones locales o anónimas.|  
-|recgen|**BIGINT**|Número de la última generación recibida.|  
+|priority|**real**|Especifica la prioridad de la suscripción y permite la implementación de una resolución de conflictos basada en prioridades. Es igual a **0,00** para todas las suscripciones locales o anónimas.|  
+|recgen|**bigint**|Número de la última generación recibida.|  
 |recguid|**uniqueidentifier**|Identificador único de la última generación recibida.|  
-|sentgen|**BIGINT**|Número de la última generación enviada.|  
+|sentgen|**bigint**|Número de la última generación enviada.|  
 |sentguid|**uniqueidentifier**|Identificador único de la última generación enviada.|  
 |schemaversion|**int**|Número del último esquema recibido.|  
 |schemaguid|**uniqueidentifier**|Identificador único del último esquema recibido.|  

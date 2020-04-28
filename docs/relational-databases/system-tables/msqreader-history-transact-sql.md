@@ -18,10 +18,10 @@ ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032527"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68032527"
 |**runstatus**|**int**|Estado de ejecución del agente:<br /><br /> **1** = Inicio.<br /><br /> **2** = correcto.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = Reintentar.<br /><br /> **6** = error.|  
 |**start_time**|**datetime**|Fecha y hora en que empezó la sesión del agente.|  
 |**time**|**datetime**|Fecha y hora del último mensaje registrado.|  
-|**Duration**|**int**|Tiempo transcurrido de la actividad de sesión registrada, en segundos.|  
-|**opiniones**|**nvarchar(255)**|Texto descriptivo.|  
-|**transaction_id**|**nvarchar (40)**|Id. de transacción almacenado en el mensaje, si procede.|  
+|**duration**|**int**|Tiempo transcurrido de la actividad de sesión registrada, en segundos.|  
+|**comentarios**|**nvarchar(255)**|Texto descriptivo.|  
+|**transaction_id**|**nvarchar(40)**|Id. de transacción almacenado en el mensaje, si procede.|  
 |**transaction_status**|**int**|El estado de la transacción.|  
 |**transactions_processed**|**int**|Número acumulado de transacciones procesadas en la sesión.|  
 |**commands_processed**|**int**|Número acumulado de comandos procesados en la sesión.|  

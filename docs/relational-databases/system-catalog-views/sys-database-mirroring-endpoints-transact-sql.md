@@ -23,10 +23,10 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bcbe9d23bab18e47b69f82812f604a94d4c5ce9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022769"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
@@ -41,13 +41,13 @@ ms.locfileid: "68022769"
 |-----------------|---------------|-----------------|  
 |**\<columnas heredadas>**|-|Hereda columnas de **Sys. endpoints** (para obtener más información, vea [Sys. endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
 |**role**|**tinyint**|Rol de creación de reflejo, uno de los siguientes:<br /><br /> **0** = ninguno<br /><br /> **1** = asociado<br /><br /> **2** = testigo<br /><br /> **3** = todo<br /><br /> Nota: este valor solo es relevante para la creación de reflejo de la base de datos.|  
-|**role_desc**|**nvarchar (60)**|Descripción del rol de creación de reflejo, uno de los siguientes:<br /><br /> **NINGUNA**<br /><br /> **ASOCIADO**<br /><br /> **TESTIGO**<br /><br /> **ALL**<br /><br /> Nota: este valor solo es relevante para la creación de reflejo de la base de datos.|  
+|**role_desc**|**nvarchar(60)**|Descripción del rol de creación de reflejo, uno de los siguientes:<br /><br /> **NINGUNA**<br /><br /> **ASOCIADO**<br /><br /> **TESTIGO**<br /><br /> **ALL**<br /><br /> Nota: este valor solo es relevante para la creación de reflejo de la base de datos.|  
 |**is_encryption_enabled**|**bit**|**1** significa que el cifrado está habilitado.<br /><br /> **0** significa que el cifrado está deshabilitado.|  
 |**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** : NTLM<br /><br /> **2** -Kerberos<br /><br /> **3** -negociación<br /><br /> **4** : certificado<br /><br /> **5** : NTLM, certificado<br /><br /> **6** -Kerberos, certificado<br /><br /> **7** -Negotiate, certificado<br /><br /> **8** -certificado, NTLM<br /><br /> **9** -certificado, Kerberos<br /><br /> **10** -certificado, Negotiate|  
 |**connection_auth_desc**|**Nvarchar (60)**|Descripción del tipo de autenticación necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICADO<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  
 |**certificate_id**|**int**|Identificador del certificado utilizado para la autenticación, si lo hay.<br /><br /> 0 = Se está utilizando la Autenticación de Windows.|  
 |**encryption_algorithm**|**tinyint**|Algoritmo de cifrado, uno de los siguientes:<br /><br /> **0** : ninguno<br /><br /> **1** -RC4<br /><br /> **2** -AES<br /><br /> **3** -ninguno, RC4<br /><br /> **4** : ninguno, AES<br /><br /> **5** -RC4, AES<br /><br /> **6** : AES, RC4<br /><br /> **7** : ninguno, RC4, AES<br /><br /> **8** : ninguno, AES, RC4|  
-|**encryption_algorithm_desc**|**nvarchar (60)**|Descripción del algoritmo de cifrado, uno de los siguientes:<br /><br /> Ninguno<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo de cifrado, uno de los siguientes:<br /><br /> Ninguno<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
 ## <a name="remarks"></a>Observaciones  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68022769"
  [Sys. availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [Sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
  [Sys. database_mirroring_witnesses &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   
- [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
+ [El extremo de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

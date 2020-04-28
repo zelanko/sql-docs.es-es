@@ -22,10 +22,10 @@ ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006647"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Conexión a SQL Server (AccessToSQL)
@@ -97,11 +97,11 @@ Puede conectarse o volver a conectarse a versiones posteriores de SQL Server.
 ||||||||
 |-|-|-|-|-|-|-|
 |**VERSIÓN de tipo de proyecto frente al servidor de destino**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (versión: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (versión: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (versión: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (versión: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (versión: 13. x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|Sí|Sí|Sí|Sí|Sí||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||Sí|Sí|Sí|Sí||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||Sí|Sí|Sí||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Sí|Sí|Sí|Sí|Sí||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Sí|Sí|Sí|Sí||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Sí|Sí|Sí||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Sí|Sí||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Sí||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Sí||
 |SQL Azure||||||Sí|
   
 > [!IMPORTANT]  
@@ -119,7 +119,7 @@ La conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permane
   
 El procedimiento para volver a conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el mismo que el procedimiento para establecer una conexión.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
 Si desea personalizar la asignación entre las bases de datos de origen y de destino, consulte [asignación de bases de datos de origen y de destino](mapping-source-and-target-databases-accesstosql.md) ; en caso contrario, el siguiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso consiste en convertir los objetos de base de datos a sintaxis mediante la conversión de objetos de [base de datos](converting-access-database-objects-accesstosql.md) .  
   
 ## <a name="see-also"></a>Consulte también  

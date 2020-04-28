@@ -18,10 +18,10 @@ ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026670"
 ---
 # <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68026670"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**id_de_solicitud**|**int**|Identifica una entrada de solicitud de estado en la tabla [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) .|  
+|**request_id**|**int**|Identifica una entrada de solicitud de estado en la tabla [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) .|  
 |**personas**|**sysname**|Nodo del mismo nivel que generó la respuesta.|  
 |**peer_db**|**sysname**|Base de datos de suscripciones del nodo del mismo nivel que generó la respuesta.|  
 |**received_date**|**datetime**|La fecha y hora en que se recibió la solicitud del mismo nivel.|  

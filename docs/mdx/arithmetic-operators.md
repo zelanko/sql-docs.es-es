@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017084"
 ---
 # <a name="arithmetic-operators"></a>Operadores aritméticos
@@ -25,9 +25,9 @@ ms.locfileid: "68017084"
 |Operator|Descripción|  
 |--------------|-----------------|  
 |[+ (Sumar)](../mdx/add-mdx.md)|Suma dos números.|  
-|[/(Dividir)](../mdx/divide-mdx-operator-reference.md)|Divide un número entre otro.|  
+|[/ (Dividir)](../mdx/divide-mdx-operator-reference.md)|Divide un número entre otro.|  
 |[* (Multiplicar)](../mdx/multiply-mdx.md)|Multiplica dos números.|  
-|[-(Restar)](../mdx/subtract-mdx.md)|Resta dos números.|  
+|[- (Restar)](../mdx/subtract-mdx.md)|Resta dos números.|  
 |^ (Elevar a una potencia)|Eleva un número a otro.|  
   
 > [!NOTE]  

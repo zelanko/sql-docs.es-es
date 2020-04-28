@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fa2412e61e30852497ffa00493ea6dbe244989a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001115"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>Sys. pdw_nodes_tables (Transact-SQL)
@@ -41,10 +41,10 @@ ms.locfileid: "68001115"
 |large_value_types_out_of_row|**bit**|1 = Los tipos de valores grandes se guardan fuera de la fila.|Siempre es 0.|  
 |is_tracked_by_cdc|**bit**|1 = la tabla está habilitada para la captura de datos modificados|Siempre es 0; no se admite CDC.|  
 |lock_escalation|**tinyint**|El valor de la opción LOCK_ESCALATION para la tabla: 2 = AUTO|Siempre es 2.|  
-|lock_escalation_desc|**nvarchar (60)**|Una descripción de texto de la opción lock_escalation.|"Siempre" AUTO.|  
+|lock_escalation_desc|**nvarchar(60)**|Una descripción de texto de la opción lock_escalation.|"Siempre" AUTO.|  
 |pdw_node_id|**int**|Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|NOT NULL|  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

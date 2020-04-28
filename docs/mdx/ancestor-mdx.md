@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017127"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
@@ -38,7 +38,7 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
- *Posición*  
+ *Distancia*  
  Expresión numérica válida que especifica la distancia desde el miembro especificado.  
   
 ## <a name="remarks"></a>Observaciones  

@@ -18,10 +18,10 @@ ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017703"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68017703"
 |-----------------|---------------|-----------------|  
 |**guidsrc**|**uniqueidentifier**|Identificador global de los cambios que ha identificado la generación en el suscriptor.|  
 |**pubid**|**uniqueidentifier**|Identificador de publicación.|  
-|**última**|**BIGINT**|Valor de generación.|  
+|**última**|**bigint**|Valor de generación.|  
 |**art_nick**|**int**|El alias del artículo.|  
 |**nicknames**|**varbinary (1001)**|Lista de alias de otros suscriptores de los que se conoce que han tenido esta generación. Se usa para evitar enviar una generación a un suscriptor que ya ha visto los cambios. Los alias de la lista se mantienen ordenados para que las búsquedas sean más eficaces. Si hay más alias de los que caben en el campo, no podrán aprovechar esta optimización.|  
 |**coldate**|**datetime**|Fecha en que se agrega la generación actual a la tabla.|  

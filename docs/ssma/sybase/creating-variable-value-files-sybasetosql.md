@@ -13,10 +13,10 @@ ms.assetid: 395be464-4b19-44f7-91e5-b8876d6743dc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c0c76a36502d9d590b6db478efcab6feb50ba01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029389"
 ---
 # <a name="creating-variable-value-files-sybasetosql"></a>Creación de archivos de valor variable (SybaseToSQL)
@@ -50,7 +50,7 @@ El archivo de valores de variable es un archivo XML que comprende los valores de
   
 </variables>  
 ```  
-**Ejemplo 2:**  
+**Ejemplo 2:**  
   
 ```xml  
 <!--Sample of variable value file commands-->  

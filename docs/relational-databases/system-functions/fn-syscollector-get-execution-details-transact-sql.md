@@ -18,10 +18,10 @@ ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042822"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
@@ -56,7 +56,7 @@ fn_syscollector_get_execution_details ( log_id )
 |starttime|**datetime**|Hora en que el paquete empezó a ejecutarse.|  
 |endtime|**datetime**|Hora en que la ejecución del paquete se completó.|  
 |datacode|**int**|Valor entero que identifica el evento asociado a la entrada de registro. El valor "0" indica que el evento no ha generado ningún identificador.|  
-|databytes|**impresión**|Matriz de bytes que identifica un valor devuelto.|  
+|databytes|**image**|Matriz de bytes que identifica un valor devuelto.|  
 |message|**nvarchar**|Descripción del evento e información asociada a dicho evento.|  
   
 ## <a name="permissions"></a>Permisos  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026787"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
@@ -43,24 +43,24 @@ ms.locfileid: "68026787"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Id. del objeto.|  
-|xtp_object_id|**BIGINT**|IDENTIFICADOR de la tabla optimizada para memoria.|  
+|xtp_object_id|**bigint**|IDENTIFICADOR de la tabla optimizada para memoria.|  
 |index_id|**int**|Id. del índice.|  
-|delta_pages|**BIGINT**|Número total de páginas delta de este índice en el árbol.|  
-|internal_pages|**BIGINT**|Solo para uso interno. Número total de páginas internas de este índice en el árbol.|  
-|leaf_pages|**BIGINT**|Número total de páginas hoja de este índice en el árbol.|  
-|outstanding_retired_nodes|**BIGINT**|Solo para uso interno. Número total de nodos de este índice en las estructuras internas.|  
-|page_update_count|**BIGINT**|Número acumulativo de operaciones que actualizan una página del índice.|  
-|page_update_retry_count|**BIGINT**|Número acumulativo de reintentos de una operación que actualiza una página del índice.|  
-|page_consolidation_count|**BIGINT**|Número acumulativo de consolidaciones de páginas del índice.|  
-|page_consolidation_retry_count|**BIGINT**|Número acumulativo de reintentos de operaciones de consolidación de páginas.|  
-|page_split_count|**BIGINT**|Número acumulativo de operaciones de división de páginas del índice.|  
-|page_split_retry_count|**BIGINT**|Número acumulativo de reintentos de operaciones de división de páginas.|  
-|key_split_count|**BIGINT**|Número acumulativo de divisiones de clave del índice.|  
-|key_split_retry_count|**BIGINT**|Número acumulativo de reintentos de operaciones de división de clave.|  
-|page_merge_count|**BIGINT**|Número acumulativo de operaciones de mezcla de páginas del índice.|  
-|page_merge_retry_count|**BIGINT**|Número acumulativo de reintentos de operaciones de mezcla de páginas.|  
-|key_merge_count|**BIGINT**|Número acumulativo de operaciones de mezcla de claves del índice.|  
-|key_merge_retry_count|**BIGINT**|Número acumulativo de reintentos de operaciones de mezcla de claves.|  
+|delta_pages|**bigint**|Número total de páginas delta de este índice en el árbol.|  
+|internal_pages|**bigint**|Para uso interno. Número total de páginas internas de este índice en el árbol.|  
+|leaf_pages|**bigint**|Número total de páginas hoja de este índice en el árbol.|  
+|outstanding_retired_nodes|**bigint**|Para uso interno. Número total de nodos de este índice en las estructuras internas.|  
+|page_update_count|**bigint**|Número acumulativo de operaciones que actualizan una página del índice.|  
+|page_update_retry_count|**bigint**|Número acumulativo de reintentos de una operación que actualiza una página del índice.|  
+|page_consolidation_count|**bigint**|Número acumulativo de consolidaciones de páginas del índice.|  
+|page_consolidation_retry_count|**bigint**|Número acumulativo de reintentos de operaciones de consolidación de páginas.|  
+|page_split_count|**bigint**|Número acumulativo de operaciones de división de páginas del índice.|  
+|page_split_retry_count|**bigint**|Número acumulativo de reintentos de operaciones de división de páginas.|  
+|key_split_count|**bigint**|Número acumulativo de divisiones de clave del índice.|  
+|key_split_retry_count|**bigint**|Número acumulativo de reintentos de operaciones de división de clave.|  
+|page_merge_count|**bigint**|Número acumulativo de operaciones de mezcla de páginas del índice.|  
+|page_merge_retry_count|**bigint**|Número acumulativo de reintentos de operaciones de mezcla de páginas.|  
+|key_merge_count|**bigint**|Número acumulativo de operaciones de mezcla de claves del índice.|  
+|key_merge_retry_count|**bigint**|Número acumulativo de reintentos de operaciones de mezcla de claves.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos actual.  

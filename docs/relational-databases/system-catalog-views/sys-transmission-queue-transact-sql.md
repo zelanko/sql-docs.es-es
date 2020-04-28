@@ -20,10 +20,10 @@ ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022599"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68022599"
 |**from_service_name**|**nvarchar(256)**|Nombre del servicio que origina este mensaje. Acepta valores NULL.|  
 |**service_contract_name**|**nvarchar(256)**|Nombre del contrato por el que se rige la conversación para este mensaje. Acepta valores NULL.|  
 |**enqueue_time**|**datetime**|Hora en que el mensaje entró en la cola. Este valor utiliza UTC, independientemente de la zona horaria local de la instancia. No acepta valores NULL.|  
-|**message_sequence_number**|**BIGINT**|Número de secuencia del mensaje. No acepta valores NULL.|  
+|**message_sequence_number**|**bigint**|Número de secuencia del mensaje. No acepta valores NULL.|  
 |**message_type_name**|**nvarchar(256)**|Nombre del tipo de mensaje para el mensaje. Acepta valores NULL.|  
 |**is_conversation_error**|**bit**|Indica si este mensaje es un mensaje de error.<br /><br /> 0 = No es un mensaje de error.<br /><br /> 1 = Mensaje de error.<br /><br /> No acepta valores NULL.|  
 |**is_end_of_dialog**|**bit**|Indica si este mensaje es un mensaje de final de conversación. No acepta valores NULL.<br /><br /> 0 = No es un mensaje de final de conversación.<br /><br /> 1 = Mensaje de final de conversación.<br /><br /> No acepta valores NULL.|  

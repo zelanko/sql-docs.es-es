@@ -14,10 +14,10 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006637"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>Convertir, cargar y migrar (AccessToSQL)
@@ -28,10 +28,10 @@ Una vez completada la migración, puede ver mensajes informativos, de advertenci
 La sección **migrar datos para objetos seleccionados** de la página también contiene un botón de **Informe** . Puede hacer clic en este botón para ver un informe de migración de datos.  
   
 ## <a name="options"></a>Opciones  
-**Report**  
+**Informe**  
 Muestra el informe de conversión o migración asociado.  
   
 ## <a name="see-also"></a>Consulte también  
 [Referencia de la interfaz de usuario (acceso)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-[asistente para migración](migration-wizard-accesstosql.md)  
+[Asistente para la migración](migration-wizard-accesstosql.md)  
   

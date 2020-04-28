@@ -20,10 +20,10 @@ ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bda45d55505356594f23a8bb1ece2e95153206a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022654"
 ---
 # <a name="systrace_columns-transact-sql"></a>sys.trace_columns (Transact-SQL)
@@ -34,13 +34,12 @@ ms.locfileid: "68022654"
  Para obtener una lista completa de los eventos de seguimiento admitidos, vea [SQL Server referencia](../../relational-databases/event-classes/sql-server-event-class-reference.md)de la clase de eventos.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use vistas de catálogo de eventos extendidos en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use vistas de catálogo de eventos extendidos en su lugar.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|Id. único de esta columna.|  
-|**Name**|**nvarchar(128)**|Nombre único de esta columna. Este parámetro no se traduce.|  
+|**name**|**nvarchar(128)**|Nombre único de esta columna. Este parámetro no se traduce.|  
 |**type_name**|**nvarchar(128)**|Nombre del tipo de datos de esta columna.|  
 |**max_size**|**int**|Tamaño máximo de los datos de esta columna, en bytes.|  
 |**is_filterable**|**bit**|Indica si la columna se puede utilizar para especificar un filtro.<br /><br /> 0 = falso<br /><br /> 1 = verdadero|  

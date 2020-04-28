@@ -18,10 +18,10 @@ ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 114ffee3ca13d7b5a42c3843957df0a2450b787f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990246"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
@@ -34,11 +34,11 @@ ms.locfileid: "67990246"
 |**publisherindex_id**|**int**|Identifica un índice publicado.|  
 |**table_id**|**int**|Identifica la tabla de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) a la que pertenece el índice.|  
 |**publisher_id**|**smallint**|Identifica el publicador que no es de SQL Server desde el cual se está publicando el índice.|  
-|**Name**|**sysname**|Nombre del índice publicado.|  
-|**automáticamente**|**nvarchar(255)**|Un tipo de índice admitido de la tabla del sistema [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) .|  
+|**name**|**sysname**|Nombre del índice publicado.|  
+|**type**|**nvarchar(255)**|Un tipo de índice admitido de la tabla del sistema [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) .|  
   
 ## <a name="see-also"></a>Consulte también  
- [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicación de base de datos heterogénea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933820"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
@@ -46,7 +46,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="arguments"></a>Argumentos  
 `[ @remoteserver = ] 'remoteserver'`Es el nombre del servidor remoto asignado al inicio de sesión remoto que se va a quitar. *RemoteServer* es de **tipo sysname**y no tiene ningún valor predeterminado. *RemoteServer* ya debe existir.  
   
-`[ @loginame = ] 'login'`Es el nombre de inicio de sesión opcional en el servidor local que está asociado con el servidor remoto. *login* es de **tipo sysname y su**valor predeterminado es NULL. el *Inicio de sesión* ya debe existir si se especifica.  
+`[ @loginame = ] 'login'`Es el nombre de inicio de sesión opcional en el servidor local que está asociado con el servidor remoto. *login* es de tipo **sysname** y su valor predeterminado es NULL. el *Inicio de sesión* ya debe existir si se especifica.  
   
 `[ @remotename = ] 'remote_name'`Es el nombre opcional del inicio de sesión remoto que se asigna al *Inicio de sesión* cuando se inicia sesión desde el servidor remoto. *remote_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -58,8 +58,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
  Para agregar usuarios del servidor local, use **sp_addlogin**. Para quitar usuarios del servidor local, use **sp_droplogin**.  
   
- Los inicios de sesión remotos solo son necesarios cuando se usan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y posteriores utilizan en su lugar inicios de sesión de servidores vinculados. Use **sp_addlinkedsrvlogin** y **sp_droplinkedsrvlogin** para agregar y quitar inicios de sesión de servidor vinculado.  
+ Los inicios de sesión remotos solo son necesarios cuando se usan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 y posteriores utilizan en su lugar inicios de sesión de servidores vinculados. Use **sp_addlinkedsrvlogin** y **sp_droplinkedsrvlogin** para agregar y quitar inicios de sesión de servidor vinculado.  
   
  **sp_dropremotelogin** no se puede ejecutar en una transacción definida por el usuario.  
   

@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946480"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expresiones de ruta de acceso: Especificación de ejes
@@ -47,10 +47,10 @@ ms.locfileid: "67946480"
 |----------|-----------------|  
 |**Child1**|Devuelve elementos secundarios del nodo de contexto.|  
 |**descendant**|Devuelve todos los descendientes del nodo de contexto.|  
-|**parent**|Devuelve el elemento primario del nodo de contexto.|  
-|**atribui**|Devuelve atributos del nodo de contexto.|  
+|**primario**|Devuelve el elemento primario del nodo de contexto.|  
+|**attribute**|Devuelve atributos del nodo de contexto.|  
 |**mismo**|Devuelve el propio nodo de contexto.|  
-|**descendiente o propio**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
+|**descendant-or-self**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
   
  Todos estos ejes, excepto el eje **primario** , son ejes hacia delante. El eje **primario** es un eje inverso, porque busca hacia atrás en la jerarquía del documento. Por ejemplo, la expresión de ruta de acceso relativa `child::ProductDescription/child::Summary` tiene dos pasos, y cada uno especifica un eje `child`. En el primer paso se recupera \<el elemento ProductDescription> elementos secundarios del nodo de contexto. Para cada \<nodo de elemento de> de ProductDescription, el segundo paso \<recupera los elementos secundarios del nodo de elemento de Resumen>.  
   

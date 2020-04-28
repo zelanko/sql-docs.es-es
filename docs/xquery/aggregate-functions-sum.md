@@ -16,10 +16,10 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985742"
 ---
 # <a name="aggregate-functions---sum"></a>Funciones de agregado: sum
@@ -48,7 +48,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  La función devuelve un error en tiempo de ejecución cuando se produce una excepción por desbordamiento o por valores fuera del intervalo.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas **** en varias columnas de tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML de la base de datos.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas **xml** en varias columnas de tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML de la base de datos.  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Utilizar la función sum() de XQuery para calcular el número total de horas de trabajo de todos los centros de trabajo del proceso de fabricación  
  La consulta siguiente averigua el número total de horas de trabajo para todos los centros de trabajo del proceso de fabricación de todos los modelos de producto para los que se almacenan instrucciones de fabricación.  

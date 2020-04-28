@@ -18,10 +18,10 @@ ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990055"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
@@ -40,8 +40,8 @@ ms.locfileid: "67990055"
 |**sequence_number**|**int**|Número incremental que indica el orden correcto de la información para los errores que ocupan varios registros.|  
 |**log_time**|**datetime**|Fecha y hora en que se creó el registro.|  
 |**log_time_utc**|**datetime**|Fecha y hora en que se creó el registro en hora universal coordinada.|  
-|**Mensaje**|**nvarchar**|Texto del mensaje.|  
-|**fuentes**|**nvarchar**|Origen del evento o mensaje de error.|  
+|**message**|**nvarchar**|Texto del mensaje.|  
+|**de origen**|**nvarchar**|Origen del evento o mensaje de error.|  
 |**help_url**|**nvarchar**|Dirección URL (si está disponible) donde se puede encontrar más información acerca del error.|  
   
 ## <a name="remarks"></a>Observaciones  

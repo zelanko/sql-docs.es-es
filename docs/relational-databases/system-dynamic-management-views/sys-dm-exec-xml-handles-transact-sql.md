@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936783"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
@@ -56,11 +56,11 @@ dm_exec_xml_handles (session_id | 0 )
 |**statement_start_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o en el procedimiento almacenado en el que se produce la llamada **sp_xml_preparedocument** . Se puede usar junto con el **sql_handle**, el **statement_end_offset**y la función de administración dinámica **Sys. dm_exec_sql_text** para recuperar la instrucción que se está ejecutando actualmente para la solicitud.|  
 |**statement_end_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o en el procedimiento almacenado en el que se produce la llamada **sp_xml_preparedocument** . Se puede usar junto con el **sql_handle**, el **statement_start_offset**y la función de administración dinámica **Sys. dm_exec_sql_text** para recuperar la instrucción que se está ejecutando actualmente para la solicitud.|  
 |**creation_time**|**datetime**|Marca de tiempo cuando se llamó a **sp_xml_preparedocument** .|  
-|**original_document_size_bytes**|**BIGINT**|Tamaño del documento XML no analizado, en bytes.|  
-|**original_namespace_document_size_bytes**|**BIGINT**|Tamaño del documento de espacio de nombres XML no analizado, en bytes. Es NULL si no hay ningún documento de espacio de nombres.|  
-|**num_openxml_calls**|**BIGINT**|Número de llamadas OPENXML para este identificador de documento.|  
-|**row_count**|**BIGINT**|Número de filas devueltas por todas las llamadas OPENXML anteriores para este identificador de documento.|  
-|**dormant_duration_ms**|**BIGINT**|Milisegundos desde la última llamada OPENXML. Si no se ha llamado a OPENXML, devuelve milisegundos desde la llamada a **sp_xml_preparedocumen**t.|  
+|**original_document_size_bytes**|**bigint**|Tamaño del documento XML no analizado, en bytes.|  
+|**original_namespace_document_size_bytes**|**bigint**|Tamaño del documento de espacio de nombres XML no analizado, en bytes. Es NULL si no hay ningún documento de espacio de nombres.|  
+|**num_openxml_calls**|**bigint**|Número de llamadas OPENXML para este identificador de documento.|  
+|**row_count**|**bigint**|Número de filas devueltas por todas las llamadas OPENXML anteriores para este identificador de documento.|  
+|**dormant_duration_ms**|**bigint**|Milisegundos desde la última llamada OPENXML. Si no se ha llamado a OPENXML, devuelve milisegundos desde la llamada a **sp_xml_preparedocumen**t.|  
   
 ## <a name="remarks"></a>Observaciones  
  La duración de **sql_handles** utilizada para recuperar el texto SQL que ejecutó una llamada a **sp_xml_preparedocument** el plan almacenado en caché que se usa para ejecutar la consulta. Si el texto de la consulta no está disponible en la memoria caché, los datos no pueden recuperarse usando la información proporcionada en el resultado de la función. Esto puede ocurrir si está ejecutando muchos lotes grandes.  

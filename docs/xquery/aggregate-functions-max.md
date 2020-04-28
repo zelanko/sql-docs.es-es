@@ -16,10 +16,10 @@ ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985953"
 ---
 # <a name="aggregate-functions---max"></a>Funciones de agregado: max
@@ -46,7 +46,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  La función **Max ()** devuelve el valor de la secuencia que es mayor que cualquier otro en la secuencia de entrada. En el caso de los valores xs:string, se utiliza la intercalación de puntos de código Unicode predeterminada. Si un valor XDT: untypedAtomic no se puede convertir a XS: Double, el valor se omite en la secuencia de entrada, *$arg*. Si la entrada es una secuencia vacía calculada dinámicamente, se devolverá la secuencia vacía.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas **** en varias columnas de tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML de la base de datos.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas **xml** en varias columnas de tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML de la base de datos.  
   
 ### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Utilizar la función max() de XQuery para buscar las ubicaciones de centro de trabajo del proceso de fabricación que tienen más horas de trabajo  
  La consulta proporcionada en la [función min (XQuery)](../xquery/aggregate-functions-min.md) se puede volver a escribir para usar la función **Max ()** .  

@@ -16,17 +16,16 @@ ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e85a8d988b2f2f17cb77c08ca2c70da1a76164c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67941948"
 ---
 # <a name="ole-automation-stored-procedures-transact-sql"></a>Procedimientos almacenados de OLE Automation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes procedimientos almacenados del sistema que permiten el uso de objetos de OLE Automation en un lote [!INCLUDE[tsql](../../includes/tsql-md.md)]. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloquea el acceso a los procedimientos almacenados de OLE Automation porque este componente se desactiva como parte de la configuración de seguridad para este servidor. Un administrador del sistema puede habilitar el acceso a los procedimientos de OLE Automation mediante sp_configure. Para obtener más información, vea [configuración de área expuesta](../../relational-databases/security/surface-area-configuration.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes procedimientos almacenados del sistema que permiten el uso de objetos de OLE Automation en un lote [!INCLUDE[tsql](../../includes/tsql-md.md)]. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloquea el acceso a los procedimientos almacenados de OLE Automation porque este componente se desactiva como parte de la configuración de seguridad para este servidor. Un administrador del sistema puede habilitar el acceso a los procedimientos de OLE Automation mediante sp_configure. Para obtener más información, vea [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
 |||  
 |-|-|  

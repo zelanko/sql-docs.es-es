@@ -16,10 +16,10 @@ ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933227"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
@@ -62,7 +62,7 @@ Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-o
 |**adUnsignedTinyInt**|17|Indica un entero sin signo de un byte (DBTYPE_UI1).|  
 |**adUserDefined**|132|Indica una variable definida por el usuario (DBTYPE_UDT).|  
 |**adVarBinary**|204|Indica un valor binario.|  
-|**VARCHAR**|200|Indica un valor de cadena.|  
+|**adVarChar**|200|Indica un valor de cadena.|  
 |**adVariant**|12|Indica una **variante** de automatización (DBTYPE_VARIANT).<br /><br /> **Nota:** Este tipo de datos no es compatible actualmente con ADO. El uso puede producir resultados imprevisibles.|  
 |**adVarNumeric**|139|Indica un valor numérico.|  
 |**adVarWChar**|202|Indica una cadena de caracteres Unicode terminada en NULL.|  

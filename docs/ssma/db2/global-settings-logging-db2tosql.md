@@ -10,10 +10,10 @@ ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989559"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Configuración global (registro) (DB2ToSQL)
@@ -29,9 +29,9 @@ Las siguientes opciones están disponibles en el **nivel de mensajes**:
 |----------|---------------|  
 |**[todas las categorías]**|Se usa para establecer el nivel de registro para todas las opciones siguientes.|  
 |**Recopilador**|Recopila metadatos sobre el esquema de origen y los guarda en el proyecto.|  
-|**Convertidor**|Convierte estructuras de objetos de base de datos de origen, como tablas y procedimientos almacenados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en estructuras correspondientes.|  
+|**Converter**|Convierte estructuras de objetos de base de datos de origen, como tablas y procedimientos almacenados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en estructuras correspondientes.|  
 |**Data Migrator**|Migra datos de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]origen a.|  
-|**Firmas**|Subcomponente del convertidor que genera scripts para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
+|**Formateador**|Subcomponente del convertidor que genera scripts para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
 |**Interfaz gráfica de usuario**|Mensajes que aparecen cuando se usa la herramienta SSMA.|  
 |**Enlazador**|Resuelve los identificadores de SQL y proporciona información a otros componentes.|  
 |**Otros**|Todos los mensajes que no están en ninguna otra categoría.|  
@@ -47,10 +47,10 @@ Para cada opción en **nivel de mensajes**, configure uno de los siguientes nive
 |**Error irrecuperable**|Escriba solo mensajes de error irrecuperables en el registro.|  
 |**Error**|Escriba mensajes de error y de error grave en el registro.|  
 |**Warning (ADVERTENCIA)**|Escriba mensajes de advertencia, error y error grave en el registro.|  
-|**Superclase**|Escriba mensajes informativos, de advertencia, de error y de error grave en el registro.|  
+|**Información**|Escriba mensajes informativos, de advertencia, de error y de error grave en el registro.|  
 |**Depurar**|Escriba todos los mensajes, incluidos los mensajes de depuración, en el registro.|  
   
-**Ruta del archivo de registro**  
+**Ruta de acceso al archivo de registro**  
 La ruta de acceso del archivo y el nombre de los archivos de registro de SSMA. Para especificar otro nombre, haga clic en la ruta de acceso actual y, a continuación, haga clic en el botón Examinar (**...**).  
   
 **Tamaño de archivo de registro**  

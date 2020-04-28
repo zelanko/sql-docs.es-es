@@ -18,10 +18,10 @@ ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f0a304020b972b29d521bd32da3f98b8d3fdfc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989994"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67989994"
 |**session_status**|**tinyint**|Estado de la sesión.<br /><br /> 0 = Iniciada.<br /><br /> 1 = En ejecución.<br /><br /> 2 = Correcta.<br /><br /> 3 = Error.<br /><br /> 4 = Advertencia.|  
 |**log_time**|**datetime**|Fecha y hora en que se creó el registro.|  
 |**log_time_utc**|**datetime**|Fecha y hora en que se creó el registro en hora universal coordinada.|  
-|**Mensaje**|**nvarchar(max)**|Texto del mensaje.|  
+|**message**|**nvarchar(max)**|Texto del mensaje.|  
   
 ## <a name="remarks"></a>Observaciones  
  Esta tabla contiene los detalles del historial para los agentes de trasvase de registros. Para identificar una sesión del agente, utilice las columnas **agent_id**, **agent_type**y **session_id**. Para ver los detalles del historial de la sesión del agente, ordene por **log_time**.  

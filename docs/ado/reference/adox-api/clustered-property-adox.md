@@ -20,10 +20,10 @@ ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c66bca375951ec78593bafc2c2eff950e3282e4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966995"
 ---
 # <a name="clustered-property-adox"></a>Clustered (propiedad, ADOX)

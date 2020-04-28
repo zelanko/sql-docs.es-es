@@ -12,10 +12,10 @@ ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944688"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Configuración de opciones de proyecto (MySQLToSQL)
@@ -44,7 +44,7 @@ La configuración del proyecto se puede configurar de cuatro maneras:
   
 -   Completo  
   
--   Personalizado  
+-   Personalizada  
   
 El modo predeterminado es el recomendado para la mayoría de los usuarios. El modo optimista mantiene más la sintaxis actual de MySQL y es más fácil de leer. Sin embargo, mantener la sintaxis actual podría no ser preciso. Si la sintaxis de MySQL se debe convertir en una sintaxis equivalente SQL Server o SQL Azure, el modo completo realiza la conversión más completa. Sin embargo, el código resultante puede ser más difícil de leer. En el modo personalizado, puede establecer las opciones.  
   

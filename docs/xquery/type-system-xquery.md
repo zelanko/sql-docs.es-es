@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946200"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
@@ -149,7 +149,7 @@ WHERE ProductModelID=7
 >  El uso explícito de la función **Data ()** en este ejemplo solo es para fines ilustrativos. Si no se especifica, **SUM ()** aplica implícitamente la función **Data ()** para extraer los valores con tipo de los nodos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Plantillas y permisos de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler plantillas y permisos](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)  
   
   

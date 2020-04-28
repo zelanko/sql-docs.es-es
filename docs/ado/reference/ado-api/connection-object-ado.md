@@ -16,10 +16,10 @@ ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933562"
 ---
 # <a name="connection-object-ado"></a>Objeto de conexión (ADO)
@@ -99,4 +99,4 @@ cnn. "parameter"
  [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Colección Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

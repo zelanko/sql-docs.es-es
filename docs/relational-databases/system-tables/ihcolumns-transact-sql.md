@@ -18,10 +18,10 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990386"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
@@ -35,17 +35,17 @@ ms.locfileid: "67990386"
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identifica una columna publicada.|  
 |**publishercolumn_id**|**int**|Asocia una columna publicada a los metadatos de columna almacenados en la tabla del sistema [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) .|  
-|**Name**|**sysname**|Especifica el nombre de la columna.|  
+|**name**|**sysname**|Especifica el nombre de la columna.|  
 |**article_id**|**int**|Identifica el artículo al que pertenece la columna.|  
 |**column_ordinal**|**int**|Identifica la columna por orden.|  
 |**mapped_type**|**tinyint**|Tipo de datos de columna de la columna de destino en el suscriptor.|  
-|**mapped_length**|**BIGINT**|Longitud de la columna en el suscriptor.|  
+|**mapped_length**|**bigint**|Longitud de la columna en el suscriptor.|  
 |**mapped_prec**|**int**|Precisión de la columna en el suscriptor.|  
 |**mapped_scale**|**int**|Escala de la columna en el suscriptor.|  
 |**mapped_nullable**|**bit**|Indica si la columna en el suscriptor acepta valores NULL, donde **1** significa que se aceptan valores NULL.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Replicación de base de datos heterogénea](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_articlecolumn &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

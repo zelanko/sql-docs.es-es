@@ -10,10 +10,10 @@ ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944626"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referencia de la interfaz de usuario (MySQLToSQL)
@@ -24,7 +24,7 @@ En la tabla siguiente se muestran los cuadros de diálogo de SSMA:
   
 |||  
 |-|-|  
-|**Tema.**|**Descripción**|  
+|**Tema**|**Descripción**|  
 |[Selección avanzada de objetos &#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Utilice el cuadro de diálogo **Seleccionar objeto avanzado** para buscar objetos de base de datos mediante criterios de filtro y, a continuación, Active o desactive esos objetos.|  
 |[Informe de evaluación &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Use el informe para ver los resultados de la conversión de objetos de MySQL en sintaxis de Transact-SQL y para calcular el tiempo y la complejidad de una migración a SQL Server.|  
 |[Conexión a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Utilice el cuadro de diálogo **conectar con MySQL** para conectarse a la base de datos MySQL que desea migrar.|  

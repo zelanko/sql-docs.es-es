@@ -10,16 +10,16 @@ ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 70d916526f5b7d7d36c9237624ef311befca39c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938356"
 ---
 # <a name="appendix---1-db2tosql"></a>Apéndice-1 (DB2ToSQL)
 Vista rápida de las opciones de la línea de comandos de la consola de SSMA:  
   
-|SL. No.|Switch|¿Requerido?|Argumento de modificador|Valores permitidos|  
+|SL. No.|Modificador|¿Necesario?|Argumento de modificador|Valores permitidos|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Sí|scriptfile|Nombre de archivo XML válido.<br /><br />Archivo de definición de script de consola.|  
 |2|-v/variable|No|variablevaluefile|Nombre de archivo XML válido.<br /><br />Si se usan variables en el archivo de script, debe especificarse este archivo.|  

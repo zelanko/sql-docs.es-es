@@ -18,10 +18,10 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67939011"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67939011"
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**publication_id**|**int**|Id. de la publicación.|  
 |**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = transaccional.<br /><br /> **1** = instantánea.<br /><br /> **2** = fusionar mediante combinación.|  
-|**thirdparty_flag**|**bit**|Indica si una publicación es una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos:<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = origen de datos distinto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.|  
+|**thirdparty_flag**|**bit**|Indica si una publicación es una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos:<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = origen de datos distinto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.|  
 |**independent_agent**|**bit**|Indica si hay un agente de distribución independiente para esta publicación.|  
 |**immediate_sync**|**bit**|Indica si los archivos de sincronización se crean o se vuelven a crear cada vez que se ejecuta el Agente de instantáneas.|  
 |**allow_push**|**bit**|Indica si es posible crear suscripciones de inserción para la publicación indicada.|  
@@ -49,7 +49,7 @@ ms.locfileid: "67939011"
 |**allow_subscription_copy**|**bit**|Habilita o deshabilita la funcionalidad de copia de las bases de datos de suscripciones suscritas a esta publicación. **0** significa que la copia está deshabilitada y **1** significa que está habilitada.|  
 |**thirdparty_options**|**int**|Especifica si se suprime la presentación de una publicación en la [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] carpeta de replicación en:<br /><br /> **0** = muestra una publicación heterogénea en la carpeta de replicación [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en.<br /><br /> **1** = suprime la visualización de una publicación heterogénea en la carpeta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de replicación en.|  
 |**allow_queued_tran**|**bit**|Especifica si la publicación admite la actualización en cola:<br /><br /> **0 =** La publicación no está en cola.<br /><br /> **1** = la publicación está en cola.|  
-|**Opciones**|**int**|No hay información disponible para esta versión.|  
+|**options**|**int**|No hay información disponible para esta versión.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

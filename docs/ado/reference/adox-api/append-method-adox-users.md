@@ -17,10 +17,10 @@ ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967227"
 ---
 # <a name="append-method-adox-users"></a>Append (método) (usuarios ADOX)
@@ -34,7 +34,7 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *User*  
+ *Usuario*  
  Valor de **tipo Variant** que contiene el objeto de **usuario** que se va a anexar o el nombre del usuario que se va a crear y anexar.  
   
  *Contraseña*  

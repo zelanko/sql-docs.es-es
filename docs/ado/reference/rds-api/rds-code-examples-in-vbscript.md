@@ -16,10 +16,10 @@ ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27ece72a3d9db6398dd8120941f95de2b8276b9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963795"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>Ejemplos de código RDS en VBScript
@@ -31,7 +31,7 @@ ms.locfileid: "67963795"
 > [!NOTE]
 >  Pegue el ejemplo de código completo en el editor de código. Es posible que el ejemplo no se ejecute correctamente si se usan ejemplos parciales o si se pierde el formato del párrafo.  
   
-## <a name="objects"></a>Objetos  
+## <a name="objects"></a>de la empresa  
   
 -   [Ejemplo del objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
   

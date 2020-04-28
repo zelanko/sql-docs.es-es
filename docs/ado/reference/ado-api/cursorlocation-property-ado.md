@@ -17,10 +17,10 @@ ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933285"
 ---
 # <a name="cursorlocation-property-ado"></a>Propiedad CursorLocation (ADO)
@@ -48,4 +48,4 @@ Indica la ubicación del servicio de cursor.
 |[Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Consulte también  
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

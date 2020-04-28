@@ -10,10 +10,10 @@ ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 945b7e86641c796e79bfb87b8b7b5de25949e4c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989769"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Crear archivos de valor variable (DB2ToSQL)
@@ -47,7 +47,7 @@ El archivo de valores de variable es un archivo XML que comprende los valores de
   
 </variables>  
 ```  
-**Ejemplo 2:**  
+**Ejemplo 2:**  
   
 ```  
 <!--Sample of variable value file commands-->  

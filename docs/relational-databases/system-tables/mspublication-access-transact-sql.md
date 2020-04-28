@@ -18,10 +18,10 @@ ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fccf3e82fbf5958e0293c462961d8aa9b459e594
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947776"
 ---
 # <a name="mspublication_access-transact-sql"></a>MSpublication_access (Transact-SQL)

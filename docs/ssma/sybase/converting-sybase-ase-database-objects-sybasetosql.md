@@ -12,16 +12,16 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948510"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Conversión de objetos de base de datos de SAP ASE (SybaseToSQL)
 Después de conectarse a SAP Adaptive Server Enterprise (ASE), conectarse a o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Azure SQL y establecer las opciones de asignación de datos y de proyecto, puede convertir objetos de base de datos de SAP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Adaptive Server Enterprise (ASE) en objetos de base de datos SQL de Azure.  
   
-## <a name="the-conversion-process"></a>Proceso de conversión  
+## <a name="the-conversion-process"></a>El proceso de conversión  
 La conversión de objetos de base de datos toma las definiciones de objetos de ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , las convierte en objetos similares o de SQL Azure y, a continuación, carga esta información en los metadatos de SSMA. No carga la información en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL. A continuación, puede ver los objetos y sus propiedades mediante o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el explorador de metadatos de Azure SQL.
   
 Durante la conversión, SSMA imprime los mensajes de salida en el panel de salida y los mensajes de error en el panel de **lista de errores** . Utilice la información de salida y de error para determinar si tiene que modificar las bases de datos de ASE o el proceso de conversión para obtener los resultados de la conversión deseada.  

@@ -17,21 +17,21 @@ ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965436"
 ---
 # <a name="procedures-collection-adox"></a>Colección de procedimientos (ADOX)
 Contiene todos los objetos de [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) de un catálogo.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) de una colección **Procedures** es único para ADOX. Puede:  
+ El método [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) de una colección **Procedures** es único para ADOX. Puede realizar lo siguiente:  
   
 -   Agregue un nuevo procedimiento a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede realizar lo siguiente:  
   
 -   Obtener acceso a un procedimiento de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

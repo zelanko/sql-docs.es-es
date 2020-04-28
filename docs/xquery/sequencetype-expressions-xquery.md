@@ -18,10 +18,10 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946284"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expresiones SequenceType (XQuery)
@@ -39,9 +39,9 @@ ms.locfileid: "67946284"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Tenga en cuenta `instance of` que el operador `Occurrence indicator`,, especifica la cardinalidad, el número de elementos de la secuencia resultante. Si no se especifica esto, se supone que la cardinalidad es 1. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo se admite el indicador de repetición de signo de interrogación (**?)** . El **** el indicador de repetición `Expression` indica que puede devolver cero o un elemento. Si el **** se especifica el indicador de `instance of` repetición, devuelve true `Expression` cuando el tipo coincide `SequenceType`con el especificado, `Expression` independientemente de si devuelve un singleton o una secuencia vacía.  
+ Tenga en cuenta `instance of` que el operador `Occurrence indicator`,, especifica la cardinalidad, el número de elementos de la secuencia resultante. Si no se especifica esto, se supone que la cardinalidad es 1. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo se admite el indicador de repetición de signo de interrogación (**?)** . El **?** el indicador de repetición `Expression` indica que puede devolver cero o un elemento. Si el **?** se especifica el indicador de `instance of` repetición, devuelve true `Expression` cuando el tipo coincide `SequenceType`con el especificado, `Expression` independientemente de si devuelve un singleton o una secuencia vacía.  
   
- Si el **** no se especifica el indicador de `sequence of` repetición, solo devuelve true `Expression` cuando el tipo `Type` coincide con `Expression` el especificado y devuelve un singleton.  
+ Si el **?** no se especifica el indicador de `sequence of` repetición, solo devuelve true `Expression` cuando el tipo `Type` coincide con `Expression` el especificado y devuelve un singleton.  
   
  **Nota:** Los indicadores de signo**+** más () y asterisco (**&#42;**) no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

@@ -13,10 +13,10 @@ ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e92682dde038891d1f9bd6ae2dbe2c64c5d98c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965073"
 ---
 # <a name="tables-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección de tablas
@@ -32,7 +32,7 @@ ms.locfileid: "67965073"
   
  [Refresh (método)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

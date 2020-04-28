@@ -14,10 +14,10 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964121"
 ---
 # <a name="fetchoptions-property-rds"></a>Propiedad FetchOptions (RDS)
@@ -33,7 +33,7 @@ Indica el tipo de captura asincrónica.
 |--------------|-----------------|  
 |**adcFetchUpFront**|Se capturan todos los registros del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) antes de que se devuelva el control a la aplicación. Se captura el **conjunto de registros** completo antes de que la aplicación pueda hacer nada con él.|  
 |**adcFetchBackground**|El control puede volver a la aplicación en cuanto se ha capturado el primer lote de registros. Una lectura posterior del **conjunto de registros** que intenta tener acceso a un registro que no se captura en el primer lote se retrasará hasta que se recupere realmente el registro buscado, momento en el que el control de tiempo vuelve a la aplicación.|  
-|**adcFetchAsync**|Default. El control vuelve inmediatamente a la aplicación mientras se capturan los registros en segundo plano. Si la aplicación intenta leer un registro que todavía no se ha capturado, el registro más cercano al registro buscado se leerá y el control se devolverá inmediatamente, lo que indica que se ha alcanzado el final actual del **conjunto de registros** . Por ejemplo, una llamada a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) moverá la posición del registro actual al último registro que se ha capturado realmente, aunque más registros continúen rellenando el **conjunto de registros**.|  
+|**adcFetchAsync**|Predeterminada. El control vuelve inmediatamente a la aplicación mientras se capturan los registros en segundo plano. Si la aplicación intenta leer un registro que todavía no se ha capturado, el registro más cercano al registro buscado se leerá y el control se devolverá inmediatamente, lo que indica que se ha alcanzado el final actual del **conjunto de registros** . Por ejemplo, una llamada a [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) moverá la posición del registro actual al último registro que se ha capturado realmente, aunque más registros continúen rellenando el **conjunto de registros**.|  
   
 > [!NOTE]
 >  Cada archivo ejecutable del lado cliente que utiliza estas constantes debe proporcionar declaraciones para ellas. Puede cortar y pegar las declaraciones de constantes que desee del archivo Adcvbs. Inc, que se encuentra en la carpeta de instalación predeterminada de la biblioteca RDS.  

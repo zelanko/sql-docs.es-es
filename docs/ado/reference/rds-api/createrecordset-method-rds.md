@@ -20,10 +20,10 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964515"
 ---
 # <a name="createrecordset-method-rds"></a>Ejemplo del método CreateRecordset (RDS)
@@ -65,7 +65,7 @@ object.CreateRecordset(ColumnInfos)
   
  En algunos de los tipos de datos de variable, el tipo se puede convertir al tipo indicado en la columna de sustitución. No verá las sustituciones hasta que el conjunto de **registros** se haya creado y rellenado. A continuación, puede comprobar el tipo de datos real, si es necesario.  
   
-|Length|Constante|Number|Sustitución|  
+|Length|Constante|número|Substitution|  
 |------------|--------------|------------|------------------|  
 |Corregido|**adTinyInt**|16||  
 |Corregido|**adSmallInt**|2||  
@@ -89,7 +89,7 @@ object.CreateRecordset(ColumnInfos)
 |Corregido|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
 |Variable|**adChar**|129|200|  
-|Variable|**VARCHAR**|200||  
+|Variable|**adVarChar**|200||  
 |Variable|**adLongVarChar**|201|200|  
 |Variable|**adWChar**|130||  
 |Variable|**adVarWChar**|202|130|  

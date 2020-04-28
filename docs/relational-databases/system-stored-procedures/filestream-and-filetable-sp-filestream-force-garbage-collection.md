@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942285"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
@@ -46,11 +46,10 @@ sp_filestream_force_garbage_collection
  Indica el nombre de la base de datos en la que se debe ejecutar el recolector de elementos no utilizados.  
   
 > [!NOTE]  
-> `@dbname`es de **tipo sysname**. Si no se especifica, se supone que es la base de datos actual.  
+> `@dbname` es **sysname**. Si no se especifica, se supone que es la base de datos actual.  
   
  `[ @filename = ] 'logical_file_name'`  
- Especifica el nombre lógico del contenedor de FILESTREAM en el que se va a ejecutar el recolector de elementos no utilizados. 
-  `@filename` es opcional. Si no se especifica ningún nombre de archivo lógico, el recolector de elementos no utilizados limpia todos los contenedores de FILESTREAM de la base de datos especificada.  
+ Especifica el nombre lógico del contenedor de FILESTREAM en el que se va a ejecutar el recolector de elementos no utilizados. `@filename` es opcional. Si no se especifica ningún nombre de archivo lógico, el recolector de elementos no utilizados limpia todos los contenedores de FILESTREAM de la base de datos especificada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
   

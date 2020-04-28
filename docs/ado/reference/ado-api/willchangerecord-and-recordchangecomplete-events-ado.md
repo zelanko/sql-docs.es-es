@@ -19,10 +19,10 @@ ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938673"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventos WillChangeRecord y RecordChangeComplete (ADO)
@@ -37,7 +37,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Reason*  
+ *adReason*  
  Valor [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) que especifica el motivo de este evento. Su valor puede ser **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**o **adRsnFirstChange**.  
   
  *cRecords*  
@@ -46,7 +46,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pError*  
  Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Describe el error que se produjo si el valor de *adStatus* es **adStatusErrorsOccurred**; de lo contrario, no se establece.  
   
- *Statu*  
+ *adStatus*  
  Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
  Cuando se llama a **WillChangeRecord** , este parámetro se establece en **adStatusOK** si la operación que causó el evento se realizó correctamente. Se establece en **adStatusCantDeny** si este evento no puede solicitar la cancelación de la operación pendiente.  

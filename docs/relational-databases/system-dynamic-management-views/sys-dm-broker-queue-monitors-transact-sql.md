@@ -19,10 +19,10 @@ ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948634"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67948634"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador del objeto de la base de datos que contiene la cola que supervisa el monitor. Acepta valores NULL.|  
 |**queue_id**|**int**|Identificador del objeto de la cola que supervisa el monitor. Acepta valores NULL.|  
-|**State**|**nvarchar (32)**|Estado del monitor. Acepta valores NULL. Es uno de los siguientes:<br /><br /> **INACTIVA**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|Estado del monitor. Acepta valores NULL. Es uno de los siguientes:<br /><br /> **INACTIVA**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Última vez que una instrucción RECEIVE de la cola devolvió un resultado vacío. Acepta valores NULL.|  
 |**last_activated_time**|**datetime**|Última vez que este monitor de cola activó un procedimiento almacenado. Acepta valores NULL.|  
 |**tasks_waiting**|**int**|Número de sesiones que esperan actualmente en una instrucción RECEIVE de esta cola. Acepta valores NULL.<br /><br /> Nota: este número incluye cualquier sesión que ejecute una instrucción Receive, independientemente de si el monitor de cola inició la sesión. Es así si usa WAITFOR junto con RECEIVE. Básicamente, estas tareas esperan que lleguen mensajes a la cola.|  
@@ -76,7 +76,7 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker vistas de administración dinámica relacionadas &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

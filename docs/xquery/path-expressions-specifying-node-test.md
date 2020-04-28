@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946429"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expresiones de ruta de acceso: Especificar prueba de nodo
@@ -71,7 +71,7 @@ child::ProductDescription
   
  Como resultado, cuando esta expresión se ejecuta en documentos XML de catálogo de productos en la tabla **ProductModel** , recupera todos los elementos secundarios del nodo de elemento \<de las características> nodo de elemento \<secundario del elemento ProductDescription>.  
   
- La expresión de ruta `/child::PD:ProductDescription/attribute::ProductModelID`de acceso,, se compone de dos pasos. Ambos pasos especifican un nombre de nodo como la prueba de nodo. Además, el segundo paso utiliza el eje attribute. Por tanto, cada paso selecciona nodos de la clase de nodo principal de su eje que tenga especificado el nombre como la prueba de nodo. Por lo tanto, la **** expresión devuelve el nodo de \<atributo ProductModelID del nodo de elemento ProductDescription>.  
+ La expresión de ruta `/child::PD:ProductDescription/attribute::ProductModelID`de acceso,, se compone de dos pasos. Ambos pasos especifican un nombre de nodo como la prueba de nodo. Además, el segundo paso utiliza el eje attribute. Por tanto, cada paso selecciona nodos de la clase de nodo principal de su eje que tenga especificado el nombre como la prueba de nodo. Por lo tanto, la **ProductModelID** expresión devuelve el nodo de \<atributo ProductModelID del nodo de elemento ProductDescription>.  
   
  Al especificar nombres de nodo para pruebas de nodo, puede utilizar el carácter comodín (*) para especificar el nombre local de un nodo o para su prefijo de espacio de nombres, tal y como muestra el ejemplo siguiente:  
   
@@ -94,14 +94,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |Tipo de nodo|Devuelve|Ejemplo|  
 |---------------|-------------|-------------|  
-|`comment()`|True para un nodo de comentario.|
-  `following::comment()` selecciona todos los nodos de comentario que aparecen después del nodo de contexto.|  
-|`node()`|True para un nodo de cualquier clase.|
-  `preceding::node()` selecciona todos los nodos que aparecen antes del nodo de contexto.|  
-|`processing-instruction()`|True para un nodo de instrucciones de procesamiento.|
-  `self::processing instruction()` selecciona todos los nodos de instrucciones de procesamiento incluidos en el nodo de contexto.|  
-|`text()`|True para un nodo de texto.|
-  `child::text()` selecciona los nodos de texto que son secundarios del nodo de contexto.|  
+|`comment()`|True para un nodo de comentario.|`following::comment()` selecciona todos los nodos de comentario que aparecen después del nodo de contexto.|  
+|`node()`|True para un nodo de cualquier clase.|`preceding::node()` selecciona todos los nodos que aparecen antes del nodo de contexto.|  
+|`processing-instruction()`|True para un nodo de instrucciones de procesamiento.|`self::processing instruction()` selecciona todos los nodos de instrucciones de procesamiento incluidos en el nodo de contexto.|  
+|`text()`|True para un nodo de texto.|`child::text()` selecciona los nodos de texto que son secundarios del nodo de contexto.|  
   
  Si el tipo de nodo (por ejemplo, text(), comment(), etc.) se especifica como la prueba de nodo, el paso solo devuelve nodos de la clase especificada, con independencia de la clase de nodo principal del eje. Por ejemplo, la siguiente expresión de ruta de acceso solo devuelve los nodos de comentario secundarios del nodo de contexto:  
   

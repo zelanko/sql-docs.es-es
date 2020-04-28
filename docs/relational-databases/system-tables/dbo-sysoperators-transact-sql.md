@@ -20,10 +20,10 @@ ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984908"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "67984908"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**sesión**|**int**|Id. del operador.|  
-|**Name**|**sysname**|nombre de la operación.|  
+|**id**|**int**|Id. del operador.|  
+|**name**|**sysname**|nombre de la operación.|  
 |**activó**|**tinyint**|Estado de las notificaciones de alerta (booleano). Si es **1**, este operador puede recibir notificaciones cuando se produce una alerta.|  
 |**email_address**|**nvarchar(100**|Dirección de correo electrónico para este operador.|  
 |**last_email_date**|**int**|Fecha en que el operador recibió por última vez una alerta por correo electrónico.|  

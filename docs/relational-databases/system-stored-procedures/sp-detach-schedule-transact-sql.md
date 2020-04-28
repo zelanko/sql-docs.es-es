@@ -18,10 +18,10 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aed989cc09922b7b480a7dd7b3ca6820d6b77ab2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936742"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
@@ -77,8 +77,7 @@ sp_detach_schedule
   
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una comprobación para determinar si el usuario es propietario de la programación. Solo los miembros del rol fijo de servidor **sysadmin** pueden separar las programaciones de los trabajos que pertenecen a otro usuario.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una comprobación para determinar si el usuario es propietario de la programación. Solo los miembros del rol fijo de servidor **sysadmin** pueden separar las programaciones de los trabajos que pertenecen a otro usuario.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se quita una asociación entre una programación `'NightlyJobs'` y un trabajo `'BackupDatabase'`.  

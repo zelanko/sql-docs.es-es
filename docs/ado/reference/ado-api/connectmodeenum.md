@@ -16,10 +16,10 @@ ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933457"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
@@ -34,7 +34,7 @@ Especifica los permisos disponibles para modificar los datos de una [conexión](
 |**adModeShareDenyRead**|4|Impide que otros abran una conexión con permisos de lectura.|  
 |**adModeShareDenyWrite**|8|Impide que otros abran una conexión con permisos de escritura.|  
 |**adModeShareExclusive**|12|Impide que otros abran una conexión.|  
-|**adModeUnknown**|0|Default. Indica que los permisos todavía no se han establecido o no se pueden determinar.|  
+|**adModeUnknown**|0|Predeterminada. Indica que los permisos todavía no se han establecido o no se pueden determinar.|  
 |**adModeWrite**|2|Indica permisos de solo escritura.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  

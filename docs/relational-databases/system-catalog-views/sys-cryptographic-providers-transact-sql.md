@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940299"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "67940299"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Número de identificación del proveedor de servicios criptográficos.|  
-|**Name**|**sysname**|Nombre del proveedor criptográfico.|  
+|**name**|**sysname**|Nombre del proveedor criptográfico.|  
 |**guid**|**uniqueidentifier**|Proveedor único GUID.|  
-|**Versión**|**nvarchar(50)**|Versión del proveedor con el formato '*AA.BB.CCCC.DD*'.|  
+|**version**|**nvarchar(50)**|Versión del proveedor con el formato '*AA.BB.CCCC.DD*'.|  
 |**dll_path**|**nvarchar(512)**|Ruta de acceso a DLL que implementa la interfaz de programación de aplicaciones (API) de la Administración extensible de claves (EKM).|  
 |**is_enabled**|**bit**|Si el proveedor está habilitado en el servidor o no.<br /><br /> 0 = no habilitado (predeterminado)<br /><br /> 1 = habilitado|  
   

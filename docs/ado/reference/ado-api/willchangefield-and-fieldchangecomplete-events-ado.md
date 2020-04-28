@@ -20,10 +20,10 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945883"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField y FieldChangeComplete (ADO)
@@ -41,13 +41,13 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  Un **valor de tipo Long** que indica el número de objetos de **campo** en *los campos*.  
   
- *Fields*  
+ *Campos*  
  En el caso de **WillChangeField**, el parámetro *Fields* es una matriz de **variantes** que contiene objetos de **campo** con los valores originales. En **FieldChangeComplete**, el parámetro *Fields* es una matriz de **variantes** que contiene objetos de **campo** con los valores modificados.  
   
  *pError*  
  Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Describe el error que se produjo si el valor de *adStatus* es **adStatusErrorsOccurred**; de lo contrario, no se establece.  
   
- *Statu*  
+ *adStatus*  
  Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) .  
   
  Cuando se llama a **WillChangeField** , este parámetro se establece en **adStatusOK** si la operación que causó el evento se realizó correctamente. Se establece en **adStatusCantDeny** si este evento no puede solicitar la cancelación de la operación pendiente.  

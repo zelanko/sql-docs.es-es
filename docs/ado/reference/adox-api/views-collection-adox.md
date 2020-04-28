@@ -17,21 +17,21 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964778"
 ---
 # <a name="views-collection-adox"></a>Colección de vistas (ADOX)
 Contiene todos los objetos de [vista](../../../ado/reference/adox-api/view-object-adox.md) de un catálogo.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](../../../ado/reference/adox-api/append-method-adox-views.md) de una colección **views** es único para ADOX. Puede:  
+ El método [Append](../../../ado/reference/adox-api/append-method-adox-views.md) de una colección **views** es único para ADOX. Puede realizar lo siguiente:  
   
 -   Agregue una nueva vista a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede realizar lo siguiente:  
   
 -   Obtener acceso a una vista de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

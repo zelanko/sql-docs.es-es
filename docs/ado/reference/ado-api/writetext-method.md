@@ -17,10 +17,10 @@ ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947495"
 ---
 # <a name="writetext-method"></a>Método WriteText
@@ -34,7 +34,7 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *data*  
+ *Data*  
  Valor de **cadena** que contiene el texto en caracteres que se va a escribir.  
   
  *Opciones*  
@@ -54,4 +54,4 @@ Stream.WriteText Data, Options
  [Objeto de secuencia (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Método Write](../../../ado/reference/ado-api/write-method.md)
+ [Write (método)](../../../ado/reference/ado-api/write-method.md)

@@ -16,10 +16,10 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946224"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema de tipo: Equiparación de tipos de secuencia
@@ -102,8 +102,7 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:decimal')
 GO  
 ```  
   
- Ahora, cambie el valor `a` del atributo a un tipo de cadena. 
-  `instance of xs:string` devolverá True.  
+ Ahora, cambie el valor `a` del atributo a un tipo de cadena. `instance of xs:string` devolverá True.  
   
 ```  
 DECLARE @var XML(SC)  

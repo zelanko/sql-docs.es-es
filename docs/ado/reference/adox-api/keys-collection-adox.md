@@ -17,21 +17,21 @@ ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965847"
 ---
 # <a name="keys-collection-adox"></a>Colección de claves (ADOX)
 Contiene todos los objetos de [clave](../../../ado/reference/adox-api/key-object-adox.md) de una [tabla](../../../ado/reference/adox-api/table-object-adox.md).  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) de una [colección Keys](../../../ado/reference/adox-api/keys-collection-adox.md) es único para ADOX. Puede:  
+ El método [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) de una [colección Keys](../../../ado/reference/adox-api/keys-collection-adox.md) es único para ADOX. Puede realizar lo siguiente:  
   
 -   Agregue una nueva clave a la colección con el método [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede realizar lo siguiente:  
   
 -   Obtener acceso a una clave en la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

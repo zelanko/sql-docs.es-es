@@ -10,10 +10,10 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d9d1879cd5583ee7b87c12edb19bf5486cee4fcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986435"
 ---
 # <a name="generating-reports-accesstosql"></a>Generación de informes (AccessToSQL)
@@ -61,7 +61,7 @@ Use el procedimiento siguiente para generar informes:
     > [!NOTE]  
     > La configuración de informes de errores especificada anteriormente es aplicable a los comandos Generate-Assessment-Report, Convert-Schema, Migrate-Data.  
   
-**Ejemplo**:  
+**Ejemplo:**  
   
 ```xml  
 <generate-assessment-report  

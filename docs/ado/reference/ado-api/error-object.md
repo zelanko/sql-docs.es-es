@@ -16,10 +16,10 @@ ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932964"
 ---
 # <a name="error-object"></a>Objeto de error
@@ -61,4 +61,4 @@ Contiene detalles sobre los errores de acceso a datos que pertenecen a una únic
  [Ejemplo de las propiedades Description, HelpContext, HelpFile, NativeError, Number, Source y SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Connection (objeto) (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Colección de errores (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -19,10 +19,10 @@ ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67951036"
 ---
 # <a name="sysdm_filestream_file_io_requests-transact-sql"></a>sys.dm_filestream_file_io_requests (Transact-SQL)
@@ -34,15 +34,15 @@ ms.locfileid: "67951036"
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8**|Muestra la dirección interna del bloque de memoria del NSO que contiene la solicitud de E/S desde el controlador. No admite valores NULL.|  
 |**current_spid**|**smallint**|Muestra el ID. de proceso del sistema (SPID) de la conexión del SQL Server actual. No admite valores NULL.|  
-|**request_type**|**nvarchar (60)**|Muestra el tipo de paquete de solicitud de E/S (IRP). Los tipos de solicitud posibles son REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY y REQ_SET_SECURITY. No admite valores NULL|  
-|**request_state**|**nvarchar (60)**|Muestra el estado de la solicitud de E/S en el NSO. Los valores posibles son REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING y REQ_STATE_COMPLETED. No admite valores NULL.|  
-|**id_de_solicitud**|**int**|Muestra el identificador de solicitud único asignado por el controlador a esta solicitud. No admite valores NULL.|  
+|**request_type**|**nvarchar(60)**|Muestra el tipo de paquete de solicitud de E/S (IRP). Los tipos de solicitud posibles son REQ_PRE_CREATE, REQ_POST_CREATE, REQ_RESOLVE_VOLUME, REQ_GET_VOLUME_INFO, REQ_GET_LOGICAL_NAME, REQ_GET_PHYSICAL_NAME, REQ_PRE_CLEANUP, REQ_POST_CLEANUP, REQ_CLOSE, REQ_FSCTL, REQ_QUERY_INFO, REQ_SET_INFO, REQ_ENUM_DIRECTORY, REQ_QUERY_SECURITY y REQ_SET_SECURITY. No admite valores NULL|  
+|**request_state**|**nvarchar(60)**|Muestra el estado de la solicitud de E/S en el NSO. Los valores posibles son REQ_STATE_RECEIVED, REQ_STATE_INITIALIZED, REQ_STATE_ENQUEUED, REQ_STATE_PROCESSING, REQ_STATE_FORMATTING_RESPONSE, REQ_STATE_SENDING_RESPONSE, REQ_STATE_COMPLETING y REQ_STATE_COMPLETED. No admite valores NULL.|  
+|**request_id**|**int**|Muestra el identificador de solicitud único asignado por el controlador a esta solicitud. No admite valores NULL.|  
 |**irp_id**|**int**|Muestra el identificador de IRP único. Esto es útil para identificar todas las solicitudes de E/S relacionadas con el IRP determinado. No admite valores NULL.|  
 |**handle_id**|**int**|Indica el id. del identificador del espacio de nombres. Se trata del identificador específico del NSO y es único en una instancia. No admite valores NULL.|  
 |**client_thread_id**|**varbinary(8**|Muestra el identificador de subproceso de la aplicación cliente que origina la solicitud.<br /><br /> ** \* ADVERTENCIA de \* \* ** Esto solo es significativo si la aplicación cliente se ejecuta en el mismo equipo que SQL Server. Cuando la aplicación cliente se ejecuta de forma remota, en el **client_thread_id** se muestra el identificador de subproceso del proceso del sistema que funciona en nombre del cliente remoto.<br /><br /> Acepta valores NULL.|  
 |**client_process_id**|**varbinary(8**|Muestra el identificador de proceso de la aplicación cliente si esta se ejecuta en la misma máquina que SQL Server. Para un cliente remoto, muestra el identificador de proceso del sistema que funciona en nombre de la aplicación cliente. Acepta valores NULL.|  
 |**handle_context_address**|**varbinary(8**|Muestra la dirección de la estructura NSO interna asociada con el identificador del cliente. Acepta valores NULL.|  
-|**filestream_transaction_id**|**varbinary (128)**|Muestra el identificador de la transacción asociada con el identificador determinado y todas las solicitudes asociadas con este identificador. Es el valor devuelto por la función **get_filestream_transaction_context** . Acepta valores NULL.|  
+|**filestream_transaction_id**|**varbinary(128)**|Muestra el identificador de la transacción asociada con el identificador determinado y todas las solicitudes asociadas con este identificador. Es el valor devuelto por la función **get_filestream_transaction_context** . Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  

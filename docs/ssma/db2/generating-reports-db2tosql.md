@@ -10,10 +10,10 @@ ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2d96b82e3ce883bcf9e704ea001024228be81761
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989650"
 ---
 # <a name="generating-reports-db2tosql"></a>Generación de informes (DB2ToSQL)
@@ -62,7 +62,7 @@ Use el procedimiento siguiente para generar informes:
     > [!NOTE]  
     > La configuración de informes de errores especificada anteriormente es aplicable a los comandos Generate-Assessment-Report, Convert-Schema, Migrate-Data, Convert-SQL-Statement.  
   
-**Ejemplo**:  
+**Ejemplo:**  
   
 ```  
 <generate-assessment-report  

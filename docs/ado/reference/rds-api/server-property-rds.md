@@ -16,10 +16,10 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963473"
 ---
 # <a name="server-property-rds"></a>Propiedad del servidor (RDS)
@@ -110,7 +110,7 @@ DataControl.Server=""
  *awebsrvr*o *ComputerName*  
  Valor de **cadena** que contiene una ruta de acceso de Internet o de la intranet, o un nombre de equipo, si el servidor está en un equipo remoto; o bien, una cadena vacía si el servidor está en el equipo local.  
   
- *casilla*  
+ *port*  
  Opcional. Puerto que se utiliza para conectarse a un servidor que ejecuta IIS. El número de puerto se establece en Internet Explorer (en el menú **Ver** , haga clic en **Opciones**y, a continuación, seleccione la pestaña **conexión** ) o en IIS.  
   
  *DataControl*  

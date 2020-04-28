@@ -17,10 +17,10 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946113"
 ---
 # <a name="xqueries-involving-order"></a>Consultas XQuery basadas en el orden
@@ -246,8 +246,8 @@ where ProductModelID=7
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [&#40;de datos XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [&#40;de referencia del lenguaje XQuery SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Construcción XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

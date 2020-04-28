@@ -16,10 +16,10 @@ ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949407"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
@@ -30,5 +30,5 @@ Especifica el valor para la propiedad [Type](../../../ado/reference/ado-md-api/t
 |**adMemberAll**|4|Indica que el objeto **miembro** representa todos los miembros del nivel.|  
 |**adMemberFormula**|3|Indica que el objeto **miembro** se calcula mediante una expresión de fórmula.|  
 |**adMemberMeasure**|2|Indica que el objeto **miembro** pertenece a la dimensión Measures y representa un atributo cuantitativo.|  
-|**adMemberRegular**|1|Default. Indica que el objeto **miembro** representa una instancia de una entidad comercial.|  
+|**adMemberRegular**|1|Predeterminada. Indica que el objeto **miembro** representa una instancia de una entidad comercial.|  
 |**adMemberUnknown**|0|No se puede determinar el tipo del miembro.|

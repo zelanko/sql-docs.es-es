@@ -10,10 +10,10 @@ ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989637"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introducción con SSMA para DB2 (DB2ToSQL)
@@ -92,7 +92,7 @@ En la tabla siguiente se muestran los menús de SSMA.
 |----|-----------|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectarse a DB2 y conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Edición**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el panel de detalles de SQL. También contiene la opción **administrar marcadores** , donde podrá ver una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
-|**Vista**|Contiene el comando **sincronizar exploradores de metadatos** . Que sincroniza los objetos entre el explorador de metadatos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 y el explorador de metadatos. También contiene comandos para mostrar y ocultar los paneles de **salida** y **lista de errores** y los **diseños** de opciones para administrar los diseños.|  
+|**Ver**|Contiene el comando **sincronizar exploradores de metadatos** . Que sincroniza los objetos entre el explorador de metadatos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2 y el explorador de metadatos. También contiene comandos para mostrar y ocultar los paneles de **salida** y **lista de errores** y los **diseños** de opciones para administrar los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes y migrar objetos y datos. También proporciona acceso a los cuadros de diálogo Configuración **global** y **configuración del proyecto** .|  
 |**Ayuda**|Proporciona acceso a la ayuda de SSMA y al cuadro **de diálogo acerca de** .|  
   

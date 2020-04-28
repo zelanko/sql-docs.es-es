@@ -16,10 +16,10 @@ ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965952"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
@@ -29,7 +29,7 @@ Especifica cómo los objetos heredarán los permisos establecidos con [SetPermis
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|Los dos objetos y otros contenedores contenidos en el objeto principal heredan la entrada.|  
 |**adInheritContainers**|2|Otros contenedores contenidos en el objeto principal heredan la entrada.|  
-|**adInheritNone**|0|Default. No se produce herencia.|  
+|**adInheritNone**|0|Predeterminada. No se produce herencia.|  
 |**adInheritNoPropagate**|4|Las marcas **adInheritObjects** y **adInheritContainers** no se propagan a una entrada heredada.|  
 |**adInheritObjects**|1|Los objetos que no son contenedores del contenedor heredan los permisos.|  
   

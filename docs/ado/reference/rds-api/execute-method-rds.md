@@ -14,10 +14,10 @@ ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964317"
 ---
 # <a name="execute-method-rds"></a>Execute (método) (RDS)
@@ -71,7 +71,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *pParameters*  
  **Variante** que contiene una matriz segura de definiciones de parámetros. Si se ha especificado la opción *GetInfo* en *lExecuteOptions*, este parámetro se utiliza para devolver las definiciones de parámetros obtenidas del proveedor de OLE DB. De lo contrario, este parámetro puede estar vacío.  
   
- *LCID*  
+ *lcid*  
  LCID que se usa para compilar los errores que se devuelven en *pInformation*.  
   
  *pInformation*  

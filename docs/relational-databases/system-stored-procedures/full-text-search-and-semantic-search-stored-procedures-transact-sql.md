@@ -18,10 +18,10 @@ ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c0bf121cdb6007783cca682125dad04c01ab59ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942209"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>Búsqueda de texto completo y procedimientos almacenados de búsqueda semántica (Transact-SQL)
@@ -60,7 +60,7 @@ ms.locfileid: "67942209"
  [sp_fulltext_table](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)  
  Marca o quita la marca de una tabla para la indización de texto completo.  
   
- [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Use [CREATE FULLTEXT index](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER fulltext](../../t-sql/statements/alter-fulltext-index-transact-sql.md)INDEX y [Drop fulltext index](../../t-sql/statements/drop-fulltext-index-transact-sql.md) en su lugar.  
+ [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)y [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) en su lugar.  
   
  [sp_help_fulltext_catalog_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalog-components-transact-sql.md)  
  Devuelve una lista con todos los componentes (filtros, separadores de palabras y controladores de protocolo) que se usan en los catálogos de texto completo de la base de datos actual.  

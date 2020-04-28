@@ -15,10 +15,10 @@ ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924492"
 ---
 # <a name="records-and-streams"></a>Registros y secuencias
@@ -35,7 +35,7 @@ ADO actualmente proporciona el objeto de [conjunto de registros](../../../ado/re
   
  Para obtener más información sobre el uso del objeto **Record** para procesar estos datos heterogéneos de proveedores como el proveedor de publicación en Internet, vea [usar ado para la publicación en Internet](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
-## <a name="streams"></a>Flujos  
+## <a name="streams"></a>Secuencias  
  El objeto **Stream** proporciona los medios para leer, escribir y administrar un flujo de bytes. Esta secuencia de bytes puede ser texto o binaria y solo tiene un tamaño limitado por los recursos del sistema. Normalmente, los objetos de **secuencia** de ADO se utilizan para los siguientes fines:  
   
 -   Para contener los datos de un **conjunto de registros** guardado en formato XML. Estas secuencias XML de los **conjuntos de registros**guardados se pueden usar como origen al abrir un nuevo **conjunto de registros**. Para obtener más información, vea [flujos y persistencia](../../../ado/guide/data/streams-and-persistence.md).  

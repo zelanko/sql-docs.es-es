@@ -17,21 +17,21 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966045"
 ---
 # <a name="indexes-collection-adox"></a>Colección de índices (ADOX)
 Contiene todos los objetos de [Índice](../../../ado/reference/adox-api/index-object-adox.md) de una tabla.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) de una colección **Indexes** es único para ADOX. Puede:  
+ El método [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) de una colección **Indexes** es único para ADOX. Puede realizar lo siguiente:  
   
 -   Agregue un nuevo índice a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede realizar lo siguiente:  
   
 -   Obtener acceso a un índice de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

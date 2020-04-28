@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946606"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Módulos y prólogos: prólogo de XQuery
@@ -45,8 +45,7 @@ WHERE ProductModelID=7
   
 -   La palabra clave `declare namespace` define un prefijo de espacio de nombres que se utiliza posteriormente en el cuerpo de la consulta.  
   
--   
-  `/AWMI:root/AWMI:Location[@LocationID="10"]` es el cuerpo de la consulta.  
+-   `/AWMI:root/AWMI:Location[@LocationID="10"]` es el cuerpo de la consulta.  
   
 ## <a name="namespace-declarations"></a>Declaraciones de espacios de nombres  
  Una declaración de espacio de nombres define un prefijo y lo asocia a un URI de espacio de nombres, como se muestra en la consulta siguiente. En la consulta, `CatalogDescription` es una columna de tipo **XML** .  

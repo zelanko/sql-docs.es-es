@@ -16,10 +16,10 @@ ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933264"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
@@ -31,7 +31,7 @@ Especifica qué funcionalidad debe probar el método [Supports](../../../ado/ref
 |**adApproxPosition**|0x4000|Admite las propiedades [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) y [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) .|  
 |**adBookmark**|0x2000|Admite la propiedad [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) para obtener acceso a registros específicos.|  
 |**adDelete**|0x1000800|Admite el método [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) para eliminar registros.|  
-|**Find**|0x80000|Admite el método [Find](../../../ado/reference/ado-api/find-method-ado.md) para buscar una fila en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**adFind**|0x80000|Admite el método [Find](../../../ado/reference/ado-api/find-method-ado.md) para buscar una fila en un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
 |**adHoldRecords**|0x100|Recupera más registros o cambia la siguiente posición sin confirmar todos los cambios pendientes.|  
 |**adIndex**|0x100000|Admite la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) para asignar un nombre a un índice.|  
 |**adMovePrevious**|0x200|Admite los métodos [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) y [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) , y los métodos [Move](../../../ado/reference/ado-api/move-method-ado.md) o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) para mover la posición del registro actual hacia atrás sin necesidad de marcadores.|  

@@ -19,10 +19,10 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937063"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
@@ -38,7 +38,7 @@ ms.locfileid: "67937063"
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|IDENTIFICADOR de la tabla desde la que se migraron las filas.|  
 |**database_id**|**int**|IDENTIFICADOR de la base de datos desde la que se migraron las filas.|  
-|**migrated_rows**|**BIGINT**|Número de filas migradas en este lote.|  
+|**migrated_rows**|**bigint**|Número de filas migradas en este lote.|  
 |**start_time_utc**|**datetime**|Hora UTC a la que se inició el lote.|  
 |**end_time_utc**|**datetime**|Hora UTC a la que finalizó el lote.|  
 |**error_number**|**int**|Si se produce un error en el lote, el número de error del error que se produjo; de lo contrario, es NULL.|  

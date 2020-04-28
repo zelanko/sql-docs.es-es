@@ -16,10 +16,10 @@ ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965183"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
@@ -27,7 +27,7 @@ Especifica la secuencia de ordenación para una columna indizada.
   
 |Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adSortAscending**|1|Default. La secuencia de ordenación de la columna es ascendente.|  
+|**adSortAscending**|1|Predeterminada. La secuencia de ordenación de la columna es ascendente.|  
 |**adSortDescending**|2|La secuencia de ordenación de la columna es descendente.|  
   
 ## <a name="applies-to"></a>Se aplica a  

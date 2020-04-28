@@ -17,10 +17,10 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967327"
 ---
 # <a name="append-method-adox-columns"></a>Append (método) (columnas ADOX)
@@ -37,7 +37,7 @@ Columns.Append Column [,Type] [,DefinedSize]
  *Columna*  
  Objeto de **columna** que se va a anexar o nombre de la columna que se va a crear y anexar.  
   
- *Tipo*  
+ *Type*  
  Opcional. Valor **largo** que especifica el tipo de datos de la columna. El parámetro de *tipo* corresponde a la propiedad [Type](../../../ado/reference/adox-api/type-property-column-adox.md) de un objeto **Column** .  
   
  *DefinedSize*  

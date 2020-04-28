@@ -18,10 +18,10 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946082"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery y el establecimiento de tipos estáticos
@@ -86,8 +86,7 @@ ms.locfileid: "67946082"
  En el contexto de XQuery, `fn:avg (//r)` la función "Average" devuelve un error estático, ya que el compilador de XQuery no puede agregar valores de tipos diferentes (**xs: int**, **xs: Float** o `r` **xs: Double**) para el <> elementos en el argumento de **FN: AVG ()**. Para resolver esto, rescriba la invocación de función como `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
 ### <a name="example-operator-over-union-type"></a>Ejemplo: operador sobre tipo de unión  
- La operación de suma ("+") requiere tipos precisos para los operandos. Como resultado, la expresión `(//r)[1] + 1` devuelve un error estático que tiene la definición de tipo descrita previamente para el elemento `r` <>. Una posible solución es rescribirlo como `(//r)[1] cast as xs:int? +1`, donde "?" indica 0 o 1 repeticiones. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], requiere "cast as" con "?", porque cualquier conversión puede resultar en una secuencia vacía como consecuencia de los errores en tiempo de ejecución.  
+ La operación de suma ("+") requiere tipos precisos para los operandos. Como resultado, la expresión `(//r)[1] + 1` devuelve un error estático que tiene la definición de tipo descrita previamente para el elemento `r` <>. Una posible solución es rescribirlo como `(//r)[1] cast as xs:int? +1`, donde "?" indica 0 o 1 repeticiones. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], requiere "cast as" con "?", porque cualquier conversión puede resultar en una secuencia vacía como consecuencia de los errores en tiempo de ejecución.  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia del lenguaje XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

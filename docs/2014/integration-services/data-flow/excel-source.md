@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37eb17ccaa418a6d81ef4caa461af50e505a8747
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087157"
 ---
 # <a name="excel-source"></a>Origen de Excel
@@ -51,7 +51,7 @@ ms.locfileid: "82087157"
   
 -   **Orígenes de datos**. El origen de datos de un libro de Excel puede ser una hoja de cálculo, a cuyo nombre debe agregarse el signo $ (por ejemplo, Hoja1$), un rango con nombre (por ejemplo, MiRango). En una instrucción SQL, el nombre de la hoja debe estar delimitado (por ejemplo [Hoja1$]) para evitar un error de sintaxis producido por el signo $. El Generador de consultas agrega automáticamente estos delimitadores. Al especificar una hoja de cálculo o un rango, el controlador lee los bloques contiguos de celdas, comenzando con la primera celda no vacía en la esquina superior izquierda de la hoja de cálculo o rango. Por tanto, no deben dejarse filas vacías en los datos de origen, ni una fila vacía entre las filas de título o de cabecera y las filas de datos.  
   
--   **Valores que faltan**. Este controlador lee un cierto número de filas (de forma predeterminada, 8) en el origen especificado para elegir el tipo de datos de cada columna. Cuando una columna parece contener varios tipos de datos, especialmente numéricos y de texto, el controlador elige el tipo más usado y devuelve valores NULL en las celdas que contienen datos de los demás tipos. (En caso de empate, el tipo numérico tiene prioridad.) La mayoría de las opciones de formato en las hojas Excel parecen no afectar a esta determinación de tipos de datos. Para modificar este comportamiento del controlador de Excel, especifique el modo de importación. Para especificar el `IMEX=1` modo de importación, agregue al valor de Propiedades extendidas en la cadena de conexión del Administrador de conexiones de Excel en la ventana **Propiedades.** Para obtener más información, vea [PRB: valores de Excel devueltos como NULL usando DAO OpenRecordset](https://support.microsoft.com/kb/194124).  
+-   **Faltan valores**. Este controlador lee un cierto número de filas (de forma predeterminada, 8) en el origen especificado para elegir el tipo de datos de cada columna. Cuando una columna parece contener varios tipos de datos, especialmente numéricos y de texto, el controlador elige el tipo más usado y devuelve valores NULL en las celdas que contienen datos de los demás tipos. (En caso de empate, el tipo numérico tiene prioridad.) La mayoría de las opciones de formato en las hojas Excel parecen no afectar a esta determinación de tipos de datos. Para modificar este comportamiento del controlador de Excel, especifique el modo de importación. Para especificar el modo de importación `IMEX=1` , agregue al valor de propiedades extendidas en la cadena de conexión del administrador de conexiones con Excel en la ventana **propiedades** . Para obtener más información, vea [PRB: valores de Excel devueltos como NULL usando DAO OpenRecordset](https://support.microsoft.com/kb/194124).  
   
 -   **Texto truncado**. Cuando el controlador determina que una columna de Excel contiene datos de texto, el controlador selecciona el tipo de datos (cadena o memorando) en función del valor más largo que muestrea. Si el controlador no descubre valores de más de 255 caracteres en las filas que muestrea, trata a la columna como una columna de cadena de 255 caracteres en lugar de una columna memorando. Así, es posible que se trunquen las cadenas con más de 255 caracteres. Para importar datos de una columna memorando sin que se trunquen, debe asegurarse de que la columna memo contenga, en al menos una de las filas muestreadas, un valor superior a los 255 caracteres, o tendrá que incrementar el número de filas muestreadas por el controlador para que se incluya dicha fila. Puede aumentar el número de filas muestreadas al incrementar el valor de **TypeGuessRows** en la clave del registro **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** . Para más información, vea [PRB: transferencia de datos del origen de OLEDB de Jet 4.0 con error](https://support.microsoft.com/kb/281517).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "82087157"
   
     -   Booleano: booleano (DT_BOOL)  
   
-    -   Fecha/hora `datetime` - (DT_DATE)  
+    -   Fecha y hora: `datetime` (DT_DATE)  
   
     -   Cadena: cadena Unicode, longitud de 255 caracteres (DT_WSTR)  
   
@@ -112,6 +112,6 @@ ms.locfileid: "82087157"
   
 -   Entrada de blog sobre cómo [importar datos de Excel de 64 bits en SSIS](https://go.microsoft.com/fwlink/?LinkId=217673)en hrvoje.piasevoli.com  
   
--   Entrada de blog, [Conexión a Excel (XLSX) en SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
+-   Entrada de blog [sobre cómo conectarse a Excel (xlsx) en SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

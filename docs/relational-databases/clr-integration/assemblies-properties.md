@@ -1,6 +1,6 @@
 ---
-title: Propiedades de ensamblaje (página general) Microsoft Docs
-description: Puede ver o modificar las propiedades de un ensamblado hospedado en SQL Server. Estos incluyen el nombre del ensamblado y el propietario, el conjunto de permisos y otras propiedades.
+title: Propiedades del ensamblado (página general) | Microsoft Docs
+description: Puede ver o modificar las propiedades de un ensamblado hospedado en SQL Server. Esto incluye el nombre y el propietario del ensamblado, el conjunto de permisos y otras propiedades.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488024"
 ---
 # <a name="assemblies---properties"></a>Ensamblados: propiedades
@@ -31,20 +31,20 @@ ms.locfileid: "81488024"
  Escriba el nombre del propietario o del esquema, o bien selecciónelo en la lista.  
   
  **Conjunto de permisos**  
- Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Seguro,** **Acceso externo**y Acceso **no seguro.**  
+ Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Safe**, **external Access**y **Unsafe** Access.  
   
  **Ruta al ensamblado**  
  Escriba la ruta de acceso al archivo de ensamblado.  
   
  **Examinar**  
- Navegue hasta el ensamblado que desee agregar. Haga clic en **Examinar** si no desea escribir la ruta de acceso al archivo de ensamblaje.  
+ Navegue hasta el ensamblado que desee agregar. Haga clic en **examinar** si no desea escribir la ruta de acceso al archivo de ensamblado.  
   
 ## <a name="additional-properties-grid"></a>Propiedades adicionales (cuadrícula)  
  **Fecha de creación**  
  Muestra la fecha de creación o registro del ensamblado.  
   
  **Nombre seguro**  
- Muestra **True** si el ensamblado se ha firmado digitalmente, **False** si no se ha firmado digitalmente.  
+ Muestra **true** si el ensamblado está firmado digitalmente, **false** si no se ha firmado digitalmente.  
   
  **Versión**  
  Muestra el número de versión del ensamblado.  

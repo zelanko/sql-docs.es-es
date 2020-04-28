@@ -1,6 +1,6 @@
 ---
-title: Agregados definidos por el usuario de CLR ( User-Defined Aggregates? Microsoft Docs
-description: La integración de SQL Server CLR permite crear funciones de agregado personalizadas en código administrado, que realizan un cálculo en un conjunto de valores y devuelven un valor.
+title: Agregados definidos por el usuario CLR | Microsoft Docs
+description: SQL Server la integración CLR le permite crear funciones de agregado personalizadas en código administrado, que realizan un cálculo sobre un conjunto de valores y devuelven un valor.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9267e1e1e0b051dbbd8581b694aafacd2e5ce8a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488307"
 ---
 # <a name="clr-user-defined-aggregates"></a>Agregados definidos por el usuario de CLR

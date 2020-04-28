@@ -1,6 +1,6 @@
 ---
-title: Funciones definidas por el usuario de CLR ( User-Defined Functions) Microsoft Docs
-description: La integración de SQL Server CLR permite crear funciones de agregado, con valores escalares, de tabla y de valor escalar definidos por el usuario en cualquier lenguaje de programación de .NET Framework.
+title: Funciones CLR definidas por el usuario | Microsoft Docs
+description: SQL Server la integración CLR le permite crear funciones escalares definidas por el usuario, con valores de tabla y de agregado en cualquier lenguaje de programación .NET Framework.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0da524de3a21a97daf6e3b2d2e0277631a4467c0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488288"
 ---
 # <a name="clr-user-defined-functions"></a>Funciones definidas por el usuario de CLR

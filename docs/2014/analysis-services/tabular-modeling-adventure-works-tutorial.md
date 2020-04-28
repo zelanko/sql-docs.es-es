@@ -1,5 +1,5 @@
 ---
-title: Modelado tabular (Tutorial de Obras de Aventura) Microsoft Docs
+title: Modelado tabular (tutorial de Adventure Works) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487634"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Creación de modelos tabulares (tutorial de Adventure Works)
@@ -58,7 +58,7 @@ ms.locfileid: "81487634"
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)de datos de ejemplo, consulte .  
+-   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)ejemplo, vea.  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 o posterior (para su uso con la característica Analizar de Excel en la lección 11)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81487634"
 |Lección|Tiempo estimado para completarla|  
 |------------|--------------------------------|  
 |[Implementar seguridad dinámica utilizando filtros de filas](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 minutos|  
-|[Configurar las propiedades de informes para los informes](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) de Power View Configurar las propiedades de informes para los informes de Power View|30 minutos|  
+|[Configurar propiedades de informes para informes de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) Configurar propiedades de informes para informes de Power View|30 minutos|  
   
 ## <a name="next-step"></a>siguiente paso  
  Para empezar el tutorial, vaya a la primera lección: [Lección 1: Crear un nuevo proyecto de modelo tabular](lesson-1-create-a-new-tabular-model-project.md).  

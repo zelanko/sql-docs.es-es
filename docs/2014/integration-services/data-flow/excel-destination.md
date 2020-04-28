@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087165"
 ---
 # <a name="excel-destination"></a>Destino de Excel
@@ -48,7 +48,7 @@ ms.locfileid: "82087165"
   
      Si desea información sobre cómo evitar incluir las comillas simples, consulte esta entrada de blog, [Se añade una comilla simple a todas las cadenas al transformar los datos a Excel cuando se utiliza el componente de flujo de datos de destino Excel en un paquete SSIS](https://go.microsoft.com/fwlink/?LinkId=400876), en msdn.com.  
   
--   **Guardar datos de memorando (ntext)**. Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, la instrucción CREATE TABLE debe utilizar LONGTEXT (o uno de sus sinónimos) como tipo de datos de la columna de nota.  
+-   **Guardar datos de memorando (ntext)**. Para poder guardar correctamente cadenas de más de 255 caracteres en una columna de Excel, el controlador debe reconocer el tipo de datos de la columna de destino como **memorando** y no como **cadena**. Si la tabla de destino ya contiene filas de datos, las primeras filas que pruebe el controlador deberán contener por lo menos una instancia de un valor de más de 255 caracteres en la columna de memorando. Si la tabla de destino se crea durante el diseño del paquete o en tiempo de ejecución, la instrucción CREATE TABLE debe utilizar LONGTEXT (o uno de sus sinónimos) como tipo de datos de la columna de memorando.  
   
 -   **Tipos de datos**. El controlador de Excel reconoce solo un conjunto limitado de tipos de datos. Por ejemplo, todas las columnas numéricas se interpretan como dobles (DT_R8) y todas las columnas de cadena (a excepción de las columnas memorando) se interpretan como cadenas Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] asigna los tipos de datos de Excel de la siguiente manera:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "82087165"
   
     -   Booleano     booleano (DT_BOOL)  
   
-    -   Fecha y `datetime` hora (DT_DATE)  
+    -   Fecha y hora `datetime` (DT_DATE)  
   
     -   Cadena    cadena Unicode, longitud de 255 caracteres (DT_WSTR)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "82087165"
   
 ## <a name="see-also"></a>Consulte también  
  [Origen de Excel](excel-source.md)   
- [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;&#41; variables de SSIS](../integration-services-ssis-variables.md)   
  [Flujo de datos](data-flow.md)   
  [Trabajar con archivos de Excel con la tarea Script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

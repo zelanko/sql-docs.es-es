@@ -13,17 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175594"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar las propiedades de comportamiento de las tablas para informes de Power View (SSAS tabular)
   Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.
 
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] se diferencia de otras aplicaciones de informes en que agrupará automáticamente los elementos durante el diseño de informe, evaluando las columnas que se han colocado en la lista de campos del informe con el formato de presentación que se está utilizando. En la mayoría de los casos, la agrupación predeterminada genera un resultado óptimo. Pero en algunas tablas, normalmente aquellas que contienen datos detallados, el comportamiento de agrupación predeterminada agrupará a veces filas que no deberían estarlo. Para estas tablas, puede establecer propiedades que cambien la forma de evaluar los grupos.
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] se diferencia de otras aplicaciones de informes en que agrupará automáticamente los elementos durante el diseño de informe, evaluando las columnas que se han colocado en la lista de campos del informe con el formato de presentación que se está utilizando. En la mayoría de los casos, la agrupación predeterminada genera un resultado óptimo. Pero en algunas tablas, normalmente aquellas que contienen datos detallados, el comportamiento de agrupación predeterminada agrupará a veces filas que no deberían estarlo. Para estas tablas, puede establecer propiedades que cambien la forma de evaluar los grupos.
 
  El establecimiento de las propiedades de comportamiento de las tablas se recomienda para las tablas donde las filas individuales tengan un interés primordial, como los registros de empleado o de cliente. En cambio, entre las tablas que no se benefician de estas propiedades están aquellas que actúan como tabla de búsqueda (por ejemplo, las tablas de fechas, las de categorías de producto o las de departamentos, donde la tabla consta de un número relativamente reducido de filas y de columnas), o las tablas de resumen que contienen filas que solo ofrecen interés cuando se resumen (por ejemplo, los datos del censo que se acumulan por sexo, edad o ubicación geográfica). En las tablas de resumen y de búsqueda, el comportamiento de agrupación predeterminada genera el mejor resultado.
 
@@ -32,16 +31,16 @@ ms.locfileid: "78175594"
 
  Las propiedades del comportamiento de las tablas son:
 
--   **Identificador de fila** ) también especifica una columna que contiene solo valores únicos, lo que permite utilizar esa columna como clave interna de agrupación.
+-   **Identificador de fila** : especifica una columna que contiene solo valores únicos, lo que permite utilizar esa columna como clave interna de agrupación.
 
--   **Mantener filas únicas** ) también especifica qué columnas proporcionan valores que se deben tratar como únicos aunque estén duplicados (por ejemplo, el nombre y el apellido de un empleado, en los casos en que dos o más empleados compartan el mismo nombre).
+-   **Mantener filas únicas** : especifica qué columnas proporcionan valores que se tienen que tratar como únicos, aunque estén duplicados (por ejemplo, nombre y apellidos de empleado, para los casos en que dos o varios empleados compartan el mismo nombre).
 
--   **Etiqueta predeterminada** ) también especifica qué columna proporciona un nombre para mostrar que representará los datos de fila (por ejemplo, el nombre de empleado en un registro de empleado).
+-   **Etiqueta predeterminada** : especifica qué columna proporciona un nombre para mostrar que representará los datos de fila (por ejemplo, el nombre de empleado en un registro de empleado).
 
--   **Imagen predeterminada** ) también especifica qué columna proporciona una imagen que representa los datos de fila (por ejemplo, un identificador de fotografía en un registro de empleado).
+-   **Imagen predeterminada** : especifica qué columna proporciona una imagen que representará los datos de fila (por ejemplo, un carnet con fotografía en un registro del empleado).
 
 > [!NOTE]
->  En la sección siguiente puede ver un enfoque de las optimizaciones de diseño desde el punto de vista de un formato de presentación determinado:  [Optimizar diseños específicos](#bkmk_optimizeforlayout).
+>   Consulte la siguiente sección para enfocar las optimizaciones de diseño desde el punto de vista de un formato de presentación determinado:  [Optimizar diseños específicos](#bkmk_optimizeforlayout).
 
 ## <a name="opening-the-table-behavior-dialog-box"></a>Abrir el cuadro de diálogo de comportamiento de la tabla
 
@@ -87,7 +86,7 @@ ms.locfileid: "78175594"
 > [!NOTE]
 >  Las imágenes se pueden extraer de direcciones URL en un archivo de imagen de un servidor web o como datos binarios insertados en el libro. Si la imagen se basa en una dirección URL, asegúrese también de establecer la columna como tipo de imagen para que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] recupere la imagen en lugar de mostrar la dirección URL como datos de texto en el informe.
 
-##  <a name="bkmk_optimizeforlayout"></a>Optimizar diseños específicos
+##  <a name="optimizing-for-specific-layouts"></a><a name="bkmk_optimizeforlayout"></a> Optimizar diseños específicos
  Esta sección describe el efecto de establecer las propiedades del comportamiento de las tablas desde el punto de vista de un formato de presentación determinado y las características de los datos. Si intenta ajustar el diseño de un informe de matriz, por ejemplo, puede utilizar esta información para comprender cómo mejorar una presentación de matriz mediante propiedades de comportamiento de tablas en el modelo.
 
 ### <a name="images-are-missing"></a>Faltan imágenes
@@ -113,11 +112,11 @@ ms.locfileid: "78175594"
 
  Compare estas imágenes de antes y después que muestran cómo el establecimiento de esta propiedad afecta al diseño de una matriz.
 
- **Before: agrupación predeterminada basada en los campos de la matriz**
+ **Antes: agrupación predeterminada basada en los campos de la matriz**
 
  ![Diseño de matriz agrupado por identificador de fila](../media/ssas-rptprop-matrixrowid.gif "Diseño de matriz agrupado por identificador de fila")
 
- **Después: agrupación en identificador de fila**
+ **Después: agrupación según el identificador de fila**
 
  ![Diseño de matriz agrupado por identificador de fila](../media/ssas-rptprop-matrixrowid.gif "Diseño de matriz agrupado por identificador de fila")
 
@@ -130,11 +129,11 @@ ms.locfileid: "78175594"
 
  ![Gráfico basado en agrupación predeterminado en nivel de campo](../media/ssas-rptprop-chartfieldgroup.gif "Gráfico basado en agrupación predeterminado en nivel de campo")
 
- **Después: agrupación en identificador de fila (el identificador de fila se convierte en el eje)**
+ **Después: agrupación según el identificador de fila (el identificador de fila se convierte en el eje)**
 
  ![Gráfico basado en agrupación de identificador de fila](../media/ssas-rptprop-chartrowid.gif "Gráfico basado en agrupación de identificador de fila")
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Pasos a seguir
  Después de haber evaluado las tablas del modelo y establecer las propiedades del comportamiento de las tablas para que las que contengan filas de detalles aparezcan siempre como elementos individuales, puede optimizar aún más el modelo mediante propiedades o configuraciones adicionales.
 
 

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175724"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
@@ -98,7 +98,7 @@ ms.locfileid: "78175724"
 |Nivel Route Category en la dimensión Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|
 |Atributo Route en la dimensión Route|air,sea,road,rail|RouteDimensionTable|Enrutar|Sea|
 |Atributo Hemisphere en la dimensión Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|
-|Atributo Continent en la dimensión Source|Africa,Asia,AustraliaEurope,N. America,S. América|SourceDimensionTable|Continent|Europa|
+|Atributo Continent en la dimensión Source|Africa,Asia,AustraliaEuropa,N. America,S. America|SourceDimensionTable|Continent|Europa|
 |Atributo Half en la dimensión Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|
 |Atributo Quarter en la dimensión Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Trimestre|3rd quarter|
 

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d705a02df8e133b5deb8242b1120a6ddd9f9cac9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177223"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Tarea 7: ver las actualizaciones realizadas con Master Data Manager en Excel
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Tarea 7: Visualización de las actualizaciones realizadas con Master Data Manager en Excel
   En esta tarea, comprobará que puede ver los datos actualizados desde MDS en Excel.
 
 1.  Ahora, cambie a la ventana de Excel que tiene abierta la hoja de cálculo **de proveedores limpiados y coincidentes** .
@@ -31,6 +31,6 @@ ms.locfileid: "78177223"
      ![Excel - Códigos y nombres de estado actualizados](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel - Códigos y nombres de estado actualizados")
 
 ## <a name="next-step"></a>siguiente paso
- [Tarea 8: agregar un nuevo valor para la entidad Estado en Excel](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)
+ [Tarea 8: Adición de un nuevo valor para la entidad Estado en Excel](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)
 
 

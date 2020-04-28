@@ -13,10 +13,10 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925600"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
@@ -159,7 +159,7 @@ En este tema se definen los términos relevantes para ADO.
  Propiedad específica de un proveedor de datos o del servicio de cursor. La colección de **propiedades** de un objeto se rellena automáticamente ("dinámicamente"). Un objeto no tiene ninguna propiedad dinámica hasta que se conecta a un origen de datos a través de un proveedor de datos determinado. Vea también proveedor de datos, cursor.  
   
 ## <a name="e"></a>E  
- Enumeration  
+ Enumeración  
  Lista de constantes con nombre. Los valores enumerados no deben ser únicos. Sin embargo, el nombre de cada valor debe ser único dentro del ámbito en el que se define la enumeración. En ADO, las enumeraciones se utilizan para los valores devueltos y los parámetros numéricos, para agregar significado al código ADO y para proteger al desarrollador de los valores numéricos (que pueden cambiar de una versión a una versión). Por ejemplo, para abrir un **conjunto de registros**estático, use el valor enumerado **adOpenStatic** :`Recordset.Open ,,adOpenStatic`  
   
  También se conoce como *constante enumerada*. Vea también *constante*.  
@@ -190,7 +190,7 @@ En este tema se definen los términos relevantes para ADO.
  Columna o columnas de una tabla que identifican de forma única una fila; se utiliza a menudo para indizar una tabla.  
   
 ## <a name="m"></a>M  
- calcular las referencias  
+ marshaling  
  Proceso de empaquetar, enviar y desempaquetar parámetros de método de interfaz en los límites de subprocesos o procesos.  
   
  capa intermedia  
@@ -291,5 +291,5 @@ En este tema se definen los términos relevantes para ADO.
  Árbol  
  Estructura que representa una relación jerárquica entre los elementos (nodos). Hay un nodo en el nivel superior de un árbol (la raíz). Debajo de la raíz, puede haber varios elementos secundarios. A su vez, cada elemento secundario puede ser el elemento primario de otros elementos secundarios, con lo que se bifurca como un árbol. Una carpeta que contiene documentos y otras carpetas es un ejemplo típico de una estructura de árbol. Vea también jerarquía, nodo, raíz, elemento secundario y primario.  
   
- Servidor web  
+ Servidor Web  
  Equipo que proporciona servicios web y páginas a los usuarios de la intranet y de Internet.

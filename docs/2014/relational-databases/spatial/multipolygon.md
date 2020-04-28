@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176645"
 ---
 # <a name="multipolygon"></a>MultiPolygon
@@ -72,9 +72,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g2` es válido porque las dos instancias de `Polygon` se tocan solo en un punto tangente. 
-  `@g3` no es válido porque los interiores de las dos instancias de `Polygon` se superponen.
+ `@g2` es válido porque las dos instancias de `Polygon` se tocan solo en un punto tangente. `@g3` no es válido porque los interiores de las dos instancias de `Polygon` se superponen.
 
 ## <a name="examples"></a>Ejemplos
  El ejemplo siguiente muestra la creación de una instancia de `geometry``MultiPolygon` y devuelve el valor Well-Known Text (WKT) del segundo componente.

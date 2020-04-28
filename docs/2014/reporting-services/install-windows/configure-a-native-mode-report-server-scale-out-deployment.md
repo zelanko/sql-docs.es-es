@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9fea6ae71046de3cf1a6b4dc765b1a2a19e149
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173586"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo (Administrador de configuración de SSRS)
@@ -59,8 +59,7 @@ ms.locfileid: "78173586"
 
 1.  Instale una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo que hospedará las bases de datos del servidor de informes. Como mínimo, instale [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
 
-2.  Si es necesario, habilite el servidor de informes para conexiones remotas. Algunas versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no habilitan las conexiones TCP/IP remotas ni las conexiones de canalizaciones con nombre de forma predeterminada. Para confirmar si se permiten las conexiones remotas, use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y consulte la configuración de red de la instancia de destino. Si la instancia remota es también una instancia con nombre, compruebe que el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser está habilitado y ejecutándose en el servidor de destino. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser proporciona el número de puerto que se usa para conectarse a la instancia con nombre.
+2.  Si es necesario, habilite el servidor de informes para conexiones remotas. Algunas versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no habilitan las conexiones TCP/IP remotas ni las conexiones de canalizaciones con nombre de forma predeterminada. Para confirmar si se permiten las conexiones remotas, use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y consulte la configuración de red de la instancia de destino. Si la instancia remota es también una instancia con nombre, compruebe que el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser está habilitado y ejecutándose en el servidor de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser proporciona el número de puerto que se usa para conectarse a la instancia con nombre.
 
 ### <a name="to-install-the-first-report-server-instance"></a>Para instalar la primera instancia del servidor de informes
 
@@ -113,13 +112,13 @@ ms.locfileid: "78173586"
     > [!NOTE]
     >  **Problema:** Al intentar unir una instancia del servidor de informes de Reporting Services a la implementación escalada, es posible que se produzcan mensajes de error similares a "acceso denegado".
     > 
-    >  **Solución alternativa:** Realice una copia [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de seguridad de la clave [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de cifrado de la primera instancia y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] restáurela en el segundo servidor de informes. A continuación, intente unir el segundo servidor a la implementación escalada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+    >  **Solución alternativa:** haga una copia de seguridad de la clave de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la primera instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y restáurela en el segundo servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . A continuación, intente unir el segundo servidor a la implementación escalada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
 4.  Ahora debería poder para comprobar que ambas instancias del servidor de informes están operativas. Para comprobar la segunda instancia, puede utilizar la herramienta Configuración de Reporting Services con el fin de conectarse al servidor de informes y hacer clic en la dirección URL del servicio web o en la dirección URL del Administrador de informes.
 
  Si tiene previsto ejecutar los servidores de informes en un clúster de servidores con equilibrio de carga, son necesarios algunos pasos de configuración adicionales. Para más información, consulte [Configurar un servidor de informes en un clúster con equilibrio de carga de red](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).
 
 ## <a name="see-also"></a>Consulte también
- [Configurar una cuenta de servicio &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [configurar una dirección url &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [crear una base de datos del servidor de informes en modo nativo &#40;SSRS Configuration Manager](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)&#41;[configurar las direcciones url del servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [configurar una conexión de base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [Agregar y quitar claves de cifrado para la implementación escalada &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) [administrar un informe Servidor de informes en modo nativo de servicios](../report-server/manage-a-reporting-services-native-mode-report-server.md)
+ [Configurar una cuenta de servicio &#40;ssrs Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md) [configurar una dirección url &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [crear una base de datos del servidor de informes en modo nativo &#40;SSRS Configuration Manager](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)&#41;[configurar las direcciones url del servidor de informes &#40;SSRS Configuration Manager](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)&#41;[configurar una conexión de base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md) [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) [administrar un servidor](../report-server/manage-a-reporting-services-native-mode-report-server.md)
 
 

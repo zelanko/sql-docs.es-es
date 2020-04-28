@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175874"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisar el rendimiento mediante el almacén de consultas
@@ -27,7 +27,7 @@ ms.locfileid: "78175874"
 > [!IMPORTANT]
 >  Actualmente, se trata de una característica de vista previa. Para usar el Almacén de consultas debe confirmar y aceptar que la implementación de Almacén de consultas está sujeta a los términos de vista previa del contrato de licencia (por ejemplo, el Contrato Enterprise, Contrato de Microsoft Azure o Contrato Microsoft Online Subscription), así como cualquier [término de uso complementario aplicable para Microsoft Azure vista previa](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).
 
-##  <a name="Enabling"></a>Habilitar el Almacén de consultas
+##  <a name="enabling-the-query-store"></a><a name="Enabling"></a> Habilitar el Almacén de consultas
  El Almacén de consultas no está activo para nuevas bases de datos de manera predeterminada.
 
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Mediante el uso de la página del Almacén de consultas en Management Studio
@@ -53,7 +53,7 @@ ms.locfileid: "78175874"
 
 
 
-##  <a name="About"></a> Información del Almacén de consultas
+##  <a name="information-in-the-query-store"></a><a name="About"></a> Información del Almacén de consultas
  Los planes de ejecución para cualquier consulta específica en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suelen evolucionar con el tiempo debido a una serie de motivos diferentes, como cambios en las estadísticas, cambios de esquema, creación o eliminación de los índices, etc. La caché de procedimientos (donde se almacenan los planes de consulta almacenados en caché) solo almacena el plan de ejecución más reciente. Los planes también se eliminan de la caché de planes debido a la presión de memoria. Como resultado, es posible que las regresiones de rendimiento de consultas provocadas por los cambios de planes de ejecución no sean triviales y que su resolución lleve mucho tiempo.
 
  Como el almacén de consultas conserva varios planes de ejecución por consulta, puede aplicar directivas para dirigir el procesador de consultas para que use un plan de ejecución concreto para una consulta. Esto se conoce como forzado de plan. El forzado de plan en la consulta de almacenes se ofrece mediante un mecanismo similar al de la sugerencia de consulta [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) , pero no requiere ningún cambio en las aplicaciones de usuario. El plan de forzado puede resolver una regresión del rendimiento de consultas provocado por un cambio de plan en un período de tiempo muy breve.
@@ -98,7 +98,7 @@ JOIN sys.query_store_query_text AS Txt
 
 
 
-##  <a name="Options"></a>Opciones de configuración
+##  <a name="configuration-options"></a><a name="Options"></a> Opciones de configuración
  OPERATION_MODE puede ser READ_WRITE o READ_ONLY.
 
  CLEANUP_POLICY configurar el argumento STALE_QUERY_THRESHOLD_DAYS para especificar el número de días que se conservarán los datos en el almacén de consultas.
@@ -115,51 +115,51 @@ JOIN sys.query_store_query_text AS Txt
 
  
 
-##  <a name="Related"></a>Vistas, funciones y procedimientos relacionados
+##  <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Vistas, funciones y procedimientos relacionados
  El Almacén de consultas se puede ver y administrar a través de [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o usando las siguientes vistas y procedimientos.
 
--   [Sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)
+-   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)
 
 ### <a name="query-store-catalog-views"></a>Vistas de catálogo del almacén de consultas
  Las siete vistas de catálogo presentan información sobre el Almacén de consultas.
 
--   [Sys. database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)
+-   [sys.database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)
 
--   [Sys. query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)
+-   [sys.query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)
 
--   [Sys. query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)
+-   [sys.query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)
 
--   [Sys. query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)
+-   [sys.query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)
 
--   [Sys. query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)
+-   [sys.query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)
 
--   [Sys. query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)
+-   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)
 
--   [Sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)
+-   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)
 
 ### <a name="query-store-stored-procedures"></a>Procedimientos almacenados del almacén de consultas
  Los seis procedimientos almacenados configuran el Almacén de consultas.
 
--   [sp_query_store_flush_db &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)
+-   [sp_query_store_flush_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)
 
--   [sp_query_store_reset_exec_stats &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)
+-   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)
 
--   [sp_query_store_force_plan &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)
+-   [sp_query_store_force_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)
 
--   [sp_query_store_unforce_plan &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)
+-   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)
 
--   [sp_query_store_remove_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)
+-   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)
 
--   [sp_query_store_remove_query &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)
+-   [sp_query_store_remove_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)
 
 
 
-##  <a name="Scenarios"></a>Escenarios de uso de claves
+##  <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Escenarios de uso clave
 
-###  <a name="OptionMgmt"></a>Administración de opciones
+###  <a name="option-management"></a><a name="OptionMgmt"></a> Administración de opciones
  En esta sección se ofrecen algunas directrices sobre la administración de la propia característica Almacén de consultas.
 
- **¿Está Almacén de consultas actualmente activo?**
+ **¿Está el Almacén de consultas activo actualmente?**
 
  El Almacén de consultas almacena sus datos dentro de la base de datos del usuario y ese es el motivo por el que tiene limitado el tamaño (configurado con `MAX_STORAGE_SIZE_MB`). Si los datos del Almacén de consultas alcanzan ese límite, el Almacén de consultas cambiará automáticamente el estado de lectura-escritura a solo lectura y dejará de recopilar datos nuevos.
 
@@ -179,7 +179,7 @@ ELSE SELECT ''Query Store is NOT active''' ;
 EXEC sp_executesql @query;
 ```
 
- **Obtener Almacén de consultas opciones**
+ **Obtener opciones del Almacén de consultas**
 
  Para averiguar información detallada sobre el estado del Almacén de consultas, ejecute lo siguiente en una base de datos de usuario.
 
@@ -187,7 +187,7 @@ EXEC sp_executesql @query;
 SELECT * FROM sys.database_query_store_options;
 ```
 
- **Establecer Almacén de consultas intervalo**
+ **Establecimiento del intervalo del Almacén de consultas**
 
  Puede invalidar el intervalo para agregar estadísticas de tiempo de ejecución de consultas (el valor predeterminado es 60 minutos).
 
@@ -211,7 +211,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
 ```
 
- **Establecer todas las opciones de Almacén de consultas**
+ **Establecer todas las opciones del Almacén de consultas**
 
  Puede establecer varias opciones del Almacén de consultas a la vez con una sola instrucción ALTER DATABASE.
 
@@ -237,7 +237,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
  Como alternativa, puede que quiera borrar solo datos de consultas ad hoc, porque resulta menos relevantes para optimizaciones de consultas y análisis de plan, pero ocupa el mismo espacio.
 
- **Eliminar consultas ad hoc** Esto elimina las consultas que solo se ejecutaron una vez y que tienen más de 24 horas de antigüedad.
+ **Eliminar consultas ad hoc** Se eliminan las consultas que solo se ejecutaron una vez y que tienen más de 24 horas de antigüedad.
 
 ```
 DECLARE @id int
@@ -278,7 +278,7 @@ DEALLOCATE adhoc_queries_cursor;
 
 
 
-###  <a name="Peformance"></a>Auditoría y solución de problemas de rendimiento
+###  <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> Auditoría del rendimiento y solución de problemas
  Como el almacén de consultas conserva el historial de métricas de tiempo de ejecución y compilación a lo largo de las ejecuciones de consulta, hay muchas preguntas diferentes que puede responder con facilidad con respecto a la carga de trabajo.
 
  **Últimas *n* consultas ejecutadas en la base de datos.**
@@ -493,12 +493,12 @@ OPTION (MERGE JOIN);
 
 
 
-###  <a name="Stability"></a>Mantener la estabilidad del rendimiento de las consultas
+###  <a name="maintaining-query-performance-stability"></a><a name="Stability"></a>Mantener la estabilidad del rendimiento de las consultas
  Para las consultas ejecutadas varias veces puede observar que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ha usado diferentes planes que han generado diferente duración y uso de los recursos. Con el Almacén de consultas puede detectar con facilidad cuándo se devolvió el rendimiento de las consultas y determinar el plan óptimo en un período de interés. Luego puede forzar ese plan óptimo para futuras ejecuciones de consultas.
 
  También puede identificar el rendimiento incoherente de las consultas para una consulta con parámetros (ya sea con parámetros automáticos o con parámetros manuales). Entre los distintos planes puede identificar el plan que es rápido y lo suficientemente óptimo para todos o la mayoría de los valores de parámetros y forzar ese plan, manteniendo un rendimiento predecible para el conjunto más amplio de escenarios de usuario.
 
- **Forzar o planear una consulta (aplicar Directiva de forzado).** Cuando se fuerza un plan para una determinada consulta, cada vez que una consulta entra en ejecución, se ejecutará con el plan que se fuerza.
+ **Forzar o planear una consulta (aplicar directiva de forzado).** Cuando se fuerza un plan para una determinada consulta, cada vez que una consulta entra en ejecución, se ejecutará con el plan que se fuerza.
 
 ```
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;

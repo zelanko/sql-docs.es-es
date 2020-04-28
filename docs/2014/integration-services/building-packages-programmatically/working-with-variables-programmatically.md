@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42ac0e7f8b2c41fa30dd41c8255e0b8f04f6e730
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176546"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
@@ -158,7 +158,7 @@ End Module
  Observe que todas las variables en el ámbito del espacio de nombres **System** están disponibles para el paquete. Para más información, consulte [System Variables](../system-variables.md).
 
 ## <a name="namespaces"></a>Espacios de nombres
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) proporciona dos espacios de nombres predeterminados donde residen las [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variables; Espacios de nombres **del sistema y del** **usuario** . De forma predeterminada, cualquier variable personalizada que crea el desarrollador se agrega al espacio de nombres **User**. Las variables System residen en el espacio de nombres **System**. Puede crear espacios de nombres adicionales distintos del espacio de nombres **User** para contener variables personalizadas y puede cambiar el nombre del espacio de nombres **User**, pero no puede agregar ni modificar variables en el espacio de nombres **System** ni asignar variables del sistema a un espacio de nombres diferente.
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) proporciona dos espacios de nombres predeterminados donde residen las variables; los espacios de nombres **User** y **System**. De forma predeterminada, cualquier variable personalizada que crea el desarrollador se agrega al espacio de nombres **User**. Las variables System residen en el espacio de nombres **System**. Puede crear espacios de nombres adicionales distintos del espacio de nombres **User** para contener variables personalizadas y puede cambiar el nombre del espacio de nombres **User**, pero no puede agregar ni modificar variables en el espacio de nombres **System** ni asignar variables del sistema a un espacio de nombres diferente.
 
  Las variables del sistema que están disponibles difieren en función del tipo de contenedor. Para obtener una lista de variables del sistema disponibles para paquetes, contenedores, tareas y controladores de eventos, vea [Variables del sistema](../system-variables.md).
 

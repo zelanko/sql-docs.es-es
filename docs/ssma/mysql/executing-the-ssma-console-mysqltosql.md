@@ -18,10 +18,10 @@ ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 239ba5021363be583572d5d24887233261e359cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909695"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Ejecución de la consola de SSMA (MySQLToSQL)
@@ -37,7 +37,7 @@ crear nuevo proyecto:
   
 Los comandos del proyecto controlan la creación de proyectos, la apertura, el guardado y el cierre de proyectos.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `project-folder`indica la carpeta del proyecto que se va a crear.  
   
@@ -71,7 +71,7 @@ El atributo ' Project-type ' es **SQL-Server-2008** de forma predeterminada.
 proyecto abierto:   
                   Abre un proyecto existente.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `project-folder`indica la carpeta del proyecto que se va a crear. El comando genera un error si la carpeta especificada no existe.  {string}  
   
@@ -95,7 +95,7 @@ proyecto abierto:
   
 guardar-proyecto: guarda el proyecto de migración.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -107,7 +107,7 @@ guardar-proyecto: guarda el proyecto de migración.
 cerrar proyecto  
                   : Cierra el proyecto de migración.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -119,7 +119,7 @@ cerrar proyecto
 cerrar proyecto  
                   : Cierra el proyecto de migración.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -149,7 +149,7 @@ Connect-Source-Database
   
 -   Si no se puede establecer la conexión con el origen, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 La definición del servidor se recupera del atributo name definido para cada conexión en la sección Server del archivo de conexión del servidor o del archivo de script.  
   
@@ -168,7 +168,7 @@ forzar carga-origen/destino-base de datos
   
 -   Si no se puede establecer la conexión con el origen o el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
@@ -189,7 +189,7 @@ reconnect-Source-Database
   
 2.  Si no se puede establecer la conexión con el origen, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -204,7 +204,7 @@ Connect-Target-Database
   
 2.  Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 La definición del servidor se recupera del atributo name definido para cada conexión en la sección Server del archivo de conexión del servidor o del archivo de script.  
   
@@ -221,7 +221,7 @@ reconnect-Target-Database
   
 2.  Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
   
-**Manuscrit**  
+**Script**  
   
 **Ejemplo de sintaxis:**  
   
@@ -242,7 +242,7 @@ generar informe de evaluación
   
 3.  No se puede conectar con el servidor de base de datos de origen durante la ejecución del comando, lo que da lugar a la finalización de la aplicación de consola.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `assessment-report-folder:`Especifica la carpeta donde se puede almacenar el informe de evaluación. (atributo opcional)  
   
@@ -316,7 +316,7 @@ Convert-Schema
   
 2.  Si no se realiza la conexión a la base de datos de origen o de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de origen o de destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `conversion-report-folder:`Especifica la carpeta donde se puede almacenar el informe de evaluación. (atributo opcional)  
   
@@ -380,7 +380,7 @@ migrar datos
   
 1.  Migra los datos de origen al destino.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `object-name:`Especifica los objetos de origen que se han tenido en cuenta para migrar datos (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
@@ -442,7 +442,7 @@ Map-Schema
   
 Asignación de esquema de la base de datos de origen al esquema de destino.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `source-schema`especifica el esquema de origen que se va a migrar.  
   
@@ -474,7 +474,7 @@ sincronizar-destino
   
 3.  Si no se realiza la conexión a la base de datos de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de base de datos de destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `object-name:`Especifica los objetos que se tienen en cuenta para la sincronización con la base de datos de destino (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
@@ -537,7 +537,7 @@ actualizar desde la base de datos
   
 2.  Si este comando se ejecuta en la base de datos de destino, se genera un error.  
   
-**Manuscrit**  
+**Script**  
   
 1.  `object-name:`Especifica los objetos de origen que se tienen en cuenta para actualizar desde la base de datos de origen (puede tener nombres de objeto individuales o un nombre de objeto de grupo).  
   
@@ -600,7 +600,7 @@ guardar como script
   
 Se usa para guardar los scripts de los objetos en un archivo mencionado cuando metabase = Target, es una alternativa al comando de sincronización, en el que obtenemos los scripts y ejecutamos lo mismo en la base de datos de destino.  
   
-**Manuscrit**  
+**Script**  
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   
@@ -676,7 +676,7 @@ Convert-SQL-Statement
   
     -   verbose (= "true/false", con el valor predeterminado "false" (atributos opcionales)).  
   
-**Manuscrit**  
+**Script**  
   
 Requiere uno o varios nodos de metabase como parámetro de línea de comandos.  
   

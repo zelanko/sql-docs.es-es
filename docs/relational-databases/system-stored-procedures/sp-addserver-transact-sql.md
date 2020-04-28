@@ -21,10 +21,10 @@ ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1d89da6675fba33af3c6e2d1c054273b6e420ec3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172312"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addserver [ @server = ] 'server' ,
 ```
 
 ## <a name="arguments"></a>Argumentos
-`[ @server = ] 'server'`Es el nombre del servidor. Los nombres de los servidores tienen que ser únicos y cumplir las reglas para los nombres de equipo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, aunque no se permiten espacios. *Server* es de **tipo sysname**y no tiene ningún valor predeterminado.
+`[ @server = ] 'server'`Es el nombre del servidor. Los nombres de los servidores tienen que ser únicos y cumplir las reglas para los nombres de equipo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, aunque no se permiten espacios. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.
 
  Cuando se instalan varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo, una instancia opera como si estuviera en un servidor independiente. Especifique una instancia con nombre haciendo referencia al *servidor* como *nombredeservidor\nombredeinstancia*.
 
@@ -64,7 +64,7 @@ sp_addserver [ @server = ] 'server' ,
 
  no se puede usar **sp_addserver** dentro de una transacción definida por el usuario.
 
- El uso de **sp_addserver** para agregar un servidor remoto es discontinuo. En su lugar, use [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) .
+ El uso de **sp_addserver** para agregar un servidor remoto es discontinuo. Use en su lugar [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) .
 
 ## <a name="permissions"></a>Permisos
  Debe pertenecer al rol fijo de servidor **setupadmin** .

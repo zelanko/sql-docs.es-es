@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 588295d0705ec9c556c85eb5bef1d96d8128b580
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176074"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Crear un miembro consolidado (Master Data Services)
@@ -53,11 +53,11 @@ ms.locfileid: "78176074"
 
 9. Haga clic en **OK**.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Pasos a seguir
 
 -   [Movimiento de miembros dentro de una jerarquía &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)
 
 ## <a name="see-also"></a>Consulte también
- [Cree una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md) [crear un miembro hoja &#40;Master Data Services](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)&#41;[cargar o actualizar miembros en Master Data Services mediante el uso de los miembros del proceso de almacenamiento provisional](add-update-and-delete-data-master-data-services.md) [](../../2014/master-data-services/members-master-data-services.md) &#40;Master Data Services&#41;las [jerarquías explícitas](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) &#40;Master Data Services&#41;
+ [Cree una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md) [crear un miembro hoja &#40;Master Data Services](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)&#41;[cargar o actualizar miembros en Master Data Services mediante el uso de los miembros del proceso de almacenamiento provisional](add-update-and-delete-data-master-data-services.md) [Members &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md) &#40;Master Data Services&#41;las [jerarquías explícitas](../../2014/master-data-services/explicit-hierarchies-master-data-services.md) &#40;Master Data Services&#41;
 
 

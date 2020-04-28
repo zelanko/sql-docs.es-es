@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76971390"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Conceder permisos en un servidor de informes en modo nativo
@@ -70,7 +70,7 @@ ms.locfileid: "76971390"
   
 ## <a name="see-also"></a>Consulte también  
  [Roles predefinidos](role-definitions-predefined-roles.md)   
- [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Conceder permisos para elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Autenticación con el servidor de informes](authentication-with-the-report-server.md)   
  (create-and-manage-role-assignments.md)   
  [Seguridad y protección de Reporting Services](reporting-services-security-and-protection.md)   

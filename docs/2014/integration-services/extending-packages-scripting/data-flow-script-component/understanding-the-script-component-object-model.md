@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176204"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Descripción del modelo de objetos del componente de script
@@ -158,8 +158,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Qué proporciona el elemento de proyecto ComponentWrapper
  El elemento de proyecto ComponentWrapper contiene una clase denominada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La clase `ScriptMain` donde escribe el código personalizado deriva a su vez de `UserComponent`. La clase `UserComponent` contiene los siguientes métodos:
 
--   Una implementación invalidada del método `PrimeOutput`. El motor de flujo de datos llama a este método antes de `ProcessInput` en tiempo de ejecución y solamente lo llama una vez. 
-  `PrimeOutput` entrega el procesamiento al método `CreateNewOutputRows`. A continuación, si el componente es un origen (es decir, el componente no tiene ninguna entrada), `PrimeOutput` llama al método reemplazable `FinishOutputs` y al método privado `MarkOutputsAsFinished`. El método `MarkOutputsAsFinished` llama a `SetEndOfRowset` en el último búfer de salida.
+-   Una implementación invalidada del método `PrimeOutput`. El motor de flujo de datos llama a este método antes de `ProcessInput` en tiempo de ejecución y solamente lo llama una vez. `PrimeOutput` entrega el procesamiento al método `CreateNewOutputRows`. A continuación, si el componente es un origen (es decir, el componente no tiene ninguna entrada), `PrimeOutput` llama al método reemplazable `FinishOutputs` y al método privado `MarkOutputsAsFinished`. El método `MarkOutputsAsFinished` llama a `SetEndOfRowset` en el último búfer de salida.
 
 -   Una implementación reemplazable del método `CreateNewOutputRows`. La implementación predeterminada está vacía. Éste es el método que normalmente invalidará para escribir el código personalizado de procesamiento de datos.
 

@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176385"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Generar, implementar y depurar objetos personalizados
   Después de haber escrito el código para un objeto personalizado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], debe generar, implementar e integrar el ensamblado en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para que esté disponible para su uso en paquetes, y probarlo y depurarlo.
 
-##  <a name="top"></a> Pasos para generar, implementar y depurar un objeto personalizado para Integration Services
+##  <a name="steps-in-building-deploying-and-debugging-a-custom-object-for-integration-services"></a><a name="top"></a> Pasos para generar, implementar y depurar un objeto personalizado para Integration Services
  Ya ha escrito la funcionalidad personalizada para el objeto. Ahora tiene que probarlo y hacer que esté disponible para los usuarios. Los pasos son muy similares para todos los tipos de objetos personalizados que puede crear para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
  A continuación figuran los pasos que debe seguir para generar, implementar y depurar el objeto:
@@ -41,7 +41,7 @@ ms.locfileid: "78176385"
 
 6.  [Pruebe](#testing) y depure el código.
 
-##  <a name="signing"></a>Firmar el ensamblado
+##  <a name="signing-the-assembly"></a><a name="signing"></a> Firmar el ensamblado
  Cuando se tiene pensado compartir un ensamblado, se debe instalar en la memoria caché de ensamblados global. Una vez agregado el ensamblado a la memoria caché de ensamblados global, aplicaciones como [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pueden utilizarlo. Un requisito de la memoria caché de ensamblados global es que el ensamblado se debe firmar con un nombre seguro, que garantiza que el ensamblado es único de forma global. Un ensamblado con nombre seguro especifica un nombre completo que incluye el nombre del ensamblado, la referencia cultural, la clave pública y el número de versión. El motor en tiempo de ejecución utiliza esta información para localizar el ensamblado y distinguirlo entre otros ensamblados con el mismo nombre.
 
  Para firmar un ensamblado con un nombre seguro, es necesario crear o tener antes un par de claves publica y privada. Este par de claves criptográficas pública y privada se usa al realizar la compilación para crear un ensamblado con nombre seguro.
@@ -56,7 +56,7 @@ ms.locfileid: "78176385"
 
  Puede firmar con facilidad el ensamblado con un nombre seguro en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] durante la generación. En el cuadro de diálogo **propiedades del proyecto** , seleccione la pestaña **firma** . Seleccione la opción para **firmar el ensamblado** y, a continuación, proporcione la ruta de acceso del archivo de clave (. snk).
 
-##  <a name="building"></a>Compilar el ensamblado
+##  <a name="building-the-assembly"></a><a name="building"></a> Generar el ensamblado
  Después de firmar el proyecto, debe generar o volver a generar el proyecto o la solución utilizando los comandos disponibles en el menú **Generar** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. La solución puede contener un proyecto independiente para una interfaz de usuario personalizada, que también se debe firmar con un nombre seguro y se puede generar al mismo tiempo.
 
  El método más sencillo para realizar los dos pasos siguientes (implementar el ensamblado e instalarlo en la memoria caché de ensamblados global) es crear un script con estos pasos como un evento posterior a la compilación en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Los eventos de compilación están disponibles en la página **Compilar** de Propiedades del proyecto para un proyecto de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] y en la página **Eventos de compilación** para un proyecto de C#. Es necesaria la ruta de acceso completa para las utilidades de símbolo del sistema como **gacutil.exe**. Son necesarias comillas alrededor de las rutas de acceso que contienen espacios en blanco y alrededor de macros como $(TargetPath) que se expanden a rutas de acceso que contienen espacios en blanco.
@@ -69,7 +69,7 @@ ms.locfileid: "78176385"
 copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProviders "
 ```
 
-##  <a name="deploying"></a>Implementar el ensamblado
+##  <a name="deploying-the-assembly"></a><a name="deploying"></a> Implementar el ensamblado
  El [!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador busca los objetos personalizados disponibles para su uso en paquetes enumerando los archivos que se encuentran en una serie de carpetas que se crean [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se instala. Cuando se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la configuración de instalación predeterminada, este conjunto de carpetas se encuentra en **C:\Archivos de programa\Microsoft SQL Server\120\DTS**. Sin embargo, si crea un programa de instalación para el objeto personalizado, debe comprobar el valor de la clave del registro **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath** para comprobar la ubicación de esta carpeta.
 
  Puede colocar el ensamblado en la carpeta de dos maneras:
@@ -90,7 +90,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 > [!NOTE]
 >  Los ensamblados se copian en estas carpetas para admitir la enumeración de tareas disponibles, administradores de conexión, etc. Por consiguiente no tiene que implementar los ensamblados que contienen solo la interfaz de usuario personalizada para los objetos personalizados en estas carpetas.
 
-##  <a name="installing"></a>Instalar el ensamblado en la caché global de ensamblados
+##  <a name="installing-the-assembly-in-the-global-assembly-cache"></a><a name="installing"></a> Instalar el ensamblado en la memoria caché de ensamblados global
  Para instalar el ensamblado de tarea en la caché global de ensamblados (GAC), use la herramienta de línea de comandos **gacutil.exe** o arrastre los ensamblados al directorio `%system%\assembly`. Para su comodidad, puede incluir también la llamada a **gacutil.exe** en un evento posterior a la compilación.
 
  El comando siguiente instala un componente denominado *MyTask.dll* en la GAC mediante **gacutil.exe**.
@@ -101,7 +101,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
  Para obtener más información sobre la caché global de ensamblados, vea Herramienta Caché global de ensamblados (Gactutil.exe) en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Tools.
 
-##  <a name="troubleshooting"></a>Solución de problemas de la implementación
+##  <a name="troubleshooting-the-deployment"></a><a name="troubleshooting"></a> Solucionar problemas relacionados con la implementación
  Si el objeto personalizado aparece en el **cuadro de herramientas** o en la lista de objetos disponibles, pero no puede agregarlo a un paquete, pruebe lo siguiente:
 
 1.  Busque en la memoria caché de ensamblados global varias versiones del componente. Si hay varias versiones del componente en la memoria caché de ensamblados global, el diseñador quizá no pueda cargar el componente. Elimine todas las instancias del ensamblado de la memoria caché de ensamblados global y vuelva a agregar el ensamblado.
@@ -112,7 +112,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 4.  Adjunte [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] a **devenv.exe** y establezca un punto de interrupción para reproducir paso a paso el código de inicialización con el fin de asegurarse de que no se produce ninguna excepción.
 
-##  <a name="testing"></a>Probar y depurar el código
+##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> Probar y depurar el código
  El enfoque más sencillo para depurar los métodos en tiempo de ejecución de un objeto personalizado consiste en iniciar **dtexec.exe** desde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] después de compilar el objeto personalizado y ejecutar un paquete que use el componente.
 
  Si desea depurar los métodos en tiempo de diseño del componente, como el `Validate` método, abra un paquete que use el componente en una segunda instancia de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y asócielo a su proceso **devenv. exe** .
@@ -125,7 +125,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 2.  En la pestaña **depurar** de **propiedades del proyecto**, seleccione **programa externo de inicio** como la acción de **Inicio**y busque **DTExec. exe**, que se instala de forma predeterminada en c:\Archivos de programa\Microsoft SQL server\120\dts\binn
 
-3.  En el cuadro de texto **Opciones de la línea de comandos**, en **Opciones de inicio**, escriba los argumentos de la línea de comandos necesarios para ejecutar un paquete que usa el componente. A menudo el argumento de la línea de comandos estará compuesto del modificador /F[ILE] seguido de la ruta de acceso y nombre de archivo del archivo .dtsx. Para obtener más información, vea [DTExec Utility](../packages/dtexec-utility.md).
+3.  En el cuadro de texto **Opciones de la línea de comandos**, en **Opciones de inicio**, escriba los argumentos de la línea de comandos necesarios para ejecutar un paquete que usa el componente. A menudo el argumento de la línea de comandos estará compuesto del modificador /F[ILE] seguido de la ruta de acceso y nombre de archivo del archivo .dtsx. Para obtener más información, consulte [utilidad dtexec](../packages/dtexec-utility.md).
 
 4.  Establezca los puntos de interrupción en el código fuente donde sea adecuado en los métodos en tiempo de ejecución del componente.
 

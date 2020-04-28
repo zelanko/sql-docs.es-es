@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176845"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
@@ -27,12 +27,12 @@ ms.locfileid: "78176845"
 > [!NOTE]
 >  La búsqueda de texto completo es un componente opcional del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [instalación de SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).
 
-##  <a name="benefits"></a>¿Qué puedo hacer con la búsqueda de texto completo?
+##  <a name="what-can-i-do-with-full-text-search"></a><a name="benefits"></a>¿Qué puedo hacer con la búsqueda de texto completo?
  La búsqueda de texto completo es aplicable a una amplia gama de escenarios empresariales como, por ejemplo, la búsqueda de elementos en un sitio Web. empresas judiciales: búsqueda de historiales de casos en un repositorio de datos legales; o los departamentos de recursos humanos: descripciones de trabajos coincidentes con currículos almacenados. Las tareas administrativas y de desarrollo básicas de la búsqueda de texto completo son equivalentes independientemente de los escenarios empresariales. Sin embargo, en un escenario empresarial determinado, el índice y las consultas de texto completo se pueden ajustar a los objetivos empresariales. Por ejemplo, para un e-business podría ser más importante la maximización del rendimiento que la clasificación de resultados, la exactitud de la recuperación (cuántas de las coincidencias existentes devuelve realmente una consulta de texto completo) o la admisión de varios idiomas. Para un bufete de abogados, recuperar cada posible acierto (*recuperación total* de información) podría ser la consideración más importante.
 
  [En este tema](#top)
 
-###  <a name="queries"></a>Consultas de búsqueda de texto completo
+###  <a name="full-text-search-queries"></a><a name="queries"></a>Consultas de búsqueda de texto completo
  Una vez agregadas las columnas a un índice de texto completo, los usuarios y aplicaciones pueden ejecutar las consultas de texto completo en el texto de las columnas. Estas consultas pueden buscar cualquiera de lo siguiente:
 
 -   Una o varias palabras o frases específicas (*término simple*)
@@ -74,12 +74,12 @@ ms.locfileid: "78176845"
 
  [En este tema](#top)
 
-###  <a name="like"></a>Comparar LIKE con la búsqueda de texto completo
- A diferencia de la búsqueda de texto completo, el predicado [like](/sql/t-sql/language-elements/like-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] solo funciona en patrones de caracteres. Además, no es posible utilizar el predicado de LIKE para consultar datos binarios con formato. Por otro lado, una consulta LIKE contra una cantidad grande de datos de texto no estructurados es mucho más lenta que una consulta de texto completo equivalente contra los mismos datos. Una consulta LIKE realizada en millones de filas de datos de texto puede tardar minutos en devolver resultados, mientras que una consulta de texto completo en los mismos datos puede tardar únicamente segundos, en función del número de filas que se devuelvan.
+###  <a name="comparing-like-to-full-text-search"></a><a name="like"></a>Comparar LIKE con la búsqueda de texto completo
+ A diferencia de la búsqueda de texto completo, el predicado [LIKE](/sql/t-sql/language-elements/like-transact-sql) de [!INCLUDE[tsql](../../../includes/tsql-md.md)] funciona solamente en patrones de caracteres. Además, no es posible utilizar el predicado de LIKE para consultar datos binarios con formato. Por otro lado, una consulta LIKE contra una cantidad grande de datos de texto no estructurados es mucho más lenta que una consulta de texto completo equivalente contra los mismos datos. Una consulta LIKE realizada en millones de filas de datos de texto puede tardar minutos en devolver resultados, mientras que una consulta de texto completo en los mismos datos puede tardar únicamente segundos, en función del número de filas que se devuelvan.
 
  [En este tema](#top)
 
-##  <a name="architecture"></a>Componentes y arquitectura de la búsqueda de texto completo
+##  <a name="components-and-architecture-of-full-text-search"></a><a name="architecture"></a>Componentes y arquitectura de la búsqueda de texto completo
  La arquitectura de búsqueda de texto completo consta de los procesos siguientes:
 
 -   Proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (sqlserver.exe).
@@ -90,11 +90,11 @@ ms.locfileid: "78176845"
 
  Estos dos procesos contienen los componentes de la arquitectura de búsqueda de texto completo. Estos componentes y sus relaciones se resumen en la ilustración siguiente. Los componentes se describen después de la ilustración.
 
- ![arquitectura de la búsqueda de texto completo](../../database-engine/media/ifts-arch.gif "arquitectura de la búsqueda de texto completo")
+ ![arquitectura de búsqueda de texto completo](../../database-engine/media/ifts-arch.gif "arquitectura de la búsqueda de texto completo")
 
  [En este tema](#top)
 
-###  <a name="sqlprocess"></a>SQL Server proceso
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a>SQL Server proceso
  El proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa los componentes siguientes para la búsqueda de texto completo:
 
 -   **Tablas de usuario.** Esta tablas contienen los datos cuyo texto completo se indizará.
@@ -103,11 +103,11 @@ ms.locfileid: "78176845"
 
 -   **Archivos de sinónimos.** Estos archivos contienen sinónimos de los términos de búsqueda. Para obtener más información, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](configure-and-manage-thesaurus-files-for-full-text-search.md).
 
--   **Objetos STOPLIST.** Los objetos de listas de palabras irrelevantes contienen una lista de palabras comunes que no son útiles para la búsqueda. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
+-   **Objetos de listas de palabras irrelevantes.** Los objetos de listas de palabras irrelevantes contienen una lista de palabras comunes que no son útiles para la búsqueda. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]procesador de consultas.** El procesador de consultas compila y ejecuta consultas SQL. Si una consulta SQL incluye una consulta de búsqueda de texto completo, la consulta se envía al motor de texto completo, durante la compilación y durante la ejecución. El resultado de la consulta se hace coincidir con el índice de texto completo.
 
--   **Motor de texto completo.** El motor de texto completo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se integra ahora totalmente con el procesador de consultas. El motor de texto completo compila y ejecuta consultas de texto completo. Como parte de la ejecución de consultas, el motor de texto completo puede recibir entradas del diccionario de sinónimos y de la lista de palabras irrelevantes.
+-   **Motor de búsqueda de texto completo.** El motor de texto completo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se integra ahora totalmente con el procesador de consultas. El motor de texto completo compila y ejecuta consultas de texto completo. Como parte de la ejecución de consultas, el motor de texto completo puede recibir entradas del diccionario de sinónimos y de la lista de palabras irrelevantes.
 
 -   **Escritor de índices (indizador).** El escritor de índices genera la estructura que se utiliza para almacenar los tokens indizados.
 
@@ -115,7 +115,7 @@ ms.locfileid: "78176845"
 
  [En este tema](#top)
 
-###  <a name="fdhostprocess"></a>Proceso de host de demonio de filtro
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a>Proceso de host de demonio de filtro
  El host de demonio de filtro es un proceso iniciado por el motor de texto completo. Ejecuta los componentes de búsqueda de texto completo siguientes, que son responsables de obtener acceso a los datos de las tablas, filtrarlos y separar las palabras de esos datos, así como de separar las palabras y lematizar la entrada de la consulta.
 
  Los componentes del proceso de host de demonio de filtro son los siguientes:
@@ -128,10 +128,10 @@ ms.locfileid: "78176845"
 
  [En este tema](#top)
 
-##  <a name="processing"></a>Procesamiento de la búsqueda de texto completo
+##  <a name="full-text-search-processing"></a><a name="processing"></a>Procesamiento de la búsqueda de texto completo
  La búsqueda de texto completo se realiza gracias al motor de texto completo. El motor de texto completo desempeña dos roles: la indización y las consultas.
 
-###  <a name="indexing"></a>Proceso de indización de texto completo
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a>Proceso de indización de texto completo
  Cuando se inicia un rellenado de texto completo (también conocido como rastreo), el motor de texto completo inserta lotes grandes de datos en la memoria y lo notifica al host de demonio de filtro. El host filtra y establece separaciones de palabras en los datos, y convierte los datos convertidos en las listas de palabras invertidas. A continuación, la búsqueda de texto completo extrae los datos convertidos de las listas de palabras, procesa los datos para quitar las palabras irrelevantes y conserva las listas de palabras para un lote en uno o varios índices invertidos.
 
  Al indizar los datos almacenados en `varbinary(max)` una `image` columna o, el filtro, que implementa la interfaz **IFilter** , extrae texto basándose en el formato de archivo especificado para los datos ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] por ejemplo, Word). En algunos casos, los componentes de filtro requieren `varbinary(max)`que los `image` datos de, o se escriban en la carpeta filterdata, en lugar de insertarse en la memoria.
@@ -144,22 +144,21 @@ ms.locfileid: "78176845"
 
  [En este tema](#top)
 
-###  <a name="querying"></a>Proceso de consulta de texto completo
+###  <a name="full-text-querying-process"></a><a name="querying"></a>Proceso de consulta de texto completo
  El procesador de consultas pasa las partes de texto completo de una consulta al Motor de búsqueda de texto completo para procesarlas. El motor de búsqueda de texto completo realiza la separación de palabras y, opcionalmente, expansiones del diccionario de sinónimos, lematización y procesamiento de las palabras irrelevantes. A continuación, las partes de texto completo de la consulta se representan en forma de operadores de SQL, principalmente como funciones con valores de tabla de transmisión por secuencias (STVF). Durante la ejecución de la consulta, las STVF tienen acceso al índice invertido para recuperar los resultados correctos. Los resultados se devuelven en este punto al cliente o se siguen procesando antes de devolverse al cliente.
 
  [En este tema](#top)
 
-##  <a name="components"></a>Componentes lingüísticos y compatibilidad con idiomas en la búsqueda de texto completo
+##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>Componentes lingüísticos y compatibilidad con idiomas en la búsqueda de texto completo
  La búsqueda de texto completo admite casi 50 idiomas distintos, como inglés, español, chino, japonés, árabe, bengalí e hindi. Para obtener una lista completa de los idiomas de texto completo compatibles, vea [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Cada una de las columnas incluidas en el índice de texto completo está asociada a un identificador de configuración regional (LCID) de Microsoft Windows que se corresponde con un idioma compatible con la búsqueda de texto completo. Por ejemplo, el LCID 1033 corresponde al inglés de Estados Unido y el LCID 2057 corresponde al inglés de Reino Unido. Para cada idioma de texto completo compatible, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona componentes lingüísticos que permiten indizar y consultar los datos de texto completo almacenados en ese idioma.
 
  Entre los componentes específicos del idioma se incluyen los siguientes:
 
 -   **Separadores de palabras y lematizadores.** Un separador de palabras busca los límites de palabra en función de las reglas léxicas de un idioma concreto (*separación de palabras*). Cada separador de palabras está asociado a un lematizador que conjuga los verbos para dicho idioma. Para obtener más información, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](configure-and-manage-word-breakers-and-stemmers-for-search.md).
 
--   **Palabras irrelevantes.** Se proporciona una lista de palabras irrelevantes del sistema que contiene un conjunto básico de palabras irrelevantes (denominadas también palabras vacías). Una *palabra irrelevante* es una palabra que no aporta nada a la búsqueda y que se omite en las consultas de texto completo. Por ejemplo, en la configuración regional en inglés, las palabras como "a", "and", "is" y "the" se consideran palabras irrelevantes. Normalmente, tendrá que configurar uno o varios archivos de diccionario de sinónimos y listas de palabras irrelevantes. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
+-   **Listas de palabras irrelevantes.** Se proporciona una lista de palabras irrelevantes del sistema que contiene un conjunto básico de palabras irrelevantes (denominadas también palabras vacías). Una *palabra irrelevante* es una palabra que no aporta nada a la búsqueda y que se omite en las consultas de texto completo. Por ejemplo, en la configuración regional en inglés, las palabras como "a", "and", "is" y "the" se consideran palabras irrelevantes. Normalmente, tendrá que configurar uno o varios archivos de diccionario de sinónimos y listas de palabras irrelevantes. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
--   **Archivos de sinónimos.** 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala también un archivo de diccionario de sinónimos para cada idioma de texto completo, además de un archivo de diccionario de sinónimos global. Los archivos de diccionario de sinónimos instalados son básicamente archivos vacíos, pero puede modificarlos para definir los sinónimos de un determinado idioma o escenario empresarial. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. Para obtener más información, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](configure-and-manage-thesaurus-files-for-full-text-search.md).
+-   **Archivos de sinónimos.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala también un archivo de diccionario de sinónimos para cada idioma de texto completo, además de un archivo de diccionario de sinónimos global. Los archivos de diccionario de sinónimos instalados son básicamente archivos vacíos, pero puede modificarlos para definir los sinónimos de un determinado idioma o escenario empresarial. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. Para obtener más información, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](configure-and-manage-thesaurus-files-for-full-text-search.md).
 
 -   **Filtros (iFilters).**  La indización de un documento en una columna de tipo de datos `varbinary(max)`, `image`, o `xml` requiere un filtro que realice el procesamiento adicional. El filtro debe ser específico del tipo de documento (.doc, .pdf, .xls, .xml, etc.). Para obtener más información, vea [Configurar y administrar filtros para búsquedas](configure-and-manage-filters-for-search.md).
 
@@ -167,7 +166,7 @@ ms.locfileid: "78176845"
 
  [En este tema](#top)
 
-##  <a name="reltasks"></a> Tareas relacionadas
+##  <a name="related-tasks"></a><a name="reltasks"></a> Tareas relacionadas
 
 -   [Introducción a la búsqueda de texto completo](get-started-with-full-text-search.md)
 
@@ -187,7 +186,7 @@ ms.locfileid: "78176845"
 
 -   Administrar catálogos e índices
 
-    -   [Crear y administrar catálogos de texto completo](create-and-manage-full-text-catalogs.md)
+    -   [Creación y administración de catálogos de texto completo](create-and-manage-full-text-catalogs.md)
 
     -   [Crear y administrar índices de texto completo](create-and-manage-full-text-indexes.md)
 
@@ -201,7 +200,7 @@ ms.locfileid: "78176845"
 
     -   [Solucionar problemas de indización de texto completo](troubleshoot-full-text-indexing.md)
 
-    -   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](back-up-and-restore-full-text-catalogs-and-indexes.md)
+    -   [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](back-up-and-restore-full-text-catalogs-and-indexes.md)
 
 -   Administrar los componentes lingüísticos
 
@@ -225,13 +224,13 @@ ms.locfileid: "78176845"
 
     -   [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](manage-and-monitor-full-text-search-for-a-server-instance.md)
 
-    -   [Establecer la cuenta del servicio para el selector del demonio de filtro de texto completo](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)
+    -   [Establecer la cuenta del servicio para el selector del demonio de filtro completo](set-the-service-account-for-the-full-text-filter-daemon-launcher.md)
 
 -   [Actualizar la búsqueda de texto completo](upgrade-full-text-search.md)
 
  [En este tema](#top)
 
-##  <a name="relcontent"></a> Contenido relacionado
+##  <a name="related-content"></a><a name="relcontent"></a> Contenido relacionado
 
 -   [DDL de búsqueda de texto completo, funciones, procedimientos almacenados y vistas](../views/views.md)
 

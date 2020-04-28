@@ -17,15 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e67d718c928785d85712eb5307130af22570c26
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173915"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona una gama completa de herramientas y servicios listos para usar que le ayudarán a crear, implementar y administrar informes para su organización. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye características de programación que le permitirán ampliar y personalizar la funcionalidad de informes.
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona una gama completa de herramientas y servicios listos para usar que le ayudarán a crear, implementar y administrar informes para su organización. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye características de programación que le permitirán ampliar y personalizar la funcionalidad de informes.
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]es una plataforma de informes basada en servidor que proporciona una funcionalidad de informes completa para una variedad de orígenes de datos. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]incluye un conjunto completo de herramientas para crear, administrar y proporcionar informes, así como API que permiten a los desarrolladores integrar o ampliar el procesamiento de datos e informes en aplicaciones personalizadas. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]las herramientas de funcionan [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] en el entorno de y están [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] totalmente integradas con herramientas y componentes de.
 
@@ -35,7 +34,7 @@ ms.locfileid: "78173915"
 
  Para obtener información sobre otros componentes, herramientas y recursos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea los [Libros en pantalla de SQL Server](../2014-toc/index.yml).
 
- Icono **Examinar contenido por carpeta de área** ![](media/hlp-16folder.gif "Icono de carpeta") [Reporting Services servidor de informes](../../2014/reporting-services/reporting-services-report-server.md)
+ Icono **Examinar contenido por carpeta de área** ![Folder icon](media/hlp-16folder.gif "Icono de carpeta") [Reporting Services servidor de informes](../../2014/reporting-services/reporting-services-report-server.md)
 
  ![Icono de carpeta](media/hlp-16folder.gif "Icono de carpeta") [Reporting Services informes &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)
 
@@ -45,7 +44,7 @@ ms.locfileid: "78173915"
 
  ![Icono de carpeta](media/hlp-16folder.gif "Icono de carpeta") [elementos de informe en Diseñador de informes &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)
 
- ![](media/hlp-16folder.gif "Icono de carpeta") [Programas](subscriptions/schedules.md) de iconos de carpeta
+ ![Folder icon](media/hlp-16folder.gif "Icono de carpeta") [Programas](subscriptions/schedules.md) de iconos de carpeta
 
  ![Icono de carpeta](media/hlp-16folder.gif "Icono de carpeta") [suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)
 
@@ -66,6 +65,6 @@ ms.locfileid: "78173915"
  ![Icono de carpeta](media/hlp-16folder.gif "Icono de carpeta") [&#40;de referencia de características Reporting Services&#41;](feature-reference-reporting-services.md)
 
 ## <a name="see-also"></a>Consulte también
- [SQL Server centro de recursos](https://go.microsoft.com/fwlink/?linkID=219676)
+ [Centro de recursos de SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)
 
 

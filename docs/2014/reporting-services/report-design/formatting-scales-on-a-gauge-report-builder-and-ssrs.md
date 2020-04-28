@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dec6f4898f46246b31e0808d0ff0997dd4c0913c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176775"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a las escalas de un medidor (Generador de informes y SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176775"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="DefiningMinMax"></a> Definir el mínimo, el máximo y los intervalos de una escala
+##  <a name="defining-minimum-maximum-and-intervals-on-a-scale"></a><a name="DefiningMinMax"></a> Definir el mínimo, el máximo y los intervalos de una escala
  Un medidor se suele usar para mostrar indicadores clave de rendimiento (KPI) que se miden en porcentajes de 0 a 100; por ello, estos son los valores predeterminados que se dan a las propiedades de valores mínimo y máximo del medidor. Sin embargo, es posible que estos valores no representen la escala de valores que está intentando mostrar. Dado que no hay ninguna lógica integrada para determinar lo que representa el campo de datos KPI, el medidor no calcula automáticamente los valores mínimo y máximo. Si los valores de un campo de datos KPI no están comprendidos entre 0 y 100, debe establecer explícitamente los valores para las propiedades de valores mínimo y máximo con objeto de dar contexto al valor que se muestra en el medidor.
 
  En la escala se sitúan las marcas de graduación principales y secundarias. Además, la escala tiene etiquetas que suelen estar asociadas a las marcas de graduación principales. Por ejemplo, una escala podría tener marcas de graduación principales en los valores 0, 20, 40, 60, 80 y 100. Las etiquetas deberían corresponder a esas marcas de graduación. La diferencia entre los valores de las etiquetas se denomina intervalo de escala. En este ejemplo, el intervalo de escala está establecido en 20. Puede establecer la propiedad Intervalo en el cuadro de diálogo **Propiedades de escala radial** o **Propiedades de escala lineal** .
@@ -53,14 +53,14 @@ ms.locfileid: "78176775"
  El desplazamiento del intervalo determina el número de unidades que se omitirán antes de que se muestre la primera etiqueta. Todas las marcas de graduación y etiquetas principales sucesivas que aparezcan en la escala utilizarán el intervalo especificado. El hecho de especificar un valor de 0 para los intervalos de etiquetas o las marcas de graduación es lo mismo que restablecer el intervalo a Automático.
 
 
-##  <a name="ReducingCollisions"></a> Reducir las colisiones de las etiquetas mediante multiplicadores
+##  <a name="reducing-label-collisions-with-multipliers"></a><a name="ReducingCollisions"></a> Reducir las colisiones de las etiquetas mediante multiplicadores
  Si los valores contienen muchos dígitos, es posible que afecten a la legibilidad del medidor. Puede usar un multiplicador de escala para aumentar o reducir la escala de los valores. Cuando se especifica un multiplicador de escala, se multiplica por él cada valor original de la escala antes de mostrarlo en la escala. Para reducir la escala de los valores, debe especificar un número decimal. Por ejemplo, si la escala va de 0 a 10000, pero desea mostrar los números 0 a 10 en el medidor, puede usar un valor de multiplicador de 0,001.
 
 > [!NOTE]
 >  Cuando se usa un multiplicador, no se multiplica el valor real del campo de agregado que usa el medidor. Solo se multiplican los valores de las etiquetas mostradas en el medidor una vez definidos el mínimo, el máximo y los intervalos. Cuando use un multiplicador, considere la posibilidad de conservar el cálculo del intervalo como automático.
 
 
-##  <a name="SpecifyingScaleBar"></a> Especificar el ancho de la barra de escala, el radio y los ángulos de una escala radial
+##  <a name="specifying-the-scale-bar-width-radius-and-angles-on-a-radial-scale"></a><a name="SpecifyingScaleBar"></a> Especificar el ancho de la barra de escala, el radio y los ángulos de una escala radial
  Use la página **Diseño** del cuadro de diálogo **Propiedades de escala radial** para establecer el ancho de la barra de escala, el radio de escala, el ángulo inicial y ángulo de barrido de la escala. Puede usar estas propiedades para personalizar el tamaño y el formato de la escala. Por ejemplo, si coloca las etiqueta de la escala fuera de la misma, necesitará cambiar el tamaño del radio de la escala para que las etiquetas quepan dentro del medidor.
 
 > [!NOTE]
@@ -77,7 +77,7 @@ ms.locfileid: "78176775"
  El ángulo de barrido es el número de grados, entre 0 y 360, que la escala barrerá en un círculo. Un ángulo de barrido de 360 grados genera una escala que es un círculo completo. Esto es útil si desea diseñar un medidor que se parezca a un reloj.
 
 
-##  <a name="PositioningLabels"></a> Colocar etiquetas en una escala lineal o radial
+##  <a name="positioning-labels-on-a-linear-or-radial-scale"></a><a name="PositioningLabels"></a> Colocar etiquetas en una escala lineal o radial
  Hay dos propiedades que determinan la posición de las etiquetas. La propiedad de colocación de las etiquetas especifica si las etiquetas se muestran dentro, fuera o cruzadas en la barra de escala. La propiedad de distancia establece la distancia de la etiqueta a la escala, comenzando en la barra de escala. Si desea colocar las etiquetas dentro de la barra de escala, especifique un número negativo. Por ejemplo, si las etiquetas están fuera de la escala y ha establecido una distancia desde la escala de 10, las etiquetas se mostrarán 10 unidades más afuera de donde se colocarían normalmente, donde 1 unidad es:
 
 -   1% del diámetro del medidor en un medidor radial, o bien

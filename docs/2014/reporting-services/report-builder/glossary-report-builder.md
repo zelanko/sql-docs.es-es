@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 761abc52c7ef0ba974540ff0b87a57773a4badc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918093"
 ---
 # <a name="glossary-report-builder"></a>Glosario (Generador de informes)
@@ -37,18 +37,18 @@ ms.locfileid: "76918093"
 |base de datos de aplicación|Base de datos que almacena la información del usuario y del sistema de una aplicación.|  
 |Argumento|Valor que proporciona información a una acción, evento, método, propiedad, función o procedimiento.|  
 |ensamblado|Módulo de aplicación administrada que contiene metadatos de clases y código administrado como un objeto de SQL Server, para el que se pueden crear funciones CLR, procedimientos almacenados, desencadenadores, agregados definidos por el usuario y tipos definidos por el usuario en SQL Server.|  
-|Autenticación|Proceso por el que se comprueba la identidad de un usuario, equipo, proceso u otra entidad validando las credenciales proporcionadas por la entidad. Las formas comunes de credenciales son las firmas digitales, tarjetas inteligentes, datos biométricos y una combinación de nombres de usuario y contraseña.|  
+|autenticación|Proceso por el que se comprueba la identidad de un usuario, equipo, proceso u otra entidad validando las credenciales proporcionadas por la entidad. Las formas comunes de credenciales son las firmas digitales, tarjetas inteligentes, datos biométricos y una combinación de nombres de usuario y contraseña.|  
 |authorization|1. La operación que comprueba los permisos y derechos de acceso que se otorgan a un usuario. 2. El proceso de otorgar a una persona, proceso del equipo o dispositivo acceso a determinada información, servicios o funcionalidad.|  
 |ejes|Líneas vertical y horizontal de un gráfico, que se usan para mostrar la posición de un punto.|  
 |intervalo de eje|Número de unidades entre las marcas de graduación principales de un eje del gráfico. El intervalo se calcula automáticamente, pero también se puede establecer de forma manual.|  
 |realizar copia de seguridad|Crear una copia duplicada de un programa, un disco o datos.|  
-|backup|Colección de archivos, carpetas y otros tipos de datos que se han duplicado y almacenado en un archivo o en una o varias cintas.|  
+|copia de seguridad|Colección de archivos, carpetas y otros tipos de datos que se han duplicado y almacenado en un archivo o en una o varias cintas.|  
 |tabla base|Tabla que se almacena permanentemente en una base de datos. Las referencias a las tablas base se realizan mediante vistas, cursores, instrucciones SQL y procedimientos almacenados.|  
-|lote|1. Conjunto de instrucciones SQL que se envían de forma conjunta y que se ejecutan como grupo.  2. En Reporting Services, recopilación de llamadas a métodos SOAP en una única transacción.|  
+|proceso por lotes|1. Conjunto de instrucciones SQL que se envían de forma conjunta y que se ejecutan como grupo.  2. En Reporting Services, recopilación de llamadas a métodos SOAP en una única transacción.|  
 |objeto binario grande (BLOB)|Datos binarios de tamaño excepcionalmente grande, como imágenes o pistas de audio o multimedia, almacenadas como datos digitales, o cualquier variable o columna de tabla lo suficientemente grande como para guardar estos valores.|  
 |operación bit a bit|Operación que manipula un solo bit o comprueba si el bit está activado o no.|  
 |marcador|En un informe, vínculo que salta a otro lugar del mismo informe.|  
-|Boolean|Operación o expresión que se puede evaluar solamente como verdadera o falsa.|  
+|Booleano|Operación o expresión que se puede evaluar solamente como verdadera o falsa.|  
 |mapa de burbujas|Capa de mapa que muestra círculos de tamaño variable. Las burbujas tienen como centro puntos centrales de polígonos o puntos.|  
 |funciones integradas|Grupo de funciones predefinidas que forman parte de los lenguajes Transact-SQL y de expresiones multidimensionales.|  
 |columna calculada|Columna de una tabla que muestra el resultado de una expresión en lugar de los datos almacenados.|  
@@ -196,7 +196,7 @@ ms.locfileid: "76918093"
 |informe vinculado|Informe que hace referencia a una definición de informe existente mediante un conjunto distinto de valores o propiedades de parámetros. Un informe vinculado es un elemento del servidor de informes que proporciona un punto de acceso a un informe existente. Conceptualmente, es similar a los accesos directos a programa que se usan para ejecutar un programa o abrir un archivo.|  
 |región de datos de lista|Región de datos del diseño de un informe que se repite con cada grupo o fila del conjunto de datos de informe. Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos.|  
 |servidor local|1. En conexiones de SQL Server, instancia de SQL Server que se ejecuta en el mismo equipo que la aplicación. <br />2. En una instrucción Transact-SQL, cuando se resuelven referencias a objetos de base de datos, instancia de SQL Server que ejecuta la instrucción. <br />3. En consultas distribuidas de SQL Server, instancia de SQL Server que ejecuta la consulta distribuida. El servidor local tendrá acceso a cualquier servidor vinculado al que la consulta haga referencia.|  
-|localidad|Atributo del sistema operativo Windows que define algunos comportamientos relacionados con el idioma.|  
+|locale|Atributo del sistema operativo Windows que define algunos comportamientos relacionados con el idioma.|  
 |identificador de configuración regional (LCID)|Número que identifica una configuración regional basada en Windows.|  
 |archivo de registro|Archivo o conjunto de archivos que contiene registros de las modificaciones realizadas en una base de datos.|  
 |nombre lógico|Nombre utilizado por SQL Server para identificar un archivo.|  
@@ -215,7 +215,7 @@ ms.locfileid: "76918093"
 |MDX|Véase: expresiones multidimensionales (MDX)|  
 |proyección de Mercator|En un elemento de informe de mapa, proyección de mapa cilíndrica ideada por Gerardus Mercator en 1569.|  
 |metadata|Información sobre las propiedades de datos, como el tipo de datos de una columna (numéricos, texto, etc.) o la longitud de una columna; información sobre un archivo, como su título, descripción, fecha de creación y fecha de la última modificación; información sobre la estructura de los datos o información que especifica el diseño de objetos como cubos o dimensiones.|  
-|method|Función que lleva a cabo una acción mediante un objeto COM, como en SQL-DMO, OLE DB y Objetos de datos ActiveX (ADO).|  
+|método|Función que lleva a cabo una acción mediante un objeto COM, como en SQL-DMO, OLE DB y Objetos de datos ActiveX (ADO).|  
 |Tipo de MIME|Formato de archivo de una imagen, por ejemplo .bmp, .gif o .jpeg.|  
 |dependencia de modelos|Relación entre dos o más modelos en la que un modelo depende de la información de otro.|  
 |Expresiones multidimensionales (MDX)|Sintaxis utilizada para definir objetos multidimensionales, así como consultar y manipular datos multidimensionales.|  
@@ -229,7 +229,7 @@ ms.locfileid: "76918093"
 |anidamiento|Colocación de una región de datos dentro de otra, por ejemplo un minigráfico dentro de una tabla. Las regiones de datos anidadas están basadas en el mismo conjunto de datos de informe. El ámbito de los datos de la región anidada se define automáticamente mediante su posición en la región de datos primaria.|  
 |NULL|Entrada que no tiene ningún valor asignado explícitamente.|  
 |expresión numérica|Expresión que se evalúa en un número.|  
-|object|Uno de los componentes de una base de datos, como una tabla, índice o procedimiento almacenado.|  
+|objeto|Uno de los componentes de una base de datos, como una tabla, índice o procedimiento almacenado.|  
 |identificador de objeto|1. Nombre exclusivo que se da a un objeto. 2. En Metadata Services, identificador exclusivo construido a partir de un identificador único global (GUID) y un identificador interno.|  
 |Origen de datos ODBC|1. Ubicación de un conjunto de datos al que se puede tener acceso mediante un controlador ODBC. 2. Definición almacenada que contiene toda la información de conexión que necesita una aplicación ODBC para conectarse al origen de datos.|  
 |Controlador ODBC|Biblioteca de vínculos dinámicos (DLL) que una aplicación habilitada para ODBC, como Excel, puede utilizar para obtener acceso a un origen de datos ODBC.|  
@@ -243,7 +243,7 @@ ms.locfileid: "76918093"
 |operator|Signo o símbolo que especifica el tipo de cálculo que se va a realizar en una expresión. Existen operadores matemáticos, de comparación, lógicos y de referencia.|  
 |agregado externo|Función de agregado que especifica un parámetro de ámbito que es otra función de agregado.|  
 |relleno|1. Cadena que se suele agregar cuando el último bloque de texto simple es corto. 2. Espacio asignado a una celda para crear o mantener un tamaño concreto.|  
-|Page|En el Generador de informes, la página hacer referencia a la página física de papel. El tamaño del papel especificado para el informe controla cómo se representa el informe.|  
+|página|En el Generador de informes, la página hacer referencia a la página física de papel. El tamaño del papel especificado para el informe controla cómo se representa el informe.|  
 |paleta|Conjunto de valores predefinidos o definidos por el usuario de los colores utilizados en gráficos, mapas y medidores.|  
 |parámetro|Colección global integrada en un informe que permite que los usuarios establezcan valores que pueden modificar los datos y la apariencia de los informes, y conectar los informes relacionados. Los parámetros del informe se crean automáticamente a partir de los parámetros de la consulta y de la base de datos, y manualmente por parte de los autores de informes.|  
 |informe con parámetros|Informe publicado que acepta valores de entrada mediante parámetros.|  
@@ -264,7 +264,7 @@ ms.locfileid: "76918093"
 |provider|1. Proveedor OLE DB. 2. Biblioteca de vínculos dinámicos (DLL) en proceso que proporciona acceso a una base de datos.|  
 |parámetros de consulta|Parámetros que se especifican en una consulta del conjunto de datos, como una consulta de Transact-SQL.|  
 |RDL|Véase: lenguaje RDL (Report Definition Language)|  
-|record|Grupo de campos, o columnas, de información relacionados que se trata como una unidad. En una base de datos relacional, un registro se suele denominar fila.|  
+|registro|Grupo de campos, o columnas, de información relacionados que se trata como una unidad. En una base de datos relacional, un registro se suele denominar fila.|  
 |rectángulo|Elemento de informe que se puede usar como contenedor para varios elementos de informe o como elemento gráfico de un informe.|  
 |jerarquía recursiva|1. Jerarquía de datos de un único conjunto de datos de informe donde existen varios niveles jerárquicos, como puede ser la estructura de mando para las relaciones entre jefes y empleados en una jerarquía de organización. 2. En Master Data Services, una jerarquía recursiva es una jerarquía derivada que incluye una relación recursiva. Una relación recursiva existe cuando una entidad tiene un atributo basado en dominio en la propia entidad.|  
 |base de datos relacional|Base de datos o sistema de administración de bases de datos que almacena información en tablas como filas y columnas de datos y realiza búsquedas mediante los datos de columnas especificadas de una tabla para buscar datos adicionales en otra tabla.|  
@@ -342,7 +342,7 @@ ms.locfileid: "76918093"
 |inicio de sesión de SQL Server|Cuenta almacenada en SQL Server que permite a los usuarios conectarse a SQL Server.|  
 |Instrucción SQL|Comando SQL o Transact-SQL, como SELECT o DELETE, que realiza una acción en los datos.|  
 |cadena de conexión estática|Conjunto de valores que el informe utiliza siempre para conectarse al mismo origen de datos cada vez que se ejecuta.|  
-|string|Tipo de datos con letras, números y muchos otros caracteres. Los números de un campo String, que es el campo con el tipo String, no se pueden utilizar para realizar cálculos. Para realizar cálculos numéricos se debe utilizar un tipo de datos numérico, como entero o flotante. En el caso de un parámetro, String equivale al tipo de datos Text.|  
+|cadena|Tipo de datos con letras, números y muchos otros caracteres. Los números de un campo String, que es el campo con el tipo String, no se pueden utilizar para realizar cálculos. Para realizar cálculos numéricos se debe utilizar un tipo de datos numérico, como entero o flotante. En el caso de un parámetro, String equivale al tipo de datos Text.|  
 |funciones de cadena|Funciones que realizan operaciones en cadenas binarias o de caracteres.|  
 |Lenguaje de consulta estructurado (SQL)|Lenguaje usado para insertar, recuperar, modificar y eliminar datos en una base de datos relacional y diseñado específicamente para consultas de bases de datos.|  
 |subinforme|Un subinforme es un control incrustado en el cuerpo de un informe primario. Desde el punto de vista conceptual, un subinforme equivale a un marco en una página web que sirve de contenedor de otro contenido de la página web. El subinforme se representa dentro del informe primario que lo contiene. Ambos informes se procesan y muestran a la vez.|  

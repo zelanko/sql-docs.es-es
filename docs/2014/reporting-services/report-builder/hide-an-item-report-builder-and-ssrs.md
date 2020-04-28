@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0eb06c9136179a075057791f88bf2d80e187026
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176886"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ocultar un elemento (Generador de informes y SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176886"
     > [!NOTE]
     >  Para seleccionar una tabla entera o una región de datos de la matriz, haga clic en la región de datos para seleccionarla, haga clic con el botón derecho en un identificador de fila, de columna o de tabla y, después, haga clic en **Propiedades de Tablix**.
 
-2.  Haga clic en **Visibilidad**.
+2.  Haga clic en **visibilidad.**
 
 3.  En **Cuando se ejecute inicialmente el informe**, especifique si desea ocultar el elemento la primera vez que se ve el informe:
 

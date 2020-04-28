@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4e3e06280ad91c59984b91e7383213f73f95343
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175334"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios
@@ -63,7 +63,7 @@ ms.locfileid: "78175334"
 
 ## <a name="modifying-parent-attribute-properties-in-the-employee-dimension"></a>Modificar las propiedades de los atributos primarios en la dimensión Employee
 
-1.  Cambie al diseñador de dimensiones para la dimensión **Employee** .
+1.  Cambie al Diseñador de dimensiones para la dimensión **Employee** .
 
 2.  Haga clic en la pestaña **Estructura de dimensión** , y, después, seleccione la jerarquía de atributo **Employees** en el panel **Atributos** .
 

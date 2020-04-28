@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174354"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint
@@ -22,19 +22,19 @@ ms.locfileid: "78174354"
 
 |||
 |-|-|
-|![Contenido relacionado con PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")|Al final del tema se incluye un script completo de PowerShell. Use el script completo como punto de partida para generar un script personalizado con el fin de auditar toda la implementación de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|
+|![Contenido relacionado con PowerShell](../../../reporting-services/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell")|Al final del tema se incluye un script completo de PowerShell. Use el script completo como punto de partida para generar un script personalizado con el fin de auditar toda la implementación de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] .|
 
 ||
 |-|
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|
 
- **En este tema**: los elementos con letras de la tabla de contenido siguiente corresponden a las áreas del diagrama. El diagrama muestra
+ **En este tema**: los elementos indicados con letras en la tabla de contenido siguiente corresponden a las áreas del diagrama. El diagrama muestra
 
 |||
 |-|-|
-|[Preparar el entorno de PowerShell](#bkmk_prerequisites)<br /><br /> [Síntomas y acciones recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services servicio de Windows](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService y PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [aplicaciones de servicio PowerPivot y servidores proxy](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [bases de datos](#bkmk_databases)<br /><br /> [Características de SharePoint](#bkmk_features)<br /><br /> [Trabajos de temporizador](#bkmk_timer_jobs)<br /><br /> [Reglas de estado](#bkmk_health_rules)<br /><br /> **(E)** [registros de Windows y ULS](#bkmk_logs)<br /><br /> [Proveedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca de cliente de ADOMD.Net](#bkmk_adomd)<br /><br /> [Reglas de recopilación de datos de mantenimiento](#bkmk_health_collection)<br /><br /> [Soluciones](#bkmk_solutions)<br /><br /> [Pasos de comprobación manual](#bkmk_manual)<br /><br /> [Más recursos](#bkmk_more_resources)<br /><br /> [Script completo de PowerShell](#bkmk_full_script)|![comprobación de powershell de powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "comprobación de powershell de powerpivot")|
+|[Preparar el entorno de PowerShell](#bkmk_prerequisites)<br /><br /> [Síntomas y acciones recomendadas](#bkmk_symptoms)<br /><br /> **(A)** [Servicio Windows de Analysis Services](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService y PowerPivotEngineService](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Aplicaciones de servicio y servidores proxy PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Bases de datos](#bkmk_databases)<br /><br /> [Características de SharePoint](#bkmk_features)<br /><br /> [Trabajos del temporizador](#bkmk_timer_jobs)<br /><br /> [Reglas de mantenimiento](#bkmk_health_rules)<br /><br /> **(E)** [Registros de Windows y ULS](#bkmk_logs)<br /><br /> [Proveedor MSOLAP](#bkmk_msolap)<br /><br /> [Biblioteca cliente ADOMD.Net](#bkmk_adomd)<br /><br /> [Reglas de recopilación de datos de mantenimiento](#bkmk_health_collection)<br /><br /> [Soluciones](#bkmk_solutions)<br /><br /> [Pasos de comprobación manual](#bkmk_manual)<br /><br /> [Más recursos](#bkmk_more_resources)<br /><br /> [Script completo de PowerShell](#bkmk_full_script)|![comprobación de powershell de powerpivot](../../../sql-server/install/media/ssas-powershell-component-verification.png "comprobación de powershell de powerpivot")|
 
-##  <a name="bkmk_prerequisites"></a>Preparar el entorno de PowerShell
+##  <a name="prepare-your-powershell-environment"></a><a name="bkmk_prerequisites"></a> Preparar el entorno de PowerShell
  Los pasos de esta sección sirven para preparar el entorno de PowerShell. Puede que estos pasos no sean necesarios, en función de cómo esté configurado actualmente el entorno de scripting.
 
  **Permisos de PowerShell**
@@ -43,7 +43,7 @@ ms.locfileid: "78174354"
 
  Get-SPLogEvent: Debe tener **privilegios de administrador** del equipo para ejecutar este cmdlet.
 
- **SharePoint y [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] ** Destina
+ **SharePoint y módulo [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]**
 
  Si ve un mensaje de error similar al siguiente al ejecutar cmdlets relacionados de SharePoint, ejecute el comando Add-PSSnapin:
 
@@ -61,7 +61,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |-|-|
 |![powerpivot en conjunto de aplicaciones general de sharepoint](../../../sql-server/install/media/ssas-powerpivot-logo.png "powerpivot en conjunto de aplicaciones general de sharepoint")|Si lo desea, puede comprobar la mayoría de los componentes en Administración central, con el panel de administración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir el panel en Administración central, haga clic en **Configuración de aplicación general**y, a continuación, haga clic en **Panel de administración** en **PowerPivot**. Para obtener más información sobre el panel, vea [PowerPivot Management Dashboard and Usage Data](../../power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|
 
-##  <a name="bkmk_symptoms"></a>Síntomas y acciones recomendadas
+##  <a name="symptoms-and-recommended-actions"></a><a name="bkmk_symptoms"></a>Síntomas y acciones recomendadas
  En la tabla siguiente se muestra una lista de síntomas o problemas y la sección sugerida de este tema que puede consultar para resolver el problema.
 
 |Síntoma|Vea la sección|
@@ -71,7 +71,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |Algunas partes del panel de administración|Si instala PowerPivot para SharePoint en una granja que tiene la topología de Administración central, sin Excel Services o PowerPivot para SharePoint, debe descargar e instalar la biblioteca de cliente de Microsoft ADOMD.NET si desea acceso total a los informes integrados en el panel de administración de PowerPivot. Algunos informes del panel usan ADOMD.NET para tener acceso a los datos internos que proporcionan los datos de errores en el procesamiento de las consultas de PowerPivot y el estado del servidor en la granja. Vea la sección [Biblioteca de cliente de ADOMD.NET](#bkmk_adomd) y el tema [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).|
 |\<> de contenido futuro||
 
-##  <a name="bkmk_windows_service"></a>Analysis Services servicio de Windows
+##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a> Servicio Windows de Analysis Services
  El script de esta sección comprueba la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Compruebe que el servicio se está **ejecutando**.
 
 ```powershell
@@ -84,7 +84,7 @@ Name              DisplayName                                Status
 MSOLAP$POWERPIVOT SQL Server Analysis Services (POWERPIVOT) Running
 ```
 
-##  <a name="bkmk_engine_and_system_service"></a>PowerPivotSystemService y PowerPivotEngineService
+##  <a name="powerpivotsystemservice-and-powerpivotengineservice"></a><a name="bkmk_engine_and_system_service"></a>PowerPivotSystemService y PowerPivotEngineService
  Los scripts de esta sección comprueban los servicios del sistema de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] . Hay un servicio del sistema para una implementación de SharePoint 2013 y dos servicios para una implementación de SharePoint 2010.
 
  **PowerPivotSystemService**
@@ -122,7 +122,7 @@ Instances : {POWERPIVOT}
 Farm      : SPFarm Name=SharePoint_Config
 ```
 
-##  <a name="bkmk_powerpivot_service_application"></a>Aplicaciones de servicio PowerPivot y servidores proxy
+##  <a name="powerpivot-service-applications-and-proxies"></a><a name="bkmk_powerpivot_service_application"></a>Aplicaciones de servicio PowerPivot y servidores proxy
  Compruebe que el estado es **En línea**. La Aplicación de Servicios de Excel no usa una base de datos de aplicación de servicio y por tanto el cmdlet no devuelve un nombre de base de datos. Anote la base de datos usada por la aplicación de servicio de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para que pueda comprobar que está en línea en la sección de base de datos más adelante en este tema.
 
  **PowerPivot y aplicaciones de servicio de Excel**
@@ -187,7 +187,7 @@ PowerPivot Service Application Proxy                     Online PowerPivotUnatte
 Excel Services Application Web Service Application Proxy Online                             Excel Services Application
 ```
 
-##  <a name="bkmk_databases"></a>Bases
+##  <a name="databases"></a><a name="bkmk_databases"></a> Bases de datos
  El script siguiente devuelve el estado de las bases de datos de aplicación de servicio y todas las bases de datos de contenido. Compruebe que el estado es **En línea**.
 
 ```powershell
@@ -202,7 +202,7 @@ DefaultWebApplicationDB-f0db1a8e-4c22-408c-b9b9-153bd74b0312               Onlin
 SharePoint_Admin_3cadf0b098bf49e0bb15abd487f5c684                          Online TESTSERVER\POWERPIVOT    Content Database
 ```
 
-##  <a name="bkmk_features"></a>Características de SharePoint
+##  <a name="sharepoint-features"></a><a name="bkmk_features"></a>Características de SharePoint
  Compruebe que las características de sitio, web y granja están en línea.
 
 ```powershell
@@ -217,7 +217,7 @@ PowerPivotAdmin Online   Web SPFarm Name=SharePoint_Config
 PowerPivot      Online  Farm SPFarm Name=SharePoint_Config
 ```
 
-##  <a name="bkmk_timer_jobs"></a>Trabajos de temporizador
+##  <a name="timer-jobs"></a><a name="bkmk_timer_jobs"></a>Trabajos de temporizador
  Compruebe que los trabajos del temporizador están **En línea**. El EngineService de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] no está instalado en SharePoint 2013, por lo que el script no mostrará los trabajos del temporizador de EngineService en una implementación de SharePoint 2013.
 
 ```powershell
@@ -240,7 +240,7 @@ Online Health Analysis Job (Weekly, SQL Server PowerPivot Service Application, A
 Online PowerPivot Setup Extension Timer Job                                                 4/1/2014 1:40:31 AM  MidTierService
 ```
 
-##  <a name="bkmk_health_rules"></a>Reglas de estado
+##  <a name="health-rules"></a><a name="bkmk_health_rules"></a>Reglas de estado
  Hay menos reglas en una implementación de SharePoint 2013. Para obtener una lista completa de reglas para cada entorno de SharePoint y una explicación de cómo usar las reglas, consulte [reglas de estado de PowerPivot-configurar](../../power-pivot-sharepoint/configure-power-pivot-health-rules.md).
 
 ```powershell
@@ -259,14 +259,14 @@ ASADOMDNETHealthRule             True PowerPivot: ADOMD.NET is not installed on 
 MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should have 'Full Read' permission on all associated SPWebApplications.
 ```
 
-##  <a name="bkmk_logs"></a>Registros de Windows y ULS
+##  <a name="windows-and-uls-logs"></a><a name="bkmk_logs"></a>Registros de Windows y ULS
  **Registro de eventos de Windows**
 
  El comando siguiente buscará en el registro de eventos de Windows los eventos relacionados con la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener información sobre cómo deshabilitar eventos o cambiar el nivel de evento, vea [configurar y ver archivos de registro de SharePoint y el registro de diagnósticos &#40;PowerPivot para SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).
 
- **Nombre del servicio:** MSOLAP $ POWERPIVOT
+ **Nombre de servicio:** MSOLAP$POWERPIVOT
 
- **Nombre para mostrar en servicios de Windows:** SQL Server Analysis Services (POWERPIVOT)
+ **Nombre para mostrar en Servicios de Windows:** SQL Server Analysis Services (POWERPIVOT)
 
 ```powershell
 Get-EventLog "application" | Where-Object {$_.source -Like "msolap`$powerpivot*"}  | Select timegenerated, entrytype , source, message | Format-Table -property * -AutoSize | Out-Default
@@ -318,7 +318,7 @@ Message     : EXCEPTION: System.TimeoutException: The request channel timed out 
               System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.WaitForReply(TimeSpan timeout...
 ```
 
-##  <a name="bkmk_msolap"></a>Proveedor MSOLAP
+##  <a name="msolap-provider"></a><a name="bkmk_msolap"></a>Proveedor MSOLAP
  Compruebe el proveedor MSOLAP. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]y [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] requieren msolap. 5.
 
 ```powershell
@@ -337,7 +337,7 @@ MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0
 
  Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) y [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](https://technet.microsoft.com/library/hh758436.aspx).
 
-##  <a name="bkmk_adomd"></a>Biblioteca de cliente de ADOMD.Net
+##  <a name="adomdnet-client-library"></a><a name="bkmk_adomd"></a>Biblioteca de cliente de ADOMD.Net
 
 ```powershell
 Get-WMIObject -Class win32_product | Where-Object {$_.name -Like "*ado*"} | Select name, version, vendor | Format-Table -Property * -AutoSize | out-default
@@ -352,7 +352,7 @@ Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Cor
 
  Para obtener más información, vea [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).
 
-##  <a name="bkmk_health_collection"></a>Reglas de recopilación de datos de mantenimiento
+##  <a name="health-data-collection-rules"></a><a name="bkmk_health_collection"></a>Reglas de recopilación de datos de mantenimiento
  Compruebe que el **Estado** está en línea y que **Habilitado** es True.
 
 ```powershell
@@ -370,7 +370,7 @@ PowerPivot Unload Data Usage Online    True AnalysisServicesUnloads             
 
  Para obtener más información, consulte [PowerPivot Usage Data Collection](../../power-pivot-sharepoint/power-pivot-usage-data-collection.md).
 
-##  <a name="bkmk_solutions"></a>Solución
+##  <a name="solutions"></a><a name="bkmk_solutions"></a>Solución
  Si los demás componentes están en línea, puede omitir la comprobación de las soluciones. Sin embargo, si faltan reglas de mantenimiento, compruebe que las dos soluciones existen y mostraban Compruebe que las dos soluciones de PowerPivot están **En línea** e **Implementada**.
 
 ```powershell
@@ -398,27 +398,27 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 
  Para obtener más información sobre cómo implementar soluciones de SharePoint, vea [Implementación de paquetes de solución (SharePoint Server 2010)](https://technet.microsoft.com/library/cc262995\(v=office.14\).aspx).
 
-##  <a name="bkmk_manual"></a>Pasos de comprobación manual
+##  <a name="manual-verification-steps"></a><a name="bkmk_manual"></a>Pasos de comprobación manual
  En esta sección se describen los pasos de comprobación que no se pueden completar mediante cmdlets de PowerShell.
 
- **Actualización de datos programada:** Configure la actualización programar un libro para que **también se actualice lo antes posible**.  Para obtener más información, vea la sección "comprobar la actualización de datos" de [programación de actualización de datos y orígenes de datos que no admiten la autenticación de Windows &#40;PowerPivot para SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).
+ **Actualización de datos programada:** configure la programación de actualización de un libro en **También actualizar lo más rápido posible**.  Para obtener más información, vea la sección "comprobar la actualización de datos" de [programación de actualización de datos y orígenes de datos que no admiten la autenticación de Windows &#40;PowerPivot para SharePoint&#41;](../../power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md).
 
-##  <a name="bkmk_more_resources"></a>Más recursos
- [Cmdlets de administración de servidor Web (IIS) en Windows PowerShell](https://technet.microsoft.com/library/ee790599.aspx).
+##  <a name="more-resources"></a><a name="bkmk_more_resources"></a>Más recursos
+ [Cmdlets de administración de servidor web (IIS) en Windows PowerShell](https://technet.microsoft.com/library/ee790599.aspx).
 
- [PowerShell para comprobar los servicios, los sitios IIS y el estado del grupo de aplicaciones en SharePoint](https://gallery.technet.microsoft.com/office/PowerShell-to-check-a6ed72a0).
+ [PowerShell para comprobar el estado de servicios, sitios de IIS y grupos de aplicaciones en SharePoint](https://gallery.technet.microsoft.com/office/PowerShell-to-check-a6ed72a0).
 
  [Referencia de Windows PowerShell para SharePoint 2013](https://technet.microsoft.com/library/ee890108\(v=office.15\).aspx)
 
  [Referencia de Windows PowerShell para SharePoint Foundation 2010](https://technet.microsoft.com/library/ee890105\(v=office.14\).aspx)
 
- [Administración de servicios de Excel con Windows PowerShell (SharePoint Server 2010)](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)
+ [Administración de Servicios de Excel con Windows PowerShell (SharePoint Server 2010)](https://technet.microsoft.com/library/ff191201\(v=office.14\).aspx)
 
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 
- [Usar el cmdlet Get-EventLog](https://technet.microsoft.com/library/ee176846.aspx)
+ [Usar el cmdlet Get-Eventlog](https://technet.microsoft.com/library/ee176846.aspx)
 
-##  <a name="bkmk_full_script"></a>Script completo de PowerShell
+##  <a name="full-powershell-script"></a><a name="bkmk_full_script"></a>Script completo de PowerShell
  El siguiente script contiene todos los comandos de las secciones anteriores. El script ejecuta los comandos en el mismo orden en que se presentan en este tema. El script contiene alguna variaciones opcionales de los comandos indicadas en este tema por si necesita algún filtrado adicional. Las variaciones se deshabilitan con un carácter de comentario (#). El script también incluye algunas instrucciones para comprobar el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Las instrucciones de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] se deshabilitan con un carácter de comentario (#).
 
 ```powershell

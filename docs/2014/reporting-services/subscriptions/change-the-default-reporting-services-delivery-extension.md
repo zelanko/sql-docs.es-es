@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a92d967e0b37f1143c9fd37a0d5ee8154ac21db
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177125"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Cambiar la extensión de entrega predeterminada de Reporting Services
@@ -112,4 +112,4 @@ ms.locfileid: "78177125"
     ```
 
 ## <a name="see-also"></a>Consulte también
- [Archivo de configuración](../report-server/rsreportserver-config-configuration-file.md) RSReportServer [distribución del recurso compartido de archivos de configuración del archivo de configuración en Reporting Services](file-share-delivery-in-reporting-services.md) [entrega de correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md) [configurar un servidor de informes para la entrega de correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) [](../report-server/rsreportserver-config-configuration-file.md)
+ [Archivo de configuración](../report-server/rsreportserver-config-configuration-file.md) RSReportServer [distribución del recurso compartido de archivos de configuración del archivo de configuración en Reporting Services](file-share-delivery-in-reporting-services.md) [entrega de correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md) [configurar un servidor de informes para la entrega de correo electrónico &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)

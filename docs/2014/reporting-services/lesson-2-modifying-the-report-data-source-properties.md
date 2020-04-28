@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41679439c7c687cc4574a56369c535f019c77e13
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176935"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
@@ -28,11 +28,11 @@ ms.locfileid: "78176935"
 
 -   [Para modificar AdventureWorksDataset](#bkmk_modify_dataset)
 
--   [Para agregar un parámetro de informe y volver a publicar el informe](#bkmk_add_reportparameter)
+-   [Para agregar un parámetro de informe y volver a publicarlo](#bkmk_add_reportparameter)
 
 -   [Para volver a implementar el informe](#bkmk_redeploy)
 
-##  <a name="bkmk_modify_datasource"></a>Para modificar las propiedades del origen de datos
+##  <a name="to-modify-the-data-source-properties"></a><a name="bkmk_modify_datasource"></a>Para modificar las propiedades del origen de datos
 
 1.  Inicie [Administrador de informes &#40;modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) con privilegios de administrador, por ejemplo, haga clic con el botón secundario en el icono de Internet Explorer y haga clic en **Ejecutar como administrador**.
 
@@ -42,7 +42,7 @@ ms.locfileid: "78176935"
 
 3.  Haga clic en la pestaña **Orígenes de datos** .
 
-4.  En **tipo de conexión**, seleccione **Microsoft SQL Server**.
+4.  Como **Tipo de conexión**, seleccione **Microsoft SQL Server**.
 
 5.  La cadena de conexión del origen de datos personalizada será la siguiente y se supone que la base de datos de ejemplo está en un servidor de bases de datos local:
 
@@ -62,7 +62,7 @@ ms.locfileid: "78176935"
 
 11. Visualice el informe para comprobar que se ejecuta con las credenciales que ha especificado. Para ver el informe, haga clic en la pestaña **Ver** . tenga en cuenta que una vez que el informe está abierto, debe seleccionar un nombre de empleado y, a continuación, hacer clic en el botón **Ver informe** para ver el informe.
 
-##  <a name="bkmk_modify_dataset"></a>Para modificar AdventureWorksDataset
+##  <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>Para modificar AdventureWorksDataset
 
 1.  Abra el informe Sales Orders en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]
 
@@ -89,7 +89,7 @@ ms.locfileid: "78176935"
 
 4.  Haga clic en **Aceptar**
 
-##  <a name="bkmk_add_reportparameter"></a>Para agregar un parámetro de informe y volver a publicar el informe
+##  <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>Para agregar un parámetro de informe y volver a publicar el informe
 
 1.  En el panel **Datos de informe** , haga clic en **Nuevo** y, a continuación, haga clic en **Parámetro**.
 
@@ -113,15 +113,15 @@ ms.locfileid: "78176935"
 
          ![Visor de informes con área de parámetros visible](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "Visor de informes con área de parámetros visible")
 
-8.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto que se usan en el tutorial de tablas, vea la sección "Para publicar el informe en el servidor de informes (opcional)" de la [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
+8.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto que se usan en el tutorial de tablas, vea la sección ' para publicar el informe en el servidor de informes (opcional) ' de la [Lección 6: agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
 
-##  <a name="bkmk_redeploy"></a>Para volver a implementar el informe
+##  <a name="to-re-deploy-the-report"></a><a name="bkmk_redeploy"></a>Para volver a implementar el informe
 
-1.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto que se usan en el tutorial de tablas, vea la sección "Para publicar el informe en el servidor de informes (opcional)" de la [Lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
+1.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto que se usan en el tutorial de tablas, vea la sección ' para publicar el informe en el servidor de informes (opcional) ' de la [Lección 6: agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
 
 2.  En la barra de herramientas, haga clic en **Generar** y, a continuación, haga clic en **Tutorial de implementación**.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="next-steps"></a>Pasos a seguir
  Ha configurado correctamente el informe para obtener datos utilizando credenciales almacenadas. A continuación, especifica la suscripción usando las páginas de suscripción controlada por datos en el Administrador de informes. Consulte la [Lección 3: Definir una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).
 
 ## <a name="see-also"></a>Consulte también

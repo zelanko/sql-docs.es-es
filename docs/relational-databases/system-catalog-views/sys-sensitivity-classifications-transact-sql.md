@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77903914"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -37,7 +37,7 @@ Devuelve una fila por cada elemento clasificado en la base de datos.
 
 |Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|  
-|**las**|**int**|Identifica la clase del elemento en el que existe la clasificación. Siempre tendrá el valor 1 (que representa una columna).|  
+|**class**|**int**|Identifica la clase del elemento en el que existe la clasificación. Siempre tendrá el valor 1 (que representa una columna).|  
 |**class_desc**|**VARCHAR (16)**|Descripción de la clase del elemento en el que existe la clasificación. siempre tendrá el valor *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|Representa el identificador de la tabla que contiene la columna clasificada, que corresponde a sys. all_objects. object_id|  
 |**minor_id**|**int**|Representa el identificador de la columna en la que existe la clasificación, que corresponde a sys. all_columns. column_id|   

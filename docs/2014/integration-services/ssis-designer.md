@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34079d17fd847b2a522b74f7ecdddcf3a0342b2c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176114"
 ---
 # <a name="ssis-designer"></a>Diseñador SSIS
@@ -93,11 +93,10 @@ ms.locfileid: "78176114"
  Mientras se ejecuta un paquete, la pestaña **Progreso** muestra el progreso de la ejecución del paquete. Una vez que el paquete ha terminado de ejecutarse, los resultados de la ejecución permanecen disponibles en la pestaña **Resultados de la ejecución** .
 
 > [!NOTE]
->  Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** .
+>   Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** .
 
 ##### <a name="connection-managers-area"></a>Área de administradores de conexión
- Los administradores de conexión utilizados por un paquete se agregan y modifican en el área **Administradores de conexión** . 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye administradores de conexión para conectarse a una serie de orígenes de datos, como archivos de texto, bases de datos OLE DB y proveedores .NET.
+ Los administradores de conexión utilizados por un paquete se agregan y modifican en el área **Administradores de conexión** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye administradores de conexión para conectarse a una serie de orígenes de datos, como archivos de texto, bases de datos OLE DB y proveedores .NET.
 
  Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md) y [Crear administradores de conexiones](../../2014/integration-services/create-connection-managers.md).
 

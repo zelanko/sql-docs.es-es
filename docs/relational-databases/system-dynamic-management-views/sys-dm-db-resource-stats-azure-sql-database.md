@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175161"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (base de datos SQL de Azure)
@@ -45,7 +45,7 @@ ms.locfileid: "78175161"
 |cpu_limit|**decimal (5, 2)**|Número de núcleos virtuales para esta base de datos durante este intervalo. En el caso de las bases de datos que usan el modelo basado en DTU, esta columna es NULL.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|Promedio de uso de la CPU para la instancia de SQL Server que hospeda la base de datos, medida por el sistema operativo. Incluye el uso de CPU por parte de cargas de trabajo tanto de usuario como internas.|
 |avg_instance_memory_percent|**decimal (5, 2)**|Promedio de uso de memoria para la instancia de SQL Server que hospeda la base de datos, medida por el sistema operativo. Incluye el uso de memoria por parte de cargas de trabajo tanto de usuario como internas.|
-|avg_login_rate_percent|**decimal (5, 2)**|Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
+|avg_login_rate_percent|**decimal (5, 2)**|Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|
 |replica_role|**int**|Representa el rol de la réplica actual con 0 como principal, 1 como secundario y 2 como reenviador (principal de la secundaria geográfica). Verá "1" cuando esté conectado con intención de solo lectura a todas las secundarias legibles. Si se conecta a una región secundaria geográfica sin especificar la intención de solo lectura, debería ver "2" (conexión al reenviador).|
 |||
   

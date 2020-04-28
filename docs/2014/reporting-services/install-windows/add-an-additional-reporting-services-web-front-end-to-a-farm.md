@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dba2c6637c9a637e60583b926b9e80671c043be
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173534"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Agregar un front-end web adicional de Reporting Services a una granja de servidores
@@ -53,7 +53,7 @@ ms.locfileid: "78173534"
 
 |Paso|Descripción y vínculo|
 |----------|--------------------------|
-|Ejecutar la herramienta de preparación de Productos de SharePoint 2010|Debe tener el disco de instalación para SharePoint 2010. La herramienta de preparación es **PrerequisiteInstaller. exe** en los medios de instalación de.|
+|Ejecutar la herramienta de preparación de Productos de SharePoint 2010|Debe tener el disco de instalación para SharePoint 2010. La herramienta de preparación es **PrerequisiteInstaller.exe** en los discos de instalación.|
 |Instalar un producto de SharePoint 2010.|1) Seleccione el tipo de instalación **granja de servidores** .<br /><br /> 2) Seleccione **completo** para el tipo de servidor.<br /><br /> 3) Una vez completada la instalación, no ejecute el Asistente para configuración de Productos de SharePoint si la granja de servidores de SharePoint existente tiene instalado SharePoint 2010 SP1. Debe instalar SharePoint SP1 antes de ejecutar el Asistente para configuración de Productos de SharePoint.|
 |Instalar SharePoint Server 2010 SP1.|Si su granja de servidores de SharePoint existente tiene instalado SharePoint 2010 SP1, descargue e instale SharePoint[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)2010 SP1 desde:.<br /><br /> Para obtener más información acerca de SharePoint 2010 SP1, vea [Problemas conocidos al instalar Office 2010 SP1 y SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126):|
 |Ejecutar el Asistente para configuración de Productos de SharePoint para agregar el servidor a la granja.|1) en el grupo de programas **productos de Microsoft sharepoint 2010** , haga clic en el **Asistente para configuración de productos de Microsoft SharePoint 2010**.<br /><br /> 2) en la página **conectar a una granja de servidores** , seleccione **conectar a una granja** de servidores existente y haga clic en **siguiente**.<br /><br /> 3) en la página **especificar las opciones** de la base de datos de configuración, escriba el nombre del servidor de bases de datos usado para la granja existente y el nombre de la base de datos de configuración. Haga clic en **Next**.<br />**&#42;&#42; importante &#42;&#42;** Si ve un mensaje de error similar al siguiente y ha comprobado que tiene permisos, compruebe qué protocolos están habilitados para la configuración de red SQL Server en **SQL Server Configuration Manager**. "No se pudo conectar con el servidor de base de datos. Asegúrese de que la base de datos existe, es un servidor SQL Server y de que tiene los permisos adecuados para obtener acceso al servidor ".<br />**&#42;&#42; importante &#42;&#42;** Si ve la página estado de la **granja de servidores y el estado**de la revisión, tendrá que revisar la información de la página y actualizar el servidor con los archivos necesarios antes de continuar con la Unión del servidor a la granja.<br /><br /> 4) en la página **especificar la configuración de seguridad del conjunto de servidores** , escriba la frase de contraseña de la granja y haga clic en **siguiente**. Haga clic en **Siguiente** en la página de confirmación para ejecutar el asistente.<br /><br /> 5) haga clic en **siguiente** para ejecutar el **Asistente para configuración de granja de servidores**.|

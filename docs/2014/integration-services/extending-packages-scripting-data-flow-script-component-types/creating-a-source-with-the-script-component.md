@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176275"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Crear un origen con el componente de script
@@ -85,8 +85,7 @@ ms.locfileid: "78176275"
 ### <a name="understanding-the-auto-generated-code"></a>Descripción del código generado automáticamente
  Al abrir el IDE de VSTA después de crear y configurar un componente de origen, la clase `ScriptMain` modificable aparece en el editor de código. El código personalizado se escribe en la clase `ScriptMain`.
 
- La clase `ScriptMain` incluye un código auxiliar para el método `CreateNewOutputRows`. 
-  `CreateNewOutputRows` es el método más importante en un componente de origen.
+ La clase `ScriptMain` incluye un código auxiliar para el método `CreateNewOutputRows`. `CreateNewOutputRows` es el método más importante en un componente de origen.
 
  Si abre la ventana **Explorador de proyectos** de VSTA, puede ver que el componente de script también ha generado elementos de proyecto `BufferWrapper` y `ComponentWrapper` de solo lectura. La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.
 

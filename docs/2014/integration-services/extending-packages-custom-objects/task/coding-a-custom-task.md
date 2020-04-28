@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0cc4026c8eae44ab8dacff62a72cfa66470c07fb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176286"
 ---
 # <a name="coding-a-custom-task"></a>Codificar una tarea personalizada
@@ -52,12 +52,10 @@ ms.locfileid: "78176286"
 
  El rendimiento es algo que hay que tener en cuenta para determinar lo que se valida y lo que no. Por ejemplo, la entrada para una tarea podría ser una conexión a través de una red que tiene poco ancho banda o mucha intensidad de tráfico. La validación puede tardar varios segundos para procesar si decide validar que el recurso está disponible. Otra validación puede producir un viaje de ida y vuelta (round trip) a un servidor de gran demanda y la rutina de validación podría ser lenta. Aunque hay muchas propiedades y configuraciones que se pueden validar, no se debería validar todo.
 
--   
-  `Validate` también llama al código del método <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> antes de que se ejecute la tarea, y la clase base <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> cancela la ejecución si se produce un error en la validación.
+-   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> también llama al código del método `Validate` antes de que se ejecute la tarea, y la clase base <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> cancela la ejecución si se produce un error en la validación.
 
 #### <a name="user-interface-considerations-during-validation"></a>Consideraciones de interfaz de usuario durante la validación
- 
-  <xref:Microsoft.SqlServer.Dts.Runtime.Task> incluye una interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> como un parámetro para el método `Validate`. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contiene los métodos a los que llama la tarea para producir eventos en el motor en tiempo de ejecución. Se llama a los métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> cuando se produce una advertencia o condición de error durante la validación. Ambos métodos de advertencia requieren los mismos parámetros que incluyen un código de error, componente de origen, descripción, archivo de Ayuda e información de contexto de ayuda. El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] usa esta información para mostrar indicaciones visuales en la superficie de diseño. Las indicaciones visuales que proporciona el diseñador incluyen un icono de exclamación que aparece junto a la tarea en la superficie del diseñador. Esta indicación visual muestra al usuario que la tarea requiere configuración adicional antes de que la ejecución pueda continuar.
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> incluye una interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> como un parámetro para el método `Validate`. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> contiene los métodos a los que llama la tarea para producir eventos en el motor en tiempo de ejecución. Se llama a los métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> cuando se produce una advertencia o condición de error durante la validación. Ambos métodos de advertencia requieren los mismos parámetros que incluyen un código de error, componente de origen, descripción, archivo de Ayuda e información de contexto de ayuda. El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] usa esta información para mostrar indicaciones visuales en la superficie de diseño. Las indicaciones visuales que proporciona el diseñador incluyen un icono de exclamación que aparece junto a la tarea en la superficie del diseñador. Esta indicación visual muestra al usuario que la tarea requiere configuración adicional antes de que la ejecución pueda continuar.
 
  El icono de exclamación también muestra una información sobre herramientas que contiene un mensaje de error. La tarea proporciona el mensaje de error en el parámetro de descripción del evento. Los mensajes de error también se muestran en el panel **Lista de tareas** de [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], que proporciona al usuario una ubicación central para ver todos los errores de validación.
 

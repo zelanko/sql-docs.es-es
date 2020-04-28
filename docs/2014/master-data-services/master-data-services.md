@@ -11,14 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db2e2fb2a174e73cfbe139c3ee15529af72e5b7b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176044"
 ---
 # <a name="master-data-services"></a>Master Data Services
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. La administración de datos maestros (MDM) describe los esfuerzos que realiza una organización para detectar y definir listas no transaccionales de datos con el objetivo de compilar listas maestras que se puedan mantener. Un proyecto de MDM generalmente incluye la evaluación y reestructuración de los procesos corporativos internos junto con la implementación de tecnología MDM. El resultado de una solución MDM correcta es la existencia de datos confiables y centralizados que se pueden analizar, lo que permite que las decisiones corporativas sean más inteligentes.
 
  Con el entrenamiento adecuado, la mayor parte de los usuarios corporativos deben poder implementar una solución de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Además, puede usar MDS para administrar cualquier dominio; no se limita únicamente a la administración de listas de clientes, productos o cuentas. Cuando MDS se instala por primera vez, no incluye la estructura de ningún dominio, sino que se definen los dominios necesarios mediante la creación de modelos para ellos.
@@ -27,8 +26,7 @@ ms.locfileid: "78176044"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]incluye los siguientes componentes y herramientas:
 
--   
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], una herramienta que se usa para crear y configurar bases de datos y aplicaciones web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].
+-   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], una herramienta que se usa para crear y configurar bases de datos y aplicaciones web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].
 
 -   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], una aplicación web que se utiliza para realizar tareas administrativas (como la creación de un modelo o una regla de negocio) y que los usuarios tienen acceso a los datos actualizados.
 

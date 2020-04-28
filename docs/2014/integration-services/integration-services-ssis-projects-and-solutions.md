@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176194"
 ---
 # <a name="integration-services-ssis-projects"></a>Proyectos de Integration Services (SSIS)
@@ -48,7 +48,7 @@ ms.locfileid: "78176194"
 
 |Carpeta|Descripción|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]Paquetes|Contiene paquetes. Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] .|Contiene paquetes. Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|
 |Varios|Contiene archivos que no son archivos de paquete.|
 
 ### <a name="files-in-integration-services-projects"></a>Archivos en proyectos de Integration Services

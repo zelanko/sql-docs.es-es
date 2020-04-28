@@ -10,10 +10,10 @@ ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4fd1316850a064a8d1aed3d2994642d44111f421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909685"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Nuevas características de la interfaz gráfica de usuario de SSMA para MySQL (MySQLToSQL)
@@ -72,7 +72,7 @@ Puede quitar un marcador de las siguientes maneras:
   
 -   Usar botones quitar o quitar todo en el cuadro de diálogo administrar marcadores  
   
-### <a name="manage-bookmarks"></a>Administrar marcadores  
+### <a name="manage-bookmarks"></a>Administración de marcadores  
 Para abrir el cuadro de diálogo administrar marcadores, en el menú Edición, haga clic en administrar marcadores. En el cuadro de diálogo verá una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.  
   
 ## <a name="object-history"></a>Historial de objetos  

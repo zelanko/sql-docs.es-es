@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175994"
 ---
 # <a name="data-import-master-data-services"></a>Importación de datos (Master Data Services)
@@ -69,11 +69,11 @@ ms.locfileid: "78175994"
 ## <a name="staging-tables-and-stored-procedures"></a>Tablas y procedimientos almacenados de de almacenamiento provisional
  La base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] incluye los siguientes tipos de tablas de almacenamiento provisional que puede rellenar con sus datos.
 
--   [&#40;Master Data Services la tabla de ensayo de miembros hoja&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
+-   [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
 
--   [&#40;Master Data Services la tabla de almacenamiento provisional de miembros consolidados&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
+-   [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
 
--   [&#40;Master Data Services de la tabla de ensayo de relaciones&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
+-   [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
 
  Para cada entidad del modelo, hay una tabla de almacenamiento provisional. El nombre de la tabla indica la entidad correspondiente y el tipo de entidad, como miembro hoja. La siguiente imagen muestra las tablas de almacenamiento provisional de las entidades de moneda, cliente y producto.
 
@@ -81,8 +81,7 @@ ms.locfileid: "78175994"
 
  El nombre de cada tabla se especifica cuando se crea una entidad y no se puede cambiar. Si el nombre de la tabla de ensayo contiene _1 u otro número, otra tabla con ese nombre ya existía cuando se creó la entidad.
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] incluye los siguientes tipos de procedimientos almacenados de almacenamiento provisional.
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] incluye los siguientes tipos de procedimientos almacenados de almacenamiento provisional.
 
 -   stg.udp_\<name>_Leaf
 
@@ -103,7 +102,7 @@ ms.locfileid: "78175994"
 
 ## <a name="related-content"></a>Contenido relacionado
 
--   [Master Data Services de &#40;de validación&#41;](../../2014/master-data-services/validation-master-data-services.md)
+-   [Validación &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)
 
 -   [Reglas de negocios &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
 

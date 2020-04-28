@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9697d5a53b2aac0d951445206adc4c4f30e5385
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177095"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
@@ -47,14 +47,14 @@ ms.locfileid: "78177095"
 
  ![rs_GettingStartedReport](../media/rs-gettingstartedreport.gif "rs_GettingStartedReport")
 
-##  <a name="bkmk_StagesSummary"></a>Fases del procesamiento de informes
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Fases del procesamiento de informes
  Al crear un informe, tiene que definir un archivo de definición de informe (.rdl) en formato XML. Este archivo contiene toda la información necesaria para combinar los datos y el diseño del informe mediante el procesador de informes. Cuando consulte un informe, el informe avanzará a través de los pasos siguientes:
 
--   **Compilación.** Se evalúan las expresiones de la definición de informe y se almacena el formato intermedio compilado internamente en el servidor de informes.
+-   **Volver.** Se evalúan las expresiones de la definición de informe y se almacena el formato intermedio compilado internamente en el servidor de informes.
 
--   **Proceso.** Se ejecutan las consultas de conjuntos de datos y se combina el formato intermedio con los datos y el diseño.
+-   **Procese.** Se ejecutan las consultas de conjuntos de datos y se combina el formato intermedio con los datos y el diseño.
 
--   **Representación.** El informe procesado se envía a una extensión de representación para determinar cuánta información cabe en cada página y crear el informe paginado.
+-   **Representar.** El informe procesado se envía a una extensión de representación para determinar cuánta información cabe en cada página y crear el informe paginado.
 
 -   **Exportación (opcional).** El informe se exporta a un formato de archivo diferente.
 
@@ -128,9 +128,9 @@ ms.locfileid: "78177095"
 
 -   **Entrega.**  Configure una suscripción para entregar informes a los lectores a través de un mensaje de correo electrónico o una carpeta de archivos compartida.  Para obtener más información, vea [Suscripciones y entrega &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).
 
--   **Exportación.**  En la barra de herramientas del visor de informes, un lector puede exportar un informe a un formato de archivo diferente. Los formatos de archivo de exportación los puede configurar el administrador del servidor de informes. Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).
+-   **Portada.**  En la barra de herramientas del visor de informes, un lector puede exportar un informe a un formato de archivo diferente. Los formatos de archivo de exportación los puede configurar el administrador del servidor de informes. Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).
 
--   **Impresión.**  Un lector de informes puede imprimir un informe o algunas de las páginas de un informe, en función del modo en que lo esté viendo. Para más información, vea [Imprimir informes &#40;Generador de informes y SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).
+-   **Imprime.**  Un lector de informes puede imprimir un informe o algunas de las páginas de un informe, en función del modo en que lo esté viendo. Para más información, vea [Imprimir informes &#40;Generador de informes y SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).
 
 -   **Aplicación web o formulario Windows Forms.**  Use Visual Studio para desarrollar una aplicación ASP.NET AJAX o una aplicación de Windows Forms que hospede el control de visor de informes. El control puede apuntar a informes publicados en un servidor de informes. Para obtener más información, vea [Informes de Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).
 
@@ -139,9 +139,9 @@ ms.locfileid: "78177095"
 
 -   **Orígenes de datos.** Los orígenes de datos compartidos e incrustados se administran independientemente de la definición de informe.
 
--   **Conjuntos de datos.**  Los conjuntos de datos compartidos se administran con independencia de la definición de informe.
+-   **Conjuntos.**  Los conjuntos de datos compartidos se administran con independencia de la definición de informe.
 
--   **Parámetros.**  Los parámetros se administran con independencia de la definición de informe. Una vez que los parámetros se modifican en el servidor de informes, los clientes de generación de informes no pueden publicar los cambios realizados en el servidor.
+-   **Los.**  Los parámetros se administran con independencia de la definición de informe. Una vez que los parámetros se modifican en el servidor de informes, los clientes de generación de informes no pueden publicar los cambios realizados en el servidor.
 
 -   **Recursos.**  Las imágenes y los datos espaciales de los archivos de forma ESRI son recursos que se pueden publicar y administrar con independencia de la definición de informe.
 
@@ -153,7 +153,7 @@ ms.locfileid: "78177095"
 
  Para más información sobre rendimiento, vea [Rendimiento, instantáneas, almacenamiento en caché &#40;Reporting Services&#41;](../report-server/performance-snapshots-caching-reporting-services.md).
 
-##  <a name="bkmk_SecureReportsSummary"></a>Proteger informes
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Proteger informes
  Para proteger un informe:
 
 -   En el administrador del servidor de informes, identifique el sistema de autorización y autenticación empleado para la instalación de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa la autenticación de Windows, la seguridad integrada y la asignación de roles para ayudar a controlar el acceso a los informes publicados. Para más información, vea [Roles y permisos &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) y [Seguridad y protección de Reporting Services](../security/reporting-services-security-and-protection.md).
@@ -164,7 +164,7 @@ ms.locfileid: "78177095"
 ## <a name="upgrade-reports"></a>Upgrade Reports
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] admite varias versiones de las definiciones de informe, de los servidores de informes y de los sitios de SharePoint. Para actualizar un informe:
 
--   Actualice una instalación del servidor de informes. Los informes compilados que se almacenan en el servidor de informes se actualizan automáticamente al usarse por primera vez. La definición de informe (.rdl) no se modifica. Para obtener más información, vea [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
+-   Actualice una instalación del servidor de informes. Los informes compilados que se almacenan en el servidor de informes se actualizan automáticamente al usarse por primera vez. La definición de informe (.rdl) no se modifica. Para obtener más información, vea [actualizar y migrar Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
 
 -   Abra un informe en un entorno de creación de informes. La definición de informe se actualiza en la mayoría de los casos. Para más información, vea [Actualizar informes](../install-windows/upgrade-reports.md) e [Implementación y compatibilidad de versiones en SQL Server Data Tools &#40;SSRS&#41;](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).
 

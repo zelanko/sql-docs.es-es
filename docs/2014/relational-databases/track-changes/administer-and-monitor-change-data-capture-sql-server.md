@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929191"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
   En este tema se describe cómo administrar y supervisar la captura de datos modificados.  
   
-##  <a name="Capture"></a>Trabajo de captura  
+##  <a name="capture-job"></a><a name="Capture"></a> Trabajo de captura  
  El trabajo de captura se inicia ejecutando el procedimiento almacenado sin parámetros `sp_MScdc_capture_job`. Este procedimiento almacenado empieza extrayendo los valores configurados para *maxtrans*, *maxscans*, *continuous*y *pollinginterval* para el trabajo de captura desde msdb.dbo.cdc_jobs. A continuación, estos valores configurados se pasan como parámetros al procedimiento almacenado `sp_cdc_scan`. Esto se utiliza para llamar a `sp_replcmds` con el fin de realizar el examen del registro.  
   
 ### <a name="capture-job-parameters"></a>Parámetros de trabajo de captura  
@@ -61,7 +61,7 @@ ms.locfileid: "76929191"
 ### <a name="capture-job-customization"></a>Personalización del trabajo de captura  
  En el trabajo de captura se puede aplicar una lógica adicional para determinar si un examen nuevo comienza inmediatamente o si se impone una suspensión antes de iniciarse en lugar de basarse en un intervalo de sondeo fijo. La opción podría basarse simplemente en la hora del día, exigiendo quizás suspensiones muy largas durante las horas de actividad máxima, e incluso el paso a un intervalo de sondeo igual a 0 al final del día, cuando es importante completar el procesamiento de los días y preparar las ejecuciones nocturnas. El progreso del proceso de captura también se puede supervisar para determinar el momento en que todas las transacciones confirmadas a media noche han sido examinadas y depositadas en las tablas de cambios. Esto permite que el trabajo de captura finalice y se reinicie de la forma programada diariamente. Al reemplazar el paso de trabajo entregado llamando a `sp_cdc_scan` con una llamada a un contenedor escrito por el usuario para `sp_cdc_scan`, se puede obtener un comportamiento muy personalizado con poco esfuerzo adicional.  
   
-##  <a name="Cleanup"></a>Trabajo de limpieza  
+##  <a name="cleanup-job"></a><a name="Cleanup"></a> Trabajo de limpieza  
  En esta sección se proporciona información sobre cómo funciona el trabajo de limpieza de la captura de datos modificados.  
   
 ### <a name="structure-of-the-cleanup-job"></a>Estructura del trabajo de limpieza  
@@ -77,8 +77,8 @@ ms.locfileid: "76929191"
 ### <a name="cleanup-job-customization"></a>Personalización del trabajo de limpieza  
  La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Como los procedimientos de limpieza subyacentes se basan en `lsn` en lugar de en el tiempo, se puede usar cualquier cantidad de estrategias para determinar el valor `lsn` más bajo que se debe conservar en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo `lsn` para limpiar las tablas de cambios de todas las bases de datos, también se puede llamar al procedimiento de limpieza subyacente para limpiar en el nivel de la instancia de captura.  
   
-##  <a name="Monitor"></a>Supervisar el proceso de captura de datos modificados  
- Supervisar el proceso de captura de datos modificados permite determinar si los cambios se están escribiendo correctamente y con una latencia razonable en las tablas de cambios. La supervisión también puede ayudar a identificar los errores que puedan producirse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]incluye dos vistas de administración dinámica para ayudarle a supervisar la captura de datos modificados: [Sys. dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) y [Sys. dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
+##  <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Supervisar el proceso de captura de datos modificados  
+ Supervisar el proceso de captura de datos modificados permite determinar si los cambios se están escribiendo correctamente y con una latencia razonable en las tablas de cambios. La supervisión también puede ayudar a identificar los errores que puedan producirse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos vistas de administración dinámica para ayudar a supervisar la captura de datos modificados: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) y [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
   
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identificar las sesiones con conjuntos de resultados vacíos  
  Cada fila de sys.dm_cdc_log_scan_sessions representa una sesión de examen del registro (excepto la fila con el identificador 0). Una sesión de examen del registro es equivalente a una ejecución de [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). Durante una sesión, el examen puede devolver los cambios o un resultado vacío. Si el conjunto de resultados está vacío, la columna empty_scan_count de sys.dm_cdc_log_scan_sessions se establece en 1. Si hay conjuntos de resultados vacíos consecutivos, por ejemplo si el trabajo de captura se está ejecutando continuamente, el valor empty_scan_count de la última fila existente se incrementa. Por ejemplo, si sys.dm_cdc_log_scan_sessions ya contiene 10 filas para los exámenes que devolvieron los cambios y hay seguidos cinco resultados vacíos, la vista contiene 11 filas. La última fila tiene el valor 5 en la columna empty_scan_count. Para determinar las sesiones que tenían un examen vacío, ejecute la consulta siguiente:  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175324"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultar y deshabilitar jerarquías de atributo
@@ -49,25 +49,25 @@ ms.locfileid: "78175324"
 
 2.  Compruebe que las jerarquías de atributo siguientes aparecen en la lista **Jerarquía** :
 
-    -   **Velocidad base**
+    -   **Base Rate**
 
-    -   **Birth Date**
+    -   **Fecha de nacimiento**
 
-    -   **IDENTIFICADOR de inicio de sesión**
+    -   **Id. de inicio de sesión**
 
-    -   **SSN del administrador**
+    -   **Número de seguridad social del director**
 
     -   **S.S.**
 
 3.  Vaya a la pestaña **Estructura de dimensión** y seleccione los atributos siguientes en el panel **Atributos** . Para seleccionar varias medidas, haga clic en cada una de ellas mientras mantiene presionada la tecla CTRL:
 
-    -   **Velocidad base**
+    -   **Base Rate**
 
-    -   **Birth Date**
+    -   **Fecha de nacimiento**
 
-    -   **IDENTIFICADOR de inicio de sesión**
+    -   **Id. de inicio de sesión**
 
-    -   **SSN del administrador**
+    -   **Número de seguridad social del director**
 
     -   **S.S.**
 

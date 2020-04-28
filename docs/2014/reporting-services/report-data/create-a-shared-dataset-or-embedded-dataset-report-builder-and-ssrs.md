@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 644fa33aa0a9fd8bd51521270cfb89636ac63791
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173204"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "78173204"
      ![rs_NewSharedDataset](../media/rs-newshareddataset.gif "rs_NewSharedDataset")
 
     > [!NOTE]
-    >  Si el panel **Nuevo informe o conjunto de datos** no aparece, en el botón Generador de informes haga clic en **Nuevo**.
+    >   Si el panel **Nuevo informe o conjunto de datos** no aparece, en el botón Generador de informes haga clic en **Nuevo**.
 
 2.  En el panel izquierdo, bajo **Crear un conjunto de datos**, haga clic en **Conjunto de datos compartido**.
 
@@ -56,7 +56,7 @@ ms.locfileid: "78173204"
 
 4.  En el diseñador de consultas, especifique los campos que se incluirán en el conjunto de datos.
 
-5.  Haga clic en **Ejecutar** ( **!** ) para ejecutar la consulta.
+5.  Haga clic en **Ejecutar** (**!**) para ejecutar la consulta.
 
 6.  En el botón **Generador de informes** , haga clic en **Guardar** o **Guardar como** para guardar el conjunto de datos compartido en el servidor de informes.
 

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a77024e62402cea0a37b945e0539274fee9a3c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173334"
 ---
 # <a name="report-data-pane-report-builder"></a>Panel Datos de informe (Generador de informes)
@@ -29,11 +29,11 @@ ms.locfileid: "78173334"
 
  **Parámetros** de Representa la colección de parámetros de informe, cada uno de los cuales puede ser de un solo valor o de varios valores. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md).
 
- **Imágenes** de Representa el conjunto de imágenes usadas en el informe. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md).
+ **Imágenes** Representa el conjunto de imágenes usadas en el informe. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](report-design/images-report-builder-and-ssrs.md).
 
  **Orígenes de datos** Representa un origen de datos incrustado o una referencia a un origen de datos compartido. Un origen de datos representa un origen de los datos correspondientes al informe. Un origen de datos es el nodo primario de la colección de conjuntos de datos que lo usa. Para obtener más información, vea [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md) y [conexiones de datos, orígenes de datos y cadenas de conexión en generador de informes](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).
 
- **Conjuntos de valores** Representa los datos que se recuperan de un origen de datos mediante la ejecución de un comando, [!INCLUDE[tsql](../includes/tsql-md.md)] por ejemplo, una consulta que recupera [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] datos de una base de datos. Un conjunto de datos es el nodo primario para la colección de campos especificados por la consulta e incluye también cualquier campo calculado. El Generador de informes admite el uso de diseñadores de consultas, que ayudan a especificar las consultas. Para obtener más información, vea [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md).
+ **Conjuntos de datos** Representa los datos que se recuperan de un origen de datos ejecutando un comando, por ejemplo, una consulta [!INCLUDE[tsql](../includes/tsql-md.md)] que recupera los datos de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Un conjunto de datos es el nodo primario para la colección de campos especificados por la consulta e incluye también cualquier campo calculado. El Generador de informes admite el uso de diseñadores de consultas, que ayudan a especificar las consultas. Para obtener más información, vea [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-data/report-datasets-ssrs.md).
 
 ## <a name="see-also"></a>Consulte también
  [Colección de campos de conjunto de &#40;generador de informes y SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md) [generador de informes la ayuda de los cuadros de diálogo, paneles y asistentes de](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md) [agrupación](report-design/grouping-pane-report-builder.md) &#40;generador de informes&#41;[buscar, ver y administrar informes &#40;generador de informes y SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

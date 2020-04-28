@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0bb599b49235cc68fdc7cfa2c74e7b15f6c1c4d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177170"
 ---
 # <a name="upload-files-to-a-folder"></a>Cargar archivos a una carpeta
@@ -35,8 +35,7 @@ ms.locfileid: "78177170"
 > [!NOTE]
 >  No se pueden cargar archivos de origen de datos de informes (.rds) para crear un origen de datos compartido. Los archivos .rds solo se utilizan en el Diseñador de informes. No puede proporcionar el contenido para un elemento de origen de datos compartido que se defina y administre mediante el Administrador de informes. Como alternativa a la carga, se puede escribir un script que cree un origen de datos compartido basado en un archivo .rds.
 
- 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]determina el tamaño de archivo máximo para los elementos cargados. De manera predeterminada, el tamaño máximo es de 4 megabytes (MB).
+ [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]determina el tamaño de archivo máximo para los elementos cargados. De manera predeterminada, el tamaño máximo es de 4 megabytes (MB).
 
  Visualmente, los archivos que se cargan a la base de datos del servidor de informes aparecen representados en la jerarquía de carpetas con los siguientes iconos.
 

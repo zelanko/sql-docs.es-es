@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320782"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
@@ -62,8 +62,8 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|Id. de la métrica del rendimiento de la replicación, que puede tener uno de los siguientes valores.<br /><br /> **1expiration** : supervisa la expiración inminente de las suscripciones a las publicaciones transaccionales.<br /><br /> **2latency** : supervisa el rendimiento de las suscripciones a las publicaciones transaccionales.<br /><br /> **4mergeexpiration** : supervisa la expiración inminente de suscripciones a publicaciones de combinación.<br /><br /> **5mergeslowrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).<br /><br /> **6mergefastrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).<br /><br /> **7mergefastrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).<br /><br /> **8mergeslowrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
-|**Titulo**|**sysname**|Nombre de la métrica de rendimiento de la replicación.|  
-|**valor**|**int**|El valor de umbral de la métrica de rendimiento.|  
+|**title**|**sysname**|Nombre de la métrica de rendimiento de la replicación.|  
+|**value**|**int**|El valor de umbral de la métrica de rendimiento.|  
 |**shouldalert**|**bit**|Indica si se debe generar una alerta cuando la métrica supera el umbral definido para esta publicación. un valor de **1** indica que debe generarse una alerta.|  
 |**IsEnabled**|**bit**|Es si la supervisión está habilitada para esta métrica de rendimiento de replicación para esta publicación. un valor de **1** indica que está habilitada la supervisión.|  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176435"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
@@ -38,7 +38,7 @@ ms.locfileid: "78176435"
 
  En el siguiente diagrama se muestra el tipo de resultado de las conversiones implícitas de las operaciones binarias. La intersección de la columna y la fila en esta tabla es el tipo de resultado de una operación binaria con operandos de los tipos izquierdo (From) y derecho (To).
 
- ![Conversión implícita de tipo de datos entre tipo de datos](../media/mw-dts-impl-conver-02.gif "Conversión implícita de tipo de datos entre tipo de datos")
+ ![Conversión implícita de tipo de datos entre tipos de datos](../media/mw-dts-impl-conver-02.gif "Conversión implícita de tipo de datos entre tipos de datos")
 
  La intersección de un entero con signo y un entero sin signo es un entero con signo posiblemente más grande que cualquiera de los argumentos.
 
@@ -101,7 +101,7 @@ ms.locfileid: "78176435"
  Los resultados de muchas operaciones y funciones tienen tipos de datos predeterminados. Pueden ser el tipo de datos del argumento o el tipo de datos al que el evaluador de expresiones convierte el resultado. Por ejemplo, el resultado de un operador lógico OR (||) es siempre un valor booleano, el resultado de la función ABS es el tipo de datos numérico del argumento y el resultado de la multiplicación es el tipo de datos numérico más pequeño que puede contener el resultado sin perder información. Para más información sobre los tipos de datos de los resultados, vea [Operadores &#40;expresión de SSIS&#41;](operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](functions-ssis-expression.md).
 
 ## <a name="related-tasks"></a>Related Tasks
- [Usar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)
+ [utilizar una expresión en un componente de flujo de datos](../use-an-expression-in-a-data-flow-component.md)
 
 ## <a name="related-content"></a>Contenido relacionado
 

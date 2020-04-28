@@ -13,20 +13,19 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176675"
 ---
 # <a name="linestring"></a>LineString
-  
   `LineString` es un objeto unidimensional que representa una secuencia de puntos y los segmentos de línea que los conectan.
 
 ## <a name="linestring-instances"></a>Instancias de LineString
  En la ilustración siguiente se muestran ejemplos de instancias de `LineString`.
 
- ![Ejemplos de instancias de LineString de geometry](../../database-engine/media/linestring.gif "Ejemplos de instancias LineString de geometry")
+ ![Ejemplos de instancias de LineString de geometry](../../database-engine/media/linestring.gif "Ejemplos de instancias de LineString de geometry")
 
  Como se muestra en la ilustración:
 
@@ -47,8 +46,7 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 ```
 
- 
-  `@g3` muestra que se puede aceptar una instancia de `LineString`, pero no es válida.
+ `@g3` muestra que se puede aceptar una instancia de `LineString`, pero no es válida.
 
  No se acepta la siguiente instancia de `LineString`. Producirá una `System.FormatException`.
 

@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175229"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar las plantillas de Analysis Services en SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona un conjunto de plantillas para ayudarle a crear scripts XMLA, DMX o consultas MDX; para crear KPI en un cubo o un modelo tabular; incluir en scripts las operaciones de copia de seguridad y restauración; y otras muchas tareas. Las plantillas se encuentran en el **Explorador de plantillas** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
  Este tema incluye una lista de las plantillas para los modelos multidimensionales y los modelos tabulares, y proporciona ejemplos del modo de crear una consulta MDX y una instrucción XMLA mediante el Explorador de metadatos y el Explorador de plantillas.
@@ -27,17 +26,17 @@ ms.locfileid: "78175229"
 
  [Abrir una plantilla de Analysis Services](#bkmk_usingTE)
 
- [Compilar y ejecutar una consulta MDX en un modelo tabular mediante una plantilla](#BKMK_Building_Queries)
+ [Compilar y ejecutar una consulta MDX en un modelo tabular usando una plantilla](#BKMK_Building_Queries)
 
- [Crear script XMLA a partir de una plantilla](#bkmk_backup)
+ [Crear un script XMLA a partir de una plantilla](#bkmk_backup)
 
- [Generar una consulta de conjunto de filas de esquema mediante una plantilla XMLA](#bkmk_schemarowset)
+ [Generar una consulta de conjunto de filas de esquema usando una plantilla XMLA](#bkmk_schemarowset)
 
- [Referencia de plantillas de Analysis Services](#bkmk_Ref)
+ [Referencia de las plantillas de Analysis Services](#bkmk_Ref)
 
  En este tema no se tratan las plantillas DMX. Para consultar ejemplos sobre cómo crear consultas de minería de datos con las plantillas, vea [Crear una consulta DMX en SQL Server Management Studio](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) o [Crear una consulta de predicción singleton desde una plantilla](../data-mining/create-a-singleton-prediction-query-from-a-template.md).
 
-##  <a name="bkmk_usingTE"></a>Abrir una plantilla de Analysis Services
+##  <a name="open-an-analysis-services-template"></a><a name="bkmk_usingTE"></a>Abrir una plantilla de Analysis Services
  Todas las plantillas para las consultas del motor de base de datos y las consultas y los comandos de Analysis Services están disponibles en el Explorador de plantillas.
 
  Para abrir el **Explorador de plantillas**, selecciónelo en el menú **Ver** . Después, haga clic en el icono de cubo para ver una lista de las plantillas disponibles para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].
@@ -56,7 +55,7 @@ ms.locfileid: "78175229"
 
      Cambie a la pestaña **Mensajes** para ver el número de registros devueltos, los errores, las instrucciones de consulta y cualquier otro mensaje que esté asociado a la ejecución de la consulta. Por ejemplo, si ejecuta una instrucción DAX con un modelo que se ejecuta en modo de consulta directa, puede ver la instrucción de Transact-SQL que el motor analítico en memoria xVelocity (VertiPaq) genera.
 
-##  <a name="BKMK_Building_Queries"></a>Compilar y ejecutar una consulta MDX en un modelo tabular mediante una plantilla
+##  <a name="build-and-run-an-mdx-query-on-a-tabular-model-using-a-template"></a><a name="BKMK_Building_Queries"></a>Compilar y ejecutar una consulta MDX en un modelo tabular mediante una plantilla
  Este ejemplo muestra cómo crear una consulta MDX en SQL Server Management Studio, con una base de datos de modelo tabular como origen de datos. Para repetir este ejemplo en el equipo, puede [descargar el proyecto de ejemplo de modelo tabular de Adventureworks](https://go.microsoft.com/fwlink/?LinkId=231183).
 
 > [!WARNING]
@@ -80,7 +79,7 @@ ms.locfileid: "78175229"
 
 4.  Puede ejecutar la consulta tal cual, pero probablemente deseará hacer algunos cambios, como agregar una función para devolver miembros concretos. Por ejemplo, escriba `.members` después de **[categoría de producto]. [ Nombre de categoría de producto]**. Para más información, vea [Using Member Expressions](/sql/mdx/using-member-expressions).
 
-##  <a name="bkmk_backup"></a>Crear script XMLA a partir de una plantilla
+##  <a name="create-xmla-script-from-a-template"></a><a name="bkmk_backup"></a>Crear script XMLA a partir de una plantilla
  Las plantillas de comandos XMLA que se proporcionan en el Explorador de plantillas se pueden utilizar para crear scripts que permitan supervisar y actualizar los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , independientemente de si la instancia está en modo multidimensional y minería de datos, o en el modo tabular. Las plantillas **XMLA** incluyen ejemplos de los siguientes tipos de scripts:
 
 -   Operaciones de copia de seguridad, restauración y sincronización
@@ -108,7 +107,7 @@ ms.locfileid: "78175229"
 
 5.  Haga doble clic en el texto del \<archivo>. Escriba el nombre del archivo de copia de seguridad, incluida la extensión de archivo .abf. Especifique la ruta de acceso completa si no usa la ubicación predeterminada de copia de seguridad. Para más información, vea [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).
 
-##  <a name="bkmk_schemarowset"></a>Generar una consulta de conjunto de filas de esquema mediante una plantilla XMLA
+##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a>Generar una consulta de conjunto de filas de esquema mediante una plantilla XMLA
  El **Explorador de plantillas** contiene solo una plantilla para las consultas de conjunto de filas de esquema. Para usar esta plantilla, debe conocer los requisitos del conjunto de filas de esquema individual que desea utilizar, incluido cualquier elemento necesario, y las columnas que se pueden usa como restricciones. Para más información, vea [Conjuntos de filas de esquema de Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).
 
  Tenga en cuenta que muchos de los conjuntos de filas de esquema también se han expuesto como vistas de administración dinámica (DMV) por simplicidad. Mediante la DMV correspondiente, puede consultar el conjunto de filas de esquema con una sintaxis similar a la de Transact-SQL. Por ejemplo, las siguientes consultas devuelven los mismos resultados, pero uno está en formato XML y otro en formato tabular. Para más información sobre las DMV, vea [Usar vistas de administración dinámica &#40;DMV&#41; para supervisar Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).
@@ -163,7 +162,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
     ```
 
-##  <a name="bkmk_Ref"></a>Referencia de plantillas de Analysis Services
+##  <a name="analysis-services-template-reference"></a><a name="bkmk_Ref"></a>Referencia de plantillas de Analysis Services
  Las plantillas siguientes se proporcionan para trabajar con bases de datos de Analysis Services y los objetos de la base de datos, incluidas las restricciones de minería de datos y los modelos de minería de datos, los cubos y los modelos tabulares:
 
 |Category|Plantilla de elementos|Descripción|
@@ -188,7 +187,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Importar|Muestra cómo usar la instrucción DMX IMPORT FROM con la cláusula WITH PASSWORD para llevar a cabo una importación.|
 ||Rename Model|Muestra cómo usar la instrucción DMX RENAME MINING MODEL para cambiar el nombre de un modelo de minería de datos existente.|
 ||Rename Structure|Muestra cómo usar la instrucción DMX RENAME MINING STRUCTRE para cambiar el nombre de una estructura de minería de datos existente.|
-||Entrenamiento de modelo|Muestra cómo usar la instrucción DMX INSERT INTO MINING MODEL para entrenar un modelo de minería de datos en una estructura ya entrenada.|
+||Train Model (Entrenar modelo)|Muestra cómo usar la instrucción DMX INSERT INTO MINING MODEL para entrenar un modelo de minería de datos en una estructura ya entrenada.|
 ||Train Nested Structure|Muestra cómo combinar la instrucción DMX INSERT INTO MINING STRUCTURE con la consulta de datos de origen SHAPE para entrenar un modelo de minería de datos que contiene columnas anidadas con datos que contienen tablas anidadas, recuperadas mediante una consulta, de un origen de datos existente.|
 ||Train Structure|Muestra cómo combinar la instrucción DMX INSERT INTO MINING STRUCTURE con la consulta de datos de origen OPENQUERY para entrenar una estructura de minería de datos.|
 |DMX\Consultas de predicción|Base Prediction|Muestra cómo combinar una instrucción DMX Select from * \<Model>* join join con la consulta de datos de origen OPENQUERY para ejecutar una consulta de predicción en un modelo de minería de datos utilizando datos, recuperados mediante una consulta, de un origen de datos existente.|
@@ -222,7 +221,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Memory Grant|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_MEMORYGRANT.|
 ||Contadores de rendimiento|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_PERFORMANCE_COUNTERS.|
 ||Sesiones|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_SESSIONS.|
-||Seguimientos|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_TRACES.|
+||Traces|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_TRACES.|
 ||Transacciones|Muestra cómo usar el método XMLA `Discover` para recuperar el contenido del conjunto de filas de esquema DISCOVER_TRANSACTIONS.|
 
 ## <a name="see-also"></a>Consulte también

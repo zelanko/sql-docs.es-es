@@ -21,13 +21,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176465"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Tutorial de SSIS: Implementar paquetes
+# <a name="ssis-tutorial-deploying-packages"></a>Tutorial de SSIS: Implementación de paquetes
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona herramientas que permiten implementar paquetes en otro equipo. Las herramientas de implementación también administran las dependencias, como configuraciones y archivos que necesita el paquete. En este tutorial, aprenderá a usar estas herramientas para instalar paquetes y sus dependencias en un equipo de destino.
 
  Primero, realizará tareas para preparar la implementación. Creará un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y agregará paquetes y archivos de datos existentes al proyecto. No creará nuevos paquetes desde el principio; solamente trabajará con paquetes completados creados exclusivamente para este tutorial. En este tutorial no modificará la funcionalidad de los paquetes; no obstante, después de agregar los paquetes al proyecto, puede resultar útil abrirlos en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y revisar el contenido de cada paquete. Mediante el examen de los paquetes, conocerá las dependencias de los paquetes como los archivos de registro y otras características interesantes de los mismos.
@@ -50,8 +50,7 @@ ms.locfileid: "78176465"
 
  **Equipo de origen.** El equipo en el que creará el paquete de implementación debe tener instalados los siguientes componentes:
 
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks. Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Puede descargar la base de datos de ejemplo de [CodePlex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks. Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Puede descargar la base de datos de ejemplo de [CodePlex](https://msftdbprodsamples.codeplex.com/releases/view/125550).
 
 -   Debe tener permiso para crear y quitar tablas en AdventureWorks.
 
@@ -61,8 +60,7 @@ ms.locfileid: "78176465"
 
  **Equipo de destino.** El equipo en el que implementará los paquetes debe tener instalados los siguientes componentes:
 
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks.
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks.
 
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 

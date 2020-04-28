@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175354"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Usar índices no clúster de almacén de columnas
@@ -28,14 +28,14 @@ ms.locfileid: "78175354"
 
 -   [Crear un índice no clúster de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)
 
--   [Cambiar los datos de un índice de almacén de columnas no agrupado](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
+-   [Cargar los datos en un índice no clúster de almacén de columnas](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
 
-##  <a name="load"></a>Crear un índice de almacén de columnas no agrupado
+##  <a name="create-a-nonclustered-columnstore-index"></a><a name="load"></a>Crear un índice de almacén de columnas no agrupado
  Para cargar datos en un índice de almacén de columnas no agrupado, cargue primero los datos en una tabla almacén tradicional almacenada como un montón o un índice clúster y, a continuación, use [crear índice de almacén de columnas &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) para crear un índice de almacén de columnas.
 
  ![Cargar datos en un índice de almacén de columnas](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Cargar datos en un índice de almacén de columnas")
 
-##  <a name="change"></a>Cambiar los datos de un índice de almacén de columnas no agrupado
+##  <a name="change-the-data-in-a-nonclustered-columnstore-index"></a><a name="change"></a>Cambiar los datos de un índice de almacén de columnas no agrupado
  Una vez creado un índice no clúster de almacén de columnas en una tabla, no puede modificar directamente los datos de esa tabla. Una consulta con INSERT, UPDATE, DELETE o MERGE generará un error y devolverá un mensaje de error. Para agregar o modificar los datos de la tabla, puede hacer lo siguiente:
 
 -   Deshabilite el índice de almacén de columnas. Después puede actualizar los datos de la tabla. Si deshabilita el índice de almacén de columnas, puede regenerar el índice de almacén de columnas cuando termine de actualizar los datos. Por ejemplo:

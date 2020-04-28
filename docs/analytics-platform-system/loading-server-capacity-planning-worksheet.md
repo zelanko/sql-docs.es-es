@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1d2c3f1c0366d2c7d3d9efe700d9cfccc688dbc9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171604"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Cargando hoja de cálculo de planeamiento de capacidad del servidor para Analytics Platform System

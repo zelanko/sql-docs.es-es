@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a8cd7ddaac1138599701e4ccfe14c3cb0b84656
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173952"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
@@ -48,7 +48,7 @@ ms.locfileid: "78173952"
 
 4.  De manera opcional, seleccione otra fuente de distribución de datos en la lista desplegable **Nombre de los datos de informe** .
 
-     Si no se genera ninguna fuente de distribución de datos a partir del informe, no puede crear una definición de alerta para el informe. El diseño del informe determina el contenido de cada fuente de distribución de datos. Para obtener más información, vea [generar fuentes de datos a partir de informes &#40;generador de informes y SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
+     Si no se genera ninguna fuente de distribución de datos a partir del informe, no puede crear una definición de alerta para el informe. El diseño del informe determina el contenido de cada fuente de distribución de datos. Para más información, vea [Generar fuentes de distribución de datos a partir de informes &#40;Generador de informes y SSRS&#41;](report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).
 
 5.  Si lo desea, en el cuadro de texto **Nombre de alerta** , cambie el nombre predeterminado por otro más significativo.
 
@@ -116,6 +116,6 @@ ms.locfileid: "78173952"
 22. Haga clic en **Save**(Guardar).
 
 ## <a name="see-also"></a>Consulte también
- [](../../2014/reporting-services/data-alert-designer.md) [Administrador de alertas de datos del diseñador de alertas de datos para los administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) [Reporting Services alertas de datos](../ssms/agent/alerts.md)
+ [Data Alert Designer](../../2014/reporting-services/data-alert-designer.md) [Administrador de alertas de datos del diseñador de alertas de datos para los administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md) [Reporting Services alertas de datos](../ssms/agent/alerts.md)
 
 

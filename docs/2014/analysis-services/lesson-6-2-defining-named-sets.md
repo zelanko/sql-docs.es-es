@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175274"
 ---
 # <a name="defining-named-sets"></a>Definir conjuntos con nombre
@@ -75,7 +75,7 @@ ms.locfileid: "78175274"
 
 8.  Abra el Diseñador de dimensiones para la dimensión **Reseller** y, a continuación, haga clic en **Number of Employees** en el panel **Atributos** .
 
-9. En el ventana Propiedades, cambie la `DiscretizationMethod` propiedad a **automático**y, a continuación, `DiscretizationBucketCount` cambie la `5`propiedad a. Para obtener más información, vea [miembros de atributo de grupo &#40;&#41;de discretización ](multidimensional-models/attribute-properties-group-attribute-members.md).
+9. En el ventana Propiedades, cambie la `DiscretizationMethod` propiedad a **automático**y, a continuación, `DiscretizationBucketCount` cambie la `5`propiedad a. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
 
 10. En el menú **Generar** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en **Implementar Tutorial de Analysis Services**.
 
@@ -132,7 +132,7 @@ ms.locfileid: "78175274"
      ![Panel Filtro con dos conjuntos con nombre](../../2014/tutorials/media/l6-named-set-05.gif "Panel Filtro con dos conjuntos con nombre")
 
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección
- [Lección 7: definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
+ [Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
 
 ## <a name="see-also"></a>Consulte también
  [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md) [crear conjuntos con nombre](multidimensional-models/create-named-sets.md)

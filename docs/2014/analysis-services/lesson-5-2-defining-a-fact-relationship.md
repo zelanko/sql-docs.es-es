@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175284"
 ---
 # <a name="defining-a-fact-relationship"></a>Definir una relación de hechos
@@ -93,7 +93,7 @@ ms.locfileid: "78175284"
 
      En la imagen siguiente se muestran las propiedades de la relación de hechos en el cuadro de diálogo **Definir relación** .
 
-     ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-factrelationship-2.gif "Cuadro de diálogo Definir relación")
+     ![Cuadro de diálogo Definir relación](../../2014/tutorials/media/l5-factrelationship-2.gif "Cuadro de diálogo Definir relación")
 
 3.  Haga clic en **Cancelar**.
 

@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656997"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>Sys. dm_exec_query_plan_stats (Transact-SQL)
@@ -59,7 +59,7 @@ El *plan_handle* se puede obtener de los siguientes objetos de administración d
 |**objectId**|**int**|Identificador del objeto (por ejemplo, procedimiento almacenado o función definida por el usuario) de este plan de consulta. Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
 |**número**|**smallint**|Entero de procedimiento almacenado numerado. Por ejemplo, un grupo de procedimientos de la aplicación **orders** puede llamarse **orderproc;1**, **orderproc;2**, etc.  Para lotes "ad hoc" y preparados, esta columna es **null**.<br /><br /> Esta columna acepta valores NULL.|  
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
-|**query_plan**|**lenguaje**|Contiene la última representación de SHOWPLAN en tiempo de ejecución conocida del plan de ejecución de consulta real que se especifica con *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.| 
+|**query_plan**|**xml**|Contiene la última representación de SHOWPLAN en tiempo de ejecución conocida del plan de ejecución de consulta real que se especifica con *plan_handle*. El plan de presentación está en formato XML. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.| 
 
 ## <a name="remarks"></a>Observaciones
 Esta función del sistema está disponible a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] partir de CTP 2,4.
@@ -75,13 +75,13 @@ La salida del plan de presentación por sys. dm_exec_query_plan_stats contiene l
 En las siguientes condiciones, se devuelve un resultado de SHOWPLAN **equivalente a un plan de ejecución real** en la columna **query_plan** de la tabla devuelta para **Sys. dm_exec_query_plan_stats**:  
 
 -   El plan se puede encontrar en [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **y**    
+    **AND**    
 -   La consulta que se ejecuta es compleja o de consumo de recursos.
 
-En las siguientes condiciones, se devuelve una salida del plan de presentación **simplificada <sup></sup> ** en la **query_plan** columna de la tabla devuelta para **Sys. dm_exec_query_plan_stats**:  
+En las siguientes condiciones, se devuelve una salida del plan de presentación **simplificada <sup>1</sup> ** en la **query_plan** columna de la tabla devuelta para **Sys. dm_exec_query_plan_stats**:  
 
 -   El plan se puede encontrar en [Sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **y**    
+    **AND**    
 -   La consulta es lo suficientemente sencilla, normalmente clasificada como parte de una carga de trabajo OLTP.
 
 <sup>1</sup> a partir [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] de CTP 2,5, esto hace referencia a un plan de presentación que solo contiene el operador de nodo raíz (Select). En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] el caso de CTP 2,4, esto hace referencia al plan almacenado `sys.dm_exec_cached_plans`en caché como disponible a través de.
@@ -89,7 +89,7 @@ En las siguientes condiciones, se devuelve una salida del plan de presentación 
 En las siguientes condiciones, **no se devuelve ningún resultado** desde **Sys. dm_exec_query_plan_stats**:
 
 -   El plan de consulta especificado mediante *plan_handle* se ha expulsado de la caché del plan.     
-    **O BIEN**    
+    **OR**    
 -   No se pudo almacenar en caché el plan de consulta en primer lugar. Para obtener más información, consulte [almacenamiento en caché y reutilización del plan de ejecución ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 

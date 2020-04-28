@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cf6a58c50922b412b76576ee2a7fd44cdf9e32a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176708"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Sincronización web para la replicación de mezcla
@@ -47,7 +47,7 @@ ms.locfileid: "78176708"
 
  ![Componentes y flujo de datos de sincronización web](media/web-sync01.gif "Componentes y flujo de datos de sincronización web")
 
- La sincronización web es una opción exclusiva de las suscripciones de extracción, por lo que un Agente de mezcla se ejecutará siempre en el suscriptor. Este Agente de mezcla puede ser el Agente de mezcla estándar, el control ActiveX del Agente de mezcla o de una aplicación que proporcione sincronización a través de Replication Management Objects (RMO). Para especificar la ubicación del equipo en el que se ejecuta IIS, use el parámetro **-InternetUrl** del Agente de mezcla.
+ La sincronización web es una opción exclusiva de las suscripciones de extracción, por lo que un Agente de mezcla se ejecutará siempre en el suscriptor. Este Agente de mezcla puede ser el Agente de mezcla estándar, el control ActiveX del Agente de mezcla o de una aplicación que proporcione sincronización a través de Replication Management Objects (RMO). Para especificar la ubicación del equipo en el que se ejecuta IIS, utilice el parámetro **-InternetUrl** para el agente de mezcla.
 
  La Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Replisapi.dll) se configura en el equipo en el que se ejecuta IIS y es responsable de controlar los mensajes que se envían al servidor desde el publicador y los suscriptores. Cada nodo de la topología controla el flujo de datos XML con el Reconciliador de replicación de mezcla (Replrec.dll).
 

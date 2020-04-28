@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176685"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
@@ -41,7 +41,7 @@ ms.locfileid: "78176685"
 
 1.  Todas las instancias contenidas en la instancia `CompoundCurve` son instancias de segmento de arco circular aceptadas. Para obtener más información sobre instancias de segmento de arco circular aceptadas, vea [LineString](linestring.md) y [CircularString](circularstring.md).
 
-2.  Todos los segmentos de arco circulares contenidos en la instancia `CompoundCurve` están conectados. El primer punto de cada segmento de arco circular subsiguiente es el mismo que el último punto del segmento de arco circular anterior.
+2.  Todos los segmentos de arco circulares contenidos en la instancia `CompoundCurve` están conectados. El primer punto de cada segmento de arco circular siguiente coincide con el último punto del segmento de arco circular precedente.
 
     > [!NOTE]
     >  Esto incluye las coordenadas Z y M. Por tanto, las cuatro coordenadas X, Y, Z y M deben coincidir para ambos puntos.
@@ -79,8 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- 
-  `@g3` es válido porque la instancia `CircularString` es válida. Para obtener más información sobre la validez de `CircularString` la instancia, vea [CircularString](circularstring.md).
+ `@g3` es válido porque la instancia `CircularString` es válida. Para obtener más información sobre la validez de `CircularString` la instancia, vea [CircularString](circularstring.md).
 
  El siguiente ejemplo muestra instancias de `CompoundCurve` no válidas.
 
@@ -91,10 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g1` no es válida porque la segunda instancia no es una instancia válida de LineString. 
-  `@g2` no es válida porque la instancia de `LineString` no es válida. 
-  `@g3` no es válida porque la instancia de `CircularString` no es válida. Para obtener más información sobre `CircularString` las `LineString` instancias de y válidas, vea [CircularString](circularstring.md) y [LineString](linestring.md).
+ `@g1` no es válida porque la segunda instancia no es una instancia válida de LineString. `@g2` no es válida porque la instancia de `LineString` no es válida. `@g3` no es válida porque la instancia de `CircularString` no es válida. Para obtener más información sobre `CircularString` las `LineString` instancias de y válidas, vea [CircularString](circularstring.md) y [LineString](linestring.md).
 
 ## <a name="examples"></a>Ejemplos
 

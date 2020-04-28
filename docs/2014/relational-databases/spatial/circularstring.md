@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176725"
 ---
 # <a name="circularstring"></a>CircularString
@@ -37,8 +37,7 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
 ```
 
- 
-  `@g3` muestra que la instancia de `CircularString` se puede aceptar, pero no es válida. La siguiente declaración de instancia de CircularString no se acepta. Esta declaración inicia una excepción `System.FormatException`.
+ `@g3` muestra que la instancia de `CircularString` se puede aceptar, pero no es válida. La siguiente declaración de instancia de CircularString no se acepta. Esta declaración inicia una excepción `System.FormatException`.
 
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
@@ -159,6 +158,6 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
 ```
 
 ## <a name="see-also"></a>Consulte también
- [Información general sobre los tipos de datos espaciales](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [MakeValid &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [STIsValid &#40;tipo de datos Geometry](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)&#41;STIsValid &#40;tipo de datos [Geography](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)&#41;STLength &#40;tipo de [datos Geometry&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) STStartPoint &#40;tipo de datos [Geometry&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) [STEndpoint &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) STPointN &#40;tipo de datos [Geometry](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)&#41;[STNumPoints &#40;tipo de datos](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) Geometry&#41;STIsRing [&#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) tipo de datos [STIsClosed &#40;Geometry&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) [STPointOnSurface &#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [LineString](linestring.md)
+ [Información general sobre tipos de datos espaciales](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [MakeValid &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;tipo de datos Geometry&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [STIsValid &#40;tipo de datos Geometry](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)&#41;STIsValid &#40;tipo de datos [Geography](/sql/t-sql/spatial-geography/stisvalid-geography-data-type)&#41;STLength &#40;tipo de datos [Geometry&#41;STStartPoint](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) &#40;tipo de datos Geometry [&#41;STEndpoint &#40;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) tipo [de datos](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) [Geometry&#41;STPointN](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [&#40;tipo de](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) datos [Geometry&#41;STNumPoints](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) [&#40;tipo](linestring.md) [de datos Geometry](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) [&#41;STIsRing](/sql/t-sql/spatial-geometry/stisring-geometry-data-type)
 
 

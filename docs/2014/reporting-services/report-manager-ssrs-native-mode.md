@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 5cefc88469ac3c98f3bb944c0e490f1ce7e88472
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172421"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Administrador de informes (Modo nativo de SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "78172421"
 
 -   [Descripciones de iconos](#bkmk_icon_descriptions)
 
-##  <a name="bkmk_whatis_report_manager"></a>¿Qué es Administrador de informes?
+##  <a name="what-is-report-manager"></a><a name="bkmk_whatis_report_manager"></a>¿Qué es Administrador de informes?
  Puede utilizar el Administrador de informes para realizar las siguientes tareas:
 
 -   Ver, buscar, imprimir y suscribirse a informes.
@@ -55,13 +55,13 @@ ms.locfileid: "78172421"
 
  El Administrador de informes solamente se utiliza para un servidor de informes que se ejecuta en modo nativo. No se admite para un servidor de informes que se configure para el modo integrado de SharePoint.
 
- Algunas características del Administrador de informes solo están disponibles en determinadas ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ Algunas características del Administrador de informes solo están disponibles en determinadas ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
  En una instalación nueva, solo los administradores locales tienen permisos suficientes para trabajar con el contenido y la configuración. Para conceder permisos a otros usuarios, un administrador local debe crear asignaciones de roles que proporcionen acceso al servidor de informes. Las tareas y las páginas de aplicación a las que un usuario puede obtener acceso posteriormente dependerán de las asignaciones de roles para dicho usuario. Para obtener más información, vea [conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](security/grant-user-access-to-a-report-server.md).
 
  Si está usando [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] o Windows Server 2008, debe configurar el Administrador de informes para la administración local. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).
 
-##  <a name="bkmk_start_report_manager"></a>Inicio y uso de Administrador de informes
+##  <a name="start-and-use-report-manager"></a><a name="bkmk_start_report_manager"></a>Inicio y uso de Administrador de informes
  El Administrador de informes es una aplicación web que abre escribiendo la dirección URL del Administrador de informes en la barra de direcciones de una ventana de explorador. Al iniciar el Administrador de informes, las páginas, vínculos y opciones que se ven varían en función de los permisos que se tengan en el servidor de informes. Para realizar una tarea, debe estar asignado a un rol que incluya la tarea. Un usuario asignado a un rol con permisos totales tiene acceso al conjunto completo de menús y páginas de la aplicación disponibles para administrar un servidor de informes. Un usuario asignado a un rol con permisos para ver y ejecutar informes solo ve los menús y las páginas que admiten dichas actividades. Cada usuario puede tener distintas asignaciones de roles para distintos servidores de informes o, incluso, para los distintos informes y carpetas almacenados en un único servidor de informes.
 
  Para obtener más información sobre los roles, consulte [Conceder permisos en un servidor de informes en modo nativo](security/granting-permissions-on-a-native-mode-report-server.md).
@@ -86,7 +86,7 @@ ms.locfileid: "78172421"
 
  Puede personalizar el Administrador de informes de maneras muy limitadas. Por ejemplo, puede modificar el título de la aplicación en la página Configuración del sitio. Si es un programador web, puede modificar las hojas de estilo que contienen la información del estilo que utiliza el Administrador de informes. Como el Administrador de informes no se diseñó específicamente para admitir personalización, debe analizar cuidadosamente cualquier modificación que realice. Si el Administrador de informes no satisface sus necesidades, puede desarrollar un visor de informes personalizado o configurar elementos Web de SharePoint para buscar y ver los informes en un sitio de SharePoint. Para obtener más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](report-server/configure-web-portal.md).
 
-##  <a name="bkmk_icon_descriptions"></a>Descripciones de iconos
+##  <a name="icon-descriptions"></a><a name="bkmk_icon_descriptions"></a>Descripciones de iconos
  En la tabla siguiente se describen los iconos que se usan en el Administrador de informes. Para obtener más información acerca de los iconos que aparecen en la barra de herramientas de informe, vea [visor HTML y la barra de herramientas de informe](html-viewer-and-the-report-toolbar.md).
 
 |Icono|Descripción|Acción|
@@ -97,7 +97,7 @@ ms.locfileid: "78172421"
 |![Icono de carpeta](media/hlp-16folder.gif "Icono de carpeta")|Carpeta|Haga clic en el icono de carpeta o en el nombre de la misma para abrir la carpeta.|
 |![Icono de suscripción](media/hlp-16subscription.gif "Icono de suscripción")|Subscription|Haga clic en un icono de suscripción o en una descripción para editar una suscripción.|
 |![Icono de suscripción controlada por datos](media/hlp-16subscriptiondd.gif "Icono de suscripción controlada por datos")|Suscripción controlada por datos|Haga clic en un icono de suscripción controlada por datos o en una descripción para editar una suscripción.|
-|![icono de recurso genérico](media/hlp-16file.gif "Icono de recurso genérico")|Resource|Haga clic en el icono de recurso o en el nombre del mismo para abrir el recurso. El recurso se abre en una ventana aparte.|
+|![Icono de recurso genérico](media/hlp-16file.gif "Icono de recurso genérico")|Resource|Haga clic en el icono de recurso o en el nombre del mismo para abrir el recurso. El recurso se abre en una ventana aparte.|
 |![Icono de origen de datos compartido](media/hlp-16datasource.png "Icono de origen de datos compartido")|Elemento de origen de datos compartido|Haga clic en un icono de origen de datos compartido para abrir las páginas de propiedades, la lista de informes y una lista de suscripción del origen de datos.|
 |![Icono de página de propiedades](media/hlp-16prop.gif "Icono de página de propiedades")|Página de propiedades|Haga clic en el icono de propiedades para obtener acceso a páginas adicionales donde establecer valores de propiedades y seguridad.|
 

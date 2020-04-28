@@ -15,22 +15,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175408"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Cifrado de datos transparente con Base de datos SQL de Azure
-  
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] cifrado de datos transparente (vista previa) le ayuda a protegerse contra la amenaza de la actividad malintencionada realizando un cifrado y descifrado en tiempo real, copias de seguridad asociadas y archivos de registro de transacciones en reposo sin requerir cambios en la aplicación.
 
- TDE cifra el almacenamiento de una base de datos completa mediante el uso de una clave simétrica denominada clave de cifrado de base de datos. En [!INCLUDE[ssSDS](../includes/sssds-md.md)] la clave de cifrado de base de datos está protegida por un certificado de servidor integrado. El certificado de servidor integrado es único para cada servidor de [!INCLUDE[ssSDS](../includes/sssds-md.md)] . Si una base de datos está en una relación de GeoDR, está protegida por una clave diferente en cada servidor. Si hay 2 bases de datos conectadas al mismo servidor, comparten el mismo certificado integrado. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] gira automáticamente estos certificados al menos cada 90 días. Para obtener una descripción general de TDE, vea [Cifrado de datos transparente &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).
+ TDE cifra el almacenamiento de una base de datos completa mediante el uso de una clave simétrica denominada clave de cifrado de base de datos. En [!INCLUDE[ssSDS](../includes/sssds-md.md)] la clave de cifrado de base de datos está protegida por un certificado de servidor integrado. El certificado de servidor integrado es único para cada servidor de [!INCLUDE[ssSDS](../includes/sssds-md.md)] . Si una base de datos está en una relación de GeoDR, está protegido por una clave diferente en cada servidor. Si hay 2 bases de datos conectadas al mismo servidor, comparten el mismo certificado integrado. [!INCLUDE[msCoName](../includes/msconame-md.md)] gira automáticamente estos certificados al menos cada 90 días. Para obtener una descripción general de TDE, vea [Cifrado de datos transparente &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).
 
- 
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] no admite la integración del Almacén de claves de Azure con TDE. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se ejecuta en una máquina virtual de Azure puede usar una clave asimétrica del almacén de claves. Para obtener más información, vea [Example A: Transparent Data Encryption by Using an Asymmetric Key from the Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] no admite la integración del Almacén de claves de Azure con TDE. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se ejecuta en una máquina virtual de Azure puede usar una clave asimétrica del almacén de claves. Para obtener más información, vea [Example A: Transparent Data Encryption by Using an Asymmetric Key from the Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).
 
 ||
 |-|
@@ -39,9 +35,9 @@ ms.locfileid: "78175408"
 > [!IMPORTANT]
 >  Actualmente, se trata de una característica de vista previa. Reconoce y acepta que la implementación del cifrado de datos transparente de [!INCLUDE[ssSDS](../includes/sssds-md.md)] en mis bases de datos está sujeta a los términos de vista previa del contrato de licencia (por ejemplo, el contrato Enterprise, contrato de Microsoft Azure o el contrato Microsoft Online Subscription), así como cualquier [término complementario de vista previa de Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)aplicable.
 
- La vista previa del estado de TDE se aplica incluso en el subconjunto de las regiones geográficas donde la familia de la versión V12 de [!INCLUDE[ssSDS](../includes/sssds-md.md)] se anuncia como con estado de disponibilidad general. TDE para [!INCLUDE[ssSDS](../includes/sssds-md.md)] no está diseñado para su uso en bases de datos de producción hasta que [!INCLUDE[msCoName](../includes/msconame-md.md)] anuncie que TDE se promueve de vista previa a disponibilidad general. Para más información sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12, consulte [Novedades de la base de datos de SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).
+ La vista previa del estado de TDE se aplica incluso en el subconjunto de las regiones geográficas donde la familia de la versión V12 de [!INCLUDE[ssSDS](../includes/sssds-md.md)] se anuncia como con estado de disponibilidad general. TDE para [!INCLUDE[ssSDS](../includes/sssds-md.md)] no está diseñado para su uso en bases de datos de producción hasta que [!INCLUDE[msCoName](../includes/msconame-md.md)] anuncie que TDE se promueve de vista previa a disponibilidad general. Para más información sobre [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12, consulte [Novedades de Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).
 
-##  <a name="Permissions"></a> Permisos
+##  <a name="permissions"></a><a name="Permissions"></a> Permisos
  Para inscriburse para obtener la vista previa y configurar TDE a través del portal de Azure, mediante la API de REST o mediante PowerShell, debe estar conectado como propietario de Azure, colaborador o administrador de seguridad de SQL.
 
  Para configurar TDE mediante [!INCLUDE[tsql](../includes/tsql-md.md)] se requiere lo siguiente:
@@ -52,7 +48,7 @@ ms.locfileid: "78175408"
 
 -   Para ejecutar la instrucción ALTER DATABASE con la opción SET solo se requiere la pertenencia al rol **dbmanager** .
 
-##  <a name="Preview"></a>Suscríbase a la versión preliminar de TDE y habilite TDE en una base de datos
+##  <a name="sign-up-for-the-preview-of-tde-and-enable-tde-on-a-database"></a><a name="Preview"></a>Suscríbase a la versión preliminar de TDE y habilite TDE en una base de datos
 
 1.  Visite Azure portal en [https://portal.azure.com](https://portal.azure.com) e inicie sesión con su cuenta de administrador o colaborador de Azure.
 
@@ -60,7 +56,7 @@ ms.locfileid: "78175408"
 
 3.  Con **Bases de datos SQL** seleccionado en el panel izquierdo, haga clic en la base de datos de usuario.
 
-4.  En la hoja base de datos, haga clic en **toda la configuración**.
+4.  En la hoja de la base de datos, haga clic en **Toda la configuración**.
 
 5.  En la hoja **Configuración** , haga clic en la parte **Cifrado de datos transparente (vista previa)** para abrir la hoja **VISTA PREVIA de cifrado de datos transparente** . Si todavía no está suscrito a la versión preliminar de TDE, se deshabilitará la configuración de cifrado de datos hasta que finalice el registro.
 
@@ -74,7 +70,7 @@ ms.locfileid: "78175408"
 
      También puede supervisar el progreso del cifrado mediante la conexión a [!INCLUDE[ssSDS](../includes/sssds-md.md)] mediante una herramienta de consulta como [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] como un usuario de base de datos con el permiso **VER ESTADO DE LA BASE DE DATOS** . Consulte la `encryption_state` columna de la vista [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
-##  <a name="Encrypt"></a>Habilitar TDE en [!INCLUDE[ssSDS](../includes/sssds-md.md)] mediante TRANSACT-SQL
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Habilitar TDE en [!INCLUDE[ssSDS](../includes/sssds-md.md)] mediante TRANSACT-SQL
  En los pasos siguientes se supone que ya se ha registrado para la vista previa.
 
 ###  <a name="TsqlProcedure"></a>
@@ -116,7 +112,7 @@ ms.locfileid: "78175408"
     Switch-AzureMode -Name AzureServiceManagement
     ```
 
-##  <a name="Decrypt"></a>Descifrado de una base de datos protegida por TDE en[!INCLUDE[ssSDS](../includes/sssds-md.md)]
+##  <a name="decrypting-a-tde-protected-database-on-sssds"></a><a name="Decrypt"></a>Descifrado de una base de datos protegida por TDE en[!INCLUDE[ssSDS](../includes/sssds-md.md)]
 
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>Para deshabilitar TDE mediante Azure Portal
 
@@ -126,7 +122,7 @@ ms.locfileid: "78175408"
 
 3.  Con **Bases de datos SQL** seleccionado en el panel izquierdo, haga clic en la base de datos de usuario.
 
-4.  En la hoja base de datos, haga clic en **toda la configuración**.
+4.  En la hoja de la base de datos, haga clic en **Toda la configuración**.
 
 5.  En la hoja **Configuración** , haga clic en la parte **Cifrado de datos transparente (vista previa)** para abrir la hoja **VISTA PREVIA de cifrado de datos transparente** .
 
@@ -148,7 +144,7 @@ ms.locfileid: "78175408"
 
 3.  Para supervisar el progreso del cifrado [!INCLUDE[ssSDS](../includes/sssds-md.md)]en, los usuarios de la base de datos con el permiso `encryption_state` **View Database State** pueden consultar la columna de la vista [Sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
-##  <a name="Working"></a>Trabajar con bases de datos protegidas por TDE en[!INCLUDE[ssSDS](../includes/sssds-md.md)]
+##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>Trabajar con bases de datos protegidas por TDE en[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  No es necesario descifrar las bases de datos para las operaciones dentro de Azure. La configuración de TDE en la base de datos de origen o la base de datos principal se hereda de forma transparente en el destino. Aquí se incluyen operaciones que implican:
 
 -   Restauración geográfica
@@ -161,7 +157,7 @@ ms.locfileid: "78175408"
 
 -   Creación de la copia de una base de datos
 
-##  <a name="Moving"></a>Mover una base de datos protegida por TDE al usar. Archivos BacPac
+##  <a name="moving-a-tde-protected-database-on-using-bacpac-files"></a><a name="Moving"></a>Mover una base de datos protegida por TDE al usar. Archivos BacPac
  Cuando se exporta una base de datos protegida con TDE mediante la función Exportar base de datos del Portal de [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] o el asistente para la importación y exportación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el contenido de la base de datos no se cifra. El contenido se almacena en archivos .bacpac que no están cifrados.  Asegúrese de proteger adecuadamente los archivos .bacpac y de habilitar TDE una vez completada la importación de la nueva base de datos.
 
 ## <a name="related-sql-server-topic"></a>Tema de SQL Server relacionado

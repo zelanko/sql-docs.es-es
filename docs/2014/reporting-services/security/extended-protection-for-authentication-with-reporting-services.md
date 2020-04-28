@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89aae3981d88c25104a29a6abfe81f09bb04de53
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177091"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
@@ -31,7 +31,7 @@ ms.locfileid: "78177091"
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] admite y aplica la protección ampliada que se ha habilitado en el sistema operativo. Si el sistema operativo no admite la protección ampliada o no se ha habilitado la característica en él, se producirá un error de autenticación de la característica de protección ampliada de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] también requiere un certificado SSL. Para más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](configure-ssl-connections-on-a-native-mode-report-server.md).
 
 > [!IMPORTANT]
->  De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no habilita la protección ampliada. La característica se puede habilitar si se modifica el archivo de configuración `rsreportserver.config` o mediante las API de WMI para actualizar el archivo de configuración. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]no proporciona una interfaz de usuario para modificar o ver la configuración de protección ampliada. Para obtener más información, vea la sección de [configuración](#ConfigurationSettings) de este tema.
+>  De forma predeterminada, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no habilita la protección ampliada. La característica se puede habilitar si se modifica el archivo de configuración `rsreportserver.config` o mediante las API de WMI para actualizar el archivo de configuración. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no proporciona una interfaz de usuario para modificar o ver la configuración de protección ampliada. Para obtener más información, vea la sección de [configuración](#ConfigurationSettings) de este tema.
 
  Los problemas comunes que se producen a causa de los cambios de la configuración de la protección ampliada o de una configuración incorrecta no se muestran mediante mensajes ni ventanas de cuadro de diálogo de error obvios. Los problemas relacionados con la configuración y la compatibilidad de la protección ampliada tienen como resultado errores de autenticación y errores en los registros de seguimiento de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .
 
@@ -53,7 +53,7 @@ ms.locfileid: "78177091"
 
 -   El valor predeterminado del parámetro `RSWindowsExtendedProtectionScenario` es `Proxy`.
 
--   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]El asesor de actualizaciones no comprueba que el sistema operativo o la instalación actual [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de tienen habilitada la protección ampliada.
+-   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] no comprueba si el sistema operativo ni la instalación actual de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tienen habilitada la protección ampliada.
 
 ### <a name="what-reporting-services-extended-protection-does-not-cover"></a>Lo que no cubre la protección ampliada de Reporting Services
  La característica de protección ampliada de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no es compatible con las siguientes áreas y escenarios de características:
@@ -107,13 +107,13 @@ ms.locfileid: "78177091"
 
  Cuando se produce un error de autenticación de la configuración, se deshabilitan los tipos de autenticación `RSWindowsNTLM`, `RSWindowsKerberos` y `RSWindowsNegotiate` en el servidor de informes.
 
-###  <a name="ConfigurationSettings"></a>Opciones de configuración para la protección ampliada de Reporting Services
+###  <a name="configuration-settings-for-reporting-services-extended-protection"></a><a name="ConfigurationSettings"></a> Configuración de la protección ampliada de los servicios de informes
  La tabla siguiente proporciona información sobre los valores de configuración que aparecen en `rsreportserver.config` para la protección ampliada.
 
 |Configuración|Descripción|
 |-------------|-----------------|
-|`RSWindowsExtendedProtectionLevel`|Especifica el grado de aplicación de la protección ampliada. Los valores válidos son `Off`, `Allow` y `Require`.<br /><br /> El valor predeterminado es `Off`.<br /><br /> El valor `Off` especifica que no existe comprobación de enlace de canal ni de enlace de servicio.<br /><br /> El valor `Allow` admite la protección ampliada pero no la necesita. El valor Allow especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan. La forma de aplicar la protección la determina la opción `RsWindowsExtendedProtectionScenario`.<br /><br /> Se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.<br /><br /> El valor `Require` especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan.<br /><br /> **No** se permitirá la autenticación para las aplicaciones que se ejecutan en sistemas operativos que no admiten la protección ampliada.|
-|`RsWindowsExtendedProtectionScenario`|Especifica las formas de la protección ampliada que se validan: enlace de canal, enlace de servicio o ambos. Los valores válidos son `Any`, `Proxy` y `Direct`.<br /><br /> El valor predeterminado es `Proxy`.<br /><br /> El valor `Any` especifica:<br /><br /> -No se necesitan la autenticación de Windows NTLM, Kerberos ni Negotiate, ni ningún enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Proxy` especifica:<br /><br /> -Si está presente, la autenticación de Windows NTLM, Kerberos y Negotiate cuando está presente un token de enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Direct` especifica:<br /><br /> -La autenticación de Windows NTLM, Kerberos y Negotiate cuando están presentes un CBT y una conexión SSL al servicio actual, y el CBT para que la conexión SSL coincida con el CBT del token de NTLM, Kerberos o Negotiate.<br /><br /> -No se aplica el enlace de servicio.<br /><br /> <br /><br /> Nota: este valor se omite si `RsWindowsExtendedProtectionLevel` está establecido en `OFF`.|
+|`RSWindowsExtendedProtectionLevel`|Especifica el grado de aplicación de la protección ampliada. Valores válidos son `Off`, `Allow` y `Require`.<br /><br /> El valor predeterminado es `Off`.<br /><br /> El valor `Off` especifica que no existe comprobación de enlace de canal ni de enlace de servicio.<br /><br /> El valor `Allow` admite la protección ampliada pero no la necesita. El valor Allow especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan. La forma de aplicar la protección la determina la opción `RsWindowsExtendedProtectionScenario`.<br /><br /> Se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.<br /><br /> El valor `Require` especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan.<br /><br /> **No** se permitirá la autenticación para las aplicaciones que se ejecutan en sistemas operativos que no admiten la protección ampliada.|
+|`RsWindowsExtendedProtectionScenario`|Especifica qué formas de protección ampliada se validan: Enlace de canales, enlace de servicios o ambos. Valores válidos son `Any`, `Proxy` y `Direct`.<br /><br /> El valor predeterminado es `Proxy`.<br /><br /> El valor `Any` especifica:<br /><br /> -No se necesitan la autenticación de Windows NTLM, Kerberos ni Negotiate, ni ningún enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Proxy` especifica:<br /><br /> -Si está presente, la autenticación de Windows NTLM, Kerberos y Negotiate cuando está presente un token de enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Direct` especifica:<br /><br /> -La autenticación de Windows NTLM, Kerberos y Negotiate cuando están presentes un CBT y una conexión SSL al servicio actual, y el CBT para que la conexión SSL coincida con el CBT del token de NTLM, Kerberos o Negotiate.<br /><br /> -No se aplica el enlace de servicio.<br /><br /> <br /><br /> Nota: este valor se omite si `RsWindowsExtendedProtectionLevel` está establecido en `OFF`.|
 
  Entradas del ejemplo en el archivo de configuración `rsreportserver.config`:
 
@@ -125,8 +125,7 @@ ms.locfileid: "78177091"
 ```
 
 ## <a name="service-binding-and-included-spns"></a>Enlace de servicio y SPN incluidos
- El enlace de servicio usa nombres principales de servicio (SPN) para validar el destino previsto de los tokens de autenticación. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa la información de reserva de dirección URL para compilar una lista de los SPN que se consideran válidos. Si se usa la información de reservas de direcciones URL para la validación tanto de SPN como de reservas de direcciones URL, los administraciones del sistema pueden administrarlos desde una sola ubicación.
+ El enlace de servicio usa nombres principales de servicio (SPN) para validar el destino previsto de los tokens de autenticación. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa la información de reserva de dirección URL para compilar una lista de los SPN que se consideran válidos. Si se usa la información de reservas de direcciones URL para la validación tanto de SPN como de reservas de direcciones URL, los administraciones del sistema pueden administrarlos desde una sola ubicación.
 
  La lista de los SPN válidos se actualiza cuando se inicia el servidor de informes, se cambia la configuración de la protección ampliada o se recicla el dominio de aplicación.
 

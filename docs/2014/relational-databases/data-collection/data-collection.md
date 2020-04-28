@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175989"
 ---
 # <a name="data-collection"></a>Recopilación de datos
@@ -31,13 +31,12 @@ ms.locfileid: "78175989"
 
  La ilustración siguiente muestra cómo encaja el recopilador de datos en la estrategia global para la recopilación y la administración de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
- ![Rol del recopilador de datos en la administración de datos](../../database-engine/media/datacollectorroleindatastrategy.gif "Rol del recopilador de datos en la administración de datos")
+ ![Rol del recopilador de datos en Administración de datos](../../database-engine/media/datacollectorroleindatastrategy.gif "Rol del recopilador de datos en Administración de datos")
 
 ## <a name="data-collector-concepts"></a>Conceptos del recopilador de datos
  El recopilador de datos se integra en el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y usa ambos exhaustivamente. Antes de trabajar con el recopilador de datos, debe conocer ciertos conceptos relacionados con cada uno de estos componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa para programar y ejecutar trabajos de recopilación. Debe conocer los conceptos siguientes:
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa para programar y ejecutar trabajos de recopilación. Debe conocer los conceptos siguientes:
 
 -   Trabajo
 
@@ -51,10 +50,9 @@ ms.locfileid: "78175989"
 
  Para obtener más información, vea [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](../../ssms/agent/sql-server-agent.md).
 
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) se usa para ejecutar paquetes que recopilan datos de proveedores de datos individuales. Debe estar familiarizado con los siguientes conceptos y herramientas de [!INCLUDE[ssIS](../../includes/ssis-md.md)] :
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) se usa para ejecutar paquetes que recopilan datos de proveedores de datos individuales. Debe estar familiarizado con los siguientes conceptos y herramientas de [!INCLUDE[ssIS](../../includes/ssis-md.md)] :
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]configura
+-   Paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 
 -   configuración de paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)]
 

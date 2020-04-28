@@ -19,10 +19,10 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557812"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>Abrir, desbloquear, cambiar el nombre y eliminar un proyecto de calidad de datos (DQS)
@@ -31,9 +31,9 @@ ms.locfileid: "75557812"
 
   En este tema se describe cómo administrar un proyecto de calidad de datos mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , realizando acciones tales como abrirlo, desbloquearlo, cambiarle el nombre y eliminarlo.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
   
 -   No es posible abrir un proyecto bloqueado creado por otro usuario.  
   
@@ -43,15 +43,15 @@ ms.locfileid: "75557812"
   
 -   Solo se podrán desbloquear los proyectos de calidad de datos creados por uno mismo.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Debe disponer al menos de un proyecto de calidad de datos que administrar.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para administrar un proyecto de calidad de datos.  
   
-##  <a name="Open"></a>Abrir un proyecto de calidad de datos  
+##  <a name="open-a-data-quality-project"></a><a name="Open"></a> Abrir un proyecto de calidad de datos  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -63,11 +63,11 @@ ms.locfileid: "75557812"
   
 4.  El proyecto de calidad de datos se abre en el mismo estado de la actividad en que se cerró por última vez. Un proyecto de calidad de datos tiene los estados siguientes:  
   
-    -   Para la actividad **Limpieza**, un proyecto de calidad de datos puede tener los estados siguientes: **Limpieza: asignar**, **Limpieza: limpiar**, **Limpieza: administrar y ver resultados** y **Limpieza: exportar**.  
+    -   En la actividad **limpieza** , un proyecto de calidad de datos puede tener los Estados siguientes: **limpieza: asignar**, **limpieza: limpiar**, **limpieza: administrar y ver resultados**y **limpieza-exportar**.  
   
-    -   Para la actividad **Coincidencia**, un proyecto de calidad de datos puede tener los estados siguientes: **Coincidencia: asignar**, **Coincidencia: coincidencia**, **Coincidencia: permanencia** y **Coincidencia: exportar**.  
+    -   En el caso de la actividad de **búsqueda de coincidencias** , un proyecto de calidad de datos puede tener los siguientes Estados: **coincidencia de asignación** **, coincidencia de coincidencia**, **permanencia de coincidencia**y **búsqueda de coincidencias**.  
   
-##  <a name="Unlock"></a>Desbloquear un proyecto de calidad de datos  
+##  <a name="unlock-a-data-quality-project"></a><a name="Unlock"></a> Desbloquear un proyecto de calidad de datos  
  Cuando se crea un proyecto de calidad de datos, queda bloqueado para evitar su uso o modificación por parte de otros usuarios. Si desea que otros usuarios puedan trabajar en el proyecto de calidad de datos, deberá desbloquearlo después de finalizar su trabajo. Para los proyectos que están bloqueados se muestra un símbolo con un candado.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "75557812"
   
 3.  En la pantalla **Abrir proyecto** , haga clic con el botón secundario en un proyecto de calidad de datos bloqueado que haya creado y, a continuación, haga clic en **Desbloquear** en el menú contextual. Se muestra una marca de verificación verde que indicará que el proyecto está desbloqueado.  
   
-##  <a name="Rename"></a>Cambiar el nombre de un proyecto de calidad de datos  
+##  <a name="rename-a-data-quality-project"></a><a name="Rename"></a> Cambiar el nombre de un proyecto de calidad de datos  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75557812"
   
 4.  Podrá editar el nombre del proyecto de calidad de datos en la columna **Nombre** . Escriba un nuevo nombre y presione Entrar.  
   
-##  <a name="Delete"></a>Eliminar un proyecto de calidad de datos  
+##  <a name="delete-a-data-quality-project"></a><a name="Delete"></a> Eliminar un proyecto de calidad de datos  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

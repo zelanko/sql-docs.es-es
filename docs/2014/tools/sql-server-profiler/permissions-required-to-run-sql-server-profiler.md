@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6155f01b055f123277222a8c3a9359f907ca18cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171845"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Permisos necesarios para ejecutar SQL Server Profiler
@@ -62,9 +62,9 @@ ms.locfileid: "78171845"
 
  En el siguiente diagrama se muestra el proceso de comprobación de permisos al reproducir seguimientos:
 
- ![Permisos de reproducción de seguimiento de SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "Permisos de reproducción de seguimiento de SQL Server Profiler")
+ ![Permisos de seguimiento de reproducción de SQL Server Profiler](../../database-engine/media/replaytracedecisiontree.gif "Permisos de seguimiento de reproducción de SQL Server Profiler")
 
 ## <a name="see-also"></a>Consulte también
- [SQL Server Profiler procedimientos almacenados &#40;los seguimientos de la reproducción de&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql) [](replay-traces.md) [crean un seguimiento &#40;SQL Server Profiler](create-a-trace-sql-server-profiler.md)&#41;[reproducir una tabla de seguimiento](replay-a-trace-table-sql-server-profiler.md) &#40;SQL Server Profiler&#41;[reproducir un archivo de seguimiento &#40;](replay-a-trace-file-sql-server-profiler.md) SQL Server Profiler&#41;
+ [SQL Server Profiler procedimientos almacenados &#40;los seguimientos de la reproducción de&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql) [Replay Traces](replay-traces.md) [crean un seguimiento &#40;SQL Server Profiler](create-a-trace-sql-server-profiler.md)&#41;[reproducir una tabla de seguimiento](replay-a-trace-table-sql-server-profiler.md) &#40;SQL Server Profiler&#41;[reproducir un archivo de seguimiento &#40;](replay-a-trace-file-sql-server-profiler.md) SQL Server Profiler&#41;
 
 

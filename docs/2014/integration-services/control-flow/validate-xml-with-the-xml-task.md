@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176505"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,7 +25,7 @@ ms.locfileid: "78176505"
 
  La siguiente captura de pantalla muestra el **Editor de la tarea XML** con la configuración necesaria para la validación de XML con la salida de error completa.
 
- ![Propiedades de la tarea XML en el Editor de la tarea XML](../media/xmltaskproperties.jpg "Propiedades de la tarea XML en el editor de la tarea XML")
+ ![Propiedades de la tarea XML en el Editor de la tarea XML](../media/xmltaskproperties.jpg "Propiedades de la tarea XML en el Editor de la tarea XML")
 
  Antes de que la propiedad `ValidationDetails` estuviera disponible, la validación de XML efectuada mediante la tarea XML solo devolvía un resultado true o false, sin información sobre errores o sus ubicaciones. Ahora, cuando se establece `ValidationDetails` en true, el archivo de salida contiene información detallada sobre cada uno de los errores, incluido el número de línea y la posición. Puede usar esta información para comprender, buscar y corregir errores en documentos XML.
 
@@ -116,7 +116,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
 
  Este es el resultado de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] de la segunda consulta de ejemplo que se muestra en el texto anterior.
 
- ![Consulta para agrupar errores de XML en Management Studio](../media/queryforxmlerrors.jpg "Consulta para agrupar errores XML en Management Studio")
+ ![Consulta para agrupar errores de XML en Management Studio](../media/queryforxmlerrors.jpg "Consulta para agrupar errores de XML en Management Studio")
 
 ## <a name="see-also"></a>Consulte también
  Editor de la tarea XML de la [tarea xml](xml-task.md) [&#40;página general&#41;](../xml-task-editor-general-page.md)

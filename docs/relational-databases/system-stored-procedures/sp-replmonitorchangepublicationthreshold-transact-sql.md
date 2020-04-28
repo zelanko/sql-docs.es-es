@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322242"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -63,14 +63,14 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @metric_id = ] metric_id`Es el identificador de la métrica de umbral de publicación que se va a cambiar. *metric_id* es de **tipo int**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Nombre de métrica|  
+|Value|Nombre de la métrica|  
 |-----------|-----------------|  
-|**1**|**expiración** : supervisa la expiración inminente de las suscripciones a las publicaciones transaccionales.|  
-|**2**|**latencia** : supervisa el rendimiento de las suscripciones a las publicaciones transaccionales.|  
+|**1**|**expiration** : supervisa la expiración inminente de suscripciones a publicaciones transaccionales.|  
+|**2**|**latency** : supervisa el rendimiento de suscripciones a publicaciones transaccionales.|  
 |**4**|**mergeexpiration** : supervisa la expiración inminente de suscripciones a publicaciones de combinación.|  
 |**5**|**mergeslowrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
 |**6**|**mergefastrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
-|**7**|**mergefastrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de gran ancho de banda (LAN).|  
+|**7**|**mergefastrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
 |**203**|**mergeslowrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
   
  Debe especificar *metric_id* o *thresholdmetricname*. Si se especifica *thresholdmetricname* , *METRIC_ID* debe ser null.  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176445"
 ---
 # <a name="cast-ssis-expression"></a>Conversión (expresión de SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "78176445"
  *expresión* de Es una expresión válida.
 
 ## <a name="result-types"></a>Tipos de resultado
- El tipo de datos de *type_spec*. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).
+ El tipo de datos de *type_spec*. Para obtener más información, vea [Integration Services tipos de datos](../data-flow/integration-services-data-types.md).
 
 ## <a name="remarks"></a>Observaciones
  El siguiente diagrama muestra operaciones de conversión válidas.
@@ -51,7 +51,7 @@ ms.locfileid: "78176445"
 
 |Tipo de datos|Parámetro|Ejemplo|
 |---------------|---------------|-------------|
-|DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) convierte 30 bytes, o 30 caracteres individuales, al tipo de datos DT_STR con la página de códigos 1252.|
+|DT_STR|*charCount*<br /><br /> *737*|(DT_STR,30,1252) convierte 30 bytes, o 30 caracteres individuales, al tipo de datos DT_STR con la página de códigos 1252.|
 |DT_WSTR|*CharCount*|(DT_WSTR,20) convierte 20 pares de bytes, o 20 caracteres Unicode, al tipo de datos DT_WSTR.|
 |DT_BYTES|*ByteCount*|(DT_BYTES,50) convierte 50 bytes al tipo de datos DT_BYTES.|
 |DT_DECIMAL|*Escala*|(DT_DECIMAL,2) convierte un valor numérico al tipo de datos DT_DECIMAL con una escala de 2.|

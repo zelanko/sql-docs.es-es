@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175810"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visores de modelos de minería de datos (Diseñador de modelos de minería de datos)
@@ -27,11 +27,11 @@ ms.locfileid: "78175810"
  Para consultar un tutorial sobre cómo usar cada visor, vea [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md).
 
 ## <a name="common-options"></a>Opciones comunes
- **Actualizar contenido del visor** Vuelva a cargar el modelo de minería de datos en el visor.
+ **Actualizar el contenido del visor** Vuelva a cargar el modelo de minería de datos en el visor.
 
- **Modelo de minería de datos** Elija un modelo de minería de datos para ver que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá primero en su visor personalizado asociado.
+ **Modelo de minería de datos** Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá primero en su visor personalizado asociado.
 
- **Visor** de Elija un visor para explorar el modelo de minería de datos seleccionado. Esta lista [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] incluye los visores que proporciona para cada modelo de minería de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] , el visor de contenido de minería de datos y los visores de complementos.
+ **Visor** Elija un visor para explorar el modelo de minería de datos seleccionado. Esta lista [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] incluye los visores que proporciona para cada modelo de minería de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] , el visor de contenido de minería de datos y los visores de complementos.
 
  El siguiente diagrama muestra un visor personalizado y el visor genérico para el mismo modelo.
 

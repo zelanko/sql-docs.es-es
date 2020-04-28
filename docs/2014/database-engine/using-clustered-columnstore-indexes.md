@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175364"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usar índices clúster de almacén de columnas
@@ -38,7 +38,7 @@ ms.locfileid: "78175364"
 
 -   [Reorganizar un índice clúster de almacén de columnas](#reorganize)
 
-##  <a name="create"></a>Crear un índice de almacén de columnas agrupado
+##  <a name="create-a-clustered-columnstore-index"></a><a name="create"></a>Crear un índice de almacén de columnas agrupado
  Para crear un índice clúster de almacén de columnas, cree primero una tabla almacén como un montón o un índice clúster y, a continuación, use la instrucción [Create Clustered almacén de columnas &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) para convertir la tabla en un índice de almacén de columnas agrupado. Si desea que el índice clúster de almacén de columnas tenga el mismo nombre que el índice clúster, use la opción DROP_EXISTING.
 
  En este ejemplo se crea una tabla como un montón y después se convierte en un índice clúster de almacén de columnas denominado cci_Simple. Esto cambia el almacenamiento de la tabla de un almacén de filas a un almacén de columnas.
@@ -56,10 +56,10 @@ GO
 
  Para obtener más ejemplos, vea la sección ejemplos del tema sobre cómo [crear un índice de almacén de columnas en clúster &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).
 
-##  <a name="drop"></a>Quitar un índice de almacén de columnas agrupado
+##  <a name="drop-a-clustered-columnstore-index"></a><a name="drop"></a>Quitar un índice de almacén de columnas agrupado
  Use la instrucción [DROP INDEX &#40;&#41;de Transact-SQL](/sql/t-sql/statements/drop-index-transact-sql) para quitar un índice de almacén de columnas agrupado. Esta operación quitará el índice y convertirá la tabla de almacén de columnas en un montón de almacenes de filas.
 
-##  <a name="load"></a>Carga de datos en un índice de almacén de columnas agrupado
+##  <a name="load-data-into-a-clustered-columnstore-index"></a><a name="load"></a>Carga de datos en un índice de almacén de columnas agrupado
  Puede agregar datos a un índice clúster de almacén de columnas existente mediante cualquiera de los métodos estándar de carga.  Por ejemplo, la herramienta de carga masiva BCP, Integration Services e INSERT... Seleccione puede cargar todos los datos en un índice de almacén de columnas agrupado.
 
  Los índices clúster de almacén de columnas aprovechan el almacén delta para evitar la fragmentación de segmentos de columna en el almacén de columnas.
@@ -83,9 +83,9 @@ GO
 |Filas que se cargarán de forma masiva|Filas agregadas al almacén de columnas|Filas agregadas al almacén delta|
 |-----------------------|-----------------------------------|----------------------------------|
 |102 000|0|102 000|
-|145,000|145,000<br /><br /> Tamaño del grupo de filas: 145.000|0|
-|1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1.048.576|1|
-|2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1.048.576, 1.048.576, 155.000|0|
+|145,000|145,000<br /><br /> Tamaño del grupo de filas: 145,000|0|
+|1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1 048 576.|1|
+|2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1 048 576, 1 048 576, 155 000.|0|
 
  En el ejemplo siguiente se muestran los resultados de cargar 1.048.577 filas en una partición. Los resultados muestran un grupo de filas COMPRESSED en el almacén de columnas (como segmentos de columna comprimidos) y una fila en el almacén delta.
 
@@ -97,7 +97,7 @@ SELECT * FROM sys.column_store_row_groups
 
 
 
-##  <a name="change"></a>Cambiar datos en un índice de almacén de columnas agrupado
+##  <a name="change-data-in-a-clustered-columnstore-index"></a><a name="change"></a>Cambiar datos en un índice de almacén de columnas agrupado
  Los índices clúster de almacén de columnas admiten las operaciones del DML INSERT, UPDATE y DELETE.
 
  Utilice [insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) para insertar una fila. Se agregará la fila al almacén delta.
@@ -114,7 +114,7 @@ SELECT * FROM sys.column_store_row_groups
 
 -   Si la fila se encuentra en el almacén delta, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la actualiza en ese almacén.
 
-##  <a name="rebuild"></a>Volver a generar un índice clúster de almacén de columnas
+##  <a name="rebuild-a-clustered-columnstore-index"></a><a name="rebuild"></a>Volver a generar un índice clúster de almacén de columnas
  Use [crear índice clúster de almacén de columnas &#40;Transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) o [ALTER index &#40;transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) para realizar una recompilación completa de un índice clúster de almacén de columnas existente. Además, puede usar ALTER INDEX... Rebuild para volver a generar una partición específica.
 
 ### <a name="rebuild-process"></a>Proceso de regeneración
@@ -145,7 +145,7 @@ SELECT * FROM sys.column_store_row_groups
 
      Esto garantiza que todos los datos se almacenan en el almacén de columnas. Si se producen varias cargas al mismo tiempo, cada partición puede acabar teniendo varios almacenes delta. La regeneración trasladará todas las filas del almacén delta al almacén de columnas.
 
-##  <a name="reorganize"></a>Reorganizar un índice de almacén de columnas agrupado
+##  <a name="reorganize-a-clustered-columnstore-index"></a><a name="reorganize"></a>Reorganizar un índice de almacén de columnas agrupado
  La reorganización de un índice clúster de almacén de columnas desplaza todos los grupos de columnas marcados como CLOSED al almacén de columnas. Para realizar una reorganización, use [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)con la opción reorganize.
 
  No es necesario llevar a cabo la reorganización para mover grupos de filas CLOSED al almacén de columnas. El proceso de tupla motriz encontrará finalmente todos los grupos de filas CLOSED y los moverá. Sin embargo, la tupla motriz es de un solo subproceso y los grupos de filas pueden no moverse lo suficientemente rápido para la carga de trabajo.

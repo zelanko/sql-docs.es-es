@@ -11,21 +11,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175444"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
-  A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la extensión del grupo de búferes proporciona una perfecta integración de una extensión de la memoria de acceso aleatorio no volátil (es decir, una unidad de estado sólido) con el grupo de búferes del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para mejorar considerablemente el rendimiento de E/S. La extensión del grupo de búferes no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+  A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la extensión del grupo de búferes proporciona una perfecta integración de una extensión de la memoria de acceso aleatorio no volátil (es decir, una unidad de estado sólido) con el grupo de búferes del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para mejorar considerablemente el rendimiento de E/S. La extensión del grupo de búferes no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
 ## <a name="benefits-of-the-buffer-pool-extension"></a>Ventajas de la extensión del grupo de búferes
  El propósito principal de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es almacenar y recuperar datos, por lo que una E/S de disco intensiva es una de las características principales del Motor de base de datos. Dado que las operaciones de E/S de disco pueden consumir muchos recursos y tardar bastante tiempo en completarse, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se centra en hacer la E/S muy eficaz. El grupo de búferes se utiliza como origen principal de asignación de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La administración de búfer es un componente clave para lograr esta eficacia. El componente de administración de búfer consta de dos mecanismos: el administrador de búfer para obtener acceso a las páginas de bases de datos y actualizarlas, y el grupo de búferes para reducir la E/S de archivos de base de datos.
 
  Las páginas de datos y de índice se leen desde el disco en el grupo de búferes y las páginas modificadas (también conocidas como páginas desfasadas) se escriben en el disco. La presión de memoria en los puntos de comprobación de la base de datos y el servidor hace que las páginas desfasadas (activas) de la memoria caché del búfer se expulsen de la memoria caché y se escriban en discos mecánicos y después se lean de nuevo en la memoria caché. Estas operaciones de E/S suelen ser pequeñas lecturas y escrituras aleatorias del orden de 4 a 16 kB de datos. Los patrones aleatorios de E/S pequeños incurren en búsquedas frecuentes, compitiendo por el brazo del disco mecánico, lo que aumenta la latencia de E/S y reduce el rendimiento de E/S global del sistema.
 
- El enfoque típico para solucionar estos cuellos de botella de E/S consiste en agregar más DRAM o, como alternativa, agregar ejes SAS de alto rendimiento. Aunque estas opciones son útiles, presentan unas desventajas importantes: la DRAM es más cara que las unidades de almacenamiento de datos y agregar ejes aumenta el gasto de la inversión para la adquisición de hardware y los costes operativos debido al mayor consumo energético y a la mayor probabilidad de que se produzca un error en un componente.
+ El enfoque típico para solucionar estos cuellos de botella de E/S consiste en agregar más DRAM o, como alternativa, agregar ejes SAS de alto rendimiento. Aunque estas opciones son útiles, presentan unas desventajas importantes: la DRAM es más cara que las unidades de almacenamiento de datos y agregar ejes aumenta el gasto de la inversión para la adquisición de hardware y los costos operativos debido al mayor consumo energético y a la mayor probabilidad de que se produzca un error en un componente.
 
  La característica de extensión del grupo de búferes extiende la memoria caché del grupo de búferes con almacenamiento no volátil (generalmente SSD). Debido a esta extensión, el grupo de búferes puede contener un espacio de trabajo de la base de datos mayor, lo que fuerza la paginación de operaciones de E/S entre la RAM y las SSD. Esto descarga de forma efectiva las pequeñas operaciones de E/S aleatorias de los discos mecánicos a las SSD. Debido a la menor latencia y al mejor rendimiento de E/S aleatoria de las SSD, la extensión del grupo de búferes mejora considerablemente el rendimiento de las operaciones de E/S.
 
@@ -61,7 +61,7 @@ ms.locfileid: "78175444"
 
  Cuando está habilitada, la extensión del grupo de búferes especifica el tamaño y la ruta de acceso del archivo de almacenamiento en caché del grupo de búferes en la SSD. Este archivo es una extensión contigua del almacenamiento en la SSD y se configura de forma estática durante el inicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las modificaciones de los parámetros de configuración del archivo solo se pueden hacer cuando la característica de extensión del grupo de búferes está deshabilitada. Cuando la extensión del grupo de búferes está deshabilitada, toda la configuración relacionada se quita del Registro. El archivo de la extensión del grupo de búferes se elimina tras el cierre de la instancia de SQL Server.
 
-## <a name="best-practices"></a>Prácticas recomendadas
+## <a name="best-practices"></a>Procedimientos recomendados
  Se aconseja seguir estas prácticas recomendadas.
 
 -   Tras habilitar la extensión del grupo de búferes por primera vez, se recomienda reiniciar la instancia de SQL Server para aprovechar las ventajas derivadas de un rendimiento máximo.
@@ -73,9 +73,9 @@ ms.locfileid: "78175444"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Devolver información sobre la extensión del grupo de búferes
  Puede utilizar las siguientes vistas de administración dinámica para mostrar la configuración de la extensión del grupo de búferes y devolver información acerca de las páginas de datos de la extensión.
 
--   [Sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [Sys. dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  En el objeto Buffer Manager de SQL Server hay disponibles contadores de rendimiento para hacer un seguimiento de las páginas de datos en el archivo de la extensión del grupo de búferes. Para obtener más información, vea los [contadores de rendimiento de la extensión del grupo de búferes](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).
 
@@ -92,10 +92,10 @@ ms.locfileid: "78175444"
 
 |||
 |-|-|
-|**Descripción de la tarea**|**Tema.**|
+|**Descripción de la tarea**|**Tema**|
 |Habilitar y configurar la extensión del grupo de búferes|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |Modificar la configuración de la extensión del grupo de búferes|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|Ver la configuración de la extensión del grupo de búferes|[Sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|Supervisar la extensión del grupo de búferes|[Sys. dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Contadores de rendimiento](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|Ver la configuración de la extensión del grupo de búferes|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|Supervisar la extensión del grupo de búferes|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Contadores de rendimiento](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

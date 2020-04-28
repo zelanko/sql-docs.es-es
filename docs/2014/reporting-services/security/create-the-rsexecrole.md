@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e3717bb9af98c9f3231115a7bad4cc8639998d1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177113"
 ---
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un rol de base de datos predefinido denominado `RSExecRole` para conceder permisos de servidor de informes a la base de datos del servidor de informes. El `RSExecRole` rol se crea automáticamente con la base de datos del servidor de informes. Por lo general, nunca se debe modificar el rol ni asignar otros usuarios al mismo. Sin embargo, cuando se mueve una base de datos del servidor de informes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]a un nuevo o a uno diferente, se debe volver a crear el rol en las bases de datos de sistema maestra y msdb.
 
  Usando estas instrucciones realizará los siguientes pasos:
@@ -65,7 +64,7 @@ ms.locfileid: "78177113"
 
 8.  En **nombre de rol**, `RSExecRole`escriba.
 
-9. En **propietario**, escriba **DBO**.
+9. En **Propietario**, escriba **DBO**.
 
 10. Haga clic en **Elementos protegibles**.
 
@@ -93,8 +92,7 @@ ms.locfileid: "78177113"
 
 19. En la fila **Ejecutar** , en la columna **Conceder** , haga clic en la casilla y, a continuación, haga clic en **Aceptar**.
 
-20. Repita este paso con cada uno de los procedimientos almacenados restantes. 
-  `RSExecRole` debe tener concedidos permisos de ejecución para los tres procedimientos almacenados.
+20. Repita este paso con cada uno de los procedimientos almacenados restantes. `RSExecRole` debe tener concedidos permisos de ejecución para los tres procedimientos almacenados.
 
  ![Página Propiedades del rol de la base de datos](../media/rsexecroledbproperties.gif "Página Propiedades del rol de la base de datos")
 
@@ -188,7 +186,7 @@ ms.locfileid: "78177113"
 30. Repita este procedimiento con la tabla sysjobs. Se deben conceder al rol RSExecRole permisos de selección para ambas tablas.
 
 ## <a name="move-the-report-server-database"></a>Mover la base de datos del servidor de informes
- Después de crear los roles, puede mover la base de datos del servidor de informes a una instancia nueva de SQL Server. Para más información, vea [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).
+ Después de crear los roles, puede mover la base de datos del servidor de informes a una instancia nueva de SQL Server. Para más información, vea [Mover las bases de datos del servidor de informes a otro equipo &#40;Modo nativo de SSRS&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).
 
  Si va a actualizar [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], puede hacerlo antes o después de mover la base de datos.
 
@@ -219,7 +217,7 @@ ms.locfileid: "78177113"
 
 10. Haga clic en **Claves de cifrado**.
 
-11. Haga clic en **Restaurar**.
+11. Haga clic en **restaurar**.
 
 12. Seleccione el archivo seguro (.snk) que tiene la copia de seguridad de la clave simétrica utilizada para descifrar las credenciales almacenadas y la información de conexión en la base de datos del servidor de informes.
 

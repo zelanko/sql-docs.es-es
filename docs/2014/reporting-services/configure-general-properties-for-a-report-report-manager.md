@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23184e77efbe41eae3d4de434a30ff8f3a4847ff
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177035"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>Configurar las propiedades generales de un informe (Administrador de informes)
@@ -26,7 +26,7 @@ ms.locfileid: "78177035"
 
 1.  Inicie el [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).
 
-2.  En el Administrador de informes, navegue hasta la página **Contenido** . Navegue al informe cuyas propiedades generales desea configurar y ábralo.
+2.  En Administrador de informes, vaya a la página **contenido** . Navegue al informe cuyas propiedades generales desea configurar y ábralo.
 
 3.  Haga clic en la pestaña **Propiedades**.
 

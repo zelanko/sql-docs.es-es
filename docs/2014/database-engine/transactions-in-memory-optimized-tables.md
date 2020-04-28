@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175419"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transacciones en tablas con optimización para memoria
@@ -50,8 +50,7 @@ ms.locfileid: "78175419"
  Además, si una transacción (TxA) lee filas que otra transacción (TxB) ha insertado o modificado y está en proceso de confirmación, se supondrá de forma optimista la confirmación de la otra transacción, en lugar de esperar a que la confirmación se produzca. En este caso, la transacción TxA tendrá una dependencia de confirmación de la transacción TxB.
 
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>Detección de conflictos, validación y comprobaciones de las dependencias de confirmación
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta conflictos entre las operaciones simultáneas, así como las infracciones del nivel de aislamiento y condenará una de las transacciones en conflicto. Esta transacción tendrá que volver a intentarse. (Para obtener más información, vea [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)).
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] detecta conflictos entre las operaciones simultáneas, así como las infracciones del nivel de aislamiento y condenará una de las transacciones en conflicto. Esta transacción tendrá que volver a intentarse. (Para obtener más información, vea [Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)).
 
  El sistema supone de forma optimista que no hay conflictos ni infracciones de aislamiento de transacciones. Los conflictos que puedan provocar incoherencias en la base de datos o puedan infringir el aislamiento de la transacción, se detectan y se termina la transacción.
 
@@ -83,7 +82,7 @@ Duración de una transacción que tiene acceso a tablas optimizadas para memoria
 
  Este error destruye la transacción (incluso si XACT_ABORT está en OFF), lo que significa que la transacción se revertirá cuando la sesión de usuario finaliza. Las transacciones condenadas no se puede confirmar y solo admiten operaciones de lectura que no escriben en el registro y no tienen acceso a las tablas optimizadas para memoria.
 
-#####  <a name="cd"></a>Dependencias de confirmación
+#####  <a name="commit-dependencies"></a><a name="cd"></a>Dependencias de confirmación
  Durante el procesamiento normal, una transacción puede leer las filas escritas por otras transacciones que están en la fase de confirmación o validación, pero aún no se hayan confirmado. Las filas están visibles porque la hora de finalización lógica de las transacciones se ha asignado al inicio de la fase de validación.
 
  Si una transacción lee estas filas no confirmadas, realizará una dependencia de confirmación en esa transacción. Esto tiene dos implicaciones principales:

@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321629"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
@@ -46,12 +46,12 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|Es la fase de la sesión de sincronización, que puede ser:<br /><br /> **0** = inicialización o fila de Resumen<br /><br /> **1** = carga<br /><br /> **2** = descargar|  
 |**ArticleName**|**sysname**|Es el nombre del artículo que se va a sincronizar. **ArticleName** también contiene información de resumen para las filas del conjunto de resultados que no representan detalles del artículo.|  
-|**PercentComplete**|**Decimal**|Indica el porcentaje de los cambios totales aplicados en una fila determinada de detalles del artículo para las sesiones en ejecución o con errores.|  
-|**RelativeCost**|**Decimal**|Indica el tiempo dedicado a la sincronización del artículo como porcentaje del tiempo de sincronización total para la sesión.|  
+|**PercentComplete**|**decimal**|Indica el porcentaje de los cambios totales aplicados en una fila determinada de detalles del artículo para las sesiones en ejecución o con errores.|  
+|**RelativeCost**|**decimal**|Indica el tiempo dedicado a la sincronización del artículo como porcentaje del tiempo de sincronización total para la sesión.|  
 |**Duration**|**int**|Duración de la sesión de agente.|  
-|**Inserta**|**int**|Número de inserciones de cada sesión.|  
+|**Inserts**|**int**|Número de inserciones de cada sesión.|  
 |**Actualizaciones**|**int**|Número de actualizaciones de cada sesión.|  
-|**Elimina**|**int**|Número de eliminaciones de cada sesión.|  
+|**Eliminaciones**|**int**|Número de eliminaciones de cada sesión.|  
 |**Conflictos**|**int**|Número de conflictos ocurridos en una sesión.|  
 |**ErrorID**|**int**|Identificador de un error de la sesión.|  
 |**SeqNo**|**int**|Orden de las sesiones en el conjunto de resultados.|  

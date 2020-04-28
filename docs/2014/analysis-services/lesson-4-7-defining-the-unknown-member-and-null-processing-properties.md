@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175314"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definir las propiedades de miembro desconocido y de procesamiento de valores NULL
@@ -123,7 +123,7 @@ ms.locfileid: "78175314"
 
 6.  Haga clic en la pestaña **Explorador** en el Diseñador de dimensiones para la dimensión **Product** y, después, haga clic en **Volver a conectar**.
 
-7.  Compruebe que **líneas de modelo de producto** aparece **** en la lista jerarquía `All Products`, expanda y, a continuación, expanda **componentes**.
+7.  Compruebe que **líneas de modelo de producto** aparece **Hierarchy** en la lista jerarquía `All Products`, expanda y, a continuación, expanda **componentes**.
 
 8.  Seleccione **Product Categories** en la lista **jerarquía** , expanda `All Products`y, a continuación, expanda **Components**.
 

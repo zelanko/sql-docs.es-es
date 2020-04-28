@@ -15,31 +15,31 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 42cdcb1245e5280d25a94a81617da92f755ea048
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176945"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 En este tema se proporciona información general sobre las opciones de actualización y migración de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Hay dos enfoques generales para actualizar una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :
 
--   **Actualización:** Actualice los [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componentes de en los servidores y las instancias donde están instalados actualmente. Habitualmente se denomina actualización "en contexto". No se admite la actualización en contexto de un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar un servidor de informes en modo nativo a un servidor de informes en modo de SharePoint. Puede migrar los elementos de informe de un modo a otro. Para obtener más información, vea la sección "migración de nativo a SharePoint" más adelante en este documento y el ejemplo de tema relacionado [Reporting Services script de RS. exe para migrar contenido entre servidores de informes](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).
+-   **Actualización:** se actualizan los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los servidores y las instancias donde están instalados actualmente. Habitualmente se denomina actualización "en contexto". No se admite la actualización en contexto de un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar un servidor de informes en modo nativo a un servidor de informes en modo de SharePoint. Puede migrar los elementos de informe de un modo a otro. Para obtener más información, vea la sección "migración de nativo a SharePoint" más adelante en este documento y el ejemplo de tema relacionado [Reporting Services script de RS. exe para migrar contenido entre servidores de informes](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).
 
--   **Migrar**: se instala y configura un nuevo entorno de SharePoint, se copian los elementos de informe y los recursos en el nuevo entorno, y se configura el nuevo entorno para usar contenido existente. Una forma de nivel inferior de migración es copiar bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], los archivos de configuración y, si se usa el modo de SharePoint, las bases de datos de contenido de SharePoint.
+-   **Migración**: se instala y configura un nuevo entorno de SharePoint, se copian los elementos de informe y los recursos al nuevo entorno, y se configura el nuevo entorno para usar contenido existente. Una forma de nivel inferior de migración es copiar bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los archivos de configuración y, si se usa el modo de SharePoint, las bases de datos de contenido de SharePoint.
 
 ||
 |-|
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint|
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|
 
-##  <a name="bkmk_top"></a>En este tema:
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> En este tema:
 
 -   [Problemas de actualización conocidos y prácticas recomendadas](#bkmk_known_issues)
 
 -   [Instalaciones en paralelo](#bkmk_side_by_side)
 
--   [Actualización en contexto](#bkmk_inplace_upgrade)
+-   [Actualización local](#bkmk_inplace_upgrade)
 
 -   [Lista de comprobación previa a la actualización](#bkmk_upgrade_checklist)
 
@@ -53,29 +53,27 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
 -   [Recursos adicionales](#bkmk_additional_resources)
 
-##  <a name="bkmk_known_issues"></a>Problemas de actualización conocidos y prácticas recomendadas
+##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> Problemas conocidos y prácticas recomendadas de actualización
  Para obtener una lista detallada de las ediciones y las versiones admitidas que puede actualizar, vea [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
 
 > [!TIP]
 >  Para obtener la información más reciente sobre los problemas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea lo siguiente:
 > 
 >  -   [SQL Server notas](https://go.microsoft.com/fwlink/?LinkID=296445)de la versión de 2014.
-> -   [SQL Server 2014 Reporting Services sugerencias, trucos y solución de problemas](https://go.microsoft.com/fwlink/?LinkID=391254).
+> -   [Sugerencias, trucos y solución de problemas de SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).
 > -   Use el Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Reporting Services problemas de actualización &#40;el asesor de actualizaciones&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md) y [Cómo: instalar el asesor de actualizaciones](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md).
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
-##  <a name="bkmk_side_by_side"></a>Instalaciones en paralelo
+##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Instalaciones en paralelo
  El modo nativo de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] se puede instalar en paralelo con una implementación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] en modo nativo.
 
- No se admiten las implementaciones en paralelo del modo de SharePoint de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] y ninguna de las versiones anteriores de los componentes del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+ No se admiten las implementaciones en paralelo del modo de SharePoint de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] y ninguna de las versiones anteriores de los componentes del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
-##  <a name="bkmk_inplace_upgrade"></a>Actualización en contexto
- El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ocupa de realizar la actualización. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede usar para actualizar algunos o todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluido [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El programa de instalación detecta las instancias existentes y solicita que se actualice. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación proporciona opciones de actualización que puede especificar como argumentos de la línea de comandos o en el Asistente para la instalación.
+##  <a name="in-place-upgrade"></a><a name="bkmk_inplace_upgrade"></a>Actualización en contexto
+ El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ocupa de realizar la actualización. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede usar para actualizar algunos o todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluido [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. El programa de instalación detecta las instancias existentes y solicita que se actualice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación proporciona opciones de actualización que puede especificar como argumentos de la línea de comandos o en el Asistente para la instalación.
 
  Al ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede seleccionar la opción para actualizar desde una de las versiones siguientes o puede instalar una nueva instancia de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] que se ejecute en paralelo con las instalaciones existentes:
 
@@ -97,14 +95,14 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
-##  <a name="bkmk_upgrade_checklist"></a>Lista de comprobación previa a la actualización
+##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> Lista de comprobación previa a la actualización
  Antes de actualizarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], revise lo siguiente:
 
 -   Revise los requisitos para determinar si el hardware y el software pueden admitir [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]. Para obtener más información, vea [Hardware and Software Requirements for Installing SQL Server 2014](../../../2014/sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
 -   Utilice el Comprobador de configuración del sistema (SCC) para examinar el equipo del servidor de informes en busca de cualquier condición que pudiera evitar la instalación correcta de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Check Parameters for the System Configuration Checker](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md).
 
--   Revise las prácticas recomendadas de seguridad y orientación para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [consideraciones de seguridad para una instalación de SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).
+-   Revise las prácticas recomendadas de seguridad y orientación para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Security Considerations for a SQL Server Installation](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).
 
 -   Ejecute el Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo del servidor de informes para determinar cualquier problema que pueda impedir que la actualización se realice correctamente. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).
 
@@ -114,7 +112,7 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
 -   Haga copia de seguridad de las personalizaciones de los directorios virtuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] existentes en IIS.
 
--   Quite los certificados SSL no válidos.  Se trata de los certificados expirados y que no piensa actualizar antes de actualizar Reporting Services.  Los certificados no válidos provocarán un error de actualización y la aparición de un mensaje de error similar al siguiente en el archivo de registro de Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: No se ha configurado ningún certificado SSL (Capa de sockets seguros) en el sitio web**.
+-   Quite los certificados SSL no válidos.  Se trata de los certificados expirados y que no piensa actualizar antes de actualizar Reporting Services.  Los certificados no válidos provocarán un error de actualización y la aparición de un mensaje de error similar al siguiente en el archivo de registro de Reporting Services: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: No se configuró ningún certificado SSL (Capa de sockets seguros) en el sitio web.** .
 
  Antes de actualizar un entorno de producción, ejecute siempre una actualización de prueba en un entorno de preproducción que tenga la misma configuración que el entorno de producción.
 
@@ -135,8 +133,8 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
-##  <a name="bkmk_native_scenarios"></a>Escenarios de actualización y migración en modo nativo
- **Actualización:** La actualización en contexto para el modo nativo es el mismo proceso para cada una de las versiones admitidas enumeradas anteriormente en este tema. Ejecute el Asistente para la instalación de SQL Server o una instalación desde la línea de comandos. Después de la instalación, la base de datos del servidor de informes se actualizará automáticamente al nuevo esquema de la base de datos del servidor de informes. Para obtener más información, consulte la sección [actualización local](#bkmk_inplace_upgrade) de este tema.
+##  <a name="native-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_native_scenarios"></a> Escenarios de actualización y migración en modo nativo
+ **Actualización:** la actualización en contexto para el modo nativo es el mismo proceso para cada una de las versiones admitidas mencionadas anteriormente en este tema. Ejecute el Asistente para la instalación de SQL Server o una instalación desde la línea de comandos. Después de la instalación, la base de datos del servidor de informes se actualizará automáticamente al nuevo esquema de la base de datos del servidor de informes. Para obtener más información, consulte la sección [actualización local](#bkmk_inplace_upgrade) de este tema.
 
  El proceso de actualización comienza al seleccionar una instancia del servidor de informes existente para actualizar.
 
@@ -146,7 +144,7 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
 3.  Si la actualización puede continuar, el programa de instalación le solicita que continúe con el proceso de actualización.
 
-4.  El programa de instalación crea carpetas nuevas para los archivos de programa de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las carpetas de programas para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] una instalación de incluyen MSRS12. \< *nombre de instancia*>.
+4.  El programa de instalación crea carpetas nuevas para los archivos de programa de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Las carpetas de programas para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] una instalación de incluyen MSRS12. \< *nombre de instancia*>.
 
 5.  El programa de instalación agrega los archivos de programa del servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , las herramientas de configuración y las utilidades de línea de comandos que forman parte de la característica del servidor de informes.
 
@@ -156,10 +154,9 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
     3.  Otras herramientas cliente como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y los Libros en pantalla no se actualizan. Para obtener nuevas versiones de las herramientas, puede agregarlas al ejecutar la instalación. Las versiones anteriores coexistirán con las versiones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Si instaló ejemplos, la versión anterior permanecerá. El programa de instalación no admite la actualización de los ejemplos de SQL Server.
 
-    4.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es una descarga independiente. Para obtener más información, vea [Microsoft SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es una descarga independiente. Para obtener más información, vea [Microsoft SQL Server 2014 Data Tools - Business Intelligence para Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).
 
-6.  El programa de instalación reutiliza la entrada de servicio del Administrador de control de servicios para el servicio Servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esta entrada de servicio incluye la cuenta de servicio de Windows Servidor de informes.
+6.  El programa de instalación reutiliza la entrada de servicio del Administrador de control de servicios para el servicio Servidor de informes de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Esta entrada de servicio incluye la cuenta de servicio de Windows Servidor de informes.
 
 7.  El programa de instalación reserva direcciones URL nuevas de acuerdo con la configuración actual del directorio de IIS. Es posible que el programa de instalación no quite los directorios virtuales en IIS, de modo que tiene que asegurarse de quitarlos manualmente una vez finalizada la actualización.
 
@@ -167,11 +164,11 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
 9. El programa de instalación combina los valores de los archivos de configuración. Utilizando como base los archivos de configuración de instalación de la instalación actual, se agregan las nuevas entradas. No se quitan las entradas desusadas, pero el servidor de informes dejará de leerlas una vez finalizada la actualización. La actualización no eliminará los archivos de registro anteriores, el archivo RSWebApplication.config obsoleto o la configuración de directorios virtuales en IIS. La actualización no quitará el Diseñador de informes de SQL Server 2005, Management Studio u otras herramientas de cliente. Si ya no los necesita, asegúrese de quitar estos archivos y herramientas una vez finalizada la actualización.
 
- **Migración:** La migración de una versión anterior de una instalación en modo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nativo a es la misma para todas las versiones de s admitidas que se enumeran anteriormente en este tema. Para obtener más información, vea [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).
+ **Migración** : la migración de una versión anterior de una instalación en modo nativo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consta de los mismos pasos para todas las versiones admitidas enumeradas anteriormente en este tema. Para obtener más información, vea [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
-##  <a name="bkmk_native_scaleout"></a>Actualización de una implementación escalada en modo nativo Reporting Services
+##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Actualizar una implementación escalada horizontalmente de Reporting Services en modo nativo
  A continuación se muestra un resumen de cómo actualizar una implementación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] escalada horizontalmente a más de un servidor de informes. Este proceso requiere un tiempo de inactividad de la implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :
 
 1.  Haga copia de seguridad de las claves de cifrado y las bases de datos del servidor de informes. Para más información, vea [Operaciones de copia de seguridad y restauración de Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) y [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).
@@ -184,29 +181,29 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
      Para cada servidor, repita los pasos de actualización y escalado horizontal.
 
-##  <a name="bkmk_sharePoint_scenarios"></a>Escenarios de actualización y migración en modo de SharePoint
+##  <a name="sharepoint-mode-upgrade-and-migration-scenarios"></a><a name="bkmk_sharePoint_scenarios"></a> Escenarios de actualización y migración en modo de SharePoint
  En las secciones siguientes se describen los problemas y los pasos básicos necesarios para actualizar o migrar desde [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] versiones especificadas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] del modo de SharePoint al modo de SharePoint.
 
  Hay dos componentes de instalación para actualizar una implementación del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Servicio compartido de SharePoint.
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
 
     > [!TIP]
     >  Use el cmdlet [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de SharePoint de `Get-SPRSServiceApplicationServers` para determinar los servidores de la granja de servidores de SharePoint que están ejecutando actualmente el servicio compartido de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y, por tanto, requieren una actualización.
 
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Complemento para productos de SharePoint. Para obtener más información, vea [instalar o desinstalar el complemento de Reporting Services para sharepoint &#40;sharepoint 2010 y sharepoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Complemento para productos de SharePoint. Para obtener más información, vea [instalar o desinstalar el complemento de Reporting Services para sharepoint &#40;sharepoint 2010 y sharepoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).
 
  Para obtener los pasos detallados sobre cómo migrar una instalación en modo de SharePoint, vea [Migrar una instalación de Reporting Services &#40;modo de SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).
 
 > [!IMPORTANT]
 >  Algunos de los escenarios siguientes necesitan un tiempo de inactividad del entorno de SharePoint debido a las diversas tecnologías que hay que actualizar. Si su situación no permite que haya tiempo de inactividad, necesitará completar una migración en lugar de una actualización en contexto.
 
-### <a name="sssql11-to-sssql14"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Para[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
+### <a name="sssql11-to-sssql14"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
  **Entorno inicial:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]., SharePoint 2010.
 
- **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010 o SharePoint 2013.
+ **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SQL Server 2010 o SharePoint 2013.
 
--   **SharePoint 2010:** Se admite la actualización en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contexto de, pero el escenario de actualización requiere un tiempo de inactividad del entorno de SharePoint.
+-   **SharePoint 2010:** la actualización en contexto de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se admite, pero el escenario de actualización requiere un tiempo de inactividad en el entorno de SharePoint.
 
      Si también desea que el entorno final ejecute SharePoint 2013, debe completar una operación de actualizar y adjuntar la base de datos de SharePoint 2010 a SharePoint 2013.
 
@@ -214,10 +211,10 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
      Si tiene una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada con SharePoint 2010, no puede realizar una actualización en contexto del servidor de SharePoint. Sin embargo, puede migrar las bases de datos de contenido y las bases de datos de aplicación de servicio de la granja de SharePoint 2010 a una granja de SharePoint 2013.
 
-### <a name="sskilimanjaro-to-sssql14"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]Para[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
+### <a name="sskilimanjaro-to-sssql14"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
  **Entorno inicial:** SQL Server 2008 R2, SharePoint 2010.
 
- **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.
+ **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]y SharePoint 2010.
 
 -   Se admite la actualización en contexto y no hay ningún tiempo de inactividad para el entorno de SharePoint.
 
@@ -229,11 +226,10 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
-### <a name="sskatmai-sp2-to-sssql14"></a>
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
+### <a name="sskatmai-sp2-to-sssql14"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
  **Entorno inicial:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2, SharePoint 2007.
 
- **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.
+ **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]y SharePoint 2010.
 
 -   Este escenario de actualización en contexto necesita un tiempo de inactividad del entorno de SharePoint porque hay que actualizar las tecnologías de SharePoint y SQL Server. Puede que le interese completar una migración en lugar de una actualización en contexto.
 
@@ -253,7 +249,7 @@ En este tema se proporciona información general sobre las opciones de actualiza
 ### <a name="sql-server-2005-sp2-to-sssql14"></a>SQL Server 2005 SP2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]
  **Entorno inicial:** SQL Server 2005 SP2, SharePoint 2007.
 
- **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.
+ **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]y SharePoint 2010.
 
 -   Este escenario de actualización en contexto necesita un tiempo de inactividad del entorno de SharePoint porque hay que actualizar las tecnologías de SharePoint y SQL Server. Puede que le interese completar una migración en lugar de una actualización en contexto.
 
@@ -270,7 +266,7 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
-##  <a name="bkmk_migration_considerations"></a>Consideraciones sobre una migración
+##  <a name="considerations-for-a-migration"></a><a name="bkmk_migration_considerations"></a> Consideraciones sobre una migración
  Al mover los datos de la aplicación, debe ser consciente de los aspectos y restricciones siguientes:
 
 -   La protección de la clave de cifrado incluye un hash que incorpora la identidad del equipo.
@@ -284,9 +280,9 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
  Para volver a establecer el cifrado reversible en el nuevo equipo del servidor de informes, debe restaurar la clave de la que realizó anteriormente una copia de seguridad. El conjunto de claves completo que se almacena en la base de datos del servidor de informes está compuesto de un valor de clave simétrica más la información de identidad del servicio que se usa para restringir el acceso a la clave, para que solo pueda usarla la instancia del servidor de informes donde se almacenó. Durante la restauración de la clave, el servidor de informes reemplaza las copias existentes de la clave por las versiones nuevas. La versión nueva incluye los valores de identidad de servicio y de equipo definidos en el equipo actual. Para obtener más información, vea los temas siguientes:
 
--   Modo de SharePoint: vea la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).
+-   Modo SharePoint: consulte la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).
 
--   Modo nativo: vea [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).
+-   Modo nativo: Consulte [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
@@ -303,7 +299,7 @@ En este tema se proporciona información general sobre las opciones de actualiza
 
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de este tema:](#bkmk_top)
 
-##  <a name="bkmk_additional_resources"></a>Recursos adicionales
+##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> Recursos adicionales
 
 > [!NOTE]
 >  Para obtener más información acerca de cómo actualizar y adjuntar la base de datos de SharePoint 2013, vea lo siguiente:

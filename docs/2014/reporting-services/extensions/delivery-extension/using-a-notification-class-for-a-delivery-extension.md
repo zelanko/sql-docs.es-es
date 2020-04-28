@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b274eb50405a02f4995b953611e50a234b11eab
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177005"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Usar una clase Notification para una extensión de entrega
@@ -31,11 +31,10 @@ ms.locfileid: "78177005"
 
  Se pasa el objeto <xref:Microsoft.ReportingServices.Interfaces.Notification> al método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> de la extensión de entrega. El método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> debería contener código concreto para procesar la notificación y entregar el informe.
 
- Para obtener un ejemplo de cómo usar la <xref:Microsoft.ReportingServices.Interfaces.Notification> clase, vea [SQL Server Reporting Services ejemplos de productos](https://go.microsoft.com/fwlink/?LinkId=177889).
+ Para obtener un ejemplo de cómo usar la clase <xref:Microsoft.ReportingServices.Interfaces.Notification>, vea [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).
 
 ## <a name="retry-functionality"></a>Funcionalidad de reintento
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le permite crear una cola de reintento para las notificaciones que no se pueden entregar inmediatamente. Una vez que el servidor de informes invoca el método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> de una extensión de entrega, esta puede solicitar que el servidor de informes vuelva a intentar la entrega más adelante. Si ocurre esto, el servidor de informes coloca la notificación en una cola interna y reintenta la entrega cuando transcurra un período concreto. Los administradores pueden configurar el número máximo de reintentos que el servidor de informes realiza y el período entre ellos en la sección correspondiente a la extensión de entrega del archivo RSReportServer.config mediante los elementos XML **MaxNumberOfRetries** y **PeriodBetweenRetries**. Las notificaciones se quitan de la cola de reintento si la entrega posterior tiene éxito o si se alcanza el número máximo de reintentos. Si se produce un error en la entrega después del número máximo de reintentos, se descarta la notificación.
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] le permite crear una cola de reintento para las notificaciones que no se pueden entregar inmediatamente. Una vez que el servidor de informes invoca el método <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> de una extensión de entrega, esta puede solicitar que el servidor de informes vuelva a intentar la entrega más adelante. Si ocurre esto, el servidor de informes coloca la notificación en una cola interna y reintenta la entrega cuando transcurra un período concreto. Los administradores pueden configurar el número máximo de reintentos que el servidor de informes realiza y el período entre ellos en la sección correspondiente a la extensión de entrega del archivo RSReportServer.config mediante los elementos XML **MaxNumberOfRetries** y **PeriodBetweenRetries**. Las notificaciones se quitan de la cola de reintento si la entrega posterior tiene éxito o si se alcanza el número máximo de reintentos. Si se produce un error en la entrega después del número máximo de reintentos, se descarta la notificación.
 
 ## <a name="see-also"></a>Consulte también
  [Implementar una extensión de entrega](../delivery-extension/implementing-a-delivery-extension.md) [Reporting Services biblioteca de extensiones](../reporting-services-extension-library.md)

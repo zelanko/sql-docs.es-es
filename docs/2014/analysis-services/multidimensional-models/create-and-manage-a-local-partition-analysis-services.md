@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175794"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Crear y administrar una partición local (Analysis Services)
@@ -68,7 +68,7 @@ ms.locfileid: "78175794"
     |||
     |-|-|
     |Conjunto 1:|"SaleYear" = 2012<br /><br /> "SaleYear" = 2013|
-    |Conjunto 2:|"Continent" = 'NorthAmerica'<br /><br /> "Continent" = 'Europe'<br /><br /> "Continent" = 'SouthAmerica'|
+    |Conjunto 2:|"Continent" = 'NorthAmerica'<br /><br /> "Continent" = 'Europa'<br /><br /> "Continent" = 'SouthAmerica'|
     |Conjunto 3:|"Country" = 'USA'<br /><br /> "Country" = 'Mexico'<br /><br /> ("Country" <> 'USA' AND "Country" <> 'Mexico')|
 
 6.  Haga clic en **Comprobar** para comprobar si hay errores de sintaxis y, a continuación, haga clic en **Aceptar**.
@@ -108,7 +108,7 @@ ms.locfileid: "78175794"
 
 7.  En la última página, Finalización del asistente, asigne un nombre descriptivo a la partición.
 
-8.  Haga clic en **Finalizar**
+8.  Haga clic en **Finalizar**.
 
 9. Repita los pasos anteriores para crear las particiones restantes, eligiendo una consulta con nombre diferente cada vez para seleccionar el segmento de datos siguiente.
 

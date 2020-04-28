@@ -14,10 +14,10 @@ ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175184"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Crear un atributo de archivo (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "78175184"
 
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .
 
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).
 
 -   Debe existir una entidad para la que crear el atributo. Para obtener más información, vea [Create an Entity &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md).
 
@@ -40,7 +40,7 @@ ms.locfileid: "78175184"
 
 |Columna|Descripción|
 |------------|-----------------|
-|Status|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|
+|Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|
 |Nombre|El nombre del atributo.|
 |Display Name (Nombre para mostrar)|Nombre para mostrar del atributo.|
 |Descripción|Descripción del atributo.|
@@ -50,19 +50,19 @@ ms.locfileid: "78175184"
 
  Cuando se hace clic en un atributo, se muestra la siguiente información.
 
--   **Creado por**: el nombre del usuario que creó el atributo.
+-   **Creado por:** nombre del usuario que creó el atributo.
 
--   El: fecha y hora **en**que se creó el atributo.
+-   **El**: fecha y hora en que se creó el atributo.
 
--   **Actualizado por**: el nombre del usuario que actualizó el atributo por última vez.
+-   **Actualizado por**: nombre del último usuario que actualizó el atributo.
 
--   El: fecha y hora **en**que se actualizó por última vez el atributo.
+-   **El**: fecha y hora en que se actualizó el atributo por última vez.
 
 ### <a name="to-create-a-file-attribute"></a>Crear un atributo de archivo
 
 1.  En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], haga clic en **Administración del sistema**.
 
-2.  En la página **Manage Model** (Administrar modelo), seleccione un modelo de la cuadrícula y después haga clic en **Entidades**.
+2.  En la página **administrar modelo** , seleccione un modelo de la cuadrícula y, a continuación, haga clic en **entidades**.
 
 3.  En la página **Manage Entity** (Administrar entidad), seleccione la fila de la entidad para la que desea crear un atributo.
 
@@ -76,7 +76,7 @@ ms.locfileid: "78175184"
 
     -   Si el atributo es para colecciones, seleccione **Colección** en el cuadro de lista **Member Types** (Tipos de miembro).
 
-6.  En el cuadro **Nombre** , escriba un nombre para el atributo. Para ver una lista de palabras que no se deben usar como nombres de atributo, consulte [Palabras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).
+6.  En el cuadro **Nombre** , escriba un nombre para el atributo. Para obtener una lista de palabras que no se deben usar como nombres de atributo, consulte [palabras reservadas &#40;Master Data Services&#41;](../master-data-services/reserved-words-master-data-services.md).
 
 7.  Opcionalmente, escriba un nombre para mostrar y una descripción para el atributo en el cuadro **Descripción** .
 

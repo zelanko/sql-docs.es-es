@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171774"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarea 3: crear y ejecutar un proyecto de calidad de datos para buscar coincidencias
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarea 3: Creación y ejecución de un proyecto de calidad de datos para buscar coincidencias
   En esta tarea, creará un proyecto de calidad de datos para la actividad de búsqueda de coincidencias y ejecutará el proceso de coincidencia en los datos limpios de proveedores para quitar duplicados en los datos.
 
 1.  En la Página principal del **cliente DQS**, haga clic en **nuevo proyecto de calidad de datos**.
@@ -47,6 +47,6 @@ ms.locfileid: "78171774"
 12. Haga clic en **siguiente** para cambiar a la página **exportar** .
 
 ## <a name="next-step"></a>siguiente paso
- [Tarea 4: exportar los resultados de la actividad de coincidencia a un archivo de Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
+ [Tarea 4: Exportación de los resultados de la actividad de coincidencia a un archivo de Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
 
 

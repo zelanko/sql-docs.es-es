@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175644"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Crear o personalizar una biblioteca de fuentes de datos (PowerPivot para SharePoint)
@@ -39,13 +39,12 @@ ms.locfileid: "78175644"
 
  [Agregar el tipo de contenido de la fuente de distribución de datos a cualquier biblioteca](#addtolib)
 
-##  <a name="prereq"></a> Requisitos previos
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe activar para los sitios para los que vaya a crear la biblioteca de fuentes de distribución de datos. Si el tipo de plantilla de biblioteca de fuentes de distribución de datos no está disponible, probablemente se deba a que no se ha cumplido este requisito previo. Para obtener más información, vea [activar la integración de características de PowerPivot para colecciones de sitios en administración central](activate-power-pivot-integration-for-site-collections-in-ca.md).
+##  <a name="prerequisites"></a><a name="prereq"></a> Requisitos previos
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe activar para los sitios para los que vaya a crear la biblioteca de fuentes de distribución de datos. Si el tipo de plantilla de biblioteca de fuentes de distribución de datos no está disponible, probablemente se deba a que no se ha cumplido este requisito previo. Para obtener más información, vea [activar la integración de características de PowerPivot para colecciones de sitios en administración central](activate-power-pivot-integration-for-site-collections-in-ca.md).
 
  Debe ser propietario del sitio para crear la biblioteca.
 
-##  <a name="createlib"></a>Crear una nueva biblioteca de fuentes de distribución de datos
+##  <a name="create-a-new-data-feed-library"></a><a name="createlib"></a> Crear una nueva biblioteca de fuentes de distribución de datos
  Crear una biblioteca de fuentes de distribución de datos es el primer paso si se desea habilitar fuentes de distribución de datos para los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Dado que una biblioteca de fuentes de distribución de datos proporciona las páginas de aplicación y administración para los documentos de servicio de datos, debe disponer de una para poder crear un documento nuevo.
 
  Una biblioteca de fuentes de distribución de datos se basa en una plantilla integrada y en un *tipo de contenido del documento de servicio de datos* preconfigurado que define las propiedades y comportamientos para un documento de servicio de datos.
@@ -64,7 +63,7 @@ ms.locfileid: "78175644"
 
  Después de crear una biblioteca, puede utilizarla para crear documentos de servicio de datos. Para obtener más información, vea [usar fuentes de datos &#40;PowerPivot para SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).
 
-##  <a name="addtolib"></a>Agregar el tipo de contenido de la fuente de distribución de datos a cualquier biblioteca
+##  <a name="add-the-data-feed-content-type-to-any-library"></a><a name="addtolib"></a> Agregar el tipo de contenido de la fuente de distribución de datos a una biblioteca
  Si no desea crear una biblioteca de fuentes de distribución de datos dedicada, pero sigue deseando crear y administrar los documentos de servicio de datos desde un sitio de SharePoint, puede agregar y configurar manualmente el tipo de contenido del documento de servicio de datos para cualquier biblioteca que use para compartir los archivos de documento de servicio de datos (.atomsvc).
 
  Para agregar y configurar un tipo de contenido, debe tener al menos el permiso Administrar listas. Este permiso se integra en el nivel de permisos de diseño y superiores.

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175304"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definir una relación referenciada
@@ -52,7 +52,7 @@ ms.locfileid: "78175304"
 
      En la imagen siguiente se muestra el cuadro de diálogo **Definir relación** con una relación regular entre la tabla de la dimensión **DimCustomer** y la tabla del grupo de medida **FactInternetSales** .
 
-     ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Cuadro de diálogo Definir relación")
+     ![Cuadro de diálogo Definir relación](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Cuadro de diálogo Definir relación")
 
 9. Haga clic en **Cancelar**.
 
@@ -118,7 +118,7 @@ ms.locfileid: "78175304"
 
      Observe que la medida **Reseller Sales-Sales Amount** no aparece bien dimensionada por el atributo **Country-Region** de la jerarquía definida por el usuario **Geographies** , como se muestra en la imagen siguiente.
 
-     ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Cuadro de diálogo Definir relación")
+     ![Cuadro de diálogo Definir relación](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Cuadro de diálogo Definir relación")
 
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección
  [Definir una relación de hechos](lesson-5-2-defining-a-fact-relationship.md)

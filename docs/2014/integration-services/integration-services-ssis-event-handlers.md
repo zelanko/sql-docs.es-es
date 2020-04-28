@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176138"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Controladores de eventos de Integration Services (SSIS)
@@ -71,9 +71,9 @@ ms.locfileid: "78176138"
 ## <a name="run-time-events"></a>Eventos de tiempo de ejecución
  En la siguiente tabla se enumeran los controladores de eventos que proporciona [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y se describen los eventos de tiempo de ejecución que hacen que el controlador de eventos se ejecute.
 
-|Controlador de eventos|Evento|
+|Controlador de eventos|evento|
 |-------------------|-----------|
-|`OnError`|El controlador de eventos para `OnError` el evento. Este evento es desencadenado por un ejecutable cuando se produce un error.|
+|`OnError`|Controlador de eventos para el evento `OnError`. Este evento es desencadenado por un ejecutable cuando se produce un error.|
 |**OnExecStatusChanged**|El controlador de eventos para el evento **OnExecStatusChanged** . Este evento es desencadenado por un ejecutable cuando se modifica su estado de ejecución.|
 |**OnInformation**|El controlador de eventos para el evento **OnInformation** . Este evento se desencadena durante la validación y ejecución de un ejecutable para proporcionar información. Este evento transmite únicamente información, no errores o advertencias.|
 |**OnPostExecute**|El controlador de eventos para el evento **OnPostExecute** . Este evento es desencadenado por un ejecutable inmediatamente después de haber terminado de ejecutarse.|

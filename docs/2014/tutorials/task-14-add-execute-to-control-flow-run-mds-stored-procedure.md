@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177295"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarea 14: agregar la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarea 14: Adición de la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS
   Después de cargar datos en las tablas de ensayo de MDS, hay que ejecutar un procedimiento almacenado asociado a esa tabla para cargar los datos de las tablas de ensayo en las tablas adecuadas de la base de datos de MDS. Este procedimiento almacenado tiene dos parámetros requeridos que tiene que pasar: LogFlag y VersionName. LogFlag especifica si las transacciones se registran durante el proceso de almacenamiento provisional y VersionName representa la versión del modelo. Vea el tema sobre [procedimientos almacenados preconfigurados](https://msdn.microsoft.com/library/hh231028.aspx) para obtener más detalles.
 
  En esta tarea, agregará la tarea Ejecutar SQL al flujo de control para invocar el procedimiento almacenado con el fin de cargar los datos almacenados provisionalmente en las tablas adecuadas de MDS.
@@ -71,6 +71,6 @@ ms.locfileid: "78177295"
 15. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de ejecutar SQL** .
 
 ## <a name="next-step"></a>siguiente paso
- [Tarea 15: compilar y ejecutar el proyecto de SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
+ [Tarea 15: Compilación y ejecución del proyecto de SSIS](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
 
 

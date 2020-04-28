@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939602"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Archivos de datos de SQL Server en Azure
@@ -30,20 +30,20 @@ ms.locfileid: "76939602"
   
 ## <a name="benefits-of-using-sql-server-data-files-in-azure"></a>Ventajas de usar archivos de datos de SQL Server en Azure  
   
--   **Ventajas de la migración sencilla y rápida:** Esta característica simplifica el proceso de migración, ya que mueve una base de datos cada vez entre equipos locales, así como entre entornos locales y en la nube sin cambios en la aplicación. Por tanto, admite una migración incremental a la vez que conserva la infraestructura local existente. Además, tener acceso a un almacenamiento de datos centralizado simplifica la lógica de la aplicación en los casos en los que una aplicación deba ejecutarse en varias ubicaciones en un entorno local. En algunos casos, es posible que necesite configurar rápidamente centros informáticos en ubicaciones geográficamente dispersas, que recopilen datos de muchas fuentes diferentes. Con esta nueva mejora, en lugar de mover datos de una ubicación a otra, puede almacenar muchas bases de datos como blobs de Azure y, después, ejecutar scripts de Transact-SQL para crear bases de datos en los equipos locales o máquinas virtuales.  
+-   **Ventajas de una migración fácil y rápida:** esta característica simplifica el proceso de migración, para lo cual mueve una base de datos cada vez entre equipos locales así como entre entornos locales y entornos en la nube sin cambios de la aplicación. Por tanto, admite una migración incremental a la vez que conserva la infraestructura local existente. Además, tener acceso a un almacenamiento de datos centralizado simplifica la lógica de la aplicación en los casos en los que una aplicación deba ejecutarse en varias ubicaciones en un entorno local. En algunos casos, es posible que necesite configurar rápidamente centros informáticos en ubicaciones geográficamente dispersas, que recopilen datos de muchas fuentes diferentes. Con esta nueva mejora, en lugar de mover datos de una ubicación a otra, puede almacenar muchas bases de datos como blobs de Azure y, después, ejecutar scripts de Transact-SQL para crear bases de datos en los equipos locales o máquinas virtuales.  
   
 -   **Ventajas del costo y del almacenamiento ilimitado:** Esta característica permite tener un almacenamiento fuera de la ubicación ilimitado en Azure al tiempo que se aprovechan los recursos de proceso locales. Si usa Azure como ubicación de almacenamiento, puede centrarse fácilmente en la lógica de la aplicación sin la sobrecarga de administración de hardware. Si pierde un nodo de proceso local, puede configurar uno nuevo sin tener que mover datos.  
   
 -   **Ventajas de alta disponibilidad y recuperación ante desastres:** El uso de SQL Server archivos de datos en la característica de Azure puede simplificar las soluciones de alta disponibilidad y recuperación ante desastres. Por ejemplo, si una máquina virtual de Azure o una instancia de SQL Server se bloquea, puede volver a crear las bases de datos en una nueva máquina simplemente volviendo a establecer vínculos a los blobs de Azure.  
   
--   **Ventajas de seguridad:** Esta nueva mejora le permite separar una instancia de proceso de una instancia de almacenamiento. Puede tener una base de datos completamente cifrada donde el descifrado solo se produce en una instancia de proceso, pero no en una instancia de almacenamiento. Es decir, con esta nueva mejora, puede cifrar todos los datos de la nube pública mediante certificados de cifrado de datos transparente (TDE), que están separados físicamente de los datos. Las claves TDE se pueden almacenar en la base de datos maestra, la cual se almacena localmente en el equipo local protegido físicamente y con copia de seguridad íntegra. Puede usar estas claves locales para cifrar los datos, que residen en Azure Storage. Si roban las credenciales de la cuenta de almacenamiento en la nube, los datos seguirán estando protegidos ya que los certificados TDE siempre se encuentran en el entorno local.  
+-   **Ventajas de seguridad:** esta nueva mejora le permite separar una instancia de proceso de una instancia de almacenamiento. Puede tener una base de datos completamente cifrada donde el descifrado solo se produce en una instancia de proceso, pero no en una instancia de almacenamiento. Es decir, con esta nueva mejora, puede cifrar todos los datos de la nube pública mediante certificados de cifrado de datos transparente (TDE), que están separados físicamente de los datos. Las claves TDE se pueden almacenar en la base de datos maestra, la cual se almacena localmente en el equipo local protegido físicamente y con copia de seguridad íntegra. Puede usar estas claves locales para cifrar los datos, que residen en Azure Storage. Si roban las credenciales de la cuenta de almacenamiento en la nube, los datos seguirán estando protegidos ya que los certificados TDE siempre se encuentran en el entorno local.  
   
 ## <a name="concepts-and-requirements"></a>Conceptos y requisitos  
   
 ### <a name="azure-storage-concepts"></a>Conceptos de Azure Storage  
  Cuando use la característica Archivos de datos de SQL Server en Azure, debe crear una cuenta de almacenamiento y un contenedor en Azure. A continuación, debe crear una credencial de SQL Server, que incluye información sobre la directiva del contenedor así como una firma de acceso compartido, la cual resulta necesaria para tener acceso al contenedor.  
   
- En Azure, una cuenta de almacenamiento representa el nivel más alto del espacio de nombres para tener acceso a los BLOBs. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, siempre que su tamaño total sea inferior a 500 TB. Para obtener la información más reciente acerca de los límites de almacenamiento, vea [Suscripciones de Azure y límites de servicio, cuotas y restricciones](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). Un contenedor proporciona una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Además, una cuenta puede disponer de un número ilimitado de contenedores y De forma similar, un contenedor puede almacenar un número ilimitado de blobs igualmente. Existen dos tipos de blobs que pueden almacenarse en Azure Storage: blobs en páginas y en bloques. Esta nueva característica utiliza blobs en páginas, que pueden tener un tamaño de hasta 1 TB y son más eficaces cuando los intervalos de bytes en el archivo se modifican con frecuencia. Puede obtener acceso a blobs mediante el siguiente formato de dirección URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+ En Azure, una cuenta de almacenamiento representa el nivel más alto del espacio de nombres para tener acceso a los BLOBs. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, siempre que su tamaño total sea inferior a 500 TB. Para obtener la información más reciente acerca de los límites de almacenamiento, vea [Suscripciones de Azure y límites de servicio, cuotas y restricciones](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/). Un contenedor proporciona una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta puede contener un número ilimitado de contenedores. De forma similar, un contenedor puede almacenar un número ilimitado de blobs igualmente. Existen dos tipos de blobs que pueden almacenarse en Azure Storage: blobs en páginas y en bloques. Esta nueva característica utiliza blobs en páginas, que pueden tener un tamaño de hasta 1 TB y son más eficaces cuando los intervalos de bytes en el archivo se modifican con frecuencia. Puede obtener acceso a blobs mediante el siguiente formato de dirección URL: `http://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="azure-billing-considerations"></a>Consideraciones sobre la facturación de Azure  
  Estimar el costo de usar los servicios de Azure es una cuestión importante a la hora de tomar decisiones y en el proceso de planeamiento. Al almacenar archivos de datos de SQL Server en Azure Storage, deberá correr con los gastos asociados al almacenamiento y las transacciones. Además, la implementación de la característica Archivos de datos de SQL Server en Azure Storage requiere una renovación de la concesión de blobs cada 45-60 segundos de forma implícita. Esto también ocasiona costos de transacción por archivo de base de datos, como .mdf y .ldf. Según nuestras estimaciones, el costo por renovar las concesiones para dos archivos de base de datos (.mdf y .ldf) sería de unos 2 centavos al mes según el modelo actual de precios. Recomendamos usar la información de la página [Precios de Azure](https://azure.microsoft.com/pricing/) como ayuda para estimar los costos mensuales asociados al uso de Azure Storage y Máquinas virtuales de Azure.  
@@ -90,11 +90,11 @@ ON
 ### <a name="installation-prerequisites"></a>Requisitos previos de instalación  
  A continuación se indican los requisitos previos de instalación cuando se almacenan SQL Server archivos de datos en Azure.  
   
--   **SQL Server local:** SQL Server versión 2014 incluye esta característica. Para obtener información sobre cómo descargar SQL Server 2014, vea [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
+-   **SQL Server local:** la versión SQL Server 2014 incluye esta característica. Para obtener información sobre cómo descargar SQL Server 2014, vea [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
 -   SQL Server que se ejecuta en una máquina virtual de Azure: si va a instalar SQL Server en una máquina virtual de Azure, instale SQL Server 2014 o actualice la instancia existente. Del mismo modo, también puede crear una nueva máquina virtual en Azure con la imagen de la plataforma SQL Server 2014. Para obtener información sobre cómo descargar SQL Server 2014, vea [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx).  
   
-###  <a name="bkmk_Limitations"></a>Límite  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Limitaciones  
   
 -   En la versión actual de esta característica, no `FileStream` se admite el almacenamiento de datos en Azure Storage. Puede almacenar `Filestream` datos en una Azure Storage base de datos local integrada, pero no puede trasladar datos de FileStream entre equipos mediante Azure Storage. Para los datos `FileStream`, se recomienda que siga usando las técnicas tradicionales para mover archivos (.mdf, .ldf) asociadas con Filestream entre varios equipos.  
   
@@ -134,7 +134,7 @@ ON
   
 -   Una nueva columna **int** , **credential_id**, en la vista del sistema **sys.master_files** . La columna **credential_id** se usa para permitir la referencia cruzada en sys.credentials de los archivos de datos habilitados en Azure Storage para las credenciales creadas para ellos. Puede usarla para solucionar problemas, como que una credencial no se puede eliminar cuando un archivo de base de datos la está usando.  
   
-##  <a name="bkmk_Troubleshooting"></a>Solución de problemas de archivos de datos de SQL Server en Azure  
+##  <a name="troubleshooting-for-sql-server-data-files-in-azure"></a><a name="bkmk_Troubleshooting"></a>Solución de problemas de archivos de datos de SQL Server en Azure  
  Para evitar errores por funciones no admitidas o limitaciones, primero consulte [Limitations](sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations).  
   
  La lista de errores que puede obtener cuando se usa la característica Archivos de datos de SQL Server en Azure Storage es la siguiente:  
@@ -165,7 +165,7 @@ ON
 3.  *Código de error 5120 no se puede abrir el archivo físico "%. \*LS ". Error del sistema operativo% d: "% LS"*   
     Solución: actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el servidora está en línea con un archivo de base de datos activo y se inicia de forma accidental, y también tiene una base de datos que señala al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos con un código de error *5120 no\* se puede abrir el archivo físico "%. LS ". Error del sistema operativo% d: "% LS"*.  
   
-     Para resolver este problema, determine en primer lugar si necesita que el Servidor A obtenga acceso al archivo de base de datos de Azure Storage o no. Si no es así, basta con quitar las conexiones entre el Servidor A y los archivos de base de datos de Azure Storage. Para ello, siga estos pasos.  
+     Para resolver este problema, determine en primer lugar si necesita que el Servidor A obtenga acceso al archivo de base de datos de Azure Storage o no. Si no es así, basta con quitar las conexiones entre el Servidor A y los archivos de base de datos de Azure Storage. Para ello, realice los pasos siguientes:  
   
     1.  Establezca la ruta de acceso de ServidorA en una carpeta local mediante la instrucción ALTER DATABASE.  
   
@@ -176,4 +176,4 @@ ON
     4.  Ponga la base de datos en línea.  
   
 ## <a name="see-also"></a>Consulte también  
- [Tutorial: archivos de datos de SQL Server en el servicio Azure Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutorial: Archivos de datos de SQL Server en el servicio Azure Storage](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

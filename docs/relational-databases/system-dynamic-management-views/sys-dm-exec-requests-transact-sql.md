@@ -21,10 +21,10 @@ ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77429026"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
@@ -38,8 +38,8 @@ Devuelve información sobre cada una de las solicitudes que se [!INCLUDE[ssNoVer
 |session_id|**smallint**|Identificador de la sesión con la que está relacionada esta solicitud. No admite valores NULL.|  
 |request_id|**int**|Id. de la solicitud. Es único en el contexto de la sesión. No admite valores NULL.|  
 |start_time|**datetime**|Marca de tiempo de la llegada de la solicitud. No admite valores NULL.|  
-|status|**nvarchar(30**|Estado de la solicitud. Puede ser uno de los siguientes:<br /><br /> Información previa<br />En ejecución<br />Ejecutable<br />En espera<br />Suspended<br /><br /> No admite valores NULL.|  
-|command|**nvarchar (32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
+|status|**nvarchar(30)**|Estado de la solicitud. Puede ser uno de los siguientes:<br /><br /> Segundo plano<br />En ejecución<br />Ejecutable<br />En espera<br />Suspended<br /><br /> No admite valores NULL.|  
+|command|**nvarchar(32)**|Identifica el tipo de comando actual que se está procesando. Los tipos de comandos comunes incluyen lo siguiente:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Delete<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> El texto de la solicitud se puede recuperar mediante sys.dm_exec_sql_text con el correspondiente sql_handle para la solicitud. Los procesos internos del sistema establecen el comando según el tipo de tarea que realizan. Las tareas pueden incluir las siguientes:<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> No admite valores NULL.|  
 |sql_handle|**varbinary (64)**|Es un token que identifica de forma única el lote o el procedimiento almacenado del que forma parte la consulta. Acepta valores NULL.| 
 |statement_start_offset|**int**|Indica, en bytes, empezando por 0, la posición inicial de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle`, `statement_end_offset`y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
 |statement_end_offset|**int**|Indica, en bytes, empezando por 0, la posición final de la instrucción que se está ejecutando actualmente para el lote que se está ejecutando actualmente o el objeto almacenado. Se puede usar junto con `sql_handle`, `statement_start_offset`y la `sys.dm_exec_sql_text` función de administración dinámica para recuperar la instrucción que se está ejecutando actualmente para la solicitud. Acepta valores NULL.|  
@@ -48,23 +48,23 @@ Devuelve información sobre cada una de las solicitudes que se [!INCLUDE[ssNoVer
 |user_id|**int**|Identificador del usuario que envió la solicitud. No admite valores NULL.|  
 |connection_id|**uniqueidentifier**|Identificador de la conexión a la que ha llegado la solicitud. Acepta valores NULL.|  
 |blocking_session_id|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL o es igual a 0, la solicitud no está bloqueada o la información de sesión de la sesión de bloqueo no está disponible (o no se puede identificar).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el identificador de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado de dicho bloqueo.|  
-|wait_type|**nvarchar (60)**|Si la solicitud está actualmente bloqueada, esta columna devuelve el tipo de espera. Acepta valores NULL.<br /><br /> Para obtener información sobre los tipos de esperas, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|wait_type|**nvarchar(60)**|Si la solicitud está actualmente bloqueada, esta columna devuelve el tipo de espera. Acepta valores NULL.<br /><br /> Para obtener información sobre los tipos de esperas, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Si la solicitud está actualmente bloqueada, esta columna devuelve la duración en milisegundos de la espera actual. No admite valores NULL.|  
-|last_wait_type|**nvarchar (60)**|Si esta solicitud se ha bloqueado anteriormente, esta columna devuelve el tipo de la última espera. No admite valores NULL.|  
+|last_wait_type|**nvarchar(60)**|Si esta solicitud se ha bloqueado anteriormente, esta columna devuelve el tipo de la última espera. No admite valores NULL.|  
 |wait_resource|**nvarchar(256)**|Si la solicitud está actualmente bloqueada, esta columna devuelve el recurso por el que está esperando la solicitud actualmente. No admite valores NULL.|  
 |open_transaction_count|**int**|Número de transacciones abiertas para esta solicitud. No admite valores NULL.|  
 |open_resultset_count|**int**|Número de conjuntos de resultados abiertos para esta solicitud. No admite valores NULL.|  
-|transaction_id|**BIGINT**|Identificador de la transacción donde se ejecuta esta solicitud. No admite valores NULL.|  
-|context_info|**varbinary (128)**|Valor CONTEXT_INFO de la sesión. Acepta valores NULL.|  
-|percent_complete|**impuestos**|Porcentaje de trabajo completado en los siguientes comandos:<br /><br /> ALTER INDEX REORGANIZE<br />Opción AUTO_SHRINK con ALTER DATABASE<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> No admite valores NULL.|  
-|estimated_completion_time|**BIGINT**|Solo interno. No admite valores NULL.|  
+|transaction_id|**bigint**|Identificador de la transacción donde se ejecuta esta solicitud. No admite valores NULL.|  
+|context_info|**varbinary(128)**|Valor CONTEXT_INFO de la sesión. Acepta valores NULL.|  
+|percent_complete|**real**|Porcentaje de trabajo completado en los siguientes comandos:<br /><br /> ALTER INDEX REORGANIZE<br />Opción AUTO_SHRINK con ALTER DATABASE<br />BACKUP DATABASE<br />DBCC CHECKDB<br />DBCC CHECKFILEGROUP<br />DBCC CHECKTABLE<br />DBCC INDEXDEFRAG<br />DBCC SHRINKDATABASE<br />DBCC SHRINKFILE<br />RECOVERY<br />RESTORE DATABASE<br />ROLLBACK<br />TDE ENCRYPTION<br /><br /> No admite valores NULL.|  
+|estimated_completion_time|**bigint**|Solo interno. No admite valores NULL.|  
 |cpu_time|**int**|Tiempo de CPU en milisegundos utilizado por la solicitud. No admite valores NULL.|  
 |total_elapsed_time|**int**|Tiempo total transcurrido en milisegundos desde que llegó la solicitud. No admite valores NULL.|  
 |scheduler_id|**int**|Identificador del programador que programa esta solicitud. No admite valores NULL.|  
 |task_address|**varbinary(8**|Dirección de memoria asignada a la tarea asociada con esta solicitud. Acepta valores NULL.|  
-|reads|**BIGINT**|Número de lecturas realizadas por esta solicitud. No admite valores NULL.|  
-|writes|**BIGINT**|Número de escrituras realizadas por esta solicitud. No admite valores NULL.|  
-|logical_reads|**BIGINT**|Número de lecturas lógicas realizadas por la solicitud. No admite valores NULL.|  
+|Lecturas|**bigint**|Número de lecturas realizadas por esta solicitud. No admite valores NULL.|  
+|Escrituras|**bigint**|Número de escrituras realizadas por esta solicitud. No admite valores NULL.|  
+|logical_reads|**bigint**|Número de lecturas lógicas realizadas por la solicitud. No admite valores NULL.|  
 |text_size|**int**|Valor de TEXTSIZE para esta solicitud. No admite valores NULL.|  
 |language|**nvarchar(128)**|Configuración de idioma para esta solicitud. Acepta valores NULL.|  
 |date_format|**nvarchar (3)**|Valor de DATEFORMAT para esta solicitud. Acepta valores NULL.|  
@@ -80,7 +80,7 @@ Devuelve información sobre cada una de las solicitudes que se [!INCLUDE[ssNoVer
 |transaction_isolation_level|**smallint**|Nivel de aislamiento con el que se creó la transacción para esta solicitud. No admite valores NULL.<br /> 0 = Unspecified<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Snapshot|  
 |lock_timeout|**int**|Tiempo de espera de bloqueo en milisegundos para esta solicitud. No admite valores NULL.|  
 |deadlock_priority|**int**|Valor de DEADLOCK_PRIORITY para la solicitud. No admite valores NULL.|  
-|row_count|**BIGINT**|Número de filas que esta solicitud ha devuelto al cliente. No admite valores NULL.|  
+|row_count|**bigint**|Número de filas que esta solicitud ha devuelto al cliente. No admite valores NULL.|  
 |prev_error|**int**|Último error que se ha producido durante la ejecución de la solicitud. No admite valores NULL.|  
 |nest_level|**int**|Nivel de anidamiento actual del código que se está ejecutando en la solicitud. No admite valores NULL.|  
 |granted_query_memory|**int**|Número de páginas asignadas a la ejecución de una consulta en la solicitud. No admite valores NULL.|  
@@ -88,14 +88,14 @@ Devuelve información sobre cada una de las solicitudes que se [!INCLUDE[ssNoVer
 |group_id|**int**|Identificador del grupo de cargas de trabajo al que pertenece esta consulta. No admite valores NULL.|  
 |query_hash|**Binary(8**|Valor hash binario que se calcula en la consulta y que se usa para identificar consultas con una lógica similar. Puede usar el hash de consulta para determinar el uso de recursos agregados para las consultas que solo se diferencian en los valores literales.|  
 |query_plan_hash|**Binary(8**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.|  
-|statement_sql_handle|**varbinary (64)**|**Válido para **: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Identificador SQL de la consulta individual.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
-|statement_context_id|**BIGINT**|**Válido para **: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> La clave externa opcional para sys. query_context_settings.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
-|dop |**int** |**Válido para **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> Grado de paralelismo de la consulta. |  
-|parallel_worker_count |**int** |**Válido para **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
-|external_script_request_id |**uniqueidentifier** |**Válido para **: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR de solicitud de script externo asociado a la solicitud actual. |  
-|is_resumable |**bit** |**Válido para **: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] y versiones posteriores.<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
-|page_resource |**Binary(8** |**Se aplica a**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. Para obtener más información, vea [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
-|page_server_reads|**BIGINT**|**Se aplica a**: hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas por esta solicitud. No admite valores NULL.|  
+|statement_sql_handle|**varbinary (64)**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Identificador SQL de la consulta individual.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
+|statement_context_id|**bigint**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> La clave externa opcional para sys. query_context_settings.<br /><br />Esta columna es NULL si Almacén de consultas no está habilitada para la base de datos. |  
+|dop |**int** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> Grado de paralelismo de la consulta. |  
+|parallel_worker_count |**int** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
+|external_script_request_id |**uniqueidentifier** |**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR de solicitud de script externo asociado a la solicitud actual. |  
+|is_resumable |**bit** |**Válido para** : [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] y versiones posteriores.<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
+|page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. Para obtener más información, vea [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|page_server_reads|**bigint**|**Se aplica a**: hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas por esta solicitud. No admite valores NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Observaciones 
@@ -192,5 +192,5 @@ GO
 [Sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [Sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, objeto SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
-[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)      (Guía de arquitectura de procesamiento de consultas)  
+[Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)    

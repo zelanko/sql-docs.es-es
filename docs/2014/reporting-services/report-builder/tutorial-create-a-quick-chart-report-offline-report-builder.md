@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5cd666ec589737d83717e9b435a260bd2a0d0ef6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176900"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Creación de un informe de gráfico rápido sin conexión (Generador de informes)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
   En este tutorial, creará un gráfico circular usando un asistente y, a continuación, lo modificará un poco, solo para hacerse una idea de las posibilidades. Puede hacerlo de dos maneras diferentes: Ambos métodos tienen el mismo resultado: un gráfico circular como el de la siguiente ilustración:
 
  !["Mi primer gráfico circular" en la vista Ejecutar](../media/rs-my1stpierunview.gif "Mi primer gráfico circular en la vista ejecutar")
@@ -29,11 +29,11 @@ ms.locfileid: "78176900"
 ## <a name="prerequisites"></a>Prerrequisitos
  Si usa datos XML o una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)], necesita tener acceso al Generador de informes [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Puede ejecutar la versión independiente o la versión de ClickOnce disponible en el Administrador de informes o en un sitio de SharePoint. Solo el primer paso, cómo abrir Generador de informes, es diferente para las versiones de ClickOnce. Para obtener más información, vea [instalar, desinstalar y generador de informes soporte técnico](../install-uninstall-and-report-builder-support.md).
 
-##  <a name="TwoWays"></a> Dos maneras de hacer este tutorial
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> Dos maneras de hacer este tutorial
 
 -   [Crear el gráfico circular con datos XML](#CreatePieChartXML)
 
--   [Crear el gráfico circular con una consulta Transact-SQL que contenga datos](#CreatePieQueryData)
+-   [Crear el gráfico circular con una consulta de Transact-SQL que contenga datos](#CreatePieQueryData)
 
 ### <a name="using-xml-data-for-this-tutorial"></a>Usar datos XML para este tutorial
  Puede utilizar los datos XML que copia de este tema y pegarlos en el asistente. No necesita estar conectado a un servidor de informes o a un servidor de informes en modo integrado de SharePoint, y no necesita acceso a una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].
@@ -47,20 +47,20 @@ ms.locfileid: "78176900"
 
  La consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] TSQL requiere otros requisitos previos. Para obtener más información, consulte [Requisitos previos para los tutoriales&#40;Generador de informes&#41;](../report-builder-tutorials.md).
 
- [Crear el gráfico circular con una consulta Transact-SQL que contenga datos](#CreatePieQueryData)
+ [Crear el gráfico circular con una consulta de Transact-SQL que contenga datos](#CreatePieQueryData)
 
 ## <a name="also-in-this-article"></a>También en este artículo
  [Después de ejecutar el asistente](#AfterWizard)
 
  [Pasos siguientes](#WhatsNext)
 
-##  <a name="CreatePieChartXML"></a>Crear el gráfico circular con datos XML
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a>Crear el gráfico circular con datos XML
 
 #### <a name="to-create-the-pie-chart-with-xml-data"></a>Para crear el gráfico circular con datos XML
 
 1.  Haga clic en **Inicio**, seleccione **Programas**, **Generador de informes de Microsoft SQL Server 2012**y, a continuación, haga clic en **Generador de informes**.
 
-     Aparecerá el cuadro de diálogo **Introducción** .
+     Aparece el cuadro de diálogo **Introducción** .
 
     > [!NOTE]
     >  Si el cuadro de diálogo **Introducción** no aparece, en el botón **generador de informes** , haga clic en **nuevo**.
@@ -110,7 +110,7 @@ ms.locfileid: "78176900"
     </Query>
     ```
 
-11. (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.
+11. (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.
 
 12. Haga clic en **Next**.
 
@@ -124,15 +124,15 @@ ms.locfileid: "78176900"
 
 16. En la página **elegir un estilo** , **océano** está seleccionado de forma predeterminada. Haga clic en otros estilos para ver su apariencia.
 
-17. Haga clic en **Finalizar**
+17. Haga clic en **Finalizar**.
 
      Se ve ahora el nuevo informe de gráfico circular en la superficie de diseño. Lo que ve es figurativo. La leyenda dice Full Name 1, Full Name 2, etc., en lugar de los nombres de los vendedores, y el tamaño de los sectores del gráfico circular no es preciso. Únicamente es para que se haga una idea de cómo será el informe.
 
 18. Para ver el gráfico circular real, haga clic en **Ejecutar** en la pestaña **Inicio** de la cinta de opciones.
 
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#TwoWays)
+ ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [volver al principio](#TwoWays)
 
-##  <a name="CreatePieQueryData"></a>Crear el gráfico circular con una [!INCLUDE[tsql](../../../includes/tsql-md.md)] consulta
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Crear el gráfico circular con una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)]
 
 #### <a name="to-create-the-pie-chart-with-a-tsql-query-that-contains-data"></a>Para crear el gráfico circular con una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] que contenga los datos
 
@@ -161,7 +161,7 @@ ms.locfileid: "78176900"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName 
     ```
 
-8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.
+8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.
 
 9. Haga clic en **Next**.
 
@@ -175,15 +175,15 @@ ms.locfileid: "78176900"
 
 13. En la página **Elegir un estilo** , Océano está seleccionado de forma predeterminada. Haga clic en otros estilos para ver su apariencia.
 
-14. Haga clic en **Finalizar**
+14. Haga clic en **Finalizar**.
 
      Se ve ahora el nuevo informe de gráfico circular en la superficie de diseño. Lo que ve es figurativo. La leyenda dice Full Name 1, Full Name 2, etc., en lugar de los nombres de los vendedores, y el tamaño de los sectores del gráfico circular no es preciso. Únicamente es para que se haga una idea de cómo será el informe.
 
 15. Para ver el gráfico circular real, haga clic en **Ejecutar** en la pestaña **Inicio** de la cinta de opciones.
 
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#TwoWays)
+ ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [volver al principio](#TwoWays)
 
-##  <a name="AfterWizard"></a> Después de ejecutar el asistente
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Después de ejecutar el asistente
  Ahora que tiene el informe del gráfico circular, puede trabajar con él. En la pestaña **Ejecutar** de la cinta de opciones, haga clic en **Diseño**, de modo que pueda seguir modificándolo.
 
 ### <a name="make-the-chart-bigger"></a>Agrandar el gráfico
@@ -202,15 +202,13 @@ ms.locfileid: "78176900"
 
 3.  Escriba `#PERCENT{P0}` para la opción **datos de etiqueta** .
 
-     
-  `{P0}` le da el porcentaje sin decimales. Si simplemente escribe `#PERCENT`, los números tendrán dos posiciones decimales. 
-  `#PERCENT` es una palabra clave que realiza un cálculo o función automáticamente; hay muchas otras.
+     `{P0}` le da el porcentaje sin decimales. Si simplemente escribe `#PERCENT`, los números tendrán dos posiciones decimales. `#PERCENT` es una palabra clave que realiza un cálculo o función automáticamente; hay muchas otras.
 
  Para obtener más información acerca de cómo personalizar las etiquetas del gráfico y las leyendas, consulte [Mostrar valores de porcentaje en un gráfico circular &#40;Generador de informes y SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) y [Cambiar el texto de un elemento de leyenda&#40;Generador de informes y SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).
 
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#TwoWays)
+ ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [volver al principio](#TwoWays)
 
-##  <a name="WhatsNext"></a>¿Qué es lo próximo?
+##  <a name="whats-next"></a><a name="WhatsNext"></a>¿Qué es lo próximo?
  Ahora que ha creado su primer informe en el Generador de informes, está listo para leer los demás tutoriales y empezar a crear informes a partir de sus propios datos. Para ejecutar Generador de informes, necesita permiso para obtener acceso a los orígenes de datos, como bases de datos, con una *cadena de conexión*, que realmente le conecta al origen de datos. El administrador del sistema tiene esta información y puede facilitársela.
 
  Para trabajar con otros tutoriales, necesita el nombre de una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] y credenciales suficientes para el acceso de solo lectura a cualquier base de datos. El administrador del sistema puede facilitárselo también.
@@ -219,7 +217,7 @@ ms.locfileid: "78176900"
 
  Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Para obtener más información, vea [conceptos de creación de informes &#40;generador de informes y SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Para obtener más información, vea [planear un informe &#40;Generador de informes&#41;](../report-design/planning-a-report-report-builder.md).
 
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Volver al principio](#TwoWays)
+ ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [volver al principio](#TwoWays)
 
 ## <a name="see-also"></a>Consulte también
  [Tutoriales &#40;Generador de informes&#41;](../report-builder-tutorials.md) [Generador de informes en SQL Server 2014](report-builder-in-sql-server-2016.md)

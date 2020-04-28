@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c5e1eb0a35081cd9392178412db990308efcd0b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176736"
 ---
 # <a name="replication-publishing-model-overview"></a>Información general del modelo de publicación de replicación
@@ -44,7 +44,7 @@ ms.locfileid: "78176736"
 
  Una *topología de replicación* define la relación entre los servidores y las copias de los datos, y aclara la lógica que determina cómo fluyen los datos entre los servidores. Hay varios procesos de replicación (denominados *agentes*) que son responsables de copiar y mover los datos entre el publicador y los suscriptores. En la siguiente ilustración se muestra información general acerca de los componentes y procesos que participan en la replicación.
 
- ![Componentes y flujo de datos de replicación](../media/replintro1.gif "Componentes de replicación y flujo de datos")
+ ![Componentes y flujo de datos de replicación](../media/replintro1.gif "Componentes y flujo de datos de replicación")
 
 ## <a name="publisher"></a>Publicador
  El publicador es una instancia de base de datos que permite que los datos estén disponibles para otras ubicaciones a través de la replicación. El publicador puede tener una o más publicaciones, cada una de las cuales representa un conjunto de objetos y datos relacionados lógicamente para replicar.

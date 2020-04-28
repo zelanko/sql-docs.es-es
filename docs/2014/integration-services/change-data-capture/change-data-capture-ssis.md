@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176535"
 ---
 # <a name="change-data-capture-ssis"></a>Captura de datos modificados (SSIS)
@@ -40,62 +40,61 @@ ms.locfileid: "78176535"
 
  Tal como se muestra en el diagrama anterior, la creación de un paquete que realiza una carga incremental de datos modificados conlleva los pasos siguientes:
 
- **Paso 1: diseñar el flujo de control** En el flujo de control del paquete, deben definirse las siguientes tareas:
+ **Paso 1: diseñar el flujo de control** Debe definir las tareas siguientes en el flujo de control del paquete:
 
 -   Calcule los valores `datetime` inicial y final para el intervalo de cambios en los datos de origen que desea recuperar.
 
      Para calcular estos valores, utilice una tarea Ejecutar SQL o expresiones de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] con funciones `datetime`. A continuación, almacene estos extremos en variables de paquete para usarlas posteriormente en el paquete.
 
-     **Para obtener más información:**[Especifique un intervalo de datos modificados](specify-an-interval-of-change-data.md) .  
+     **Para obtener más información:**  [Especificar un intervalo de datos modificados](specify-an-interval-of-change-data.md)
 
 -   Determine si están listos los datos modificados para el intervalo seleccionado. Este paso es necesario porque es posible que el proceso de captura asincrónico todavía no haya alcanzado el extremo seleccionado.
 
      Para determinar si están listos los datos, comience con un contenedor de bucles For para retrasar la ejecución, si es necesario, hasta que estén listos los datos modificados para el intervalo seleccionado. Dentro del contenedor de bucles, utilice una tarea Ejecutar SQL para consultar las tablas de asignación de fecha y hora que se mantienen en la captura de datos modificados. A continuación, utilice una tarea Script que llame al método `Thread.Sleep` u otra tarea Ejecutar SQL con una instrucción `WAITFOR`, con objeto de retrasar la ejecución del paquete temporalmente, si es necesario. También puede utilizar otra tarea Script para registrar una condición de error o un tiempo de espera.
 
-     **Para obtener más información:**  [determinar si los datos modificados están listos](determine-whether-the-change-data-is-ready.md)
+     **Para obtener más información:**  [Determinar si los datos modificados están preparados](determine-whether-the-change-data-is-ready.md)
 
 -   Prepare la cadena de consulta que se utilizará para consultar los datos modificados.
 
      Use una tarea Script o Ejecutar SQL para ensamblar la instrucción SQL que se usará para consultar si hay cambios.
 
-     **Para obtener más información:**  [preparar la consulta de los datos modificados](prepare-to-query-for-the-change-data.md)
+     **Para obtener más información:**  [Preparar para consultar datos modificados](prepare-to-query-for-the-change-data.md)
 
  **Paso 2: configurar la consulta para los datos modificados** Cree la función con valores de tabla que consultará los datos.
 
  Utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para desarrollar y guardar la consulta.
 
- **Para obtener más información:**  [recuperar y comprender los datos modificados](retrieve-and-understand-the-change-data.md)
+ **Para obtener más información:**  [Recuperar y describir datos modificados](retrieve-and-understand-the-change-data.md)
 
- **Paso 3: diseñar el flujo de datos** En el flujo de datos del paquete, deben definirse las siguientes tareas:
+ **Paso 3: diseñar el flujo de datos** Debe definir las tareas siguientes en el flujo de datos del paquete:
 
 -   Recupere los datos modificados de las tablas de cambios.
 
      Para recuperar los datos, utilice un componente de origen para consultar las tablas de cambios con objeto de detectar los cambios comprendidos en el intervalo seleccionado. El origen llama a una función con valores de tabla de Transact-SQL que deberá haber creado previamente.
 
-     **Para obtener más información:**  [recuperar y comprender los datos modificados](retrieve-and-understand-the-change-data.md)
+     **Para obtener más información:**  [Recuperar y describir datos modificados](retrieve-and-understand-the-change-data.md)
 
 -   Divida los cambios en inserciones, actualizaciones y eliminaciones para su procesamiento.
 
      Para dividir los cambios, utilice una transformación División condicional para dirigir las inserciones, las actualizaciones y las eliminaciones a las distintas salidas con objeto de procesarlas adecuadamente.
 
-     **Para obtener más información:**  [procesar inserciones, actualizaciones y eliminaciones](process-inserts-updates-and-deletes.md)
+     **Para obtener más información:**  [Procesar inserciones, actualizaciones y eliminaciones](process-inserts-updates-and-deletes.md)
 
 -   Aplique las inserciones, eliminaciones y actualizaciones en el destino.
 
      Con el fin de realizar los cambios en el destino, utilice un componente de destino para aplicar las inserciones en el destino. Asimismo, utilice transformaciones Comando de OLE DB con instrucciones UPDATE y DELETE con parámetros para aplicar las actualizaciones y las eliminaciones en el destino. También puede aplicar las actualizaciones y las eliminaciones mediante componentes de destino para guardar las filas en tablas temporales. A continuación, utilice tareas Ejecutar SQL para realizar operaciones de actualización y eliminación masivas en el destino a partir de las tablas temporales.
 
-     **Para obtener más información:**  [aplicar los cambios al destino](apply-the-changes-to-the-destination.md)
+     **Para obtener más información:**  [Aplicar los cambios al destino](apply-the-changes-to-the-destination.md)
 
 ### <a name="change-data-from-multiple-tables"></a>Datos modificados de varias tablas
  El proceso descrito en el diagrama y en los pasos anteriores conlleva una carga incremental a partir de una sola tabla. Cuando es preciso realizar una carga incremental a partir de varias tablas, el proceso general es el mismo. Sin embargo, hay que cambiar el diseño del paquete para adaptarlo al procesamiento de varias tablas. Para obtener más información sobre cómo crear un paquete que realiza una carga incremental a partir de varias tablas, vea [Realizar una carga incremental de varias tablas](perform-an-incremental-load-of-multiple-tables.md).
 
 ## <a name="samples-of-change-data-capture-packages"></a>Ejemplos de paquetes de captura de datos modificados
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona dos ejemplos que muestran cómo usar la captura de datos modificados en paquetes. Para obtener más información, vea los temas siguientes:
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona dos ejemplos que muestran cómo usar la captura de datos modificados en paquetes. Para obtener más información, vea los temas siguientes:
 
--   [Readme_Change captura de datos para el ejemplo de paquete de intervalo especificado](https://go.microsoft.com/fwlink/?LinkId=133507)
+-   [Léame del ejemplo de captura de datos modificados desde el paquete de la última solicitud](https://go.microsoft.com/fwlink/?LinkId=133507)
 
--   [Readme_Change captura de datos desde el último ejemplo de paquete de solicitud](https://go.microsoft.com/fwlink/?LinkId=133508)
+-   [Léame del ejemplo de captura de datos de cambio desde el paquete de la última solicitud](https://go.microsoft.com/fwlink/?LinkId=133508)
 
 ## <a name="related-tasks"></a>Related Tasks
 

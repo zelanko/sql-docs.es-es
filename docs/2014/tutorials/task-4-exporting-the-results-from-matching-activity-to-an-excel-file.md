@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 4: Exportación de los resultados de la actividad de coincidencia a un archivo de Excel Microsoft Docs'
+title: 'Tarea 4: exportar los resultados de la actividad de coincidencia a un archivo de Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,44 +11,44 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4ed1d29af328a162eafadb1ce7a160c262bdcba3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177253"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarea 4: exportar los resultados de la actividad de coincidencia a un archivo de Excel
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarea 4: Exportación de los resultados de la actividad de coincidencia a un archivo de Excel
   En esta tarea, exportará los resultados de la actividad de coincidencia a un archivo de Excel.
 
-1.  En la página **Exportar,** seleccione **Archivo de Excel** para tipo de **destino**.
+1.  En la página **exportar** , seleccione **archivo de Excel** para el **tipo de destino**.
 
-2.  Seleccione la opción **Resultados de supervivencia.** En el proceso de supervivencia, DQS determina un registro de superviviente para cada clúster en función de la regla de **supervivencia** que seleccionó.
+2.  Seleccione la opción **resultados de permanencia** . En el proceso de permanencia, DQS determina un registro de permanencia para cada clúster en función de la **regla de permanencia** seleccionada.
 
-3.  Haga clic en **Examinar** y vaya a la carpeta donde desea almacenar el archivo de salida.
+3.  Haga clic en **examinar** y navegue hasta la carpeta en la que desea almacenar el archivo de salida.
 
-4.  Escriba **Cleansed and Matched Suppliers.xls** para el nombre y haga clic en **Abrir**.
+4.  Escriba **cleaned and matched Suppliers. xls** como nombre y haga clic en **abrir**.
 
-5.  Confirme que **Registro dinámico** está seleccionado para la Regla **de supervivencia**. Al seleccionar esta opción, se elige el registro dinámico de cada clúster para la salida de un clúster. Las demás opciones de la regla de supervivencia son las siguientes:
+5.  Confirme que se ha seleccionado **registro dinámico** para la **regla de permanencia**. Al seleccionar esta opción, se elige el registro dinámico de cada clúster para la salida de un clúster. Las demás opciones de la regla de supervivencia son las siguientes:
 
-    1.  **Registro más completo:** El registro de superviviente es el que tiene el mayor número de campos poblados.
+    1.  **Registro más completo:** El registro de permanencia es el que tiene el mayor número de campos rellenos.
 
-    2.  **Registro más largo:** El registro de superviviente es el que tiene el mayor número de términos en los campos de origen.
+    2.  **Registro más largo:** El registro de permanencia es el que tiene el mayor número de términos en los campos de origen.
 
-    3.  **Registro más completo y más largo:** El registro de supervivientees es el que tiene el mayor número de campos poblados y tiene el mayor número de términos en cada campo.
+    3.  **Registro más completo y más largo:** El registro de permanencia es el que tiene el mayor número de campos rellenos y tiene el mayor número de términos en cada campo.
 
      ![Exportar resultados de la página de coincidencias](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "Exportar resultados de la página de coincidencias")
 
-6.  Haga clic en **Exportar** para exportar los resultados a un archivo de Excel.
+6.  Haga clic en **exportar** para exportar los resultados a un archivo de Excel.
 
-7.  Haga clic en **Cerrar** para cerrar el cuadro de diálogo **Exportación coincidente.**
+7.  Haga clic en **cerrar** para cerrar el cuadro de diálogo **exportar correspondiente** .
 
-8.  Haga clic en **Finalizar** para finalizar la actividad coincidente.
+8.  Haga clic en **Finalizar** para finalizar la actividad de búsqueda de coincidencias.
 
-9. Abra el archivo **Cleansed and Matched Suppliers.xlsx** y confirme que no ve ningún duplicado (SupplierID).
+9. Abra el archivo **cleaned and matched Suppliers. xlsx** y confirme que no ve ningún duplicado (SupplierID).
 
  Ahora, tiene datos de proveedor que se han limpiado y en el que se han buscado coincidencias para quitar valores duplicados.
 
 ## <a name="next-step"></a>siguiente paso
- [Lección 4: Almacenar datos de proveedor en MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)
+ [Lección 4: Almacenamiento de datos de proveedor en MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)
 
 

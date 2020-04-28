@@ -11,24 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929443"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Solución de problemas de la copia de seguridad administrada de SQL Server en Azure
   En este tema se describen las tareas y las herramientas que puede usar para solucionar los errores que pueden producirse durante las operaciones de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
 ## <a name="overview"></a>Información general  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tiene pasos para solucionar problemas y comprobaciones integrados de modo que, en muchos casos, el propio proceso de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se ocupa de los errores internos.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tiene pasos para solucionar problemas y comprobaciones integrados de modo que, en muchos casos, el propio proceso de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se ocupa de los errores internos.  
   
  Por ejemplo, una eliminación de un archivo de copia de seguridad que da lugar a una interrupción de la cadena de registro que afecta a [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] la capacidad de recuperación: identificará la interrupción en la cadena de registros y programará una copia de seguridad para que se realice inmediatamente. Sin embargo, se recomienda supervisar el estado y solucionar los errores que requieran intervención manual.  
   
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] registra los eventos y los errores usando procedimientos almacenados del sistema, vistas del sistema y eventos extendidos. Las vistas del sistema y los procedimientos almacenados proporcionan información de configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], el estado de las copias de seguridad programadas y también los errores capturados por Eventos extendidos. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa Eventos extendidos para capturar los errores que se usan para solucionar problemas. Además de registrar los eventos, las Directivas de administración inteligente de SQL Server proporcionan un estado de mantenimiento que un trabajo de notificación por correo electrónico usa para la notificación de errores y problemas. Para obtener más información, consulte [supervisión SQL Server copia de seguridad administrada en Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] registra los eventos y los errores usando procedimientos almacenados del sistema, vistas del sistema y eventos extendidos. Las vistas del sistema y los procedimientos almacenados proporcionan información de configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], el estado de las copias de seguridad programadas y también los errores capturados por Eventos extendidos. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa Eventos extendidos para capturar los errores que se usan para solucionar problemas. Además de registrar los eventos, las Directivas de administración inteligente de SQL Server proporcionan un estado de mantenimiento que un trabajo de notificación por correo electrónico usa para la notificación de errores y problemas. Para obtener más información, consulte [supervisión SQL Server copia de seguridad administrada en Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]también usa el mismo registro que se usa cuando se realiza una copia de seguridad manual en Azure Storage (SQL Server copia de seguridad en la dirección URL). Para obtener más información acerca de los problemas relacionados con la copia de seguridad en URL, consulte la sección solución de problemas de [SQL Server procedimientos recomendados y solución de problemas de copia de seguridad en URL](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md) .  
   
@@ -36,8 +33,7 @@ ms.locfileid: "76929443"
   
 1.  Habilite la notificación por correo electrónico para empezar a recibir mensajes de correo electrónico con los errores y advertencias.  
   
-     Como alternativa, también puede ejecutar periódicamente `smart_admin.fn_get_health_status` para comprobar los recuentos y los errores agregados. Por ejemplo, `number_of_invalid_credential_errors` es el número de veces que la copia de seguridad inteligente intentó una copia de seguridad pero obtuvo un error de credencial no válida. 
-  `Number_of_backup_loops` y `number_of_retention_loops` no son errores pero indican que el número de veces que el subproceso de copia de seguridad y el de retención examinaron la lista de bases de datos. Normalmente, cuando @begin_time no @end_time se proporcionan y, la función muestra la información de los últimos 30 minutos y, por lo general, deberíamos ver valores distintos de cero para estas dos columnas. Si son cero, implica que el sistema está sobrecargado o incluso que no responde. Para obtener más información, consulte la sección **solución de problemas del sistema** más adelante en este tema.  
+     Como alternativa, también puede ejecutar periódicamente `smart_admin.fn_get_health_status` para comprobar los recuentos y los errores agregados. Por ejemplo, `number_of_invalid_credential_errors` es el número de veces que la copia de seguridad inteligente intentó una copia de seguridad pero obtuvo un error de credencial no válida. `Number_of_backup_loops` y `number_of_retention_loops` no son errores pero indican que el número de veces que el subproceso de copia de seguridad y el de retención examinaron la lista de bases de datos. Normalmente, cuando @begin_time no @end_time se proporcionan y, la función muestra la información de los últimos 30 minutos y, por lo general, deberíamos ver valores distintos de cero para estas dos columnas. Si son cero, implica que el sistema está sobrecargado o incluso que no responde. Para obtener más información, consulte la sección **solución de problemas del sistema** más adelante en este tema.  
   
 2.  Revise los registros de Eventos extendidos para obtener más detalles sobre los errores y otros eventos asociados.  
   
@@ -62,8 +58,7 @@ ms.locfileid: "76929443"
   
      Error: "no se pudo obtener acceso a la dirección URL de almacenamiento.... Proporcione una credencial SQL válida... ": puede ver este y otros errores similares relacionados con las credenciales de SQL.  En tales casos, revise el nombre de la credencial de SQL que proporcionó, así como la información almacenada en la credencial de SQL: el nombre de la cuenta de almacenamiento y la clave de acceso de almacenamiento, y asegúrese de que son actuales y válidos.  
   
-     Error: "... no se puede configurar la base de datos.... como es una base de datos del sistema ": verá este error si intenta habilitar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para una base de datos del sistema.  
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no admite copias de seguridad de bases de datos del sistema.  Para configurar la copia de seguridad de una base de datos del sistema, utilice otras tecnologías de copia de seguridad de SQL Server como los planes de mantenimiento.  
+     Error: "... no se puede configurar la base de datos.... como es una base de datos del sistema ": verá este error si intenta habilitar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para una base de datos del sistema.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no admite copias de seguridad de bases de datos del sistema.  Para configurar la copia de seguridad de una base de datos del sistema, utilice otras tecnologías de copia de seguridad de SQL Server como los planes de mantenimiento.  
   
      Error: "... Proporcionar un período de retención.... ": puede ver errores relacionados con el período de retención Si no ha especificado un período de retención para la base de datos o la instancia de al configurar estos valores por primera vez. También puede ver un error si proporciona un valor distinto de un número entre 1 y 30. El valor válido para el período de retención es un número entre 1 y 30.  
   

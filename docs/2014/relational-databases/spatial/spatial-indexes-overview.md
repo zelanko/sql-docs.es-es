@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176665"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
@@ -24,9 +24,9 @@ ms.locfileid: "78176665"
 > [!IMPORTANT]
 >  Para obtener una descripción detallada y ejemplos de las nuevas características espaciales de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], incluidas las características que afectan a los índices espaciales, descargue las notas del producto [Nuevas características espaciales de SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).
 
-##  <a name="about"></a> Acerca de los índices espaciales
+##  <a name="about-spatial-indexes"></a><a name="about"></a> Acerca de los índices espaciales
 
-###  <a name="decompose"></a> Descomponer espacio indizado en una jerarquía de cuadrículas
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Descomponer espacio indizado en una jerarquía de cuadrículas
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los índices espaciales se generan usando árboles B, es decir, los índices deben representar los datos espaciales bidimensionales en el orden lineal de los árboles B. Por consiguiente, antes de leer los datos en un índice espacial, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementa una descomposición uniforme jerárquica de espacio. El proceso de creación de índices *descompone* el espacio en una *jerarquía de cuadrículas*de cuatro niveles. Estos niveles se conocen como *nivel 1* (el nivel superior), *nivel 2*, *nivel 3*y *nivel 4*.
 
  Cada nivel sucesivo descompone el nivel superior, de manera que cada celda de nivel superior contiene una cuadrícula completa en el nivel siguiente. En un nivel determinado, todas las cuadrículas tienen el mismo número de celdas a lo largo de ambos ejes (por ejemplo, 4x4 o 8x8) y las celdas son todas del mismo tamaño.
@@ -60,7 +60,7 @@ ms.locfileid: "78176665"
 > [!NOTE]
 >  Las densidades de cuadrícula de un índice espacial se ven en las columnas level_1_grid, level_2_grid, level_3_grid y level_4_grid de la vista de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) cuando el nivel de compatibilidad de la base de datos se establece en 100 o menos. Las `GEOMETRY_AUTO_GRID` / `GEOGRAPHY_AUTO_GRID` opciones del esquema de teselación no rellenan estas columnas. la vista de catálogo sys. `NULL` spatial_index_tessellations tiene valores para estas columnas cuando se usan las opciones de cuadrícula automática.
 
-###  <a name="tessellation"></a>Tesela
+###  <a name="tessellation"></a><a name="tessellation"></a> Teselación
  Después de la descomposición de un espacio indizado en una jerarquía de cuadrículas, el índice espacial lee los datos de la columna espacial, fila por fila. Después de leer los datos para un objeto espacial (o instancia), el índice espacial realiza un *proceso de teselación* para dicho objeto. El proceso de teselación ajusta el objeto en la jerarquía de cuadrículas asociándolo a un conjunto de celdas de cuadrícula que modifique (*celdas modificadas*). Comenzando por el nivel 1 de la jerarquía de cuadrículas, el proceso de teselación continúa por el nivel *primero a lo ancho* . Potencialmente, el proceso puede continuar a través de los cuatro niveles, un nivel a la vez.
 
  El resultado del proceso de teselación es un conjunto de celdas modificadas que se graban en el índice espacial para el objeto. Haciendo referencia a estas celdas grabadas, el índice espacial puede buscar el objeto en el espacio relativo a otros objetos de la columna espacial también almacenados en el índice.
@@ -110,7 +110,7 @@ ms.locfileid: "78176665"
 
  ![Optimización de celda más profunda](../../database-engine/media/spndx-opt-deepest-cell.gif "Optimización de celda más profunda")
 
-###  <a name="schemes"></a>Esquemas de teselación
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> Esquemas de teselación
  El comportamiento de un índice espacial depende en parte de su *esquema de teselación*. El esquema de teselación es el tipo de datos concreto. En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los índices espaciales admiten dos esquemas de teselación:
 
 -   *Teselación de cuadrícula de geometría*, que es el `geometry` esquema del tipo de datos.
@@ -133,9 +133,9 @@ ms.locfileid: "78176665"
 
 -   *y-min* es la coordenada y de la esquina inferior izquierda.
 
--   *x-MAX* es la coordenada x de la esquina superior derecha.
+-   *x-max* es la coordenada x de la esquina superior derecha.
 
--   *y-Max* es la coordenada y de la esquina superior derecha.
+-   *y-max* es la coordenada y de la esquina superior derecha.
 
 > [!NOTE]
 >  Estas coordenadas se especifican mediante la cláusula BOUNDING_BOX de la instrucción [Create Spatial index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
@@ -151,7 +151,7 @@ ms.locfileid: "78176665"
  Un cuadro de límite se corresponde a alguna parte de los datos espaciales de una aplicación. Depende de la aplicación si el cuadro de límite del índice contiene por completo los datos almacenados en la columna espacial, o solo contiene una parte. Solo las operaciones calculadas en los objetos que están completamente dentro del cuadro de límite se benefician del índice espacial. Por consiguiente, para aprovechar al máximo un índice espacial en una columna `geometry`, es necesario especificar un cuadro de límite que contenga todos los objetos o la mayoría de ellos.
 
 > [!NOTE]
->  Las densidades de cuadrícula de un índice espacial están visibles en las columnas bounding_box_xmin, bounding_box_ymin, bounding_box_xmax y bounding_box_ymax de la vista de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql).
+>  Las densidades de cuadrícula de un índice espacial están visibles en las columnas bounding_box_xmin, bounding_box_ymin, bounding_box_xmax y bounding_box_ymax de la vista de catálogo [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) .
 
 #### <a name="the-geography-grid-tessellation-scheme"></a>El esquema de teselación de cuadrícula de geografía
  Este esquema de teselación solo se aplica a una columna `geography`. Esta sección resume los métodos admitidos por teselación de cuadrícula de geografía y trata cómo se proyecta el espacio geodésico en un plano, que se descompone a continuación en una jerarquía de cuadrículas.
@@ -170,15 +170,15 @@ ms.locfileid: "78176665"
 
  La ilustración siguiente muestra una vista esquemática del proceso de descomposición de tres pasos. En las pirámides, las líneas de puntos representan los límites de las cuatro facetas de cada pirámide. Los pasos 1 y 2 muestran el elipsoide geodésico, usando una línea horizontal verde para representar la línea de longitud ecuatorial y una serie de líneas verticales verdes para representar varias líneas de latitud. El paso 1 muestra las pirámides proyectándose sobre los dos hemisferios. El paso 2 muestra las pirámides aplanándose. El paso 3 muestra las pirámides aplanadas, una vez que se han combinado para formar un plano, mostrando varias líneas de longitud proyectadas. Observe que estas líneas proyectadas se ponen rectas y varían en longitud, dependiendo de dónde se encuentra en las pirámides.
 
- ![Proyección del elipsoide en un plano](../../database-engine/media/spndx-geodetic-projection.gif "Proyección de la elipsoide en un plano")
+ ![Proyección de la elipsoide en un plano](../../database-engine/media/spndx-geodetic-projection.gif "Proyección de la elipsoide en un plano")
 
  Una vez que se ha proyectado el espacio en el plano, éste se descompone en la jerarquía de cuadrículas de cuatro niveles. Diferentes niveles pueden usar distintas densidades de cuadrícula. La ilustración siguiente muestra el plano una vez se ha descompuesto en una cuadrícula de nivel 1 4x4. Para esta ilustración, se omiten los niveles inferiores de la jerarquía de cuadrículas. En realidad, el plano se descompone totalmente en una jerarquía de cuadrículas de cuatro niveles. Cuando termina el proceso de descomposición, se leen los datos geográficos, fila por fila, desde la columna geography y, a su vez, se lleva a cabo el proceso de teselación para cada objeto.
 
  ![Cuadrícula de geography de nivel 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Cuadrícula de geography de nivel 1")
 
-##  <a name="methods"></a>Métodos admitidos por los índices espaciales
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a>Métodos admitidos por los índices espaciales
 
-###  <a name="geometry"></a>Métodos de geometría admitidos por los índices espaciales
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a>Métodos de geometría admitidos por los índices espaciales
  En ciertas condiciones, los índices espaciales son compatibles con los siguientes métodos de geometry y orientados a conjuntos: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() y STWithin(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE o JOIN ON de una consulta, y se deben producir dentro de un predicado con el formato general siguiente:
 
  *geometry1*. *method_name*(*geometry2*)*comparison_operator * * valid_number*
@@ -187,23 +187,23 @@ ms.locfileid: "78176665"
 
  Los índices espaciales son compatibles con los formatos de predicado siguientes:
 
--   *geometry1*. [STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
 
 -   *geometry1*. *Número* de < de [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*)
 
--   *geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *número*
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *number*
 
--   *geometry1*. [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1
 
--   *geometry1*. [STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1
 
 -   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*
 
--   *geometry1*. [STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
 
--   *geometry1*. [STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*) = 1
+-   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1
 
-###  <a name="geography"></a>Métodos Geography admitidos por los índices espaciales
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a>Métodos Geography admitidos por los índices espaciales
  En ciertas condiciones, los índices espaciales son compatibles con los siguientes métodos de geography orientados a conjuntos: STIntersects(),STEquals() y STDistance(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE y se deben producir dentro de un predicado con el formato general siguiente:
 
  *geography1*. *method_name*(*geography2*)*comparison_operator * * valid_number*
@@ -212,13 +212,13 @@ ms.locfileid: "78176665"
 
  Los índices espaciales son compatibles con los formatos de predicado siguientes:
 
--   *geography1*. [STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1
 
--   *geography1*. [STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1
 
 -   *geography1*. *Número* de < de [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*)
 
--   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *número*
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*
 
 ### <a name="queries-that-use-spatial-indexes"></a>Consultas que usan índices espaciales
  Solo se admiten índices espaciales en las consultas que incluyen un operador espacial indizado en la cláusula `WHERE`. Por ejemplo, sintaxis como la siguiente:

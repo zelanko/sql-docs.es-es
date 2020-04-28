@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175964"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
@@ -79,13 +79,12 @@ ms.locfileid: "78175964"
 
  En el ejemplo siguiente, el grupo de archivos de tabla optimizada para memoria tiene cuatro pares de archivos delta y de datos en la marca de tiempo 500 que contiene los datos de transacciones anteriores. Por ejemplo, las filas del primer archivo de datos corresponden a las transacciones con marca de tiempo mayor que 100 y menor o igual que 200; de forma alternativa, se representan como (100, 200]. Los archivos de datos segundo y tercero están completos menos de un 50 por ciento tras tener en cuenta las filas marcadas como eliminadas. La operación de combinación combina estos dos CFP y crea un nuevo CFP que contiene las transacciones con marca de tiempo mayor que 200 y menor o igual que 400, que es el intervalo combinado de estos dos CFP. Puede ver otro CFP con intervalo (500, 600] y el archivo delta no vacío para el intervalo de transacción (200, 400] muestra que la operación de combinación se puede realizar de forma simultanea a la actividad transaccional que incluye la eliminación de varias filas de los CFP de origen.
 
- ![El diagrama muestra el grupo de archivos de tabla con optimización para memoria](../../database-engine/media/storagediagram-hekaton.png "El diagrama muestra el grupo de archivos de tabla con optimización para memoria")
+ ![Diagrama que muestra grupo de archivos de tabla optimizada para memoria](../../database-engine/media/storagediagram-hekaton.png "Diagrama que muestra grupo de archivos de tabla optimizada para memoria")
 
  Un subproceso en segundo plano evalúa todos los CFP cerrados mediante una directiva de combinación y después inicia una o varias solicitudes para los CFP aptos. Estas solicitudes de combinación se procesan mediante el subproceso de punto de comprobación sin conexión. La evaluación de la directiva de combinación se realiza periódicamente y también cuando se cierra un punto de comprobación.
 
-### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]Directiva de combinación
- 
-  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa la directiva de combinación siguiente:
+### <a name="sssql14-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Directiva de combinación
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] implementa la directiva de combinación siguiente:
 
 -   Se programa una combinación si se pueden consolidar 2 o más CFP consecutivos, después de tener en cuenta las filas eliminadas, de forma que las filas resultantes quepan en 1 CFP de tamaño ideal. El tamaño ideal de un CFP se determina de la manera siguiente:
 
@@ -115,6 +114,6 @@ ms.locfileid: "78175964"
  Puede forzarse manualmente el punto de comprobación seguido de la copia de seguridad de registros para acelerar la recolección de elementos no utilizados pero esto agregará 5 CFP vacíos (5 pares de archivos de datos y delta con un archivo de datos de un tamaño de 128 MB cada uno). En escenarios de producción, los puntos de comprobación automáticos y las copias de seguridad de registros realizados como parte de la estrategia de copia de seguridad simplificarán la transición de los CFP por estas fases sin que sea necesaria ninguna intervención manual. El efecto del proceso de recolección de elementos no utilizados es que las bases de datos con tablas optimizadas para memoria pueden tener un tamaño de almacenamiento máximo respecto a su tamaño en memoria. No es infrecuente que los CFP tengan en memoria un tamaño que es hasta cuatro veces el de las tablas durables optimizadas para memoria.
 
 ## <a name="see-also"></a>Consulte también
- [Crear y administrar el almacenamiento de objetos optimizados para memoria](creating-and-managing-storage-for-memory-optimized-objects.md)
+ [Crear y administrar el almacenamiento de objetos con optimización para memoria](creating-and-managing-storage-for-memory-optimized-objects.md)
 
 

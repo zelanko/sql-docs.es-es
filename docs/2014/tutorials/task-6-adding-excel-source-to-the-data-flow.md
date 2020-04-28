@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177243"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tarea 6: agregar el origen de Excel al flujo de datos
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tarea 6: Adición del origen de Excel al flujo de datos
   En esta tarea, agregará un origen de Excel al flujo de datos para leer datos de proveedor del archivo de Excel de origen. El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de Microsoft Excel. Vea el tema [Origen de Excel](../integration-services/data-flow/excel-source.md) para obtener más detalles.
 
 1.  Arrastrar y coloque **Origen de Excel** desde **Otros orígenes** en el **Cuadro de herramientas de SSIS** hasta la pestaña **Flujo de datos** .
@@ -46,7 +46,7 @@ ms.locfileid: "78177243"
 
 ## <a name="next-step"></a>siguiente paso
 
-[Tarea 7: agregar la transformación Limpieza de DQS al flujo de datos](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)
+[Tarea 7: Adición de la transformación Limpieza de DQS al flujo de datos](task-7-adding-dqs-cleansing-transform-to-the-data-flow.md)
 
 ### <a name="see-also"></a>Consulte también
 

@@ -19,10 +19,10 @@ ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 090236bd5e0bd0429985ff9c54039a576950ec84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322104"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "75322104"
 |sent_date|**datetime**|Fecha y hora en que se inició la solicitud de configuración que produce conflicto.|  
 |timeout|**int**|Período de tiempo que un procedimiento debe esperar para que todos los nodos del mismo nivel devuelvan información de conflicto.|  
 |modified_date|**datetime**|Fecha y hora en que se completó una fase.|  
-|progress_phase|**nvarchar (32)**|Identifica la fase actual de procesamiento, utilizando uno de los valores siguientes:<br /><br /> Started<br /><br /> Explorando topología<br /><br /> Recopilando estado<br /><br /> Estado recopilado|  
+|progress_phase|**nvarchar(32)**|Identifica la fase actual de procesamiento, utilizando uno de los valores siguientes:<br /><br /> Iniciado<br /><br /> Explorando topología<br /><br /> Recopilando estado<br /><br /> Estado recopilado|  
 |phase_timed_out|**bit**|Indica si la fase actual ha agotado el tiempo de espera.|  
   
 ## <a name="see-also"></a>Consulte también  

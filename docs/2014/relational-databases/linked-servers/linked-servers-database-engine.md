@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e50cd7bc491109c1aa7a1941d04330141e907941
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175904"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (motor de base de datos)
@@ -49,8 +49,7 @@ ms.locfileid: "78175904"
  El [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client (ProgID: SQLNCLI11) es el proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]OLE DB oficial para.
 
 > [!NOTE]
->  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] están diseñadas para ser usadas con cualquier proveedor OLE DB que implemente las interfaces OLE DB requeridas. Sin embargo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo se ha probado con el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y algunos otros.
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] están diseñadas para ser usadas con cualquier proveedor OLE DB que implemente las interfaces OLE DB requeridas. Sin embargo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo se ha probado con el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y algunos otros.
 
 ## <a name="linked-server-details"></a>Detalles de servidores vinculados
  En la siguiente ilustración se muestran los conceptos básicos de una configuración con servidores vinculados.
@@ -85,17 +84,17 @@ ms.locfileid: "78175904"
 >  Es posible definir servidores vinculados que señalen al servidor donde se han definido, es decir, que operen como bucle invertido. Los servidores en bucle invertido resultan muy útiles cuando se prueba una aplicación que utiliza consultas distribuidas en una red con un único servidor. Los servidores vinculados en bucle invertido están previstos para la realización de pruebas y no se admiten para muchas operaciones, como las transacciones distribuidas.
 
 ## <a name="related-tasks"></a>Related Tasks
- [Crear servidores vinculados &#40;SQL Server Motor de base de datos&#41;](create-linked-servers-sql-server-database-engine.md)
+ [Crear servidores vinculados &#40;Motor de base de datos de SQL Server&#41;](create-linked-servers-sql-server-database-engine.md)
 
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)
 
- [sp_addlinkedsrvlogin &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql)
 
- [sp_dropserver &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)
+ [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql)
 
 ## <a name="related-content"></a>Contenido relacionado
- [Sys. Servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)
+ [sys.servers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql)
 
- [sp_linkedservers &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)
+ [sp_linkedservers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-linkedservers-transact-sql)
 
 

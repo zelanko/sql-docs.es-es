@@ -11,19 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 687a3c6e92dad953d39199afb446389bc11b9841
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176144"
 ---
-# <a name="step-3-testing-the-deployed-packages"></a>Paso 3: Probar los paquetes implementados
+# <a name="step-3-testing-the-deployed-packages"></a>Paso 3: Prueba de los paquetes implementados
   En esta tarea probará los paquetes que ha implementado en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
  En otros tutoriales de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ejecutó paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], con la opción **Iniciar depuración** del menú **Depurar** . Esta vez ejecutará los paquetes de otra forma.
 
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona varias herramientas que puede utilizar para ejecutar paquetes en el entorno de prueba y producción: la utilidad del símbolo del sistema `dtexec` y la Utilidad de ejecución de paquetes. La Utilidad de ejecución de paquetes es una herramienta gráfica integrada en `dtexec`. Las dos herramientas ejecutan el paquete de forma inmediata. Además, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un subsistema del Agente SQL Server que está diseñado especialmente para programar la ejecución de paquetes como un paso del trabajo del Agente SQL Server.
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona varias herramientas que puede utilizar para ejecutar paquetes en el entorno de prueba y producción: la utilidad del símbolo del sistema `dtexec` y la Utilidad de ejecución de paquetes. La Utilidad de ejecución de paquetes es una herramienta gráfica integrada en `dtexec`. Las dos herramientas ejecutan el paquete de forma inmediata. Además, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un subsistema del Agente SQL Server que está diseñado especialmente para programar la ejecución de paquetes como un paso del trabajo del Agente SQL Server.
 
  Utilizará la Utilidad de ejecución de paquetes para ejecutar los paquetes implementados. Los paquetes se utilizarán tal como están; por tanto, no tiene que actualizar información en ninguna página del cuadro de diálogo. Ejecutará los paquetes desde la página General, que es la primera página de la Utilidad de ejecución de paquetes. Si lo desea, puede hacer clic en otras páginas para ver la información que contienen para cada paquete.
 

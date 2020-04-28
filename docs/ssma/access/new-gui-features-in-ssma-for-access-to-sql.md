@@ -10,10 +10,10 @@ ms.assetid: 95b95de2-db05-4422-825d-43968ecfd01c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e68a58135e28989c2661ee531e2b4bf3c86a0104
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76910228"
 ---
 # <a name="new-gui-features-in-ssma-for-access-to-sql"></a>Nuevas características de la interfaz gráfica de usuario de SSMA para el acceso a SQL
@@ -72,7 +72,7 @@ Puede quitar un marcador de las siguientes maneras:
   
 -   Usar botones quitar o quitar todo en el cuadro de diálogo administrar marcadores  
   
-### <a name="manage-bookmarks"></a>Administrar marcadores  
+### <a name="manage-bookmarks"></a>Administración de marcadores  
 Para abrir el cuadro de diálogo administrar marcadores, en el menú Edición, haga clic en administrar marcadores. En el cuadro de diálogo verá una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.  
   
 ## <a name="object-history"></a>Historial de objetos  

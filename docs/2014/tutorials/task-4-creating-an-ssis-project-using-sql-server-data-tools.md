@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcf16dc7d63e6a4acca6c30871666d1ffe996192
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171724"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarea 4: crear un proyecto de SSIS con SQL Server Data Tools
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarea 4: Creación de un proyecto de SSIS con SQL Server Data Tools
   En esta tarea, creará un proyecto de SSIS usando **SQL Server Data Tools** para automatizar la limpieza y la búsqueda de coincidencias de los datos de proveedor.
 
 1.  Inicie **SQL Server Data Tools**. Haga clic en Inicio, seleccione **Todos los programas**, expanda **Microsoft SQL Server 2012**y, a continuación, haga clic en **SQL Server Data Tools**.
@@ -39,6 +39,6 @@ ms.locfileid: "78171724"
 7.  Escriba **CleanseAndCurate.dtsx** y presione **ENTRAR**. Asegúrese de que la **extensión** siga siendo **.dtsx**.
 
 ## <a name="next-step"></a>siguiente paso
- [Tarea 5: agregar una tarea Flujo de datos](task-5-adding-data-flow-task.md)
+ [Tarea 5: Adición de una tarea Flujo de datos](task-5-adding-data-flow-task.md)
 
 

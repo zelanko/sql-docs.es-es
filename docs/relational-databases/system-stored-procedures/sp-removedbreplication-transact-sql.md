@@ -17,10 +17,10 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c7da3db641d6e0b9aa53d570a7d0cf9bdc731477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322265"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
@@ -42,13 +42,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'`Es el nombre de la base de datos. *dbname* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se utiliza la base de datos actual.  
+`[ @dbname = ] 'dbname'`Es el nombre de la base de datos. *dbname* es de tipo **sysname**y su valor predeterminado es NULL. Si es NULL, se utiliza la base de datos actual.  
   
 `[ @type = ] type`Es el tipo de replicación para la que se quitan los objetos de base de datos. *Type* es de tipo **nvarchar (5)** y puede tener uno de los valores siguientes.  
   
 |||  
 |-|-|  
-|**Trans**|Quita los objetos de publicación de replicación transaccional.|  
+|**tran**|Quita los objetos de publicación de replicación transaccional.|  
 |**sin**|Quita los objetos de publicación de replicación de mezcla.|  
 |**both** (valor predeterminado)|Quita todos los objetos de publicación de replicación.|  
   
@@ -83,7 +83,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  
+ [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

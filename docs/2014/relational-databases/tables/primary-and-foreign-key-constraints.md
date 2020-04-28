@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176822"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restricciones entre claves principales y claves externas
@@ -33,7 +33,7 @@ ms.locfileid: "78176822"
 
  [Tareas relacionadas](../tables/primary-and-foreign-key-constraints.md#Tasks)
 
-##  <a name="PKeys"></a> Restricciones de clave principal
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> Restricciones de clave principal
  Una tabla suele tener una columna o una combinación de columnas cuyos valores identifican de forma única cada fila de la tabla. Estas columnas se denominan claves principales de la tabla y exigen la integridad de entidad de la tabla. Debido a que las restricciones de clave principal garantizan datos únicos, con frecuencia se definen en una columna de identidad.
 
  Cuando especifica una restricción de clave principal en una tabla, [!INCLUDE[ssDE](../../includes/ssde-md.md)] exige la unicidad de los datos mediante la creación automática de un índice único para las columnas de clave principal. Este índice también permite un acceso rápido a los datos cuando se usa la clave principal en las consultas. Si se define una restricción de clave principal para más de una columna, puede haber valores duplicados dentro de la misma columna, pero cada combinación de valores de todas las columnas de la definición de la restricción de clave principal debe ser única.
@@ -54,7 +54,7 @@ ms.locfileid: "78176822"
 
 -   Si la clave principal se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario.
 
-##  <a name="FKeys"></a> Foreign Key Constraints
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints
  Una clave externa (FK) es una columna o combinación de columnas que se usa para establecer y aplicar un vínculo entre los datos de dos tablas a fin de controlar los datos que se pueden almacenar una tabla de clave externa. En una referencia de clave externa, se crea un vínculo entre dos tablas cuando las columnas de una de ellas hacen referencia a las columnas de la otra que contienen el valor de clave principal. Esta columna se convierte en una clave externa para la segunda tabla.
 
  Por ejemplo, la tabla **Sales.SalesOrderHeader** tiene un vínculo de clave externa a la tabla **Sales.SalesPerson** porque existe una relación lógica entre pedidos de ventas y personal de ventas. La columna **SalesPersonID** de la tabla **SalesOrderHeader** coincide con la columna de clave principal de la tabla **SalesPerson** . La columna **SalesPersonID** de la tabla **SalesOrderHeader** es la clave externa para la tabla **SalesPerson** . Al crear esta relación de clave externa, no se puede insertar un valor para **SalesPersonID** en la tabla **SalesOrderHeader** si no existe en la tabla **SalesPerson** .
@@ -103,7 +103,7 @@ ms.locfileid: "78176822"
 
 -   Una tabla con un desencadenador INSTEAD OF no puede tener también una cláusula REFERENCES que especifique un acción en cascada. Sin embargo, un desencadenador AFTER de la tabla de destino de una acción en cascada puede ejecutar una instrucción INSERT, UPDATE o DELETE en otra tabla o vista que active un desencadenador INSTEAD OF definido para dicho objeto.
 
-##  <a name="Tasks"></a> Tareas relacionadas
+##  <a name="related-tasks"></a><a name="Tasks"></a> Tareas relacionadas
  En la tabla siguiente se enumeran las tareas comunes asociadas a restricciones de clave principal y clave externa.
 
 |Tarea|Tema|

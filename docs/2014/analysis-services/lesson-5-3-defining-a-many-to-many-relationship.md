@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175294"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definir una relación de varios a varios
@@ -143,7 +143,7 @@ ms.locfileid: "78175294"
 
      En la imagen siguiente se muestran los cambios realizados en el cuadro de diálogo **Definir relación** .
 
-     ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-many-to-many-3.gif "Cuadro de diálogo Definir relación")
+     ![Cuadro de diálogo Definir relación](../../2014/tutorials/media/l5-many-to-many-3.gif "Cuadro de diálogo Definir relación")
 
 5.  Haga clic en **OK**.
 

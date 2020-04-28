@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175574"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Seguimiento (Cliente de minería de datos para Excel)
@@ -27,20 +27,20 @@ ms.locfileid: "78175574"
 
  Dependiendo de la acción que se solicita, la instrucción puede ser una consulta de definición de datos o una consulta de manipulación de datos de Extensiones de Minería de Datos (DMX), un paquete de Analysis Services Scripting Language (ASSL), o una llamada a un procedimiento almacenado de Analysis Services. Sin embargo, no se muestran resultados numéricos ni valores de datos reales.
 
- **Seguimiento** solo supervisa la conexión actual y el contenido del cuadro de diálogo **seguimiento** no se almacena.
+ **Seguimiento** solo supervisa la conexión actual; el contenido del cuadro de diálogo **Seguimiento** no se guarda.
 
 ## <a name="options"></a>Opciones
  En el panel seguimiento se enumeran todas las instrucciones enviadas desde el cliente de Excel al servidor.
 
  Dependiendo de la acción que se solicita, la instrucción podría ser una manipulación de datos DMX o una instrucción de definición de datos, una llamada a un procedimiento almacenado de Analysis Services o un paquete XML/A.
 
- **Conexión actual** Haga clic para mostrar la definición de la conexión actual. La definición incluye el nombre de la conexión, el proveedor, el origen de datos y el catálogo, la hora en que se utilizó la conexión por última vez para una transacción y el estado actual (Abierta, Inactiva).
+ **Conexión actual** Haga clic en esta opción para mostrar la definición de la conexión actual. La definición incluye el nombre de la conexión, el proveedor, el origen de datos y el catálogo, la hora en que se utilizó la conexión por última vez para una transacción y el estado actual (Abierta, Inactiva).
 
  **Usar modelos de sesión** Active esta casilla para almacenar estructuras y modelos de minería de datos como objetos temporales en el servidor. Los modelos y las estructuras que cree sólo estarán disponibles mientras dure la sesión actual.
 
  Anule la selección de esta opción si desea guardar los modelos o las estructuras en un servidor de Analysis Services.
 
- **Nota:** La capacidad de usar objetos temporales solo está disponible cuando se usan las herramientas de análisis de tabla para Excel. Las Plantillas de minería de datos para Visio y el Cliente de minería de datos para Excel requieren que las estructuras y los modelos se almacenen en el servidor.
+ **Nota** : la capacidad de usar objetos temporales sólo está disponible cuando se usan las Herramientas de análisis de tabla para Excel. Las Plantillas de minería de datos para Visio y el Cliente de minería de datos para Excel requieren que las estructuras y los modelos se almacenen en el servidor.
 
 ## <a name="tracing-temporary-structures-and-models"></a>Estructuras y modelos temporales de seguimiento
  Si usa las Herramientas de análisis de tabla que, de forma predeterminada, crean estructuras y modelos temporales, se supervisará la actividad entre el servidor y el cliente, pero los modelos o las estructuras que cree no se guardarán en el servidor.

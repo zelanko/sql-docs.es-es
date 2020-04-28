@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
 ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656592"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparar funciones de Business Intelligence en diferentes entornos de Microsoft
@@ -26,13 +26,13 @@ Para obtener más información comparando SharePoint Server y SharePoint Online,
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Plan 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Sitios BI|[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]Galería|No|Sitio de Power BI|  
+|Sitios BI|Galería de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|No|Sitio de Power BI|  
 |Centralización de datos y uso compartido y administración de datos|No|No|Sí ** <sup>1</sup>**|  
 |Integración con Master Data Services (MDS) and Data Quality Services (DQS)|Sí|No|No|  
 |Programar actualizaciones de datos|Sí, pero no ofrece compatibilidad para libros que contienen datos de Power Query|No|Sí|  
 |Consulta en lenguaje natural (Q&A)|No|No|Sí ** <sup>2</sup>**|  
 |Previsión de predicción|No|No|Sí ** <sup>3</sup>**|  
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrar|Sí|No|No|  
+|Integración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Sí|No|No|  
 |Integración de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensional y tabular)|Sí|No|No|  
 |Exportar el panel interactivo de Power View a presentación de PowerPoint|Sí|No|No|  
 |Creación del panel en el explorador|Sí|No|No|  
@@ -40,7 +40,7 @@ Para obtener más información comparando SharePoint Server y SharePoint Online,
 |Aprovechamiento de seguridad basada en filas de cubos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Sí|No|No|  
 |||||
 
- **<sup>1</sup>**  [Descripción del rol de los administradores de datos en administración de datos](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) y [vídeo: Power BI administración de información y la protección de datos](https://www.youtube.com/watch?v=8dHOj68ts7c).  
+ **<sup>1</sup>**  [Descripción del papel de la centralización de datos en la administración de datos](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) y el [vídeo: Administración de información de Power BI y centralización de datos](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
  **<sup>2</sup>**  [Power BI Q&a: optimizar un libro de Power BI (modelado en la nube)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
@@ -59,9 +59,9 @@ Para obtener más información comparando SharePoint Server y SharePoint Online,
 
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
   
- **<sup>2</sup>**  [libros PowerPivot como origen de datos](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
+ **<sup>2</sup>**  [Libros de PowerPivot como origen de datos](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
   
- **<sup>3</sup>**  [compatibilidad con dispositivos móviles en las herramientas de Business Intelligence (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) y [planeación para Reporting Services y Power View compatibilidad con exploradores (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
+ **<sup>3</sup>**  [Compatibilidad con dispositivos móviles en todas las herramientas de Business Intelligence (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) y [planeación de la compatibilidad del explorador de Reporting Services y Power View (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   
 ## <a name="more-information"></a>Más información  
   
@@ -69,7 +69,7 @@ Para obtener más información comparando SharePoint Server y SharePoint Online,
   
 - Para obtener información sobre los requisitos para usar sinónimos, consulte [optimizar Power BI Q&a con sinónimos & formulación](https://blog.pragmaticworks.com/optimizing-power-bi-qa-with-synonyms-phrasing-using-cloud-modeling) en pragmaticworks.com.  
   
-- [Office Online, elija su red social empresarial: Yammer o newsfeed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
+- [Office Online, elija su red social empresarial: ¿Yammer o Newsfeed?](https://support.office.com/article/Pick-your-enterprise-social-network-Yammer-or-Newsfeed-21954c85-4384-47d4-96c2-dfa1c9d56e66?ui=en-US&rs=en-US&ad=US).  
   
 - [Power BI para Office 365](https://www.microsoft.com/powerbi/default.aspx).  
   
@@ -77,5 +77,5 @@ Para obtener más información comparando SharePoint Server y SharePoint Online,
   
 - [Análisis e informes con herramientas de Microsoft Business Intelligence (BI)](../reporting-services/choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting.md)  
   
-## <a name="community-content"></a>Contenido de la Comunidad
+## <a name="community-content"></a>Contenido de la comunidad
 

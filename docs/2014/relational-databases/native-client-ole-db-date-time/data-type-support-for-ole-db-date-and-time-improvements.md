@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82d8de1aa71507b8d1397befc287041def1ab839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929542"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB
@@ -26,7 +26,7 @@ ms.locfileid: "76929542"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros  
  OLE DB proporciona dos nuevos tipos de datos para admitir los nuevos tipos de servidor: DBTYPE_DBTIME2 y DBTYPE_DBTIMESTAMPOFFSET. La tabla siguiente muestra la asignación completa de tipo de servidor:  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos|Tipo de datos de OLE DB|Value|  
+|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo de datos de OLE DB|Value|  
 |-----------------------------------------|----------------------|-----------|  
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -37,10 +37,9 @@ ms.locfileid: "76929542"
   
 ## <a name="data-formats-strings-and-literals"></a>Formatos de datos: Cadenas y literales  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos|Tipo de datos de OLE DB|Formato de cadena para conversiones de cliente|  
+|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Tipo de datos de OLE DB|Formato de cadena para conversiones de cliente|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta tres dígitos de la fracción de segundo para Datetime.|  
+|datetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta tres dígitos de la fracción de segundo para Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'aaaa-mm-dd hh:mm:ss'<br /><br /> Este tipo de datos tiene una precisión de un minuto. El componente de segundos será cero en salida y será redondeado por el servidor al producir los resultados.|  
 |date|DBTYPE_DBDATE|'aaaa-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
@@ -169,14 +168,14 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Asignar tipo de datos en ITableDefinition::CreateTable  
- La siguiente asignación de tipos se usa con las estructuras DBCOLUMNDESC que usa ITableDefinition:: CreateTable:  
+ La siguiente asignación de tipos se usa con las estructuras DBCOLUMNDESC que se emplean en ITableDefinition::CreateTable:  
   
-|Tipo de datos OLE DB (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos|Notas|  
+|Tipo de datos de OLE DB (*wType*)|Tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Notas|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`m|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
-|DBTYPE_DBTIME2|`time`m|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`m|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
+|DBTYPE_DBTIME2|`time`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
   
  Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede invalidar la asignación a `datetime2` proporcionando un nombre de tipo en *pwszTypeName*. Si `datetime` se especifica, *bScale* debe ser 3. Si `smalldatetime` se especifica, *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
   

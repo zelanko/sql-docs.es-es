@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: acb218e5d6377e8926d22aa66de0aded9a1fb0a8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177063"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Descripción del proveedor WMI para eventos de servidor
@@ -52,8 +52,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO
 ```
 
- En este ejemplo, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` es un identificador de [!INCLUDE[tsql](../../includes/tsql-md.md)] compuesto por el prefijo `SQLWEP_` y un GUID. 
-  `SQLWEP` crea un nuevo GUID para cada identificador. El valor `A7E5521A-1CA6-4741-865D-826F804E5135` de la `TO SERVICE` cláusula es el GUID que identifica la instancia del agente en la base de datos **msdb** .
+ En este ejemplo, `SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9` es un identificador de [!INCLUDE[tsql](../../includes/tsql-md.md)] compuesto por el prefijo `SQLWEP_` y un GUID. `SQLWEP` crea un nuevo GUID para cada identificador. El valor `A7E5521A-1CA6-4741-865D-826F804E5135` de la `TO SERVICE` cláusula es el GUID que identifica la instancia del agente en la base de datos **msdb** .
 
  Para obtener más información sobre cómo trabajar con WQL, vea [usar WQL con el proveedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx).
 

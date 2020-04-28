@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: d03ce811c860b976d891dd096ec8e0a7d5507d3a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176635"
 ---
 # <a name="polygon"></a>Polygon
@@ -73,9 +73,7 @@ DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 ```
 
- 
-  `@g1` no se acepta porque la instancia de `LineString` para el anillo exterior no contiene suficientes puntos. 
-  `@g2` no se acepta porque el punto inicial de la instancia de `LineString` del anillo exterior no es igual que el punto final. En el ejemplo siguiente hay un anillo exterior aceptable, pero el anillo interior no lo es. También en este caso se genera una excepción `System.FormatException`.
+ `@g1` no se acepta porque la instancia de `LineString` para el anillo exterior no contiene suficientes puntos. `@g2` no se acepta porque el punto inicial de la instancia de `LineString` del anillo exterior no es igual que el punto final. En el ejemplo siguiente hay un anillo exterior aceptable, pero el anillo interior no lo es. También en este caso se genera una excepción `System.FormatException`.
 
 ```
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';
